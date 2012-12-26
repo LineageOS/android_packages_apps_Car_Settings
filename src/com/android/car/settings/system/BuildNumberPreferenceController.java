@@ -83,13 +83,13 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
             mDevHitCountdown--;
             if (mDevHitCountdown == 0) {
                 DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), true);
-                showToast(getContext().getString(R.string.show_dev_on), Toast.LENGTH_LONG);
+                showToast(getContext().getString(R.string.show_dev_on_cm), Toast.LENGTH_LONG);
             } else if (mDevHitCountdown <= getTapsToBecomeDeveloper() - getTapsToShowToast()) {
                 showToast(StringUtil.getIcuPluralsString(getContext(), mDevHitCountdown,
-                        R.string.show_dev_countdown), Toast.LENGTH_SHORT);
+                        R.string.show_dev_countdown_cm), Toast.LENGTH_SHORT);
             }
         } else if (mDevHitCountdown < 0) {
-            showToast(getContext().getString(R.string.show_dev_already), Toast.LENGTH_LONG);
+            showToast(getContext().getString(R.string.show_dev_already_cm), Toast.LENGTH_LONG);
         }
         return true;
     }
