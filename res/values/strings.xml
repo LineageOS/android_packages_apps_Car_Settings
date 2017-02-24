@@ -105,6 +105,22 @@
     <!-- Bluetooth settings: The sub heading for available devices during and after scanning. [CHAR LIMIT=40] -->
     <string name="bluetooth_preference_found_devices">Available devices</string>
 
+    <!-- sound settings -->
+    <!-- Sound settings screen heading -->
+    <string name="sound_settings">Sound</string>
+    <!-- Sound settings screen, setting option name -->
+    <string name="ring_volume_title">Ring volume</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the incoming call volume -->
+    <string name="incoming_call_volume_title">Ringtone</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the notification volume -->
+    <string name="notification_volume_title">Notification</string>
+    <!-- Sound settings screen, setting option name -->
+    <string name="media_volume_title">Media</string>
+    <!-- Sound settings screen, setting option summary text -->
+    <string name="media_volume_summary">Set volume for music and videos</string>
+    <!-- Sound settings screen, alarm volume slider title -->
+    <string name="alarm_volume_title">Alarm</string>
+
     <!-- generic -->
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
