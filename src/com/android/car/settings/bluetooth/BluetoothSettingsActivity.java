@@ -74,7 +74,7 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
             });
 
         mProgressBar = (ProgressBar) findViewById(R.id.bt_search_progress);
-        mDeviceListView = (PagedListView) findViewById(android.R.id.list);
+        mDeviceListView = (PagedListView) findViewById(R.id.list);
         mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
         mMessageView = (TextView) findViewById(R.id.bt_message);
 

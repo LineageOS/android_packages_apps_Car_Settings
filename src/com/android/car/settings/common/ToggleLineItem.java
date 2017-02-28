@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,19 +45,25 @@ public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
     }
 
     public void bindViewHolder(RecyclerView.ViewHolder holder) {
-        ViewHolder viewHolder = (ViewHolder) holder;
+        ToggleLineItemViewHolder viewHolder = (ToggleLineItemViewHolder) holder;
         viewHolder.titleView.setText(mTitle);
-        viewHolder.descView.setText(getDesc());
+        CharSequence desc = getDesc();
+        if (TextUtils.isEmpty(desc)) {
+            viewHolder.descView.setVisibility(View.GONE);
+        } else {
+            viewHolder.descView.setVisibility(View.VISIBLE);
+            viewHolder.descView.setText(desc);
+        }
         viewHolder.toggle.setChecked(isChecked());
         holder.itemView.setOnClickListener(mOnClickListener);
     }
 
-    private static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ToggleLineItemViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final TextView descView;
-        final Switch toggle;
+        public final Switch toggle;
 
-        public ViewHolder(View view) {
+        public ToggleLineItemViewHolder(View view) {
             super(view);
             titleView = (TextView) view.findViewById(R.id.title);
             descView = (TextView) view.findViewById(R.id.desc);
@@ -67,7 +74,7 @@ public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.toggle_line_item, parent, false);
-        return new ViewHolder(v);
+        return new ToggleLineItemViewHolder(v);
     }
 
     /**

@@ -15,7 +15,10 @@
   ~ limitations under the License
   -->
 
-<RelativeLayout
+<!-- The whole line item is clickable and will handle the logic change and update the switch
+ contained inside. We can't take the touch focus away from Switch due to how touch was handled in
+ that widget -->
+<com.android.car.settings.common.InterceptTouchRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -40,5 +43,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"/>
-</RelativeLayout>
+        android:layout_alignParentEnd="true" />
+</com.android.car.settings.common.InterceptTouchRelativeLayout>

@@ -123,6 +123,19 @@
     <string name="bluetooth_preference_paired_devices">Paired devices</string>
     <!-- Bluetooth settings: The sub heading for available devices during and after scanning. [CHAR LIMIT=40] -->
     <string name="bluetooth_preference_found_devices">Available devices</string>
+    <!-- Bluetooth settings: The sub heading for no bluetooth device has been paired with this device. [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_no_paired_devices">No paired devices</string>
+    <!-- Bluetooth settings: The sub heading for no available bluetooth devices during and after scanning. [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_no_found_devices">No available devices</string>
+    <!-- Bluetooth settings: Paired dialog title [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_paired_dialog_title">Paired device</string>
+    <!-- Bluetooth settings: Name label [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_paired_dialog_name_label">Name</string>
+    <!-- Bluetooth settings.  Connection options screen.  The title of the header that is above all of the profiles.
+     When a user decides what Bluetooth capabilities to use with the device.  -->
+    <string name="bluetooth_device_advanced_profile_header_title">Use for</string>
+    <!-- Hint for a text field to change the name of the Bluetooth device. [CHAR LIMIT=35] -->
+    <string name="wifi_ssid_hint">Change the name of the Bluetooth device</string>
 
     <!-- sound settings --><skip />
     <!-- Sound settings screen heading -->

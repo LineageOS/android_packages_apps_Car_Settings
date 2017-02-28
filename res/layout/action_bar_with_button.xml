@@ -53,6 +53,6 @@
             android:layout_gravity="center_vertical"
             android:background="@null"
             android:textSize="@dimen/medium_text_size"
-            android:layout_marginEnd="@dimen/stream_content_keyline_1"/>
+            android:layout_marginEnd="@dimen/stream_content_keyline_1" />
     </LinearLayout>
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class ApplicationSettingsActivity extends CarSettingActivity {
         showMenuIcon();
         setContentView(R.layout.paged_list);
 
-        mListView = (PagedListView) findViewById(android.R.id.list);
+        mListView = (PagedListView) findViewById(R.id.list);
         mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
         mListView.setDarkMode();
         mAdapter = new ApplicationListAdapter(this /* context */, getPackageManager());

@@ -25,7 +25,7 @@ import com.android.car.settings.R;
 import java.util.ArrayList;
 
 /**
- * Shows a list of settings
+ * Settings page that only contain a list of items.
  */
 public abstract class ListSettingsActivity extends CarSettingActivity {
 
@@ -38,7 +38,7 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
         setupActionBar();
         setContentView(R.layout.paged_list);
 
-        mListView = (PagedListView) findViewById(android.R.id.list);
+        mListView = (PagedListView) findViewById(R.id.list);
         mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
         mListView.setDarkMode();
         mPagedListAdapter = new TypedPagedListAdapter(this /* context */, getLineItems());

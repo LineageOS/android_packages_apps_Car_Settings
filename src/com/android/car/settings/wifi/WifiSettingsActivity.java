@@ -64,7 +64,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         getActionBar().setDisplayShowCustomEnabled(true);
         ((TextView) findViewById(R.id.title)).setText(R.string.wifi_settings);
         mProgressBar = (ProgressBar) findViewById(R.id.wifi_search_progress);
-        mListView = (PagedListView) findViewById(android.R.id.list);
+        mListView = (PagedListView) findViewById(R.id.list);
         mMessageView = (TextView) findViewById(R.id.message);
         mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
         mAddWifiTextView = (TextView) findViewById(R.id.add_wifi);

@@ -28,7 +28,6 @@ import com.android.car.settings.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.settingslib.wifi.AccessPoint;
 
-import java.util.HashSet;
 import java.util.regex.Pattern;
 
 /**
