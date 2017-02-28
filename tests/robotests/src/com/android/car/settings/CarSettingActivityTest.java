@@ -34,10 +34,4 @@ public class CarSettingActivityTest {
         assertThat(mActivity.getSettingAction()).isEqualTo("android.car.settings.SETTINGS");
         assertThat(mActivity.getSettingPkg()).isEqualTo("com.android.car.settings");
     }
-
-    @Test
-    public void testIsDashboardFeatureEnabled() {
-        mActivity = new CarSettingActivity();
-        assertThat(mActivity.isDashboardFeatureEnabled()).isTrue();
-    }
 }

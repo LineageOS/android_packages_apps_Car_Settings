@@ -15,13 +15,20 @@
  */
 package com.android.car.settings;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
+import android.content.Intent;
+import android.util.Log;
+
+import com.android.settingslib.drawer.ProfileSelectDialog;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
+import com.android.settingslib.drawer.Tile;
 
 /**
  * Base activity class for car settings
  */
 public class CarSettingActivity extends SettingsDrawerActivity {
+    private static final String TAG = "CarSettingActivity";
     private static final String CAR_PACKAGE = "android.car.settings.SETTINGS";
     private static final String SETTING_PKG = "com.android.car.settings";
 
@@ -30,12 +37,38 @@ public class CarSettingActivity extends SettingsDrawerActivity {
         return CAR_PACKAGE;
     }
 
-    @Override protected boolean isDashboardFeatureEnabled() {
-        return true;
-    }
-
     @Override
     public String getSettingPkg() {
         return SETTING_PKG;
+    }
+
+    public boolean openTile(Tile tile) {
+        if (tile == null) {
+            Intent intent = new Intent(getSettingAction()).addFlags(
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            return true;
+        }
+        try {
+            ProfileSelectDialog.updateUserHandlesIfNeeded(this /* context */, tile);
+            int numUserHandles = tile.userHandle.size();
+            if (numUserHandles > 1) {
+                ProfileSelectDialog.show(getFragmentManager(), tile);
+                return false;
+            } else if (numUserHandles == 1) {
+                // Show menu on top level items.
+                tile.intent.putExtra(EXTRA_SHOW_MENU, true);
+                tile.intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivityAsUser(tile.intent, tile.userHandle.get(0));
+            } else {
+                // Show menu on top level items.
+                tile.intent.putExtra(EXTRA_SHOW_MENU, true);
+                tile.intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(tile.intent);
+            }
+        } catch (ActivityNotFoundException e) {
+            Log.w(TAG, "Couldn't find tile " + tile.intent, e);
+        }
+        return true;
     }
 }
