@@ -28,6 +28,9 @@ import com.android.car.settings.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.settingslib.wifi.AccessPoint;
 
+import java.util.HashSet;
+import java.util.regex.Pattern;
+
 /**
  * Adds a wifi network, the network can be public or private. If ADD_NETWORK_MODE is not specified
  * in the intent, then it needs to contain AccessPoint information, which is be use that to
@@ -36,6 +39,7 @@ import com.android.settingslib.wifi.AccessPoint;
 public class AddWifiActivity extends CarSettingActivity {
     public static final String ADD_NETWORK_MODE = "addNetworkMode";
     private static final String TAG = "AddWifiActivity";
+    private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
     private AccessPoint mAccessPoint;
     private WifiManager mWifiManager;
     private final WifiManager.ActionListener mConnectionListener = new WifiManager.ActionListener() {
@@ -74,7 +78,7 @@ public class AddWifiActivity extends CarSettingActivity {
                 WifiConfiguration wifiConfig = new WifiConfiguration();
                 wifiConfig.SSID = String.format("\"%s\"", getSsId());
                 wifiConfig.preSharedKey = String.format(
-                        "\"%s\"", mWifiNameInput.getText().toString());
+                        "\"%s\"", mWifiPasswordInput.getText().toString());
 
                 int netId = mWifiManager.addNetwork(wifiConfig);
                 mWifiManager.disconnect();
@@ -82,6 +86,46 @@ public class AddWifiActivity extends CarSettingActivity {
                 mWifiManager.reconnect();
                 finish();
             });
+    }
+
+    private void connectToAccessPoint() {
+        WifiConfiguration wifiConfig = new WifiConfiguration();
+        wifiConfig.SSID = String.format("\"%s\"", getSsId());
+        wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+        wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+        wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+        wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+        wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+        wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+        switch (mAccessPoint.getSecurity()) {
+            case AccessPoint.SECURITY_NONE:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.clear();
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+            case AccessPoint.SECURITY_WEP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+                String password = mWifiPasswordInput.getText().toString();
+                wifiConfig.wepKeys[0] = isHexString(password) ? password : "\"" + password + "\"";
+                wifiConfig.wepTxKeyIndex = 0;
+            case AccessPoint.SECURITY_PSK:
+            case AccessPoint.SECURITY_EAP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+                wifiConfig.preSharedKey = String.format(
+                        "\"%s\"", mWifiPasswordInput.getText().toString());
+        }
+        int netId = mWifiManager.addNetwork(wifiConfig);
+        if (netId != -1) {
+            mWifiManager.enableNetwork(netId, true);
+        }
+    }
+
+    private boolean isHexString(String password) {
+        return HEX_PATTERN.matcher(password).matches();
     }
 
     // TODO: handle null case, show warning message etc.

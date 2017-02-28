@@ -72,9 +72,6 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
                     mLocalAdapter.setBluetoothEnabled(false);
                 }
             });
-       findViewById(R.id.exit_button).setOnClickListener(v -> {
-                finish();
-            });
 
         mProgressBar = (ProgressBar) findViewById(R.id.bt_search_progress);
         mDeviceListView = (PagedListView) findViewById(android.R.id.list);

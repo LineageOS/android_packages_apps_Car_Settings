@@ -35,7 +35,7 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
+        setupActionBar();
         setContentView(R.layout.paged_list);
 
         mListView = (PagedListView) findViewById(android.R.id.list);
@@ -49,4 +49,11 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
      * Gets a List of LineItems to show up in this activity.
      */
     public abstract ArrayList<TypedPagedListAdapter.LineItem> getLineItems();
+
+    /**
+     * Add logic to setup ActionBar here.
+     */
+    public void setupActionBar() {
+        showMenuIcon();
+    }
 }

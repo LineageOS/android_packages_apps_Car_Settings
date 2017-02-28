@@ -19,17 +19,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end|center_vertical"
-        android:minHeight="@dimen/lens_header_height"
-        android:clickable="true"
-        android:focusable="true">
+        android:minHeight="@dimen/lens_header_height">
 
-    <TextView android:id="@+id/title"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              style="@style/CarTitle"
-              android:gravity="center_vertical"
-              android:layout_alignParentStart="true"
-              android:maxLines="1"/>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CarTitle"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:maxLines="1"/>
 
     <Switch
         android:id="@+id/toggle_switch"
@@ -37,16 +36,7 @@
         android:layout_height="@dimen/stream_button_icon_size"
         android:layout_gravity="center_vertical"
         android:background="@null"
-        android:layout_toStartOf="@+id/exit_button"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/stream_content_keyline_1" />
 
-    <ImageButton
-        android:id="@+id/exit_button"
-        android:layout_width="@dimen/stream_button_icon_size"
-        android:layout_height="@dimen/stream_button_icon_size"
-        android:layout_gravity="center_vertical"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_close"
-        android:background="@null"
-        android:layout_marginEnd="@dimen/stream_content_keyline_1" />
 </RelativeLayout>

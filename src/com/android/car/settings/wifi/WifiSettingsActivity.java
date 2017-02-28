@@ -69,9 +69,6 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
         mAddWifiTextView = (TextView) findViewById(R.id.add_wifi);
         mWifiListContainer = (LinearLayout) findViewById(R.id.wifi_list_container);
-        findViewById(R.id.exit_button).setOnClickListener(v -> {
-                finish();
-            });
         mAddWifiTextView.setOnClickListener(v -> {
             Intent intent = new Intent(this /* context */, AddWifiActivity.class);
             intent.putExtra(AddWifiActivity.ADD_NETWORK_MODE, true);
@@ -111,6 +108,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
 
     @Override
     public void onWifiStateChanged(int state) {
+        mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         switch (state) {
             case WifiManager.WIFI_STATE_ENABLING:
                 showList();
