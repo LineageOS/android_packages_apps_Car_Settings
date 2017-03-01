@@ -178,11 +178,43 @@
             </intent-filter>
 
             <meta-data
+                android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true"/>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage"/>
+        </activity>
+
+        <!-- Applications settings -->
+        <activity
+          android:name=".applications.ApplicationSettingsActivity"
+          android:label="@string/applications_settings"
+          android:theme="@style/CarSettingTheme"
+          android:icon="@drawable/ic_settings_applications">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+
+            <meta-data
               android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
               android:value="true"/>
             <meta-data
               android:name="com.android.settings.category"
               android:value="com.android.settings.category.ia.homepage"/>
+        </activity>
+
+        <activity
+          android:name=".applications.ApplicationDetailActivity"
+          android:label="@string/applications_settings"
+          android:theme="@style/CarSettingTheme"
+          android:icon="@drawable/ic_settings_applications">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+
+            <meta-data
+              android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+              android:value="true"/>
         </activity>
     </application>
 </manifest>

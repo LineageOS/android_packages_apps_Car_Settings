@@ -48,4 +48,12 @@
         <item name="android:minHeight">3dp</item>
         <item name="android:maxHeight">3dp</item>
     </style>
+    <style name="SettingIcon">
+        <item name="android:layout_width">@dimen/tile_icon_size</item>
+        <item name="android:layout_height">@dimen/tile_icon_size</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">@dimen/key_line1</item>
+        <item name="android:layout_marginEnd">@dimen/key_line1</item>
+    </style>
 </resources>

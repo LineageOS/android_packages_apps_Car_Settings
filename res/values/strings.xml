@@ -121,6 +121,32 @@
     <!-- Sound settings screen, alarm volume slider title -->
     <string name="alarm_volume_title">Alarm</string>
 
+    <!-- applications -->
+    <!-- Applications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of application settings-->
+    <string name="applications_settings">App info</string>
+    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
+    <string name="disable_text">Disable</string>
+    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to re-enable an existing application. -->
+    <string name="enable_text">Enable</string>
+    <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
+    <string name="permissions_label">Permissions</string>
+    <!-- Runtime permissions preference summary, shown when the app has no permissions granted. [CHAR LIMIT=40] -->
+    <string name="runtime_permissions_summary_no_permissions_granted">No permissions granted</string>
+    <!-- Runtime permissions preference summary, shown when the app requests no permissions. [CHAR LIMIT=40] -->
+    <string name="runtime_permissions_summary_no_permissions_requested">No permissions requested</string>
+    <!-- Activity title for network data usage summary. [CHAR LIMIT=25] -->
+    <string name="data_usage_summary_title">Data usage</string>
+    <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
+    <string name="data_usage_app_summary_title">App data usage</string>
+    <!-- Manage applications, text label for button to kill / force stop an application -->
+    <string name="force_stop">Force stop</string>
+    <string name="computing_size">Computing\u2026</string>
+    <!-- Runtime permissions preference summary.  Number of additional permissions granted. [CHAR LIMIT=40] -->
+    <plurals name="runtime_permissions_additional_count">
+        <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> additional permission</item>
+        <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> additional permissions</item>
+    </plurals>
+
     <!-- generic -->
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
