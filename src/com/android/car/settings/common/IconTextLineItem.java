@@ -16,37 +16,49 @@
 
 package com.android.car.settings.common;
 
+import android.annotation.DrawableRes;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.android.car.settings.R;
 
 /**
- * Contains logic for a line item represents text only view of a title and a description.
+ * Contains logic for a line item represents icon and texts of a title and a description.
  */
-public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
-    private final CharSequence mTitle;
+public abstract class IconTextLineItem extends TypedPagedListAdapter.LineItem {
+    private final String mTitle;
+    @DrawableRes
+    private final int mIconRes;
 
-    private View.OnClickListener mOnClickListener = (v) -> {
-            TextLineItem.this.onClick();
-        };
+    private View.OnClickListener mOnClickListener = (v) -> onClick();
 
-    public TextLineItem(CharSequence title) {
+    public IconTextLineItem(String title, @DrawableRes int iconRes) {
         mTitle = title;
+        mIconRes = iconRes;
     }
 
     @Override
     public int getType() {
-        return TEXT_TYPE;
+        return ICON_TEXT_TYPE;
     }
 
     @Override
     public void bindViewHolder(RecyclerView.ViewHolder holder) {
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.titleView.setText(mTitle);
-        viewHolder.descView.setText(getDesc());
+        viewHolder.iconView.setImageResource(mIconRes);
+        CharSequence desc = getDesc();
+        if (TextUtils.isEmpty(desc)) {
+            viewHolder.descView.setVisibility(View.GONE);
+        } else {
+            viewHolder.descView.setVisibility(View.VISIBLE);
+            viewHolder.descView.setText(desc);
+        }
         holder.itemView.setOnClickListener(mOnClickListener);
         holder.itemView.setEnabled(isEnabled());
     }
@@ -54,9 +66,11 @@ public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
     private static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final TextView descView;
+        final ImageView iconView;
 
         public ViewHolder(View view) {
             super(view);
+            iconView = (ImageView) view.findViewById(R.id.icon);
             titleView = (TextView) view.findViewById(R.id.title);
             descView = (TextView) view.findViewById(R.id.desc);
         }
@@ -64,7 +78,7 @@ public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
 
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.text_line_item, parent, false);
+                .inflate(R.layout.icon_text_line_item, parent, false);
         return new ViewHolder(v);
     }
 

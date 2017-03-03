@@ -19,24 +19,18 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
 import android.provider.Settings;
 
-import android.support.car.ui.PagedListView;
-import android.support.v7.widget.RecyclerView;
-import com.android.car.settings.CarSettingActivity;
 import com.android.car.settings.R;
-import com.android.car.settings.common.NoDividerItemDecoration;
+import com.android.car.settings.common.ListSettingsActivity;
 import com.android.car.settings.common.TypedPagedListAdapter;
-import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * Configures date time
  */
-public class DatetimeSettingsActivity extends CarSettingActivity {
+public class DatetimeSettingsActivity extends ListSettingsActivity {
     private static final String TAG = "DatetimeSettingsActivity";
 
     private static final IntentFilter TIME_CHANGED_FILTER =
@@ -48,34 +42,22 @@ public class DatetimeSettingsActivity extends CarSettingActivity {
     private final TimeChangedBroadCastReceiver mTimeChangedBroadCastReceiver =
             new TimeChangedBroadCastReceiver();
 
-    private PagedListView mListView;
-    private TypedPagedListAdapter mPagedListAdapter;
-    private final ArrayList<TypedPagedListAdapter.LineItem> mLineItems = new ArrayList<>();
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        showMenuIcon();
-        setContentView(R.layout.paged_list);
-
-        mLineItems.add(new DateTimeToggleLineItem(this,
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        lineItems.add(new DateTimeToggleLineItem(this,
                 getString(R.string.date_time_auto),
                 getString(R.string.date_time_auto_summary),
                 Settings.Global.AUTO_TIME));
-        mLineItems.add(new DateTimeToggleLineItem(this,
+        lineItems.add(new DateTimeToggleLineItem(this,
                 getString(R.string.zone_auto),
                 getString(R.string.zone_auto_summary),
                 Settings.Global.AUTO_TIME_ZONE));
-        mLineItems.add(new SetDateLineItem(this));
-        mLineItems.add(new SetTimeLineItem(this));
-        mLineItems.add(new SetTimeZoneLineItem(this));
-        mLineItems.add(new TimeFormatToggleLineItem(this));
-
-        mListView = (PagedListView) findViewById(android.R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
-        mListView.setDarkMode();
-        mPagedListAdapter = new TypedPagedListAdapter(this /* context */, mLineItems);
-        mListView.setAdapter(mPagedListAdapter);
+        lineItems.add(new SetDateLineItem(this));
+        lineItems.add(new SetTimeLineItem(this));
+        lineItems.add(new SetTimeZoneLineItem(this));
+        lineItems.add(new TimeFormatToggleLineItem(this));
+        return lineItems;
     }
 
     @Override

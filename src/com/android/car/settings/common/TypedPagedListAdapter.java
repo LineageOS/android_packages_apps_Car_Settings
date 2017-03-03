@@ -53,7 +53,7 @@ public class TypedPagedListAdapter
 
     public static abstract class LineItem {
         @Retention(SOURCE)
-        @IntDef({TEXT_TYPE, TOGGLE_TYPE})
+        @IntDef({TEXT_TYPE, TOGGLE_TYPE, ICON_TEXT_TYPE})
         public @interface LineItemType {}
 
         // with one title and one description
@@ -61,6 +61,9 @@ public class TypedPagedListAdapter
 
         // with one tile, one description, and a toggle on the right.
         static final int TOGGLE_TYPE = 2;
+
+        // with one icon, one tile and one description.
+        static final int ICON_TEXT_TYPE = 3;
 
         @LineItemType
         abstract int getType();
@@ -77,6 +80,8 @@ public class TypedPagedListAdapter
                 return TextLineItem.createViewHolder(parent);
             case LineItem.TOGGLE_TYPE:
                 return ToggleLineItem.createViewHolder(parent);
+            case LineItem.ICON_TEXT_TYPE:
+                return IconTextLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }
