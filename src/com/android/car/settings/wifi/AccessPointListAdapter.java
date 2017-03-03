@@ -97,7 +97,7 @@ public class AccessPointListAdapter
 
         public ViewHolder(View view) {
             super(view);
-            mWifiName = (TextView) view.findViewById(R.id.name);
+            mWifiName = (TextView) view.findViewById(R.id.title);
             mWifiDesc = (TextView) view.findViewById(R.id.desc);
             mIcon = (ImageView) view.findViewById(R.id.icon);
         }

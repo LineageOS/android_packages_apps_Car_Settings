@@ -86,7 +86,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
         ImageView icon = (ImageView) findViewById(R.id.icon);
         icon.setImageDrawable(mResolveInfo.loadIcon(getPackageManager()));
 
-        TextView appName = (TextView) findViewById(R.id.name);
+        TextView appName = (TextView) findViewById(R.id.title);
         appName.setText(mResolveInfo.loadLabel(getPackageManager()));
 
         PermissionsSummaryHelper.getPermissionSummary(this /* context */,
@@ -191,7 +191,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
             });
 
             if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "Sending broadcast to query restart status for "
+                Log.d(TAG, "Sending broadcast to query restart for "
                         + mResolveInfo.activityInfo.packageName);
             }
             sendOrderedBroadcastAsUser(intent, UserHandle.CURRENT, null,

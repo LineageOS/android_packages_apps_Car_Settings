@@ -33,7 +33,7 @@
     <string name="keywords_display_auto_brightness">dim screen, touchscreen, battery</string>
     <string name="keywords_display_night_display">dim screen, night, tint</string>
 
-    <!-- wifi settings-->
+    <!-- wifi settings--><skip />
     <!-- Used in the 1st-level settings screen to go to the 2nd-level settings screen  [CHAR LIMIT=20]-->
     <string name="wifi_settings">Wi\u2011Fi</string>
     <!-- Summary text of the Wi-fi settings screen -->
@@ -66,7 +66,7 @@
     <!-- Key for the tag to store UI info for access point -->
     <string name="access_point_tag_key">access_point_tag_key</string>
 
-    <!-- Bluetooth settings -->
+    <!-- Bluetooth settings --><skip />
     <!-- Bluetooth settings check box title on Main Settings screen -->
     <string name="bluetooth_quick_toggle_title">Bluetooth</string>
     <!-- Bluetooth settings check box summary for turning on bluetooth -->
@@ -105,7 +105,7 @@
     <!-- Bluetooth settings: The sub heading for available devices during and after scanning. [CHAR LIMIT=40] -->
     <string name="bluetooth_preference_found_devices">Available devices</string>
 
-    <!-- sound settings -->
+    <!-- sound settings --><skip />
     <!-- Sound settings screen heading -->
     <string name="sound_settings">Sound</string>
     <!-- Sound settings screen, setting option name -->
@@ -121,7 +121,7 @@
     <!-- Sound settings screen, alarm volume slider title -->
     <string name="alarm_volume_title">Alarm</string>
 
-    <!-- applications -->
+    <!-- applications --><skip />
     <!-- Applications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of application settings-->
     <string name="applications_settings">App info</string>
     <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
@@ -147,7 +147,54 @@
         <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> additional permissions</item>
     </plurals>
 
-    <!-- generic -->
+
+    <!-- Date and time settings --><skip />
+    <!-- Main Settings screen setting option name to go into the date and time settings-->
+    <string name="date_and_time_settings_title">Date &amp; time</string>
+    <!-- Title for Date & Time settings screen in SetupWizard [CHAR LIMIT=40] -->
+    <string name="date_and_time_settings_title_setup_wizard">Set date and time</string>
+    <!-- Main Settings screen setting option summary text for the item to go into the date and time settings. -->
+    <string name="date_and_time_settings_summary">Set date, time, time zone, &amp; formats</string>
+    <!-- Date & time setting screen setting check box title if the date and time should be determined automatically [CHAR LIMIT=30] -->
+    <string name="date_time_auto">Automatic date &amp; time</string>
+    <!-- Date & time setting screen setting option summary text when Automatic check box is selected
+        (that is, when date and time should be determined automatically) [CHAR LIMIT=100] -->
+    <string name="date_time_auto_summary">Use network-provided time</string>
+    <!-- Date & time setting screen setting check box title if the time zone should be determined automatically [CHAR LIMIT=30] -->
+    <string name="zone_auto">Automatic time zone</string>
+    <!-- Date & time setting screen setting option summary text when Automatic time zone check box is selected (that is, when date and time should be determined automatically)
+        [CHAR LIMIT=100]  -->
+    <string name="zone_auto_summary">Use network-provided time zone</string>
+    <!-- Date & time setting screen setting check box title [CHAR LIMIT=30] -->
+    <string name="date_time_24hour_title">24\u2011hour format</string>
+    <!-- Date & time setting screen setting check box title -->
+    <string name="date_time_24hour">Use 24-hour format</string>
+    <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
+    <string name="date_time_set_time_title">Time</string>
+    <!-- Date & time setting screen setting option title -->
+    <string name="date_time_set_time">Set time</string>
+    <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
+    <string name="date_time_set_timezone_title">Time zone</string>
+    <!-- Date & time setting screen setting option title -->
+    <string name="date_time_set_timezone">Select time zone</string>
+    <!-- Date & time setting screen setting option title [CHAR LIMIT=30] -->
+    <string name="date_time_set_date_title">Date</string>
+    <!-- Date & time setting screen setting option title -->
+    <string name="date_time_set_date">Set date</string>
+    <!-- Menu item on Select time zone screen -->
+    <string name="zone_list_menu_sort_alphabetically">Sort alphabetically</string>
+    <!-- Menu item on Select time zone screen -->
+    <string name="zone_list_menu_sort_by_timezone">Sort by time zone</string>
+    <!-- Title string shown above DatePicker, letting a user select system date
+         [CHAR LIMIT=20] -->
+    <string name="date_picker_title">Date</string>
+    <!-- Title string shown above TimePicker, letting a user select system time
+         [CHAR LIMIT=20] -->
+    <string name="time_picker_title">Time</string>
+
+    <!-- generic --><skip />
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
+    <!-- Button label for generic OK action [CHAR LIMIT=20] -->
+    <string name="okay">OK</string>
 </resources>

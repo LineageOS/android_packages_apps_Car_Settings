@@ -23,7 +23,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
@@ -40,8 +39,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
-import com.android.car.settings.wifi.AddWifiActivity;
-import com.android.car.settings.wifi.WifiDetailActivity;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -95,7 +92,7 @@ public class BluetoothDeviceListAdapter
 
     class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView mIcon;
-        private final TextView mName;
+        private final TextView mTitle;
         private final TextView mDesc;
         private final ImageButton mActionButton;
         private final DeviceAttributeChangeCallback mCallback =
@@ -103,7 +100,7 @@ public class BluetoothDeviceListAdapter
 
         public ViewHolder(View view) {
             super(view);
-            mName = (TextView) view.findViewById(R.id.name);
+            mTitle = (TextView) view.findViewById(R.id.title);
             mDesc = (TextView) view.findViewById(R.id.desc);
             mIcon = (ImageView) view.findViewById(R.id.icon);
             mActionButton = (ImageButton) view.findViewById(R.id.action);
@@ -189,7 +186,7 @@ public class BluetoothDeviceListAdapter
             getItem(holder.getOldPosition()).unregisterCallback(holder.mCallback);
         }
         bluetoothDevice.registerCallback(holder.mCallback);
-        holder.mName.setText(bluetoothDevice.getName());
+        holder.mTitle.setText(bluetoothDevice.getName());
         Pair<Integer, String> pair = getBtClassDrawableWithDescription(bluetoothDevice);
         holder.mIcon.setImageResource(pair.first);
         int summaryResourceId = bluetoothDevice.getConnectionSummary();

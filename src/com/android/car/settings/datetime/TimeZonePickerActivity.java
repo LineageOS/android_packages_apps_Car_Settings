@@ -13,8 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
-package com.android.car.settings.applications;
+package com.android.car.settings.datetime;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
@@ -23,25 +25,28 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
 
 /**
- * Lists all installed applications and their summary.
+ * Lists all time zone and its offset from GMT.
  */
-public class ApplicationSettingsActivity extends CarSettingActivity {
-    private static final String TAG = "ApplicationSettingsActivity";
-
-    private PagedListView mListView;
-    private ApplicationListAdapter mAdapter;
+public class TimeZonePickerActivity extends CarSettingActivity implements
+        TimeZoneListAdapter.TimeZoneChangeListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         showMenuIcon();
-        setContentView(R.layout.paged_list);
+        setContentView(R.layout.list);
 
-        mListView = (PagedListView) findViewById(android.R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
-        mListView.setDarkMode();
-        mAdapter = new ApplicationListAdapter(this /* context */, getPackageManager());
-        mListView.setAdapter(mAdapter);
+        PagedListView listView = (PagedListView) findViewById(android.R.id.list);
+        listView.setDefaultItemDecoration(new NoDividerItemDecoration(this /* context */));
+        listView.setDarkMode();
+        TimeZoneListAdapter adapter = new TimeZoneListAdapter(
+                this /* context */, this /* TimeZoneChangeListener */);
+        listView.setAdapter(adapter);
     }
 
+    @Override
+    public void onTimeZoneChanged() {
+        sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+        finish();
+    }
 }

@@ -63,11 +63,11 @@ public class ApplicationListAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView mIcon;
-        private final TextView mName;
+        private final TextView mTitle;
 
         public ViewHolder(View view) {
             super(view);
-            mName = (TextView) view.findViewById(R.id.name);
+            mTitle = (TextView) view.findViewById(R.id.title);
             mIcon = (ImageView) view.findViewById(R.id.icon);
         }
     }
@@ -100,7 +100,7 @@ public class ApplicationListAdapter
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         ResolveInfo resolveInfo = mResolveInfos.get(position);
-        holder.mName.setText(resolveInfo.loadLabel(mPm));
+        holder.mTitle.setText(resolveInfo.loadLabel(mPm));
         holder.mIcon.setImageDrawable(resolveInfo.loadIcon(mPm));
         holder.itemView.setOnClickListener(new ApplicationInfoClickListener(position));
     }
