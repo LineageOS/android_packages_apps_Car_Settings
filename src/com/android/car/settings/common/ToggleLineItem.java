@@ -28,14 +28,14 @@ import com.android.car.settings.R;
  * Contains logic for a line item represents title text, description text and a toggle widget.
  */
 public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
-    private final String mTitle;
+    private final CharSequence mTitle;
 
     private View.OnClickListener mOnClickListener = (v) -> {
             Switch switchToggle = (Switch) v.findViewById(R.id.toggle_switch);
             ToggleLineItem.this.onClick(switchToggle.isChecked());
         };
 
-    public ToggleLineItem(String title) {
+    public ToggleLineItem(CharSequence title) {
         mTitle = title;
     }
 

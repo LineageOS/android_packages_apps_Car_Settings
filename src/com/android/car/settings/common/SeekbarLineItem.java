@@ -20,53 +20,80 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.android.car.settings.R;
 
 /**
- * Contains logic for a line item represents text only view of a title and a description.
+ * Contains logic for a line item represents a description and a seekbar.
  */
-public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
+public abstract class SeekbarLineItem extends TypedPagedListAdapter.LineItem {
     private final CharSequence mTitle;
 
-    private View.OnClickListener mOnClickListener = (v) -> onClick();
+    private SeekBar.OnSeekBarChangeListener mOnSeekBarChangeListener =
+            new SeekBar.OnSeekBarChangeListener() {
 
-    public TextLineItem(CharSequence title) {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            SeekbarLineItem.this.onSeekbarChanged(progress);
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+            // no-op
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+            // no-op
+        }
+    };
+
+    public SeekbarLineItem(CharSequence title) {
         mTitle = title;
     }
 
     @Override
     public int getType() {
-        return TEXT_TYPE;
+        return SEEKBAR_TYPE;
     }
 
     @Override
     public void bindViewHolder(RecyclerView.ViewHolder holder) {
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.titleView.setText(mTitle);
-        viewHolder.descView.setText(getDesc());
-        holder.itemView.setOnClickListener(mOnClickListener);
-        holder.itemView.setEnabled(isEnabled());
+        viewHolder.seekBar.setMax(getMaxSeekbarValue());
+        viewHolder.seekBar.setProgress(getInitialSeekbarValue());
+        viewHolder.seekBar.setOnSeekBarChangeListener(mOnSeekBarChangeListener);
     }
 
     private static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
-        final TextView descView;
+        final SeekBar seekBar;
 
         public ViewHolder(View view) {
             super(view);
             titleView = (TextView) view.findViewById(R.id.title);
-            descView = (TextView) view.findViewById(R.id.desc);
+            seekBar = (SeekBar) view.findViewById(R.id.seekbar);
         }
     }
 
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.text_line_item, parent, false);
+                .inflate(R.layout.seekbar_line_item, parent, false);
         return new ViewHolder(v);
     }
 
-    public abstract void onClick();
+    // Seekbar Line item does not have description field for now.
+    @Override
+    public CharSequence getDesc() {
+        return null;
+    }
 
-    public abstract boolean isEnabled();
+    public abstract int getInitialSeekbarValue();
+
+    public abstract int getMaxSeekbarValue();
+
+    public abstract void onSeekbarChanged(int progress);
 }

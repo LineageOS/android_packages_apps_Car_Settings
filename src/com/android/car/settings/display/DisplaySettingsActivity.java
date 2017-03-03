@@ -15,23 +15,22 @@
  */
 package com.android.car.settings.display;
 
-import android.os.Bundle;
-
-import com.android.car.settings.CarSettingActivity;
 import com.android.car.settings.R;
-import com.android.settingslib.drawer.SettingsDrawerActivity;
+import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.common.TypedPagedListAdapter;
+
+import java.util.ArrayList;
 
 /**
  * Activity to host Display related preferences.
  */
-public class DisplaySettingsActivity extends CarSettingActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+public class DisplaySettingsActivity extends ListSettingsActivity {
 
-        // Display the fragment as the main content.
-        getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new DisplaySettings())
-                .commit();
+    @Override
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        lineItems.add(new AutoBrightnessLineItem(this /* context */));
+        lineItems.add(new BrightnessLineItem(this /* context */));
+        return lineItems;
     }
 }

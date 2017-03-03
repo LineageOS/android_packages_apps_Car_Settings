@@ -51,7 +51,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
     @Override
     protected AndroidManifest getAppManifest(Config config) {
         // Using the manifest file's relative path, we can figure out the application directory.
-        final String appRoot = "vendor/auto/embedded/apps/CarSettings";
+        final String appRoot = "packages/apps/Car/Settings/";
         final String manifestPath = appRoot + "/AndroidManifest.xml";
         final String resDir = appRoot + "/res";
         final String assetsDir = appRoot + config.assetDir();
@@ -65,7 +65,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                 List<ResourcePath> paths = super.getIncludedResourcePaths();
                 paths.add(new ResourcePath(
                         getPackageName(),
-                        Fs.fileFromPath("./vendor/auto/embedded/apps/CarSettings/res"),
+                        Fs.fileFromPath("./packages/apps/Car/Settings/res"),
                         null));
                 paths.add(new ResourcePath(
                         getPackageName(),

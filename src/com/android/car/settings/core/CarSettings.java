@@ -22,8 +22,7 @@ import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.util.Log;
 import com.android.car.settings.R;
-import com.android.car.settings.display.AutoBrightnessPreferenceController;
-import java.util.ArrayList;
+
 import java.util.List;
 
 

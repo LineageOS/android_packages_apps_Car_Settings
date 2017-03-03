@@ -65,6 +65,9 @@ public class TypedPagedListAdapter
         // with one icon, one tile and one description.
         static final int ICON_TEXT_TYPE = 3;
 
+        // with one tile and one seekbar.
+        static final int SEEKBAR_TYPE = 4;
+
         @LineItemType
         abstract int getType();
 
@@ -82,6 +85,8 @@ public class TypedPagedListAdapter
                 return ToggleLineItem.createViewHolder(parent);
             case LineItem.ICON_TEXT_TYPE:
                 return IconTextLineItem.createViewHolder(parent);
+            case LineItem.SEEKBAR_TYPE:
+                return SeekbarLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }

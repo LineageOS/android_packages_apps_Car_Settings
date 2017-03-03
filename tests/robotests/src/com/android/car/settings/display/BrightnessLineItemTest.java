@@ -11,19 +11,17 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License.
+ * limitations under the License
  */
 
-package com.android.car.settings;
-
-import android.app.Activity;
-import android.support.v7.preference.SeekBarPreference;
+package com.android.car.settings.display;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.provider.Settings;
-import com.android.car.settings.display.BrightnessPreferenceController;
-import com.android.car.settings.display.DisplaySettings;
+
+import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.TestConfig;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,34 +34,30 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)
-public class BrightnessPreferenceControllerTest {
+public class BrightnessLineItemTest {
     private Context mContext;
 
-    private SeekBarPreference mSeekBarPreference;
-
-    private BrightnessPreferenceController mPreferenceController;
+    private BrightnessLineItem mBrightnessLineItem;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mSeekBarPreference = new SeekBarPreference(mContext);
-        mPreferenceController = new BrightnessPreferenceController(mContext);
+        mBrightnessLineItem = new BrightnessLineItem(mContext);
     }
 
     @Test
-    public void testStateUpdate() throws Exception {
+    public void testInitialValue() throws Exception {
         // for some reason in robolectric test, I can't set this value over 100
         for (int brightness = 0; brightness < 100; ++brightness) {
             Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS, brightness);
-            mPreferenceController.updateState(mSeekBarPreference);
-            assertThat(mSeekBarPreference.getValue()).isEqualTo(brightness);
+            assertThat(mBrightnessLineItem.getInitialSeekbarValue()).isEqualTo(brightness);
         }
     }
 
     @Test
-    public void testOnPreferenceChange() throws Exception {
+    public void testOnSeekbarChanged() throws Exception {
         for (int brightness = 0; brightness < 255; ++brightness) {
-            mPreferenceController.onPreferenceChange(mSeekBarPreference, brightness);
+            mBrightnessLineItem.onSeekbarChanged(brightness);
             assertThat(Settings.System.getInt(mContext.getContentResolver(),
                     SCREEN_BRIGHTNESS)).isEqualTo(brightness);
         }

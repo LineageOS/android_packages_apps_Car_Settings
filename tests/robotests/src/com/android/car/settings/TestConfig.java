@@ -19,5 +19,5 @@ package com.android.car.settings;
 public class TestConfig {
     public static final int SDK_VERSION = 23;
     public static final String MANIFEST_PATH =
-            "vendor/auto/embedded/apps/CarSettings/AndroidManifest.xml";
+            "packages/apps/Car/Settings/AndroidManifest.xml";
 }
