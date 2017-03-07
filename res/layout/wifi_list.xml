@@ -42,7 +42,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/wifi_setup_add_network"
                 android:textSize="@dimen/medium_text_size"
-                android:layout_marginStart="@dimen/key_line1" />
+                android:layout_marginStart="@dimen/stream_content_keyline_1" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/car_divider_height"

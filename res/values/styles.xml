@@ -53,7 +53,7 @@
         <item name="android:layout_height">@dimen/tile_icon_size</item>
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_centerVertical">true</item>
-        <item name="android:layout_marginStart">@dimen/key_line1</item>
-        <item name="android:layout_marginEnd">@dimen/key_line1</item>
+        <item name="android:layout_marginStart">@dimen/stream_content_keyline_1</item>
+        <item name="android:layout_marginEnd">@dimen/stream_content_keyline_1</item>
     </style>
 </resources>
