@@ -61,25 +61,23 @@ public class BluetoothProfileLineItem extends ToggleLineItem {
         } else if (isChecked) {
             mCachedDevice.disconnect(mProfile);
             mProfile.setPreferred(mCachedDevice.getDevice(), false);
-        } else {
-            if (mProfile.isPreferred(mCachedDevice.getDevice())) {
-                if (mProfile instanceof PanProfile) {
-                    mCachedDevice.connectProfile(mProfile);
-                } else {
-                    mProfile.setPreferred(mCachedDevice.getDevice(), false);
-                }
-            } else {
-                mProfile.setPreferred(mCachedDevice.getDevice(), true);
+        } else if (mProfile.isPreferred(mCachedDevice.getDevice())) {
+            if (mProfile instanceof PanProfile) {
                 mCachedDevice.connectProfile(mProfile);
+            } else {
+                mProfile.setPreferred(mCachedDevice.getDevice(), false);
             }
+        } else {
+            mProfile.setPreferred(mCachedDevice.getDevice(), true);
+            mCachedDevice.connectProfile(mProfile);
         }
         mDataChangedListener.onDataChanged();
     }
 
     @Override
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
+    public void bindViewHolder(ToggleLineItemViewHolder holder) {
         super.bindViewHolder(holder);
-        mViewHolder = (ToggleLineItemViewHolder) holder;
+        mViewHolder = holder;
     }
 
     @Override

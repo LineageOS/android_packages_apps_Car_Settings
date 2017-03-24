@@ -18,7 +18,7 @@ package com.android.car.settings.applications;
 import android.os.Bundle;
 import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
 
@@ -34,7 +34,6 @@ public class ApplicationSettingsActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
         setContentView(R.layout.paged_list);
 
         mListView = (PagedListView) findViewById(R.id.list);

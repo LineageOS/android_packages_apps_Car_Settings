@@ -30,7 +30,6 @@ import com.android.car.settings.common.SimpleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.wifi.AccessPoint;
 
-import com.android.car.settings.CarSettingActivity;
 import com.android.car.settings.R;
 
 import java.util.ArrayList;
@@ -65,9 +64,9 @@ public class WifiDetailActivity extends ListSettingsActivity {
 
     @Override
     public void setupActionBar() {
+        super.setupActionBar();
         getActionBar().setCustomView(R.layout.action_bar_with_button);
         getActionBar().setDisplayShowCustomEnabled(true);
-        showMenuIcon();
     }
 
     @Override

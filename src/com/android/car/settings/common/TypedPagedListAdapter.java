@@ -51,9 +51,14 @@ public class TypedPagedListAdapter
         return mContentList.isEmpty();
     }
 
-    public static abstract class LineItem {
+    public static abstract class LineItem<VH extends ViewHolder> {
         @Retention(SOURCE)
-        @IntDef({TEXT_TYPE, TOGGLE_TYPE, ICON_TEXT_TYPE})
+        @IntDef({TEXT_TYPE,
+                TOGGLE_TYPE,
+                ICON_TEXT_TYPE,
+                SEEKBAR_TYPE,
+                ICON_TOGGLE_TYPE,
+                SIMPLE_ICON_TEXT_TYPE})
         public @interface LineItemType {}
 
         // with one title and one description
@@ -68,10 +73,16 @@ public class TypedPagedListAdapter
         // with one tile and one seekbar.
         static final int SEEKBAR_TYPE = 4;
 
+        // with one icon, title, description and a toggle.
+        static final int ICON_TOGGLE_TYPE = 5;
+
+        // similar to ICON_TEXT_TYPE, but with a different layout.
+        static final int SIMPLE_ICON_TEXT_TYPE = 6;
+
         @LineItemType
         abstract int getType();
 
-        abstract void bindViewHolder(ViewHolder holder);
+        abstract void bindViewHolder(VH holder);
 
         public abstract CharSequence getDesc();
     }
@@ -87,6 +98,10 @@ public class TypedPagedListAdapter
                 return IconTextLineItem.createViewHolder(parent);
             case LineItem.SEEKBAR_TYPE:
                 return SeekbarLineItem.createViewHolder(parent);
+            case LineItem.ICON_TOGGLE_TYPE:
+                return IconToggleLineItem.createViewHolder(parent);
+            case LineItem.SIMPLE_ICON_TEXT_TYPE:
+                return SimpleIconLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }

@@ -23,8 +23,6 @@ import android.os.Bundle;
 import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -33,7 +31,7 @@ import android.widget.ViewSwitcher;
 
 import android.annotation.StringRes;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 import com.android.settingslib.wifi.AccessPoint;
@@ -60,9 +58,8 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         super.onCreate(savedInstanceState);
         mCarWifiManager = new CarWifiManager(this /* context */ , this /* listener */);
         setContentView(R.layout.wifi_list);
-        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
-        getActionBar().setDisplayShowCustomEnabled(true);
-        ((TextView) findViewById(R.id.title)).setText(R.string.wifi_settings);
+
+        ((TextView) findViewById(R.id.action_bar_title)).setText(R.string.wifi_settings);
         mProgressBar = (ProgressBar) findViewById(R.id.wifi_search_progress);
         mListView = (PagedListView) findViewById(R.id.list);
         mMessageView = (TextView) findViewById(R.id.message);
@@ -87,6 +84,13 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         mAdapter = new AccessPointListAdapter(
                 this, mCarWifiManager, mCarWifiManager.getAccessPoints());
         mListView.setAdapter(mAdapter);
+    }
+
+    @Override
+    public void setupActionBar() {
+        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
+        getActionBar().setDisplayShowCustomEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

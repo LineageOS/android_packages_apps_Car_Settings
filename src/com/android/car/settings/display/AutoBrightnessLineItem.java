@@ -58,7 +58,7 @@ class AutoBrightnessLineItem extends ToggleLineItem {
     }
 
     @Override
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
+    public void bindViewHolder(ToggleLineItemViewHolder holder) {
         super.bindViewHolder(holder);
         holder.itemView.setEnabled(isEnabled());
     }

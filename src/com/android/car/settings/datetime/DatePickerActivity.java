@@ -21,7 +21,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.DatePicker;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 import java.util.Calendar;
@@ -37,7 +37,7 @@ public class DatePickerActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
+
         setContentView(R.layout.date_picker);
 
         mDatePicker = (DatePicker) findViewById(R.id.date_picker);

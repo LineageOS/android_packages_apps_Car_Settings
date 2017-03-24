@@ -40,7 +40,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
     private WifiTracker mWifiTracker;
     private final HandlerThread mBgThread;
     private WifiManager mWifiManager;
-    interface Listener {
+    public interface Listener {
         /**
          * Something about wifi setting changed.
          */
@@ -110,6 +110,10 @@ public class CarWifiManager implements WifiTracker.WifiListener {
 
     public boolean isWifiEnabled() {
         return mWifiManager.isWifiEnabled();
+    }
+
+    public int getWifiState() {
+        return mWifiManager.getWifiState();
     }
 
     public boolean setWifiEnabled(boolean enabled) {

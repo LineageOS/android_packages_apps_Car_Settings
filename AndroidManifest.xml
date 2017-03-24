@@ -59,7 +59,7 @@
         android:label="@string/settings_label">
 
         <activity
-            android:name=".HomepageActivity"
+            android:name=".home.HomepageActivity"
             android:label="@string/settings_label"
             android:launchMode="singleTask"
             android:exported="true">
@@ -93,7 +93,7 @@
             android:name=".wifi.WifiSettingsActivity"
             android:label="@string/wifi_settings"
             android:theme="@style/CarSettingTheme"
-            android:icon="@drawable/ic_settings_wireless">
+            android:icon="@drawable/ic_settings_wifi">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>
@@ -113,7 +113,7 @@
             android:name=".wifi.WifiDetailActivity"
             android:label="@string/wifi_settings"
             android:theme="@style/CarSettingTheme"
-            android:icon="@drawable/ic_settings_wireless">
+            android:icon="@drawable/ic_settings_wifi">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>
@@ -127,7 +127,7 @@
             android:name=".wifi.AddWifiActivity"
             android:label="@string/wifi_settings"
             android:theme="@style/CarSettingTheme"
-            android:icon="@drawable/ic_settings_wireless">
+            android:icon="@drawable/ic_settings_wifi">
             <intent-filter android:priority="1">
                 <action android:name="com.android.settings.action.SETTINGS"/>
             </intent-filter>

@@ -30,14 +30,15 @@ import com.android.car.settings.R;
 /**
  * Contains logic for a line item represents icon and texts of a title and a description.
  */
-public abstract class IconTextLineItem extends TypedPagedListAdapter.LineItem {
-    private final String mTitle;
+public abstract class IconTextLineItem
+        extends TypedPagedListAdapter.LineItem<IconTextLineItem.ViewHolder> {
+    private final CharSequence mTitle;
     @DrawableRes
     private final int mIconRes;
 
     private View.OnClickListener mOnClickListener = (v) -> onClick();
 
-    public IconTextLineItem(String title, @DrawableRes int iconRes) {
+    public IconTextLineItem(CharSequence title, @DrawableRes int iconRes) {
         mTitle = title;
         mIconRes = iconRes;
     }
@@ -48,8 +49,7 @@ public abstract class IconTextLineItem extends TypedPagedListAdapter.LineItem {
     }
 
     @Override
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
-        ViewHolder viewHolder = (ViewHolder) holder;
+    public void bindViewHolder(ViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
         viewHolder.iconView.setImageResource(mIconRes);
         CharSequence desc = getDesc();
@@ -59,11 +59,11 @@ public abstract class IconTextLineItem extends TypedPagedListAdapter.LineItem {
             viewHolder.descView.setVisibility(View.VISIBLE);
             viewHolder.descView.setText(desc);
         }
-        holder.itemView.setOnClickListener(mOnClickListener);
-        holder.itemView.setEnabled(isEnabled());
+        viewHolder.itemView.setOnClickListener(mOnClickListener);
+        viewHolder.itemView.setEnabled(isEnabled());
     }
 
-    private static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final TextView descView;
         final ImageView iconView;

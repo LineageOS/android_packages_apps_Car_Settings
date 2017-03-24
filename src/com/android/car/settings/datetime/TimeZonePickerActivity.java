@@ -20,7 +20,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
 
@@ -33,7 +33,7 @@ public class TimeZonePickerActivity extends CarSettingActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
+
         setContentView(R.layout.list);
 
         PagedListView listView = (PagedListView) findViewById(android.R.id.list);

@@ -21,16 +21,14 @@ import android.graphics.Canvas;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 import com.android.settingslib.bluetooth.BluetoothCallback;
@@ -58,8 +56,6 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bluetooth_list);
-        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
-        getActionBar().setDisplayShowCustomEnabled(true);
 
         ((TextView) findViewById(R.id.title)).setText(R.string.bluetooth_settings);
         mBluetoothSwitch = (Switch) findViewById(R.id.toggle_switch);
@@ -91,6 +87,13 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
         mDeviceListView.setDarkMode();
         mDeviceAdapter = new BluetoothDeviceListAdapter(this /* context */ , mLocalManager);
         mDeviceListView.setAdapter(mDeviceAdapter);
+    }
+
+    @Override
+    public void setupActionBar() {
+        super.setupActionBar();
+        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
+        getActionBar().setDisplayShowCustomEnabled(true);
     }
 
     @Override

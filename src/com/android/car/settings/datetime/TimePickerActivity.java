@@ -22,7 +22,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TimePicker;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 import java.util.Calendar;
@@ -38,7 +38,7 @@ public class TimePickerActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
+
         setContentView(R.layout.time_picker);
 
         mTimePicker = (TimePicker) findViewById(R.id.time_picker);

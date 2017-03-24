@@ -23,7 +23,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 /**
@@ -39,7 +39,6 @@ public class SoundSettingsActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
         setContentView(R.layout.volume_list);
 
         View mediaVolumeControllerView = findViewById(

@@ -25,7 +25,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.settings.common.TypedPagedListAdapter;
@@ -62,9 +62,6 @@ public class BluetoothDetailActivity extends CarSettingActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setCustomView(R.layout.action_bar_with_button);
-        getActionBar().setDisplayShowCustomEnabled(true);
-        showMenuIcon();
         setContentView(R.layout.bluetooth_details);
         mListView = (PagedListView) findViewById(R.id.list);
         mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
@@ -99,6 +96,13 @@ public class BluetoothDetailActivity extends CarSettingActivity implements
 
         mPagedListAdapter = new TypedPagedListAdapter(this /* context */, getProfileLineItems());
         mListView.setAdapter(mPagedListAdapter);
+    }
+
+    @Override
+    public void setupActionBar() {
+        super.setupActionBar();
+        getActionBar().setCustomView(R.layout.action_bar_with_button);
+        getActionBar().setDisplayShowCustomEnabled(true);
     }
 
     @Override

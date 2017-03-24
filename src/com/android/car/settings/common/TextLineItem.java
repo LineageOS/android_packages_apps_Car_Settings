@@ -26,7 +26,7 @@ import com.android.car.settings.R;
 /**
  * Contains logic for a line item represents text only view of a title and a description.
  */
-public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
+public abstract class TextLineItem extends TypedPagedListAdapter.LineItem<TextLineItem.ViewHolder> {
     private final CharSequence mTitle;
 
     private View.OnClickListener mOnClickListener = (v) -> onClick();
@@ -41,15 +41,14 @@ public abstract class TextLineItem extends TypedPagedListAdapter.LineItem {
     }
 
     @Override
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
-        ViewHolder viewHolder = (ViewHolder) holder;
+    public void bindViewHolder(ViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
         viewHolder.descView.setText(getDesc());
-        holder.itemView.setOnClickListener(mOnClickListener);
-        holder.itemView.setEnabled(isEnabled());
+        viewHolder.itemView.setOnClickListener(mOnClickListener);
+        viewHolder.itemView.setEnabled(isEnabled());
     }
 
-    private static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final TextView descView;
 

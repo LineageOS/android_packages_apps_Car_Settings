@@ -28,7 +28,8 @@ import com.android.car.settings.R;
 /**
  * Contains logic for a line item represents title text, description text and a toggle widget.
  */
-public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
+public abstract class ToggleLineItem
+        extends TypedPagedListAdapter.LineItem<ToggleLineItem.ToggleLineItemViewHolder> {
     private final CharSequence mTitle;
 
     private View.OnClickListener mOnClickListener = (v) -> {
@@ -44,8 +45,7 @@ public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
         return TOGGLE_TYPE;
     }
 
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
-        ToggleLineItemViewHolder viewHolder = (ToggleLineItemViewHolder) holder;
+    public void bindViewHolder(ToggleLineItemViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
         CharSequence desc = getDesc();
         if (TextUtils.isEmpty(desc)) {
@@ -55,7 +55,7 @@ public abstract class ToggleLineItem extends TypedPagedListAdapter.LineItem {
             viewHolder.descView.setText(desc);
         }
         viewHolder.toggle.setChecked(isChecked());
-        holder.itemView.setOnClickListener(mOnClickListener);
+        viewHolder.itemView.setOnClickListener(mOnClickListener);
     }
 
     public static class ToggleLineItemViewHolder extends RecyclerView.ViewHolder {

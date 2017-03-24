@@ -24,7 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -64,7 +64,7 @@ public class AddWifiActivity extends CarSettingActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mWifiManager = (WifiManager) getSystemService(WifiManager.class);
-        showMenuIcon();
+
         setContentView(R.layout.add_wifi);
         mSSidViewSwitcher = (ViewSwitcher) findViewById(R.id.wifi_name);
         mWifiNameDisplay = (TextView) findViewById(R.id.wifi_name_display);

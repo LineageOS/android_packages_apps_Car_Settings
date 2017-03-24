@@ -13,38 +13,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
-
 package com.android.car.settings.common;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
+import android.support.v4.app.NavUtils;
+import android.view.MenuItem;
 
-import com.android.car.settings.R;
-
-import java.util.ArrayList;
 
 /**
- * Settings page that only contain a list of items.
+ * Base activity class for car settings, provides a action bar with a back button that goes to
+ * previous activity.
  */
-public abstract class ListSettingsActivity extends CarSettingActivity {
-
-    private PagedListView mListView;
-    protected TypedPagedListAdapter mPagedListAdapter;
+public class CarSettingActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.paged_list);
-
-        mListView = (PagedListView) findViewById(R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
-        mListView.setDarkMode();
-        mPagedListAdapter = new TypedPagedListAdapter(this /* context */, getLineItems());
-        mListView.setAdapter(mPagedListAdapter);
+        setupActionBar();
     }
 
     /**
-     * Gets a List of LineItems to show up in this activity.
+     * Add logic to setup ActionBar here.
      */
-    public abstract ArrayList<TypedPagedListAdapter.LineItem> getLineItems();
+    public void setupActionBar() {
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    /**
+     * Make home button as back button.
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

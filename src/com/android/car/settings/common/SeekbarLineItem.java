@@ -28,7 +28,8 @@ import com.android.car.settings.R;
 /**
  * Contains logic for a line item represents a description and a seekbar.
  */
-public abstract class SeekbarLineItem extends TypedPagedListAdapter.LineItem {
+public abstract class SeekbarLineItem
+        extends TypedPagedListAdapter.LineItem<SeekbarLineItem.ViewHolder> {
     private final CharSequence mTitle;
 
     private SeekBar.OnSeekBarChangeListener mOnSeekBarChangeListener =
@@ -60,15 +61,14 @@ public abstract class SeekbarLineItem extends TypedPagedListAdapter.LineItem {
     }
 
     @Override
-    public void bindViewHolder(RecyclerView.ViewHolder holder) {
-        ViewHolder viewHolder = (ViewHolder) holder;
+    public void bindViewHolder(ViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
         viewHolder.seekBar.setMax(getMaxSeekbarValue());
         viewHolder.seekBar.setProgress(getInitialSeekbarValue());
         viewHolder.seekBar.setOnSeekBarChangeListener(mOnSeekBarChangeListener);
     }
 
-    private static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final SeekBar seekBar;
 

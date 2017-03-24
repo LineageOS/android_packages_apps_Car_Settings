@@ -38,7 +38,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.car.settings.CarSettingActivity;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
 import com.android.settingslib.Utils;
@@ -67,7 +67,6 @@ public class ApplicationDetailActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        showMenuIcon();
         setContentView(R.layout.application_details);
         if (getIntent() != null && getIntent().getExtras() != null) {
             mResolveInfo = getIntent().getExtras().getParcelable(APPLICATION_INFO_KEY);
