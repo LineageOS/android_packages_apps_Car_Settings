@@ -18,10 +18,10 @@ package com.android.car.settings.datetime;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 import com.android.car.settings.common.NoDividerItemDecoration;
 
 /**

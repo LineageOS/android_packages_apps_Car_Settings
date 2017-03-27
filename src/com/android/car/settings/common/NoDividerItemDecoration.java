@@ -16,13 +16,13 @@
 
 package com.android.car.settings.common;
 
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.content.Context;
 import android.graphics.Canvas;
+import com.android.car.view.PagedListView;
 
 /**
- * Default {@link android.support.car.ui.PagedListView.Decoration} for the {@link PagedListView}
+ * Default {@link com.android.car.view.PagedListView.Decoration} for the {@link PagedListView}
  * that removes the dividing lines between items.
  */
 public class NoDividerItemDecoration extends PagedListView.Decoration {

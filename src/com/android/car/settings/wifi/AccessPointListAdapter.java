@@ -21,7 +21,6 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,6 +35,7 @@ import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.wifi.AccessPointListAdapter.ViewHolder;
+import com.android.car.view.PagedListView;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.List;

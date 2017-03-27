@@ -17,9 +17,9 @@
 package com.android.car.settings.common;
 
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
 
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 
 import java.util.ArrayList;
 

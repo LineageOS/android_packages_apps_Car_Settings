@@ -18,7 +18,6 @@ package com.android.car.settings.datetime;
 import android.annotation.NonNull;
 import android.app.AlarmManager;
 import android.content.Context;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +25,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.List;

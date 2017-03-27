@@ -16,11 +16,11 @@
 package com.android.car.settings.applications;
 
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
+import com.android.car.view.PagedListView;
 
 /**
  * Lists all installed applications and their summary.

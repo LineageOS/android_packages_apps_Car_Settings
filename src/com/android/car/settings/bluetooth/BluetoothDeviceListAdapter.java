@@ -27,7 +27,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.util.Pair;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +38,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;

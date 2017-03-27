@@ -55,6 +55,8 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4 \
                                  jsr305
 
+  include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
+  include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
   include packages/services/Car/car-support-lib/car-support.mk
   include frameworks/base/packages/SettingsLib/common.mk
 

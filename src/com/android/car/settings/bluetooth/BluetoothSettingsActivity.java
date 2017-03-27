@@ -21,7 +21,6 @@ import android.graphics.Canvas;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.support.car.ui.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -30,6 +29,7 @@ import android.widget.ViewSwitcher;
 
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
@@ -190,7 +190,7 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
     }
 
     /**
-     * Default {@link android.support.car.ui.PagedListView.Decoration} for the {@link PagedListView}
+     * Default {@link com.android.car.view.PagedListView.Decoration} for the {@link PagedListView}
      * that removes the dividing lines between items.
      */
     private static class ItemDecoration extends PagedListView.Decoration {

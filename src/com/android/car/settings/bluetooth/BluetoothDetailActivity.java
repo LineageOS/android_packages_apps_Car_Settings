@@ -17,7 +17,6 @@ package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
-import android.support.car.ui.PagedListView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -29,6 +28,7 @@ import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.settings.common.TypedPagedListAdapter;
+import com.android.car.view.PagedListView;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
