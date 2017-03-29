@@ -110,7 +110,7 @@ public class HomepageActivity extends ListSettingsActivity implements CarWifiMan
                 R.drawable.ic_settings_display,
                 this,
                 null,
-                DatetimeSettingsActivity.class));
+                DisplaySettingsActivity.class));
         lineItems.add(new SimpleIconLineItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
@@ -126,11 +126,11 @@ public class HomepageActivity extends ListSettingsActivity implements CarWifiMan
                 null,
                 ApplicationSettingsActivity.class));
         lineItems.add(new SimpleIconLineItem(
-                R.string.display_settings,
-                R.drawable.ic_settings_display,
+                R.string.date_and_time_settings_title,
+                R.drawable.ic_settings_date_time,
                 this,
                 null,
-                DisplaySettingsActivity.class));
+                DatetimeSettingsActivity.class));
         lineItems.add(new SimpleIconLineItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,

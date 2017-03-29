@@ -22,7 +22,6 @@ import android.support.v7.widget.RecyclerView;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
-import com.android.car.settings.common.NoDividerItemDecoration;
 
 /**
  * Lists all time zone and its offset from GMT.
@@ -37,7 +36,7 @@ public class TimeZonePickerActivity extends CarSettingActivity implements
         setContentView(R.layout.list);
 
         PagedListView listView = (PagedListView) findViewById(android.R.id.list);
-        listView.setDefaultItemDecoration(new NoDividerItemDecoration(this /* context */));
+        listView.setDefaultItemDecoration(new PagedListView.Decoration(this /* context */));
         listView.setDarkMode();
         TimeZoneListAdapter adapter = new TimeZoneListAdapter(
                 this /* context */, this /* TimeZoneChangeListener */);

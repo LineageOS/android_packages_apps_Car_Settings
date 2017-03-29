@@ -91,7 +91,7 @@ public class TimeZoneListAdapter
     public TimeZoneListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.time_zone_list_item, parent, false);
+                .inflate(R.layout.text_line_item, parent, false);
         return new ViewHolder(v);
     }
 

@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 
@@ -25,6 +26,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.android.car.settings.R;
 
@@ -35,6 +37,7 @@ public class SimpleIconLineItem extends IconTextLineItem {
     private final CharSequence mDesc;
     private final Context mContext;
     private final Class mActivityClass;
+    private final @DrawableRes int mIconRes;
 
     public SimpleIconLineItem(
             @StringRes int title,
@@ -42,21 +45,22 @@ public class SimpleIconLineItem extends IconTextLineItem {
             Context context,
             CharSequence desc,
             Class activityClass) {
-        super(context.getText(title), iconRes);
+        super(context.getText(title));
         mDesc = desc;
         mContext = context;
         mActivityClass = activityClass;
+        mIconRes = iconRes;
     }
 
     @Override
-    public int getType() {
-        return SIMPLE_ICON_TEXT_TYPE;
+    public void setIcon(ImageView iconView) {
+        iconView.setImageResource(mIconRes);
     }
 
     @Override
     public void onClick() {
         Intent intent = new Intent(mContext, mActivityClass);
-        mContext.startActivity(intent);
+        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 
     @Override
@@ -67,11 +71,5 @@ public class SimpleIconLineItem extends IconTextLineItem {
     @Override
     public CharSequence getDesc() {
         return mDesc;
-    }
-
-    public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.tile_item, parent, false);
-        return new ViewHolder(v);
     }
 }

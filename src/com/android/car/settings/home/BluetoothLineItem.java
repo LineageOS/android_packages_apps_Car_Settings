@@ -24,6 +24,7 @@ import android.content.Intent;
 
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsActivity;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.IconToggleLineItem;
 
 
@@ -31,14 +32,13 @@ import com.android.car.settings.common.IconToggleLineItem;
  * Represents the Bluetooth line item on settings home page.
  */
 public class BluetoothLineItem extends IconToggleLineItem {
-    private final Context mContext;
     private BluetoothAdapter mBluetoothAdapter;
 
     public BluetoothLineItem(Context context) {
         super(context.getText(R.string.bluetooth_settings), context);
-        mContext = context;
-        mBluetoothAdapter = ((BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE))
-                .getAdapter();
+        mBluetoothAdapter =
+                ((BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE))
+                        .getAdapter();
     }
 
     @Override
@@ -53,7 +53,7 @@ public class BluetoothLineItem extends IconToggleLineItem {
     @Override
     public void onClicked() {
         Intent intent = new Intent(mContext, BluetoothSettingsActivity.class);
-        mContext.startActivity(intent);
+        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 
     @Override

@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.provider.Settings;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.TextLineItem;
 import com.android.settingslib.datetime.ZoneGetter;
 
@@ -53,6 +54,6 @@ class SetTimeZoneLineItem extends TextLineItem {
     @Override
     public void onClick() {
         Intent intent = new Intent(mContext, TimeZonePickerActivity.class);
-        mContext.startActivity(intent);
+        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 }

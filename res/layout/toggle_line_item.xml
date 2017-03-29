@@ -20,28 +20,30 @@
  that widget -->
 <com.android.car.settings.common.InterceptTouchRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    style="@style/LineItem" >
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/stream_card_keyline_1"
         android:layout_alignParentStart="true">
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/medium_text_size"/>
+            style="@style/CarBody1" />
         <TextView
             android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/small_text_size"/>
+            android:layout_marginTop="@dimen/double_line_text_margin"
+            style="@style/CarBody2" />
     </LinearLayout>
     <Switch
         android:id="@+id/toggle_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true" />
+        style="@style/SettingIcon"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/stream_card_keyline_1"
+        android:switchMinWidth="@dimen/icon_size"/>
 </com.android.car.settings.common.InterceptTouchRelativeLayout>

@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.net.wifi.WifiManager;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.IconToggleLineItem;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiSettingsActivity;
@@ -49,7 +50,7 @@ public class WifiLineItem extends IconToggleLineItem {
     @Override
     public void onClicked() {
         Intent intent = new Intent(mContext, WifiSettingsActivity.class);
-        mContext.startActivity(intent);
+        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 
     @Override

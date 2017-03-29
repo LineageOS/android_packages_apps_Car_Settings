@@ -34,10 +34,10 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.paged_list);
+        setContentView(R.layout.list);
 
         mListView = (PagedListView) findViewById(R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
+        mListView.setDefaultItemDecoration(getDecoration());
         mListView.setDarkMode();
         mPagedListAdapter = new TypedPagedListAdapter(this /* context */, getLineItems());
         mListView.setAdapter(mPagedListAdapter);
@@ -47,4 +47,11 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
      * Gets a List of LineItems to show up in this activity.
      */
     public abstract ArrayList<TypedPagedListAdapter.LineItem> getLineItems();
+
+    /**
+     * Gets decoration for the list view.
+     */
+    protected PagedListView.Decoration getDecoration() {
+        return new PagedListView.Decoration(this);
+    }
 }

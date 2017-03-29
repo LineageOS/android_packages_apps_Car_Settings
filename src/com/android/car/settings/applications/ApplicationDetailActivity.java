@@ -38,6 +38,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
@@ -55,6 +56,9 @@ import java.util.List;
  */
 public class ApplicationDetailActivity extends CarSettingActivity {
     private static final String TAG = "AppDetailActivity";
+    /**
+     * Key for ResolvedInfo in bundle passed in.
+     */
     public static final String APPLICATION_INFO_KEY = "APPLICATION_INFO_KEY";
 
     private ResolveInfo mResolveInfo;
@@ -246,17 +250,15 @@ public class ApplicationDetailActivity extends CarSettingActivity {
         }
     };
 
-    private OnClickListener mPermissionClickedListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            // start new activity to manage app permissions
-            Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
-            intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
-            try {
-                startActivity(intent);
-            } catch (ActivityNotFoundException e) {
-                Log.w(TAG, "No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
-            }
+    private OnClickListener mPermissionClickedListener = (v) -> {
+        // start new activity to manage app permissions
+        Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
+        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
+        try {
+            startActivity(intent, AnimationUtil.slideInFromRightOption(
+                    ApplicationDetailActivity.this).toBundle());
+        } catch (ActivityNotFoundException e) {
+            Log.w(TAG, "No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
         }
     };
 }

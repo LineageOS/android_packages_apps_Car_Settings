@@ -30,6 +30,7 @@ import android.widget.ViewSwitcher;
 
 import android.annotation.StringRes;
 
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
@@ -59,7 +60,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         mCarWifiManager = new CarWifiManager(this /* context */ , this /* listener */);
         setContentView(R.layout.wifi_list);
 
-        ((TextView) findViewById(R.id.action_bar_title)).setText(R.string.wifi_settings);
+        ((TextView) findViewById(R.id.title)).setText(R.string.wifi_settings);
         mProgressBar = (ProgressBar) findViewById(R.id.wifi_search_progress);
         mListView = (PagedListView) findViewById(R.id.list);
         mMessageView = (TextView) findViewById(R.id.message);
@@ -69,7 +70,8 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         mAddWifiTextView.setOnClickListener(v -> {
             Intent intent = new Intent(this /* context */, AddWifiActivity.class);
             intent.putExtra(AddWifiActivity.ADD_NETWORK_MODE, true);
-            startActivity(intent);
+            startActivity(intent, AnimationUtil.slideInFromRightOption(
+                    WifiSettingsActivity.this).toBundle());
         });
         setupWifiSwitch();
         if (mCarWifiManager.isWifiEnabled()) {
@@ -77,7 +79,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         } else {
             showMessage(R.string.wifi_disabled);
         }
-        mListView.setDefaultItemDecoration(new ItemDecoration(this));
+        mListView.setDefaultItemDecoration(new PagedListView.Decoration(this));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mListView.setDarkMode();
@@ -144,19 +146,6 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
             }
         }
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
-    }
-
-    /**
-     * Default {@link com.android.car.view.PagedListView.Decoration} for the {@link PagedListView}
-     * that removes the dividing lines between items.
-     */
-    private static class ItemDecoration extends PagedListView.Decoration {
-        public ItemDecoration(Context context) {
-            super(context);
-        }
-
-        @Override
-        public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {}
     }
 
     private void showMessage(@StringRes int resId) {

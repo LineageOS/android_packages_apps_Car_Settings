@@ -17,6 +17,7 @@
 package com.android.car.settings.system;
 
 import android.content.Context;
+import android.widget.ImageView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.IconTextLineItem;
@@ -30,7 +31,7 @@ class LegalInfoLineItem extends IconTextLineItem {
     private final Context mContext;
 
     public LegalInfoLineItem(Context context) {
-        super(context.getString(R.string.legal_information), R.drawable.ic_settings_about);
+        super(context.getString(R.string.legal_information));
         mContext = context;
     }
 
@@ -47,5 +48,10 @@ class LegalInfoLineItem extends IconTextLineItem {
     @Override
     public void onClick() {
         // TODO: link to a legal info page.
+    }
+
+    @Override
+    public void setIcon(ImageView iconView) {
+        iconView.setImageResource(R.drawable.ic_settings_about);
     }
 }

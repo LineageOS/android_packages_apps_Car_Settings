@@ -16,15 +16,23 @@
 package com.android.car.settings.sound;
 
 import android.car.Car;
+import android.car.CarNotConnectedException;
+import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.media.AudioManager;
+import android.media.IVolumeController;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.view.View;
+import android.os.RemoteException;
+import android.util.Log;
 
 import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
+
+import java.util.ArrayList;
 
 /**
  * Activity hosts sound related settings.
@@ -32,49 +40,57 @@ import com.android.car.settings.R;
 public class SoundSettingsActivity extends CarSettingActivity {
     private static final String TAG = "SoundSettingsActivity";
     private Car mCar;
+    private CarAudioManager mCarAudioManager;
+    private PagedListView mListView;
+    private TypedPagedListAdapter mPagedListAdapter;
 
-    private VolumeControllerPresenter mMediaVolumeControllerPresenter;
-    private VolumeControllerPresenter mRingVolumeControllerPresenter;
+    private final ArrayList<VolumeLineItem> mVolumeLineItems = new ArrayList<>();
+    private final SoundSettingsActivity.VolumnCallback
+            mVolumeCallback = new SoundSettingsActivity.VolumnCallback();
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.volume_list);
-
-        View mediaVolumeControllerView = findViewById(
-                R.id.media_volume);
-        View ringVolumeControllerView = findViewById(
-                R.id.ring_volume);
-        mMediaVolumeControllerPresenter = new VolumeControllerPresenter(
-                this /* context*/,
-                mediaVolumeControllerView,
-                AudioManager.STREAM_MUSIC,
-                null /* Uri sampleUri */,
-                R.string.media_volume_title,
-                com.android.internal.R.drawable.ic_audio_media);
-        mRingVolumeControllerPresenter = new VolumeControllerPresenter(
-                this /* context*/,
-                ringVolumeControllerView,
-                AudioManager.STREAM_RING,
-                null /* Uri sampleUri */,
-                R.string.ring_volume_title,
-                com.android.internal.R.drawable.ic_audio_ring_notif);
-        mCar = Car.createCar(this /* context */, mServiceConnection);
-    }
-
-    ServiceConnection mServiceConnection = new ServiceConnection() {
+    private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            mMediaVolumeControllerPresenter.onServiceConnected(mCar);
-            mRingVolumeControllerPresenter.onServiceConnected(mCar);
+            try {
+                mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
+                mCarAudioManager.setVolumeController(mVolumeCallback);
+            } catch (CarNotConnectedException e) {
+                Log.e(TAG, "Car is not connected!", e);
+            }
+            for (VolumeLineItem item : mVolumeLineItems) {
+                item.setCarAudioManager(mCarAudioManager);
+            }
+            mListView = (PagedListView) findViewById(R.id.list);
+            mListView.setDefaultItemDecoration(
+                    new PagedListView.Decoration(SoundSettingsActivity.this));
+            mListView.setDarkMode();
+            mPagedListAdapter = new TypedPagedListAdapter(
+                    SoundSettingsActivity.this /* context */, mVolumeLineItems);
+            mListView.setAdapter(mPagedListAdapter);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            mMediaVolumeControllerPresenter.onServiceDisconnected();
-            mRingVolumeControllerPresenter.onServiceDisconnected();
+            mCarAudioManager = null;
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.list);
+        mVolumeLineItems.add(new VolumeLineItem(
+                SoundSettingsActivity.this,
+                AudioManager.STREAM_MUSIC,
+                R.string.media_volume_title,
+                com.android.internal.R.drawable.ic_audio_media));
+        mVolumeLineItems.add(new VolumeLineItem(
+                SoundSettingsActivity.this,
+                AudioManager.STREAM_RING,
+                R.string.ring_volume_title,
+                com.android.internal.R.drawable.ic_audio_ring_notif));
+        mCar = Car.createCar(this /* context */, mServiceConnection);
+    }
 
     @Override
     public void onStart() {
@@ -85,8 +101,46 @@ public class SoundSettingsActivity extends CarSettingActivity {
     @Override
     public void onStop() {
         super.onStop();
-        mMediaVolumeControllerPresenter.stop();
-        mRingVolumeControllerPresenter.stop();
+        for (VolumeLineItem item : mVolumeLineItems) {
+            item.stop();
+        }
         mCar.disconnect();
+    }
+
+    /**
+     * The interface has a terrible name, it is actually a callback, so here name it accordingly.
+     */
+    private final class VolumnCallback extends IVolumeController.Stub {
+        @Override
+        public void displaySafeVolumeWarning(int flags) throws RemoteException {
+        }
+
+        @Override
+        public void volumeChanged(int streamType, int flags) throws RemoteException {
+            for (VolumeLineItem item : mVolumeLineItems) {
+                if (streamType == item.getStreamType()) {
+                    break;
+                }
+                return;
+            }
+            mPagedListAdapter.notifyDataSetChanged();
+        }
+
+        // this is not mute of this stream
+        @Override
+        public void masterMuteChanged(int flags) throws RemoteException {
+        }
+
+        @Override
+        public void setLayoutDirection(int layoutDirection) throws RemoteException {
+        }
+
+        @Override
+        public void dismiss() throws RemoteException {
+        }
+
+        @Override
+        public void setA11yMode(int mode) {
+        }
     }
 }

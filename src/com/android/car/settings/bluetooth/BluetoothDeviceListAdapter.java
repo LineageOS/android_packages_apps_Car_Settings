@@ -39,6 +39,7 @@ import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -160,7 +161,7 @@ public class BluetoothDeviceListAdapter
                 ((TextView) v).setText(R.string.bluetooth_preference_found_devices);
                 break;
             default:
-                v = layoutInflater.inflate(R.layout.list_item, parent, false);
+                v = layoutInflater.inflate(R.layout.icon_widget_line_item, parent, false);
         }
         return new ViewHolder(v);
     }
@@ -202,7 +203,8 @@ public class BluetoothDeviceListAdapter
                     Intent intent = new Intent(mContext, BluetoothDetailActivity.class);
                     intent.putExtra(
                             BluetoothDetailActivity.BT_DEVICE_KEY, bluetoothDevice.getDevice());
-                    mContext.startActivity(intent);
+                    mContext.startActivity(
+                            intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
                 });
         } else {
             holder.mActionButton.setVisibility(View.GONE);

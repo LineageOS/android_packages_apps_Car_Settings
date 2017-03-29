@@ -64,7 +64,7 @@ public abstract class SeekbarLineItem
     public void bindViewHolder(ViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
         viewHolder.seekBar.setMax(getMaxSeekbarValue());
-        viewHolder.seekBar.setProgress(getInitialSeekbarValue());
+        viewHolder.seekBar.setProgress(getSeekbarValue());
         viewHolder.seekBar.setOnSeekBarChangeListener(mOnSeekBarChangeListener);
     }
 
@@ -91,7 +91,7 @@ public abstract class SeekbarLineItem
         return null;
     }
 
-    public abstract int getInitialSeekbarValue();
+    public abstract int getSeekbarValue();
 
     public abstract int getMaxSeekbarValue();
 

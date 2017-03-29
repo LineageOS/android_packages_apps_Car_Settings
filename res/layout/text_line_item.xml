@@ -17,17 +17,18 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/LineItem"
+    android:layout_marginStart="@dimen/stream_card_keyline_1"
     android:orientation="vertical" >
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/medium_text_size"/>
+        style="@style/CarBody1" />
     <TextView
         android:id="@+id/desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/small_text_size"/>
+        android:layout_marginTop="@dimen/double_line_text_margin"
+        style="@style/CarBody2" />
 </LinearLayout>

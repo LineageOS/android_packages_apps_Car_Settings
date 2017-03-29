@@ -14,33 +14,42 @@
  * limitations under the License
  */
 
-package com.android.car.settings.system;
+package com.android.car.settings.applications;
 
+import android.annotation.NonNull;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.widget.ImageView;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.IconTextLineItem;
 
-
 /**
- * A LineItem that displays info about system.
+ * Represents an application in application settings page.
  */
-class AboutSystemLineItem extends IconTextLineItem {
-
+public class ApplicationLineItem extends IconTextLineItem {
+    private final ResolveInfo mResolveInfo;
     private final Context mContext;
+    private final PackageManager mPm;
 
-    public AboutSystemLineItem(Context context) {
-        super(context.getString(R.string.about_settings));
+    public ApplicationLineItem(
+            @NonNull Context context, PackageManager pm, ResolveInfo resolveInfo) {
+        super(resolveInfo.loadLabel(pm));
         mContext = context;
+        mPm = pm;
+        mResolveInfo = resolveInfo;
     }
 
+
     @Override
-    public CharSequence getDesc() {
-        return mContext.getString(R.string.about_summary, Build.VERSION.RELEASE);
+    public void onClick() {
+        Intent intent = new Intent(mContext, ApplicationDetailActivity.class);
+        intent.putExtra(
+                ApplicationDetailActivity.APPLICATION_INFO_KEY, mResolveInfo);
+        mContext.startActivity(
+                intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 
     @Override
@@ -49,13 +58,12 @@ class AboutSystemLineItem extends IconTextLineItem {
     }
 
     @Override
-    public void onClick() {
-        Intent intent = new Intent(mContext, AboutSettingsActivity.class);
-        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+    public CharSequence getDesc() {
+        return null;
     }
 
     @Override
     public void setIcon(ImageView iconView) {
-        iconView.setImageResource(R.drawable.ic_settings_about);
+        iconView.setImageDrawable(mResolveInfo.loadIcon(mPm));
     }
 }

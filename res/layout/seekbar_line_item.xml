@@ -17,14 +17,13 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    style="@style/LineItem"
     android:orientation="vertical" >
     <TextView
       android:id="@+id/title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="@dimen/medium_text_size" />
+      style="@style/CarBody2" />
     <SeekBar
       android:id="@+id/seekbar"
       android:layout_width="match_parent"

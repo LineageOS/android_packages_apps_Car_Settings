@@ -16,8 +16,6 @@
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
-import android.content.Context;
-import android.graphics.Canvas;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -81,7 +79,7 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
 
-        mDeviceListView.setDefaultItemDecoration(new ItemDecoration(this));
+        mDeviceListView.setDefaultItemDecoration(new PagedListView.Decoration(this));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mDeviceListView.setDarkMode();
@@ -187,18 +185,5 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
         if (mProgressBar != null) {
             mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
-    }
-
-    /**
-     * Default {@link com.android.car.view.PagedListView.Decoration} for the {@link PagedListView}
-     * that removes the dividing lines between items.
-     */
-    private static class ItemDecoration extends PagedListView.Decoration {
-        public ItemDecoration(Context context) {
-            super(context);
-        }
-
-        @Override
-        public void onDrawOver(Canvas c, RecyclerView parent, RecyclerView.State state) {}
     }
 }

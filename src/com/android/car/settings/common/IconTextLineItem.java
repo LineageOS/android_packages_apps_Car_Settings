@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.annotation.DrawableRes;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -33,14 +32,11 @@ import com.android.car.settings.R;
 public abstract class IconTextLineItem
         extends TypedPagedListAdapter.LineItem<IconTextLineItem.ViewHolder> {
     private final CharSequence mTitle;
-    @DrawableRes
-    private final int mIconRes;
 
     private View.OnClickListener mOnClickListener = (v) -> onClick();
 
-    public IconTextLineItem(CharSequence title, @DrawableRes int iconRes) {
+    public IconTextLineItem(CharSequence title) {
         mTitle = title;
-        mIconRes = iconRes;
     }
 
     @Override
@@ -51,7 +47,7 @@ public abstract class IconTextLineItem
     @Override
     public void bindViewHolder(ViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
-        viewHolder.iconView.setImageResource(mIconRes);
+        setIcon(viewHolder.iconView);
         CharSequence desc = getDesc();
         if (TextUtils.isEmpty(desc)) {
             viewHolder.descView.setVisibility(View.GONE);
@@ -60,19 +56,27 @@ public abstract class IconTextLineItem
             viewHolder.descView.setText(desc);
         }
         viewHolder.itemView.setOnClickListener(mOnClickListener);
-        viewHolder.itemView.setEnabled(isEnabled());
+        if (isEnabled()) {
+            viewHolder.itemView.setEnabled(true);
+            viewHolder.rightArrow.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.itemView.setEnabled(false);
+            viewHolder.rightArrow.setVisibility(View.GONE);
+        }
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
         final TextView descView;
         final ImageView iconView;
+        final ImageView rightArrow;
 
         public ViewHolder(View view) {
             super(view);
             iconView = (ImageView) view.findViewById(R.id.icon);
             titleView = (TextView) view.findViewById(R.id.title);
             descView = (TextView) view.findViewById(R.id.desc);
+            rightArrow = (ImageView) view.findViewById(R.id.right_chevron);
         }
     }
 
@@ -81,6 +85,8 @@ public abstract class IconTextLineItem
                 .inflate(R.layout.icon_text_line_item, parent, false);
         return new ViewHolder(v);
     }
+
+    public abstract void setIcon(ImageView iconView);
 
     public abstract void onClick();
 

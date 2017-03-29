@@ -17,9 +17,9 @@ package com.android.car.settings.common;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
+import com.android.car.settings.R;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to
@@ -47,6 +47,7 @@ public class CarSettingActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
                 onBackPressed();
+                overridePendingTransition(R.anim.trans_fade_in, R.anim.trans_right_out);
                 return true;
         }
         return super.onOptionsItemSelected(item);

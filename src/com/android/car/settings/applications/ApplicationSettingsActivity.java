@@ -15,32 +15,39 @@
  */
 package com.android.car.settings.applications;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import com.android.car.settings.common.CarSettingActivity;
-import com.android.car.settings.R;
-import com.android.car.settings.common.NoDividerItemDecoration;
-import com.android.car.view.PagedListView;
+
+import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.common.TypedPagedListAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Lists all installed applications and their summary.
  */
-public class ApplicationSettingsActivity extends CarSettingActivity {
-    private static final String TAG = "ApplicationSettingsActivity";
-
-    private PagedListView mListView;
-    private ApplicationListAdapter mAdapter;
+public class ApplicationSettingsActivity extends ListSettingsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.paged_list);
-
-        mListView = (PagedListView) findViewById(R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(this));
-        mListView.setDarkMode();
-        mAdapter = new ApplicationListAdapter(this /* context */, getPackageManager());
-        mListView.setAdapter(mAdapter);
     }
 
+    @Override
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        PackageManager pm = getPackageManager();
+        Intent intent= new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent,
+                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS
+                        | PackageManager.MATCH_DISABLED_COMPONENTS);
+        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+        for (ResolveInfo resolveInfo : resolveInfos) {
+            items.add(new ApplicationLineItem(this, pm, resolveInfo));
+        }
+        return items;
+    }
 }

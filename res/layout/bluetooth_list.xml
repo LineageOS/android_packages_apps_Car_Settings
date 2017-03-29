@@ -33,7 +33,8 @@
         <com.android.car.view.PagedListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/side_margin" />
         <TextView
             android:id="@+id/bt_message"
             android:layout_gravity="center"

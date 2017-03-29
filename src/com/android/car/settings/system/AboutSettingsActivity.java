@@ -19,9 +19,11 @@ package com.android.car.settings.system;
 import android.os.Build;
 
 import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.settings.common.SimpleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.view.PagedListView;
 import com.android.settingslib.DeviceInfoUtils;
 
 import java.util.ArrayList;
@@ -46,5 +48,10 @@ public class AboutSettingsActivity extends ListSettingsActivity {
         lineItems.add(new SimpleTextLineItem(
                 getText(R.string.build_number), Build.DISPLAY));
         return lineItems;
+    }
+
+    @Override
+    public PagedListView.Decoration getDecoration() {
+        return new NoDividerItemDecoration(this);
     }
 }

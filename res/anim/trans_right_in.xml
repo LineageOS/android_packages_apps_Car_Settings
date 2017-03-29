@@ -15,12 +15,10 @@
   ~ limitations under the License
   -->
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    <com.android.car.view.PagedListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</FrameLayout>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="100%p"
+        android:toXDelta="0"
+        android:interpolator="@android:interpolator/linear_out_slow_in"
+        android:duration="@android:integer/config_mediumAnimTime" />
+</set>

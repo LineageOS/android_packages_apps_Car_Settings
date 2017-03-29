@@ -34,6 +34,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.wifi.AccessPointListAdapter.ViewHolder;
 import com.android.car.view.PagedListView;
 import com.android.settingslib.wifi.AccessPoint;
@@ -123,7 +124,8 @@ public class AccessPointListAdapter
                 Bundle accessPointState = new Bundle();
                 mAccessPoint.saveWifiState(accessPointState);
                 intent.putExtras(accessPointState);
-                mContext.startActivity(intent);
+                mContext.startActivity(
+                        intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
             }
         }
     };
@@ -132,7 +134,7 @@ public class AccessPointListAdapter
     public AccessPointListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_item, parent, false);
+                .inflate(R.layout.icon_widget_line_item, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }

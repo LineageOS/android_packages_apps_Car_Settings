@@ -22,6 +22,7 @@ import android.provider.Settings;
 import android.text.format.DateFormat;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.TextLineItem;
 import com.android.settingslib.datetime.ZoneGetter;
 
@@ -53,6 +54,6 @@ class SetDateLineItem extends TextLineItem {
     @Override
     public void onClick() {
         Intent intent = new Intent(mContext /* context */, DatePickerActivity.class);
-        mContext.startActivity(intent);
+        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
     }
 }

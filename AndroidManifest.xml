@@ -61,6 +61,7 @@
         <activity
             android:name=".home.HomepageActivity"
             android:label="@string/settings_label"
+            android:theme="@style/CarSettingTheme"
             android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>

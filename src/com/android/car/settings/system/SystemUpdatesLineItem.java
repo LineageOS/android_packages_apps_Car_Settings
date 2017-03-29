@@ -17,6 +17,7 @@
 package com.android.car.settings.system;
 
 import android.content.Context;
+import android.widget.ImageView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.IconTextLineItem;
@@ -31,8 +32,7 @@ class SystemUpdatesLineItem extends IconTextLineItem {
     private final Context mContext;
 
     public SystemUpdatesLineItem(Context context) {
-        super(context.getString(
-                R.string.system_update_settings_list_item_title), R.drawable.ic_system_update);
+        super(context.getString(R.string.system_update_settings_list_item_title));
         mContext = context;
     }
 
@@ -49,5 +49,10 @@ class SystemUpdatesLineItem extends IconTextLineItem {
     @Override
     public void onClick() {
         // TODO: trigger system OTA flow
+    }
+
+    @Override
+    public void setIcon(ImageView iconView) {
+        iconView.setImageResource(R.drawable.ic_system_update);
     }
 }

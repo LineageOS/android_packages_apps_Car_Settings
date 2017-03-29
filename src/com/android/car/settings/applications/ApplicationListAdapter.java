@@ -27,8 +27,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
+import com.android.car.settings.common.AnimationUtil;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -85,7 +88,8 @@ public class ApplicationListAdapter
             Intent intent = new Intent(mContext, ApplicationDetailActivity.class);
             intent.putExtra(
                 ApplicationDetailActivity.APPLICATION_INFO_KEY, resolveInfo);
-            mContext.startActivity(intent);
+            mContext.startActivity(
+                    intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
         }
     };
 
@@ -93,7 +97,7 @@ public class ApplicationListAdapter
     public ApplicationListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_item, parent, false);
+                .inflate(R.layout.icon_widget_line_item, parent, false);
         return new ViewHolder(v);
     }
 

@@ -33,7 +33,7 @@ import com.android.car.settings.R;
  */
 public abstract class IconToggleLineItem
         extends TypedPagedListAdapter.LineItem<IconToggleLineItem.ViewHolder> {
-    private final Context mContext;
+    protected final Context mContext;
     private final CharSequence mTitle;
     protected IconUpdateListener mIconUpdateListener;
 
@@ -88,7 +88,7 @@ public abstract class IconToggleLineItem
 
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.tile_item, parent, false);
+                .inflate(R.layout.icon_toggle_line_item, parent, false);
         return new ViewHolder(v);
     }
 
