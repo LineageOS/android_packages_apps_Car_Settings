@@ -53,6 +53,6 @@
         style="@style/SettingIcon"
         android:layout_marginEnd="@dimen/stream_card_keyline_1"
         android:layout_alignParentEnd="true"
-        android:switchMinWidth="@dimen/icon_size"
+        android:switchMinWidth="@dimen/stream_button_icon_size"
         android:visibility="gone"/>
 </RelativeLayout>

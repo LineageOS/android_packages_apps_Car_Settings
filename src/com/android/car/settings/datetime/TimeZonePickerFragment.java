@@ -19,33 +19,42 @@ package com.android.car.settings.datetime;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import com.android.car.settings.common.CarSettingActivity;
+
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
 
 /**
  * Lists all time zone and its offset from GMT.
  */
-public class TimeZonePickerActivity extends CarSettingActivity implements
+public class TimeZonePickerFragment extends BaseFragment implements
         TimeZoneListAdapter.TimeZoneChangeListener {
 
+    public static TimeZonePickerFragment getInstance() {
+        TimeZonePickerFragment timeZonePickerFragment = new TimeZonePickerFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.date_time_set_timezone_title);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
+        timeZonePickerFragment.setArguments(bundle);
+        return timeZonePickerFragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        setContentView(R.layout.list);
-
-        PagedListView listView = (PagedListView) findViewById(android.R.id.list);
-        listView.setDefaultItemDecoration(new PagedListView.Decoration(this /* context */));
+        PagedListView listView = (PagedListView) getView().findViewById(R.id.list);
+        listView.setDefaultItemDecoration(new PagedListView.Decoration(getContext()));
         listView.setDarkMode();
         TimeZoneListAdapter adapter = new TimeZoneListAdapter(
-                this /* context */, this /* TimeZoneChangeListener */);
+                getContext(), this /* TimeZoneChangeListener */);
         listView.setAdapter(adapter);
     }
 
     @Override
     public void onTimeZoneChanged() {
-        sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
-        finish();
+        getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+        mFragmentController.goBack();
     }
 }

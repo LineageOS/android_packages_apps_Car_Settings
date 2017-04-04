@@ -15,29 +15,61 @@
  */
 package com.android.car.settings.common;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.android.car.settings.R;
+import com.android.car.settings.home.HomepageFragment;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to
  * previous activity.
  */
-public class CarSettingActivity extends Activity {
+public class CarSettingActivity extends AppCompatActivity implements
+        BaseFragment.FragmentController {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
+        setContentView(R.layout.app_compat_activity);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        HomepageFragment homepageFragment = HomepageFragment.getInstance();
+        homepageFragment.setFragmentController(this);
+        launchFragment(homepageFragment);
     }
 
-    /**
-     * Add logic to setup ActionBar here.
-     */
-    public void setupActionBar() {
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+    @Override
+    public void launchFragment(BaseFragment fragment) {
+        fragment.setFragmentController(this);
+        getFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(
+                        R.animator.trans_right_in ,
+                        R.animator.trans_left_out,
+                        R.animator.trans_left_in,
+                        R.animator.trans_right_out)
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void goBack() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     /**
@@ -47,7 +79,6 @@ public class CarSettingActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
                 onBackPressed();
-                overridePendingTransition(R.anim.trans_fade_in, R.anim.trans_right_out);
                 return true;
         }
         return super.onOptionsItemSelected(item);

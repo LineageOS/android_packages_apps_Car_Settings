@@ -18,7 +18,6 @@ package com.android.car.settings.applications;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
-import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -26,22 +25,18 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.content.res.Resources;
 import android.icu.text.ListFormatter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.car.settings.common.AnimationUtil;
-import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 
+import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.PermissionsSummaryHelper;
 import com.android.settingslib.applications.PermissionsSummaryHelper.PermissionsResultCallback;
@@ -54,47 +49,46 @@ import java.util.List;
  * Shows details about an application and action associated with that application,
  * like uninstall, forceStop.
  */
-public class ApplicationDetailActivity extends CarSettingActivity {
+public class ApplicationDetailFragment extends ListSettingsFragment {
     private static final String TAG = "AppDetailActivity";
-    /**
-     * Key for ResolvedInfo in bundle passed in.
-     */
-    public static final String APPLICATION_INFO_KEY = "APPLICATION_INFO_KEY";
+    public static final String EXTRA_RESOLVE_INFO = "extra_resolve_info";
 
     private ResolveInfo mResolveInfo;
-    private TextView mPermissionDetailView;
-    private View mPermissionContainer;
-    private Button mDisableToggle;
-    private Button mForceStopButton;
+
+    private TextView mDisableToggle;
+    private TextView mForceStopButton;
     private DevicePolicyManager mDpm;
 
+    public static ApplicationDetailFragment getInstance(ResolveInfo resolveInfo) {
+        ApplicationDetailFragment applicationDetailFragment = new ApplicationDetailFragment();
+        Bundle bundle = ListSettingsFragment.getBundle();
+        bundle.putParcelable(EXTRA_RESOLVE_INFO, resolveInfo);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.applications_settings);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        applicationDetailFragment.setArguments(bundle);
+        return applicationDetailFragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.application_details);
-        if (getIntent() != null && getIntent().getExtras() != null) {
-            mResolveInfo = getIntent().getExtras().getParcelable(APPLICATION_INFO_KEY);
-        }
+        mResolveInfo = getArguments().getParcelable(EXTRA_RESOLVE_INFO);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         if (mResolveInfo == null) {
             Log.w(TAG, "No application info set.");
             return;
         }
 
-        mDisableToggle = (Button) findViewById(R.id.disable_toggle);
-        mForceStopButton = (Button) findViewById(R.id.force_stop);
+        mDisableToggle = (TextView) getActivity().findViewById(R.id.action_button1);
+        mForceStopButton = (TextView) getActivity().findViewById(R.id.action_button2);
+        mForceStopButton.setText(R.string.force_stop);
+        mForceStopButton.setVisibility(View.VISIBLE);
 
-        mPermissionDetailView = (TextView) findViewById(R.id.permission_detail);
-        mPermissionContainer = findViewById(R.id.permission_container);
-
-        ImageView icon = (ImageView) findViewById(R.id.icon);
-        icon.setImageDrawable(mResolveInfo.loadIcon(getPackageManager()));
-
-        TextView appName = (TextView) findViewById(R.id.title);
-        appName.setText(mResolveInfo.loadLabel(getPackageManager()));
-
-        PermissionsSummaryHelper.getPermissionSummary(this /* context */,
-                mResolveInfo.activityInfo.packageName, mPermissionCallback);
-        mDpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+        mDpm = (DevicePolicyManager) getContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
         updateForceStopButton();
         mForceStopButton.setOnClickListener(v -> {
             forceStopPackage(mResolveInfo.activityInfo.packageName);
@@ -102,10 +96,23 @@ public class ApplicationDetailActivity extends CarSettingActivity {
         updateDisableable();
     }
 
+    @Override
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+        items.add(new ApplicationLineItem(
+                getContext(),
+                getContext().getPackageManager(),
+                mResolveInfo,
+                null /* fragmentController */,
+                false));
+        items.add(new ApplicationPermissionLineItem(getContext(), mResolveInfo));
+        return items;
+    }
+
     // fetch the latest ApplicationInfo instead of caching it so it reflects the current state.
     private ApplicationInfo getAppInfo() {
         try {
-            return getPackageManager().getApplicationInfo(
+            return getContext().getPackageManager().getApplicationInfo(
                     mResolveInfo.activityInfo.packageName, 0 /* flag */);
         } catch (PackageManager.NameNotFoundException e) {
             Log.e(TAG, "incorrect packagename: " + mResolveInfo.activityInfo.packageName, e);
@@ -115,7 +122,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
 
     private PackageInfo getPackageInfo() {
         try {
-            return getPackageManager().getPackageInfo(
+            return getContext().getPackageManager().getPackageInfo(
                     mResolveInfo.activityInfo.packageName, 0 /* flag */);
         } catch (PackageManager.NameNotFoundException e) {
             Log.e(TAG, "incorrect packagename: " + mResolveInfo.activityInfo.packageName, e);
@@ -128,7 +135,8 @@ public class ApplicationDetailActivity extends CarSettingActivity {
         boolean disabled = false;
         // Try to prevent the user from bricking their phone
         // by not allowing disabling of apps in the system.
-        if (Utils.isSystemPackage(getResources(), getPackageManager(), getPackageInfo())) {
+        if (Utils.isSystemPackage(
+                getResources(), getContext().getPackageManager(), getPackageInfo())) {
             // Disable button for core system applications.
             mDisableToggle.setText(R.string.disable_text);
             disabled = false;
@@ -146,7 +154,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
                 ? PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
                 : PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER;
         mDisableToggle.setOnClickListener(v -> {
-            getPackageManager().setApplicationEnabledSetting(
+            getContext().getPackageManager().setApplicationEnabledSetting(
                     mResolveInfo.activityInfo.packageName,
                     enableState,
                     0);
@@ -160,7 +168,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
     }
 
     private void forceStopPackage(String pkgName) {
-        ActivityManager am = (ActivityManager) getSystemService(
+        ActivityManager am = (ActivityManager) getContext().getSystemService(
                 Context.ACTIVITY_SERVICE);
         Log.d(TAG, "Stopping package " + pkgName);
         am.forceStopPackage(pkgName);
@@ -197,7 +205,7 @@ public class ApplicationDetailActivity extends CarSettingActivity {
                 Log.d(TAG, "Sending broadcast to query restart for "
                         + mResolveInfo.activityInfo.packageName);
             }
-            sendOrderedBroadcastAsUser(intent, UserHandle.CURRENT, null,
+            getActivity().sendOrderedBroadcastAsUser(intent, UserHandle.CURRENT, null,
                     mCheckKillProcessesReceiver, null, Activity.RESULT_CANCELED, null, null);
         }
     }
@@ -212,53 +220,6 @@ public class ApplicationDetailActivity extends CarSettingActivity {
                                 mResolveInfo.activityInfo.packageName, enabled));
             }
             mForceStopButton.setEnabled(enabled);
-        }
-    };
-
-    private final PermissionsResultCallback mPermissionCallback
-            = new PermissionsResultCallback() {
-        @Override
-        public void onPermissionSummaryResult(int standardGrantedPermissionCount,
-                int requestedPermissionCount, int additionalGrantedPermissionCount,
-                List<CharSequence> grantedGroupLabels) {
-            Resources res = getResources();
-            CharSequence summary = null;
-
-            if (requestedPermissionCount == 0) {
-                summary = res.getString(
-                        R.string.runtime_permissions_summary_no_permissions_requested);
-                mPermissionContainer.setEnabled(false);
-                mPermissionContainer.setOnClickListener(null);
-            } else {
-                ArrayList<CharSequence> list = new ArrayList<>(grantedGroupLabels);
-                if (additionalGrantedPermissionCount > 0) {
-                    // N additional permissions.
-                    list.add(res.getQuantityString(
-                            R.plurals.runtime_permissions_additional_count,
-                            additionalGrantedPermissionCount, additionalGrantedPermissionCount));
-                }
-                if (list.size() == 0) {
-                    summary = res.getString(
-                            R.string.runtime_permissions_summary_no_permissions_granted);
-                } else {
-                    summary = ListFormatter.getInstance().format(list);
-                }
-                mPermissionContainer.setEnabled(true);
-                mPermissionContainer.setOnClickListener(mPermissionClickedListener);
-            }
-            mPermissionDetailView.setText(summary);
-        }
-    };
-
-    private OnClickListener mPermissionClickedListener = (v) -> {
-        // start new activity to manage app permissions
-        Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
-        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
-        try {
-            startActivity(intent, AnimationUtil.slideInFromRightOption(
-                    ApplicationDetailActivity.this).toBundle());
-        } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
         }
     };
 }

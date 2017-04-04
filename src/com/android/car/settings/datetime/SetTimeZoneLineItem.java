@@ -17,11 +17,10 @@
 package com.android.car.settings.datetime;
 
 import android.content.Context;
-import android.content.Intent;
 import android.provider.Settings;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.AnimationUtil;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.TextLineItem;
 import com.android.settingslib.datetime.ZoneGetter;
 
@@ -31,12 +30,13 @@ import java.util.Calendar;
  * A LineItem that displays and sets time zone.
  */
 class SetTimeZoneLineItem extends TextLineItem {
+    private final Context mContext;
+    private final BaseFragment.FragmentController mFragmentController;
 
-    private Context mContext;
-
-    public SetTimeZoneLineItem(Context context) {
+    public SetTimeZoneLineItem(Context context, BaseFragment.FragmentController fragmentController) {
         super(context.getString(R.string.date_time_set_timezone));
         mContext = context;
+        mFragmentController = fragmentController;
     }
 
     @Override
@@ -53,7 +53,6 @@ class SetTimeZoneLineItem extends TextLineItem {
 
     @Override
     public void onClick() {
-        Intent intent = new Intent(mContext, TimeZonePickerActivity.class);
-        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+        mFragmentController.launchFragment(TimeZonePickerFragment.getInstance());
     }
 }

@@ -20,7 +20,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -38,8 +37,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.view.PagedListView;
-import com.android.car.settings.common.AnimationUtil;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -76,6 +75,7 @@ public class BluetoothDeviceListAdapter
     private final LocalBluetoothManager mLocalManager;
     private final CachedBluetoothDeviceManager mDeviceManager;
     private final Context mContext;
+    private final BaseFragment.FragmentController mFragmentController;
 
     /* Talk-back descriptions for various BT icons */
     public final String mComputerDescription;
@@ -110,9 +110,12 @@ public class BluetoothDeviceListAdapter
     }
 
     public BluetoothDeviceListAdapter(
-            Context context, LocalBluetoothManager localBluetoothManager) {
+            Context context,
+            LocalBluetoothManager localBluetoothManager,
+            BaseFragment.FragmentController fragmentController) {
         mContext = context;
         mLocalManager = localBluetoothManager;
+        mFragmentController = fragmentController;
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
         mDeviceManager = mLocalManager.getCachedDeviceManager();
 
@@ -153,12 +156,14 @@ public class BluetoothDeviceListAdapter
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
             case BONDED_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.in_list_header, parent, false);
-                ((TextView) v).setText(R.string.bluetooth_preference_paired_devices);
+                v = layoutInflater.inflate(R.layout.text_line_item, parent, false);
+                ((TextView) v.findViewById(R.id.title)).setText(
+                        R.string.bluetooth_preference_paired_devices);
                 break;
             case AVAILABLE_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.in_list_header, parent, false);
-                ((TextView) v).setText(R.string.bluetooth_preference_found_devices);
+                v = layoutInflater.inflate(R.layout.text_line_item, parent, false);
+                ((TextView) v.findViewById(R.id.title)).setText(
+                        R.string.bluetooth_preference_found_devices);
                 break;
             default:
                 v = layoutInflater.inflate(R.layout.icon_widget_line_item, parent, false);
@@ -200,11 +205,8 @@ public class BluetoothDeviceListAdapter
         if (BluetoothDeviceFilter.BONDED_DEVICE_FILTER.matches(bluetoothDevice.getDevice())) {
             holder.mActionButton.setVisibility(View.VISIBLE);
             holder.mActionButton.setOnClickListener(v -> {
-                    Intent intent = new Intent(mContext, BluetoothDetailActivity.class);
-                    intent.putExtra(
-                            BluetoothDetailActivity.BT_DEVICE_KEY, bluetoothDevice.getDevice());
-                    mContext.startActivity(
-                            intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+                mFragmentController.launchFragment(
+                        BluetoothDetailFragment.getInstance(bluetoothDevice.getDevice()));
                 });
         } else {
             holder.mActionButton.setVisibility(View.GONE);

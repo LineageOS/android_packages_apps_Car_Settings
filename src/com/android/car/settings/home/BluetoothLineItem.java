@@ -20,11 +20,10 @@ import android.annotation.DrawableRes;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
-import android.content.Intent;
 
 import com.android.car.settings.R;
-import com.android.car.settings.bluetooth.BluetoothSettingsActivity;
-import com.android.car.settings.common.AnimationUtil;
+import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.IconToggleLineItem;
 
 
@@ -33,9 +32,11 @@ import com.android.car.settings.common.IconToggleLineItem;
  */
 public class BluetoothLineItem extends IconToggleLineItem {
     private BluetoothAdapter mBluetoothAdapter;
+    private BaseFragment.FragmentController mFragmentController;
 
-    public BluetoothLineItem(Context context) {
+    public BluetoothLineItem(Context context, BaseFragment.FragmentController fragmentController) {
         super(context.getText(R.string.bluetooth_settings), context);
+        mFragmentController = fragmentController;
         mBluetoothAdapter =
                 ((BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE))
                         .getAdapter();
@@ -52,8 +53,7 @@ public class BluetoothLineItem extends IconToggleLineItem {
 
     @Override
     public void onClicked() {
-        Intent intent = new Intent(mContext, BluetoothSettingsActivity.class);
-        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+        mFragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
     }
 
     @Override

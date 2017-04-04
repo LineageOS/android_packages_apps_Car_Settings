@@ -19,13 +19,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
 
@@ -36,10 +37,10 @@ import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
- * Activity to host Bluetooth related preferences.
+ * Hosts Bluetooth related preferences.
  */
-public class BluetoothSettingsActivity extends CarSettingActivity implements BluetoothCallback {
-    private static final String TAG = "BluetoothSettingsActivity";
+public class BluetoothSettingsFragment extends BaseFragment implements BluetoothCallback {
+    private static final String TAG = "BluetoothSettingsFragment";
 
     private Switch mBluetoothSwitch;
     private ProgressBar mProgressBar;
@@ -50,13 +51,20 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
     private LocalBluetoothAdapter mLocalAdapter;
     private LocalBluetoothManager mLocalManager;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.bluetooth_list);
+    public static BluetoothSettingsFragment getInstance() {
+        BluetoothSettingsFragment bluetoothSettingsFragment = new BluetoothSettingsFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.bluetooth_settings);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.bluetooth_list);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_toggle);
+        bluetoothSettingsFragment.setArguments(bundle);
+        return bluetoothSettingsFragment;
+    }
 
-        ((TextView) findViewById(R.id.title)).setText(R.string.bluetooth_settings);
-        mBluetoothSwitch = (Switch) findViewById(R.id.toggle_switch);
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mBluetoothSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
         mBluetoothSwitch.setOnClickListener(v -> {
                 if (mBluetoothSwitch.isChecked()) {
                     // bt scan was turned on at state listener, when state is on.
@@ -67,31 +75,25 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
                 }
             });
 
-        mProgressBar = (ProgressBar) findViewById(R.id.bt_search_progress);
-        mDeviceListView = (PagedListView) findViewById(R.id.list);
-        mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
-        mMessageView = (TextView) findViewById(R.id.bt_message);
+        mProgressBar = (ProgressBar) getView().findViewById(R.id.bt_search_progress);
+        mDeviceListView = (PagedListView) getView().findViewById(R.id.list);
+        mViewSwitcher = (ViewSwitcher) getView().findViewById(R.id.view_switcher);
+        mMessageView = (TextView) getView().findViewById(R.id.bt_message);
 
-        mLocalManager = LocalBluetoothManager.getInstance(this /* context */ , null /* listener */);
+        mLocalManager = LocalBluetoothManager.getInstance(getContext(), null /* listener */);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
             return;
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
 
-        mDeviceListView.setDefaultItemDecoration(new PagedListView.Decoration(this));
+        mDeviceListView.setDefaultItemDecoration(new PagedListView.Decoration(getContext()));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mDeviceListView.setDarkMode();
-        mDeviceAdapter = new BluetoothDeviceListAdapter(this /* context */ , mLocalManager);
+        mDeviceAdapter = new BluetoothDeviceListAdapter(
+                getContext() , mLocalManager, mFragmentController);
         mDeviceListView.setAdapter(mDeviceAdapter);
-    }
-
-    @Override
-    public void setupActionBar() {
-        super.setupActionBar();
-        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
-        getActionBar().setDisplayShowCustomEnabled(true);
     }
 
     @Override
@@ -100,7 +102,7 @@ public class BluetoothSettingsActivity extends CarSettingActivity implements Blu
         if (mLocalManager == null) {
             return;
         }
-        mLocalManager.setForegroundActivity(this);
+        mLocalManager.setForegroundActivity(getActivity());
         mLocalManager.getEventManager().registerCallback(this);
         mBluetoothSwitch.setChecked(mLocalAdapter.isEnabled());
         if (mLocalAdapter.isEnabled()) {
