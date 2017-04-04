@@ -20,6 +20,7 @@ import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.IVolumeController;
 import android.os.Bundle;
@@ -51,19 +52,38 @@ public class SoundSettingsActivity extends CarSettingActivity {
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
+            AudioAttributes naviAudioAttributes;
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
                 mCarAudioManager.setVolumeController(mVolumeCallback);
+                naviAudioAttributes = mCarAudioManager.getAudioAttributesForCarUsage(
+                        mCarAudioManager.CAR_AUDIO_USAGE_NAVIGATION_GUIDANCE);
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car is not connected!", e);
-            }
-            for (VolumeLineItem item : mVolumeLineItems) {
-                item.setCarAudioManager(mCarAudioManager);
+                return;
             }
             mListView = (PagedListView) findViewById(R.id.list);
             mListView.setDefaultItemDecoration(
                     new PagedListView.Decoration(SoundSettingsActivity.this));
             mListView.setDarkMode();
+            mVolumeLineItems.add(new VolumeLineItem(
+                    SoundSettingsActivity.this,
+                    mCarAudioManager,
+                    AudioManager.STREAM_MUSIC,
+                    R.string.media_volume_title,
+                    com.android.internal.R.drawable.ic_audio_media));
+            mVolumeLineItems.add(new VolumeLineItem(
+                    SoundSettingsActivity.this,
+                    mCarAudioManager,
+                    AudioManager.STREAM_RING,
+                    R.string.ring_volume_title,
+                    com.android.internal.R.drawable.ic_audio_ring_notif));
+            mVolumeLineItems.add(new VolumeLineItem(
+                    SoundSettingsActivity.this,
+                    mCarAudioManager,
+                    naviAudioAttributes.getVolumeControlStream(),
+                    R.string.navi_volume_title,
+                    R.drawable.ic_audio_navi));
             mPagedListAdapter = new TypedPagedListAdapter(
                     SoundSettingsActivity.this /* context */, mVolumeLineItems);
             mListView.setAdapter(mPagedListAdapter);
@@ -79,16 +99,6 @@ public class SoundSettingsActivity extends CarSettingActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
-        mVolumeLineItems.add(new VolumeLineItem(
-                SoundSettingsActivity.this,
-                AudioManager.STREAM_MUSIC,
-                R.string.media_volume_title,
-                com.android.internal.R.drawable.ic_audio_media));
-        mVolumeLineItems.add(new VolumeLineItem(
-                SoundSettingsActivity.this,
-                AudioManager.STREAM_RING,
-                R.string.ring_volume_title,
-                com.android.internal.R.drawable.ic_audio_ring_notif));
         mCar = Car.createCar(this /* context */, mServiceConnection);
     }
 

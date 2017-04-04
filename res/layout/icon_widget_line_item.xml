@@ -28,17 +28,18 @@
         android:orientation="vertical"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/stream_card_keyline_3" >
+        android:layout_marginStart="@dimen/stream_card_keyline_3"
+        android:layout_marginEnd="@dimen/stream_card_keyline_3" >
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/CarBody1" />
+            style="@style/CarBody1.SingleLine" />
         <TextView
             android:id="@+id/desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/CarBody2"
+            style="@style/CarBody2.SingleLine"
             android:visibility="gone" />
     </LinearLayout>
     <ImageButton

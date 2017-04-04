@@ -44,8 +44,13 @@ public class VolumeLineItem extends SeekbarLineItem {
     private CarAudioManager mCarAudioManager;
 
     public VolumeLineItem(
-            Context context, int streamType, int titleStringResId, int iconResId) {
+            Context context,
+            CarAudioManager carAudioManager,
+            int streamType,
+            int titleStringResId,
+            int iconResId) {
         super(context.getText(titleStringResId));
+        mCarAudioManager = carAudioManager;
         this.streamType = streamType;
         Uri ringtoneUri;
 
@@ -67,10 +72,6 @@ public class VolumeLineItem extends SeekbarLineItem {
 
     public int getStreamType() {
         return streamType;
-    }
-
-    public void setCarAudioManager(CarAudioManager carAudioManager) {
-        mCarAudioManager = carAudioManager;
     }
 
     public void stop() {

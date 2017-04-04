@@ -22,6 +22,16 @@
         <item name="android:gravity">center_vertical</item>
     </style>
 
+    <style name="CarBody1.SingleLine" parent="@style/CarBody1">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <style name="CarBody2.SingleLine" parent="@style/CarBody2">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
     <attr name="WifiSignalColor" format="reference" />
     <style name="TextAppearance.Medium" parent="@android:style/TextAppearance.Material.Medium" >
         <item name="android:textSize">@dimen/medium_text_size</item>

@@ -15,14 +15,10 @@
  */
 package com.android.car.settings.wifi;
 
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Canvas;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -30,7 +26,6 @@ import android.widget.ViewSwitcher;
 
 import android.annotation.StringRes;
 
-import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
@@ -49,10 +44,8 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
     private Switch mWifiSwitch;
     private ProgressBar mProgressBar;
     private PagedListView mListView;
-    private LinearLayout mWifiListContainer;
     private TextView mMessageView;
     private ViewSwitcher mViewSwitcher;
-    private TextView mAddWifiTextView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,14 +58,6 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
         mListView = (PagedListView) findViewById(R.id.list);
         mMessageView = (TextView) findViewById(R.id.message);
         mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
-        mAddWifiTextView = (TextView) findViewById(R.id.add_wifi);
-        mWifiListContainer = (LinearLayout) findViewById(R.id.wifi_list_container);
-        mAddWifiTextView.setOnClickListener(v -> {
-            Intent intent = new Intent(this /* context */, AddWifiActivity.class);
-            intent.putExtra(AddWifiActivity.ADD_NETWORK_MODE, true);
-            startActivity(intent, AnimationUtil.slideInFromRightOption(
-                    WifiSettingsActivity.this).toBundle());
-        });
         setupWifiSwitch();
         if (mCarWifiManager.isWifiEnabled()) {
             showList();
@@ -156,7 +141,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
     }
 
     private void showList() {
-        if (mViewSwitcher.getCurrentView() != mWifiListContainer) {
+        if (mViewSwitcher.getCurrentView() != mListView) {
             mViewSwitcher.showPrevious();
         }
     }
