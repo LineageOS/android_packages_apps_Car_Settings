@@ -66,6 +66,11 @@ public class ApplicationLineItem extends IconTextLineItem {
 
     @Override
     public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public boolean isExpandable() {
         return mClickable;
     }
 

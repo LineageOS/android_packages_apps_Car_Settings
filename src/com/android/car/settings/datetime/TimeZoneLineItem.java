@@ -16,48 +16,64 @@
 
 package com.android.car.settings.datetime;
 
+import android.app.AlarmManager;
 import android.content.Context;
 import android.provider.Settings;
-import android.text.format.DateFormat;
 
+import android.annotation.NonNull;
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.TextLineItem;
 import com.android.settingslib.datetime.ZoneGetter;
 
-import java.util.Calendar;
+import java.util.Map;
 
 /**
- * A LineItem that displays and sets system time.
+ * A LineItem that displays available time zone.
  */
-class SetTimeLineItem extends TextLineItem {
+class TimeZoneLineItem extends TextLineItem {
     private final Context mContext;
-    private final BaseFragment.FragmentController mFragmentController;
+    private final TimeZoneChangeListener mListener;
+    private final Map<String, Object> mTimeZone;
 
-    public SetTimeLineItem(Context context, BaseFragment.FragmentController fragmentController) {
-        super(context.getString(R.string.date_time_set_time));
+    public interface TimeZoneChangeListener {
+        void onTimeZoneChanged();
+    }
+
+    public TimeZoneLineItem(
+            Context context,
+            @NonNull TimeZoneChangeListener listener,
+            Map<String, Object> timeZone) {
+        super((CharSequence) timeZone.get(ZoneGetter.KEY_DISPLAYNAME));
         mContext = context;
-        mFragmentController = fragmentController;
+        mListener = listener;
+        mTimeZone = timeZone;
     }
 
     @Override
     public CharSequence getDesc() {
-        return DateFormat.getTimeFormat(mContext).format(Calendar.getInstance().getTime());
+        return (CharSequence) mTimeZone.get(ZoneGetter.KEY_GMT);
     }
 
     @Override
     public boolean isEnabled() {
         return Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME, 0) <= 0;
+                Settings.Global.AUTO_TIME_ZONE, 0) <= 0;
     }
 
     @Override
     public boolean isExpandable() {
+        return false;
+    }
+
+    @Override
+    public boolean isClickable() {
         return true;
     }
 
     @Override
     public void onClick() {
-        mFragmentController.launchFragment(TimePickerFragment.getInstance());
+        AlarmManager am = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+        am.setTimeZone((String) mTimeZone.get(ZoneGetter.KEY_ID));
+        mListener.onTimeZoneChanged();
     }
 }

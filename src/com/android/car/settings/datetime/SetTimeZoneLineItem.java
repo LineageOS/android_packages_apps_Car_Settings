@@ -52,6 +52,16 @@ class SetTimeZoneLineItem extends TextLineItem {
     }
 
     @Override
+    public boolean isExpandable() {
+        return false;
+    }
+
+    @Override
+    public boolean isClickable() {
+        return true;
+    }
+
+    @Override
     public void onClick() {
         mFragmentController.launchFragment(TimeZonePickerFragment.getInstance());
     }

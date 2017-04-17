@@ -108,6 +108,8 @@ public class VolumeLineItem extends SeekbarLineItem {
                 Log.w(TAG, "CarAudiomanager not available, Car is not connected!");
                 return;
             }
+            // the flag is a request to play sound, depend on implementation, it may not play
+            // anything, the listener in SoundSettings class will play audible feedback.
             mCarAudioManager.setStreamVolume(streamType, progress, AudioManager.FLAG_PLAY_SOUND);
             playAudioFeedback();
         } catch (CarNotConnectedException e) {

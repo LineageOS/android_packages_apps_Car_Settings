@@ -18,17 +18,17 @@
     <style name="LineItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_item_height</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="CarBody1.SingleLine" parent="@style/CarBody1">
         <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_body_1</item>
         <item name="android:ellipsize">marquee</item>
     </style>
 
     <style name="CarBody2.SingleLine" parent="@style/CarBody2">
         <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/text_body_2</item>
         <item name="android:ellipsize">end</item>
     </style>
 
@@ -43,7 +43,6 @@
     </style>
 
     <style name="ActionBarStyle.Car" parent="@style/Theme.AppCompat">
-        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
         <item name="actionBarSize">@dimen/lens_header_height</item>
     </style>
 
@@ -58,5 +57,21 @@
         <item name="android:layout_centerVertical">true</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="SettingIcon.ActionBar" parent="SettingIcon">
+        <item name="android:tint">@color/car_teal_700</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="SettingSwitch">
+        <item name="android:layout_width">@dimen/stream_button_icon_size</item>
+        <item name="android:layout_height">@dimen/stream_button_icon_size</item>
+        <item name="android:paddingEnd">@dimen/switch_end_padding</item>
+        <item name="android:scaleX">1.5</item>
+        <item name="android:scaleY">1.5</item>
+        <!--<item name="android:thumb">@drawable/ic_toggle_thumb</item>-->
+        <!--<item name="android:track">@drawable/ic_toggle_track</item>-->
     </style>
 </resources>

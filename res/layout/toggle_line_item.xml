@@ -42,8 +42,14 @@
     </LinearLayout>
     <Switch
         android:id="@+id/toggle_switch"
-        style="@style/SettingIcon"
+        style="@style/SettingSwitch"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/stream_card_keyline_1"
-        android:switchMinWidth="@dimen/stream_button_icon_size"/>
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/stream_card_keyline_1"/>
+    <View
+        android:id="@+id/line_item_divider"
+        android:layout_alignParentBottom="true"
+        android:background="@color/car_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_divider_height" />
 </com.android.car.settings.common.InterceptTouchRelativeLayout>

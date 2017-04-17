@@ -20,36 +20,43 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.view.PagedListView;
+import com.android.settingslib.datetime.ZoneGetter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Lists all time zone and its offset from GMT.
  */
-public class TimeZonePickerFragment extends BaseFragment implements
-        TimeZoneListAdapter.TimeZoneChangeListener {
+public class TimeZonePickerFragment extends ListSettingsFragment implements
+        TimeZoneLineItem.TimeZoneChangeListener {
+    private List<Map<String, Object>> mZoneList;
 
     public static TimeZonePickerFragment getInstance() {
         TimeZonePickerFragment timeZonePickerFragment = new TimeZonePickerFragment();
-        Bundle bundle = BaseFragment.getBundle();
+        Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.date_time_set_timezone_title);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
         timeZonePickerFragment.setArguments(bundle);
         return timeZonePickerFragment;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        mZoneList = ZoneGetter.getZonesList(getContext());
         super.onActivityCreated(savedInstanceState);
+    }
 
-        PagedListView listView = (PagedListView) getView().findViewById(R.id.list);
-        listView.setDefaultItemDecoration(new PagedListView.Decoration(getContext()));
-        listView.setDarkMode();
-        TimeZoneListAdapter adapter = new TimeZoneListAdapter(
-                getContext(), this /* TimeZoneChangeListener */);
-        listView.setAdapter(adapter);
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        for (Map<String, Object> zone : mZoneList) {
+            lineItems.add(new TimeZoneLineItem(getContext(), this, zone));
+        }
+        return lineItems;
     }
 
     @Override

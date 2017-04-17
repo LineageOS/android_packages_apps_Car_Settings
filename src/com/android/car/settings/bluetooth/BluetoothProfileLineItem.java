@@ -21,7 +21,7 @@ import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
-import com.android.car.settings.common.ToggleLineItem;
+import com.android.car.settings.common.CheckBoxLineItem;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
@@ -32,10 +32,10 @@ import com.android.settingslib.bluetooth.PbapServerProfile;
 /**
  * Represents a line item for a Bluetooth mProfile.
  */
-public class BluetoothProfileLineItem extends ToggleLineItem {
+public class BluetoothProfileLineItem extends CheckBoxLineItem {
     private final LocalBluetoothProfile mProfile;
     private final CachedBluetoothDevice mCachedDevice;
-    private ToggleLineItemViewHolder mViewHolder;
+    private CheckboxLineItemViewHolder mViewHolder;
     private DataChangedListener mDataChangedListener;
 
     public interface DataChangedListener {
@@ -75,14 +75,19 @@ public class BluetoothProfileLineItem extends ToggleLineItem {
     }
 
     @Override
-    public void bindViewHolder(ToggleLineItemViewHolder holder) {
-        super.bindViewHolder(holder);
-        mViewHolder = holder;
+    public boolean isExpandable() {
+        return false;
     }
 
     @Override
-    public CharSequence getDesc() {
-        return null;
+    public boolean isEnabled() {
+        return true;
+    }
+
+    @Override
+    public void bindViewHolder(CheckboxLineItemViewHolder holder) {
+        super.bindViewHolder(holder);
+        mViewHolder = holder;
     }
 
     @Override

@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.android.car.settings.R;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
@@ -85,7 +86,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
         // Call super after the wifiLineItem and BluetoothLineItem are setup, because
         // those are needed in super.onCreate().
         super.onActivityCreated(savedInstanceState);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getActivity().findViewById(R.id.action_bar_icon_container).setVisibility(View.GONE);
     }
 
     @Override

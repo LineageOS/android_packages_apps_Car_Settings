@@ -16,7 +16,6 @@
 
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/dashboard_tile"
         style="@style/LineItem" >
 
     <ImageView
@@ -50,9 +49,14 @@
     </LinearLayout>
     <Switch
         android:id="@+id/toggle_switch"
-        style="@style/SettingIcon"
-        android:layout_marginEnd="@dimen/stream_card_keyline_1"
+        style="@style/SettingSwitch"
         android:layout_alignParentEnd="true"
-        android:switchMinWidth="@dimen/stream_button_icon_size"
-        android:visibility="gone"/>
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/stream_card_keyline_1" />
+    <View
+        android:id="@+id/line_item_divider"
+        android:layout_alignParentBottom="true"
+        android:background="@color/car_list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_divider_height" />
 </RelativeLayout>

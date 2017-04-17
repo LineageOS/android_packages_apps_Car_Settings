@@ -20,7 +20,6 @@ import android.os.Build;
 import android.os.Bundle;
 
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.settings.common.SimpleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.settings.R;
@@ -57,10 +56,5 @@ public class AboutSettingsFragment extends ListSettingsFragment {
         lineItems.add(new SimpleTextLineItem(
                 getText(R.string.build_number), Build.DISPLAY));
         return lineItems;
-    }
-
-    @Override
-    public PagedListView.Decoration getDecoration() {
-        return new NoDividerItemDecoration(getContext());
     }
 }

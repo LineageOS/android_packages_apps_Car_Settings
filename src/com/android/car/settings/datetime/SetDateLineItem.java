@@ -51,6 +51,11 @@ class SetDateLineItem extends TextLineItem {
     }
 
     @Override
+    public boolean isExpandable() {
+        return true;
+    }
+
+    @Override
     public void onClick() {
         mFragmentController.launchFragment(DatePickerFragment.getInstance());
     }

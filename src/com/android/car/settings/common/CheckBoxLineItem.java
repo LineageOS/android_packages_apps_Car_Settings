@@ -21,60 +21,53 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
+
 import com.android.car.settings.R;
 
 /**
- * Contains logic for a line item represents title text, description text and a checkbox widget.
+ * Contains logic for a line item represents title text and a checkbox.
  */
-public abstract class ToggleLineItem
-        extends TypedPagedListAdapter.LineItem<ToggleLineItem.ToggleLineItemViewHolder> {
+public abstract class CheckBoxLineItem
+        extends TypedPagedListAdapter.LineItem<CheckBoxLineItem.CheckboxLineItemViewHolder> {
     private final CharSequence mTitle;
 
     private View.OnClickListener mOnClickListener = (v) -> {
-            Switch switchToggle = (Switch) v.findViewById(R.id.toggle_switch);
-            ToggleLineItem.this.onClick(switchToggle.isChecked());
+            CheckBox checkBox = v.findViewById(R.id.checkbox);
+            CheckBoxLineItem.this.onClick(checkBox.isChecked());
         };
 
-    public ToggleLineItem(CharSequence title) {
+    public CheckBoxLineItem(CharSequence title) {
         mTitle = title;
     }
 
     public int getType() {
-        return TOGGLE_TYPE;
+        return CHECKBOX_TYPE;
     }
 
-    public void bindViewHolder(ToggleLineItemViewHolder viewHolder) {
+    public void bindViewHolder(CheckboxLineItemViewHolder viewHolder) {
         viewHolder.titleView.setText(mTitle);
-        CharSequence desc = getDesc();
-        if (TextUtils.isEmpty(desc)) {
-            viewHolder.descView.setVisibility(View.GONE);
-        } else {
-            viewHolder.descView.setVisibility(View.VISIBLE);
-            viewHolder.descView.setText(desc);
-        }
-        viewHolder.toggle.setChecked(isChecked());
+        viewHolder.checkbox.setChecked(isChecked());
         viewHolder.itemView.setOnClickListener(mOnClickListener);
     }
 
-    public static class ToggleLineItemViewHolder extends RecyclerView.ViewHolder {
+    public static class CheckboxLineItemViewHolder extends RecyclerView.ViewHolder {
         final TextView titleView;
-        final TextView descView;
-        public final Switch toggle;
+        public final CheckBox checkbox;
 
-        public ToggleLineItemViewHolder(View view) {
+        public CheckboxLineItemViewHolder(View view) {
             super(view);
-            titleView = (TextView) view.findViewById(R.id.title);
-            descView = (TextView) view.findViewById(R.id.desc);
-            toggle = (Switch) view.findViewById(R.id.toggle_switch);
+            titleView = view.findViewById(R.id.title);
+            checkbox = view.findViewById(R.id.checkbox);
         }
     }
 
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.toggle_line_item, parent, false);
-        return new ToggleLineItemViewHolder(v);
+                .inflate(R.layout.checkbox_line_item, parent, false);
+        return new CheckboxLineItemViewHolder(v);
     }
 
     /**
@@ -88,5 +81,10 @@ public abstract class ToggleLineItem
     @Override
     public boolean isClickable() {
         return true;
+    }
+
+    @Override
+    public CharSequence getDesc() {
+        return null;
     }
 }

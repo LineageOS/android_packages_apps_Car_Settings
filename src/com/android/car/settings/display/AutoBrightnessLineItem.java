@@ -63,8 +63,14 @@ class AutoBrightnessLineItem extends ToggleLineItem {
         holder.itemView.setEnabled(isEnabled());
     }
 
+    @Override
     public boolean isEnabled() {
         return mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_automatic_brightness_available);
+    }
+
+    @Override
+    public boolean isExpandable() {
+        return false;
     }
 }

@@ -52,6 +52,16 @@ public class BluetoothLineItem extends IconToggleLineItem {
     }
 
     @Override
+    public boolean isExpandable() {
+        return false;
+    }
+
+    @Override
+    public boolean isClickable() {
+        return true;
+    }
+
+    @Override
     public void onClicked() {
         mFragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
     }

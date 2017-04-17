@@ -67,7 +67,8 @@ public class TypedPagedListAdapter
                 TOGGLE_TYPE,
                 ICON_TEXT_TYPE,
                 SEEKBAR_TYPE,
-                ICON_TOGGLE_TYPE})
+                ICON_TOGGLE_TYPE,
+                CHECKBOX_TYPE})
         public @interface LineItemType {}
 
         // with one title and one description
@@ -85,12 +86,35 @@ public class TypedPagedListAdapter
         // with one icon, title, description and a toggle.
         static final int ICON_TOGGLE_TYPE = 5;
 
+        // with one icon, title and a checkbox.
+        static final int CHECKBOX_TYPE = 6;
+
         @LineItemType
         abstract int getType();
 
         abstract void bindViewHolder(VH holder);
 
         public abstract CharSequence getDesc();
+
+        /**
+         * Returns true if this item is ready to receive touch. If it's set to false,
+         * this item maybe not clickable or temporarily not functional.
+         */
+        public boolean isEnabled() {
+            return true;
+        }
+
+        /**
+         * Returns true if some component on this item can be clicked.
+         */
+        public boolean isClickable() {
+            return isExpandable();
+        }
+
+        /**
+         * Returns true if this item can launch another activity or fragment.
+         */
+        public abstract boolean isExpandable();
     }
 
     @Override
@@ -106,6 +130,8 @@ public class TypedPagedListAdapter
                 return SeekbarLineItem.createViewHolder(parent);
             case LineItem.ICON_TOGGLE_TYPE:
                 return IconToggleLineItem.createViewHolder(parent);
+            case LineItem.CHECKBOX_TYPE:
+                return CheckBoxLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }

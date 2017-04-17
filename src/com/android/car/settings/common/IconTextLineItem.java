@@ -56,13 +56,10 @@ public abstract class IconTextLineItem
             viewHolder.descView.setText(desc);
         }
         viewHolder.itemView.setOnClickListener(mOnClickListener);
-        if (isEnabled()) {
-            viewHolder.itemView.setEnabled(true);
-            viewHolder.rightArrow.setVisibility(View.VISIBLE);
-        } else {
-            viewHolder.itemView.setEnabled(false);
-            viewHolder.rightArrow.setVisibility(View.GONE);
-        }
+        viewHolder.rightArrow.setVisibility(
+                isExpandable() ? View.VISIBLE : View.INVISIBLE);
+        viewHolder.dividerLine.setVisibility(
+                isClickable() && isEnabled() ? View.VISIBLE : View.INVISIBLE);
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
@@ -70,6 +67,7 @@ public abstract class IconTextLineItem
         final TextView descView;
         final ImageView iconView;
         final ImageView rightArrow;
+        public final View dividerLine;
 
         public ViewHolder(View view) {
             super(view);
@@ -77,6 +75,7 @@ public abstract class IconTextLineItem
             titleView = (TextView) view.findViewById(R.id.title);
             descView = (TextView) view.findViewById(R.id.desc);
             rightArrow = (ImageView) view.findViewById(R.id.right_chevron);
+            dividerLine = view.findViewById(R.id.line_item_divider);
         }
     }
 
@@ -89,6 +88,4 @@ public abstract class IconTextLineItem
     public abstract void setIcon(ImageView iconView);
 
     public abstract void onClick();
-
-    public abstract boolean isEnabled();
 }

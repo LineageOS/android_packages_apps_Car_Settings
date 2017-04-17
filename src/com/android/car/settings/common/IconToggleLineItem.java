@@ -77,7 +77,6 @@ public abstract class IconToggleLineItem
             title = (TextView) itemView.findViewById(R.id.title);
             summary = (TextView) itemView.findViewById(R.id.desc);
             toggle = (Switch) itemView.findViewById(R.id.toggle_switch);
-            toggle.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -106,4 +105,9 @@ public abstract class IconToggleLineItem
     public abstract boolean isChecked();
 
     public abstract @DrawableRes int getIcon();
+
+    @Override
+    public boolean isClickable() {
+        return true;
+    }
 }

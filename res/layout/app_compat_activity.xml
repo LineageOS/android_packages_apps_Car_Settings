@@ -26,7 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/lens_header_height"
         app:theme="@style/ActionBarStyle.Car"
-        app:contentInsetStart="@dimen/stream_content_keyline_1" />
+        app:contentInsetStart="0dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_divider_height"
+        android:background="@color/car_list_divider"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

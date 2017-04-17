@@ -67,6 +67,11 @@ public class WifiLineItem extends IconToggleLineItem {
     }
 
     @Override
+    public boolean isExpandable() {
+        return true;
+    }
+
+    @Override
     public @DrawableRes int getIcon() {
         return getIconRes(mCarWifiManager.getWifiState());
     }

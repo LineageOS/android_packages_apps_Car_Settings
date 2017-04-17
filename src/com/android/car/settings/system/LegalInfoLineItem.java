@@ -46,6 +46,11 @@ class LegalInfoLineItem extends IconTextLineItem {
     }
 
     @Override
+    public boolean isExpandable() {
+        return true;
+    }
+
+    @Override
     public void onClick() {
         // TODO: link to a legal info page.
     }

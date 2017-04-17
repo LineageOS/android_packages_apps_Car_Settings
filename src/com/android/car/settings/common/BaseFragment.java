@@ -107,12 +107,14 @@ public abstract class BaseFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);
         actionBar.setCustomView(mActionBarLayout);
         actionBar.setDisplayShowCustomEnabled(true);
         // make the toolbar take the whole width.
         Toolbar toolbar=(Toolbar)actionBar.getCustomView().getParent();
         toolbar.setPadding(0, 0, 0, 0);
+        getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
+                v -> mFragmentController.goBack());
         ((TextView) getActivity().findViewById(R.id.title)).setText(mTitleId);
     }
 }

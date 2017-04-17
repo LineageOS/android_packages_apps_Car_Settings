@@ -44,7 +44,7 @@ class AboutSystemLineItem extends IconTextLineItem {
     }
 
     @Override
-    public boolean isEnabled() {
+    public boolean isExpandable() {
         return true;
     }
 

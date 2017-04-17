@@ -45,7 +45,7 @@ public abstract class ListSettingsFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
 
         mListView = (PagedListView) getView().findViewById(R.id.list);
-        mListView.setDefaultItemDecoration(getDecoration());
+        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(getContext()));
         mListView.setDarkMode();
         mPagedListAdapter = new TypedPagedListAdapter(getContext(), getLineItems());
         mListView.setAdapter(mPagedListAdapter);
@@ -55,11 +55,4 @@ public abstract class ListSettingsFragment extends BaseFragment {
      * Gets a List of LineItems to show up in this activity.
      */
     public abstract ArrayList<TypedPagedListAdapter.LineItem> getLineItems();
-
-    /**
-     * Gets decoration for the list view.
-     */
-    protected PagedListView.Decoration getDecoration() {
-        return new PagedListView.Decoration(getContext());
-    }
 }

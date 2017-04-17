@@ -73,7 +73,12 @@ public class ApplicationPermissionLineItem extends TextLineItem {
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
+    }
+
+    @Override
+    public boolean isExpandable() {
+        return true;
     }
 
     @Override

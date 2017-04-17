@@ -96,4 +96,14 @@ public abstract class SeekbarLineItem
     public abstract int getMaxSeekbarValue();
 
     public abstract void onSeekbarChanged(int progress);
+
+    @Override
+    public boolean isClickable() {
+        return true;
+    }
+
+    @Override
+    public boolean isExpandable() {
+        return false;
+    }
 }

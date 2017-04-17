@@ -47,6 +47,16 @@ class SystemUpdatesLineItem extends IconTextLineItem {
     }
 
     @Override
+    public boolean isClickable() {
+        return true;
+    }
+
+    @Override
+    public boolean isExpandable() {
+        return false;
+    }
+
+    @Override
     public void onClick() {
         // TODO: trigger system OTA flow
     }
