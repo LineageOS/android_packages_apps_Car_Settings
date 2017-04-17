@@ -20,7 +20,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 
-import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.R;
+import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.TypedPagedListAdapter;
 
 import java.util.ArrayList;
@@ -29,16 +30,19 @@ import java.util.List;
 /**
  * Lists all installed applications and their summary.
  */
-public class ApplicationSettingsActivity extends ListSettingsActivity {
+public class ApplicationSettingsFragment extends ListSettingsFragment {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public static ApplicationSettingsFragment getInstance() {
+        ApplicationSettingsFragment applicationSettingsFragment = new ApplicationSettingsFragment();
+        Bundle bundle = ListSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.applications_settings);
+        applicationSettingsFragment.setArguments(bundle);
+        return applicationSettingsFragment;
     }
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        PackageManager pm = getPackageManager();
+        PackageManager pm = getContext().getPackageManager();
         Intent intent= new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent,
@@ -46,7 +50,7 @@ public class ApplicationSettingsActivity extends ListSettingsActivity {
                         | PackageManager.MATCH_DISABLED_COMPONENTS);
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
         for (ResolveInfo resolveInfo : resolveInfos) {
-            items.add(new ApplicationLineItem(this, pm, resolveInfo));
+            items.add(new ApplicationLineItem(getContext(), pm, resolveInfo, mFragmentController));
         }
         return items;
     }

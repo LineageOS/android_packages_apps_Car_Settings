@@ -40,6 +40,6 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/medium_text_size"/>
+            style="@style/CarBody1"/>
     </ViewSwitcher>
 </LinearLayout>

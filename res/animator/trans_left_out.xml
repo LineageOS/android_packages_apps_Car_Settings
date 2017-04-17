@@ -14,13 +14,19 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
   -->
-
-<TimePicker
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/time_picker"
-    android:scaleX="1.5"
-    android:scaleY="1.5"
-    android:layout_gravity="center"
-    android:timePickerMode="spinner"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:interpolator="@android:interpolator/decelerate_quint"
+        android:valueFrom="0dp"
+        android:valueTo="-100dp"
+        android:valueType="floatType"
+        android:propertyName="translationX"
+        android:duration="@android:integer/config_mediumAnimTime" />
+    <objectAnimator
+        android:interpolator="@android:interpolator/decelerate_quint"
+        android:valueFrom="1.0"
+        android:valueTo="0.0"
+        android:valueType="floatType"
+        android:propertyName="alpha"
+        android:duration="@android:integer/config_mediumAnimTime" />
+</set>

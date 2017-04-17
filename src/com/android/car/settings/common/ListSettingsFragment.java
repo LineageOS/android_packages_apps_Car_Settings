@@ -18,6 +18,9 @@ package com.android.car.settings.common;
 
 import android.os.Bundle;
 
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
+
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
 
@@ -26,20 +29,25 @@ import java.util.ArrayList;
 /**
  * Settings page that only contain a list of items.
  */
-public abstract class ListSettingsActivity extends CarSettingActivity {
+public abstract class ListSettingsFragment extends BaseFragment {
 
     private PagedListView mListView;
     protected TypedPagedListAdapter mPagedListAdapter;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.list);
+    protected static Bundle getBundle() {
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
+        return bundle;
+    }
 
-        mListView = (PagedListView) findViewById(R.id.list);
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        mListView = (PagedListView) getView().findViewById(R.id.list);
         mListView.setDefaultItemDecoration(getDecoration());
         mListView.setDarkMode();
-        mPagedListAdapter = new TypedPagedListAdapter(this /* context */, getLineItems());
+        mPagedListAdapter = new TypedPagedListAdapter(getContext(), getLineItems());
         mListView.setAdapter(mPagedListAdapter);
     }
 
@@ -52,6 +60,6 @@ public abstract class ListSettingsActivity extends CarSettingActivity {
      * Gets decoration for the list view.
      */
     protected PagedListView.Decoration getDecoration() {
-        return new PagedListView.Decoration(this);
+        return new PagedListView.Decoration(getContext());
     }
 }

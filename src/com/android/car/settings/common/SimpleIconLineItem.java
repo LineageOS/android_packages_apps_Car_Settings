@@ -16,16 +16,11 @@
 
 package com.android.car.settings.common;
 
-import android.app.ActivityOptions;
 import android.content.Context;
-import android.content.Intent;
 
 import android.annotation.DrawableRes;
 import android.annotation.StringRes;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.android.car.settings.R;
@@ -36,20 +31,23 @@ import com.android.car.settings.R;
 public class SimpleIconLineItem extends IconTextLineItem {
     private final CharSequence mDesc;
     private final Context mContext;
-    private final Class mActivityClass;
+    private final BaseFragment mFragment;
     private final @DrawableRes int mIconRes;
+    private final BaseFragment.FragmentController mFragmentController;
 
     public SimpleIconLineItem(
             @StringRes int title,
             @DrawableRes int iconRes,
             Context context,
             CharSequence desc,
-            Class activityClass) {
+            BaseFragment fragment,
+            BaseFragment.FragmentController fragmentController) {
         super(context.getText(title));
         mDesc = desc;
         mContext = context;
-        mActivityClass = activityClass;
+        mFragment = fragment;
         mIconRes = iconRes;
+        mFragmentController = fragmentController;
     }
 
     @Override
@@ -59,8 +57,7 @@ public class SimpleIconLineItem extends IconTextLineItem {
 
     @Override
     public void onClick() {
-        Intent intent = new Intent(mContext, mActivityClass);
-        mContext.startActivity(intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+        mFragmentController.launchFragment(mFragment);
     }
 
     @Override

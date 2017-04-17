@@ -15,12 +15,20 @@
   ~ limitations under the License
   -->
 
-<TimePicker
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/time_picker"
-    android:scaleX="1.5"
-    android:scaleY="1.5"
-    android:layout_gravity="center"
-    android:timePickerMode="spinner"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lens_header_height"
+        app:theme="@style/ActionBarStyle.Car"
+        app:contentInsetStart="@dimen/stream_content_keyline_1" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"/>
+</LinearLayout>

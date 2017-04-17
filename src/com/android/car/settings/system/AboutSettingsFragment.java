@@ -17,8 +17,9 @@
 package com.android.car.settings.system;
 
 import android.os.Build;
+import android.os.Bundle;
 
-import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.settings.common.SimpleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
@@ -31,7 +32,15 @@ import java.util.ArrayList;
 /**
  * Shows basic info about the system and provide some actions like update, reset etc.
  */
-public class AboutSettingsActivity extends ListSettingsActivity {
+public class AboutSettingsFragment extends ListSettingsFragment {
+
+    public static AboutSettingsFragment getInstance() {
+        AboutSettingsFragment aboutSettingsFragment = new AboutSettingsFragment();
+        Bundle bundle = ListSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.about_settings);
+        aboutSettingsFragment.setArguments(bundle);
+        return aboutSettingsFragment;
+    }
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
@@ -52,6 +61,6 @@ public class AboutSettingsActivity extends ListSettingsActivity {
 
     @Override
     public PagedListView.Decoration getDecoration() {
-        return new NoDividerItemDecoration(this);
+        return new NoDividerItemDecoration(getContext());
     }
 }

@@ -22,16 +22,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.android.car.settings.R;
-import com.android.car.settings.applications.ApplicationSettingsActivity;
-import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.applications.ApplicationSettingsFragment;
+import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.SimpleIconLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
-import com.android.car.settings.datetime.DatetimeSettingsActivity;
-import com.android.car.settings.display.DisplaySettingsActivity;
-import com.android.car.settings.sound.SoundSettingsActivity;
-import com.android.car.settings.system.SystemSettingsActivity;
+import com.android.car.settings.datetime.DatetimeSettingsFragment;
+import com.android.car.settings.display.DisplaySettingsFragment;
+import com.android.car.settings.sound.SoundSettingsFragment;
+import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ import java.util.ArrayList;
 /**
  * Homepage for settings for car.
  */
-public class HomepageActivity extends ListSettingsActivity implements CarWifiManager.Listener {
+public class HomepageFragment extends ListSettingsFragment implements CarWifiManager.Listener {
     private CarWifiManager mCarWifiManager;
     private WifiLineItem mWifiLineItem;
     private BluetoothLineItem mBluetoothLineItem;
@@ -67,15 +68,24 @@ public class HomepageActivity extends ListSettingsActivity implements CarWifiMan
     private final IntentFilter mBtStateChangeFilter =
             new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
 
+    public static HomepageFragment getInstance() {
+        HomepageFragment homepageFragment = new HomepageFragment();
+        Bundle bundle = ListSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.settings_label);
+        homepageFragment.setArguments(bundle);
+        return homepageFragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        mCarWifiManager = new CarWifiManager(this /* context */ , this /* listener */);
-        mWifiLineItem = new WifiLineItem(this, mCarWifiManager);
-        mBluetoothLineItem = new BluetoothLineItem(this);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
+        mWifiLineItem = new WifiLineItem(getContext(), mCarWifiManager, mFragmentController);
+        mBluetoothLineItem = new BluetoothLineItem(getContext(), mFragmentController);
 
         // Call super after the wifiLineItem and BluetoothLineItem are setup, because
         // those are needed in super.onCreate().
-        super.onCreate(savedInstanceState);
+        super.onActivityCreated(savedInstanceState);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
     }
 
     @Override
@@ -92,14 +102,14 @@ public class HomepageActivity extends ListSettingsActivity implements CarWifiMan
     public void onStart() {
         super.onStart();
         mCarWifiManager.start();
-        registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
+        getActivity().registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
     }
 
     @Override
     public void onStop() {
         super.onStop();
         mCarWifiManager.stop();
-        unregisterReceiver(mBtStateReceiver);
+        getActivity().unregisterReceiver(mBtStateReceiver);
     }
 
     @Override
@@ -108,40 +118,40 @@ public class HomepageActivity extends ListSettingsActivity implements CarWifiMan
         lineItems.add(new SimpleIconLineItem(
                 R.string.display_settings,
                 R.drawable.ic_settings_display,
-                this,
+                getContext(),
                 null,
-                DisplaySettingsActivity.class));
+                DisplaySettingsFragment.getInstance(),
+                mFragmentController));
         lineItems.add(new SimpleIconLineItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
-                this,
+                getContext(),
                 null,
-                SoundSettingsActivity.class));
+                SoundSettingsFragment.getInstance(),
+                mFragmentController));
         lineItems.add(mWifiLineItem);
         lineItems.add(mBluetoothLineItem);
         lineItems.add(new SimpleIconLineItem(
                 R.string.applications_settings,
                 R.drawable.ic_settings_applications,
-                this,
+                getContext(),
                 null,
-                ApplicationSettingsActivity.class));
+                ApplicationSettingsFragment.getInstance(),
+                mFragmentController));
         lineItems.add(new SimpleIconLineItem(
                 R.string.date_and_time_settings_title,
                 R.drawable.ic_settings_date_time,
-                this,
+                getContext(),
                 null,
-                DatetimeSettingsActivity.class));
+                DatetimeSettingsFragment.getInstance(),
+                mFragmentController));
         lineItems.add(new SimpleIconLineItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,
-                this,
+                getContext(),
                 null,
-                SystemSettingsActivity.class));
+                SystemSettingsFragment.getInstance(),
+                mFragmentController));
         return lineItems;
-    }
-
-    @Override
-    public void setupActionBar() {
-        getActionBar().hide();
     }
 }

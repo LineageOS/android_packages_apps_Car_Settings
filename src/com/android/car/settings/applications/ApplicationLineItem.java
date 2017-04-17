@@ -18,12 +18,11 @@ package com.android.car.settings.applications;
 
 import android.annotation.NonNull;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.widget.ImageView;
 
-import com.android.car.settings.common.AnimationUtil;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.IconTextLineItem;
 
 /**
@@ -33,28 +32,41 @@ public class ApplicationLineItem extends IconTextLineItem {
     private final ResolveInfo mResolveInfo;
     private final Context mContext;
     private final PackageManager mPm;
+    private final boolean mClickable;
+    private final BaseFragment.FragmentController mFragmentController;
 
     public ApplicationLineItem(
-            @NonNull Context context, PackageManager pm, ResolveInfo resolveInfo) {
+            @NonNull Context context,
+            PackageManager pm,
+            ResolveInfo resolveInfo,
+            BaseFragment.FragmentController fragmentController) {
+        this(context, pm, resolveInfo, fragmentController, true);
+    }
+
+    public ApplicationLineItem(
+            @NonNull Context context,
+            PackageManager pm,
+            ResolveInfo resolveInfo,
+            BaseFragment.FragmentController fragmentController,
+            boolean clickable) {
         super(resolveInfo.loadLabel(pm));
         mContext = context;
         mPm = pm;
         mResolveInfo = resolveInfo;
+        mFragmentController = fragmentController;
+        mClickable = clickable;
     }
-
 
     @Override
     public void onClick() {
-        Intent intent = new Intent(mContext, ApplicationDetailActivity.class);
-        intent.putExtra(
-                ApplicationDetailActivity.APPLICATION_INFO_KEY, mResolveInfo);
-        mContext.startActivity(
-                intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+        if (mClickable) {
+            mFragmentController.launchFragment(ApplicationDetailFragment.getInstance(mResolveInfo));
+        }
     }
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return mClickable;
     }
 
     @Override

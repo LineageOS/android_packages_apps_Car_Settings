@@ -19,10 +19,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Bundle;
 import android.provider.Settings;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsActivity;
+import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.TypedPagedListAdapter;
 
 import java.util.ArrayList;
@@ -30,8 +31,8 @@ import java.util.ArrayList;
 /**
  * Configures date time
  */
-public class DatetimeSettingsActivity extends ListSettingsActivity {
-    private static final String TAG = "DatetimeSettingsActivity";
+public class DatetimeSettingsFragment extends ListSettingsFragment {
+    private static final String TAG = "DatetimeSettingsFragment";
 
     private static final IntentFilter TIME_CHANGED_FILTER =
             new IntentFilter(Intent.ACTION_TIME_CHANGED);
@@ -42,35 +43,43 @@ public class DatetimeSettingsActivity extends ListSettingsActivity {
     private final TimeChangedBroadCastReceiver mTimeChangedBroadCastReceiver =
             new TimeChangedBroadCastReceiver();
 
+    public static DatetimeSettingsFragment getInstance() {
+        DatetimeSettingsFragment datetimeSettingsFragment = new DatetimeSettingsFragment();
+        Bundle bundle = ListSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.date_and_time_settings_title);
+        datetimeSettingsFragment.setArguments(bundle);
+        return datetimeSettingsFragment;
+    }
+
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(new DateTimeToggleLineItem(this,
+        lineItems.add(new DateTimeToggleLineItem(getContext(),
                 getString(R.string.date_time_auto),
                 getString(R.string.date_time_auto_summary),
                 Settings.Global.AUTO_TIME));
-        lineItems.add(new DateTimeToggleLineItem(this,
+        lineItems.add(new DateTimeToggleLineItem(getContext(),
                 getString(R.string.zone_auto),
                 getString(R.string.zone_auto_summary),
                 Settings.Global.AUTO_TIME_ZONE));
-        lineItems.add(new SetDateLineItem(this));
-        lineItems.add(new SetTimeLineItem(this));
-        lineItems.add(new SetTimeZoneLineItem(this));
-        lineItems.add(new TimeFormatToggleLineItem(this));
+        lineItems.add(new SetDateLineItem(getContext(), mFragmentController));
+        lineItems.add(new SetTimeLineItem(getContext(), mFragmentController));
+        lineItems.add(new SetTimeZoneLineItem(getContext(), mFragmentController));
+        lineItems.add(new TimeFormatToggleLineItem(getContext()));
         return lineItems;
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        registerReceiver(mTimeChangedBroadCastReceiver, TIME_CHANGED_FILTER);
+        getActivity().registerReceiver(mTimeChangedBroadCastReceiver, TIME_CHANGED_FILTER);
         mPagedListAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        unregisterReceiver(mTimeChangedBroadCastReceiver);
+        getActivity().unregisterReceiver(mTimeChangedBroadCastReceiver);
     }
 
     private class TimeChangedBroadCastReceiver extends BroadcastReceiver {

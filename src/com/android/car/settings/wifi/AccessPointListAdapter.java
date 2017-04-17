@@ -16,11 +16,9 @@
 package com.android.car.settings.wifi;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.wifi.WifiManager;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.AnimationUtil;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.view.PagedListView;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -57,14 +55,19 @@ public class AccessPointListAdapter
 
     private final StateListDrawable mWifiSld;
     private final Context mContext;
+    private final BaseFragment.FragmentController mFragmentController;
     private final CarWifiManager mCarWifiManager;
     private final WifiManager.ActionListener mConnectionListener;
 
     private List<AccessPoint> mAccessPoints;
 
-    public AccessPointListAdapter(@NonNull Context context, CarWifiManager carWifiManager,
-            @NonNull List<AccessPoint> accesssPoints) {
+    public AccessPointListAdapter(
+            @NonNull Context context,
+            CarWifiManager carWifiManager,
+            @NonNull List<AccessPoint> accesssPoints,
+            BaseFragment.FragmentController fragmentController) {
         mContext = context;
+        mFragmentController = fragmentController;
         mCarWifiManager = carWifiManager;
         mAccessPoints = accesssPoints;
         mWifiSld = (StateListDrawable) context.getTheme()
@@ -94,6 +97,7 @@ public class AccessPointListAdapter
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private final ImageView mIcon;
+        private final ImageView mRightChevron;
         private final TextView mWifiName;
         private final TextView mWifiDesc;
 
@@ -102,6 +106,7 @@ public class AccessPointListAdapter
             mWifiName = (TextView) view.findViewById(R.id.title);
             mWifiDesc = (TextView) view.findViewById(R.id.desc);
             mIcon = (ImageView) view.findViewById(R.id.icon);
+            mRightChevron = (ImageView) view.findViewById(R.id.right_chevron);
         }
     }
 
@@ -118,15 +123,10 @@ public class AccessPointListAdapter
             if (mAccessPoint.getSecurity() == AccessPoint.SECURITY_NONE &&
                     !mAccessPoint.isSaved() && !mAccessPoint.isActive()) {
                 mCarWifiManager.connectToPublicWifi(mAccessPoint, mConnectionListener);
+            } else if (mAccessPoint.isSaved()) {
+                mFragmentController.launchFragment(WifiDetailFragment.getInstance(mAccessPoint));
             } else {
-                Intent intent = mAccessPoint.isSaved()
-                        ? new Intent(mContext , WifiDetailActivity.class)
-                        : new Intent(mContext, AddWifiActivity.class);
-                Bundle accessPointState = new Bundle();
-                mAccessPoint.saveWifiState(accessPointState);
-                intent.putExtras(accessPointState);
-                mContext.startActivity(
-                        intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+                mFragmentController.launchFragment(AddWifiFragment.getInstance(mAccessPoint));
             }
         }
     };
@@ -150,10 +150,7 @@ public class AccessPointListAdapter
             viewHolder.mWifiDesc.setVisibility(View.GONE);
             viewHolder.mWifiName.setText(R.string.wifi_setup_add_network);
             viewHolder.itemView.setOnClickListener(v -> {
-                Intent intent = new Intent(mContext, AddWifiActivity.class);
-                intent.putExtra(AddWifiActivity.ADD_NETWORK_MODE, true);
-                mContext.startActivity(
-                        intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+                mFragmentController.launchFragment(AddWifiFragment.getInstance(null));
             });
         }
         return viewHolder;
@@ -175,6 +172,12 @@ public class AccessPointListAdapter
             holder.mWifiDesc.setVisibility(View.VISIBLE);
         } else {
             holder.mWifiDesc.setVisibility(View.GONE);
+        }
+        if (accessPoint.getSecurity() == accessPoint.SECURITY_NONE &&
+                !accessPoint.isSaved() && !accessPoint.isActive()) {
+            holder.mRightChevron.setVisibility(View.GONE);
+        } else {
+            holder.mRightChevron.setVisibility(View.VISIBLE);
         }
     }
 

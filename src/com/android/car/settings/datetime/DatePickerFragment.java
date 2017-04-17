@@ -20,8 +20,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.DatePicker;
+import android.widget.TextView;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
 
 import java.util.Calendar;
@@ -29,31 +30,41 @@ import java.util.Calendar;
 /**
  * Sets the system date.
  */
-public class DatePickerActivity extends CarSettingActivity {
+public class DatePickerFragment extends BaseFragment {
     private static final int MILLIS_IN_SECOND = 1000;
 
     private DatePicker mDatePicker;
 
+    public static DatePickerFragment getInstance() {
+        DatePickerFragment datePickerFragment = new DatePickerFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.date_picker_title);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.date_picker);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        datePickerFragment.setArguments(bundle);
+        return datePickerFragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
-        setContentView(R.layout.date_picker);
+        mDatePicker = (DatePicker) getView().findViewById(R.id.date_picker);
 
-        mDatePicker = (DatePicker) findViewById(R.id.date_picker);
-
-        findViewById(R.id.confirm).setOnClickListener(v -> {
+        TextView button = (TextView) getActivity().findViewById(R.id.action_button1);
+        button.setText(R.string.okay);
+        button.setOnClickListener(v -> {
             Calendar c = Calendar.getInstance();
 
             c.set(Calendar.YEAR, mDatePicker.getYear());
             c.set(Calendar.MONTH, mDatePicker.getMonth());
             c.set(Calendar.DAY_OF_MONTH, mDatePicker.getDayOfMonth());
-            long when = Math.max(c.getTimeInMillis(), DatetimeSettingsActivity.MIN_DATE);
+            long when = Math.max(c.getTimeInMillis(), DatetimeSettingsFragment.MIN_DATE);
             if (when / MILLIS_IN_SECOND < Integer.MAX_VALUE) {
-                ((AlarmManager) getSystemService(Context.ALARM_SERVICE)).setTime(when);
-                sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+                ((AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE)).setTime(when);
+                getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
             }
-            finish();
+            mFragmentController.goBack();
         });
     }
 }

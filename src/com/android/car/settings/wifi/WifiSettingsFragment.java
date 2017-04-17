@@ -26,7 +26,7 @@ import android.widget.ViewSwitcher;
 
 import android.annotation.StringRes;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
 
@@ -36,8 +36,8 @@ import com.android.settingslib.wifi.AccessPoint;
 /**
  * Main page to host Wifi related preferences.
  */
-public class WifiSettingsActivity extends CarSettingActivity implements CarWifiManager.Listener {
-    private static final String TAG = "WifiSettingsActivity";
+public class WifiSettingsFragment extends BaseFragment implements CarWifiManager.Listener {
+    private static final String TAG = "WifiSettingsFragment";
 
     private CarWifiManager mCarWifiManager;
     private AccessPointListAdapter mAdapter;
@@ -47,37 +47,41 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
     private TextView mMessageView;
     private ViewSwitcher mViewSwitcher;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mCarWifiManager = new CarWifiManager(this /* context */ , this /* listener */);
-        setContentView(R.layout.wifi_list);
+    public static WifiSettingsFragment getInstance() {
+        WifiSettingsFragment wifiSettingsFragment = new WifiSettingsFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.wifi_list);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_toggle);
+        wifiSettingsFragment.setArguments(bundle);
+        return wifiSettingsFragment;
+    }
 
-        ((TextView) findViewById(R.id.title)).setText(R.string.wifi_settings);
-        mProgressBar = (ProgressBar) findViewById(R.id.wifi_search_progress);
-        mListView = (PagedListView) findViewById(R.id.list);
-        mMessageView = (TextView) findViewById(R.id.message);
-        mViewSwitcher = (ViewSwitcher) findViewById(R.id.view_switcher);
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
+
+        mProgressBar = (ProgressBar) getView().findViewById(R.id.wifi_search_progress);
+        mListView = (PagedListView) getView().findViewById(R.id.list);
+        mMessageView = (TextView) getView().findViewById(R.id.message);
+        mViewSwitcher = (ViewSwitcher) getView().findViewById(R.id.view_switcher);
         setupWifiSwitch();
         if (mCarWifiManager.isWifiEnabled()) {
             showList();
         } else {
             showMessage(R.string.wifi_disabled);
         }
-        mListView.setDefaultItemDecoration(new PagedListView.Decoration(this));
+        mListView.setDefaultItemDecoration(new PagedListView.Decoration(getContext()));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mListView.setDarkMode();
         mAdapter = new AccessPointListAdapter(
-                this, mCarWifiManager, mCarWifiManager.getAccessPoints());
+                getContext(),
+                mCarWifiManager,
+                mCarWifiManager.getAccessPoints(),
+                mFragmentController);
         mListView.setAdapter(mAdapter);
-    }
-
-    @Override
-    public void setupActionBar() {
-        getActionBar().setCustomView(R.layout.action_bar_with_toggle);
-        getActionBar().setDisplayShowCustomEnabled(true);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -147,7 +151,7 @@ public class WifiSettingsActivity extends CarSettingActivity implements CarWifiM
     }
 
     private void setupWifiSwitch() {
-        mWifiSwitch = (Switch) findViewById(R.id.toggle_switch);
+        mWifiSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         mWifiSwitch.setOnClickListener(v -> {
             mCarWifiManager.setWifiEnabled(mWifiSwitch.isChecked());

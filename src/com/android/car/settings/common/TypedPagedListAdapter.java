@@ -40,11 +40,21 @@ public class TypedPagedListAdapter
     private static final String TAG = "TypedPagedListAdapter";
 
     private final Context mContext;
-    private final ArrayList<? extends LineItem> mContentList;
+    private ArrayList<? extends LineItem> mContentList;
 
-    public TypedPagedListAdapter(@NonNull Context context, ArrayList<? extends LineItem> contentList) {
+    public TypedPagedListAdapter(@NonNull Context context) {
+        this(context, new ArrayList<>());
+    }
+
+    public TypedPagedListAdapter(
+            @NonNull Context context, ArrayList<? extends LineItem> contentList) {
         mContext = context;
         mContentList = contentList;
+    }
+
+    public void updateList(ArrayList<? extends LineItem> contentList) {
+        mContentList = contentList;
+        notifyDataSetChanged();
     }
 
     public boolean isEmpty() {

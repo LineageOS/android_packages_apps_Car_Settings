@@ -45,5 +45,5 @@
         style="@style/SettingIcon"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/stream_card_keyline_1"
-        android:switchMinWidth="@dimen/icon_size"/>
+        android:switchMinWidth="@dimen/stream_button_icon_size"/>
 </com.android.car.settings.common.InterceptTouchRelativeLayout>

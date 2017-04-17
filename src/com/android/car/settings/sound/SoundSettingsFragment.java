@@ -28,7 +28,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
@@ -38,16 +38,16 @@ import java.util.ArrayList;
 /**
  * Activity hosts sound related settings.
  */
-public class SoundSettingsActivity extends CarSettingActivity {
-    private static final String TAG = "SoundSettingsActivity";
+public class SoundSettingsFragment extends BaseFragment {
+    private static final String TAG = "SoundSettingsFragment";
     private Car mCar;
     private CarAudioManager mCarAudioManager;
     private PagedListView mListView;
     private TypedPagedListAdapter mPagedListAdapter;
 
     private final ArrayList<VolumeLineItem> mVolumeLineItems = new ArrayList<>();
-    private final SoundSettingsActivity.VolumnCallback
-            mVolumeCallback = new SoundSettingsActivity.VolumnCallback();
+    private final SoundSettingsFragment.VolumnCallback
+            mVolumeCallback = new SoundSettingsFragment.VolumnCallback();
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
@@ -62,31 +62,28 @@ public class SoundSettingsActivity extends CarSettingActivity {
                 Log.e(TAG, "Car is not connected!", e);
                 return;
             }
-            mListView = (PagedListView) findViewById(R.id.list);
-            mListView.setDefaultItemDecoration(
-                    new PagedListView.Decoration(SoundSettingsActivity.this));
-            mListView.setDarkMode();
             mVolumeLineItems.add(new VolumeLineItem(
-                    SoundSettingsActivity.this,
+                    getContext(),
                     mCarAudioManager,
                     AudioManager.STREAM_MUSIC,
                     R.string.media_volume_title,
                     com.android.internal.R.drawable.ic_audio_media));
             mVolumeLineItems.add(new VolumeLineItem(
-                    SoundSettingsActivity.this,
+                    getContext(),
                     mCarAudioManager,
                     AudioManager.STREAM_RING,
                     R.string.ring_volume_title,
                     com.android.internal.R.drawable.ic_audio_ring_notif));
             mVolumeLineItems.add(new VolumeLineItem(
-                    SoundSettingsActivity.this,
+                    getContext(),
                     mCarAudioManager,
                     naviAudioAttributes.getVolumeControlStream(),
                     R.string.navi_volume_title,
                     R.drawable.ic_audio_navi));
-            mPagedListAdapter = new TypedPagedListAdapter(
-                    SoundSettingsActivity.this /* context */, mVolumeLineItems);
-            mListView.setAdapter(mPagedListAdapter);
+            // if list is already initiated, update it's content.
+            if (mPagedListAdapter != null) {
+                mPagedListAdapter.updateList(mVolumeLineItems);
+            }
         }
 
         @Override
@@ -95,11 +92,34 @@ public class SoundSettingsActivity extends CarSettingActivity {
         }
     };
 
+    public static SoundSettingsFragment getInstance() {
+        SoundSettingsFragment soundSettingsFragment = new SoundSettingsFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.sound_settings);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
+        soundSettingsFragment.setArguments(bundle);
+        return soundSettingsFragment;
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list);
-        mCar = Car.createCar(this /* context */, mServiceConnection);
+        mCar = Car.createCar(getContext(), mServiceConnection);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mListView = (PagedListView) getView().findViewById(R.id.list);
+        mListView.setDefaultItemDecoration(
+                new PagedListView.Decoration(getContext()));
+        mListView.setDarkMode();
+        mPagedListAdapter = new TypedPagedListAdapter(getContext());
+        mListView.setAdapter(mPagedListAdapter);
+        if (!mVolumeLineItems.isEmpty()) {
+            mPagedListAdapter.updateList(mVolumeLineItems);
+        }
     }
 
     @Override
