@@ -15,11 +15,14 @@
   ~ limitations under the License
   -->
 
-<com.android.car.view.PagedListView
+<shape
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
-    android:layout_marginEnd="@dimen/side_margin"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/SettingPagedList"
-    />
+    android:shape="oval">
+    <solid android:color="@color/car_teal_700" />
+    <size
+        android:width="20dp"
+        android:height="20dp" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/car_teal_700" />
+</shape>

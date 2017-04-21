@@ -32,6 +32,7 @@
         android:layout_height="match_parent">
         <com.android.car.view.PagedListView
             android:id="@+id/list"
+            style="@style/SettingPagedList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/side_margin" />

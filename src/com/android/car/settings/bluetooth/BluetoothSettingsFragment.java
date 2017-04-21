@@ -28,7 +28,6 @@ import android.widget.ViewSwitcher;
 
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
-import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.view.PagedListView;
 
 import com.android.settingslib.bluetooth.BluetoothCallback;
@@ -88,7 +87,6 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
 
-        mDeviceListView.setDefaultItemDecoration(new NoDividerItemDecoration(getContext()));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mDeviceListView.setDarkMode();

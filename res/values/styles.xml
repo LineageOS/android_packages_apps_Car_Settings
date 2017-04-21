@@ -71,7 +71,11 @@
         <item name="android:paddingEnd">@dimen/switch_end_padding</item>
         <item name="android:scaleX">1.5</item>
         <item name="android:scaleY">1.5</item>
-        <!--<item name="android:thumb">@drawable/ic_toggle_thumb</item>-->
-        <!--<item name="android:track">@drawable/ic_toggle_track</item>-->
+    </style>
+
+    <style name="SettingPagedList">
+        <item name="scrollbarContainerWidth">@dimen/side_margin</item>
+        <item name="showDivider">false</item>
+        <item name="usedInDrawer">true</item>
     </style>
 </resources>

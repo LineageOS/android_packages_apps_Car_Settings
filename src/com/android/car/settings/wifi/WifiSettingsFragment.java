@@ -28,7 +28,6 @@ import android.annotation.StringRes;
 
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
-import com.android.car.settings.common.NoDividerItemDecoration;
 import com.android.car.view.PagedListView;
 
 import com.android.settingslib.wifi.AccessPoint;
@@ -73,7 +72,6 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         } else {
             showMessage(R.string.wifi_disabled);
         }
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(getContext()));
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
         mListView.setDarkMode();

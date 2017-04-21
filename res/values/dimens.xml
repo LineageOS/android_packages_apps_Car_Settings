@@ -16,6 +16,9 @@
 
 
 <resources>
+    <dimen name="seekbar_track_height">6dp</dimen>
+    <dimen name="seekbar_track_corner">3dp</dimen>
+    <dimen name="seekbar_padding_top">10dp</dimen>
     <dimen name="switch_end_padding">5dp</dimen>
     <dimen name="double_icon_size">112dp</dimen>
     <dimen name="line_item_height">128dp</dimen>

@@ -156,20 +156,16 @@ public class BluetoothDeviceListAdapter
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
             case BONDED_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.text_line_item, parent, false);
+                v = layoutInflater.inflate(R.layout.single_text_line_item, parent, false);
                 v.setEnabled(false);
-                ((TextView) v.findViewById(R.id.desc)).setText(
+                ((TextView) v.findViewById(R.id.title)).setText(
                         R.string.bluetooth_preference_paired_devices);
-                v.findViewById(R.id.title).setVisibility(View.GONE);
-                v.findViewById(R.id.right_chevron).setVisibility(View.GONE);
                 break;
             case AVAILABLE_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.text_line_item, parent, false);
+                v = layoutInflater.inflate(R.layout.single_text_line_item, parent, false);
                 v.setEnabled(false);
-                ((TextView) v.findViewById(R.id.desc)).setText(
+                ((TextView) v.findViewById(R.id.title)).setText(
                         R.string.bluetooth_preference_found_devices);
-                v.findViewById(R.id.title).setVisibility(View.GONE);
-                v.findViewById(R.id.right_chevron).setVisibility(View.GONE);
                 break;
             default:
                 v = layoutInflater.inflate(R.layout.icon_widget_line_item, parent, false);

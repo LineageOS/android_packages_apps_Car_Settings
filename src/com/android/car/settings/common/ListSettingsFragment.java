@@ -45,7 +45,6 @@ public abstract class ListSettingsFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
 
         mListView = (PagedListView) getView().findViewById(R.id.list);
-        mListView.setDefaultItemDecoration(new NoDividerItemDecoration(getContext()));
         mListView.setDarkMode();
         mPagedListAdapter = new TypedPagedListAdapter(getContext(), getLineItems());
         mListView.setAdapter(mPagedListAdapter);
