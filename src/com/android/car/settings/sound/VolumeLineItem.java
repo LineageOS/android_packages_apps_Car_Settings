@@ -18,6 +18,7 @@ package com.android.car.settings.sound;
 
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
+import android.annotation.DrawableRes;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.Ringtone;
@@ -48,8 +49,8 @@ public class VolumeLineItem extends SeekbarLineItem {
             CarAudioManager carAudioManager,
             int streamType,
             int titleStringResId,
-            int iconResId) {
-        super(context.getText(titleStringResId));
+            @DrawableRes int iconResId) {
+        super(context.getText(titleStringResId), iconResId);
         mCarAudioManager = carAudioManager;
         this.streamType = streamType;
         Uri ringtoneUri;

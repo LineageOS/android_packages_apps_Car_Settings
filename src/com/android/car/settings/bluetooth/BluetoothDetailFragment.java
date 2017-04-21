@@ -17,15 +17,14 @@ package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.EditTextLineItem;
+import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.SingleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.view.PagedListView;
 
@@ -33,9 +32,9 @@ import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
-import com.android.settingslib.bluetooth.MapProfile;
+import com.android.settingslib.bluetooth.MapClientProfile;
 import com.android.settingslib.bluetooth.PanProfile;
-import com.android.settingslib.bluetooth.PbapServerProfile;
+import com.android.settingslib.bluetooth.PbapClientProfile;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,7 @@ import java.util.ArrayList;
  * e.g. forget etc. The intent should include information about the device, use that to
  * render UI, e.g. show name etc.
  */
-public class BluetoothDetailFragment extends BaseFragment implements
+public class BluetoothDetailFragment extends ListSettingsFragment implements
         BluetoothProfileLineItem.DataChangedListener {
     private static final String TAG = "BluetoothDetailFragment";
 
@@ -53,19 +52,17 @@ public class BluetoothDetailFragment extends BaseFragment implements
     private BluetoothDevice mDevice;
     private CachedBluetoothDevice mCachedDevice;
 
-    private PagedListView mListView;
-    private TypedPagedListAdapter mPagedListAdapter;
     private CachedBluetoothDeviceManager mDeviceManager;
     private LocalBluetoothManager mLocalManager;
-    private EditText mNameView;
+    private EditTextLineItem mInputLineItem;
     private TextView mOkButton;
+    private String mInput;
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
         BluetoothDetailFragment bluetoothDetailFragment = new BluetoothDetailFragment();
-        Bundle bundle = BaseFragment.getBundle();
+        Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putParcelable(EXTRA_BT_DEVICE, btDevice);
         bundle.putInt(EXTRA_TITLE_ID, R.string.bluetooth_settings);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.bluetooth_details);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bluetoothDetailFragment.setArguments(bundle);
         return bluetoothDetailFragment;
@@ -75,19 +72,6 @@ public class BluetoothDetailFragment extends BaseFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mDevice = getArguments().getParcelable(EXTRA_BT_DEVICE);
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mListView = (PagedListView) getView().findViewById(R.id.list);
-        mListView.setDarkMode();
-
-        if (mDevice == null) {
-            Log.w(TAG, "No bluetooth device set.");
-            return;
-        }
-
         mLocalManager = LocalBluetoothManager.getInstance(getContext(), null /* listener */);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
@@ -101,14 +85,18 @@ public class BluetoothDetailFragment extends BaseFragment implements
                     mLocalManager.getProfileManager(),
                     mDevice);
         }
+    }
 
-        mNameView = (EditText) getView().findViewById(R.id.bt_name);
-        mNameView.setText(mCachedDevice.getName());
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        if (mDevice == null) {
+            Log.w(TAG, "No bluetooth device set.");
+            return;
+        }
+        super.onActivityCreated(savedInstanceState);
+
         setupForgetButton();
         setupOkButton();
-
-        mPagedListAdapter = new TypedPagedListAdapter(getContext(), getProfileLineItems());
-        mListView.setAdapter(mPagedListAdapter);
     }
 
     @Override
@@ -116,28 +104,24 @@ public class BluetoothDetailFragment extends BaseFragment implements
         mPagedListAdapter.notifyDataSetChanged();
     }
 
-    private ArrayList<TypedPagedListAdapter.LineItem> getProfileLineItems() {
+    @Override
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        mInputLineItem = new EditTextLineItem(
+                getContext().getText(R.string.bluetooth_preference_paired_dialog_name_label),
+                mCachedDevice.getName());
+        lineItems.add(mInputLineItem);
+        lineItems.add(new SingleTextLineItem(getContext().getText(
+                R.string.bluetooth_device_advanced_profile_header_title)));
+        addProfileLineItems(lineItems);
+        return lineItems;
+    }
+
+    private void addProfileLineItems(ArrayList<TypedPagedListAdapter.LineItem> lineItems) {
         for (LocalBluetoothProfile profile : mCachedDevice.getConnectableProfiles()) {
             lineItems.add(new BluetoothProfileLineItem(
                     getContext(), profile, mCachedDevice, this));
         }
-
-        int pbapPermission = mCachedDevice.getPhonebookPermissionChoice();
-        // Only provide PBAP cabability if the client device has requested PBAP.
-        if (pbapPermission != CachedBluetoothDevice.ACCESS_UNKNOWN) {
-            PbapServerProfile psp = mLocalManager.getProfileManager().getPbapProfile();
-            lineItems.add(new BluetoothProfileLineItem(
-                    getContext(), psp, mCachedDevice, this));
-        }
-
-        int mapPermission = mCachedDevice.getMessagePermissionChoice();
-        if (mapPermission != CachedBluetoothDevice.ACCESS_UNKNOWN) {
-            MapProfile mapProfile = mLocalManager.getProfileManager().getMapProfile();
-            lineItems.add(new BluetoothProfileLineItem(
-                    getContext(), mapProfile, mCachedDevice, this));
-        }
-        return lineItems;
     }
 
     private void setupForgetButton() {
@@ -155,24 +139,12 @@ public class BluetoothDetailFragment extends BaseFragment implements
         mOkButton.setText(R.string.okay);
         // before the text gets changed, always set it in a disabled state.
         mOkButton.setEnabled(false);
-        mNameView.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // don't care
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // dont' care
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                mOkButton.setEnabled(!s.toString().equals(mCachedDevice.getName()));
-            }
+        mInputLineItem.setTextChangeListener((s) -> {
+            mInput = s.toString();
+            mOkButton.setEnabled(!mInput.equals(mCachedDevice.getName()));
         });
         mOkButton.setOnClickListener(v -> {
-            mCachedDevice.setName(mNameView.getText().toString());
+            mCachedDevice.setName(mInput);
             mFragmentController.goBack();
         });
     }

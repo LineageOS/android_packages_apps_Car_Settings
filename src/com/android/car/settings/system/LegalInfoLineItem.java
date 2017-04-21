@@ -17,6 +17,7 @@
 package com.android.car.settings.system;
 
 import android.content.Context;
+import android.content.Intent;
 import android.widget.ImageView;
 
 import com.android.car.settings.R;
@@ -52,7 +53,9 @@ class LegalInfoLineItem extends IconTextLineItem {
 
     @Override
     public void onClick() {
-        // TODO: link to a legal info page.
+        Intent intent = new Intent();
+        intent.setAction("android.settings.WEBVIEW_LICENSE");
+        mContext.startActivity(intent);
     }
 
     @Override

@@ -53,7 +53,7 @@ class SetTimeLineItem extends TextLineItem {
 
     @Override
     public boolean isExpandable() {
-        return true;
+        return isEnabled();
     }
 
     @Override

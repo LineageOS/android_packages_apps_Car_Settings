@@ -68,7 +68,9 @@ public class TypedPagedListAdapter
                 ICON_TEXT_TYPE,
                 SEEKBAR_TYPE,
                 ICON_TOGGLE_TYPE,
-                CHECKBOX_TYPE})
+                CHECKBOX_TYPE,
+                EDIT_TEXT_TYPE,
+                SINGLE_TEXT_TYPE})
         public @interface LineItemType {}
 
         // with one title and one description
@@ -88,6 +90,12 @@ public class TypedPagedListAdapter
 
         // with one icon, title and a checkbox.
         static final int CHECKBOX_TYPE = 6;
+
+        // with one title and a EditText.
+        static final int EDIT_TEXT_TYPE = 7;
+
+        // with one title.
+        static final int SINGLE_TEXT_TYPE = 8;
 
         @LineItemType
         abstract int getType();
@@ -132,6 +140,10 @@ public class TypedPagedListAdapter
                 return IconToggleLineItem.createViewHolder(parent);
             case LineItem.CHECKBOX_TYPE:
                 return CheckBoxLineItem.createViewHolder(parent);
+            case LineItem.EDIT_TEXT_TYPE:
+                return EditTextLineItem.createViewHolder(parent);
+            case LineItem.SINGLE_TEXT_TYPE:
+                return SingleTextLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }
