@@ -23,8 +23,8 @@
     android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="23"/>
+        android:minSdkVersion="24"
+        android:targetSdkVersion="24"/>
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
