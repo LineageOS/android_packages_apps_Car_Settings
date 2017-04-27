@@ -53,12 +53,12 @@ class SetTimeZoneLineItem extends TextLineItem {
 
     @Override
     public boolean isExpandable() {
-        return false;
+        return isEnabled();
     }
 
     @Override
     public boolean isClickable() {
-        return true;
+        return isEnabled();
     }
 
     @Override
