@@ -47,8 +47,8 @@ public abstract class TextLineItem extends TypedPagedListAdapter.LineItem<TextLi
         viewHolder.descView.setText(getDesc());
         viewHolder.itemView.setOnClickListener(mOnClickListener);
         viewHolder.itemView.setEnabled(isEnabled());
-        viewHolder.titleView.setEnabled(isClickable() && isEnabled());
-        viewHolder.descView.setEnabled(isClickable() && isEnabled());
+        viewHolder.titleView.setEnabled(isEnabled());
+        viewHolder.descView.setEnabled(isEnabled());
         viewHolder.rightArrow.setEnabled(isEnabled());
         viewHolder.rightArrow.setVisibility(
                 isExpandable() ? View.VISIBLE : View.INVISIBLE);

@@ -18,6 +18,7 @@
     <style name="LineItem">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_item_height</item>
+        <item name="android:foreground">@drawable/car_list_item_background</item>
     </style>
 
     <style name="LineItem.SingleItem" parent="LineItem">
@@ -81,6 +82,7 @@
     <style name="SettingPagedList">
         <item name="scrollbarContainerWidth">@dimen/side_margin</item>
         <item name="showDivider">false</item>
-        <item name="usedInDrawer">true</item>
+        <item name="offsetScrollBar">true</item>
+        <item name="rightMargin">0dp</item>
     </style>
 </resources>

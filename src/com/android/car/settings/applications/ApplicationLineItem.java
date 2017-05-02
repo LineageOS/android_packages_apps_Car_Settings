@@ -20,6 +20,7 @@ import android.annotation.NonNull;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.PorterDuff;
 import android.widget.ImageView;
 
 import com.android.car.settings.common.BaseFragment;
@@ -82,5 +83,6 @@ public class ApplicationLineItem extends IconTextLineItem {
     @Override
     public void setIcon(ImageView iconView) {
         iconView.setImageDrawable(mResolveInfo.loadIcon(mPm));
+        iconView.setImageTintMode(PorterDuff.Mode.DST);
     }
 }

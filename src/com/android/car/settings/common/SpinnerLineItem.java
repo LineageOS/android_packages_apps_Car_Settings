@@ -16,47 +16,69 @@
 
 package com.android.car.settings.common;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
 
-/**
- * Contains logic for a line item represents text only view of a title.
- */
-public class SingleTextLineItem
-        extends TypedPagedListAdapter.LineItem<SingleTextLineItem.ViewHolder> {
-    private final CharSequence mTitle;
+import java.util.List;
 
-    public SingleTextLineItem(CharSequence title) {
+/**
+ * Contains logic for a line item represents a spinner.
+ */
+public class SpinnerLineItem extends TypedPagedListAdapter.LineItem<SpinnerLineItem.ViewHolder> {
+    private final ArrayAdapter<?> mArrayAdapter;
+    private final AdapterView.OnItemSelectedListener mOnItemSelectedListener;
+    private final CharSequence mTitle;
+    private final int mSelectedPosition;
+
+    public SpinnerLineItem(
+            Context context,
+            AdapterView.OnItemSelectedListener listener,
+            List<?> items,
+            CharSequence title,
+            int selectedPosition) {
+        mArrayAdapter = new ArrayAdapter(context, R.layout.spinner, items);
+        mArrayAdapter.setDropDownViewResource(R.layout.spinner_drop_down);
+        mOnItemSelectedListener = listener;
         mTitle = title;
+        mSelectedPosition = selectedPosition;
     }
 
     @Override
     public int getType() {
-        return SINGLE_TEXT_TYPE;
+        return SPINNER_TYPE;
     }
 
     @Override
     public void bindViewHolder(ViewHolder viewHolder) {
+        viewHolder.spinner.setAdapter(mArrayAdapter);
+        viewHolder.spinner.setSelection(mSelectedPosition);
+        viewHolder.spinner.setOnItemSelectedListener(mOnItemSelectedListener);
         viewHolder.titleView.setText(mTitle);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        public final Spinner spinner;
         public final TextView titleView;
 
         public ViewHolder(View view) {
             super(view);
+            spinner = view.findViewById(R.id.spinner);
             titleView = view.findViewById(R.id.title);
         }
     }
 
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         return new ViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.single_text_line_item, parent, false));
+                .inflate(R.layout.spinner_line_item, parent, false));
     }
 
     @Override

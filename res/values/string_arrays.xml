@@ -15,10 +15,10 @@
   ~ limitations under the License
   -->
 
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="true"
-          android:color="@color/car_body2" />
-    <item android:state_enabled="false"
-          android:alpha="0.5"
-          android:color="@color/car_body2" />
-</selector>
+<resources>
+    <string-array name="wifi_security_method">
+        <item>@string/wifi_security_none</item>
+        <item>@string/wifi_security_wep</item>
+        <item>@string/wifi_security_wpa_wpa2</item>
+    </string-array>
+</resources>

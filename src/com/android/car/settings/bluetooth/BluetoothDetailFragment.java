@@ -56,7 +56,6 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     private LocalBluetoothManager mLocalManager;
     private EditTextLineItem mInputLineItem;
     private TextView mOkButton;
-    private String mInput;
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
         BluetoothDetailFragment bluetoothDetailFragment = new BluetoothDetailFragment();
@@ -139,12 +138,10 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
         mOkButton.setText(R.string.okay);
         // before the text gets changed, always set it in a disabled state.
         mOkButton.setEnabled(false);
-        mInputLineItem.setTextChangeListener((s) -> {
-            mInput = s.toString();
-            mOkButton.setEnabled(!mInput.equals(mCachedDevice.getName()));
-        });
+        mInputLineItem.setTextChangeListener((s) ->
+                mOkButton.setEnabled(!s.toString().equals(mCachedDevice.getName())));
         mOkButton.setOnClickListener(v -> {
-            mCachedDevice.setName(mInput);
+            mCachedDevice.setName(mInputLineItem.getInput());
             mFragmentController.goBack();
         });
     }

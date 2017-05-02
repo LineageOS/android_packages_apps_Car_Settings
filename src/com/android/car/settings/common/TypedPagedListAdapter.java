@@ -70,7 +70,9 @@ public class TypedPagedListAdapter
                 ICON_TOGGLE_TYPE,
                 CHECKBOX_TYPE,
                 EDIT_TEXT_TYPE,
-                SINGLE_TEXT_TYPE})
+                SINGLE_TEXT_TYPE,
+                SPINNER_TYPE,
+                PASSWORD_TYPE})
         public @interface LineItemType {}
 
         // with one title and one description
@@ -96,6 +98,12 @@ public class TypedPagedListAdapter
 
         // with one title.
         static final int SINGLE_TEXT_TYPE = 8;
+
+        // with a spinner.
+        static final int SPINNER_TYPE = 9;
+
+        // with a password input window and a checkbox for show password or not.
+        static final int PASSWORD_TYPE = 10;
 
         @LineItemType
         abstract int getType();
@@ -144,6 +152,10 @@ public class TypedPagedListAdapter
                 return EditTextLineItem.createViewHolder(parent);
             case LineItem.SINGLE_TEXT_TYPE:
                 return SingleTextLineItem.createViewHolder(parent);
+            case LineItem.SPINNER_TYPE:
+                return SpinnerLineItem.createViewHolder(parent);
+            case LineItem.PASSWORD_TYPE:
+                return PasswordLineItem.createViewHolder(parent);
             default:
                 throw new IllegalStateException("ViewType not supported: " + viewType);
         }

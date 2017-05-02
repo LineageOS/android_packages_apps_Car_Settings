@@ -19,16 +19,21 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewSwitcher;
 
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.EditTextLineItem;
+import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.PasswordLineItem;
+import com.android.car.settings.common.SpinnerLineItem;
+import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.wifi.AccessPoint;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -36,7 +41,8 @@ import java.util.regex.Pattern;
  * in the intent, then it needs to contain AccessPoint information, which is be use that to
  * render UI, e.g. show SSID etc.
  */
-public class AddWifiFragment extends BaseFragment {
+public class AddWifiFragment extends ListSettingsFragment implements
+        AdapterView.OnItemSelectedListener{
     public static final String EXTRA_AP_STATE = "extra_ap_state";
 
     private static final String TAG = "AddWifiFragment";
@@ -56,18 +62,16 @@ public class AddWifiFragment extends BaseFragment {
                     Toast.LENGTH_SHORT).show();
         }
     };
-    // Switch between display a ssid and entering ssid.
-    private ViewSwitcher mSSidViewSwitcher;
-    private TextView mWifiNameDisplay;
-    private EditText mWifiNameInput;
-    private EditText mWifiPasswordInput;
+    private EditTextLineItem mWifiNameInput;
+    private EditTextLineItem mWifiPasswordInput;
+
+    private int mSelectedPosition = AccessPointSecurity.SECURITY_NONE_POSITION;
 
     public static AddWifiFragment getInstance(AccessPoint accessPoint) {
         AddWifiFragment addWifiFragment = new AddWifiFragment();
-        Bundle bundle = BaseFragment.getBundle();
+        Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_setup_add_network);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.add_wifi);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         Bundle accessPointState = new Bundle();
         if (accessPoint != null) {
             accessPoint.saveWifiState(accessPointState);
@@ -83,24 +87,65 @@ public class AddWifiFragment extends BaseFragment {
         if (getArguments().keySet().contains(EXTRA_AP_STATE)) {
             mAccessPoint = new AccessPoint(getContext(), getArguments().getBundle(EXTRA_AP_STATE));
         }
+        mWifiManager = getContext().getSystemService(WifiManager.class);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mWifiManager = getContext().getSystemService(WifiManager.class);
 
-        mSSidViewSwitcher = (ViewSwitcher) getView().findViewById(R.id.wifi_name);
-        mWifiNameDisplay = (TextView) getView().findViewById(R.id.wifi_name_display);
-        mWifiNameInput = (EditText) getView().findViewById(R.id.wifi_name_input);
-        mWifiPasswordInput = (EditText) getView().findViewById(R.id.wifi_password);
-        Button addWifiButton = (Button) getView().findViewById(R.id.wifi_connect);
-        bootstrap();
-
+        TextView addWifiButton = getActivity().findViewById(R.id.action_button1);
+        addWifiButton.setText(R.string.wifi_setup_connect);
         addWifiButton.setOnClickListener(v -> {
                 connectToAccessPoint();
                 mFragmentController.goBack();
             });
+    }
+
+    @Override
+    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        if (mAccessPoint != null) {
+            mWifiNameInput = new EditTextLineItem(
+                    getContext().getText(R.string.wifi_ssid), mAccessPoint.getSsid());
+            mWifiNameInput.setTextType(EditTextLineItem.TextType.NONE);
+        } else {
+            mWifiNameInput = new EditTextLineItem(
+                    getContext().getText(R.string.wifi_ssid));
+            mWifiNameInput.setTextType(EditTextLineItem.TextType.TEXT);
+        }
+        lineItems.add(mWifiNameInput);
+
+        if (mAccessPoint == null) {
+            List<AccessPointSecurity> securities =
+                    AccessPointSecurity.getSecurityType(getContext());
+            lineItems.add(new SpinnerLineItem(
+                    getContext(),
+                    this,
+                    securities,
+                    getContext().getText(R.string.wifi_security),
+                    mSelectedPosition));
+        }
+
+        if (mAccessPoint!= null
+                || mSelectedPosition != AccessPointSecurity.SECURITY_NONE_POSITION) {
+            mWifiPasswordInput = new PasswordLineItem(getContext().getText(R.string.wifi_password));
+            lineItems.add(mWifiPasswordInput);
+        }
+        return lineItems;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if (position == mSelectedPosition) {
+            return;
+        }
+        mSelectedPosition = position;
+        mPagedListAdapter.updateList(getLineItems());
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
     }
 
     private void connectToAccessPoint() {
@@ -117,7 +162,7 @@ public class AddWifiFragment extends BaseFragment {
             wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
             wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
             wifiConfig.preSharedKey = String.format(
-                    "\"%s\"", mWifiPasswordInput.getText().toString());
+                    "\"%s\"", mWifiPasswordInput.getInput());
         } else {
             switch (mAccessPoint.getSecurity()) {
                 case AccessPoint.SECURITY_NONE:
@@ -129,7 +174,7 @@ public class AddWifiFragment extends BaseFragment {
                     wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
                     wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
                     wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
-                    String password = mWifiPasswordInput.getText().toString();
+                    String password = mWifiPasswordInput.getInput();
                     wifiConfig.wepKeys[0] = isHexString(password) ? password
                             : "\"" + password + "\"";
                     wifiConfig.wepTxKeyIndex = 0;
@@ -139,7 +184,7 @@ public class AddWifiFragment extends BaseFragment {
                     wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
                     wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
                     wifiConfig.preSharedKey = String.format(
-                            "\"%s\"", mWifiPasswordInput.getText().toString());
+                            "\"%s\"", mWifiPasswordInput.getInput());
             }
         }
         int netId = mWifiManager.addNetwork(wifiConfig);
@@ -155,21 +200,9 @@ public class AddWifiFragment extends BaseFragment {
     // TODO: handle null case, show warning message etc.
     private String getSsId() {
         if (mAccessPoint == null) {
-            return mWifiNameInput.getText().toString();
+            return mWifiNameInput.getInput();
         } else {
             return mAccessPoint.getSsid().toString();
-        }
-    }
-
-    /**
-     * Sets up fields based on Intent content, and setup UI accordingly.
-     */
-    private void bootstrap() {
-        if (mAccessPoint == null && mSSidViewSwitcher.getCurrentView() == mWifiNameDisplay) {
-            mSSidViewSwitcher.showNext();
-        }
-        if (mAccessPoint != null) {
-            mWifiNameDisplay.setText(mAccessPoint.getSsid());
         }
     }
 }

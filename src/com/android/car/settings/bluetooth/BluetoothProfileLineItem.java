@@ -97,14 +97,11 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
         if (mProfile instanceof MapProfile) {
             return mCachedDevice.getMessagePermissionChoice()
                     == CachedBluetoothDevice.ACCESS_ALLOWED;
-
         } else if (mProfile instanceof PbapServerProfile) {
             return mCachedDevice.getPhonebookPermissionChoice()
                     == CachedBluetoothDevice.ACCESS_ALLOWED;
-
         } else if (mProfile instanceof PanProfile) {
             return mProfile.getConnectionStatus(device) == BluetoothProfile.STATE_CONNECTED;
-
         } else {
             return mProfile.isPreferred(device);
         }

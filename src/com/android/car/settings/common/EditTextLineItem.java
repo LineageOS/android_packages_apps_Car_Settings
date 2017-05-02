@@ -16,8 +16,10 @@
 
 package com.android.car.settings.common;
 
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,23 +32,62 @@ import com.android.car.settings.R;
 /**
  * Contains logic for a line item represents text only view of a title and a EditText as input.
  */
-public class EditTextLineItem extends TypedPagedListAdapter.LineItem<EditTextLineItem.ViewHolder> {
+public class EditTextLineItem<VH extends EditTextLineItem.ViewHolder>
+        extends TypedPagedListAdapter.LineItem<VH> {
     private final CharSequence mTitle;
-    private final CharSequence mInitialInputTest;
+    private final CharSequence mInitialInputText;
 
     public interface TextChangeListener {
+
         void textChanged(Editable s);
     }
 
     private TextChangeListener mTextChangeListener;
+    private EditText mEditText;
+    protected TextType mTextType = TextType.NONE;
+
+    public enum TextType {
+        // None editable text
+        NONE(0),
+        // text input
+        TEXT(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL),
+        // password, input is replaced by dot
+        HIDDEN_PASSWORD(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD),
+        // password, visible.
+        VISIBLE_PASSWORD(
+                InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+
+        private int mValue;
+
+        TextType(int value) {
+          mValue = value;
+        }
+
+        public int getValue() {
+            return mValue;
+        }
+    }
+
+    public EditTextLineItem(CharSequence title) {
+        this(title, null);
+    }
 
     public EditTextLineItem(CharSequence title, CharSequence initialInputText) {
         mTitle = title;
-        mInitialInputTest = initialInputText;
+        mInitialInputText = initialInputText;
+    }
+
+    public void setTextType(TextType textType) {
+        mTextType = textType;
     }
 
     public void setTextChangeListener(TextChangeListener listener) {
         mTextChangeListener = listener;
+    }
+
+    @Nullable
+    public String getInput() {
+        return mEditText == null ? null : mEditText.getText().toString();
     }
 
     @Override
@@ -55,10 +96,14 @@ public class EditTextLineItem extends TypedPagedListAdapter.LineItem<EditTextLin
     }
 
     @Override
-    public void bindViewHolder(ViewHolder viewHolder) {
+    public void bindViewHolder(VH viewHolder) {
         viewHolder.titleView.setText(mTitle);
-        viewHolder.editText.setText(mInitialInputTest);
-        viewHolder.editText.addTextChangedListener(new TextWatcher() {
+        mEditText = viewHolder.editText;
+        mEditText.setInputType(mTextType.getValue());
+        if (mInitialInputText != null) {
+            mEditText.setText(mInitialInputText);
+        }
+        mEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // don't care

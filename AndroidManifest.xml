@@ -62,6 +62,7 @@
         <activity
             android:name=".common.CarSettingActivity"
             android:label="@string/settings_label"
+            android:windowSoftInputMode="adjustPan"
             android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
