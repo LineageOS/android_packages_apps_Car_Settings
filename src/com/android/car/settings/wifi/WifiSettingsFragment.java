@@ -126,7 +126,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     private void refreshData() {
         if (mAdapter != null) {
             mAdapter.updateAccessPoints(mCarWifiManager.getAccessPoints());
-            // if the list is empty, keep showing the progress bar, the list should refresh
+            // if the list is empty, keep showing the progress bar, the list should reset
             // every couple seconds.
             // TODO: Consider show a message in the list view place.
             if (!mAdapter.isEmpty()) {

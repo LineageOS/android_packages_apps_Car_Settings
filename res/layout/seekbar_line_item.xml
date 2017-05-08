@@ -20,8 +20,7 @@
     style="@style/LineItem" >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="@dimen/stream_card_keyline_1"
@@ -31,13 +30,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/line_item_top_margin"
             style="@style/CarBody2.SingleLine" />
         <ImageView
             android:id="@+id/icon"
             style="@style/SettingIcon"
             android:layout_marginEnd="@dimen/stream_card_keyline_1"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/title"
+            android:layout_alignParentBottom="true"
             android:visibility="gone" />
         <SeekBar
             android:id="@+id/seekbar"
@@ -45,7 +45,7 @@
             android:layout_marginTop="@dimen/double_line_text_margin"
             android:thumb="@drawable/ic_seekbar_thumb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/stream_button_icon_size"
             android:layout_below="@+id/title"
             android:layout_toEndOf="@+id/icon"/>
     </RelativeLayout>

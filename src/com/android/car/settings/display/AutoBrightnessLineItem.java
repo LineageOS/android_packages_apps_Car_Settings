@@ -47,6 +47,9 @@ class AutoBrightnessLineItem extends ToggleLineItem {
 
     @Override
     public boolean isChecked() {
+        if (!isEnabled()) {
+            return false;
+        }
         int brightnessMode = Settings.System.getInt(mContext.getContentResolver(),
                 SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL);
         return brightnessMode != SCREEN_BRIGHTNESS_MODE_MANUAL;
@@ -60,7 +63,11 @@ class AutoBrightnessLineItem extends ToggleLineItem {
     @Override
     public void bindViewHolder(ToggleLineItemViewHolder holder) {
         super.bindViewHolder(holder);
-        holder.itemView.setEnabled(isEnabled());
+        boolean enabled = isEnabled();
+        holder.titleView.setEnabled(enabled);
+        holder.descView.setEnabled(enabled);
+        holder.toggle.setEnabled(enabled);
+        holder.itemView.setEnabled(enabled);
     }
 
     @Override

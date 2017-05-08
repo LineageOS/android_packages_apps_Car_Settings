@@ -16,11 +16,16 @@
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -42,6 +47,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
 public class BluetoothSettingsFragment extends BaseFragment implements BluetoothCallback {
     private static final String TAG = "BluetoothSettingsFragment";
 
+    private SwipeRefreshLayout mSwipeRefreshLayout;
     private Switch mBluetoothSwitch;
     private ProgressBar mProgressBar;
     private PagedListView mDeviceListView;
@@ -50,6 +56,21 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
     private BluetoothDeviceListAdapter mDeviceAdapter;
     private LocalBluetoothAdapter mLocalAdapter;
     private LocalBluetoothManager mLocalManager;
+
+    private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (BluetoothAdapter.ACTION_DISCOVERY_STARTED.equals(intent.getAction())) {
+                setProgressBarVisible(true);
+                mBluetoothSwitch.setChecked(true);
+                if (mViewSwitcher.getCurrentView() != mSwipeRefreshLayout) {
+                    mViewSwitcher.showPrevious();
+                }
+            } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(intent.getAction())) {
+                setProgressBarVisible(false);
+            }
+        }
+    };
 
     public static BluetoothSettingsFragment getInstance() {
         BluetoothSettingsFragment bluetoothSettingsFragment = new BluetoothSettingsFragment();
@@ -64,7 +85,22 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mBluetoothSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
+        mBluetoothSwitch = getActivity().findViewById(R.id.toggle_switch);
+        mSwipeRefreshLayout = getActivity().findViewById(R.id.swiperefresh);
+        mSwipeRefreshLayout.setSize(SwipeRefreshLayout.LARGE);
+        mSwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        mSwipeRefreshLayout.setRefreshing(false);
+                        if (mLocalAdapter.isDiscovering()) {
+                            mLocalAdapter.cancelDiscovery();
+                        }
+                        mDeviceAdapter.reset();
+                    }
+                }
+        );
+
         mBluetoothSwitch.setOnClickListener(v -> {
                 if (mBluetoothSwitch.isChecked()) {
                     // bt scan was turned on at state listener, when state is on.
@@ -75,10 +111,10 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
                 }
             });
 
-        mProgressBar = (ProgressBar) getView().findViewById(R.id.bt_search_progress);
-        mDeviceListView = (PagedListView) getView().findViewById(R.id.list);
-        mViewSwitcher = (ViewSwitcher) getView().findViewById(R.id.view_switcher);
-        mMessageView = (TextView) getView().findViewById(R.id.bt_message);
+        mProgressBar = getView().findViewById(R.id.bt_search_progress);
+        mDeviceListView = getView().findViewById(R.id.list);
+        mViewSwitcher = getView().findViewById(R.id.view_switcher);
+        mMessageView = getView().findViewById(R.id.bt_message);
 
         mLocalManager = LocalBluetoothManager.getInstance(getContext(), null /* listener */);
         if (mLocalManager == null) {
@@ -101,13 +137,18 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         if (mLocalManager == null) {
             return;
         }
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_STARTED);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+        getActivity().registerReceiver(mBroadcastReceiver, filter);
+
         mLocalManager.setForegroundActivity(getActivity());
         mLocalManager.getEventManager().registerCallback(this);
         mBluetoothSwitch.setChecked(mLocalAdapter.isEnabled());
         if (mLocalAdapter.isEnabled()) {
             setProgressBarVisible(true);
             mLocalAdapter.startScanning(true);
-            if (mViewSwitcher.getCurrentView() != mDeviceListView) {
+            if (mViewSwitcher.getCurrentView() != mSwipeRefreshLayout) {
                 mViewSwitcher.showPrevious();
             }
         } else {
@@ -125,6 +166,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         if (mLocalManager == null) {
             return;
         }
+        getActivity().unregisterReceiver(mBroadcastReceiver);
         mDeviceAdapter.stop();
         mLocalManager.setForegroundActivity(null);
         mLocalAdapter.stopScanning();
@@ -145,7 +187,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
             case BluetoothAdapter.STATE_TURNING_ON:
                 setProgressBarVisible(true);
                 mBluetoothSwitch.setChecked(true);
-                if (mViewSwitcher.getCurrentView() != mDeviceListView) {
+                if (mViewSwitcher.getCurrentView() != mSwipeRefreshLayout) {
                         mViewSwitcher.showPrevious();
                 }
                 break;

@@ -31,7 +31,7 @@ import java.util.ArrayList;
  */
 public abstract class ListSettingsFragment extends BaseFragment {
 
-    private PagedListView mListView;
+    protected PagedListView mListView;
     protected TypedPagedListAdapter mPagedListAdapter;
 
     protected static Bundle getBundle() {

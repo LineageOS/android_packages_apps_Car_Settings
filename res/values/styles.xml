@@ -83,6 +83,6 @@
         <item name="scrollbarContainerWidth">@dimen/side_margin</item>
         <item name="showDivider">false</item>
         <item name="offsetScrollBar">true</item>
-        <item name="rightMargin">0dp</item>
+        <item name="rightMargin">@dimen/side_margin</item>
     </style>
 </resources>

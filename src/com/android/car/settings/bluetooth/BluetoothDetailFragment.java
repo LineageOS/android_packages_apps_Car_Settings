@@ -124,7 +124,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     }
 
     private void setupForgetButton() {
-        TextView fortgetButton = (TextView) getActivity().findViewById(R.id.action_button2);
+        TextView fortgetButton = getActivity().findViewById(R.id.action_button2);
         fortgetButton.setVisibility(View.VISIBLE);
         fortgetButton.setText(R.string.forget);
         fortgetButton.setOnClickListener(v -> {
@@ -134,14 +134,12 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     }
 
     private void setupOkButton() {
-        mOkButton = (TextView) getActivity().findViewById(R.id.action_button1);
+        mOkButton = getActivity().findViewById(R.id.action_button1);
         mOkButton.setText(R.string.okay);
-        // before the text gets changed, always set it in a disabled state.
-        mOkButton.setEnabled(false);
-        mInputLineItem.setTextChangeListener((s) ->
-                mOkButton.setEnabled(!s.toString().equals(mCachedDevice.getName())));
         mOkButton.setOnClickListener(v -> {
-            mCachedDevice.setName(mInputLineItem.getInput());
+            if (!mInputLineItem.getInput().equals(mCachedDevice.getName())) {
+                mCachedDevice.setName(mInputLineItem.getInput());
+            }
             mFragmentController.goBack();
         });
     }

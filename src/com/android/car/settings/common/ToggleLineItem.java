@@ -59,8 +59,8 @@ public abstract class ToggleLineItem
     }
 
     public static class ToggleLineItemViewHolder extends RecyclerView.ViewHolder {
-        final TextView titleView;
-        final TextView descView;
+        public final TextView titleView;
+        public final TextView descView;
         public final Switch toggle;
 
         public ToggleLineItemViewHolder(View view) {

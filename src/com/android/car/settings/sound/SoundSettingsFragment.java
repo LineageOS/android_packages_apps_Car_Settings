@@ -82,7 +82,7 @@ public class SoundSettingsFragment extends BaseFragment {
                     R.drawable.ic_audio_navi));
             // if list is already initiated, update it's content.
             if (mPagedListAdapter != null) {
-                mPagedListAdapter.updateList(mVolumeLineItems);
+                mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
             }
         }
 
@@ -116,7 +116,7 @@ public class SoundSettingsFragment extends BaseFragment {
         mPagedListAdapter = new TypedPagedListAdapter(getContext());
         mListView.setAdapter(mPagedListAdapter);
         if (!mVolumeLineItems.isEmpty()) {
-            mPagedListAdapter.updateList(mVolumeLineItems);
+            mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
         }
     }
 

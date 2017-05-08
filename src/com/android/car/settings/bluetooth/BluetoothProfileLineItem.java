@@ -20,23 +20,26 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.android.car.settings.common.CheckBoxLineItem;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
-import com.android.settingslib.bluetooth.MapProfile;
+import com.android.settingslib.bluetooth.MapClientProfile;
 import com.android.settingslib.bluetooth.PanProfile;
-import com.android.settingslib.bluetooth.PbapServerProfile;
+import com.android.settingslib.bluetooth.PbapClientProfile;
 
 /**
  * Represents a line item for a Bluetooth mProfile.
  */
 public class BluetoothProfileLineItem extends CheckBoxLineItem {
+    private static final String TAG = "BTProfileLineItem";
     private final LocalBluetoothProfile mProfile;
     private final CachedBluetoothDevice mCachedDevice;
     private CheckboxLineItemViewHolder mViewHolder;
     private DataChangedListener mDataChangedListener;
+    private final Context mContext;
 
     public interface DataChangedListener {
         void onDataChanged();
@@ -45,6 +48,7 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
     public BluetoothProfileLineItem(Context context, LocalBluetoothProfile profile,
             CachedBluetoothDevice cachedBluetoothDevice, DataChangedListener listener) {
         super(context.getText(profile.getNameResource(cachedBluetoothDevice.getDevice())));
+        mContext = context;
         mCachedDevice = cachedBluetoothDevice;
         mProfile = profile;
         mDataChangedListener = listener;
@@ -52,10 +56,10 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
 
     @Override
     public void onClick(boolean isChecked) {
-        if (mProfile instanceof PbapServerProfile) {
+        if (mProfile instanceof PbapClientProfile) {
             mCachedDevice.setPhonebookPermissionChoice(isChecked
                     ? CachedBluetoothDevice.ACCESS_REJECTED : CachedBluetoothDevice.ACCESS_ALLOWED);
-        } else if (mProfile instanceof MapProfile) {
+        } else if (mProfile instanceof MapClientProfile) {
             mCachedDevice.setMessagePermissionChoice(isChecked
                     ? CachedBluetoothDevice.ACCESS_REJECTED : CachedBluetoothDevice.ACCESS_ALLOWED);
         } else if (isChecked) {
@@ -94,10 +98,10 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
     public boolean isChecked() {
         BluetoothDevice device = mCachedDevice.getDevice();
 
-        if (mProfile instanceof MapProfile) {
+        if (mProfile instanceof MapClientProfile) {
             return mCachedDevice.getMessagePermissionChoice()
                     == CachedBluetoothDevice.ACCESS_ALLOWED;
-        } else if (mProfile instanceof PbapServerProfile) {
+        } else if (mProfile instanceof PbapClientProfile) {
             return mCachedDevice.getPhonebookPermissionChoice()
                     == CachedBluetoothDevice.ACCESS_ALLOWED;
         } else if (mProfile instanceof PanProfile) {

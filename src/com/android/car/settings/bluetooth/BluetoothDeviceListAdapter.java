@@ -256,7 +256,7 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceDeleted(CachedBluetoothDevice cachedDevice) {
-        onDeviceDeleted(cachedDevice, true /* refresh */);
+        onDeviceDeleted(cachedDevice, true /* reset */);
     }
 
     @Override
@@ -278,6 +278,16 @@ public class BluetoothDeviceListAdapter
         }
     }
 
+    public void reset() {
+        mBondedDevices.clear();
+        mBondedDevicesSorted.clear();
+        mAvailableDevices.clear();
+        mAvailableDevicesSorted.clear();
+        mLocalAdapter.startScanning(true);
+        addBondDevices();
+        addCachedDevices();
+    }
+
     @Override
     public void onScanningStateChanged(boolean started) {
         // don't care
@@ -285,7 +295,7 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
-        onDeviceDeleted(cachedDevice, false /* refresh */);
+        onDeviceDeleted(cachedDevice, false /* reset */);
         onDeviceAdded(cachedDevice);
     }
 
@@ -337,7 +347,7 @@ public class BluetoothDeviceListAdapter
             }
         }
         if (BluetoothDeviceFilter.UNBONDED_DEVICE_FILTER.matches(cachedDevice.getDevice())) {
-            // refresh is done at SortTask.
+            // reset is done at SortTask.
             mAvailableDevices.add(cachedDevice);
         }
         return needSort;

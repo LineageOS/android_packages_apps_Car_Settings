@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/optical_center_offset"
             android:layout_marginStart="@dimen/stream_card_keyline_3"
             android:layout_marginEnd="@dimen/stream_card_keyline_3"
             android:orientation="vertical">

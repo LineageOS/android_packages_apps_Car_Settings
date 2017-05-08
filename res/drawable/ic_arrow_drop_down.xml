@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (C) 2017 The Android Open Source Project
   ~
@@ -15,10 +14,13 @@
   ~ limitations under the License
   -->
 
-<com.android.car.view.PagedListView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/SettingPagedList"
-    />
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:height="@dimen/stream_button_icon_size"
+        android:width="@dimen/stream_button_icon_size"
+        android:tint="@color/car_tint"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+    <path
+        android:pathData="M7,10l5,5 5,-5z"
+        android:fillColor="#000000"/>
+</vector>

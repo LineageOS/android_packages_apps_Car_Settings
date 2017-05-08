@@ -17,6 +17,10 @@
 package com.android.car.settings.system;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.PersistableBundle;
+import android.telephony.CarrierConfigManager;
+import android.text.TextUtils;
 import android.widget.ImageView;
 
 import com.android.car.settings.R;
@@ -27,8 +31,6 @@ import com.android.car.settings.common.IconTextLineItem;
  * A LineItem that links to system update.
  */
 class SystemUpdatesLineItem extends IconTextLineItem {
-    private static final String TAG = "SystemUpdatesLineItem";
-
     private final Context mContext;
 
     public SystemUpdatesLineItem(Context context) {
@@ -58,7 +60,26 @@ class SystemUpdatesLineItem extends IconTextLineItem {
 
     @Override
     public void onClick() {
-        // TODO: trigger system OTA flow
+        // copy what the phone setting is doing, sending out a carrier defined intent
+        CarrierConfigManager configManager =
+                (CarrierConfigManager) mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE);
+        PersistableBundle b = configManager.getConfig();
+        if (b == null || !b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
+          return;
+        }
+        String intentStr = b.getString(CarrierConfigManager.
+                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
+        if (!TextUtils.isEmpty(intentStr)) {
+            String extra = b.getString(CarrierConfigManager.
+                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
+            Intent intent = new Intent(intentStr);
+            if (!TextUtils.isEmpty(extra)) {
+                String extraVal = b.getString(CarrierConfigManager.
+                        KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
+                intent.putExtra(extra, extraVal);
+            }
+            mContext.getApplicationContext().sendBroadcast(intent);
+        }
     }
 
     @Override

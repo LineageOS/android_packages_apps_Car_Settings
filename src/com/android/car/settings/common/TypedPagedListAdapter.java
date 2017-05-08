@@ -37,22 +37,20 @@ import java.util.ArrayList;
 public class TypedPagedListAdapter
         extends RecyclerView.Adapter<ViewHolder>
         implements PagedListView.ItemCap {
-    private static final String TAG = "TypedPagedListAdapter";
 
     private final Context mContext;
-    private ArrayList<? extends LineItem> mContentList;
+    private ArrayList<LineItem> mContentList;
 
     public TypedPagedListAdapter(@NonNull Context context) {
         this(context, new ArrayList<>());
     }
 
-    public TypedPagedListAdapter(
-            @NonNull Context context, ArrayList<? extends LineItem> contentList) {
+    public TypedPagedListAdapter(@NonNull Context context, ArrayList<LineItem> contentList) {
         mContext = context;
         mContentList = contentList;
     }
 
-    public void updateList(ArrayList<? extends LineItem> contentList) {
+    public void updateList(ArrayList<LineItem> contentList) {
         mContentList = contentList;
         notifyDataSetChanged();
     }

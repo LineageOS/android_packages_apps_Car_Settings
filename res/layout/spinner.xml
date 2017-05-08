@@ -19,7 +19,5 @@
           android:id="@+id/spinnerTarget"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:paddingTop="@dimen/tile_top_bottom_padding"
-          android:paddingBottom="@dimen/tile_top_bottom_padding"
           style="@style/CarBody1.SingleLine"
 />
