@@ -32,14 +32,16 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_RESOURCE_DIR := \
       $(LOCAL_PATH)/res \
-      frameworks/support/v7/preference/res \
-      frameworks/support/v14/preference/res \
-      frameworks/support/design/res
+      $(SUPPORT_LIBRARY_ROOT)/v7/preference/res \
+      $(SUPPORT_LIBRARY_ROOT)/v14/preference/res \
+      $(SUPPORT_LIBRARY_ROOT)/core-ui/res \
+      $(SUPPORT_LIBRARY_ROOT)/design/res
 
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
 
   LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.preference
   LOCAL_AAPT_FLAGS += --extra-packages android.support.v14.preference
+  LOCAL_AAPT_FLAGS += --extra-packages android.support.coreui
   LOCAL_AAPT_FLAGS += --extra-packages android.support.design
 
   LOCAL_CERTIFICATE := platform
