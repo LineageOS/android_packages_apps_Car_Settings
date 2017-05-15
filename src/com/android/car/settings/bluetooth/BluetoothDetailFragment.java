@@ -109,6 +109,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
         mInputLineItem = new EditTextLineItem(
                 getContext().getText(R.string.bluetooth_preference_paired_dialog_name_label),
                 mCachedDevice.getName());
+        mInputLineItem.setTextType(EditTextLineItem.TextType.TEXT);
         lineItems.add(mInputLineItem);
         lineItems.add(new SingleTextLineItem(getContext().getText(
                 R.string.bluetooth_device_advanced_profile_header_title)));
