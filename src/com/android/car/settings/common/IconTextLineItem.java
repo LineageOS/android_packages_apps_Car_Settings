@@ -62,8 +62,8 @@ public abstract class IconTextLineItem
                 isClickable() && isEnabled() ? View.VISIBLE : View.INVISIBLE);
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        final TextView titleView;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public final TextView titleView;
         final TextView descView;
         final ImageView iconView;
         final ImageView rightArrow;
