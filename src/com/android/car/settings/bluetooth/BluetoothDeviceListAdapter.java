@@ -460,7 +460,12 @@ public class BluetoothDeviceListAdapter
                 if (!device.startPairing()) {
                     showError(device.getName(),
                             R.string.bluetooth_pairing_error_message);
+                    return;
                 }
+                // allow MAP and PBAP since this is client side, permission should be handled on
+                // server side. i.e. the phone side.
+                device.setPhonebookPermissionChoice(CachedBluetoothDevice.ACCESS_ALLOWED);
+                device.setMessagePermissionChoice(CachedBluetoothDevice.ACCESS_ALLOWED);
             }
         }
     }
