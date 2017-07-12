@@ -22,11 +22,13 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.EditTextLineItem;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.TypedPagedListAdapter;
 
@@ -48,7 +50,7 @@ public class UserDetailsSettingsFragment extends ListSettingsFragment {
                 userSettingsFragment = new UserDetailsSettingsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_details_title);
         bundle.putParcelable(EXTRA_USER_INFO, userInfo);
         userSettingsFragment.setArguments(bundle);
         return userSettingsFragment;
@@ -62,7 +64,19 @@ public class UserDetailsSettingsFragment extends ListSettingsFragment {
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        return new ArrayList<>();
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        EditTextLineItem userNameLineItem = new EditTextLineItem(
+                getContext().getText(R.string.user_name_label),
+                mUserInfo.name);
+        userNameLineItem.setTextType(EditTextLineItem.TextType.TEXT);
+        userNameLineItem.setTextChangeListener(new EditTextLineItem.TextChangeListener() {
+            @Override
+            public void textChanged(Editable s) {
+                mUserManager.setUserName(mUserInfo.id, s.toString());
+            }
+        });
+        lineItems.add(userNameLineItem);
+        return lineItems;
     }
 
     @Override

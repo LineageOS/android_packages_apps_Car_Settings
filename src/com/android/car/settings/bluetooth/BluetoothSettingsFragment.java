@@ -101,7 +101,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
                 }
         );
 
-        mBluetoothSwitch.setOnClickListener(v -> {
+        mBluetoothSwitch.setOnCheckedChangeListener((v, isChecked) -> {
                 if (mBluetoothSwitch.isChecked()) {
                     // bt scan was turned on at state listener, when state is on.
                     mLocalAdapter.setBluetoothEnabled(true);
