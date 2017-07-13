@@ -53,33 +53,35 @@ public class SoundSettingsFragment extends BaseFragment {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             AudioAttributes naviAudioAttributes;
+            AudioAttributes systemAudioAttributes;
+            AudioAttributes mediaAudioAttributes;
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
                 mCarAudioManager.setVolumeController(mVolumeCallback);
-                naviAudioAttributes = mCarAudioManager.getAudioAttributesForCarUsage(
-                        mCarAudioManager.CAR_AUDIO_USAGE_NAVIGATION_GUIDANCE);
+
+                systemAudioAttributes = mCarAudioManager.getAudioAttributesForCarUsage(
+                        mCarAudioManager.CAR_AUDIO_USAGE_SYSTEM_SOUND);
+                mediaAudioAttributes = mCarAudioManager.getAudioAttributesForCarUsage(
+                        mCarAudioManager.CAR_AUDIO_USAGE_MUSIC);
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car is not connected!", e);
                 return;
             }
+
+            // It turns out that the stream id for system and navigation are the same.
+            // skip navi for now
             mVolumeLineItems.add(new VolumeLineItem(
                     getContext(),
                     mCarAudioManager,
-                    AudioManager.STREAM_MUSIC,
+                    mediaAudioAttributes.getVolumeControlStream(),
                     R.string.media_volume_title,
                     com.android.internal.R.drawable.ic_audio_media));
             mVolumeLineItems.add(new VolumeLineItem(
                     getContext(),
                     mCarAudioManager,
-                    AudioManager.STREAM_RING,
+                    systemAudioAttributes.getVolumeControlStream(),
                     R.string.ring_volume_title,
                     com.android.internal.R.drawable.ic_audio_ring_notif));
-            mVolumeLineItems.add(new VolumeLineItem(
-                    getContext(),
-                    mCarAudioManager,
-                    naviAudioAttributes.getVolumeControlStream(),
-                    R.string.navi_volume_title,
-                    R.drawable.ic_audio_navi));
             // if list is already initiated, update it's content.
             if (mPagedListAdapter != null) {
                 mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
