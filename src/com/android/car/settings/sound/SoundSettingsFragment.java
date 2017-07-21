@@ -134,6 +134,7 @@ public class SoundSettingsFragment extends BaseFragment {
         for (VolumeLineItem item : mVolumeLineItems) {
             item.stop();
         }
+        mVolumeLineItems.clear();
         mCar.disconnect();
     }
 
