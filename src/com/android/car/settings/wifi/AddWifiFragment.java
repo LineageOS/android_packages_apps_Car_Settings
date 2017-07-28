@@ -19,6 +19,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
@@ -49,6 +50,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
     private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
     @Nullable private AccessPoint mAccessPoint;
     private WifiManager mWifiManager;
+    private TextView mAddWifiButton;
     private final WifiManager.ActionListener mConnectionListener =
             new WifiManager.ActionListener() {
         @Override
@@ -94,12 +96,13 @@ public class AddWifiFragment extends ListSettingsFragment implements
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        TextView addWifiButton = getActivity().findViewById(R.id.action_button1);
-        addWifiButton.setText(R.string.wifi_setup_connect);
-        addWifiButton.setOnClickListener(v -> {
-                connectToAccessPoint();
-                mFragmentController.goBack();
-            });
+        mAddWifiButton = getActivity().findViewById(R.id.action_button1);
+        mAddWifiButton.setText(R.string.wifi_setup_connect);
+        mAddWifiButton.setOnClickListener(v -> {
+            connectToAccessPoint();
+            mFragmentController.goBack();
+        });
+        mAddWifiButton.setEnabled(mAccessPoint != null) ;
     }
 
     @Override
@@ -113,6 +116,8 @@ public class AddWifiFragment extends ListSettingsFragment implements
             mWifiNameInput = new EditTextLineItem(
                     getContext().getText(R.string.wifi_ssid));
             mWifiNameInput.setTextType(EditTextLineItem.TextType.TEXT);
+            mWifiNameInput.setTextChangeListener(s ->
+                    mAddWifiButton.setEnabled(!TextUtils.isEmpty(s)));
         }
         lineItems.add(mWifiNameInput);
 
@@ -188,7 +193,11 @@ public class AddWifiFragment extends ListSettingsFragment implements
             }
         }
         int netId = mWifiManager.addNetwork(wifiConfig);
-        if (netId != -1) {
+        if (netId == -1) {
+            Toast.makeText(getContext(),
+                    R.string.wifi_failed_connect_message,
+                    Toast.LENGTH_SHORT).show();
+        } else {
             mWifiManager.enableNetwork(netId, true);
         }
     }
