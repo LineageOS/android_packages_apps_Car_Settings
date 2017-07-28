@@ -58,7 +58,7 @@
             android:layout_marginTop="@dimen/optical_center_offset"
             android:background="@null"
             style="@style/CarTitle"
-            android:textColor="@color/car_teal_700"
+            android:textColor="@color/action_bar_btn"
             android:textAllCaps="true"
             android:visibility="gone"
             android:layout_marginEnd="@dimen/button_margin" />
@@ -71,7 +71,7 @@
             android:layout_marginTop="@dimen/optical_center_offset"
             android:background="@null"
             style="@style/CarTitle"
-            android:textColor="@color/car_teal_700"
+            android:textColor="@color/action_bar_btn"
             android:textAllCaps="true"
             android:layout_marginEnd="@dimen/action_bar_end_widget_margin_end" />
     </LinearLayout>
