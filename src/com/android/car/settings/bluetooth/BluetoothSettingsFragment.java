@@ -147,6 +147,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         mBluetoothSwitch.setChecked(mLocalAdapter.isEnabled());
         if (mLocalAdapter.isEnabled()) {
             setProgressBarVisible(true);
+            mLocalAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
             mLocalAdapter.startScanning(true);
             if (mViewSwitcher.getCurrentView() != mSwipeRefreshLayout) {
                 mViewSwitcher.showPrevious();
@@ -168,6 +169,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         }
         getActivity().unregisterReceiver(mBroadcastReceiver);
         mDeviceAdapter.stop();
+        mLocalAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
         mLocalManager.setForegroundActivity(null);
         mLocalAdapter.stopScanning();
         mLocalManager.getEventManager().unregisterCallback(this);
