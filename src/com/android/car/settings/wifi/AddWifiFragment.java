@@ -48,6 +48,8 @@ public class AddWifiFragment extends ListSettingsFragment implements
 
     private static final String TAG = "AddWifiFragment";
     private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
+    private static final Pattern VALID_SSID_PATTERN =
+            Pattern.compile("^[A-Za-z]+[\\w\\-\\:\\.]*$");
     @Nullable private AccessPoint mAccessPoint;
     private WifiManager mWifiManager;
     private TextView mAddWifiButton;
@@ -117,7 +119,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
                     getContext().getText(R.string.wifi_ssid));
             mWifiNameInput.setTextType(EditTextLineItem.TextType.TEXT);
             mWifiNameInput.setTextChangeListener(s ->
-                    mAddWifiButton.setEnabled(!TextUtils.isEmpty(s)));
+                    mAddWifiButton.setEnabled(VALID_SSID_PATTERN.matcher(s).matches()));
         }
         lineItems.add(mWifiNameInput);
 
