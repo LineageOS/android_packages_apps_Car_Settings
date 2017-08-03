@@ -93,6 +93,12 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
         mForceStopButton.setOnClickListener(v -> {
             forceStopPackage(mResolveInfo.activityInfo.packageName);
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        updateForceStopButton();
         updateDisableable();
     }
 
