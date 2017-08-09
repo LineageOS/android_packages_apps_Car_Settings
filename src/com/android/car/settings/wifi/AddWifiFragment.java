@@ -19,7 +19,7 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
@@ -51,6 +51,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
     private static final Pattern VALID_SSID_PATTERN =
             Pattern.compile("^[A-Za-z]+[\\w\\-\\:\\.]*$");
     @Nullable private AccessPoint mAccessPoint;
+    @Nullable private SpinnerLineItem<AccessPointSecurity> mSpinnerLineItem;
     private WifiManager mWifiManager;
     private TextView mAddWifiButton;
     private final WifiManager.ActionListener mConnectionListener =
@@ -125,13 +126,14 @@ public class AddWifiFragment extends ListSettingsFragment implements
 
         if (mAccessPoint == null) {
             List<AccessPointSecurity> securities =
-                    AccessPointSecurity.getSecurityType(getContext());
-            lineItems.add(new SpinnerLineItem(
+                    AccessPointSecurity.getSecurityTypes(getContext());
+            mSpinnerLineItem = new SpinnerLineItem<>(
                     getContext(),
                     this,
                     securities,
                     getContext().getText(R.string.wifi_security),
-                    mSelectedPosition));
+                    mSelectedPosition);
+            lineItems.add(mSpinnerLineItem);
         }
 
         if (mAccessPoint!= null
@@ -164,35 +166,40 @@ public class AddWifiFragment extends ListSettingsFragment implements
         wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
         wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
         wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+        int security;
         if (mAccessPoint == null) {
-            wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
-            wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-            wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-            wifiConfig.preSharedKey = String.format(
-                    "\"%s\"", mWifiPasswordInput.getInput());
+            security = mSpinnerLineItem.getItem(mSelectedPosition).getSecurityType();
+            wifiConfig.hiddenSSID = true;
         } else {
-            switch (mAccessPoint.getSecurity()) {
-                case AccessPoint.SECURITY_NONE:
-                    wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-                    wifiConfig.allowedAuthAlgorithms.clear();
-                    wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-                    wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-                case AccessPoint.SECURITY_WEP:
-                    wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-                    wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
-                    wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
-                    String password = mWifiPasswordInput.getInput();
-                    wifiConfig.wepKeys[0] = isHexString(password) ? password
-                            : "\"" + password + "\"";
-                    wifiConfig.wepTxKeyIndex = 0;
-                case AccessPoint.SECURITY_PSK:
-                case AccessPoint.SECURITY_EAP:
-                    wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
-                    wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-                    wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-                    wifiConfig.preSharedKey = String.format(
-                            "\"%s\"", mWifiPasswordInput.getInput());
-            }
+            security = mAccessPoint.getSecurity();
+        }
+        switch (security) {
+            case AccessPoint.SECURITY_NONE:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.clear();
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+                break;
+            case AccessPoint.SECURITY_WEP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+                String password = mWifiPasswordInput.getInput();
+                wifiConfig.wepKeys[0] = isHexString(password) ? password
+                        : "\"" + password + "\"";
+                wifiConfig.wepTxKeyIndex = 0;
+                break;
+            case AccessPoint.SECURITY_PSK:
+            case AccessPoint.SECURITY_EAP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+                wifiConfig.preSharedKey = String.format(
+                        "\"%s\"", mWifiPasswordInput.getInput());
+                break;
+            default:
+                Log.w(TAG, "invalid security type: " + security);
+                break;
         }
         int netId = mWifiManager.addNetwork(wifiConfig);
         if (netId == -1) {
