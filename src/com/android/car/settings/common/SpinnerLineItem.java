@@ -33,8 +33,8 @@ import java.util.List;
 /**
  * Contains logic for a line item represents a spinner.
  */
-public class SpinnerLineItem extends TypedPagedListAdapter.LineItem<SpinnerLineItem.ViewHolder> {
-    private final ArrayAdapter<?> mArrayAdapter;
+public class SpinnerLineItem<T> extends TypedPagedListAdapter.LineItem<SpinnerLineItem.ViewHolder> {
+    private final ArrayAdapter<T> mArrayAdapter;
     private final AdapterView.OnItemSelectedListener mOnItemSelectedListener;
     private final CharSequence mTitle;
     private final int mSelectedPosition;
@@ -79,6 +79,10 @@ public class SpinnerLineItem extends TypedPagedListAdapter.LineItem<SpinnerLineI
     public static RecyclerView.ViewHolder createViewHolder(ViewGroup parent) {
         return new ViewHolder(LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.spinner_line_item, parent, false));
+    }
+
+    public T getItem(int position) {
+        return mArrayAdapter.getItem(position);
     }
 
     @Override
