@@ -164,6 +164,8 @@
     <string name="enable_text">Enable</string>
     <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
     <string name="permissions_label">Permissions</string>
+    <!-- Label for displaying application version. -->
+    <string name="application_version_label">Version: %1$s</string>
     <!-- Runtime permissions preference summary, shown when the app has no permissions granted. [CHAR LIMIT=40] -->
     <string name="runtime_permissions_summary_no_permissions_granted">No permissions granted</string>
     <!-- Runtime permissions preference summary, shown when the app requests no permissions. [CHAR LIMIT=40] -->
