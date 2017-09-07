@@ -18,7 +18,6 @@ package com.android.car.settings.common;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 
 import com.android.car.settings.R;
 import com.android.car.settings.home.HomepageFragment;
