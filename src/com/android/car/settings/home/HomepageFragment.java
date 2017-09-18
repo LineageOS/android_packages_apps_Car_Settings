@@ -22,14 +22,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.SimpleIconLineItem;
-import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
@@ -117,14 +115,14 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.display_settings,
                 R.drawable.ic_settings_display,
                 getContext(),
                 null,
                 DisplaySettingsFragment.getInstance(),
                 mFragmentController));
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
                 getContext(),
@@ -133,28 +131,28 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 mFragmentController));
         lineItems.add(mWifiLineItem);
         lineItems.add(mBluetoothLineItem);
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.applications_settings,
                 R.drawable.ic_settings_applications,
                 getContext(),
                 null,
                 ApplicationSettingsFragment.getInstance(),
                 mFragmentController));
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.date_and_time_settings_title,
                 R.drawable.ic_settings_date_time,
                 getContext(),
                 null,
                 DatetimeSettingsFragment.getInstance(),
                 mFragmentController));
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.user_settings_title,
                 R.drawable.ic_user,
                 getContext(),
                 null,
                 UserSettingsFragment.getInstance(),
                 mFragmentController));
-        lineItems.add(new SimpleIconLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,
                 getContext(),

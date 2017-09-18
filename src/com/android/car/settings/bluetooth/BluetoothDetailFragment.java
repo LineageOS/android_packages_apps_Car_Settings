@@ -21,20 +21,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.car.list.EditTextLineItem;
+import com.android.car.list.SingleTextLineItem;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.EditTextLineItem;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.SingleTextLineItem;
-import com.android.car.settings.common.TypedPagedListAdapter;
-import com.android.car.view.PagedListView;
-
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
-import com.android.settingslib.bluetooth.MapClientProfile;
-import com.android.settingslib.bluetooth.PanProfile;
-import com.android.settingslib.bluetooth.PbapClientProfile;
 
 import java.util.ArrayList;
 

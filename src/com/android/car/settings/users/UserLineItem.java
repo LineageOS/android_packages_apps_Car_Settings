@@ -22,11 +22,12 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.Bitmap;
 import android.os.UserManager;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.android.car.list.IconTextLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.IconTextLineItem;
 
 /**
  * Represents a user in settings page.
@@ -57,7 +58,7 @@ public class UserLineItem extends IconTextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         mFragmentController.launchFragment(UserDetailsSettingsFragment.getInstance(mUserInfo));
     }
 

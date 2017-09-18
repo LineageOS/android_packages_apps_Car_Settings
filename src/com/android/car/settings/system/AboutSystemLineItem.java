@@ -18,11 +18,12 @@ package com.android.car.settings.system;
 
 import android.content.Context;
 import android.os.Build;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.android.car.list.IconTextLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.IconTextLineItem;
 
 
 /**
@@ -49,7 +50,7 @@ class AboutSystemLineItem extends IconTextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         mFragmentController.launchFragment(AboutSettingsFragment.getInstance());
     }
 

@@ -19,8 +19,11 @@ package com.android.car.settings.datetime;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
+import android.view.View;
+import android.widget.Switch;
 
-import com.android.car.settings.common.ToggleLineItem;
+import com.android.car.list.ToggleLineItem;
+import com.android.car.settings.R;
 
 /**
  * A LineItem that displays and sets system auto date/time.
@@ -39,7 +42,8 @@ class DateTimeToggleLineItem extends ToggleLineItem {
     }
 
     @Override
-    public void onClick(boolean isChecked) {
+    public void onClick(View view) {
+        boolean isChecked = ((Switch) view.findViewById(R.id.toggle_switch)).isChecked();
         Settings.Global.putInt(
                 mContext.getContentResolver(),
                 mSettingString,

@@ -23,7 +23,6 @@ import android.support.annotation.UiThread;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;
-import com.android.settingslib.wifi.WifiTracker.WifiListener;
 
 import java.util.ArrayList;
 import java.util.List;

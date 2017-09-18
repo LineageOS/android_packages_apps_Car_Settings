@@ -16,9 +16,9 @@
 
 package com.android.car.settings.sound;
 
+import android.annotation.DrawableRes;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
-import android.annotation.DrawableRes;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.Ringtone;
@@ -29,7 +29,7 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.android.car.settings.common.SeekbarLineItem;
+import com.android.car.list.SeekbarLineItem;
 
 /**
  * Contains logic about volume controller UI.

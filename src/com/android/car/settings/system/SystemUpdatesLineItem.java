@@ -21,10 +21,11 @@ import android.content.Intent;
 import android.os.PersistableBundle;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.android.car.list.IconTextLineItem;
 import com.android.car.settings.R;
-import com.android.car.settings.common.IconTextLineItem;
 
 
 /**
@@ -59,7 +60,7 @@ class SystemUpdatesLineItem extends IconTextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         // copy what the phone setting is doing, sending out a carrier defined intent
         CarrierConfigManager configManager =
                 (CarrierConfigManager) mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE);

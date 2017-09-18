@@ -19,11 +19,11 @@ package com.android.car.settings.datetime;
 import android.content.Context;
 import android.provider.Settings;
 import android.text.format.DateFormat;
+import android.view.View;
 
+import com.android.car.list.TextLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.TextLineItem;
-import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.Calendar;
 
@@ -57,7 +57,7 @@ class SetTimeLineItem extends TextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         mFragmentController.launchFragment(TimePickerFragment.getInstance());
     }
 }

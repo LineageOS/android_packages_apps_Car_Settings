@@ -27,10 +27,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.car.list.EditTextLineItem;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.EditTextLineItem;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.TypedPagedListAdapter;
 
 import java.util.ArrayList;
 

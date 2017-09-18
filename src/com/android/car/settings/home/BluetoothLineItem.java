@@ -20,11 +20,12 @@ import android.annotation.DrawableRes;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
+import android.view.View;
 
+import com.android.car.list.IconToggleLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.IconToggleLineItem;
 
 
 /**
@@ -62,7 +63,7 @@ public class BluetoothLineItem extends IconToggleLineItem {
     }
 
     @Override
-    public void onClicked() {
+    public void onClick(View view) {
         mFragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
     }
 

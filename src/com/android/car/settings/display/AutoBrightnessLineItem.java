@@ -22,11 +22,11 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 
 import android.content.Context;
 import android.provider.Settings;
-import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Switch;
 
+import com.android.car.list.ToggleLineItem;
 import com.android.car.settings.R;
-
-import com.android.car.settings.common.ToggleLineItem;
 
 /**
  * A LineItem that displays and sets display auto brightness setting.
@@ -40,7 +40,8 @@ class AutoBrightnessLineItem extends ToggleLineItem {
     }
 
     @Override
-    public void onClick(boolean isChecked) {
+    public void onClick(View view) {
+        boolean isChecked = ((Switch) view.findViewById(R.id.toggle_switch)).isChecked();
         Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS_MODE,
                 isChecked ? SCREEN_BRIGHTNESS_MODE_MANUAL : SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
     }

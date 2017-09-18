@@ -22,8 +22,8 @@ import android.content.Context;
 import android.provider.Settings;
 import android.util.Log;
 
+import com.android.car.list.SeekbarLineItem;
 import com.android.car.settings.R;
-import com.android.car.settings.common.SeekbarLineItem;
 
 /**
  * A LineItem that displays and sets display brightness.

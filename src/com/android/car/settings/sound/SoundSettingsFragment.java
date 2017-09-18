@@ -15,15 +15,14 @@
  */
 package com.android.car.settings.sound;
 
+import android.annotation.DrawableRes;
+import android.annotation.StringRes;
 import android.app.Activity;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
-import android.media.AudioAttributes;
 import android.media.IVolumeController;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,9 +31,9 @@ import android.os.Looper;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.TypedPagedListAdapter;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.view.PagedListView;
 
 import java.util.ArrayList;

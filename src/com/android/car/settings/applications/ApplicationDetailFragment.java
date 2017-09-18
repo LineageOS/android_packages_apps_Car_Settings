@@ -25,7 +25,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.icu.text.ListFormatter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -33,18 +32,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.car.list.SingleTextLineItem;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.SingleTextLineItem;
-import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.Utils;
-import com.android.settingslib.applications.PermissionsSummaryHelper;
-import com.android.settingslib.applications.PermissionsSummaryHelper.PermissionsResultCallback;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Shows details about an application and action associated with that application,
