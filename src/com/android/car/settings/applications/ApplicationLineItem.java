@@ -21,10 +21,11 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.PorterDuff;
+import android.view.View;
 import android.widget.ImageView;
 
+import com.android.car.list.IconTextLineItem;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.IconTextLineItem;
 
 /**
  * Represents an application in application settings page.
@@ -59,7 +60,7 @@ public class ApplicationLineItem extends IconTextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         if (mClickable) {
             mFragmentController.launchFragment(ApplicationDetailFragment.getInstance(mResolveInfo));
         }

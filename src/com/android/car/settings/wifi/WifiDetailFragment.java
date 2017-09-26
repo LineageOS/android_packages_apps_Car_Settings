@@ -19,18 +19,16 @@ import android.net.NetworkInfo.State;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.SimpleTextLineItem;
-import com.android.car.settings.common.TypedPagedListAdapter;
-import com.android.settingslib.wifi.AccessPoint;
-
+import com.android.car.list.SimpleTextLineItem;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ListSettingsFragment;
+import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;
 

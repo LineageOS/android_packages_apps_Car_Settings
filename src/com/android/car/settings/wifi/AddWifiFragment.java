@@ -25,12 +25,12 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.car.list.EditTextLineItem;
+import com.android.car.list.PasswordLineItem;
+import com.android.car.list.SpinnerLineItem;
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.EditTextLineItem;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.PasswordLineItem;
-import com.android.car.settings.common.SpinnerLineItem;
-import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;

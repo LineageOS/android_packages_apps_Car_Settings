@@ -18,6 +18,9 @@ package com.android.car.settings.display;
 
 import android.content.Context;
 import android.provider.Settings;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.Switch;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +35,7 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
 import com.android.car.settings.TestConfig;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -50,22 +54,28 @@ public class AutoBrightnessLineItemTest {
     @Test
     public void testIsChecked() {
         Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS_MODE,
-            SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
+                SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
         assertThat(mAutoBrightnessLineItem.isChecked()).isTrue();
         Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS_MODE,
-            SCREEN_BRIGHTNESS_MODE_MANUAL);
+                SCREEN_BRIGHTNESS_MODE_MANUAL);
         assertThat(mAutoBrightnessLineItem.isChecked()).isFalse();
     }
 
     @Test
     public void testOnClick() {
-        mAutoBrightnessLineItem.onClick(false);
+        ViewGroup parent = new LinearLayout(mContext);
+        Switch toggleSwitch = new Switch(mContext);
+        toggleSwitch.setId(R.id.toggle_switch);
+        parent.addView(toggleSwitch);
+        toggleSwitch.setChecked(false);
+        mAutoBrightnessLineItem.onClick(parent);
         assertThat(Settings.System.getInt(mContext.getContentResolver(),
-            SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL))
-            .isEqualTo(SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
-        mAutoBrightnessLineItem.onClick(true);
+                SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL))
+                .isEqualTo(SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
+        toggleSwitch.setChecked(true);
+        mAutoBrightnessLineItem.onClick(parent);
         assertThat(Settings.System.getInt(mContext.getContentResolver(),
-            SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL))
-            .isEqualTo(SCREEN_BRIGHTNESS_MODE_MANUAL);
+                SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL))
+                .isEqualTo(SCREEN_BRIGHTNESS_MODE_MANUAL);
     }
 }

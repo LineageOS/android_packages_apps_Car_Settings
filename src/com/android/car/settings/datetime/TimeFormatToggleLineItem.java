@@ -20,9 +20,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.Switch;
 
+import com.android.car.list.ToggleLineItem;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ToggleLineItem;
 
 import java.util.Calendar;
 
@@ -56,7 +58,8 @@ class TimeFormatToggleLineItem extends ToggleLineItem {
     }
 
     @Override
-    public void onClick(boolean is24Hour) {
+    public void onClick(View view) {
+        boolean is24Hour = ((Switch) view.findViewById(R.id.toggle_switch)).isChecked();
         Settings.System.putString(mContext.getContentResolver(),
                 Settings.System.TIME_12_24,
                 is24Hour ? HOURS_12 : HOURS_24);

@@ -18,9 +18,7 @@ package com.android.car.settings.common;
 
 import android.os.Bundle;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
-
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.view.PagedListView;
 

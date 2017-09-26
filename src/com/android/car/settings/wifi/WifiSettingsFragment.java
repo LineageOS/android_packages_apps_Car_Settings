@@ -15,22 +15,18 @@
  */
 package com.android.car.settings.wifi;
 
+import android.annotation.StringRes;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import android.annotation.StringRes;
-
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.view.PagedListView;
-
-import com.android.settingslib.wifi.AccessPoint;
 
 
 /**

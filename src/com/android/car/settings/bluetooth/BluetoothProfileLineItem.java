@@ -19,9 +19,11 @@ package com.android.car.settings.bluetooth;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
+import android.view.View;
+import android.widget.CheckBox;
 
-import com.android.car.settings.common.CheckBoxLineItem;
-
+import com.android.car.list.CheckBoxLineItem;
+import com.android.car.settings.R;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 import com.android.settingslib.bluetooth.PanProfile;
@@ -51,8 +53,8 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
     }
 
     @Override
-    public void onClick(boolean isChecked) {
-        if (isChecked) {
+    public void onClick(View view) {
+        if (((CheckBox) view.findViewById(R.id.checkbox)).isChecked()) {
             mCachedDevice.disconnect(mProfile);
             mProfile.setPreferred(mCachedDevice.getDevice(), false);
         } else if (mProfile.isPreferred(mCachedDevice.getDevice())) {

@@ -22,9 +22,9 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.TypedPagedListAdapter;
 
 import java.util.ArrayList;
 

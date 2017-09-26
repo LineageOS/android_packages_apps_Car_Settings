@@ -18,12 +18,10 @@ package com.android.car.settings.datetime;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.TypedPagedListAdapter;
-import com.android.car.view.PagedListView;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.ArrayList;

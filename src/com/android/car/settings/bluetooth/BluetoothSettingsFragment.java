@@ -21,22 +21,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.view.PagedListView;
-
 import com.android.settingslib.bluetooth.BluetoothCallback;
-import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;

@@ -20,9 +20,9 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.common.TypedPagedListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

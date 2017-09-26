@@ -16,13 +16,13 @@
 
 package com.android.car.settings.datetime;
 
+import android.annotation.NonNull;
 import android.app.AlarmManager;
 import android.content.Context;
 import android.provider.Settings;
+import android.view.View;
 
-import android.annotation.NonNull;
-import com.android.car.settings.R;
-import com.android.car.settings.common.TextLineItem;
+import com.android.car.list.TextLineItem;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.Map;
@@ -71,7 +71,7 @@ class TimeZoneLineItem extends TextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         AlarmManager am = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
         am.setTimeZone((String) mTimeZone.get(ZoneGetter.KEY_ID));
         mListener.onTimeZoneChanged();

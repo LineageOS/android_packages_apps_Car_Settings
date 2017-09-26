@@ -23,8 +23,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment;
 
 import java.util.Calendar;
 

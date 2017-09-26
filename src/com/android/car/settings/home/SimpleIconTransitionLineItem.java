@@ -14,59 +14,40 @@
  * limitations under the License
  */
 
-package com.android.car.settings.common;
-
-import android.content.Context;
+package com.android.car.settings.home;
 
 import android.annotation.DrawableRes;
 import android.annotation.StringRes;
-import android.support.v7.widget.RecyclerView;
-import android.widget.ImageView;
+import android.content.Context;
+import android.view.View;
 
-import com.android.car.settings.R;
+import com.android.car.list.SimpleIconLineItem;
+import com.android.car.settings.common.BaseFragment;
 
 /**
- * Represents the basic line item with Icon and text.
+ * This class extends {@link SimpleIconLineItem} and adds the onClick behavior to
+ * trigger the fragmentController to launch a new fragment when clicked.
+ * The fragment passed in is what will be launched.
  */
-public class SimpleIconLineItem extends IconTextLineItem {
-    private final CharSequence mDesc;
-    private final Context mContext;
-    private final BaseFragment mFragment;
-    private final @DrawableRes int mIconRes;
-    private final BaseFragment.FragmentController mFragmentController;
+public class SimpleIconTransitionLineItem extends SimpleIconLineItem {
 
-    public SimpleIconLineItem(
+    private BaseFragment.FragmentController mFragmentController;
+    private BaseFragment mFragment;
+
+    public SimpleIconTransitionLineItem(
             @StringRes int title,
             @DrawableRes int iconRes,
             Context context,
             CharSequence desc,
             BaseFragment fragment,
             BaseFragment.FragmentController fragmentController) {
-        super(context.getText(title));
-        mDesc = desc;
-        mContext = context;
+        super(title, iconRes, context, desc);
         mFragment = fragment;
-        mIconRes = iconRes;
         mFragmentController = fragmentController;
     }
 
-    @Override
-    public void setIcon(ImageView iconView) {
-        iconView.setImageResource(mIconRes);
-    }
-
-    @Override
-    public void onClick() {
+    public void onClick(View view) {
         mFragmentController.launchFragment(mFragment);
     }
 
-    @Override
-    public boolean isExpandable() {
-        return true;
-    }
-
-    @Override
-    public CharSequence getDesc() {
-        return mDesc;
-    }
 }

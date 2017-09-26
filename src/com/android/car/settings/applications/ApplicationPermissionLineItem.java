@@ -24,11 +24,11 @@ import android.content.res.Resources;
 import android.icu.text.ListFormatter;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 
+import com.android.car.list.TextLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.AnimationUtil;
-import com.android.car.settings.common.TextLineItem;
-import com.android.settingslib.Utils;
 import com.android.settingslib.applications.PermissionsSummaryHelper;
 import com.android.settingslib.applications.PermissionsSummaryHelper.PermissionsResultCallback;
 
@@ -58,6 +58,7 @@ public class ApplicationPermissionLineItem extends TextLineItem {
 
     @Override
     public void bindViewHolder(TextLineItem.ViewHolder viewHolder) {
+        super.bindViewHolder(viewHolder);
         mViewHolder = viewHolder;
         viewHolder.titleView.setText(mTitle);
         if (TextUtils.isEmpty(mSummary)) {
@@ -65,7 +66,6 @@ public class ApplicationPermissionLineItem extends TextLineItem {
             viewHolder.descView.setText(R.string.computing_size);
             viewHolder.itemView.setEnabled(false);
         } else {
-            viewHolder.itemView.setOnClickListener(mOnClickListener);
             viewHolder.descView.setText(mSummary);
             viewHolder.itemView.setEnabled(true);
         }
@@ -87,7 +87,7 @@ public class ApplicationPermissionLineItem extends TextLineItem {
     }
 
     @Override
-    public void onClick() {
+    public void onClick(View view) {
         // start new activity to manage app permissions
         Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
         intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
