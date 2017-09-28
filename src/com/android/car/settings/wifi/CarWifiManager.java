@@ -17,8 +17,6 @@ package com.android.car.settings.wifi;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
-import android.os.HandlerThread;
-import android.os.Process;
 import android.support.annotation.UiThread;
 
 import com.android.settingslib.wifi.AccessPoint;
@@ -37,7 +35,6 @@ public class CarWifiManager implements WifiTracker.WifiListener {
     private boolean mStarted;
 
     private WifiTracker mWifiTracker;
-    private final HandlerThread mBgThread;
     private WifiManager mWifiManager;
     public interface Listener {
         /**
@@ -65,9 +62,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         mContext = context;
         mListener = listener;
         mWifiManager = (WifiManager) mContext.getSystemService(WifiManager.class);
-        mBgThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
-        mBgThread.start();
-        mWifiTracker = new WifiTracker(context, this, mBgThread.getLooper(), true, true);
+        mWifiTracker = new WifiTracker(context, this, true, true);
     }
 
     /**
@@ -78,7 +73,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
     public void start() {
         if (!mStarted) {
             mStarted = true;
-            mWifiTracker.startTracking();
+            mWifiTracker.onStart();
         }
     }
 
@@ -90,8 +85,17 @@ public class CarWifiManager implements WifiTracker.WifiListener {
     public void stop() {
         if (mStarted) {
             mStarted = false;
-            mWifiTracker.stopTracking();
+            mWifiTracker.onStop();
         }
+    }
+
+    /**
+     * Destroys {@link CarWifiManager}
+     * This should only be called from main thread.
+     */
+    @UiThread
+    public void destroy() {
+        mWifiTracker.onDestroy();
     }
 
     public List<AccessPoint> getAccessPoints() {
