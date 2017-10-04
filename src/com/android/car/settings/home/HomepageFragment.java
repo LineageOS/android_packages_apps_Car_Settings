@@ -113,6 +113,12 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mCarWifiManager.destroy();
+    }
+
+    @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
         lineItems.add(new SimpleIconTransitionLineItem(

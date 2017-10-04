@@ -92,6 +92,12 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mCarWifiManager.destroy();
+    }
+
+    @Override
     public void onAccessPointsChanged() {
         refreshData();
     }
