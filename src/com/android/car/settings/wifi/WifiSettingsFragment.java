@@ -65,6 +65,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         setupWifiSwitch();
         if (mCarWifiManager.isWifiEnabled()) {
             showList();
+            setProgressBarVisible(true);
         } else {
             showMessage(R.string.wifi_disabled);
         }
