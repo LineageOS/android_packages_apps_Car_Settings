@@ -14,8 +14,11 @@
  * limitations under the License
  */
 
+
 package com.android.car.settings.system;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import com.android.car.list.TypedPagedListAdapter;
@@ -29,6 +32,10 @@ import java.util.ArrayList;
  */
 public class SystemSettingsFragment extends ListSettingsFragment {
 
+    // Copied from hidden version in android.provider.Settings
+    private static final String ACTION_SYSTEM_UPDATE_SETTINGS =
+            "android.settings.SYSTEM_UPDATE_SETTINGS";
+
     public static SystemSettingsFragment getInstance() {
         SystemSettingsFragment systemSettingsFragment = new SystemSettingsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
@@ -40,7 +47,11 @@ public class SystemSettingsFragment extends ListSettingsFragment {
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(new SystemUpdatesLineItem(getContext()));
+        Intent settingsIntent = new Intent(ACTION_SYSTEM_UPDATE_SETTINGS);
+        PackageManager packageManager = getContext().getPackageManager();
+        if (settingsIntent.resolveActivity(packageManager) != null) {
+            lineItems.add(new SystemUpdatesLineItem(getContext(), settingsIntent));
+        }
         lineItems.add(new AboutSystemLineItem(getContext(), mFragmentController));
         lineItems.add(new LegalInfoLineItem(getContext()));
         return lineItems;
