@@ -75,5 +75,23 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".bluetooth.BluetoothPairingDialog"
+                  android:excludeFromRecents="true"
+                  android:windowSoftInputMode="stateVisible|adjustResize"
+                  android:theme="@*android:style/Theme.DeviceDefault.Settings.Dialog.NoActionBar">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".bluetooth.BluetoothPairingService" />
+
+        <receiver android:name=".bluetooth.BluetoothPairingRequest">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
+            </intent-filter>
+        </receiver>
+
     </application>
 </manifest>
