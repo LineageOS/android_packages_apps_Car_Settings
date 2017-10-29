@@ -165,6 +165,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 null,
                 SystemSettingsFragment.getInstance(),
                 mFragmentController));
+        lineItems.addAll(new ExtraSettingsLoader(getContext()).load());
         return lineItems;
     }
 }
