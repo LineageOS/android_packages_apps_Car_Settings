@@ -18,6 +18,8 @@ package com.android.car.settings.wifi;
 import android.annotation.StringRes;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.support.car.widget.DayNightStyle;
+import android.support.car.widget.PagedListView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -26,8 +28,6 @@ import android.widget.ViewSwitcher;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.view.PagedListView;
-
 
 /**
  * Main page to host Wifi related preferences.
@@ -71,7 +71,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         }
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
-        mListView.setDarkMode();
+        mListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mAdapter = new AccessPointListAdapter(
                 getContext(),
                 mCarWifiManager,
