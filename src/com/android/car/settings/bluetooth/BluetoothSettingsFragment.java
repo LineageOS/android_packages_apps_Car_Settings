@@ -21,6 +21,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.car.widget.DayNightStyle;
+import android.support.car.widget.PagedListView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
@@ -31,7 +33,6 @@ import android.widget.ViewSwitcher;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.view.PagedListView;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
@@ -121,7 +122,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
 
         // Set this to light mode, since the scroll bar buttons always appear
         // on top of a dark scrim.
-        mDeviceListView.setDarkMode();
+        mDeviceListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mDeviceAdapter = new BluetoothDeviceListAdapter(
                 getContext() , mLocalManager, mFragmentController);
         mDeviceListView.setAdapter(mDeviceAdapter);
