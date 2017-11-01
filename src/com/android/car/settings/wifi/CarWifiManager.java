@@ -103,7 +103,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         if (mWifiManager.isWifiEnabled()) {
             for (AccessPoint accessPoint : mWifiTracker.getAccessPoints()) {
                 // ignore out of reach access points.
-                if (accessPoint.getLevel() != -1) {
+                if (accessPoint.isReachable()) {
                     accessPoints.add(accessPoint);
                 }
             }
