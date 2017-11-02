@@ -20,6 +20,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.wifi.WifiManager;
+import android.support.car.widget.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,6 @@ import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.view.PagedListView;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.List;

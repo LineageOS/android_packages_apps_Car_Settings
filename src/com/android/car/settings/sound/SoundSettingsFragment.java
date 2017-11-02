@@ -29,12 +29,13 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.RemoteException;
+import android.support.car.widget.DayNightStyle;
+import android.support.car.widget.PagedListView;
 import android.util.Log;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.view.PagedListView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -132,7 +133,7 @@ public class SoundSettingsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mListView = (PagedListView) getView().findViewById(R.id.list);
-        mListView.setDarkMode();
+        mListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mPagedListAdapter = new TypedPagedListAdapter(getContext());
         mListView.setAdapter(mPagedListAdapter);
         if (!mVolumeLineItems.isEmpty()) {

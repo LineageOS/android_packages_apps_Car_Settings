@@ -33,10 +33,12 @@ import com.android.car.settings.R;
  */
 class SystemUpdatesLineItem extends IconTextLineItem {
     private final Context mContext;
+    private final Intent mSettingsIntent;
 
-    public SystemUpdatesLineItem(Context context) {
+    public SystemUpdatesLineItem(Context context, Intent settingsIntent) {
         super(context.getString(R.string.system_update_settings_list_item_title));
         mContext = context;
+        mSettingsIntent = settingsIntent;
     }
 
     @Override
@@ -61,6 +63,8 @@ class SystemUpdatesLineItem extends IconTextLineItem {
 
     @Override
     public void onClick(View view) {
+        mContext.startActivity(mSettingsIntent);
+
         // copy what the phone setting is doing, sending out a carrier defined intent
         CarrierConfigManager configManager =
                 (CarrierConfigManager) mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE);
