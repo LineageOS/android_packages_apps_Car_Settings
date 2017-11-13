@@ -17,26 +17,13 @@ package com.android.car.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.app.ActivityManager;
-import android.content.Context;
-import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.RemoteException;
-import android.os.UserHandle;
-import android.os.UserManager;
-import android.support.v4.app.FragmentActivity;
-import android.text.Editable;
-import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
-import com.android.car.list.EditTextLineItem;
 import com.android.car.list.SingleTextLineItem;
-import com.android.car.list.TextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.users.UserDetailsSettingsFragment;
 
 import java.util.ArrayList;
 

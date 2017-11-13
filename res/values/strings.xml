@@ -369,6 +369,12 @@
     <string name="account_list_title">Accounts for <xliff:g id="current_user_name">%1$s</xliff:g></string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
     <string name="account_details_title">Account info</string>
+    <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
+    <string name="add_account_title">Add account</string>
+    <!-- Choose what type of account want to add. [CHAR LIMIT=25] -->
+    <string name="choose_account_title">Choose account</string>
+    <!-- Message to limited users that they cannot add accounts [CHAR LIMIT=100] -->
+    <string name="user_cannot_add_accounts_message">Restricted profiles cannot add accounts</string>
 
     <!-- generic --><skip />
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
