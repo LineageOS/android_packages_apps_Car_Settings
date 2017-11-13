@@ -51,7 +51,8 @@ public class AboutSettingsFragment extends ListSettingsFragment {
         lineItems.add(new SimpleTextLineItem(
                 getText(R.string.security_patch), DeviceInfoUtils.getSecurityPatch()));
         lineItems.add(new SimpleTextLineItem(
-                getText(R.string.kernel_version), DeviceInfoUtils.getFormattedKernelVersion()));
+                getText(R.string.kernel_version),
+                DeviceInfoUtils.getFormattedKernelVersion(getContext())));
         lineItems.add(new SimpleTextLineItem(
                 getText(R.string.build_number), Build.DISPLAY));
         return lineItems;
