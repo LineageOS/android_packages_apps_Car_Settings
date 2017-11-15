@@ -13,8 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
-package com.android.car.settings.users;
+package com.android.car.settings.accounts;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.UserInfo;
@@ -22,12 +24,13 @@ import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserManager;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
+import com.android.car.list.SubtitleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.users.UserLineItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,19 +38,19 @@ import java.util.List;
 /**
  * Lists all Users available on this device.
  */
-public class UserSettingsFragment extends ListSettingsFragment {
-    private static final String TAG = "UserSettingsFragment";
+public class UserAndAccountSettingsFragment extends ListSettingsFragment {
+    private static final String TAG = "UserAndAccountSettingsFragment";
     private Context mContext;
     private UserManager mUserManager;
 
-    public static UserSettingsFragment getInstance() {
-        UserSettingsFragment
-                userSettingsFragment = new UserSettingsFragment();
+    public static UserAndAccountSettingsFragment getInstance() {
+        UserAndAccountSettingsFragment
+                userAndAccountSettingsFragment = new UserAndAccountSettingsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.user_and_account_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        userSettingsFragment.setArguments(bundle);
-        return userSettingsFragment;
+        userAndAccountSettingsFragment.setArguments(bundle);
+        return userAndAccountSettingsFragment;
     }
 
     @Override
@@ -73,33 +76,40 @@ public class UserSettingsFragment extends ListSettingsFragment {
                 Log.e(TAG, "Couldn't switch user.", e);
             }
         });
-
-        TextView guestBtn = (TextView) getActivity().findViewById(R.id.action_button2);
-        guestBtn.setVisibility(View.VISIBLE);
-        guestBtn.setText(R.string.user_guest);
-        guestBtn.setOnClickListener(v -> {
-            UserInfo guest = mUserManager.createGuest(
-                    mContext, mContext.getString(R.string.user_guest));
-            if (guest == null) {
-                // Couldn't create user, most likely because there are too many, but we haven't
-                // been able to reload the list yet.
-                Log.w(TAG, "can't create user.");
-                return;
-            }
-            try {
-                ActivityManager.getService().switchUser(guest.id);
-            } catch (RemoteException e) {
-                Log.e(TAG, "Couldn't switch user.", e);
-            }
-        });
     }
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         List<UserInfo> infos = mUserManager.getUsers(true);
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+
+        UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
+
+        // Show current user and list of accounts owned by current user.
+        items.add(new UserLineItem(mContext, currUserInfo, mUserManager, mFragmentController));
+
+        // Add "Account for $User" title for a list of accounts.
+        items.add(new SubtitleTextLineItem(
+                getString(R.string.account_list_title, currUserInfo.name)));
+
+        AuthHelper authHelper = new AuthHelper(mContext, currUserInfo.getUserHandle());
+        String[] accountTypes = authHelper.getEnabledAccountTypes();
+        for (int i = 0; i < accountTypes.length; i++) {
+            String accountType = accountTypes[i];
+            Account[] accounts = AccountManager.get(mContext)
+                    .getAccountsByTypeAsUser(accountType, currUserInfo.getUserHandle());
+            for (Account account : accounts) {
+                items.add(new AccountLineItem(
+                        mContext, currUserInfo, mUserManager, account, mFragmentController));
+            }
+            authHelper.preloadDrawableForType(mContext, accountType);
+        }
+
+        items.add(new SubtitleTextLineItem(getString(R.string.other_users_title)));
         for (UserInfo userInfo : infos) {
-            items.add(new UserLineItem(mContext, userInfo, mUserManager, mFragmentController));
+            if (userInfo.id != currUserInfo.id) {
+                items.add(new UserLineItem(mContext, userInfo, mUserManager, mFragmentController));
+            }
         }
         return items;
     }
