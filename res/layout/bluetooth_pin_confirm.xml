@@ -30,7 +30,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_height="@dimen/double_line_item_height"
+            android:layout_height="@dimen/car_double_line_list_item_height"
             android:layout_width="match_parent" >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,14 +52,14 @@
                     android:layout_height="wrap_content"
                     android:visibility="gone"
                     style="@style/CarBody1.SingleLine"
-                    android:layout_marginTop="@dimen/padding1" />
+                    android:layout_marginTop="@dimen/car_padding_1" />
             </LinearLayout>
         </RelativeLayout>
 
         <TextView
             android:id="@+id/pairing_code_message"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/single_line_item_height"
+            android:layout_height="@dimen/car_single_line_list_item_height"
             android:gravity="center_vertical"
             android:text="@string/bluetooth_enter_passkey_msg"
             style="@style/CarBody2"
@@ -67,12 +67,12 @@
 
         <RelativeLayout
             android:id="@+id/phonebook_sharing_message_confirm_pin_container"
-            android:layout_height="@dimen/double_line_item_height"
+            android:layout_height="@dimen/car_double_line_list_item_height"
             android:layout_width="match_parent" >
             <CheckBox
                 android:id="@+id/phonebook_sharing_message_confirm_pin"
-                android:layout_width="@dimen/stream_button_icon_size"
-                android:layout_height="@dimen/stream_button_icon_size"
+                android:layout_width="@dimen/car_primary_icon_size"
+                android:layout_height="@dimen/car_primary_icon_size"
                 android:button="@drawable/ic_check_box"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true" />

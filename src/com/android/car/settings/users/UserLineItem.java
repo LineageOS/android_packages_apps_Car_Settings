@@ -83,7 +83,7 @@ public class UserLineItem extends IconTextLineItem {
 
         if (picture != null) {
             int avatarSize = mContext.getResources()
-                    .getDimensionPixelSize(R.dimen.stream_button_icon_size);
+                    .getDimensionPixelSize(R.dimen.car_primary_icon_size);
             picture = Bitmap.createScaledBitmap(
                     picture, avatarSize, avatarSize, true);
             iconView.setImageBitmap(picture);
