@@ -32,7 +32,7 @@ import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.system.SystemSettingsFragment;
-import com.android.car.settings.users.UserSettingsFragment;
+import com.android.car.settings.accounts.UserAndAccountSettingsFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 
 import java.util.ArrayList;
@@ -152,11 +152,11 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 DatetimeSettingsFragment.getInstance(),
                 mFragmentController));
         lineItems.add(new SimpleIconTransitionLineItem(
-                R.string.user_settings_title,
+                R.string.user_and_account_settings_title,
                 R.drawable.ic_user,
                 getContext(),
                 null,
-                UserSettingsFragment.getInstance(),
+                UserAndAccountSettingsFragment.getInstance(),
                 mFragmentController));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,

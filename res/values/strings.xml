@@ -61,7 +61,7 @@
     <!-- Label for the SSID of the network -->
     <string name="wifi_ssid">Network name</string>
     <!-- Hint for a text field to enter the SSID of a hidden wifi network. [CHAR LIMIT=35] -->
-    <string name="wifi_ssid_hint">Enter the SSID</string>
+    <!-- <string name="wifi_ssid_hint">Enter the SSID</string> -->
     <!-- Label for the security of the connection -->
     <string name="wifi_security">Security</string>
     <!-- Label for the signal strength of the connection -->
@@ -162,8 +162,6 @@
     <string name="bluetooth_pin_values_hint_16_digits">Must be 16 digits</string>
     <!-- Bluetooth PIN hint text (below the text entry box). [CHAR LIMIT=30] -->
     <string name="bluetooth_pin_values_hint">Usually 0000 or 1234</string>
-    <!-- Bluetooth PIN hint text (below the text entry box). [CHAR LIMIT=30] -->
-    <string name="bluetooth_pin_values_hint_16_digits">Must be 16 digits</string>
     <!-- Notification title when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_title">Pairing request</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
@@ -344,6 +342,8 @@
     <string name="user_list_title">Users &amp; profiles</string>
     <!-- User settings add user or restricted profile menu [CHAR LIMIT=35] -->
     <string name="user_add_user_or_profile_menu">Add user or profile</string>
+    <!-- Title for list of users other than current user.[CHAR LIMIT=30] -->
+    <string name="other_users_title">Other users</string>
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>
     <!-- Spoken content description for delete icon beside a user [CHAR LIMIT=none] -->
@@ -361,6 +361,12 @@
     <!-- User settings label for user name [CHAR LIMIT=25] -->
     <string name="user_name_label">Name</string>
 
+    <!-- Account settings screen title [CHAR LIMIT=25] -->
+    <string name="user_and_account_settings_title">Users &amp; accounts</string>
+    <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
+    <string name="account_list_title">Accounts for <xliff:g id="current_user_name">%1$s</xliff:g></string>
+    <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
+    <string name="account_details_title">Account info</string>
 
     <!-- generic --><skip />
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->

@@ -25,7 +25,10 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+  LOCAL_USE_AAPT2 := true
+
   LOCAL_STATIC_ANDROID_LIBRARIES := \
+      android-support-v4 \
       android-support-car \
       android-support-core-ui \
       android-support-design \
@@ -35,21 +38,9 @@ ifeq (,$(TARGET_BUILD_APPS))
       android-support-v7-recyclerview
 
   LOCAL_RESOURCE_DIR := \
-      $(LOCAL_PATH)/res \
-      frameworks/support/car/res \
-      frameworks/support/core-ui/res \
-      frameworks/support/design/res \
-      frameworks/support/v7/preference/res \
-      frameworks/support/v14/preference/res
+      $(LOCAL_PATH)/res
 
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
-
-  LOCAL_AAPT_FLAGS += \
-      --extra-packages android.support.car \
-      --extra-packages android.support.coreui \
-      --extra-packages android.support.design \
-      --extra-packages android.support.v7.preference \
-      --extra-packages android.support.v14.preference
 
   LOCAL_CERTIFICATE := platform
 
@@ -61,8 +52,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DEX_PREOPT := false
 
-  LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4 \
-                                 jsr305
+  LOCAL_STATIC_JAVA_LIBRARIES += jsr305
 
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
   include packages/apps/Car/libs/car-list/car-list.mk
