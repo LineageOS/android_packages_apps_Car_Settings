@@ -24,7 +24,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/lens_header_height"
+        android:layout_height="@dimen/car_app_bar_height"
         app:theme="@style/ActionBarStyle.Car"
         app:contentInsetStart="0dp" />
     <View

@@ -15,16 +15,6 @@
 -->
 
 <resources>
-    <style name="LineItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/double_line_item_height</item>
-        <item name="android:foreground">@drawable/car_list_item_background</item>
-    </style>
-
-    <style name="LineItem.SingleItem" parent="LineItem">
-        <item name="android:layout_height">@dimen/single_line_item_height</item>
-    </style>
-
     <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings" />
 
     <attr name="WifiSignalColor" format="reference" />
@@ -36,7 +26,7 @@
     </style>
 
     <style name="ActionBarStyle.Car" parent="@style/Theme.AppCompat">
-        <item name="actionBarSize">@dimen/lens_header_height</item>
+        <item name="actionBarSize">@dimen/car_app_bar_height</item>
     </style>
 
     <style name="TrimmedHorizontalProgressBar" parent="android:Widget.Material.ProgressBar.Horizontal">
@@ -44,33 +34,10 @@
         <item name="android:minHeight">3dp</item>
         <item name="android:maxHeight">3dp</item>
     </style>
-    <style name="SettingIcon">
-        <item name="android:layout_width">@dimen/stream_button_icon_size</item>
-        <item name="android:layout_height">@dimen/stream_button_icon_size</item>
-        <item name="android:layout_centerVertical">true</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:scaleType">fitCenter</item>
-        <item name="android:tint">@color/car_tint</item>
-    </style>
 
-    <style name="SettingIcon.ActionBar" parent="SettingIcon">
+    <style name="ListIcon.ActionBar" parent="ListIcon">
         <item name="android:tint">@color/car_teal_700</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
-    </style>
-
-    <style name="SettingSwitch">
-        <item name="android:layout_width">@dimen/stream_button_icon_size</item>
-        <item name="android:layout_height">@dimen/stream_button_icon_size</item>
-        <item name="android:paddingEnd">@dimen/switch_end_padding</item>
-        <item name="android:scaleX">1.5</item>
-        <item name="android:scaleY">1.5</item>
-    </style>
-
-    <style name="SettingPagedList">
-        <item name="scrollbarContainerWidth">@dimen/side_margin</item>
-        <item name="showDivider">false</item>
-        <item name="offsetScrollBar">true</item>
-        <item name="rightMargin">@dimen/side_margin</item>
     </style>
 </resources>

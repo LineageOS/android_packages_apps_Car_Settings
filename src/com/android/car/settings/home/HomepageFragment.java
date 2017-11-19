@@ -21,7 +21,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Resources;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Display;
 import android.view.View;
 
 import com.android.car.list.TypedPagedListAdapter;
@@ -41,6 +46,7 @@ import java.util.ArrayList;
  * Homepage for settings for car.
  */
 public class HomepageFragment extends ListSettingsFragment implements CarWifiManager.Listener {
+    private static final String TAG = "HomepageFragment";
     private CarWifiManager mCarWifiManager;
     private WifiLineItem mWifiLineItem;
     private BluetoothLineItem mBluetoothLineItem;
@@ -103,6 +109,29 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
         super.onStart();
         mCarWifiManager.start();
         getActivity().registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
+
+        if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Point screenSize = new Point();
+            getActivity().getWindowManager().getDefaultDisplay().getSize(screenSize);
+            Log.d(TAG, "window size: "
+                    + convertPixelsToDp(screenSize.x, getContext())
+                    + " x " + convertPixelsToDp(screenSize.y, getContext()));
+            Log.d(TAG, "keyline1: " + convertPixelsToDp(
+                    getResources().getDimensionPixelSize(R.dimen.car_keyline_1), getContext()));
+            Log.d(TAG, "car_double_line_list_item_height: " + convertPixelsToDp(
+                    getResources().getDimensionPixelSize(R.dimen.car_double_line_list_item_height),
+                    getContext()));
+            Log.d(TAG, "car_single_line_list_item_height: " + convertPixelsToDp(
+                    getResources().getDimensionPixelSize(R.dimen.car_single_line_list_item_height),
+                    getContext()));
+        }
+    }
+
+    public static float convertPixelsToDp(float px, Context context){
+        Resources resources = context.getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        float dp = px / ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        return dp;
     }
 
     @Override

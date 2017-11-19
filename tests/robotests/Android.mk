@@ -8,11 +8,12 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 # Include the testing libraries (JUnit4 + Robolectric libs).
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    truth-prebuilt
+    truth-prebuilt \
+    mockito-robolectric-prebuilt
 
 LOCAL_JAVA_LIBRARIES := \
     junit \
-    platform-robolectric-prebuilt \
+    platform-robolectric-3.1.1-prebuilt \
     sdk_vcurrent
 
 LOCAL_INSTRUMENTATION_FOR := CarSettings
@@ -36,4 +37,9 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_TEST_PACKAGE := CarSettings
 
-include prebuilts/misc/common/robolectric/run_robotests.mk
+LOCAL_ROBOTEST_FILES := $(filter-out %/BaseRobolectricTest.java,\
+    $(call find-files-in-subdirs,$(LOCAL_PATH)/src,*Test.java,.))
+
+LOCAL_INSTRUMENT_SOURCE_DIRS := $(dir $(LOCAL_PATH))../src
+
+include prebuilts/misc/common/robolectric/3.1.1/run_robotests.mk
