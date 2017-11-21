@@ -60,7 +60,7 @@ public class AccountLineItem extends IconTextLineItem {
 
     @Override
     public void onClick(View view) {
-        mFragmentController.launchFragment(AccountDetailsFragment.getInstance(mAccount));
+        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(mAccount));
     }
 
     @Override

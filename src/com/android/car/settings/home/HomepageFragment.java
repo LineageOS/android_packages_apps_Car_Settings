@@ -185,7 +185,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 R.drawable.ic_user,
                 getContext(),
                 null,
-                UserAndAccountSettingsFragment.getInstance(),
+                UserAndAccountSettingsFragment.newInstance(),
                 mFragmentController));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,

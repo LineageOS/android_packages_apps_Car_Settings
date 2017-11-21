@@ -39,11 +39,11 @@ import java.util.List;
  * Lists all Users available on this device.
  */
 public class UserAndAccountSettingsFragment extends ListSettingsFragment {
-    private static final String TAG = "UserAndAccountSettingsFragment";
+    private static final String TAG = "UserAndAccountSettings";
     private Context mContext;
     private UserManager mUserManager;
 
-    public static UserAndAccountSettingsFragment getInstance() {
+    public static UserAndAccountSettingsFragment newInstance() {
         UserAndAccountSettingsFragment
                 userAndAccountSettingsFragment = new UserAndAccountSettingsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
@@ -55,10 +55,10 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         mContext = getContext();
         mUserManager =
                 (UserManager) mContext.getSystemService(Context.USER_SERVICE);
-        super.onActivityCreated(savedInstanceState);
         TextView addUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
         addUserBtn.setText(R.string.user_add_user_menu);
         addUserBtn.setOnClickListener(v -> {
@@ -80,7 +80,6 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        List<UserInfo> infos = mUserManager.getUsers(true);
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
 
         UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
@@ -102,10 +101,11 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
                 items.add(new AccountLineItem(
                         mContext, currUserInfo, mUserManager, account, mFragmentController));
             }
-            authHelper.preloadDrawableForType(mContext, accountType);
         }
 
         items.add(new SubtitleTextLineItem(getString(R.string.other_users_title)));
+
+        List<UserInfo> infos = mUserManager.getUsers(true);
         for (UserInfo userInfo : infos) {
             if (userInfo.id != currUserInfo.id) {
                 items.add(new UserLineItem(mContext, userInfo, mUserManager, mFragmentController));
