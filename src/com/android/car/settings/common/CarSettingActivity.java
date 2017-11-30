@@ -43,7 +43,7 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public void launchFragment(BaseFragment fragment) {
         fragment.setFragmentController(this);
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
                         R.animator.trans_right_in ,
@@ -57,15 +57,15 @@ public class CarSettingActivity extends AppCompatActivity implements
 
     @Override
     public void goBack() {
-        if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
         }
     }
 
     @Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
         }
