@@ -25,8 +25,8 @@ import com.android.car.settings.common.BaseFragment;
  */
 public class AccountTitleLineItem extends TextLineItem {
     private final Context mContext;
-    private BaseFragment.FragmentController mFragmentController;
-    private CharSequence mDesc;
+    private final BaseFragment.FragmentController mFragmentController;
+    private final CharSequence mDesc;
 
     public AccountTitleLineItem(Context context,
             BaseFragment.FragmentController fragmentController,

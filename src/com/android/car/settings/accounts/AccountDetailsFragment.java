@@ -51,7 +51,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     private Account mAccount;
     private AccountManager mAccountManager;
 
-    public static AccountDetailsFragment getInstance(Account account) {
+    public static AccountDetailsFragment newInstance(Account account) {
         AccountDetailsFragment
                 accountDetailsFragment = new AccountDetailsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
