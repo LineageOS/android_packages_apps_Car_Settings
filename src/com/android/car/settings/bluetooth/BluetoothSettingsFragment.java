@@ -21,8 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.car.widget.DayNightStyle;
-import android.support.car.widget.PagedListView;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +35,9 @@ import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+
+import androidx.car.widget.DayNightStyle;
+import androidx.car.widget.PagedListView;
 
 /**
  * Hosts Bluetooth related preferences.

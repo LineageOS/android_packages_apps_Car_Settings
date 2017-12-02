@@ -23,7 +23,6 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.car.widget.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.Pair;
@@ -53,6 +52,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import androidx.car.widget.PagedListView;
 
 /**
  * Renders {@link android.bluetooth.BluetoothDevice} to a view to be displayed as a row in a list.

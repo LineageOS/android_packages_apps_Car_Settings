@@ -29,8 +29,6 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.RemoteException;
-import android.support.car.widget.DayNightStyle;
-import android.support.car.widget.PagedListView;
 import android.util.Log;
 
 import com.android.car.list.TypedPagedListAdapter;
@@ -39,6 +37,9 @@ import com.android.car.settings.common.BaseFragment;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+
+import androidx.car.widget.DayNightStyle;
+import androidx.car.widget.PagedListView;
 
 /**
  * Activity hosts sound related settings.
