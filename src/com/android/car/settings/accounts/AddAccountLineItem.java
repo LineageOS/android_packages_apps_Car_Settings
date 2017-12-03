@@ -16,7 +16,9 @@
 package com.android.car.settings.accounts;
 
 import android.accounts.Account;
+import android.annotation.DrawableRes;
 import android.annotation.NonNull;
+import android.annotation.StringRes;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
@@ -29,38 +31,36 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
 /**
- * Builds the account list in Settings page.
+ * Shows an + Add account option in Users & Accounts page.
  */
-public class AccountLineItem extends IconTextLineItem {
+public class AddAccountLineItem extends IconTextLineItem {
     private final Context mContext;
-    private final UserInfo mUserInfo;
-    private final UserManager mUserManager;
-    private final Account mAccount;
+    @DrawableRes
+    private final int mIconRes;
+    private final String mTitle;
     private final BaseFragment.FragmentController mFragmentController;
 
-    public AccountLineItem(
+    public AddAccountLineItem(
+            String title,
+            @DrawableRes int iconRes,
             @NonNull Context context,
-            UserInfo userInfo,
-            UserManager userManager,
-            Account account,
             BaseFragment.FragmentController fragmentController) {
-        super(account.name);
+        super(title);
+        mTitle = title;
         mContext = context;
-        mUserInfo = userInfo;
-        mUserManager = userManager;
-        mAccount = account;
+        mIconRes = iconRes;
         mFragmentController = fragmentController;
     }
 
     @Override
     public void bindViewHolder(IconTextLineItem.ViewHolder viewHolder) {
         super.bindViewHolder(viewHolder);
-        viewHolder.titleView.setText(mAccount.name);
+        viewHolder.titleView.setText(mTitle);
     }
 
     @Override
     public void onClick(View view) {
-        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(mAccount));
+        mFragmentController.launchFragment(ChooseAccountFragment.newInstance());
     }
 
     @Override
@@ -80,14 +80,6 @@ public class AccountLineItem extends IconTextLineItem {
 
     @Override
     public void setIcon(ImageView iconView) {
-        AuthHelper authHelper = new AuthHelper(mContext, mUserInfo.getUserHandle());
-        Drawable picture = authHelper.getDrawableForType(mContext, mAccount.type);
-
-        if (picture != null) {
-            iconView.setImageDrawable(picture);
-        } else {
-            // TODO: Have a new drawable for default account icon.
-            iconView.setImageDrawable(mContext.getDrawable(R.drawable.ic_user));
-        }
+        iconView.setImageResource(mIconRes);
     }
 }

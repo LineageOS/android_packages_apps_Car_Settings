@@ -61,21 +61,7 @@ final public class AuthHelper {
     }
 
     /**
-     * Cache of icon picture for account type.
      *
-     * @param accountType the type of account
-     */
-    public void preloadDrawableForType(final Context context, final String accountType) {
-        new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                getDrawableForType(context, accountType);
-                return null;
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, (Void[]) null);
-    }
-
-    /**
      * Gets an icon associated with a particular account type. If none found, return default.
      * Icon will be cached in mAccTypeIconCache if loaded.
      *
@@ -111,8 +97,7 @@ final public class AuthHelper {
     }
 
     /**
-     * Updates auth descriptions. Subclasses should call this in onCreate()
-     * and update any UI that depends on AuthenticatorDescriptions in onAuthDescriptionsUpdated().
+     * Updates auth descriptions.
      */
     public void updateAuthDescriptions(Context context) {
         AuthenticatorDescription[] authDescs = AccountManager.get(context)
@@ -122,7 +107,7 @@ final public class AuthHelper {
         }
     }
 
-    void onAccountsUpdated(Account[] accounts) {
+    private void onAccountsUpdated(Account[] accounts) {
         updateAuthDescriptions(mContext);
         if (accounts == null) {
             accounts = AccountManager.get(mContext).getAccountsAsUser(mUserHandle.getIdentifier());

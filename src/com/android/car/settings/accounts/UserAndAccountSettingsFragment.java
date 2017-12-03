@@ -26,6 +26,7 @@ import android.os.UserManager;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.android.car.list.SimpleIconLineItem;
 import com.android.car.list.SubtitleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
@@ -39,11 +40,11 @@ import java.util.List;
  * Lists all Users available on this device.
  */
 public class UserAndAccountSettingsFragment extends ListSettingsFragment {
-    private static final String TAG = "UserAndAccountSettingsFragment";
+    private static final String TAG = "UserAndAccountSettings";
     private Context mContext;
     private UserManager mUserManager;
 
-    public static UserAndAccountSettingsFragment getInstance() {
+    public static UserAndAccountSettingsFragment newInstance() {
         UserAndAccountSettingsFragment
                 userAndAccountSettingsFragment = new UserAndAccountSettingsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
@@ -55,10 +56,10 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         mContext = getContext();
         mUserManager =
                 (UserManager) mContext.getSystemService(Context.USER_SERVICE);
-        super.onActivityCreated(savedInstanceState);
         TextView addUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
         addUserBtn.setText(R.string.user_add_user_menu);
         addUserBtn.setOnClickListener(v -> {
@@ -80,13 +81,16 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
 
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        List<UserInfo> infos = mUserManager.getUsers(true);
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
 
         UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
 
         // Show current user and list of accounts owned by current user.
-        items.add(new UserLineItem(mContext, currUserInfo, mUserManager, mFragmentController));
+        items.add(new UserLineItem(
+                mContext,
+                currUserInfo,
+                mUserManager,
+                mFragmentController));
 
         // Add "Account for $User" title for a list of accounts.
         items.add(new SubtitleTextLineItem(
@@ -100,15 +104,29 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
                     .getAccountsByTypeAsUser(accountType, currUserInfo.getUserHandle());
             for (Account account : accounts) {
                 items.add(new AccountLineItem(
-                        mContext, currUserInfo, mUserManager, account, mFragmentController));
+                        mContext,
+                        currUserInfo,
+                        mUserManager,
+                        account,
+                        mFragmentController));
             }
-            authHelper.preloadDrawableForType(mContext, accountType);
         }
+        items.add(new AddAccountLineItem(
+                getString(R.string.add_account_title),
+                R.drawable.ic_add,
+                getContext(),
+                mFragmentController));
 
         items.add(new SubtitleTextLineItem(getString(R.string.other_users_title)));
+
+        List<UserInfo> infos = mUserManager.getUsers(true);
         for (UserInfo userInfo : infos) {
             if (userInfo.id != currUserInfo.id) {
-                items.add(new UserLineItem(mContext, userInfo, mUserManager, mFragmentController));
+                items.add(new UserLineItem(
+                        mContext,
+                        userInfo,
+                        mUserManager,
+                        mFragmentController));
             }
         }
         return items;

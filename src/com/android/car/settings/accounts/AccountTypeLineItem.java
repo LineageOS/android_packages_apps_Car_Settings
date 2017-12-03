@@ -15,12 +15,14 @@
  */
 package com.android.car.settings.accounts;
 
-import android.accounts.Account;
+import static android.app.Activity.RESULT_OK;
+import static android.content.Intent.EXTRA_USER;
+
 import android.annotation.NonNull;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
-import android.os.UserManager;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -29,38 +31,37 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
 /**
- * Builds the account list in Settings page.
+ * Builds the account type list, as a follow up of Add account.
  */
-public class AccountLineItem extends IconTextLineItem {
+public class AccountTypeLineItem extends IconTextLineItem {
     private final Context mContext;
     private final UserInfo mUserInfo;
-    private final UserManager mUserManager;
-    private final Account mAccount;
-    private final BaseFragment.FragmentController mFragmentController;
+    private final String mProviderName;
+    private final String mAccountType;
 
-    public AccountLineItem(
+    public AccountTypeLineItem(
             @NonNull Context context,
             UserInfo userInfo,
-            UserManager userManager,
-            Account account,
-            BaseFragment.FragmentController fragmentController) {
-        super(account.name);
+            String providerName,
+            String accountType) {
+        super(providerName);
         mContext = context;
         mUserInfo = userInfo;
-        mUserManager = userManager;
-        mAccount = account;
-        mFragmentController = fragmentController;
+        mProviderName = providerName;
+        mAccountType = accountType;
     }
 
     @Override
     public void bindViewHolder(IconTextLineItem.ViewHolder viewHolder) {
         super.bindViewHolder(viewHolder);
-        viewHolder.titleView.setText(mAccount.name);
+        viewHolder.titleView.setText(mProviderName);
     }
 
     @Override
     public void onClick(View view) {
-        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(mAccount));
+        Intent intent = new Intent(view.getContext(), AddAccountActivity.class);
+        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, mAccountType);
+        view.getContext().startActivity(intent);
     }
 
     @Override
@@ -81,7 +82,7 @@ public class AccountLineItem extends IconTextLineItem {
     @Override
     public void setIcon(ImageView iconView) {
         AuthHelper authHelper = new AuthHelper(mContext, mUserInfo.getUserHandle());
-        Drawable picture = authHelper.getDrawableForType(mContext, mAccount.type);
+        Drawable picture = authHelper.getDrawableForType(mContext, mAccountType);
 
         if (picture != null) {
             iconView.setImageDrawable(picture);
