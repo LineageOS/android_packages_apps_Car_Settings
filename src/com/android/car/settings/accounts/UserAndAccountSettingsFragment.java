@@ -56,10 +56,13 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         mContext = getContext();
         mUserManager =
                 (UserManager) mContext.getSystemService(Context.USER_SERVICE);
+
+        // Super class's onActivityCreated need to be called after mContext is initialized.
+        // Because getLineItems is called in there.
+        super.onActivityCreated(savedInstanceState);
         TextView addUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
         addUserBtn.setText(R.string.user_add_user_menu);
         addUserBtn.setOnClickListener(v -> {
@@ -114,7 +117,7 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
         items.add(new AddAccountLineItem(
                 getString(R.string.add_account_title),
                 R.drawable.ic_add,
-                getContext(),
+                mContext,
                 mFragmentController));
 
         items.add(new SubtitleTextLineItem(getString(R.string.other_users_title)));
