@@ -30,7 +30,7 @@
         android:id="@+id/view_switcher"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <android.support.car.widget.PagedListView
+        <androidx.car.widget.PagedListView
             android:id="@+id/list"
             style="@style/PagedList"
             android:layout_width="match_parent"

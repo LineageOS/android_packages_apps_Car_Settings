@@ -18,8 +18,6 @@ package com.android.car.settings.wifi;
 import android.annotation.StringRes;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.car.widget.DayNightStyle;
-import android.support.car.widget.PagedListView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -28,6 +26,9 @@ import android.widget.ViewSwitcher;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+
+import androidx.car.widget.DayNightStyle;
+import androidx.car.widget.PagedListView;
 
 /**
  * Main page to host Wifi related preferences.

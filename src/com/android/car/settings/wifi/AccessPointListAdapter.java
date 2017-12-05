@@ -20,7 +20,6 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.wifi.WifiManager;
-import android.support.car.widget.PagedListView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +34,8 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.List;
+
+import androidx.car.widget.PagedListView;
 
 /**
  * Renders {@link AccessPoint} to a view to be displayed as a row in a list.

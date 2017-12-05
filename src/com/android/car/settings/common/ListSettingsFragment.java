@@ -17,13 +17,14 @@
 package com.android.car.settings.common;
 
 import android.os.Bundle;
-import android.support.car.widget.DayNightStyle;
-import android.support.car.widget.PagedListView;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 
 import java.util.ArrayList;
+
+import androidx.car.widget.DayNightStyle;
+import androidx.car.widget.PagedListView;
 
 /**
  * Settings page that only contain a list of items.

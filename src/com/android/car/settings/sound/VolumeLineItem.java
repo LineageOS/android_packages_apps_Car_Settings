@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
+import android.support.annotation.StringRes;
 import android.util.Log;
 
 import com.android.car.list.SeekbarLineItem;
@@ -39,7 +40,7 @@ public class VolumeLineItem extends SeekbarLineItem {
     private static final int AUDIO_FEEDBACK_DELAY_MS = 1500;
 
     private final Handler mHandler = new Handler(Looper.getMainLooper());
-    private final int streamType;
+    private final @CarAudioManager.CarAudioUsage int mCarAudioUsage;
     private final Ringtone mRingtone;
 
     private CarAudioManager mCarAudioManager;
@@ -47,19 +48,19 @@ public class VolumeLineItem extends SeekbarLineItem {
     public VolumeLineItem(
             Context context,
             CarAudioManager carAudioManager,
-            int streamType,
-            int titleStringResId,
-            @DrawableRes int iconResId) {
+            @CarAudioManager.CarAudioUsage int carAudioUsage,
+            @StringRes int titleStringResId,
+            @DrawableRes int iconResId) throws CarNotConnectedException {
         super(context.getText(titleStringResId), iconResId);
         mCarAudioManager = carAudioManager;
-        this.streamType = streamType;
+        mCarAudioUsage = carAudioUsage;
         Uri ringtoneUri;
 
-        switch (this.streamType) {
-            case AudioManager.STREAM_RING:
+        switch (mCarAudioUsage) {
+            case CarAudioManager.CAR_AUDIO_USAGE_RINGTONE:
                 ringtoneUri = Settings.System.DEFAULT_RINGTONE_URI;
                 break;
-            case AudioManager.STREAM_NOTIFICATION:
+            case CarAudioManager.CAR_AUDIO_USAGE_NOTIFICATION:
                 ringtoneUri = Settings.System.DEFAULT_NOTIFICATION_URI;
                 break;
             default:
@@ -67,12 +68,13 @@ public class VolumeLineItem extends SeekbarLineItem {
         }
         mRingtone = RingtoneManager.getRingtone(context, ringtoneUri);
         if (mRingtone != null) {
-            mRingtone.setStreamType(this.streamType);
+            mRingtone.setAudioAttributes(
+                    mCarAudioManager.getAudioAttributesForCarUsage(mCarAudioUsage));
         }
     }
 
-    public int getStreamType() {
-        return streamType;
+    public @CarAudioManager.CarAudioUsage int getCarAudioUsage() {
+        return mCarAudioUsage;
     }
 
     public void stop() {
@@ -85,7 +87,7 @@ public class VolumeLineItem extends SeekbarLineItem {
     @Override
     public int getSeekbarValue() {
         try {
-            return mCarAudioManager.getStreamVolume(streamType);
+            return mCarAudioManager.getUsageVolume(mCarAudioUsage);
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
         }
@@ -95,7 +97,7 @@ public class VolumeLineItem extends SeekbarLineItem {
     @Override
     public int getMaxSeekbarValue() {
         try {
-            return mCarAudioManager.getStreamMaxVolume(streamType);
+            return mCarAudioManager.getUsageMaxVolume(mCarAudioUsage);
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
         }
@@ -111,7 +113,7 @@ public class VolumeLineItem extends SeekbarLineItem {
             }
             // the flag is a request to play sound, depend on implementation, it may not play
             // anything, the listener in SoundSettings class will play audible feedback.
-            mCarAudioManager.setStreamVolume(streamType, progress, AudioManager.FLAG_PLAY_SOUND);
+            mCarAudioManager.setUsageVolume(mCarAudioUsage, progress, AudioManager.FLAG_PLAY_SOUND);
             playAudioFeedback();
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
