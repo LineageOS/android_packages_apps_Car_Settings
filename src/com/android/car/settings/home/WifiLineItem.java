@@ -18,7 +18,6 @@ package com.android.car.settings.home;
 
 import android.annotation.DrawableRes;
 import android.content.Context;
-import android.net.wifi.WifiManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Switch;
@@ -28,6 +27,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiSettingsFragment;
+import com.android.car.settings.wifi.WifiUtil;
 
 
 /**
@@ -80,37 +80,16 @@ public class WifiLineItem extends IconToggleLineItem {
 
     @Override
     public @DrawableRes int getIcon() {
-        return getIconRes(mCarWifiManager.getWifiState());
+        return WifiUtil.getIconRes(mCarWifiManager.getWifiState());
     }
 
     public void onWifiStateChanged(int state) {
         if (mIconUpdateListener != null) {
-            mIconUpdateListener.onUpdateIcon(getIconRes(state));
+            mIconUpdateListener.onUpdateIcon(WifiUtil.getIconRes(state));
         }
         if (mSwitchStateUpdateListener != null) {
-            mSwitchStateUpdateListener.onToggleChanged(getToggleState(state));
+            mSwitchStateUpdateListener.onToggleChanged(WifiUtil.isWifiOn(state));
         }
     }
 
-    private @DrawableRes int getIconRes(int state) {
-        switch (state) {
-            case WifiManager.WIFI_STATE_ENABLING:
-                //TODO show gray out?
-            case WifiManager.WIFI_STATE_DISABLED:
-                return R.drawable.ic_settings_wifi_disabled;
-            default:
-                return R.drawable.ic_settings_wifi;
-        }
-    }
-
-    private boolean getToggleState(int state) {
-        switch (state) {
-            case WifiManager.WIFI_STATE_ENABLING:
-                //TODO show gray out?
-            case WifiManager.WIFI_STATE_DISABLED:
-                return false;
-            default:
-                return true;
-        }
-    }
 }
