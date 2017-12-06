@@ -71,6 +71,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
             }
         }
     };
+
     private final IntentFilter mBtStateChangeFilter =
             new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
 
