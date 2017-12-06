@@ -19,16 +19,12 @@ package com.android.car.settings.bluetooth;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.android.car.settings.common.CheckBoxLineItem;
 
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
-import com.android.settingslib.bluetooth.MapClientProfile;
 import com.android.settingslib.bluetooth.PanProfile;
-import com.android.settingslib.bluetooth.PbapClientProfile;
 
 /**
  * Represents a line item for a Bluetooth mProfile.
@@ -56,13 +52,7 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
 
     @Override
     public void onClick(boolean isChecked) {
-        if (mProfile instanceof PbapClientProfile) {
-            mCachedDevice.setPhonebookPermissionChoice(isChecked
-                    ? CachedBluetoothDevice.ACCESS_REJECTED : CachedBluetoothDevice.ACCESS_ALLOWED);
-        } else if (mProfile instanceof MapClientProfile) {
-            mCachedDevice.setMessagePermissionChoice(isChecked
-                    ? CachedBluetoothDevice.ACCESS_REJECTED : CachedBluetoothDevice.ACCESS_ALLOWED);
-        } else if (isChecked) {
+        if (isChecked) {
             mCachedDevice.disconnect(mProfile);
             mProfile.setPreferred(mCachedDevice.getDevice(), false);
         } else if (mProfile.isPreferred(mCachedDevice.getDevice())) {
@@ -97,14 +87,7 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
     @Override
     public boolean isChecked() {
         BluetoothDevice device = mCachedDevice.getDevice();
-
-        if (mProfile instanceof MapClientProfile) {
-            return mCachedDevice.getMessagePermissionChoice()
-                    == CachedBluetoothDevice.ACCESS_ALLOWED;
-        } else if (mProfile instanceof PbapClientProfile) {
-            return mCachedDevice.getPhonebookPermissionChoice()
-                    == CachedBluetoothDevice.ACCESS_ALLOWED;
-        } else if (mProfile instanceof PanProfile) {
+        if (mProfile instanceof PanProfile) {
             return mProfile.getConnectionStatus(device) == BluetoothProfile.STATE_CONNECTED;
         } else {
             return mProfile.isPreferred(device);

@@ -152,8 +152,10 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     private void setupWifiSwitch() {
         mWifiSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
-        mWifiSwitch.setOnClickListener(v -> {
-            mCarWifiManager.setWifiEnabled(mWifiSwitch.isChecked());
+        mWifiSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (mWifiSwitch.isChecked() != mCarWifiManager.isWifiEnabled()) {
+                mCarWifiManager.setWifiEnabled(mWifiSwitch.isChecked());
+            }
         });
     }
 }

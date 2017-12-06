@@ -24,6 +24,7 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
 import android.support.v7.widget.RecyclerView;
@@ -86,7 +87,7 @@ public class BluetoothDeviceListAdapter
     public final String mHeadphoneDescription;
     public final String mBluetoothDescription;
 
-    private SortTask mSortTask = new SortTask();
+    private SortTask mSortTask;
 
     private ArrayList<CachedBluetoothDevice> mBondedDevicesSorted = new ArrayList<>();
     private ArrayList<CachedBluetoothDevice> mAvailableDevicesSorted = new ArrayList<>();
@@ -137,6 +138,8 @@ public class BluetoothDeviceListAdapter
             addBondDevices();
             addCachedDevices();
         }
+        // create task here to avoid re-executing existing tasks.
+        mSortTask = new SortTask();
         mSortTask.execute();
     }
 
@@ -460,7 +463,12 @@ public class BluetoothDeviceListAdapter
                 if (!device.startPairing()) {
                     showError(device.getName(),
                             R.string.bluetooth_pairing_error_message);
+                    return;
                 }
+                // allow MAP and PBAP since this is client side, permission should be handled on
+                // server side. i.e. the phone side.
+                device.setPhonebookPermissionChoice(CachedBluetoothDevice.ACCESS_ALLOWED);
+                device.setMessagePermissionChoice(CachedBluetoothDevice.ACCESS_ALLOWED);
             }
         }
     }

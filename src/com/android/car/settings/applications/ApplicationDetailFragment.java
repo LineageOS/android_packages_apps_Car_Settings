@@ -36,6 +36,7 @@ import android.widget.TextView;
 import com.android.car.settings.R;
 
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.SingleTextLineItem;
 import com.android.car.settings.common.TypedPagedListAdapter;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.PermissionsSummaryHelper;
@@ -54,6 +55,7 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
     public static final String EXTRA_RESOLVE_INFO = "extra_resolve_info";
 
     private ResolveInfo mResolveInfo;
+    private PackageInfo mPackageInfo;
 
     private TextView mDisableToggle;
     private TextView mForceStopButton;
@@ -77,6 +79,7 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        mPackageInfo = getPackageInfo();
         super.onActivityCreated(savedInstanceState);
         if (mResolveInfo == null) {
             Log.w(TAG, "No application info set.");
@@ -90,9 +93,14 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
 
         mDpm = (DevicePolicyManager) getContext().getSystemService(Context.DEVICE_POLICY_SERVICE);
         updateForceStopButton();
-        mForceStopButton.setOnClickListener(v -> {
-            forceStopPackage(mResolveInfo.activityInfo.packageName);
-        });
+        mForceStopButton.setOnClickListener(
+                v -> forceStopPackage(mResolveInfo.activityInfo.packageName));
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        updateForceStopButton();
         updateDisableable();
     }
 
@@ -106,6 +114,8 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
                 null /* fragmentController */,
                 false));
         items.add(new ApplicationPermissionLineItem(getContext(), mResolveInfo));
+        items.add(new SingleTextLineItem(getContext().getString(
+                R.string.application_version_label, mPackageInfo.versionName)));
         return items;
     }
 
@@ -136,7 +146,7 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
         // Try to prevent the user from bricking their phone
         // by not allowing disabling of apps in the system.
         if (Utils.isSystemPackage(
-                getResources(), getContext().getPackageManager(), getPackageInfo())) {
+                getResources(), getContext().getPackageManager(), mPackageInfo)) {
             // Disable button for core system applications.
             mDisableToggle.setText(R.string.disable_text);
             disabled = false;

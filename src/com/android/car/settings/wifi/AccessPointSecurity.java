@@ -26,11 +26,11 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Represents Security protocal for AccessPoint.
+ * Represents Security protocol for AccessPoint.
  */
 public class AccessPointSecurity {
     public static final int SECURITY_NONE_POSITION = 0;
-    private final int mValue;
+    private final int mSecurityType;
     private final Context mContext;
     private static final List<Integer> SECURITY_TYPES = Arrays.asList(
             AccessPoint.SECURITY_NONE,
@@ -38,7 +38,7 @@ public class AccessPointSecurity {
             AccessPoint.SECURITY_PSK,
             AccessPoint.SECURITY_EAP);
 
-    public static List<AccessPointSecurity> getSecurityType(Context context) {
+    public static List<AccessPointSecurity> getSecurityTypes(Context context) {
         List<AccessPointSecurity> securities = new ArrayList<>();
         for (int security : SECURITY_TYPES) {
             securities.add(new AccessPointSecurity(context, security));
@@ -46,14 +46,18 @@ public class AccessPointSecurity {
         return securities;
     }
 
-    private AccessPointSecurity(Context context, int value) {
+    private AccessPointSecurity(Context context, int securityType) {
         mContext = context;
-        mValue = value;
+        mSecurityType = securityType;
+    }
+
+    public int getSecurityType() {
+        return mSecurityType;
     }
 
     @Override
     public String toString() {
-        switch(mValue) {
+        switch(mSecurityType) {
             case AccessPoint.SECURITY_EAP:
                 return mContext.getString(R.string.wifi_security_eap);
             case AccessPoint.SECURITY_PSK:
