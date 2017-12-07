@@ -70,9 +70,6 @@ import java.util.Map;
 public class ChooseAccountFragment extends ListSettingsFragment {
     private static final String TAG = "ChooseAccountFragment";
 
-    public static final String AUTHORITIES_FILTER_KEY = "authorities";
-    public static final String ACCOUNT_TYPES_FILTER_KEY = "account_types";
-
     private Context mContext;
     private final ArrayList<ProviderEntry> mProviderList = new ArrayList<ProviderEntry>();
     private AuthenticatorDescription[] mAuthDescs;
@@ -159,16 +156,9 @@ public class ChooseAccountFragment extends ListSettingsFragment {
             String accountType = mAuthDescs[i].type;
             CharSequence providerName = getLabelForType(accountType);
 
-            // Skip if authorities not specified. If no authorities specified,
-            // then include them all.
-            ArrayList<String> accountAuths = getAuthoritiesForAccountType(accountType);
-            if (accountAuths != null) {
-                mProviderList.add(new ProviderEntry(providerName, accountType));
-            } else {
-                if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                    Log.v(TAG, "Skipped account type " + providerName + ": has no authorities");
-                }
-            }
+            // Show all accounts type for now, before figure out why no authorities
+            // for Facebook. See b/70339686 for details.
+            mProviderList.add(new ProviderEntry(providerName, accountType));
         }
     }
 
