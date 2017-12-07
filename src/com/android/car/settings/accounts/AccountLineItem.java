@@ -20,7 +20,6 @@ import android.annotation.NonNull;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
-import android.os.UserManager;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -34,20 +33,17 @@ import com.android.car.settings.common.BaseFragment;
 public class AccountLineItem extends IconTextLineItem {
     private final Context mContext;
     private final UserInfo mUserInfo;
-    private final UserManager mUserManager;
     private final Account mAccount;
     private final BaseFragment.FragmentController mFragmentController;
 
     public AccountLineItem(
             @NonNull Context context,
             UserInfo userInfo,
-            UserManager userManager,
             Account account,
             BaseFragment.FragmentController fragmentController) {
         super(account.name);
         mContext = context;
         mUserInfo = userInfo;
-        mUserManager = userManager;
         mAccount = account;
         mFragmentController = fragmentController;
     }
@@ -60,7 +56,8 @@ public class AccountLineItem extends IconTextLineItem {
 
     @Override
     public void onClick(View view) {
-        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(mAccount));
+        mFragmentController.launchFragment(
+                AccountDetailsFragment.newInstance(mAccount, mUserInfo));
     }
 
     @Override

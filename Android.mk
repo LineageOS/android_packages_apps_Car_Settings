@@ -40,8 +40,6 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_RESOURCE_DIR := \
       $(LOCAL_PATH)/res
 
-  include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
-
   LOCAL_CERTIFICATE := platform
 
   LOCAL_MODULE_TAGS := optional

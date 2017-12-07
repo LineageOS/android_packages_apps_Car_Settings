@@ -373,6 +373,14 @@
     <string name="choose_account_title">Choose account</string>
     <!-- Message to limited users that they cannot add accounts [CHAR LIMIT=100] -->
     <string name="user_cannot_add_accounts_message">Restricted profiles cannot add accounts</string>
+    <!-- Button label to remove current account [CHAR LIMIT=25] -->
+    <string name="remove_account_title">Remove account</string>
+    <!-- Title of remove message for remove account dialog [CHAR LIMIT=25] -->
+    <string name="really_remove_account_title">Remove account?</string>
+    <!-- Remove account message in dialog [CHAR LIMIT=NONE] -->
+    <string name="really_remove_account_message">Removing this account will delete all of its messages, contacts, and other data from the device!</string>
+    <!-- This is shown if the authenticator for a given account fails to remove it. [CHAR LIMIT=NONE] -->
+    <string name="remove_account_failed">This change isn\'t allowed by your admin</string>
 
     <!-- generic --><skip />
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->

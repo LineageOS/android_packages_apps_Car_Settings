@@ -26,7 +26,6 @@ import android.os.UserManager;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.android.car.list.SimpleIconLineItem;
 import com.android.car.list.SubtitleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
@@ -63,6 +62,7 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
         // Super class's onActivityCreated need to be called after mContext is initialized.
         // Because getLineItems is called in there.
         super.onActivityCreated(savedInstanceState);
+
         TextView addUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
         addUserBtn.setText(R.string.user_add_user_menu);
         addUserBtn.setOnClickListener(v -> {
@@ -109,7 +109,6 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
                 items.add(new AccountLineItem(
                         mContext,
                         currUserInfo,
-                        mUserManager,
                         account,
                         mFragmentController));
             }

@@ -18,6 +18,20 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.os.Bundle;
+import android.accounts.AccountManagerCallback;
+import android.accounts.AccountManagerFuture;
+import android.accounts.AuthenticatorException;
+import android.accounts.OperationCanceledException;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.UserInfo;
+import android.os.UserHandle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.android.car.list.SingleTextLineItem;
@@ -26,6 +40,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
 
 import java.util.ArrayList;
+import java.io.IOException;
 
 /**
  * Shows account details, and delete account option.
@@ -34,17 +49,21 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     private static final String TAG = "AccountDetailsFragment";
 
     public static final String EXTRA_ACCOUNT_INFO = "extra_account_info";
+    public static final String EXTRA_USER_INFO = "extra_user_info";
 
     private Account mAccount;
     private AccountManager mAccountManager;
+    private UserInfo mUserInfo;
 
-    public static AccountDetailsFragment newInstance(Account account) {
+    public static AccountDetailsFragment newInstance(
+            Account account, UserInfo userInfo) {
         AccountDetailsFragment
                 accountDetailsFragment = new AccountDetailsFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_TITLE_ID, R.string.account_details_title);
         bundle.putParcelable(EXTRA_ACCOUNT_INFO, account);
+        bundle.putParcelable(EXTRA_USER_INFO, userInfo);
         accountDetailsFragment.setArguments(bundle);
         return accountDetailsFragment;
     }
@@ -53,6 +72,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAccount = getArguments().getParcelable(EXTRA_ACCOUNT_INFO);
+        mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
     }
 
     @Override
@@ -71,10 +91,103 @@ public class AccountDetailsFragment extends ListSettingsFragment {
         removeAccountBtn.setOnClickListener(v -> removeAccount());
     }
 
-    private void removeAccount() {
-        // TODO Switch to removeAccountAsUser
-        if (mAccountManager.removeAccountExplicitly(mAccount)) {
-            getActivity().onBackPressed();
+    public void removeAccount() {
+        ConfirmRemoveAccountDialog.show(this, mAccount, mUserInfo.getUserHandle());
+    }
+
+    /**
+     * Dialog to confirm with user about account removal
+     */
+    public static class ConfirmRemoveAccountDialog extends DialogFragment implements
+            DialogInterface.OnClickListener {
+        private static final String KEY_ACCOUNT = "account";
+        private static final String REMOVE_ACCOUNT_DIALOG = "confirmRemoveAccount";
+        private Account mAccount;
+        private UserHandle mUserHandle;
+
+        private final AccountManagerCallback<Bundle> mCallback =
+                new AccountManagerCallback<Bundle>() {
+            @Override
+            public void run(AccountManagerFuture<Bundle> future) {
+                // If already out of this screen, don't proceed.
+                if (!getTargetFragment().isResumed()) {
+                    return;
+                }
+                boolean success = false;
+                try {
+                    success = future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
+                } catch (OperationCanceledException | IOException | AuthenticatorException e) {
+                    if (Log.isLoggable(TAG, Log.VERBOSE)) {
+                        Log.v(TAG, "removeAccount error: " + e);
+                    }
+                }
+                final Activity activity = getTargetFragment().getActivity();
+                if (!success && activity != null && !activity.isFinishing()) {
+                    RemoveAccountFailureDialog.show(getTargetFragment());
+                } else {
+                    activity.finish();
+                }
+            }
+        };
+
+        public static void show(
+                Fragment parent, Account account, UserHandle userHandle) {
+            final ConfirmRemoveAccountDialog dialog = new ConfirmRemoveAccountDialog();
+            Bundle bundle = new Bundle();
+            bundle.putParcelable(KEY_ACCOUNT, account);
+            bundle.putParcelable(Intent.EXTRA_USER, userHandle);
+            dialog.setArguments(bundle);
+            dialog.setTargetFragment(parent, 0);
+            dialog.show(parent.getFragmentManager(), REMOVE_ACCOUNT_DIALOG);
         }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            final Bundle arguments = getArguments();
+            mAccount = arguments.getParcelable(KEY_ACCOUNT);
+            mUserHandle = arguments.getParcelable(Intent.EXTRA_USER);
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.really_remove_account_title)
+                    .setMessage(R.string.really_remove_account_message)
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .setPositiveButton(R.string.remove_account_title, this)
+                    .create();
+        }
+
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            Activity activity = getTargetFragment().getActivity();
+            AccountManager.get(activity).removeAccountAsUser(
+                    mAccount, activity, mCallback, null, mUserHandle);
+        }
+    }
+
+    /**
+     * Dialog to tell user about account removal failure
+     */
+    public static class RemoveAccountFailureDialog extends DialogFragment {
+
+        private static final String FAILED_REMOVAL_DIALOG = "removeAccountFailed";
+
+        public static void show(Fragment parent) {
+            final RemoveAccountFailureDialog dialog = new RemoveAccountFailureDialog();
+            dialog.setTargetFragment(parent, 0);
+            dialog.show(parent.getFragmentManager(), FAILED_REMOVAL_DIALOG);
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.really_remove_account_title)
+                    .setMessage(R.string.remove_account_failed)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .create();
+        }
+
     }
 }
