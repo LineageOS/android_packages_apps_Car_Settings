@@ -112,6 +112,8 @@ public class AddAccountActivity extends Activity {
                 if (Log.isLoggable(TAG, Log.VERBOSE)) {
                     Log.v(TAG, "addAccount error: " + e);
                 }
+            } finally {
+                finish();
             }
         }
     };

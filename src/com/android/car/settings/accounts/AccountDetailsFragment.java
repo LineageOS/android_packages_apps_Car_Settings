@@ -101,7 +101,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     public static class ConfirmRemoveAccountDialog extends DialogFragment implements
             DialogInterface.OnClickListener {
         private static final String KEY_ACCOUNT = "account";
-        private static final String REMOVE_ACCOUNT_DIALOG = "confirmRemoveAccount";
+        private static final String TAG = "confirmRemoveAccount";
         private Account mAccount;
         private UserHandle mUserHandle;
 
@@ -113,6 +113,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
                 if (!getTargetFragment().isResumed()) {
                     return;
                 }
+
                 boolean success = false;
                 try {
                     success = future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
@@ -125,7 +126,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
                 if (!success && activity != null && !activity.isFinishing()) {
                     RemoveAccountFailureDialog.show(getTargetFragment());
                 } else {
-                    activity.finish();
+                    getTargetFragment().getFragmentManager().popBackStack();
                 }
             }
         };
@@ -138,7 +139,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
             bundle.putParcelable(Intent.EXTRA_USER, userHandle);
             dialog.setArguments(bundle);
             dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), REMOVE_ACCOUNT_DIALOG);
+            dialog.show(parent.getFragmentManager(), TAG);
         }
 
         @Override
@@ -172,12 +173,12 @@ public class AccountDetailsFragment extends ListSettingsFragment {
      */
     public static class RemoveAccountFailureDialog extends DialogFragment {
 
-        private static final String FAILED_REMOVAL_DIALOG = "removeAccountFailed";
+        private static final String TAG = "removeAccountFailed";
 
         public static void show(Fragment parent) {
             final RemoveAccountFailureDialog dialog = new RemoveAccountFailureDialog();
             dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), FAILED_REMOVAL_DIALOG);
+            dialog.show(parent.getFragmentManager(), TAG);
         }
 
         @Override
