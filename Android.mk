@@ -52,6 +52,8 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_STATIC_JAVA_LIBRARIES += jsr305
 
+  LOCAL_DX_FLAGS := --multi-dex
+
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
   include packages/apps/Car/libs/car-list/car-list.mk
   include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
