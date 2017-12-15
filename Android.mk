@@ -65,7 +65,7 @@ endif
 
 # Use the following include to make our test apk.
 ifeq (,$(ONE_SHOT_MAKEFILE))
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call first-makefiles-under, $(LOCAL_PATH))
 endif
 
 endif
