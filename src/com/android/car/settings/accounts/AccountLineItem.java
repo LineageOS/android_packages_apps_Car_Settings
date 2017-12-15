@@ -77,8 +77,8 @@ public class AccountLineItem extends IconTextLineItem {
 
     @Override
     public void setIcon(ImageView iconView) {
-        AuthHelper authHelper = new AuthHelper(mContext, mUserInfo.getUserHandle());
-        Drawable picture = authHelper.getDrawableForType(mContext, mAccount.type);
+        AccountHelper accountHelper = new AccountHelper(mContext, mUserInfo.getUserHandle());
+        Drawable picture = accountHelper.getDrawableForType(mContext, mAccount.type);
 
         if (picture != null) {
             iconView.setImageDrawable(picture);

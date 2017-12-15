@@ -22,7 +22,10 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.os.UserManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -32,16 +35,20 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.users.UserLineItem;
 
+import com.android.settingslib.accounts.AuthenticatorHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Lists all Users available on this device.
  */
-public class UserAndAccountSettingsFragment extends ListSettingsFragment {
+public class UserAndAccountSettingsFragment extends ListSettingsFragment
+        implements AuthenticatorHelper.OnAccountsUpdateListener {
     private static final String TAG = "UserAndAccountSettings";
     private Context mContext;
     private UserManager mUserManager;
+    private AuthenticatorHelper mAuthenticatorHelper;
 
     public static UserAndAccountSettingsFragment newInstance() {
         UserAndAccountSettingsFragment
@@ -99,8 +106,11 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
         items.add(new SubtitleTextLineItem(
                 getString(R.string.account_list_title, currUserInfo.name)));
 
-        AuthHelper authHelper = new AuthHelper(mContext, currUserInfo.getUserHandle());
-        String[] accountTypes = authHelper.getEnabledAccountTypes();
+        mAuthenticatorHelper =
+                new AuthenticatorHelper(mContext, currUserInfo.getUserHandle(), this);
+        mAuthenticatorHelper.listenToAccountUpdates();
+
+        String[] accountTypes = mAuthenticatorHelper.getEnabledAccountTypes();
         for (int i = 0; i < accountTypes.length; i++) {
             String accountType = accountTypes[i];
             Account[] accounts = AccountManager.get(mContext)
@@ -132,5 +142,14 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment {
             }
         }
         return items;
+    }
+
+    @Override
+    public void onAccountsUpdate(UserHandle userHandle) {
+        Fragment fragment = getFragmentManager().findFragmentByTag(TAG);
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.detach(fragment);
+        transaction.attach(fragment);
+        transaction.commit();
     }
 }
