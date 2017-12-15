@@ -15,7 +15,6 @@
  */
 package com.android.car.settings.accounts;
 
-import static android.app.Activity.RESULT_OK;
 import static android.content.Intent.EXTRA_USER;
 
 import android.annotation.NonNull;
@@ -28,7 +27,6 @@ import android.widget.ImageView;
 
 import com.android.car.list.IconTextLineItem;
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
 
 /**
  * Builds the account type list, as a follow up of Add account.
@@ -81,8 +79,8 @@ public class AccountTypeLineItem extends IconTextLineItem {
 
     @Override
     public void setIcon(ImageView iconView) {
-        AuthHelper authHelper = new AuthHelper(mContext, mUserInfo.getUserHandle());
-        Drawable picture = authHelper.getDrawableForType(mContext, mAccountType);
+        AccountHelper accountHelper = new AccountHelper(mContext, mUserInfo.getUserHandle());
+        Drawable picture = accountHelper.getDrawableForType(mContext, mAccountType);
 
         if (picture != null) {
             iconView.setImageDrawable(picture);

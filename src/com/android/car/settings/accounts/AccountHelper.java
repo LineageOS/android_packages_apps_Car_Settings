@@ -31,33 +31,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Helper class for monitoring accounts on the device for a given user.
+ * Helper class for accounts auth description and account type icon.
  */
-final public class AuthHelper {
-    private static final String TAG = "AuthHelper";
+final public class AccountHelper {
+    private static final String TAG = "AccountHelper";
 
     private final Map<String, AuthenticatorDescription> mTypeToAuthDescription = new HashMap<>();
-    private final ArrayList<String> mEnabledAccountTypes = new ArrayList<>();
     private final Map<String, Drawable> mAccTypeIconCache = new HashMap<>();
 
     private final UserHandle mUserHandle;
     private final Context mContext;
 
-    public AuthHelper(Context context, UserHandle userHandle) {
+    public AccountHelper(Context context, UserHandle userHandle) {
         mContext = context;
         mUserHandle = userHandle;
-        // This guarantees that the helper is ready to use once constructed: the account types and
-        // authorities are initialized
-        onAccountsUpdated(null);
-    }
-
-    /**
-     * Get a list of enabled account types for device.
-     *
-     * @return a list of String for allowed account types.
-     */
-    public String[] getEnabledAccountTypes() {
-        return mEnabledAccountTypes.toArray(new String[mEnabledAccountTypes.size()]);
+        // This guarantees that the helper is ready to use once constructed: the auth descriptions
+        // are initialized.
+        updateAuthDescriptions(context);
     }
 
     /**
@@ -99,26 +89,11 @@ final public class AuthHelper {
     /**
      * Updates auth descriptions.
      */
-    public void updateAuthDescriptions(Context context) {
+    private void updateAuthDescriptions(Context context) {
         AuthenticatorDescription[] authDescs = AccountManager.get(context)
                 .getAuthenticatorTypesAsUser(mUserHandle.getIdentifier());
         for (int i = 0; i < authDescs.length; i++) {
             mTypeToAuthDescription.put(authDescs[i].type, authDescs[i]);
-        }
-    }
-
-    private void onAccountsUpdated(Account[] accounts) {
-        updateAuthDescriptions(mContext);
-        if (accounts == null) {
-            accounts = AccountManager.get(mContext).getAccountsAsUser(mUserHandle.getIdentifier());
-        }
-        mEnabledAccountTypes.clear();
-        mAccTypeIconCache.clear();
-        for (int i = 0; i < accounts.length; i++) {
-            Account account = accounts[i];
-            if (!mEnabledAccountTypes.contains(account.type)) {
-                mEnabledAccountTypes.add(account.type);
-            }
         }
     }
 }
