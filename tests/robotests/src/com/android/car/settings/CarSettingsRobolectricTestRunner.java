@@ -52,29 +52,25 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
 
         // By adding any resources from libraries we need to the AndroidManifest, we can access
         // them from within the parallel universe's resource loader.
-        final AndroidManifest manifest = new AndroidManifest(Fs.fileFromPath(manifestPath),
-                Fs.fileFromPath(resDir), Fs.fileFromPath(assetsDir)) {
+        return new AndroidManifest(Fs.fileFromPath(manifestPath), Fs.fileFromPath(resDir),
+            Fs.fileFromPath(assetsDir), "com.android.car.settings") {
             @Override
             public List<ResourcePath> getIncludedResourcePaths() {
                 List<ResourcePath> paths = super.getIncludedResourcePaths();
                 paths.add(new ResourcePath(
-                        getPackageName(),
+                        null,
                         Fs.fileFromPath("./packages/apps/Car/Settings/res"),
                         null));
                 paths.add(new ResourcePath(
-                        getPackageName(),
+                        null,
                         Fs.fileFromPath("./frameworks/base/packages/SettingsLib/res"),
                         null));
                 paths.add(new ResourcePath(
-                        getPackageName(),
+                        null,
                         Fs.fileFromPath("./frameworks/base/core/res/res"),
                         null));
                 return paths;
             }
         };
-
-        // Set the package name to the renamed one
-        manifest.setPackageName("com.android.car.settings");
-        return manifest;
     }
 }
