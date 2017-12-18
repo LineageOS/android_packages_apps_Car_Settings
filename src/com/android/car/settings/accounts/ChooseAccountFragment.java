@@ -15,14 +15,10 @@
  */
 package com.android.car.settings.accounts;
 
-import static android.app.Activity.RESULT_CANCELED;
-import static android.app.Activity.RESULT_OK;
 import static android.content.Intent.EXTRA_USER;
 
-import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -33,32 +29,23 @@ import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceGroup;
 import android.util.Log;
-import android.widget.TextView;
 
-import com.android.car.list.SingleTextLineItem;
-import com.android.car.list.SubtitleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
 
 import com.google.android.collect.Maps;
 
-import com.android.car.settings.users.UserLineItem;
 import com.android.internal.util.CharSequences;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+
+import androidx.car.widget.ListItem;
 
 /**
  * Activity asking a user to select an account to be set up.
@@ -67,7 +54,7 @@ import java.util.Map;
  * if the user for which the action needs to be performed is different to the one the
  * Settings App will run in.
  */
-public class ChooseAccountFragment extends ListSettingsFragment {
+public class ChooseAccountFragment extends ListItemSettingsFragment {
     private static final String TAG = "ChooseAccountFragment";
 
     private Context mContext;
@@ -103,8 +90,8 @@ public class ChooseAccountFragment extends ListSettingsFragment {
     public static ChooseAccountFragment newInstance() {
         ChooseAccountFragment
                 chooseAccountFragment = new ChooseAccountFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.choose_account_title);
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.add_an_account);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         chooseAccountFragment.setArguments(bundle);
         return chooseAccountFragment;
@@ -122,19 +109,29 @@ public class ChooseAccountFragment extends ListSettingsFragment {
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+    public List<ListItem> getListItems() {
+        List<ListItem> items = new ArrayList<>();
 
         UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
+        AccountHelper accountHelper = new AccountHelper(mContext, currUserInfo.getUserHandle());
 
         for (int i = 0; i < mProviderList.size(); i++) {
-            items.add(new AccountTypeLineItem(
-                    mContext,
-                    currUserInfo,
-                    mProviderList.get(i).name.toString(),
-                    mProviderList.get(i).type));
+            String accountType = mProviderList.get(i).type;
+            Drawable icon = accountHelper.getDrawableForType(mContext, accountType);
+            items.add(new ListItem.Builder(mContext)
+                    .withPrimaryActionIcon(icon, false /* useLargeIcon */)
+                    .withTitle(mProviderList.get(i).name.toString())
+                    .withOnClickListener(v -> onItemSelected(accountType))
+                    .build());
         }
         return items;
+    }
+
+    // Starts a AddAccountActivity for the accountType that was clicked on.
+    private void onItemSelected(String accountType) {
+        Intent intent = new Intent(mContext, AddAccountActivity.class);
+        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
+        mContext.startActivity(intent);
     }
 
     /**
@@ -196,7 +193,7 @@ public class ChooseAccountFragment extends ListSettingsFragment {
             try {
                 AuthenticatorDescription desc = mTypeToAuthDescription.get(accountType);
                 Context authContext = getActivity()
-                        .createPackageContextAsUser(desc.packageName, 0, mUserHandle);
+                        .createPackageContextAsUser(desc.packageName, 0 /* flags */, mUserHandle);
                 label = authContext.getResources().getText(desc.labelId);
             } catch (PackageManager.NameNotFoundException e) {
                 Log.w(TAG, "No label name for account type " + accountType);
