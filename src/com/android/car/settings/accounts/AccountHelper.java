@@ -36,6 +36,11 @@ import java.util.Map;
 final public class AccountHelper {
     private static final String TAG = "AccountHelper";
 
+    public static final String AUTHORITIES_FILTER_KEY = "authorities";
+    public static final String ACCOUNT_TYPE_PHONE = "com.android.localphone";
+    public static final String ACCOUNT_TYPE_SIM = "com.android.sim";
+    public static final String ACCOUNT_TYPE_BLUETOOTH = "com.android.bluetooth.pbapsink";
+
     private final Map<String, AuthenticatorDescription> mTypeToAuthDescription = new HashMap<>();
     private final Map<String, Drawable> mAccTypeIconCache = new HashMap<>();
 
