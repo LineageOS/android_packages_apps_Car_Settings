@@ -51,8 +51,9 @@ public abstract class BaseFragment extends Fragment {
 
         /**
          * Pops the top off the fragment stack.
+         * @return {@code false} if there's no stack to pop, {@code true} otherwise
          */
-        void goBack();
+        boolean goBack();
     }
 
     @LayoutRes
