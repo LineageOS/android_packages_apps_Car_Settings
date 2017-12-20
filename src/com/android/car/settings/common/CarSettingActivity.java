@@ -15,9 +15,11 @@
  */
 package com.android.car.settings.common;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.inputmethod.InputMethodManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.home.HomepageFragment;
@@ -56,18 +58,25 @@ public class CarSettingActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void goBack() {
+    public boolean goBack() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
             getSupportFragmentManager().popBackStack();
+            hideKeyboard();
+            return true;
         }
+        return false;
     }
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportFragmentManager().popBackStack();
-        } else {
+        if (!goBack()) {
             super.onBackPressed();
         }
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager)this.getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
     }
 }
