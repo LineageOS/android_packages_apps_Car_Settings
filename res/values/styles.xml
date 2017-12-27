@@ -40,4 +40,7 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
+    <style name="SettingsListHeader" parent="CarTitle">
+        <item name="android:textColor">@color/car_highlight</item>
+    </style>
 </resources>
