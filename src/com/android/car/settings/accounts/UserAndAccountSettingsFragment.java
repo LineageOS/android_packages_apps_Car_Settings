@@ -20,6 +20,9 @@ import android.accounts.AccountManager;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.UserHandle;
@@ -29,21 +32,21 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.android.car.list.SubtitleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
-import com.android.car.settings.users.UserLineItem;
+import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.users.UserDetailsSettingsFragment;
 
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.car.widget.ListItem;
+
 /**
  * Lists all Users available on this device.
  */
-public class UserAndAccountSettingsFragment extends ListSettingsFragment
+public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener {
     private static final String TAG = "UserAndAccountSettings";
     private Context mContext;
@@ -53,7 +56,7 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment
     public static UserAndAccountSettingsFragment newInstance() {
         UserAndAccountSettingsFragment
                 userAndAccountSettingsFragment = new UserAndAccountSettingsFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.user_and_account_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         userAndAccountSettingsFragment.setArguments(bundle);
@@ -90,58 +93,102 @@ public class UserAndAccountSettingsFragment extends ListSettingsFragment
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+    public List<ListItem> getListItems() {
+        ArrayList<ListItem> items = new ArrayList<>();
 
         UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
 
-        // Show current user and list of accounts owned by current user.
-        items.add(new UserLineItem(
-                mContext,
-                currUserInfo,
-                mUserManager,
-                mFragmentController));
+        // Show current user
+        items.add(createUserItem(currUserInfo,
+                getString(R.string.current_user_name, currUserInfo.name)));
 
         // Add "Account for $User" title for a list of accounts.
-        items.add(new SubtitleTextLineItem(
-                getString(R.string.account_list_title, currUserInfo.name)));
+        items.add(createSubtitleItem(getString(R.string.account_list_title, currUserInfo.name)));
 
-        mAuthenticatorHelper =
-                new AuthenticatorHelper(mContext, currUserInfo.getUserHandle(), this);
+        // Add an item for each account owned by the current user (1st and 3rd party accounts)
+        mAuthenticatorHelper = new AuthenticatorHelper(mContext, currUserInfo.getUserHandle(),
+                this);
         mAuthenticatorHelper.listenToAccountUpdates();
-
         String[] accountTypes = mAuthenticatorHelper.getEnabledAccountTypes();
+        AccountHelper accountHelper = new AccountHelper(mContext, currUserInfo.getUserHandle());
         for (int i = 0; i < accountTypes.length; i++) {
             String accountType = accountTypes[i];
             Account[] accounts = AccountManager.get(mContext)
                     .getAccountsByTypeAsUser(accountType, currUserInfo.getUserHandle());
             for (Account account : accounts) {
-                items.add(new AccountLineItem(
-                        mContext,
-                        currUserInfo,
-                        account,
-                        mFragmentController));
+                items.add(createAccountItem(accountHelper, account, accountType, currUserInfo));
             }
         }
-        items.add(new AddAccountLineItem(
-                getString(R.string.add_account_title),
-                R.drawable.ic_add,
-                mContext,
-                mFragmentController));
 
-        items.add(new SubtitleTextLineItem(getString(R.string.other_users_title)));
+        // Add "+ Add account" option
+        items.add(createAddAccountItem());
 
+        // Add "Other users" title item
+        items.add(createSubtitleItem(getString(R.string.other_users_title)));
+
+        // Display other users on the system
         List<UserInfo> infos = mUserManager.getUsers(true);
         for (UserInfo userInfo : infos) {
             if (userInfo.id != currUserInfo.id) {
-                items.add(new UserLineItem(
-                        mContext,
-                        userInfo,
-                        mUserManager,
-                        mFragmentController));
+                items.add(createUserItem(userInfo, userInfo.name));
             }
         }
         return items;
+    }
+
+    // Creates a line for a user, clicking on it leads to the user details page
+    private ListItem createUserItem(UserInfo userInfo, String title) {
+        return new ListItem.Builder(mContext)
+                .withPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */)
+                .withTitle(title)
+                .withOnClickListener(view -> mFragmentController.launchFragment(
+                        UserDetailsSettingsFragment.getInstance(userInfo)))
+                .build();
+    }
+
+    // Creates a subtitle line for visual separation in the list
+    private ListItem createSubtitleItem(String title) {
+        return new ListItem.Builder(mContext)
+                .withPrimaryActionEmptyIcon()
+                .withTitle(title)
+                .withViewBinder(viewHolder ->
+                        viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader))
+                .build();
+    }
+
+    // Creates a line for an account that belongs to a given user
+    private ListItem createAccountItem(AccountHelper accountHelper, Account account, String
+            accountType, UserInfo userInfo) {
+        return new ListItem.Builder(mContext)
+                .withPrimaryActionIcon(accountHelper.getDrawableForType(mContext, accountType),
+                        false /* useLargeIcon */)
+                .withTitle(account.name)
+                .withOnClickListener(view -> mFragmentController.launchFragment(
+                        AccountDetailsFragment.newInstance(account, userInfo)))
+                .build();
+    }
+
+    // Creates a clickable "+ Add Account" line. Clicking on it leads to the Add an Account page.
+    private ListItem createAddAccountItem() {
+        return new ListItem.Builder(mContext)
+                .withPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */)
+                .withTitle(getString(R.string.add_account_title))
+                .withOnClickListener(view -> mFragmentController.launchFragment(
+                        ChooseAccountFragment.newInstance()))
+                .build();
+    }
+
+    private Drawable getUserIcon(UserInfo userInfo) {
+        Bitmap picture = mUserManager.getUserIcon(userInfo.id);
+
+        if (picture != null) {
+            int avatarSize = mContext.getResources()
+                    .getDimensionPixelSize(R.dimen.car_primary_icon_size);
+            picture = Bitmap.createScaledBitmap(
+                    picture, avatarSize, avatarSize, true /* filter */);
+            return new BitmapDrawable(mContext.getResources(), picture);
+        }
+        return mContext.getDrawable(R.drawable.ic_user);
     }
 
     @Override

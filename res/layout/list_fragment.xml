@@ -22,6 +22,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:showPagedListViewDivider="true"
-    app:alignDividerStartTo="@id/primary_icon"
+    app:alignDividerStartTo="@id/container"
     app:gutter="both"/>
 
