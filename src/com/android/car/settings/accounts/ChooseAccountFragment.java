@@ -15,8 +15,6 @@
  */
 package com.android.car.settings.accounts;
 
-import static android.content.Intent.EXTRA_USER;
-
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.app.ActivityManager;
@@ -43,6 +41,7 @@ import com.android.internal.util.CharSequences;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.HashSet;
 import java.util.Map;
 
 import androidx.car.widget.ListItem;
@@ -58,11 +57,14 @@ public class ChooseAccountFragment extends ListItemSettingsFragment {
     private static final String TAG = "ChooseAccountFragment";
 
     private Context mContext;
+    private String[] mAuthorities;
+    private HashSet<String> mAccountTypesFilter;
     private final ArrayList<ProviderEntry> mProviderList = new ArrayList<ProviderEntry>();
     private AuthenticatorDescription[] mAuthDescs;
     private HashMap<String, ArrayList<String>> mAccountTypeToAuthorities;
     private Map<String, AuthenticatorDescription> mTypeToAuthDescription
             = new HashMap<String, AuthenticatorDescription>();
+
     // The UserHandle of the user we are choosing an account for
     private UserHandle mUserHandle;
     private UserManager mUserManager;
@@ -103,6 +105,15 @@ public class ChooseAccountFragment extends ListItemSettingsFragment {
         mUserManager =
                 (UserManager) mContext.getSystemService(Context.USER_SERVICE);
         mUserHandle = mUserManager.getUserInfo(ActivityManager.getCurrentUser()).getUserHandle();
+        mAuthorities = getActivity().getIntent().getStringArrayExtra(
+                AccountHelper.AUTHORITIES_FILTER_KEY);
+
+        if (mAccountTypesFilter == null) {
+            mAccountTypesFilter = new HashSet<String>();
+            mAccountTypesFilter.add(AccountHelper.ACCOUNT_TYPE_BLUETOOTH);
+            mAccountTypesFilter.add(AccountHelper.ACCOUNT_TYPE_PHONE);
+            mAccountTypesFilter.add(AccountHelper.ACCOUNT_TYPE_SIM);
+        }
 
         updateAuthDescriptions();
         super.onActivityCreated(savedInstanceState);
@@ -153,9 +164,28 @@ public class ChooseAccountFragment extends ListItemSettingsFragment {
             String accountType = mAuthDescs[i].type;
             CharSequence providerName = getLabelForType(accountType);
 
-            // Show all accounts type for now, before figure out why no authorities
-            // for Facebook. See b/70339686 for details.
-            mProviderList.add(new ProviderEntry(providerName, accountType));
+            // Get the account authorities implemented by the account type.
+            ArrayList<String> accountAuths = getAuthoritiesForAccountType(accountType);
+            boolean addAccountType = true;
+            // If there are specific authorities required, we need to check whether it's
+            // included in the account type.
+            if (mAuthorities != null && mAuthorities.length > 0 && accountAuths != null) {
+                addAccountType = false;
+                for (int k = 0; k < mAuthorities.length; k++) {
+                    if (accountAuths.contains(mAuthorities[k])) {
+                        addAccountType = true;
+                        break;
+                    }
+                }
+            }
+            // If account type is in the account type filter list, don't show it.
+            if (addAccountType && mAccountTypesFilter != null
+                    && mAccountTypesFilter.contains(accountType)) {
+                addAccountType = false;
+            }
+            if (addAccountType) {
+                mProviderList.add(new ProviderEntry(providerName, accountType));
+            }
         }
     }
 
