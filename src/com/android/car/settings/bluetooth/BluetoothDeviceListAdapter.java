@@ -288,6 +288,7 @@ public class BluetoothDeviceListAdapter
         mLocalAdapter.startScanning(true);
         addBondDevices();
         addCachedDevices();
+        notifyDataSetChanged();
     }
 
     @Override

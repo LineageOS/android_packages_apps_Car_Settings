@@ -22,22 +22,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
-import android.graphics.Point;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
 import android.view.View;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.settings.accounts.UserAndAccountSettingsFragment;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.system.SystemSettingsFragment;
-import com.android.car.settings.accounts.UserAndAccountSettingsFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 
 import java.util.ArrayList;
@@ -110,29 +107,6 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
         super.onStart();
         mCarWifiManager.start();
         getActivity().registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
-
-        if (Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, "view size: "
-                + convertPixelsToDp(getView().getWidth(), getContext())
-                + " x " + convertPixelsToDp(getView().getHeight(), getContext()));
-
-            Point screenSize = new Point();
-            getActivity().getWindowManager().getDefaultDisplay().getSize(screenSize);
-            Log.d(TAG, "window size: "
-                    + convertPixelsToDp(screenSize.x, getContext())
-                    + " x " + convertPixelsToDp(screenSize.y, getContext()));
-            Log.d(TAG, "keyline1: " + convertPixelsToDp(
-                    getResources().getDimensionPixelSize(R.dimen.car_keyline_1), getContext()));
-            Log.d(TAG, "car_double_line_list_item_height: " + convertPixelsToDp(
-                    getResources().getDimensionPixelSize(R.dimen.car_double_line_list_item_height),
-                    getContext()));
-            Log.d(TAG, "car_single_line_list_item_height: " + convertPixelsToDp(
-                    getResources().getDimensionPixelSize(R.dimen.car_single_line_list_item_height),
-                    getContext()));
-            Log.d(TAG, "car_primary_icon_size: " + convertPixelsToDp(
-                    getResources().getDimensionPixelSize(R.dimen.car_primary_icon_size),
-                    getContext()));
-        }
     }
 
     private static float convertPixelsToDp(float px, Context context){
