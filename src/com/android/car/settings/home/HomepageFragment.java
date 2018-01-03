@@ -112,6 +112,10 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
         getActivity().registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
 
         if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Log.d(TAG, "view size: "
+                + convertPixelsToDp(getView().getWidth(), getContext())
+                + " x " + convertPixelsToDp(getView().getHeight(), getContext()));
+
             Point screenSize = new Point();
             getActivity().getWindowManager().getDefaultDisplay().getSize(screenSize);
             Log.d(TAG, "window size: "
@@ -125,10 +129,13 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
             Log.d(TAG, "car_single_line_list_item_height: " + convertPixelsToDp(
                     getResources().getDimensionPixelSize(R.dimen.car_single_line_list_item_height),
                     getContext()));
+            Log.d(TAG, "car_primary_icon_size: " + convertPixelsToDp(
+                    getResources().getDimensionPixelSize(R.dimen.car_primary_icon_size),
+                    getContext()));
         }
     }
 
-    public static float convertPixelsToDp(float px, Context context){
+    private static float convertPixelsToDp(float px, Context context){
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
         float dp = px / ((float) metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);

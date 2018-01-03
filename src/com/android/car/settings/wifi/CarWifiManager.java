@@ -15,7 +15,9 @@
  */
 package com.android.car.settings.wifi;
 
+import android.annotation.Nullable;
 import android.content.Context;
+import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.support.annotation.UiThread;
 
@@ -109,6 +111,16 @@ public class CarWifiManager implements WifiTracker.WifiListener {
             }
         }
         return accessPoints;
+    }
+
+    @Nullable
+    public AccessPoint getConnectedAccessPoint() {
+        for (AccessPoint accessPoint : getAccessPoints()) {
+            if (accessPoint.getDetailedState() == NetworkInfo.DetailedState.CONNECTED) {
+                return accessPoint;
+            }
+        }
+        return null;
     }
 
     public boolean isWifiEnabled() {

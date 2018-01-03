@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -29,6 +30,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
+import com.android.car.settings.quicksettings.QuickSettingActivity;
 
 import java.util.Set;
 
@@ -116,6 +118,13 @@ public abstract class BaseFragment extends Fragment {
         toolbar.setPadding(0, 0, 0, 0);
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> mFragmentController.goBack());
-        ((TextView) getActivity().findViewById(R.id.title)).setText(mTitleId);
+        TextView titleView = getActivity().findViewById(R.id.title);
+        titleView.setText(mTitleId);
+
+        // hack, once we have a proper entry point, remove this.
+        titleView.setOnClickListener(v -> {
+                Intent intent = new Intent(getContext(), QuickSettingActivity.class);
+                getActivity().startActivity(intent);
+        });
     }
 }

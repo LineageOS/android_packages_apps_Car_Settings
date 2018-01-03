@@ -75,6 +75,19 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".quicksettings.QuickSettingActivity"
+            android:theme="@style/CarQuickSettingTheme"
+            android:label="@string/settings_label"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".bluetooth.BluetoothPairingDialog"
                   android:excludeFromRecents="true"
                   android:windowSoftInputMode="stateVisible|adjustResize"

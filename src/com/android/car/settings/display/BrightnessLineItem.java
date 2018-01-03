@@ -28,7 +28,7 @@ import com.android.car.settings.R;
 /**
  * A LineItem that displays and sets display brightness.
  */
-class BrightnessLineItem extends SeekbarLineItem {
+public class BrightnessLineItem extends SeekbarLineItem {
     private static final String TAG = "BrightnessLineItem";
     private static final int MAX_BRIGHTNESS = 255;
 
