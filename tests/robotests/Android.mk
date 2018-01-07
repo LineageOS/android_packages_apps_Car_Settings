@@ -13,7 +13,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
 
 LOCAL_JAVA_LIBRARIES := \
     junit \
-    platform-robolectric-3.5.1-prebuilt \
+    platform-robolectric-3.6.1-prebuilt \
     sdk_vcurrent
 
 LOCAL_INSTRUMENTATION_FOR := CarSettings
@@ -39,4 +39,4 @@ LOCAL_TEST_PACKAGE := CarSettings
 
 LOCAL_INSTRUMENT_SOURCE_DIRS := $(dir $(LOCAL_PATH))../src
 
-include prebuilts/misc/common/robolectric/3.5.1/run_robotests.mk
+include prebuilts/misc/common/robolectric/3.6.1/run_robotests.mk
