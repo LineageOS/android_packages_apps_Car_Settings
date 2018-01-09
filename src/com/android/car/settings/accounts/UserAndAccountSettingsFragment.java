@@ -100,7 +100,8 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
         // Show current user
         items.add(createUserItem(currUserInfo,
-                getString(R.string.current_user_name, currUserInfo.name)));
+                getString(R.string.current_user_name, currUserInfo.name),
+                false /* withDividerHidden */));
 
         // Add "Account for $User" title for a list of accounts.
         items.add(createSubtitleItem(getString(R.string.account_list_title, currUserInfo.name)));
@@ -130,20 +131,26 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         List<UserInfo> infos = mUserManager.getUsers(true);
         for (UserInfo userInfo : infos) {
             if (userInfo.id != currUserInfo.id) {
-                items.add(createUserItem(userInfo, userInfo.name));
+                items.add(createUserItem(userInfo, userInfo.name, true /* withDividerHidden*/));
             }
         }
         return items;
     }
 
     // Creates a line for a user, clicking on it leads to the user details page
-    private ListItem createUserItem(UserInfo userInfo, String title) {
-        return new ListItem.Builder(mContext)
+    private ListItem createUserItem(UserInfo userInfo, String title, boolean withDividerHidden) {
+        ListItem.Builder listItem =  new ListItem.Builder(mContext)
                 .withPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */)
                 .withTitle(title)
                 .withOnClickListener(view -> mFragmentController.launchFragment(
-                        UserDetailsSettingsFragment.getInstance(userInfo)))
-                .build();
+                        UserDetailsSettingsFragment.getInstance(userInfo)));
+
+        if (withDividerHidden) {
+            // Hiding the divider to group the items together visually. All of those without a
+            // divider between them will be part of the same "group".
+            listItem.withDividerHidden();
+        }
+        return listItem.build();
     }
 
     // Creates a subtitle line for visual separation in the list
@@ -153,6 +160,8 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
                 .withTitle(title)
                 .withViewBinder(viewHolder ->
                         viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader))
+                .withDividerHidden() // Hiding the divider after subtitle, since subtitle is a
+                // header for a group of items.
                 .build();
     }
 
@@ -165,6 +174,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
                 .withTitle(account.name)
                 .withOnClickListener(view -> mFragmentController.launchFragment(
                         AccountDetailsFragment.newInstance(account, userInfo)))
+                .withDividerHidden()
                 .build();
     }
 
