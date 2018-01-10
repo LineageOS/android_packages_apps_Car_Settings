@@ -31,6 +31,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.Log;
 
+import androidx.car.widget.TextListItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 
@@ -129,7 +130,7 @@ public class ChooseAccountFragment extends ListItemSettingsFragment {
         for (int i = 0; i < mProviderList.size(); i++) {
             String accountType = mProviderList.get(i).type;
             Drawable icon = accountHelper.getDrawableForType(mContext, accountType);
-            items.add(new ListItem.Builder(mContext)
+            items.add(new TextListItem.Builder(mContext)
                     .withPrimaryActionIcon(icon, false /* useLargeIcon */)
                     .withTitle(mProviderList.get(i).name.toString())
                     .withOnClickListener(v -> onItemSelected(accountType))
