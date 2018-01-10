@@ -32,7 +32,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.TextView;
 
-import androidx.car.widget.TextListItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.UserDetailsSettingsFragment;
@@ -140,7 +139,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     // Creates a line for a user, clicking on it leads to the user details page
     private ListItem createUserItem(UserInfo userInfo, String title, boolean withDividerHidden) {
-        TextListItem.Builder listItem =  new TextListItem.Builder(mContext)
+        ListItem.Builder listItem =  new ListItem.Builder(mContext)
                 .withPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */)
                 .withTitle(title)
                 .withOnClickListener(view -> mFragmentController.launchFragment(
@@ -156,7 +155,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     // Creates a subtitle line for visual separation in the list
     private ListItem createSubtitleItem(String title) {
-        return new TextListItem.Builder(mContext)
+        return new ListItem.Builder(mContext)
                 .withPrimaryActionEmptyIcon()
                 .withTitle(title)
                 .withViewBinder(viewHolder ->
@@ -169,7 +168,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
     // Creates a line for an account that belongs to a given user
     private ListItem createAccountItem(AccountHelper accountHelper, Account account, String
             accountType, UserInfo userInfo) {
-        return new TextListItem.Builder(mContext)
+        return new ListItem.Builder(mContext)
                 .withPrimaryActionIcon(accountHelper.getDrawableForType(mContext, accountType),
                         false /* useLargeIcon */)
                 .withTitle(account.name)
@@ -181,7 +180,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     // Creates a clickable "+ Add Account" line. Clicking on it leads to the Add an Account page.
     private ListItem createAddAccountItem() {
-        return new TextListItem.Builder(mContext)
+        return new ListItem.Builder(mContext)
                 .withPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */)
                 .withTitle(getString(R.string.add_account_title))
                 .withOnClickListener(view -> mFragmentController.launchFragment(
