@@ -69,6 +69,22 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                         null,
                         Fs.fileFromPath("./frameworks/base/core/res/res"),
                         null));
+                paths.add(new ResourcePath(
+                        null,
+                        Fs.fileFromPath("./frameworks/support/car/res"),
+                        null));
+                paths.add(new ResourcePath(
+                        null,
+                        Fs.fileFromPath("./frameworks/support/v7/appcompat/res"),
+                        null));
+                paths.add(new ResourcePath(
+                        null,
+                        Fs.fileFromPath("./packages/apps/Car/libs/car-stream-ui-lib/res"),
+                        null));
+                paths.add(new ResourcePath(
+                        null,
+                        Fs.fileFromPath("./packages/apps/Car/libs/car-list/res"),
+                        null));
                 return paths;
             }
         };
