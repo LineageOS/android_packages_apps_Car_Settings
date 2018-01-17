@@ -19,7 +19,7 @@ import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.android.car.list.EditTextLineItem;
 import com.android.car.list.SingleTextLineItem;
@@ -50,7 +50,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     private CachedBluetoothDeviceManager mDeviceManager;
     private LocalBluetoothManager mLocalManager;
     private EditTextLineItem mInputLineItem;
-    private TextView mOkButton;
+    private Button mOkButton;
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
         BluetoothDetailFragment bluetoothDetailFragment = new BluetoothDetailFragment();
@@ -120,7 +120,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     }
 
     private void setupForgetButton() {
-        TextView fortgetButton = getActivity().findViewById(R.id.action_button2);
+        Button fortgetButton = getActivity().findViewById(R.id.action_button2);
         fortgetButton.setVisibility(View.VISIBLE);
         fortgetButton.setText(R.string.forget);
         fortgetButton.setOnClickListener(v -> {

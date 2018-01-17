@@ -26,7 +26,6 @@ import android.support.design.widget.TextInputEditText;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
@@ -127,14 +126,14 @@ public class UserDetailsSettingsFragment extends BaseFragment {
     }
 
     private void showRemoveUserButton() {
-        TextView removeUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
+        Button removeUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
         removeUserBtn.setText(R.string.delete_button);
         removeUserBtn.setOnClickListener(v -> removeUser());
     }
 
     private void showSwitchButton() {
         if (!mIsCurrentUser) {
-            TextView switchUserBtn = (TextView) getActivity().findViewById(R.id.action_button2);
+            Button switchUserBtn = (Button) getActivity().findViewById(R.id.action_button2);
             switchUserBtn.setVisibility(View.VISIBLE);
             switchUserBtn.setText(R.string.user_switch);
             switchUserBtn.setOnClickListener(v -> switchTo());

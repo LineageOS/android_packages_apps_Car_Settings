@@ -20,7 +20,7 @@ import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.TimePicker;
 
 import com.android.car.settings.R;
@@ -52,7 +52,7 @@ public class TimePickerFragment extends BaseFragment {
 
         mTimePicker = (TimePicker) getView().findViewById(R.id.time_picker);
 
-        TextView button = (TextView) getActivity().findViewById(R.id.action_button1);
+        Button button = (Button) getActivity().findViewById(R.id.action_button1);
         button.setText(R.string.okay);
         button.setOnClickListener(v -> {
             Calendar c = Calendar.getInstance();
