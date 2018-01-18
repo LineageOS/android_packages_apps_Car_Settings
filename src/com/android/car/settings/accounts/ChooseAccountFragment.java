@@ -130,11 +130,12 @@ public class ChooseAccountFragment extends ListItemSettingsFragment {
         for (int i = 0; i < mProviderList.size(); i++) {
             String accountType = mProviderList.get(i).type;
             Drawable icon = accountHelper.getDrawableForType(mContext, accountType);
-            items.add(new TextListItem.Builder(mContext)
-                    .withPrimaryActionIcon(icon, false /* useLargeIcon */)
-                    .withTitle(mProviderList.get(i).name.toString())
-                    .withOnClickListener(v -> onItemSelected(accountType))
-                    .build());
+
+            TextListItem item = new TextListItem(mContext);
+            item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+            item.setTitle(mProviderList.get(i).name.toString());
+            item.setOnClickListener(v -> onItemSelected(accountType));
+            items.add(item);
         }
         return items;
     }
