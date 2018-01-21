@@ -224,6 +224,11 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         // no-op
     }
 
+    @Override
+    public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
+        // no-op
+    }
+
     private  void setProgressBarVisible(boolean visible) {
         if (mProgressBar != null) {
             mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
