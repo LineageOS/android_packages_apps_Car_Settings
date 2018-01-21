@@ -30,7 +30,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.android.car.list.SingleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
@@ -52,8 +52,8 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
     private ResolveInfo mResolveInfo;
     private PackageInfo mPackageInfo;
 
-    private TextView mDisableToggle;
-    private TextView mForceStopButton;
+    private Button mDisableToggle;
+    private Button mForceStopButton;
     private DevicePolicyManager mDpm;
 
     public static ApplicationDetailFragment getInstance(ResolveInfo resolveInfo) {
@@ -81,8 +81,8 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
             return;
         }
 
-        mDisableToggle = (TextView) getActivity().findViewById(R.id.action_button1);
-        mForceStopButton = (TextView) getActivity().findViewById(R.id.action_button2);
+        mDisableToggle = (Button) getActivity().findViewById(R.id.action_button1);
+        mForceStopButton = (Button) getActivity().findViewById(R.id.action_button2);
         mForceStopButton.setText(R.string.force_stop);
         mForceStopButton.setVisibility(View.VISIBLE);
 

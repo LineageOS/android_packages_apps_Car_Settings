@@ -40,7 +40,7 @@
         <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
     </style>
 
-    <style name="ActionBarStyle.Car" parent="@style/Theme.AppCompat">
+    <style name="ActionBarStyle.Car" parent="@style/CarToolbarTheme">
         <item name="actionBarSize">@dimen/car_app_bar_height</item>
     </style>
 
@@ -57,5 +57,12 @@
     </style>
     <style name="SettingsListHeader" parent="CarTitle">
         <item name="android:textColor">@color/car_highlight</item>
+    </style>
+
+    <style name="Widget.Car.Settings.ActionBar.Button.Borderless.Colored"
+           parent="Widget.Car.Button.Borderless.Colored">
+        <item name="android:minWidth">@dimen/car_button_min_width</item>
+        <item name="android:fontFamily">roboto-regular</item>
+        <item name="android:textColor">@color/action_bar_btn</item>
     </style>
 </resources>

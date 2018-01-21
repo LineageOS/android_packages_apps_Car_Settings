@@ -22,7 +22,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.android.car.list.EditTextLineItem;
@@ -43,30 +43,32 @@ import java.util.regex.Pattern;
  * render UI, e.g. show SSID etc.
  */
 public class AddWifiFragment extends ListSettingsFragment implements
-        AdapterView.OnItemSelectedListener{
+        AdapterView.OnItemSelectedListener {
     public static final String EXTRA_AP_STATE = "extra_ap_state";
 
     private static final String TAG = "AddWifiFragment";
     private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
     private static final Pattern VALID_SSID_PATTERN =
             Pattern.compile("^[A-Za-z]+[\\w\\-\\:\\.]*$");
-    @Nullable private AccessPoint mAccessPoint;
-    @Nullable private SpinnerLineItem<AccessPointSecurity> mSpinnerLineItem;
+    @Nullable
+    private AccessPoint mAccessPoint;
+    @Nullable
+    private SpinnerLineItem<AccessPointSecurity> mSpinnerLineItem;
     private WifiManager mWifiManager;
-    private TextView mAddWifiButton;
+    private Button mAddWifiButton;
     private final WifiManager.ActionListener mConnectionListener =
             new WifiManager.ActionListener() {
-        @Override
-        public void onSuccess() {
-        }
+                @Override
+                public void onSuccess() {
+                }
 
-        @Override
-        public void onFailure(int reason) {
-            Toast.makeText(getContext(),
-                    R.string.wifi_failed_connect_message,
-                    Toast.LENGTH_SHORT).show();
-        }
-    };
+                @Override
+                public void onFailure(int reason) {
+                    Toast.makeText(getContext(),
+                            R.string.wifi_failed_connect_message,
+                            Toast.LENGTH_SHORT).show();
+                }
+            };
     private EditTextLineItem mWifiNameInput;
     private EditTextLineItem mWifiPasswordInput;
 
@@ -105,7 +107,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
             connectToAccessPoint();
             mFragmentController.goBack();
         });
-        mAddWifiButton.setEnabled(mAccessPoint != null) ;
+        mAddWifiButton.setEnabled(mAccessPoint != null);
     }
 
     @Override
@@ -136,7 +138,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
             lineItems.add(mSpinnerLineItem);
         }
 
-        if (mAccessPoint!= null
+        if (mAccessPoint != null
                 || mSelectedPosition != AccessPointSecurity.SECURITY_NONE_POSITION) {
             mWifiPasswordInput = new PasswordLineItem(getContext().getText(R.string.wifi_password));
             lineItems.add(mWifiPasswordInput);

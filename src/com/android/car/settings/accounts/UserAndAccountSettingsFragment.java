@@ -30,19 +30,18 @@ import android.os.UserManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
-import android.widget.TextView;
+import android.widget.Button;
 
-import androidx.car.widget.TextListItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.UserDetailsSettingsFragment;
-
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import androidx.car.widget.ListItem;
+import androidx.car.widget.TextListItem;
 
 /**
  * Lists all Users available on this device.
@@ -74,7 +73,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         // Because getLineItems is called in there.
         super.onActivityCreated(savedInstanceState);
 
-        TextView addUserBtn = (TextView) getActivity().findViewById(R.id.action_button1);
+        Button addUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
         addUserBtn.setText(R.string.user_add_user_menu);
         addUserBtn.setOnClickListener(v -> {
             UserInfo user = mUserManager.createUser(
@@ -140,7 +139,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     // Creates a line for a user, clicking on it leads to the user details page
     private ListItem createUserItem(UserInfo userInfo, String title, boolean withDividerHidden) {
-        TextListItem.Builder listItem =  new TextListItem.Builder(mContext)
+        TextListItem.Builder listItem = new TextListItem.Builder(mContext)
                 .withPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */)
                 .withTitle(title)
                 .withOnClickListener(view -> mFragmentController.launchFragment(

@@ -17,7 +17,6 @@ package com.android.car.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.os.Bundle;
 import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
@@ -25,22 +24,23 @@ import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.UserInfo;
+import android.os.Bundle;
 import android.os.UserHandle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.android.car.list.SingleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
 
-import java.util.ArrayList;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Shows account details, and delete account option.
@@ -86,7 +86,7 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mAccountManager = AccountManager.get(getActivity());
-        TextView removeAccountBtn = getActivity().findViewById(R.id.action_button1);
+        Button removeAccountBtn = getActivity().findViewById(R.id.action_button1);
         removeAccountBtn.setText(R.string.delete_button);
         removeAccountBtn.setOnClickListener(v -> removeAccount());
     }
@@ -106,30 +106,31 @@ public class AccountDetailsFragment extends ListSettingsFragment {
         private UserHandle mUserHandle;
 
         private final AccountManagerCallback<Bundle> mCallback =
-                new AccountManagerCallback<Bundle>() {
-            @Override
-            public void run(AccountManagerFuture<Bundle> future) {
-                // If already out of this screen, don't proceed.
-                if (!getTargetFragment().isResumed()) {
-                    return;
-                }
+            new AccountManagerCallback<Bundle>() {
+                @Override
+                public void run(AccountManagerFuture<Bundle> future) {
+                    // If already out of this screen, don't proceed.
+                    if (!getTargetFragment().isResumed()) {
+                        return;
+                    }
 
-                boolean success = false;
-                try {
-                    success = future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
-                } catch (OperationCanceledException | IOException | AuthenticatorException e) {
-                    if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                        Log.v(TAG, "removeAccount error: " + e);
+                    boolean success = false;
+                    try {
+                        success =
+                                future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
+                    } catch (OperationCanceledException | IOException | AuthenticatorException e) {
+                        if (Log.isLoggable(TAG, Log.VERBOSE)) {
+                            Log.v(TAG, "removeAccount error: " + e);
+                        }
+                    }
+                    final Activity activity = getTargetFragment().getActivity();
+                    if (!success && activity != null && !activity.isFinishing()) {
+                        RemoveAccountFailureDialog.show(getTargetFragment());
+                    } else {
+                        getTargetFragment().getFragmentManager().popBackStack();
                     }
                 }
-                final Activity activity = getTargetFragment().getActivity();
-                if (!success && activity != null && !activity.isFinishing()) {
-                    RemoveAccountFailureDialog.show(getTargetFragment());
-                } else {
-                    getTargetFragment().getFragmentManager().popBackStack();
-                }
-            }
-        };
+            };
 
         public static void show(
                 Fragment parent, Account account, UserHandle userHandle) {
