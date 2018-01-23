@@ -139,53 +139,50 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     // Creates a line for a user, clicking on it leads to the user details page
     private ListItem createUserItem(UserInfo userInfo, String title, boolean withDividerHidden) {
-        TextListItem.Builder listItem = new TextListItem.Builder(mContext)
-                .withPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */)
-                .withTitle(title)
-                .withOnClickListener(view -> mFragmentController.launchFragment(
-                        UserDetailsSettingsFragment.getInstance(userInfo)));
-
-        if (withDividerHidden) {
-            // Hiding the divider to group the items together visually. All of those without a
-            // divider between them will be part of the same "group".
-            listItem.withDividerHidden();
-        }
-        return listItem.build();
+        TextListItem item = new TextListItem(mContext);
+        item.setPrimaryActionIcon(getUserIcon(userInfo), false /* useLargeIcon */);
+        item.setTitle(title);
+        item.setOnClickListener(view -> mFragmentController.launchFragment(
+                UserDetailsSettingsFragment.getInstance(userInfo)));
+        // Hiding the divider to group the items together visually. All of those without a
+        // divider between them will be part of the same "group".
+        item.setHideDivider(withDividerHidden);
+        return item;
     }
 
     // Creates a subtitle line for visual separation in the list
     private ListItem createSubtitleItem(String title) {
-        return new TextListItem.Builder(mContext)
-                .withPrimaryActionEmptyIcon()
-                .withTitle(title)
-                .withViewBinder(viewHolder ->
-                        viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader))
-                .withDividerHidden() // Hiding the divider after subtitle, since subtitle is a
-                // header for a group of items.
-                .build();
+        TextListItem item = new TextListItem(mContext);
+        item.setPrimaryActionEmptyIcon();
+        item.setTitle(title);
+        item.addViewBinder(viewHolder ->
+            viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader));
+        // Hiding the divider after subtitle, since subtitle is a header for a group of items.
+        item.setHideDivider(true);
+        return item;
     }
 
     // Creates a line for an account that belongs to a given user
     private ListItem createAccountItem(AccountHelper accountHelper, Account account, String
             accountType, UserInfo userInfo) {
-        return new TextListItem.Builder(mContext)
-                .withPrimaryActionIcon(accountHelper.getDrawableForType(mContext, accountType),
-                        false /* useLargeIcon */)
-                .withTitle(account.name)
-                .withOnClickListener(view -> mFragmentController.launchFragment(
-                        AccountDetailsFragment.newInstance(account, userInfo)))
-                .withDividerHidden()
-                .build();
+        TextListItem item = new TextListItem(mContext);
+        item.setPrimaryActionIcon(accountHelper.getDrawableForType(mContext, accountType),
+            false /* useLargeIcon */);
+        item.setTitle(account.name);
+        item.setOnClickListener(view -> mFragmentController.launchFragment(
+            AccountDetailsFragment.newInstance(account, userInfo)));
+        item.setHideDivider(true);
+        return item;
     }
 
     // Creates a clickable "+ Add Account" line. Clicking on it leads to the Add an Account page.
     private ListItem createAddAccountItem() {
-        return new TextListItem.Builder(mContext)
-                .withPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */)
-                .withTitle(getString(R.string.add_account_title))
-                .withOnClickListener(view -> mFragmentController.launchFragment(
-                        ChooseAccountFragment.newInstance()))
-                .build();
+        TextListItem item = new TextListItem(mContext);
+        item.setPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */);
+        item.setTitle(getString(R.string.add_account_title));
+        item.setOnClickListener(
+            view -> mFragmentController.launchFragment(ChooseAccountFragment.newInstance()));
+        return item;
     }
 
     private Drawable getUserIcon(UserInfo userInfo) {
