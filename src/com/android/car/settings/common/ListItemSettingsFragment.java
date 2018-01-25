@@ -25,6 +25,7 @@ import java.util.List;
 import androidx.car.widget.DayNightStyle;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemAdapter;
+import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.ListItemProvider.ListProvider;
 import androidx.car.widget.PagedListView;
 
@@ -36,7 +37,6 @@ import androidx.car.widget.PagedListView;
  */
 public abstract class ListItemSettingsFragment extends BaseFragment {
     private ListItemAdapter mListAdapter;
-    private ListProvider mItemProvider;
 
     /**
      * Gets bundle adding the list_fragment layout to it.
@@ -51,8 +51,7 @@ public abstract class ListItemSettingsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mItemProvider = new ListProvider(getListItems());
-        mListAdapter = new ListItemAdapter(getContext(), mItemProvider);
+        mListAdapter = new ListItemAdapter(getContext(), getItemProvider());
 
         PagedListView listView = getView().findViewById(R.id.list);
         listView.setDayNightStyle(DayNightStyle.FORCE_DAY);
@@ -61,8 +60,15 @@ public abstract class ListItemSettingsFragment extends BaseFragment {
     }
 
     /**
-     * Called in onActivityCreated.
-     * Gets ListItems that should show up in the list.
+     * Triggers UI update on the list.
      */
-    public abstract List<ListItem> getListItems();
+    public void refreshList() {
+        mListAdapter.notifyDataSetChanged();
+    }
+
+    /**
+     * Called in onActivityCreated.
+     * Gets ListItemProvider that should provide items to show up in the list.
+     */
+    public abstract ListItemProvider getItemProvider();
 }
