@@ -22,6 +22,7 @@ import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
+import android.media.AudioAttributes;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -56,7 +57,7 @@ public class SoundSettingsFragment extends BaseFragment {
                     mVolumeLineItems.add(new VolumeLineItem(
                             getContext(),
                             mCarAudioManager,
-                            volumeControlSliderItem.carAudioUsage,
+                            volumeControlSliderItem.usage,
                             volumeControlSliderItem.nameStringId,
                             volumeControlSliderItem.iconId));
                 }
@@ -105,15 +106,15 @@ public class SoundSettingsFragment extends BaseFragment {
         // Defines available volume slider items here. These items would be populated to UI
         // once car audio service is connected.
         mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                CarAudioManager.CAR_AUDIO_USAGE_MUSIC,
+                AudioAttributes.USAGE_MEDIA,
                 R.string.media_volume_title,
                 com.android.internal.R.drawable.ic_audio_media));
         mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                CarAudioManager.CAR_AUDIO_USAGE_RINGTONE,
+                AudioAttributes.USAGE_NOTIFICATION_RINGTONE,
                 R.string.ring_volume_title,
                 com.android.internal.R.drawable.ic_audio_ring_notif));
         mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                CarAudioManager.CAR_AUDIO_USAGE_NAVIGATION_GUIDANCE,
+                AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE,
                 R.string.navi_volume_title,
                 R.drawable.ic_audio_navi));
         mCar = Car.createCar(getContext(), mServiceConnection);
@@ -151,8 +152,8 @@ public class SoundSettingsFragment extends BaseFragment {
      * Represents a slider item for volume control.
      */
     private static final class VolumeControlSliderItem {
-        @CarAudioManager.CarAudioUsage
-        final int carAudioUsage;
+        @AudioAttributes.AttributeUsage
+        final int usage;
 
         @StringRes
         final int nameStringId;
@@ -161,17 +162,17 @@ public class SoundSettingsFragment extends BaseFragment {
         final int iconId;
 
         VolumeControlSliderItem(
-                @CarAudioManager.CarAudioUsage int carAudioUsage,
+                @AudioAttributes.AttributeUsage int usage,
                 @StringRes int nameStringId,
                 @DrawableRes int iconId) {
-            this.carAudioUsage = carAudioUsage;
+            this.usage = usage;
             this.nameStringId = nameStringId;
             this.iconId = iconId;
         }
 
         @Override
         public int hashCode() {
-            return carAudioUsage;
+            return usage;
         }
 
         @Override
@@ -182,7 +183,7 @@ public class SoundSettingsFragment extends BaseFragment {
             if (!(o instanceof VolumeControlSliderItem)) {
                 return false;
             }
-            return carAudioUsage == ((VolumeControlSliderItem) o).carAudioUsage;
+            return usage == ((VolumeControlSliderItem) o).usage;
         }
     }
 }
