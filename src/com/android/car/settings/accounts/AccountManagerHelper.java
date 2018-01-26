@@ -48,7 +48,20 @@ final class AccountManagerHelper {
         // Listen to account updates for this user.
         mAuthenticatorHelper =
                 new AuthenticatorHelper(mContext, mCurrentUserHandle, mUpdateListener);
+    }
+
+    /**
+     * Starts listening to account updates. Every registered listener should be unregistered.
+     */
+    public void startListeningToAccountUpdates() {
         mAuthenticatorHelper.listenToAccountUpdates();
+    }
+
+    /**
+     * Stops listening to account updates. Should be called on cleanup/destroy.
+     */
+    public void stopListeningToAccountUpdates() {
+        mAuthenticatorHelper.stopListeningToAccountUpdates();
     }
 
     /**

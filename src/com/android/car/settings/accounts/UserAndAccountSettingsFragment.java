@@ -62,7 +62,10 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         mContext = getContext();
+
         mAccountManagerHelper = new AccountManagerHelper(mContext, this);
+        mAccountManagerHelper.startListeningToAccountUpdates();
+
         mUserManagerHelper = new UserManagerHelper(mContext);
         mItemProvider = new UserAndAccountItemProvider(mContext, this,
                 mUserManagerHelper, mAccountManagerHelper);
@@ -85,6 +88,7 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
     public void onDestroy() {
         super.onDestroy();
         mUserManagerHelper.unregisterOnUsersUpdateListener();
+        mAccountManagerHelper.stopListeningToAccountUpdates();
     }
 
     @Override

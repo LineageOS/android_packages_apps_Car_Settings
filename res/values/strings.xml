@@ -381,6 +381,11 @@
     <string name="really_remove_account_message">Removing this account will delete all of its messages, contacts, and other data from the device!</string>
     <!-- This is shown if the authenticator for a given account fails to remove it. [CHAR LIMIT=NONE] -->
     <string name="remove_account_failed">This change isn\'t allowed by your admin</string>
+    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=25] -->
+    <string name="really_remove_user_title">Remove this user?</string>
+    <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
+    <string name="really_remove_user_message">"All apps and data will be deleted."</string>
+
 
     <!-- generic --><skip />
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
