@@ -73,14 +73,6 @@ public class SoundSettingsFragment extends BaseFragment {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            try {
-                if (mCarAudioManager != null) {
-                    mCarAudioManager.setVolumeController(null);
-                }
-            } catch (CarNotConnectedException e) {
-                Log.e(TAG, "Car is not connected!", e);
-                return;
-            }
             mCarAudioManager = null;
         }
     };
