@@ -312,6 +312,11 @@ public class BluetoothDeviceListAdapter
         onDeviceAdded(cachedDevice);
     }
 
+    @Override
+    public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
+        // Not used (for now)
+    }
+
     private void onDeviceDeleted(CachedBluetoothDevice cachedDevice, boolean refresh) {
         // the device might changed bonding state, so need to remove from both sets.
         if (mBondedDevices.remove(cachedDevice)) {
