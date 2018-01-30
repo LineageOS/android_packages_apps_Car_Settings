@@ -16,14 +16,10 @@
 package com.android.car.settings.users;
 
 import android.app.ActivityManager;
-import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.RemoteException;
 import android.os.UserHandle;
-import android.os.UserManager;
 import android.support.design.widget.TextInputEditText;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,11 +29,11 @@ import com.android.car.settings.common.BaseFragment;
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.
  */
-public class UserDetailsSettingsFragment extends BaseFragment {
+public class UserDetailsSettingsFragment extends BaseFragment implements
+        ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
     public static final String EXTRA_USER_INFO = "extra_user_info";
     private static final String TAG = "UserDetailsSettingsFragment";
     private UserInfo mUserInfo;
-    private UserManager mUserManager;
 
     private boolean mCurrentUserIsOwner;
     private boolean mIsCurrentUser;
@@ -45,6 +41,8 @@ public class UserDetailsSettingsFragment extends BaseFragment {
     private TextInputEditText mUserNameEditText;
     private Button mOkButton;
     private Button mCancelButton;
+
+    private UserManagerHelper mUserManagerHelper;
 
     public static UserDetailsSettingsFragment getInstance(UserInfo userInfo) {
         UserDetailsSettingsFragment
@@ -76,12 +74,19 @@ public class UserDetailsSettingsFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mUserManager = (UserManager) getActivity().getSystemService(Context.USER_SERVICE);
+        mUserManagerHelper = new UserManagerHelper(getContext());
 
         configureUsernameEditing();
 
         showRemoveUserButton();
         showSwitchButton();
+    }
+
+    @Override
+    public void onRemoveUserConfirmed() {
+        if (mUserManagerHelper.removeUser(mUserInfo)) {
+            getActivity().onBackPressed();
+        }
     }
 
     private void configureUsernameEditing() {
@@ -91,7 +96,7 @@ public class UserDetailsSettingsFragment extends BaseFragment {
         // Configure OK button.
         mOkButton.setOnClickListener(view -> {
             // Save new user's name.
-            mUserManager.setUserName(mUserInfo.id, mUserNameEditText.getText().toString());
+            mUserManagerHelper.setUserName(mUserInfo, mUserNameEditText.getText().toString());
             getActivity().onBackPressed();
         });
 
@@ -128,7 +133,13 @@ public class UserDetailsSettingsFragment extends BaseFragment {
     private void showRemoveUserButton() {
         Button removeUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
         removeUserBtn.setText(R.string.delete_button);
-        removeUserBtn.setOnClickListener(v -> removeUser());
+        removeUserBtn
+                .setOnClickListener(v -> {
+                    ConfirmRemoveUserDialog dialog =
+                            new ConfirmRemoveUserDialog();
+                    dialog.registerConfirmRemoveUserListener(this);
+                    dialog.show(this);
+                });
     }
 
     private void showSwitchButton() {
@@ -136,61 +147,10 @@ public class UserDetailsSettingsFragment extends BaseFragment {
             Button switchUserBtn = (Button) getActivity().findViewById(R.id.action_button2);
             switchUserBtn.setVisibility(View.VISIBLE);
             switchUserBtn.setText(R.string.user_switch);
-            switchUserBtn.setOnClickListener(v -> switchTo());
-        }
-    }
-
-    private void removeUser() {
-        if (mUserInfo.id == UserHandle.USER_SYSTEM) {
-            Log.w(TAG, "User " + mUserInfo.id + " could not removed.");
-            return;
-        }
-        if (mIsCurrentUser) {
-            switchToUserId(UserHandle.USER_SYSTEM);
-        }
-        if (mUserManager.removeUser(mUserInfo.id)) {
-            getActivity().onBackPressed();
-        }
-    }
-
-    private void switchTo() {
-        if (mIsCurrentUser) {
-            if (mUserInfo.isGuest()) {
-                switchToGuest();
-            }
-            return;
-        }
-
-        if (UserManager.isGuestUserEphemeral()) {
-            // If switching from guest, we want to bring up the guest exit dialog instead of
-            // switching
-            UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
-            if (currUserInfo != null && currUserInfo.isGuest()) {
-                return;
-            }
-        }
-
-        switchToUserId(mUserInfo.id);
-        getActivity().onBackPressed();
-    }
-
-    private void switchToGuest() {
-        UserInfo guest = mUserManager.createGuest(getContext(),
-                getContext().getString(R.string.user_guest));
-        if (guest == null) {
-            // Couldn't create user, most likely because there are too many, but we haven't
-            // been able to reload the list yet.
-            Log.w(TAG, "can't create user.");
-            return;
-        }
-        switchToUserId(guest.id);
-    }
-
-    private void switchToUserId(int id) {
-        try {
-            ActivityManager.getService().switchUser(id);
-        } catch (RemoteException e) {
-            Log.e(TAG, "Couldn't switch user.", e);
+            switchUserBtn.setOnClickListener(v -> {
+                mUserManagerHelper.switchToUser(mUserInfo);
+                getActivity().onBackPressed();
+            });
         }
     }
 }
