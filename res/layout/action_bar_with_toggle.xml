@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/CarTitle"
-        android:textColor="@color/car_teal_700"
+        android:textColor="@color/car_accent"
         android:layout_marginTop="@dimen/optical_center_offset"
         android:layout_gravity="center_vertical"
         android:layout_centerVertical="true"

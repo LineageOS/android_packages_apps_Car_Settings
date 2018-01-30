@@ -43,7 +43,7 @@
         android:layout_toEndOf="@id/action_bar_icon_container"
         android:gravity="center_vertical"
         android:textAppearance="@style/CarTitle2"
-        android:textColor="@color/car_teal_700"/>
+        android:textColor="@color/car_accent"/>
 
     <LinearLayout
         android:id="@+id/button_container"
