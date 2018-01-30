@@ -29,7 +29,8 @@ import com.android.car.settings.common.BaseFragment;
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.
  */
-public class UserDetailsSettingsFragment extends BaseFragment {
+public class UserDetailsSettingsFragment extends BaseFragment implements
+        ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
     public static final String EXTRA_USER_INFO = "extra_user_info";
     private static final String TAG = "UserDetailsSettingsFragment";
     private UserInfo mUserInfo;
@@ -81,6 +82,13 @@ public class UserDetailsSettingsFragment extends BaseFragment {
         showSwitchButton();
     }
 
+    @Override
+    public void onRemoveUserConfirmed() {
+        if (mUserManagerHelper.removeUser(mUserInfo)) {
+            getActivity().onBackPressed();
+        }
+    }
+
     private void configureUsernameEditing() {
         // Set the User's name.
         mUserNameEditText.setText(mUserInfo.name);
@@ -125,11 +133,13 @@ public class UserDetailsSettingsFragment extends BaseFragment {
     private void showRemoveUserButton() {
         Button removeUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
         removeUserBtn.setText(R.string.delete_button);
-        removeUserBtn.setOnClickListener(v -> {
-            if (mUserManagerHelper.removeUser(mUserInfo)) {
-                getActivity().onBackPressed();
-            }
-        });
+        removeUserBtn
+                .setOnClickListener(v -> {
+                    ConfirmRemoveUserDialog dialog =
+                            new ConfirmRemoveUserDialog();
+                    dialog.registerConfirmRemoveUserListener(this);
+                    dialog.show(this);
+                });
     }
 
     private void showSwitchButton() {
