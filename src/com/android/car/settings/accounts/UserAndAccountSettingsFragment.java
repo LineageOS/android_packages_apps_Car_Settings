@@ -28,6 +28,7 @@ import android.widget.ProgressBar;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.users.ConfirmCreateNewUserDialog;
 import com.android.car.settings.users.UserDetailsSettingsFragment;
 import com.android.car.settings.users.UserManagerHelper;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -40,7 +41,8 @@ import androidx.car.widget.ListItemProvider;
 public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener,
         UserManagerHelper.OnUsersUpdateListener,
-        UserAndAccountItemProvider.UserAndAccountClickListener {
+        UserAndAccountItemProvider.UserAndAccountClickListener,
+        ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener {
     private static final String TAG = "UserAndAccountSettings";
 
     private Context mContext;
@@ -85,7 +87,17 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
         mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
         mAddUserButton.setText(R.string.user_add_user_menu);
-        mAddUserButton.setOnClickListener(v -> mAddNewUserTask = new AddNewUserTask().execute());
+        mAddUserButton.setOnClickListener(v -> {
+            ConfirmCreateNewUserDialog dialog =
+                    new ConfirmCreateNewUserDialog();
+            dialog.setConfirmCreateNewUserListener(this);
+            dialog.show(this);
+        });
+    }
+
+    @Override
+    public void onCreateNewUserConfirmed() {
+        mAddNewUserTask = new AddNewUserTask().execute();
     }
 
     @Override

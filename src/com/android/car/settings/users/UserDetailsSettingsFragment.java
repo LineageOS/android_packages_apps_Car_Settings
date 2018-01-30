@@ -137,7 +137,7 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
                 .setOnClickListener(v -> {
                     ConfirmRemoveUserDialog dialog =
                             new ConfirmRemoveUserDialog();
-                    dialog.registerConfirmRemoveUserListener(this);
+                    dialog.setConfirmRemoveUserListener(this);
                     dialog.show(this);
                 });
     }
