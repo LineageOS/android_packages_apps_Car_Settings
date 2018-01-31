@@ -57,7 +57,7 @@ public class BrightnessLineItemTest {
     @Test
     public void testOnSeekbarChanged() throws Exception {
         for (int brightness = 0; brightness < 255; ++brightness) {
-            mBrightnessLineItem.onSeekbarChanged(brightness);
+            mBrightnessLineItem.onSeekbarChanged(brightness, false);
             assertThat(Settings.System.getInt(mContext.getContentResolver(),
                     SCREEN_BRIGHTNESS)).isEqualTo(brightness);
         }

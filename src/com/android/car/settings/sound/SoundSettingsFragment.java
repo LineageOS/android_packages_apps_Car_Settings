@@ -22,8 +22,10 @@ import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
+import android.database.ContentObserver;
 import android.media.AudioAttributes;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -65,6 +67,7 @@ public class SoundSettingsFragment extends BaseFragment {
                 if (mPagedListAdapter != null) {
                     mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
                 }
+                mCarAudioManager.registerVolumeChangeObserver(mVolumeChangeObserver);
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car is not connected!", e);
                 return;
@@ -73,7 +76,15 @@ public class SoundSettingsFragment extends BaseFragment {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            mCarAudioManager.unregisterVolumeChangeObserver(mVolumeChangeObserver);
             mCarAudioManager = null;
+        }
+    };
+
+    private final ContentObserver mVolumeChangeObserver = new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            mPagedListAdapter.notifyDataSetChanged();
         }
     };
 
