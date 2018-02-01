@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.text.TextUtils;
 
 import com.android.car.settings.R;
 import com.android.car.settings.users.UserManagerHelper;
@@ -154,6 +155,13 @@ class UserAndAccountItemProvider extends ListItemProvider {
         item.setPrimaryActionIcon(mAccountManagerHelper.getDrawableForType(accountType),
                 false /* useLargeIcon */);
         item.setTitle(account.name);
+
+        // Set item body = account label.
+        CharSequence itemBody = mAccountManagerHelper.getLabelForType(accountType);
+        if (!TextUtils.isEmpty(itemBody)) {
+            item.setBody(itemBody.toString());
+        }
+
         item.setOnClickListener(view -> mItemClickListener.onAccountClicked(account, userInfo));
         item.setHideDivider(true);
         return item;

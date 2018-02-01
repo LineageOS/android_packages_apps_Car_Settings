@@ -27,39 +27,47 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.UserInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 
-import com.android.car.list.SingleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
 
 /**
  * Shows account details, and delete account option.
  */
-public class AccountDetailsFragment extends ListSettingsFragment {
+public class AccountDetailsFragment extends ListItemSettingsFragment
+        implements AuthenticatorHelper.OnAccountsUpdateListener {
     private static final String TAG = "AccountDetailsFragment";
 
     public static final String EXTRA_ACCOUNT_INFO = "extra_account_info";
     public static final String EXTRA_USER_INFO = "extra_user_info";
 
     private Account mAccount;
-    private AccountManager mAccountManager;
     private UserInfo mUserInfo;
+    private ListItemProvider mItemProvider;
+    private AccountManagerHelper mAccountManagerHelper;
 
     public static AccountDetailsFragment newInstance(
             Account account, UserInfo userInfo) {
         AccountDetailsFragment
                 accountDetailsFragment = new AccountDetailsFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_TITLE_ID, R.string.account_details_title);
         bundle.putParcelable(EXTRA_ACCOUNT_INFO, account);
@@ -76,19 +84,59 @@ public class AccountDetailsFragment extends ListSettingsFragment {
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(new SingleTextLineItem(mAccount.name));
-        return lineItems;
+    public void onActivityCreated(Bundle savedInstanceState) {
+        // Should be created before calling getListItem().
+        mAccountManagerHelper = new AccountManagerHelper(getContext(), this);
+        mAccountManagerHelper.startListeningToAccountUpdates();
+
+        mItemProvider = new ListItemProvider.ListProvider(getListItems());
+
+        // Super is called only AFTER item provider is instantiated, because
+        // super.onActivityCreated calls getItemProvider().
+        super.onActivityCreated(savedInstanceState);
+
+        // Title was set in super.onActivityCreated, but override if account label is available.
+        setFragmentTitle();
+
+        showRemoveButton();
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mAccountManager = AccountManager.get(getActivity());
+    public void onAccountsUpdate(UserHandle userHandle) {
+        if (!mAccountManagerHelper.accountExists(mAccount)) {
+            // The account was deleted. Pop back.
+            mFragmentController.goBack();
+        }
+    }
+
+    @Override
+    public ListItemProvider getItemProvider() {
+        return mItemProvider;
+    }
+
+    private void showRemoveButton() {
         Button removeAccountBtn = getActivity().findViewById(R.id.action_button1);
-        removeAccountBtn.setText(R.string.delete_button);
+        removeAccountBtn.setText(R.string.remove_button);
         removeAccountBtn.setOnClickListener(v -> removeAccount());
+    }
+
+    private void setFragmentTitle() {
+        CharSequence accountLabel = mAccountManagerHelper.getLabelForType(mAccount.type);
+        if (!TextUtils.isEmpty(accountLabel)) {
+            setTitle(accountLabel);
+        }
+    }
+
+    private List<ListItem> getListItems() {
+        Drawable icon = mAccountManagerHelper.getDrawableForType(mAccount.type);
+
+        TextListItem item = new TextListItem(getContext());
+        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setTitle(mAccount.name);
+
+        List<ListItem> items = new ArrayList<>();
+        items.add(item);
+        return items;
     }
 
     public void removeAccount() {

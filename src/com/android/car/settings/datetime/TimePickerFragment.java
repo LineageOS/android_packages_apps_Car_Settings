@@ -53,7 +53,7 @@ public class TimePickerFragment extends BaseFragment {
         mTimePicker = (TimePicker) getView().findViewById(R.id.time_picker);
 
         Button button = (Button) getActivity().findViewById(R.id.action_button1);
-        button.setText(R.string.okay);
+        button.setText(android.R.string.ok);
         button.setOnClickListener(v -> {
             Calendar c = Calendar.getInstance();
 
