@@ -26,19 +26,19 @@ import android.support.v4.app.Fragment;
 import com.android.car.settings.R;
 
 /**
- * Dialog to confirm user removal.
+ * Dialog to confirm creation of new user.
  */
-public class ConfirmRemoveUserDialog extends DialogFragment implements
+public class ConfirmCreateNewUserDialog extends DialogFragment implements
         DialogInterface.OnClickListener {
-    private static final String DIALOG_TAG = "ConfirmRemoveUserDialog";
-    private ConfirmRemoveUserListener mListener;
+    private static final String DIALOG_TAG = "ConfirmCreateNewUserDialog";
+    private ConfirmCreateNewUserListener mListener;
 
     /**
-     * Interface for listeners that want to receive a callback when user confirms user removal in a
-     * dialog.
+     * Interface for listeners that want to receive a callback when user confirms new user creation
+     * in the dialog.
      */
-    public interface ConfirmRemoveUserListener {
-        void onRemoveUserConfirmed();
+    public interface ConfirmCreateNewUserListener {
+        void onCreateNewUserConfirmed();
     }
 
     /**
@@ -52,29 +52,34 @@ public class ConfirmRemoveUserDialog extends DialogFragment implements
     }
 
     /**
-     * Sets a listener for OnRemoveUserConfirmed that will get called if user confirms
+     * Sets a listener for OnCreateNewUserConfirmed that will get called if user confirms
      * the dialog.
      *
-     * @param listener Instance of {@link ConfirmRemoveUserListener} to call when confirmed.
+     * @param listener Instance of {@link ConfirmCreateNewUserListener} to call when confirmed.
      */
-    public void setConfirmRemoveUserListener(ConfirmRemoveUserListener listener) {
+    public void setConfirmCreateNewUserListener(ConfirmCreateNewUserListener listener) {
         mListener = listener;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        String message = getString(R.string.user_add_user_message_setup)
+                .concat(System.getProperty("line.separator"))
+                .concat(System.getProperty("line.separator"))
+                .concat(getString(R.string.user_add_user_message_update));
+
         return new AlertDialog.Builder(getContext())
-                .setTitle(R.string.really_remove_user_title)
-                .setMessage(R.string.really_remove_user_message)
+                .setTitle(R.string.user_add_user_title)
+                .setMessage(message)
                 .setNegativeButton(android.R.string.cancel, null)
-                .setPositiveButton(R.string.delete_button, this)
+                .setPositiveButton(android.R.string.ok, this)
                 .create();
     }
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
         if (mListener != null) {
-            mListener.onRemoveUserConfirmed();
+            mListener.onCreateNewUserConfirmed();
         }
     }
 }

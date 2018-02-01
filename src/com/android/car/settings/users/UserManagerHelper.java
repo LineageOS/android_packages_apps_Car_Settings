@@ -145,18 +145,17 @@ public final class UserManagerHelper {
 
     /**
      * Creates a new user on the system.
-     * If new user is successfully created, automatically switches to that user.
      */
-    public void createNewUser() {
+    public UserInfo createNewUser() {
         UserInfo user = mUserManager.createUser(
                 mContext.getString(R.string.user_new_user_name), 0 /* flags */);
         if (user == null) {
             // Couldn't create user, most likely because there are too many, but we haven't
             // been able to reload the list yet.
             Log.w(TAG, "can't create user.");
-            return;
+            return null;
         }
-        switchToUserId(user.id);
+        return user;
     }
 
     /**

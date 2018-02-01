@@ -19,35 +19,41 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.users.ConfirmCreateNewUserDialog;
 import com.android.car.settings.users.UserDetailsSettingsFragment;
 import com.android.car.settings.users.UserManagerHelper;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 /**
  * Lists all Users available on this device.
  */
 public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener,
-        UserManagerHelper.OnUsersUpdateListener {
+        UserManagerHelper.OnUsersUpdateListener,
+        UserAndAccountItemProvider.UserAndAccountClickListener,
+        ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener {
     private static final String TAG = "UserAndAccountSettings";
 
     private Context mContext;
     private UserAndAccountItemProvider mItemProvider;
     private AccountManagerHelper mAccountManagerHelper;
     private UserManagerHelper mUserManagerHelper;
+
+    private ProgressBar mProgressBar;
+    private Button mAddUserButton;
+
+    private AsyncTask mAddNewUserTask;
 
     public static UserAndAccountSettingsFragment newInstance() {
         UserAndAccountSettingsFragment
@@ -77,16 +83,27 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         // Because getLineItems is called in there.
         super.onActivityCreated(savedInstanceState);
 
-        Button addUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
-        addUserBtn.setText(R.string.user_add_user_menu);
-        addUserBtn.setOnClickListener(v -> {
-            mUserManagerHelper.createNewUser();
+        mProgressBar = getActivity().findViewById(R.id.progress_bar);
+
+        mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
+        mAddUserButton.setText(R.string.user_add_user_menu);
+        mAddUserButton.setOnClickListener(v -> {
+            ConfirmCreateNewUserDialog dialog =
+                    new ConfirmCreateNewUserDialog();
+            dialog.setConfirmCreateNewUserListener(this);
+            dialog.show(this);
         });
+    }
+
+    @Override
+    public void onCreateNewUserConfirmed() {
+        mAddNewUserTask = new AddNewUserTask().execute();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        mAddNewUserTask.cancel(false /* mayInterruptIfRunning */);
         mUserManagerHelper.unregisterOnUsersUpdateListener();
         mAccountManagerHelper.stopListeningToAccountUpdates();
     }
@@ -106,15 +123,17 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         refreshList();
     }
 
-    private void launchUserDetails(UserInfo userInfo) {
+    @Override
+    public void onUserClicked(UserInfo userInfo) {
         mFragmentController.launchFragment(UserDetailsSettingsFragment.getInstance(userInfo));
     }
 
-    private void launchAccountDetails(Account account, UserInfo userInfo) {
+    @Override
+    public void onAccountClicked(Account account, UserInfo userInfo) {
         mFragmentController.launchFragment(AccountDetailsFragment.newInstance(account, userInfo));
     }
 
-    private void launchAccountChooser() {
+    public void onAddAccountClicked() {
         mFragmentController.launchFragment(ChooseAccountFragment.newInstance());
     }
 
@@ -123,112 +142,25 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         return mItemProvider;
     }
 
-    private static class UserAndAccountItemProvider extends ListItemProvider {
-        private final List<ListItem> mItems = new ArrayList<>();
-        private final Context mContext;
-        private final UserAndAccountSettingsFragment mFragment;
-        private final UserManagerHelper mUserManagerHelper;
-        private final AccountManagerHelper mAccountManagerHelper;
-
-        UserAndAccountItemProvider(Context context, UserAndAccountSettingsFragment fragment,
-                UserManagerHelper userManagerHelper, AccountManagerHelper accountManagerHelper) {
-            mContext = context;
-            mFragment = fragment;
-            mUserManagerHelper = userManagerHelper;
-            mAccountManagerHelper = accountManagerHelper;
-            refreshItems();
+    private class AddNewUserTask extends AsyncTask<Void, Void, UserInfo> {
+        @Override
+        protected UserInfo doInBackground(Void... params) {
+            return mUserManagerHelper.createNewUser();
         }
 
         @Override
-        public ListItem get(int position) {
-            return mItems.get(position);
+        protected void onPreExecute() {
+            mAddUserButton.setEnabled(false);
+            mProgressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
-        public int size() {
-            return mItems.size();
-        }
-
-        public void refreshItems() {
-            mItems.clear();
-
-            UserInfo currUserInfo = mUserManagerHelper.getCurrentUserInfo();
-
-            // Show current user
-            mItems.add(createUserItem(currUserInfo,
-                    mContext.getString(R.string.current_user_name, currUserInfo.name),
-                    false /* withDividerHidden */));
-
-            // Add "Account for $User" title for a list of accounts.
-            mItems.add(createSubtitleItem(
-                    mContext.getString(R.string.account_list_title, currUserInfo.name)));
-
-            // Add an item for each account owned by the current user (1st and 3rd party accounts)
-            for (Account account : mAccountManagerHelper.getAccountsForCurrentUser()) {
-                mItems.add(createAccountItem(account, account.type, currUserInfo));
+        protected void onPostExecute(UserInfo user) {
+            mAddUserButton.setEnabled(true);
+            mProgressBar.setVisibility(View.GONE);
+            if (user != null) {
+                mUserManagerHelper.switchToUser(user);
             }
-
-            // Add "+ Add account" option
-            mItems.add(createAddAccountItem());
-
-            // Add "Other users" title item
-            mItems.add(createSubtitleItem(mContext.getString(R.string.other_users_title)));
-
-            // Display other users on the system
-            List<UserInfo> infos = mUserManagerHelper.getOtherUsers();
-            for (UserInfo userInfo : infos) {
-                mItems.add(createUserItem(
-                        userInfo, userInfo.name, true /* withDividerHidden*/));
-            }
-        }
-
-        // Creates a line for a user, clicking on it leads to the user details page
-        private ListItem createUserItem(UserInfo userInfo,
-                String title, boolean withDividerHidden) {
-            TextListItem item = new TextListItem(mContext);
-            item.setPrimaryActionIcon(mUserManagerHelper.getUserIcon(userInfo),
-                    false /* useLargeIcon */);
-            item.setTitle(title);
-            item.setOnClickListener(view -> mFragment.launchUserDetails(userInfo));
-            // Hiding the divider to group the items together visually. All of those without a
-            // divider between them will be part of the same "group".
-            item.setHideDivider(withDividerHidden);
-            return item;
-        }
-
-        // Creates a subtitle line for visual separation in the list
-        private ListItem createSubtitleItem(String title) {
-            TextListItem item = new TextListItem(mContext);
-            item.setPrimaryActionEmptyIcon();
-            item.setTitle(title);
-            item.addViewBinder(viewHolder ->
-                    viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader));
-            // Hiding the divider after subtitle, since subtitle is a header for a group of items.
-            item.setHideDivider(true);
-            return item;
-        }
-
-        // Creates a line for an account that belongs to a given user
-        private ListItem createAccountItem(Account account, String accountType,
-                UserInfo userInfo) {
-            TextListItem item = new TextListItem(mContext);
-            item.setPrimaryActionIcon(mAccountManagerHelper.getDrawableForType(accountType),
-                    false /* useLargeIcon */);
-            item.setTitle(account.name);
-            item.setOnClickListener(view -> mFragment.launchAccountDetails(account, userInfo));
-            item.setHideDivider(true);
-            return item;
-        }
-
-        // Creates a clickable "+ Add Account" line.
-        // Clicking on it leads to the Add an Account page.
-        private ListItem createAddAccountItem() {
-            TextListItem item = new TextListItem(mContext);
-            item.setPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */);
-            item.setTitle(mContext.getString(R.string.add_account_title));
-            item.setOnClickListener(
-                    view -> mFragment.launchAccountChooser());
-            return item;
         }
     }
 }
