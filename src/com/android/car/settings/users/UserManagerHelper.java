@@ -180,6 +180,45 @@ public final class UserManagerHelper {
     }
 
     /**
+     * Checks whether the user is system user (admin).
+     *
+     * @param userInfo User to check against system user.
+     * @return {@code true} if system user, {@code false} otherwise.
+     */
+    public boolean userIsSystemUser(UserInfo userInfo) {
+        return userInfo.id == UserHandle.USER_SYSTEM;
+    }
+
+    /**
+     * Returns whether this user can be removed from the system.
+     *
+     * @param userInfo User to be removed
+     * @return {@code true} if they can be removed, {@code false} otherwise.
+     */
+    public boolean userCanBeRemoved(UserInfo userInfo) {
+        return !userIsSystemUser(userInfo);
+    }
+
+    /**
+     * Checks whether currently logged in user is also the system user (admin).
+     *
+     * @return {@code true} if current user is admin, {@code false} otherwise.
+     */
+    public boolean currentUserIsSystemUser() {
+        return userIsSystemUser(getCurrentUserInfo());
+    }
+
+    /**
+     * Checks whether passed in user is the user that's currently logged in.
+     *
+     * @param userInfo User to check.
+     * @return {@code true} if current user, {@code false} otherwise.
+     */
+    public boolean userIsCurrentUser(UserInfo userInfo) {
+        return getCurrentUserInfo().id == userInfo.id;
+    }
+
+    /**
      * Switches (logs in) to another user.
      *
      * @param userInfo User to switch to.

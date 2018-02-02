@@ -15,10 +15,9 @@
  */
 package com.android.car.settings.users;
 
-import android.app.ActivityManager;
+import android.annotation.IdRes;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
@@ -34,9 +33,6 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
     public static final String EXTRA_USER_INFO = "extra_user_info";
     private static final String TAG = "UserDetailsSettingsFragment";
     private UserInfo mUserInfo;
-
-    private boolean mCurrentUserIsOwner;
-    private boolean mIsCurrentUser;
 
     private TextInputEditText mUserNameEditText;
     private Button mOkButton;
@@ -60,8 +56,6 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
-        mCurrentUserIsOwner = ActivityManager.getCurrentUser() == UserHandle.USER_SYSTEM;
-        mIsCurrentUser = ActivityManager.getCurrentUser() == mUserInfo.id;
     }
 
     @Override
@@ -78,8 +72,7 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
 
         configureUsernameEditing();
 
-        showRemoveUserButton();
-        showSwitchButton();
+        showActionButtons();
     }
 
     @Override
@@ -105,8 +98,9 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
             getActivity().onBackPressed();
         });
 
-        if (mIsCurrentUser /* Each user can edit their own name. */
-                || mCurrentUserIsOwner /* Owner can edit everyone's name. */) {
+        // Each user can edit their own name. Owner can edit everyone's name.
+        if (mUserManagerHelper.userIsCurrentUser(mUserInfo)
+                || mUserManagerHelper.currentUserIsSystemUser()) {
             allowUserNameEditing();
         } else {
             mUserNameEditText.setEnabled(false);
@@ -130,8 +124,25 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
         });
     }
 
-    private void showRemoveUserButton() {
-        Button removeUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
+    private void showActionButtons() {
+        if (mUserManagerHelper.userIsCurrentUser(mUserInfo)) {
+            // Already in current user, shouldn't show SWITCH button.
+            showRemoveUserButton(R.id.action_button1);
+            return;
+        }
+
+        showRemoveUserButton(R.id.action_button2);
+        showSwitchButton(R.id.action_button1);
+    }
+
+    private void showRemoveUserButton(@IdRes int buttonId) {
+        if (!mUserManagerHelper.userCanBeRemoved(mUserInfo)) {
+            // User cannot be removed, do not show delete button.
+            return;
+        }
+
+        Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
+        removeUserBtn.setVisibility(View.VISIBLE);
         removeUserBtn.setText(R.string.delete_button);
         removeUserBtn
                 .setOnClickListener(v -> {
@@ -142,15 +153,13 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
                 });
     }
 
-    private void showSwitchButton() {
-        if (!mIsCurrentUser) {
-            Button switchUserBtn = (Button) getActivity().findViewById(R.id.action_button2);
-            switchUserBtn.setVisibility(View.VISIBLE);
-            switchUserBtn.setText(R.string.user_switch);
-            switchUserBtn.setOnClickListener(v -> {
-                mUserManagerHelper.switchToUser(mUserInfo);
-                getActivity().onBackPressed();
-            });
-        }
+    private void showSwitchButton(@IdRes int buttonId) {
+        Button switchUserBtn = (Button) getActivity().findViewById(buttonId);
+        switchUserBtn.setVisibility(View.VISIBLE);
+        switchUserBtn.setText(R.string.user_switch);
+        switchUserBtn.setOnClickListener(v -> {
+            mUserManagerHelper.switchToUser(mUserInfo);
+            getActivity().onBackPressed();
+        });
     }
 }
