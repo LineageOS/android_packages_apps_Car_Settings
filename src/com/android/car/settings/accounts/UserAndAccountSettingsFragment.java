@@ -103,7 +103,11 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mAddNewUserTask.cancel(false /* mayInterruptIfRunning */);
+
+        if (mAddNewUserTask != null) {
+            mAddNewUserTask.cancel(false /* mayInterruptIfRunning */);
+        }
+
         mUserManagerHelper.unregisterOnUsersUpdateListener();
         mAccountManagerHelper.stopListeningToAccountUpdates();
     }
