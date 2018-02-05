@@ -100,7 +100,7 @@ public class EditUsernameFragment extends BaseFragment implements
 
         // Each user can edit their own name. Owner can edit everyone's name.
         if (mUserManagerHelper.userIsCurrentUser(mUserInfo)
-                || mUserManagerHelper.currentUserIsSystemUser()) {
+                || mUserManagerHelper.isSystemUser()) {
             allowUserNameEditing();
         } else {
             mUserNameEditText.setEnabled(false);
@@ -136,12 +136,15 @@ public class EditUsernameFragment extends BaseFragment implements
     }
 
     private void showRemoveUserButton(@IdRes int buttonId) {
-        if (!mUserManagerHelper.userCanBeRemoved(mUserInfo)) {
-            // User cannot be removed, do not show delete button.
+        Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
+        // If the current user is not allowed to remove users or the user trying to be removed
+        // cannot be removed, do not show delete button.
+        if (!mUserManagerHelper.canRemoveUsers() || !mUserManagerHelper.userCanBeRemoved(
+                mUserInfo)) {
+            removeUserBtn.setVisibility(View.GONE);
             return;
         }
 
-        Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
         removeUserBtn.setVisibility(View.VISIBLE);
         removeUserBtn.setText(R.string.delete_button);
         removeUserBtn
@@ -155,6 +158,12 @@ public class EditUsernameFragment extends BaseFragment implements
 
     private void showSwitchButton(@IdRes int buttonId) {
         Button switchUserBtn = (Button) getActivity().findViewById(buttonId);
+        // If the current user is not allowed to switch to another user, doe not show the switch
+        // button.
+        if (!mUserManagerHelper.canSwitchUsers()) {
+            switchUserBtn.setVisibility(View.GONE);
+            return;
+        }
         switchUserBtn.setVisibility(View.VISIBLE);
         switchUserBtn.setText(R.string.user_switch);
         switchUserBtn.setOnClickListener(v -> {

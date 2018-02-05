@@ -70,14 +70,17 @@ public class UsersListFragment extends ListItemSettingsFragment
 
         mProgressBar = getActivity().findViewById(R.id.progress_bar);
 
-        mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
-        mAddUserButton.setText(R.string.user_add_user_menu);
-        mAddUserButton.setOnClickListener(v -> {
-            ConfirmCreateNewUserDialog dialog =
-                    new ConfirmCreateNewUserDialog();
-            dialog.setConfirmCreateNewUserListener(this);
-            dialog.show(this);
-        });
+        // Only add the add user button if the current user is allowed to add a user.
+        if(mUserManagerHelper.canAddUsers()) {
+            mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
+            mAddUserButton.setText(R.string.user_add_user_menu);
+            mAddUserButton.setOnClickListener(v -> {
+                ConfirmCreateNewUserDialog dialog =
+                        new ConfirmCreateNewUserDialog();
+                dialog.setConfirmCreateNewUserListener(this);
+                dialog.show(this);
+            });
+        }
     }
 
     @Override

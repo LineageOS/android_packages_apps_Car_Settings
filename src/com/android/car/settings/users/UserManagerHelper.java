@@ -43,27 +43,14 @@ import java.util.List;
 public final class UserManagerHelper {
     private static final String TAG = "UserManagerHelper";
     private final Context mContext;
-    private OnUsersUpdateListener mUpdateListener;
-
     private final UserManager mUserManager;
-
+    private OnUsersUpdateListener mUpdateListener;
     private final BroadcastReceiver mUserChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             mUpdateListener.onUsersUpdate();
         }
     };
-
-    /**
-     * Interface for listeners that want to register for receiving updates to changes to the users
-     * on the system including removing and adding users, and changing user info.
-     */
-    public interface OnUsersUpdateListener {
-        /**
-         * Method that will get called when users list has been changed.
-         */
-        void onUsersUpdate();
-    }
 
     public UserManagerHelper(Context context) {
         mContext = context;
@@ -97,16 +84,6 @@ public final class UserManagerHelper {
     }
 
     /**
-     * Sets new Username for the user.
-     *
-     * @param user User who's name should be changed.
-     * @param name New username.
-     */
-    public void setUserName(UserInfo user, String name) {
-        mUserManager.setUserName(user.id, name);
-    }
-
-    /**
      * Gets all the other users on the system that are not the current user.
      *
      * @return List of {@code UserInfo} for each user that is not the current user.
@@ -114,7 +91,7 @@ public final class UserManagerHelper {
     public List<UserInfo> getOtherUsers() {
         List<UserInfo> others = mUserManager.getUsers(true);
 
-        for (Iterator<UserInfo> iterator = others.iterator(); iterator.hasNext();) {
+        for (Iterator<UserInfo> iterator = others.iterator(); iterator.hasNext(); ) {
             UserInfo userInfo = iterator.next();
             if (userInfo.id == UserHandle.myUserId()) {
                 // Remove current user from the list.
@@ -133,6 +110,105 @@ public final class UserManagerHelper {
     public boolean isInitialized(UserInfo user) {
         return (user.flags & UserInfo.FLAG_INITIALIZED) != 0;
     }
+
+    // User information accessors
+
+    /**
+     * Checks whether the user is system user (admin).
+     *
+     * @param userInfo User to check against system user.
+     * @return {@code true} if system user, {@code false} otherwise.
+     */
+    public boolean userIsSystemUser(UserInfo userInfo) {
+        return userInfo.id == UserHandle.USER_SYSTEM;
+    }
+
+    /**
+     * Returns whether this user can be removed from the system.
+     *
+     * @param userInfo User to be removed
+     * @return {@code true} if they can be removed, {@code false} otherwise.
+     */
+    public boolean userCanBeRemoved(UserInfo userInfo) {
+        return !userIsSystemUser(userInfo);
+    }
+
+    /**
+     * Checks whether passed in user is the user that's currently logged in.
+     *
+     * @param userInfo User to check.
+     * @return {@code true} if current user, {@code false} otherwise.
+     */
+    public boolean userIsCurrentUser(UserInfo userInfo) {
+        return getCurrentUserInfo().id == userInfo.id;
+    }
+
+    // Current user information accessors
+
+    /**
+     * Checks if the current user is a demo user.
+     */
+    public boolean isDemoUser() {
+        return mUserManager.isDemoUser();
+    }
+
+    /**
+     * Checks if the current user is a guest user.
+     */
+    public boolean isGuestUser() {
+        return mUserManager.isGuestUser();
+    }
+
+    /**
+     * Checks if the current user is the system user (User 0).
+     */
+    public boolean isSystemUser() {
+        return mUserManager.isSystemUser();
+    }
+
+    // Current user restriction accessors
+
+    /**
+     * Return whether the current user has a restriction.
+     *
+     * @param restriction Restriction to check. Should be a UserManager.* restriction.
+     * @return Whether that restriction exists for the current user.
+     */
+    public boolean hasUserRestriction(String restriction) {
+        return mUserManager.hasUserRestriction(restriction);
+    }
+
+    /**
+     * Checks if the current user can add new users.
+     */
+    public boolean canAddUsers() {
+        return !hasUserRestriction(UserManager.DISALLOW_ADD_USER);
+    }
+
+    /**
+     * Checks if the current user can remove users.
+     */
+    public boolean canRemoveUsers() {
+        return !hasUserRestriction(UserManager.DISALLOW_REMOVE_USER);
+    }
+
+    /**
+     * Checks if the current user is allowed to switch to another user.
+     */
+    public boolean canSwitchUsers() {
+        return !hasUserRestriction(UserManager.DISALLOW_USER_SWITCH);
+    }
+
+    /**
+     * Checks if the current user can modify accounts. Demo and Guest users cannot modify accounts
+     * even if the DISALLOW_MODIFY_ACCOUNTS restriction is not applied.
+     */
+    public boolean canModifyAccounts() {
+        return !hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS) && !isDemoUser()
+                && !isGuestUser();
+    }
+
+    // User actions
 
     /**
      * Creates a new user on the system.
@@ -169,45 +245,6 @@ public final class UserManagerHelper {
         }
 
         return mUserManager.removeUser(userInfo.id);
-    }
-
-    /**
-     * Checks whether the user is system user (admin).
-     *
-     * @param userInfo User to check against system user.
-     * @return {@code true} if system user, {@code false} otherwise.
-     */
-    public boolean userIsSystemUser(UserInfo userInfo) {
-        return userInfo.id == UserHandle.USER_SYSTEM;
-    }
-
-    /**
-     * Returns whether this user can be removed from the system.
-     *
-     * @param userInfo User to be removed
-     * @return {@code true} if they can be removed, {@code false} otherwise.
-     */
-    public boolean userCanBeRemoved(UserInfo userInfo) {
-        return !userIsSystemUser(userInfo);
-    }
-
-    /**
-     * Checks whether currently logged in user is also the system user (admin).
-     *
-     * @return {@code true} if current user is admin, {@code false} otherwise.
-     */
-    public boolean currentUserIsSystemUser() {
-        return userIsSystemUser(getCurrentUserInfo());
-    }
-
-    /**
-     * Checks whether passed in user is the user that's currently logged in.
-     *
-     * @param userInfo User to check.
-     * @return {@code true} if current user, {@code false} otherwise.
-     */
-    public boolean userIsCurrentUser(UserInfo userInfo) {
-        return getCurrentUserInfo().id == userInfo.id;
     }
 
     /**
@@ -297,6 +334,16 @@ public final class UserManagerHelper {
         }
     }
 
+    /**
+     * Sets new Username for the user.
+     *
+     * @param user User whose name should be changed.
+     * @param name New username.
+     */
+    public void setUserName(UserInfo user, String name) {
+        mUserManager.setUserName(user.id, name);
+    }
+
     private void registerReceiver() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_USER_REMOVED);
@@ -307,5 +354,16 @@ public final class UserManagerHelper {
 
     private void unregisterReceiver() {
         mContext.unregisterReceiver(mUserChangeReceiver);
+    }
+
+    /**
+     * Interface for listeners that want to register for receiving updates to changes to the users
+     * on the system including removing and adding users, and changing user info.
+     */
+    public interface OnUsersUpdateListener {
+        /**
+         * Method that will get called when users list has been changed.
+         */
+        void onUsersUpdate();
     }
 }

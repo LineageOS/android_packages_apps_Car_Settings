@@ -35,6 +35,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.settings.users.UserManagerHelper;
 
 import java.io.IOException;
 /**
@@ -74,6 +75,7 @@ public class AddAccountActivity extends Activity {
     // Need a specific request code for add account activity.
     public static final int ADD_ACCOUNT_REQUEST = 2001;
 
+    private UserManagerHelper mUserManagerHelper;
     private UserHandle mUserHandle;
     private PendingIntent mPendingIntent;
     private boolean mAddAccountCalled;
@@ -137,20 +139,22 @@ public class AddAccountActivity extends Activity {
             }
         }
 
+        mUserManagerHelper = new UserManagerHelper(getApplicationContext());
+
         if (mAddAccountCalled) {
             // We already called add account - maybe the callback was lost.
             finish();
             return;
         }
 
-        UserManager userManager =
-                (UserManager) getSystemService(Context.USER_SERVICE);
-        mUserHandle = userManager.getUserInfo(ActivityManager.getCurrentUser()).getUserHandle();
-        if (userManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS, mUserHandle)) {
+        UserManager userManager = (UserManager) getSystemService(Context.USER_SERVICE);
+        mUserHandle = mUserManagerHelper.getCurrentUserInfo().getUserHandle();
+        if (mUserManagerHelper.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
             // We aren't allowed to add an account.
             Toast.makeText(
                     this, R.string.user_cannot_add_accounts_message, Toast.LENGTH_LONG)
                     .show();
+            finish();
             return;
         }
         addAccount(getIntent().getStringExtra(EXTRA_SELECTED_ACCOUNT));
