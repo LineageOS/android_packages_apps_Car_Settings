@@ -24,8 +24,11 @@ import android.os.Bundle;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.home.ExtraSettingsLoader;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * Shows basic info about the system and provide some actions like update, reset etc.
@@ -52,6 +55,10 @@ public class SystemSettingsFragment extends ListSettingsFragment {
         if (settingsIntent.resolveActivity(packageManager) != null) {
             lineItems.add(new SystemUpdatesLineItem(getContext(), settingsIntent));
         }
+        ExtraSettingsLoader extraSettingLoader = new ExtraSettingsLoader(getContext());
+        Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings = extraSettingLoader.load();
+        lineItems.addAll(extraSettings.get(ExtraSettingsLoader.SYSTEM_CATEGORY));
+
         lineItems.add(new AboutSystemLineItem(getContext(), mFragmentController));
         lineItems.add(new LegalInfoLineItem(getContext()));
         return lineItems;
