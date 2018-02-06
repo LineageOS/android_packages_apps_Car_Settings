@@ -86,13 +86,46 @@ final class AccountManagerHelper {
     }
 
     /**
+     * Returns whether the given account is in the list of accounts for the current user.
+     * Useful for checking whether an account has been deleted.
+     *
+     * @param account Account which existence we're checking for.
+     * @return {@code true} if it exists, {@code false} if it doesn't.
+     */
+    public boolean accountExists(Account account) {
+        if (account == null) {
+            return false;
+        }
+
+        Account[] accounts = AccountManager.get(mContext).getAccountsByTypeAsUser(
+                account.type, mCurrentUserHandle);
+        for (Account other : accounts) {
+            if (other.equals(account)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Wrapper for {@code AuthenticatorHelper.getDrawableForType}.
      * Gets an icon associated with a particular account type.
      *
      * @param accountType the type of account
      * @return a drawable for the icon
      */
-    public Drawable getDrawableForType(String accountType) {
+    public Drawable getDrawableForType(final String accountType) {
         return mAuthenticatorHelper.getDrawableForType(mContext, accountType);
+    }
+
+    /**
+     * Wrapper for {@code AuthenticatorHelper.getLabelForType}.
+     * Gets the label associated with a particular account type. If none found, return {@code null}.
+     *
+     * @param accountType the type of account
+     * @return a CharSequence for the label or null if one cannot be found.
+     */
+    public CharSequence getLabelForType(final String accountType) {
+        return mAuthenticatorHelper.getLabelForType(mContext, accountType);
     }
 }

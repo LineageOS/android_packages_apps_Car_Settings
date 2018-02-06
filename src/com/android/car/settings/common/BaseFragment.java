@@ -100,6 +100,18 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    /**
+     * Should be used to override fragment's title.
+     * Should be called after {@code super.onActivityCreated}, so that it's called AFTER the default title
+     * setter.
+     *
+     * @param title CharSequence to set as the new title.
+     */
+    protected final void setTitle(CharSequence title) {
+        TextView titleView = getActivity().findViewById(R.id.title);
+        titleView.setText(title);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {

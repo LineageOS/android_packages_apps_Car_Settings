@@ -52,7 +52,7 @@ public class DatePickerFragment extends BaseFragment {
         mDatePicker = (DatePicker) getView().findViewById(R.id.date_picker);
 
         Button button = (Button) getActivity().findViewById(R.id.action_button1);
-        button.setText(R.string.okay);
+        button.setText(android.R.string.ok);
         button.setOnClickListener(v -> {
             Calendar c = Calendar.getInstance();
 

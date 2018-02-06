@@ -131,7 +131,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
 
     private void setupOkButton() {
         mOkButton = getActivity().findViewById(R.id.action_button1);
-        mOkButton.setText(R.string.okay);
+        mOkButton.setText(android.R.string.ok);
         mOkButton.setOnClickListener(v -> {
             if (!mInputLineItem.getInput().equals(mCachedDevice.getName())) {
                 mCachedDevice.setName(mInputLineItem.getInput());
