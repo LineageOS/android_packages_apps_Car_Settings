@@ -22,26 +22,41 @@ import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
  */
 public class ExtraSettingsLoader {
     private static final String TAG = "ExtraSettingsLoader";
+    private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
+    public static final String WIRELESS_CATEGORY = "com.android.settings.category.wireless";
+    public static final String DEVICE_CATEGORY = "com.android.settings.category.device";
+    public static final String SYSTEM_CATEGORY = "com.android.settings.category.system";
+    public static final String PERSONAL_CATEGORY = "com.android.settings.category.personal";
     private final Context mContext;
 
     public ExtraSettingsLoader(Context context) {
         mContext = context;
     }
 
-    public List<TypedPagedListAdapter.LineItem> load() {
+    public Map<String, Collection<TypedPagedListAdapter.LineItem>> load() {
         PackageManager pm = mContext.getPackageManager();
         Intent intent = new Intent(EXTRA_SETTINGS_ACTION);
+        Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings = new HashMap<>();
+        // initialize the categories
+        extraSettings.put(WIRELESS_CATEGORY, new LinkedList());
+        extraSettings.put(DEVICE_CATEGORY, new LinkedList());
+        extraSettings.put(SYSTEM_CATEGORY, new LinkedList());
+        extraSettings.put(PERSONAL_CATEGORY, new LinkedList());
 
         List<ResolveInfo> results = pm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
-        List<TypedPagedListAdapter.LineItem> extraSettings = new ArrayList<>();
+
         for (ResolveInfo resolved : results) {
             if (!resolved.system) {
                 // Do not allow any app to add to settings, only system ones.
@@ -49,6 +64,7 @@ public class ExtraSettingsLoader {
             }
             String title = null;
             String summary = null;
+            String category = null;
             ActivityInfo activityInfo = resolved.activityInfo;
             Bundle metaData = activityInfo.metaData;
             try {
@@ -69,6 +85,15 @@ public class ExtraSettingsLoader {
                 } else {
                     Log.d(TAG, "no description.");
                 }
+                if (metaData.containsKey(META_DATA_PREFERENCE_CATEGORY)) {
+                    if (metaData.get(META_DATA_PREFERENCE_CATEGORY) instanceof Integer) {
+                        category = res.getString(metaData.getInt(META_DATA_PREFERENCE_CATEGORY));
+                    } else {
+                        category = metaData.getString(META_DATA_PREFERENCE_CATEGORY);
+                    }
+                } else {
+                    Log.d(TAG, "no category.");
+                }
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
                 Log.d(TAG, "Couldn't find info", e);
             }
@@ -87,7 +112,11 @@ public class ExtraSettingsLoader {
             }
             Intent extraSettingIntent =
                     new Intent().setClassName(activityInfo.packageName, activityInfo.name);
-            extraSettings.add(new LaunchAppLineItem(
+            if (category == null || !extraSettings.containsKey(category)) {
+                // If category is not specified or not supported, default to device.
+                category = DEVICE_CATEGORY;
+            }
+            extraSettings.get(category).add(new LaunchAppLineItem(
                     title, icon, mContext, summary, extraSettingIntent));
         }
         return extraSettings;

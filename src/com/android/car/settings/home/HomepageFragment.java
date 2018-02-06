@@ -16,6 +16,11 @@
 package com.android.car.settings.home;
 
 
+import static com.android.car.settings.home.ExtraSettingsLoader.DEVICE_CATEGORY;
+import static com.android.car.settings.home.ExtraSettingsLoader.PERSONAL_CATEGORY;
+import static com.android.car.settings.home.ExtraSettingsLoader.SYSTEM_CATEGORY;
+import static com.android.car.settings.home.ExtraSettingsLoader.WIRELESS_CATEGORY;
+
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,6 +43,8 @@ import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 
 /**
  * Homepage for settings for car.
@@ -132,6 +139,9 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
     @Override
     public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        ExtraSettingsLoader extraSettingsLoader = new ExtraSettingsLoader(getContext());
+        Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings =
+                extraSettingsLoader.load();
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.display_settings,
                 R.drawable.ic_settings_display,
@@ -147,6 +157,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 SoundSettingsFragment.getInstance(),
                 mFragmentController));
         lineItems.add(mWifiLineItem);
+        lineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
         lineItems.add(mBluetoothLineItem);
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.applications_settings,
@@ -176,7 +187,9 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 null,
                 SystemSettingsFragment.getInstance(),
                 mFragmentController));
-        lineItems.addAll(new ExtraSettingsLoader(getContext()).load());
+
+        lineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
+        lineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
         return lineItems;
     }
 }
