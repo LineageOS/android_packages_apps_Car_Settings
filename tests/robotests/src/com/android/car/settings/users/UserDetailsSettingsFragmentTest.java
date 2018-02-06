@@ -18,6 +18,7 @@ package com.android.car.settings.users;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
@@ -63,6 +64,7 @@ public class UserDetailsSettingsFragmentTest {
                 .start()
                 .resume()
                 .get();
+
         mTestActivity.setUserManager(mUserManager);
     }
 
@@ -73,11 +75,7 @@ public class UserDetailsSettingsFragmentTest {
     public void testUserNameDisplayedInDetails() {
         int userId = 123;
         int differentUserId = 345;
-        UserInfo testUser = new UserInfo(differentUserId, "test_name", 0 /* flags */);
-        ShadowActivityManager.setCurrentUser(userId);
-
-        UserDetailsSettingsFragment fragment = UserDetailsSettingsFragment.getInstance(testUser);
-        mTestActivity.createFragment(fragment);
+        createUserDetailsSettingsFragment(userId, differentUserId);
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -208,7 +206,10 @@ public class UserDetailsSettingsFragmentTest {
 
     private void createUserDetailsSettingsFragment(int currentUserId, int detailsUserId) {
         UserInfo testUser = new UserInfo(detailsUserId /* id */, "test_name", 0 /* flags */);
-        ShadowActivityManager.setCurrentUser(currentUserId);
+        doReturn(testUser).when(mUserManager).getUserInfo(detailsUserId);
+
+        UserInfo currentUser = new UserInfo(currentUserId, "current_user", 0 /* flags */);
+        doReturn(currentUser).when(mUserManager).getUserInfo(UserHandle.myUserId());
 
         UserDetailsSettingsFragment fragment = UserDetailsSettingsFragment.getInstance(testUser);
         mTestActivity.createFragment(fragment);
