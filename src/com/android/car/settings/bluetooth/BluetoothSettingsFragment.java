@@ -121,9 +121,6 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
 
-        // Set this to light mode, since the scroll bar buttons always appear
-        // on top of a dark scrim.
-        mDeviceListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mDeviceAdapter = new BluetoothDeviceListAdapter(
                 getContext() , mLocalManager, mFragmentController);
         mDeviceListView.setAdapter(mDeviceAdapter);
