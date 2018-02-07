@@ -18,7 +18,6 @@ package com.android.car.settings.home;
 
 import static com.android.car.settings.home.ExtraSettingsLoader.DEVICE_CATEGORY;
 import static com.android.car.settings.home.ExtraSettingsLoader.PERSONAL_CATEGORY;
-import static com.android.car.settings.home.ExtraSettingsLoader.SYSTEM_CATEGORY;
 import static com.android.car.settings.home.ExtraSettingsLoader.WIRELESS_CATEGORY;
 
 import android.bluetooth.BluetoothAdapter;
@@ -33,13 +32,13 @@ import android.view.View;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.accounts.UserAndAccountSettingsFragment;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.system.SystemSettingsFragment;
+import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 
 import java.util.ArrayList;
@@ -178,7 +177,7 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 R.drawable.ic_user,
                 getContext(),
                 null,
-                UserAndAccountSettingsFragment.newInstance(),
+                UsersListFragment.newInstance(),
                 mFragmentController));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,

@@ -32,8 +32,8 @@ import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
 
 /**
- * Implementation of {@link ListItemProvider} for {@link UserAndAccountSettingsFragment}.
- * Creates items that represent the current user, current user's accounts and other users.
+ * Implementation of {@link ListItemProvider} for {@link UserDetailsFragment}.
+ * Creates items that represent the current user and current user's accounts.
  */
 class UserAndAccountItemProvider extends ListItemProvider {
     private final List<ListItem> mItems = new ArrayList<>();
@@ -60,11 +60,6 @@ class UserAndAccountItemProvider extends ListItemProvider {
          * @param userInfo User who's the owner of the account.
          */
         void onAccountClicked(Account account, UserInfo userInfo);
-
-        /**
-         * Invoked when add account button is clicked.
-         */
-        void onAddAccountClicked();
     }
 
     UserAndAccountItemProvider(Context context, UserAndAccountClickListener itemClickListener,
@@ -95,44 +90,31 @@ class UserAndAccountItemProvider extends ListItemProvider {
         UserInfo currUserInfo = mUserManagerHelper.getCurrentUserInfo();
 
         // Show current user
-        // WithDividerHidden = false will hide the divider to group the items together visually.
-        // All of those without a divider between them will be part of the same "group".
-        mItems.add(createUserItem(currUserInfo,
-                mContext.getString(R.string.current_user_name, currUserInfo.name),
-                false /* withDividerHidden */));
+        mItems.add(createUserItem(
+                currUserInfo, mContext.getString(R.string.current_user_name, currUserInfo.name)));
+
+        List<Account> accounts = mAccountManagerHelper.getAccountsForCurrentUser();
+        if (accounts.isEmpty()) {
+            return;
+        }
 
         // Add "Account for $User" title for a list of accounts.
         mItems.add(createSubtitleItem(
                 mContext.getString(R.string.account_list_title, currUserInfo.name)));
 
         // Add an item for each account owned by the current user (1st and 3rd party accounts)
-        for (Account account : mAccountManagerHelper.getAccountsForCurrentUser()) {
+        for (Account account : accounts) {
             mItems.add(createAccountItem(account, account.type, currUserInfo));
-        }
-
-        // Add "+ Add account" option
-        mItems.add(createAddAccountItem());
-
-        // Add "Other users" title item
-        mItems.add(createSubtitleItem(mContext.getString(R.string.other_users_title)));
-
-        // Display other users on the system
-        List<UserInfo> infos = mUserManagerHelper.getOtherUsers();
-        for (UserInfo userInfo : infos) {
-            mItems.add(createUserItem(
-                    userInfo, userInfo.name, true /* withDividerHidden*/));
         }
     }
 
     // Creates a line for a user, clicking on it leads to the user details page
-    private ListItem createUserItem(UserInfo userInfo,
-            String title, boolean withDividerHidden) {
+    private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mUserManagerHelper.getUserIcon(userInfo),
                 false /* useLargeIcon */);
         item.setTitle(title);
         item.setOnClickListener(view -> mItemClickListener.onUserClicked(userInfo));
-        item.setHideDivider(withDividerHidden);
         return item;
     }
 
@@ -163,18 +145,10 @@ class UserAndAccountItemProvider extends ListItemProvider {
         }
 
         item.setOnClickListener(view -> mItemClickListener.onAccountClicked(account, userInfo));
-        item.setHideDivider(true);
-        return item;
-    }
 
-    // Creates a clickable "+ Add Account" line.
-    // Clicking on it leads to the Add an Account page.
-    private ListItem createAddAccountItem() {
-        TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(R.drawable.ic_add, false /* useLargeIcon */);
-        item.setTitle(mContext.getString(R.string.add_account_title));
-        item.setOnClickListener(
-                view -> mItemClickListener.onAddAccountClicked());
+        // setHideDivider = true will hide the divider to group the items together visually.
+        // All of those without a divider between them will be part of the same "group".
+        item.setHideDivider(true);
         return item;
     }
 }

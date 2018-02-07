@@ -47,10 +47,11 @@ import org.robolectric.annotation.Config;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION,
         shadows = {ShadowActivityManager.class})
+@Ignore
 /**
- * Tests for UserDetailsSettingsFragment.
+ * Tests for EditUsernameFragment.
  */
-public class UserDetailsSettingsFragmentTest {
+public class EditUsernameFragmentTest {
     private TestAppCompatActivity mTestActivity;
 
     @Mock
@@ -73,11 +74,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that user name of the profile in question is displayed in the TextInputEditTest field.
      */
     @Test
-    @Ignore
     public void testUserNameDisplayedInDetails() {
         int userId = 123;
         int differentUserId = 345;
-        createUserDetailsSettingsFragment(userId, differentUserId);
+        createEditUsernameFragment(userId, differentUserId);
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -88,10 +88,9 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that non-owner users can edit their own name.
      */
     @Test
-    @Ignore
     public void testIfNotOwnerCanEditThemselves() {
         int userId = 123;
-        createUserDetailsSettingsFragment(userId, userId); // User editing their own profile.
+        createEditUsernameFragment(userId, userId); // User editing their own profile.
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -102,12 +101,11 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that non-owner users cannot edit the names of other users.
      */
     @Test
-    @Ignore
     public void testIfNotOwnerCanNotEditOthers() {
         int userId = 123;
         int differentUserId = 345;
         // Non-owner trying to edit someone else's profile.
-        createUserDetailsSettingsFragment(userId, differentUserId);
+        createEditUsernameFragment(userId, differentUserId);
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -118,11 +116,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that owner user can edit everyone's name.
      */
     @Test
-    @Ignore
     public void testIfOwnerCanEditOthers() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
-        createUserDetailsSettingsFragment(UserHandle.USER_SYSTEM, differentUserId);
+        createEditUsernameFragment(UserHandle.USER_SYSTEM, differentUserId);
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -133,11 +130,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that ok and cancel button are hidden by default.
      */
     @Test
-    @Ignore
     public void testEditButtonsHiddenByDefault() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
-        createUserDetailsSettingsFragment(UserHandle.USER_SYSTEM, differentUserId);
+        createEditUsernameFragment(UserHandle.USER_SYSTEM, differentUserId);
 
         Button okButton = (Button) mTestActivity.findViewById(R.id.ok_button);
         assertThat(okButton.getVisibility()).isEqualTo(View.GONE);
@@ -150,11 +146,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that ok and cancel button appear after the user starts editing the name.
      */
     @Test
-    @Ignore
     public void testEditButtonsAppearOnFocus() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
-        createUserDetailsSettingsFragment(UserHandle.USER_SYSTEM, differentUserId);
+        createEditUsernameFragment(UserHandle.USER_SYSTEM, differentUserId);
 
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
@@ -171,11 +166,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that clicking OK saves the new name for the user.
      */
     @Test
-    @Ignore
     public void testClickingOkSavesNewUserName() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
-        createUserDetailsSettingsFragment(UserHandle.USER_SYSTEM, differentUserId);
+        createEditUsernameFragment(UserHandle.USER_SYSTEM, differentUserId);
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
         Button okButton = (Button) mTestActivity.findViewById(R.id.ok_button);
@@ -191,11 +185,10 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that clicking Cancel brings us back to the previous fragment in activity.
      */
     @Test
-    @Ignore
     public void testClickingCancelInvokesGoingBack() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
-        createUserDetailsSettingsFragment(UserHandle.USER_SYSTEM, differentUserId);
+        createEditUsernameFragment(UserHandle.USER_SYSTEM, differentUserId);
         TextInputEditText userNameEditText =
                 (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
         Button cancelButton = (Button) mTestActivity.findViewById(R.id.cancel_button);
@@ -213,14 +206,14 @@ public class UserDetailsSettingsFragmentTest {
         verify(mUserManager, never()).setUserName(differentUserId, "new_user_name");
     }
 
-    private void createUserDetailsSettingsFragment(int currentUserId, int detailsUserId) {
+    private void createEditUsernameFragment(int currentUserId, int detailsUserId) {
         UserInfo testUser = new UserInfo(detailsUserId /* id */, "test_name", 0 /* flags */);
         doReturn(testUser).when(mUserManager).getUserInfo(detailsUserId);
 
         UserInfo currentUser = new UserInfo(currentUserId, "current_user", 0 /* flags */);
         doReturn(currentUser).when(mUserManager).getUserInfo(UserHandle.myUserId());
 
-        UserDetailsSettingsFragment fragment = UserDetailsSettingsFragment.getInstance(testUser);
+        EditUsernameFragment fragment = EditUsernameFragment.getInstance(testUser);
         mTestActivity.createFragment(fragment);
     }
 }

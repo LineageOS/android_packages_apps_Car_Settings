@@ -335,17 +335,14 @@
          [CHAR LIMIT=20] -->
     <string name="time_picker_title">Time</string>
 
-
-    <!-- User settings screen title [CHAR LIMIT=25] -->
-    <string name="user_settings_title">Users</string>
     <!-- User settings header for list of users and profiles [CHAR LIMIT=40] -->
     <string name="user_list_title">Users &amp; profiles</string>
     <!-- User settings add user or restricted profile menu [CHAR LIMIT=35] -->
     <string name="user_add_user_or_profile_menu">Add user or profile</string>
-    <!-- Title for list of users other than current user.[CHAR LIMIT=30] -->
-    <string name="other_users_title">Other users</string>
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>
+    <!-- Button title for adding an account [CHAR LIMIT=35] -->
+    <string name="user_add_account_menu">Add account</string>
     <!-- Spoken content description for delete icon beside a user [CHAR LIMIT=none] -->
     <string name="user_delete_user_description">Delete user</string>
     <!-- User details new user name [CHAR LIMIT=30] -->
@@ -361,8 +358,10 @@
     <!-- User settings label for user name [CHAR LIMIT=25] -->
     <string name="user_name_label">Name</string>
 
-    <!-- Account settings screen title [CHAR LIMIT=25] -->
+    <!-- Title for settings that lead into User and Account information [CHAR LIMIT=25] -->
     <string name="user_and_account_settings_title">Users &amp; accounts</string>
+    <!-- Title for a screen that shows the user and accounts that belong to that user [CHAR LIMIT=25] -->
+    <string name="user_settings_title">User</string>
     <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
     <string name="account_list_title">Accounts for <xliff:g id="current_user_name">%1$s</xliff:g></string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->

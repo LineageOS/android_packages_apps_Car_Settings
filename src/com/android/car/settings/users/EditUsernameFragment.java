@@ -28,10 +28,10 @@ import com.android.car.settings.common.BaseFragment;
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.
  */
-public class UserDetailsSettingsFragment extends BaseFragment implements
+public class EditUsernameFragment extends BaseFragment implements
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
     public static final String EXTRA_USER_INFO = "extra_user_info";
-    private static final String TAG = "UserDetailsSettingsFragment";
+    private static final String TAG = "EditUsernameFragment";
     private UserInfo mUserInfo;
 
     private TextInputEditText mUserNameEditText;
@@ -40,9 +40,9 @@ public class UserDetailsSettingsFragment extends BaseFragment implements
 
     private UserManagerHelper mUserManagerHelper;
 
-    public static UserDetailsSettingsFragment getInstance(UserInfo userInfo) {
-        UserDetailsSettingsFragment
-                userSettingsFragment = new UserDetailsSettingsFragment();
+    public static EditUsernameFragment getInstance(UserInfo userInfo) {
+        EditUsernameFragment
+                userSettingsFragment = new EditUsernameFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_details_title);
