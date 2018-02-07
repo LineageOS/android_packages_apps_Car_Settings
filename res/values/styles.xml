@@ -63,6 +63,21 @@
            parent="Widget.Car.Button.Borderless.Colored">
         <item name="android:minWidth">@dimen/car_button_min_width</item>
         <item name="android:fontFamily">roboto-regular</item>
-        <item name="android:textColor">@color/action_bar_btn</item>
+        <item name="android:textColor">@color/car_accent</item>
+    </style>
+
+    <style name="SetupWizardButton.Negative" parent="@style/SuwGlifButton.Secondary">
+        <!-- Negative margin to offset for padding of the button itself. We want the label to be
+             aligned with the text above it -->
+        <item name="android:layout_marginStart">-16dp</item>
+    </style>
+
+    <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary" />
+
+    <!-- Style for security lock pattern. -->
+    <style name="LockPatternStyle">
+        <item name="*android:regularColor">@color/lock_pattern_regular</item>
+        <item name="*android:successColor">@color/lock_pattern_success</item>
+        <item name="*android:errorColor">?android:attr/colorError</item>
     </style>
 </resources>

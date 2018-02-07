@@ -36,6 +36,7 @@ import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
+import com.android.car.settings.security.ChooseLockTypeFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.users.UsersListFragment;
@@ -178,6 +179,13 @@ public class HomepageFragment extends ListSettingsFragment implements CarWifiMan
                 getContext(),
                 null,
                 UsersListFragment.newInstance(),
+                mFragmentController));
+        lineItems.add(new SimpleIconTransitionLineItem(
+                R.string.security_settings_title,
+                R.drawable.ic_lock,
+                getContext(),
+                null,
+                ChooseLockTypeFragment.newInstance(),
                 mFragmentController));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,
