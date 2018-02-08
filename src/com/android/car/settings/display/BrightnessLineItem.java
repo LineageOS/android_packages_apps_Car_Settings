@@ -57,7 +57,7 @@ public class BrightnessLineItem extends SeekbarLineItem {
     }
 
     @Override
-    public void onSeekbarChanged(int progress) {
+    public void onSeekbarChanged(int progress, boolean fromUser) {
         Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS, progress);
     }
 }

@@ -36,6 +36,7 @@ import com.android.car.list.SeekbarLineItem;
  */
 public class VolumeLineItem extends SeekbarLineItem {
     private static final String TAG = "VolumeLineItem";
+    private static final long AUDIO_FEEDBACK_DELAY_MS = 1500;
 
     private final @AudioAttributes.AttributeUsage int mAttributeUsage;
     private final Ringtone mRingtone;
@@ -97,17 +98,22 @@ public class VolumeLineItem extends SeekbarLineItem {
     }
 
     @Override
-    public void onSeekbarChanged(int progress) {
+    public void onSeekbarChanged(int progress, boolean fromUser) {
+        if (!fromUser) {
+            // For instance, if this event is originated from AudioService,
+            // we can ignore it as it has already been handled and doesn't need to be
+            // sent back down again.
+            return;
+        }
         try {
             if (mCarAudioManager == null) {
-                Log.w(TAG, "CarAudiomanager not available, Car is not connected!");
+                Log.w(TAG, "Ignoring volume change event because the car isn't connected");
                 return;
             }
-            // the flag is a request to play sound, depend on implementation, it may not play
-            // anything, the listener in SoundSettings class will play audible feedback.
+            // Sets the flag to FLAG_PLAY_AUDIO since this is a volume change originated from user
+            // interaction, an audio feedback should be requested in this case.
             mCarAudioManager.setUsageVolume(
                     mAttributeUsage, progress, AudioManager.FLAG_PLAY_SOUND);
-            // playAudioFeedback();
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
         }
