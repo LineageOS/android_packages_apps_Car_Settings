@@ -127,7 +127,6 @@ public class SoundSettingsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mListView = getView().findViewById(R.id.list);
-        mListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mPagedListAdapter = new TypedPagedListAdapter(getContext());
         mListView.setAdapter(mPagedListAdapter);
         if (!mVolumeLineItems.isEmpty()) {
