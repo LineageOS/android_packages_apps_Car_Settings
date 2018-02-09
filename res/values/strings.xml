@@ -357,6 +357,8 @@
     <string name="user_settings_details_title">Profile info</string>
     <!-- User settings label for user name [CHAR LIMIT=25] -->
     <string name="user_name_label">Name</string>
+    <!-- User summary to indicate that user is currently not set up [CHAR LIMIT=100] -->
+    <string name="user_summary_not_set_up">Not set up</string>
 
     <!-- Title for settings that lead into User and Account information [CHAR LIMIT=25] -->
     <string name="user_and_account_settings_title">Users &amp; accounts</string>

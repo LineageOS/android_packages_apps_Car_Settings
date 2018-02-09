@@ -93,6 +93,12 @@ class UsersItemProvider extends ListItemProvider {
         item.setPrimaryActionIcon(mUserManagerHelper.getUserIcon(userInfo),
                 false /* useLargeIcon */);
         item.setTitle(title);
+
+        if (!mUserManagerHelper.isInitialized(userInfo)) {
+            // Indicate that the user has not been initialized yet.
+            item.setBody(mContext.getString(R.string.user_summary_not_set_up));
+        }
+
         item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
         item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
