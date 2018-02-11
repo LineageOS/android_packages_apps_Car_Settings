@@ -16,14 +16,15 @@
 package com.android.car.settings.sound;
 
 import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
+import android.car.media.CarVolumeGroup;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
-import android.media.AudioAttributes;
+import android.database.ContentObserver;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 
@@ -34,7 +35,6 @@ import com.android.car.settings.common.BaseFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.car.widget.DayNightStyle;
 import androidx.car.widget.PagedListView;
 
 /**
@@ -45,35 +45,41 @@ public class SoundSettingsFragment extends BaseFragment {
 
     private final List<VolumeLineItem> mVolumeLineItems = new ArrayList<>();
 
-    private final List<VolumeControlSliderItem> mVolumeControlSliderItems = new ArrayList<>();
-
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
-                // Populates volume slider items from mVolumeControlSliderItems to UI.
-                for (VolumeControlSliderItem volumeControlSliderItem : mVolumeControlSliderItems) {
+                CarVolumeGroup[] carVolumeGroups = mCarAudioManager.getVolumeGroups();
+                // Populates volume slider items from volume groups to UI.
+                for (CarVolumeGroup volumeGroup : carVolumeGroups) {
                     mVolumeLineItems.add(new VolumeLineItem(
-                            getContext(),
                             mCarAudioManager,
-                            volumeControlSliderItem.usage,
-                            volumeControlSliderItem.nameStringId,
-                            volumeControlSliderItem.iconId));
+                            volumeGroup,
+                            getIconResId(volumeGroup)));
                 }
                 // if list is already initiated, update it's content.
                 if (mPagedListAdapter != null) {
                     mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
                 }
+                mCarAudioManager.registerVolumeChangeObserver(mVolumeChangeObserver);
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car is not connected!", e);
-                return;
             }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            mCarAudioManager.unregisterVolumeChangeObserver(mVolumeChangeObserver);
+            mVolumeLineItems.clear();
             mCarAudioManager = null;
+        }
+    };
+
+    private final ContentObserver mVolumeChangeObserver = new ContentObserver(new Handler()) {
+        @Override
+        public void onChange(boolean selfChange) {
+            mPagedListAdapter.notifyDataSetChanged();
         }
     };
 
@@ -95,20 +101,6 @@ public class SoundSettingsFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Defines available volume slider items here. These items would be populated to UI
-        // once car audio service is connected.
-        mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                AudioAttributes.USAGE_MEDIA,
-                R.string.media_volume_title,
-                com.android.internal.R.drawable.ic_audio_media));
-        mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                AudioAttributes.USAGE_NOTIFICATION_RINGTONE,
-                R.string.ring_volume_title,
-                com.android.internal.R.drawable.ic_audio_ring_notif));
-        mVolumeControlSliderItems.add(new VolumeControlSliderItem(
-                AudioAttributes.USAGE_ASSISTANCE_NAVIGATION_GUIDANCE,
-                R.string.navi_volume_title,
-                R.drawable.ic_audio_navi));
         mCar = Car.createCar(getContext(), mServiceConnection);
     }
 
@@ -116,7 +108,6 @@ public class SoundSettingsFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mListView = getView().findViewById(R.id.list);
-        mListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mPagedListAdapter = new TypedPagedListAdapter(getContext());
         mListView.setAdapter(mPagedListAdapter);
         if (!mVolumeLineItems.isEmpty()) {
@@ -133,49 +124,19 @@ public class SoundSettingsFragment extends BaseFragment {
     @Override
     public void onStop() {
         super.onStop();
-        for (VolumeLineItem item : mVolumeLineItems) {
-            item.stop();
-        }
-        mVolumeLineItems.clear();
         mCar.disconnect();
     }
 
     /**
-     * Represents a slider item for volume control.
+     * TODO: return the drawable resource id by a given {@link CarVolumeGroup}.
+     *
+     * Settings and Car service normally won't be in the same package, therefore it's impractical
+     * to include the drawable resource id in {@link CarVolumeGroup}.
+     *
+     * @param carVolumeGroup {@link CarVolumeGroup} instance to get the drawable resource id for
+     * @return Drawable resource id to represent the {@link CarVolumeGroup} on UI
      */
-    private static final class VolumeControlSliderItem {
-        @AudioAttributes.AttributeUsage
-        final int usage;
-
-        @StringRes
-        final int nameStringId;
-
-        @DrawableRes
-        final int iconId;
-
-        VolumeControlSliderItem(
-                @AudioAttributes.AttributeUsage int usage,
-                @StringRes int nameStringId,
-                @DrawableRes int iconId) {
-            this.usage = usage;
-            this.nameStringId = nameStringId;
-            this.iconId = iconId;
-        }
-
-        @Override
-        public int hashCode() {
-            return usage;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof VolumeControlSliderItem)) {
-                return false;
-            }
-            return usage == ((VolumeControlSliderItem) o).usage;
-        }
+    private @DrawableRes int getIconResId(CarVolumeGroup carVolumeGroup) {
+        return R.drawable.ic_audio_navi;
     }
 }

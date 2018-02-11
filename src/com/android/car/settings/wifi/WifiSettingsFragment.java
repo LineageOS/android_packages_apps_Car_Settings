@@ -70,9 +70,6 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         } else {
             showMessage(R.string.wifi_disabled);
         }
-        // Set this to light mode, since the scroll bar buttons always appear
-        // on top of a dark scrim.
-        mListView.setDayNightStyle(DayNightStyle.FORCE_DAY);
         mAdapter = new AccessPointListAdapter(
                 getContext(),
                 mCarWifiManager,
