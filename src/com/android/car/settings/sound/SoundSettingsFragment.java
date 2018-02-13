@@ -16,10 +16,10 @@
 package com.android.car.settings.sound;
 
 import android.annotation.DrawableRes;
+import android.annotation.StringRes;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
-import android.car.media.CarVolumeGroup;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.database.ContentObserver;
@@ -50,13 +50,15 @@ public class SoundSettingsFragment extends BaseFragment {
         public void onServiceConnected(ComponentName name, IBinder service) {
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
-                CarVolumeGroup[] carVolumeGroups = mCarAudioManager.getVolumeGroups();
+                int volumeGroupCount = mCarAudioManager.getVolumeGroupCount();
                 // Populates volume slider items from volume groups to UI.
-                for (CarVolumeGroup volumeGroup : carVolumeGroups) {
+                for (int groupId = 0; groupId < volumeGroupCount; groupId++) {
                     mVolumeLineItems.add(new VolumeLineItem(
+                            getContext(),
                             mCarAudioManager,
-                            volumeGroup,
-                            getIconResId(volumeGroup)));
+                            groupId,
+                            getTitleResId(groupId),
+                            getIconResId(groupId)));
                 }
                 // if list is already initiated, update it's content.
                 if (mPagedListAdapter != null) {
@@ -128,15 +130,28 @@ public class SoundSettingsFragment extends BaseFragment {
     }
 
     /**
-     * TODO: return the drawable resource id by a given {@link CarVolumeGroup}.
+     * Gets the title string resource id by a given volume group id.
      *
-     * Settings and Car service normally won't be in the same package, therefore it's impractical
-     * to include the drawable resource id in {@link CarVolumeGroup}.
+     * TODO(hwwang): enumerate the audio usages by group id and returns the title
+     * string resource id by the hero usage.
      *
-     * @param carVolumeGroup {@link CarVolumeGroup} instance to get the drawable resource id for
-     * @return Drawable resource id to represent the {@link CarVolumeGroup} on UI
+     * @param volumeGroupId The id of a volume group to get the title resource id for
+     * @return String resource id to represent the volume group on UI
      */
-    private @DrawableRes int getIconResId(CarVolumeGroup carVolumeGroup) {
+    private @StringRes int getTitleResId(int volumeGroupId) {
+        return R.string.about_settings;
+    }
+
+    /**
+     * Gets the drawable resource id by a given volume group id.
+     *
+     * TODO(hwwang): enumerate the audio usages by group id and returns the icon
+     * drawable resource id by the first recognized usage.
+     *
+     * @param volumeGroupId The id of a volume group to get the drawable resource id for
+     * @return Drawable resource id to represent the volume group on UI
+     */
+    private @DrawableRes int getIconResId(int volumeGroupId) {
         return R.drawable.ic_audio_navi;
     }
 }
