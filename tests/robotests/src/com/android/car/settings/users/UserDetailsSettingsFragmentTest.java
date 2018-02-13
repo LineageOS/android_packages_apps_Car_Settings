@@ -36,6 +36,7 @@ import com.android.car.settings.TestConfig;
 import com.android.car.settings.testutils.ShadowActivityManager;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -72,6 +73,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that user name of the profile in question is displayed in the TextInputEditTest field.
      */
     @Test
+    @Ignore
     public void testUserNameDisplayedInDetails() {
         int userId = 123;
         int differentUserId = 345;
@@ -86,6 +88,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that non-owner users can edit their own name.
      */
     @Test
+    @Ignore
     public void testIfNotOwnerCanEditThemselves() {
         int userId = 123;
         createUserDetailsSettingsFragment(userId, userId); // User editing their own profile.
@@ -99,6 +102,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that non-owner users cannot edit the names of other users.
      */
     @Test
+    @Ignore
     public void testIfNotOwnerCanNotEditOthers() {
         int userId = 123;
         int differentUserId = 345;
@@ -114,6 +118,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that owner user can edit everyone's name.
      */
     @Test
+    @Ignore
     public void testIfOwnerCanEditOthers() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
@@ -128,6 +133,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that ok and cancel button are hidden by default.
      */
     @Test
+    @Ignore
     public void testEditButtonsHiddenByDefault() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
@@ -144,6 +150,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that ok and cancel button appear after the user starts editing the name.
      */
     @Test
+    @Ignore
     public void testEditButtonsAppearOnFocus() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
@@ -164,6 +171,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that clicking OK saves the new name for the user.
      */
     @Test
+    @Ignore
     public void testClickingOkSavesNewUserName() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
@@ -183,6 +191,7 @@ public class UserDetailsSettingsFragmentTest {
      * Tests that clicking Cancel brings us back to the previous fragment in activity.
      */
     @Test
+    @Ignore
     public void testClickingCancelInvokesGoingBack() {
         int differentUserId = 345;
         // Owner editing someone else's profile. UserHandle.USER_SYSTEM is the owner id.
