@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -31,8 +32,8 @@ import android.os.UserManager;
 import android.util.Log;
 
 import com.android.car.settings.R;
+import com.android.internal.util.UserIcons;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -134,26 +135,6 @@ public final class UserManagerHelper {
     }
 
     /**
-     * Gets an icon for the user.
-     *
-     * @param userInfo User for which we want to get the icon.
-     * @return a drawable for the icon
-     */
-    public Drawable getUserIcon(UserInfo userInfo) {
-        Bitmap picture = mUserManager.getUserIcon(userInfo.id);
-
-        if (picture == null) {
-            return mContext.getDrawable(R.drawable.ic_user);
-        }
-
-        int avatarSize = mContext.getResources()
-                .getDimensionPixelSize(R.dimen.car_primary_icon_size);
-        picture = Bitmap.createScaledBitmap(
-                picture, avatarSize, avatarSize, true /* filter */);
-        return new BitmapDrawable(mContext.getResources(), picture);
-    }
-
-    /**
      * Creates a new user on the system.
      */
     public UserInfo createNewUser() {
@@ -165,6 +146,7 @@ public final class UserManagerHelper {
             Log.w(TAG, "can't create user.");
             return null;
         }
+        assignDefaultIcon(user);
         return user;
     }
 
@@ -268,6 +250,43 @@ public final class UserManagerHelper {
             return;
         }
         switchToUserId(guest.id);
+    }
+
+    /**
+     * Gets an icon for the user.
+     *
+     * @param userInfo User for which we want to get the icon.
+     * @return a drawable for the icon
+     */
+    public Drawable getUserIcon(UserInfo userInfo) {
+        Bitmap picture = mUserManager.getUserIcon(userInfo.id);
+
+        if (picture == null) {
+            picture = assignDefaultIcon(userInfo);
+        }
+
+        if (picture == null) {
+            return mContext.getDrawable(R.drawable.ic_user);
+        }
+
+        int avatarSize = mContext.getResources()
+                .getDimensionPixelSize(R.dimen.car_primary_icon_size);
+        picture = Bitmap.createScaledBitmap(
+                picture, avatarSize, avatarSize, true /* filter */);
+        return new BitmapDrawable(mContext.getResources(), picture);
+    }
+
+    /**
+     * Assigns a default icon to a user according to the user's id.
+     *
+     * @param userInfo User to assign a default icon to.
+     * @return Bitmap that has been assigned to the user.
+     */
+    private Bitmap assignDefaultIcon(UserInfo userInfo) {
+        Bitmap bitmap = UserIcons.convertToBitmap(
+                UserIcons.getDefaultUserIcon(mContext.getResources(), userInfo.id, false));
+        mUserManager.setUserIcon(userInfo.id, bitmap);
+        return bitmap;
     }
 
     private void switchToUserId(int id) {
