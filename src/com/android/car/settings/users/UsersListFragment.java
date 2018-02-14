@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,40 +14,31 @@
  * limitations under the License
  */
 
-package com.android.car.settings.accounts;
+package com.android.car.settings.users;
 
-import android.accounts.Account;
-import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.android.car.settings.R;
+import com.android.car.settings.accounts.UserDetailsFragment;
 import com.android.car.settings.common.ListItemSettingsFragment;
-import com.android.car.settings.users.ConfirmCreateNewUserDialog;
-import com.android.car.settings.users.UserDetailsSettingsFragment;
-import com.android.car.settings.users.UserManagerHelper;
-import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import androidx.car.widget.ListItemProvider;
 
 /**
  * Lists all Users available on this device.
  */
-public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
-        implements AuthenticatorHelper.OnAccountsUpdateListener,
-        UserManagerHelper.OnUsersUpdateListener,
-        UserAndAccountItemProvider.UserAndAccountClickListener,
+public class UsersListFragment extends ListItemSettingsFragment
+        implements UserManagerHelper.OnUsersUpdateListener,
+        UsersItemProvider.UserClickListener,
         ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener {
-    private static final String TAG = "UserAndAccountSettings";
+    private static final String TAG = "UsersListFragment";
 
-    private Context mContext;
-    private UserAndAccountItemProvider mItemProvider;
-    private AccountManagerHelper mAccountManagerHelper;
+    private UsersItemProvider mItemProvider;
     private UserManagerHelper mUserManagerHelper;
 
     private ProgressBar mProgressBar;
@@ -55,26 +46,20 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
 
     private AsyncTask mAddNewUserTask;
 
-    public static UserAndAccountSettingsFragment newInstance() {
-        UserAndAccountSettingsFragment
-                userAndAccountSettingsFragment = new UserAndAccountSettingsFragment();
+    public static UsersListFragment newInstance() {
+        UsersListFragment usersListFragment = new UsersListFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.user_and_account_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        userAndAccountSettingsFragment.setArguments(bundle);
-        return userAndAccountSettingsFragment;
+        usersListFragment.setArguments(bundle);
+        return usersListFragment;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        mContext = getContext();
-
-        mAccountManagerHelper = new AccountManagerHelper(mContext, this);
-        mAccountManagerHelper.startListeningToAccountUpdates();
-
-        mUserManagerHelper = new UserManagerHelper(mContext);
-        mItemProvider = new UserAndAccountItemProvider(mContext, this,
-                mUserManagerHelper, mAccountManagerHelper);
+        mUserManagerHelper = new UserManagerHelper(getContext());
+        mItemProvider =
+                new UsersItemProvider(getContext(), this, mUserManagerHelper);
 
         // Register to receive changes to the users.
         mUserManagerHelper.registerOnUsersUpdateListener(this);
@@ -109,12 +94,6 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         }
 
         mUserManagerHelper.unregisterOnUsersUpdateListener();
-        mAccountManagerHelper.stopListeningToAccountUpdates();
-    }
-
-    @Override
-    public void onAccountsUpdate(UserHandle userHandle) {
-        refreshListItems();
     }
 
     @Override
@@ -122,23 +101,14 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
         refreshListItems();
     }
 
-    private void refreshListItems() {
-        mItemProvider.refreshItems();
-        refreshList();
-    }
-
     @Override
     public void onUserClicked(UserInfo userInfo) {
-        mFragmentController.launchFragment(UserDetailsSettingsFragment.getInstance(userInfo));
-    }
-
-    @Override
-    public void onAccountClicked(Account account, UserInfo userInfo) {
-        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(account, userInfo));
-    }
-
-    public void onAddAccountClicked() {
-        mFragmentController.launchFragment(ChooseAccountFragment.newInstance());
+        if (mUserManagerHelper.userIsCurrentUser(userInfo)) {
+            // Is it's current user, launch fragment that displays their accounts.
+            mFragmentController.launchFragment(UserDetailsFragment.newInstance());
+        } else {
+            mFragmentController.launchFragment(EditUsernameFragment.getInstance(userInfo));
+        }
     }
 
     @Override
@@ -166,5 +136,10 @@ public class UserAndAccountSettingsFragment extends ListItemSettingsFragment
                 mUserManagerHelper.switchToUser(user);
             }
         }
+    }
+
+    private void refreshListItems() {
+        mItemProvider.refreshItems();
+        refreshList();
     }
 }

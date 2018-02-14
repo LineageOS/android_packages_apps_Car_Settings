@@ -124,6 +124,16 @@ public final class UserManagerHelper {
     }
 
     /**
+     * Returns whether or not this user has gone through its first-time initialization.
+     *
+     * @param user User whose initialization we're checking.
+     * @return {@code true} if initialized, {@code false} if it's not.
+     */
+    public boolean isInitialized(UserInfo user) {
+        return (user.flags & UserInfo.FLAG_INITIALIZED) != 0;
+    }
+
+    /**
      * Gets an icon for the user.
      *
      * @param userInfo User for which we want to get the icon.
