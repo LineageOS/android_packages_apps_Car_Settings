@@ -60,7 +60,11 @@ public class QuickSettingActivity extends AppCompatActivity {
         super.onStart();
         mGridAdapter = new QuickSettingGridAdapter(this);
         WifiTile wifiTile = new WifiTile(this, mGridAdapter);
+        BluetoothTile bluetoothTile = new BluetoothTile(this, mGridAdapter);
+        DayNightTile dayNightTile = new DayNightTile(this, mGridAdapter);
         mGridAdapter.addTile(wifiTile);
+        mGridAdapter.addTile(bluetoothTile);
+        mGridAdapter.addTile(dayNightTile);
         mGridView.setAdapter(mGridAdapter);
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
         lineItems.add(new BrightnessLineItem(this));
