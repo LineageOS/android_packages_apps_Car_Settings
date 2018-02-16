@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/car_padding_2"
-            android:textAppearance="@style/CarTitle" />
+            android:textAppearance="@style/TextAppearance.Car.Title2" />
 
         <TextView
             android:id="@+id/description_text"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/car_padding_5"
             android:gravity="center"
-            android:textAppearance="@style/CarBody2" />
+            android:textAppearance="@style/TextAppearance.Car.Body2" />
 
         <!-- confirm / restart buttons -->
         <LinearLayout

@@ -25,8 +25,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/car_app_bar_height"
-        app:theme="@style/ActionBarStyle.Car"
-        app:contentInsetStart="0dp" />
+        app:contentInsetStart="0dp"
+        style="@style/ActionBarStyle.Car" />
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/car_list_divider_height"

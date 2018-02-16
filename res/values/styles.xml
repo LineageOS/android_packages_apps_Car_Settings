@@ -19,14 +19,14 @@
 
     <attr name="WifiSignalColor" format="reference" />
 
-    <style name="CarSettingTheme" parent="@style/Theme.Car.NoActionBar">
+    <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="WifiSignalColor">?android:attr/colorAccent</item>
         <item name="android:background">@color/car_card</item>
         <item name="android:windowAnimationStyle">@style/SettingAnimationStyle</item>
     </style>
 
-    <style name="CarQuickSettingTheme" parent="@style/Theme.Car.NoActionBar">
+    <style name="CarQuickSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/QsAnimationStyle</item>
     </style>
 
@@ -40,7 +40,7 @@
         <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
     </style>
 
-    <style name="ActionBarStyle.Car" parent="@style/CarToolbarTheme">
+    <style name="ActionBarStyle.Car" parent="Widget.Car.Toolbar">
         <item name="actionBarSize">@dimen/car_app_bar_height</item>
     </style>
 
@@ -55,7 +55,8 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
-    <style name="SettingsListHeader" parent="CarBody2">
+
+    <style name="SettingsListHeader" parent="TextAppearance.Car.Body2">
         <item name="android:textColor">@color/car_accent</item>
     </style>
 
