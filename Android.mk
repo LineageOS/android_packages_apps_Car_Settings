@@ -53,6 +53,7 @@ ifeq (,$(TARGET_BUILD_APPS))
   include packages/apps/Car/libs/car-list/car-list.mk
   include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
   include packages/services/Car/car-support-lib/car-support.mk
+  include frameworks/opt/setupwizard/library/common-gingerbread.mk
   include frameworks/base/packages/SettingsLib/common.mk
 
   include $(BUILD_PACKAGE)
