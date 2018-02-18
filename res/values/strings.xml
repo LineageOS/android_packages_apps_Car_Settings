@@ -352,7 +352,7 @@
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
-    <string name="current_user_name">%1$s (current)</string>
+    <string name="current_user_name">You (%1$s)</string>
     <!-- User settings details screen title [CHAR LIMIT=25] -->
     <string name="user_settings_details_title">Profile info</string>
     <!-- User settings label for user name [CHAR LIMIT=25] -->
@@ -393,11 +393,62 @@
     <!-- Message to inform user that the newly created user will have permissions to update apps for all other users. [CHAR LIMIT=100] -->
     <string name="user_add_user_message_update">Any user can update apps for all other users.</string>
 
-    <!-- generic --><skip />
+    <!-- security lock -->
+    <!-- Title for security settings [CHAR LIMIT=20] -->
+    <string name="security_settings_title">Security</string>
+    <!-- Subtitle for security settings [CHAR LIMIT=20] -->
+    <string name="security_settings_subtitle">Screen lock</string>
+    <!-- Title string shown in choose screen lock for lock pattern [CHAR LIMIT=40] -->
+    <string name="security_lock_pattern">Pattern</string>
+    <!-- Title string shown in choose screen lock for lock pin [CHAR LIMIT=40] -->
+    <string name="security_lock_pin">Pin</string>
+    <!-- Title string shown in choose screen lock for lock password [CHAR LIMIT=40] -->
+    <string name="security_lock_password">Password</string>
+    <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=22] -->
+    <string name="lock_settings_picker_title">Choose a lock type</string>
+    <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
+    <string name="lockpattern_confirm_button_text">Confirm</string>
+    <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  If they are not satisfied with this pattern, they click this button to redraw the pattern. -->
+    <string name="lockpattern_restart_button_text">Redraw</string>
+    <!-- Choose unlock pattern screen button. After first valid enter, they will be prompt to confirm page. [CHAR LIMIT=20] -->
+    <string name="lockpattern_continue_button_text">Continue</string>
+    <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
+    <string name="set_screen_lock">Set a screen lock</string>
+    <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
+    <string name="choose_lock_pattern_message">For security, set a pattern</string>
+    <!-- Choose unlock pattern screen button. If they are supposed to enter their current pattern before being able to draw another one, and they made a mistake, they hit this button to try again [CHAR LIMIT=20] -->
+    <string name="lockpattern_retry_button_text">Clear</string>
+    <!-- Choose unlock pattern screen button. They can choose to cancel the setting of lock pattern. [CHAR LIMIT=20] -->
+    <string name="lockpattern_cancel_button_text">Cancel</string>
+    <!-- Choose unlock pattern screen message, confirm pattern success.[CHAR LIMIT=40] -->
+    <string name="lockpattern_pattern_confirmed">Your new unlock pattern</string>
+    <!-- Choose unlock pattern screen instruction on top of screen. When they are supposed to draw a new unlock pattern (for example, if they are changing their unlock patterns). [CHAR LIMIT=40] -->
+    <string name="lockpattern_recording_intro_header">Draw an unlock pattern</string>
+    <!-- Choose unlock pattern screen instruction on top of screen while drawing pattern. [CHAR LIMIT=40] -->
+    <string name="lockpattern_recording_inprogress">Release finger when done</string>
+    <!-- Choose unlock pattern screen message after drawing pattern. [CHAR LIMIT=40] -->
+    <string name="lockpattern_pattern_entered">Pattern recorded</string>
+    <!-- Choose unlock pattern screen instruction to confirm pattern. [CHAR LIMIT=40] -->
+    <string name="lockpattern_need_to_confirm">Draw pattern again to confirm</string>
+    <!-- Choose unlock pattern screen instruction on top of screen if user doesn't connect enough dots. [CHAR LIMIT=40] -->
+    <string name="lockpattern_recording_incorrect_too_short">Connect at least 4 dots. Try again.</string>
+    <!-- Choose unlock pattern screen instruction if user draws incorrect pattern [CHAR LIMIT=30] -->
+    <string name="lockpattern_pattern_wrong">Wrong pattern</string>
+    <!-- Choose unlock pattern screen instruction, the help instructions (an animation) caption. [CHAR LIMIT=40] -->
+    <string name="lockpattern_settings_help_how_to_record">How to draw an unlock pattern</string>
+    <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
+    <string name="okay">OK</string>
+
+    <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
+    <string name="setup_lock_settings_options_button_label">Screen lock options</string>
+
+    <!-- generic -->
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
     <!-- Delete button text [CHAR LIMIT=20] -->
     <string name="delete_button">Delete</string>
     <!-- Remove button text [CHAR LIMIT=20] -->
     <string name="remove_button">Remove</string>
+    <!-- Cancel button text [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
 </resources>

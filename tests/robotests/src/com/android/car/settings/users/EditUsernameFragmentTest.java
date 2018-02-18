@@ -31,9 +31,9 @@ import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.TestAppCompatActivity;
 import com.android.car.settings.TestConfig;
 import com.android.car.settings.testutils.ShadowActivityManager;
+import com.android.car.settings.testutils.TestAppCompatActivity;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -206,9 +206,48 @@ public class EditUsernameFragmentTest {
         verify(mUserManager, never()).setUserName(differentUserId, "new_user_name");
     }
 
+    /**
+     * Tests that if the DISALLOW_REMOVE_USER restriction is on, the removeUserButton is hidden
+     */
+    @Test
+    public void testDisallowRemoveUsersPermissionHidesRemoveUserButton() {
+        int userId = 123;
+        int differentUserId = 345;
+        doReturn(true).when(mUserManager)
+                .hasUserRestriction(UserManager.DISALLOW_REMOVE_USER);
+
+        createEditUsernameFragment(userId, differentUserId);
+
+        Button removeUserButton = (Button) mTestActivity.findViewById(R.id.action_button2);
+
+        assertThat(removeUserButton.getVisibility()).isEqualTo(View.GONE);
+    }
+
+    /**
+     * Tests that if the DISALLOW_USER_SWITCH restriction is on, the switchUserButton is hidden
+     */
+    @Test
+    public void testDisallowSwitchUsersPermissionHidesSwitchUserButton() {
+        int userId = 123;
+        int differentUserId = 345;
+        doReturn(true).when(mUserManager)
+                .hasUserRestriction(UserManager.DISALLOW_USER_SWITCH);
+
+        createEditUsernameFragment(userId, differentUserId);
+
+        Button switchUserButton = (Button) mTestActivity.findViewById(R.id.action_button1);
+
+        assertThat(switchUserButton.getVisibility()).isEqualTo(View.GONE);
+    }
+
     private void createEditUsernameFragment(int currentUserId, int detailsUserId) {
         UserInfo testUser = new UserInfo(detailsUserId /* id */, "test_name", 0 /* flags */);
         doReturn(testUser).when(mUserManager).getUserInfo(detailsUserId);
+
+
+        if (currentUserId == UserHandle.USER_SYSTEM) {
+            doReturn(true).when(mUserManager).isSystemUser();
+        }
 
         UserInfo currentUser = new UserInfo(currentUserId, "current_user", 0 /* flags */);
         doReturn(currentUser).when(mUserManager).getUserInfo(UserHandle.myUserId());

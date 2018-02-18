@@ -42,26 +42,6 @@ class UserAndAccountItemProvider extends ListItemProvider {
     private final UserManagerHelper mUserManagerHelper;
     private final AccountManagerHelper mAccountManagerHelper;
 
-    /**
-     * Interface for registering clicks on user or account items.
-     */
-    interface UserAndAccountClickListener {
-        /**
-         * Invoked when user is clicked.
-         *
-         * @param userInfo User for which the click is registered.
-         */
-        void onUserClicked(UserInfo userInfo);
-
-        /**
-         * Invoked when a specific account is clicked on.
-         *
-         * @param account Account for which to display details.
-         * @param userInfo User who's the owner of the account.
-         */
-        void onAccountClicked(Account account, UserInfo userInfo);
-    }
-
     UserAndAccountItemProvider(Context context, UserAndAccountClickListener itemClickListener,
             UserManagerHelper userManagerHelper, AccountManagerHelper accountManagerHelper) {
         mContext = context;
@@ -98,13 +78,16 @@ class UserAndAccountItemProvider extends ListItemProvider {
             return;
         }
 
-        // Add "Account for $User" title for a list of accounts.
-        mItems.add(createSubtitleItem(
-                mContext.getString(R.string.account_list_title, currUserInfo.name)));
+        // Only add account-related items if the User can Modify Accounts
+        if (mUserManagerHelper.canModifyAccounts()) {
+            // Add "Account for $User" title for a list of accounts.
+            mItems.add(createSubtitleItem(
+                    mContext.getString(R.string.account_list_title, currUserInfo.name)));
 
-        // Add an item for each account owned by the current user (1st and 3rd party accounts)
-        for (Account account : accounts) {
-            mItems.add(createAccountItem(account, account.type, currUserInfo));
+            // Add an item for each account owned by the current user (1st and 3rd party accounts)
+            for (Account account : accounts) {
+                mItems.add(createAccountItem(account, account.type, currUserInfo));
+            }
         }
     }
 
@@ -150,5 +133,25 @@ class UserAndAccountItemProvider extends ListItemProvider {
         // All of those without a divider between them will be part of the same "group".
         item.setHideDivider(true);
         return item;
+    }
+
+    /**
+     * Interface for registering clicks on user or account items.
+     */
+    interface UserAndAccountClickListener {
+        /**
+         * Invoked when user is clicked.
+         *
+         * @param userInfo User for which the click is registered.
+         */
+        void onUserClicked(UserInfo userInfo);
+
+        /**
+         * Invoked when a specific account is clicked on.
+         *
+         * @param account  Account for which to display details.
+         * @param userInfo User who's the owner of the account.
+         */
+        void onAccountClicked(Account account, UserInfo userInfo);
     }
 }
