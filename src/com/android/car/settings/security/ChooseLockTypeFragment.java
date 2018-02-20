@@ -16,12 +16,14 @@
 
 package com.android.car.settings.security;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.internal.widget.LockPatternUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +39,10 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
     static final String LOCK_PATTERN = "lockPattern";
     static final String LOCK_PIN = "lockPin";
     static final String LOCK_PASSWORD = "lockPassword";
-    private final List<ListItem> mItems = new ArrayList<>();
+
+    // Arbitrary request code for choose security lock activity.
+    private static final int REQUEST_CHOOSE_LOCK = 10001;
+
     private ListItemProvider mItemProvider;
 
     public static ChooseLockTypeFragment newInstance() {
@@ -65,19 +70,48 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
     private List<ListItem> getListItems() {
         List<ListItem> items = new ArrayList<>();
         items.add(createLockPatternLineItem());
+        items.add(createLockPasswordLineItem());
+        items.add(createLockPinLineItem());
         return items;
     }
 
     private ListItem createLockPatternLineItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_pattern));
-        item.setOnClickListener(view -> startChooseSecurityLockActivity(LOCK_PATTERN));
+        item.setOnClickListener(view -> startChooseLockPatternActivity());
         return item;
     }
 
-    private void startChooseSecurityLockActivity(String lockType) {
-        Intent intent = new Intent(getContext(), ChooseSecurityLockActivity.class);
-        intent.putExtra(ChooseSecurityLockActivity.EXTRA_LOCK_TYPE, lockType);
-        getContext().startActivity(intent);
+    private ListItem createLockPasswordLineItem() {
+        TextListItem item = new TextListItem(getContext());
+        item.setTitle(getString(R.string.security_lock_password));
+        item.setOnClickListener(view -> startChooseLockPasswordActivity());
+        return item;
+    }
+
+    private ListItem createLockPinLineItem() {
+        TextListItem item = new TextListItem(getContext());
+        item.setTitle(getString(R.string.security_lock_pin));
+        item.setOnClickListener(view -> startChooseLockPinActivity());
+        return item;
+    }
+
+    private void startChooseLockPatternActivity() {
+        Intent intent = new Intent(getContext(), ChooseLockPatternActivity.class);
+        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
+    }
+
+    private void startChooseLockPasswordActivity() {
+        Intent intent = new Intent(getContext(), ChooseLockPasswordActivity.class);
+        intent.putExtra(LockPatternUtils.PASSWORD_TYPE_KEY,
+                DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC);
+        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
+    }
+
+    private void startChooseLockPinActivity() {
+        Intent intent = new Intent(getContext(), ChooseLockPasswordActivity.class);
+        intent.putExtra(LockPatternUtils.PASSWORD_TYPE_KEY,
+                DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
+        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
     }
 }

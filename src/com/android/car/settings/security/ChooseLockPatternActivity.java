@@ -293,8 +293,8 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
      * The states of the primary footer button.
      */
     enum PrimaryButtonState {
-        Continue(R.string.lockpattern_continue_button_text, true),
-        ContinueDisabled(R.string.lockpattern_continue_button_text, false),
+        Continue(R.string.continue_button_text, true),
+        ContinueDisabled(R.string.continue_button_text, false),
         Confirm(R.string.lockpattern_confirm_button_text, true),
         ConfirmDisabled(R.string.lockpattern_confirm_button_text, false),
         Ok(R.string.okay, true);

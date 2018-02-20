@@ -410,8 +410,8 @@
     <string name="lockpattern_confirm_button_text">Confirm</string>
     <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  If they are not satisfied with this pattern, they click this button to redraw the pattern. -->
     <string name="lockpattern_restart_button_text">Redraw</string>
-    <!-- Choose unlock pattern screen button. After first valid enter, they will be prompt to confirm page. [CHAR LIMIT=20] -->
-    <string name="lockpattern_continue_button_text">Continue</string>
+    <!-- Choose security lock screen button. After first valid enter, they will be prompt to confirm page. [CHAR LIMIT=20] -->
+    <string name="continue_button_text">Continue</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
@@ -438,6 +438,104 @@
     <string name="lockpattern_settings_help_how_to_record">How to draw an unlock pattern</string>
     <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
     <string name="okay">OK</string>
+
+    <!-- Description for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
+    <string name="choose_lock_pin_message">For security, set a PIN</string>
+    <!-- Header on password confirm screen [CHAR LIMIT=40] -->
+    <string name="confirm_your_pin_header">Re-enter your PIN</string>
+    <!-- Hints for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
+    <string name="choose_lock_pin_hints">PIN must be at least 4 digits</string>
+    <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
+    <string name="lockpin_invalid_pin">Pin invalid, must be at least 4 digits</string>
+    <!-- Header on pin confirm screen if second pin doesn't match the first. [CHAR LIMIT=30]-->
+    <string name="confirm_pins_dont_match">PINs don\'t match</string>
+    <!-- Description for Choose Lock Password Screen [CHAR_LIMIT=40] -->
+    <string name="choose_lock_password_message">For security, set a password</string>
+    <!-- Header on password confirm screen [CHAR LIMIT=40] -->
+    <string name="confirm_your_password_header">Re-enter your password</string>
+    <!-- Header on password confirm screen if second password doesn't match the first. [CHAR LIMIT=30] -->
+    <string name="confirm_passwords_dont_match">Passwords don\'t match</string>
+    <!-- Label for Clear button when entering PIN / password. [CHAR LIMIT=30] -->
+    <string name="lockpassword_clear_label">Clear</string>
+    <!-- Label for Cancel button when entering PIN / password. [CHAR LIMIT=30] -->
+    <string name="lockpassword_cancel_label">Cancel</string>
+    <!-- Label for Confirm button when entering PIN / password the second time. [CHAR LIMIT=30] -->
+    <string name="lockpassword_confirm_label">Confirm</string>
+    <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=40] -->
+    <string name="choose_lock_password_hints">Password must be between 4-8 characters with at least 1 number</string>
+    <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
+    <string name="lockpassword_password_too_short">Must be at least <xliff:g id="count" example="3">%d</xliff:g> characters</string>
+    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=40] -->
+    <string name="lockpassword_pin_too_short">PIN must be at least <xliff:g id="count" example="3">%d</xliff:g> digits</string>
+
+    <!-- Error shown in popup when password is too long [CHAR LIMIT=40] -->
+    <string name="lockpassword_password_too_long">Must be fewer than
+        <xliff:g id="number" example="17">%d</xliff:g> characters</string>
+    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=40] -->
+    <string name="lockpassword_pin_too_long">Must be fewer than
+        <xliff:g id="number" example="17">%d</xliff:g> digits</string>
+
+    <!-- Error shown when in PIN mode and user enters a non-digit [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9</string>
+
+    <!-- Error shown when in PIN mode and PIN has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_pin_recently_used">Device admin doesn\'t allow using a recent PIN</string>
+
+    <!-- Error shown when a user is choosing a PIN for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PIN that's less common and more complicated. [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_pin_blacklisted_by_admin">Common PINs are blocked by your IT admin. Try a different PIN.</string>
+
+    <!-- Error shown when in PASSWORD mode and user enters an invalid character [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_illegal_character">This can\'t include an invalid character</string>
+
+    <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_invalid_password">Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace</string>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="one">Must contain at least 1 letter</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> letters</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of lowercase letters [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="one">Must contain at least 1 lowercase letter</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> lowercase letters</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of uppercase letters [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="one">Must contain at least 1 uppercase letter</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> uppercase letters</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of numerical digits [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="one">Must contain at least 1 numerical digit</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> numerical digits</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of special symbols [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="one">Must contain at least 1 special symbol</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> special symbols</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of non-letter characters [CHAR LIMIT=NONE] -->
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="one">Must contain at least 1 non-letter character</item>
+        <item quantity="other">Must contain at least <xliff:g id="count" example="3">%d</xliff:g> non-letter characters</item>
+    </plurals>
+
+    <!-- Error shown when in PASSWORD mode and password has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_password_recently_used">Device admin doesn\'t allow using a recent
+        password</string>
+
+    <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_password_blacklisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
+
+    <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits [CHAR LIMIT=NONE] -->
+    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence
+        of digits isn\'t allowed</string>
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
