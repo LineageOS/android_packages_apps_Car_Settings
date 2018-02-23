@@ -22,16 +22,25 @@ import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
+import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
 import android.database.ContentObserver;
+import android.media.AudioAttributes;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.util.SparseArray;
+import android.util.Xml;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,6 +52,11 @@ import androidx.car.widget.PagedListView;
 public class SoundSettingsFragment extends BaseFragment {
     private static final String TAG = "SoundSettingsFragment";
 
+    private static final String XML_TAG_VOLUME_ITEMS = "carVolumeItems";
+    private static final String XML_TAG_VOLUME_ITEM = "item";
+
+    private final SparseArray<VolumeItem> mVolumeItems = new SparseArray<>();
+
     private final List<VolumeLineItem> mVolumeLineItems = new ArrayList<>();
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -53,12 +67,14 @@ public class SoundSettingsFragment extends BaseFragment {
                 int volumeGroupCount = mCarAudioManager.getVolumeGroupCount();
                 // Populates volume slider items from volume groups to UI.
                 for (int groupId = 0; groupId < volumeGroupCount; groupId++) {
+                    final VolumeItem volumeItem = getVolumeItemForUsages(
+                            mCarAudioManager.getUsagesForVolumeGroupId(groupId));
                     mVolumeLineItems.add(new VolumeLineItem(
                             getContext(),
                             mCarAudioManager,
                             groupId,
-                            getTitleResId(groupId),
-                            getIconResId(groupId)));
+                            volumeItem.title,
+                            volumeItem.icon));
                 }
                 // if list is already initiated, update it's content.
                 if (mPagedListAdapter != null) {
@@ -101,14 +117,11 @@ public class SoundSettingsFragment extends BaseFragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mCar = Car.createCar(getContext(), mServiceConnection);
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        loadAudioUsageItems();
+        mCar = Car.createCar(getContext(), mServiceConnection);
         mListView = getView().findViewById(R.id.list);
         mPagedListAdapter = new TypedPagedListAdapter(getContext());
         mListView.setAdapter(mPagedListAdapter);
@@ -129,29 +142,69 @@ public class SoundSettingsFragment extends BaseFragment {
         mCar.disconnect();
     }
 
-    /**
-     * Gets the title string resource id by a given volume group id.
-     *
-     * TODO(hwwang): enumerate the audio usages by group id and returns the title
-     * string resource id by the hero usage.
-     *
-     * @param volumeGroupId The id of a volume group to get the title resource id for
-     * @return String resource id to represent the volume group on UI
-     */
-    private @StringRes int getTitleResId(int volumeGroupId) {
-        return R.string.about_settings;
+    private void loadAudioUsageItems() {
+        try (XmlResourceParser parser = getResources().getXml(R.xml.car_volume_items)) {
+            AttributeSet attrs = Xml.asAttributeSet(parser);
+            int type;
+            // Traverse to the first start tag
+            while ((type=parser.next()) != XmlResourceParser.END_DOCUMENT
+                    && type != XmlResourceParser.START_TAG) {
+            }
+
+            if (!XML_TAG_VOLUME_ITEMS.equals(parser.getName())) {
+                throw new RuntimeException("Meta-data does not start with carVolumeItems tag");
+            }
+            int outerDepth = parser.getDepth();
+            int rank = 0;
+            while ((type=parser.next()) != XmlResourceParser.END_DOCUMENT
+                    && (type != XmlResourceParser.END_TAG || parser.getDepth() > outerDepth)) {
+                if (type == XmlResourceParser.END_TAG) {
+                    continue;
+                }
+                if (XML_TAG_VOLUME_ITEM.equals(parser.getName())) {
+                    TypedArray item = getResources().obtainAttributes(
+                            attrs, R.styleable.carVolumeItems_item);
+                    int usage = item.getInt(R.styleable.carVolumeItems_item_usage, -1);
+                    if (usage >= 0) {
+                        mVolumeItems.put(usage, new VolumeItem(
+                                rank,
+                                item.getResourceId(R.styleable.carVolumeItems_item_title, 0),
+                                item.getResourceId(R.styleable.carVolumeItems_item_icon, 0)));
+                        rank++;
+                    }
+                    item.recycle();
+                }
+            }
+        } catch (XmlPullParserException | IOException e) {
+            Log.e(TAG, "Error parsing volume groups configuration", e);
+        }
+    }
+
+    private VolumeItem getVolumeItemForUsages(int[] usages) {
+        int rank = Integer.MAX_VALUE;
+        VolumeItem result = null;
+        for (int usage : usages) {
+            VolumeItem volumeItem = mVolumeItems.get(usage);
+            if (volumeItem.rank < rank) {
+                rank = volumeItem.rank;
+                result = volumeItem;
+            }
+        }
+        return result;
     }
 
     /**
-     * Gets the drawable resource id by a given volume group id.
-     *
-     * TODO(hwwang): enumerate the audio usages by group id and returns the icon
-     * drawable resource id by the first recognized usage.
-     *
-     * @param volumeGroupId The id of a volume group to get the drawable resource id for
-     * @return Drawable resource id to represent the volume group on UI
+     * Wrapper class which contains information to render volume item on UI.
      */
-    private @DrawableRes int getIconResId(int volumeGroupId) {
-        return R.drawable.ic_audio_navi;
+    private static class VolumeItem {
+        private final int rank;
+        private final @StringRes int title;
+        private final @DrawableRes int icon;
+
+        private VolumeItem(int rank, @StringRes int title, @DrawableRes int icon) {
+            this.rank = rank;
+            this.title = title;
+            this.icon = icon;
+        }
     }
 }
