@@ -39,5 +39,5 @@
         android:paddingTop="@dimen/car_padding_1"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tile_icon"
-        android:textAppearance="@style/CarBody2"/>
+        android:textAppearance="@style/TextAppearance.Car.Body2"/>
 </com.android.car.list.InterceptTouchRelativeLayout>

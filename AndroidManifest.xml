@@ -108,18 +108,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".security.ChooseSecurityLockActivity"
-                  android:configChanges="orientation|keyboardHidden|screenSize">
-            <intent-filter>
-                <action android:name="android.car.settings.CHOOSE_SECURITY_LOCK" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".security.ChooseLockPatternActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.car.settings.CHOOSE_LOCK_PATTERN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".security.ChooseLockPasswordActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.car.settings.CHOOSE_LOCK_PASSWORD" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

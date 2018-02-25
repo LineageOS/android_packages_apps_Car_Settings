@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/car_margin"
         android:layout_marginTop="@dimen/optical_center_offset"
-        style="@style/CarTitle"
+        android:textAppearance="@style/TextAppearance.Car.Title"
         android:textColor="@color/car_accent"
         android:layout_gravity="center_vertical"
         android:layout_centerVertical="true"
