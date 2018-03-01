@@ -73,6 +73,7 @@ public class SoundSettingsFragment extends BaseFragment {
                             getContext(),
                             mCarAudioManager,
                             groupId,
+                            volumeItem.usage,
                             volumeItem.title,
                             volumeItem.icon));
                 }
@@ -139,6 +140,9 @@ public class SoundSettingsFragment extends BaseFragment {
     @Override
     public void onStop() {
         super.onStop();
+        for (VolumeLineItem item : mVolumeLineItems) {
+            item.stop();
+        }
         mCar.disconnect();
     }
 
@@ -167,7 +171,7 @@ public class SoundSettingsFragment extends BaseFragment {
                     int usage = item.getInt(R.styleable.carVolumeItems_item_usage, -1);
                     if (usage >= 0) {
                         mVolumeItems.put(usage, new VolumeItem(
-                                rank,
+                                usage, rank,
                                 item.getResourceId(R.styleable.carVolumeItems_item_title, 0),
                                 item.getResourceId(R.styleable.carVolumeItems_item_icon, 0)));
                         rank++;
@@ -197,11 +201,14 @@ public class SoundSettingsFragment extends BaseFragment {
      * Wrapper class which contains information to render volume item on UI.
      */
     private static class VolumeItem {
+        private final @AudioAttributes.AttributeUsage int usage;
         private final int rank;
         private final @StringRes int title;
         private final @DrawableRes int icon;
 
-        private VolumeItem(int rank, @StringRes int title, @DrawableRes int icon) {
+        private VolumeItem(@AudioAttributes.AttributeUsage int usage, int rank,
+                @StringRes int title, @DrawableRes int icon) {
+            this.usage = usage;
             this.rank = rank;
             this.title = title;
             this.icon = icon;

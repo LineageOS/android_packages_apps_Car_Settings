@@ -21,7 +21,13 @@ import android.annotation.StringRes;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.Context;
-import android.media.AudioManager;
+import android.media.AudioAttributes;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.android.car.list.SeekbarLineItem;
@@ -31,18 +37,26 @@ import com.android.car.list.SeekbarLineItem;
  */
 public class VolumeLineItem extends SeekbarLineItem {
     private static final String TAG = "VolumeLineItem";
+    private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
 
     private final CarAudioManager mCarAudioManager;
+    private final Handler mUiHandler;
+    private final Ringtone mRingtone;
     private final int mVolumeGroupId;
 
     public VolumeLineItem(
             Context context,
             CarAudioManager carAudioManager,
             int volumeGroupId,
+            @AudioAttributes.AttributeUsage int usage,
             @StringRes int titleResId,
             @DrawableRes int iconResId) throws CarNotConnectedException {
         super(context.getString(titleResId), iconResId);
+
         mCarAudioManager = carAudioManager;
+        mUiHandler = new Handler(Looper.getMainLooper());
+        mRingtone = RingtoneManager.getRingtone(context, getRingtoneUri(usage));
+        mRingtone.setAudioAttributes(new AudioAttributes.Builder().setUsage(usage).build());
         mVolumeGroupId = volumeGroupId;
     }
 
@@ -79,11 +93,39 @@ public class VolumeLineItem extends SeekbarLineItem {
                 Log.w(TAG, "Ignoring volume change event because the car isn't connected");
                 return;
             }
-            // Sets the flag to FLAG_PLAY_AUDIO since this is a volume change originated from user
-            // interaction, an audio feedback should be requested in this case.
-            mCarAudioManager.setGroupVolume(mVolumeGroupId, progress, AudioManager.FLAG_PLAY_SOUND);
+            // AudioManager.FLAG_PLAY_SOUND does not guarantee play sound, use our own
+            // playback here instead.
+            mCarAudioManager.setGroupVolume(mVolumeGroupId, progress, 0);
+            playAudioFeedback();
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
+        }
+    }
+
+    public void stop() {
+        mUiHandler.removeCallbacksAndMessages(null);
+        mRingtone.stop();
+    }
+
+    private void playAudioFeedback() {
+        mUiHandler.removeCallbacksAndMessages(null);
+        mRingtone.play();
+        mUiHandler.postDelayed(() -> {
+            if (mRingtone.isPlaying()) {
+                mRingtone.stop();
+            }
+        }, AUDIO_FEEDBACK_DURATION_MS);
+    }
+
+    // TODO: bundle car-specific audio sample assets in res/raw by usage
+    private Uri getRingtoneUri(@AudioAttributes.AttributeUsage int usage) {
+        switch (usage) {
+            case AudioAttributes.USAGE_NOTIFICATION:
+                return Settings.System.DEFAULT_NOTIFICATION_URI;
+            case AudioAttributes.USAGE_ALARM:
+                return Settings.System.DEFAULT_ALARM_ALERT_URI;
+            default:
+                return Settings.System.DEFAULT_RINGTONE_URI;
         }
     }
 }
