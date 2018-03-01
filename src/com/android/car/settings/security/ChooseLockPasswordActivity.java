@@ -115,7 +115,9 @@ public class ChooseLockPasswordActivity extends FragmentActivity
             new SaveAndFinishWorker.Listener() {
                 @Override
                 public void onChosenLockSaveFinished(Intent resultData) {
-                    setResult(RESULT_FIRST_USER, resultData);
+                    // TODO b/73551228 - handle failure to save
+                    setResult(RESULT_OK, resultData);
+                    finish();
                 }
             };
 
