@@ -481,7 +481,10 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
                 mChosenPattern, mCurrentPattern, mUserId);
     }
 
-    private SaveAndFinishWorker.Listener mWorkerListener = (resultData) -> finish();
+    private SaveAndFinishWorker.Listener mWorkerListener = (resultData) -> {
+        setResult(RESULT_OK);
+        finish();
+    };
 
     /**
      * Async task to save the chosen lock pattern.
