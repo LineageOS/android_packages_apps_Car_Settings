@@ -16,31 +16,31 @@
 
 package com.android.car.settings.security;
 
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC;
 import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_COMPLEX;
 import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
 import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX;
+
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
+
+import android.content.Intent;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.TestConfig;
-import com.android.car.settings.testutils.ShadowActivityManager;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.annotation.Config;
 
 /**
  * Tests for ChooseLockPasswordActivity class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION,
-        shadows = {ShadowActivityManager.class})
-@Ignore
 public class ChooseLockPasswordActivityTest {
     private ChooseLockPasswordActivity mActivity;
 
@@ -145,5 +145,35 @@ public class ChooseLockPasswordActivityTest {
         String password = "1a34";
         assertThat(mActivity.validatePassword(password))
                 .isEqualTo(ChooseLockPasswordActivity.CONTAIN_NON_DIGITS);
+    }
+
+    /**
+     * A test to verify that the activity is finished when save worker succeeds
+     */
+    @Test
+    public void testActivityIsFinishedWhenSaveWorkerSucceeds() {
+        ChooseLockPasswordActivity spyActivity = spy(mActivity);
+
+        Intent intent = new Intent();
+        intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, true);
+        spyActivity.onChosenLockSaveFinished(intent);
+
+        verify(spyActivity).finish();
+    }
+
+    /**
+     * A test to verify that the UI stage is updated when save worker fails
+     */
+    @Test
+    public void testStageIsUpdatedWhenSaveWorkerFails() {
+        ChooseLockPasswordActivity spyActivity = spy(mActivity);
+        doNothing().when(spyActivity).updateStage(ChooseLockPasswordActivity.Stage.SaveFailure);
+
+        Intent intent = new Intent();
+        intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, false);
+        spyActivity.onChosenLockSaveFinished(intent);
+
+        verify(spyActivity, never()).finish();
+        verify(spyActivity).updateStage(ChooseLockPasswordActivity.Stage.SaveFailure);
     }
 }

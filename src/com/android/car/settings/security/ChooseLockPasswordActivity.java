@@ -16,13 +16,6 @@
 
 package com.android.car.settings.security;
 
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_COMPLEX;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX;
-
-import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.app.admin.PasswordMetrics;
 import android.content.Intent;
@@ -31,6 +24,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
 import android.support.annotation.StringRes;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.InputType;
@@ -48,11 +42,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 
-import com.android.internal.annotations.VisibleForTesting;
+import com.android.car.settings.R;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.TextViewInputDisabler;
-
-import com.android.car.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,8 +52,11 @@ import java.util.List;
 /**
  * Activity for choosing a lock password/pin.
  */
-public class ChooseLockPasswordActivity extends FragmentActivity
-        implements OnEditorActionListener, TextWatcher, View.OnClickListener {
+public class ChooseLockPasswordActivity extends FragmentActivity implements
+        OnEditorActionListener,
+        TextWatcher,
+        View.OnClickListener,
+        SaveChosenLockWorkerBase.Listener {
     /**
      * Password must contain at least one number, one letter,
      * can not have white space, should be between 4 to 8 characters.
@@ -88,10 +83,8 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     @VisibleForTesting
     static final int BLACKLISTED = 1 << 5;
 
-    private static final String TAG = "ChooseLockPattern";
+    private static final String TAG = "ChooseLockPassword";
     private static final String FRAGMENT_TAG_SAVE_AND_FINISH = "save_and_finish_worker";
-
-    private static final int RESULT_FINISHED = RESULT_FIRST_USER;
 
     private int mRequestedQuality = DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
     private boolean mIsAlphaMode;
@@ -100,7 +93,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     private EditText mPasswordEntry;
     private TextViewInputDisabler mPasswordEntryInputDisabler;
 
-    private SaveAndFinishWorker mSaveAndFinishWorker;
+    private SaveLockPasswordWorker mSaveLockPasswordWorker;
 
     private String mFirstPassword;
 
@@ -111,25 +104,61 @@ public class ChooseLockPasswordActivity extends FragmentActivity
 
     private TextChangedHandler mTextChangedHandler;
 
-    private final SaveAndFinishWorker.Listener mWorkerListener =
-            new SaveAndFinishWorker.Listener() {
-                @Override
-                public void onChosenLockSaveFinished(Intent resultData) {
-                    // TODO b/73551228 - handle failure to save
-                    setResult(RESULT_OK, resultData);
-                    finish();
-                }
-            };
+    // Keep track internally of where the user is in choosing a password.
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    protected enum Stage {
+        Introduction(
+                R.string.choose_lock_password_hints,
+                R.string.choose_lock_pin_hints,
+                R.string.continue_button_text,
+                R.string.lockpassword_cancel_label),
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        PasswordInvalid(
+                R.string.lockpassword_invalid_password,
+                R.string.lockpin_invalid_pin,
+                R.string.continue_button_text,
+                R.string.lockpassword_clear_label),
 
-        if (resultCode != Activity.RESULT_OK) {
-            setResult(RESULT_FINISHED);
-            finish();
-        } else {
-            mCurrentPassword = data.getStringExtra(SaveChosenLockWorkerBase.EXTRA_KEY_PASSWORD);
+        NeedToConfirm(
+                R.string.confirm_your_password_header,
+                R.string.confirm_your_pin_header,
+                R.string.lockpassword_confirm_label,
+                R.string.lockpassword_cancel_label),
+
+        ConfirmWrong(
+                R.string.confirm_passwords_dont_match,
+                R.string.confirm_pins_dont_match,
+                R.string.continue_button_text,
+                R.string.lockpassword_cancel_label),
+
+        SaveFailure(
+                R.string.error_saving_password,
+                R.string.error_saving_lockpin,
+                R.string.lockscreen_retry_button_text,
+                R.string.lockpassword_cancel_label);
+
+        public final int alphaHint;
+        public final int numericHint;
+        public final int primaryButtonText;
+        public final int secondaryButtonText;
+
+        Stage(int hintInAlpha,
+                int hintInNumeric,
+                int primaryButtonText,
+                int secondaryButtonText) {
+            this.alphaHint = hintInAlpha;
+            this.numericHint = hintInNumeric;
+            this.primaryButtonText = primaryButtonText;
+            this.secondaryButtonText = secondaryButtonText;
+        }
+
+        @StringRes
+        public int getHint(boolean isAlpha) {
+            if (isAlpha) {
+                return alphaHint;
+            } else {
+                return numericHint;
+            }
         }
     }
 
@@ -174,6 +203,19 @@ public class ChooseLockPasswordActivity extends FragmentActivity
         }
     }
 
+    @Override
+    public void onChosenLockSaveFinished(Intent data) {
+        boolean isSaveSuccessful =
+                data.getBooleanExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, false);
+        if (isSaveSuccessful) {
+            setResult(RESULT_OK, data);
+            finish();
+        } else {
+            mSaveLockPasswordWorker = null;  // Allow new worker to be created
+            updateStage(Stage.SaveFailure);
+        }
+    }
+
     /**
      * Validates PIN/Password and returns the validation result.
      *
@@ -187,13 +229,13 @@ public class ChooseLockPasswordActivity extends FragmentActivity
 
         // Ensure no non-digits if we are requesting numbers. This shouldn't be possible unless
         // user finds some way to bring up soft keyboard.
-        if (mRequestedQuality == PASSWORD_QUALITY_NUMERIC
-                || mRequestedQuality == PASSWORD_QUALITY_NUMERIC_COMPLEX) {
+        if (mRequestedQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC
+                || mRequestedQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX) {
             if (metrics.letters > 0 || metrics.symbols > 0) {
                 errorCode |= CONTAIN_NON_DIGITS;
             }
 
-            if (mRequestedQuality == PASSWORD_QUALITY_NUMERIC_COMPLEX) {
+            if (mRequestedQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX) {
                 // Check for repeated characters or sequences (e.g. '1234', '0000', '2468')
                 final int sequence = PasswordMetrics.maxLengthSequence(password);
                 if (sequence > PasswordMetrics.MAX_ALLOWED_SEQUENCE) {
@@ -218,7 +260,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     }
 
     @VisibleForTesting
-    protected void setPasswordQuality(int passwordQuality) {
+    void setPasswordQuality(int passwordQuality) {
         mRequestedQuality = passwordQuality;
     }
 
@@ -270,58 +312,10 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-    }
-
-    // Keep track internally of where the user is in choosing a password.
-    private enum Stage {
-        Introduction(
-                R.string.choose_lock_password_hints,
-                R.string.choose_lock_pin_hints,
-                R.string.continue_button_text,
-                R.string.lockpassword_cancel_label),
-
-        PasswordInvalid(
-                R.string.lockpassword_invalid_password,
-                R.string.lockpin_invalid_pin,
-                R.string.continue_button_text,
-                R.string.lockpassword_clear_label),
-
-        NeedToConfirm(
-                R.string.confirm_your_password_header,
-                R.string.confirm_your_pin_header,
-                R.string.lockpassword_confirm_label,
-                R.string.lockpassword_cancel_label),
-
-        ConfirmWrong(
-                R.string.confirm_passwords_dont_match,
-                R.string.confirm_pins_dont_match,
-                R.string.continue_button_text,
-                R.string.lockpassword_cancel_label);
-
-        Stage(int hintInAlpha,
-                int hintInNumeric,
-                int primaryButtonText,
-                int secondaryButtonText) {
-            this.alphaHint = hintInAlpha;
-            this.numericHint = hintInNumeric;
-            this.primaryButtonText = primaryButtonText;
-            this.secondaryButtonText = secondaryButtonText;
-        }
-
-        public final int alphaHint;
-        public final int numericHint;
-        public final int primaryButtonText;
-        public final int secondaryButtonText;
-
-        @StringRes
-        public int getHint(boolean isAlpha) {
-            if (isAlpha) {
-                return alphaHint;
-            } else {
-                return numericHint;
-            }
+    public void onStop() {
+        super.onStop();
+        if (mSaveLockPasswordWorker != null) {
+            mSaveLockPasswordWorker.setListener(null);
         }
     }
 
@@ -331,10 +325,6 @@ public class ChooseLockPasswordActivity extends FragmentActivity
 
     private void setPrimaryButtonTextId(int textId) {
         mPrimaryButton.setText(textId);
-    }
-
-    private void setSecondaryButtonVisible(boolean visible) {
-        mSecondaryButton.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
     private void setSecondaryButtonEnabled(boolean enabled) {
@@ -348,7 +338,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     // Updates display message and proceed to next step according to the different text on
     // the secondary button.
     private void handleSecondaryButtonClick() {
-        if (mSaveAndFinishWorker != null || TextUtils.isEmpty(mEnteredPassword)) {
+        if (mSaveLockPasswordWorker != null || TextUtils.isEmpty(mEnteredPassword)) {
             finish();
             return;
         }
@@ -366,7 +356,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
     // the primary button.
     private void handlePrimaryButtonClick() {
         mEnteredPassword = mPasswordEntry.getText().toString();
-        if (mSaveAndFinishWorker != null || TextUtils.isEmpty(mEnteredPassword)) {
+        if (mSaveLockPasswordWorker != null || TextUtils.isEmpty(mEnteredPassword)) {
             return;
         }
 
@@ -381,6 +371,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
                 }
                 break;
             case NeedToConfirm:
+            case SaveFailure:
                 if (mFirstPassword.equals(mEnteredPassword)) {
                     startSaveAndFinish();
                 } else {
@@ -398,7 +389,7 @@ public class ChooseLockPasswordActivity extends FragmentActivity
 
     // Starts an async task to save the chosen password.
     private void startSaveAndFinish() {
-        if (mSaveAndFinishWorker != null) {
+        if (mSaveLockPasswordWorker != null) {
             Log.v(TAG, "startSaveAndFinish with an existing SaveAndFinishWorker.");
             return;
         }
@@ -406,22 +397,20 @@ public class ChooseLockPasswordActivity extends FragmentActivity
         mPasswordEntryInputDisabler.setInputEnabled(false);
         setPrimaryButtonEnabled(false);
 
-        mSaveAndFinishWorker = new SaveAndFinishWorker();
-        mSaveAndFinishWorker.setListener(mWorkerListener);
+        mSaveLockPasswordWorker = new SaveLockPasswordWorker();
+        mSaveLockPasswordWorker.setListener(this);
 
-        getFragmentManager().beginTransaction().add(mSaveAndFinishWorker,
+        getFragmentManager().beginTransaction().add(mSaveLockPasswordWorker,
                 FRAGMENT_TAG_SAVE_AND_FINISH).commit();
         getFragmentManager().executePendingTransactions();
 
-        mSaveAndFinishWorker = new SaveAndFinishWorker();
-        mSaveAndFinishWorker.setListener(mWorkerListener);
-        mSaveAndFinishWorker.start(new LockPatternUtils(this),
+        mSaveLockPasswordWorker.start(new LockPatternUtils(this),
                 mEnteredPassword, mCurrentPassword, mRequestedQuality, mUserId);
     }
 
     // Updates the hint based on current Stage and length of password entry
     private void updateUi() {
-        boolean canInput = mSaveAndFinishWorker == null;
+        boolean inputAllowed = mSaveLockPasswordWorker == null;
 
         if (mUiStage == Stage.Introduction) {
             final int errorCode = validatePassword(mEnteredPassword);
@@ -433,16 +422,17 @@ public class ChooseLockPasswordActivity extends FragmentActivity
         } else {
             mHintMessage.setText(getString(mUiStage.getHint(mIsAlphaMode)));
             boolean hasPassword = mEnteredPassword == "" ? false : mEnteredPassword.length() > 0;
-            setPrimaryButtonEnabled(canInput && hasPassword);
-            setSecondaryButtonEnabled(canInput && hasPassword);
+            setPrimaryButtonEnabled(inputAllowed && hasPassword);
+            setSecondaryButtonEnabled(inputAllowed && hasPassword);
         }
 
         setPrimaryButtonTextId(mUiStage.primaryButtonText);
         setSecondaryButtonTextId(mUiStage.secondaryButtonText);
-        mPasswordEntryInputDisabler.setInputEnabled(canInput);
+        mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
     }
 
-    private void updateStage(Stage stage) {
+    @VisibleForTesting
+    void updateStage(Stage stage) {
         mUiStage = stage;
         updateUi();
     }
@@ -491,36 +481,5 @@ public class ChooseLockPasswordActivity extends FragmentActivity
                     : R.string.lockpassword_pin_blacklisted_by_admin));
         }
         return messages.toArray(new String[0]);
-    }
-
-    /**
-     * Worker to store chosen password using LockPatternUtils.
-     */
-    public static class SaveAndFinishWorker extends SaveChosenLockWorkerBase {
-
-        private String mEnteredPassword;
-        private String mCurrentPassword;
-        private int mRequestedQuality;
-
-        public void start(LockPatternUtils utils,
-                String enteredPassword, String currentPassword, int requestedQuality, int userId) {
-            prepare(utils, userId);
-
-            mEnteredPassword = enteredPassword;
-            mCurrentPassword = currentPassword;
-            mRequestedQuality = requestedQuality;
-            mUserId = userId;
-
-            start();
-        }
-
-        @Override
-        protected Intent saveAndVerifyInBackground() {
-            Intent result = null;
-            mUtils.saveLockPassword(mEnteredPassword, mCurrentPassword, mRequestedQuality,
-                    mUserId);
-
-            return result;
-        }
     }
 }
