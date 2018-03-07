@@ -28,7 +28,6 @@
 
     <style name="CarQuickSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/QsAnimationStyle</item>
-        <item name="android:background">@color/car_card</item>
     </style>
 
     <style name="QsAnimationStyle">

@@ -17,8 +17,6 @@ package com.android.car.settings.quicksettings;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 import java.util.ArrayList;
@@ -64,13 +62,9 @@ public class QuickSettingActivity extends AppCompatActivity {
         WifiTile wifiTile = new WifiTile(this, mGridAdapter);
         BluetoothTile bluetoothTile = new BluetoothTile(this, mGridAdapter);
         DayNightTile dayNightTile = new DayNightTile(this, mGridAdapter);
-        CelluarTile celluarTile = new CelluarTile(this, mGridAdapter);
-        DndTile dndTile = new DndTile(this, mGridAdapter, new Handler(Looper.getMainLooper()));
         mGridAdapter.addTile(wifiTile);
         mGridAdapter.addTile(bluetoothTile);
         mGridAdapter.addTile(dayNightTile);
-        mGridAdapter.addTile(celluarTile);
-        mGridAdapter.addTile(dndTile);
         mGridView.setAdapter(mGridAdapter);
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
         lineItems.add(new BrightnessLineItem(this));
