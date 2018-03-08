@@ -50,11 +50,6 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_DX_FLAGS := --multi-dex
 
-  ifneq ($(GENERIC_CAR_INCLUDE_DIAGNOSTIC_DEBUGGING),false)
-  #This will hide AOSP phone setting.
-  LOCAL_OVERRIDES_PACKAGES := Settings
-  endif
-
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
   include packages/apps/Car/libs/car-list/car-list.mk
   include packages/apps/Car/libs/car-apps-common/car-apps-common.mk

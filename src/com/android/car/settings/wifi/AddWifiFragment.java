@@ -70,7 +70,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
                 }
             };
     private EditTextLineItem mWifiNameInput;
-    private PasswordLineItem mWifiPasswordInput;
+    private EditTextLineItem mWifiPasswordInput;
 
     private int mSelectedPosition = AccessPointSecurity.SECURITY_NONE_POSITION;
 
