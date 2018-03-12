@@ -20,6 +20,7 @@ import android.accounts.Account;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.view.View;
 import android.widget.Button;
 
 import com.android.car.settings.R;
@@ -71,8 +72,12 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         super.onActivityCreated(savedInstanceState);
 
         mAddAccountButton = (Button) getActivity().findViewById(R.id.action_button1);
-        mAddAccountButton.setText(R.string.user_add_account_menu);
-        mAddAccountButton.setOnClickListener(v -> onAddAccountClicked());
+        if(mUserManagerHelper.canModifyAccounts()) {
+            mAddAccountButton.setText(R.string.user_add_account_menu);
+            mAddAccountButton.setOnClickListener(v -> onAddAccountClicked());
+        } else {
+            mAddAccountButton.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -80,6 +85,9 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         super.onDestroy();
         mUserManagerHelper.unregisterOnUsersUpdateListener();
         mAccountManagerHelper.stopListeningToAccountUpdates();
+
+        // The action button may be hidden at some point, so make it visible again
+        mAddAccountButton.setVisibility(View.VISIBLE);
     }
 
     @Override
