@@ -412,6 +412,8 @@
     <string name="lockpattern_restart_button_text">Redraw</string>
     <!-- Choose security lock screen button. After first valid enter, they will be prompt to confirm page. [CHAR LIMIT=20] -->
     <string name="continue_button_text">Continue</string>
+    <!-- Security lock screen button. If error is encountered when saving password, PIN or pattern, the user can click this button to try saving again. [CHAR LIMIT=20] -->
+    <string name="lockscreen_retry_button_text">Retry</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
@@ -436,6 +438,8 @@
     <string name="lockpattern_pattern_wrong">Wrong pattern</string>
     <!-- Choose unlock pattern screen instruction, the help instructions (an animation) caption. [CHAR LIMIT=40] -->
     <string name="lockpattern_settings_help_how_to_record">How to draw an unlock pattern</string>
+    <!-- Message shown when error is encountered when saving pattern [CHAR LIMIT=40] -->
+    <string name="error_saving_lockpattern">Error saving pattern</string>
     <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
     <string name="okay">OK</string>
 
@@ -449,6 +453,8 @@
     <string name="lockpin_invalid_pin">Pin invalid, must be at least 4 digits</string>
     <!-- Header on pin confirm screen if second pin doesn't match the first. [CHAR LIMIT=30]-->
     <string name="confirm_pins_dont_match">PINs don\'t match</string>
+    <!-- Message shown when error is encountered when saving PIN [CHAR LIMIT=40] -->
+    <string name="error_saving_lockpin">Error saving PIN</string>
     <!-- Description for Choose Lock Password Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_password_message">For security, set a password</string>
     <!-- Header on password confirm screen [CHAR LIMIT=40] -->
@@ -529,6 +535,9 @@
     <!-- Error shown when in PASSWORD mode and password has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_recently_used">Device admin doesn\'t allow using a recent
         password</string>
+
+    <!-- Message shown when error is encountered when saving password [CHAR LIMIT=40] -->
+    <string name="error_saving_password">Error saving password</string>
 
     <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_blacklisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
