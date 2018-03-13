@@ -46,7 +46,7 @@ public abstract class ListSettingsFragment extends BaseFragment {
 
         mListView = (PagedListView) getView().findViewById(R.id.list);
         mListView.setDayNightStyle(DayNightStyle.AUTO);
-        mPagedListAdapter = new TypedPagedListAdapter(getContext(), getLineItems());
+        mPagedListAdapter = new TypedPagedListAdapter(getLineItems());
         mListView.setAdapter(mPagedListAdapter);
     }
 

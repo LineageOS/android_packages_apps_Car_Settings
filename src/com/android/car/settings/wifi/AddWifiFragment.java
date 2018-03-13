@@ -152,7 +152,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
             return;
         }
         mSelectedPosition = position;
-        mPagedListAdapter.updateList(getLineItems());
+        mPagedListAdapter.setList(getLineItems());
     }
 
     @Override

@@ -26,6 +26,7 @@ import android.service.settings.suggestions.Suggestion;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 
+import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.suggestions.SuggestionController;
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
@@ -101,7 +102,7 @@ public class SettingsSuggestionsController implements
         if (suggestionList == null) {
             return;
         }
-        ArrayList<SuggestionLineItem> items = new ArrayList<>();
+        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
         for (final Suggestion suggestion : suggestionList) {
             LOG.v("Suggestion ID: " + suggestion.getId());
             Drawable iconDrawable = mIconCache.getIcon(suggestion.getIcon());
@@ -169,6 +170,6 @@ public class SettingsSuggestionsController implements
          * Invoked when deferred setup items have been loaded.
          * @param suggestions List of deferred setup suggestions.
          */
-        void onSuggestionsLoaded(@NonNull ArrayList<SuggestionLineItem> suggestions);
+        void onSuggestionsLoaded(@NonNull ArrayList<TypedPagedListAdapter.LineItem> suggestions);
     }
 }

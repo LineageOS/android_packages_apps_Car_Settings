@@ -68,7 +68,7 @@ public class QuickSettingActivity extends AppCompatActivity {
         mGridView.setAdapter(mGridAdapter);
         ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
         lineItems.add(new BrightnessLineItem(this));
-        mPagedListAdapter = new TypedPagedListAdapter(this, lineItems);
+        mPagedListAdapter = new TypedPagedListAdapter(lineItems);
         mListView.setAdapter(mPagedListAdapter);
     }
 
