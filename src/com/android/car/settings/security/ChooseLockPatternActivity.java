@@ -26,12 +26,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.car.settings.R;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockPatternView.Cell;
 import com.android.internal.widget.LockPatternView.DisplayMode;
-
-import com.android.car.settings.R;
 
 import com.google.android.collect.Lists;
 
@@ -42,7 +41,9 @@ import java.util.List;
 /**
  * Activity for choosing security lock pattern.
  */
-public class ChooseLockPatternActivity extends FragmentActivity implements View.OnClickListener {
+public class ChooseLockPatternActivity extends FragmentActivity implements
+        View.OnClickListener, SaveChosenLockWorkerBase.Listener {
+
     private static final String TAG = "ChooseLockPattern";
     private static final int ID_EMPTY_MESSAGE = -1;
     // How long we wait to clear a wrong pattern
@@ -55,7 +56,7 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
 
     private List<LockPatternView.Cell> mChosenPattern;
     private String mCurrentPattern;
-    private SaveAndFinishWorker mSaveAndFinishWorker;
+    private SaveLockPatternWorker mSaveLockPatternWorker;
     private int mUserId;
 
     @Override
@@ -105,17 +106,31 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
         super.onStart();
         updateStage(mUiStage);
 
-        if (mSaveAndFinishWorker != null) {
+        if (mSaveLockPatternWorker != null) {
             setPrimaryButtonEnabled(true);
-            mSaveAndFinishWorker.setListener(mWorkerListener);
+            mSaveLockPatternWorker.setListener(this);
         }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mSaveAndFinishWorker != null) {
-            mSaveAndFinishWorker.setListener(null);
+        if (mSaveLockPatternWorker != null) {
+            mSaveLockPatternWorker.setListener(null);
+        }
+    }
+
+    @Override
+    public void onChosenLockSaveFinished(Intent data) {
+        boolean isSaveSuccessful =
+                data.getBooleanExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, false);
+
+        if (isSaveSuccessful) {
+            setResult(RESULT_OK, data);
+            finish();
+        } else {
+            mSaveLockPatternWorker = null;  // Allow new worker to be created
+            updateStage(Stage.SaveFailure);
         }
     }
 
@@ -179,8 +194,21 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
         ChoiceConfirmed(
                 R.string.lockpattern_pattern_confirmed,
                 SecondaryButtonState.Cancel, PrimaryButtonState.Confirm,
+                false /* patternEnabled */ ),
+
+        /**
+         * Error saving pattern.
+         * Pattern disabled, primary button shows Retry, secondary button allows for cancel
+         */
+        SaveFailure(
+                R.string.error_saving_lockpattern,
+                SecondaryButtonState.Cancel, PrimaryButtonState.Retry,
                 false /* patternEnabled */ );
 
+        final int messageId;
+        final SecondaryButtonState secondaryButtonState;
+        final PrimaryButtonState primaryButtonState;
+        final boolean patternEnabled;
 
         /**
          * @param message The message displayed as instruction.
@@ -197,11 +225,6 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
             this.primaryButtonState = primaryButtonState;
             this.patternEnabled = patternEnabled;
         }
-
-        final int messageId;
-        final SecondaryButtonState secondaryButtonState;
-        final PrimaryButtonState primaryButtonState;
-        final boolean patternEnabled;
     }
 
     /**
@@ -297,6 +320,7 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
         ContinueDisabled(R.string.continue_button_text, false),
         Confirm(R.string.lockpattern_confirm_button_text, true),
         ConfirmDisabled(R.string.lockpattern_confirm_button_text, false),
+        Retry(R.string.lockscreen_retry_button_text, true),
         Ok(R.string.okay, true);
 
         /**
@@ -452,6 +476,13 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
                 }
                 startSaveAndFinish();
                 break;
+            case Retry:
+                if (mUiStage != Stage.SaveFailure) {
+                    throw new IllegalStateException("expected ui stage " + Stage.SaveFailure
+                            + " when button is " + PrimaryButtonState.Retry);
+                }
+                startSaveAndFinish();
+                break;
             case Ok:
                 if (mUiStage != Stage.HelpScreen) {
                     throw new IllegalStateException("Help screen is only mode with ok button, "
@@ -468,57 +499,18 @@ public class ChooseLockPatternActivity extends FragmentActivity implements View.
 
     // Save recorded pattern as an async task and proceed to next
     private void startSaveAndFinish() {
-        if (mSaveAndFinishWorker != null) {
-            Log.v(TAG, "startSaveAndFinish with an existing SaveAndFinishWorker.");
+        if (mSaveLockPatternWorker != null) {
+            Log.v(TAG, "startSaveAndFinish with an existing SaveLockPatternWorker.");
             return;
         }
 
         setPrimaryButtonEnabled(false);
 
-        mSaveAndFinishWorker = new SaveAndFinishWorker();
-        mSaveAndFinishWorker.setListener(mWorkerListener);
-        mSaveAndFinishWorker.start(new LockPatternUtils(this),
+        mSaveLockPatternWorker = new SaveLockPatternWorker();
+        mSaveLockPatternWorker.setListener(this);
+        mSaveLockPatternWorker.start(new LockPatternUtils(this),
                 mChosenPattern, mCurrentPattern, mUserId);
     }
 
-    private SaveAndFinishWorker.Listener mWorkerListener = (resultData) -> {
-        setResult(RESULT_OK);
-        finish();
-    };
 
-    /**
-     * Async task to save the chosen lock pattern.
-     */
-    public static class SaveAndFinishWorker extends SaveChosenLockWorkerBase {
-        private List<LockPatternView.Cell> mChosenPattern;
-        private String mCurrentPattern;
-
-        public void start(LockPatternUtils utils,
-                List<LockPatternView.Cell> chosenPattern, String currentPattern, int userId) {
-            prepare(utils, userId);
-
-            mCurrentPattern = currentPattern;
-            mChosenPattern = chosenPattern;
-            mUserId = userId;
-
-            start();
-        }
-
-        @Override
-        protected Intent saveAndVerifyInBackground() {
-            Intent result = null;
-            final int userId = mUserId;
-            mUtils.saveLockPattern(mChosenPattern, mCurrentPattern, userId);
-            return result;
-        }
-
-        @Override
-        protected void finish(Intent resultData) {
-            if (!mUtils.isPatternEverChosen(mUserId)) {
-                mUtils.setVisiblePatternEnabled(true, mUserId);
-            }
-
-            super.finish(resultData);
-        }
-    }
 }
