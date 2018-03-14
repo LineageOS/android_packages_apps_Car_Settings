@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.annotation.CallSuper;
 import android.annotation.WorkerThread;
 import android.app.Fragment;
 import android.content.Intent;
@@ -32,13 +33,21 @@ abstract class SaveChosenLockWorkerBase extends Fragment {
 
     public static final String EXTRA_KEY_PATTERN = "pattern";
     public static final String EXTRA_KEY_PASSWORD = "password";
+    public static final String EXTRA_KEY_SUCCESS = "success";
 
     private Listener mListener;
     private boolean mFinished;
     private Intent mResultData;
+    private LockPatternUtils mUtils;
+    private int mUserId;
 
-    protected LockPatternUtils mUtils;
-    protected int mUserId;
+    final LockPatternUtils getUtils() {
+        return mUtils;
+    }
+
+    final int getUserId() {
+        return mUserId;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,7 +83,7 @@ abstract class SaveChosenLockWorkerBase extends Fragment {
     /**
      * Start executing the async task.
      */
-    protected void start() {
+    final void start() {
         new Task().execute();
     }
 
@@ -87,6 +96,7 @@ abstract class SaveChosenLockWorkerBase extends Fragment {
     /**
      * Send result data via the listener when task finishes.
      */
+    @CallSuper
     protected void finish(Intent resultData) {
         mFinished = true;
         mResultData = resultData;
@@ -112,6 +122,6 @@ abstract class SaveChosenLockWorkerBase extends Fragment {
      * Call back when finishing save the chosen lock.
      */
     interface Listener {
-        public void onChosenLockSaveFinished(Intent resultData);
+        void onChosenLockSaveFinished(Intent resultData);
     }
 }

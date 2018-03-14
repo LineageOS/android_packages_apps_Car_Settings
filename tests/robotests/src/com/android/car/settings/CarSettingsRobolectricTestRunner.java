@@ -15,6 +15,8 @@
  */
 package com.android.car.settings;
 
+import android.support.annotation.NonNull;
+
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
@@ -22,6 +24,9 @@ import org.robolectric.manifest.AndroidManifest;
 import org.robolectric.res.Fs;
 import org.robolectric.res.ResourcePath;
 
+import java.net.MalformedURLException;
+
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -36,6 +41,14 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
      */
     public CarSettingsRobolectricTestRunner(Class<?> testClass) throws InitializationError {
         super(testClass);
+    }
+
+    private static ResourcePath createResourcePath(@NonNull String filePath) {
+        try {
+            return new ResourcePath(null, Fs.fromURL(new URL(filePath)), null);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("CarSettingsobolectricTestRunner failure", e);
+        }
     }
 
     /**
@@ -53,38 +66,21 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
         // By adding any resources from libraries we need to the AndroidManifest, we can access
         // them from within the parallel universe's resource loader.
         return new AndroidManifest(Fs.fileFromPath(manifestPath), Fs.fileFromPath(resDir),
-            Fs.fileFromPath(assetsDir), "com.android.car.settings") {
+            Fs.fileFromPath(assetsDir)) {
             @Override
             public List<ResourcePath> getIncludedResourcePaths() {
                 List<ResourcePath> paths = super.getIncludedResourcePaths();
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./packages/apps/Car/Settings/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./frameworks/base/packages/SettingsLib/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./frameworks/base/core/res/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./frameworks/support/car/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./frameworks/support/v7/appcompat/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./packages/apps/Car/libs/car-stream-ui-lib/res"),
-                        null));
-                paths.add(new ResourcePath(
-                        null,
-                        Fs.fileFromPath("./packages/apps/Car/libs/car-list/res"),
-                        null));
+                paths.add(createResourcePath("file:packages/apps/Car/Settings/res"));
+                paths.add(createResourcePath("file:frameworks/support/v7/appcompat/res"));
+                paths.add(createResourcePath("file:frameworks/support/car/res"));
+                paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
+                paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
+                paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
+                paths.add(createResourcePath(
+                        "file:frameworks/opt/setupwizard/library/gingerbread/res"));
+                paths.add(createResourcePath(
+                        "file:frameworks/opt/setupwizard/library/main/res"));
+
                 return paths;
             }
         };
