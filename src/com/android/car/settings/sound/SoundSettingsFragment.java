@@ -79,7 +79,7 @@ public class SoundSettingsFragment extends BaseFragment {
                 }
                 // if list is already initiated, update it's content.
                 if (mPagedListAdapter != null) {
-                    mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
+                    mPagedListAdapter.setList(new ArrayList<>(mVolumeLineItems));
                 }
                 mCarAudioManager.registerVolumeChangeObserver(mVolumeChangeObserver);
             } catch (CarNotConnectedException e) {
@@ -124,10 +124,10 @@ public class SoundSettingsFragment extends BaseFragment {
         loadAudioUsageItems();
         mCar = Car.createCar(getContext(), mServiceConnection);
         mListView = getView().findViewById(R.id.list);
-        mPagedListAdapter = new TypedPagedListAdapter(getContext());
+        mPagedListAdapter = new TypedPagedListAdapter();
         mListView.setAdapter(mPagedListAdapter);
         if (!mVolumeLineItems.isEmpty()) {
-            mPagedListAdapter.updateList(new ArrayList<>(mVolumeLineItems));
+            mPagedListAdapter.setList(new ArrayList<>(mVolumeLineItems));
         }
     }
 
