@@ -22,7 +22,8 @@ import android.content.pm.UserInfo;
 import android.text.TextUtils;
 
 import com.android.car.settings.R;
-import com.android.car.settings.users.UserManagerHelper;
+import com.android.car.settings.users.UserIconProvider;
+import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,7 +95,8 @@ class UserAndAccountItemProvider extends ListItemProvider {
     // Creates a line for a user, clicking on it leads to the user details page
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(mUserManagerHelper.getUserIcon(userInfo),
+        item.setPrimaryActionIcon(
+                UserIconProvider.getUserIcon(userInfo, mUserManagerHelper, mContext),
                 false /* useLargeIcon */);
         item.setTitle(title);
         item.setOnClickListener(view -> mItemClickListener.onUserClicked(userInfo));

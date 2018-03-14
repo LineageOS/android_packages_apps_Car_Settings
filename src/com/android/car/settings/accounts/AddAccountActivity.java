@@ -23,7 +23,6 @@ import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
@@ -35,7 +34,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
-import com.android.car.settings.users.UserManagerHelper;
+import com.android.settingslib.users.UserManagerHelper;
 
 import java.io.IOException;
 /**
