@@ -59,7 +59,6 @@ public class HomepageFragment extends ListSettingsFragment implements
     private CarWifiManager mCarWifiManager;
     private WifiLineItem mWifiLineItem;
     private BluetoothLineItem mBluetoothLineItem;
-    private ArrayList<TypedPagedListAdapter.LineItem> mSettingsLineItems = new ArrayList<>();
 
     private final BroadcastReceiver mBtStateReceiver = new BroadcastReceiver() {
         @Override
@@ -96,7 +95,6 @@ public class HomepageFragment extends ListSettingsFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         LOG.v("onActivityCreated: " + savedInstanceState);
-        mSettingsLineItems.clear();
         mSettingsSuggestionsController =
                 new SettingsSuggestionsController(
                         getContext(),
@@ -149,52 +147,53 @@ public class HomepageFragment extends ListSettingsFragment implements
         ExtraSettingsLoader extraSettingsLoader = new ExtraSettingsLoader(getContext());
         Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings =
                 extraSettingsLoader.load();
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.display_settings,
                 R.drawable.ic_settings_display,
                 getContext(),
                 null,
                 DisplaySettingsFragment.getInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
                 getContext(),
                 null,
                 SoundSettingsFragment.getInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(mWifiLineItem);
-        mSettingsLineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
-        mSettingsLineItems.add(mBluetoothLineItem);
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(mWifiLineItem);
+        lineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
+        lineItems.add(mBluetoothLineItem);
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.applications_settings,
                 R.drawable.ic_settings_applications,
                 getContext(),
                 null,
                 ApplicationSettingsFragment.getInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.date_and_time_settings_title,
                 R.drawable.ic_settings_date_time,
                 getContext(),
                 null,
                 DatetimeSettingsFragment.getInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.user_and_account_settings_title,
                 R.drawable.ic_user,
                 getContext(),
                 null,
                 UsersListFragment.newInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.security_settings_title,
                 R.drawable.ic_lock,
                 getContext(),
                 null,
                 ChooseLockTypeFragment.newInstance(),
                 mFragmentController));
-        mSettingsLineItems.add(new SimpleIconTransitionLineItem(
+        lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,
                 getContext(),
@@ -202,15 +201,14 @@ public class HomepageFragment extends ListSettingsFragment implements
                 SystemSettingsFragment.getInstance(),
                 mFragmentController));
 
-        mSettingsLineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
-        mSettingsLineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
-        return mSettingsLineItems;
+        lineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
+        lineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
+        return lineItems;
     }
 
     @Override
-    public void onSuggestionsLoaded(ArrayList<SuggestionLineItem> suggestions) {
+    public void onSuggestionsLoaded(ArrayList<TypedPagedListAdapter.LineItem> suggestions) {
         LOG.v("onDeferredSuggestionsLoaded");
-        mSettingsLineItems.addAll(0, suggestions);
-        mPagedListAdapter.updateList(mSettingsLineItems);
+        mPagedListAdapter.addAll(0, suggestions);
     }
 }
