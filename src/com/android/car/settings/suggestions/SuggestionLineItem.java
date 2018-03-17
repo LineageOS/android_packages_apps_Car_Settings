@@ -20,34 +20,45 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.android.car.list.IconTextLineItem;
+import com.android.car.list.ActionIconButtonLineItem;
 
 /**
  * Represents suggestion list item.
  */
-public class SuggestionLineItem extends IconTextLineItem {
+public class SuggestionLineItem extends ActionIconButtonLineItem {
 
     private final CharSequence mSummary;
     private final Drawable mIconDrawable;
+    private final Drawable mActionIconDrawable;
     private final View.OnClickListener mOnClickListener;
+    private final ActionListener mActionListener;
 
     /**
-     * Constructs an IconTextLIneItem with just the title set.
+     * Creates a {@link SuggestionLineItem} with title, summary, icons, and click handlers.
      */
     public SuggestionLineItem(
             CharSequence title,
             CharSequence summary,
             Drawable iconDrawable,
-            View.OnClickListener onClickListener) {
+            Drawable actionIconDrawable,
+            View.OnClickListener onClickListener,
+            ActionListener actionListener) {
         super(title);
         mSummary = summary;
         mIconDrawable = iconDrawable;
+        mActionIconDrawable = actionIconDrawable;
         mOnClickListener = onClickListener;
+        mActionListener = actionListener;
     }
 
     @Override
     public void setIcon(ImageView iconView) {
         iconView.setImageDrawable(mIconDrawable);
+    }
+
+    @Override
+    public void setActionButtonIcon(ImageView actionButtonIconView) {
+        actionButtonIconView.setImageDrawable(mActionIconDrawable);
     }
 
     @Override
@@ -63,5 +74,24 @@ public class SuggestionLineItem extends IconTextLineItem {
     @Override
     public void onClick(View view) {
         mOnClickListener.onClick(view);
+    }
+
+    @Override
+    public void onActionButtonClick(int adapterPosition) {
+        mActionListener.onSuggestionItemDismissed(adapterPosition);
+    }
+
+    /**
+     * Interface that surfaces events on the suggestion.
+     */
+    public interface ActionListener {
+
+        /**
+         * Invoked when a suggestions item is dismissed.
+         *
+         * @param adapterPosition the position of the suggestion item in it's adapter.
+         *
+         */
+        void onSuggestionItemDismissed(int adapterPosition);
     }
 }
