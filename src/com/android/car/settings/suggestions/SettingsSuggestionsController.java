@@ -27,6 +27,7 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 
 import com.android.car.list.TypedPagedListAdapter;
+import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.suggestions.SuggestionController;
 import com.android.settingslib.suggestions.SuggestionControllerMixin;
@@ -35,6 +36,7 @@ import com.android.settingslib.utils.IconCache;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 /**
  * Retrieves suggestions and prepares them for rendering.
@@ -105,12 +107,14 @@ public class SettingsSuggestionsController implements
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
         for (final Suggestion suggestion : suggestionList) {
             LOG.v("Suggestion ID: " + suggestion.getId());
-            Drawable iconDrawable = mIconCache.getIcon(suggestion.getIcon());
+            Drawable itemIcon = mIconCache.getIcon(suggestion.getIcon());
+            Drawable dismissIcon = mContext.getDrawable(R.drawable.ic_close);
             SuggestionLineItem suggestionLineItem =
                     new SuggestionLineItem(
                             suggestion.getTitle(),
                             suggestion.getSummary(),
-                            iconDrawable,
+                            itemIcon,
+                            dismissIcon,
                             v -> {
                                 try {
                                     suggestion.getPendingIntent().send();
@@ -118,6 +122,11 @@ public class SettingsSuggestionsController implements
                                 } catch (PendingIntent.CanceledException e) {
                                     LOG.w("Failed to start suggestion " + suggestion.getTitle());
                                 }
+                            },
+                            adapterPosition -> {
+                                dismissSuggestion(suggestion);
+                                mListener.onSuggestionDismissed(adapterPosition);
+
                             });
             items.add(suggestionLineItem);
         }
@@ -163,7 +172,7 @@ public class SettingsSuggestionsController implements
     }
 
     /**
-     * Listener interface to notify of data state changes.
+     * Listener interface to notify of data state changes and actions.
      */
     public interface Listener {
         /**
@@ -171,5 +180,12 @@ public class SettingsSuggestionsController implements
          * @param suggestions List of deferred setup suggestions.
          */
         void onSuggestionsLoaded(@NonNull ArrayList<TypedPagedListAdapter.LineItem> suggestions);
+
+        /***
+         * Invoked when a suggestion is dismissed.
+         *
+         * @param adapterPosition the position of the suggestion item in it's adapter.
+         */
+        void onSuggestionDismissed(int adapterPosition);
     }
 }

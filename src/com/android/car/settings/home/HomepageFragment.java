@@ -34,11 +34,10 @@ import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
-import com.android.car.settings.suggestions.SettingsSuggestionsController;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.security.ChooseLockTypeFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
-import com.android.car.settings.suggestions.SuggestionLineItem;
+import com.android.car.settings.suggestions.SettingsSuggestionsController;
 import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.CarWifiManager;
@@ -210,5 +209,11 @@ public class HomepageFragment extends ListSettingsFragment implements
     public void onSuggestionsLoaded(ArrayList<TypedPagedListAdapter.LineItem> suggestions) {
         LOG.v("onDeferredSuggestionsLoaded");
         mPagedListAdapter.addAll(0, suggestions);
+    }
+
+    @Override
+    public void onSuggestionDismissed(int adapterPosition) {
+        LOG.v("onSuggestionDismissed adapterPosition " + adapterPosition);
+        mPagedListAdapter.remove(adapterPosition);
     }
 }
