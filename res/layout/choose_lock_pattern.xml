@@ -86,7 +86,7 @@
 
             <!-- left / top button: skip, or re-try -->
             <Button android:id="@+id/footerSecondaryButton"
-                    style="@style/SetupWizardButton.Negative"
+                    style="@style/Widget.Car.Button.Borderless.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/car_action1_size"
@@ -95,7 +95,7 @@
 
             <!-- right / bottom button: confirm or ok -->
             <Button android:id="@+id/footerPrimaryButton"
-                    style="@style/SetupWizardButton.Positive"
+                    style="@style/Widget.Car.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/car_action1_size"
