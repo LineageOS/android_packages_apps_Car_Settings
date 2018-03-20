@@ -41,7 +41,10 @@ class AutoBrightnessLineItem extends ToggleLineItem {
 
     @Override
     public void onClick(View view) {
-        boolean isChecked = ((Switch) view.findViewById(R.id.toggle_switch)).isChecked();
+        Switch switchView = ((Switch) view.findViewById(R.id.toggle_switch));
+        boolean isChecked = switchView.isChecked();
+        // Toggle the switch.
+        switchView.setChecked(!isChecked);
         Settings.System.putInt(mContext.getContentResolver(), SCREEN_BRIGHTNESS_MODE,
                 isChecked ? SCREEN_BRIGHTNESS_MODE_MANUAL : SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
     }
