@@ -22,7 +22,6 @@ import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -44,6 +43,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.car.app.CarAlertDialog;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -201,9 +201,9 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getContext())
+            return new CarAlertDialog.Builder(getContext())
                     .setTitle(R.string.really_remove_account_title)
-                    .setMessage(R.string.really_remove_account_message)
+                    .setBody(R.string.really_remove_account_message)
                     .setNegativeButton(android.R.string.cancel, null)
                     .setPositiveButton(R.string.remove_account_title, this)
                     .create();
@@ -232,9 +232,9 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getContext())
+            return new CarAlertDialog.Builder(getContext())
                     .setTitle(R.string.really_remove_account_title)
-                    .setMessage(R.string.remove_account_failed)
+                    .setBody(R.string.remove_account_failed)
                     .setPositiveButton(android.R.string.ok, null)
                     .create();
         }

@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -24,6 +23,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 
 import com.android.car.settings.R;
+
+import androidx.car.app.CarAlertDialog;
 
 /**
  * Dialog to confirm creation of new user.
@@ -68,9 +69,9 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
                 .concat(System.getProperty("line.separator"))
                 .concat(getString(R.string.user_add_user_message_update));
 
-        return new AlertDialog.Builder(getContext())
+        return new CarAlertDialog.Builder(getContext())
                 .setTitle(R.string.user_add_user_title)
-                .setMessage(message)
+                .setBody(message)
                 .setNegativeButton(android.R.string.cancel, null)
                 .setPositiveButton(android.R.string.ok, this)
                 .create();
