@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -24,6 +23,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 
 import com.android.car.settings.R;
+
+import androidx.car.app.CarAlertDialog;
 
 /**
  * Dialog to confirm user removal.
@@ -63,12 +64,12 @@ public class ConfirmRemoveUserDialog extends DialogFragment implements
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getContext())
-                .setTitle(R.string.really_remove_user_title)
-                .setMessage(R.string.really_remove_user_message)
-                .setNegativeButton(android.R.string.cancel, null)
-                .setPositiveButton(R.string.delete_button, this)
-                .create();
+        return new CarAlertDialog.Builder(getContext())
+            .setTitle(R.string.really_remove_user_title)
+            .setBody(R.string.really_remove_user_message)
+            .setPositiveButton(R.string.delete_button, this)
+            .setNegativeButton(android.R.string.cancel, null)
+            .create();
     }
 
     @Override
