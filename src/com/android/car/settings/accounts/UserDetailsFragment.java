@@ -26,8 +26,8 @@ import android.widget.Button;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.EditUsernameFragment;
-import com.android.car.settings.users.UserManagerHelper;
 import com.android.settingslib.accounts.AuthenticatorHelper;
+import com.android.settingslib.users.UserManagerHelper;
 
 import androidx.car.widget.ListItemProvider;
 
