@@ -24,6 +24,7 @@ import android.widget.Button;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.settingslib.users.UserManagerHelper;
 
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.
