@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 
 import com.android.car.settings.R;
+import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,20 +82,21 @@ class UsersItemProvider extends ListItemProvider {
                 mContext.getString(R.string.current_user_name, currUserInfo.name)));
 
         // Display other users on the system
-        List<UserInfo> infos = mUserManagerHelper.getOtherUsers();
+        List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentUser();
         for (UserInfo userInfo : infos) {
             mItems.add(createUserItem(userInfo, userInfo.name));
         }
     }
 
-    // Creates a line for a user, clicking on it leads to the user details page
+    // Creates a line for a user, clicking on it leads to the user details page.
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(mUserManagerHelper.getUserIcon(userInfo),
+        item.setPrimaryActionIcon(
+                UserIconProvider.getUserIcon(userInfo, mUserManagerHelper, mContext),
                 false /* useLargeIcon */);
         item.setTitle(title);
 
-        if (!mUserManagerHelper.isInitialized(userInfo)) {
+        if (!userInfo.isInitialized()) {
             // Indicate that the user has not been initialized yet.
             item.setBody(mContext.getString(R.string.user_summary_not_set_up));
         }

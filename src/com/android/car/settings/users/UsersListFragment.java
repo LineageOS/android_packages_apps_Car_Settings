@@ -26,6 +26,7 @@ import android.widget.ProgressBar;
 import com.android.car.settings.R;
 import com.android.car.settings.accounts.UserDetailsFragment;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.settingslib.users.UserManagerHelper;
 
 import androidx.car.widget.ListItemProvider;
 
@@ -64,8 +65,8 @@ public class UsersListFragment extends ListItemSettingsFragment
         // Register to receive changes to the users.
         mUserManagerHelper.registerOnUsersUpdateListener(this);
 
-        // Super class's onActivityCreated need to be called after mContext is initialized.
-        // Because getLineItems is called in there.
+        // Super class's onActivityCreated need to be called after itemProvider is initialized.
+        // Because getItemProvider is called in there.
         super.onActivityCreated(savedInstanceState);
 
         mProgressBar = getActivity().findViewById(R.id.progress_bar);
@@ -85,7 +86,8 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onCreateNewUserConfirmed() {
-        mAddNewUserTask = new AddNewUserTask().execute();
+        mAddNewUserTask =
+                new AddNewUserTask().execute(getContext().getString(R.string.user_new_user_name));
     }
 
     @Override
@@ -119,10 +121,10 @@ public class UsersListFragment extends ListItemSettingsFragment
         return mItemProvider;
     }
 
-    private class AddNewUserTask extends AsyncTask<Void, Void, UserInfo> {
+    private class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
         @Override
-        protected UserInfo doInBackground(Void... params) {
-            return mUserManagerHelper.createNewUser();
+        protected UserInfo doInBackground(String... userNames) {
+            return mUserManagerHelper.createNewUser(userNames[0]);
         }
 
         @Override
