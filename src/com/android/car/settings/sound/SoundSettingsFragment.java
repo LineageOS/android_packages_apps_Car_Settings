@@ -34,7 +34,6 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.Xml;
 
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
@@ -44,6 +43,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemAdapter;
+import androidx.car.widget.ListItemProvider.ListProvider;
 import androidx.car.widget.PagedListView;
 
 /**
@@ -57,7 +59,7 @@ public class SoundSettingsFragment extends BaseFragment {
 
     private final SparseArray<VolumeItem> mVolumeItems = new SparseArray<>();
 
-    private final List<VolumeLineItem> mVolumeLineItems = new ArrayList<>();
+    private final List<ListItem> mVolumeLineItems = new ArrayList<>();
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
@@ -74,12 +76,15 @@ public class SoundSettingsFragment extends BaseFragment {
                             mCarAudioManager,
                             groupId,
                             volumeItem.usage,
-                            volumeItem.title,
-                            volumeItem.icon));
+                            volumeItem.icon,
+                            new VolumeLineItem.SeekbarListener(getContext(),
+                                mCarAudioManager,
+                                groupId,
+                                volumeItem.usage)));
                 }
                 // if list is already initiated, update it's content.
                 if (mPagedListAdapter != null) {
-                    mPagedListAdapter.setList(new ArrayList<>(mVolumeLineItems));
+                    mPagedListAdapter.notifyDataSetChanged();
                 }
                 mCarAudioManager.registerVolumeChangeObserver(mVolumeChangeObserver);
             } catch (CarNotConnectedException e) {
@@ -105,7 +110,7 @@ public class SoundSettingsFragment extends BaseFragment {
     private Car mCar;
     private CarAudioManager mCarAudioManager;
     private PagedListView mListView;
-    private TypedPagedListAdapter mPagedListAdapter;
+    private ListItemAdapter mPagedListAdapter;
 
     public static SoundSettingsFragment getInstance() {
         SoundSettingsFragment soundSettingsFragment = new SoundSettingsFragment();
@@ -124,11 +129,9 @@ public class SoundSettingsFragment extends BaseFragment {
         loadAudioUsageItems();
         mCar = Car.createCar(getContext(), mServiceConnection);
         mListView = getView().findViewById(R.id.list);
-        mPagedListAdapter = new TypedPagedListAdapter();
+        mPagedListAdapter = new ListItemAdapter(getContext(), new ListProvider(mVolumeLineItems));
         mListView.setAdapter(mPagedListAdapter);
-        if (!mVolumeLineItems.isEmpty()) {
-            mPagedListAdapter.setList(new ArrayList<>(mVolumeLineItems));
-        }
+        mListView.setMaxPages(PagedListView.UNLIMITED_PAGES);
     }
 
     @Override
@@ -140,8 +143,8 @@ public class SoundSettingsFragment extends BaseFragment {
     @Override
     public void onStop() {
         super.onStop();
-        for (VolumeLineItem item : mVolumeLineItems) {
-            item.stop();
+        for (ListItem item : mVolumeLineItems) {
+            ((VolumeLineItem) item).stop();
         }
         mCar.disconnect();
     }
