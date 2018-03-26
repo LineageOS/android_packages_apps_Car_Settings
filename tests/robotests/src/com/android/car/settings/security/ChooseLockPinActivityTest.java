@@ -16,11 +16,15 @@
 
 package com.android.car.settings.security;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -31,17 +35,53 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 
 /**
- * Tests for ChooseLockPatternActivity class.
+ * Tests for ChooseLockPinActivity class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class ChooseLockPatternActivityTest {
-    private ChooseLockPatternActivity mActivity;
+public class ChooseLockPinActivityTest {
+    private ChooseLockPinActivity mActivity;
 
     @Before
-    public void setUp() {
-        mActivity = Robolectric.buildActivity(ChooseLockPatternActivity.class)
+    public void setUpPinActivity() {
+        mActivity = Robolectric.buildActivity(ChooseLockPinActivity.class)
                 .create()
                 .get();
+    }
+
+    /**
+     * A test to check validatePassword works as expected for pin that contains non digits.
+     */
+    @Test
+    public void testValidatePinContainingNonDigits() {
+        String password = "1a34";
+        assertThat(mActivity.validatePassword(password))
+                .isEqualTo(ChooseLockPinActivity.CONTAINS_NON_DIGITS);
+    }
+
+    /**
+     * A test to check validatePassword works as expected for pin with too few digits
+     */
+    @Test
+    public void testValidatePinWithTooFewDigits() {
+        String password = "12";
+        assertThat(mActivity.validatePassword(password))
+                .isEqualTo(ChooseLockPinActivity.TOO_FEW_DIGITS);
+    }
+
+    /**
+     * A test to check validatePassword works as expected for numeric complex password
+     * that has sequential digits.
+     */
+    @Test
+    public void testValidatePinWithSequentialDigits() {
+        ChooseLockPinActivity spyActivity = spy(mActivity);
+        doReturn(DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX)
+                .when(spyActivity)
+                .getPasswordQuality();
+
+        String password = "1234";
+        assertThat(spyActivity.validatePassword(password))
+                .isEqualTo(ChooseLockPinActivity.CONTAINS_SEQUENTIAL_DIGITS);
     }
 
     /**
@@ -49,7 +89,7 @@ public class ChooseLockPatternActivityTest {
      */
     @Test
     public void testActivityIsFinishedWhenSaveWorkerSucceeds() {
-        ChooseLockPatternActivity spyActivity = spy(mActivity);
+        ChooseLockPinActivity spyActivity = spy(mActivity);
 
         Intent intent = new Intent();
         intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, true);
@@ -63,14 +103,14 @@ public class ChooseLockPatternActivityTest {
      */
     @Test
     public void testStageIsUpdatedWhenSaveWorkerFails() {
-        ChooseLockPatternActivity spyActivity = spy(mActivity);
-        doNothing().when(spyActivity).updateStage(ChooseLockPatternActivity.Stage.SaveFailure);
+        ChooseLockPinActivity spyActivity = spy(mActivity);
+        doNothing().when(spyActivity).updateStage(ChooseLockPinActivity.Stage.SaveFailure);
 
         Intent intent = new Intent();
         intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, false);
         spyActivity.onChosenLockSaveFinished(intent);
 
         verify(spyActivity, never()).finish();
-        verify(spyActivity).updateStage(ChooseLockPatternActivity.Stage.SaveFailure);
+        verify(spyActivity).updateStage(ChooseLockPinActivity.Stage.SaveFailure);
     }
 }
