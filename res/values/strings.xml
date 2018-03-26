@@ -558,4 +558,21 @@
     <string name="remove_button">Remove</string>
     <!-- Cancel button text [CHAR LIMIT=20] -->
     <string name="cancel">Cancel</string>
+
+    <!-- Accessibility description for the backspace key in the PIN pad [CHAR LIMIT=NONE] -->
+    <string name="backspace_key">Backspace key</string>
+    <!-- Accessibility description for the enter key in the PIN pad [CHAR LIMIT=NONE] -->
+    <string name="enter_key">Enter key</string>
+
+    <!-- These are the digits on the PIN pad -->
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="zero" translatable="false">0</string>
 </resources>

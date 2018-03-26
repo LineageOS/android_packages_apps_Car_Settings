@@ -22,15 +22,25 @@
     android:layout_marginStart="@dimen/car_margin"
     android:layout_marginEnd="@dimen/car_margin"
     android:orientation="horizontal"
+    android:paddingTop="@dimen/car_app_bar_height"
     android:paddingBottom="@dimen/car_app_bar_height">
 
-    <!-- Start side: instructions and messages -->
-    <LinearLayout
+    <!-- Start side: lock pattern -->
+    <FrameLayout
+        android:layout_weight="@integer/content_weight"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/pin_pad"/>
+    </FrameLayout>
+
+    <!-- End side: pin entry field and messages -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
         android:layout_weight="@integer/content_weight"
         android:orientation="vertical"
-        android:paddingTop="@dimen/car_primary_icon_size">
+        android:layout_marginTop="@dimen/pin_pad_end_padding_top">
 
         <TextView
             android:id="@+id/title_text"
@@ -50,16 +60,7 @@
             android:layout_marginBottom="@dimen/car_padding_5"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body2"
-            android:text="@string/choose_lock_password_message"/>
-    </LinearLayout>
-
-    <!-- End side: password entry field -->
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="0dp"
-        android:layout_weight="@integer/content_weight"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/car_primary_icon_size">
+            android:text="@string/choose_lock_pin_message"/>
 
         <EditText
             android:id="@+id/password_entry"
@@ -68,12 +69,15 @@
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body1"
             android:maxLines="1"
-            android:inputType="textPassword" />
+            android:inputType="none"
+            android:password="true"
+            android:cursorVisible="false"
+            android:focusable="false"/>
 
         <!--  hint text -->
         <TextView
             android:id="@+id/hint_text"
-            android:text="@string/choose_lock_password_hints"
+            android:text="@string/choose_lock_pin_hints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -84,14 +88,10 @@
             android:id="@+id/buttonContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:clipChildren="false"
-            android:clipToPadding="false"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <!-- left / top button: skip, or re-try -->
+            <!-- skip, or re-try -->
             <Button android:id="@+id/footerSecondaryButton"
                     style="@style/Widget.Car.Button.Borderless.Colored"
                     android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                     android:layout_marginEnd="@dimen/car_padding_4"
                     android:text="@string/lockpattern_cancel_button_text" />
 
-            <!-- right / bottom button: confirm or ok -->
+            <!-- confirm or ok -->
             <Button android:id="@+id/footerPrimaryButton"
                     style="@style/Widget.Car.Button"
                     android:layout_width="wrap_content"
