@@ -404,7 +404,7 @@
     <string name="security_lock_pin">Pin</string>
     <!-- Title string shown in choose screen lock for lock password [CHAR LIMIT=40] -->
     <string name="security_lock_password">Password</string>
-    <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=22] -->
+    <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=25] -->
     <string name="lock_settings_picker_title">Choose a lock type</string>
     <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
     <string name="lockpattern_confirm_button_text">Confirm</string>
@@ -432,7 +432,7 @@
     <string name="lockpattern_pattern_entered">Pattern recorded</string>
     <!-- Choose unlock pattern screen instruction to confirm pattern. [CHAR LIMIT=40] -->
     <string name="lockpattern_need_to_confirm">Draw pattern again to confirm</string>
-    <!-- Choose unlock pattern screen instruction on top of screen if user doesn't connect enough dots. [CHAR LIMIT=40] -->
+    <!-- Choose unlock pattern screen instruction on top of screen if user doesn't connect enough dots. [CHAR LIMIT=48] -->
     <string name="lockpattern_recording_incorrect_too_short">Connect at least 4 dots. Try again.</string>
     <!-- Choose unlock pattern screen instruction if user draws incorrect pattern [CHAR LIMIT=30] -->
     <string name="lockpattern_pattern_wrong">Wrong pattern</string>
@@ -467,7 +467,7 @@
     <string name="lockpassword_cancel_label">Cancel</string>
     <!-- Label for Confirm button when entering PIN / password the second time. [CHAR LIMIT=30] -->
     <string name="lockpassword_confirm_label">Confirm</string>
-    <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=40] -->
+    <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=73] -->
     <string name="choose_lock_password_hints">Password must be between 4-8 characters with at least 1 number</string>
     <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
     <string name="lockpassword_password_too_short">Must be at least <xliff:g id="count" example="3">%d</xliff:g> characters</string>
