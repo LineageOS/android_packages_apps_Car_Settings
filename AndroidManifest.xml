@@ -123,6 +123,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".security.ChooseLockPinActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.car.settings.CHOOSE_LOCK_PIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <service android:name=".bluetooth.BluetoothPairingService" />
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest">

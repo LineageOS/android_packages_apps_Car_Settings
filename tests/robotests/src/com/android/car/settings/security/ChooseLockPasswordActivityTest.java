@@ -16,14 +16,9 @@
 
 package com.android.car.settings.security;
 
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
-import static android.app.admin.DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -57,10 +52,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordTooShort() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "lov";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.DO_NOT_MATCH_PATTERN);
+                .isEqualTo(ChooseLockPasswordActivity.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
@@ -69,10 +63,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordTooLong() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "passwordtoolong";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.DO_NOT_MATCH_PATTERN);
+                .isEqualTo(ChooseLockPasswordActivity.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
@@ -81,10 +74,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordWhiteSpace() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "pass wd";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.DO_NOT_MATCH_PATTERN);
+                .isEqualTo(ChooseLockPasswordActivity.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
@@ -93,10 +85,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordNoDigit() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "password";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.DO_NOT_MATCH_PATTERN);
+                .isEqualTo(ChooseLockPasswordActivity.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
@@ -105,10 +96,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordNonAscii() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "1passwýd";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.CONTAIN_INVALID_CHARACTERS);
+                .isEqualTo(ChooseLockPasswordActivity.CONTAINS_INVALID_CHARACTERS);
     }
 
     /**
@@ -117,34 +107,9 @@ public class ChooseLockPasswordActivityTest {
      */
     @Test
     public void testValidatePasswordNoLetter() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_ALPHANUMERIC);
         String password = "123456";
         assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.DO_NOT_MATCH_PATTERN);
-    }
-
-    /**
-     * A test to check validatePassword works as expected for numeric complex password
-     * that has sequential digits.
-     */
-    @Test
-    public void testValidatePasswordSequentialDigits() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_NUMERIC_COMPLEX);
-        String password = "1234";
-        assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.CONTAIN_SEQUENTIAL_DIGITS);
-    }
-
-    /**
-     * A test to check validatePassword works as expected for numeric password
-     * that contains non digits.
-     */
-    @Test
-    public void testValidatePasswordNoneDigits() {
-        mActivity.setPasswordQuality(PASSWORD_QUALITY_NUMERIC);
-        String password = "1a34";
-        assertThat(mActivity.validatePassword(password))
-                .isEqualTo(ChooseLockPasswordActivity.CONTAIN_NON_DIGITS);
+                .isEqualTo(ChooseLockPasswordActivity.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
