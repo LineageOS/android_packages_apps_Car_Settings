@@ -33,10 +33,6 @@ import androidx.car.widget.TextListItem;
  * Give user choices of lock screen type: Pin/Pattern/Password or None.
  */
 public class ChooseLockTypeFragment extends ListItemSettingsFragment {
-    static final String LOCK_PATTERN = "lockPattern";
-    static final String LOCK_PIN = "lockPin";
-    static final String LOCK_PASSWORD = "lockPassword";
-
     // Arbitrary request code for choose security lock activity.
     private static final int REQUEST_CHOOSE_LOCK = 10001;
 
@@ -49,11 +45,6 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         chooseLockTypeFragment.setArguments(bundle);
         return chooseLockTypeFragment;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
     }
 
     @Override
