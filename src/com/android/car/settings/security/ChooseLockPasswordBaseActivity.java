@@ -208,9 +208,11 @@ public abstract class ChooseLockPasswordBaseActivity extends FragmentActivity im
 
             @Override
             public void afterTextChanged(Editable s) {
-                // Changing the text while error displayed resets to NeedToConfirm state
+                // Changing the text while error displayed resets to a normal state
                 if (mUiStage == Stage.ConfirmWrong) {
                     mUiStage = Stage.NeedToConfirm;
+                } else if (mUiStage == Stage.PasswordInvalid) {
+                    mUiStage = Stage.Introduction;
                 }
                 // Schedule the UI update.
                 mTextChangedHandler.notifyAfterTextChanged();
@@ -346,7 +348,7 @@ public abstract class ChooseLockPasswordBaseActivity extends FragmentActivity im
             final int errorCode = validatePassword(mEnteredPassword);
             String[] messages = convertErrorCodeToMessages(errorCode);
             // Update the fulfillment of requirements.
-            mHintMessage.setText(messages.toString());
+            mHintMessage.setText(String.join(". ", messages));
             // Enable/Disable the next button accordingly.
             setPrimaryButtonEnabled(errorCode == NO_ERROR);
         } else {
