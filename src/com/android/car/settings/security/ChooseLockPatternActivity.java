@@ -23,7 +23,6 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
@@ -64,12 +63,6 @@ public class ChooseLockPatternActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.choose_lock_pattern);
-
-        ImageView iconImg = (ImageView) findViewById(R.id.base_icon);
-        iconImg.setImageResource(R.drawable.ic_lock);
-
-        TextView titleText = (TextView) findViewById(R.id.title_text);
-        titleText.setText(getString(R.string.set_screen_lock));
 
         mMessageText = (TextView) findViewById(R.id.description_text);
         mMessageText.setText(getString(R.string.choose_lock_pattern_message));
