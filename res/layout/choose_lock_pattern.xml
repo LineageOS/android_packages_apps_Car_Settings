@@ -49,20 +49,16 @@
         android:orientation="vertical"
         android:paddingTop="@dimen/car_primary_icon_size">
 
-        <ImageView
-            android:id="@+id/base_icon"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/car_primary_icon_size"
-            android:layout_marginBottom="@dimen/car_padding_2"
-            android:gravity="center"/>
-
         <TextView
             android:id="@+id/title_text"
-            android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/car_padding_2"
-            android:textAppearance="@style/TextAppearance.Car.Title2" />
+            android:textAppearance="@style/TextAppearance.Car.Title2"
+            android:text="@string/set_screen_lock"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="@dimen/lockscreen_title_drawable_padding"/>
 
         <TextView
             android:id="@+id/description_text"
