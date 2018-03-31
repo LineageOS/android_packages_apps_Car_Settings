@@ -36,6 +36,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.car.widget.PagedListView;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.settingslib.bluetooth.BluetoothCallback;
@@ -53,8 +55,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import androidx.car.widget.PagedListView;
 
 /**
  * Renders {@link android.bluetooth.BluetoothDevice} to a view to be displayed as a row in a list.
@@ -321,6 +321,11 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
+        // Not used (for now)
+    }
+
+    @Override
+    public void onProfileAudioStateChanged(int bluetoothProfile, int state) {
         // Not used (for now)
     }
 
