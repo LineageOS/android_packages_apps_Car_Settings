@@ -29,15 +29,14 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import androidx.car.widget.PagedListView;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
-
-import androidx.car.widget.DayNightStyle;
-import androidx.car.widget.PagedListView;
 
 /**
  * Hosts Bluetooth related preferences.
@@ -223,6 +222,11 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
 
     @Override
     public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
+        // no-op
+    }
+
+    @Override
+    public void onProfileAudioStateChanged(int bluetoothProfile, int state) {
         // no-op
     }
 
