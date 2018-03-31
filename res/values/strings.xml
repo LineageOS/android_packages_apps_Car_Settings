@@ -536,7 +536,7 @@
     <string name="lockpassword_password_recently_used">Device admin doesn\'t allow using a recent
         password</string>
 
-    <!-- Message shown when error is encountered when saving password [CHAR LIMIT=40] -->
+    <!-- Message shown when error is encountered when saving password [CHAR LIMIT=50] -->
     <string name="error_saving_password">Error saving password</string>
 
     <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
