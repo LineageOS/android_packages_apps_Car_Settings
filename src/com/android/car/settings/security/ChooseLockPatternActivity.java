@@ -75,6 +75,7 @@ public class ChooseLockPatternActivity extends FragmentActivity implements
         mLockPatternView = (LockPatternView) findViewById(R.id.lockPattern);
         mLockPatternView.setVisibility(View.VISIBLE);
         mLockPatternView.setEnabled(true);
+        mLockPatternView.setFadePattern(false);
         mLockPatternView.clearPattern();
         mLockPatternView.setOnPatternListener(mChooseNewLockPatternListener);
 
