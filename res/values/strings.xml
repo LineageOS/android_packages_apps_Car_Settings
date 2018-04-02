@@ -407,6 +407,8 @@
     <string name="security_lock_password">Password</string>
     <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=30] -->
     <string name="lock_settings_picker_title">Choose a lock type</string>
+    <!--  Button caption to open a dialog for user to choose an screen lock method: Pattern/PIN/Password [CHAR LIMIT=40] -->
+    <string name="screen_lock_options">Screen lock options</string>
     <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
     <string name="lockpattern_confirm_button_text">Confirm</string>
     <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  If they are not satisfied with this pattern, they click this button to redraw the pattern. -->
@@ -451,7 +453,7 @@
     <!-- Hints for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_pin_hints">PIN must be at least 4 digits</string>
     <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
-    <string name="lockpin_invalid_pin">Pin invalid, must be at least 4 digits</string>
+    <string name="lockpin_invalid_pin">Pin invalid, must be at least 4 digits.</string>
     <!-- Header on pin confirm screen if second pin doesn't match the first. [CHAR LIMIT=30]-->
     <string name="confirm_pins_dont_match">PINs don\'t match</string>
     <!-- Message shown when error is encountered when saving PIN [CHAR LIMIT=40] -->
@@ -483,7 +485,7 @@
         <xliff:g id="number" example="17">%d</xliff:g> digits</string>
 
     <!-- Error shown when in PIN mode and user enters a non-digit [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9</string>
+    <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9.</string>
 
     <!-- Error shown when in PIN mode and PIN has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
     <string name="lockpassword_pin_recently_used">Device admin doesn\'t allow using a recent PIN</string>
@@ -492,10 +494,10 @@
     <string name="lockpassword_pin_blacklisted_by_admin">Common PINs are blocked by your IT admin. Try a different PIN.</string>
 
     <!-- Error shown when in PASSWORD mode and user enters an invalid character [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_illegal_character">This can\'t include an invalid character</string>
+    <string name="lockpassword_illegal_character">This can\'t include an invalid character.</string>
 
     <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_invalid_password">Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace</string>
+    <string name="lockpassword_invalid_password">Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace.</string>
 
     <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=NONE] -->
     <plurals name="lockpassword_password_requires_letters">
@@ -544,8 +546,7 @@
     <string name="lockpassword_password_blacklisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
 
     <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence
-        of digits isn\'t allowed</string>
+    <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed.</string>
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
