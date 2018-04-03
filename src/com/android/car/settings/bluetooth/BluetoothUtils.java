@@ -20,41 +20,29 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Toast;
-
-import com.android.car.settings.R;
-import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
-import com.android.settingslib.bluetooth.LocalBluetoothManager;
-import com.android.settingslib.bluetooth.LocalBluetoothManager.BluetoothManagerCallback;
-import com.android.settingslib.bluetooth.Utils.ErrorListener;
 
 import androidx.car.app.CarAlertDialog;
 
+import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
+import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
+import com.android.settingslib.bluetooth.LocalBluetoothManager;
+import com.android.settingslib.bluetooth.LocalBluetoothManager.BluetoothManagerCallback;
 
 /**
  * BluetoothUtils provides an interface to the preferences
  * related to Bluetooth.
  */
 final class BluetoothUtils {
-    static final boolean V = com.android.settingslib.bluetooth.Utils.V; // verbose logging
-    static final boolean D =  com.android.settingslib.bluetooth.Utils.D;  // regular logging
-    private static final String TAG = "BluetoothUtils";
-    private static final boolean DEBUG = D;
+    private static final Logger LOG = new Logger(BluetoothUtils.class);
     private static final String SHARED_PREFERENCES_NAME = "bluetooth_settings";
 
     private static final BluetoothManagerCallback mOnInitCallback = new BluetoothManagerCallback() {
         @Override
         public void onBluetoothManagerInitialized(Context appContext,
                 LocalBluetoothManager bluetoothManager) {
-            com.android.settingslib.bluetooth.Utils.setErrorListener(mErrorListener);
-        }
-    };
-
-    private static final ErrorListener mErrorListener = new ErrorListener() {
-        @Override
-        public void onShowError(Context context, String name, int messageResId) {
-            showError(context, name, messageResId);
+            com.android.settingslib.bluetooth.Utils.setErrorListener(BluetoothUtils::showError);
         }
     };
 
@@ -85,6 +73,7 @@ final class BluetoothUtils {
                     .setTitle(R.string.bluetooth_error_title)
                     .setBody(message)
                     .setPositiveButton(android.R.string.ok, null)
+                    .create()
                     .show();
         } else {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
@@ -104,7 +93,7 @@ final class BluetoothUtils {
             String deviceAddress, String deviceName) {
         LocalBluetoothManager manager = getLocalBtManager(context);
         if (manager == null) {
-            if (DEBUG) Log.v(TAG, "manager == null - do not show dialog.");
+            LOG.v("manager == null - do not show dialog.");
             return false;
         }
 
@@ -116,7 +105,7 @@ final class BluetoothUtils {
         // If in appliance mode, do not show dialog in foreground.
         if ((context.getResources().getConfiguration().uiMode &
                 Configuration.UI_MODE_TYPE_APPLIANCE) == Configuration.UI_MODE_TYPE_APPLIANCE) {
-            if (DEBUG) Log.v(TAG, "in appliance mode - do not show dialog.");
+            LOG.v("in appliance mode - do not show dialog.");
             return false;
         }
 
@@ -164,31 +153,16 @@ final class BluetoothUtils {
             String packagedKeyboardName = context.getString(
                     com.android.internal.R.string.config_packagedKeyboardName);
             if (deviceName.equals(packagedKeyboardName)) {
-                if (DEBUG) Log.v(TAG, "showing dialog for packaged keyboard");
+                LOG.v("showing dialog for packaged keyboard");
                 return true;
             }
         }
 
-        if (DEBUG) Log.v(TAG, "Found no reason to show the dialog - do not show dialog.");
+        LOG.v("Found no reason to show the dialog - do not show dialog.");
         return false;
     }
 
     public static LocalBluetoothManager getLocalBtManager(Context context) {
         return LocalBluetoothManager.getInstance(context, mOnInitCallback);
-    }
-
-    static void persistSelectedDeviceInPicker(Context context, String deviceAddress) {
-        SharedPreferences.Editor editor = getSharedPreferences(context).edit();
-        editor.putString(KEY_LAST_SELECTED_DEVICE,
-                deviceAddress);
-        editor.putLong(KEY_LAST_SELECTED_DEVICE_TIME,
-                System.currentTimeMillis());
-        editor.apply();
-    }
-
-    static void persistDiscoverableEndTimestamp(Context context, long endTimestamp) {
-        SharedPreferences.Editor editor = getSharedPreferences(context).edit();
-        editor.putLong(KEY_DISCOVERABLE_END_TIMESTAMP, endTimestamp);
-        editor.apply();
     }
 }
