@@ -23,19 +23,19 @@
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo automático"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimizar el nivel de brillo según la luz disponible"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna está activada"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
     <string name="keywords_display" msgid="3978416985146943922">"pantalla, pantalla táctil"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"atenuar pantalla, pantalla táctil, batería"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"atenuar pantalla, pantalla táctil, batería"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"atenuar pantalla, noche, tono"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"Configurar y administrar access points inalámbricos"</string>
+    <string name="wifi_settings_summary" msgid="6095898149997291025">"Configurar y administrar puntos de acceso inalámbricos"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activando Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Desactivando Wi-Fi…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Se produjo un error al olvidar la red"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Se produjo un error al establecer conexión con la red"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Agregar red"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"El Wi-Fi está inhabilitado"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi inhabilitado"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Conectar"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Contraseña"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostrar contraseña"</string>
@@ -56,7 +56,7 @@
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Activar Bluetooth"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"Se inhabilitó el Bluetooth"</string>
+    <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth inhabilitado"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Administrar conexiones, y establecer nombre y visibilidad del dispositivo"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Computadora"</string>
@@ -79,7 +79,7 @@
     <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronización mediante Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN contiene letras o símbolos"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ingresa el código de sincronización y, luego, presiona Mostrar o Intro"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Ingresa el código de sincronización y, luego, presiona Intro"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"¿Sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> acceda a los contactos y al historial de llamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Es posible que también debas ingresar este PIN de acceso en el otro dispositivo."</string>
@@ -94,7 +94,7 @@
     <string name="navi_volume_title" msgid="946292066759195165">"Volumen de navegación"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Tono"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Notificación"</string>
-    <string name="media_volume_title" msgid="6697416686272606865">"Contenido multimedia"</string>
+    <string name="media_volume_title" msgid="6697416686272606865">"Multimedia"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"Establecer volumen para la música y los videos"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarma"</string>
     <string name="applications_settings" msgid="794261395191035632">"Información de apps"</string>
