@@ -25,7 +25,6 @@ import org.robolectric.res.Fs;
 import org.robolectric.res.ResourcePath;
 
 import java.net.MalformedURLException;
-
 import java.net.URL;
 import java.util.List;
 
@@ -71,8 +70,13 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
             public List<ResourcePath> getIncludedResourcePaths() {
                 List<ResourcePath> paths = super.getIncludedResourcePaths();
                 paths.add(createResourcePath("file:packages/apps/Car/Settings/res"));
-                paths.add(createResourcePath("file:frameworks/support/v7/appcompat/res"));
-                paths.add(createResourcePath("file:frameworks/support/car/res"));
+
+                // Support library resources. These need to point to the prebuilts of support
+                // library and not the source.
+                paths.add(createResourcePath(
+                        "file:prebuilts/sdk/current/support/v7/appcompat/res/"));
+                paths.add(createResourcePath("file:prebuilts/sdk/current/car/car/res"));
+
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
                 paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
