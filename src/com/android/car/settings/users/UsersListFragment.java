@@ -76,7 +76,7 @@ public class UsersListFragment extends ListItemSettingsFragment
         mProgressBar = getActivity().findViewById(R.id.progress_bar);
 
         mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
-        if (mUserManagerHelper.isDemoUser()) {
+        if (mUserManagerHelper.currentProcessRunningAsDemoUser()) {
             // If the user is a demo user, show a dialog asking if they want to exit retail/demo
             // mode
             mAddUserButton.setText(R.string.exit_retail_title);
@@ -85,7 +85,7 @@ public class UsersListFragment extends ListItemSettingsFragment
                 dialog.setConfirmExitRetailModeListener(this);
                 dialog.show(this);
             });
-        } else if (mUserManagerHelper.canAddUsers()) {
+        } else if (mUserManagerHelper.currentProcessCanAddUsers()) {
             // Only add the add user button if the current user is allowed to add a user.
             mAddUserButton.setText(R.string.user_add_user_menu);
             mAddUserButton.setOnClickListener(v -> {
@@ -137,8 +137,8 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onUserClicked(UserInfo userInfo) {
-        if (mUserManagerHelper.userIsCurrentUser(userInfo)) {
-            // Is it's current user, launch fragment that displays their accounts.
+        if (mUserManagerHelper.userIsRunningCurrentProcess(userInfo)) {
+            // If it's the user running the process, launch fragment that displays their accounts.
             mFragmentController.launchFragment(UserDetailsFragment.newInstance());
         } else {
             // If it's another user, launch fragment that displays their information

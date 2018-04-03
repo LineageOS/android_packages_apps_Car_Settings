@@ -100,8 +100,8 @@ public class EditUsernameFragment extends BaseFragment implements
         });
 
         // Each user can edit their own name. Owner can edit everyone's name.
-        if (mUserManagerHelper.userIsCurrentUser(mUserInfo)
-                || mUserManagerHelper.isSystemUser()) {
+        if (mUserManagerHelper.userIsRunningCurrentProcess(mUserInfo)
+                || mUserManagerHelper.currentProcessRunningAsSystemUser()) {
             allowUserNameEditing();
         } else {
             mUserNameEditText.setEnabled(false);
@@ -126,7 +126,7 @@ public class EditUsernameFragment extends BaseFragment implements
     }
 
     private void showActionButtons() {
-        if (mUserManagerHelper.userIsCurrentUser(mUserInfo)) {
+        if (mUserManagerHelper.userIsRunningCurrentProcess(mUserInfo)) {
             // Already in current user, shouldn't show SWITCH button.
             showRemoveUserButton(R.id.action_button1);
             return;
@@ -140,8 +140,9 @@ public class EditUsernameFragment extends BaseFragment implements
         Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
         // If the current user is not allowed to remove users, the user trying to be removed
         // cannot be removed, or the current user is a demo user, do not show delete button.
-        if (!mUserManagerHelper.canRemoveUsers() || !mUserManagerHelper.userCanBeRemoved(
-                mUserInfo) || mUserManagerHelper.isDemoUser()) {
+        if (!mUserManagerHelper.currentProcessCanRemoveUsers()
+                || !mUserManagerHelper.userCanBeRemoved(mUserInfo)
+                || mUserManagerHelper.currentProcessRunningAsDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);
             return;
         }
@@ -159,9 +160,9 @@ public class EditUsernameFragment extends BaseFragment implements
 
     private void showSwitchButton(@IdRes int buttonId) {
         Button switchUserBtn = (Button) getActivity().findViewById(buttonId);
-        // If the current user is not allowed to switch to another user, doe not show the switch
+        // If the current process is not allowed to switch to another user, doe not show the switch
         // button.
-        if (!mUserManagerHelper.canSwitchUsers()) {
+        if (!mUserManagerHelper.currentProcessCanSwitchUsers()) {
             switchUserBtn.setVisibility(View.GONE);
             return;
         }
