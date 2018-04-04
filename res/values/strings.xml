@@ -360,7 +360,7 @@
     <!-- User summary to indicate that user is currently not set up [CHAR LIMIT=100] -->
     <string name="user_summary_not_set_up">Not set up</string>
 
-    <!-- Title for settings that lead into User and Account information [CHAR LIMIT=25] -->
+    <!-- Title for settings that lead into User and Account information [CHAR LIMIT=35] -->
     <string name="user_and_account_settings_title">Users &amp; accounts</string>
     <!-- Title for a screen that shows the user and accounts that belong to that user [CHAR LIMIT=25] -->
     <string name="user_settings_title">User</string>
@@ -471,13 +471,13 @@
     <string name="choose_lock_password_hints">Password must be between 4-8 characters with at least 1 number</string>
     <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
     <string name="lockpassword_password_too_short">Must be at least <xliff:g id="count" example="3">%d</xliff:g> characters</string>
-    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=40] -->
+    <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=44] -->
     <string name="lockpassword_pin_too_short">PIN must be at least <xliff:g id="count" example="3">%d</xliff:g> digits</string>
 
-    <!-- Error shown in popup when password is too long [CHAR LIMIT=40] -->
+    <!-- Error shown in popup when password is too long [CHAR LIMIT=42] -->
     <string name="lockpassword_password_too_long">Must be fewer than
         <xliff:g id="number" example="17">%d</xliff:g> characters</string>
-    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=40] -->
+    <!-- Error shown in popup when PIN is too long [CHAR LIMIT=42] -->
     <string name="lockpassword_pin_too_long">Must be fewer than
         <xliff:g id="number" example="17">%d</xliff:g> digits</string>
 
