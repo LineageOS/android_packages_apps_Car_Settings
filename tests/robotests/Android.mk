@@ -8,6 +8,8 @@ LOCAL_MODULE := CarSettingsRoboTests
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+LOCAL_JAVA_RESOURCE_DIRS := config
+
 # Include the testing libraries
 LOCAL_JAVA_LIBRARIES := \
     robolectric_android-all-stub \
