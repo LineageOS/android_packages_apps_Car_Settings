@@ -23,4 +23,7 @@
 
     <!-- Timeout to clear invalid lock pin/pattern/password -->
     <integer name="clear_content_timeout_ms">2000</integer>
+
+    <!-- Number of columns in quick setting grid -->
+    <integer name="quick_setting_column_count">4</integer>
 </resources>

@@ -16,20 +16,20 @@
   -->
 
 <com.android.car.list.InterceptTouchRelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/wifi_cell"
-        android:foreground="@drawable/car_list_item_background"
-        android:layout_width="100dp"
-        android:layout_height="100dp">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tile_container"
+    android:foreground="@drawable/car_list_item_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageButton
         android:id="@+id/tile_icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:paddingTop="@dimen/car_padding_1"
-        android:paddingBottom="@dimen/car_padding_1"
+        android:layout_width="@dimen/car_touch_target_size"
+        android:layout_height="@dimen/car_touch_target_size"
+        android:layout_marginBottom="@dimen/car_padding_1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_settings_wifi"
+        android:tint="@color/car_label1"
         android:background="@null"
         style="@style/ListIcon" />
     <TextView
@@ -39,5 +39,5 @@
         android:paddingTop="@dimen/car_padding_1"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tile_icon"
-        android:textAppearance="@style/TextAppearance.Car.Body2"/>
+        android:textAppearance="@style/TextAppearance.Car.Label1"/>
 </com.android.car.list.InterceptTouchRelativeLayout>

@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -30,7 +29,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.quicksettings.QuickSettingActivity;
 
 import java.util.Set;
 
@@ -55,7 +53,7 @@ public abstract class BaseFragment extends Fragment {
          * Pops the top off the fragment stack.
          * @return {@code false} if there's no stack to pop, {@code true} otherwise
          */
-        boolean goBack();
+        void goBack();
     }
 
     @LayoutRes
@@ -126,17 +124,11 @@ public abstract class BaseFragment extends Fragment {
         actionBar.setCustomView(mActionBarLayout);
         actionBar.setDisplayShowCustomEnabled(true);
         // make the toolbar take the whole width.
-        Toolbar toolbar=(Toolbar)actionBar.getCustomView().getParent();
+        Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
         toolbar.setPadding(0, 0, 0, 0);
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> mFragmentController.goBack());
         TextView titleView = getActivity().findViewById(R.id.title);
         titleView.setText(mTitleId);
-
-        // hack, once we have a proper entry point, remove this.
-        titleView.setOnClickListener(v -> {
-                Intent intent = new Intent(getContext(), QuickSettingActivity.class);
-                getActivity().startActivity(intent);
-        });
     }
 }

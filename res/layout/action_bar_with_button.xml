@@ -28,11 +28,7 @@
 
         <ImageView
             android:id="@+id/back_button"
-            android:layout_width="@dimen/car_primary_icon_size"
-            android:layout_height="@dimen/car_primary_icon_size"
-            android:layout_gravity="center"
-            android:background="@drawable/button_ripple_bg"
-            android:src="@drawable/ic_arrow_back"/>
+            style="@style/ListIcon.ActionBar"/>
     </FrameLayout>
 
     <TextView
