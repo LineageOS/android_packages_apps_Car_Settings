@@ -575,4 +575,12 @@
     <string name="eight" translatable="false">8</string>
     <string name="nine" translatable="false">9</string>
     <string name="zero" translatable="false">0</string>
+
+    <!-- Demo/Retail-related strings -->
+    <!-- Title of dialog asking the user if they really want to exit the demo, which requires a
+         factory reset [CHAR LIMIT=20]-->
+    <string name="exit_retail_title">Exit Demo</string>
+    <!-- Message in dialog asking the user if they really want to exit the demo, which requires a
+         factory reset [CHAR LIMIT=100]-->
+    <string name="exit_retail_message">Deleting the demo account and exiting demo mode will require a factory reset</string>
 </resources>
