@@ -19,15 +19,16 @@ package com.android.car.settings.users;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 /**
  * Implementation of {@link ListItemProvider} for {@link UsersListFragment}.
@@ -38,18 +39,6 @@ class UsersItemProvider extends ListItemProvider {
     private final Context mContext;
     private final UserClickListener mUserClickListener;
     private final UserManagerHelper mUserManagerHelper;
-
-    /**
-     * Interface for registering clicks on users.
-     */
-    interface UserClickListener {
-        /**
-         * Invoked when user is clicked.
-         *
-         * @param userInfo User for which the click is registered.
-         */
-        void onUserClicked(UserInfo userInfo);
-    }
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             UserManagerHelper userManagerHelper) {
@@ -81,6 +70,11 @@ class UsersItemProvider extends ListItemProvider {
         mItems.add(createUserItem(currUserInfo,
                 mContext.getString(R.string.current_user_name, currUserInfo.name)));
 
+        // If the current user is a demo user, don't list any of the other users.
+        if (currUserInfo.isDemo()) {
+            return;
+        }
+
         // Display other users on the system
         List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentUser();
         for (UserInfo userInfo : infos) {
@@ -104,5 +98,17 @@ class UsersItemProvider extends ListItemProvider {
         item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
         item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
+    }
+
+    /**
+     * Interface for registering clicks on users.
+     */
+    interface UserClickListener {
+        /**
+         * Invoked when user is clicked.
+         *
+         * @param userInfo User for which the click is registered.
+         */
+        void onUserClicked(UserInfo userInfo);
     }
 }
