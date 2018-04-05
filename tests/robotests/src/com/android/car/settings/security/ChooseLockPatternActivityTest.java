@@ -26,7 +26,6 @@ import android.content.Intent;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
@@ -35,7 +34,6 @@ import org.robolectric.Robolectric;
  * Tests for ChooseLockPatternActivity class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Ignore
 public class ChooseLockPatternActivityTest {
     private ChooseLockPatternActivity mActivity;
 
