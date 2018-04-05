@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -23,12 +24,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import androidx.car.widget.ListItemProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.accounts.UserDetailsFragment;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.settingslib.users.UserManagerHelper;
-
-import androidx.car.widget.ListItemProvider;
 
 /**
  * Lists all Users available on this device.
@@ -36,7 +37,10 @@ import androidx.car.widget.ListItemProvider;
 public class UsersListFragment extends ListItemSettingsFragment
         implements UserManagerHelper.OnUsersUpdateListener,
         UsersItemProvider.UserClickListener,
-        ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener {
+        ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener,
+        ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener {
+    private static final String FACTORY_RESET_PACKAGE_NAME = "android";
+    private static final String FACTORY_RESET_REASON = "ExitRetailModeConfirmed";
     private static final String TAG = "UsersListFragment";
 
     private UsersItemProvider mItemProvider;
@@ -71,9 +75,18 @@ public class UsersListFragment extends ListItemSettingsFragment
 
         mProgressBar = getActivity().findViewById(R.id.progress_bar);
 
-        // Only add the add user button if the current user is allowed to add a user.
-        if(mUserManagerHelper.canAddUsers()) {
-            mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
+        mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
+        if (mUserManagerHelper.isDemoUser()) {
+            // If the user is a demo user, show a dialog asking if they want to exit retail/demo
+            // mode
+            mAddUserButton.setText(R.string.exit_retail_title);
+            mAddUserButton.setOnClickListener(v -> {
+                ConfirmExitRetailModeDialog dialog = new ConfirmExitRetailModeDialog();
+                dialog.setConfirmExitRetailModeListener(this);
+                dialog.show(this);
+            });
+        } else if (mUserManagerHelper.canAddUsers()) {
+            // Only add the add user button if the current user is allowed to add a user.
             mAddUserButton.setText(R.string.user_add_user_menu);
             mAddUserButton.setOnClickListener(v -> {
                 ConfirmCreateNewUserDialog dialog =
@@ -88,6 +101,22 @@ public class UsersListFragment extends ListItemSettingsFragment
     public void onCreateNewUserConfirmed() {
         mAddNewUserTask =
                 new AddNewUserTask().execute(getContext().getString(R.string.user_new_user_name));
+    }
+
+    /**
+     * Will perform a factory reset. Copied from
+     * {@link com.android.settings.MasterClearConfirm#doMasterClear()}
+     */
+    @Override
+    public void onExitRetailModeConfirmed() {
+        Intent intent = new Intent(Intent.ACTION_FACTORY_RESET);
+        intent.setPackage(FACTORY_RESET_PACKAGE_NAME);
+        intent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND);
+        intent.putExtra(Intent.EXTRA_REASON, FACTORY_RESET_REASON);
+        intent.putExtra(Intent.EXTRA_WIPE_EXTERNAL_STORAGE, true);
+        intent.putExtra(Intent.EXTRA_WIPE_ESIMS, true);
+        getActivity().sendBroadcast(intent);
+        // Intent handling is asynchronous -- assume it will happen soon.
     }
 
     @Override
@@ -112,6 +141,7 @@ public class UsersListFragment extends ListItemSettingsFragment
             // Is it's current user, launch fragment that displays their accounts.
             mFragmentController.launchFragment(UserDetailsFragment.newInstance());
         } else {
+            // If it's another user, launch fragment that displays their information
             mFragmentController.launchFragment(EditUsernameFragment.getInstance(userInfo));
         }
     }
@@ -119,6 +149,11 @@ public class UsersListFragment extends ListItemSettingsFragment
     @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
+    }
+
+    private void refreshListItems() {
+        mItemProvider.refreshItems();
+        refreshList();
     }
 
     private class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
@@ -141,10 +176,5 @@ public class UsersListFragment extends ListItemSettingsFragment
                 mUserManagerHelper.switchToUser(user);
             }
         }
-    }
-
-    private void refreshListItems() {
-        mItemProvider.refreshItems();
-        refreshList();
     }
 }
