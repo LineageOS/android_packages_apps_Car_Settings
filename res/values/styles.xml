@@ -22,7 +22,7 @@
     <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="WifiSignalColor">?android:attr/colorAccent</item>
-        <item name="android:background">@color/car_card</item>
+        <item name="android:windowBackground">@color/car_card</item>
         <item name="android:windowAnimationStyle">@style/SettingAnimationStyle</item>
     </style>
 
