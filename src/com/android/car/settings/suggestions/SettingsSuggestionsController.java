@@ -23,6 +23,7 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
+import android.support.annotation.StringRes;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 
@@ -50,6 +51,12 @@ public class SettingsSuggestionsController implements
     private static final ComponentName mComponentName = new ComponentName(
             "com.android.settings.intelligence",
             "com.android.settings.intelligence.suggestions.SuggestionService");
+    // These values are hard coded until we receive the OK to plumb them through
+    // SettingsIntelligence. This is ok as right now only SUW uses this framework.
+    @StringRes
+    private static final int PRIMARY_ACTION_ID = R.string.suggestion_primary_button;
+    @StringRes
+    private static final int SECONDARY_ACTION_ID = R.string.suggestion_secondary_button;
 
     private final Context mContext;
     private final LoaderManager mLoaderManager;
@@ -108,13 +115,13 @@ public class SettingsSuggestionsController implements
         for (final Suggestion suggestion : suggestionList) {
             LOG.v("Suggestion ID: " + suggestion.getId());
             Drawable itemIcon = mIconCache.getIcon(suggestion.getIcon());
-            Drawable dismissIcon = mContext.getDrawable(R.drawable.ic_close);
             SuggestionLineItem suggestionLineItem =
                     new SuggestionLineItem(
                             suggestion.getTitle(),
                             suggestion.getSummary(),
                             itemIcon,
-                            dismissIcon,
+                            mContext.getString(PRIMARY_ACTION_ID),
+                            mContext.getString(SECONDARY_ACTION_ID),
                             v -> {
                                 try {
                                     suggestion.getPendingIntent().send();
@@ -177,6 +184,7 @@ public class SettingsSuggestionsController implements
     public interface Listener {
         /**
          * Invoked when deferred setup items have been loaded.
+         *
          * @param suggestions List of deferred setup suggestions.
          */
         void onSuggestionsLoaded(@NonNull ArrayList<TypedPagedListAdapter.LineItem> suggestions);
