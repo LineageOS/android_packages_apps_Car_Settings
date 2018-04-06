@@ -226,16 +226,16 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"அழி"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ரத்துசெய்"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"உறுதிப்படுத்து"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"கடவுச்சொல்லில் குறைந்தது 1 எண்ணுடன் சேர்த்து, 4-8 வரையிலான எழுத்துக்குறிகள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்துக்குறி இருக்க வேண்டும்"</string>
+    <string name="choose_lock_password_hints" msgid="1802962836351866087">"கடவுச்சொல்லில் குறைந்தது 1 எண்ணுடன் சேர்த்து, 4-8 வரையிலான எழுத்துகள் இருக்க வேண்டும்"</string>
+    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்து இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> இலக்கங்கள் இருக்க வேண்டும்"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்துக்குறி விட குறைவாக இருக்கவேண்டும்"</string>
+    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்தை விட குறைவாக இருக்கவேண்டும்"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> இலக்கங்களை விட குறைவாக இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"0-9 இலக்கங்கள் மட்டுமே இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"உங்கள் IT நிர்வாகி, பொதுவான பின்களைத் தடுத்துள்ளார். வேறு பின்னைப் பயன்படுத்திப் பார்க்கவும்."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"இதில் தவறான எழுத்துக்குறி இருக்கக்கூடாது"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"கடவுச்சொல் தவறானது. இதில் 4-8 எழுத்துக்குறிகள் இருக்க வேண்டும். குறைந்தது 1 இலக்கம், 1 எழுத்து இருக்க வேண்டும், இடைவெளி இருக்கக்கூடாது"</string>
+    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"இதில் தவறான எழுத்து இருக்கக்கூடாது"</string>
+    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"கடவுச்சொல் தவறானது. இதில் 4-8 எழுத்துகள் இருக்க வேண்டும். குறைந்தது 1 இலக்கம், 1 எழுத்து இருக்க வேண்டும், இடைவெளி இருக்கக்கூடாது"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்துகள் இருக்க வேண்டும்</item>
       <item quantity="one">குறைந்தது 1 எழுத்து இருக்க வேண்டும்</item>

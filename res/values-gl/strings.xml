@@ -105,7 +105,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Non se outorgou ningún permiso"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Non se solicitou ningún permiso"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Uso de datos"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso datos da aplicación"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso de datos da aplicación"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forzar parada"</string>
     <string name="computing_size" msgid="5791407621793083965">"Calculando…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
@@ -209,7 +209,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Solta o dedo cando remates"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Rexistrouse o padrón"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Debuxa o padrón de novo para confirmalo"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecta 4 puntos e téntao de novo."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Conecta polo menos 4 puntos e téntao de novo."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"O padrón é incorrecto"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como debuxar un deseño de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao gardar o padrón"</string>
@@ -217,7 +217,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Pola seguranza, define un PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Volve introducir o teu PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"O PIN debe conter polo menos 4 díxitos"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"O PIN non é válido, deber como mínimo 4 díxitos"</string>
+    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"O PIN non é válido, debe conter como mínimo 4 díxitos"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Os PIN non coinciden"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Erro ao gardar o PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Pola seguranza, define un contrasinal"</string>

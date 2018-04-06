@@ -32,7 +32,7 @@
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Зымсыз кошулуу түйүндөрүн жөндөө жана башкаруу"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi күйгүзүлүүдө…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi өчүрүлүүдө…"</string>
-    <string name="wifi_failed_forget_message" msgid="121732682699377206">"Тармак унутулган жок"</string>
+    <string name="wifi_failed_forget_message" msgid="121732682699377206">"Тармак өчүрүлгөн жок"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Тармакка туташпай калды"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Тармак кошуу"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi өчүрүлдү"</string>
@@ -62,7 +62,7 @@
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Компьютер"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Гарнитура"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"Телефон"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"Сүрөт тартуучу түзмөк"</string>
+    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"Камера"</string>
     <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"Гарнитура"</string>
     <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"Дайындарды киргизүүчү сырткы түзмөк"</string>
     <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"Bluetooth"</string>
@@ -79,7 +79,7 @@
     <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth жупташтыруучу коду"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN код тамгаларды же символдорду камтыйт"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Жупташтыруу кодун терип, андан соң Артка же Киргизүүнү басыңыз"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Жупташтыруу кодун терип, андан соң \"Артка\" же \"Киргизүү\" баскычын басыңыз"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> менен жупташтырылсынбы?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> түзмөгүнө байланыштар менен чалуу таржымалына кирүү мүмкүнчүлүгүн бериңиз"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Сиз бул PIN кодду башка түзмөккө дагы киргизишиңиз керек."</string>
@@ -90,8 +90,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> менен жупташуу үчүн таптап коюңуз."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="sound_settings" msgid="3072423952331872246">"Үн"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"Шыңгырдын үнүнүн катуулугу"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"Чабыттоо добушунун катуулугу"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"Шыңгырдын үнү"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"Чабыттоонун үнү"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Рингтон"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Эскертме"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Медиа"</string>
@@ -139,14 +139,14 @@
     <string name="terms_title" msgid="5201471373602628765">"Шарттар жана жоболор"</string>
     <string name="webview_license_title" msgid="2531829466541104826">"WebView тутум уруксаттамасы"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тушкагаздар"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Спутник сүрөттөрү:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Спутниктик сүрөттөр:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Үчүнчү тараптын уруксаттамалары"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Уруксаттамалар жүктөлүп жатканда көйгөй келип чыкты."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Жүктөлүүдө…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Күн жана убакыт"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Күндү жана убакытты жөндөө"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Күндү, убакытты, убакыт алкагын, жана форматтарды жөндөө"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Күн менен убакытты авт. жөндөө"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Тармактын күнү жана убакыты"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Тармактын убакыты колдонулсун"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Убакыт алкагын авто-аныктоо"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Тармактын убакыт алкагы колдонулсун"</string>
@@ -163,7 +163,7 @@
     <string name="date_picker_title" msgid="1533614225273770178">"Күн"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Убакыт"</string>
     <string name="user_list_title" msgid="973865977445453930">"Колдонуучулар жана профилдер"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Колдонуучу же профиль кошуу"</string>
+    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Колдонуучуну же профилди кошуу"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Колдонуучу кошуу"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Аккаунт кошуу"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Колдонуучуну жок кылуу"</string>
@@ -176,7 +176,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Түзүлгөн жок"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Колдонуучулар жана аккаунттар"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Колдонуучу"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> аккаунттары"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> аттуу колдонуучунун аккаунттары"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Аккаунт тууралуу маалымат"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Аккаунт кошуу"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Аккаунт кошуу"</string>
@@ -187,8 +187,8 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Мындай өзгөртүүгө администраторуңуз тыюу салган"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Колдонуучуну өчүрөсүзбү?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Бардык колдонмолор жана дайындар жок кылынат."</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Жаңы колдонуучу кошосузбу?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Жаңы колдонуучу кошулганда, ал өз мейкиндигин түзүп алышы керек."</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Колдонуучуну кошосузбу?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Жаңы колдонуучу кошулганда, ал өзүнүн профилин жөндөп алышы керек."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Колдонмолорду бир колдонуучу калган бардык колдонуучулар үчүн да жаңырта алат."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Коопсуздук"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экран кулпусу"</string>
@@ -209,7 +209,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Даяр болгондо манжаңызды алыңыз"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Графикалык ачкыч сакталды"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Ырастоо үчүн графикалык ачкычты кайра тартыңыз"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кеминде 4 чекитти бирктрңиз. Кайталоо."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Кеминде 4 чекитти бириктирүү керек."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Графикалык ачкыч туура эмес"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Графикалык ачкычты кантип тартуу керек"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Графикалык ачкычты сактоо катасы"</string>
@@ -226,7 +226,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Тазалоо"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Жокко чыгаруу"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Ырастоо"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Сырсөз 4-8 белгиден жана кеминде 1 сандан турушу керек"</string>
+    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Сырсөз арасында кеминде 1 сан кошулган 4-8 белгиден турушу керек"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кеминде <xliff:g id="COUNT">%d</xliff:g> белгиден турушу керек"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN код кеминде <xliff:g id="COUNT">%d</xliff:g> сандан турушу керек"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> белгиден ашпашы керек"</string>
@@ -235,7 +235,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Түзмөктүн администратору акыркы PIN кодду колдонууга тыюу салган"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Жөнөкөй PIN-коддорду коюу IT администраторуңуз тарабынан бөгөттөлгөн. Татаалыраак PIN-кодду коюп көрүңүз."</string>
     <string name="lockpassword_illegal_character" msgid="4316822683738779337">"Бул жерде жараксыз белги камтылбашы керек"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Сырсөз жараксыз, 4-8 белгиден, кеминде 1 сандан, 1 тамгадан туруп, боштугу жок жазылышы керек"</string>
+    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Сырсөз жараксыз. Ал арасында кеминде 1 сан, 1 тамга кошулган 4-8 белгиден туруп, боштугу жок жазылышы керек"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Кеминде <xliff:g id="COUNT">%d</xliff:g> тамга болушу керек</item>
       <item quantity="one">Кеминде 1 тамга болушу керек</item>

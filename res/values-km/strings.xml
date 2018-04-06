@@ -62,9 +62,9 @@
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"កុំព្យូទ័រ"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"កាស"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ទូរសព្ទ"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"កំពុងបង្ហាញ"</string>
+    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"ឧបករណ៍ផ្ដិតយករូប"</string>
     <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"កាស"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"បញ្ចូល​ឧបករណ៍​ដែល​អាច​ភ្ជាប់​ជាមួយ​កុំព្យូទ័រ"</string>
+    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"​ឧបករណ៍សម្រាប់​ភ្ជាប់​ជាមួយ​កុំព្យូទ័រ"</string>
     <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"ប៊្លូធូស"</string>
     <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"ឧបករណ៍​ដែល​បាន​ផ្គូផ្គង"</string>
     <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"ឧបករណ៍​ដែល​អាច​ភ្ជាប់បាន"</string>
@@ -116,12 +116,12 @@
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"បច្ចុប្បន្នភាព​ប្រព័ន្ធ"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"កំណែ Android"</string>
-    <string name="security_patch" msgid="4794276590178386903">"កម្រិតផេឆសុវត្ថិភាព Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"កម្រិតបំណះសុវត្ថិភាព Android"</string>
     <string name="model_info" msgid="4966408071657934452">"ម៉ូដែល"</string>
     <string name="baseband_version" msgid="2370088062235041897">"កំណែ​មូលដ្ឋាន"</string>
     <string name="kernel_version" msgid="7327212934187011508">"កំណែ​ខឺណែល"</string>
-    <string name="build_number" msgid="3997326631001009102">"លេខ​បង្កើត"</string>
-    <string name="device_info_not_available" msgid="2095601973977376655">"មិនមាន​ផ្តល់​ជូន​ទេ"</string>
+    <string name="build_number" msgid="3997326631001009102">"លេខ​កំណែបង្កើត"</string>
+    <string name="device_info_not_available" msgid="2095601973977376655">"មិនមានទេ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ស្ថានភាព"</string>
     <string name="device_status" msgid="267298179806290920">"ស្ថានភាព"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"ស្ថានភាព​ថ្ម បណ្ដាញ និង​ព័ត៌មាន​ផ្សេងទៀត"</string>
@@ -136,7 +136,7 @@
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"សៀវភៅ​ណែនាំ​ពី​សុវត្ថិភាព និង​បទប្បញ្ញត្តិ"</string>
     <string name="copyright_title" msgid="4220237202917417876">"រក្សាសិទ្ធិ"</string>
     <string name="license_title" msgid="936705938435249965">"អាជ្ញាបណ្ណ"</string>
-    <string name="terms_title" msgid="5201471373602628765">"លក្ខខណ្ឌ​ប្រើប្រាស់"</string>
+    <string name="terms_title" msgid="5201471373602628765">"លក្ខខណ្ឌ​"</string>
     <string name="webview_license_title" msgid="2531829466541104826">"អាជ្ញាបណ្ណ System WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ផ្ទាំង​រូបភាព"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ក្រុមហ៊ុន​ផ្ដល់​សេវារូបភាព​ផ្កាយរណប៖\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
@@ -171,7 +171,7 @@
     <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"អ្នក (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"ព័ត៌មាន​អំពី​កម្រងព័ត៌មាន"</string>
+    <string name="user_settings_details_title" msgid="3016069827765597036">"ព័ត៌មាន​ក្នុង​កម្រងព័ត៌មាន"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"មិន​បាន​រៀបចំ"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"អ្នកប្រើប្រាស់ និងគណនី"</string>
@@ -263,7 +263,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​ពាក្យ​សម្ងាត់​​ដែលទើបប្រើ​ហើយ​ទេ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​ពាក្យ​សម្ងាត់"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ពាក្យសម្ងាត់​លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សាកល្បង​ប្រើ​ពាក្យ​សម្ងាត់​ផ្សេង​ពី​នេះ។"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់ឡើង ចុះ ឬច្រំដែលទេ"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់ឡើង ចុះ ឬដដែលៗទេ"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="forget" msgid="3971143908183848527">"បំភ្លេច"</string>
     <string name="delete_button" msgid="5840500432614610850">"លុប"</string>
