@@ -29,7 +29,7 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
   LOCAL_USE_AAPT2 := true
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      $(ANDROID_SUPPORT_CAR_TARGETS) \
+      android-support-car \
       android-support-v7-preference \
       android-support-v14-preference
 
@@ -50,7 +50,6 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_DX_FLAGS := --multi-dex
 
-  include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
   include packages/apps/Car/libs/car-list/car-list.mk
   include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
   include packages/apps/Car/libs/car-settings-lib/car-settings-lib.mk

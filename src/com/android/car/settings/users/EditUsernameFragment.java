@@ -138,10 +138,10 @@ public class EditUsernameFragment extends BaseFragment implements
 
     private void showRemoveUserButton(@IdRes int buttonId) {
         Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
-        // If the current user is not allowed to remove users or the user trying to be removed
-        // cannot be removed, do not show delete button.
+        // If the current user is not allowed to remove users, the user trying to be removed
+        // cannot be removed, or the current user is a demo user, do not show delete button.
         if (!mUserManagerHelper.canRemoveUsers() || !mUserManagerHelper.userCanBeRemoved(
-                mUserInfo)) {
+                mUserInfo) || mUserManagerHelper.isDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);
             return;
         }

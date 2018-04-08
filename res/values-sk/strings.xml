@@ -82,7 +82,7 @@
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Zadajte párovací kód a potom stlačte tlačidlo Return alebo Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Spárovať so zariadením <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Povoliť zariadeniu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> prístup k vašim kontaktom a histórii hovorov"</string>
-    <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Tento kód PIN bude možno treba zadať aj na druhom zariadení."</string>
+    <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Tento kód PIN bude možno treba zadať aj v druhom zariadení."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Tento prístupový kľúč možno bude potrebné zadať aj v druhom zariadení."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Musí obsahovať 16 číslic"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Obvykle 0000 alebo 1234"</string>
@@ -228,7 +228,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Vymazať"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Zrušiť"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdiť"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Heslo musí obsahovať najmenej 4 – 8 znakov a jedno číslo"</string>
+    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Heslo musí obsahovať 4 – 8 znakov a aspoň jedno číslo"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimálny počet znakov: <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Minimálny počet čísel kódu PIN: <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Musí mať menej ako <xliff:g id="NUMBER">%d</xliff:g> znakov"</string>
