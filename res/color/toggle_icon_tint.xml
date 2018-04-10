@@ -14,9 +14,11 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
-    <color name="lock_pattern_background">#353839</color>
 
-    <color name="toggle_bg_disabled">@color/car_grey_400</color>
-    <color name="toggle_icon_disabled">@color/car_grey_800</color>
-</resources>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_enabled="false"
+      android:color="@color/toggle_icon_disabled"/>
+  <item android:state_enabled="true"
+      android:color="@color/car_card"/>
+  <item android:color="@color/car_card"/>
+</selector>
