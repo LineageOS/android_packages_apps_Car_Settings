@@ -24,6 +24,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.home.HomepageFragment;
+import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 
 /**
@@ -37,6 +38,10 @@ public class CarSettingActivity extends AppCompatActivity implements
     /** Actions to launch setting page to configure a new wifi network. */
     public static final String ACTION_ADD_WIFI = "android.car.settings.action_add_wifi";
 
+    /** Actions to launch setting page to show the list of all users. */
+    public static final String ACTION_LIST_USER = "android.car.settings.action_list_user";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,13 +54,20 @@ public class CarSettingActivity extends AppCompatActivity implements
     public void onStart() {
         super.onStart();
         Intent intent = getIntent();
-        if (intent != null && ACTION_ADD_WIFI.equals(intent.getAction())) {
-            launchFragment(WifiSettingsFragment.getInstance());
-        } else {
-            HomepageFragment homepageFragment = HomepageFragment.getInstance();
-            homepageFragment.setFragmentController(this);
-            launchFragment(homepageFragment);
+        if (intent != null && intent.getAction() != null) {
+            switch (intent.getAction()) {
+                case ACTION_LIST_USER:
+                    launchFragment(UsersListFragment.newInstance());
+                    return;
+                case ACTION_ADD_WIFI:
+                    launchFragment(WifiSettingsFragment.getInstance());
+                    return;
+                default:
+            }
         }
+        HomepageFragment homepageFragment = HomepageFragment.getInstance();
+        homepageFragment.setFragmentController(this);
+        launchFragment(homepageFragment);
     }
 
     @Override
@@ -79,19 +91,17 @@ public class CarSettingActivity extends AppCompatActivity implements
     }
 
     @Override
-    public boolean goBack() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportFragmentManager().popBackStack();
-            hideKeyboard();
-            return true;
-        }
-        return false;
+    public void goBack() {
+        onBackPressed();
     }
 
     @Override
     public void onBackPressed() {
-        if (!goBack()) {
-            super.onBackPressed();
+        super.onBackPressed();
+        hideKeyboard();
+        // if the backstack is empty, finish the activity.
+        if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
+            finish();
         }
     }
 

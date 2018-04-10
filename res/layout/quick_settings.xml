@@ -20,52 +20,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/car_app_bar_height"
-    android:layout_marginStart="@dimen/car_margin"
-    android:layout_marginEnd="@dimen/car_margin"
     android:orientation="vertical"
     android:id="@+id/container">
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_app_bar_height"
+        app:contentInsetStart="0dp"
+        style="@style/ActionBarStyle.Car" />
     <androidx.car.widget.PagedListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:showPagedListViewDivider="false"
         style="@style/PagedList" />
-
-    <GridView
-        android:id="@+id/grid"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:horizontalSpacing="16dp"
-        android:verticalSpacing="16dp"
-        android:numColumns="4"
-        android:columnWidth="120dp"
-        android:scrollbarStyle="insideOverlay"
-        android:stretchMode="spacingWidthUniform"
-        android:scrollIndicators="top|bottom" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="@dimen/car_keyline_1"
-        android:layout_marginBottom="@dimen/car_keyline_1"
-        android:orientation="horizontal"
-        android:id="@+id/container">
-        <TextView
-            android:id="@+id/back"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="BACK"
-            android:layout_marginEnd="@dimen/car_keyline_2"
-            android:textAppearance="@style/TextAppearance.Car.Body1"/>
-
-        <ImageButton
-            style="@style/ListIcon"
-            android:id="@+id/setting_icon"
-            android:paddingStart="@dimen/car_padding_1"
-            android:src="@drawable/ic_settings_gear"
-            android:background="@null" />
-    </LinearLayout>
 </LinearLayout>

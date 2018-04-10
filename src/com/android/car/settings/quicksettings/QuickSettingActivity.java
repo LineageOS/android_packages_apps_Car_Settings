@@ -17,16 +17,17 @@ package com.android.car.settings.quicksettings;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.GridView;
-import java.util.ArrayList;
-
-import com.android.car.list.TypedPagedListAdapter;
-import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.car.widget.PagedListView;
-import com.android.car.settings.display.BrightnessLineItem;
+
+import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivity;
 
 /**
  * Shows a page to access frequently used settings.
@@ -35,8 +36,6 @@ public class QuickSettingActivity extends AppCompatActivity {
     private static final String TAG = "QS";
 
     private QuickSettingGridAdapter mGridAdapter;
-    private TypedPagedListAdapter mPagedListAdapter;
-    private GridView mGridView;
     private PagedListView mListView;
 
 
@@ -45,31 +44,49 @@ public class QuickSettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quick_settings);
 
-        mGridView = (GridView) findViewById(R.id.grid);
         mListView = (PagedListView) findViewById(R.id.list);
+        mGridAdapter = new QuickSettingGridAdapter(this);
+        mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // make the toolbar take the whole width.
+        toolbar.setPadding(0, 0, 0, 0);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setCustomView(R.layout.action_bar_with_button);
+        actionBar.setDisplayShowCustomEnabled(true);
 
-        findViewById(R.id.back).setOnClickListener(v -> onBackPressed());
-        findViewById(R.id.setting_icon).setOnClickListener(v -> {
+        Button adavancedSettingBtn = (Button) findViewById(R.id.action_button1);
+        Button userSwitcherBtn = (Button) findViewById(R.id.action_button2);
+        adavancedSettingBtn.setText(R.string.advanced_settings_label);
+        adavancedSettingBtn.setVisibility(View.VISIBLE);
+        adavancedSettingBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, CarSettingActivity.class);
             startActivity(intent);
-        } );
+        });
+
+        userSwitcherBtn.setText(R.string.user_and_account_settings_title);
+        userSwitcherBtn.setVisibility(View.VISIBLE);
+        userSwitcherBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CarSettingActivity.class);
+            intent.setAction(CarSettingActivity.ACTION_LIST_USER);
+            startActivity(intent);
+        });
+        View exitBtn = findViewById(R.id.back_button);
+        ((ImageView) exitBtn).setImageResource(R.drawable.ic_close);
+        exitBtn.setOnClickListener(v -> finish());
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        mGridAdapter = new QuickSettingGridAdapter(this);
-        WifiTile wifiTile = new WifiTile(this, mGridAdapter);
-        BluetoothTile bluetoothTile = new BluetoothTile(this, mGridAdapter);
-        DayNightTile dayNightTile = new DayNightTile(this, mGridAdapter);
-        mGridAdapter.addTile(wifiTile);
-        mGridAdapter.addTile(bluetoothTile);
-        mGridAdapter.addTile(dayNightTile);
-        mGridView.setAdapter(mGridAdapter);
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(new BrightnessLineItem(this));
-        mPagedListAdapter = new TypedPagedListAdapter(lineItems);
-        mListView.setAdapter(mPagedListAdapter);
+
+        mGridAdapter
+                .addTile(new WifiTile(this, mGridAdapter))
+                .addTile(new BluetoothTile(this, mGridAdapter))
+                .addTile(new DayNightTile(this, mGridAdapter))
+                .addSeekbarTile(new BrightnessTile(this));
+        mListView.setAdapter(mGridAdapter);
     }
 
     @Override

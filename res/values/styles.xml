@@ -27,12 +27,7 @@
     </style>
 
     <style name="CarQuickSettingTheme" parent="Theme.Car.Light.NoActionBar">
-        <item name="android:windowAnimationStyle">@style/QsAnimationStyle</item>
-    </style>
-
-    <style name="QsAnimationStyle">
-        <item name="android:windowEnterAnimation">@anim/fade_in_top</item>
-        <item name="android:windowExitAnimation">@anim/fade_out_top</item>
+        <item name="android:background">@color/car_card</item>
     </style>
 
     <style name="SettingAnimationStyle">
