@@ -67,6 +67,11 @@ public class SuggestionLineItem extends ActionIconButtonLineItem {
         mActionListener.onSuggestionItemDismissed(adapterPosition);
     }
 
+    @Override
+    public void onPrimaryActionButtonClick(View view) {
+        onClick(view);
+    }
+
     /**
      * Interface that surfaces events on the suggestion.
      */
