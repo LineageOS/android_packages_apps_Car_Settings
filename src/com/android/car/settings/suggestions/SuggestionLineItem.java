@@ -18,7 +18,6 @@ package com.android.car.settings.suggestions;
 
 import android.graphics.drawable.Drawable;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.android.car.list.ActionIconButtonLineItem;
 
@@ -28,8 +27,6 @@ import com.android.car.list.ActionIconButtonLineItem;
 public class SuggestionLineItem extends ActionIconButtonLineItem {
 
     private final CharSequence mSummary;
-    private final Drawable mIconDrawable;
-    private final Drawable mActionIconDrawable;
     private final View.OnClickListener mOnClickListener;
     private final ActionListener mActionListener;
 
@@ -40,25 +37,14 @@ public class SuggestionLineItem extends ActionIconButtonLineItem {
             CharSequence title,
             CharSequence summary,
             Drawable iconDrawable,
-            Drawable actionIconDrawable,
+            CharSequence primaryAction,
+            CharSequence secondaryAction,
             View.OnClickListener onClickListener,
             ActionListener actionListener) {
-        super(title);
+        super(title, primaryAction, secondaryAction, iconDrawable);
         mSummary = summary;
-        mIconDrawable = iconDrawable;
-        mActionIconDrawable = actionIconDrawable;
         mOnClickListener = onClickListener;
         mActionListener = actionListener;
-    }
-
-    @Override
-    public void setIcon(ImageView iconView) {
-        iconView.setImageDrawable(mIconDrawable);
-    }
-
-    @Override
-    public void setActionButtonIcon(ImageView actionButtonIconView) {
-        actionButtonIconView.setImageDrawable(mActionIconDrawable);
     }
 
     @Override
@@ -77,7 +63,7 @@ public class SuggestionLineItem extends ActionIconButtonLineItem {
     }
 
     @Override
-    public void onActionButtonClick(int adapterPosition) {
+    public void onSecondaryActionButtonClick(int adapterPosition) {
         mActionListener.onSuggestionItemDismissed(adapterPosition);
     }
 
@@ -90,7 +76,6 @@ public class SuggestionLineItem extends ActionIconButtonLineItem {
          * Invoked when a suggestions item is dismissed.
          *
          * @param adapterPosition the position of the suggestion item in it's adapter.
-         *
          */
         void onSuggestionItemDismissed(int adapterPosition);
     }
