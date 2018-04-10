@@ -64,16 +64,8 @@
         <activity
             android:name=".common.CarSettingActivity"
             android:label="@string/settings_label"
-            android:windowSoftInputMode="adjustPan"
-            android:launchMode="singleTask"
-            android:exported="true">
-            <!-- Set priority high enough to trump the phone setting app -->
-            <!-- TODO: once phone setting is removed from car system image, set priority to 1 -->
-            <intent-filter android:priority="10">
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.settings.SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustPan">
         </activity>
 
         <activity
@@ -82,8 +74,11 @@
             android:label="@string/settings_label"
             android:launchMode="singleTask"
             android:exported="true">
-            <intent-filter>
+            <!-- Set priority high enough to trump the phone setting app -->
+            <!-- TODO: once phone setting is removed from car system image, set priority to 1 -->
+            <intent-filter android:priority="10">
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.settings.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

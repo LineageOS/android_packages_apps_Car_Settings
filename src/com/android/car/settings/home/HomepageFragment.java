@@ -26,7 +26,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.View;
 
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
@@ -106,7 +105,6 @@ public class HomepageFragment extends ListSettingsFragment implements
         // Call super after the wifiLineItem and BluetoothLineItem are setup, because
         // those are needed in super.onCreate().
         super.onActivityCreated(savedInstanceState);
-        getActivity().findViewById(R.id.action_bar_icon_container).setVisibility(View.GONE);
     }
 
     @Override
