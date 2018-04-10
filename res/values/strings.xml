@@ -583,4 +583,10 @@
     <!-- Message in dialog asking the user if they really want to exit the demo, which requires a
          factory reset [CHAR LIMIT=100]-->
     <string name="exit_retail_message">Deleting the demo account and exiting demo mode will require a factory reset</string>
+
+    <!-- String values for settings suggestions. -->
+    <!-- Button that allows users to re-open the setup wizard (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
+    <string name="suggestion_primary_button">finish setup</string>
+    <!-- Button that dismisses the suggestion to finish setting up their device (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
+    <string name="suggestion_secondary_button">not now</string>
 </resources>
