@@ -29,7 +29,6 @@ import com.android.settingslib.users.UserManagerHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Implementation of {@link ListItemProvider} for {@link UsersListFragment}.
  * Creates items that represent users on the system.
@@ -64,7 +63,7 @@ class UsersItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mUserManagerHelper.getCurrentUserInfo();
+        UserInfo currUserInfo = mUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
         mItems.add(createUserItem(currUserInfo,
@@ -76,7 +75,7 @@ class UsersItemProvider extends ListItemProvider {
         }
 
         // Display other users on the system
-        List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentUser();
+        List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentProcessUser();
         for (UserInfo userInfo : infos) {
             mItems.add(createUserItem(userInfo, userInfo.name));
         }
