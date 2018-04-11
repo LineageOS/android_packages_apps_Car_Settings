@@ -27,6 +27,7 @@
         android:foreground="@drawable/car_list_item_background"
         android:layout_alignParentStart="true">
         <ImageView
+            android:id="@+id/back_button"
             style="@style/ListIcon.ActionBar"/>
     </FrameLayout>
 
