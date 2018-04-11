@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Параметрлер"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"Дисплей"</string>
     <string name="brightness" msgid="2919605130898772866">"Жарықтық деңгейі"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Бейімделгіш жарықтық"</string>
@@ -146,7 +148,7 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Күн және уақыт"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Күн мен уақытты реттеу"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Күнін, уақытын, уақыт белдеуін, форматтарды реттеу"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Автоматты күні мен уақыт"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Автоматты күн мен уақыт"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Желідегі уақытты қолдану"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Aвтоматты уақыт белдеуі"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Желідегі уақыт белдеуін қолдану"</string>
@@ -226,16 +228,16 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Өшіру"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Бас тарту"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Растау"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Құпия сөз кемі 4-8 таңбадан тұруы қажет (ішінде 1 сан болуы керек)"</string>
+    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Құпия сөз 4-8 таңбадан тұруы қажет (ішінде кемінде 1 сан болуы керек)"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Кемінде <xliff:g id="COUNT">%d</xliff:g> таңба болуы керек"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN коды кемінде <xliff:g id="COUNT">%d</xliff:g> таңбадан тұруы керек"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> таңба болуы керек"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Ең көбі <xliff:g id="NUMBER">%d</xliff:g> сан болуы керек"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"Тек 0-9 арасындағы сандар болуы керек"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Құрылғы әкімшісі жақында пайдаланылған PIN кодын қолдануға рұқсат бермейді"</string>
-    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"АТ әкімшісі ортақ PIN кодтарына тыйым салды. Басқа PIN кодын енгізіп көріңіз."</string>
+    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"АТ әкімшісі оңай PIN кодтарына тыйым салды. Басқа PIN кодын енгізіп көріңіз."</string>
     <string name="lockpassword_illegal_character" msgid="4316822683738779337">"Жарамсыз таңба болмауы керек"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Құпия сөз жарамсыз: кемі 4-8 таңбадан тұруы қажет, оның ішінде кемінде 1 сан, 1 әріп болуы керек (бос орынға рұқсат етілмейді)"</string>
+    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Құпия сөз жарамсыз: 4-8 таңбадан тұруы қажет, оның ішінде кемінде 1 сан, 1 әріп болуы керек (бос орынға рұқсат етілмейді)"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Кемінде <xliff:g id="COUNT">%d</xliff:g> әріп болуы керек</item>
       <item quantity="one">Кемінде 1 әріп болуы керек</item>
@@ -262,7 +264,7 @@
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Құрылғы әкімшісі соңғы құпия сөзді қолдануға рұқсат бермейді"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Құпия сөзді сақтау кезінде қате кетті"</string>
-    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Ортақ құпия сөздерге АТ әкімшісі тыйым салды. Басқа құпия сөз енгізіп көріңіз."</string>
+    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Оңай құпия сөздерге АТ әкімшісі тыйым салды. Басқа құпия сөз енгізіп көріңіз."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Сандардың артатын, кемитін немесе қайталанатын ретіне рұқсат берілмейді"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды құлыптау опциялары"</string>
     <string name="forget" msgid="3971143908183848527">"Ұмыту"</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"Бас тарту"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace пернесі"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter пернесі"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>

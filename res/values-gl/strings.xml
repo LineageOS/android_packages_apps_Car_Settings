@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Configuración"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"Pantalla"</string>
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo automático"</string>
@@ -87,7 +89,7 @@
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Debe ter 16 díxitos"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalmente 0000 ou 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Solicitude de sincronización"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tocar para sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="sound_settings" msgid="3072423952331872246">"Son"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume do timbre"</string>
@@ -195,13 +197,13 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"Padrón"</string>
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Contrasinal"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Escolle un bloqueo"</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Escolle un tipo de bloqueo"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmar"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Volver debuxar"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Continuar"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Tentar de novo"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Definir un bloqueo de pantalla"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pola seguranza, define un padrón"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Por cuestións de seguranza, define un padrón"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Borrar"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancelar"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"O teu novo deseño de desbloqueo"</string>
@@ -214,13 +216,13 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como debuxar un deseño de desbloqueo"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao gardar o padrón"</string>
     <string name="okay" msgid="4589873324439764349">"Aceptar"</string>
-    <string name="choose_lock_pin_message" msgid="2963792070267774417">"Pola seguranza, define un PIN"</string>
+    <string name="choose_lock_pin_message" msgid="2963792070267774417">"Por cuestións de seguranza, define un PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Volve introducir o teu PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"O PIN debe conter polo menos 4 díxitos"</string>
     <string name="lockpin_invalid_pin" msgid="1305060827461433777">"O PIN non é válido, debe conter como mínimo 4 díxitos"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Os PIN non coinciden"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Erro ao gardar o PIN"</string>
-    <string name="choose_lock_password_message" msgid="6124341145027370784">"Pola seguranza, define un contrasinal"</string>
+    <string name="choose_lock_password_message" msgid="6124341145027370784">"Por cuestións de seguranza, define un contrasinal"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Volve introducir o teu contrasinal"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Os contrasinais non coinciden"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Borrar"</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"Cancelar"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retroceso"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>
