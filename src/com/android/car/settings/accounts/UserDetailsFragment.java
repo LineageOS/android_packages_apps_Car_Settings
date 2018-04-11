@@ -23,13 +23,13 @@ import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.car.widget.ListItemProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.EditUsernameFragment;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.settingslib.users.UserManagerHelper;
-
-import androidx.car.widget.ListItemProvider;
 
 /**
  * Shows current user and the accounts that belong to the user.
@@ -72,7 +72,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         super.onActivityCreated(savedInstanceState);
 
         mAddAccountButton = (Button) getActivity().findViewById(R.id.action_button1);
-        if(mUserManagerHelper.canModifyAccounts()) {
+        if (mUserManagerHelper.currentProcessCanModifyAccounts()) {
             mAddAccountButton.setText(R.string.user_add_account_menu);
             mAddAccountButton.setOnClickListener(v -> onAddAccountClicked());
         } else {

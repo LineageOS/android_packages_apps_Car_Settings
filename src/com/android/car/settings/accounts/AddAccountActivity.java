@@ -146,9 +146,9 @@ public class AddAccountActivity extends Activity {
             return;
         }
 
-        UserManager userManager = (UserManager) getSystemService(Context.USER_SERVICE);
-        mUserHandle = mUserManagerHelper.getCurrentUserInfo().getUserHandle();
-        if (mUserManagerHelper.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
+        mUserHandle = mUserManagerHelper.getCurrentProcessUserInfo().getUserHandle();
+        if (mUserManagerHelper.currentProcessHasUserRestriction(
+                UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
             // We aren't allowed to add an account.
             Toast.makeText(
                     this, R.string.user_cannot_add_accounts_message, Toast.LENGTH_LONG)
