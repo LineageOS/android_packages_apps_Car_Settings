@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Configuració"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"Pantalla"</string>
     <string name="brightness" msgid="2919605130898772866">"Nivell de brillantor"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillantor automàtica"</string>
@@ -80,14 +82,14 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Codi de vinculació per Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"El PIN conté lletres o símbols"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Escriu el codi de vinculació i, a continuació, prem la tecla de retorn."</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Vols vincular-lo amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Vols vincular el dispositiu amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permet que <xliff:g id="DEVICE_NAME">%1$s</xliff:g> accedeixi als contactes i a l\'historial de trucades"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Pot ser que també hagis d\'introduir aquest PIN a l\'altre dispositiu."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Pot ser que també hagis d\'introduir aquesta contrasenya a l\'altre dispositiu."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Ha de tenir 16 dígits"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Generalment 0000 o 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Sol·licitud de vinculació"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca per vincular-lo amb el dispositiu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca per vincular el dispositiu amb <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="sound_settings" msgid="3072423952331872246">"So"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volum del to"</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"Cancel·la"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tecla de retrocés"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tecla de retorn"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>

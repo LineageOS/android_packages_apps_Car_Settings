@@ -19,15 +19,17 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Ezarpenak"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"Pantaila"</string>
     <string name="brightness" msgid="2919605130898772866">"Distira"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Distira doigarria"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimizatu pantailaren distira inguruko argitasunaren arabera"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago gaueko argia"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Aktibatuta dago Gaueko argia"</string>
     <string name="keywords_display" msgid="3978416985146943922">"ukipen-pantaila, pantaila"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"ilundu pantaila, ukipen-pantaila, bateria"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ilundu pantaila, ukipen-pantaila, bateria"</string>
-    <string name="keywords_display_night_display" msgid="2922294576679769957">"pantaila iluna, gaua, ilundu"</string>
+    <string name="keywords_display_night_display" msgid="2922294576679769957">"pantaila iluna, gaua, tonalitatea"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Konfiguratu eta kudeatu hari gabeko sarbide-puntuak"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi konexioa aktibatzen…"</string>
@@ -101,11 +103,11 @@
     <string name="disable_text" msgid="4358165448648990820">"Desgaitu"</string>
     <string name="enable_text" msgid="1794971777861881238">"Gaitu"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Baimenak"</string>
-    <string name="application_version_label" msgid="8556889839783311649">"%1$s bertsioa"</string>
+    <string name="application_version_label" msgid="8556889839783311649">"Bertsioa: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ez du baimenik"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ez du eskatu baimenik"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datuen erabilera"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplik. datuen erabilera"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplikazioen datuen erabilera"</string>
     <string name="force_stop" msgid="2153183697014720520">"Behartu gelditzera"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kalkulatzen…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
@@ -125,7 +127,7 @@
     <string name="device_status_activity_title" msgid="4083567497305368200">"Egoera"</string>
     <string name="device_status" msgid="267298179806290920">"Egoera"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Bateriaren nahiz sarearen egoera eta bestelako informazioa"</string>
-    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Telefono-zenbakia, seinalea eta abar."</string>
+    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Telefono-zenbakia, seinalea eta abar"</string>
     <string name="about_settings" msgid="4329457966672592345">"Honi buruz"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Ikusi legezko informazioa, egoera eta software-bertsioa"</string>
@@ -144,7 +146,7 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Arazo bat gertatu da lizentziak kargatzean."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Kargatzen…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data eta ordua"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Zehaztu data eta ordua"</string>
+    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Ezarri data eta ordua"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ezarri data, ordua, ordu-zona eta formatuak"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Data eta ordu automatikoa"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Erabili sareak emandako ordua"</string>
@@ -188,7 +190,7 @@
     <string name="really_remove_user_title" msgid="4990029019291756762">"Erabiltzaile hau kendu?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Aplikazio eta datu guztiak ezabatuko dira."</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Beste erabiltzaile bat gehitu?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Erabiltzaile bat gehitzen duzunean, hark bere eremua konfiguratu beharko du."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Erabiltzaile bat gehitzen duzunean, bere eremua konfiguratu beharko du."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Edozein erabiltzailek egunera ditzake beste erabiltzaile guztien aplikazioak."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurtasuna"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Pantailaren blokeoa"</string>
@@ -229,8 +231,8 @@
     <string name="choose_lock_password_hints" msgid="1802962836351866087">"Pasahitzak 4-8 karaktere izan behar ditu, gutxienez zenbaki batekin"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> karaktere izan behar ditu"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu PIN kodeak"</string>
-    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> karaktere baino gutxiago izan behar ditu"</string>
-    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> digitu baino gutxiago izan behar ditu"</string>
+    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> karaktere izan behar ditu"</string>
+    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> digitu izan behar ditu"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"0 eta 9 arteko digituak soilik izan ditzake"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Gailuaren administratzaileak ez du eman beste PIN kode bat erabiltzeko baimenik"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IKT administratzaileak blokeatu egiten ditu asmatzen errazak diren PIN kodeak. Erabili beste PIN bat."</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"Utzi"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Atzera tekla"</string>
     <string name="enter_key" msgid="2121394305541579468">"Sartu tekla"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>

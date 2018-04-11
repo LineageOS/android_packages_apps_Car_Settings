@@ -19,10 +19,12 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Mipangilio"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"Onyesho"</string>
     <string name="brightness" msgid="2919605130898772866">"Hali ya mwangaza"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Mwangaza unaojirekebisha"</string>
-    <string name="auto_brightness_summary" msgid="4741887033140384352">"Boresha kiwango cha ung\'avu cha mwangaza unaopatikana"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Ung\'aavu unaojirekebisha"</string>
+    <string name="auto_brightness_summary" msgid="4741887033140384352">"Boresha kiwango cha ung\'aavu kulingana na mwanga uliopo"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Mwanga wa Usiku umewashwa"</string>
     <string name="keywords_display" msgid="3978416985146943922">"skrini, skrini ya kugusa"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"punguza mwanga wa skrini, skrini ya kugusa, betri"</string>
@@ -41,7 +43,7 @@
     <string name="wifi_show_password" msgid="8423293211933521097">"Onyesha nenosiri"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Jina la mtandao"</string>
     <string name="wifi_security" msgid="158358046038876532">"Usalama"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Nguvu ya ishara"</string>
+    <string name="wifi_signal" msgid="1817579728350364549">"Nguvu za mawimbi"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Hali"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Kasi ya muunganisho"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Masafa"</string>
@@ -78,8 +80,8 @@
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Oanisha kisha unganisha"</string>
     <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Msimbo wa kuoanisha Bluetooth"</string>
-    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN inajumlisha herufi au ishara"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Andika msimbo wa kuoanisha kisha ubonyeze \"Return\" au \"Enter\""</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN inajumlisha herufi au alama"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Andika msimbo wa kuoanisha kisha ubonyeze \"Rejesha\" au \"Enter\""</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Je, ungependa kuoanisha na <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Ruhusu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ifikie rekodi ya simu zilizopigwa na anwani zako"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Unawezahitaji pia kuandika PIN hii kwenye kifaa kingine."</string>
@@ -106,7 +108,7 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Hakuna ruhusa zilizoombwa"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Matumizi ya data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Matumizi ya data ya programu"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Ilazimishe ikome"</string>
+    <string name="force_stop" msgid="2153183697014720520">"Lazimisha kuzima"</string>
     <string name="computing_size" msgid="5791407621793083965">"Inahesabu…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other">Ruhusa <xliff:g id="COUNT_1">%d</xliff:g> za ziada</item>
@@ -116,9 +118,9 @@
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Masisho ya mfumo"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"Toleo la Android"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Kiwango cha kuzuia athari za usalama kwenye Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Kiwango cha rekebisho la usalama kwenye Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Muundo"</string>
-    <string name="baseband_version" msgid="2370088062235041897">"Toleo la Baseband"</string>
+    <string name="baseband_version" msgid="2370088062235041897">"Toleo la mitambo ya redio"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Toleo la kiini"</string>
     <string name="build_number" msgid="3997326631001009102">"Nambari ya muundo"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Haipatikani"</string>
@@ -145,11 +147,11 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Inapakia…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarehe na saa"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Weka tarehe na saa"</string>
-    <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Weka tarehe, saa, ukanda wa saa na miundo"</string>
+    <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Weka tarehe, saa, saa za eneo na mfumo"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Tarehe na saa otomatiki"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"Tumia saa iliyotolewa na mtandao"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Tumia saa inayotolewa na mtandao"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Saa za eneo otomatiki"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"Tumia saa za eneo zilizotolewa na mtandao"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Tumia saa za eneo kwa mujibu wa mtandao"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Mfumo wa saa 24"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Tumia mpangilio wa saa 24"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Saa"</string>
@@ -168,12 +170,12 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ongeza akaunti"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Futa mtumiaji"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Mtumiaji mpya"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Aliyealikwa"</string>
+    <string name="user_guest" msgid="3465399481257448601">"Mgeni"</string>
     <string name="user_switch" msgid="6544839750534690781">"Badilisha"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Wewe (%1$s)"</string>
     <string name="user_settings_details_title" msgid="3016069827765597036">"Maelezo ya wasifu"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Jina"</string>
-    <string name="user_summary_not_set_up" msgid="1473688119241224145">"Haijasanidiwa"</string>
+    <string name="user_summary_not_set_up" msgid="1473688119241224145">"Haijawekwa mipangilio"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Akaunti na watumiaji"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Mtumiaji"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaunti za <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -210,7 +212,7 @@
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Mchoro wa kufungua umerekodiwa"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Chora mchoro tena ili uthibitishe"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Unganisha angalau vitone 4. Jaribu tena."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Mchoro huo si sahihi"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Mchoro si sahihi"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Jinsi ya kuchora mchoro wa kufungua"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hitilafu ya kuhifadhi mchoro"</string>
     <string name="okay" msgid="4589873324439764349">"Sawa"</string>
@@ -253,8 +255,8 @@
       <item quantity="one">Ni lazima liwe na angalau tarakimu 1</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="other">Ni lazima iwe na ishara <xliff:g id="COUNT">%d</xliff:g> maalum</item>
-      <item quantity="one">Ni lazima liwe na angalau ishara 1 maalum</item>
+      <item quantity="other">Ni lazima iwe na alama <xliff:g id="COUNT">%d</xliff:g> maalum</item>
+      <item quantity="one">Ni lazima liwe na angalau alama 1 maalum</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
       <item quantity="other">Ni lazima liwe na angalau herufi <xliff:g id="COUNT">%d</xliff:g> ambazo si herufi za alfabeti</item>
@@ -271,4 +273,10 @@
     <string name="cancel" msgid="750286395700355455">"Ghairi"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Kitufe cha Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Kitufe cha Enter"</string>
+    <string name="exit_retail_title" msgid="8921261196479156697">"Funga Onyesho"</string>
+    <string name="exit_retail_message" msgid="1426206128187780964">"Utatakiwa urejeshe mipangilio ya kiwandani ili ufute akaunti ya onyesho na ufunge hali ya onyesho"</string>
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>
