@@ -226,7 +226,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
     }
 
     @Override
-    public void onProfileAudioStateChanged(int bluetoothProfile, int state) {
+    public void onAudioModeChanged() {
         // no-op
     }
 
