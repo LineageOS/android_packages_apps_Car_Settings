@@ -325,7 +325,7 @@ public class BluetoothDeviceListAdapter
     }
 
     @Override
-    public void onProfileAudioStateChanged(int bluetoothProfile, int state) {
+    public void onAudioModeChanged() {
         // Not used (for now)
     }
 

@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ترتیبات"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"ڈسپلے"</string>
     <string name="brightness" msgid="2919605130898772866">"چمک کی سطح"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"تغیر پذیر چمک"</string>
@@ -83,14 +85,14 @@
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کے ساتھ جوڑا بنائیں؟"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کو اپنے رابطوں اور کال کی سرگزشت تک رسائی کی اجازت دیں"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"آپ کو دوسرے آلہ پر بھی یہ PIN ٹائپ کرنے کی ضرورت پڑ سکتی ہے۔"</string>
-    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"آپ کو دیگر آلہ پر بھی اس پاس کلید کو ٹائپ کرنے کی ضرورت ہو سکتی ہے۔"</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"آپ کو دیگر آلہ پر بھی اس پاس کلید کو ٹائپ کرنے کی ضرورت پڑ سکتی ہے۔"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"16 ہندسے ہونے چاہئیں"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"عام طور پر 0000 یا 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"جوڑا بنانے کی درخواست"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کے ساتھ جوڑا بنانے کیلئے تھپتھپائیں۔"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="sound_settings" msgid="3072423952331872246">"آواز"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"رنگ والیوم"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"رِنگ والیوم"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"نیویگیشن والیوم"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"رنگ ٹون"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"اطلاع"</string>
@@ -102,7 +104,7 @@
     <string name="enable_text" msgid="1794971777861881238">"فعال کریں"</string>
     <string name="permissions_label" msgid="2701446753515612685">"اجازتیں"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ورژن: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"اجازت نہیں دی گئی"</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"کوئی اجازت نہیں دی گئی"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"کسی اجازت کی درخواست نہیں کی گئی"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ڈیٹا کا استعمال"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ایپ ڈیٹا کا استعمال"</string>
@@ -137,7 +139,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"کاپی رائٹ"</string>
     <string name="license_title" msgid="936705938435249965">"لائسنس"</string>
     <string name="terms_title" msgid="5201471373602628765">"شرائط و ضوابط"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"سسٹم WebView کا لائسنس"</string>
+    <string name="webview_license_title" msgid="2531829466541104826">"سسٹم WebView لائسنس"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"وال پیپرز"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"سیٹلائٹ تصاویر کے فراہم کنندگان:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"فریق ثالث کے لائسنسز"</string>
@@ -173,14 +175,14 @@
     <string name="current_user_name" msgid="3813671533249316823">"آپ (%1$s)"</string>
     <string name="user_settings_details_title" msgid="3016069827765597036">"پروفائل کی معلومات"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
-    <string name="user_summary_not_set_up" msgid="1473688119241224145">"ترتیب نہیں دی گئی"</string>
+    <string name="user_summary_not_set_up" msgid="1473688119241224145">"ترتیب نہیں دیا گیا"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"صارفین اور اکاؤنٹس"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"صارف"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> کے لئے اکاؤنٹس"</string>
     <string name="account_details_title" msgid="7529571432258448573">"اکا‌‌‌ؤنٹ کی معلومات"</string>
     <string name="add_account_title" msgid="5988746086885210040">"اکاؤنٹ شامل کریں"</string>
     <string name="add_an_account" msgid="1072285034300995091">"ایک اکاؤنٹ شامل کریں"</string>
-    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"محدود پروفائلز اکاؤنٹس شامل نہیں کر سکتے ہیں"</string>
+    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"محدود پروفائلز اکاؤنٹس شامل نہیں کر سکتی ہیں"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"اکاؤنٹ ہٹائیں"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"اکاؤنٹ ہٹائیں؟"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"اس اکاؤنٹ کو ہٹانے سے اس کے تمام پیغامات، رابطے اور اس آلے کا دیگر ڈیٹا حذف ہو جائے گا!"</string>
@@ -193,7 +195,7 @@
     <string name="security_settings_title" msgid="6955331714774709746">"سیکیورٹی"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"اسکرین لاک"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"پیٹرن"</string>
-    <string name="security_lock_pin" msgid="7970343656751993936">"پن کریں"</string>
+    <string name="security_lock_pin" msgid="7970343656751993936">"پن"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"پاس ورڈ"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"لاک کی قسم منتخب کریں"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"تصدیق کریں"</string>
@@ -226,7 +228,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"صاف کریں"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"منسوخ کریں"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تصدیق کریں"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"پاس ورڈ میں 4 سے 8 کیریکٹرز کا ہونا چاہئے جس میں کم از کم 1 نمبر ہونا چاہئے"</string>
+    <string name="choose_lock_password_hints" msgid="1802962836351866087">"پاس ورڈ 4 سے 8 کیریکٹرز کا ہونا چاہئے جس میں کم از کم 1 نمبر ہونا چاہئے"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"کم از کم <xliff:g id="COUNT">%d</xliff:g> حروف پر مشتمل ہونا چاہیے"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN کم از کم <xliff:g id="COUNT">%d</xliff:g> ہندسوں کا ہونا چاہیے"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"کریکٹرز <xliff:g id="NUMBER">%d</xliff:g> سے کم ہونے چاہئیں"</string>
@@ -257,7 +259,7 @@
       <item quantity="one">کم از کم ایک خصوصی علامت پر مشتمل ہونا چاہیئے</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="other">کم از کم <xliff:g id="COUNT">%d</xliff:g> غیر حرفی علامتوں پر مشتمل ہونا چاہیے</item>
+      <item quantity="other">کم از کم <xliff:g id="COUNT">%d</xliff:g> ایسے کریکٹرز پر مشتمل ہونا چاہیئے جو حروف نہ ہوں</item>
       <item quantity="one">کم از کم ایک ایسے کریکٹر پر مشتمل ہونا چاہیئے جو حرف نہ ہو</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"آلے کا منتظم ایک حالیہ پاس ورڈ کا استعمال کرنے کی اجازت نہیں دیتا ہے"</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"منسوخ کریں"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace کلید"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter کلید"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>

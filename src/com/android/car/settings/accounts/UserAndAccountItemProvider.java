@@ -21,16 +21,16 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.text.TextUtils;
 
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 import com.android.car.settings.users.UserIconProvider;
 import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 /**
  * Implementation of {@link ListItemProvider} for {@link UserDetailsFragment}.
@@ -68,7 +68,7 @@ class UserAndAccountItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mUserManagerHelper.getCurrentUserInfo();
+        UserInfo currUserInfo = mUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
         mItems.add(createUserItem(
@@ -80,7 +80,7 @@ class UserAndAccountItemProvider extends ListItemProvider {
         }
 
         // Only add account-related items if the User can Modify Accounts
-        if (mUserManagerHelper.canModifyAccounts()) {
+        if (mUserManagerHelper.currentProcessCanModifyAccounts()) {
             // Add "Account for $User" title for a list of accounts.
             mItems.add(createSubtitleItem(
                     mContext.getString(R.string.account_list_title, currUserInfo.name)));
