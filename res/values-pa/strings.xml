@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ਸੈਟਿੰਗਾਂ"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"ਡਿਸਪਲੇ"</string>
     <string name="brightness" msgid="2919605130898772866">"ਚਮਕ ਪੱਧਰ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"ਅਨੁਕੂਲ ਚਮਕ"</string>
@@ -29,7 +31,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ਡਿਮ ਸਕ੍ਰੀਨ, ਟੱਚਸਕ੍ਰੀਨ, ਬੈਟਰੀ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ਡਿਮ ਸਕ੍ਰੀਨ, ਰਾਤ ਵਾਲਾ ਮੋਡ, ਭਾਹ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ਵਾਈ-ਫਾਈ"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ਵਾਇਰਲੈਸ ਪਹੁੰਚ ਬਿੰਦੂ ਦਾ ਸੈੱਟਅੱਪ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
+    <string name="wifi_settings_summary" msgid="6095898149997291025">"ਵਾਇਰਲੈਸ ਪਹੁੰਚ ਬਿੰਦੂਆਂ ਦਾ ਸੈੱਟਅੱਪ ਅਤੇ ਪ੍ਰਬੰਧਨ ਕਰੋ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ਵਾਈ‑ਫਾਈ ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ਵਾਈ‑ਫਾਈ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ਨੈੱਟਵਰਕ ਛੱਡਣ ਵਿੱਚ ਅਸਫਲ ਰਿਹਾ"</string>
@@ -237,28 +239,28 @@
     <string name="lockpassword_illegal_character" msgid="4316822683738779337">"ਇਸ ਵਿੱਚ ਇੱਕ ਅਵੈਧ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਨਹੀਂ ਹੋ ਸਕਦਾ"</string>
     <string name="lockpassword_invalid_password" msgid="4372835914837507519">"ਪਾਸਵਰਡ ਅਵੈਧ ਹੈ, ਇਹ 4-8 ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਜਿਸ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ 1 ਅੰਕ, 1 ਅੱਖਰ ਹੋਵੇ ਅਤੇ ਕੋਈ ਖਾਲੀ ਜਗ੍ਹਾ ਸ਼ਾਮਲ ਨਾ ਹੋਵੇ"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਛੋਟੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਛੋਟੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਛੋਟੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਛੋਟੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਵੱਡੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਵੱਡੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਵੱਡੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਵੱਡੇ ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਸੰਖਿਆਤਮਿਕ ਅੰਕ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਸੰਖਿਆਤਮਿਕ ਅੰਕ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਸੰਖਿਆਤਮਿਕ ਅੰਕ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਸੰਖਿਆਤਮਿਕ ਅੰਕ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਖਾਸ ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਖਾਸ ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਖਾਸ ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਖਾਸ ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਗੈਰ-ਅੱਖਰੀ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ</item>
-      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਗੈਰ-ਅੱਖਰੀ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨੇ ਚਾਹੀਦੇ ਹਨ</item>
+      <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਗੈਰ-ਅੱਖਰੀ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
+      <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਗੈਰ-ਅੱਖਰੀ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ਡੀਵਾਈਸ ਪ੍ਰਸ਼ਾਸਕ ਇੱਕ ਹਾਲੀਆ ਪਾਸਵਰਡ ਵਰਤਣ ਨਹੀਂ ਦਿੰਦਾ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ਪਾਸਵਰਡ ਰੱਖਿਅਤ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋਈ"</string>
@@ -271,4 +273,12 @@
     <string name="cancel" msgid="750286395700355455">"ਰੱਦ ਕਰੋ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ਕੁੰਜੀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter ਕੁੰਜੀ"</string>
+    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <skip />
+    <!-- no translation found for exit_retail_message (1426206128187780964) -->
+    <skip />
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>

@@ -19,6 +19,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"設定"</string>
+    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
+    <skip />
     <string name="display_settings" msgid="5325515247739279185">"螢幕"</string>
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調整亮度"</string>
@@ -271,4 +273,10 @@
     <string name="cancel" msgid="750286395700355455">"取消"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 鍵"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 鍵"</string>
+    <string name="exit_retail_title" msgid="8921261196479156697">"結束示範模式"</string>
+    <string name="exit_retail_message" msgid="1426206128187780964">"必須恢復原廠設定才能刪除示範帳戶及結束示範模式"</string>
+    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <skip />
+    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
+    <skip />
 </resources>
