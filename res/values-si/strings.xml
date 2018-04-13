@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"සැකසීම්"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"තව සැකසීම්"</string>
     <string name="display_settings" msgid="5325515247739279185">"සංදර්ශකය"</string>
     <string name="brightness" msgid="2919605130898772866">"දීප්ති මට්ටම"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"අනුවර්තක දීප්තිය"</string>
@@ -275,8 +274,6 @@
     <string name="enter_key" msgid="2121394305541579468">"Enter යතුර"</string>
     <string name="exit_retail_title" msgid="8921261196479156697">"ආදර්ශනයෙන් ඉවත් වන්න"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"ආදර්ශන ගිණුම මකා දමා ආදර්ශන ආකාරයෙන් ඉවත් වීම සඳහා කර්මාන්තශාලා යළි පිහිටුවීම කළ යුතු වේ"</string>
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"පිහිටුවීම අවසන් කරන්න"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"දැන් නොවේ"</string>
 </resources>

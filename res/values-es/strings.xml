@@ -118,7 +118,7 @@
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Actualizaciones del sistema"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"Versión de Android"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Nivel de parche de seguridad de Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Nivel del parche de seguridad de Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modelo"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Versión de banda base"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versión de kernel"</string>
@@ -275,8 +275,6 @@
     <string name="enter_key" msgid="2121394305541579468">"Tecla Intro"</string>
     <string name="exit_retail_title" msgid="8921261196479156697">"Salir de demostración"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"Para eliminar la cuenta demo y salir del modo demo, es necesario restablecer el estado de fábrica"</string>
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"finalizar configuración"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"ahora no"</string>
 </resources>
