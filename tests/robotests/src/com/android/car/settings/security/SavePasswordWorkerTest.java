@@ -28,24 +28,20 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Tests for SaveLockPatternWorker class.
+ * Tests for SavePasswordWorker class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class SaveLockPatternWorkerTest {
+public class SavePasswordWorkerTest {
     /**
      * A test to check return value when save worker succeeds
      */
     @Test
     public void testSaveLockSuccessReturnsTrue() {
-        SaveLockPatternWorker worker = spy(new SaveLockPatternWorker());
+        SavePasswordWorker worker = spy(new SavePasswordWorker());
 
-        doNothing().when(worker).saveLockPattern();
+        doNothing().when(worker).saveLock();
 
-        assertThat(worker
-                .saveAndVerifyInBackground()
-                .getBooleanExtra(SaveLockPatternWorker.EXTRA_KEY_SUCCESS,
-                        false))
-                .isTrue();
+        assertThat(worker.saveAndVerifyInBackground()).isTrue();
     }
 
     /**
@@ -53,14 +49,10 @@ public class SaveLockPatternWorkerTest {
      */
     @Test
     public void testSaveLockFailureReturnsFalse() {
-        SaveLockPatternWorker worker = spy(new SaveLockPatternWorker());
+        SavePasswordWorker worker = spy(new SavePasswordWorker());
 
-        doThrow(new RuntimeException()).when(worker).saveLockPattern();
+        doThrow(new RuntimeException()).when(worker).saveLock();
 
-        assertThat(worker
-                .saveAndVerifyInBackground()
-                .getBooleanExtra(SaveLockPatternWorker.EXTRA_KEY_SUCCESS,
-                        true))
-                .isFalse();
+        assertThat(worker.saveAndVerifyInBackground()).isFalse();
     }
 }
