@@ -25,7 +25,7 @@
     <string name="brightness" msgid="2919605130898772866">"Պայծառության մակարդակ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Հարմարողական պայծառություն"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Փոխել պայծառությունն ըստ լուսավորվածության մակարդակի"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Գիշերային լույսը միացված է"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Գիշերային ռեժիմը միացված է"</string>
     <string name="keywords_display" msgid="3978416985146943922">"էկրան, հպէկրան"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"խամրեցված էկրան, հպէկրան, մարտկոց"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"խամրեցված էկրան, հպէկրան, մարտկոց"</string>
@@ -53,7 +53,7 @@
     <item msgid="4897376984576812606">"Թույլ"</item>
     <item msgid="2032262610626057081">"Բավարար"</item>
     <item msgid="3859756017461098953">"Լավ"</item>
-    <item msgid="1521103743353335724">"Հիանալի"</item>
+    <item msgid="1521103743353335724">"Գերազանց"</item>
   </string-array>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Միացնել Bluetooth-ը"</string>
@@ -92,7 +92,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Հպեք` <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ի հետ զուգակցելու համար:"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="sound_settings" msgid="3072423952331872246">"Ձայն"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"Զանգերանգի ձայնը"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"Զանգի ձայնը"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Նավիգացիայի ձայնը"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Զանգերանգ"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Ծանուցում"</string>
@@ -266,19 +266,16 @@
     <string name="error_saving_password" msgid="8334882262622500658">"Չհաջողվեց պահել գաղտնաբառը"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ՏՏ ադմինիստրատորն արգելափակել է պարզ գաղտնաբառերը: Փորձեք մեկ այլ գաղտնաբառ:"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Թվանշանների աճող, նվազող կամ կրկնվող հաջորդականությունն արգելված է"</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման ընտրանքներ"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման տարբերակներ"</string>
     <string name="forget" msgid="3971143908183848527">"Հեռացնել"</string>
     <string name="delete_button" msgid="5840500432614610850">"Ջնջել"</string>
     <string name="remove_button" msgid="6664656962868194178">"Հեռացնել"</string>
     <string name="cancel" msgid="750286395700355455">"Չեղարկել"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ստեղն"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter ստեղն"</string>
-    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <!-- no translation found for exit_retail_title (4514319631081146178) -->
     <skip />
-    <!-- no translation found for exit_retail_message (1426206128187780964) -->
-    <skip />
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="exit_retail_message" msgid="1426206128187780964">"Փորձնական հաշիվը ջնջելու և դեմո ռեժիմից դուրս գալու համար գործարանային վերակայում է անհրաժեշտ"</string>
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"ավարտել կարգավորումը"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"ոչ հիմա"</string>
 </resources>

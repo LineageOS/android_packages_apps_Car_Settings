@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Тохиргоо"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"Бусад тохиргоо"</string>
     <string name="display_settings" msgid="5325515247739279185">"Харуулах"</string>
     <string name="brightness" msgid="2919605130898772866">"Гэрэлтүүлгийн түвшин"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Дасан зохицох боломжтой гэрэлтүүлэг"</string>
@@ -183,7 +182,7 @@
     <string name="add_account_title" msgid="5988746086885210040">"Бүртгэл нэмэх"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Бүртгэл нэмэх"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Хязгаарлагдсан профайлууд бүртгэл нэмэх боломжгүй"</string>
-    <string name="remove_account_title" msgid="8840386525787836381">"Бүртгэл устгах"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"Бүртгэл хасах"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Бүртгэлийг устгах уу?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Энэ бүртгэлийг устгаснаар үүний бүх зурвас, харилцагч болон бусад өгөгдлийг төхөөрөмжөөс устгана!"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"Энэ өөрчлөлтийг таны админ зөвшөөрөөгүй байна"</string>
@@ -273,10 +272,9 @@
     <string name="cancel" msgid="750286395700355455">"Цуцлах"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Ухраах түлхүүр"</string>
     <string name="enter_key" msgid="2121394305541579468">"Oруулах түлхүүр"</string>
-    <string name="exit_retail_title" msgid="8921261196479156697">"Туршилтаас гарах"</string>
+    <!-- no translation found for exit_retail_title (4514319631081146178) -->
+    <skip />
     <string name="exit_retail_message" msgid="1426206128187780964">"Туршилтын бүртгэлийг устгах болон туршилтын горимоос гарахад үйлдвэрийн шинэчлэлт шаардлагатай болно"</string>
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"тохиргоог дуусгах"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"одоо биш"</string>
 </resources>

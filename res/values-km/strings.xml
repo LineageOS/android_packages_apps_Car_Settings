@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ការកំណត់"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"ការកំណត់ច្រើនទៀត"</string>
     <string name="display_settings" msgid="5325515247739279185">"ការ​បង្ហាញ"</string>
     <string name="brightness" msgid="2919605130898772866">"កម្រិត​ពន្លឺ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"កម្រិតពន្លឺបត់បែន"</string>
@@ -273,10 +272,9 @@
     <string name="cancel" msgid="750286395700355455">"បោះបង់"</string>
     <string name="backspace_key" msgid="1545590866688979099">"គ្រាប់​ចុច​លុប"</string>
     <string name="enter_key" msgid="2121394305541579468">"គ្រាប់​ចុច​បញ្ចូល"</string>
-    <string name="exit_retail_title" msgid="8921261196479156697">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
+    <!-- no translation found for exit_retail_title (4514319631081146178) -->
+    <skip />
     <string name="exit_retail_message" msgid="1426206128187780964">"ការ​លុប​គណនី​សាកល្បង និង​ការ​ចាកចេញពីមុខងារ​សាកល្បង​នឹង​តម្រូវ​ឱ្យ​មាន​ការ​កំណត់​ដូច​ដើម​ឡើង​វិញ"</string>
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"បញ្ចប់​ការរៀបចំ"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"កុំ​ទាន់"</string>
 </resources>

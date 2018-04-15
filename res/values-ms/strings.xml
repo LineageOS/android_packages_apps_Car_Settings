@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Tetapan"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"Lagi tetapan"</string>
     <string name="display_settings" msgid="5325515247739279185">"Paparan"</string>
     <string name="brightness" msgid="2919605130898772866">"Tahap kecerahan"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Kecerahan boleh suai"</string>
@@ -273,10 +272,9 @@
     <string name="cancel" msgid="750286395700355455">"Batal"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Kekunci undur ruang"</string>
     <string name="enter_key" msgid="2121394305541579468">"Kekunci enter"</string>
-    <string name="exit_retail_title" msgid="8921261196479156697">"Keluar drp Tnjk Cara"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Pemadaman akaun tunjuk cara dan tindakan keluar drp mod tunjuk cara memerlukan tetapan semula kilang"</string>
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
+    <!-- no translation found for exit_retail_title (4514319631081146178) -->
     <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="exit_retail_message" msgid="1426206128187780964">"Pemadaman akaun demo dan tindakan keluar daripada mod demo memerlukan tetapan semula kilang"</string>
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"selesaikan persediaan"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"bukan sekarang"</string>
 </resources>

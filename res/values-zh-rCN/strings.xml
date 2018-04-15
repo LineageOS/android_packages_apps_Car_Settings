@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"设置"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"更多设置"</string>
     <string name="display_settings" msgid="5325515247739279185">"显示"</string>
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自动调节亮度"</string>
@@ -273,12 +272,9 @@
     <string name="cancel" msgid="750286395700355455">"取消"</string>
     <string name="backspace_key" msgid="1545590866688979099">"退格键"</string>
     <string name="enter_key" msgid="2121394305541579468">"输入密钥"</string>
-    <!-- no translation found for exit_retail_title (8921261196479156697) -->
+    <!-- no translation found for exit_retail_title (4514319631081146178) -->
     <skip />
-    <!-- no translation found for exit_retail_message (1426206128187780964) -->
-    <skip />
-    <!-- no translation found for suggestion_primary_button (6421115494714083020) -->
-    <skip />
-    <!-- no translation found for suggestion_secondary_button (7075088546904464681) -->
-    <skip />
+    <string name="exit_retail_message" msgid="1426206128187780964">"必须恢复出厂设置才能删除演示帐号以及退出演示模式"</string>
+    <string name="suggestion_primary_button" msgid="6421115494714083020">"完成设置"</string>
+    <string name="suggestion_secondary_button" msgid="7075088546904464681">"以后再说"</string>
 </resources>

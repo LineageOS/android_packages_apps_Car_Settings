@@ -21,9 +21,7 @@
     android:layout_height="match_parent"
     android:layout_marginStart="@dimen/car_margin"
     android:layout_marginEnd="@dimen/car_margin"
-    android:orientation="horizontal"
-    android:paddingTop="@dimen/car_app_bar_height"
-    android:paddingBottom="@dimen/car_app_bar_height">
+    android:orientation="horizontal">
 
     <!-- Start side: lock pattern -->
     <FrameLayout
@@ -92,21 +90,25 @@
             android:orientation="horizontal">
 
             <!-- skip, or re-try -->
-            <Button android:id="@+id/footerSecondaryButton"
-                    style="@style/Widget.Car.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/car_action1_size"
-                    android:layout_marginEnd="@dimen/car_padding_4"
-                    android:text="@string/lockpattern_cancel_button_text" />
+            <Button
+                android:id="@+id/footerSecondaryButton"
+                style="@style/Widget.Car.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/car_action1_size"
+                android:layout_marginEnd="@dimen/car_padding_4"
+                android:text="@string/lockpattern_cancel_button_text"
+                android:visibility="gone"/>
 
             <!-- confirm or ok -->
-            <Button android:id="@+id/footerPrimaryButton"
-                    style="@style/Widget.Car.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/car_action1_size"
-                    android:text="@string/lockpattern_confirm_button_text" />
+            <Button
+                android:id="@+id/footerPrimaryButton"
+                style="@style/Widget.Car.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/car_action1_size"
+                android:text="@string/lockpattern_confirm_button_text"
+                android:visibility="gone"/>
 
         </LinearLayout>
     </LinearLayout>
