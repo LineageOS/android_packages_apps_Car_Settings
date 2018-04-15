@@ -16,8 +16,11 @@
 
 package com.android.car.settings.security;
 
-import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
@@ -25,17 +28,10 @@ import com.android.car.settings.common.ListItemSettingsFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
-
 /**
  * Give user choices of lock screen type: Pin/Pattern/Password or None.
  */
 public class ChooseLockTypeFragment extends ListItemSettingsFragment {
-    // Arbitrary request code for choose security lock activity.
-    private static final int REQUEST_CHOOSE_LOCK = 10001;
-
     private ListItemProvider mItemProvider;
 
     public static ChooseLockTypeFragment newInstance() {
@@ -66,36 +62,34 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
     private ListItem createLockPatternLineItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_pattern));
-        item.setOnClickListener(view -> startChooseLockPatternActivity());
+        item.setOnClickListener(view -> showChooseLockPattern());
         return item;
     }
 
     private ListItem createLockPasswordLineItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_password));
-        item.setOnClickListener(view -> startChooseLockPasswordActivity());
+        item.setOnClickListener(view -> showChooseLockPassword());
         return item;
     }
 
     private ListItem createLockPinLineItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_pin));
-        item.setOnClickListener(view -> startChooseLockPinActivity());
+        item.setOnClickListener(view -> showChooseLockPin());
         return item;
     }
 
-    private void startChooseLockPatternActivity() {
-        Intent intent = new Intent(getContext(), ChooseLockPatternActivity.class);
-        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
+    private void showChooseLockPattern() {
+        mFragmentController.launchFragment(ChooseLockPatternFragment.newInstance());
     }
 
-    private void startChooseLockPasswordActivity() {
-        Intent intent = new Intent(getContext(), ChooseLockPasswordActivity.class);
-        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
+    private void showChooseLockPassword() {
+        mFragmentController.launchFragment(ChooseLockPasswordFragment.newInstance());
+
     }
 
-    private void startChooseLockPinActivity() {
-        Intent intent = new Intent(getContext(), ChooseLockPinActivity.class);
-        startActivityForResult(intent, REQUEST_CHOOSE_LOCK);
+    private void showChooseLockPin() {
+        mFragmentController.launchFragment(ChooseLockPinFragment.newInstance());
     }
 }
