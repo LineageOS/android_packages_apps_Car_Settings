@@ -417,6 +417,8 @@
     <string name="continue_button_text">Continue</string>
     <!-- Security lock screen button. If error is encountered when saving password, PIN or pattern, the user can click this button to try saving again. [CHAR LIMIT=20] -->
     <string name="lockscreen_retry_button_text">Retry</string>
+    <!-- Security lock screen button, allowing user to skip setting a screen lock [CHAR LIMIT=20] -->
+    <string name="lockscreen_skip_button_text">Skip</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
@@ -452,7 +454,7 @@
     <string name="confirm_your_pin_header">Re-enter your PIN</string>
     <!-- Hints for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_pin_hints">PIN must be at least 4 digits</string>
-    <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
+    <!-- Error shown when in PASSWORD doesn't meet requirement. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence.  [CHAR LIMIT=40] -->
     <string name="lockpin_invalid_pin">Pin invalid, must be at least 4 digits.</string>
     <!-- Header on pin confirm screen if second pin doesn't match the first. [CHAR LIMIT=30]-->
     <string name="confirm_pins_dont_match">PINs don\'t match</string>
@@ -484,7 +486,7 @@
     <string name="lockpassword_pin_too_long">Must be fewer than
         <xliff:g id="number" example="17">%d</xliff:g> digits</string>
 
-    <!-- Error shown when in PIN mode and user enters a non-digit [CHAR LIMIT=NONE] -->
+    <!-- Error shown when in PIN mode and user enters a non-digit. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=40] -->
     <string name="lockpassword_pin_contains_non_digits">Must contain only digits 0-9.</string>
 
     <!-- Error shown when in PIN mode and PIN has been used recently. Please keep this string short! [CHAR LIMIT=NONE] -->
@@ -493,10 +495,10 @@
     <!-- Error shown when a user is choosing a PIN for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PIN that's less common and more complicated. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_pin_blacklisted_by_admin">Common PINs are blocked by your IT admin. Try a different PIN.</string>
 
-    <!-- Error shown when in PASSWORD mode and user enters an invalid character [CHAR LIMIT=NONE] -->
+    <!-- Error shown when in PASSWORD mode and user enters an invalid character. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence.  [CHAR LIMIT=40] -->
     <string name="lockpassword_illegal_character">This can\'t include an invalid character.</string>
 
-    <!-- Error shown when in PASSWORD doesn't meet requirement [CHAR LIMIT=NONE] -->
+    <!-- Error shown when in PASSWORD doesn't meet requirement. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_invalid_password">Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace.</string>
 
     <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=NONE] -->
@@ -545,7 +547,7 @@
     <!-- Error shown when a user is choosing a PASSWORD for their work phone, but what they suggest is blocked by their company's IT administrator. The user should try another PASSWORD that's less common and more complicated. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_password_blacklisted_by_admin">Common passwords are blocked by your IT admin. Try a different password.</string>
 
-    <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits [CHAR LIMIT=NONE] -->
+    <!-- [CHAR_LIMIT=NONE] Error shown when the user tries to set an ascending or descending sequence of digits. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
     <string name="lockpassword_pin_no_sequential_digits">Ascending, descending, or repeated sequence of digits isn\'t allowed.</string>
 
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->

@@ -37,8 +37,6 @@ abstract class SaveLockWorkerBase extends Fragment {
         void onChosenLockSaveFinished(boolean isSaveSuccessful);
     }
 
-    public static final String EXTRA_KEY_SUCCESS = "success";
-
     private static final Logger LOG = new Logger(SaveLockWorkerBase.class);
 
     private Listener mListener;

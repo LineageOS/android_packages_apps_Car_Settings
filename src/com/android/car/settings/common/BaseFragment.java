@@ -39,6 +39,10 @@ public abstract class BaseFragment extends Fragment {
     public static final String EXTRA_TITLE_ID = "extra_title_id";
     public static final String EXTRA_LAYOUT = "extra_layout";
     public static final String EXTRA_ACTION_BAR_LAYOUT = "extra_action_bar_layout";
+    /**
+     * For indicating a fragment is running in Setup Wizard
+     */
+    public static final String EXTRA_RUNNING_IN_SETUP_WIZARD = "extra_running_in_setup_wizard";
 
     /**
      * Controls the transition of fragment.
