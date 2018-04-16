@@ -18,26 +18,35 @@
 <com.android.car.list.InterceptTouchRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tile_container"
-    android:foreground="@drawable/car_list_item_background"
+    android:padding="@dimen/toggle_padding"
+    android:layout_marginStart="@dimen/car_padding_2"
+    android:layout_marginEnd="@dimen/car_padding_2"
+    android:layout_marginBottom="@dimen/car_padding_5"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <ImageButton
-        android:id="@+id/tile_icon"
+    <FrameLayout
+        android:id="@+id/icon_container"
         android:layout_width="@dimen/car_touch_target_size"
         android:layout_height="@dimen/car_touch_target_size"
-        android:layout_marginBottom="@dimen/car_padding_1"
-        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_bg"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_settings_wifi"
-        android:tint="@color/car_label1"
-        android:background="@null"
-        style="@style/ListIcon" />
+        android:layout_marginBottom="@dimen/car_padding_4">
+        <ImageButton
+            android:id="@+id/tile_icon"
+            android:layout_width="@dimen/car_primary_icon_size"
+            android:layout_height="@dimen/car_primary_icon_size"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_settings_wifi"
+            android:tint="@color/car_card"
+            android:background="@null"
+            style="@style/ListIcon" />
+    </FrameLayout>
     <TextView
         android:id="@+id/tile_text"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:paddingTop="@dimen/car_padding_1"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/tile_icon"
+        android:layout_below="@id/icon_container"
         android:textAppearance="@style/TextAppearance.Car.Label1"/>
 </com.android.car.list.InterceptTouchRelativeLayout>

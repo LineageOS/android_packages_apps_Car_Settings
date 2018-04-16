@@ -19,7 +19,7 @@
     <!-- Application name, temporarily misspelled to allow it to live alongside the regular
          android settings without confusion. -->
     <string name="settings_label">Settings</string>
-    <string name="advanced_settings_label">More settings</string>
+    <string name="more_settings_label">More</string>
     <string name="display_settings">Display</string>
     <!-- Sound & display settings screen, setting option name to change brightness level -->
     <string name="brightness">Brightness level</string>
@@ -591,4 +591,8 @@
     <string name="suggestion_primary_button">finish setup</string>
     <!-- Button that dismisses the suggestion to finish setting up their device (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
     <string name="suggestion_secondary_button">not now</string>
+
+    <!-- Warn user that the action they are trying to perform is blocked while the car is in
+         motion [CHAR LIMIT=60] -->
+    <string name="restricted_while_driving">Action not available while driving.</string>
 </resources>
