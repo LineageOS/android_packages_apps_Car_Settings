@@ -16,9 +16,9 @@
 package com.android.car.settings.wifi;
 
 import android.annotation.DrawableRes;
-import android.annotation.Nullable;
 import android.net.wifi.WifiManager;
-import android.support.annotation.StringRes;
+
+import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 

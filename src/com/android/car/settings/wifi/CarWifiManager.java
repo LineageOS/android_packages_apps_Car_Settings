@@ -19,7 +19,8 @@ import android.annotation.Nullable;
 import android.content.Context;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
-import android.support.annotation.UiThread;
+
+import androidx.annotation.UiThread;
 
 import com.android.settingslib.wifi.AccessPoint;
 import com.android.settingslib.wifi.WifiTracker;

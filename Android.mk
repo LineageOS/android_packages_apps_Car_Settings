@@ -29,9 +29,9 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_USE_AAPT2 := true
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      android-support-car \
-      android-support-v7-preference \
-      android-support-v14-preference \
+      androidx.car_car \
+      androidx.preference_preference \
+      androidx.legacy_legacy-preference-v14 \
       car-apps-common \
       car-list \
       car-settings-lib

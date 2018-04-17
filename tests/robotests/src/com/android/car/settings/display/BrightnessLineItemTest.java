@@ -16,6 +16,10 @@
 
 package com.android.car.settings.display;
 
+import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
+
+import static com.google.common.truth.Truth.assertThat;
+
 import android.content.Context;
 import android.provider.Settings;
 
@@ -27,10 +31,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.Robolectric;
-
-import static com.google.common.truth.Truth.assertThat;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)

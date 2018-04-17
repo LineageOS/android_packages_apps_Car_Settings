@@ -19,12 +19,12 @@ package com.android.car.settings.users;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-
-import com.android.car.settings.R;
 
 import androidx.car.app.CarAlertDialog;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+
+import com.android.car.settings.R;
 
 /**
  * Dialog to confirm user removal.

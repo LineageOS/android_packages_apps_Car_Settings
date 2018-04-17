@@ -19,9 +19,9 @@ package com.android.car.settings.security;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 
 import androidx.car.app.CarListDialog;
+import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
 

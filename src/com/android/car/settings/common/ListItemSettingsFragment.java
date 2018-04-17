@@ -18,16 +18,11 @@ package com.android.car.settings.common;
 
 import android.os.Bundle;
 
-import com.android.car.settings.R;
-
-import java.util.List;
-
-import androidx.car.widget.DayNightStyle;
-import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemAdapter;
 import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.ListItemProvider.ListProvider;
 import androidx.car.widget.PagedListView;
+
+import com.android.car.settings.R;
 
 /**
  * Settings page that only contain a list of items.

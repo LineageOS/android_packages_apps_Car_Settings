@@ -18,12 +18,13 @@ package com.android.car.settings.wifi;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 
 import com.android.car.list.EditTextLineItem;
 import com.android.car.list.PasswordLineItem;

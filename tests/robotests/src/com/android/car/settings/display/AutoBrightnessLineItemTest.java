@@ -16,27 +16,27 @@
 
 package com.android.car.settings.display;
 
+import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
+import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
+import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
+
+import static com.google.common.truth.Truth.assertThat;
+
 import android.content.Context;
 import android.provider.Settings;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 
+import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
+import com.android.car.settings.TestConfig;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.Robolectric;
-
-import static com.google.common.truth.Truth.assertThat;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
-
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
-import com.android.car.settings.TestConfig;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION)

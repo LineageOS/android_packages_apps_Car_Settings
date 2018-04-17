@@ -21,9 +21,9 @@ import android.os.UserHandle;
 import android.util.Log;
 
 import androidx.car.widget.ListItemProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
-
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 /**

@@ -2,8 +2,8 @@ package com.android.car.settings.home;
 
 import static com.android.settingslib.drawer.TileUtils.EXTRA_SETTINGS_ACTION;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
-import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
+import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -21,7 +21,6 @@ import com.android.car.list.LaunchAppLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;

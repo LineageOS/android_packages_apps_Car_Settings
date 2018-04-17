@@ -29,11 +29,16 @@ import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
+
+import androidx.car.app.CarAlertDialog;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
@@ -42,11 +47,6 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.car.app.CarAlertDialog;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 /**
  * Shows account details, and delete account option.
