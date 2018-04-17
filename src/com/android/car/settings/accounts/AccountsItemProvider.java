@@ -20,9 +20,9 @@ import android.accounts.Account;
 import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
-import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;

@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -29,6 +28,7 @@ import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import androidx.car.widget.PagedListView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
