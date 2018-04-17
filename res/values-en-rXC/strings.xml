@@ -197,6 +197,7 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‏‎‏‎‎‏‏‏‎‎‎‏‎‏‏‎‎‏‎‏‎‏‎‎‏‏‏‎‏‏‏‏‏‎‎‏‏‏‏‏‎‏‏‎‎‏‎‏‎‎‎‏‎‏‎‎‎‎‎Pin‎‏‎‎‏‎"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‎‏‎‏‎‏‎‏‏‏‏‎‏‏‎‏‏‏‏‏‏‎‎‎‎‏‏‏‏‎‎‎‎‎‎‏‏‎‏‏‏‎‏‏‏‎‏‏‏‏‏‎‏‏‏‏‏‎‎Password‎‏‎‎‏‎"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‏‎‏‏‏‎‏‎‏‏‎‎‎‏‏‏‎‎‏‎‏‏‏‏‎‎‎‏‏‏‎‎‎‎‏‎‏‏‏‏‎‎‏‎‎‎‏‏‏‎‎‏‎‎‎‎‎‎Choose a lock type‎‏‎‎‏‎"</string>
+    <string name="screen_lock_options" msgid="7023338635352915768">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‎‏‎‏‏‏‎‏‏‏‏‏‏‎‏‎‎‏‎‏‎‎‎‏‏‏‎‎‎‏‎‎‎‏‎‏‏‏‏‏‎‎‏‎‏‏‏‏‏‏‎‎‏‏‏‎‎‎‎Screen lock options‎‏‎‎‏‎"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‏‎‎‏‏‎‎‏‏‏‎‎‏‏‏‎‏‎‎‏‏‎‏‎‏‏‎‎‏‎‏‎‎‏‎‏‏‏‏‏‏‎‏‏‎‏‏‎‎‏‎‏‎Confirm‎‏‎‎‏‎"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‎‏‏‎‏‎‎‎‎‏‎‎‏‏‏‏‎‏‎‎‎‎‎‏‏‎‎‎‏‏‏‏‏‏‏‎‎‏‏‎‏‎‎‎‏‎‏‎‎‏‏‎‎‎‎‎‎‏‎Redraw‎‏‎‎‏‎"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‏‏‎‎‏‏‎‎‎‏‎‏‎‏‏‎‎‎‏‏‏‎‎‎‎‎‎‎‏‎‏‏‏‎‎‏‏‏‎‎‎‏‏‏‎‏‎‏‏‎‏‎‏‎‎‎‎‏‎Continue‎‏‎‎‏‎"</string>
@@ -218,7 +219,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‎‏‎‎‏‎‎‎‎‏‏‎‎‎‎‎‎‏‎‎‏‎‏‏‏‏‎‏‏‎‎‎‎‎‎‏‏‎‏‏‏‎‎‎‏‎‎‏‎‏‏‏‎‏‎‎‎‏‎For security, set a PIN‎‏‎‎‏‎"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‏‏‏‏‎‎‎‏‏‏‎‏‎‏‏‎‏‏‏‎‎‎‏‏‏‎‏‎‏‎‎‎‎‎‎‏‏‎‎Re-enter your PIN‎‏‎‎‏‎"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‏‎‎‎‏‎‏‏‏‎‎‏‎‎‏‏‎‎‎‎‏‏‏‎‎‏‎‏‎‏‏‎‎‏‎‏‎‎‎‏‏‏‎‎‏‎‎‎‏‏‎‏‏‎‏‏‎‎‎PIN must be at least 4 digits‎‏‎‎‏‎"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‎‎‎‎‏‏‏‎‎‏‎‎‎‎‎‎‏‏‏‏‎‏‎‎‎‎‏‏‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‏‏‏‎‎‏‏‎‏‏‎‎‎‏‎Pin invalid, must be at least 4 digits‎‏‎‎‏‎"</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‏‏‏‎‏‎‎‏‏‎‏‏‏‎‏‏‎‎‏‎‏‏‎‏‎‎‎‏‏‏‎‏‏‎‎‎‏‎‏‏‎‏‎‎‏‎‎‎‏‎‎‎‎‎‎‎‎‎Pin invalid, must be at least 4 digits.‎‏‎‎‏‎"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‏‏‏‏‏‎‏‏‏‏‏‎‏‏‏‏‏‎‎‏‎‎‎‎‏‏‎‎‏‎‎‎‏‎‎‏‏‏‎‏‎‏‏‎‎‎‎‏‏‏‎‏‎‏‎‎‎‎‎PINs don\'t match‎‏‎‎‏‎"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‎‏‏‏‎‏‎‎‏‏‏‏‏‏‏‏‏‏‏‏‎‏‎‏‎‏‏‏‏‎‎‎‏‏‎‏‎‎‏‏‏‏‎‎‎‏‎‎‏‎Error saving PIN‎‏‎‎‏‎"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‎‎‏‏‏‏‏‏‏‎‎‎‎‎‎‏‏‏‏‏‎‏‎‎‏‎‏‏‎‎‎‎‎‎‏‎‏‎‏‎‏‎‎‏‎‏‏‏‏‏‎‎‏‎‎‎‎‎‎For security, set a password‎‏‎‎‏‎"</string>
@@ -232,11 +233,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‏‎‎‏‏‎‏‏‏‏‎‏‏‏‎‎‏‏‎‏‏‎‏‏‏‏‎‏‏‎‎‎‎‏‎‎‎‏‎‎‏‏‎‏‏‏‎‎‎‎‏‏‎‏‎‎PIN must be at least ‎‏‎‎‏‏‎<xliff:g id="COUNT">%d</xliff:g>‎‏‎‎‏‏‏‎ digits‎‏‎‎‏‎"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‎‎‎‎‏‎‏‏‎‎‏‎‏‎‎‏‎‏‏‏‎‏‏‎‎‏‎‏‏‎‏‏‎‎‏‎‏‏‎‎‏‎‏‎‏‏‎‏‏‎‏‏‎Must be fewer than ‎‏‎‎‏‏‎<xliff:g id="NUMBER">%d</xliff:g>‎‏‎‎‏‏‏‎ characters‎‏‎‎‏‎"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‎‎‏‏‎‏‏‏‏‏‏‎‏‎‏‎‏‏‏‎‏‎‏‏‎‏‏‏‏‏‎‎‏‎‏‏‎‎‎‎‏‎‎‎‎‏‎‏‏‏‎‏‎‎‎‏‎‎‎Must be fewer than ‎‏‎‎‏‏‎<xliff:g id="NUMBER">%d</xliff:g>‎‏‎‎‏‏‏‎ digits‎‏‎‎‏‎"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‎‏‎‏‎‎‎‎‎‎‎‎‏‏‎‎‎‎‏‏‎‏‏‏‎‏‏‏‎‎‎‏‏‏‎‎‏‎‏‎‎‏‎‎‎‏‏‏‏‏‏‏‎‏‏‏‎‎‎‎Must contain only digits 0-9‎‏‎‎‏‎"</string>
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‎‎‏‎‎‎‎‎‎‎‏‎‏‎‏‎‎‏‎‎‎‎‎‏‏‎‏‏‏‎‏‎‏‎‎‏‏‏‏‎‏‎‎‎‎‏‏‏‎‎‏‏‏‎‎‏‏‎Must contain only digits 0-9.‎‏‎‎‏‎"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‏‏‎‏‎‏‎‎‏‎‏‎‎‎‎‎‎‏‏‎‏‎‏‏‎‏‎‎‎‎‎‎‎‎‎‎‎‎‏‎‏‏‎‎‏‏‏‎‎‎‎‏‎‏‏‏‏‎Device admin doesn\'t allow using a recent PIN‎‏‎‎‏‎"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‏‎‏‏‎‏‏‏‏‏‎‎‏‏‏‏‎‎‎‎‏‏‎‏‎‎‎‏‏‏‏‏‎‎‏‎‎‎‏‏‎‏‎‏‏‏‏‎‏‎‏‎‎‎‏‎‏‎‎Common PINs are blocked by your IT admin. Try a different PIN.‎‏‎‎‏‎"</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‏‏‏‏‏‎‏‎‎‎‎‏‏‎‏‏‏‏‎‏‎‏‏‎‏‏‏‏‏‏‏‏‏‎‏‎‎‏‏‎‎‏‎‎‏‎‏‏‏‎‏‏‎‎‏‎‎‏‎This can\'t include an invalid character‎‏‎‎‏‎"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‎‎‏‎‏‎‏‏‏‏‎‏‏‎‏‏‏‏‎‎‎‏‏‎‎‎‏‎‏‎‎‏‎‎‏‏‏‏‎‏‎‏‏‎‏‏‏‏‎‏‏‎‏‏‏‏‏‏‎Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace‎‏‎‎‏‎"</string>
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‏‏‏‎‎‎‏‏‎‎‎‎‎‎‎‏‏‏‏‏‎‎‎‎‎‎‏‏‎‏‎‎‏‏‎‏‎‎‏‏‎‎‎‎‎‎‎‎‏‏‏‎‏‎‎‎‏‎‎This can\'t include an invalid character.‎‏‎‎‏‎"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‏‎‎‏‏‎‏‏‏‏‏‎‏‎‏‎‏‎‏‏‏‎‏‎‎‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‎‎‎‎‎‏‏‏‏‎‏‎‎‏‏‏‎Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace.‎‏‎‎‏‎"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‎‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‎Must contain at least ‎‏‎‎‏‏‎<xliff:g id="COUNT">%d</xliff:g>‎‏‎‎‏‏‏‎ letters‎‏‎‎‏‎</item>
       <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‎‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‎Must contain at least 1 letter‎‏‎‎‏‎</item>
@@ -264,7 +265,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‎‏‎‏‎‎‏‎‎‏‎‎‎‏‏‏‏‏‎‎‎‏‏‏‎‏‎‎‏‎‏‎‎‎‎‏‏‎‏‎‎‏‏‎‏‏‏‏‏‎‎‎‎‏‎‏‏‎‎‎Device admin doesn\'t allow using a recent password‎‏‎‎‏‎"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‎‏‏‏‎‏‎‏‎‏‏‎‏‏‏‎‎‏‏‎‏‎‎‎‎‎‏‏‏‏‏‏‏‎‎‎‏‎‏‎‎‎‏‎‏‏‏‎‏‏‏‎‎‏‏‎‎‏‎‎Error saving password‎‏‎‎‏‎"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‏‎‏‎‎‎‏‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‎‏‏‏‎‎‏‎‎‎‏‎‏‏‏‏‏‏‏‎‏‎‎‎‎‎‎‏‏‏‎‏‎‎‏‏‎Common passwords are blocked by your IT admin. Try a different password.‎‏‎‎‏‎"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‎‎‏‎‏‏‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‏‎‏‎‏‎‎‏‎‎‏‏‎‎‎‏‏‏‏‎‎‏‏‎‏‏‎‏‏‎‏‎‏‏‎‎‎Ascending, descending, or repeated sequence of digits isn\'t allowed‎‏‎‎‏‎"</string>
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‎‎‏‎‎‎‏‎‎‏‏‏‏‎‎‏‎‎‏‎‏‏‏‎‎‎‎‏‎‏‏‎‎‏‎‎‎‏‎‎‎‏‏‎‏‏‏‎‏‎‎‎‎‏‏‎‎‎‎Ascending, descending, or repeated sequence of digits isn\'t allowed.‎‏‎‎‏‎"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‏‏‎‎‏‎‏‎‎‏‎‎‏‏‎‏‎‎‏‎‎‎‏‎‏‎‎‏‎‎‏‏‎‎‏‎‏‏‏‎‏‎‎‏‎‏‎‏‎‎‏‏‎‏‎‎‎‎‎‎Screen lock options‎‏‎‎‏‎"</string>
     <string name="forget" msgid="3971143908183848527">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‎‎‎‏‏‏‎‎‎‏‎‏‎‏‏‎‎‏‎‏‏‎‎‎‎‎‏‎‏‏‏‏‎‏‎‎‎‎‎‏‎‎‏‏‎‏‏‎‎‏‎‎‏‏‏‏‎Forget‎‏‎‎‏‎"</string>
     <string name="delete_button" msgid="5840500432614610850">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‎‏‏‎‏‏‎‏‎‎‎‎‎‎‎‏‏‎‎‏‎‏‏‏‏‏‏‎‎‏‎‎‎‎‎‏‎‎‏‎‏‎‏‏‏‏‎‏‎‎‎‏‎‎Delete‎‏‎‎‏‎"</string>
@@ -272,8 +273,7 @@
     <string name="cancel" msgid="750286395700355455">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‎‎‏‏‎‏‎‎‏‏‎‎‎‏‏‎‏‏‎‎‎‎‎‎‎‎‏‏‎‏‏‏‏‏‎‎‎‎‏‏‏‎‎‏‎‎‎‎‏‎‏‏‏‏‏‏‏‎Cancel‎‏‎‎‏‎"</string>
     <string name="backspace_key" msgid="1545590866688979099">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‎‏‏‏‎‎‏‏‎‎‎‎‏‎‏‎‏‎‏‏‎‏‎‎‎‏‎‏‎‎‎‏‎‎‎‏‎‏‎‏‏‎‏‏‎‎‎‎‏‎‎‏‏‎‏‏‎Backspace key‎‏‎‎‏‎"</string>
     <string name="enter_key" msgid="2121394305541579468">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‏‎‏‏‏‎‎‎‎‏‎‏‏‎‏‎‎‏‏‏‎‎‎‎‏‏‎‎‏‏‎‏‎‎‏‎‏‎‏‏‏‏‎‏‎‎‎‏‎‏‏‎‎‏‏‎‎‎Enter key‎‏‎‎‏‎"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‏‎‏‎‏‎‎‏‏‎‎‎‎‏‎‏‎‏‏‏‎‎‏‎‎‏‎‏‎‏‏‏‎‏‎‎‏‎‏‎‏‎‎‎‎‎‎‏‏‏‎‏‎‎‎‎‏‎‎Exit Demo?‎‏‎‎‏‎"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‏‏‎‎‏‎‏‎‏‏‏‎‎‏‏‎‏‏‏‎‏‎‏‎‏‏‎‎‏‏‏‏‎‎‎‏‏‏‏‎‎‎‏‎‏‏‏‏‎‏‏‎‎‏‎‎‎Deleting the demo account and exiting demo mode will require a factory reset‎‏‎‎‏‎"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‏‎‎‎‏‏‏‎‎‎‏‏‎‎‎‏‎‏‎‎‎‎‏‎‏‏‎‎‏‏‏‎‎‎‎‏‏‎‎‎‎‏‎‎‎‎‏‏‎‏‏‎‎‏‏‎‎‎finish setup‎‏‎‎‏‎"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‎‎‎‏‎‏‏‏‏‏‏‎‎‎‎‏‏‏‎‎‎‏‏‎‎‎‏‎‎‏‎‎‎‏‎‏‎‏‏‎‎‏‏‎‏‏‏‎‏‎‎‏‎‏‎‎‏‎not now‎‏‎‎‏‎"</string>
