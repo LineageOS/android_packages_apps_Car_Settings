@@ -31,10 +31,10 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_JAVA_LIBRARIES += android.car
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      android-support-car \
-      android-support-v7-preference \
-      android-support-v14-preference \
-      android-arch-lifecycle-extensions \
+      androidx.car_car \
+      androidx.preference_preference \
+      androidx.legacy_legacy-preference-v14 \
+      androidx.lifecycle_lifecycle-extensions \
       car-list \
       car-settings-lib \
       setup-wizard-lib-gingerbread-compat \

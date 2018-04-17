@@ -19,8 +19,9 @@ package com.android.car.settings.security;
 import android.annotation.WorkerThread;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.app.Fragment;
+
+import androidx.annotation.VisibleForTesting;
+import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;

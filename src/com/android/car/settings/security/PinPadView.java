@@ -19,13 +19,14 @@ package com.android.car.settings.security;
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 

@@ -34,6 +34,7 @@ LOCAL_MODULE := RunCarSettingsRoboTests
 LOCAL_JAVA_LIBRARIES := \
     android.car \
     CarSettingsRoboTests \
+    android.car \
     robolectric_android-all-stub \
     Robolectric_all-target \
     mockito-robolectric-prebuilt \

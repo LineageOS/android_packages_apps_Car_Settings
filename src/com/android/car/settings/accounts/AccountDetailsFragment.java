@@ -29,8 +29,6 @@ import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.widget.Button;
 
@@ -38,6 +36,8 @@ import androidx.car.app.CarAlertDialog;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;

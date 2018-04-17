@@ -19,14 +19,16 @@ import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.VisibleForTesting;
-import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 /**
  * Enables user to edit their username.

@@ -18,8 +18,9 @@ package com.android.car.settings.security;
 
 import android.app.KeyguardManager;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
