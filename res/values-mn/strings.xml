@@ -193,10 +193,12 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Бусад бүх хэрэглэгчийн аппуудыг дурын хэрэглэгч шинэчлэх боломжтой."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Нууцлал"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Дэлгэцийн түгжээ"</string>
-    <string name="security_lock_pattern" msgid="1174352995619563104">"Загвар"</string>
+    <string name="security_lock_pattern" msgid="1174352995619563104">"Хээ"</string>
     <string name="security_lock_pin" msgid="7970343656751993936">"Пин"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Нууц үг"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Түгжих төрлийг сонгох"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Баталгаажуулах"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Дахин зурах"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Үргэлжлүүлэх"</string>
@@ -218,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Аюулгүй байдлын үүднээс ПИН тохируулах"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ПИН-ээ дахин оруулах"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ПИН хамгийн багадаа 4 оронтой цифр байх ёстой"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"Пин буруу байна. Хамгийн багадаа 4 цифр байх ёстой"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ПИН таарахгүй байна"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ПИН-г хадгалахад алдаа гарлаа"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Аюулгүй байдлын үүднээс нууц үг тохируулах"</string>
@@ -232,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ПИН хамгийн багадаа <xliff:g id="COUNT">%d</xliff:g> цифртэй байх ёстой"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>-с цөөн тэмдэгттэй байх ёстой"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>-с цөөн цифртэй байх ёстой"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"Зөвхөн 0-9 хүртэлх цифр агуулах ёстой"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Төхөөрөмжийн админ саяхны ПИН-г ашиглахыг зөвшөөрдөггүй"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Таны IT админ түгээмэл ПИН-г блоклосон байна. Өөр ПИН оруулна уу."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"Үүнд буруу тэмдэгт агуулах боломжгүй"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Нууц үг буруу байна. Үүнд хамгийн багадаа 1 цифр, 1 үсэг бүхий 4-8 тэмдэгт агуулсан байх ёстой бөгөөд хоосон зай агуулж болохгүй"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Хамгийн багадаа <xliff:g id="COUNT">%d</xliff:g> үсэг агуулах ёстой</item>
       <item quantity="one">Хамгийн багадаа 1 үсэг агуулах ёстой</item>
@@ -264,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Төхөөрөмжийн админ саяхны нууц үг ашиглахыг зөвшөөрдөггүй"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Нууц үгийг хадгалахад алдаа гарлаа"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Таны IT админ түгээмэл нууц үгийг блоклосон байна. Өөр нууц үг оруулна уу."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Өсөж буй, буурч буй эсвэл давхардсан цифрийг зөвшөөрдөггүй"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Дэлгэцийн түгжээний сонголтууд"</string>
     <string name="forget" msgid="3971143908183848527">"Мартах"</string>
     <string name="delete_button" msgid="5840500432614610850">"Устгах"</string>
@@ -272,8 +279,7 @@
     <string name="cancel" msgid="750286395700355455">"Цуцлах"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Ухраах түлхүүр"</string>
     <string name="enter_key" msgid="2121394305541579468">"Oруулах түлхүүр"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"Туршилтаас гарах уу?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"Туршилтын бүртгэлийг устгах болон туршилтын горимоос гарахад үйлдвэрийн шинэчлэлт шаардлагатай болно"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"тохиргоог дуусгах"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"одоо биш"</string>

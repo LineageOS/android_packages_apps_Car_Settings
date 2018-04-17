@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"सेटिङहरू"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"थप सेटिङहरू"</string>
     <string name="display_settings" msgid="5325515247739279185">"प्रदर्शन"</string>
     <string name="brightness" msgid="2919605130898772866">"चमकको स्तर"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूलनीय चमक"</string>
@@ -198,6 +197,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"पिन गर्नुहोस्"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी राख्नुहोस्"</string>
@@ -219,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN कम्तीमा ४ अङ्कको हुनै पर्ने"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"Pin अमान्य छ, यसमा अनिवार्य रूपमा कम्तीमा ४ अङ्क हुनु पर्छ"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN हरू मेल खाँदैनन्"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षाका लागि पासवर्ड सेट गर्नुहोस्"</string>
@@ -233,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN कम्तीमा <xliff:g id="COUNT">%d</xliff:g> अङ्कको हुनै पर्छ"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम वर्ण हुनु पर्छ"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम अङ्क हुनु पर्छ"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"अनिवार्य रूपमा ० देखि ९ सम्मका अङ्कहरू मात्र समावेश हुनु पर्छ"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"यन्त्रको प्रशासकले पछिल्लो PIN प्रयोग गर्न अनुमति दिँदैन"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"तपाईंका IT व्यवस्थापकले धेरै प्रयोग हुने PIN हरूमाथि रोक लगाउनु भएको छ। कुनै फरक PIN प्रयोग गरी हेर्नुहोस्।"</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"यसमा अमान्य वर्ण समावेश गर्न सकिँदैन"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"पासवर्ड अमान्य छ, अनिवार्य रूपमा ४ देखि ८ वर्ण हुनु पर्ने, कम्तीमा १ अङ्क, १ अक्षर हुुनु पर्ने, ह्वाइटस्पेस हुनु नहुने"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">कम्तीमा <xliff:g id="COUNT">%d</xliff:g> वटा अक्षरहरू हुनु अनिवार्य छ</item>
       <item quantity="one">कम्तीमा एउटा अक्षर हुनु अनिवार्य छ</item>
@@ -265,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"यन्त्रको व्यवस्थापकले पछिल्लो पासवर्ड प्रयोग गर्ने अनुमति दिँदैन"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"तपाईंका IT व्यवस्थापकले धेरै प्रयोग हुने पासवर्डहरूमाथि रोक लगाउनु भएको छ। कुनै फरक पासवर्ड प्रयोग गरी हेर्नुहोस्।"</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"बढ्दो, घट्दो वा दोहोरिएका अङ्कहरूको अनुक्रमलाई निषेध गरिएको छ"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="forget" msgid="3971143908183848527">"बिर्सनुहोस्"</string>
     <string name="delete_button" msgid="5840500432614610850">"मेट्नुहोस्"</string>

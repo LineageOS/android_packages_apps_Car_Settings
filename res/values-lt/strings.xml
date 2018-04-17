@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Nustatymai"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"Daugiau nustatymų"</string>
     <string name="display_settings" msgid="5325515247739279185">"Ekranas"</string>
     <string name="brightness" msgid="2919605130898772866">"Šviesumo lygis"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Prisitaikantis šviesumas"</string>
@@ -200,6 +199,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN kodas"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Slaptažodis"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Rinkitės užrakto tipą"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Patvirtinti"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Nustatyti iš naujo"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Tęsti"</string>
@@ -221,7 +222,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Saugumo PIN kodo nustatymas"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Įveskite PIN kodą iš naujo"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN kodą turi sudaryti bent 4 skaitmenys"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"PIN kodas netinkamas; jį turi sudaryti bent 4 skaitmenys"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodai nesutampa"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Klaida išsaugant PIN kodą"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Saugumo slaptažodžio nustatymas"</string>
@@ -235,11 +237,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kodą turi sudaryti bent <xliff:g id="COUNT">%d</xliff:g> skaitm."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Turi būti mažiau nei <xliff:g id="NUMBER">%d</xliff:g> simbol."</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Turi būti mažiau nei <xliff:g id="NUMBER">%d</xliff:g> skaitm."</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"Turi būti sudarytas tik iš skaitmenų (0–9)"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Įrenginio administratorius neleidžia naudoti pastarojo PIN kodo"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Dažnai naudojamus PIN kodus užblokavo IT administratorius. Bandykite naudoti kitą PIN kodą."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"Negali būti netinkamų simbolių"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Slaptažodis netinkamas; jį turi sudaryti 4–8 simboliai, iš kurių bent 1 turi būti skaitmuo, 1 raidė, negali būti matomų tarpų"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Turi būti bent <xliff:g id="COUNT">%d</xliff:g> raidė</item>
       <item quantity="few">Turi būti bent <xliff:g id="COUNT">%d</xliff:g> raidės</item>
@@ -279,7 +284,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Įrenginio administratorius neleidžia naudoti pastarojo slaptažodžio"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Klaida išsaugant slaptažodį"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Dažnai naudojamus slaptažodžius užblokavo IT administratorius. Bandykite naudoti kitą slaptažodį."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Didėjanti, mažėjanti ar pasikartojanti skaitmenų seka neleidžiama"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekrano užrakto parinktys"</string>
     <string name="forget" msgid="3971143908183848527">"Pamiršti"</string>
     <string name="delete_button" msgid="5840500432614610850">"Ištrinti"</string>
@@ -287,8 +293,7 @@
     <string name="cancel" msgid="750286395700355455">"Atšaukti"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Naikinimo klavišas"</string>
     <string name="enter_key" msgid="2121394305541579468">"Klavišas „Enter“"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"Išeiti iš dem. režimo?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"Jei ištrinsite dem. paskyrą ir išeisite iš demonstracinio rež., reikės atkurti gamyklinius duomenis"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"užbaigti sąranką"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ne dabar"</string>
