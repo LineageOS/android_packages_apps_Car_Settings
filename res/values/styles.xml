@@ -82,8 +82,8 @@
         <item name="android:layout_height">@dimen/pin_pad_key_height</item>
         <item name="android:layout_margin">@dimen/pin_pad_key_margin</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/pin_pad_key_text_size</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/car_body1_size</item>
+        <item name="android:textColor">@color/car_body3</item>
         <item name="android:clickable">true</item>
         <item name="android:background">@drawable/button_ripple_bg</item>
     </style>
