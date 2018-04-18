@@ -19,8 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Instellingen"</string>
-    <!-- no translation found for advanced_settings_label (7169519070776858180) -->
-    <skip />
+    <string name="advanced_settings_label" msgid="7169519070776858180">"Meer instellingen"</string>
     <string name="display_settings" msgid="5325515247739279185">"Display"</string>
     <string name="brightness" msgid="2919605130898772866">"Helderheidsniveau"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Aanpasbare helderheid"</string>
@@ -198,6 +197,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Pincode"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Wachtwoord"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Vergrend.type kiezen"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Bevestigen"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Opnieuw tekenen"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Doorgaan"</string>
@@ -219,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Stel pincode in voor betere beveiliging"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Geef je pincode opnieuw op"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Pincode moet minimaal 4 tekens bevatten"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"Pincode ongeldig: moet uit vier tekens bestaan"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Pincodes komen niet overeen"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Fout bij pincode opslaan"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Stel wachtwoord in voor beveiliging"</string>
@@ -233,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Pincode moet ten minste <xliff:g id="COUNT">%d</xliff:g> cijfers zijn"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Moet korter zijn dan <xliff:g id="NUMBER">%d</xliff:g> tekens"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Pincode moet minder dan <xliff:g id="NUMBER">%d</xliff:g> cijfers hebben"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"Mag alleen de cijfers 0-9 bevatten"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Apparaatbeheer staat het gebruik van een recente pincode niet toe"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Veelvoorkomende pincodes worden geblokkeerd door je IT-beheerder. Probeer een andere pincode."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"Mag geen ongeldig teken bevatten"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"Wachtwoord ongeldig, moet vier tot acht tekens lang zijn, zonder spaties en met ten minste één cijfer en één letter"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> letters bevatten</item>
       <item quantity="one">Moet ten minste één letter bevatten</item>
@@ -265,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Apparaatbeheer staat het gebruik van een recent wachtwoord niet toe"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Fout bij wachtwoord opslaan"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Veelvoorkomende wachtwoorden worden geblokkeerd door je IT-beheerder. Probeer een ander wachtwoord."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"Een oplopende, aflopende of herhaalde reeks cijfers is niet toegestaan"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Schermvergrendelingsopties"</string>
     <string name="forget" msgid="3971143908183848527">"Vergeten"</string>
     <string name="delete_button" msgid="5840500432614610850">"Verwijderen"</string>
@@ -273,8 +279,7 @@
     <string name="cancel" msgid="750286395700355455">"Annuleren"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace-toets"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter-toets"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"Demo afsluiten?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"De fabrieksinstellingen worden teruggezet als je het demo-account verwijdert en de demomodus sluit."</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"instellen voltooien"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"niet nu"</string>

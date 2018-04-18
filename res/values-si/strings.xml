@@ -197,6 +197,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Pin"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"මුරපදය"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"අගුළු ආකාරයක් තෝරාගන්න"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"තහවුරු කරන්න"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"යළි අඳින්න"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ඉදිරියට යන්න"</string>
@@ -218,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ආරක්ෂාව සඳහා, PIN එකක් සකසන්න"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ඔබේ PIN අංකය නැවත ඇතුළු කරන්න"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN අඩු තරමින් සංඛ්‍යා 4ක් විය යුතුය"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"Pin අවලංගුයි, අවම වශයෙන් ඉලක්කම් 4ක් විය යුතුය"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN අංක නොගැළපේ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN අංකය සුරැකීමේ දෝෂයකි"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ආරක්ෂාව සඳහා, මුරපදයක් සකසන්න"</string>
@@ -232,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN හි අඩු තරමින් ඉලක්කම් <xliff:g id="COUNT">%d</xliff:g>ක් විය යුතුය"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"අනුලකුණු <xliff:g id="NUMBER">%d</xliff:g>කට වඩා අඩු විය යුතුය"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ඉලක්කම් <xliff:g id="NUMBER">%d</xliff:g>කට වඩා අඩු විය යුතුය"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"0-9 ඉලක්කම් පමණක් අඩංගු විය යුතුය"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"උපාංග පරිපාලක මෑත PIN එකක් භාවිතා කිරීමට ඉඩ නොදේ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ඔබේ IT පරිපාලක විසින් සුලබ PIN අවහිර කරනු ලැබේ. වෙනස් PIN එකක් උත්සාහ කරන්න."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"මෙහි අවලංගු අනුලකුණක් ඇතුළත් විය නොහැකිය"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"මුරපදය අවලංගුයි, අනුලකුණු 4-8, අවම වශයෙන් 1 ඉලක්කමක්, 1 අකුරක්, හිස් අවකාශයක් නොමැති විය යුතුය"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">අඩු තරමින් අකුරු <xliff:g id="COUNT">%d</xliff:g>ක් අඩංගු විය යුතුය</item>
       <item quantity="other">අඩු තරමින් අකුරු <xliff:g id="COUNT">%d</xliff:g>ක් අඩංගු විය යුතුය</item>
@@ -264,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"උපාංග පරිපාලක මෑත මුරපදයක් භාවිතා කිරීමට අවසර නොදේ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"මුරපදය සුරැකීමේ දෝෂයකි"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ඔබේ IT පරිපාලක විසින් සුලබ මුරපද අවහිර කරනු ලැබේ. වෙනස් මුරපදයක් උත්සාහ කරන්න."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ආරෝහණ, අවරෝහණ හෝ පුනරාවර්ත අනුක්‍රමයේ ඉලක්කම්වලට ඉඩ නොදේ"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"තිර අගුළු විකල්ප"</string>
     <string name="forget" msgid="3971143908183848527">"අමතක කරන්න"</string>
     <string name="delete_button" msgid="5840500432614610850">"මකන්න"</string>
@@ -272,8 +279,7 @@
     <string name="cancel" msgid="750286395700355455">"අවලංගු කරන්න"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace යතුර"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter යතුර"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"ආදර්ශනයෙන් ඉවත් වන්නද?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"ආදර්ශන ගිණුම මකා දමා ආදර්ශන ආකාරයෙන් ඉවත් වීම සඳහා කර්මාන්තශාලා යළි පිහිටුවීම කළ යුතු වේ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"පිහිටුවීම අවසන් කරන්න"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"දැන් නොවේ"</string>

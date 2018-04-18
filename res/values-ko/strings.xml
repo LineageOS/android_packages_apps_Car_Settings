@@ -197,6 +197,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"고정"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"비밀번호"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"잠금 유형 선택"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"확인"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"다시 그리기"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"계속"</string>
@@ -218,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"보안을 위해 PIN을 설정하세요."</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN 다시 입력"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN은 4자리 이상이어야 합니다."</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"PIN이 잘못되었습니다. 4자리 이상이어야 합니다."</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN이 일치하지 않음"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN 저장 중 오류 발생"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"보안을 위해 비밀번호를 설정하세요."</string>
@@ -232,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN은 <xliff:g id="COUNT">%d</xliff:g>자리 이상이어야 합니다."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>자 미만이어야 합니다."</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>자리 미만이어야 합니다."</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"0에서 9까지의 숫자만 포함해야 합니다."</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"기기 관리자가 최근 PIN 사용을 허용하지 않습니다."</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IT 관리자가 일반적으로 사용되는 PIN을 허용하지 않습니다. 다른 PIN으로 시도해 보세요."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"잘못된 문자를 포함할 수 없습니다."</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"비밀번호가 잘못되었습니다. 비밀번호는 숫자 1개와 문자 1개 이상이 포함된 4~8자여야 하며 공백이 없어야 합니다."</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">문자를 <xliff:g id="COUNT">%d</xliff:g>개 이상 포함해야 합니다.</item>
       <item quantity="one">문자를 1개 이상 포함해야 합니다.</item>
@@ -264,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"기기 관리자가 최근 비밀번호 사용을 허용하지 않습니다."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"비밀번호 저장 중 오류 발생"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"IT 관리자가 일반적으로 사용되는 비밀번호를 허용하지 않습니다. 다른 비밀번호로 시도해 보세요."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
     <string name="forget" msgid="3971143908183848527">"삭제"</string>
     <string name="delete_button" msgid="5840500432614610850">"삭제"</string>
@@ -272,8 +279,7 @@
     <string name="cancel" msgid="750286395700355455">"취소"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 키"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 키"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"데모를 종료하시겠습니까?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"데모 계정을 삭제하거나 데모 모드를 종료하려면 기기를 초기화해야 합니다."</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"설정 완료"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"나중에"</string>

@@ -197,6 +197,8 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Pin"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"ລະຫັດຜ່ານ"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ເລືອກປະເພດການລັອກ"</string>
+    <!-- no translation found for screen_lock_options (7023338635352915768) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ຢືນຢັນ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ແຕ້ມໃໝ່"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ສືບຕໍ່"</string>
@@ -218,7 +220,8 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ເພື່ອຄວາມປອດໄພ, ກະລຸນາຕັ້ງລະຫັດ PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ປ້ອນ PIN ຂອງທ່ານຄືນໃໝ່"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ຕ້ອງມີຢ່າງໜ້ອຍ 4 ຕົວເລກ"</string>
-    <string name="lockpin_invalid_pin" msgid="1305060827461433777">"Pin ບໍ່ຖືກຕ້ອງ, ຕ້ອງມີຢ່າງໜ້ອຍ 4 ຕົວເລກ"</string>
+    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
+    <skip />
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN ບໍ່ກົງກັນ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ເກີດຄວາມຜິດພາດໃນການບັນທຶກ PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ເພື່ອຄວາມປອດໄພ, ກະລຸນາຕັ້ງລະຫັດຜ່ານ"</string>
@@ -232,11 +235,14 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN ຕ້ອງມີຢ່າງໜ້ອຍ <xliff:g id="COUNT">%d</xliff:g> ຕົວເລກ"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ຕ້ອງມີອັກຂະລະໜ້ອຍກວ່າ <xliff:g id="NUMBER">%d</xliff:g> ຕົວ"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ຈະຕ້ອງມີໜ້ອຍກວ່າ <xliff:g id="NUMBER">%d</xliff:g> ຕົວເລກ"</string>
-    <string name="lockpassword_pin_contains_non_digits" msgid="4791937461696741304">"ຕ້ອງມີຕົວເລກ 0 ຫາ 9 ເທົ່ານັ້ນ"</string>
+    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
+    <skip />
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ຜູ້ເບິ່ງແຍງລະບົບອຸປະກອນບໍ່ອະນຸຍາດໃຫ້ໃຊ້ລະຫັດ PIN ເມື່ອບໍ່ດົນມານີ້"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"PIN ທີ່ມັກໃຊ້ທົ່ວໄປຖືກບລັອກໄວ້ໂດຍຜູ້ເບິ່ງແຍງລະບົບໄອທີຂອງທ່ານ. ກະລຸນາລອງໃຊ້ PIN ອື່ນ."</string>
-    <string name="lockpassword_illegal_character" msgid="4316822683738779337">"ນີ້ບໍ່ສາມາດຮວມມີອັກຂະລະທີ່ບໍ່ຖືກຕ້ອງໄດ້"</string>
-    <string name="lockpassword_invalid_password" msgid="4372835914837507519">"ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ, ຕ້ອງມີອັກຂະລະ 4-8 ຕົວ, ໂດຍມີຢ່າງໜ້ອຍ 1 ຕົວເລກ, 1 ຕົວອັກສອນ, ບໍ່ມີຍະຫວ່າງ"</string>
+    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
+    <skip />
+    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
+    <skip />
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ <xliff:g id="COUNT">%d</xliff:g> ຕົວ</item>
       <item quantity="one">ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ 1 ຕົວ</item>
@@ -264,7 +270,8 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ຜູ້ເບິ່ງແຍງລະບົບອຸປະກອນບໍ່ອະນຸຍາດໃຫ້ໃຊ້ລະຫັດຜ່ານເມື່ອບໍ່ດົນມານີ້"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"ເກີດຄວາມຜິດພາດໃນການບັນທຶກລະຫັດຜ່ານ"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ລະຫັດຜ່ານທີ່ມັກໃຊ້ທົ່ວໄປຖືກບລັອກໄວ້ໂດຍຜູ້ເບິ່ງແຍງລະບົບໄອທີຂອງທ່ານ. ກະລຸນາລອງໃຊ້ລະຫັດອື່ນ."</string>
-    <string name="lockpassword_pin_no_sequential_digits" msgid="6511579896796310956">"ບໍ່ອະນຸຍາດໃຫ້ໃຊ້ຊຸດຕົວເລກລຽງກັນແຕ່ນ້ອຍຫາໃຫຍ່, ໃຫຍ່ຫານ້ອຍ ຫຼື ຊຸດຕົວເລກຊ້ຳກັນ"</string>
+    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
+    <skip />
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ຕົວເລືອກການລັອກໜ້າຈໍ"</string>
     <string name="forget" msgid="3971143908183848527">"ລືມ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ລຶບ"</string>
@@ -272,8 +279,7 @@
     <string name="cancel" msgid="750286395700355455">"ຍົກເລີກ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"ປຸ່ມລຶບກັບຫຼັງ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ປຸ່ມເອັນເທີ"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"ອອກຈາກໂໝດສາທິດບໍ?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"ການລຶບບັນຊີສາທິດ ແລະ ອອກຈາກໂໝດສາທິດຈະຈຳເປັນຕ້ອງມີການຣີເຊັດເປັນຄ່າໂຮງງານ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ສຳເລັດການຕັ້ງຄ່າ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ບໍ່ແມ່ນຕອນນີ້"</string>
