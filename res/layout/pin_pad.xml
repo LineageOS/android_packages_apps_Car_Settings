@@ -77,6 +77,7 @@ limitations under the License.
         android:id="@+id/key_backspace"
         style="@style/PinPadKey"
         android:src="@drawable/ic_backspace"
+        android:tint="@color/car_body3"
         android:contentDescription="@string/backspace_key"/>
     <Button
         android:id="@+id/key0"
@@ -87,5 +88,6 @@ limitations under the License.
         android:id="@+id/key_enter"
         style="@style/PinPadKey"
         android:src="@drawable/ic_done"
+        android:tint="@color/car_body3"
         android:contentDescription="@string/enter_key"/>
 </GridLayout>
