@@ -49,6 +49,7 @@
             android:textAppearance="@style/TextAppearance.Car.Title2"
             android:text="@string/set_screen_lock"
             android:drawableStart="@drawable/ic_lock"
+            android:drawableTint="@color/car_body3"
             android:drawablePadding="@dimen/lockscreen_title_drawable_padding"/>
 
         <TextView
