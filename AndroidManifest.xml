@@ -104,26 +104,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".security.ChooseLockPatternActivity"
+        <activity android:name=".security.SetupWizardScreenLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
-                <action android:name="android.car.settings.CHOOSE_LOCK_PATTERN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".security.ChooseLockPasswordActivity"
-                  android:configChanges="orientation|keyboardHidden|screenSize">
-            <intent-filter>
-                <action android:name="android.car.settings.CHOOSE_LOCK_PASSWORD" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".security.ChooseLockPinActivity"
-                  android:configChanges="orientation|keyboardHidden|screenSize">
-            <intent-filter>
-                <action android:name="android.car.settings.CHOOSE_LOCK_PIN" />
+                <action android:name="android.car.settings.SETUP_WIZARD_SCREEN_LOCK_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
