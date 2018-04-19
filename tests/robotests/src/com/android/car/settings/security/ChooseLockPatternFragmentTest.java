@@ -21,41 +21,35 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
-import android.content.Intent;
-
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.robolectric.Robolectric;
 
 /**
- * Tests for ChooseLockPatternActivity class.
+ * Tests for ChooseLockPatternFragment class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class ChooseLockPatternActivityTest {
-    private ChooseLockPatternActivity mActivity;
+public class ChooseLockPatternFragmentTest {
+    private ChooseLockPatternFragment mFragment;
 
     @Before
-    public void setUp() {
-        mActivity = Robolectric.buildActivity(ChooseLockPatternActivity.class)
-                .create()
-                .get();
+    public void initFragment() {
+        mFragment = new ChooseLockPatternFragment();
     }
 
     /**
-     * A test to verify that the activity is finished when save worker succeeds
+     * A test to verify that onComplete is called when save worker succeeds
      */
     @Test
-    public void testActivityIsFinishedWhenSaveWorkerSucceeds() {
-        ChooseLockPatternActivity spyActivity = spy(mActivity);
+    public void testOnCompleteIsCalledWhenSaveWorkerSucceeds() {
+        ChooseLockPatternFragment spyFragment = spy(mFragment);
+        doNothing().when(spyFragment).onComplete();
 
-        Intent intent = new Intent();
-        intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, true);
-        spyActivity.onChosenLockSaveFinished(intent);
+        spyFragment.onChosenLockSaveFinished(true);
 
-        verify(spyActivity).finish();
+        verify(spyFragment).onComplete();
     }
 
     /**
@@ -63,14 +57,12 @@ public class ChooseLockPatternActivityTest {
      */
     @Test
     public void testStageIsUpdatedWhenSaveWorkerFails() {
-        ChooseLockPatternActivity spyActivity = spy(mActivity);
-        doNothing().when(spyActivity).updateStage(ChooseLockPatternActivity.Stage.SaveFailure);
+        ChooseLockPatternFragment spyFragment = spy(mFragment);
+        doNothing().when(spyFragment).updateStage(ChooseLockPatternFragment.Stage.SaveFailure);
 
-        Intent intent = new Intent();
-        intent.putExtra(SaveChosenLockWorkerBase.EXTRA_KEY_SUCCESS, false);
-        spyActivity.onChosenLockSaveFinished(intent);
+        spyFragment.onChosenLockSaveFinished(false);
 
-        verify(spyActivity, never()).finish();
-        verify(spyActivity).updateStage(ChooseLockPatternActivity.Stage.SaveFailure);
+        verify(spyFragment, never()).onComplete();
+        verify(spyFragment).updateStage(ChooseLockPatternFragment.Stage.SaveFailure);
     }
 }
