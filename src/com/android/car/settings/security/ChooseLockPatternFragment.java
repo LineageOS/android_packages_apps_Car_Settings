@@ -19,6 +19,7 @@ package com.android.car.settings.security;
 import android.annotation.StringRes;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.support.annotation.VisibleForTesting;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -43,10 +44,15 @@ import java.util.List;
 public class ChooseLockPatternFragment extends BaseFragment {
 
     private static final Logger LOG = new Logger(ChooseLockPatternFragment.class);
+    private static final String LOCK_OPTIONS_DIALOG_TAG = "lock_options_dialog_tag";
     private static final String FRAGMENT_TAG_SAVE_PATTERN_WORKER = "save_pattern_worker";
     private static final int ID_EMPTY_MESSAGE = -1;
+
     // How long we wait to clear a wrong pattern
     private int mWrongPatternClearTimeOut;
+    private int mUserId;
+    private boolean mIsInSetupWizard;
+
     private Stage mUiStage = Stage.Introduction;
     private LockPatternView mLockPatternView;
     private TextView mMessageText;
@@ -55,7 +61,6 @@ public class ChooseLockPatternFragment extends BaseFragment {
     private List<LockPatternView.Cell> mChosenPattern;
     private String mCurrentPattern;
     private SavePatternWorker mSavePatternWorker;
-    private int mUserId;
 
     /**
      * Keep track internally of where the user is in choosing a pattern.
@@ -214,8 +219,11 @@ public class ChooseLockPatternFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         mWrongPatternClearTimeOut = getResources().getInteger(R.integer.clear_content_timeout_ms);
         mUserId = UserHandle.myUserId();
-        mCurrentPattern = getActivity().getIntent()
-                .getStringExtra(SaveChosenLockWorkerBase.EXTRA_KEY_PATTERN);
+
+        Bundle args = getArguments();
+        if (args != null) {
+            mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
+        }
     }
 
     @Override
@@ -231,6 +239,14 @@ public class ChooseLockPatternFragment extends BaseFragment {
         mLockPatternView.setFadePattern(false);
         mLockPatternView.clearPattern();
         mLockPatternView.setOnPatternListener(mChooseNewLockPatternListener);
+
+        if (mIsInSetupWizard) {
+            View screenLockOptions = view.findViewById(R.id.screen_lock_options);
+            screenLockOptions.setVisibility(View.VISIBLE);
+            screenLockOptions.setOnClickListener(v -> {
+                new LockTypeDialogFragment().show(getFragmentManager(), LOCK_OPTIONS_DIALOG_TAG);
+            });
+        }
 
         // Re-attach to the exiting worker if there is one.
         if (savedInstanceState != null) {
@@ -286,7 +302,13 @@ public class ChooseLockPatternFragment extends BaseFragment {
             setSecondaryButtonVisible(false);
         } else {
             setSecondaryButtonVisible(true);
-            setSecondaryButtonText(stage.mSecondaryButtonState.mTextResId);
+            // In Setup Wizard, the Cancel button text is replaced with Skip
+            if (mIsInSetupWizard && stage.mSecondaryButtonState.mTextResId
+                    == R.string.lockpattern_cancel_button_text) {
+                setSecondaryButtonText(R.string.lockscreen_skip_button_text);
+            } else {
+                setSecondaryButtonText(stage.mSecondaryButtonState.mTextResId);
+            }
             setSecondaryButtonEnabled(stage.mSecondaryButtonState.mEnabled);
         }
 
@@ -484,7 +506,11 @@ public class ChooseLockPatternFragment extends BaseFragment {
                 updateStage(Stage.Introduction);
                 break;
             case Cancel:
-                mFragmentController.goBack();
+                if (mIsInSetupWizard) {
+                    ((SetupWizardScreenLockActivity) getActivity()).onCancel();
+                } else {
+                    mFragmentController.goBack();
+                }
                 break;
             default:
                 throw new IllegalStateException("secondary footer button pressed, but stage of "
@@ -492,9 +518,10 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
     }
 
-    private void onChosenLockSaveFinished(boolean isSaveSuccessful) {
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    void onChosenLockSaveFinished(boolean isSaveSuccessful) {
         if (isSaveSuccessful) {
-            mFragmentController.goBack();
+            onComplete();
         } else {
             updateStage(Stage.SaveFailure);
         }
@@ -520,5 +547,14 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
 
         mSavePatternWorker.start(mUserId, mChosenPattern, mCurrentPattern);
+    }
+
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    void onComplete() {
+        if (mIsInSetupWizard) {
+            ((SetupWizardScreenLockActivity) getActivity()).onComplete();
+        } else {
+            mFragmentController.goBack();
+        }
     }
 }

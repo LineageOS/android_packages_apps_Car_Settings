@@ -85,11 +85,10 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
     }
 
     private void showChooseLockPassword() {
-        mFragmentController.launchFragment(ChooseLockPasswordFragment.newInstance());
-
+        mFragmentController.launchFragment(ChooseLockPinPasswordFragment.newPasswordInstance());
     }
 
     private void showChooseLockPin() {
-        mFragmentController.launchFragment(ChooseLockPinFragment.newInstance());
+        mFragmentController.launchFragment(ChooseLockPinPasswordFragment.newPinInstance());
     }
 }

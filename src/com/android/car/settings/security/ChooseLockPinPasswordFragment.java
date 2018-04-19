@@ -16,7 +16,6 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.NonNull;
 import android.annotation.StringRes;
 import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
@@ -43,37 +42,44 @@ import com.android.internal.widget.TextViewInputDisabler;
 import java.util.List;
 
 /**
- * Abstract base Activity for choosing a lock password/pin.
+ * Fragment for choosing a lock password/pin.
  */
-public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
+public class ChooseLockPinPasswordFragment extends BaseFragment {
 
+    private static final String LOCK_OPTIONS_DIALOG_TAG = "lock_options_dialog_tag";
     private static final String FRAGMENT_TAG_SAVE_PASSWORD_WORKER = "save_password_worker";
-    private static final Logger LOG = new Logger(ChooseLockPasswordBaseFragment.class);
+    private static final Logger LOG = new Logger(ChooseLockPinPasswordFragment.class);
+    private static final String EXTRA_IS_PIN = "extra_is_pin";
 
-    // Error code returned from validatePassword(String).
-    static final int NO_ERROR = 0;
+    // View Ids used to set onClick listener
+    private static final int[] PIN_PAD_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
+            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
 
     private Stage mUiStage = Stage.Introduction;
 
     private int mUserId;
+    private int mErrorCode = PasswordHelper.NO_ERROR;
+
+    private boolean mIsInSetupWizard;
+    private boolean mIsPin;
     private boolean mIsAlphaMode;
+
     // Password currently in the input field
-    private String mEnteredPassword;
+    private String mCurrentEntry;
     // Existing password that user previously set
-    private String mCurrentPassword;
+    private String mExistingPassword;
     // Password must be entered twice.  This is what user entered the first time.
-    private String mFirstPassword;
-    private TextViewInputDisabler mPasswordEntryInputDisabler;
-    private SavePasswordWorker mSavePasswordWorker;
+    private String mFirstEntry;
 
     private TextView mHintMessage;
     private Button mSecondaryButton;
     private Button mPrimaryButton;
-    private EditText mPasswordEntry;
+    private EditText mPasswordField;
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
-
-    private int mErrorCode = NO_ERROR;
+    private TextViewInputDisabler mPasswordEntryInputDisabler;
+    private SavePasswordWorker mSavePasswordWorker;
+    private PasswordHelper mPasswordHelper;
 
     // Keep track internally of where the user is in choosing a password.
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
@@ -134,34 +140,47 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
     }
 
     /**
-     * Returns one of the password quality values defined in {@link DevicePolicyManager}, such
-     * as NUMERIC, ALPHANUMERIC etc.
+     * Factory method for creating fragment in password mode
      */
-    protected abstract int getPasswordQuality();
+    public static ChooseLockPinPasswordFragment newPasswordInstance() {
+        ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_password);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_password);
+        bundle.putBoolean(EXTRA_IS_PIN, false);
+        passwordFragment.setArguments(bundle);
+        return passwordFragment;
+    }
 
     /**
-     * Validates PIN/Password and returns the validation result.
-     *
-     * @param password the raw password the user typed in
-     * @return the error code which should be non-zero where there is error. Otherwise
-     * {@link #NO_ERROR} should be returned.
+     * Factory method for creating fragment in Pin mode
      */
-    protected abstract int validatePassword(String password);
-
-    /**
-     * Converts error code from validatePassword to an array of message describing the error,
-     * important message comes first.
-     * @param errorCode the code returned by {@link #validatePassword}
-     */
-    @NonNull
-    protected abstract List<String> convertErrorCodeToMessages(int errorCode);
+    public static ChooseLockPinPasswordFragment newPinInstance() {
+        ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pin);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pin);
+        bundle.putBoolean(EXTRA_IS_PIN, true);
+        passwordFragment.setArguments(bundle);
+        return passwordFragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserId = UserHandle.myUserId();
 
-        int passwordQuality = getPasswordQuality();
+        Bundle args = getArguments();
+        if (args != null) {
+            mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
+            mIsPin = args.getBoolean(EXTRA_IS_PIN);
+        }
+
+        mPasswordHelper = new PasswordHelper(mIsPin);
+
+        int passwordQuality = mPasswordHelper.getPasswordQuality();
         mIsAlphaMode = DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC == passwordQuality
                 || DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC == passwordQuality
                 || DevicePolicyManager.PASSWORD_QUALITY_COMPLEX == passwordQuality;
@@ -171,8 +190,8 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mPasswordEntry = view.findViewById(R.id.password_entry);
-        mPasswordEntry.setOnEditorActionListener((textView, actionId, keyEvent) -> {
+        mPasswordField = view.findViewById(R.id.password_entry);
+        mPasswordField.setOnEditorActionListener((textView, actionId, keyEvent) -> {
             // Check if this was the result of hitting the enter or "done" key
             if (actionId == EditorInfo.IME_NULL
                     || actionId == EditorInfo.IME_ACTION_DONE
@@ -183,7 +202,7 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
             return false;
         });
 
-        mPasswordEntry.addTextChangedListener(new TextWatcher() {
+        mPasswordField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -206,10 +225,22 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
             }
         });
 
-        mPasswordEntry.requestFocus();
-        mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordEntry);
+        mPasswordField.requestFocus();
+        mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordField);
 
         mHintMessage = view.findViewById(R.id.hint_text);
+
+        if (mIsInSetupWizard) {
+            View screenLockOptions = view.findViewById(R.id.screen_lock_options);
+            screenLockOptions.setVisibility(View.VISIBLE);
+            screenLockOptions.setOnClickListener(v -> {
+                new LockTypeDialogFragment().show(getFragmentManager(), LOCK_OPTIONS_DIALOG_TAG);
+            });
+        }
+
+        if (mIsPin) {
+            onPinViewCreated(view);
+        }
 
         // Re-attach to the exiting worker if there is one.
         if (savedInstanceState != null) {
@@ -251,22 +282,41 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
     /**
      * Append the argument to the end of the password entry field
      */
-    protected final void appendToPasswordEntry(String text) {
-        mPasswordEntry.append(text);
+    private void appendToPasswordEntry(String text) {
+        mPasswordField.append(text);
     }
 
     /**
      * Populate the password entry field with the argument
      */
-    protected final void setPasswordEntry(String text) {
-        mPasswordEntry.setText(text);
+    private void setPasswordField(String text) {
+        mPasswordField.setText(text);
     }
 
     /**
      * Returns the string in the password entry field
      */
-    protected final String getPasswordEntry() {
-        return mPasswordEntry.getText().toString();
+    private String getPasswordField() {
+        return mPasswordField.getText().toString();
+    }
+
+    private void onPinViewCreated(View view) {
+        View backspace = view.findViewById(R.id.key_backspace);
+        backspace.setOnClickListener(v -> {
+            String pin = getPasswordField();
+            if (pin.length() > 0) {
+                setPasswordField(pin.substring(0, pin.length() - 1));
+            }
+        });
+
+        View enter = view.findViewById(R.id.key_enter);
+        enter.setOnClickListener(v -> handlePrimaryButtonClick());
+
+        for (int keyId : PIN_PAD_KEYS) {
+            TextView key = view.findViewById(keyId);
+            String digit = key.getTag().toString();
+            key.setOnClickListener(v -> appendToPasswordEntry(digit));
+        }
     }
 
     private void setPrimaryButtonEnabled(boolean enabled) {
@@ -287,17 +337,18 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
 
     // Updates display message and proceed to next step according to the different text on
     // the primary button.
-    protected final void handlePrimaryButtonClick() {
-        mEnteredPassword = mPasswordEntry.getText().toString();
-        if (TextUtils.isEmpty(mEnteredPassword)) {
+    private void handlePrimaryButtonClick() {
+        mCurrentEntry = mPasswordField.getText().toString();
+        if (TextUtils.isEmpty(mCurrentEntry)) {
             return;
         }
 
         switch(mUiStage) {
             case Introduction:
-                if ((mErrorCode = validatePassword(mEnteredPassword)) == NO_ERROR) {
-                    mFirstPassword = mEnteredPassword;
-                    mPasswordEntry.setText("");
+                mErrorCode = mPasswordHelper.validate(mCurrentEntry);
+                if (mErrorCode == PasswordHelper.NO_ERROR) {
+                    mFirstEntry = mCurrentEntry;
+                    mPasswordField.setText("");
                     updateStage(Stage.NeedToConfirm);
                 } else {
                     updateStage(Stage.PasswordInvalid);
@@ -305,12 +356,12 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
                 break;
             case NeedToConfirm:
             case SaveFailure:
-                // Password must be entered twice. mFirstPassword is the one the user entered
-                // the first time.  mEnteredPassword is what's currently in the input field
-                if (mFirstPassword.equals(mEnteredPassword)) {
+                // Password must be entered twice. mFirstEntry is the one the user entered
+                // the first time.  mCurrentEntry is what's currently in the input field
+                if (mFirstEntry.equals(mCurrentEntry)) {
                     startSaveAndFinish();
                 } else {
-                    CharSequence tmp = mPasswordEntry.getText();
+                    CharSequence tmp = mPasswordField.getText();
                     if (tmp != null) {
                         Selection.setSelection((Spannable) tmp, 0, tmp.length());
                     }
@@ -330,18 +381,27 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
         }
 
         if (mUiStage.secondaryButtonText == R.string.lockpassword_clear_label) {
-            mPasswordEntry.setText("");
+            mPasswordField.setText("");
             mUiStage = Stage.Introduction;
-            setSecondaryButtonText(mUiStage.secondaryButtonText);
+            if (mIsInSetupWizard && mUiStage.secondaryButtonText
+                    == R.string.lockpassword_cancel_label) {
+                setSecondaryButtonText(R.string.lockscreen_skip_button_text);
+            } else {
+                setSecondaryButtonText(mUiStage.secondaryButtonText);
+            }
         } else {
-            mFragmentController.goBack();
+            if (mIsInSetupWizard) {
+                ((SetupWizardScreenLockActivity) getActivity()).onCancel();
+            } else {
+                mFragmentController.goBack();
+            }
         }
     }
 
-    private void onChosenLockSaveFinished(boolean isSaveSuccessful) {
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    void onChosenLockSaveFinished(boolean isSaveSuccessful) {
         if (isSaveSuccessful) {
-            mFragmentController.goBack();
-
+            onComplete();
         } else {
             updateStage(Stage.SaveFailure);
         }
@@ -367,8 +427,8 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
                     .commitNow();
         }
 
-        mSavePasswordWorker.start(mUserId, mEnteredPassword, mCurrentPassword,
-                getPasswordQuality());
+        mSavePasswordWorker.start(mUserId, mCurrentEntry, mExistingPassword,
+                mPasswordHelper.getPasswordQuality());
     }
 
     // Updates the hint message, button text and state
@@ -376,9 +436,10 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
         boolean inputAllowed = mSavePasswordWorker == null;
 
         if (mUiStage == Stage.Introduction) {
-            String password = mPasswordEntry.getText().toString();
-            if (mErrorCode != NO_ERROR) {
-                List<String> messages = convertErrorCodeToMessages(mErrorCode);
+            String password = mPasswordField.getText().toString();
+            if (mErrorCode != PasswordHelper.NO_ERROR) {
+                List<String> messages = mPasswordHelper.convertErrorCodeToMessages(getContext(),
+                        mErrorCode);
                 // Update the fulfillment of requirements.
                 mHintMessage.setText(String.join(" ", messages));
             } else {
@@ -388,13 +449,18 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
             setPrimaryButtonEnabled(!TextUtils.isEmpty(password));
         } else {
             mHintMessage.setText(getString(mUiStage.getHint(mIsAlphaMode)));
-            boolean hasPassword = !TextUtils.isEmpty(mEnteredPassword);
+            boolean hasPassword = !TextUtils.isEmpty(mCurrentEntry);
             setPrimaryButtonEnabled(inputAllowed && hasPassword);
             setSecondaryButtonEnabled(inputAllowed);
         }
 
         setPrimaryButtonText(mUiStage.primaryButtonText);
-        setSecondaryButtonText(mUiStage.secondaryButtonText);
+        if (mIsInSetupWizard && mUiStage.secondaryButtonText
+                == R.string.lockpassword_cancel_label) {
+            setSecondaryButtonText(R.string.lockscreen_skip_button_text);
+        } else {
+            setSecondaryButtonText(mUiStage.secondaryButtonText);
+        }
         mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
     }
 
@@ -404,10 +470,19 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
         updateUi();
     }
 
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    void onComplete() {
+        if (mIsInSetupWizard) {
+            ((SetupWizardScreenLockActivity) getActivity()).onComplete();
+        } else {
+            mFragmentController.goBack();
+        }
+    }
+
     /**
      * Handler that batches text changed events
      */
-    class TextChangedHandler extends Handler {
+    private class TextChangedHandler extends Handler {
         private static final int ON_TEXT_CHANGED = 1;
         private static final int DELAY_IN_MILLISECOND = 100;
 
@@ -423,7 +498,7 @@ public abstract class ChooseLockPasswordBaseFragment extends BaseFragment {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == ON_TEXT_CHANGED) {
-                mErrorCode = NO_ERROR;
+                mErrorCode = PasswordHelper.NO_ERROR;
                 updateUi();
             }
         }
