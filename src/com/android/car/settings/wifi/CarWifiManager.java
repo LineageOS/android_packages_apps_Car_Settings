@@ -100,12 +100,26 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         mWifiTracker.onDestroy();
     }
 
-    public List<AccessPoint> getAccessPoints() {
+    /**
+     * Returns a list of all reachable access points.
+     */
+    public List<AccessPoint> getAllAccessPoints() {
+        return getAccessPoints(false);
+    }
+
+    /**
+     * Returns a list of saved access points.
+     */
+    public List<AccessPoint> getSavedAccessPoints() {
+        return getAccessPoints(true);
+    }
+
+    private List<AccessPoint> getAccessPoints(boolean saved) {
         List<AccessPoint> accessPoints = new ArrayList<AccessPoint>();
         if (mWifiManager.isWifiEnabled()) {
             for (AccessPoint accessPoint : mWifiTracker.getAccessPoints()) {
                 // ignore out of reach access points.
-                if (accessPoint.isReachable()) {
+                if (shouldIncludeAp(accessPoint, saved)) {
                     accessPoints.add(accessPoint);
                 }
             }
@@ -113,9 +127,14 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         return accessPoints;
     }
 
+    private boolean shouldIncludeAp(AccessPoint accessPoint, boolean saved) {
+        return saved ? accessPoint.isReachable() && accessPoint.isSaved()
+                : accessPoint.isReachable();
+    }
+
     @Nullable
     public AccessPoint getConnectedAccessPoint() {
-        for (AccessPoint accessPoint : getAccessPoints()) {
+        for (AccessPoint accessPoint : getAllAccessPoints()) {
             if (accessPoint.getDetailedState() == NetworkInfo.DetailedState.CONNECTED) {
                 return accessPoint;
             }

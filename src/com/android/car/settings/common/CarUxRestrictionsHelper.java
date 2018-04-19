@@ -87,6 +87,15 @@ public class CarUxRestrictionsHelper {
         }
     }
 
+    /**
+     * Checks if UX_RESTRICTIONS_NO_SETUP is set or not.
+     */
+    public static boolean isNoSetup(CarUxRestrictions carUxRestrictions) {
+        return (carUxRestrictions.getActiveRestrictions()
+                & CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP)
+                == CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP;
+    }
+
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
