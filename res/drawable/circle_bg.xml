@@ -20,7 +20,7 @@
     android:shape="oval">
 
   <solid
-      android:color="@color/car_accent"/>
+      android:color="@color/toggle_bg"/>
 
   <size
       android:width="@dimen/car_touch_target_size"

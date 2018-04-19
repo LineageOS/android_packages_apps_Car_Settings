@@ -23,6 +23,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SeekBar;
@@ -39,9 +40,6 @@ import java.util.List;
 public class QuickSettingGridAdapter
         extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StateChangedListener {
     private static final int COLUMN_COUNT = 4;
-    // alpha value for icon or text.
-    private static final int ALPHA_DISABLED = 128;
-    private static final int ALPHA_ENABLED = 255;
     private static final int SEEKBAR_VIEWTYPE = 0;
     private static final int TILE_VIEWTYPE = 1;
     private final Context mContext;
@@ -84,6 +82,18 @@ public class QuickSettingGridAdapter
         String getText();
 
         State getState();
+
+        /**
+         * Returns {@code true} if this tile should be displayed.
+         */
+        boolean isAvailable();
+
+        /**
+         * Returns a listener for launching a setting fragment for advanced configuration for this
+         * tile, A.K.A deep dive, if available. {@code null} if deep dive is not available.
+         */
+        @Nullable
+        OnClickListener getDeepDiveListener();
     }
 
     interface SeekbarTile extends SeekBar.OnSeekBarChangeListener {
@@ -103,7 +113,9 @@ public class QuickSettingGridAdapter
     }
 
     QuickSettingGridAdapter addTile(Tile tile) {
-        mTiles.add(tile);
+        if (tile.isAvailable()) {
+            mTiles.add(tile);
+        }
         return this;
     }
 
@@ -145,15 +157,31 @@ public class QuickSettingGridAdapter
             case TILE_VIEWTYPE:
                 Tile tile = mTiles.get(position - mSeekbarTiles.size());
                 TileViewHolder vh = (TileViewHolder) holder;
+                OnClickListener deepDiveListener = tile.getDeepDiveListener();
+                if (deepDiveListener != null) {
+                    vh.mDeepDiveIcon.setVisibility(View.VISIBLE);
+                    vh.mTextContainer.setOnClickListener(deepDiveListener);
+                    vh.mIconContainer.setOnClickListener(tile);
+                    vh.itemView.setOnClickListener(null);
+                    vh.itemView.setClickable(false);
+                } else {
+                    vh.itemView.setOnClickListener(tile);
+                    vh.itemView.setClickable(true);
+                    vh.mIconContainer.setOnClickListener(null);
+                    vh.mIconContainer.setClickable(false);
+                    vh.mDeepDiveIcon.setVisibility(View.GONE);
+                    vh.mTextContainer.setClickable(false);
+                    vh.mTextContainer.setOnClickListener(null);
+                }
                 vh.mIcon.setImageDrawable(tile.getIcon());
                 switch (tile.getState()) {
                     case ON:
-                        vh.mIcon.setAlpha(ALPHA_ENABLED);
-                        vh.mText.setAlpha(ALPHA_ENABLED);
+                        vh.mIcon.setEnabled(true);
+                        vh.mIconBackground.setEnabled(true);
                         break;
                     case OFF:
-                        vh.mIcon.setAlpha(ALPHA_DISABLED);
-                        vh.mText.setAlpha(ALPHA_DISABLED);
+                        vh.mIcon.setEnabled(false);
+                        vh.mIconBackground.setEnabled(false);
                         break;
                     default:
                 }
@@ -161,7 +189,6 @@ public class QuickSettingGridAdapter
                 if (!TextUtils.isEmpty(textString)) {
                     vh.mText.setText(textString);
                 }
-                vh.itemView.setOnClickListener(tile);
                 break;
             default:
         }
@@ -177,12 +204,20 @@ public class QuickSettingGridAdapter
     }
 
     private class TileViewHolder extends RecyclerView.ViewHolder {
+        private final View mIconContainer;
+        private final View mTextContainer;
+        private final View mIconBackground;
         private final ImageView mIcon;
+        private final ImageView mDeepDiveIcon;
         private final TextView mText;
 
         TileViewHolder(View view) {
             super(view);
+            mIconContainer = view.findViewById(R.id.icon_container);
+            mTextContainer = view.findViewById(R.id.text_container);
+            mIconBackground = view.findViewById(R.id.icon_background);
             mIcon = (ImageView) view.findViewById(R.id.tile_icon);
+            mDeepDiveIcon = (ImageView) view.findViewById(R.id.deep_dive_icon);
             mText = (TextView) view.findViewById(R.id.tile_text);
         }
     }
