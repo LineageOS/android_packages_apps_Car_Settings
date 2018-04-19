@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import android.annotation.NonNull;
+import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -29,6 +31,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
+import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 import java.util.Set;
 
@@ -71,14 +74,52 @@ public abstract class BaseFragment extends Fragment {
 
     protected FragmentController mFragmentController;
 
-    public void setFragmentController(FragmentController fragmentController) {
+    @NonNull
+    private CarUxRestrictions mCurrentRestrictions;
+
+    public final void setFragmentController(FragmentController fragmentController) {
         mFragmentController = fragmentController;
+    }
+
+    /**
+     * Sets the CarUxRestrictions and update this fragment by calling onUxRestrictionChanged().
+     */
+    void setCarUxRestrictions(@NonNull CarUxRestrictions restrictions) {
+        mCurrentRestrictions = restrictions;
+        onUxRestrictionChanged(restrictions);
     }
 
     protected static Bundle getBundle() {
         Bundle bundle = new Bundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
         return bundle;
+    }
+
+    /**
+     * Checks if this fragment can be shown or not given the CarUxRestrictions. Default to
+     * {@code false} if UX_RESTRICTIONS_NO_SETUP is set.
+     */
+    protected boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
+        return !CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
+    }
+
+    /**
+     * Notifies the fragment with the latest CarUxRestrictions change. Default to quick setting
+     * page when canBeShown() return false, no-op otherwise.
+     */
+    protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
+        mCurrentRestrictions = carUxRestrictions;
+        if (!canBeShown(carUxRestrictions)) {
+            mFragmentController.launchFragment(QuickSettingFragment.newInstance());
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (mCurrentRestrictions != null) {
+            onUxRestrictionChanged(mCurrentRestrictions);
+        }
     }
 
     @Override

@@ -15,38 +15,54 @@
   ~ limitations under the License
   -->
 
-<com.android.car.list.InterceptTouchRelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tile_container"
     android:padding="@dimen/toggle_padding"
     android:layout_marginStart="@dimen/car_padding_2"
     android:layout_marginEnd="@dimen/car_padding_2"
     android:layout_marginBottom="@dimen/car_padding_5"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
     <FrameLayout
         android:id="@+id/icon_container"
         android:layout_width="@dimen/car_touch_target_size"
         android:layout_height="@dimen/car_touch_target_size"
-        android:background="@drawable/circle_bg"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/car_padding_4">
-        <ImageButton
+        android:background="@drawable/button_ripple_bg"
+        android:layout_marginBottom="@dimen/car_padding_4"
+        android:gravity="center">
+        <View
+            android:id="@+id/icon_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_bg"/>
+        <ImageView
             android:id="@+id/tile_icon"
             android:layout_width="@dimen/car_primary_icon_size"
             android:layout_height="@dimen/car_primary_icon_size"
             android:layout_gravity="center"
             android:src="@drawable/ic_settings_wifi"
-            android:tint="@color/car_card"
-            android:background="@null"
+            android:tint="@color/toggle_icon_tint"
             style="@style/ListIcon" />
     </FrameLayout>
-    <TextView
-        android:id="@+id/tile_text"
+    <LinearLayout
+        android:id="@+id/text_container"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:paddingTop="@dimen/car_padding_1"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/icon_container"
-        android:textAppearance="@style/TextAppearance.Car.Label1"/>
-</com.android.car.list.InterceptTouchRelativeLayout>
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tile_text"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/TextAppearance.Car.Label1"/>
+        <ImageView
+            android:id="@+id/deep_dive_icon"
+            android:layout_width="@dimen/car_primary_icon_size"
+            android:layout_height="@dimen/car_primary_icon_size"
+            android:src="@drawable/ic_arrow_drop_down"
+            android:tint="@color/car_label1"
+            android:layout_marginStart="@dimen/car_padding_1"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

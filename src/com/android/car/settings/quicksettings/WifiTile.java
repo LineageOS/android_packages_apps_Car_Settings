@@ -19,13 +19,15 @@ package com.android.car.settings.quicksettings;
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.content.Context;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseFragment.FragmentController;
 import com.android.car.settings.wifi.CarWifiManager;
+import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiUtil;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -33,9 +35,13 @@ import com.android.settingslib.wifi.AccessPoint;
  * Controls Wifi tile on quick setting page.
  */
 public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Listener {
+    private static final String TAG = "WifiTile";
     private final StateChangedListener mStateChangedListener;
     private final CarWifiManager mCarWifiManager;
     private final Context mContext;
+    private final FragmentController mFragmentController;
+
+    private final OnClickListener mSwitchSavedWifiListener;
 
     @DrawableRes
     private int mIconRes = R.drawable.ic_settings_wifi;
@@ -44,13 +50,31 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
 
     private State mState = State.OFF;
 
-    WifiTile(Context context, StateChangedListener stateChangedListener) {
+    WifiTile(Context context, StateChangedListener stateChangedListener,
+            FragmentController fragmentController) {
         mContext = context;
+        mFragmentController = fragmentController;
+        mSwitchSavedWifiListener = v -> {
+            mFragmentController.launchFragment(
+                    WifiSettingsFragment.getInstance().showSavedApOnly(true));
+        };
         mCarWifiManager = new CarWifiManager(context, this /* listener */);
         mCarWifiManager.start();
         mStateChangedListener = stateChangedListener;
         // init icon and text etc.
+        updateAccessPointSsid();
         onWifiStateChanged(mCarWifiManager.getWifiState());
+    }
+
+    @Nullable
+    public OnClickListener getDeepDiveListener() {
+        return !mCarWifiManager.getSavedAccessPoints().isEmpty()
+                ? mSwitchSavedWifiListener : null;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI);
     }
 
     @Override
@@ -100,9 +124,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
     @Override
     public void onClick(View v) {
         if (wifiEnabledNotConnected()) {
-            Intent intent = new Intent(mContext, CarSettingActivity.class);
-            intent.setAction(CarSettingActivity.ACTION_ADD_WIFI);
-            mContext.startActivity(intent);
+            mFragmentController.launchFragment(WifiSettingsFragment.getInstance());
         } else {
             mCarWifiManager.setWifiEnabled(!mCarWifiManager.isWifiEnabled());
         }

@@ -39,6 +39,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
     private final Context mContext;
     private final StateChangedListener mStateChangedListener;
     private LocalBluetoothAdapter mLocalAdapter;
+    private LocalBluetoothManager mLocalManager;
 
     @DrawableRes
     private int mIconRes = R.drawable.ic_settings_bluetooth;
@@ -60,7 +61,6 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
                         // TODO show a different status icon?
                     case BluetoothAdapter.STATE_OFF:
                         mIconRes = R.drawable.ic_settings_bluetooth_disabled;
-                        mText = mContext.getString(R.string.bluetooth_disabled);
                         mState = State.OFF;
                         break;
                     default:
@@ -91,25 +91,31 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
         mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
         mContext.registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
-        LocalBluetoothManager mLocalManager = LocalBluetoothManager.getInstance(
+        mLocalManager = LocalBluetoothManager.getInstance(
                 mContext, null /* listener */);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
-            mIconRes = R.drawable.ic_settings_bluetooth_disabled;
-            mText = mContext.getString(R.string.bluetooth_disabled);
-            mState = State.OFF;
             return;
         }
+        mText = mContext.getString(R.string.bluetooth_settings);
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
         if (mLocalAdapter.isEnabled()) {
             mIconRes = R.drawable.ic_settings_bluetooth;
-            mText = mContext.getString(R.string.bluetooth_settings);
             mState = State.ON;
         } else {
             mIconRes = R.drawable.ic_settings_bluetooth_disabled;
-            mText = mContext.getString(R.string.bluetooth_disabled);
             mState = State.OFF;
         }
+    }
+
+    @Nullable
+    public View.OnClickListener getDeepDiveListener() {
+        return null;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return mLocalManager != null;
     }
 
     @Override
@@ -120,6 +126,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
     @Override
     @Nullable
     public String getText() {
+        // TODO: return connected ssid
         return mText;
     }
 

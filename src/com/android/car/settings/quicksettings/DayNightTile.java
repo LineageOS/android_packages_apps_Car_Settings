@@ -19,18 +19,12 @@ package com.android.car.settings.quicksettings;
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.app.UiModeManager;
-import android.bluetooth.BluetoothAdapter;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.android.car.settings.R;
-import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
-import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
  * Controls Day night mode tile on quick setting page.
@@ -43,7 +37,7 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
     @DrawableRes
     private int mIconRes = R.drawable.ic_settings_night_display;
 
-    private String mText = "night mode";
+    private final String mText;
 
     private State mState = State.ON;
 
@@ -52,10 +46,21 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
         mContext = context;
         mUiModeManager = (UiModeManager) mContext.getSystemService(Context.UI_MODE_SERVICE);
         if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            mState = State.OFF;
-        } else {
             mState = State.ON;
+        } else {
+            mState = State.OFF;
         }
+        mText = mContext.getString(R.string.night_mode_tile_label);
+    }
+
+    @Nullable
+    public OnClickListener getDeepDiveListener() {
+        return null;
+    }
+
+    @Override
+    public boolean isAvailable() {
+        return true;
     }
 
     @Override
