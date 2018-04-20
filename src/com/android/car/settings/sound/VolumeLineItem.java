@@ -17,6 +17,7 @@
 package com.android.car.settings.sound;
 
 import android.annotation.DrawableRes;
+import android.annotation.StringRes;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.Context;
@@ -45,9 +46,11 @@ public class VolumeLineItem extends SeekbarListItem {
             int volumeGroupId,
             @AudioAttributes.AttributeUsage int usage,
             @DrawableRes int iconResId,
+            @StringRes int titleId,
             SeekbarListener seekbarListener) throws CarNotConnectedException {
         super(context, getMaxSeekbarValue(carAudioManager, volumeGroupId),
-            getSeekbarValue(carAudioManager, volumeGroupId), seekbarListener, null);
+                getSeekbarValue(carAudioManager, volumeGroupId), seekbarListener,
+                context.getString(titleId));
         setPrimaryActionIcon(iconResId);
         mSeekbarListener = seekbarListener;
     }
