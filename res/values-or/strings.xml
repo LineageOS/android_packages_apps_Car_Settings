@@ -20,7 +20,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- no translation found for settings_label (5147911978211079839) -->
     <skip />
-    <string name="advanced_settings_label" msgid="7169519070776858180">"ଅଧିକ ସେଟିଙ୍ଗ"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"ଅଧିକ"</string>
     <!-- no translation found for display_settings (5325515247739279185) -->
     <skip />
     <!-- no translation found for brightness (2919605130898772866) -->
@@ -38,6 +38,8 @@
     <!-- no translation found for keywords_display_auto_brightness (2700310050333468752) -->
     <skip />
     <!-- no translation found for keywords_display_night_display (2922294576679769957) -->
+    <skip />
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
     <skip />
     <!-- no translation found for wifi_settings (7701477685273103841) -->
     <skip />
@@ -358,8 +360,7 @@
     <skip />
     <!-- no translation found for lock_settings_picker_title (6590330165050361632) -->
     <skip />
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
     <!-- no translation found for lockpattern_confirm_button_text (7784925958324484965) -->
     <skip />
     <!-- no translation found for lockpattern_restart_button_text (9355771277617537) -->
@@ -367,6 +368,8 @@
     <!-- no translation found for continue_button_text (5129979170426836641) -->
     <skip />
     <!-- no translation found for lockscreen_retry_button_text (5314212350698701242) -->
+    <skip />
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
     <skip />
     <!-- no translation found for set_screen_lock (5239317292691332780) -->
     <skip />
@@ -402,8 +405,7 @@
     <skip />
     <!-- no translation found for choose_lock_pin_hints (7362906249992020844) -->
     <skip />
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin ଅମାନ୍ୟ ଅଟେ, ଅତିକମରେ 4ଟି ସଂଖ୍ୟା ରହିବା ଆବଶ୍ୟକ।"</string>
     <!-- no translation found for confirm_pins_dont_match (4607110139373520720) -->
     <skip />
     <!-- no translation found for error_saving_lockpin (9011960139736000393) -->
@@ -430,16 +432,13 @@
     <skip />
     <!-- no translation found for lockpassword_pin_too_long (62957683396974404) -->
     <skip />
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
     <!-- no translation found for lockpassword_pin_recently_used (7901918311213276207) -->
     <skip />
     <!-- no translation found for lockpassword_pin_blacklisted_by_admin (7412709707800738442) -->
     <skip />
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ଏହା ଗୋଟିଏ ଭୁଲ ଅକ୍ଷରକୁ ଯୋଡ଼ିପାରିବନାହିଁ"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ପାସ୍‌ୱର୍ଡ ଅମାନ୍ୟ ଅଟେ, ଏଥିରେ ନିହାତି 4-8ଟି ବର୍ଣ୍ଣ ରହିବା ଦରକାର, ଯେଉଁଥିରେ ଅତିକମରେ 1ଟି ସଂଖ୍ୟା, 1 ଅକ୍ଷର ଥିବ ଓ କୌଣସି ଖାଲି ସ୍ଥାନ ନଥିବ।"</string>
     <!-- no translation found for lockpassword_password_requires_letters (424616259312760303) -->
     <!-- no translation found for lockpassword_password_requires_lowercase (2267487180744744833) -->
     <!-- no translation found for lockpassword_password_requires_uppercase (7999264563026517898) -->
@@ -452,8 +451,7 @@
     <skip />
     <!-- no translation found for lockpassword_password_blacklisted_by_admin (7965893810326503891) -->
     <skip />
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା କ୍ରମ ଦୋହରାଇବାର ଅନୁମତି ନାହିଁ।"</string>
     <!-- no translation found for setup_lock_settings_options_button_label (3337845811029780896) -->
     <skip />
     <!-- no translation found for forget (3971143908183848527) -->
@@ -466,9 +464,9 @@
     <skip />
     <string name="backspace_key" msgid="1545590866688979099">"Backspace କୀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"କୀ ଦବାନ୍ତୁ"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରିଆସିବେ?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"ଡେମୋ ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରିବାକୁ ଏବଂ ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରି ଆସିବାକୁ ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍ କରିବା ଆବଶ୍ୟକ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ସେଟ୍-ଅପ୍ ସମାପ୍ତ କରନ୍ତୁ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ଏବେ ନୁହେଁଁ"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଏହି କାର୍ଯ୍ୟ କରିହେବ ନାହିଁ।"</string>
 </resources>

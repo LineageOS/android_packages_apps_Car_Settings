@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"設定"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"詳細設定"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"その他"</string>
     <string name="display_settings" msgid="5325515247739279185">"ディスプレイ"</string>
     <string name="brightness" msgid="2919605130898772866">"明るさのレベル"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"明るさの自動調節"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"画面を暗くする、タッチスクリーン、電池"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"画面を暗くする、タッチスクリーン、電池"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"画面を暗くする、夜間、ティント"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ワイヤレス アクセス ポイントを設定、管理する"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi を ON にしています…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"パスワード"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ロックタイプの選択"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"画面ロックの方法"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"確認"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"再入力"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"続行"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"再試行"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"画面ロックの設定"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"セキュリティ強化のためにパターンを設定"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"消去"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"セキュリティ強化のために PIN を設定"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN の再入力"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN は 4 桁以上にしてください"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN が無効です。4 桁以上にしてください。"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN が一致しません"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN の保存中にエラーが発生しました"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"セキュリティ強化のためにパスワードを設定"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN は <xliff:g id="COUNT">%d</xliff:g> 桁以上必要です"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> 文字未満にしてください"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> 桁未満にしてください"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"使用できるのは 0～9 の数字のみです。"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"端末管理により、最近使用した PIN は使用できません"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"一般的な PIN は IT 管理者によってブロックされています。別の PIN をお試しください。"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"無効な文字があります。"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"パスワードが無効です。4～8 文字で指定してください。数字と英字が 1 つ以上必要です。空白文字は使用できません。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">英字が <xliff:g id="COUNT">%d</xliff:g> 文字以上必要です</item>
       <item quantity="one">英字が 1 文字以上必要です</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"端末管理により、最近使用したパスワードは使用できません"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"パスワードの保存中にエラーが発生しました"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"一般的なパスワードは IT 管理者によってブロックされています。別のパスワードをお試しください。"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
     <string name="forget" msgid="3971143908183848527">"削除"</string>
     <string name="delete_button" msgid="5840500432614610850">"削除"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"デモアカウントを削除し、デモモードを終了すると、出荷時設定へのリセットが必要になります"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"設定を完了"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"後で行う"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"この操作は運転中はできません。"</string>
 </resources>

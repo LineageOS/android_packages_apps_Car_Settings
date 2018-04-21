@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ការកំណត់"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"ការកំណត់ច្រើនទៀត"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"ច្រើន​ទៀត"</string>
     <string name="display_settings" msgid="5325515247739279185">"ការ​បង្ហាញ"</string>
     <string name="brightness" msgid="2919605130898772866">"កម្រិត​ពន្លឺ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"កម្រិតពន្លឺបត់បែន"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"អេក្រង់ពន្លឺតិច​ អេក្រង់ចុច ថ្ម"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"អេក្រង់ពន្លឺតិច​ អេក្រង់ចុច ថ្ម"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"អេក្រង់ពន្លឺតិច យប់ ពណ៌ព្រឿងៗ"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"រៀបចំ និង​គ្រប់គ្រង​ចំណុច​ចូល​ប្រើ​ដោយឥត​ខ្សែ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"កំពុង​បើក Wi‑Fi…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"កូដ PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"ពាក្យសម្ងាត់"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ជ្រើសរើស​ប្រភេទ​សោ"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"ជម្រើស​ចាក់សោអេក្រង់"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"បញ្ជាក់"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"គូរ​ឡើងវិញ"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"បន្ត"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ព្យាយាមម្ដងទៀត"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"កំណត់​ការចាក់​សោអេក្រង់"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ដើម្បីសុវត្ថិភាព សូមកំណត់លំនាំ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"សម្អាត"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​កូដ PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"បញ្ចូល​កូដ PIN របស់អ្នក​ឡើងវិញ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"កូដ PIN ត្រូវតែ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"កូដ PIN មិនត្រឹមត្រូវ​ទេ ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់។"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"កូដ PIN មិន​ត្រូវគ្នាទេ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​កូដ PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​ពាក្យសម្ងាត់"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ត្រូវមានតិចជាង <xliff:g id="NUMBER">%d</xliff:g> តួ"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ត្រូវមានលេខតិចជាង <xliff:g id="NUMBER">%d</xliff:g> ខ្ទង់"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ត្រូវមាន​លេខពី 0-9 តែ​ប៉ុណ្ណោះ។"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​កូដ PIN ​ទើបប្រើ​ហើយ​ទេ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"កូដ PIN លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សាកល្បង​ប្រើ​កូដ PIN ផ្សេង​ពី​នេះ។"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"វាមិនអាច​ប្រើតួ​អក្សរដែល​មិន​ត្រឹមត្រូវ​បានទេ។"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ពាក្យសម្ងាត់​មិន​ត្រឹមត្រូវ​ទេ ត្រូវ​តែ​មាន 4-8 តួ ដែល​មាន​លេខយ៉ាង​ហោចណាស់ 1 ខ្ទង់ អក្សរ 1 តួ និងមិនមានដកឃ្លា។"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">ត្រូវ​មាន​អក្សរ​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ</item>
       <item quantity="one">ត្រូវមានអក្សរយ៉ាងហោចណាស់ 1 តួ</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​ពាក្យ​សម្ងាត់​​ដែលទើបប្រើ​ហើយ​ទេ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​ពាក្យ​សម្ងាត់"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ពាក្យសម្ងាត់​លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សាកល្បង​ប្រើ​ពាក្យ​សម្ងាត់​ផ្សេង​ពី​នេះ។"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់​ឡើង ចុះ ឬ​ដដែលៗ​ទេ។"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="forget" msgid="3971143908183848527">"បំភ្លេច"</string>
     <string name="delete_button" msgid="5840500432614610850">"លុប"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"ការ​លុប​គណនី​សាកល្បង និង​ការ​ចាកចេញពីមុខងារ​សាកល្បង​នឹង​តម្រូវ​ឱ្យ​មាន​ការ​កំណត់​ដូច​ដើម​ឡើង​វិញ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"បញ្ចប់​ការរៀបចំ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"កុំ​ទាន់"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"មិនមាន​សកម្មភាព​ទេ ខណៈពេល​កំពុង​បើកបរ។"</string>
 </resources>

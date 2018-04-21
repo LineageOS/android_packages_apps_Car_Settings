@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Ajustes"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Más ajustes"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Más"</string>
     <string name="display_settings" msgid="5325515247739279185">"Pantalla"</string>
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo automático"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"atenuar pantalla, pantalla táctil, batería"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"atenuar pantalla, pantalla táctil, batería"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"atenuar pantalla, nocturno, tono"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Configurar y administrar puntos de acceso inalámbricos"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activando Wi‑Fi…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Pin"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Contraseña"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Elegir tipo de bloqueo"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Opciones de bloqueo de pantalla"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmar"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Crear un patrón nuevo"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Continuar"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Reintentar"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Definir un bloqueo de pantalla"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Por seguridad, establece un patrón"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Borrar"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Por seguridad, establece un PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Vuelve a introducir tu PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"El PIN debe tener al menos 4 dígitos"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"El PIN no es válido: debe tener al menos 4 dígitos."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Los PIN no coinciden"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"No se ha podido guardar el PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Por seguridad, establece una contraseña"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"El PIN debe tener al menos <xliff:g id="COUNT">%d</xliff:g> dígitos"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Debe tener menos de <xliff:g id="NUMBER">%d</xliff:g> caracteres"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Debe tener menos de <xliff:g id="NUMBER">%d</xliff:g> dígitos"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Solo debe tener dígitos comprendidos entre el 0 y el 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"El administrador de dispositivos no permite utilizar un PIN reciente"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"El administrador de TI bloquea los PIN comunes. Prueba a utilizar otro PIN."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"No puede incluir un carácter que no sea válido."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"La contraseña no es válida: debe tener entre 4 y 8 caracteres, incluir al menos un dígito y una letra, y no tener espacios en blanco."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Debe tener al menos <xliff:g id="COUNT">%d</xliff:g> letras</item>
       <item quantity="one">Debe tener al menos 1 letra</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"El administrador de dispositivos no permite utilizar una contraseña reciente"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"No se ha podido guardar la contraseña"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"El administrador de TI bloquea las contraseñas comunes. Prueba a utilizar otra contraseña."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="forget" msgid="3971143908183848527">"Olvidar"</string>
     <string name="delete_button" msgid="5840500432614610850">"Eliminar"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"Para eliminar la cuenta demo y salir del modo demo, es necesario restablecer el estado de fábrica"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"finalizar configuración"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ahora no"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Esta acción no está disponible mientras conduces."</string>
 </resources>

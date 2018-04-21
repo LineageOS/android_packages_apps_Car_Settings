@@ -19,16 +19,18 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Sozlamalar"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Boshqa sozlamalar"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Yana"</string>
     <string name="display_settings" msgid="5325515247739279185">"Ekran"</string>
     <string name="brightness" msgid="2919605130898772866">"Yorqinlik darajasi"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Moslashuvchan yorqinlik"</string>
-    <string name="auto_brightness_summary" msgid="4741887033140384352">"Yorqinlikni yorug‘lik darajasiga qarab moslashtirish"</string>
+    <string name="auto_brightness_summary" msgid="4741887033140384352">"Ekran yorqinligini atrofning yoritilganlik darajasiga qarab moslashtirish"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Tungi rejim yoqilgan"</string>
     <string name="keywords_display" msgid="3978416985146943922">"ekran, sensorli ekran"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"xira ekran, sensorli ekran, batareya"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"xira ekran, sensorli ekran, batareya"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"xira ekran, tun, tus"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Ulanish nuqtalarini sozlash &amp; boshqarish"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi yoqilmoqda…"</string>
@@ -44,7 +46,7 @@
     <string name="wifi_security" msgid="158358046038876532">"Xavfsizlik"</string>
     <string name="wifi_signal" msgid="1817579728350364549">"Signal darajasi"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Holati"</string>
-    <string name="wifi_speed" msgid="1650692446731850781">"Aloqa tezligi"</string>
+    <string name="wifi_speed" msgid="1650692446731850781">"Ulanish tezligi"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Chastota"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP manzili"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
@@ -177,7 +179,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Sozlanmagan"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Foydalanuvchilar va hisoblar"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Foydalanuvchi"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> uchun hisoblar"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Yangi hisob qo‘shish"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Mahkamlash"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Parol"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Qulf turini tanlang"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Ekran qulfi parametrlari"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Tasdiqlash"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Qayta chizish"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Keyingisi"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Qayta urinish"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran qulfini sozlang"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit o‘rnating"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tozalash"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Xavfsizlik uchun PIN kod o‘rnating"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN kodni qayta kiriting"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN kod kamida 4 ta raqamli bo‘lsin"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kod yaroqsiz, kamida 5 ta raqamdan iborat bo‘lishi lozim."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodlar bir-biriga mos emas"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN kod saqlanmadi"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Xavfsizlik uchun parol o‘rnating"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kod kamida <xliff:g id="COUNT">%d</xliff:g> raqamli bo‘lsin"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Parol maksimum <xliff:g id="NUMBER">%d</xliff:g> ta belgili bo‘lsin"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"PIN kod maksimum <xliff:g id="NUMBER">%d</xliff:g> ta raqamli bo‘lsin"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"PIN kod faqat 0-9 raqamlaridan iborat bo‘lishi lozim."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Qurilma administratori oxirgi PIN koddan yana foydalanishga ruxsat bermaydi"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Oddiy PIN kodlar AT admini tomonidan bloklangan. Murakkabroq PIN kod tanlang."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Parol yaroqsiz belgidan iborat bo‘lmasligi lozim."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Parol xato, 4-8 ta belgidan, kamida 1 ta raqam va 1 ta harf hamda bo‘sh joysiz bo‘lishi lozim."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Parol tarkibida kamida <xliff:g id="COUNT">%d</xliff:g> ta harf bo‘lishi lozim</item>
       <item quantity="one">Parol tarkibida kamida 1 ta harf bo‘lishi lozim</item>
@@ -270,10 +269,9 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Qurilma administratori yaqinda foydalanilgan paroldan yana foydalanishga ruxsat bermaydi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Parol saqlanmadi"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Oddiy parollar AT admini tomonidan bloklangan. Murakkabroq parol tanlang."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran qulfi parametrlari"</string>
-    <string name="forget" msgid="3971143908183848527">"Unutish"</string>
+    <string name="forget" msgid="3971143908183848527">"Olib tashlash"</string>
     <string name="delete_button" msgid="5840500432614610850">"O‘chirish"</string>
     <string name="remove_button" msgid="6664656962868194178">"Ha"</string>
     <string name="cancel" msgid="750286395700355455">"Bekor qilish"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"Demo hisob va mavjud demo rejimni o‘chirib tashlash sozlamalarni asliga qaytarishni talab qiladi"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"sozlashni tugatish"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"hozir emas"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Avtomobilda harakatlanayotganda amal ishlamaydi."</string>
 </resources>

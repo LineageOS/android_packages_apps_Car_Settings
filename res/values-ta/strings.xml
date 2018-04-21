@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"அமைப்புகள்"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"மேலும் அமைப்புகள்"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"மேலும்"</string>
     <string name="display_settings" msgid="5325515247739279185">"திரை"</string>
     <string name="brightness" msgid="2919605130898772866">"ஒளிர்வு நிலை"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"சூழலுக்கு ஏற்ற ஒளிர்வு"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"ஒளிமங்கல் திரை, டச்ஸ்கிரீன், பேட்டரி"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ஒளிமங்கல் திரை, டச்ஸ்கிரீன், பேட்டரி"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ஒளிமங்கல் திரை, இரவு, மென்னிறம்"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"வைஃபை"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"வயர்லெஸ் ஆக்சஸ் பாயிண்ட்களை அமைத்து நிர்வகிக்கவும்"</string>
     <string name="wifi_starting" msgid="473253087503153167">"வைஃபையை ஆன் செய்கிறது…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"பின்"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"கடவுச்சொல்"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"பூட்டு வகை தேர்வுசெய்க"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"உறுதிப்படுத்து"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"மீண்டும் வரைக"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"தொடர்க"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"மீண்டும் முயலவும்"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"திரைப் பூட்டை அமைக்கவும்"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"பாதுகாப்பிற்கு, பின்னை அமைக்கவும்"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"பின்னை மீண்டும் உள்ளிடவும்"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"குறைந்தது 4 இலக்கங்கள் இருக்க வேண்டும்"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"பின் தவறானது, குறைந்தது 4 இலக்கங்கள் இருக்க வேண்டும்."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"பின்கள் பொருந்தவில்லை"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"பின்னைச் சேமிப்பதில் பிழை"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"பாதுகாப்பிற்கு, கடவுச்சொல்லை அமைக்கவும்"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> இலக்கங்கள் இருக்க வேண்டும்"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்தை விட குறைவாக இருக்கவேண்டும்"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> இலக்கங்களை விட குறைவாக இருக்க வேண்டும்"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0-9 இலக்கங்கள் மட்டுமே இருக்க வேண்டும்."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"உங்கள் IT நிர்வாகி, பொதுவான பின்களைத் தடுத்துள்ளார். வேறு பின்னைப் பயன்படுத்திப் பார்க்கவும்."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"இதில் தவறான எழுத்து இருக்கக்கூடாது."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"கடவுச்சொல் தவறானது. இதில் 4-8 எழுத்துகள் இருக்க வேண்டும். குறைந்தது 1 இலக்கம், 1 எழுத்து இருக்க வேண்டும், இடைவெளி இருக்கக்கூடாது."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்துகள் இருக்க வேண்டும்</item>
       <item quantity="one">குறைந்தது 1 எழுத்து இருக்க வேண்டும்</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"சாதன நிர்வாகி சமீபத்திய கடவுச்சொல்லைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"கடவுச்சொல்லைச் சேமிப்பதில் பிழை"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"உங்கள் IT நிர்வாகி, பொதுவான கடவுச்சொற்களைத் தடுத்துள்ளார். வேறு கடவுச்சொல்லைப் பயன்படுத்திப் பார்க்கவும்."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="forget" msgid="3971143908183848527">"அகற்று"</string>
     <string name="delete_button" msgid="5840500432614610850">"நீக்கு"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"ரத்துசெய்"</string>
     <string name="backspace_key" msgid="1545590866688979099">"பேக்ஸ்பேஸ் விசை"</string>
     <string name="enter_key" msgid="2121394305541579468">"என்டர் விசை"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"டெமோவிலிருந்து வெளியேறவா?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"டெமோ கணக்கை நீக்க மற்றும் டெமோ முறையிலிருந்து வெளியேற, ஆரம்பநிலை மீட்டமைவைச் செயல்படுத்த வேண்டும்"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"அமைவை முடி"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"இப்போது வேண்டாம்"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"வாகனம் ஓட்டும்போது, இந்தச் செயலைச் செய்ய முடியாது."</string>
 </resources>

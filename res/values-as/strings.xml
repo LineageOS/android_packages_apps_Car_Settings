@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ছেটিংবোৰ"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"অধিক ছেটিং"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"অধিক"</string>
     <string name="display_settings" msgid="5325515247739279185">"ডিছপ্লে"</string>
     <string name="brightness" msgid="2919605130898772866">"উজ্জ্বলতাৰ স্তৰ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"অভিযোজিত উজ্জ্বলতা"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"অনুজ্জ্বল স্ক্ৰীণ, টাচ্চস্ক্ৰীণ, বেটাৰি"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"অনুজ্জ্বল স্ক্ৰীণ, টাচ্চস্ক্ৰীণ, বেটাৰি"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"অনুজ্জ্বল স্ক্ৰীণ, ৰাতি, আভা"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"ৱাই-ফাই"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ৱায়াৰলেচ এক্সেছ পইণ্টসমূহ ছেটআপ কৰি পৰিচালনা কৰক"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ৱাই-ফাই অন কৰি থকা হৈছে…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"পিন"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"পাছৱৰ্ড"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"কোনো লকৰ প্ৰকাৰ বাছক"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"স্ক্ৰীণ লকৰ বিকল্পসমূহ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"নিশ্চিত কৰক"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"আকৌ আঁকক"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"অব্য়াহত ৰাখক"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"পুনৰ চেষ্টা কৰক"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"স্ক্ৰীণ ছেট কৰক"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"সুৰক্ষাৰ বাবে কোনো আৰ্হি ছেট কৰক"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"মচক"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"সুৰক্ষাৰ বাবে কোনো পিন ছেট কৰক"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"আপোনাৰ পিনটো আকৌ দিয়ক"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"পিনটোত কমেও ৪টা অংক থাকিব লাগিব"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"অমান্য় পিন, কমেও ৪টা সংখ্য়া হ\'ব লাগিব।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"পিনবিলাক মিলা নাই"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"পিন ছেভ কৰোঁতে আঁসোৱাহ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"সুৰক্ষাৰ বাবে কোনো পাছৱৰ্ড ছেট কৰক"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"পিনটোত অতি কমেও <xliff:g id="COUNT">%d</xliff:g>টা অংক থাকিব লাগিব"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>তকৈ কম সংখ্যক বৰ্ণ থাকিব লাগিব"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g>তকৈ কম সংখ্যক অংকৰ হ\'ব লাগিব"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"কেৱল ০-৯ৰ ভিতৰৰ অংকহে থাকিব লাগিব।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ডিভাইচৰ প্ৰশাসকে শেহতীয়া পিন ব্যৱহাৰ কৰিব নিদিয়ে"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"আপোনাৰ আইটি প্ৰশাসকে উমৈহতীয়া পিনবোৰ অৱৰোধ কৰি থৈছে৷ বেলেগ পিন ব্য়ৱহাৰ কৰি চাওক৷"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ইয়াত অমান্য় বৰ্ণ থাকিব নোৱাৰে।"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"অমান্য় পাছৱৰ্ড, ইয়াত ৪-৮ বৰ্ণ থাকিবই লাগিব য\'ত কমেও ১টা সংখ্য়া, ১টা আখৰ হওক কিন্তু মাজত কোনো খালী ঠাই হ\'ব নোৱাৰিব।"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">অতি কমেও <xliff:g id="COUNT">%d</xliff:g> টা বৰ্ণ থাকিব লাগিব</item>
       <item quantity="other">অতি কমেও <xliff:g id="COUNT">%d</xliff:g> বৰ্ণ থাকিব লাগিব</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ডিভাইচৰ প্ৰশাসকে শেহতীয়া পাছৱৰ্ড ব্যৱহাৰ কৰিব নিদিয়ে"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"পাছৱৰ্ড ছেভ কৰোঁতে আঁসোৱাহ"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"আইটি প্ৰশাসকে উমৈহতীয়া পাছৱৰ্ডসমূহ অৱৰোধ কৰি থৈছে। বেলেগ পাছৱৰ্ড ব্যৱাহৰ কৰি চাওক।"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"সংখ্যাবোৰৰ ঊৰ্ধ্বগামী, অধোগামী বা পুনৰাবৃত্তি ক্ৰমক অনুমতি দিয়া নহয়।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীণ লকৰ বিকল্পসমূহ"</string>
     <string name="forget" msgid="3971143908183848527">"পাহৰক"</string>
     <string name="delete_button" msgid="5840500432614610850">"মচক"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"বাতিল কৰক"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace কী"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter কী"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"ডেম\'ৰ পৰা বাহিৰ হ\'বনে?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"ডেম\' একাউণ্ট মচিবলৈ আৰু ডেম\' ম\'ডৰ পৰা বাহিৰলৈ ওলাবলৈ ফেক্টৰী ৰিছেট কৰাৰ প্ৰয়োজন হ\'ব"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ছেট আপ সমাপ্ত কৰক"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"এতিয়াই নহয়"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"গাড়ী চলোৱা সময়ত কাৰ্যটো উপলব্ধ নাথাকে।"</string>
 </resources>
