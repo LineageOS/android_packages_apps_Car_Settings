@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ဆက်တင်များ"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"နောက်ထပ် ဆက်တင်များ"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"နောက်ထပ်"</string>
     <string name="display_settings" msgid="5325515247739279185">"မျက်နှာပြင်ပြသမှု"</string>
     <string name="brightness" msgid="2919605130898772866">"တောက်ပမှု"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"အလိုက်သင့် တောက်ပမှု"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"မျက်နှာပြင် မှိန်ရန်၊ ထိတွေ့မှုမျက်နှာပြင်၊ ဘက်ထရီ"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"မျက်နှာပြင် မှိန်ရန်၊ ထိတွေ့မှုမျက်နှာပြင်၊ ဘက်ထရီ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"မျက်နှာပြင်ကို မှိန်ရန်၊ ည၊ အရောင်သန်းခြင်း"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ကြိုးမဲ့ချိတ်ဆက်ပွိုင့်များကို စနစ်ထည့်သွင်းခြင်းနှင့် စီမံခြင်း"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi ကို ဖွင့်နေသည်…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"ပင်နံပါတ်"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"စကားဝှက်"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"လော့ခ်အမျိုးအစား ရွေးပါ"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"မျက်နှာပြင်လော့ခ်ချရန် ရွေးချယ်စရာများ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"အတည်ပြုရန်"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ပြန်ဆွဲပါ"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ဆက်လုပ်ရန်"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ထပ်လုပ်ရန်"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"မျက်နှာပြင်လော့ခ်တစ်ခု သတ်မှတ်ခြင်း"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"လုံခြုံရေးအတွက် ပင်နံပါတ်တစ်ခု သတ်မှတ်ပါ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"သင့်ပင်နံပါတ်ကို ပြန်ထည့်ပါ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ပင်နံပါတ်၌ အနည်းဆုံးဂဏန်း ၄ လုံး ပါရမည်"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"ပင်နံပါတ် မမှန်ကန်ပါ၊ အနည်းဆုံး ဂဏန်း ၄ လုံးပါရမည်။"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ပင်နံပါတ်များ ထပ်တူမကျပါ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ပင်နံပါတ်ကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"လုံခြုံရေးအတွက် စကားဝှက်တစ်ခု သတ်မှတ်ပါ"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ပင်နံပါတ်သည် အနည်းဆုံးဂဏန်း <xliff:g id="COUNT">%d</xliff:g> လုံးရှိရမည်"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"အက္ခရာ <xliff:g id="NUMBER">%d</xliff:g> လုံးထက် နည်းရပါမည်"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ဂဏန်း <xliff:g id="NUMBER">%d</xliff:g> လုံးထက် နည်းရပါမည်"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ဂဏန်း ၀−၉ အထိသာ ပါဝင်ရပါမည်။"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"စက်ပစ္စည်း၏ စီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် ပင်နံပါတ်ကို သုံးခွင့်မပြုပါ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"အသုံးပြုလေ့ရှိသော ပင်နံပါတ်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား ပင်နံပါတ်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"၎င်းတွင် မမှန်ကန်သည့် အက္ခရာများ ပါဝင်၍မရပါ။"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"စကားဝှက် မမှန်ကန်ပါ၊ အက္ခရာ ၄−၈ လုံး၊ အနည်းဆုံး ဂဏန်း ၁ လုံး၊ စာလုံး ၁ လုံးရှိရမည်ဖြစ်ပြီး နေရာမခြားရပါ။"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">အနည်းဆုံး စကားလုံး <xliff:g id="COUNT">%d</xliff:g> လုံးပါဝင်ရမည်</item>
       <item quantity="one">အနည်းဆုံး စကားလုံး ၁ လုံးပါဝင်ရမည်</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"စက်ပစ္စည်းစီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် စကားဝှက်ကို သုံးခွင့်မပြုပါ"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"စကားဝှက်ကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"အသုံးပြုလေ့ရှိသော စကားဝှက်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား စကားဝှက်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"အစဉ်လိုက်ဖြစ်နေသော ဂဏန်း အငယ်မှအကြီး၊ အကြီးမှအငယ် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ။"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
     <string name="forget" msgid="3971143908183848527">"မေ့ပစ်ရန်"</string>
     <string name="delete_button" msgid="5840500432614610850">"ဖျက်ရန်"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"သရုပ်ပြအကောင့်ကို ဖျက်၍ သရုပ်ပြမုဒ်မှ ထွက်ခြင်းအတွက် စက်ရုံထုတ်အတိုင်း ပြင်ဆင်သတ်မှတ်ခြင်း လိုပါမည်။"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"စနစ်ထည့်သွင်းမှု အပြီးသတ်ရန်"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ယခုမလုပ်ပါ"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"ကားမောင်းနေစဉ် လုပ်ဆောင်ချက်များ မရနိုင်ပါ။"</string>
 </resources>

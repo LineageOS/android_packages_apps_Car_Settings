@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Paramètres"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Plus de paramètres"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Plus"</string>
     <string name="display_settings" msgid="5325515247739279185">"Écran"</string>
     <string name="brightness" msgid="2919605130898772866">"Niveau de luminosité"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosité adaptative"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"assombrir l\'écran, écran tactile, pile"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"assombrir l\'écran, écran tactile, pile"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"assombrir l\'écran, nuit, teinte"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Configurer et gérer les points d\'accès sans fil"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activation du Wi-Fi en cours…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"NIP"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Mot de passe"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Choisissez un type de verrouillage"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Options de verrouillage de l\'écran"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmer"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Redessiner"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Continuer"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Réessayer"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour votre sécurité, déf. un sch. de verr."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Effacer"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Pour plus de sécurité, définissez un NIP"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Confirmez votre NIP"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Le NIP doit contenir au moins 4 chiffres"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Le NIP n\'est pas valide, il doit contenir au moins 4 chiffres."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Les NIP ne correspondent pas"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Erreur lors de l\'enregistrement du NIP"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Pour votre sécurité, déf. un m. de passe"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Le NIP doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> chiffres"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Doit contenir moins de <xliff:g id="NUMBER">%d</xliff:g> caractères."</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Doit contenir moins de <xliff:g id="NUMBER">%d</xliff:g> chiffres."</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Doit contenir uniquement des chiffres contenus entre 0 et 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"L\'administrateur de l\'appareil ne permet pas l\'utilisation d\'un NIP récent"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Les NIP communs sont bloqués par l\'administrateur de votre service informatique. Essayez un NIP différent."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Vous ne pouvez pas inclure de caractère non valide."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Le mot de passe n\'est pas valide, il doit comprendre entre 4 et 8 caractères, et contenir au moins 1 chiffre, 1 lettre et aucune espace."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettre</item>
       <item quantity="other">Doit contenir au moins <xliff:g id="COUNT">%d</xliff:g> lettres</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"L\'administrateur de l\'appareil ne permet pas l\'utilisation d\'un mot de passe récent"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Erreur lors de l\'enreg. du mot de passe"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Les mots de passe communs sont bloqués par l\'administrateur de votre service informatique. Essayez un mot de passe différent."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Les suites croissantes, décroissantes ou répétitives de chiffres ne sont pas autorisées."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="forget" msgid="3971143908183848527">"Oublier"</string>
     <string name="delete_button" msgid="5840500432614610850">"Supprimer"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"Pour quitter le mode de démo et supprimer le compte de démo, vous devrez réinitialiser l\'appareil"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"terminer la configuration"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"pas maintenant"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Cette action n\'est pas accessible durant la conduite."</string>
 </resources>

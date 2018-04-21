@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"सेटिङहरू"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"थप सेटिङहरू"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"थप कुराहरू"</string>
     <string name="display_settings" msgid="5325515247739279185">"प्रदर्शन"</string>
     <string name="brightness" msgid="2919605130898772866">"चमकको स्तर"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूलनीय चमक"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"मधुरो स्क्रिन, टचस्क्रिन, ब्याट्री"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"मधुरो स्क्रिन, टचस्क्रिन, ब्याट्री"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"मधुरो स्क्रिन, रात, हल्का रङ"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ताररहित पहुँच बिन्दुहरू सेटअप र प्रबन्ध गर्नुहोस्"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
@@ -50,7 +52,7 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"कमजोर"</item>
-    <item msgid="2032262610626057081">"ठीकै"</item>
+    <item msgid="2032262610626057081">"ठिकै"</item>
     <item msgid="3859756017461098953">"राम्रो"</item>
     <item msgid="1521103743353335724">"उत्कृष्ट"</item>
   </string-array>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"पिन गर्नुहोस्"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी राख्नुहोस्"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"पुनः प्रयास गर्ने"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि ढाँचा सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>
@@ -216,12 +219,11 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"गलत ढाँचा"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलक शैली कोर्ने तरिका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ढाँचा सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
-    <string name="okay" msgid="4589873324439764349">"ठीक छ"</string>
+    <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN कम्तीमा ४ अङ्कको हुनै पर्ने"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin अमान्य छ, यसमा अनिवार्य रूपमा कम्तीमा ४ अङ्क हुनु पर्छ।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN हरू मेल खाँदैनन्"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षाका लागि पासवर्ड सेट गर्नुहोस्"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN कम्तीमा <xliff:g id="COUNT">%d</xliff:g> अङ्कको हुनै पर्छ"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम वर्ण हुनु पर्छ"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"अनिवार्य रूपमा <xliff:g id="NUMBER">%d</xliff:g> भन्दा कम अङ्क हुनु पर्छ"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"अनिवार्य रूपमा ० देखि ९ सम्मका अङ्कहरू मात्र समावेश हुनु पर्छ।"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"यन्त्रको प्रशासकले पछिल्लो PIN प्रयोग गर्न अनुमति दिँदैन"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"तपाईंका IT व्यवस्थापकले धेरै प्रयोग हुने PIN हरूमाथि रोक लगाउनु भएको छ। कुनै फरक PIN प्रयोग गरी हेर्नुहोस्।"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"यसमा कुनै अमान्य वर्ण समावेश गर्न मिल्दैन।"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"पासवर्ड अमान्य छ, अनिवार्य रूपमा ४ देखि ८ वर्ण हुनु पर्ने, कम्तीमा १ अङ्क, १ अक्षर हुनु पर्ने, ह्वाइटस्पेस हुन नहुने।"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">कम्तीमा <xliff:g id="COUNT">%d</xliff:g> वटा अक्षरहरू हुनु अनिवार्य छ</item>
       <item quantity="one">कम्तीमा एउटा अक्षर हुनु अनिवार्य छ</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"यन्त्रको व्यवस्थापकले पछिल्लो पासवर्ड प्रयोग गर्ने अनुमति दिँदैन"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"तपाईंका IT व्यवस्थापकले धेरै प्रयोग हुने पासवर्डहरूमाथि रोक लगाउनु भएको छ। कुनै फरक पासवर्ड प्रयोग गरी हेर्नुहोस्।"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अङ्कहरूको बढ्दो, घट्दो वा दोहोरिएको अनुक्रम निषेध गरिएको छ।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="forget" msgid="3971143908183848527">"बिर्सनुहोस्"</string>
     <string name="delete_button" msgid="5840500432614610850">"मेट्नुहोस्"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"रद्द गर्नुहोस्"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace कुञ्जी"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter कुञ्जी"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"डेमो मोडबाट बाहिरिने हो?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"डेमो खाता मेट्न र डेमो मोडबाट बाहिर निस्कन फ्याक्ट्री रिसेट गर्नु पर्ने हुन्छ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"सेटअप सम्पन्न गर्नुहोस्"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"अहिले होइन"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"सवारी साधन चलाइरहेको बेला कारबाही उपलब्ध छैन।"</string>
 </resources>

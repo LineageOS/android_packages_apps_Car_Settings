@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Beállítások"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"További beállítások"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Több"</string>
     <string name="display_settings" msgid="5325515247739279185">"Kijelző"</string>
     <string name="brightness" msgid="2919605130898772866">"Fényerőszint"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Alkalmazkodó fényerő"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"képernyő halványítása, érintőképernyő, akkumulátor"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"képernyő halványítása, érintőképernyő, akkumulátor"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"képernyő halványítása, éjszaka, árnyalás"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Vezeték nélküli hozzáférési pontok beállítása és kezelése"</string>
     <string name="wifi_starting" msgid="473253087503153167">"A Wi-Fi bekapcsolása…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN-kód"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Jelszó"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Lezárás típusa"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"A képernyőzár beállításai"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Megerősítés"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Újrarajzolás"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Tovább"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Újra"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Képernyőzár beállítása"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"A biztonság érdekében állítson be mintát"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Törlés"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"A biztonság miatt állítson be PIN-kódot"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Adja meg újra a PIN-kódot"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-kód: legalább 4 számjegy"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"A PIN-kód érvénytelen; legalább 4 számjegyből kell állnia."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"A PIN-kódok nem egyeznek"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Hiba történt a PIN-kód mentése során"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"A biztonság miatt állítson be jelszót"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"A PIN-kód legalább <xliff:g id="COUNT">%d</xliff:g> számjegy legyen"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> karakternél rövidebbnek kell lennie"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> számjegynél rövidebbnek kell lennie"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Csak számokat tartalmazhat, 0-tól 9-ig."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Az eszközrendszergazda nem engedélyezi a legutóbbi PIN-kódok használatát"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Rendszergazdája letiltotta a gyakran használt PIN-kódokat. Próbálkozzon másik PIN-kóddal."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Nem tartalmazhat érvénytelen karaktert."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"A jelszó érvénytelen. 4–8 karaktert, legalább egy számot, legalább egy betűt kell tartalmaznia, és nem lehet benne szóköz."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Tartalmaznia kell legalább <xliff:g id="COUNT">%d</xliff:g> betűt</item>
       <item quantity="one">Tartalmaznia kell legalább 1 betűt</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Az eszközrendszergazda nem engedélyezi a legutóbbi jelszavak használatát"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Hiba történt a jelszó mentése során"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Rendszergazdája letiltotta a gyakran használt jelszavakat. Próbálkozzon másik jelszóval."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
     <string name="forget" msgid="3971143908183848527">"Elfelejtés"</string>
     <string name="delete_button" msgid="5840500432614610850">"Törlés"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"A demófiók törléséhez és a demómódból történő kilépéshez vissza kell állítani a gyári beállításokat"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"beállítás befejezése"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"most nem"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"A művelet nem hajtható végre vezetés közben."</string>
 </resources>

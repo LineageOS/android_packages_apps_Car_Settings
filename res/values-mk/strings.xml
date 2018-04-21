@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Поставки"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Повеќе поставки"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Повеќе"</string>
     <string name="display_settings" msgid="5325515247739279185">"Приказ"</string>
     <string name="brightness" msgid="2919605130898772866">"Ниво на осветленост"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Приспособлива осветленост"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"затемни екран, екран на допир, батерија"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"затемни екран, екран на допир, батерија"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"затемнет екран, ноќ, обојување"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Постави и управувај со безжични пристапни точки"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Вклучување Wi-Fi…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Прикачување"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Лозинка"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Избери тип заклучување"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Опции за заклучување на екранот"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Потврди"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Измени"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Продолжи"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Повторно"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Поставете заклучување екран"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"За безбедност, поставете шема"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Исчисти"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"За безбедност, поставете PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Внесете го PIN-кодот повторно"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-кодот мора да има најмалку 4 цифри"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN-кодот е неважечки. Мора да има барем 4 цифри."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-кодовите не се совпаѓаат"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Грешка при зачувување PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"За безбедност, поставете лозинка"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-от мора да има најмалку <xliff:g id="COUNT">%d</xliff:g> цифри"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> знаци"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> цифри"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да содржи само цифри од 0 до 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Администраторот на уредот не дозволува користење на неодамнешен PIN"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Обичните PIN-кодови се блокирани од вашиот IT-администратор. Обидете се со друг PIN."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Лозинката не може да содржи неважечки знак."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Лозинката е неважечка. Мора да има од 4 до 8 знаци, да содржи барем една цифра, 1 буква и да нема празни места."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Мора да содржи најмалку <xliff:g id="COUNT">%d</xliff:g> буква</item>
       <item quantity="other">Мора да содржи најмалку <xliff:g id="COUNT">%d</xliff:g> букви</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Администраторот на уредот не дозволува користење на неодамнешна лозинка"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Грешка при зачувување на лозинката"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Обичните лозинки се блокирани од вашиот IT-администратор. Обидете се со друга лозинка."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Не е дозволена низа на цифри со растечки, опаѓачки или повторлив редослед."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="forget" msgid="3971143908183848527">"Избриши го"</string>
     <string name="delete_button" msgid="5840500432614610850">"Избриши"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"Откажи"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Копче Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Копче Enter"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"Да се излезе од демо?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"За да ја избришете демо-сметката и да излезете од демо-режимот, потребно е фабричко ресетирање"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"заврши со поставување"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"не сега"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Дејството не е достапно при возење."</string>
 </resources>
