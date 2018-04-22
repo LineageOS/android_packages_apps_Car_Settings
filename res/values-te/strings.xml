@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"సెట్టింగ్‌లు"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"మరిన్ని సెట్టింగ్‌లు"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"మరింత"</string>
     <string name="display_settings" msgid="5325515247739279185">"డిస్‌ప్లే"</string>
     <string name="brightness" msgid="2919605130898772866">"ప్రకాశం స్థాయి"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"పరిసర అనుకూల ప్రకాశం"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"కాంతివిహీన స్క్రీన్, టచ్‌స్క్రీన్, బ్యాటరీ"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"కాంతివిహీన స్క్రీన్, టచ్‌స్క్రీన్, బ్యాటరీ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"కాంతివిహీన స్క్రీన్, రాత్రి, లేత రంగు"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"వైర్‌లెస్ యాక్సెస్ స్థానాలను సెటప్ చేయండి &amp; నిర్వహించండి"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fiని ఆన్ చేస్తోంది…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"పిన్"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"పాస్‌‌వర్డ్"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"లాక్ రకాన్ని ఎంచుకోండి"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"నిర్ధారించు"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"మళ్లీ గీయి"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"కొనసాగించు"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"మళ్లీ ప్రయత్నించు"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"భద్రత కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"భద్రత కోసం, పిన్‌ను సెట్ చేయండి"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"మీ పిన్‌ను మళ్లీ నమోదు చేయండి"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"పిన్ తప్పనిసరిగా కనీసం 4 అంకెలు ఉండాలి"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"పిన్ చెల్లదు, కనీసం 4 అంకెలు ఉండాలి."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"పిన్‌లు సరిపోలలేదు"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"పిన్‌ని సేవ్ చేయడంలో ఎర్రర్ ఏర్పడింది"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"భద్రత కోసం, పాస్‌వర్డ్‌ను సెట్ చేయండి"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"పిన్ తప్పనిసరిగా కనీసం <xliff:g id="COUNT">%d</xliff:g> అంకెలు ఉండాలి"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"తప్పనిసరిగా <xliff:g id="NUMBER">%d</xliff:g> కంటే తక్కువ అక్షరాలు ఉండాలి"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"తప్పనిసరిగా <xliff:g id="NUMBER">%d</xliff:g> కంటే తక్కువ అంకెలు ఉండాలి"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"తప్పనిసరిగా 0-9 అంకెలను మాత్రమే కలిగి ఉండాలి."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ఇటీవలి పిన్‌ని ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"సాధారణ పిన్‌లను మా IT నిర్వాహకులు బ్లాక్ చేసారు. వేరే పిన్‌ని ప్రయత్నించండి."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ఇందులో చెల్లని అక్షరం ఉండకూడదు."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"పాస్‌వర్డ్ చెల్లదు, తప్పనిసరిగా 4-8 అక్షరాల్లో ఉండాలి, వాటిలో కనీసం 1 అంకె, 1 వర్ణమాల అక్షరం ఉండాలి, తెల్లని ఖాళీ ఉండకూడదు."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">తప్పనిసరిగా కనీసం <xliff:g id="COUNT">%d</xliff:g> అక్షరాలను కలిగి ఉండాలి</item>
       <item quantity="one">తప్పనిసరిగా కనీసం 1 అక్షరాన్ని కలిగి ఉండాలి</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ఇటీవలి పాస్‌వర్డ్‌ను ఉపయోగించడానికి పరికర నిర్వాహకులు అనుమతించరు"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"పాస్‌వర్డ్‌ని సేవ్ చేయడంలో ఎర్రర్"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"సాధారణ పాస్‌వర్డ్‌లను మా IT నిర్వాహకులు బ్లాక్ చేసారు. వేరే పాస్‌వర్డ్‌ని ప్రయత్నించండి."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="forget" msgid="3971143908183848527">"విస్మరించు"</string>
     <string name="delete_button" msgid="5840500432614610850">"తొలగించు"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"రద్దు చేయి"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace కీ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter కీ"</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"డెమో నుండి నిష్క్రమించాలా?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"డెమో ఖాతాను తొలగించడం మరియు డెమో మోడ్ నుండి నిష్క్రమించడం వంటి వాటికి ఫ్యాక్టరీ రీసెట్ అవసరం"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"సెటప్‌ను పూర్తి చేయండి"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ఇప్పుడు వద్దు"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"డ్రైవింగ్ చేస్తున్నప్పుడు చర్య అందుబాటులో ఉండదు."</string>
 </resources>

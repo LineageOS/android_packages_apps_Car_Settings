@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Cilësimet"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Cilësime të tjera"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Më shumë"</string>
     <string name="display_settings" msgid="5325515247739279185">"Ekrani"</string>
     <string name="brightness" msgid="2919605130898772866">"Niveli i ndriçimit"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Ndriçimi i përshtatshëm"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"zbeh ekranin, ekran me prekje, bateri"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"zbeh ekranin, ekran me prekje, bateri"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"errëso ekranin, natë, ngjyrosje"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Cakto dhe menaxho zonat e qasjes të rrjetit me valë"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Po aktivizon Wi‑Fi…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"Gozhdo"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Fjalëkalimi"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Zgjidh një lloj kyçjeje"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Opsionet e kyçjes së ekranit"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Konfirmo"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Tërhiq sërish"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Vazhdo"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Riprovo"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Cakto një kyçje të ekranit"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Për siguri, cakto një motiv"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Pastro"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Për siguri, cakto një kod PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Fut përsëri kodin PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Kodi PIN duhet të jetë të paktën 4 shifra"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Kodi PIN është i pavlefshëm, duhet të jetë të paktën 4 shifra."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kodet PIN nuk përputhen"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Gabim gjatë ruajtjes së kodit PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Për siguri, cakto një fjalëkalim"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Kodi PIN duhet të jetë të paktën <xliff:g id="COUNT">%d</xliff:g> shifra"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> karaktere"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Duhet të jetë më pak se <xliff:g id="NUMBER">%d</xliff:g> shifra"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Duhet të përmbajë vetëm shifra 0-9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administratori i pajisjes nuk e lejon përdorimin e një kodi PIN të përdorur së fundi"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Kodet e zakonshme PIN janë bllokuar nga administratori i TI-së. Provo një kod tjetër PIN."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Kjo nuk mund të përfshijë një karakter të pavlefshëm."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Fjalëkalimi është i pavlefshëm, duhet të jetë 4-8 karaktere, të përmbajë të paktën 1 shifër, 1 shkronjë, pa hapësira boshe."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Duhet të përmbajë të paktën <xliff:g id="COUNT">%d</xliff:g> shkronja</item>
       <item quantity="one">Duhet të përmbajë të paktën 1 shkronjë</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Administratori i pajisjes nuk e lejon përdorimin e një fjalëkalimi të përdorur së fundi"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Gabim gjatë ruajtjes së fjalëkalimit"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Fjalëkalimet e zakonshme janë bllokuar nga administratori i TI-së. Provo një fjalëkalim tjetër."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="forget" msgid="3971143908183848527">"Harro"</string>
     <string name="delete_button" msgid="5840500432614610850">"Fshi"</string>
@@ -279,9 +277,9 @@
     <string name="cancel" msgid="750286395700355455">"Anulo"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasti \"Kthim prapa\""</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasti \"Hyrje\""</string>
-    <!-- no translation found for exit_retail_title (4514319631081146178) -->
-    <skip />
+    <string name="exit_retail_title" msgid="4514319631081146178">"Do të dalësh nga demonstrimi?"</string>
     <string name="exit_retail_message" msgid="1426206128187780964">"Fshirja e llogarisë së demonstrimit dhe dalja nga modaliteti i demonstrimit do të kërkojë rivendosje në gjendje fabrike"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"përfundo konfigurimin"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"jo tani"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Veprimi nuk ofrohet gjatë drejtimit të makinës"</string>
 </resources>

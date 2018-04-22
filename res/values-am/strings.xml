@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"ቅንብሮች"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"ተጨማሪ ቅንብሮች"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"ተጨማሪ"</string>
     <string name="display_settings" msgid="5325515247739279185">"አሳይ"</string>
     <string name="brightness" msgid="2919605130898772866">"የብሩህነት ደረጃ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"ተለዋዋጭ ብሩህነት"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"ደብዛዛ ማያ ገጽ፣ ማያንካ፣ ባትሪ"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ደብዛዛ ማያ ገጽ፣ ማያንካ፣ ባትሪ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ደብዛዛ ማያ ገጽ፣ ሌሌት፣ ቅልም"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"የገመድ አልባ መገናኛ ነጥቦችን ያቀናብሩ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fiን በማብራት ላይ…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"ሰካ"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"የይለፍ ቃል"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"የቁልፍ አይነት ይምረጡ"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"ማያ ገጽ መቆለፊያ አማራጮች"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"አረጋግጥ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"በድጋሚ ሳል"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ቀጥል"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"እንደገና ይሞክሩ"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"የማያ ገጽ መቆለፊያን ያቀናብሩ"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ለደህንነት ሲባል፣ ሥርዓተ ጥለትን ያቀናብሩ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"አጽዳ"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ለደህንነት አንድ ፒን ያቀናብሩ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"የእርስዎን ፒን ደግመው ያስገቡ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ፒን ቢያንስ 4 አሃዞች መሆን አለበት"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"ፒን ልክ ያልሆነ ነው፣ ቢያንስ 4 አኃዞች መሆን አለበት።"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ፒኖች አይዛመዱም"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ፒን ማስቀመጥ ላይ ስህተት"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ለደህንነት የይለፍ ቃል ያቀናብሩ"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ፒን ቢያንስ <xliff:g id="COUNT">%d</xliff:g> አኃዞች መሆን አለበት"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"የይለፍ ቃል ከ<xliff:g id="NUMBER">%d</xliff:g> ቁምፊዎች ያነሰ መሆን አለበት"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"ከ<xliff:g id="NUMBER">%d</xliff:g> አሃዞች ያነሰ መሆን አለበት።"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"ከ0-9 የሆኑ አሃዞችን ብቻ ነው መያዝ ያለበት።"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"የመሣሪያ አስተዳዳሪው የቅርብ ጊዜ ፒንን መጠቀም አይፈቅድም"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"የተለመዱ ፒኖች በአይቲ አስተዳዳሪዎ የታገዱ ናቸው። የተለየ ፒን ይሞክሩ።"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ይህ ልክ ያልሆነ ቁምፊን ማካተት አይችልም።"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"የይለፍ ቃል ልክ ያልሆነ ነው፣ 4-8 ቁምፊዎች የሆነ፣ ቢያንስ 1 አኃዝ እና 1 ፊደል የያዘ እና ምንም ባዶ ክፍተት የሌለው መሆን አለበት።"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">ቢያንስ <xliff:g id="COUNT">%d</xliff:g> ፊደሎችን መያዝ አለበት</item>
       <item quantity="other">ቢያንስ <xliff:g id="COUNT">%d</xliff:g> ፊደሎችን መያዝ አለበት</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"የመሣሪያ አስተዳዳሪው የቅርብ ጊዜ የይለፍ ቃልን መጠቀም አይፈቅድም"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"የይለፍ ቃልን ማስቀመጥ ላይ ስህተት"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"የተለመዱ የይለፍ ቃላት በአይቲ አስተዳዳሪዎ የታገዱ ናቸው። የተለየ የይለፍ ቃል ይሞክሩ።"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"እየጨመሩ የሚሄዱ፣ እየቀነሱ የሚሄዱ ወይም ተደጋጋሚ የአኃዞች ተከታታይ አይፈቀድም።"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"የማያ ገጽ መቆለፊያ አማራጮች"</string>
     <string name="forget" msgid="3971143908183848527">"እርሳ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ሰርዝ"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"የማሳያ መለያውን እና የነባር ማሳያ ሁነታን ለመሰረዝ የፋብሪካ ዳግም ማስጀመር ያስፈልጋል"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ማዋቀር ጨርስ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"አሁን አልፈልግም"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"በመንዳት ጊዜ እርምጃው አይገኝም።"</string>
 </resources>

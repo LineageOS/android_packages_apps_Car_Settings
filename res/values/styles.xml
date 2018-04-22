@@ -48,6 +48,7 @@
     <style name="ListIcon.ActionBar" parent="ListIcon">
         <item name="android:tint">@color/car_accent</item>
         <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/button_ripple_bg</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
 

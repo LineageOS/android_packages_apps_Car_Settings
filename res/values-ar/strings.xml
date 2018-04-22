@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"الإعدادات"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"المزيد من الإعدادات"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"المزيد"</string>
     <string name="display_settings" msgid="5325515247739279185">"العرض"</string>
     <string name="brightness" msgid="2919605130898772866">"مستوى السطوع"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"السطوع التكيُّفي"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"تعتيم شاشة، شاشة تعمل باللمس، بطارية"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"تعتيم شاشة، شاشة تعمل باللمس، بطارية"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"تعتيم الشاشة، ليل، تلوين خفيف"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"إعداد نقاط الدخول اللاسلكية وإدارتها"</string>
     <string name="wifi_starting" msgid="473253087503153167">"جارٍ تفعيل Wi-Fi…"</string>
@@ -201,12 +203,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"رقم التعريف الشخصي"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"كلمة المرور"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"اختيار نوع القفل"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"خيارات قفل الشاشة"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"تأكيد"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"إعادة رسم النقش"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"متابعة"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"إعادة المحاولة"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"تعيين قفل شاشة"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"للحفاظ على الأمان، يجب تعيين نقش."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"محو"</string>
@@ -224,8 +227,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"للحفاظ على الأمان، يجب تعيين رقم PIN."</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"إعادة إدخال رقم التعريف الشخصي"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"يجب أن يكون رقم PIN‏ 4 أرقام على الأقل."</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"رقم التعريف الشخصي غير صالح لأنه يجب أن يحتوي على 4 أرقام على الأقل."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"أرقام PIN غير متطابقة"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"حدث خطأ أثناء حفظ رقم التعريف الشخصي."</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"للحفاظ على الأمان، يجب تعيين كلمة مرور."</string>
@@ -239,14 +241,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"يجب أن يحتوي PIN على <xliff:g id="COUNT">%d</xliff:g> رقم على الأقل."</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"يجب ألا تزيد كلمة المرور عن <xliff:g id="NUMBER">%d</xliff:g> حرف."</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"يجب ألا يزيد رقم التعريف الشخصي عن <xliff:g id="NUMBER">%d</xliff:g> رقم."</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"يجب أن يحتوي رقم التعريف الشخصي على أرقام من ۰ إلى ٩ فقط."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"لا يسمح مشرف الجهاز باستخدام رقم تعريف شخصي تم استخدامه مؤخرًا."</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"حظرَ مشرف تكنولوجيا المعلومات استخدام أرقام التعريف الشخصية الشائعة. جرِّب استخدام رقم تعريف شخصي مختلف."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"يجب ألا تتضمّن كلمة المرور حرفًا غير صالح."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"كلمة المرور غير صالحة لأنها يجب أن تتكّون من 4 إلى 8 أحرف، وأن تحتوي على رقم واحد على الأقل، مع عدم استخدام مسافة بيضاء."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="zero">يجب أن تحتوي كلمة المرور على <xliff:g id="COUNT">%d</xliff:g> حرف على الأقل.</item>
       <item quantity="two">يجب أن تحتوي كلمة المرور على حرفين (<xliff:g id="COUNT">%d</xliff:g>) على الأقل.</item>
@@ -298,8 +297,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"لا يسمح مشرف الجهاز باستخدام كلمة مرور تم استخدامها مؤخرًا."</string>
     <string name="error_saving_password" msgid="8334882262622500658">"حدث خطأ أثناء حفظ كلمة المرور."</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"حظرَ مشرف تكنولوجيا المعلومات استخدام كلمات المرور الشائعة. جرِّب استخدام كلمة مرور مختلفة."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"لا يُسمح باستخدام الترتيب التصاعدي أو التنازلي أو المكرر للأرقام."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"خيارات قفل الشاشة"</string>
     <string name="forget" msgid="3971143908183848527">"حذف"</string>
     <string name="delete_button" msgid="5840500432614610850">"حذف"</string>
@@ -311,4 +309,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"سيتطلب حذف حساب العرض التوضيحي والخروج من وضع العرض التوضيحي إجراء إعادة الضبط بحسب إعدادات المصنع."</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"الانتهاء من الإعداد"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ليس الآن"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"الإجراء غير متاح أثناء القيادة."</string>
 </resources>

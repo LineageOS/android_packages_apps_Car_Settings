@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Կարգավորումներ"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Այլ կարգավորումներ"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Ավելին"</string>
     <string name="display_settings" msgid="5325515247739279185">"Էկրան"</string>
     <string name="brightness" msgid="2919605130898772866">"Պայծառության մակարդակ"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Հարմարողական պայծառություն"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"խամրեցված էկրան, հպէկրան, մարտկոց"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"խամրեցված էկրան, հպէկրան, մարտկոց"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"խամրեցված էկրան, գիշեր, երանգ"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Կարգավորել և կառավարել անլար միացման կետերը"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi-ը միանում է…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN կոդ"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Գաղտնաբառ"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Ընտրեք կողպման եղանակ"</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Էկրանի կողպման տարբերակներ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Հաստատել"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Նորից գծել"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Շարունակել"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Կրկնել"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպման կարգավորում"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Անվտանգության համար ավելացրեք նախշ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Մաքրել"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Անվտանգության համար ավելացրեք PIN կոդ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Նորից մուտքագրեք PIN կոդը"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN կոդը պետք է առնվազն 4 թիվ պարունակի"</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN կոդն անվավեր է. պետք է առնվազն 4 թիվ պարունակի:"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN կոդերը չեն համընկնում"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Չհաջողվեց պահել PIN-ը"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Անվտանգության համար ավելացրեք գաղտնաբառ"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-ը պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> թվանշան"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Պետք է <xliff:g id="NUMBER">%d</xliff:g>-ից քիչ նիշ պարունակի"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Պետք է <xliff:g id="NUMBER">%d</xliff:g>-ից քիչ թվանշան պարունակի"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Պետք է պարունակի միայն 0-9 թվանշաններ:"</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Սարքի ադմինիստրատորը չի թույլատրում օգտագործել վերջին PIN կոդերը"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ՏՏ ադմինիստրատորն արգելափակել է պարզ PIN կոդերը: Փորձեք մեկ այլ PIN:"</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Գաղտնաբառն անվավեր նիշ է պարունակում:"</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Գաղտնաբառն անվավեր է. պետք է լինի 4-8 նիշ և պարունակի առնվազն 1 թիվ ու 1 տառ՝ առանց բացատի:"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> տառ</item>
       <item quantity="other">Պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> տառ</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Սարքի ադմինիստրատորը թույլ չի տալիս օգտագործել վերջին գաղտնաբառը"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Չհաջողվեց պահել գաղտնաբառը"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ՏՏ ադմինիստրատորն արգելափակել է պարզ գաղտնաբառերը: Փորձեք մեկ այլ գաղտնաբառ:"</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Թվանշանների աճող, նվազող կամ կրկնվող հաջորդականությունն արգելված է:"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման տարբերակներ"</string>
     <string name="forget" msgid="3971143908183848527">"Հեռացնել"</string>
     <string name="delete_button" msgid="5840500432614610850">"Ջնջել"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"Փորձնական հաշիվը ջնջելու և դեմո ռեժիմից դուրս գալու համար գործարանային վերակայում է անհրաժեշտ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ավարտել կարգավորումը"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ոչ հիմա"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Գործողությունը վարելու ընթացքում հասանելի չէ:"</string>
 </resources>

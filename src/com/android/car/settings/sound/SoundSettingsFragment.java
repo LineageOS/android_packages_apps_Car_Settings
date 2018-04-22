@@ -34,6 +34,11 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.Xml;
 
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemAdapter;
+import androidx.car.widget.ListItemProvider.ListProvider;
+import androidx.car.widget.PagedListView;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
@@ -42,11 +47,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemAdapter;
-import androidx.car.widget.ListItemProvider.ListProvider;
-import androidx.car.widget.PagedListView;
 
 /**
  * Activity hosts sound related settings.
@@ -77,6 +77,7 @@ public class SoundSettingsFragment extends BaseFragment {
                             groupId,
                             volumeItem.usage,
                             volumeItem.icon,
+                            volumeItem.title,
                             new VolumeLineItem.SeekbarListener(getContext(),
                                 mCarAudioManager,
                                 groupId,

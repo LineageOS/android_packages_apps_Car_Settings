@@ -19,7 +19,7 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Ρυθμίσεις"</string>
-    <string name="advanced_settings_label" msgid="7169519070776858180">"Περισσότερες ρυθμίσεις"</string>
+    <string name="more_settings_label" msgid="3867559443480110616">"Περισσότερα"</string>
     <string name="display_settings" msgid="5325515247739279185">"Οθόνη"</string>
     <string name="brightness" msgid="2919605130898772866">"Επίπεδο φωτεινότητας"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Προσαρμοστική φωτεινότητα"</string>
@@ -29,6 +29,8 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"μείωση φωτεινότητας οθόνης, οθόνη αφής, μπαταρία"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"μείωση φωτεινότητας οθόνης, οθόνη αφής, μπαταρία"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"μείωση φωτεινότητας οθόνης, νυχτερινή λειτουργία, απόχρωση"</string>
+    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Ορισμός και διαχείριση ασύρματων σημείων πρόσβασης"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Ενεργοποίηση Wi-Fi…"</string>
@@ -197,12 +199,13 @@
     <string name="security_lock_pin" msgid="7970343656751993936">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Κωδικός πρόσβασης"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Επιλογή τύπου κλειδώμ."</string>
-    <!-- no translation found for screen_lock_options (7023338635352915768) -->
-    <skip />
+    <string name="screen_lock_options" msgid="7023338635352915768">"Επιλογές κλειδώματος οθόνης"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Επιβεβαίωση"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Επανάληψη σχεδίασης"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Συνέχεια"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Επανάληψη"</string>
+    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
+    <skip />
     <string name="set_screen_lock" msgid="5239317292691332780">"Ορισμός κλειδώματος οθόνης"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Για λόγους ασφαλείας, ορίστε ένα μοτίβο"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Διαγραφή"</string>
@@ -220,8 +223,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Για λόγους ασφαλείας, ορίστε ένα PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Εισαγάγετε ξανά τον αριθμό PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Το PIN πρέπει να είναι τουλάχ. 4 ψηφία."</string>
-    <!-- no translation found for lockpin_invalid_pin (2149191577096327424) -->
-    <skip />
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Ο αριθμός PIN δεν είναι έγκυρος. Πρέπει να αποτελείται από τουλάχιστον 4 ψηφία."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Τα PIN δεν ταιριάζουν"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Σφάλμα κατά την αποθήκευση του PIN"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Για ασφάλεια, ορίστε κωδικό πρόσβασης"</string>
@@ -235,14 +237,11 @@
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Το PIN πρέπει να έχει τουλάχιστον <xliff:g id="COUNT">%d</xliff:g> ψηφία"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Πρέπει να έχει λιγότερ. από <xliff:g id="NUMBER">%d</xliff:g> χαρακτήρες"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Πρέπει να έχει λιγότερα από <xliff:g id="NUMBER">%d</xliff:g> ψηφία"</string>
-    <!-- no translation found for lockpassword_pin_contains_non_digits (3044526271686839923) -->
-    <skip />
+    <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Πρέπει να περιέχει μόνο ψηφία από το 0 έως το 9."</string>
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Ο διαχειριστής της συσκευής δεν επιτρέπει τη χρήση πρόσφατου PIN"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Τα συνηθισμένα PIN αποκλείονται από τον διαχειριστή IT. Δοκιμάστε να χρησιμοποιήσετε διαφορετικό PIN."</string>
-    <!-- no translation found for lockpassword_illegal_character (1984970060523635618) -->
-    <skip />
-    <!-- no translation found for lockpassword_invalid_password (4987689810161043367) -->
-    <skip />
+    <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Δεν μπορεί να περιλαμβάνει μη έγκυρο χαρακτήρα."</string>
+    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Ο κωδικός πρόσβασης δεν είναι έγκυρος. Πρέπει να αποτελείται από 4-8 χαρακτήρες, να περιέχει τουλάχιστον 1 ψηφίο, 1 γράμμα και κανένα κενό διάστημα."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Πρέπει να περιέχει τουλάχιστον <xliff:g id="COUNT">%d</xliff:g> γράμματα</item>
       <item quantity="one">Πρέπει να περιέχει τουλάχιστον 1 γράμμα</item>
@@ -270,8 +269,7 @@
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"Ο διαχειριστής της συσκευής δεν επιτρέπει τη χρήση πρόσφατου κωδικού πρόσβασης"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"Σφάλμα κατά την αποθ. του κωδ. πρόσβασης"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Οι συνηθισμένοι κωδικοί πρόσβασης αποκλείονται από τον διαχειριστή IT. Δοκιμάστε να χρησιμοποιήσετε διαφορετικό κωδικό πρόσβασης."</string>
-    <!-- no translation found for lockpassword_pin_no_sequential_digits (38813552228809240) -->
-    <skip />
+    <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Δεν επιτρέπεται η αύξουσα, φθίνουσα ή επαναλαμβανόμενη ακολουθία ψηφίων."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Επιλογές κλειδώματος οθόνης"</string>
     <string name="forget" msgid="3971143908183848527">"Διαγραφή από μνήμη"</string>
     <string name="delete_button" msgid="5840500432614610850">"Διαγραφή"</string>
@@ -283,4 +281,5 @@
     <string name="exit_retail_message" msgid="1426206128187780964">"Για τη διαγ. του λογ. επίδειξ. και την έξοδο από τη λειτ. επίδειξ. απαιτ. επαναφ. στις εργοστ. ρυθμ."</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ολοκλήρωση ρύθμισης"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"όχι τώρα"</string>
+    <string name="restricted_while_driving" msgid="478954379611786852">"Η ενέργεια δεν είναι διαθέσιμη κατά την οδήγηση"</string>
 </resources>
