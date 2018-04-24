@@ -104,6 +104,6 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
             fragment.setArguments(args);
         }
 
-        mFragmentController.launchFragment(fragment);
+        getFragmentController().launchFragment(fragment);
     }
 }

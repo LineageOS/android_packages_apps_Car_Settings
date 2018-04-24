@@ -107,8 +107,8 @@ public class HomepageFragment extends ListSettingsFragment implements
                         getLoaderManager(),
                         this /* listener */);
         mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
-        mWifiLineItem = new WifiLineItem(getContext(), mCarWifiManager, mFragmentController);
-        mBluetoothLineItem = new BluetoothLineItem(getContext(), mFragmentController);
+        mWifiLineItem = new WifiLineItem(getContext(), mCarWifiManager, getFragmentController());
+        mBluetoothLineItem = new BluetoothLineItem(getContext(), getFragmentController());
         mUserManagerHelper = new UserManagerHelper(getContext());
 
         // Call super after the wifiLineItem and BluetoothLineItem are setup, because
@@ -160,14 +160,14 @@ public class HomepageFragment extends ListSettingsFragment implements
                 getContext(),
                 null,
                 DisplaySettingsFragment.getInstance(),
-                mFragmentController));
+                getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
                 getContext(),
                 null,
                 SoundSettingsFragment.getInstance(),
-                mFragmentController));
+                getFragmentController()));
         lineItems.add(mWifiLineItem);
         lineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
         lineItems.add(mBluetoothLineItem);
@@ -177,21 +177,21 @@ public class HomepageFragment extends ListSettingsFragment implements
                 getContext(),
                 null,
                 ApplicationSettingsFragment.getInstance(),
-                mFragmentController));
+                getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.date_and_time_settings_title,
                 R.drawable.ic_settings_date_time,
                 getContext(),
                 null,
                 DatetimeSettingsFragment.getInstance(),
-                mFragmentController));
+                getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.user_and_account_settings_title,
                 R.drawable.ic_user,
                 getContext(),
                 null,
                 UsersListFragment.newInstance(),
-                mFragmentController));
+                getFragmentController()));
 
         // Guest users can't set screen locks
         if (!mUserManagerHelper.currentProcessRunningAsGuestUser()) {
@@ -209,7 +209,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 getContext(),
                 null,
                 SystemSettingsFragment.getInstance(),
-                mFragmentController));
+                getFragmentController()));
 
         lineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
         lineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));

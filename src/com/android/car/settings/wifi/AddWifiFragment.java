@@ -105,7 +105,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
         mAddWifiButton.setText(R.string.wifi_setup_connect);
         mAddWifiButton.setOnClickListener(v -> {
             connectToAccessPoint();
-            mFragmentController.goBack();
+            getFragmentController().goBack();
         });
         mAddWifiButton.setEnabled(mAccessPoint != null);
     }

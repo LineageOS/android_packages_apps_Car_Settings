@@ -139,10 +139,10 @@ public class UsersListFragment extends ListItemSettingsFragment
     public void onUserClicked(UserInfo userInfo) {
         if (mUserManagerHelper.userIsRunningCurrentProcess(userInfo)) {
             // If it's the user running the process, launch fragment that displays their accounts.
-            mFragmentController.launchFragment(UserDetailsFragment.newInstance());
+            getFragmentController().launchFragment(UserDetailsFragment.newInstance());
         } else {
             // If it's another user, launch fragment that displays their information
-            mFragmentController.launchFragment(EditUsernameFragment.getInstance(userInfo));
+            getFragmentController().launchFragment(EditUsernameFragment.getInstance(userInfo));
         }
     }
 
