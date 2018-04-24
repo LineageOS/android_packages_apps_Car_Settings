@@ -37,10 +37,14 @@ public class SavePatternWorker extends SaveLockWorkerBase {
 
     @Override
     void saveLock() {
-        getUtils().saveLockPattern(mChosenPattern, mCurrentPattern, getUserId());
+        int userId = getUserId();
+        // If called after saveLockPattern, this will always be true
+        boolean isPatternEverChosen = getUtils().isPatternEverChosen(userId);
 
-        if (!getUtils().isPatternEverChosen(getUserId())) {
-            getUtils().setVisiblePatternEnabled(true, getUserId());
+        getUtils().saveLockPattern(mChosenPattern, mCurrentPattern, userId);
+
+        if (!isPatternEverChosen) {
+            getUtils().setVisiblePatternEnabled(true, userId);
         }
     }
 }
