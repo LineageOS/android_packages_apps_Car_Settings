@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import android.annotation.NonNull;
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,13 +74,14 @@ public abstract class BaseFragment extends Fragment {
     @StringRes
     private int mTitleId;
 
-    protected FragmentController mFragmentController;
-
     @NonNull
     private CarUxRestrictions mCurrentRestrictions;
 
-    public final void setFragmentController(FragmentController fragmentController) {
-        mFragmentController = fragmentController;
+    /**
+     * Assume The activity holds this fragment also implements the FragmentController.
+     */
+    public final FragmentController getFragmentController() {
+        return (FragmentController) getActivity();
     }
 
     /**
@@ -111,7 +113,15 @@ public abstract class BaseFragment extends Fragment {
     protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
         mCurrentRestrictions = carUxRestrictions;
         if (!canBeShown(carUxRestrictions)) {
-            mFragmentController.launchFragment(QuickSettingFragment.newInstance());
+            getFragmentController().launchFragment(QuickSettingFragment.newInstance());
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (!(getActivity() instanceof FragmentController)) {
+            throw new IllegalArgumentException("Must attach to an FragmentController");
         }
     }
 
@@ -173,7 +183,7 @@ public abstract class BaseFragment extends Fragment {
         Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
         toolbar.setPadding(0, 0, 0, 0);
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
-                v -> mFragmentController.goBack());
+                v -> getFragmentController().goBack());
         TextView titleView = getActivity().findViewById(R.id.title);
         titleView.setText(mTitleId);
     }

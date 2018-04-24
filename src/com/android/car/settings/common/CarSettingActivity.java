@@ -88,7 +88,6 @@ public class CarSettingActivity extends AppCompatActivity implements
         if (mCarUxRestrictions != null) {
             fragment.setCarUxRestrictions(mCarUxRestrictions);
         }
-        fragment.setFragmentController(this);
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(

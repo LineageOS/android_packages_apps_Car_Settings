@@ -50,7 +50,8 @@ public class ApplicationSettingsFragment extends ListSettingsFragment {
                         | PackageManager.MATCH_DISABLED_COMPONENTS);
         ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
         for (ResolveInfo resolveInfo : resolveInfos) {
-            items.add(new ApplicationLineItem(getContext(), pm, resolveInfo, mFragmentController));
+            items.add(new ApplicationLineItem(
+                    getContext(), pm, resolveInfo, getFragmentController()));
         }
         return items;
     }

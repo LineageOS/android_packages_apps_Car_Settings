@@ -125,7 +125,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
         fortgetButton.setText(R.string.forget);
         fortgetButton.setOnClickListener(v -> {
             mCachedDevice.unpair();
-            mFragmentController.goBack();
+            getFragmentController().goBack();
         });
     }
 
@@ -136,7 +136,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
             if (!mInputLineItem.getInput().equals(mCachedDevice.getName())) {
                 mCachedDevice.setName(mInputLineItem.getInput());
             }
-            mFragmentController.goBack();
+            getFragmentController().goBack();
         });
     }
 }

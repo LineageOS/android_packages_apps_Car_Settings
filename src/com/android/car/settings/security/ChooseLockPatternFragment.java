@@ -511,7 +511,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
                 if (mIsInSetupWizard) {
                     ((SetupWizardScreenLockActivity) getActivity()).onCancel();
                 } else {
-                    mFragmentController.goBack();
+                    getFragmentController().goBack();
                 }
                 break;
             default:

@@ -59,7 +59,7 @@ public class SystemSettingsFragment extends ListSettingsFragment {
         Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings = extraSettingLoader.load();
         lineItems.addAll(extraSettings.get(ExtraSettingsLoader.SYSTEM_CATEGORY));
 
-        lineItems.add(new AboutSystemLineItem(getContext(), mFragmentController));
+        lineItems.add(new AboutSystemLineItem(getContext(), getFragmentController()));
         lineItems.add(new LegalInfoLineItem(getContext()));
         return lineItems;
     }

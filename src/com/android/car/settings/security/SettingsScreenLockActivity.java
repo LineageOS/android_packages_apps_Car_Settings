@@ -62,7 +62,6 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements
             }
             bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
             fragment.setArguments(bundle);
-            fragment.setFragmentController(this);
 
             getSupportFragmentManager()
                     .beginTransaction()
@@ -81,7 +80,6 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements
         bundle.putString(EXTRA_CURRENT_SCREEN_LOCK, lock);
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
-        fragment.setFragmentController(this);
 
         getSupportFragmentManager()
                 .beginTransaction()

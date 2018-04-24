@@ -105,12 +105,13 @@ public class UserDetailsFragment extends ListItemSettingsFragment
 
     @Override
     public void onUserClicked(UserInfo userInfo) {
-        mFragmentController.launchFragment(EditUsernameFragment.getInstance(userInfo));
+        getFragmentController().launchFragment(EditUsernameFragment.getInstance(userInfo));
     }
 
     @Override
     public void onAccountClicked(Account account, UserInfo userInfo) {
-        mFragmentController.launchFragment(AccountDetailsFragment.newInstance(account, userInfo));
+        getFragmentController().launchFragment(
+                AccountDetailsFragment.newInstance(account, userInfo));
     }
 
     @Override
@@ -124,6 +125,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment
     }
 
     private void onAddAccountClicked() {
-        mFragmentController.launchFragment(ChooseAccountFragment.newInstance());
+        getFragmentController().launchFragment(ChooseAccountFragment.newInstance());
     }
 }

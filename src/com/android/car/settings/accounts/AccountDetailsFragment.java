@@ -105,7 +105,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
     public void onAccountsUpdate(UserHandle userHandle) {
         if (!mAccountManagerHelper.accountExists(mAccount)) {
             // The account was deleted. Pop back.
-            mFragmentController.goBack();
+            getFragmentController().goBack();
         }
     }
 
