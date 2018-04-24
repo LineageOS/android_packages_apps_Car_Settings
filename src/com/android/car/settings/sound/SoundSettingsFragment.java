@@ -20,14 +20,13 @@ import android.annotation.StringRes;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
+import android.car.media.ICarVolumeCallback;
 import android.content.ComponentName;
 import android.content.ServiceConnection;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
-import android.database.ContentObserver;
 import android.media.AudioAttributes;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -87,7 +86,7 @@ public class SoundSettingsFragment extends BaseFragment {
                 if (mPagedListAdapter != null) {
                     mPagedListAdapter.notifyDataSetChanged();
                 }
-                mCarAudioManager.registerVolumeChangeObserver(mVolumeChangeObserver);
+                mCarAudioManager.registerVolumeCallback(mVolumeChangeCallback.asBinder());
             } catch (CarNotConnectedException e) {
                 Log.e(TAG, "Car is not connected!", e);
             }
@@ -95,16 +94,25 @@ public class SoundSettingsFragment extends BaseFragment {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            mCarAudioManager.unregisterVolumeChangeObserver(mVolumeChangeObserver);
+            try {
+                mCarAudioManager.unregisterVolumeCallback(mVolumeChangeCallback.asBinder());
+            } catch (CarNotConnectedException e) {
+                Log.e(TAG, "Car is not connected!", e);
+            }
             mVolumeLineItems.clear();
             mCarAudioManager = null;
         }
     };
 
-    private final ContentObserver mVolumeChangeObserver = new ContentObserver(new Handler()) {
+    private final ICarVolumeCallback mVolumeChangeCallback = new ICarVolumeCallback.Stub() {
         @Override
-        public void onChange(boolean selfChange) {
+        public void onGroupVolumeChanged(int groupId) {
             mPagedListAdapter.notifyDataSetChanged();
+        }
+
+        @Override
+        public void onMasterMuteChanged() {
+            // ignored
         }
     };
 
