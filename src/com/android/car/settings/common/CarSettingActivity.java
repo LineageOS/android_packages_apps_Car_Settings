@@ -48,17 +48,22 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        mUxRestrictionsHelper =
-                new CarUxRestrictionsHelper(this, carUxRestrictions -> {
-                    mCarUxRestrictions = carUxRestrictions;
-                    BaseFragment currentFragment = getCurrentFragment();
-                    if (currentFragment != null) {
-                        currentFragment.setCarUxRestrictions(carUxRestrictions);
-                    }
-                });
+        if (mUxRestrictionsHelper == null) {
+            mUxRestrictionsHelper =
+                    new CarUxRestrictionsHelper(this, carUxRestrictions -> {
+                        mCarUxRestrictions = carUxRestrictions;
+                        BaseFragment currentFragment = getCurrentFragment();
+                        if (currentFragment != null) {
+                            currentFragment.setCarUxRestrictions(carUxRestrictions);
+                        }
+                    });
+        }
+
         mUxRestrictionsHelper.start();
-        QuickSettingFragment qs = QuickSettingFragment.newInstance();
-        launchFragment(qs);
+
+        if (getCurrentFragment() == null) {
+            launchFragment(QuickSettingFragment.newInstance());
+        }
     }
 
     @Override
