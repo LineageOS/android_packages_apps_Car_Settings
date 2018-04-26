@@ -22,9 +22,9 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 
-import com.android.car.settings.R;
-
 import androidx.car.app.CarAlertDialog;
+
+import com.android.car.settings.R;
 
 /**
  * Dialog to confirm creation of new user.
@@ -82,5 +82,6 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
         if (mListener != null) {
             mListener.onCreateNewUserConfirmed();
         }
+        dialog.dismiss();
     }
 }
