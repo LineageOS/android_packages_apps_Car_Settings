@@ -57,6 +57,10 @@ public class HomepageFragment extends ListSettingsFragment implements
     private CarWifiManager mCarWifiManager;
     private WifiLineItem mWifiLineItem;
     private BluetoothLineItem mBluetoothLineItem;
+    // This tracks the number of suggestions currently shown in the fragment. This is based off of
+    // the assumption that suggestions are 0 through (num suggestions - 1) in the adapter. Do not
+    // change this assumption without updating the code in onSuggestionLoaded.
+    private int mNumSettingsSuggestions;
 
     private final BroadcastReceiver mBtStateReceiver = new BroadcastReceiver() {
         @Override
@@ -206,6 +210,10 @@ public class HomepageFragment extends ListSettingsFragment implements
     @Override
     public void onSuggestionsLoaded(ArrayList<TypedPagedListAdapter.LineItem> suggestions) {
         LOG.v("onDeferredSuggestionsLoaded");
+        for (int index = 0; index < mNumSettingsSuggestions; index++) {
+            mPagedListAdapter.remove(0);
+        }
+        mNumSettingsSuggestions = suggestions.size();
         mPagedListAdapter.addAll(0, suggestions);
     }
 
