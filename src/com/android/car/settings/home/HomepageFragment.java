@@ -25,8 +25,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 
+import com.android.car.list.LaunchAppLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
@@ -34,7 +36,7 @@ import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
-import com.android.car.settings.security.ChooseLockTypeFragment;
+import com.android.car.settings.security.SettingsScreenLockActivity;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.suggestions.SettingsSuggestionsController;
 import com.android.car.settings.system.SystemSettingsFragment;
@@ -183,13 +185,12 @@ public class HomepageFragment extends ListSettingsFragment implements
                 null,
                 UsersListFragment.newInstance(),
                 mFragmentController));
-        lineItems.add(new SimpleIconTransitionLineItem(
-                R.string.security_settings_title,
-                R.drawable.ic_lock,
+        lineItems.add(new LaunchAppLineItem(
+                getString(R.string.security_settings_title),
+                Icon.createWithResource(getContext(), R.drawable.ic_lock),
                 getContext(),
                 null,
-                ChooseLockTypeFragment.newInstance(),
-                mFragmentController));
+                new Intent(getContext(), SettingsScreenLockActivity.class)));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,
