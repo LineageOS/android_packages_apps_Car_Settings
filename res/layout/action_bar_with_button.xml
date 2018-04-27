@@ -24,8 +24,8 @@
         android:id="@+id/action_bar_icon_container"
         android:layout_width="@dimen/car_margin"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
-
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_ripple_bg">
         <ImageView
             android:id="@+id/back_button"
             style="@style/ListIcon.ActionBar"/>
