@@ -66,6 +66,7 @@ public class SoundSettingsFragment extends BaseFragment {
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
                 int volumeGroupCount = mCarAudioManager.getVolumeGroupCount();
+                mVolumeLineItems.clear();
                 // Populates volume slider items from volume groups to UI.
                 for (int groupId = 0; groupId < volumeGroupCount; groupId++) {
                     final VolumeItem volumeItem = getVolumeItemForUsages(
