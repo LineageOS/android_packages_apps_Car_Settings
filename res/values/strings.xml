@@ -401,10 +401,12 @@
     <string name="security_settings_title">Security</string>
     <!-- Subtitle for security settings [CHAR LIMIT=20] -->
     <string name="security_settings_subtitle">Screen lock</string>
+    <!-- Title string shown in screen lock types for no locks [CHAR LIMIT=40] -->
+    <string name="security_lock_none">None</string>
     <!-- Title string shown in choose screen lock for lock pattern [CHAR LIMIT=40] -->
     <string name="security_lock_pattern">Pattern</string>
     <!-- Title string shown in choose screen lock for lock pin [CHAR LIMIT=40] -->
-    <string name="security_lock_pin">Pin</string>
+    <string name="security_lock_pin">PIN</string>
     <!-- Title string shown in choose screen lock for lock password [CHAR LIMIT=40] -->
     <string name="security_lock_password">Password</string>
     <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=30] -->
@@ -425,6 +427,8 @@
     <string name="lockscreen_skip_button_text">Skip</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
+    <!-- Subtitle indicating the current screen lock type (none/PIN/pattern/password) [CHAR LIMIT=40] -->
+    <string name="current_screen_lock">Current screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
     <string name="choose_lock_pattern_message">For security, set a pattern</string>
     <!-- Choose unlock pattern screen button. If they are supposed to enter their current pattern before being able to draw another one, and they made a mistake, they hit this button to try again [CHAR LIMIT=20] -->
@@ -451,6 +455,10 @@
     <string name="error_saving_lockpattern">Error saving pattern</string>
     <!-- Label for button to confirm picker selection [CHAR_LIMIT=20] -->
     <string name="okay">OK</string>
+    <!-- Title of dialog asking the user if they really want to remove the screen lock [CHAR LIMIT=30]-->
+    <string name="remove_screen_lock_title">Remove screen lock?</string>
+    <!-- Message in dialog warning the user about the consequence if they choose to remove the screen lock [CHAR LIMIT=60]-->
+    <string name="remove_screen_lock_message">This will allow anyone to access your account</string>
 
     <!-- Description for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_pin_message">For security, set a PIN</string>
