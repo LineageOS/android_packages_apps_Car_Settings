@@ -176,6 +176,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (args != null) {
             mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
+            mExistingPassword = args.getString(
+                    SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK);
         }
 
         mPasswordHelper = new PasswordHelper(mIsPin);
@@ -475,7 +477,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (mIsInSetupWizard) {
             ((SetupWizardScreenLockActivity) getActivity()).onComplete();
         } else {
-            mFragmentController.goBack();
+            getActivity().finish();
         }
     }
 
