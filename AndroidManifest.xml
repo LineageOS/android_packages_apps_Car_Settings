@@ -98,6 +98,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".security.SettingsScreenLockActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
         <activity android:name=".security.SetupWizardScreenLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
