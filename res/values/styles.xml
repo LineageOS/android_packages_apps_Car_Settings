@@ -77,11 +77,12 @@
         <item name="*android:errorColor">?android:attr/colorError</item>
     </style>
 
-    <style name="PinPadKey" parent="@style/TextAppearance.Car.Key2">
+    <style name="PinPadKey">
         <item name="android:layout_width">@dimen/pin_pad_key_width</item>
         <item name="android:layout_height">@dimen/pin_pad_key_height</item>
         <item name="android:layout_margin">@dimen/pin_pad_key_margin</item>
         <item name="android:gravity">center</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/car_body1_size</item>
         <item name="android:textColor">@color/car_body3</item>
         <item name="android:clickable">true</item>
