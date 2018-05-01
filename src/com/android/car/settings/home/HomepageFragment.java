@@ -111,6 +111,9 @@ public class HomepageFragment extends ListSettingsFragment implements
         mBluetoothLineItem = new BluetoothLineItem(getContext(), getFragmentController());
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
 
+        // reset the suggestion count.
+        mNumSettingsSuggestions = 0;
+
         // Call super after the wifiLineItem and BluetoothLineItem are setup, because
         // those are needed in super.onCreate().
         super.onActivityCreated(savedInstanceState);
@@ -166,7 +169,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 R.drawable.ic_settings_sound,
                 getContext(),
                 null,
-                SoundSettingsFragment.getInstance(),
+                SoundSettingsFragment.newInstance(),
                 getFragmentController()));
         lineItems.add(mWifiLineItem);
         lineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));

@@ -36,9 +36,14 @@ import androidx.car.widget.SeekbarListItem;
 /**
  * Contains logic about volume controller UI.
  */
-public class VolumeLineItem extends SeekbarListItem {
+public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBarChangeListener {
     private static final String TAG = "VolumeLineItem";
-    private final SeekbarListener mSeekbarListener;
+    private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
+
+    private final Handler mUiHandler;
+    private final Ringtone mRingtone;
+    private final int mVolumeGroupId;
+    private final CarAudioManager mCarAudioManager;
 
     public VolumeLineItem(
             Context context,
@@ -46,118 +51,105 @@ public class VolumeLineItem extends SeekbarListItem {
             int volumeGroupId,
             @AudioAttributes.AttributeUsage int usage,
             @DrawableRes int iconResId,
-            @StringRes int titleId,
-            SeekbarListener seekbarListener) throws CarNotConnectedException {
-        super(context, getMaxSeekbarValue(carAudioManager, volumeGroupId),
-                getSeekbarValue(carAudioManager, volumeGroupId), seekbarListener,
-                context.getString(titleId));
+            @StringRes int titleId) throws CarNotConnectedException {
+        super(context);
+        mCarAudioManager = carAudioManager;
+        mUiHandler = new Handler(Looper.getMainLooper());
+        mRingtone = RingtoneManager.getRingtone(context, getRingtoneUri(usage));
+        mRingtone.setAudioAttributes(new AudioAttributes.Builder().setUsage(usage).build());
+        mVolumeGroupId = volumeGroupId;
+        setMax(getMaxSeekbarValue());
+        updateProgress();
+        setOnSeekBarChangeListener(this);
+        setText(context.getString(titleId));
         setPrimaryActionIcon(iconResId);
-        mSeekbarListener = seekbarListener;
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        // no-op
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        // no-op
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        if (!fromUser) {
+            // For instance, if this event is originated from AudioService,
+            // we can ignore it as it has already been handled and doesn't need to be
+            // sent back down again.
+            return;
+        }
+        try {
+            if (mCarAudioManager == null) {
+                Log.w(TAG, "Ignoring volume change event because the car isn't connected");
+                return;
+            }
+            // AudioManager.FLAG_PLAY_SOUND does not guarantee play sound, use our own
+            // playback here instead.
+            mCarAudioManager.setGroupVolume(mVolumeGroupId, progress, 0);
+            playAudioFeedback();
+        } catch (CarNotConnectedException e) {
+            Log.e(TAG, "Car is not connected!", e);
+        }
     }
 
     /**
-     * Handles seekbar progress change from user.
-     * TODO: refactor SeekbarListItem so we don't need a separate listener class.
+     * Clean ups
      */
-    public static class SeekbarListener implements SeekBar.OnSeekBarChangeListener {
-        private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
-
-        private final Handler mUiHandler;
-        private final Ringtone mRingtone;
-        private final int mVolumeGroupId;
-        private final CarAudioManager mCarAudioManager;
-
-        public SeekbarListener(Context context,
-                CarAudioManager carAudioManager,
-                int volumeGroupId,
-                @AudioAttributes.AttributeUsage int usage) {
-            mCarAudioManager = carAudioManager;
-            mUiHandler = new Handler(Looper.getMainLooper());
-            mRingtone = RingtoneManager.getRingtone(context, getRingtoneUri(usage));
-            mRingtone.setAudioAttributes(new AudioAttributes.Builder().setUsage(usage).build());
-            mVolumeGroupId = volumeGroupId;
-        }
-
-        @Override
-        public void onStartTrackingTouch(SeekBar seekBar) {
-            // no-op
-        }
-
-        @Override
-        public void onStopTrackingTouch(SeekBar seekBar) {
-            // no-op
-        }
-
-        @Override
-        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            if (!fromUser) {
-                // For instance, if this event is originated from AudioService,
-                // we can ignore it as it has already been handled and doesn't need to be
-                // sent back down again.
-                return;
-            }
-            try {
-                if (mCarAudioManager == null) {
-                    Log.w(TAG, "Ignoring volume change event because the car isn't connected");
-                    return;
-                }
-                // AudioManager.FLAG_PLAY_SOUND does not guarantee play sound, use our own
-                // playback here instead.
-                mCarAudioManager.setGroupVolume(mVolumeGroupId, progress, 0);
-                playAudioFeedback();
-            } catch (CarNotConnectedException e) {
-                Log.e(TAG, "Car is not connected!", e);
-            }
-        }
-
-        /**
-         * Cleans up. Should be called before this object is no longer needed.
-         */
-        public void stop() {
-            mUiHandler.removeCallbacksAndMessages(null);
-            mRingtone.stop();
-        }
-
-        private void playAudioFeedback() {
-            mUiHandler.removeCallbacksAndMessages(null);
-            mRingtone.play();
-            mUiHandler.postDelayed(() -> {
-                if (mRingtone.isPlaying()) {
-                    mRingtone.stop();
-                }
-            }, AUDIO_FEEDBACK_DURATION_MS);
-        }
-
-        // TODO: bundle car-specific audio sample assets in res/raw by usage
-        private Uri getRingtoneUri(@AudioAttributes.AttributeUsage int usage) {
-            switch (usage) {
-                case AudioAttributes.USAGE_NOTIFICATION:
-                    return Settings.System.DEFAULT_NOTIFICATION_URI;
-                case AudioAttributes.USAGE_ALARM:
-                    return Settings.System.DEFAULT_ALARM_ALERT_URI;
-                default:
-                    return Settings.System.DEFAULT_RINGTONE_URI;
-            }
-        }
-    }
-
     public void stop() {
-        mSeekbarListener.stop();
+        mUiHandler.removeCallbacksAndMessages(null);
+        mRingtone.stop();
     }
 
+    public int getVolumeGroupId() {
+        return mVolumeGroupId;
+    }
 
-    private static int getSeekbarValue(CarAudioManager carAudioManager, int volumeGroupId) {
+    /**
+     * Gets the latest progress.
+     */
+    public void updateProgress() {
+        setProgress(getSeekbarValue());
+    }
+
+    private void playAudioFeedback() {
+        mUiHandler.removeCallbacksAndMessages(null);
+        mRingtone.play();
+        mUiHandler.postDelayed(() -> {
+            if (mRingtone.isPlaying()) {
+                mRingtone.stop();
+            }
+        }, AUDIO_FEEDBACK_DURATION_MS);
+    }
+
+    // TODO: bundle car-specific audio sample assets in res/raw by usage
+    private Uri getRingtoneUri(@AudioAttributes.AttributeUsage int usage) {
+        switch (usage) {
+            case AudioAttributes.USAGE_NOTIFICATION:
+                return Settings.System.DEFAULT_NOTIFICATION_URI;
+            case AudioAttributes.USAGE_ALARM:
+                return Settings.System.DEFAULT_ALARM_ALERT_URI;
+            default:
+                return Settings.System.DEFAULT_RINGTONE_URI;
+        }
+    }
+
+    private int getSeekbarValue() {
         try {
-            return carAudioManager.getGroupVolume(volumeGroupId);
+            return mCarAudioManager.getGroupVolume(mVolumeGroupId);
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
         }
         return 0;
     }
 
-    private static int getMaxSeekbarValue(CarAudioManager carAudioManager, int volumeGroupId) {
+    private int getMaxSeekbarValue() {
         try {
-            return carAudioManager.getGroupMaxVolume(volumeGroupId);
+            return mCarAudioManager.getGroupMaxVolume(mVolumeGroupId);
         } catch (CarNotConnectedException e) {
             Log.e(TAG, "Car is not connected!", e);
         }
