@@ -62,7 +62,6 @@ abstract class SaveLockWorkerBase extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
-        mFinished = false;
     }
 
     final void init(int userId) {

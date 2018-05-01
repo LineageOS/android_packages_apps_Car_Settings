@@ -224,6 +224,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
+            mCurrentPattern = args.getString(SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK);
         }
     }
 
@@ -555,7 +556,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         if (mIsInSetupWizard) {
             ((SetupWizardScreenLockActivity) getActivity()).onComplete();
         } else {
-            mFragmentController.goBack();
+            getActivity().finish();
         }
     }
 }
