@@ -82,5 +82,6 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
         if (mListener != null) {
             mListener.onCreateNewUserConfirmed();
         }
+        dialog.dismiss();
     }
 }
