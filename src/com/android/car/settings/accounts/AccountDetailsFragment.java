@@ -214,6 +214,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
             Activity activity = getTargetFragment().getActivity();
             AccountManager.get(activity).removeAccountAsUser(
                     mAccount, activity, mCallback, null, mUserHandle);
+            dialog.dismiss();
         }
     }
 

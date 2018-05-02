@@ -77,5 +77,6 @@ public class ConfirmRemoveUserDialog extends DialogFragment implements
         if (mListener != null) {
             mListener.onRemoveUserConfirmed();
         }
+        dialog.dismiss();
     }
 }

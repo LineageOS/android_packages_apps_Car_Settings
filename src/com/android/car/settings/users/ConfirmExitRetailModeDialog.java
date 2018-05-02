@@ -70,6 +70,7 @@ public class ConfirmExitRetailModeDialog extends DialogFragment implements
         if (mListener != null) {
             mListener.onExitRetailModeConfirmed();
         }
+        dialog.dismiss();
     }
 
     /**
