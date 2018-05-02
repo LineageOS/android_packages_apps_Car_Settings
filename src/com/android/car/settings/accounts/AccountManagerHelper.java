@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * Helper class for managing accounts that belong to a single user.
  */
-final class AccountManagerHelper {
+class AccountManagerHelper {
     private final Context mContext;
     private final AuthenticatorHelper.OnAccountsUpdateListener mUpdateListener;
     private final AuthenticatorHelper mAuthenticatorHelper;

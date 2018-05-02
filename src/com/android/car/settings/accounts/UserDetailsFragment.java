@@ -28,6 +28,7 @@ import androidx.car.widget.ListItemProvider;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.EditUsernameFragment;
+import com.android.car.settings.users.UserIconProvider;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.settingslib.users.UserManagerHelper;
 
@@ -43,6 +44,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment
     private UserAndAccountItemProvider mItemProvider;
     private AccountManagerHelper mAccountManagerHelper;
     private UserManagerHelper mUserManagerHelper;
+    private UserIconProvider mUserIconProvider;
 
     private Button mAddAccountButton;
 
@@ -61,8 +63,9 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         mAccountManagerHelper.startListeningToAccountUpdates();
 
         mUserManagerHelper = new UserManagerHelper(getContext());
+        mUserIconProvider = new UserIconProvider(mUserManagerHelper);
         mItemProvider = new UserAndAccountItemProvider(getContext(), this,
-                mUserManagerHelper, mAccountManagerHelper);
+                mUserManagerHelper, mAccountManagerHelper, mUserIconProvider);
 
         // Register to receive changes to the users.
         mUserManagerHelper.registerOnUsersUpdateListener(this);
