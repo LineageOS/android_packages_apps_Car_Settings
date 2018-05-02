@@ -55,6 +55,7 @@
             android:id="@+id/tile_text"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Label1"/>
         <ImageView
             android:id="@+id/deep_dive_icon"
