@@ -36,7 +36,7 @@ public abstract class ListSettingsFragment extends BaseFragment {
 
     protected static Bundle getBundle() {
         Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.list_fragment);
         return bundle;
     }
 
