@@ -22,9 +22,9 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 
-import com.android.car.settings.R;
-
 import androidx.car.app.CarAlertDialog;
+
+import com.android.car.settings.R;
 
 /**
  * Dialog to confirm user removal.
@@ -77,5 +77,6 @@ public class ConfirmRemoveUserDialog extends DialogFragment implements
         if (mListener != null) {
             mListener.onRemoveUserConfirmed();
         }
+        dialog.dismiss();
     }
 }
