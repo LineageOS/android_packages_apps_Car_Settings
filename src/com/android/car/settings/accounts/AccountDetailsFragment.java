@@ -35,6 +35,11 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 
+import androidx.car.app.CarAlertDialog;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -42,11 +47,6 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.car.app.CarAlertDialog;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 /**
  * Shows account details, and delete account option.
@@ -214,6 +214,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
             Activity activity = getTargetFragment().getActivity();
             AccountManager.get(activity).removeAccountAsUser(
                     mAccount, activity, mCallback, null, mUserHandle);
+            dialog.dismiss();
         }
     }
 
