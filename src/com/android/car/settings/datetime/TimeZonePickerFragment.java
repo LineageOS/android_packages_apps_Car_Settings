@@ -60,6 +60,6 @@ public class TimeZonePickerFragment extends ListSettingsFragment implements
     @Override
     public void onTimeZoneChanged() {
         getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
-        mFragmentController.goBack();
+        getFragmentController().goBack();
     }
 }

@@ -395,7 +395,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             if (mIsInSetupWizard) {
                 ((SetupWizardScreenLockActivity) getActivity()).onCancel();
             } else {
-                mFragmentController.goBack();
+                getFragmentController().goBack();
             }
         }
     }
