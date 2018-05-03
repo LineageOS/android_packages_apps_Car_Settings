@@ -18,8 +18,13 @@ package com.android.car.settings.users;
 
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.android.car.settings.R;
 import com.android.settingslib.users.UserManagerHelper;
@@ -48,7 +53,14 @@ public class UserIconProvider {
             // Return default user icon.
             return context.getDrawable(R.drawable.ic_user);
         }
-        return mUserManagerHelper.scaleUserIcon(icon, context.getResources()
+        Resources res = context.getResources();
+        BitmapDrawable scaledIcon = (BitmapDrawable) mUserManagerHelper.scaleUserIcon(icon, res
                 .getDimensionPixelSize(R.dimen.car_primary_icon_size));
+
+        // Enforce that the icon is circular
+        RoundedBitmapDrawable circleIcon = RoundedBitmapDrawableFactory
+                .create(res, scaledIcon.getBitmap());
+        circleIcon.setCircular(true);
+        return circleIcon;
     }
 }
