@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
 
 import androidx.car.widget.ListItem;
@@ -30,6 +31,8 @@ import com.android.car.settings.users.UserIconProvider;
 import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -42,13 +45,16 @@ class UserAndAccountItemProvider extends ListItemProvider {
     private final UserAndAccountClickListener mItemClickListener;
     private final UserManagerHelper mUserManagerHelper;
     private final AccountManagerHelper mAccountManagerHelper;
+    private final UserIconProvider mUserIconProvider;
 
     UserAndAccountItemProvider(Context context, UserAndAccountClickListener itemClickListener,
-            UserManagerHelper userManagerHelper, AccountManagerHelper accountManagerHelper) {
+            UserManagerHelper userManagerHelper, AccountManagerHelper accountManagerHelper,
+            UserIconProvider userIconProvider) {
         mContext = context;
         mItemClickListener = itemClickListener;
         mUserManagerHelper = userManagerHelper;
         mAccountManagerHelper = accountManagerHelper;
+        mUserIconProvider = userIconProvider;
         refreshItems();
     }
 
@@ -74,7 +80,7 @@ class UserAndAccountItemProvider extends ListItemProvider {
         mItems.add(createUserItem(
                 currUserInfo, mContext.getString(R.string.current_user_name, currUserInfo.name)));
 
-        List<Account> accounts = mAccountManagerHelper.getAccountsForCurrentUser();
+        List<Account> accounts = getSortedUserAccounts();
         if (accounts.isEmpty()) {
             return;
         }
@@ -92,11 +98,23 @@ class UserAndAccountItemProvider extends ListItemProvider {
         }
     }
 
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    List<Account> getSortedUserAccounts() {
+        List<Account> accounts = mAccountManagerHelper.getAccountsForCurrentUser();
+
+        // Sort accounts
+        Collections.sort(accounts, Comparator.comparing(
+                (Account a) -> mAccountManagerHelper.getLabelForType(a.type).toString())
+                .thenComparing(a -> a.name));
+
+        return accounts;
+    }
+
     // Creates a line for a user, clicking on it leads to the user details page
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(
-                UserIconProvider.getUserIcon(userInfo, mUserManagerHelper, mContext),
+                mUserIconProvider.getUserIcon(userInfo, mContext),
                 false /* useLargeIcon */);
         item.setTitle(title);
         item.setOnClickListener(view -> mItemClickListener.onUserClicked(userInfo));

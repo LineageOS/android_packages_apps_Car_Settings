@@ -27,27 +27,28 @@ import com.android.settingslib.users.UserManagerHelper;
 /**
  * Simple class for providing icons for users in Settings.
  */
-public final class UserIconProvider {
+public class UserIconProvider {
+    private final UserManagerHelper mUserManagerHelper;
 
-    private UserIconProvider() {}
+    public UserIconProvider(UserManagerHelper userManagerHelper) {
+        mUserManagerHelper = userManagerHelper;
+    }
 
     /**
      * Gets the icon for the given user to use in settings.
      * If icon has not been assigned to this user, it defaults to a generic user icon.
      *
      * @param userInfo User for which the icon is requested.
-     * @param userManagerHelper Helper wrapper class for user management.
      *
      * @return Drawable representing the icon for the user.
      */
-    public static Drawable getUserIcon(UserInfo userInfo,
-            UserManagerHelper userManagerHelper, Context context) {
-        Bitmap icon = userManagerHelper.getUserIcon(userInfo);
+    public Drawable getUserIcon(UserInfo userInfo, Context context) {
+        Bitmap icon = mUserManagerHelper.getUserIcon(userInfo);
         if (icon == null) {
             // Return default user icon.
             return context.getDrawable(R.drawable.ic_user);
         }
-        return userManagerHelper.scaleUserIcon(icon, context.getResources()
+        return mUserManagerHelper.scaleUserIcon(icon, context.getResources()
                 .getDimensionPixelSize(R.dimen.car_primary_icon_size));
     }
 }
