@@ -60,7 +60,7 @@ public class WifiLineItem extends IconToggleLineItem {
 
     @Override
     public void onClick(View view) {
-        mFragmentController.launchFragment(WifiSettingsFragment.getInstance());
+        mFragmentController.launchFragment(WifiSettingsFragment.newInstance());
     }
 
     @Override

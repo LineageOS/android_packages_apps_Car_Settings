@@ -121,7 +121,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
 
         mDeviceAdapter = new BluetoothDeviceListAdapter(
-                getContext() , mLocalManager, mFragmentController);
+                getContext() , mLocalManager, getFragmentController());
         mDeviceListView.setAdapter(mDeviceAdapter);
     }
 

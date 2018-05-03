@@ -58,7 +58,7 @@ public class AccessPointListAdapter
     private final BaseFragment.FragmentController mFragmentController;
     private final CarWifiManager mCarWifiManager;
     private final WifiManager.ActionListener mConnectionListener;
-    private final boolean mShowAddNetworkRow;
+    private boolean mShowAddNetworkRow;
 
     private List<AccessPoint> mAccessPoints;
 
@@ -66,10 +66,8 @@ public class AccessPointListAdapter
             @NonNull Context context,
             CarWifiManager carWifiManager,
             @NonNull List<AccessPoint> accesssPoints,
-            boolean showAddNetworkRow,
             BaseFragment.FragmentController fragmentController) {
         mContext = context;
-        mShowAddNetworkRow = showAddNetworkRow;
         mFragmentController = fragmentController;
         mCarWifiManager = carWifiManager;
         mAccessPoints = accesssPoints;
@@ -87,6 +85,14 @@ public class AccessPointListAdapter
                         Toast.LENGTH_SHORT).show();
             }
         };
+    }
+
+    /**
+     * Toggles the row that links to add a new network.
+     */
+    public AccessPointListAdapter showAddNetworkRow(boolean show) {
+        mShowAddNetworkRow = show;
+        return this;
     }
 
     public void updateAccessPoints(@NonNull List<AccessPoint> accesssPoints) {

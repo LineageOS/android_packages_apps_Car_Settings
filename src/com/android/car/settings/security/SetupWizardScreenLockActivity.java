@@ -29,20 +29,17 @@ import com.android.car.settingslib.util.ResultCodes;
  * Entry point Activity for Setup Wizard to set screen lock.
  */
 public class SetupWizardScreenLockActivity extends AppCompatActivity implements
-        LockTypeDialogFragment.OnLockSelectListener {
+        LockTypeDialogFragment.OnLockSelectListener, BaseFragment.FragmentController {
 
-    private BaseFragment.FragmentController mFragmentController =
-            new BaseFragment.FragmentController() {
-                @Override
-                public void launchFragment(BaseFragment fragment) {
-                }
+    @Override
+    public void launchFragment(BaseFragment fragment) {
+    }
 
-                @Override
-                public void goBack() {
-                    setResult(RESULT_CANCELED);
-                    finish();
-                }
-            };
+    @Override
+    public void goBack() {
+        setResult(RESULT_CANCELED);
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +50,6 @@ public class SetupWizardScreenLockActivity extends AppCompatActivity implements
 
         BaseFragment pinFragment = ChooseLockPinPasswordFragment.newPinInstance();
         setFragmentArgs(pinFragment);
-        pinFragment.setFragmentController(mFragmentController);
 
         getSupportFragmentManager()
                 .beginTransaction()

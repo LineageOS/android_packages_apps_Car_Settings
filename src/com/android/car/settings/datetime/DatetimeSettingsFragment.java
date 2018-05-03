@@ -62,9 +62,9 @@ public class DatetimeSettingsFragment extends ListSettingsFragment {
                 getString(R.string.zone_auto),
                 getString(R.string.zone_auto_summary),
                 Settings.Global.AUTO_TIME_ZONE));
-        lineItems.add(new SetDateLineItem(getContext(), mFragmentController));
-        lineItems.add(new SetTimeLineItem(getContext(), mFragmentController));
-        lineItems.add(new SetTimeZoneLineItem(getContext(), mFragmentController));
+        lineItems.add(new SetDateLineItem(getContext(), getFragmentController()));
+        lineItems.add(new SetTimeLineItem(getContext(), getFragmentController()));
+        lineItems.add(new SetTimeZoneLineItem(getContext(), getFragmentController()));
         lineItems.add(new TimeFormatToggleLineItem(getContext()));
         return lineItems;
     }

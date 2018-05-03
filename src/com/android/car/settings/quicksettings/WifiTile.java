@@ -56,7 +56,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
         mFragmentController = fragmentController;
         mSwitchSavedWifiListener = v -> {
             mFragmentController.launchFragment(
-                    WifiSettingsFragment.getInstance().showSavedApOnly(true));
+                    WifiSettingsFragment.newInstance().showSavedApOnly(true));
         };
         mCarWifiManager = new CarWifiManager(context, this /* listener */);
         mCarWifiManager.start();
@@ -114,7 +114,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
             mText = mContext.getString(stringId);
         } else if (!updateAccessPointSsid()) {
             if (wifiEnabledNotConnected()) {
-                mText = mContext.getString(R.string.wifi_setup_add_network);
+                mText = mContext.getString(R.string.wifi_settings);
             }
         }
         mState = WifiUtil.isWifiOn(state) ? State.ON : State.OFF;
@@ -123,11 +123,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
 
     @Override
     public void onClick(View v) {
-        if (wifiEnabledNotConnected()) {
-            mFragmentController.launchFragment(WifiSettingsFragment.getInstance());
-        } else {
-            mCarWifiManager.setWifiEnabled(!mCarWifiManager.isWifiEnabled());
-        }
+        mCarWifiManager.setWifiEnabled(!mCarWifiManager.isWifiEnabled());
     }
 
     private boolean wifiEnabledNotConnected() {

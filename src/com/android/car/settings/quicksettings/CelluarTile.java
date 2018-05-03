@@ -16,62 +16,64 @@
 package com.android.car.settings.quicksettings;
 
 
-import android.annotation.DrawableRes;
 import android.annotation.Nullable;
-import android.app.UiModeManager;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.telephony.TelephonyManager;
 import android.view.View;
-import android.view.View.OnClickListener;
 
 import com.android.car.settings.R;
+import com.android.settingslib.net.DataUsageController;
 
 /**
- * Controls Day night mode tile on quick setting page.
+ * Controls cellular on quick setting page.
  */
-public class DayNightTile implements QuickSettingGridAdapter.Tile {
+public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageController.Callback {
     private final Context mContext;
     private final StateChangedListener mStateChangedListener;
-    private final UiModeManager mUiModeManager;
-
-    @DrawableRes
-    private int mIconRes = R.drawable.ic_settings_night_display;
-
-    private final String mText;
+    private final DataUsageController mDataUsageController;
+    @Nullable
+    private final String mCarrierName;
+    private final boolean mAvailable;
 
     private State mState = State.ON;
 
-    DayNightTile(Context context, StateChangedListener stateChangedListener) {
+    CelluarTile(Context context, StateChangedListener stateChangedListener) {
         mStateChangedListener = stateChangedListener;
         mContext = context;
-        mUiModeManager = (UiModeManager) mContext.getSystemService(Context.UI_MODE_SERVICE);
-        if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            mState = State.ON;
-        } else {
-            mState = State.OFF;
-        }
-        mText = mContext.getString(R.string.night_mode_tile_label);
+        TelephonyManager manager =
+                (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        mDataUsageController = new DataUsageController(mContext);
+        mDataUsageController.setCallback(this);
+        mAvailable = mDataUsageController.isMobileDataSupported();
+        mState = mAvailable && mDataUsageController.isMobileDataEnabled() ? State.ON : State.OFF;
+        mCarrierName = mAvailable ? manager.getNetworkOperatorName() : null;
+    }
+
+    @Override
+    public void onMobileDataEnabled(boolean enabled) {
+        mState = enabled ? State.ON : State.OFF;
     }
 
     @Nullable
-    public OnClickListener getDeepDiveListener() {
+    public View.OnClickListener getDeepDiveListener() {
         return null;
     }
 
     @Override
     public boolean isAvailable() {
-        return true;
+        return mAvailable;
     }
 
     @Override
     public Drawable getIcon() {
-        return mContext.getDrawable(mIconRes);
+        return mContext.getDrawable(R.drawable.ic_cellular_data);
     }
 
     @Override
     @Nullable
     public String getText() {
-        return mText;
+        return mCarrierName;
     }
 
     @Override
@@ -85,10 +87,6 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
 
     @Override
     public void onClick(View v) {
-        if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
-        } else {
-            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
-        }
+        mDataUsageController.setMobileDataEnabled(!mDataUsageController.isMobileDataEnabled());
     }
 }

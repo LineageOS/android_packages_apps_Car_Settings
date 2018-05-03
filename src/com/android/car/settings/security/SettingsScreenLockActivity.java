@@ -55,8 +55,6 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements
                 fragment = ChooseLockTypeFragment.newInstance();
         }
 
-        fragment.setFragmentController(this);
-
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
@@ -73,7 +71,6 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements
         }
         bundle.putString(EXTRA_CURRENT_SCREEN_LOCK, lock);
         fragment.setArguments(bundle);
-        fragment.setFragmentController(this);
 
         getSupportFragmentManager()
                 .beginTransaction()

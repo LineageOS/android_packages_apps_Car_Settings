@@ -47,7 +47,10 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     private ViewSwitcher mViewSwitcher;
     private boolean mShowSavedApOnly;
 
-    public static WifiSettingsFragment getInstance() {
+    /**
+     * Gets a new instance of this object.
+     */
+    public static WifiSettingsFragment newInstance() {
         WifiSettingsFragment wifiSettingsFragment = new WifiSettingsFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
@@ -87,8 +90,8 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
                 mShowSavedApOnly
                         ? mCarWifiManager.getSavedAccessPoints()
                         : mCarWifiManager.getAllAccessPoints(),
-                !mShowSavedApOnly,
-                mFragmentController);
+                getFragmentController());
+        mAdapter.showAddNetworkRow(!mShowSavedApOnly);
         mListView.setAdapter(mAdapter);
     }
 
@@ -154,6 +157,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
 
     private void refreshData() {
         if (mAdapter != null) {
+            mAdapter.showAddNetworkRow(!mShowSavedApOnly);
             mAdapter.updateAccessPoints(mShowSavedApOnly
                     ? mCarWifiManager.getSavedAccessPoints()
                     : mCarWifiManager.getAllAccessPoints());

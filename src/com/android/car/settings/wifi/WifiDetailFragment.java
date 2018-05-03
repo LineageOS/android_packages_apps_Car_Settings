@@ -93,7 +93,7 @@ public class WifiDetailFragment extends ListSettingsFragment {
         forgetButton.setText(R.string.forget);
         forgetButton.setOnClickListener(v -> {
             forget();
-            mFragmentController.goBack();
+            getFragmentController().goBack();
         });
 
         if (mAccessPoint.isSaved() && !mAccessPoint.isActive()) {
@@ -103,7 +103,7 @@ public class WifiDetailFragment extends ListSettingsFragment {
             connectButton.setOnClickListener(v -> {
                 mWifiManager.connect(mAccessPoint.getConfig(),
                         new ActionFailListener(R.string.wifi_failed_connect_message));
-                mFragmentController.goBack();
+                getFragmentController().goBack();
             });
         }
     }
