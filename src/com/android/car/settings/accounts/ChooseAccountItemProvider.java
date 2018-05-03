@@ -41,6 +41,7 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
 import libcore.util.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -156,6 +157,7 @@ class ChooseAccountItemProvider extends ListItemProvider {
                         new ProviderEntry(providerName, accountType));
             }
         }
+        Collections.sort(mProviderList);
     }
 
     private ArrayList<String> getAuthoritiesForAccountType(String type) {
