@@ -38,12 +38,14 @@ class UsersItemProvider extends ListItemProvider {
     private final Context mContext;
     private final UserClickListener mUserClickListener;
     private final UserManagerHelper mUserManagerHelper;
+    private final UserIconProvider mUserIconProvider;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             UserManagerHelper userManagerHelper) {
         mContext = context;
         mUserClickListener = userClickListener;
         mUserManagerHelper = userManagerHelper;
+        mUserIconProvider = new UserIconProvider(mUserManagerHelper);
         refreshItems();
     }
 
@@ -84,8 +86,7 @@ class UsersItemProvider extends ListItemProvider {
     // Creates a line for a user, clicking on it leads to the user details page.
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(
-                UserIconProvider.getUserIcon(userInfo, mUserManagerHelper, mContext),
+        item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
                 false /* useLargeIcon */);
         item.setTitle(title);
 
