@@ -147,6 +147,11 @@ public class UsersListFragment extends ListItemSettingsFragment
     }
 
     @Override
+    public void onGuestClicked() {
+        getFragmentController().launchFragment(GuestFragment.newInstance());
+    }
+
+    @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
     }
