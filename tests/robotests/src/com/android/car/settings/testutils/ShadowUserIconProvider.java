@@ -13,32 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.android.car.settings.testutils;
 
-import android.app.ActivityManager;
+import android.content.Context;
+import android.content.pm.UserInfo;
+import android.graphics.drawable.Drawable;
+
+import com.android.car.settings.users.UserIconProvider;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
-/**
- * Robolectric shadow class for the ActivityManager.
- */
-@Implements(ActivityManager.class)
-public class ShadowActivityManager {
-    private static int sCurrentUserId = 0;
-
+@Implements(UserIconProvider.class)
+public class ShadowUserIconProvider {
     @Implementation
-    public static int getCurrentUser() {
-        return sCurrentUserId;
-    }
-
-    /**
-     * Sets ID for what will get returned when {@code ActivityManager.getCurrentUser()} is called.
-     *
-     * @param userId Number that {@code getCurrentUser()} should return.
-     */
-    public static void setCurrentUser(int userId) {
-        sCurrentUserId = userId;
+    public Drawable getUserIcon(UserInfo userInfo, Context context) {
+        return null;
     }
 }

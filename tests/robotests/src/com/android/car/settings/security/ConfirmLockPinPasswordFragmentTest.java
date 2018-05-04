@@ -23,7 +23,7 @@ import android.view.View;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.testutils.TestAppCompatActivity;
+import com.android.car.settings.testutils.BaseTestActivity;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +48,7 @@ public class ConfirmLockPinPasswordFragmentTest {
                 .get();
 
         mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
-        mTestActivity.createFragment(mPinFragment);
+        mTestActivity.launchFragment(mPinFragment);
     }
 
     /**
@@ -67,7 +67,7 @@ public class ConfirmLockPinPasswordFragmentTest {
     /**
      * The containing activity of ConfirmLockPinPasswordFragment must implement two interfaces
      */
-    private static class TestSettingsScreenLockActivity extends TestAppCompatActivity implements
+    private static class TestSettingsScreenLockActivity extends BaseTestActivity implements
             CheckLockListener, BaseFragment.FragmentController {
 
         @Override
@@ -75,8 +75,5 @@ public class ConfirmLockPinPasswordFragmentTest {
 
         @Override
         public void goBack() {}
-
-        @Override
-        public void launchFragment(BaseFragment fragment) {}
     }
 }

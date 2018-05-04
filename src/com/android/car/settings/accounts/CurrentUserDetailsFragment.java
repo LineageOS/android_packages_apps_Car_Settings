@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.accounts;
@@ -29,26 +29,26 @@ import androidx.car.widget.ListItemProvider;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.EditUsernameFragment;
-import com.android.car.settings.users.UserIconProvider;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 /**
  * Shows current user and the accounts that belong to the user.
  */
-public class UserDetailsFragment extends ListItemSettingsFragment
+public class CurrentUserDetailsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener,
         CarUserManagerHelper.OnUsersUpdateListener,
         UserAndAccountItemProvider.UserAndAccountClickListener {
-
     private UserAndAccountItemProvider mItemProvider;
     private AccountManagerHelper mAccountManagerHelper;
     private CarUserManagerHelper mCarUserManagerHelper;
-    private UserIconProvider mUserIconProvider;
 
     private Button mAddAccountButton;
 
-    public static UserDetailsFragment newInstance() {
-        UserDetailsFragment userDetailsFragment = new UserDetailsFragment();
+    /**
+     * Creates new instance of CurrentUserDetailsFragment.
+     */
+    public static CurrentUserDetailsFragment newInstance() {
+        CurrentUserDetailsFragment userDetailsFragment = new CurrentUserDetailsFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
@@ -62,9 +62,8 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         mAccountManagerHelper.startListeningToAccountUpdates();
 
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mItemProvider = new UserAndAccountItemProvider(getContext(), this,
-                mCarUserManagerHelper, mAccountManagerHelper, mUserIconProvider);
+                mCarUserManagerHelper, mAccountManagerHelper);
 
         // Register to receive changes to the users.
         mCarUserManagerHelper.registerOnUsersUpdateListener(this);
@@ -104,7 +103,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment
 
     @Override
     public void onUserClicked(UserInfo userInfo) {
-        getFragmentController().launchFragment(EditUsernameFragment.getInstance(userInfo));
+        getFragmentController().launchFragment(EditUsernameFragment.newInstance(userInfo));
     }
 
     @Override

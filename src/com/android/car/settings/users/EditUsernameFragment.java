@@ -15,11 +15,11 @@
  */
 package com.android.car.settings.users;
 
-import android.annotation.IdRes;
 import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.VisibleForTesting;
 import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
@@ -29,10 +29,9 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
 
 /**
- * Shows details for a user with the ability to edit the name, remove user and switch.
+ * Enables user to edit their username.
  */
-public class EditUsernameFragment extends BaseFragment implements
-        ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
+public class EditUsernameFragment extends BaseFragment {
     public static final String EXTRA_USER_INFO = "extra_user_info";
     private UserInfo mUserInfo;
 
@@ -40,16 +39,20 @@ public class EditUsernameFragment extends BaseFragment implements
     private Button mOkButton;
     private Button mCancelButton;
 
-    private CarUserManagerHelper mCarUserManagerHelper;
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    CarUserManagerHelper mCarUserManagerHelper;
 
-    public static EditUsernameFragment getInstance(UserInfo userInfo) {
+    /**
+     * Creates instance of EditUsernameFragment.
+     */
+    public static EditUsernameFragment newInstance(UserInfo userInfo) {
         EditUsernameFragment
                 userSettingsFragment = new EditUsernameFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_details_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.edit_user_name_title);
         bundle.putParcelable(EXTRA_USER_INFO, userInfo);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.user_details_fragment);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.edit_username_fragment);
         userSettingsFragment.setArguments(bundle);
         return userSettingsFragment;
     }
@@ -63,35 +66,37 @@ public class EditUsernameFragment extends BaseFragment implements
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         mUserNameEditText = (TextInputEditText) view.findViewById(R.id.user_name_text_edit);
-        mOkButton = (Button) view.findViewById(R.id.ok_button);
-        mCancelButton = (Button) view.findViewById(R.id.cancel_button);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        createCarUserManagerHelper();
 
         configureUsernameEditing();
-
-        showActionButtons();
+        showOkButton();
+        showCancelButton();
     }
 
-    @Override
-    public void onRemoveUserConfirmed() {
-        // If removing the current running foreground user, need to switch to another user
-        // before deletion. Switch to a guest user for now, until default user logic is
-        // implemented.
-        if (mCarUserManagerHelper.removeUser(mUserInfo, "guest")) {
-            getActivity().onBackPressed();
+    private void createCarUserManagerHelper() {
+        // Null check for testing. Don't want to override it if already set by a test.
+        if (mCarUserManagerHelper == null) {
+            mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         }
     }
 
     private void configureUsernameEditing() {
         // Set the User's name.
         mUserNameEditText.setText(mUserInfo.name);
+        mUserNameEditText.setEnabled(true);
+        mUserNameEditText.setSelectAllOnFocus(true);
+    }
 
+    private void showOkButton() {
         // Configure OK button.
+        mOkButton = (Button) getActivity().findViewById(R.id.action_button2);
+        mOkButton.setVisibility(View.VISIBLE);
+        mOkButton.setText(android.R.string.ok);
         mOkButton.setOnClickListener(view -> {
             // Save new user's name.
             mCarUserManagerHelper.setUserName(mUserInfo, mUserNameEditText.getText().toString());
@@ -99,82 +104,14 @@ public class EditUsernameFragment extends BaseFragment implements
                     SettingsConstants.USER_NAME_SET, 1);
             getActivity().onBackPressed();
         });
+    }
 
+    private void showCancelButton() {
         // Configure Cancel button.
+        mCancelButton = (Button) getActivity().findViewById(R.id.action_button1);
+        mCancelButton.setVisibility(View.VISIBLE);
+        mCancelButton.setText(android.R.string.cancel);
         mCancelButton.setOnClickListener(view -> {
-            getActivity().onBackPressed();
-        });
-
-        // Each user can edit their own name.
-        if (mCarUserManagerHelper.isForegroundUser(mUserInfo)) {
-            allowUserNameEditing();
-        } else {
-            mUserNameEditText.setEnabled(false);
-        }
-    }
-
-    private void allowUserNameEditing() {
-        mUserNameEditText.setEnabled(true);
-        mUserNameEditText.setSelectAllOnFocus(true);
-        mUserNameEditText.setOnFocusChangeListener((view, focus) -> {
-            if (focus || !mUserNameEditText.getText().toString().equals(mUserInfo.name)) {
-                // If name editor is in focus, or the user's name is changed, show OK and Cancel
-                // buttons to confirm or cancel the change.
-                mOkButton.setVisibility(View.VISIBLE);
-                mCancelButton.setVisibility(View.VISIBLE);
-            } else {
-                // Hide the buttons when user is not changing the user name.
-                mOkButton.setVisibility(View.GONE);
-                mCancelButton.setVisibility(View.GONE);
-            }
-        });
-    }
-
-    private void showActionButtons() {
-        if (mCarUserManagerHelper.isForegroundUser(mUserInfo)) {
-            // Already in current user, shouldn't show SWITCH button.
-            showRemoveUserButton(R.id.action_button1);
-            return;
-        }
-
-        showRemoveUserButton(R.id.action_button2);
-        showSwitchButton(R.id.action_button1);
-    }
-
-    private void showRemoveUserButton(@IdRes int buttonId) {
-        Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
-        // If the current user is not allowed to remove users, the user trying to be removed
-        // cannot be removed, or the current user is a demo user, do not show delete button.
-        if (!mCarUserManagerHelper.canCurrentProcessRemoveUsers()
-                || !mCarUserManagerHelper.canUserBeRemoved(mUserInfo)
-                || mCarUserManagerHelper.isCurrentProcessDemoUser()) {
-            removeUserBtn.setVisibility(View.GONE);
-            return;
-        }
-
-        removeUserBtn.setVisibility(View.VISIBLE);
-        removeUserBtn.setText(R.string.delete_button);
-        removeUserBtn
-                .setOnClickListener(v -> {
-                    ConfirmRemoveUserDialog dialog =
-                            new ConfirmRemoveUserDialog();
-                    dialog.setConfirmRemoveUserListener(this);
-                    dialog.show(this);
-                });
-    }
-
-    private void showSwitchButton(@IdRes int buttonId) {
-        Button switchUserBtn = (Button) getActivity().findViewById(buttonId);
-        // If the current process is not allowed to switch to another user, doe not show the switch
-        // button.
-        if (!mCarUserManagerHelper.canCurrentProcessSwitchUsers()) {
-            switchUserBtn.setVisibility(View.GONE);
-            return;
-        }
-        switchUserBtn.setVisibility(View.VISIBLE);
-        switchUserBtn.setText(R.string.user_switch);
-        switchUserBtn.setOnClickListener(v -> {
-            mCarUserManagerHelper.switchToUser(mUserInfo);
             getActivity().onBackPressed();
         });
     }
