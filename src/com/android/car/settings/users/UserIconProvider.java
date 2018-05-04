@@ -63,4 +63,17 @@ public class UserIconProvider {
         circleIcon.setCircular(true);
         return circleIcon;
     }
+
+    /**
+     * Scales passed in bitmap to the appropriate user icon size.
+     *
+     * @param bitmap Bitmap to scale.
+     *
+     * @return Drawable scaled to the user icon size.
+     */
+    public static Drawable scaleUserIcon(Bitmap bitmap, UserManagerHelper userManagerHelper,
+            Context context) {
+        return userManagerHelper.scaleUserIcon(bitmap, context.getResources()
+                .getDimensionPixelSize(R.dimen.car_primary_icon_size));
+    }
 }
