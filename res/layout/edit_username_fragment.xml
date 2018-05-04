@@ -15,13 +15,14 @@
     limitations under the License.
 -->
 
-<RelativeLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingStart="@dimen/car_margin"
     android:paddingEnd="@dimen/car_margin">
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_name"
         android:layout_width="match_parent"
@@ -31,6 +32,7 @@
         android:paddingStart="@dimen/car_keyline_1"
         android:paddingTop="@dimen/car_padding_3"
         app:hintTextAppearance="@style/TextAppearance.Car.Hint">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_name_text_edit"
             android:layout_width="match_parent"
@@ -41,34 +43,4 @@
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.Car.Body1"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/ok_button"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/car_button_height"
-        android:layout_gravity="center_vertical"
-        android:text="@android:string/ok"
-        android:maxLines="1"
-        android:ellipsize="end"
-        style="@style/Widget.Car.Button.Borderless.Colored"
-        android:minWidth="@dimen/car_button_min_width"
-        android:textColor="@color/action_bar_btn"
-        android:layout_toStartOf="@id/cancel_button"
-        android:layout_below="@id/user_name"/>
-
-    <Button
-        android:id="@+id/cancel_button"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/car_button_height"
-        android:layout_gravity="center_vertical"
-        android:text="@string/cancel"
-        android:maxLines="1"
-        android:ellipsize="end"
-        style="@style/Widget.Car.Button.Borderless.Colored"
-        android:minWidth="@dimen/car_button_min_width"
-        android:textColor="@color/action_bar_btn"
-        android:layout_alignEnd="@id/user_name"
-        android:layout_below="@id/user_name"/>
-</RelativeLayout>
+</FrameLayout>
