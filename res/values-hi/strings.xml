@@ -29,8 +29,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"हल्की रोशनी वाली स्क्रीन, टचस्‍क्रीन, बैटरी"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"हल्की रोशनी वाली स्क्रीन, टचस्‍क्रीन, बैटरी"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"हल्की रोशनी वाली स्क्रीन, नाइट, टिंट"</string>
-    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
-    <skip />
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"नाइट मोड"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाई-फ़ाई"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"वायरलेस एक्सेस पॉइंट सेट और प्रबंधित करें"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाई-फ़ाई चालू हो रहा है…"</string>
@@ -195,18 +194,24 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
+    <!-- no translation found for security_lock_none (1054645093754839638) -->
+    <skip />
     <string name="security_lock_pattern" msgid="1174352995619563104">"पैटर्न"</string>
-    <string name="security_lock_pin" msgid="7970343656751993936">"पिन"</string>
+    <!-- no translation found for security_lock_pin (4891899974369503200) -->
+    <skip />
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"स्क्रीन लॉक करने का तरीका चुनें"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रीन लॉक के विकल्प"</string>
+    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि करें"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"फिर से बनाएं"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी रखें"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"फिर से कोशिश करें"</string>
-    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
-    <skip />
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"छोड़ें"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रीन लॉक सेट करना"</string>
+    <!-- no translation found for current_screen_lock (637651611145979587) -->
+    <skip />
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षा के लिए पैटर्न सेट करें"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"हटाएं"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"अभी नहीं"</string>
@@ -220,6 +225,10 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"लॉक खोलने का पैटर्न बनाने का तरीका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पैटर्न सेव करने में गड़बड़ी हुई"</string>
     <string name="okay" msgid="4589873324439764349">"ठीक है"</string>
+    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
+    <skip />
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षा के लिए पिन सेट करें"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"पिन दोबारा डालें"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"पिन में कम से कम 4 अंक होने चाहिए"</string>

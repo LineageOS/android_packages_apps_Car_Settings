@@ -29,8 +29,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"മങ്ങിയ സ്‌ക്രീൻ, ടച്ച്‌സ്‌ക്രീൻ, ബാറ്ററി"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"മങ്ങിയ സ്‌ക്രീൻ, ടച്ച്‌സ്‌ക്രീൻ, ബാറ്ററി"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"മങ്ങിയ സ്ക്രീൻ, രാത്രി, ടിന്റ്"</string>
-    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
-    <skip />
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"നൈറ്റ് മോഡ്"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"വൈഫൈ"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"വയർലെസ് ആക്‌സസ് പോയിന്റുകൾ സജ്ജീകരിക്കുക, നിയന്ത്രിക്കുക"</string>
     <string name="wifi_starting" msgid="473253087503153167">"വൈഫൈ ഓണാക്കുന്നു…"</string>
@@ -195,18 +194,24 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ഏതൊരു ഉപയോക്താവിനും മറ്റെല്ലാ ഉപയോക്താക്കൾക്കുമായി ആപ്പുകൾ അപ്‌ഡേറ്റ് ചെയ്യാനാവും."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"സുരക്ഷ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"സ്ക്രീൻ ലോക്ക്"</string>
+    <!-- no translation found for security_lock_none (1054645093754839638) -->
+    <skip />
     <string name="security_lock_pattern" msgid="1174352995619563104">"പാറ്റേൺ"</string>
-    <string name="security_lock_pin" msgid="7970343656751993936">"പിൻ"</string>
+    <!-- no translation found for security_lock_pin (4891899974369503200) -->
+    <skip />
     <string name="security_lock_password" msgid="4420203740048322494">"പാസ്‌വേഡ്"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ഒരു ലോക്ക് ടൈപ്പ് തിരഞ്ഞെടുക്കുക"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"സ്‌ക്രീൻ ലോക്ക് ഓപ്ഷനുകള്‍"</string>
+    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"സ്ഥിരീകരിക്കുക"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"വീണ്ടും വരയ്ക്കുക"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"തുടരുക"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"വീണ്ടും ശ്രമിക്കുക"</string>
-    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
-    <skip />
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ഒഴിവാക്കുക"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ഒരു സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിക്കുക"</string>
+    <!-- no translation found for current_screen_lock (637651611145979587) -->
+    <skip />
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"സുരക്ഷയ്‌ക്കായി, പാറ്റേൺ സജ്ജീകരിക്കുക"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"മായ്ക്കുക"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"റദ്ദാക്കുക"</string>
@@ -220,6 +225,10 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ഒരു അൺലോക്ക് പാറ്റേൺ വരയ്‌ക്കേണ്ടതെങ്ങനെ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"പാറ്റേൺ സംരക്ഷിക്കുന്നതിൽ പിശക്"</string>
     <string name="okay" msgid="4589873324439764349">"ശരി"</string>
+    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
+    <skip />
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"സുരക്ഷയ്‌ക്കായി, ഒരു പിൻ സജ്ജമാക്കുക"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"നിങ്ങളുടെ പിൻ വീണ്ടും നൽകുക"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"പിൻ നമ്പറിൽ 4 അക്കങ്ങളെങ്കിലും ഉണ്ടായിരിക്കണം"</string>
