@@ -159,17 +159,11 @@ public class QuickSettingGridAdapter
                 Tile tile = mTiles.get(position - mSeekbarTiles.size());
                 TileViewHolder vh = (TileViewHolder) holder;
                 OnClickListener deepDiveListener = tile.getDeepDiveListener();
+                vh.itemView.setOnClickListener(tile);
                 if (deepDiveListener != null) {
                     vh.mDeepDiveIcon.setVisibility(View.VISIBLE);
                     vh.mTextContainer.setOnClickListener(deepDiveListener);
-                    vh.mIconContainer.setOnClickListener(tile);
-                    vh.itemView.setOnClickListener(null);
-                    vh.itemView.setClickable(false);
                 } else {
-                    vh.itemView.setOnClickListener(tile);
-                    vh.itemView.setClickable(true);
-                    vh.mIconContainer.setOnClickListener(null);
-                    vh.mIconContainer.setClickable(false);
                     vh.mDeepDiveIcon.setVisibility(View.GONE);
                     vh.mTextContainer.setClickable(false);
                     vh.mTextContainer.setOnClickListener(null);
