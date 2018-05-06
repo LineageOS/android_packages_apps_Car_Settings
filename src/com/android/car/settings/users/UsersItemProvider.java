@@ -18,6 +18,7 @@ package com.android.car.settings.users;
 
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.graphics.drawable.Drawable;
 
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
@@ -38,12 +39,14 @@ class UsersItemProvider extends ListItemProvider {
     private final Context mContext;
     private final UserClickListener mUserClickListener;
     private final UserManagerHelper mUserManagerHelper;
+    private final UserIconProvider mUserIconProvider;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             UserManagerHelper userManagerHelper) {
         mContext = context;
         mUserClickListener = userClickListener;
         mUserManagerHelper = userManagerHelper;
+        mUserIconProvider = new UserIconProvider(mUserManagerHelper);
         refreshItems();
     }
 
@@ -77,15 +80,21 @@ class UsersItemProvider extends ListItemProvider {
         // Display other users on the system
         List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentProcessUser();
         for (UserInfo userInfo : infos) {
-            mItems.add(createUserItem(userInfo, userInfo.name));
+            if (!userInfo.isGuest()) { // Do not show guest users.
+                mItems.add(createUserItem(userInfo, userInfo.name));
+            }
+        }
+
+        // Display guest session option.
+        if (!currUserInfo.isGuest()) {
+            mItems.add(createGuestItem());
         }
     }
 
     // Creates a line for a user, clicking on it leads to the user details page.
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(
-                UserIconProvider.getUserIcon(userInfo, mUserManagerHelper, mContext),
+        item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
                 false /* useLargeIcon */);
         item.setTitle(title);
 
@@ -95,6 +104,20 @@ class UsersItemProvider extends ListItemProvider {
         }
 
         item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
+        item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
+        return item;
+    }
+
+    // Creates a line for a guest session.
+    private ListItem createGuestItem() {
+        Drawable icon = UserIconProvider.scaleUserIcon(mUserManagerHelper.getGuestDefaultIcon(),
+                mUserManagerHelper, mContext);
+
+        TextListItem item = new TextListItem(mContext);
+        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setTitle(mContext.getString(R.string.user_guest));
+
+        item.setOnClickListener(view -> mUserClickListener.onGuestClicked());
         item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
     }
@@ -109,5 +132,10 @@ class UsersItemProvider extends ListItemProvider {
          * @param userInfo User for which the click is registered.
          */
         void onUserClicked(UserInfo userInfo);
+
+        /**
+         * Invoked when guest is clicked.
+         */
+        void onGuestClicked();
     }
 }
