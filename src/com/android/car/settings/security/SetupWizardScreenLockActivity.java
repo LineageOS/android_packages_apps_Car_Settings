@@ -78,6 +78,10 @@ public class SetupWizardScreenLockActivity extends AppCompatActivity implements
         Fragment fragment = null;
 
         switch(position) {
+            case LockTypeDialogFragment.POSITION_NONE:
+                setResult(ResultCodes.RESULT_NONE);
+                finish();
+                break;
             case LockTypeDialogFragment.POSITION_PIN:
                 fragment = ChooseLockPinPasswordFragment.newPinInstance();
                 break;
