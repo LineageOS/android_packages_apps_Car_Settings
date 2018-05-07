@@ -29,8 +29,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"ໜ້າຈໍມືດລົງ, ໜ້າຈໍສຳຜັດ, ແບັດເຕີຣີ"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ໜ້າຈໍມືດລົງ, ໜ້າຈໍສຳຜັດ, ແບັດເຕີຣີ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ໜ້າຈໍມືດລົງ, ກາງຄືນ, ສີອ່ອນ"</string>
-    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
-    <skip />
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"ໂໝດກາງຄືນ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ຕັ້ງຄ່າ ແລະ ຈັດການຈຸດການເຂົ້າໃຊ້ລະບົບໄຮ້ສາຍ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ກຳລັງເປີດ Wi-Fi..."</string>
@@ -195,18 +194,24 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ຜູ້ໃຊ້ຕ່າງໆສາມາດອັບເດດແອັບສຳລັບຜູ້ໃຊ້ອື່ນທັງໝົດໄດ້."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ຄວາມປອດໄພ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ການລັອກໜ້າຈໍ"</string>
+    <!-- no translation found for security_lock_none (1054645093754839638) -->
+    <skip />
     <string name="security_lock_pattern" msgid="1174352995619563104">"ຮູບແບບປົດລັອກ"</string>
-    <string name="security_lock_pin" msgid="7970343656751993936">"Pin"</string>
+    <!-- no translation found for security_lock_pin (4891899974369503200) -->
+    <skip />
     <string name="security_lock_password" msgid="4420203740048322494">"ລະຫັດຜ່ານ"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ເລືອກປະເພດການລັອກ"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"ຕົວເລືອກໜ້າຈໍລັອກ"</string>
+    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ຢືນຢັນ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ແຕ້ມໃໝ່"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ສືບຕໍ່"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ລອງໃໝ່"</string>
-    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
-    <skip />
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ຂ້າມ"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ຕັ້ງຄ່າໜ້າຈໍລັອກ"</string>
+    <!-- no translation found for current_screen_lock (637651611145979587) -->
+    <skip />
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ເພື່ອຄວາມປອດໄພ, ກະລຸນາຕັ້ງຮູບແບບປົດລັອກ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ລຶບ"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ຍົກເລີກ"</string>
@@ -220,6 +225,10 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ວິທີແຕ້ມຮູບແບບປົດລັອກ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ເກີດຄວາມຜິດພາດໃນການບັນທຶກຮູບແບບ"</string>
     <string name="okay" msgid="4589873324439764349">"ຕົກລົງ"</string>
+    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
+    <skip />
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ເພື່ອຄວາມປອດໄພ, ກະລຸນາຕັ້ງລະຫັດ PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ປ້ອນ PIN ຂອງທ່ານຄືນໃໝ່"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ຕ້ອງມີຢ່າງໜ້ອຍ 4 ຕົວເລກ"</string>

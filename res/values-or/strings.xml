@@ -39,8 +39,7 @@
     <skip />
     <!-- no translation found for keywords_display_night_display (2922294576679769957) -->
     <skip />
-    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
-    <skip />
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"ନାଇଟ୍ ମୋଡ୍"</string>
     <!-- no translation found for wifi_settings (7701477685273103841) -->
     <skip />
     <!-- no translation found for wifi_settings_summary (6095898149997291025) -->
@@ -352,15 +351,19 @@
     <skip />
     <!-- no translation found for security_settings_subtitle (2244635550239273229) -->
     <skip />
+    <!-- no translation found for security_lock_none (1054645093754839638) -->
+    <skip />
     <!-- no translation found for security_lock_pattern (1174352995619563104) -->
     <skip />
-    <!-- no translation found for security_lock_pin (7970343656751993936) -->
+    <!-- no translation found for security_lock_pin (4891899974369503200) -->
     <skip />
     <!-- no translation found for security_lock_password (4420203740048322494) -->
     <skip />
     <!-- no translation found for lock_settings_picker_title (6590330165050361632) -->
     <skip />
     <string name="screen_lock_options" msgid="7023338635352915768">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
+    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
+    <skip />
     <!-- no translation found for lockpattern_confirm_button_text (7784925958324484965) -->
     <skip />
     <!-- no translation found for lockpattern_restart_button_text (9355771277617537) -->
@@ -369,9 +372,10 @@
     <skip />
     <!-- no translation found for lockscreen_retry_button_text (5314212350698701242) -->
     <skip />
-    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
-    <skip />
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ଛାଡ଼ିଦିଅନ୍ତୁ"</string>
     <!-- no translation found for set_screen_lock (5239317292691332780) -->
+    <skip />
+    <!-- no translation found for current_screen_lock (637651611145979587) -->
     <skip />
     <!-- no translation found for choose_lock_pattern_message (6242765203541309524) -->
     <skip />
@@ -398,6 +402,10 @@
     <!-- no translation found for error_saving_lockpattern (2933512812768570130) -->
     <skip />
     <!-- no translation found for okay (4589873324439764349) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
     <skip />
     <!-- no translation found for choose_lock_pin_message (2963792070267774417) -->
     <skip />
