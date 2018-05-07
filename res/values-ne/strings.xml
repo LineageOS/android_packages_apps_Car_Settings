@@ -29,8 +29,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"मधुरो स्क्रिन, टचस्क्रिन, ब्याट्री"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"मधुरो स्क्रिन, टचस्क्रिन, ब्याट्री"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"मधुरो स्क्रिन, रात, हल्का रङ"</string>
-    <!-- no translation found for night_mode_tile_label (6603597795502131664) -->
-    <skip />
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"रात्रि मोड"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"ताररहित पहुँच बिन्दुहरू सेटअप र प्रबन्ध गर्नुहोस्"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
@@ -195,18 +194,24 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कुनै पनि प्रयोगकर्ताले अन्य सबै प्रयोगकर्ताहरूका लागि अनुप्रयोगहरू अद्यावधिक गर्न सक्नुहुन्छ।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
+    <!-- no translation found for security_lock_none (1054645093754839638) -->
+    <skip />
     <string name="security_lock_pattern" msgid="1174352995619563104">"ढाँचा"</string>
-    <string name="security_lock_pin" msgid="7970343656751993936">"पिन गर्नुहोस्"</string>
+    <!-- no translation found for security_lock_pin (4891899974369503200) -->
+    <skip />
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रिन लकका विकल्पहरू"</string>
+    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
+    <skip />
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी राख्नुहोस्"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"पुनः प्रयास गर्ने"</string>
-    <!-- no translation found for lockscreen_skip_button_text (3755748786396198091) -->
-    <skip />
+    <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"छाड्नुहोस्"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
+    <!-- no translation found for current_screen_lock (637651611145979587) -->
+    <skip />
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि ढाँचा सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"रद्द गर्नुहोस्"</string>
@@ -220,6 +225,10 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलक शैली कोर्ने तरिका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ढाँचा सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
+    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
+    <skip />
+    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
+    <skip />
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN कम्तीमा ४ अङ्कको हुनै पर्ने"</string>
