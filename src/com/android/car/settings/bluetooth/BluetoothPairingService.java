@@ -17,15 +17,15 @@
 package com.android.car.settings.bluetooth;
 
 import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.bluetooth.BluetoothDevice;
-import android.content.IntentFilter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.IBinder;
 import android.text.TextUtils;
@@ -67,7 +67,6 @@ public final class BluetoothPairingService extends Service {
             pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_KEY, pairingKey);
         }
         pairingIntent.setAction(BluetoothDevice.ACTION_PAIRING_REQUEST);
-        pairingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return pairingIntent;
     }
 
