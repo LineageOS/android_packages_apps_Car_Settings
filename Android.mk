@@ -26,7 +26,10 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
+  LOCAL_USE_AAPT2 := true
+
   LOCAL_STATIC_ANDROID_LIBRARIES := \
+      android-support-v4 \
       android-support-v7-recyclerview \
       android-support-v7-appcompat \
       android-support-v7-preference \
@@ -34,16 +37,9 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
       android-support-design
 
   LOCAL_RESOURCE_DIR := \
-      $(LOCAL_PATH)/res \
-      frameworks/support/v7/preference/res \
-      frameworks/support/v14/preference/res \
-      frameworks/support/design/res
+      $(LOCAL_PATH)/res
 
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
-
-  LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.preference
-  LOCAL_AAPT_FLAGS += --extra-packages android.support.v14.preference
-  LOCAL_AAPT_FLAGS += --extra-packages android.support.design
 
   LOCAL_CERTIFICATE := platform
 
@@ -55,8 +51,7 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_DEX_PREOPT := false
 
-  LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4 \
-                                 jsr305
+  LOCAL_STATIC_JAVA_LIBRARIES += jsr305
 
   include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
   include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
