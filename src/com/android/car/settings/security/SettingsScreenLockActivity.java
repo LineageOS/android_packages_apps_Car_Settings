@@ -28,8 +28,7 @@ import com.android.internal.widget.LockPatternUtils;
 /**
  * Activity for setting screen locks
  */
-public class SettingsScreenLockActivity extends CarSettingActivity implements
-        ConfirmLockPatternFragment.CheckLockListener {
+public class SettingsScreenLockActivity extends CarSettingActivity implements CheckLockListener {
 
     public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
 
@@ -49,6 +48,10 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements
             switch (mPasswordQuality) {
                 case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                     fragment = ConfirmLockPatternFragment.newInstance();
+                    break;
+                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
+                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
+                    fragment = ConfirmLockPinFragment.newInstance();
                     break;
                 default:
                     // TODO implement the remaining quality values then show ConfirmPassword and log

@@ -36,7 +36,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
 
     private boolean mHasPendingResult;
     private boolean mLockMatched;
-    private boolean mCheckPatternRunning;
+    private boolean mCheckInProgress;
     private Listener mListener;
     private LockPatternUtils mLockPatternUtils;
 
@@ -49,7 +49,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
 
     @Override
     public void onChecked(boolean matched, int throttleTimeoutMs) {
-        mCheckPatternRunning = false;
+        mCheckInProgress = false;
 
         if (mListener == null) {
             mHasPendingResult = true;
@@ -71,20 +71,34 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
     }
 
     /**
-     * Checks lock pattern asynchronously.
+     * Checks lock pattern asynchronously. To receive callback when check is completed,
+     * implement {@link Listener} and call {@link #setListener(Listener)}.
      */
     public final void checkPattern(int userId, List<LockPatternView.Cell> pattern) {
-        if (mCheckPatternRunning) {
+        if (mCheckInProgress) {
             LOG.w("Check pattern request issued while one is still running");
             return;
         }
 
-        mCheckPatternRunning = true;
+        mCheckInProgress = true;
         LockPatternChecker.checkPattern(mLockPatternUtils, pattern, userId, this);
     }
 
     /**
-     * Callback when lock check is completed
+     * Checks lock PIN/password asynchronously.  To receive callback when check is completed,
+     * implement {@link Listener} and call {@link #setListener(Listener)}.
+     */
+    public final void checkPinPassword(int userId, String password) {
+        if (mCheckInProgress) {
+            LOG.w("Check pin/password request issued while one is still running");
+            return;
+        }
+        mCheckInProgress = true;
+        LockPatternChecker.checkPassword(mLockPatternUtils, password, userId, this);
+    }
+
+    /**
+     * Callback when lock check is completed.
      */
     interface Listener {
         /**
