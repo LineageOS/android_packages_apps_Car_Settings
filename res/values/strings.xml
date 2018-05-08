@@ -427,6 +427,8 @@
     <string name="lockscreen_skip_button_text">Skip</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
+    <!-- Title string shown in choose lock pattern [CHAR LIMIT=40] -->
+    <string name="lockscreen_choose_your_pattern">Choose your pattern</string>
     <!-- Subtitle indicating the current screen lock type (none/PIN/pattern/password) [CHAR LIMIT=40] -->
     <string name="current_screen_lock">Current screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->

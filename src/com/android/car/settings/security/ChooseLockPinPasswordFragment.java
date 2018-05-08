@@ -255,6 +255,11 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        // Don't show toolbar title in Setup Wizard
+        if (mIsInSetupWizard) {
+            ((TextView) getActivity().findViewById(R.id.title)).setText("");
+        }
+
         mPrimaryButton = getActivity().findViewById(R.id.action_button1);
         mPrimaryButton.setOnClickListener(view -> handlePrimaryButtonClick());
         mSecondaryButton = getActivity().findViewById(R.id.action_button2);
