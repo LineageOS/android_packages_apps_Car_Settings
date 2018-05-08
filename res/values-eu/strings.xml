@@ -194,24 +194,20 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Edozein erabiltzailek egunera ditzake beste erabiltzaile guztien aplikazioak."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurtasuna"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Pantailaren blokeoa"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"Bat ere ez"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Eredua"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN kodea"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Pasahitza"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Aukeratu blokeo mota"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"Pantaila blokeatzeko aukerak"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Marraztu eredua"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Berretsi"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Marraztu berriro"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Egin aurrera"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Saiatu berriro"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Saltatu"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ezarri pantailaren blokeo bat"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"Uneko pantailaren blokeoa"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Babestuta egoteko, ezarri eredu bat"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Garbitu"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Utzi"</string>
@@ -225,10 +221,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Desblokeatzeko eredua nola marraztu"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Errore bat gertatu da eredua gordetzean"</string>
     <string name="okay" msgid="4589873324439764349">"Ados"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Pantailaren blokeoa kendu?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Edonork atzitu ahalko du zure kontua"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Babestuta egoteko, ezarri PIN bat"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Idatzi berriro PIN kodea"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Gutxienez 4 digitu izan behar ditu PINak"</string>

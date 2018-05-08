@@ -194,24 +194,20 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Бусад бүх хэрэглэгчийн аппуудыг дурын хэрэглэгч шинэчлэх боломжтой."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Нууцлал"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Дэлгэцийн түгжээ"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"Байхгүй"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Хээ"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"ПИН"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Нууц үг"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Түгжих төрлийг сонгох"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"Дэлгэцийн түгжээний сонголт"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Хээгээ оруулна уу"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Баталгаажуулах"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Дахин зурах"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Үргэлжлүүлэх"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Дахин оролдох"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Алгасах"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Дэлгэцийн түгжээ тохируулах"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"Одоогийн дэлгэцийн түгжээ"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Аюулгүй байдлын үүднээс загвар тохируулах"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Устгах"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Цуцлах"</string>
@@ -225,10 +221,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Түгжээг тайлах загварыг хэрхэн зурах вэ?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Загварыг хадгалахад алдаа гарлаа"</string>
     <string name="okay" msgid="4589873324439764349">"ОК"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Дэлгэцийн түгжээг хасах уу?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ингэснээр хүн бүхэн таны бүртгэлд хандах боломжтой болно"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Аюулгүй байдлын үүднээс ПИН тохируулах"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ПИН-ээ дахин оруулах"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ПИН хамгийн багадаа 4 оронтой цифр байх ёстой"</string>

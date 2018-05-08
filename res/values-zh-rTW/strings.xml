@@ -194,24 +194,20 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"任何使用者都可以為所有其他使用者更新應用程式。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"圖案"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN 碼"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"密碼"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"選擇鎖定類型"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"螢幕鎖定選項"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"畫出解鎖圖案"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"確認"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"重畫"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"繼續"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"重試"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"略過"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"設定螢幕鎖定"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"目前的螢幕鎖定方式"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為了安全起見，請設定圖案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"取消"</string>
@@ -225,10 +221,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何畫出解鎖圖案"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"儲存圖案時發生錯誤"</string>
     <string name="okay" msgid="4589873324439764349">"確定"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"要移除螢幕鎖定嗎？"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"這樣一來，任何人都能存取你的帳戶"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"為了安全起見，請設定 PIN 碼"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"請重新輸入 PIN 碼"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN 碼至少要有 4 個數字"</string>
