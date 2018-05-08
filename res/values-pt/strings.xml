@@ -194,24 +194,20 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualquer usuário pode atualizar os apps para todos os demais."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurança"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueio de tela"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"Nenhum"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Padrão"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Senha"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Escolher tipo de bloqueio"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"Opções de bloqueio de tela"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Digite seu padrão"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmar"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Desenhar novamente"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Continuar"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Repetir"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Pular"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Definir bloqueio de tela"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"Bloqueio de tela atual"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Por segurança, defina um padrão"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Limpar"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancelar"</string>
@@ -225,10 +221,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Como desenhar um padrão de desbloqueio"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Erro ao salvar o padrão"</string>
     <string name="okay" msgid="4589873324439764349">"Ok"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Remover bloqueio de tela?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"Qualquer pessoa poderá acessar sua conta"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Por segurança, defina um PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Digite seu PIN novamente"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"O PIN deve ter no mínimo quatro dígitos"</string>
