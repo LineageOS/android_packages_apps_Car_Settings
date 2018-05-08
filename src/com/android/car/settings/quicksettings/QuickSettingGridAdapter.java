@@ -39,9 +39,9 @@ import java.util.List;
  */
 public class QuickSettingGridAdapter
         extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StateChangedListener {
-    private static final int COLUMN_COUNT = 4;
     private static final int SEEKBAR_VIEWTYPE = 0;
     private static final int TILE_VIEWTYPE = 1;
+    private final int mColumnCount;
     private final Context mContext;
     private final LayoutInflater mInflater;
     private final List<Tile> mTiles = new ArrayList<>();
@@ -51,6 +51,7 @@ public class QuickSettingGridAdapter
     public QuickSettingGridAdapter(Context context) {
         mContext = context;
         mInflater = LayoutInflater.from(context);
+        mColumnCount = mContext.getResources().getInteger(R.integer.quick_setting_column_count);
     }
 
     GridLayoutManager getGridLayoutManager() {
@@ -229,13 +230,13 @@ public class QuickSettingGridAdapter
          */
         @Override
         public int getSpanSize(int position) {
-            return position < mSeekbarTiles.size() ? COLUMN_COUNT : 1;
+            return position < mSeekbarTiles.size() ? mColumnCount : 1;
         }
 
         @Override
         public int getSpanIndex(int position, int spanCount) {
             return position < mSeekbarTiles.size()
-                    ? 1 : (position - mSeekbarTiles.size()) % COLUMN_COUNT;
+                    ? 1 : (position - mSeekbarTiles.size()) % mColumnCount;
         }
     }
 
