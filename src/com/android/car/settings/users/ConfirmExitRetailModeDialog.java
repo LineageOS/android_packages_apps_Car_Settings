@@ -58,9 +58,9 @@ public class ConfirmExitRetailModeDialog extends DialogFragment implements
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
-                .setTitle(R.string.exit_retail_title)
-                .setBody(R.string.exit_retail_message)
-                .setPositiveButton(R.string.continue_button_text, this)
+                .setTitle(R.string.exit_retail_mode_dialog_title)
+                .setBody(R.string.exit_retail_mode_dialog_body)
+                .setPositiveButton(R.string.exit_retail_mode_dialog_confirmation_button_text, this)
                 .setNegativeButton(android.R.string.cancel, null)
                 .create();
     }
