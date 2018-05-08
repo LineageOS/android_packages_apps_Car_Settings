@@ -31,11 +31,13 @@ import com.android.car.settings.R;
  */
 public class LockTypeDialogFragment extends DialogFragment {
     // Please make sure the order is sync with LOCK_TYPES array
-    public static final int POSITION_PIN = 0;
-    public static final int POSITION_PATTERN = 1;
-    public static final int POSITION_PASSWORD = 2;
+    public static final int POSITION_NONE = 0;
+    public static final int POSITION_PIN = 1;
+    public static final int POSITION_PATTERN = 2;
+    public static final int POSITION_PASSWORD = 3;
 
     private static final int[] LOCK_TYPES = {
+            R.string.security_lock_none,
             R.string.security_lock_pin,
             R.string.security_lock_pattern,
             R.string.security_lock_password };
