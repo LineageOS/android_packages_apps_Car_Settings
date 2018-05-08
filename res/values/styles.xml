@@ -26,10 +26,6 @@
         <item name="android:windowAnimationStyle">@style/SettingAnimationStyle</item>
     </style>
 
-    <style name="CarQuickSettingTheme" parent="Theme.Car.Light.NoActionBar">
-        <item name="android:background">@color/car_card</item>
-    </style>
-
     <style name="SettingAnimationStyle">
         <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
         <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
@@ -46,7 +42,6 @@
     </style>
 
     <style name="ListIcon.ActionBar" parent="ListIcon">
-        <item name="android:tint">@color/car_accent</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
@@ -87,5 +82,9 @@
         <item name="android:textColor">@color/car_body3</item>
         <item name="android:clickable">true</item>
         <item name="android:background">@drawable/car_button_ripple_background</item>
+    </style>
+
+    <style name="SettingList">
+        <item name="gutter">both</item>
     </style>
 </resources>
