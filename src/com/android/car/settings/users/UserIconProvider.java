@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -26,16 +27,15 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 
 import com.android.car.settings.R;
-import com.android.settingslib.users.UserManagerHelper;
 
 /**
  * Simple class for providing icons for users in Settings.
  */
 public class UserIconProvider {
-    private final UserManagerHelper mUserManagerHelper;
+    private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public UserIconProvider(UserManagerHelper userManagerHelper) {
-        mUserManagerHelper = userManagerHelper;
+    public UserIconProvider(CarUserManagerHelper userManagerHelper) {
+        mCarUserManagerHelper = userManagerHelper;
     }
 
     /**
@@ -47,13 +47,13 @@ public class UserIconProvider {
      * @return Drawable representing the icon for the user.
      */
     public Drawable getUserIcon(UserInfo userInfo, Context context) {
-        Bitmap icon = mUserManagerHelper.getUserIcon(userInfo);
+        Bitmap icon = mCarUserManagerHelper.getUserIcon(userInfo);
         if (icon == null) {
             // Return default user icon.
             return context.getDrawable(R.drawable.ic_user);
         }
         Resources res = context.getResources();
-        BitmapDrawable scaledIcon = (BitmapDrawable) mUserManagerHelper.scaleUserIcon(icon, res
+        BitmapDrawable scaledIcon = (BitmapDrawable) mCarUserManagerHelper.scaleUserIcon(icon, res
                 .getDimensionPixelSize(R.dimen.car_primary_icon_size));
 
         // Enforce that the icon is circular
@@ -70,7 +70,7 @@ public class UserIconProvider {
      *
      * @return Drawable scaled to the user icon size.
      */
-    public static Drawable scaleUserIcon(Bitmap bitmap, UserManagerHelper userManagerHelper,
+    public static Drawable scaleUserIcon(Bitmap bitmap, CarUserManagerHelper userManagerHelper,
             Context context) {
         return userManagerHelper.scaleUserIcon(bitmap, context.getResources()
                 .getDimensionPixelSize(R.dimen.car_primary_icon_size));

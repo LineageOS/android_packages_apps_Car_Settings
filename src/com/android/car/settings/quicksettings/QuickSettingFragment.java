@@ -16,6 +16,7 @@
 package com.android.car.settings.quicksettings;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,6 @@ import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.users.UserIconProvider;
 import com.android.car.settings.users.UsersListFragment;
-import com.android.settingslib.users.UserManagerHelper;
 
 /**
  * Shows a page to access frequently used settings.
@@ -41,7 +41,7 @@ public class QuickSettingFragment extends BaseFragment {
     private static final float RESTRICTED_ALPHA = 0.5f;
     private static final float UNRESTRICTED_ALPHA = 1f;
 
-    private UserManagerHelper  mUserManagerHelper;
+    private CarUserManagerHelper  mCarUserManagerHelper;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private PagedListView mListView;
@@ -67,8 +67,8 @@ public class QuickSettingFragment extends BaseFragment {
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> getActivity().finish());
 
-        mUserManagerHelper = new UserManagerHelper(getContext());
-        mUserIconProvider = new UserIconProvider(mUserManagerHelper);
+        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mListView = (PagedListView) getActivity().findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(getContext());
         mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
@@ -103,7 +103,7 @@ public class QuickSettingFragment extends BaseFragment {
 
     private void setupAccountButton() {
         ImageView userIcon = (ImageView) getActivity().findViewById(R.id.user_icon);
-        UserInfo currentUserInfo = mUserManagerHelper.getForegroundUserInfo();
+        UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
         userIcon.setImageDrawable(mUserIconProvider.getUserIcon(currentUserInfo, getContext()));
         userIcon.clearColorFilter();
 
