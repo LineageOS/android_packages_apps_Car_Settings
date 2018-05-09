@@ -19,7 +19,6 @@ import android.annotation.IdRes;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,6 +26,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
 import com.android.settingslib.users.UserManagerHelper;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.

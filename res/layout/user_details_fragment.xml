@@ -31,7 +31,7 @@
         android:paddingStart="@dimen/car_keyline_1"
         android:paddingTop="@dimen/car_padding_3"
         app:hintTextAppearance="@style/TextAppearance.Car.Hint">
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_name_text_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
