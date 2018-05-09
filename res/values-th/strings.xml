@@ -194,24 +194,20 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ผู้ใช้ทุกคนจะอัปเดตแอปให้แก่ผู้ใช้คนอื่นๆ ได้"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ความปลอดภัย"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ล็อกหน้าจอ"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"ไม่มี"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"รูปแบบ"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"รหัสผ่าน"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"เลือกประเภทการล็อก"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"ตัวเลือกการล็อกหน้าจอ"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ป้อนรูปแบบ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ยืนยัน"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"วาดซ้ำ"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ต่อไป"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ลองอีกครั้ง"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ข้าม"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ตั้งค่าการล็อกหน้าจอ"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"การล็อกหน้าจอปัจจุบัน"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ตั้งรูปแบบเพื่อความปลอดภัย"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ล้าง"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ยกเลิก"</string>
@@ -225,10 +221,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"วิธีวาดรูปแบบการปลดล็อก"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"เกิดข้อผิดพลาดในการบันทึกรูปแบบ"</string>
     <string name="okay" msgid="4589873324439764349">"ตกลง"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"นำการล็อกหน้าจอออกไหม"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"การดำเนินการนี้จะทำให้ทุกคนเข้าถึงบัญชีของคุณได้"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ตั้ง PIN เพื่อความปลอดภัย"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ป้อน PIN อีกครั้ง"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN จะต้องมีอย่างน้อย 4 หลัก"</string>
