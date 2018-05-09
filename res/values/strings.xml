@@ -464,6 +464,8 @@
 
     <!--  Title for screen asking user to enter their existing lock PIN [CHAR LIMIT=30] -->
     <string name="lock_settings_enter_pin">Enter your PIN</string>
+    <!--  Title for screen asking user to enter their existing password [CHAR LIMIT=30] -->
+    <string name="lock_settings_enter_password">Enter your password</string>
     <!-- Description for Choose Lock Pin Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_pin_message">For security, set a PIN</string>
     <!-- Header on password confirm screen [CHAR LIMIT=40] -->
@@ -478,6 +480,8 @@
     <string name="error_saving_lockpin">Error saving PIN</string>
     <!-- Confirm existing PIN screen error message when the user-entered PIN doesn't match record [CHAR LIMIT=30] -->
     <string name="lockscreen_wrong_pin">Wrong PIN</string>
+    <!-- Confirm existing password screen error message when the user-entered password doesn't match record [CHAR LIMIT=30] -->
+    <string name="lockscreen_wrong_password">Wrong password</string>
     <!-- Description for Choose Lock Password Screen [CHAR_LIMIT=40] -->
     <string name="choose_lock_password_message">For security, set a password</string>
     <!-- Header on password confirm screen [CHAR LIMIT=40] -->

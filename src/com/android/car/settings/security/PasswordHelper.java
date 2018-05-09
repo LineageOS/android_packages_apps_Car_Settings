@@ -30,6 +30,12 @@ import java.util.List;
  */
 public class PasswordHelper {
     /**
+     * View ids that represent each digit key in the pin pad.
+     */
+    public static final int[] PIN_PAD_DIGIT_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
+            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
+
+    /**
      * Password must contain at least one number, one letter, can not have white space, should be
      * between 4 to 8 characters.
      */
