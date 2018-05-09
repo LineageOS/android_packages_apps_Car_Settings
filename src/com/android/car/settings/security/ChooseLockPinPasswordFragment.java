@@ -52,10 +52,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private static final Logger LOG = new Logger(ChooseLockPinPasswordFragment.class);
     private static final String EXTRA_IS_PIN = "extra_is_pin";
 
-    // View Ids used to set onClick listener
-    private static final int[] PIN_PAD_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
-            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
-
     private Stage mUiStage = Stage.Introduction;
 
     private int mUserId;
@@ -320,7 +316,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         View enter = view.findViewById(R.id.key_enter);
         enter.setOnClickListener(v -> handlePrimaryButtonClick());
 
-        for (int keyId : PIN_PAD_KEYS) {
+        for (int keyId : PasswordHelper.PIN_PAD_DIGIT_KEYS) {
             TextView key = view.findViewById(keyId);
             String digit = key.getTag().toString();
             key.setOnClickListener(v -> appendToPasswordEntry(digit));
