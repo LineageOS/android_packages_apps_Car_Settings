@@ -80,7 +80,7 @@ public class UsersListFragment extends ListItemSettingsFragment
         if (mUserManagerHelper.currentProcessRunningAsDemoUser()) {
             // If the user is a demo user, show a dialog asking if they want to exit retail/demo
             // mode
-            mAddUserButton.setText(R.string.exit_retail_title);
+            mAddUserButton.setText(R.string.exit_retail_button_text);
             mAddUserButton.setOnClickListener(v -> {
                 ConfirmExitRetailModeDialog dialog = new ConfirmExitRetailModeDialog();
                 dialog.setConfirmExitRetailModeListener(this);

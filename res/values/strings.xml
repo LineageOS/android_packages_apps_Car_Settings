@@ -593,12 +593,16 @@
     <string name="zero" translatable="false">0</string>
 
     <!-- Demo/Retail-related strings -->
+    <!-- Text of button the user presses to exit Retail/Demo mode [CHAR LIMIT=25]-->
+    <string name="exit_retail_button_text">Exit Demo</string>
     <!-- Title of dialog asking the user if they really want to exit the demo, which requires a
          factory reset [CHAR LIMIT=30]-->
-    <string name="exit_retail_title">Exit Demo?</string>
+    <string name="exit_retail_mode_dialog_title">Exit demo mode</string>
     <!-- Message in dialog asking the user if they really want to exit the demo, which requires a
-         factory reset [CHAR LIMIT=100]-->
-    <string name="exit_retail_message">Deleting the demo account and exiting demo mode will require a factory reset</string>
+         factory reset [CHAR LIMIT=150]-->
+    <string name="exit_retail_mode_dialog_body">This will delete the demo account and factory data reset the system. All user data will be lost.</string>
+    <!-- Text of confirmation button in dialog that appears to confirm that Demo Mode should be exited. [CHAR LIMIT=25]-->
+    <string name="exit_retail_mode_dialog_confirmation_button_text">Exit Demo</string>
 
     <!-- String values for settings suggestions. -->
     <!-- Button that allows users to re-open the setup wizard (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
