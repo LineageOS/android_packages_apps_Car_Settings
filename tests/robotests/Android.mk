@@ -32,6 +32,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := RunCarSettingsRoboTests
 
 LOCAL_JAVA_LIBRARIES := \
+    android.car \
     CarSettingsRoboTests \
     android.car \
     robolectric_android-all-stub \

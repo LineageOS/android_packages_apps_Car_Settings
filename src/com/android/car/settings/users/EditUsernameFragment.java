@@ -16,6 +16,7 @@
 package com.android.car.settings.users;
 
 import android.annotation.IdRes;
+import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -26,7 +27,6 @@ import android.widget.Button;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
-import com.android.settingslib.users.UserManagerHelper;
 
 /**
  * Shows details for a user with the ability to edit the name, remove user and switch.
@@ -41,7 +41,7 @@ public class EditUsernameFragment extends BaseFragment implements
     private Button mOkButton;
     private Button mCancelButton;
 
-    private UserManagerHelper mUserManagerHelper;
+    private CarUserManagerHelper mCarUserManagerHelper;
 
     public static EditUsernameFragment getInstance(UserInfo userInfo) {
         EditUsernameFragment
@@ -71,7 +71,7 @@ public class EditUsernameFragment extends BaseFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mUserManagerHelper = new UserManagerHelper(getContext());
+        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
 
         configureUsernameEditing();
 
@@ -80,7 +80,10 @@ public class EditUsernameFragment extends BaseFragment implements
 
     @Override
     public void onRemoveUserConfirmed() {
-        if (mUserManagerHelper.removeUser(mUserInfo)) {
+        // If removing the current running foreground user, need to switch to another user
+        // before deletion. Switch to a guest user for now, until default user logic is
+        // implemented.
+        if (mCarUserManagerHelper.removeUser(mUserInfo, "guest")) {
             getActivity().onBackPressed();
         }
     }
@@ -92,7 +95,7 @@ public class EditUsernameFragment extends BaseFragment implements
         // Configure OK button.
         mOkButton.setOnClickListener(view -> {
             // Save new user's name.
-            mUserManagerHelper.setUserName(mUserInfo, mUserNameEditText.getText().toString());
+            mCarUserManagerHelper.setUserName(mUserInfo, mUserNameEditText.getText().toString());
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     SettingsConstants.USER_NAME_SET, 1);
             getActivity().onBackPressed();
@@ -103,9 +106,8 @@ public class EditUsernameFragment extends BaseFragment implements
             getActivity().onBackPressed();
         });
 
-        // Each user can edit their own name. Owner can edit everyone's name.
-        if (mUserManagerHelper.userIsRunningCurrentProcess(mUserInfo)
-                || mUserManagerHelper.currentProcessRunningAsSystemUser()) {
+        // Each user can edit their own name.
+        if (mCarUserManagerHelper.isForegroundUser(mUserInfo)) {
             allowUserNameEditing();
         } else {
             mUserNameEditText.setEnabled(false);
@@ -130,7 +132,7 @@ public class EditUsernameFragment extends BaseFragment implements
     }
 
     private void showActionButtons() {
-        if (mUserManagerHelper.userIsRunningCurrentProcess(mUserInfo)) {
+        if (mCarUserManagerHelper.isForegroundUser(mUserInfo)) {
             // Already in current user, shouldn't show SWITCH button.
             showRemoveUserButton(R.id.action_button1);
             return;
@@ -144,9 +146,9 @@ public class EditUsernameFragment extends BaseFragment implements
         Button removeUserBtn = (Button) getActivity().findViewById(buttonId);
         // If the current user is not allowed to remove users, the user trying to be removed
         // cannot be removed, or the current user is a demo user, do not show delete button.
-        if (!mUserManagerHelper.currentProcessCanRemoveUsers()
-                || !mUserManagerHelper.userCanBeRemoved(mUserInfo)
-                || mUserManagerHelper.currentProcessRunningAsDemoUser()) {
+        if (!mCarUserManagerHelper.canCurrentProcessRemoveUsers()
+                || !mCarUserManagerHelper.canUserBeRemoved(mUserInfo)
+                || mCarUserManagerHelper.isCurrentProcessDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);
             return;
         }
@@ -166,14 +168,14 @@ public class EditUsernameFragment extends BaseFragment implements
         Button switchUserBtn = (Button) getActivity().findViewById(buttonId);
         // If the current process is not allowed to switch to another user, doe not show the switch
         // button.
-        if (!mUserManagerHelper.currentProcessCanSwitchUsers()) {
+        if (!mCarUserManagerHelper.canCurrentProcessSwitchUsers()) {
             switchUserBtn.setVisibility(View.GONE);
             return;
         }
         switchUserBtn.setVisibility(View.VISIBLE);
         switchUserBtn.setText(R.string.user_switch);
         switchUserBtn.setOnClickListener(v -> {
-            mUserManagerHelper.switchToUser(mUserInfo);
+            mCarUserManagerHelper.switchToUser(mUserInfo);
             getActivity().onBackPressed();
         });
     }
