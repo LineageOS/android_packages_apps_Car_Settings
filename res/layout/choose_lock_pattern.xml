@@ -46,20 +46,23 @@
         android:layout_height="wrap_content"
         android:layout_weight="@integer/content_weight"
         android:layout_gravity="center_vertical"
+        android:gravity="center"
         android:orientation="vertical"
         android:paddingTop="@dimen/car_primary_icon_size">
 
+        <ImageView
+            android:src="@drawable/ic_lock"
+            android:layout_height="@dimen/car_primary_icon_size"
+            android:layout_width="@dimen/car_primary_icon_size"/>
+
         <TextView
             android:id="@+id/title_text"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginBottom="@dimen/car_padding_2"
-            android:textAppearance="@style/TextAppearance.Car.Title2"
-            android:text="@string/set_screen_lock"
-            android:drawableStart="@drawable/ic_lock"
-            android:drawableTint="@color/car_body3"
-            android:drawablePadding="@dimen/lockscreen_title_drawable_padding"/>
+            android:textAppearance="@style/TextAppearance.Car.Body1"
+            android:text="@string/lockscreen_choose_your_pattern"/>
 
         <TextView
             android:id="@+id/description_text"
@@ -75,7 +78,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/car_action1_size"
-            android:layout_gravity="center"
             android:text="@string/screen_lock_options"
             android:visibility="gone"/>
     </LinearLayout>
