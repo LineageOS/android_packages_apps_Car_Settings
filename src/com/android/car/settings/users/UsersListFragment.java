@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.AsyncTask;
@@ -144,6 +145,14 @@ public class UsersListFragment extends ListItemSettingsFragment
             // If it's another user, launch fragment that displays their information
             getFragmentController().launchFragment(EditUsernameFragment.getInstance(userInfo));
         }
+    }
+
+    /**
+     * User list fragment is distraction optimized, so is allowed at all times.
+     */
+    @Override
+    public boolean canBeShown(CarUxRestrictions carUxRestrictions) {
+        return true;
     }
 
     @Override

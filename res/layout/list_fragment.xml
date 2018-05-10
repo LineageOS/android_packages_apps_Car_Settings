@@ -23,5 +23,5 @@
     android:layout_height="match_parent"
     app:showPagedListViewDivider="true"
     app:alignDividerStartTo="@id/container"
-    app:gutter="both"/>
+    style="@style/SettingList" />
 
