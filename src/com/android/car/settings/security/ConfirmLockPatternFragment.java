@@ -159,15 +159,4 @@ public class ConfirmLockPatternFragment extends BaseFragment {
             mLockPatternView.postDelayed(mClearErrorRunnable, CLEAR_WRONG_ATTEMPT_TIMEOUT_MS);
         }
     }
-
-    /**
-     * Interface the containing activity must implement to handle when lock has been verified
-     */
-    interface CheckLockListener {
-        /**
-         * Callback when user-entered credential has been verified
-         * @param lock The verified credential
-         */
-        void onLockVerified(String lock);
-    }
 }
