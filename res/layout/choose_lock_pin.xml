@@ -87,8 +87,6 @@
             android:id="@+id/screen_lock_options"
             style="@style/Widget.Car.Button.Borderless.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/car_action1_size"
             android:text="@string/screen_lock_options"
             android:visibility="gone"/>
     </LinearLayout>
