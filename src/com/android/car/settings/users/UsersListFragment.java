@@ -42,7 +42,6 @@ public class UsersListFragment extends ListItemSettingsFragment
         ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener {
     private static final String FACTORY_RESET_PACKAGE_NAME = "android";
     private static final String FACTORY_RESET_REASON = "ExitRetailModeConfirmed";
-    private static final String TAG = "UsersListFragment";
 
     private UsersItemProvider mItemProvider;
     private CarUserManagerHelper mCarUserManagerHelper;

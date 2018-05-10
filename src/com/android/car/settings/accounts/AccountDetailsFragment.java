@@ -32,7 +32,6 @@ import android.os.UserHandle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 
 import androidx.car.app.CarAlertDialog;
@@ -42,6 +41,7 @@ import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.io.IOException;
@@ -53,8 +53,6 @@ import java.util.List;
  */
 public class AccountDetailsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener {
-    private static final String TAG = "AccountDetailsFragment";
-
     public static final String EXTRA_ACCOUNT_INFO = "extra_account_info";
     public static final String EXTRA_USER_INFO = "extra_user_info";
 
@@ -149,7 +147,8 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
     public static class ConfirmRemoveAccountDialog extends DialogFragment implements
             DialogInterface.OnClickListener {
         private static final String KEY_ACCOUNT = "account";
-        private static final String TAG = "confirmRemoveAccount";
+        private static final String DIALOG_TAG = "confirmRemoveAccount";
+        private static final Logger LOG = new Logger(ConfirmRemoveAccountDialog.class);
         private Account mAccount;
         private UserHandle mUserHandle;
 
@@ -167,9 +166,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
                         success =
                                 future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
                     } catch (OperationCanceledException | IOException | AuthenticatorException e) {
-                        if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                            Log.v(TAG, "removeAccount error: " + e);
-                        }
+                        LOG.v("removeAccount error: " + e);
                     }
                     final Activity activity = getTargetFragment().getActivity();
                     if (!success && activity != null && !activity.isFinishing()) {
@@ -188,7 +185,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
             bundle.putParcelable(Intent.EXTRA_USER, userHandle);
             dialog.setArguments(bundle);
             dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), TAG);
+            dialog.show(parent.getFragmentManager(), DIALOG_TAG);
         }
 
         @Override
@@ -223,12 +220,12 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
      */
     public static class RemoveAccountFailureDialog extends DialogFragment {
 
-        private static final String TAG = "removeAccountFailed";
+        private static final String DIALOG_TAG = "removeAccountFailed";
 
         public static void show(Fragment parent) {
             final RemoveAccountFailureDialog dialog = new RemoveAccountFailureDialog();
             dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), TAG);
+            dialog.show(parent.getFragmentManager(), DIALOG_TAG);
         }
 
         @Override

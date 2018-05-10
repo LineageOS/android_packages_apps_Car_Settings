@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
@@ -33,6 +32,7 @@ import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
@@ -42,7 +42,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
  * Hosts Bluetooth related preferences.
  */
 public class BluetoothSettingsFragment extends BaseFragment implements BluetoothCallback {
-    private static final String TAG = "BluetoothSettingsFragment";
+    private static final Logger LOG = new Logger(BluetoothSettingsFragment.class);
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private Switch mBluetoothSwitch;
@@ -116,7 +116,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         mLocalManager =
                 LocalBluetoothManager.getInstance(getContext(), /* onInitCallback= */ null);
         if (mLocalManager == null) {
-            Log.e(TAG, "Bluetooth is not supported on this device");
+            LOG.e("Bluetooth is not supported on this device");
             return;
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
