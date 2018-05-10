@@ -31,13 +31,13 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 
 /**
- * Tests for ConfirmLockPinFragment class.
+ * Tests for ConfirmLockPinPasswordFragment class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class ConfirmLockPinFragmentTest {
+public class ConfirmLockPinPasswordFragmentTest {
 
     private TestSettingsScreenLockActivity mTestActivity;
-    private ConfirmLockPinFragment mFragment;
+    private ConfirmLockPinPasswordFragment mPinFragment;
 
     @Before
     public void initFragment() {
@@ -47,8 +47,8 @@ public class ConfirmLockPinFragmentTest {
                 .resume()
                 .get();
 
-        mFragment = ConfirmLockPinFragment.newInstance();
-        mTestActivity.createFragment(mFragment);
+        mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
+        mTestActivity.createFragment(mPinFragment);
     }
 
     /**
@@ -56,16 +56,16 @@ public class ConfirmLockPinFragmentTest {
      */
     @Test
     public void testEnterKeyIsEnabledWhenCheckFails() {
-        View enterKey = mFragment.getView().findViewById(R.id.key_enter);
+        View enterKey = mPinFragment.getView().findViewById(R.id.key_enter);
         enterKey.setEnabled(false);
 
-        mFragment.onCheckCompleted(false);
+        mPinFragment.onCheckCompleted(false);
 
         assertThat(enterKey.isEnabled()).isTrue();
     }
 
     /**
-     * The containing activity of ConfirmLockPinFragment must implement two interfaces
+     * The containing activity of ConfirmLockPinPasswordFragment must implement two interfaces
      */
     private static class TestSettingsScreenLockActivity extends TestAppCompatActivity implements
             CheckLockListener, BaseFragment.FragmentController {
