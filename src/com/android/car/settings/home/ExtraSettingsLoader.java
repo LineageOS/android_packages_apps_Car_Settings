@@ -15,11 +15,11 @@ import android.content.res.Resources;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.android.car.list.LaunchAppLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -31,7 +31,7 @@ import java.util.Map;
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
  */
 public class ExtraSettingsLoader {
-    private static final String TAG = "ExtraSettingsLoader";
+    private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     public static final String WIRELESS_CATEGORY = "com.android.settings.category.wireless";
     public static final String DEVICE_CATEGORY = "com.android.settings.category.device";
@@ -82,7 +82,7 @@ public class ExtraSettingsLoader {
                         summary = metaData.getString(META_DATA_PREFERENCE_SUMMARY);
                     }
                 } else {
-                    Log.d(TAG, "no description.");
+                    LOG.d("no description.");
                 }
                 if (metaData.containsKey(META_DATA_PREFERENCE_CATEGORY)) {
                     if (metaData.get(META_DATA_PREFERENCE_CATEGORY) instanceof Integer) {
@@ -91,13 +91,13 @@ public class ExtraSettingsLoader {
                         category = metaData.getString(META_DATA_PREFERENCE_CATEGORY);
                     }
                 } else {
-                    Log.d(TAG, "no category.");
+                    LOG.d("no category.");
                 }
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
-                Log.d(TAG, "Couldn't find info", e);
+                LOG.d("Couldn't find info", e);
             }
             if (TextUtils.isEmpty(title)) {
-                Log.d(TAG, "no title.");
+                LOG.d("no title.");
                 title = activityInfo.loadLabel(pm).toString();
             }
             Integer iconRes = null;
@@ -107,7 +107,7 @@ public class ExtraSettingsLoader {
                 icon = Icon.createWithResource(activityInfo.packageName, iconRes);
             } else {
                 icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
-                Log.d(TAG, "no icon.");
+                LOG.d("no icon.");
             }
             Intent extraSettingIntent =
                     new Intent().setClassName(activityInfo.packageName, activityInfo.name);

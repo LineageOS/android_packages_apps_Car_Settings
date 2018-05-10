@@ -28,7 +28,6 @@ import android.text.InputFilter.LengthFilter;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -37,6 +36,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.internal.annotations.VisibleForTesting;
 
 /**
@@ -46,7 +46,7 @@ import com.android.internal.annotations.VisibleForTesting;
 public class BluetoothPairingDialogFragment extends DialogFragment implements
         TextWatcher, OnClickListener {
 
-    private static final String TAG = "BTPairingDialogFragment";
+    private static final Logger LOG = new Logger(BluetoothPairingDialogFragment.class);
 
     private AlertDialog.Builder mBuilder;
     private AlertDialog mDialog;
@@ -176,7 +176,7 @@ public class BluetoothPairingDialogFragment extends DialogFragment implements
                 break;
             default:
                 dialog = null;
-                Log.e(TAG, "Incorrect pairing type received, not showing any dialog");
+                LOG.e("Incorrect pairing type received, not showing any dialog");
         }
         return dialog;
     }

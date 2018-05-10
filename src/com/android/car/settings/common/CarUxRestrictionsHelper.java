@@ -24,7 +24,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
 import android.os.IBinder;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -33,7 +32,7 @@ import androidx.annotation.Nullable;
  * managing car connection.
  */
 public class CarUxRestrictionsHelper {
-    private static final String TAG = "CarUxRestrictionsHelper";
+    private static final Logger LOG = new Logger(CarUxRestrictionsHelper.class);
 
     // mCar is created in the constructor, but can be null if connection to the car is not
     // successful.
@@ -66,7 +65,7 @@ public class CarUxRestrictionsHelper {
             }
         } catch (IllegalStateException e) {
             // Do nothing.
-            Log.w(TAG, "start(); cannot connect to Car");
+            LOG.w("start(); cannot connect to Car");
         }
     }
 
@@ -83,7 +82,7 @@ public class CarUxRestrictionsHelper {
             }
         } catch (IllegalStateException e) {
             // Do nothing.
-            Log.w(TAG, "stop(); cannot disconnect from Car");
+            LOG.w("stop(); cannot disconnect from Car");
         }
     }
 

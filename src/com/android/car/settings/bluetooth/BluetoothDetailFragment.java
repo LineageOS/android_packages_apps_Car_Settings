@@ -17,7 +17,6 @@ package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -26,6 +25,7 @@ import com.android.car.list.SingleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -40,7 +40,7 @@ import java.util.ArrayList;
  */
 public class BluetoothDetailFragment extends ListSettingsFragment implements
         BluetoothProfileLineItem.DataChangedListener {
-    private static final String TAG = "BluetoothDetailFragment";
+    private static final Logger LOG = new Logger(BluetoothDetailFragment.class);
 
     public static final String EXTRA_BT_DEVICE = "extra_bt_device";
 
@@ -69,7 +69,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
         mLocalManager =
                 LocalBluetoothManager.getInstance(getContext(), /* onInitCallback= */ null);
         if (mLocalManager == null) {
-            Log.e(TAG, "Bluetooth is not supported on this device");
+            LOG.e("Bluetooth is not supported on this device");
             return;
         }
         mDeviceManager = mLocalManager.getCachedDeviceManager();
@@ -85,7 +85,7 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         if (mDevice == null) {
-            Log.w(TAG, "No bluetooth device set.");
+            LOG.w("No bluetooth device set.");
             return;
         }
         super.onActivityCreated(savedInstanceState);
