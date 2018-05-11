@@ -27,9 +27,9 @@
 
     <!-- Start side: lock pattern -->
     <FrameLayout
-        android:layout_weight="@integer/content_weight"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:layout_gravity="center_vertical">
 
         <com.android.internal.widget.LockPatternView
@@ -43,12 +43,10 @@
     <!-- End side: instructions and messages -->
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="@integer/content_weight"
-        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:gravity="center"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/car_primary_icon_size">
+        android:orientation="vertical">
 
         <ImageView
             android:src="@drawable/ic_lock"
@@ -76,8 +74,6 @@
             android:id="@+id/screen_lock_options"
             style="@style/Widget.Car.Button.Borderless.Colored"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/car_action1_size"
             android:text="@string/screen_lock_options"
             android:visibility="gone"/>
     </LinearLayout>
