@@ -71,7 +71,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
+        mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
 
         mProgressBar = (ProgressBar) getView().findViewById(R.id.wifi_search_progress);
         mListView = (PagedListView) getView().findViewById(R.id.list);

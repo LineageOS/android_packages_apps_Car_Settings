@@ -131,7 +131,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
         Drawable icon = mAccountManagerHelper.getDrawableForType(mAccount.type);
 
         TextListItem item = new TextListItem(getContext());
-        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(mAccount.name);
 
         List<ListItem> items = new ArrayList<>();

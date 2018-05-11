@@ -265,7 +265,7 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceDeleted(CachedBluetoothDevice cachedDevice) {
-        onDeviceDeleted(cachedDevice, true /* reset */);
+        onDeviceDeleted(cachedDevice, /* refresh= */ true);
     }
 
     @Override
@@ -305,7 +305,7 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
-        onDeviceDeleted(cachedDevice, false /* reset */);
+        onDeviceDeleted(cachedDevice, /* refresh= */ false);
         onDeviceAdded(cachedDevice);
     }
 

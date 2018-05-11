@@ -73,7 +73,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Introduction(
                 R.string.lockpattern_recording_intro_header,
                 SecondaryButtonState.Cancel, PrimaryButtonState.ContinueDisabled,
-                true /* mPatternEnabled */),
+                /* patternEnabled= */ true),
         /**
          * Help screen to show how a valid pattern looks like.
          * Pattern disabled, primary button shows Ok. No secondary button.
@@ -81,7 +81,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         HelpScreen(
                 R.string.lockpattern_settings_help_how_to_record,
                 SecondaryButtonState.Gone, PrimaryButtonState.Ok,
-                false /* mPatternEnabled */),
+                /* patternEnabled= */ false),
         /**
          * Invalid pattern is entered, hint message show required number of dots.
          * Secondary button allows for Retry, primary button disabled.
@@ -89,7 +89,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         ChoiceTooShort(
                 R.string.lockpattern_recording_incorrect_too_short,
                 SecondaryButtonState.Retry, PrimaryButtonState.ContinueDisabled,
-                true /* mPatternEnabled */),
+                /* patternEnabled= */ true),
         /**
          * First drawing on the pattern is valid, primary button shows Continue,
          * can proceed to next screen.
@@ -97,7 +97,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         FirstChoiceValid(
                 R.string.lockpattern_recording_intro_header,
                 SecondaryButtonState.Retry, PrimaryButtonState.Continue,
-                false /* mPatternEnabled */),
+                /* patternEnabled= */ false),
         /**
          * Need to draw pattern again to confirm.
          * Secondary button allows for Cancel, primary button disabled.
@@ -105,7 +105,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         NeedToConfirm(
                 R.string.lockpattern_need_to_confirm,
                 SecondaryButtonState.Cancel, PrimaryButtonState.ConfirmDisabled,
-                true /* mPatternEnabled */),
+                /* patternEnabled= */ true),
         /**
          * Confirmation of previous drawn pattern failed, didn't enter the same pattern.
          * Need to re-draw the pattern to match the fist pattern.
@@ -113,7 +113,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         ConfirmWrong(
                 R.string.lockpattern_pattern_wrong,
                 SecondaryButtonState.Cancel, PrimaryButtonState.ConfirmDisabled,
-                true /* mPatternEnabled */),
+                /* patternEnabled= */ true),
         /**
          * Pattern is confirmed after drawing the same pattern twice.
          * Pattern disabled.
@@ -121,7 +121,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         ChoiceConfirmed(
                 R.string.lockpattern_pattern_confirmed,
                 SecondaryButtonState.Cancel, PrimaryButtonState.Confirm,
-                false /* mPatternEnabled */),
+                /* patternEnabled= */ false),
 
         /**
          * Error saving pattern.
@@ -130,7 +130,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         SaveFailure(
                 R.string.error_saving_lockpattern,
                 SecondaryButtonState.Cancel, PrimaryButtonState.Retry,
-                false /* mPatternEnabled */);
+                /* patternEnabled= */ false);
 
         final int mMessageId;
         final SecondaryButtonState mSecondaryButtonState;

@@ -189,12 +189,12 @@ public class AddAccountActivity extends Activity {
 
         AccountManager.get(this).addAccountAsUser(
                 accountType,
-                null, /* authTokenType */
-                null, /* requiredFeatures */
+                /* authTokenType= */ null,
+                /* requiredFeatures= */ null,
                 addAccountOptions,
                 null,
                 mCallback,
-                null /* handler */,
+                /* handler= */ null,
                 mUserHandle);
         mAddAccountCalled = true;
     }

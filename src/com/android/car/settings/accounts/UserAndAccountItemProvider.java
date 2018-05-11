@@ -115,7 +115,7 @@ class UserAndAccountItemProvider extends ListItemProvider {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(
                 mUserIconProvider.getUserIcon(userInfo, mContext),
-                false /* useLargeIcon */);
+                /* useLargeIcon= */ false);
         item.setTitle(title);
         item.setOnClickListener(view -> mItemClickListener.onUserClicked(userInfo));
         return item;
@@ -138,7 +138,7 @@ class UserAndAccountItemProvider extends ListItemProvider {
             UserInfo userInfo) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mAccountManagerHelper.getDrawableForType(accountType),
-                false /* useLargeIcon */);
+                /* useLargeIcon= */ false);
         item.setTitle(account.name);
 
         // Set item body = account label.
