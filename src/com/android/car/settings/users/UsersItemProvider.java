@@ -95,7 +95,7 @@ class UsersItemProvider extends ListItemProvider {
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
-                false /* useLargeIcon */);
+                /* useLargeIcon= */ false);
         item.setTitle(title);
 
         if (!userInfo.isInitialized()) {
@@ -114,7 +114,7 @@ class UsersItemProvider extends ListItemProvider {
                 mCarUserManagerHelper, mContext);
 
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(mContext.getString(R.string.user_guest));
 
         item.setOnClickListener(view -> mUserClickListener.onGuestClicked());

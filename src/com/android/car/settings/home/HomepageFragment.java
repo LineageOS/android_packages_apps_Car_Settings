@@ -105,8 +105,8 @@ public class HomepageFragment extends ListSettingsFragment implements
                 new SettingsSuggestionsController(
                         getContext(),
                         getLoaderManager(),
-                        this /* listener */);
-        mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
+                        /* listener= */ this);
+        mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
         mWifiLineItem = new WifiLineItem(getContext(), mCarWifiManager, getFragmentController());
         mBluetoothLineItem = new BluetoothLineItem(getContext(), getFragmentController());
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
