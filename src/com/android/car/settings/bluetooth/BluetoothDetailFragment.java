@@ -66,7 +66,8 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mDevice = getArguments().getParcelable(EXTRA_BT_DEVICE);
-        mLocalManager = LocalBluetoothManager.getInstance(getContext(), null /* listener */);
+        mLocalManager =
+                LocalBluetoothManager.getInstance(getContext(), /* onInitCallback= */ null);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
             return;

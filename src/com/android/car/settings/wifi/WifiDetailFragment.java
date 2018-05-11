@@ -116,7 +116,7 @@ public class WifiDetailFragment extends ListSettingsFragment {
         lineItems.add(
                 new SimpleTextLineItem(getText(R.string.wifi_signal), getSignalString()));
         lineItems.add(new SimpleTextLineItem(getText(R.string.wifi_security),
-                mAccessPoint.getSecurityString(true /* concise*/)));
+                mAccessPoint.getSecurityString(/* concise= */ true)));
         return lineItems;
     }
 

@@ -75,7 +75,7 @@ public class SettingsSuggestionsController implements
         mSuggestionController = new SuggestionController(
                 mContext,
                 mComponentName,
-                this /* serviceConnectionListener */);
+                /* listener= */ this);
     }
 
     @Override
@@ -83,8 +83,8 @@ public class SettingsSuggestionsController implements
         LOG.v("onServiceConnected");
         mLoaderManager.restartLoader(
                 SettingsSuggestionsLoader.LOADER_ID_SUGGESTIONS,
-                null /* args */,
-                this /* callback */);
+                /* args= */ null,
+                /* callback= */ this);
     }
 
     @Override

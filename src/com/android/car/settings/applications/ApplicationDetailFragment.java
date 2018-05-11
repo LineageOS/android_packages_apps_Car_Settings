@@ -106,7 +106,7 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
                 getContext(),
                 getContext().getPackageManager(),
                 mResolveInfo,
-                null /* fragmentController */,
+                /* fragmentController= */ null,
                 false));
         items.add(new ApplicationPermissionLineItem(getContext(), mResolveInfo));
         items.add(new SingleTextLineItem(getContext().getString(

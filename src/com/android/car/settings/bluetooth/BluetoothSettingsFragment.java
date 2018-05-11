@@ -113,7 +113,8 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         mViewSwitcher = getView().findViewById(R.id.view_switcher);
         mMessageView = getView().findViewById(R.id.bt_message);
 
-        mLocalManager = LocalBluetoothManager.getInstance(getContext(), null /* listener */);
+        mLocalManager =
+                LocalBluetoothManager.getInstance(getContext(), /* onInitCallback= */ null);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
             return;

@@ -125,7 +125,7 @@ public class UsersListFragment extends ListItemSettingsFragment
         super.onDestroy();
 
         if (mAddNewUserTask != null) {
-            mAddNewUserTask.cancel(false /* mayInterruptIfRunning */);
+            mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
         }
 
         mCarUserManagerHelper.unregisterOnUsersUpdateListener();

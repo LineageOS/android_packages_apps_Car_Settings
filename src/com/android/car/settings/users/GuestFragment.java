@@ -86,7 +86,7 @@ public class GuestFragment extends ListItemSettingsFragment {
                 mCarUserManagerHelper, getContext());
 
         TextListItem item = new TextListItem(getContext());
-        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(getContext().getString(R.string.user_guest));
 
         List<ListItem> items = new ArrayList<>();
