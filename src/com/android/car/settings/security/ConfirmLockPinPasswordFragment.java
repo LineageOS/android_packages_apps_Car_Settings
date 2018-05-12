@@ -27,6 +27,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
@@ -174,12 +175,15 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         });
         mPinKeys.add(backspace);
 
-        View enter = view.findViewById(R.id.key_enter);
+        ImageButton enter = (ImageButton) view.findViewById(R.id.key_enter);
+        enter.setImageResource(R.drawable.ic_done);
         enter.setOnClickListener(v -> {
-            initCheckLockWorker();
-            setPinPadEnabled(false);
             mEnteredPassword = mPasswordField.getText().toString();
-            mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+            if (!TextUtils.isEmpty(mEnteredPassword)) {
+                initCheckLockWorker();
+                setPinPadEnabled(false);
+                mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+            }
         });
         mPinKeys.add(enter);
 
