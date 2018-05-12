@@ -71,9 +71,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
         }
     }
 
-    /**
-     * @return Returns whether a lock check is in progress.
-     */
+    /** Returns whether a lock check is in progress. */
     public final boolean isCheckInProgress() {
         return mCheckInProgress;
     }
