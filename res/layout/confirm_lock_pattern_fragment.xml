@@ -28,10 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/car_padding_2"
         android:textAppearance="@style/TextAppearance.Car.Title2"
-        android:text="@string/lock_settings_enter_pattern"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawableTint="@color/car_body3"
-        android:drawablePadding="@dimen/lockscreen_title_drawable_padding"/>
+        android:text="@string/lock_settings_enter_pattern"/>
 
     <TextView
         android:id="@+id/message"

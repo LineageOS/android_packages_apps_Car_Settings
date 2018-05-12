@@ -43,6 +43,7 @@
             android:id="@+id/password_entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/car_padding_5"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body1"
             android:maxLines="1"
