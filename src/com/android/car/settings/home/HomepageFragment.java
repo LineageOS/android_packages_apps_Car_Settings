@@ -21,6 +21,7 @@ import static com.android.car.settings.home.ExtraSettingsLoader.PERSONAL_CATEGOR
 import static com.android.car.settings.home.ExtraSettingsLoader.WIRELESS_CATEGORY;
 
 import android.bluetooth.BluetoothAdapter;
+import android.car.user.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -42,7 +43,6 @@ import com.android.car.settings.suggestions.SettingsSuggestionsController;
 import com.android.car.settings.system.SystemSettingsFragment;
 import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.CarWifiManager;
-import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -60,7 +60,7 @@ public class HomepageFragment extends ListSettingsFragment implements
     private CarWifiManager mCarWifiManager;
     private WifiLineItem mWifiLineItem;
     private BluetoothLineItem mBluetoothLineItem;
-    private UserManagerHelper mUserManagerHelper;
+    private CarUserManagerHelper mCarUserManagerHelper;
     // This tracks the number of suggestions currently shown in the fragment. This is based off of
     // the assumption that suggestions are 0 through (num suggestions - 1) in the adapter. Do not
     // change this assumption without updating the code in onSuggestionLoaded.
@@ -105,11 +105,11 @@ public class HomepageFragment extends ListSettingsFragment implements
                 new SettingsSuggestionsController(
                         getContext(),
                         getLoaderManager(),
-                        this /* listener */);
-        mCarWifiManager = new CarWifiManager(getContext(), this /* listener */);
+                        /* listener= */ this);
+        mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
         mWifiLineItem = new WifiLineItem(getContext(), mCarWifiManager, getFragmentController());
         mBluetoothLineItem = new BluetoothLineItem(getContext(), getFragmentController());
-        mUserManagerHelper = new UserManagerHelper(getContext());
+        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
 
         // reset the suggestion count.
         mNumSettingsSuggestions = 0;
@@ -197,7 +197,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 getFragmentController()));
 
         // Guest users can't set screen locks
-        if (!mUserManagerHelper.currentProcessRunningAsGuestUser()) {
+        if (!mCarUserManagerHelper.isCurrentProcessGuestUser()) {
             lineItems.add(new LaunchAppLineItem(
                     getString(R.string.security_settings_title),
                     Icon.createWithResource(getContext(), R.drawable.ic_lock),

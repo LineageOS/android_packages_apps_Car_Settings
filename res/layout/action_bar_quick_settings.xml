@@ -54,7 +54,7 @@
         <LinearLayout
             android:id="@+id/user_switcher_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/car_padding_4"
             android:background="@drawable/button_ripple_bg"
@@ -82,7 +82,7 @@
         <LinearLayout
             android:id="@+id/full_setting_btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/car_padding_4"
             android:background="@drawable/button_ripple_bg"

@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
@@ -25,7 +26,6 @@ import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,15 +38,15 @@ class UsersItemProvider extends ListItemProvider {
     private final List<ListItem> mItems = new ArrayList<>();
     private final Context mContext;
     private final UserClickListener mUserClickListener;
-    private final UserManagerHelper mUserManagerHelper;
+    private final CarUserManagerHelper mCarUserManagerHelper;
     private final UserIconProvider mUserIconProvider;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
-            UserManagerHelper userManagerHelper) {
+            CarUserManagerHelper userManagerHelper) {
         mContext = context;
         mUserClickListener = userClickListener;
-        mUserManagerHelper = userManagerHelper;
-        mUserIconProvider = new UserIconProvider(mUserManagerHelper);
+        mCarUserManagerHelper = userManagerHelper;
+        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         refreshItems();
     }
 
@@ -66,7 +66,7 @@ class UsersItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mUserManagerHelper.getCurrentProcessUserInfo();
+        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
         mItems.add(createUserItem(currUserInfo,
@@ -78,7 +78,7 @@ class UsersItemProvider extends ListItemProvider {
         }
 
         // Display other users on the system
-        List<UserInfo> infos = mUserManagerHelper.getAllUsersExcludesCurrentProcessUser();
+        List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
         for (UserInfo userInfo : infos) {
             if (!userInfo.isGuest()) { // Do not show guest users.
                 mItems.add(createUserItem(userInfo, userInfo.name));
@@ -95,7 +95,7 @@ class UsersItemProvider extends ListItemProvider {
     private ListItem createUserItem(UserInfo userInfo, String title) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
-                false /* useLargeIcon */);
+                /* useLargeIcon= */ false);
         item.setTitle(title);
 
         if (!userInfo.isInitialized()) {
@@ -110,11 +110,11 @@ class UsersItemProvider extends ListItemProvider {
 
     // Creates a line for a guest session.
     private ListItem createGuestItem() {
-        Drawable icon = UserIconProvider.scaleUserIcon(mUserManagerHelper.getGuestDefaultIcon(),
-                mUserManagerHelper, mContext);
+        Drawable icon = UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
+                mCarUserManagerHelper, mContext);
 
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(mContext.getString(R.string.user_guest));
 
         item.setOnClickListener(view -> mUserClickListener.onGuestClicked());

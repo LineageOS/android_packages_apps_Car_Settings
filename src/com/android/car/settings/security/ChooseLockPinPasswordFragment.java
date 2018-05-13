@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.annotation.DrawableRes;
 import android.annotation.StringRes;
 import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
@@ -50,10 +52,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private static final String FRAGMENT_TAG_SAVE_PASSWORD_WORKER = "save_password_worker";
     private static final Logger LOG = new Logger(ChooseLockPinPasswordFragment.class);
     private static final String EXTRA_IS_PIN = "extra_is_pin";
-
-    // View Ids used to set onClick listener
-    private static final int[] PIN_PAD_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
-            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
 
     private Stage mUiStage = Stage.Introduction;
 
@@ -75,6 +73,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private Button mSecondaryButton;
     private Button mPrimaryButton;
     private EditText mPasswordField;
+    private ImageButton mEnterKey;
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
     private TextViewInputDisabler mPasswordEntryInputDisabler;
@@ -88,45 +87,53 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 R.string.choose_lock_password_hints,
                 R.string.choose_lock_pin_hints,
                 R.string.continue_button_text,
-                R.string.lockpassword_cancel_label),
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_arrow_forward_on_disc),
 
         PasswordInvalid(
                 R.string.lockpassword_invalid_password,
                 R.string.lockpin_invalid_pin,
                 R.string.continue_button_text,
-                R.string.lockpassword_clear_label),
+                R.string.lockpassword_clear_label,
+                R.drawable.ic_arrow_forward_on_disc),
 
         NeedToConfirm(
                 R.string.confirm_your_password_header,
                 R.string.confirm_your_pin_header,
                 R.string.lockpassword_confirm_label,
-                R.string.lockpassword_cancel_label),
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check_on_disc),
 
         ConfirmWrong(
                 R.string.confirm_passwords_dont_match,
                 R.string.confirm_pins_dont_match,
                 R.string.continue_button_text,
-                R.string.lockpassword_cancel_label),
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check_on_disc),
 
         SaveFailure(
                 R.string.error_saving_password,
                 R.string.error_saving_lockpin,
                 R.string.lockscreen_retry_button_text,
-                R.string.lockpassword_cancel_label);
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check_on_disc);
 
         public final int alphaHint;
         public final int numericHint;
         public final int primaryButtonText;
         public final int secondaryButtonText;
+        public final int enterKeyIcon;
 
-        Stage(int hintInAlpha,
-                int hintInNumeric,
-                int primaryButtonText,
-                int secondaryButtonText) {
+        Stage(@StringRes int hintInAlpha,
+                @StringRes int hintInNumeric,
+                @StringRes int primaryButtonText,
+                @StringRes int secondaryButtonText,
+                @DrawableRes int enterKeyIcon) {
             this.alphaHint = hintInAlpha;
             this.numericHint = hintInNumeric;
             this.primaryButtonText = primaryButtonText;
             this.secondaryButtonText = secondaryButtonText;
+            this.enterKeyIcon = enterKeyIcon;
         }
 
         @StringRes
@@ -316,10 +323,10 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             }
         });
 
-        View enter = view.findViewById(R.id.key_enter);
-        enter.setOnClickListener(v -> handlePrimaryButtonClick());
+        mEnterKey = (ImageButton) view.findViewById(R.id.key_enter);
+        mEnterKey.setOnClickListener(v -> handlePrimaryButtonClick());
 
-        for (int keyId : PIN_PAD_KEYS) {
+        for (int keyId : PasswordHelper.PIN_PAD_DIGIT_KEYS) {
             TextView key = view.findViewById(keyId);
             String digit = key.getTag().toString();
             key.setOnClickListener(v -> appendToPasswordEntry(digit));
@@ -459,6 +466,10 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             boolean hasPassword = !TextUtils.isEmpty(mCurrentEntry);
             setPrimaryButtonEnabled(inputAllowed && hasPassword);
             setSecondaryButtonEnabled(inputAllowed);
+        }
+
+        if (mIsPin) {
+            mEnterKey.setImageResource(mUiStage.enterKeyIcon);
         }
 
         setPrimaryButtonText(mUiStage.primaryButtonText);

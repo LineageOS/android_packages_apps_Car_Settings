@@ -70,6 +70,11 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
         }
     }
 
+    /** Returns whether a lock check is in progress. */
+    public final boolean isCheckInProgress() {
+        return mCheckInProgress;
+    }
+
     /**
      * Checks lock pattern asynchronously. To receive callback when check is completed,
      * implement {@link Listener} and call {@link #setListener(Listener)}.
@@ -102,7 +107,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
      */
     interface Listener {
         /**
-         * @param matched Whether the entered password matches the stored record
+         * @param matched Whether the entered password matches the stored record.
          */
         void onCheckCompleted(boolean matched);
     }

@@ -29,7 +29,7 @@
         android:id="@+id/icon_container"
         android:layout_width="@dimen/car_touch_target_size"
         android:layout_height="@dimen/car_touch_target_size"
-        android:background="@drawable/button_ripple_bg"
+        android:background="@drawable/circle_ripple_bg"
         android:layout_marginBottom="@dimen/car_padding_4"
         android:gravity="center">
         <View

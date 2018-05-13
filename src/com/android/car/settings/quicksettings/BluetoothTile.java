@@ -92,7 +92,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
         mContext.registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
         mLocalManager = LocalBluetoothManager.getInstance(
-                mContext, null /* listener */);
+                mContext, /* onInitCallback= */ null);
         if (mLocalManager == null) {
             Log.e(TAG, "Bluetooth is not supported on this device");
             return;

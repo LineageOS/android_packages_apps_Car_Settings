@@ -24,6 +24,7 @@ import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.PendingIntent;
+import android.car.user.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -34,7 +35,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
-import com.android.settingslib.users.UserManagerHelper;
 
 import java.io.IOException;
 /**
@@ -74,7 +74,7 @@ public class AddAccountActivity extends Activity {
     // Need a specific request code for add account activity.
     public static final int ADD_ACCOUNT_REQUEST = 2001;
 
-    private UserManagerHelper mUserManagerHelper;
+    private CarUserManagerHelper mCarUserManagerHelper;
     private UserHandle mUserHandle;
     private PendingIntent mPendingIntent;
     private boolean mAddAccountCalled;
@@ -138,7 +138,7 @@ public class AddAccountActivity extends Activity {
             }
         }
 
-        mUserManagerHelper = new UserManagerHelper(getApplicationContext());
+        mCarUserManagerHelper = new CarUserManagerHelper(this);
 
         if (mAddAccountCalled) {
             // We already called add account - maybe the callback was lost.
@@ -146,8 +146,8 @@ public class AddAccountActivity extends Activity {
             return;
         }
 
-        mUserHandle = mUserManagerHelper.getCurrentProcessUserInfo().getUserHandle();
-        if (mUserManagerHelper.currentProcessHasUserRestriction(
+        mUserHandle = mCarUserManagerHelper.getCurrentProcessUserInfo().getUserHandle();
+        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
             // We aren't allowed to add an account.
             Toast.makeText(
@@ -189,12 +189,12 @@ public class AddAccountActivity extends Activity {
 
         AccountManager.get(this).addAccountAsUser(
                 accountType,
-                null, /* authTokenType */
-                null, /* requiredFeatures */
+                /* authTokenType= */ null,
+                /* requiredFeatures= */ null,
                 addAccountOptions,
                 null,
                 mCallback,
-                null /* handler */,
+                /* handler= */ null,
                 mUserHandle);
         mAddAccountCalled = true;
     }

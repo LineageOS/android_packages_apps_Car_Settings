@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.user.CarUserManagerHelper;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,6 @@ import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
-import com.android.settingslib.users.UserManagerHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +38,7 @@ import java.util.List;
 public class GuestFragment extends ListItemSettingsFragment {
     private static final String TAG = "GuestFragment";
 
-    private UserManagerHelper mUserManagerHelper;
+    private CarUserManagerHelper mCarUserManagerHelper;
     private ListItemProvider mItemProvider;
 
     /**
@@ -55,7 +55,7 @@ public class GuestFragment extends ListItemSettingsFragment {
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        mUserManagerHelper = new UserManagerHelper(getContext());
+        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mItemProvider = new ListItemProvider.ListProvider(getListItems());
 
         // Super class's onActivityCreated need to be called after mItemProvider is initialized.
@@ -69,7 +69,7 @@ public class GuestFragment extends ListItemSettingsFragment {
         Button switchUserBtn = (Button) getActivity().findViewById(R.id.action_button1);
         // If the current process is not allowed to switch to another user, doe not show the switch
         // button.
-        if (!mUserManagerHelper.currentProcessCanSwitchUsers()) {
+        if (!mCarUserManagerHelper.canCurrentProcessSwitchUsers()) {
             switchUserBtn.setVisibility(View.GONE);
             return;
         }
@@ -77,16 +77,16 @@ public class GuestFragment extends ListItemSettingsFragment {
         switchUserBtn.setText(R.string.user_switch);
         switchUserBtn.setOnClickListener(v -> {
             getActivity().onBackPressed();
-            mUserManagerHelper.startNewGuestSession(getContext().getString(R.string.user_guest));
+            mCarUserManagerHelper.startNewGuestSession(getContext().getString(R.string.user_guest));
         });
     }
 
     private List<ListItem> getListItems() {
-        Drawable icon = UserIconProvider.scaleUserIcon(mUserManagerHelper.getGuestDefaultIcon(),
-                mUserManagerHelper, getContext());
+        Drawable icon = UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
+                mCarUserManagerHelper, getContext());
 
         TextListItem item = new TextListItem(getContext());
-        item.setPrimaryActionIcon(icon, false /* useLargeIcon */);
+        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(getContext().getString(R.string.user_guest));
 
         List<ListItem> items = new ArrayList<>();
