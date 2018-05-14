@@ -23,12 +23,12 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.icu.text.ListFormatter;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 
 import com.android.car.list.TextLineItem;
 import com.android.car.settings.R;
 import com.android.car.settings.common.AnimationUtil;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.applications.PermissionsSummaryHelper;
 import com.android.settingslib.applications.PermissionsSummaryHelper.PermissionsResultCallback;
 
@@ -40,7 +40,7 @@ import java.util.List;
  * like uninstall, forceStop.
  */
 public class ApplicationPermissionLineItem extends TextLineItem {
-    private static final String TAG = "AppPermissionLineItem";
+    private static final Logger LOG = new Logger(ApplicationPermissionLineItem.class);
 
     private final ResolveInfo mResolveInfo;
     private final Context mContext;
@@ -95,7 +95,7 @@ public class ApplicationPermissionLineItem extends TextLineItem {
             mContext.startActivity(
                     intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
         } catch (ActivityNotFoundException e) {
-            Log.w(TAG, "No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
+            LOG.w("No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
         }
     }
 

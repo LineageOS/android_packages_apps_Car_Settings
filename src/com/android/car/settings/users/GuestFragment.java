@@ -36,8 +36,6 @@ import java.util.List;
  * Shows details for a guest session, including ability to switch to guest.
  */
 public class GuestFragment extends ListItemSettingsFragment {
-    private static final String TAG = "GuestFragment";
-
     private CarUserManagerHelper mCarUserManagerHelper;
     private ListItemProvider mItemProvider;
 

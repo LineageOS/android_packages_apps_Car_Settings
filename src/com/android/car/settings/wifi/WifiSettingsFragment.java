@@ -36,8 +36,6 @@ import com.android.car.settings.common.CarUxRestrictionsHelper;
  * Main page to host Wifi related preferences.
  */
 public class WifiSettingsFragment extends BaseFragment implements CarWifiManager.Listener {
-    private static final String TAG = "WifiSettingsFragment";
-
     private CarWifiManager mCarWifiManager;
     private AccessPointListAdapter mAdapter;
     private Switch mWifiSwitch;

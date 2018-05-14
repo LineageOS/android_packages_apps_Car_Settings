@@ -34,7 +34,6 @@ import com.android.car.settingslib.util.SettingsConstants;
 public class EditUsernameFragment extends BaseFragment implements
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
     public static final String EXTRA_USER_INFO = "extra_user_info";
-    private static final String TAG = "EditUsernameFragment";
     private UserInfo mUserInfo;
 
     private TextInputEditText mUserNameEditText;

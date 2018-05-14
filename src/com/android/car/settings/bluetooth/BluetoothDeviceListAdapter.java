@@ -24,7 +24,6 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.SystemProperties;
-import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +39,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -62,7 +62,7 @@ import java.util.Set;
 public class BluetoothDeviceListAdapter
         extends RecyclerView.Adapter<BluetoothDeviceListAdapter.ViewHolder>
         implements PagedListView.ItemCap, BluetoothCallback {
-    private static final String TAG = "BluetoothDeviceListAdapter";
+    private static final Logger LOG = new Logger(BluetoothDeviceListAdapter.class);
     // Copied from BluetoothDeviceNoNamePreferenceController.java
     private static final String BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY =
             "persist.bluetooth.showdeviceswithoutnames";
@@ -417,7 +417,7 @@ public class BluetoothDeviceListAdapter
                     // unrecognized device class; continue
             }
         } else {
-            Log.w(TAG, "btClass is null");
+            LOG.w("btClass is null");
         }
 
         List<LocalBluetoothProfile> profiles = bluetoothDevice.getProfiles();
