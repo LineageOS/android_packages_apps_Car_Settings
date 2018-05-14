@@ -18,12 +18,12 @@ package com.android.car.settings.accounts;
 
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.util.Log;
 
 import androidx.car.widget.ListItemProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
-
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 /**
@@ -35,7 +35,7 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
  */
 public class ChooseAccountFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener {
-    private static final String TAG = "ChooseAccountFragment";
+    private static final Logger LOG = new Logger(ChooseAccountFragment.class);
 
     private ChooseAccountItemProvider mItemProvider;
 
@@ -57,9 +57,7 @@ public class ChooseAccountFragment extends ListItemSettingsFragment
 
     @Override
     public void onAccountsUpdate(UserHandle userHandle) {
-        if (Log.isLoggable(TAG, Log.VERBOSE)) {
-            Log.v(TAG, "Accounts changed, refreshing the account list.");
-        }
+        LOG.v("Accounts changed, refreshing the account list.");
         mItemProvider.refreshItems();
         refreshList();
     }

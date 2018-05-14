@@ -32,7 +32,6 @@ import com.android.settingslib.bluetooth.PanProfile;
  * Represents a line item for a Bluetooth mProfile.
  */
 public class BluetoothProfileLineItem extends CheckBoxLineItem {
-    private static final String TAG = "BTProfileLineItem";
     private final LocalBluetoothProfile mProfile;
     private final CachedBluetoothDevice mCachedDevice;
     private CheckboxLineItemViewHolder mViewHolder;

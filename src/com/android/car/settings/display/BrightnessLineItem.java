@@ -20,16 +20,16 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
 
 import android.content.Context;
 import android.provider.Settings;
-import android.util.Log;
 
 import com.android.car.list.SeekbarLineItem;
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 
 /**
  * A LineItem that displays and sets display brightness.
  */
 public class BrightnessLineItem extends SeekbarLineItem {
-    private static final String TAG = "BrightnessLineItem";
+    private static final Logger LOG = new Logger(BrightnessLineItem.class);
     private static final int MAX_BRIGHTNESS = 255;
 
     private final Context mContext;
@@ -46,7 +46,7 @@ public class BrightnessLineItem extends SeekbarLineItem {
             currentBrightness = Settings.System.getInt(mContext.getContentResolver(),
                     SCREEN_BRIGHTNESS);
         } catch (Settings.SettingNotFoundException e) {
-            Log.w(TAG, "Can't find setting for SCREEN_BRIGHTNESS.");
+            LOG.w("Can't find setting for SCREEN_BRIGHTNESS.");
         }
         return currentBrightness;
     }
