@@ -32,8 +32,6 @@ import com.android.car.settings.quicksettings.QuickSettingFragment;
  */
 public class CarSettingActivity extends AppCompatActivity implements
         BaseFragment.FragmentController {
-    private static final String TAG = "CarSetting";
-
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private CarUxRestrictions mCarUxRestrictions;
 

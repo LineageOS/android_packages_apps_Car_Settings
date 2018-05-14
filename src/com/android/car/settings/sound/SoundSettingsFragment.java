@@ -29,7 +29,6 @@ import android.media.AudioAttributes;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.SparseArray;
 import android.util.Xml;
 
@@ -40,6 +39,7 @@ import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.Logger;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -51,7 +51,7 @@ import java.util.List;
  * Activity hosts sound related settings.
  */
 public class SoundSettingsFragment extends BaseFragment {
-    private static final String TAG = "SoundSettingsFragment";
+    private static final Logger LOG = new Logger(SoundSettingsFragment.class);
 
     private static final String XML_TAG_VOLUME_ITEMS = "carVolumeItems";
     private static final String XML_TAG_VOLUME_ITEM = "item";
@@ -82,7 +82,7 @@ public class SoundSettingsFragment extends BaseFragment {
                 updateList();
                 mCarAudioManager.registerVolumeCallback(mVolumeChangeCallback.asBinder());
             } catch (CarNotConnectedException e) {
-                Log.e(TAG, "Car is not connected!", e);
+                LOG.e("Car is not connected!", e);
             }
         }
 
@@ -136,7 +136,7 @@ public class SoundSettingsFragment extends BaseFragment {
         try {
             mCarAudioManager.unregisterVolumeCallback(mVolumeChangeCallback.asBinder());
         } catch (CarNotConnectedException e) {
-            Log.e(TAG, "Car is not connected!", e);
+            LOG.e("Car is not connected!", e);
         }
         cleanUpVolumeLineItems();
         mCarAudioManager = null;
@@ -215,7 +215,7 @@ public class SoundSettingsFragment extends BaseFragment {
                 }
             }
         } catch (XmlPullParserException | IOException e) {
-            Log.e(TAG, "Error parsing volume groups configuration", e);
+            LOG.e("Error parsing volume groups configuration", e);
         }
     }
 

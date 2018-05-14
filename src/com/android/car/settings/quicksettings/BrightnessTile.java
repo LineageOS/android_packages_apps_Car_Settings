@@ -19,14 +19,15 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
 
 import android.content.Context;
 import android.provider.Settings;
-import android.util.Log;
 import android.widget.SeekBar;
+
+import com.android.car.settings.common.Logger;
 
 /**
  * A slider to adjust the brightness of the screen
  */
 public class BrightnessTile implements QuickSettingGridAdapter.SeekbarTile {
-    private static final String TAG = "BrightnessLineitem";
+    private static final Logger LOG = new Logger(BrightnessTile.class);
     private static final int MAX_BRIGHTNESS = 255;
     private final Context mContext;
 
@@ -66,7 +67,7 @@ public class BrightnessTile implements QuickSettingGridAdapter.SeekbarTile {
             currentBrightness = Settings.System.getInt(mContext.getContentResolver(),
                     SCREEN_BRIGHTNESS);
         } catch (Settings.SettingNotFoundException e) {
-            Log.w(TAG, "Can't find setting for SCREEN_BRIGHTNESS.");
+            LOG.w("Can't find setting for SCREEN_BRIGHTNESS.");
         }
         return currentBrightness;
     }

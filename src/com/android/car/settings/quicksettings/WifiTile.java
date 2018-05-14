@@ -35,7 +35,6 @@ import com.android.settingslib.wifi.AccessPoint;
  * Controls Wifi tile on quick setting page.
  */
 public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Listener {
-    private static final String TAG = "WifiTile";
     private final StateChangedListener mStateChangedListener;
     private final CarWifiManager mCarWifiManager;
     private final Context mContext;

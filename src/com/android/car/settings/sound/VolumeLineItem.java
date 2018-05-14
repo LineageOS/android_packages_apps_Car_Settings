@@ -28,16 +28,17 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
-import android.util.Log;
 import android.widget.SeekBar;
 
 import androidx.car.widget.SeekbarListItem;
+
+import com.android.car.settings.common.Logger;
 
 /**
  * Contains logic about volume controller UI.
  */
 public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBarChangeListener {
-    private static final String TAG = "VolumeLineItem";
+    private static final Logger LOG = new Logger(VolumeLineItem.class);
     private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
 
     private final Handler mUiHandler;
@@ -85,7 +86,7 @@ public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBar
         }
         try {
             if (mCarAudioManager == null) {
-                Log.w(TAG, "Ignoring volume change event because the car isn't connected");
+                LOG.w("Ignoring volume change event because the car isn't connected");
                 return;
             }
             // AudioManager.FLAG_PLAY_SOUND does not guarantee play sound, use our own
@@ -93,7 +94,7 @@ public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBar
             mCarAudioManager.setGroupVolume(mVolumeGroupId, progress, 0);
             playAudioFeedback();
         } catch (CarNotConnectedException e) {
-            Log.e(TAG, "Car is not connected!", e);
+            LOG.e("Car is not connected!", e);
         }
     }
 
@@ -142,7 +143,7 @@ public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBar
         try {
             return mCarAudioManager.getGroupVolume(mVolumeGroupId);
         } catch (CarNotConnectedException e) {
-            Log.e(TAG, "Car is not connected!", e);
+            LOG.e("Car is not connected!", e);
         }
         return 0;
     }
@@ -151,7 +152,7 @@ public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBar
         try {
             return mCarAudioManager.getGroupMaxVolume(mVolumeGroupId);
         } catch (CarNotConnectedException e) {
-            Log.e(TAG, "Car is not connected!", e);
+            LOG.e("Car is not connected!", e);
         }
         return 0;
     }

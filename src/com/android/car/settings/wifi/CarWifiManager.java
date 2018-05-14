@@ -31,7 +31,6 @@ import java.util.List;
  * Manages Wifi configuration: e.g. monitors wifi states, change wifi setting etc.
  */
 public class CarWifiManager implements WifiTracker.WifiListener {
-    private static final String TAG = "CarWifiManager";
     private final Context mContext;
     private Listener mListener;
     private boolean mStarted;

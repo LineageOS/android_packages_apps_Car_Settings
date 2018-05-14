@@ -19,7 +19,6 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -31,6 +30,7 @@ import com.android.car.list.SpinnerLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
         AdapterView.OnItemSelectedListener {
     public static final String EXTRA_AP_STATE = "extra_ap_state";
 
-    private static final String TAG = "AddWifiFragment";
+    private static final Logger LOG = new Logger(AddWifiFragment.class);
     private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
     private static final Pattern VALID_SSID_PATTERN =
             Pattern.compile("^[A-Za-z]+[\\w\\-\\:\\.]*$");
@@ -200,7 +200,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
                         "\"%s\"", mWifiPasswordInput.getInput());
                 break;
             default:
-                Log.w(TAG, "invalid security type: " + security);
+                LOG.w("invalid security type: " + security);
                 break;
         }
         int netId = mWifiManager.addNetwork(wifiConfig);
