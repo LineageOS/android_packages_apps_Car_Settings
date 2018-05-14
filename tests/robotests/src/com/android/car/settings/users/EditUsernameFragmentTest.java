@@ -25,7 +25,6 @@ import static org.mockito.Mockito.verify;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.support.design.widget.TextInputEditText;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,6 +34,8 @@ import com.android.car.settings.TestConfig;
 import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.TestAppCompatActivity;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -43,6 +44,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
+
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(manifest = TestConfig.MANIFEST_PATH, sdk = TestConfig.SDK_VERSION,
