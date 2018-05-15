@@ -39,7 +39,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener,
         CarUserManagerHelper.OnUsersUpdateListener,
         UserAndAccountItemProvider.UserAndAccountClickListener {
-    private static final String TAG = "UserAndAccountSettings";
 
     private UserAndAccountItemProvider mItemProvider;
     private AccountManagerHelper mAccountManagerHelper;

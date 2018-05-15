@@ -36,8 +36,6 @@ import com.android.car.settings.users.UsersListFragment;
  * Shows a page to access frequently used settings.
  */
 public class QuickSettingFragment extends BaseFragment {
-    private static final String TAG = "QS";
-
     private static final float RESTRICTED_ALPHA = 0.5f;
     private static final float UNRESTRICTED_ALPHA = 1f;
 

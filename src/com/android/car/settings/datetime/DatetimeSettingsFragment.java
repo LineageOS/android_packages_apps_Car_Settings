@@ -32,8 +32,6 @@ import java.util.ArrayList;
  * Configures date time
  */
 public class DatetimeSettingsFragment extends ListSettingsFragment {
-    private static final String TAG = "DatetimeSettingsFragment";
-
     private static final IntentFilter TIME_CHANGED_FILTER =
             new IntentFilter(Intent.ACTION_TIME_CHANGED);
 

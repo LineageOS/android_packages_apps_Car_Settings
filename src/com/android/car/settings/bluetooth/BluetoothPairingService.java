@@ -17,21 +17,21 @@
 package com.android.car.settings.bluetooth;
 
 import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.bluetooth.BluetoothDevice;
-import android.content.IntentFilter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.IBinder;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 
 /**
  * BluetoothPairingService shows a notification if there is a pending bond request
@@ -47,7 +47,7 @@ public final class BluetoothPairingService extends Service {
     private static final String BLUETOOTH_NOTIFICATION_CHANNEL =
             "bluetooth_notification_channel";
 
-    private static final String TAG = "BluetoothPairingService";
+    private static final Logger LOG = new Logger(BluetoothPairingService.class);
 
     private BluetoothDevice mDevice;
 
@@ -83,14 +83,14 @@ public final class BluetoothPairingService extends Service {
                     return;
                 }
             } else if (action.equals(ACTION_DISMISS_PAIRING)) {
-                Log.d(TAG, "Notification cancel " + mDevice.getAddress() + " (" +
-                        mDevice.getName() + ")");
+                LOG.d("Notification cancel " + mDevice.getAddress() + " ("
+                        + mDevice.getName() + ")");
                 mDevice.cancelPairingUserInput();
             } else {
                 int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE,
                         BluetoothDevice.ERROR);
-                Log.d(TAG, "Dismiss pairing for " + mDevice.getAddress() + " (" +
-                        mDevice.getName() + "), BondState: " + bondState);
+                LOG.d("Dismiss pairing for " + mDevice.getAddress() + " ("
+                        + mDevice.getName() + "), BondState: " + bondState);
             }
             stopForeground(true);
             stopSelf();
@@ -111,7 +111,7 @@ public final class BluetoothPairingService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent == null) {
-            Log.e(TAG, "Can't start: null intent!");
+            LOG.e("Can't start: null intent!");
             stopSelf();
             return START_NOT_STICKY;
         }
@@ -132,7 +132,7 @@ public final class BluetoothPairingService extends Service {
         mDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
         if (mDevice != null && mDevice.getBondState() != BluetoothDevice.BOND_BONDING) {
-            Log.w(TAG, "Device " + mDevice + " not bonding: " + mDevice.getBondState());
+            LOG.w("Device " + mDevice + " not bonding: " + mDevice.getBondState());
             stopSelf();
             return START_NOT_STICKY;
         }
@@ -143,7 +143,7 @@ public final class BluetoothPairingService extends Service {
             name = device != null ? device.getAliasName() : res.getString(android.R.string.unknownName);
         }
 
-        Log.d(TAG, "Show pairing notification for " + mDevice.getAddress() + " (" + name + ")");
+        LOG.d("Show pairing notification for " + mDevice.getAddress() + " (" + name + ")");
 
         Notification.Action pairAction = new Notification.Action.Builder(0,
                 res.getString(R.string.bluetooth_device_context_pair_connect), pairIntent).build();

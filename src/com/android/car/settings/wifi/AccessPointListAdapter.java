@@ -43,7 +43,6 @@ import java.util.List;
 public class AccessPointListAdapter
         extends RecyclerView.Adapter<AccessPointListAdapter.ViewHolder>
         implements PagedListView.ItemCap {
-    private static final String TAG = "AccessPointListAdapter";
     private static final int NETWORK_ROW_TYPE = 1;
     private static final int ADD_NETWORK_ROW_TYPE = 2;
 

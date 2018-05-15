@@ -20,13 +20,16 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.text.Editable;
-import android.util.Log;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+
 import com.android.car.settings.R;
-import com.android.car.settings.bluetooth.BluetoothPairingDialogFragment.BluetoothPairingDialogListener;
+import com.android.car.settings.bluetooth.BluetoothPairingDialogFragment
+        .BluetoothPairingDialogListener;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
+
 import java.util.Locale;
 
 /**
@@ -37,7 +40,7 @@ import java.util.Locale;
 public class BluetoothPairingController implements OnCheckedChangeListener,
         BluetoothPairingDialogListener {
 
-    private static final String TAG = "BTPairingController";
+    private static final Logger LOG = new Logger(BluetoothPairingController.class);
 
     // Different types of dialogs we can map to
     public static final int INVALID_DIALOG_TYPE = -1;
@@ -360,7 +363,7 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
      * @param passkey - The passkey we will attempt to pair to the device with.
      */
     private void onPair(String passkey) {
-        Log.d(TAG, "Pairing dialog accepted");
+        LOG.d("Pairing dialog accepted");
         switch (mType) {
             case BluetoothDevice.PAIRING_VARIANT_PIN:
             case BluetoothDevice.PAIRING_VARIANT_PIN_16_DIGITS:
@@ -391,7 +394,7 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
                 break;
 
             default:
-                Log.e(TAG, "Incorrect pairing type received");
+                LOG.e("Incorrect pairing type received");
         }
     }
 
@@ -400,7 +403,7 @@ public class BluetoothPairingController implements OnCheckedChangeListener,
      * {@link BluetoothPairingDialogFragment} when it is dismissed.
      */
     public void onCancel() {
-        Log.d(TAG, "Pairing dialog canceled");
+        LOG.d("Pairing dialog canceled");
         mDevice.cancelPairingUserInput();
     }
 

@@ -24,10 +24,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
@@ -35,7 +35,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothManager;
  * Controls Bluetooth tile on quick setting page.
  */
 public class BluetoothTile implements QuickSettingGridAdapter.Tile {
-    private static final String TAG = "bluetoothTile";
+    private static final Logger LOG = new Logger(BluetoothTile.class);
     private final Context mContext;
     private final StateChangedListener mStateChangedListener;
     private LocalBluetoothAdapter mLocalAdapter;
@@ -94,7 +94,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         mLocalManager = LocalBluetoothManager.getInstance(
                 mContext, /* onInitCallback= */ null);
         if (mLocalManager == null) {
-            Log.e(TAG, "Bluetooth is not supported on this device");
+            LOG.e("Bluetooth is not supported on this device");
             return;
         }
         mText = mContext.getString(R.string.bluetooth_settings);

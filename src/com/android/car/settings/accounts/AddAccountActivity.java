@@ -31,10 +31,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 
 import java.io.IOException;
 /**
@@ -63,7 +63,7 @@ public class AddAccountActivity extends Activity {
     private static final String KEY_CALLER_IDENTITY = "pendingIntent";
     private static final String SHOULD_NOT_RESOLVE = "SHOULDN'T RESOLVE!";
 
-    private static final String TAG = "AddAccountSettings";
+    private static final Logger LOG = new Logger(AddAccountActivity.class);
     private static final String ALLOW_SKIP = "allowSkip";
 
     /* package */ static final String EXTRA_SELECTED_ACCOUNT = "selected_account";
@@ -88,9 +88,7 @@ public class AddAccountActivity extends Activity {
         @Override
         public void run(AccountManagerFuture<Bundle> future) {
             if (!future.isDone()) {
-                if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                    Log.v(TAG, "Account manager future is not done.");
-                }
+                LOG.v("Account manager future is not done.");
                 finish();
             }
             try {
@@ -105,14 +103,9 @@ public class AddAccountActivity extends Activity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivityForResultAsUser(
                         intent, ADD_ACCOUNT_REQUEST, mUserHandle);
-
-                if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                    Log.v(TAG, "account added: " + result);
-                }
+                LOG.v("account added: " + result);
             } catch (OperationCanceledException | IOException | AuthenticatorException e) {
-                if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                    Log.v(TAG, "addAccount error: " + e);
-                }
+                LOG.v("addAccount error: " + e);
             } finally {
                 finish();
             }
@@ -123,9 +116,7 @@ public class AddAccountActivity extends Activity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(KEY_ADD_CALLED, mAddAccountCalled);
-        if (Log.isLoggable(TAG, Log.VERBOSE)) {
-            Log.v(TAG, "saved");
-        }
+        LOG.v("saved");
     }
 
     @Override
@@ -133,9 +124,7 @@ public class AddAccountActivity extends Activity {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             mAddAccountCalled = savedInstanceState.getBoolean(KEY_ADD_CALLED);
-            if (Log.isLoggable(TAG, Log.VERBOSE)) {
-                Log.v(TAG, "Restored from previous add account call: " + mAddAccountCalled);
-            }
+            LOG.v("Restored from previous add account call: " + mAddAccountCalled);
         }
 
         mCarUserManagerHelper = new CarUserManagerHelper(this);

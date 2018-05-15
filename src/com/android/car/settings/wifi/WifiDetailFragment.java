@@ -19,7 +19,6 @@ import android.net.NetworkInfo.State;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +28,7 @@ import com.android.car.list.SimpleTextLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ import java.util.ArrayList;
  */
 public class WifiDetailFragment extends ListSettingsFragment {
     public static final String EXTRA_AP_STATE = "extra_ap_state";
-    private static final String TAG = "WifiDetailFragment";
+    private static final Logger LOG = new Logger(WifiDetailFragment.class);
 
     private AccessPoint mAccessPoint;
     private WifiManager mWifiManager;
@@ -137,7 +137,7 @@ public class WifiDetailFragment extends ListSettingsFragment {
                         AccessPoint.convertToQuotedString(mAccessPoint.getSsidStr()));
             } else {
                 // Should not happen, but a monkey seems to trigger it
-                Log.e(TAG, "Failed to forget invalid network " + mAccessPoint.getConfig());
+                LOG.e("Failed to forget invalid network " + mAccessPoint.getConfig());
                 return;
             }
         } else {
