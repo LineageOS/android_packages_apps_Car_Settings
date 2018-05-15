@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextAppearance.Car.Body1.SingleLine" />
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.AppCompat.Light">
@@ -39,9 +39,9 @@
                 android:focusableInTouchMode="true"
                 style="@style/TextAppearance.Car.Body1"
                 android:hint="@string/wifi_ssid_hint" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
     </ViewSwitcher>
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/wifi_password_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             style="@style/TextAppearance.Car.Body1"
             android:inputType="textPassword"
             android:hint="@string/wifi_password" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/wifi_connect"
         android:layout_width="wrap_content"

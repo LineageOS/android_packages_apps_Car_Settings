@@ -22,7 +22,7 @@
     android:layout_height="match_parent"
     android:paddingStart="@dimen/car_margin"
     android:paddingEnd="@dimen/car_margin">
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:inputType="text"
             android:maxLines="1"
             android:textAppearance="@style/TextAppearance.Car.Body1"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/ok_button"
