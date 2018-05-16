@@ -36,7 +36,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Implementation of {@link ListItemProvider} for {@link UserDetailsFragment}.
+ * Implementation of {@link ListItemProvider} for {@link CurrentUserDetailsFragment}.
  * Creates items that represent the current user and current user's accounts.
  */
 class UserAndAccountItemProvider extends ListItemProvider {
@@ -48,13 +48,12 @@ class UserAndAccountItemProvider extends ListItemProvider {
     private final UserIconProvider mUserIconProvider;
 
     UserAndAccountItemProvider(Context context, UserAndAccountClickListener itemClickListener,
-            CarUserManagerHelper carUserManagerHelper, AccountManagerHelper accountManagerHelper,
-            UserIconProvider userIconProvider) {
+            CarUserManagerHelper carUserManagerHelper, AccountManagerHelper accountManagerHelper) {
         mContext = context;
         mItemClickListener = itemClickListener;
         mCarUserManagerHelper = carUserManagerHelper;
         mAccountManagerHelper = accountManagerHelper;
-        mUserIconProvider = userIconProvider;
+        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         refreshItems();
     }
 

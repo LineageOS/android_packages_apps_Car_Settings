@@ -29,7 +29,7 @@ import android.widget.ProgressBar;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
-import com.android.car.settings.accounts.UserDetailsFragment;
+import com.android.car.settings.accounts.CurrentUserDetailsFragment;
 import com.android.car.settings.common.ListItemSettingsFragment;
 
 /**
@@ -138,11 +138,11 @@ public class UsersListFragment extends ListItemSettingsFragment
     @Override
     public void onUserClicked(UserInfo userInfo) {
         if (mCarUserManagerHelper.isForegroundUser(userInfo)) {
-            // If it's the user running in foreground, launch fragment that displays their accounts.
-            getFragmentController().launchFragment(UserDetailsFragment.newInstance());
+            // If it's the foreground user, launch fragment that displays their accounts.
+            getFragmentController().launchFragment(CurrentUserDetailsFragment.newInstance());
         } else {
             // If it's another user, launch fragment that displays their information
-            getFragmentController().launchFragment(EditUsernameFragment.getInstance(userInfo));
+            getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo));
         }
     }
 

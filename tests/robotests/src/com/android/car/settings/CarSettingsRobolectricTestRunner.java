@@ -75,7 +75,8 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                 // library and not the source.
                 paths.add(createResourcePath(
                         "file:prebuilts/sdk/current/support/v7/appcompat/res/"));
-                paths.add(createResourcePath("file:prebuilts/sdk/current/car/car/res"));
+                paths.add(createResourcePath("file:prebuilts/sdk/current/support/car/res"));
+
 
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
