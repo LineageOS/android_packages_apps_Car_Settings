@@ -356,16 +356,16 @@
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
     <string name="current_user_name">You (%1$s)</string>
-    <!-- User settings details screen title [CHAR LIMIT=25] -->
-    <string name="user_settings_details_title">Profile info</string>
     <!-- User settings label for user name [CHAR LIMIT=25] -->
     <string name="user_name_label">Name</string>
     <!-- User summary to indicate that user is currently not set up [CHAR LIMIT=100] -->
     <string name="user_summary_not_set_up">Not set up</string>
+    <!-- Title for edit user name page [CHAR LIMIT=30] -->
+    <string name="edit_user_name_title">Edit user name</string>
 
     <!-- Title for settings that lead into User and Account information [CHAR LIMIT=35] -->
     <string name="user_and_account_settings_title">Users &amp; accounts</string>
-    <!-- Title for a screen that shows the user and accounts that belong to that user [CHAR LIMIT=25] -->
+    <!-- Title for detailed user information page [CHAR LIMIT=25] -->
     <string name="user_settings_title">User</string>
     <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
     <string name="account_list_title">Accounts for <xliff:g id="current_user_name">%1$s</xliff:g></string>
