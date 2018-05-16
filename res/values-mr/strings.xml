@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"अतिथी"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच"</string>
     <string name="current_user_name" msgid="3813671533249316823">"तुम्ही (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"प्रोफाइल माहिती"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाव"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट केलेले नाही"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"वापरकर्ते आणि खाती"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"वापरकर्ता"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> साठी खाती"</string>
@@ -194,24 +195,21 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोणताही वापरकर्ता इतर सर्व वापरकर्त्यांसाठी अॅप्स अपडेट करू शकतो."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षितता"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"काहीही नाही"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"पॅटर्न"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"पिन"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लॉक प्रकार निवडा"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रीन लॉक पर्याय"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"तुमचा पॅटर्न एंटर करा"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"खात्री करा"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुन्हा रेखाटा"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"सुरू ठेवा"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"पुन्हा प्रयत्न करा"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"वगळा"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रीन लॉक सेट करा"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"तुमचा पॅटर्न निवडा"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"सध्‍याचा स्क्रीन लॉक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षिततेसाठी, एक पॅटर्न सेट करा"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"साफ करा"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"रद्द करा"</string>
@@ -225,16 +223,18 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"अनलॉक पॅटर्न कसा काढावा"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पॅटर्न सेव्ह करताना एरर आली"</string>
     <string name="okay" msgid="4589873324439764349">"ठीक आहे"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक काढायचा?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"तुमचे खाते अॅक्‍सेस करण्‍यासाठी हे कुणालाही अनुमती देते"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"तुमचा पिन एंटर करा"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"तुमचा पासवर्ड एंटर करा"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षिततेसाठी पिन सेट करा"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"तुमचा पिन पुन्हा एंटर करा"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"पिन किमान ४ अंकांचा असणे आवश्यक आहे"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"पिन चुकीचा आहे, किमान ४ अंक असणे आवश्‍यक आहे."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"पिन जुळत नाहीत"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"पिन सेव्ह करताना एरर आली"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"चुकीचा पिन"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"चुकीचा पासवर्ड"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षिततेसाठी पासवर्ड सेट करा"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"तुमचा पासवर्ड पुन्‍हा एंटर करा"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्ड जुळत नाहीत"</string>
@@ -286,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"रद्द करा"</string>
     <string name="backspace_key" msgid="1545590866688979099">"बॅकस्‍पेस की"</string>
     <string name="enter_key" msgid="2121394305541579468">"की एंटर करा"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"डेमो मोडमधून बाहेर यायचे?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"डेमो खाते हटवण्‍यासाठी आणि डेमो मोडमधून बाहेर पडण्‍यासाठी फॅक्‍टरी रीसेट आवश्‍यक असेल"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"डेमो मोडमधून बाहेर पडा"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"डेमो मोडमधून बाहेर पडा"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"हे डेमो खाते हटवेल आणि फॅक्टरी डेटा सिस्टम रीसेट करेल. सर्व वापरकर्ता डेटा गमावेल."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडमधून बाहेर पडा"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"सेटअप समाप्त करा"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"आता नाही"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ड्रायव्हिंग करत असताना कृती उपलब्‍ध नाही."</string>

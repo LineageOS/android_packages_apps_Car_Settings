@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
     <string name="current_user_name" msgid="3813671533249316823">"നിങ്ങൾ (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"പ്രൊഫൈൽ വിവരം"</string>
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"സജ്ജീകരിച്ചിട്ടില്ല"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"ഉപയോക്താക്കളും അക്കൗണ്ടുകളും"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"ഉപയോക്താവ്"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> എന്ന ഉപയോക്താവിന്റെ അക്കൗണ്ടുകൾ"</string>
@@ -194,24 +195,21 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ഏതൊരു ഉപയോക്താവിനും മറ്റെല്ലാ ഉപയോക്താക്കൾക്കുമായി ആപ്പുകൾ അപ്‌ഡേറ്റ് ചെയ്യാനാവും."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"സുരക്ഷ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"സ്ക്രീൻ ലോക്ക്"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"ഒന്നുമില്ല"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"പാറ്റേൺ"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"പിൻ"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"പാസ്‌വേഡ്"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ഒരു ലോക്ക് ടൈപ്പ് തിരഞ്ഞെടുക്കുക"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"സ്‌ക്രീൻ ലോക്ക് ഓപ്ഷനുകള്‍"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"നിങ്ങളുടെ പാറ്റേൺ നൽകുക"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"സ്ഥിരീകരിക്കുക"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"വീണ്ടും വരയ്ക്കുക"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"തുടരുക"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ഒഴിവാക്കുക"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ഒരു സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിക്കുക"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"പാറ്റേൺ തിരഞ്ഞെടുക്കൂ"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"നിലവിലെ സ്‌ക്രീൻ ലോക്ക്"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"സുരക്ഷയ്‌ക്കായി, പാറ്റേൺ സജ്ജീകരിക്കുക"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"മായ്ക്കുക"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"റദ്ദാക്കുക"</string>
@@ -225,16 +223,18 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ഒരു അൺലോക്ക് പാറ്റേൺ വരയ്‌ക്കേണ്ടതെങ്ങനെ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"പാറ്റേൺ സംരക്ഷിക്കുന്നതിൽ പിശക്"</string>
     <string name="okay" msgid="4589873324439764349">"ശരി"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"സ്‌ക്രീൻ ലോക്ക് നീക്കം ചെയ്യണോ?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ഇത് നിങ്ങളുടെ അക്കൗണ്ട് ആർക്കും ആക്‌സസ് ചെയ്യാൻ അനുവദിക്കും"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"പിൻ നൽകുക"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"നിങ്ങളുടെ പാസ്‌വേഡ് നല്‍‌കുക"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"സുരക്ഷയ്‌ക്കായി, ഒരു പിൻ സജ്ജമാക്കുക"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"നിങ്ങളുടെ പിൻ വീണ്ടും നൽകുക"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"പിൻ നമ്പറിൽ 4 അക്കങ്ങളെങ്കിലും ഉണ്ടായിരിക്കണം"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"അസാധുവായ പിൻ, 4 അക്കങ്ങളെങ്കിലും ഉണ്ടായിരിക്കണം."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"പിന്നുകൾ പൊരുത്തപ്പെടുന്നില്ല"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"പിൻ സംരക്ഷിക്കുന്നതിൽ പിശക്"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"പിൻ തെറ്റാണ്"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"പാസ്‌വേഡ് തെറ്റാണ്"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"സുരക്ഷയ്‌ക്കായി, പാസ്‌വേഡ് സജ്ജമാക്കുക"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"നിങ്ങളുടെ പാസ്‌വേഡ് വീണ്ടും നൽകുക"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"പാസ്‌വേഡ് പൊരുത്തപ്പെടുന്നില്ല"</string>
@@ -286,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"റദ്ദാക്കുക"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace കീ"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter കീ"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ഡെമോയിൽ നിന്ന് പുറത്തുകടക്കണോ?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ഡെമോ അക്കൗണ്ട് ഇല്ലാതാക്കുന്നതിനും ഡെമോ മോഡിൽ നിന്ന് പുറത്ത് കടക്കുന്നതിനും ഫാക്ടറി പുനഃസജ്ജീകരണം ആവശ്യമായി വരും"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ഡെമോയിൽ നിന്ന് പുറത്തുകടക്കുക"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ഡെമോ മോഡിൽ നിന്ന് പുറത്തുകടക്കുക"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ഇത് ഡെമോ അക്കൗണ്ട് ഇല്ലാതാക്കുകയും സിസ്‌റ്റം ഫാക്‌ടറി ഡാറ്റ പുനഃക്രമീകരിക്കുകയും ചെയ്യും. എല്ലാ ഉപയോക്തൃ ഡാറ്റയും നഷ്‌ടമാവും."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ഡെമോയിൽ നിന്ന് പുറത്തുകടക്കുക"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"സജ്ജീകരണം പൂർത്തിയാക്കുക"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ഇപ്പോൾ വേണ്ട"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ഡ്രൈവ് ചെയ്യുമ്പോൾ പ്രവർത്തനം ലഭ്യമല്ല."</string>

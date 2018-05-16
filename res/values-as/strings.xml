@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
     <string name="user_switch" msgid="6544839750534690781">"ছুইচ্চ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"আপুনি (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"প্ৰ\'ফাইলৰ তথ্য"</string>
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ছেট আপ কৰা হোৱা নাই"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"ব্যৱহাৰকাৰী আৰু একাউণ্টবোৰ"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"ব্যৱহাৰকাৰী"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>ৰ একাউণ্ট"</string>
@@ -210,6 +211,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"পুনৰ চেষ্টা কৰক"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"এৰি যাওক"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"স্ক্ৰীণ ছেট কৰক"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"আপোনাৰ আৰ্হি বাছক"</string>
     <!-- no translation found for current_screen_lock (637651611145979587) -->
     <skip />
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"সুৰক্ষাৰ বাবে কোনো আৰ্হি ছেট কৰক"</string>
@@ -229,12 +231,16 @@
     <skip />
     <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
     <skip />
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"আপোনাৰ পিন দিয়ক"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"আপোনাৰ পাছৱৰ্ড দিয়ক"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"সুৰক্ষাৰ বাবে কোনো পিন ছেট কৰক"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"আপোনাৰ পিনটো আকৌ দিয়ক"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"পিনটোত কমেও ৪টা অংক থাকিব লাগিব"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"অমান্য় পিন, কমেও ৪টা সংখ্য়া হ\'ব লাগিব।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"পিনবিলাক মিলা নাই"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"পিন ছেভ কৰোঁতে আঁসোৱাহ"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ভুল পিন"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ভুল পাছৱৰ্ড"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"সুৰক্ষাৰ বাবে কোনো পাছৱৰ্ড ছেট কৰক"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"আপোনাৰ পাছৱৰ্ড আকৌ দিয়ক"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"পাছৱৰ্ড মিলা নাই"</string>
@@ -286,8 +292,10 @@
     <string name="cancel" msgid="750286395700355455">"বাতিল কৰক"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace কী"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter কী"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ডেম\'ৰ পৰা বাহিৰ হ\'বনে?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ডেম\' একাউণ্ট মচিবলৈ আৰু ডেম\' ম\'ডৰ পৰা বাহিৰলৈ ওলাবলৈ ফেক্টৰী ৰিছেট কৰাৰ প্ৰয়োজন হ\'ব"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ডেম\' ম\'ডৰ পৰা বাহিৰ হওক"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"এই কামে ডেম\' একাউণ্টটো মচি পেলাব আৰু ছিষ্টেমটোৰ ফেক্টৰী ডেটা ৰিছেট কৰিব। সকলো ব্যৱহাৰকাৰীৰ ডেটা হেৰাব।"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ছেট আপ সমাপ্ত কৰক"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"এতিয়াই নহয়"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"গাড়ী চলোৱা সময়ত কাৰ্যটো উপলব্ধ নাথাকে।"</string>

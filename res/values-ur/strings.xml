@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"مہمان"</string>
     <string name="user_switch" msgid="6544839750534690781">"سوئچ کریں"</string>
     <string name="current_user_name" msgid="3813671533249316823">"آپ (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"پروفائل کی معلومات"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ترتیب نہیں دیا گیا"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"صارفین اور اکاؤنٹس"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"صارف"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> کے لئے اکاؤنٹس"</string>
@@ -194,24 +195,21 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"کوئی بھی صارف دیگر سبھی صارفین کیلئے ایپس کو اپ ڈیٹ کر سکتا ہے۔"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"سیکیورٹی"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"اسکرین لاک"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"کوئی نہیں"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"پیٹرن"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"پاس ورڈ"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"لاک کی قسم منتخب کریں"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"اسکرین لاک کے اختیارات"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"اپنا پیٹرن درج کریں"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"تصدیق کریں"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"دوبارہ ڈرا کریں"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"جاری رکھیں"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"دوبارہ کوشش کریں"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"نظر انداز کریں"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"اسکرین لاک سیٹ کریں"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"اپنا پیٹرن منتخب کریں"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"موجودہ اسکرین لاک"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"سیکیورٹی کیلئے پیٹرن سیٹ کریں"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"صاف کریں"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"منسوخ کریں"</string>
@@ -225,16 +223,18 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"غیر مقفل کرنے کا پیٹرن ڈرا کرنے کا طریقہ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"پیٹرن کو محفوظ کرنے میں خرابی"</string>
     <string name="okay" msgid="4589873324439764349">"ٹھیک ہے"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"اسکرین لاک کو ہٹائیں؟"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"اس سے کسی کو بھی آپ کے اکاؤنٹ تک رسائی کی اجازت ہوگی"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"اپنا PIN درج کریں"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"اپنا پاس ورڈ درج کریں"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"سیکیورٹی کیلئے PIN سیٹ کریں"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"اپنا PIN دوبارہ درج کریں"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN کا کم از کم 4 ہندسے کا ہونا ضروری ہے"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN غلط ہے، کم از کم 4 ہندسے ہونے چاہئیں۔"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs مماثل نہیں ہیں"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN محفوظ کرنے میں خرابی"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"غلط PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"غلط پاس ورڈ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"سیکیورٹی کیلئے پاس ورڈ سیٹ کریں"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"اپنا پاس ورڈ دوبارہ درج کریں"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"پاس ورڈز مماثل نہیں ہیں"</string>
@@ -286,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"منسوخ کریں"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace کلید"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter کلید"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ڈیمو سے باہر نکلیں؟"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ڈیمو اکاؤنٹ اور موجودہ ڈیمو وضع کو حذف کرنے کے لیے ایک فیکٹری ری سیٹ کی ضرورت ہوگی"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ڈیمو سے باہر نکلیں"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ڈیمو موڈ سے باہر نکلیں"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"اس سے ڈیمو اکاؤنٹ اور فیکٹری ڈیٹا کی دوبارہ ترتیب کا سسٹم حذف ہو جائے گا۔ تمام صارف ڈیٹا غائب ہو جائیں گے۔"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ڈیمو سے باہر نکلیں"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"سیٹ اپ مکمل کریں"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ابھی نہیں"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ڈرائیونگ کے دوران یہ عمل نہیں کیا جا سکتا۔"</string>
