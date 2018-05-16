@@ -56,9 +56,11 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DX_FLAGS := --multi-dex
 
-  ifneq ($(DISABLE_AOSP_PHONE_SETTING),false)
-    #This will hide AOSP phone setting.
-    LOCAL_OVERRIDES_PACKAGES := Settings
+  ifdef $(DISABLE_AOSP_PHONE_SETTING)
+    ifeq ($(DISABLE_AOSP_PHONE_SETTING),true)
+      # This will hide AOSP phone setting.
+      LOCAL_OVERRIDES_PACKAGES := Settings
+    endif
   endif
   include $(BUILD_PACKAGE)
 endif
