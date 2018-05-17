@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"અતિથિ"</string>
     <string name="user_switch" msgid="6544839750534690781">"સ્વિચ કરો"</string>
     <string name="current_user_name" msgid="3813671533249316823">"તમે (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"પ્રોફાઇલ માહિતી"</string>
     <string name="user_name_label" msgid="3210832645046206845">"નામ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"સેટ કરેલ નથી"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"વપરાશકર્તાઓ અને એકાઉન્ટ"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"વપરાશકર્તા"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> માટેના એકાઉન્ટ"</string>
@@ -207,6 +208,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ફરી પ્રયાસ કરો"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"છોડો"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"સ્ક્રીન લૉક સેટ કરો"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"તમારી પૅટર્ન પસંદ કરો"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"વર્તમાન સ્ક્રીન લૉક"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"સુરક્ષા માટે, એક પૅટર્ન સેટ કરો"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"સાફ કરો"</string>
@@ -223,12 +225,16 @@
     <string name="okay" msgid="4589873324439764349">"ઓકે"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"સ્ક્રીન લૉક કાઢી નાખીએ?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"આ ક્રિયા તમારા એકાઉન્ટને ઍક્સેસ કરવાની મંજૂરી કોઈને પણ આપશે"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"તમારો પિન દાખલ કરો"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"તમારો પાસવર્ડ દાખલ કરો"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"સુરક્ષા માટે, પિન સેટ કરો"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"તમારો પિન ફરી દાખલ કરો"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"પિન ઓછામાં ઓછો 4 અંકનો હોવો આવશ્યક છે"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"પિન અમાન્ય, ઓછામાં ઓછા 4 અંકનો હોવો આવશ્યક છે."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"પિન મેળ ખાતા નથી"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"પિન સાચવવામાં ભૂલ"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ખોટો પિન"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ખોટો પાસવર્ડ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"સુરક્ષા માટે, પાસવર્ડ સેટ કરો"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"તમારો પાસવર્ડ ફરી દાખલ કરો"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"પાસવર્ડ મેળ ખાતા નથી"</string>
@@ -280,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"રદ કરો"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace કી"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter કી"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ડેમોમાંથી બહાર નીકળીએ?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ડેમો એકાઉન્ટ ડિલીટ કરવા અને ડેમો મોડમાંથી બહાર નીકળવા માટે ફેક્ટરી રીસેટની આવશ્યકતા છે"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ડેમોમાંથી બહાર નીકળો"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ડેમો મોડમાંથી બહાર નીકળો"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"આ ક્રિયા ડેમો એકાઉન્ટ ડિલીટ કરશે અને સિસ્ટમને ફેક્ટરી ડેટા પર રીસેટ કરશે. વપરાશકર્તાનો બધો ડેટા ગુમ થશે."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ડેમોમાંથી બહાર નીકળો"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"સેટઅપ સમાપ્ત કરો"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"હમણાં નહીં"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ડ્રાઇવિંગ કરતી વખતે આ ક્રિયા ઉપલબ્ધ રહેશે નહીં."</string>

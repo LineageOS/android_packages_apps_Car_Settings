@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ಬದಲಿಸಿ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ನೀವು (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"ಪ್ರೊಫೈಲ್‌‌ ಮಾಹಿತಿ"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ಹೆಸರು"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ಇನ್ನೂ ಸೆಟಪ್‌ ಮಾಡಿಲ್ಲ"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"ಬಳಕೆದಾರರು ಮತ್ತು ಖಾತೆಗಳು"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"ಬಳಕೆದಾರ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ಅವರಿಗಾಗಿ ಖಾತೆಗಳು"</string>
@@ -194,24 +195,21 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ಯಾವುದೇ ಬಳಕೆದಾರರು ಎಲ್ಲಾ ಇತರೆ ಬಳಕೆದಾರರಿಗಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬಹುದು."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ಭದ್ರತೆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ಪರದೆ ಲಾಕ್"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"ಯಾವುದೂ ಅಲ್ಲ"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"ಪ್ಯಾಟರ್ನ್"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"ಪಿನ್"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ಲಾಕ್ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್ ನಮೂದಿಸಿ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ದೃಢೀಕರಿಸಿ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ಮರುರಚಿಸಿ"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"ಮುಂದುವರಿಸಿ"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ಸ್ಕಿಪ್"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ಪರದೆ ಲಾಕ್ ಹೊಂದಿಸಿ"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ಪ್ಯಾಟರ್ನ್ ಆಯ್ಕೆ ಮಾಡಿ"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"ಪ್ರಸ್ತುತ ಸ್ಕ್ರೀನ್ ಲಾಕ್"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪ್ಯಾಟ್ರನ್ ಹೊಂದಿಸಿ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ತೆರವುಗೊಳಿಸಿ"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ರದ್ದುಮಾಡಿ"</string>
@@ -225,16 +223,18 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ಅನ್‌ಲಾಕ್ ನಮೂನೆಯನ್ನು ರಚಿಸುವುದು ಹೇಗೆ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ಪ್ಯಾಟರ್ನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
     <string name="okay" msgid="4589873324439764349">"ಸರಿ"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ತೆಗೆದುಹಾಕಿ"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಾರಾದರೂ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"ನಿಮ್ಮ ಪಿನ್ ನಮೂದಿಸಿ"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪಿನ್ ಅನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"ನಿಮ್ಮ ಪಿನ್‌ ಅನ್ನು ಮರು ನಮೂದಿಸಿ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ಪಿನ್ ಕನಿಷ್ಠ 4 ಅಂಕಿಗಳಾಗಿರಬೇಕು"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"ಪಿನ್ ಅಮಾನ್ಯವಾಗಿದೆ, ಕನಿಷ್ಠ 4 ಅಂಕೆಗಳು ಇರಬೇಕು."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ಪಿನ್‌ಗಳು ಹೊಂದಾಣಿಕೆಯಾಗುತ್ತಿಲ್ಲ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ಪಿನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ತಪ್ಪಾದ ಪಿನ್‌"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ಪಾಸ್‌ವರ್ಡ್ ತಪ್ಪಾಗಿದೆ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪಾಸ್‌ವರ್ಡ್‌ ಹೊಂದಿಸಿ"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಮರು ನಮೂದಿಸಿ"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ಪಾಸ್‌ವರ್ಡ್‌ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ"</string>
@@ -286,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"ರದ್ದುಮಾಡಿ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ಕೀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ಕೀಲಿಯನ್ನು ನಮೂದಿಸಿ"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ಡೆಮೊ ನಿರ್ಗಮಿಸುವುದೇ?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ಡೆಮೊ ಖಾತೆಯನ್ನು ಅಳಿಸಲು ಮತ್ತು ಡೆಮೊ ಮೋಡ್‌ನಿಂದ ನಿರ್ಗಮಿಸುವುದಕ್ಕೆ ಫ್ಯಾಕ್ಟ್ರಿ ರಿಸೆಟ್‌ನ ಅಗತ್ಯವಿದೆ"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ಡೆಮೊದಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ಡೆಮೊ ಮೋಡ್‌ನಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ಇದು ಡೆಮೊ ಖಾತೆಯನ್ನು ಅಳಿಸುತ್ತದೆ ಮತ್ತು ಫ್ಯಾಕ್ಟರಿ ಡೇಟಾ ಸಿಸ್ಟಂ ಅನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರ ಡೇಟಾವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ಡೆಮೊದಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ಸೆಟಪ್ ಪೂರ್ಣಗೊಳಿಸಿ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ಈಗಲೇ ಬೇಡ"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ಚಾಲನೆ ಮಾಡುವಾಗ ಕ್ರಿಯೆ ಲಭ್ಯವಿಲ್ಲ."</string>
