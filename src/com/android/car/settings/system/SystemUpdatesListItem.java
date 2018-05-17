@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.system;
@@ -22,47 +22,30 @@ import android.os.PersistableBundle;
 import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ImageView;
 
-import com.android.car.list.IconTextLineItem;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 
 
 /**
  * A LineItem that links to system update.
  */
-class SystemUpdatesLineItem extends IconTextLineItem {
+class SystemUpdatesListItem extends TextListItem {
     private final Context mContext;
     private final Intent mSettingsIntent;
 
-    public SystemUpdatesLineItem(Context context, Intent settingsIntent) {
-        super(context.getString(R.string.system_update_settings_list_item_title));
+    SystemUpdatesListItem(Context context, Intent settingsIntent) {
+        super(context);
         mContext = context;
         mSettingsIntent = settingsIntent;
+        setTitle(context.getString(R.string.system_update_settings_list_item_title));
+        setPrimaryActionIcon(R.drawable.ic_system_update, /*useLargeIcon=*/ false);
+        setSupplementalIcon(R.drawable.ic_chevron_right, /*showDivider=*/ false);
+        setOnClickListener(this::onClick);
     }
 
-    @Override
-    public CharSequence getDesc() {
-        return null;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    @Override
-    public boolean isClickable() {
-        return true;
-    }
-
-    @Override
-    public boolean isExpandable() {
-        return false;
-    }
-
-    @Override
-    public void onClick(View view) {
+    private void onClick(View view) {
         mContext.startActivity(mSettingsIntent);
 
         // copy what the phone setting is doing, sending out a carrier defined intent
@@ -70,25 +53,20 @@ class SystemUpdatesLineItem extends IconTextLineItem {
                 (CarrierConfigManager) mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE);
         PersistableBundle b = configManager.getConfig();
         if (b == null || !b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-          return;
+            return;
         }
-        String intentStr = b.getString(CarrierConfigManager.
-                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
+        String intentStr = b.getString(CarrierConfigManager
+                .KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
         if (!TextUtils.isEmpty(intentStr)) {
-            String extra = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
+            String extra = b.getString(CarrierConfigManager
+                    .KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
             Intent intent = new Intent(intentStr);
             if (!TextUtils.isEmpty(extra)) {
-                String extraVal = b.getString(CarrierConfigManager.
-                        KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
+                String extraVal = b.getString(CarrierConfigManager
+                        .KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
                 intent.putExtra(extra, extraVal);
             }
             mContext.getApplicationContext().sendBroadcast(intent);
         }
-    }
-
-    @Override
-    public void setIcon(ImageView iconView) {
-        iconView.setImageResource(R.drawable.ic_system_update);
     }
 }
