@@ -42,7 +42,8 @@ final class BluetoothUtils {
         @Override
         public void onBluetoothManagerInitialized(Context appContext,
                 LocalBluetoothManager bluetoothManager) {
-            com.android.settingslib.bluetooth.Utils.setErrorListener(BluetoothUtils::showError);
+            com.android.settingslib.bluetooth.BluetoothUtils.setErrorListener(
+                    com.android.car.settings.bluetooth.BluetoothUtils::showError);
         }
     };
 
