@@ -16,9 +16,7 @@
 
 package com.android.car.settings.testutils;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.UserManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -29,8 +27,8 @@ import com.android.car.settings.common.BaseFragment;
  * Test activity that extends {@link AppCompatActivity}.
  * Used for testing {@code BaseFragment} instances.
  */
-public class TestAppCompatActivity extends AppCompatActivity {
-    private UserManager mUserManager;
+public class BaseTestActivity extends AppCompatActivity implements
+        BaseFragment.FragmentController {
     private boolean mOnBackPressedFlag;
 
     @Override
@@ -46,7 +44,8 @@ public class TestAppCompatActivity extends AppCompatActivity {
      *
      * @param fragment Fragment to add to activity.
      */
-    public void createFragment(BaseFragment fragment) {
+    @Override
+    public void launchFragment(BaseFragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragment_container, fragment)
@@ -54,15 +53,12 @@ public class TestAppCompatActivity extends AppCompatActivity {
                 .commit();
     }
 
-    /**
-     * Convenient method to set a mock of a UserManager on activity.
-     * The instance will get returned when {@code activity.getSystemService(Context.USER_SERVICE)}
-     * is called.
-     *
-     * @param userManager Instance of UserManager to be set
-     */
-    public void setUserManager(UserManager userManager) {
-        mUserManager = userManager;
+    public void reattachFragment(BaseFragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .detach(fragment)
+                .attach(fragment)
+                .commit();
     }
 
     /**
@@ -90,11 +86,7 @@ public class TestAppCompatActivity extends AppCompatActivity {
     }
 
     @Override
-    public Object getSystemService(String name) {
-        if (name == Context.USER_SERVICE && mUserManager != null) {
-            return mUserManager;
-        }
+    public void goBack() {
 
-        return getApplicationContext().getSystemService(name);
     }
 }

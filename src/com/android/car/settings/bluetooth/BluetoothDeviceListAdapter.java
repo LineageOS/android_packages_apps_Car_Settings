@@ -206,7 +206,7 @@ public class BluetoothDeviceListAdapter
         holder.mTitle.setText(bluetoothDevice.getName());
         Pair<Integer, String> pair = getBtClassDrawableWithDescription(bluetoothDevice);
         holder.mIcon.setImageResource(pair.first);
-        String summaryText = bluetoothDevice.getConnectionSummary();
+        String summaryText = bluetoothDevice.getCarConnectionSummary();
         if (summaryText != null) {
             holder.mDesc.setText(summaryText);
             holder.mDesc.setVisibility(View.VISIBLE);

@@ -18,7 +18,6 @@ package com.android.car.settings.accounts;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 import android.accounts.Account;
@@ -30,7 +29,7 @@ import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.users.UserIconProvider;
+import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,12 +37,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
+@Config(shadows = { ShadowUserIconProvider.class })
 public class UserAndAccountItemProviderTest {
     @Mock
     private AccountManagerHelper mAccountManagerHelper;
@@ -53,8 +54,6 @@ public class UserAndAccountItemProviderTest {
     private AccountManager mAccountManager;
     @Mock
     private Context mContext;
-    @Mock
-    private UserIconProvider mUserIconProvider;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -68,7 +67,6 @@ public class UserAndAccountItemProviderTest {
         when(mContext.getSystemService(Context.ACCOUNT_SERVICE)).thenReturn(mAccountManager);
         when(mContext.getApplicationContext()).thenReturn(mContext);
         when(mUserManager.getUserInfo(UserHandle.myUserId())).thenReturn(new UserInfo());
-        when(mUserIconProvider.getUserIcon(any(), any())).thenReturn(null);
         when(mAccountManagerHelper.getAccountsForCurrentUser()).thenReturn(new ArrayList<>());
 
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
@@ -76,8 +74,7 @@ public class UserAndAccountItemProviderTest {
                 RuntimeEnvironment.application,
                 null,
                 mCarUserManagerHelper,
-                mAccountManagerHelper,
-                mUserIconProvider);
+                mAccountManagerHelper);
     }
 
     @Test

@@ -67,7 +67,6 @@ public final class BluetoothPairingService extends Service {
             pairingIntent.putExtra(BluetoothDevice.EXTRA_PAIRING_KEY, pairingKey);
         }
         pairingIntent.setAction(BluetoothDevice.ACTION_PAIRING_REQUEST);
-        pairingIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return pairingIntent;
     }
 
