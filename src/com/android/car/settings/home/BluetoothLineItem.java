@@ -16,15 +16,13 @@
 
 package com.android.car.settings.home;
 
-import android.annotation.DrawableRes;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Switch;
 
-import com.android.car.list.IconToggleLineItem;
+import androidx.annotation.DrawableRes;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.common.BaseFragment;
@@ -33,81 +31,48 @@ import com.android.car.settings.common.BaseFragment;
 /**
  * Represents the Bluetooth line item on settings home page.
  */
-public class BluetoothLineItem extends IconToggleLineItem {
+public class BluetoothLineItem extends TextListItem {
     private BluetoothAdapter mBluetoothAdapter;
     private BaseFragment.FragmentController mFragmentController;
 
     public BluetoothLineItem(Context context, BaseFragment.FragmentController fragmentController) {
-        super(context.getText(R.string.bluetooth_settings), context);
+        super(context);
+        setTitle(context.getString(R.string.bluetooth_settings));
+        setBody(context.getString(R.string.bluetooth_settings_summary));
+        setPrimaryActionIcon(getIconRes(isBluetoothEnabled()), /* useLargeIcon= */ false);
+        setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         mFragmentController = fragmentController;
         mBluetoothAdapter =
-                ((BluetoothManager) mContext.getSystemService(Context.BLUETOOTH_SERVICE))
+                ((BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE))
                         .getAdapter();
-    }
-
-    @Override
-    public boolean onToggleTouched(Switch toggleSwitch, MotionEvent event) {
-        if (!isBluetoothAvailable()) {
-            return true;
-        }
-        // intercept touch event, so we can process the request and update the switch
-        // state accordingly
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            if (isChecked()) {
-                mBluetoothAdapter.disable();
-            } else {
+        setSwitch(isBluetoothEnabled(), /* showDivider= */ false, (button, isChecked) -> {
+            if (isChecked) {
                 mBluetoothAdapter.enable();
+            } else {
+                mBluetoothAdapter.disable();
             }
-        }
-        return true;
-    }
-
-    @Override
-    public boolean isExpandable() {
-        return false;
-    }
-
-    @Override
-    public boolean isClickable() {
-        return isBluetoothAvailable();
-    }
-
-    @Override
-    public void onClick(View view) {
+        });
         if (isBluetoothAvailable()) {
-            mFragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
+            setOnClickListener(v -> fragmentController.launchFragment(
+                    BluetoothSettingsFragment.getInstance()));
         }
     }
 
-    @Override
-    public CharSequence getDesc() {
-        return mContext.getText(R.string.bluetooth_settings_summary);
-    }
-
-    @Override
-    public boolean isChecked() {
+    private boolean isBluetoothEnabled() {
         return isBluetoothAvailable() && mBluetoothAdapter.isEnabled();
     }
 
-    @Override
-    public @DrawableRes int getIcon() {
-        return getIconRes(isBluetoothAvailable() && mBluetoothAdapter.isEnabled());
-    }
-
     public void onBluetoothStateChanged(boolean enabled) {
-        if (mIconUpdateListener != null) {
-            mIconUpdateListener.onUpdateIcon(getIconRes(enabled));
-        }
-        if (mSwitchStateUpdateListener != null) {
-            mSwitchStateUpdateListener.onToggleChanged(enabled);
-        }
+        setPrimaryActionIcon(getIconRes(enabled), /* useLargeIcon= */ false);
+        setSwitchState(enabled);
     }
 
     private boolean isBluetoothAvailable() {
         return mBluetoothAdapter != null;
     }
 
-    private @DrawableRes int getIconRes(boolean enabled) {
+    @DrawableRes
+    private int getIconRes(boolean enabled) {
         return enabled
                 ? R.drawable.ic_settings_bluetooth : R.drawable.ic_settings_bluetooth_disabled;
     }

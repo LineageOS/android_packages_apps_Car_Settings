@@ -16,15 +16,13 @@
 
 package com.android.car.settings.home;
 
-import android.annotation.DrawableRes;
 import android.content.Context;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Switch;
 
-import com.android.car.list.IconToggleLineItem;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.ListController;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiUtil;
@@ -33,63 +31,33 @@ import com.android.car.settings.wifi.WifiUtil;
 /**
  * Represents the wifi line item on settings home page.
  */
-public class WifiLineItem extends IconToggleLineItem {
-    private final Context mContext;
+public class WifiLineItem extends TextListItem {
     private final CarWifiManager mCarWifiManager;
-    private BaseFragment.FragmentController mFragmentController;
+    private final ListController mListController;
 
     public WifiLineItem(
             Context context,
             CarWifiManager carWifiManager,
-            BaseFragment.FragmentController fragmentController) {
-        super(context.getText(R.string.wifi_settings), context);
-        mContext = context;
+            BaseFragment.FragmentController fragmentController,
+            ListController listController) {
+        super(context);
+        mListController = listController;
         mCarWifiManager = carWifiManager;
-        mFragmentController = fragmentController;
-    }
-
-    @Override
-    public boolean onToggleTouched(Switch toggleSwitch, MotionEvent event) {
-        // intercept touch event, so we can process the request and update the switch
-        // state accordingly
-        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-            mCarWifiManager.setWifiEnabled(!isChecked());
-        }
-        return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        mFragmentController.launchFragment(WifiSettingsFragment.newInstance());
-    }
-
-    @Override
-    public CharSequence getDesc() {
-        return mContext.getText(R.string.wifi_settings_summary);
-    }
-
-    @Override
-    public boolean isChecked() {
-        return mCarWifiManager.isWifiEnabled();
-    }
-
-    @Override
-    public boolean isExpandable() {
-        return true;
-    }
-
-    @Override
-    public @DrawableRes int getIcon() {
-        return WifiUtil.getIconRes(mCarWifiManager.getWifiState());
+        setTitle(context.getString(R.string.wifi_settings));
+        setBody(context.getString(R.string.wifi_settings_summary));
+        setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
+        setPrimaryActionIcon(WifiUtil.getIconRes(mCarWifiManager.getWifiState()),
+                /* useLargeIcon= */ false);
+        setSwitch(mCarWifiManager.isWifiEnabled(), /* showDivider= */ false,
+                (button, isChecked) -> mCarWifiManager.setWifiEnabled(!isChecked));
+        setOnClickListener(v -> fragmentController
+                .launchFragment(WifiSettingsFragment.newInstance()));
     }
 
     public void onWifiStateChanged(int state) {
-        if (mIconUpdateListener != null) {
-            mIconUpdateListener.onUpdateIcon(WifiUtil.getIconRes(state));
-        }
-        if (mSwitchStateUpdateListener != null) {
-            mSwitchStateUpdateListener.onToggleChanged(WifiUtil.isWifiOn(state));
-        }
+        setPrimaryActionIcon(WifiUtil.getIconRes(state), /* useLargeIcon= */ false);
+        setSwitchState(WifiUtil.isWifiOn(state));
+        mListController.refreshList();
     }
 
 }

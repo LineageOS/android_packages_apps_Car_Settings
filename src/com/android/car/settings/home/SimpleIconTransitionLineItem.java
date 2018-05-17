@@ -16,38 +16,35 @@
 
 package com.android.car.settings.home;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.content.Context;
-import android.view.View;
 
-import com.android.car.list.SimpleIconLineItem;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
+import androidx.car.widget.TextListItem;
+
+import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
 /**
- * This class extends {@link SimpleIconLineItem} and adds the onClick behavior to
+ * A simple TestListItem that has onClick behavior to
  * trigger the fragmentController to launch a new fragment when clicked.
  * The fragment passed in is what will be launched.
  */
-public class SimpleIconTransitionLineItem extends SimpleIconLineItem {
-
-    private BaseFragment.FragmentController mFragmentController;
-    private BaseFragment mFragment;
+public class SimpleIconTransitionLineItem extends TextListItem {
 
     public SimpleIconTransitionLineItem(
-            @StringRes int title,
+            @StringRes int titleId,
             @DrawableRes int iconRes,
             Context context,
-            CharSequence desc,
+            String desc,
             BaseFragment fragment,
             BaseFragment.FragmentController fragmentController) {
-        super(title, iconRes, context, desc);
-        mFragment = fragment;
-        mFragmentController = fragmentController;
+        super(context);
+        setTitle(context.getString(titleId));
+        setBody(desc);
+        setPrimaryActionIcon(iconRes, /* useLargeIcon= */ false);
+        setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
+        setOnClickListener(
+                v -> fragmentController.launchFragment(fragment));
     }
-
-    public void onClick(View view) {
-        mFragmentController.launchFragment(mFragment);
-    }
-
 }
