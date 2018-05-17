@@ -16,19 +16,33 @@
 
 package com.android.car.settings.suggestions;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.android.car.list.ActionIconButtonLineItem;
+import androidx.annotation.LayoutRes;
+import androidx.car.widget.ListItem;
+
+import com.android.car.settings.R;
+import com.android.car.settings.common.CoustomListItemTypes;
 
 /**
  * Represents suggestion list item.
  */
-public class SuggestionLineItem extends ActionIconButtonLineItem {
-
+public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> {
+    private final CharSequence mTitle;
+    private final CharSequence mPrimaryAction;
+    private final CharSequence mSecondaryAction;
+    private final Drawable mIconDrawable;
     private final CharSequence mSummary;
     private final View.OnClickListener mOnClickListener;
     private final ActionListener mActionListener;
+
+    private boolean mIsEnabled = true;
 
     /**
      * Creates a {@link SuggestionLineItem} with title, summary, icons, and click handlers.
@@ -41,35 +55,101 @@ public class SuggestionLineItem extends ActionIconButtonLineItem {
             CharSequence secondaryAction,
             View.OnClickListener onClickListener,
             ActionListener actionListener) {
-        super(title, primaryAction, secondaryAction, iconDrawable);
+        mTitle = title;
+        mPrimaryAction = primaryAction;
+        mSecondaryAction = secondaryAction;
+        mIconDrawable = iconDrawable;
         mSummary = summary;
         mOnClickListener = onClickListener;
         mActionListener = actionListener;
     }
 
-    @Override
-    public CharSequence getDesc() {
-        return mSummary;
+    @LayoutRes
+    public static final int getViewLayoutId() {
+        return R.layout.action_icon_button_line_item;
     }
 
     @Override
-    public boolean isExpandable() {
-        return true;
+    protected void onBind(ViewHolder viewHolder) {
+        viewHolder.mActionButton1.setText(mPrimaryAction);
+        viewHolder.mActionButton1.setEnabled(mIsEnabled);
+        viewHolder.mActionButton2.setText(mSecondaryAction);
+        viewHolder.mActionButton2.setEnabled(mIsEnabled);
+        viewHolder.mTitleView.setText(mTitle);
+        viewHolder.mTitleView.setEnabled(mIsEnabled);
+        viewHolder.mEndIconView.setImageDrawable(mIconDrawable);
+        viewHolder.mEndIconView.setEnabled(mIsEnabled);
+        viewHolder.mDescView.setEnabled(mIsEnabled);
+        viewHolder.itemView.setEnabled(mIsEnabled);
+        if (TextUtils.isEmpty(mSummary)) {
+            viewHolder.mDescView.setVisibility(View.GONE);
+        } else {
+            viewHolder.mDescView.setVisibility(View.VISIBLE);
+            viewHolder.mDescView.setText(mSummary);
+        }
+        viewHolder.mActionButton2.setOnClickListener(
+                v -> onSecondaryActionButtonClick(viewHolder.getAdapterPosition()));
+
+        viewHolder.mActionButton1.setOnClickListener(
+                v -> onPrimaryActionButtonClick(viewHolder.mView));
     }
 
     @Override
-    public void onClick(View view) {
-        mOnClickListener.onClick(view);
+    public void setEnabled(boolean enabled) {
+        mIsEnabled = enabled;
     }
 
     @Override
-    public void onSecondaryActionButtonClick(int adapterPosition) {
+    protected void resolveDirtyState() {
+        // nothing to resolve.
+    }
+
+    @Override
+    public final int getViewType() {
+        return CoustomListItemTypes.SUGGESTION_VIEW_TYPE;
+    }
+
+    /**
+     * Creates a {@link ViewHolder}.
+     */
+    public static ViewHolder createViewHolder(View itemView) {
+        return new ViewHolder(itemView);
+    }
+
+    private void onSecondaryActionButtonClick(int adapterPosition) {
         mActionListener.onSuggestionItemDismissed(adapterPosition);
     }
 
-    @Override
-    public void onPrimaryActionButtonClick(View view) {
-        onClick(view);
+    private void onPrimaryActionButtonClick(View view) {
+        mOnClickListener.onClick(view);
+    }
+
+    /**
+     * ViewHolder that contains the elements that make up an ActionIconButtonLineItem,
+     * including the title, description, icon, end action button, and divider.
+     */
+    public static class ViewHolder extends ListItem.ViewHolder {
+        final TextView mTitleView;
+        final TextView mDescView;
+        final ImageView mEndIconView;
+        final Button mActionButton1;
+        final Button mActionButton2;
+        final View mView;
+
+        public ViewHolder(View view) {
+            super(view);
+            mView = view;
+            mEndIconView = (ImageView) mView.findViewById(R.id.end_icon);
+            mTitleView = (TextView) mView.findViewById(R.id.title);
+            mDescView = (TextView) mView.findViewById(R.id.desc);
+            mActionButton1 = (Button) mView.findViewById(R.id.action_button_1);
+            mActionButton2 = (Button) mView.findViewById(R.id.action_button_2);
+        }
+
+        @Override
+        public void applyUxRestrictions(CarUxRestrictions restrictions) {
+            // no-op
+        }
     }
 
     /**

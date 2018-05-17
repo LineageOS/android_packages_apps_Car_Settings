@@ -18,17 +18,17 @@ package com.android.car.settings.common;
 /**
  * Keeps ViewType ids for all customer ListItems in a centralized location.
  */
-public class CoustomListItemTypes {
+public final class CoustomListItemTypes {
     // According to ListItemAdapter, customized view type needs to be negative.
     public static final int CHECK_BOX_VIEW_TYPE = -1;
     public static final int EDIT_TEXT_VIEW_TYPE = -2;
     public static final int PASSWORD_VIEW_TYPE = -3;
     public static final int SPINNER_VIEW_TYPE = -4;
+    public static final int SUGGESTION_VIEW_TYPE = -5;
 
     /**
      * No one should instantiate this class.
      */
     private CoustomListItemTypes() {
-
     }
 }
