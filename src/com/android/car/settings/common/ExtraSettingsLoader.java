@@ -1,4 +1,20 @@
-package com.android.car.settings.home;
+/*
+ * Copyright (C) 2018 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.car.settings.common;
 
 import static com.android.settingslib.drawer.TileUtils.EXTRA_SETTINGS_ACTION;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
@@ -16,10 +32,10 @@ import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.android.car.list.LaunchAppLineItem;
-import com.android.car.list.TypedPagedListAdapter;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.Logger;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -29,7 +45,6 @@ import java.util.Map;
 
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
- * TODO: remove after all list new switched to androidx.car.widget
  */
 public class ExtraSettingsLoader {
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
@@ -44,10 +59,13 @@ public class ExtraSettingsLoader {
         mContext = context;
     }
 
-    public Map<String, Collection<TypedPagedListAdapter.LineItem>> load() {
+    /**
+     * Returns a map of category and setting items pair loaded from 3rd party.
+     */
+    public Map<String, Collection<ListItem>> load() {
         PackageManager pm = mContext.getPackageManager();
         Intent intent = new Intent(EXTRA_SETTINGS_ACTION);
-        Map<String, Collection<TypedPagedListAdapter.LineItem>> extraSettings = new HashMap<>();
+        Map<String, Collection<ListItem>> extraSettings = new HashMap<>();
         // initialize the categories
         extraSettings.put(WIRELESS_CATEGORY, new LinkedList());
         extraSettings.put(DEVICE_CATEGORY, new LinkedList());
@@ -59,7 +77,7 @@ public class ExtraSettingsLoader {
 
         for (ResolveInfo resolved : results) {
             if (!resolved.system) {
-                // Do not allow any app to add to settings, only system ones.
+                // Do not allow any app to be added to settings, only system ones.
                 continue;
             }
             String title = null;
@@ -75,6 +93,10 @@ public class ExtraSettingsLoader {
                     } else {
                         title = metaData.getString(META_DATA_PREFERENCE_TITLE);
                     }
+                }
+                if (TextUtils.isEmpty(title)) {
+                    LOG.d("no title.");
+                    title = activityInfo.loadLabel(pm).toString();
                 }
                 if (metaData.containsKey(META_DATA_PREFERENCE_SUMMARY)) {
                     if (metaData.get(META_DATA_PREFERENCE_SUMMARY) instanceof Integer) {
@@ -97,18 +119,13 @@ public class ExtraSettingsLoader {
             } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
                 LOG.d("Couldn't find info", e);
             }
-            if (TextUtils.isEmpty(title)) {
-                LOG.d("no title.");
-                title = activityInfo.loadLabel(pm).toString();
-            }
-            Integer iconRes = null;
             Icon icon = null;
             if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
-                iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
+                int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
                 icon = Icon.createWithResource(activityInfo.packageName, iconRes);
             } else {
                 icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
-                LOG.d("no icon.");
+                LOG.d("use default icon.");
             }
             Intent extraSettingIntent =
                     new Intent().setClassName(activityInfo.packageName, activityInfo.name);
@@ -116,8 +133,13 @@ public class ExtraSettingsLoader {
                 // If category is not specified or not supported, default to device.
                 category = DEVICE_CATEGORY;
             }
-            extraSettings.get(category).add(new LaunchAppLineItem(
-                    title, icon, mContext, summary, extraSettingIntent));
+            TextListItem item = new TextListItem(mContext);
+            item.setTitle(title);
+            item.setBody(summary);
+            item.setPrimaryActionIcon(icon.loadDrawable(mContext), /* useLargeIcon= */ false);
+            item.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
+            item.setOnClickListener(v -> mContext.startActivity(extraSettingIntent));
+            extraSettings.get(category).add(item);
         }
         return extraSettings;
     }
