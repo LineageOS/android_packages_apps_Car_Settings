@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2017 The Android Open Source Project
+  ~ Copyright (C) 2018 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -40,31 +40,26 @@
         android:gravity="center_vertical"
         android:textAppearance="@style/TextAppearance.Car.Title2"/>
 
-    <LinearLayout
-        android:id="@+id/button_container"
+    <Button
+        android:id="@+id/action_button2"
+        style="?android:attr/borderlessButtonStyle"
+        android:visibility="gone"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/car_button_height"
+        android:layout_toStartOf="@id/action_button1"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/action_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/car_button_height"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/car_keyline_1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/action_button2"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_marginEnd="@dimen/car_padding_3"/>
-
-        <Button
-            android:id="@+id/action_button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_marginEnd="@dimen/action_bar_end_widget_margin_end" />
-    </LinearLayout>
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/car_padding_4"
+        android:ellipsize="end"
+        android:maxLines="1"/>
 
     <ProgressBar
         android:id="@+id/progress_bar"

@@ -24,6 +24,7 @@
         <item name="WifiSignalColor">?android:attr/colorAccent</item>
         <item name="android:windowBackground">@color/car_card</item>
         <item name="android:windowAnimationStyle">@style/SettingAnimationStyle</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Car.Settings.ActionBar.Button.Borderless.Colored</item>
     </style>
 
     <style name="SettingAnimationStyle">
