@@ -115,7 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त अनुमति</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"प्रणाली"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"प्रणाली सम्बन्धी अद्यावधिकहरू"</string>
+    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"Android संस्करण"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा प्याचको चरण"</string>
@@ -173,9 +173,10 @@
     <string name="user_guest" msgid="3465399481257448601">"अतिथि"</string>
     <string name="user_switch" msgid="6544839750534690781">"बदल्नुहोस्‌"</string>
     <string name="current_user_name" msgid="3813671533249316823">"तपाईं (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"प्रोफाइलसम्बन्धी जानकारी"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेटअप गरिएको छैन"</string>
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
+    <skip />
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"प्रयोगकर्ता र खाताहरू"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"प्रयोगकर्ता"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> को खाता"</string>
@@ -207,6 +208,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"पुनः प्रयास गर्ने"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"छाड्नुहोस्"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"आफ्नो ढाँचा छनौट गर्नुहोस्"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"हालको स्क्रिन लक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि ढाँचा सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>
@@ -223,12 +225,16 @@
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रिन लक हटाउने हो?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खातामाथि पहुँच राख्न दिने छ"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN प्रविष्ट गर्नुहोस्"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"आफ्नो पासवर्ड प्रविष्ट गर्नुहोस्"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN कम्तीमा ४ अङ्कको हुनै पर्ने"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin अमान्य छ, यसमा अनिवार्य रूपमा कम्तीमा ४ अङ्क हुनु पर्छ।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN हरू मेल खाँदैनन्"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN सुरक्षित गर्ने क्रममा त्रुटि भयो"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"गलत PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"गलत पासवर्ड"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षाका लागि पासवर्ड सेट गर्नुहोस्"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"आफ्नो पासवर्ड पुन: प्रविष्ट गर्नुहोस्"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्डहरू मेल खाँदैनन्"</string>
@@ -280,8 +286,10 @@
     <string name="cancel" msgid="750286395700355455">"रद्द गर्नुहोस्"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace कुञ्जी"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter कुञ्जी"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"डेमो मोडबाट बाहिरिने हो?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"डेमो खाता मेट्न र डेमो मोडबाट बाहिर निस्कन फ्याक्ट्री रिसेट गर्नु पर्ने हुन्छ"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"डेमो मोडबाट बाहिरिनुहोस्"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"डेमो मोडबाट बाहिरिनुहोस्"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"यस कार्यले डेमो खाता मेटाउनुका साथै प्रणालीमा फ्याक्ट्रीको डेटा रिसेट गर्दछ। प्रयोगकर्ताका सबै डेटा गुम्ने छन्।"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडबाट बाहिरिनुहोस्"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"सेटअप सम्पन्न गर्नुहोस्"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"अहिले होइन"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"सवारी साधन चलाइरहेको बेला कारबाही उपलब्ध छैन।"</string>

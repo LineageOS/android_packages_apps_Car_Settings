@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Invité"</string>
     <string name="user_switch" msgid="6544839750534690781">"Changer"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Vous (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Détails du profil"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nom"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Non configuré"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Modifier le nom d\'utilisateur"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Utilisateurs et comptes"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Utilisateur"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Comptes pour <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Réessayer"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Ignorer"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Configurer le verrouillage de l\'écran"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Choisissez votre schéma"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Verrouillage actuel de l\'écran"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Pour votre sécurité, déf. un sch. de verr."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Effacer"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Suppr. le verrouill. de l\'écran?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Cela permettra à quiconque d\'accéder à votre compte"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Entrez votre NIP"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Entrez votre mot de passe"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Pour plus de sécurité, définissez un NIP"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Confirmez votre NIP"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Le NIP doit contenir au moins 4 chiffres"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Le NIP n\'est pas valide, il doit contenir au moins 4 chiffres."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Les NIP ne correspondent pas"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Erreur lors de l\'enregistrement du NIP"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"NIP incorrect"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Mot de passe incorrect"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Pour votre sécurité, déf. un m. de passe"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Confirmez votre mot de passe"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Les m. de passe ne corresp. pas"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Annuler"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Touche Retour arrière"</string>
     <string name="enter_key" msgid="2121394305541579468">"Touche Entrée"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Quitter le mode démo?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Pour quitter le mode de démo et supprimer le compte de démo, vous devrez réinitialiser l\'appareil"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Quitter le mode démo"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Quitter le mode démo"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Cette action supprimera le compte de démonstration et réinitialisera le système. Toutes les données de l\'utilisateur seront perdues."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter le mode démo"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"terminer la configuration"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"pas maintenant"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Cette action n\'est pas accessible durant la conduite."</string>

@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"អ្នក (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"ព័ត៌មាន​ក្នុង​កម្រងព័ត៌មាន"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"មិន​បាន​រៀបចំ"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"កែសម្រួល​ឈ្មោះអ្នក​ប្រើប្រាស់"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"អ្នកប្រើប្រាស់ និងគណនី"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"អ្នក​ប្រើប្រាស់"</string>
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ព្យាយាមម្ដងទៀត"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"រំលង"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"កំណត់​ការចាក់​សោអេក្រង់"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ជ្រើស​រើសលំនាំ​របស់​អ្នក"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ការចាក់សោអេក្រង់បច្ចុប្បន្ន"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ដើម្បីសុវត្ថិភាព សូមកំណត់លំនាំ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"សម្អាត"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"យល់ព្រម"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"លុប​ការ​ចាក់សោ​អេក្រង់?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"វា​នឹង​អនុញ្ញាត​ឱ្យ​នរណា​ម្នាក់​ចូល​ប្រើ​គណនី​របស់អ្នក"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"បញ្ចូល​កូដ PIN របស់​អ្នក"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​កូដ PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"បញ្ចូល​កូដ PIN របស់អ្នក​ឡើងវិញ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"កូដ PIN ត្រូវតែ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"កូដ PIN មិនត្រឹមត្រូវ​ទេ ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ 4 ខ្ទង់។"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"កូដ PIN មិន​ត្រូវគ្នាទេ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"មាន​បញ្ហា​ក្នុងការ​រក្សាទុក​កូដ PIN"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"កូដ PIN មិន​ត្រឹមត្រូវ​"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ពាក្យ​សម្ងាត់​មិន​ត្រឹមត្រូវ​ទេ"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"ដើម្បី​សុវត្ថិភាព សូម​កំណត់​ពាក្យសម្ងាត់"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"បញ្ចូល​ពាក្យ​សម្ងាត់​របស់​អ្នក​​ឡើងវិញ"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ពាក្យសម្ងាត់​មិន​ត្រូវ​គ្នាទេ"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"បោះបង់"</string>
     <string name="backspace_key" msgid="1545590866688979099">"គ្រាប់​ចុច​លុប"</string>
     <string name="enter_key" msgid="2121394305541579468">"គ្រាប់​ចុច​បញ្ចូល"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង​មែនទេ?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ការ​លុប​គណនី​សាកល្បង និង​ការ​ចាកចេញពីមុខងារ​សាកល្បង​នឹង​តម្រូវ​ឱ្យ​មាន​ការ​កំណត់​ដូច​ដើម​ឡើង​វិញ"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ចាក​ចេញ​ពីមុខងារបង្ហាញ​សាកល្បង"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ការចាកចេញ​នេះ​នឹង​លុប​គណនីបង្ហាញ​សាកល្បង និងកំណត់​ទិន្នន័យប្រព័ន្ធ​ដូច​ចេញ​ពី​រោងចក្រ។​ ទិន្នន័យ​អ្នក​ប្រើប្រាស់​ទាំងអស់​នឹង​បាត់បង់។"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"បញ្ចប់​ការរៀបចំ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"កុំ​ទាន់"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"មិនមាន​សកម្មភាព​ទេ ខណៈពេល​កំពុង​បើកបរ។"</string>

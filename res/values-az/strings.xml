@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Qonaq"</string>
     <string name="user_switch" msgid="6544839750534690781">"Dəyişin"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Profil məlumatı"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Quraşdırılmayıb"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"İstifadəçi adını redaktə edin"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"İstifadəçilər və hesablar"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"İstifadəçi"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> üçün hesablar"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Yenidən cəhd edin"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Keçin"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran kilidi təyin edin"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Modelinizi seçin"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Cari ekran kilidi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Təhlükəsizlik üçün model təyin edin"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Silin"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran kilidi ləğv edilsin?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu, hər kəsə hesabınıza daxil olmaq imkanı verəcək"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN kodu daxil edin"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Şifrənizi daxil edin"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Təhlükəsizlik üçün PIN kod təyin edin"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN kodu yenidən daxil edin"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN ən az 4 rəqəmdən ibarət olmalıdır"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pın kod yanlışdır, ən azı 4 rəqəm olmalıdır."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodlar uyğun gəlmir"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN kodu saxlamaqla bağlı problem var"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Yanlış PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Yanlış parol"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Təhlükəsizlik üçün parol təyin edin"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Parolunuzu yenidən daxil edin"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Parollar uyğun gəlmir"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Ləğv edin"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace düyməsi"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter düyməsi"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Demodan çıxılsın?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Demo hesabın silinməsi və demo rejimdən çıxma zavod ayarlarının bərpasını tələb edəcək"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Demodan çıxın"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Demo rejimdən çıxın"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Bu, demo hesabı siləcək və sistemi istehsalçı nizamlarına qaytaracaq."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çıxın"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"quraşdırmanı bitirin"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"indi yox"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Əməliyyat avtomobil idarə edərkən əlçatan deyil."</string>

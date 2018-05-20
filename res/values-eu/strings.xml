@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Gonbidatua"</string>
     <string name="user_switch" msgid="6544839750534690781">"Aldatu"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Zu (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Profilaren informazioa"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Izena"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Konfiguratu gabe"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Editatu erabiltzaile-izena"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Erabiltzaileak eta kontuak"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Erabiltzailea"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> erabiltzailearen kontuak"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Saiatu berriro"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Saltatu"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ezarri pantailaren blokeo bat"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Aukeratu eredu bat"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Uneko pantailaren blokeoa"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Babestuta egoteko, ezarri eredu bat"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Garbitu"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"Ados"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Pantailaren blokeoa kendu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Edonork atzitu ahalko du zure kontua"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Idatzi PIN kodea"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Idatzi pasahitza"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Babestuta egoteko, ezarri PIN bat"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Idatzi berriro PIN kodea"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Gutxienez 4 digitu izan behar ditu PINak"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kodeak ez du balio: gutxienez lau digitu izan behar ditu."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodeak ez datoz bat"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Errore bat gertatu da PINa gordetzean"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN kodea ez da zuzena"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pasahitza ez da zuzena"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Babestuta egoteko, ezarri pasahitz bat"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Idatzi berriro pasahitza"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Pasahitzak ez datoz bat"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Utzi"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Atzera tekla"</string>
     <string name="enter_key" msgid="2121394305541579468">"Sartu tekla"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Demo modutik irten?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Demo-kontua eta lehendik dagoen demo modua ezabatuz gero, jatorrizko ezarpenak berrezarri behar dira"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Irten demo modutik"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Irten demo modutik"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Demo kontua ezabatuko da eta sistemaren jatorrizko datuak berrezarriko dira. Erabiltzaile-datu guztiak galdu egingo dira."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"amaitu konfiguratzen"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"orain ez"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Ekintza hori ez dago erabilgarri gidatzen ari zarenean."</string>

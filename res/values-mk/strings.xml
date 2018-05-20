@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Гостин"</string>
     <string name="user_switch" msgid="6544839750534690781">"Префрли"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Вие (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Информации за профил"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Име"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не е поставен"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Изменување на корисничкото име"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Корисници и сметки"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Корисник"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Сметки за <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Повторно"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Прескокни"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Поставете заклучување екран"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Изберете шема"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Тековно заклучување на екранот"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"За безбедност, поставете шема"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Исчисти"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"Во ред"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Отстрани заклучување екран?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Ова ќе овозможи секој да пристапува до вашата сметка"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Внесете го PIN-кодот"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Внесете ја лозинката"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"За безбедност, поставете PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Внесете го PIN-кодот повторно"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-кодот мора да има најмалку 4 цифри"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN-кодот е неважечки. Мора да има барем 4 цифри."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-кодовите не се совпаѓаат"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Грешка при зачувување PIN"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Погрешен PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Погрешна лозинка"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"За безбедност, поставете лозинка"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Внесете ја лозинката повторно"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Лозинките не се совпаѓаат"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Откажи"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Копче Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Копче Enter"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Да се излезе од демо?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"За да ја избришете демо-сметката и да излезете од демо-режимот, потребно е фабричко ресетирање"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Излези од демо-режим"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Излез од демо-режим"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ова ќе ја избрише демо-сметката и ќе ги ресетира фабричките податоци на системот. Сите податоци на корисникот ќе се изгубат."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Излези од демо-режим"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"заврши со поставување"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"не сега"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Дејството не е достапно при возење."</string>
