@@ -19,6 +19,7 @@ package com.android.car.settings.security;
 import android.annotation.DrawableRes;
 import android.annotation.StringRes;
 import android.app.admin.DevicePolicyManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -31,6 +32,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -153,7 +155,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_password);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.suw_action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_password);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         passwordFragment.setArguments(bundle);
@@ -167,7 +169,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pin);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.suw_action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pin);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         passwordFragment.setArguments(bundle);
@@ -234,7 +236,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             }
         });
 
-        mPasswordField.requestFocus();
         mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordField);
 
         mHintMessage = view.findViewById(R.id.hint_text);
@@ -249,6 +250,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         if (mIsPin) {
             onPinViewCreated(view);
+        } else {
+            mPasswordField.requestFocus();
+            InputMethodManager imm = (InputMethodManager)
+                    getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm != null) {
+                imm.showSoftInput(mPasswordField, InputMethodManager.SHOW_IMPLICIT);
+            }
         }
 
         // Re-attach to the exiting worker if there is one.
@@ -445,24 +453,15 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 mPasswordHelper.getPasswordQuality());
     }
 
-    // Updates the hint message, button text and state
+    // Updates the hint message, error, button text and state
     private void updateUi() {
-        boolean inputAllowed = mSavePasswordWorker == null;
+        boolean inputAllowed = mSavePasswordWorker == null || mSavePasswordWorker.isFinished();
 
         if (mUiStage == Stage.Introduction) {
             String password = mPasswordField.getText().toString();
-            if (mErrorCode != PasswordHelper.NO_ERROR) {
-                List<String> messages = mPasswordHelper.convertErrorCodeToMessages(getContext(),
-                        mErrorCode);
-                // Update the fulfillment of requirements.
-                mHintMessage.setText(String.join(" ", messages));
-            } else {
-                mHintMessage.setText(getString(mUiStage.getHint(mIsAlphaMode)));
-            }
             // Enable/Disable the next button accordingly.
             setPrimaryButtonEnabled(!TextUtils.isEmpty(password));
         } else {
-            mHintMessage.setText(getString(mUiStage.getHint(mIsAlphaMode)));
             boolean hasPassword = !TextUtils.isEmpty(mCurrentEntry);
             setPrimaryButtonEnabled(inputAllowed && hasPassword);
             setSecondaryButtonEnabled(inputAllowed);
@@ -470,6 +469,25 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         if (mIsPin) {
             mEnterKey.setImageResource(mUiStage.enterKeyIcon);
+        }
+
+        switch(mUiStage) {
+            case Introduction:
+            case NeedToConfirm:
+                mPasswordField.setError(null);
+                mHintMessage.setText(getString(mUiStage.getHint(mIsAlphaMode)));
+                break;
+            case PasswordInvalid:
+                List<String> messages =
+                        mPasswordHelper.convertErrorCodeToMessages(getContext(), mErrorCode);
+                setError(String.join(" ", messages));
+                break;
+            case ConfirmWrong:
+            case SaveFailure:
+                setError(getString(mUiStage.getHint(mIsAlphaMode)));
+                break;
+            default:
+                // Do nothing
         }
 
         setPrimaryButtonText(mUiStage.primaryButtonText);
@@ -480,6 +498,20 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             setSecondaryButtonText(mUiStage.secondaryButtonText);
         }
         mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
+    }
+
+    /**
+     * To show error in password, it is set directly on TextInputEditText. PIN can't use
+     * TextInputEditText because PIN field is not focusable therefore error won't show. Instead
+     * the error is shown as a hint message.
+     */
+    private void setError(String message) {
+        if (mIsPin) {
+            mHintMessage.setText(message);
+        } else {
+            mPasswordField.setError(message);
+            mHintMessage.setText(null);
+        }
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
