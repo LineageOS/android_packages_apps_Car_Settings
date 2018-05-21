@@ -31,21 +31,24 @@ import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.car.list.SingleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.Utils;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Shows details about an application and action associated with that application,
  * like uninstall, forceStop.
  */
-public class ApplicationDetailFragment extends ListSettingsFragment {
+public class ApplicationDetailFragment extends ListItemSettingsFragment {
     private static final Logger LOG = new Logger(ApplicationDetailFragment.class);
     public static final String EXTRA_RESOLVE_INFO = "extra_resolve_info";
 
@@ -58,7 +61,7 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
 
     public static ApplicationDetailFragment getInstance(ResolveInfo resolveInfo) {
         ApplicationDetailFragment applicationDetailFragment = new ApplicationDetailFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putParcelable(EXTRA_RESOLVE_INFO, resolveInfo);
         bundle.putInt(EXTRA_TITLE_ID, R.string.applications_settings);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
@@ -100,17 +103,23 @@ public class ApplicationDetailFragment extends ListSettingsFragment {
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> items = new ArrayList<>();
+    public ListItemProvider getItemProvider() {
+        return new ListItemProvider.ListProvider(getListItems());
+    }
+
+    private List<ListItem> getListItems() {
+        ArrayList<ListItem> items = new ArrayList<>();
         items.add(new ApplicationLineItem(
                 getContext(),
                 getContext().getPackageManager(),
                 mResolveInfo,
                 /* fragmentController= */ null,
                 false));
-        items.add(new ApplicationPermissionLineItem(getContext(), mResolveInfo));
-        items.add(new SingleTextLineItem(getContext().getString(
-                R.string.application_version_label, mPackageInfo.versionName)));
+        items.add(new ApplicationPermissionLineItem(getContext(), mResolveInfo, this));
+        TextListItem versionItem = new TextListItem(getContext());
+        versionItem.setTitle(getContext().getString(
+                R.string.application_version_label, mPackageInfo.versionName));
+        items.add(versionItem);
         return items;
     }
 
