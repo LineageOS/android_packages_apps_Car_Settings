@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"访客"</string>
     <string name="user_switch" msgid="6544839750534690781">"开关"</string>
     <string name="current_user_name" msgid="3813671533249316823">"您 (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"个人资料信息"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名称"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"未设置"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"修改用户名称"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"用户和帐号"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"用户"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的帐号"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"重试"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"跳过"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"设置屏幕锁定"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"选择您的图案"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"当前屏幕锁定设置"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"为了安全起见，请设置解锁图案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"确定"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"清除屏幕锁定设置"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"这样一来，任何人都能访问您的帐号"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"输入您的 PIN 码"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"输入您的密码"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"为了安全起见，请设置 PIN 码"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"重新输入 PIN 码"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN 码必须至少为 4 位数"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN 码无效，必须至少包含 4 位数。"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN 码不一致"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"保存 PIN 码时出错"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN 码错误"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"密码错误"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"为了安全起见，请设置密码"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"重新输入密码"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"密码不匹配"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"取消"</string>
     <string name="backspace_key" msgid="1545590866688979099">"退格键"</string>
     <string name="enter_key" msgid="2121394305541579468">"输入密钥"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"要退出演示模式吗？"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"必须恢复出厂设置才能删除演示帐号以及退出演示模式"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"退出演示模式"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"退出演示模式"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"这项操作会删除演示帐号并将系统恢复出厂设置，且所有用户数据都会丢失。"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"完成设置"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"以后再说"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"无法在驾驶时执行此操作。"</string>

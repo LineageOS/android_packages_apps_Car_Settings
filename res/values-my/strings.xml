@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"ဧည့်သည်"</string>
     <string name="user_switch" msgid="6544839750534690781">"ပြောင်းရန်"</string>
     <string name="current_user_name" msgid="3813671533249316823">"သင် (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"ပရိုဖိုင်အချက်အလက်"</string>
     <string name="user_name_label" msgid="3210832645046206845">"အမည်"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"စနစ်ထည့်သွင်းထားခြင်း မရှိပါ"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"အသုံးပြုသူအမည် တည်းဖြတ်ခြင်း"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"အသုံးပြုသူနှင့် အကောင့်"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"အသုံးပြုသူ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> အတွက် အကောင့်များ"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ထပ်လုပ်ရန်"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ကျော်ရန်"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"မျက်နှာပြင်လော့ခ်တစ်ခု သတ်မှတ်ခြင်း"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"သင့်လော့ခ်ဖွင့်ပုံစံ ရွေးပါ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိ မျက်နှာပြင်လော့ခ်"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"မျက်နှာပြင်လော့ခ် ဖယ်လိုသလား။"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"၎င်းက မည်သူ့ကိုမဆို သင့်အကောင့်ထဲ ဝင်ခွင့်ပေးမည်"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"သင့်ပင်နံပါတ် ထည့်ပါ"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"သင့်စကားဝှက် ထည့်ပါ"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"လုံခြုံရေးအတွက် ပင်နံပါတ်တစ်ခု သတ်မှတ်ပါ"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"သင့်ပင်နံပါတ်ကို ပြန်ထည့်ပါ"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"ပင်နံပါတ်၌ အနည်းဆုံးဂဏန်း ၄ လုံး ပါရမည်"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"ပင်နံပါတ် မမှန်ကန်ပါ၊ အနည်းဆုံး ဂဏန်း ၄ လုံးပါရမည်။"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"ပင်နံပါတ်များ ထပ်တူမကျပါ"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"ပင်နံပါတ်ကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ပင်နံပါတ် မှားနေသည်"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"စကားဝှက် မှားနေသည်"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"လုံခြုံရေးအတွက် စကားဝှက်တစ်ခု သတ်မှတ်ပါ"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"သင့်စကားဝှက်ကို ပြန်ထည့်ပါ"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"စကားဝှက်များ ထပ်တူမကျပါ"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"မလုပ်တော့"</string>
     <string name="backspace_key" msgid="1545590866688979099">"ပြန်ဖျက် ခလုတ်"</string>
     <string name="enter_key" msgid="2121394305541579468">"အတည်ပြု ခလုတ်"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"သရုပ်ပြမှ ထွက်မလား။"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"သရုပ်ပြအကောင့်ကို ဖျက်၍ သရုပ်ပြမုဒ်မှ ထွက်ခြင်းအတွက် စက်ရုံထုတ်အတိုင်း ပြင်ဆင်သတ်မှတ်ခြင်း လိုပါမည်။"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"သရုပ်ပြမှ ထွက်ရန်"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"သရုပ်ပြမုဒ်မှ ထွက်ရန်"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"၎င်းက သရုပ်ပြအကောင့်ကို ဖျက်ပြီး စနစ်ကို စက်ရုံထုတ်အခြေအနေပြန်ယူပါမည်။ အသုံးပြုသူ ဒေတာအားလုံး ရှိတော့မည်မဟုတ်ပါ။"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"သရုပ်ပြမှ ထွက်ရန်"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"စနစ်ထည့်သွင်းမှု အပြီးသတ်ရန်"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ယခုမလုပ်ပါ"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ကားမောင်းနေစဉ် လုပ်ဆောင်ချက်များ မရနိုင်ပါ။"</string>

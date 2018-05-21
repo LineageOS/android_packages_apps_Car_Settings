@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Επισκέπτης"</string>
     <string name="user_switch" msgid="6544839750534690781">"Εναλλαγή"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Εσείς (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Πληροφορίες προφίλ"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Όνομα"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Δεν έχει ρυθμιστεί"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Επεξεργασία ονόματος χρήστη"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Χρήστες και λογαριασμοί"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Χρήστης"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Λογαριασμοί για <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Επανάληψη"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Παράβλεψη"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ορισμός κλειδώματος οθόνης"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Επιλέξτε το μοτίβο σας"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Τρέχουσα οθόνη κλειδώματος"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Για λόγους ασφαλείας, ορίστε ένα μοτίβο"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Διαγραφή"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Κατάργηση κλειδώματος οθόνης;"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Έτσι όλοι οι χρήστες θα έχουν πρόσβαση στον λογαριασμό σας"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Εισαγάγετε τον αριθμό σας PIN"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Εισαγάγετε κωδικό πρόσβασης"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Για λόγους ασφαλείας, ορίστε ένα PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Εισαγάγετε ξανά τον αριθμό PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Το PIN πρέπει να είναι τουλάχ. 4 ψηφία."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Ο αριθμός PIN δεν είναι έγκυρος. Πρέπει να αποτελείται από τουλάχιστον 4 ψηφία."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Τα PIN δεν ταιριάζουν"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Σφάλμα κατά την αποθήκευση του PIN"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Λανθασμένος αριθμός PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Λανθασμένος κωδικός πρόσβασης"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Για ασφάλεια, ορίστε κωδικό πρόσβασης"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Εισαγάγετε ξανά τον κωδικό πρόσβασης"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Ανόμοιοι κωδικοί πρόσβασης"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Ακύρωση"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Πλήκτρο Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Πλήκτρο Enter"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Έξοδος από επίδειξη;"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Για τη διαγ. του λογ. επίδειξ. και την έξοδο από τη λειτ. επίδειξ. απαιτ. επαναφ. στις εργοστ. ρυθμ."</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Έξοδος από επίδειξη"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Έξοδος από λειτ. επίδειξης"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Με αυτόν τον τρόπο, ο λογαριασμός επίδειξης θα χαθεί και θα γίνει επαναφορά των εργοστασιακών δεδομένων συστήματος. Όλα τα δεδομένα χρήστη θα χαθούν."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Έξοδος από επίδειξη"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ολοκλήρωση ρύθμισης"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"όχι τώρα"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Η ενέργεια δεν είναι διαθέσιμη κατά την οδήγηση"</string>

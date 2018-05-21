@@ -175,9 +175,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Gość"</string>
     <string name="user_switch" msgid="6544839750534690781">"Przełącz"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ty (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Informacje o profilu"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nazwa"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nieskonfigurowany"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Edytowanie nazwy użytkownika"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Użytkownicy i konta"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Użytkownik"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -209,6 +209,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Ponów"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Pomiń"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ustawianie blokady ekranu"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Wybierz wzór"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Aktualna blokada ekranu"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Ze względów bezpieczeństwa ustaw wzór"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Wyczyść"</string>
@@ -225,12 +226,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Usunąć blokadę ekranu?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Każdy będzie mógł mieć dostęp do Twojego konta"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Wpisz kod PIN"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Wpisz hasło"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Ze względów bezpieczeństwa ustaw kod PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Podaj ponownie kod PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Kod PIN musi mieć co najmniej 4 cyfry"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Kod PIN musi mieć co najmniej 4 cyfry."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Kody PIN nie są identyczne"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Błąd podczas zapisywania kodu PIN"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Nieprawidłowy kod PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Nieprawidłowe hasło"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Ze względów bezpieczeństwa ustaw hasło"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Podaj ponownie hasło"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Hasła nie są identyczne"</string>
@@ -294,8 +299,10 @@
     <string name="cancel" msgid="750286395700355455">"Anuluj"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Klawisz Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Klawisz Enter"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Zamknąć tryb demo?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Usunięcie konta demonstracyjnego i wyłączenie trybu demo wymaga przywrócenia ustawień fabrycznych"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Zamknij tryb demo"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Zamknij tryb demonstracyjny"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Spowoduje to usunięcie konta demonstracyjnego i przywrócenie danych fabrycznych systemu. Utracisz wszystkie swoje dane użytkownika."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Zamknij tryb demo"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"dokończ konfigurację"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"nie teraz"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Czynność niedostępna podczas jazdy."</string>

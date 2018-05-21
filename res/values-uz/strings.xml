@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Mehmon"</string>
     <string name="user_switch" msgid="6544839750534690781">"Almashtirish"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Profil ma’lumotlari"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ism"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Sozlanmagan"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Foydalanuvchi nomini tahrirlash"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Foydalanuvchilar va hisoblar"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Foydalanuvchi"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Qayta urinish"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Tashlab ketish"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran qulfini sozlang"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Grafik kalit yarating"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Joriy ekran qulfi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit o‘rnating"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tozalash"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ekran qulfi olib tashlansinmi?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Bu hammaga hisobingizga kirish imkonini beradi"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN kodni kiriting"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Parolni kiriting"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Xavfsizlik uchun PIN kod o‘rnating"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN kodni qayta kiriting"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN kod kamida 4 ta raqamli bo‘lsin"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kod yaroqsiz, kamida 5 ta raqamdan iborat bo‘lishi lozim."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodlar bir-biriga mos emas"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN kod saqlanmadi"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN kod xato"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Parol xato"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Xavfsizlik uchun parol o‘rnating"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Parolni qayta kiriting"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Parollar bir xil terilmadi"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"Bekor qilish"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace tugmasi"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter tugmasi"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Demodan chiqilsinmi?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Demo hisob va mavjud demo rejimni o‘chirib tashlash sozlamalarni asliga qaytarishni talab qiladi"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Demodan chiqish"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Demo rejimdan chiqing"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Bunda demo hisob o‘chirib tashlanadi va tizim zavod sozlamalariga qaytariladi. Barcha foydalanuvchi ma’lumotlari tozalab tashlanadi."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan chiqish"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"sozlashni tugatish"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"hozir emas"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Avtomobilda harakatlanayotganda amal ishlamaydi."</string>

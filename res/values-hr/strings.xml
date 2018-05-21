@@ -174,9 +174,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Gost"</string>
     <string name="user_switch" msgid="6544839750534690781">"Prebaci"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Vi (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Informacije profila"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nije postavljen"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Uređivanje korisničkog imena"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Korisnici i računi"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Korisnik"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Računi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -208,6 +208,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Pokušaj ponovno"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Preskoči"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Postavljanje zaključavanja zaslona"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Odaberite uzorak"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Trenutačno zaključavanje zaslona"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Radi sigurnosti postavite uzorak"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Ukloni"</string>
@@ -224,12 +225,16 @@
     <string name="okay" msgid="4589873324439764349">"U redu"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Ukloniti zaključavanje zaslona?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Druge osobe moći će pristupiti vašem računu"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Unesite PIN"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Unesite zaporku"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Radi sigurnosti postavite PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Ponovni unos PIN-a"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN mora imati barem četiri znamenke"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN nije važeći. Mora imati najmanje četiri znamenke."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-ovi se ne podudaraju"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Pogreška pri spremanju PIN-a"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Pogrešan PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Pogrešna zaporka"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Radi sigurnosti postavite zaporku"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Ponovni unos zaporke"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Zaporke se ne podudaraju"</string>
@@ -287,8 +292,10 @@
     <string name="cancel" msgid="750286395700355455">"Otkaži"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tipka Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tipka Enter"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Napustiti demo-način?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Da bi se izbrisao demo-račun i napustio demo-način, potrebno je vratiti uređaj na tvorničke postavke"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Napustite demo-način"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Napustite demo-način"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Time će se izbrisati demo-račun, a sustav će se vratiti na tvorničko stanje. Svi će se podaci korisnika izgubiti."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Napustite demo-način"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"dovršite postavljanje"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ne sada"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Radnja nije dostupna tijekom vožnje."</string>

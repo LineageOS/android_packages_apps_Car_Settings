@@ -29,7 +29,7 @@
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"हल्की रोशनी वाली स्क्रीन, टचस्‍क्रीन, बैटरी"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"हल्की रोशनी वाली स्क्रीन, टचस्‍क्रीन, बैटरी"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"हल्की रोशनी वाली स्क्रीन, नाइट, टिंट"</string>
-    <string name="night_mode_tile_label" msgid="6603597795502131664">"नाइट मोड"</string>
+    <string name="night_mode_tile_label" msgid="6603597795502131664">"रात वाला मोड"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाई-फ़ाई"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"वायरलेस एक्सेस पॉइंट सेट और प्रबंधित करें"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाई-फ़ाई चालू हो रहा है…"</string>
@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच करें"</string>
     <string name="current_user_name" msgid="3813671533249316823">"आप (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"प्रोफ़ाइल की जानकारी"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"उपयोगकर्ता नाम में बदलाव करें"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"उपयोगकर्ता और खाते"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"उपयोगकर्ता"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> के खाते"</string>
@@ -194,24 +194,21 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"पैटर्न"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"पिन"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"स्क्रीन लॉक करने का तरीका चुनें"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रीन लॉक के विकल्प"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"अपना पैटर्न डालें"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि करें"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"फिर से बनाएं"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी रखें"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"फिर से कोशिश करें"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"छोड़ें"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रीन लॉक सेट करना"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"अनलॉक करने के लिए पैटर्न चुनें"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"मौजूदा स्क्रीन लॉक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षा के लिए पैटर्न सेट करें"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"हटाएं"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"अभी नहीं"</string>
@@ -225,9 +222,10 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"लॉक खोलने का पैटर्न बनाने का तरीका"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"पैटर्न सेव करने में गड़बड़ी हुई"</string>
     <string name="okay" msgid="4589873324439764349">"ठीक है"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक हटाएं?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"स्क्रीन लॉक हटाने पर कोई भी आपका खाता इस्तेमाल कर सकता है"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"अनलॉक करने के लिए पिन डालें"</string>
+    <!-- no translation found for lock_settings_enter_password (2636669926649496367) -->
     <skip />
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षा के लिए पिन सेट करें"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"पिन दोबारा डालें"</string>
@@ -235,6 +233,9 @@
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"यह पिन अमान्य है, इसमें कम से कम 4 अंक होने चाहिए."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"पिन मेल नहीं खाते"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"पिन सेव करने में गडबड़ी हुई"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"डाला गया पिन गलत है"</string>
+    <!-- no translation found for lockscreen_wrong_password (5757087577162231825) -->
+    <skip />
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षा के लिए पासवर्ड सेट करें"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"पासवर्ड दोबारा डालें"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्ड मेल नहीं खाते"</string>
@@ -286,8 +287,10 @@
     <string name="cancel" msgid="750286395700355455">"अभी नहीं"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace बटन"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter बटन"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"डेमो मोड से बाहर आएं?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"डेमो खाता मिटाने और मौजूदा डेमो मोड से बाहर आने के लिए डिवाइस को फ़ैक्ट्री रीसेट करना ज़रूरी है"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"डेमो मोड से बाहर निकलें"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"डेमो मोड से बाहर निकलें"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"डेमो मोड से बाहर निकलने पर, डेमो खाता मिट जाएगा और सिस्टम का डेटा फ़ैक्ट्री रीसेट हो जाएगा. साथ ही, उपयोगकर्ता का पूरा डेटा भी मिट जाएगा."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोड से बाहर निकलें"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"सेटअप पूरा करें"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"अभी नहीं"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"गाड़ी चलाते समय यह काम नहीं किया जा सकता."</string>

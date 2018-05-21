@@ -175,9 +175,9 @@
     <string name="user_guest" msgid="3465399481257448601">"Гість"</string>
     <string name="user_switch" msgid="6544839750534690781">"Змінити користувача"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ви (%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"Інформація профілю"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ім’я"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не налаштовано"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Змінити ім’я користувача"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Користувачі й обл. записи"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Користувач"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Облікові записи користувача <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -209,6 +209,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Повторити"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Пропустити"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Налаштуйте блокування екрана"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Створіть ключ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Поточне блокування екрана"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"З міркувань безпеки налаштуйте ключ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Очистити"</string>
@@ -225,12 +226,16 @@
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Вимкнути блокування екрана?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Будь-хто зможе ввійти у ваш обліковий запис"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Введіть PIN-код"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"Введіть пароль"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"З міркувань безпеки налаштуйте PIN-код"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Введіть PIN-код ще раз"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-код має містити принаймні 4 цифри"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN-код недійсний. Він має складатися принаймні з 4 цифр."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-коди не збігаються"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Не вдалося зберегти PIN-код"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Неправильний PIN-код"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Неправильний пароль"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"З міркувань безпеки налаштуйте пароль"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"Введіть пароль ще раз"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Паролі не збігаються"</string>
@@ -294,8 +299,10 @@
     <string name="cancel" msgid="750286395700355455">"Скасувати"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавіша Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Клавіша Enter"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"Вийти з демо-режиму?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"Якщо видалити демонстраційний обліковий запис і вимкнути демо-режим, потрібно буде скинути параметри"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Вийти з демо-режиму"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Вийти з демо-режиму"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Буде видалено демонстраційний обліковий запис і відновлено заводські налаштування системи. Усі дані користувача буде втрачено."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Вийти з демо-режиму"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"завершити налаштування"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"не зараз"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Неможливо виконати дію під час руху автомобіля."</string>

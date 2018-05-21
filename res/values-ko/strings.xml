@@ -173,9 +173,9 @@
     <string name="user_guest" msgid="3465399481257448601">"게스트"</string>
     <string name="user_switch" msgid="6544839750534690781">"전환"</string>
     <string name="current_user_name" msgid="3813671533249316823">"사용자(%1$s)"</string>
-    <string name="user_settings_details_title" msgid="3016069827765597036">"프로필 정보"</string>
     <string name="user_name_label" msgid="3210832645046206845">"이름"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"설정되지 않음"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"사용자 이름 수정"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"사용자 및 계정"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"사용자"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>님의 계정"</string>
@@ -207,6 +207,7 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"다시 시도"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"건너뛰기"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"화면 잠금 설정"</string>
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"패턴 선택"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"현재 화면 잠금"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"보안을 위해 패턴을 설정하세요."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"삭제"</string>
@@ -223,12 +224,16 @@
     <string name="okay" msgid="4589873324439764349">"확인"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"화면 잠금을 삭제하시겠습니까?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"화면 잠금을 삭제하면 누구나 계정에 액세스할 수 있습니다."</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN 입력"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"비밀번호 입력"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"보안을 위해 PIN을 설정하세요."</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"PIN 다시 입력"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN은 4자리 이상이어야 합니다."</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN이 잘못되었습니다. 4자리 이상이어야 합니다."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN이 일치하지 않음"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN 저장 중 오류 발생"</string>
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"잘못된 PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"잘못된 비밀번호"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"보안을 위해 비밀번호를 설정하세요."</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"비밀번호 다시 입력"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"비밀번호가 일치하지 않음"</string>
@@ -280,8 +285,10 @@
     <string name="cancel" msgid="750286395700355455">"취소"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace 키"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter 키"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"데모를 종료하시겠습니까?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"데모 계정을 삭제하거나 데모 모드를 종료하려면 기기를 초기화해야 합니다."</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"데모 종료"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"데모 모드 종료"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"데모 계정을 삭제하고 시스템을 초기화합니다. 사용자 데이터는 모두 사라집니다."</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"데모 종료"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"설정 완료"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"나중에"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"운전 중 작업 불가"</string>

@@ -309,11 +309,11 @@
     <skip />
     <!-- no translation found for current_user_name (3813671533249316823) -->
     <skip />
-    <!-- no translation found for user_settings_details_title (3016069827765597036) -->
-    <skip />
     <!-- no translation found for user_name_label (3210832645046206845) -->
     <skip />
     <!-- no translation found for user_summary_not_set_up (1473688119241224145) -->
+    <skip />
+    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
     <skip />
     <!-- no translation found for user_and_account_settings_title (1542965868877207832) -->
     <skip />
@@ -351,19 +351,16 @@
     <skip />
     <!-- no translation found for security_settings_subtitle (2244635550239273229) -->
     <skip />
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"କିଛି ନାହିଁ"</string>
     <!-- no translation found for security_lock_pattern (1174352995619563104) -->
     <skip />
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <!-- no translation found for security_lock_password (4420203740048322494) -->
     <skip />
     <!-- no translation found for lock_settings_picker_title (6590330165050361632) -->
     <skip />
     <string name="screen_lock_options" msgid="7023338635352915768">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ଆପଣଙ୍କର ପାଟର୍ନ ଆଙ୍କନ୍ତୁ"</string>
     <!-- no translation found for lockpattern_confirm_button_text (7784925958324484965) -->
     <skip />
     <!-- no translation found for lockpattern_restart_button_text (9355771277617537) -->
@@ -375,8 +372,8 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ଛାଡ଼ିଦିଅନ୍ତୁ"</string>
     <!-- no translation found for set_screen_lock (5239317292691332780) -->
     <skip />
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ନିଜ ପାର୍ଟନ୍‌ ବାଛନ୍ତୁ"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"ବର୍ତ୍ତମାନର ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <!-- no translation found for choose_lock_pattern_message (6242765203541309524) -->
     <skip />
     <!-- no translation found for lockpattern_retry_button_text (4655398824001857843) -->
@@ -403,10 +400,10 @@
     <skip />
     <!-- no translation found for okay (4589873324439764349) -->
     <skip />
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"ସ୍କ୍ରୀନ ଲକ୍ ରିମୁଭ୍‍ କରିବେ କି?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ଏହା ଯେକୌଣସି ବ୍ୟକ୍ତି ଆପଣଙ୍କ ଆକାଉଣ୍ଟରେ ପ୍ରବେଶ ପାଇଁ ଅନୁମତି ଦେବ"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"ନିଜର PIN ଲେଖନ୍ତୁ"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"ନିଜ ପାସ୍‌ୱର୍ଡ ଲେଖନ୍ତୁ"</string>
     <!-- no translation found for choose_lock_pin_message (2963792070267774417) -->
     <skip />
     <!-- no translation found for confirm_your_pin_header (9096581288537156102) -->
@@ -418,6 +415,8 @@
     <skip />
     <!-- no translation found for error_saving_lockpin (9011960139736000393) -->
     <skip />
+    <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ଭୁଲ PIN"</string>
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ଭୁଲ ପାସ୍‌ୱର୍ଡ"</string>
     <!-- no translation found for choose_lock_password_message (6124341145027370784) -->
     <skip />
     <!-- no translation found for confirm_your_password_header (7052891840366724938) -->
@@ -472,8 +471,10 @@
     <skip />
     <string name="backspace_key" msgid="1545590866688979099">"Backspace କୀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"କୀ ଦବାନ୍ତୁ"</string>
-    <string name="exit_retail_title" msgid="4514319631081146178">"ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରିଆସିବେ?"</string>
-    <string name="exit_retail_message" msgid="1426206128187780964">"ଡେମୋ ଆକାଉଣ୍ଟ ଡିଲିଟ୍ କରିବାକୁ ଏବଂ ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରି ଆସିବାକୁ ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍ କରିବା ଆବଶ୍ୟକ"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
+    <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ଏହା ଡେମୋ ଆକାଉଣ୍ଟକୁ ଡିଲିଟ୍ କରିଦେବ ଏବଂ ଫ୍ୟାକ୍ଟୋରୀ ଡାଟା ସିଷ୍ଟମ୍‍କୁ ରିସେଟ୍ କରିବ। ସମସ୍ତ ୟୁଜର୍ ଡାଟା ନଷ୍ଟ ହୋ‍ଇଯିବ।"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ସେଟ୍-ଅପ୍ ସମାପ୍ତ କରନ୍ତୁ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ଏବେ ନୁହେଁଁ"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଏହି କାର୍ଯ୍ୟ କରିହେବ ନାହିଁ।"</string>
