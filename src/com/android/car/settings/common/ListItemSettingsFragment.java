@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.common;
@@ -30,7 +30,7 @@ import com.android.car.settings.R;
  * Uses support library ListItemAdapter, unlike ListSettingsFragment that uses the car-list
  * lists.
  */
-public abstract class ListItemSettingsFragment extends BaseFragment {
+public abstract class ListItemSettingsFragment extends BaseFragment implements ListController {
     private ListItemAdapter mListAdapter;
 
     /**
@@ -53,9 +53,7 @@ public abstract class ListItemSettingsFragment extends BaseFragment {
         listView.setDividerVisibilityManager(mListAdapter);
     }
 
-    /**
-     * Triggers UI update on the list.
-     */
+    @Override
     public void refreshList() {
         mListAdapter.notifyDataSetChanged();
     }
