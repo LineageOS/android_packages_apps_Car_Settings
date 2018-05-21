@@ -11,23 +11,18 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.common;
 
 import android.os.Bundle;
 
-import com.android.car.settings.R;
-
-import java.util.List;
-
-import androidx.car.widget.DayNightStyle;
-import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemAdapter;
 import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.ListItemProvider.ListProvider;
 import androidx.car.widget.PagedListView;
+
+import com.android.car.settings.R;
 
 /**
  * Settings page that only contain a list of items.
@@ -35,7 +30,7 @@ import androidx.car.widget.PagedListView;
  * Uses support library ListItemAdapter, unlike ListSettingsFragment that uses the car-list
  * lists.
  */
-public abstract class ListItemSettingsFragment extends BaseFragment {
+public abstract class ListItemSettingsFragment extends BaseFragment implements ListController {
     private ListItemAdapter mListAdapter;
 
     /**
@@ -58,9 +53,7 @@ public abstract class ListItemSettingsFragment extends BaseFragment {
         listView.setDividerVisibilityManager(mListAdapter);
     }
 
-    /**
-     * Triggers UI update on the list.
-     */
+    @Override
     public void refreshList() {
         mListAdapter.notifyDataSetChanged();
     }
