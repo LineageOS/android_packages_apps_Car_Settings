@@ -179,7 +179,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 R.drawable.ic_settings_applications,
                 getContext(),
                 null,
-                ApplicationSettingsFragment.getInstance(),
+                ApplicationSettingsFragment.newInstance(),
                 getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.date_and_time_settings_title,
