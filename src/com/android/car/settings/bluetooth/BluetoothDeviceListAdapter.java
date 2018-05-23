@@ -154,7 +154,9 @@ public class BluetoothDeviceListAdapter
         mDeviceManager.clearNonBondedDevices();
         mLocalManager.getEventManager().unregisterCallback(this);
         mBondedDevices.clear();
+        mBondedDevicesSorted.clear();
         mAvailableDevices.clear();
+        mAvailableDevicesSorted.clear();
         mSortTask.cancel(true);
     }
 
@@ -265,7 +267,12 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceDeleted(CachedBluetoothDevice cachedDevice) {
-        onDeviceDeleted(cachedDevice, /* refresh= */ true);
+        // the device might changed bonding state, so need to remove from both sets.
+        if (mBondedDevices.remove(cachedDevice)) {
+            mBondedDevicesSorted.remove(cachedDevice);
+        }
+        mAvailableDevices.remove(cachedDevice);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -305,7 +312,7 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
-        onDeviceDeleted(cachedDevice, /* refresh= */ false);
+        onDeviceDeleted(cachedDevice);
         onDeviceAdded(cachedDevice);
     }
 
@@ -315,7 +322,7 @@ public class BluetoothDeviceListAdapter
      */
     @Override
     public void onConnectionStateChanged(CachedBluetoothDevice cachedDevice, int state) {
-        onDeviceDeleted(cachedDevice, false);
+        onDeviceDeleted(cachedDevice);
         onDeviceAdded(cachedDevice);
     }
 
@@ -327,17 +334,6 @@ public class BluetoothDeviceListAdapter
     @Override
     public void onAudioModeChanged() {
         // Not used (for now)
-    }
-
-    private void onDeviceDeleted(CachedBluetoothDevice cachedDevice, boolean refresh) {
-        // the device might changed bonding state, so need to remove from both sets.
-        if (mBondedDevices.remove(cachedDevice)) {
-            mBondedDevicesSorted.remove(cachedDevice);
-        }
-        mAvailableDevices.remove(cachedDevice);
-        if (refresh) {
-            notifyDataSetChanged();
-        }
     }
 
     private void addDevices(Collection<CachedBluetoothDevice> cachedDevices) {

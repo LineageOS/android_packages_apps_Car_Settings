@@ -120,10 +120,6 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
             return;
         }
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
-
-        mDeviceAdapter = new BluetoothDeviceListAdapter(
-                getContext() , mLocalManager, getFragmentController());
-        mDeviceListView.setAdapter(mDeviceAdapter);
     }
 
     @Override
@@ -153,6 +149,9 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
                 mViewSwitcher.showNext();
             }
         }
+        mDeviceAdapter = new BluetoothDeviceListAdapter(
+                getContext() , mLocalManager, getFragmentController());
+        mDeviceListView.setAdapter(mDeviceAdapter);
         mDeviceAdapter.start();
     }
 
