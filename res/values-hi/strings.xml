@@ -175,7 +175,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"आप (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
-    <string name="edit_user_name_title" msgid="6890782937520262478">"उपयोगकर्ता नाम में बदलाव करें"</string>
+    <string name="edit_user_name_title" msgid="6890782937520262478">"\'उपयोगकर्ता नाम\' में बदलाव करें"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"उपयोगकर्ता और खाते"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"उपयोगकर्ता"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> के खाते"</string>
@@ -225,8 +225,7 @@
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रीन लॉक हटाएं?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"स्क्रीन लॉक हटाने पर कोई भी आपका खाता इस्तेमाल कर सकता है"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"अनलॉक करने के लिए पिन डालें"</string>
-    <!-- no translation found for lock_settings_enter_password (2636669926649496367) -->
-    <skip />
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"अपना पासवर्ड डालें"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षा के लिए पिन सेट करें"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"पिन दोबारा डालें"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"पिन में कम से कम 4 अंक होने चाहिए"</string>
@@ -234,8 +233,7 @@
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"पिन मेल नहीं खाते"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"पिन सेव करने में गडबड़ी हुई"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"डाला गया पिन गलत है"</string>
-    <!-- no translation found for lockscreen_wrong_password (5757087577162231825) -->
-    <skip />
+    <string name="lockscreen_wrong_password" msgid="5757087577162231825">"डाला गया पासवर्ड गलत है"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षा के लिए पासवर्ड सेट करें"</string>
     <string name="confirm_your_password_header" msgid="7052891840366724938">"पासवर्ड दोबारा डालें"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्ड मेल नहीं खाते"</string>
