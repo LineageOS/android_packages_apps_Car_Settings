@@ -26,4 +26,7 @@
 
     <!-- Number of columns in quick setting grid -->
     <integer name="quick_setting_column_count">4</integer>
+
+    <!-- user switcher column number TODO: move to support library-->
+    <integer name="user_switcher_num_col">3</integer>
 </resources>
