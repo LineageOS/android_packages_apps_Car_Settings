@@ -30,7 +30,7 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.users.UserIconProvider;
-import com.android.car.settings.users.UsersListFragment;
+import com.android.car.settings.users.UserSwitcherFragment;
 
 /**
  * Shows a page to access frequently used settings.
@@ -77,7 +77,7 @@ public class QuickSettingFragment extends BaseFragment {
         });
         mUserSwitcherBtn = getActivity().findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
-            getFragmentController().launchFragment(UsersListFragment.newInstance());
+            getFragmentController().launchFragment(UserSwitcherFragment.newInstance());
         });
 
         setupAccountButton();
