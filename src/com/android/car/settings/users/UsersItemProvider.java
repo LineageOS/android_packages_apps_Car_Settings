@@ -66,7 +66,7 @@ class UsersItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
+        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
 
         // Show current user
         mItems.add(createUserItem(currUserInfo,
@@ -83,6 +83,11 @@ class UsersItemProvider extends ListItemProvider {
             if (!userInfo.isGuest()) { // Do not show guest users.
                 mItems.add(createUserItem(userInfo, userInfo.name));
             }
+        }
+
+        UserInfo systemUser = mCarUserManagerHelper.getSystemUserInfo();
+        if (!mCarUserManagerHelper.isSystemUser(currUserInfo)) {
+            mItems.add(createUserItem(systemUser, systemUser.name));
         }
 
         // Display guest session option.
