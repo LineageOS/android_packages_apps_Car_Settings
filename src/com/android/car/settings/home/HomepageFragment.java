@@ -162,7 +162,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 R.drawable.ic_settings_display,
                 getContext(),
                 null,
-                DisplaySettingsFragment.getInstance(),
+                DisplaySettingsFragment.newInstance(),
                 getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
                 R.string.sound_settings,
