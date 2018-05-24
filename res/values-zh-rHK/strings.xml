@@ -175,8 +175,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"你 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名稱"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"尚未設定"</string>
-    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
-    <skip />
+    <string name="edit_user_name_title" msgid="6890782937520262478">"編輯使用者名稱"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"使用者和帳戶"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"使用者"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> 的帳戶"</string>
@@ -226,7 +225,7 @@
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"要移除螢幕鎖定嗎？"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"這樣，任何人都能存取您的帳戶"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"請輸入 PIN"</string>
-    <string name="lock_settings_enter_password" msgid="2636669926649496367">"輸入你的密碼"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"請輸入密碼"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"為了安全起見，請設定 PIN 碼"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"請重新輸入 PIN 碼"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN 碼至少要有 4 個數字"</string>

@@ -176,8 +176,7 @@
     <string name="current_user_name" msgid="3813671533249316823">"Vi (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nije podešeno"</string>
-    <!-- no translation found for edit_user_name_title (6890782937520262478) -->
-    <skip />
+    <string name="edit_user_name_title" msgid="6890782937520262478">"Izmenite ime korisnika"</string>
     <string name="user_and_account_settings_title" msgid="1542965868877207832">"Korisnici i nalozi"</string>
     <string name="user_settings_title" msgid="5511846421187697406">"Korisnik"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Nalozi za korisnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
@@ -293,10 +292,10 @@
     <string name="cancel" msgid="750286395700355455">"Otkaži"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Taster za brisanje unazad"</string>
     <string name="enter_key" msgid="2121394305541579468">"Taster Enter"</string>
-    <string name="exit_retail_button_text" msgid="6093240315583384473">"Nap. rež. demonstracije"</string>
-    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Nap. režim demonstracije"</string>
+    <string name="exit_retail_button_text" msgid="6093240315583384473">"Napustite režim demonstr."</string>
+    <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Da napustite režim dem.?"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ovim ćete izbrisati nalog za demonstracije i resetovati sistem na fabrička podešavanja. Svi podaci korisnika će biti izgubljeni."</string>
-    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Nap. rež. demonstracije"</string>
+    <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Napusti režim demonstr."</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"završite podešavanje"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ne sada"</string>
     <string name="restricted_while_driving" msgid="478954379611786852">"Radnja nije dostupna tokom vožnje."</string>
