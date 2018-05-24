@@ -27,14 +27,10 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Fragment for confirming existing lock PIN or password.  The containing activity must implement
@@ -45,12 +41,9 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     private static final String FRAGMENT_TAG_CHECK_LOCK_WORKER = "check_lock_worker";
     private static final String EXTRA_IS_PIN = "extra_is_pin";
 
-    // Number of keys in the pin pad, 0-9 plus backspace and enter keys.
-    private static final int NUM_KEYS = 12;
-
+    private PinPadView mPinPad;
     private EditText mPasswordField;
     private TextView mMsgView;
-    private final List<View> mPinKeys = new ArrayList<>(NUM_KEYS);
 
     private CheckLockWorker mCheckLockWorker;
     private CheckLockListener mCheckLockListener;
@@ -155,38 +148,37 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     }
 
     private void initPinView(View view) {
-        for (int keyId : PasswordHelper.PIN_PAD_DIGIT_KEYS) {
-            TextView key = view.findViewById(keyId);
-            String digit = key.getTag().toString();
-            key.setOnClickListener(v -> {
+        mPinPad = (PinPadView) view.findViewById(R.id.pin_pad);
+        mPinPad.setEnterKeyIcon(R.drawable.ic_done);
+
+        PinPadView.PinPadClickListener pinPadClickListener = new PinPadView.PinPadClickListener() {
+            @Override
+            public void onDigitKeyClick(String digit) {
                 clearError();
                 mPasswordField.append(digit);
-            });
-            mPinKeys.add(key);
-        }
-
-        View backspace = view.findViewById(R.id.key_backspace);
-        backspace.setOnClickListener(v -> {
-            clearError();
-            String pin = mPasswordField.getText().toString();
-            if (pin.length() > 0) {
-                mPasswordField.setText(pin.substring(0, pin.length() - 1));
             }
-        });
-        mPinKeys.add(backspace);
 
-        ImageButton enter = (ImageButton) view.findViewById(R.id.key_enter);
-        enter.setImageResource(R.drawable.ic_done);
-        enter.setOnClickListener(v -> {
-            mEnteredPassword = mPasswordField.getText().toString();
-            if (!TextUtils.isEmpty(mEnteredPassword)) {
-                initCheckLockWorker();
-                setPinPadEnabled(false);
-                mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+            @Override
+            public void onBackspaceClick() {
+                clearError();
+                String pin = mPasswordField.getText().toString();
+                if (pin.length() > 0) {
+                    mPasswordField.setText(pin.substring(0, pin.length() - 1));
+                }
             }
-        });
-        mPinKeys.add(enter);
 
+            @Override
+            public void onEnterKeyClick() {
+                mEnteredPassword = mPasswordField.getText().toString();
+                if (!TextUtils.isEmpty(mEnteredPassword)) {
+                    initCheckLockWorker();
+                    mPinPad.setEnabled(false);
+                    mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+                }
+            }
+        };
+
+        mPinPad.setPinPadClickListener(pinPadClickListener);
     }
 
     private void initPasswordView() {
@@ -220,12 +212,6 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         });
     }
 
-    private void setPinPadEnabled(boolean enabled) {
-        for (View key: mPinKeys) {
-            key.setEnabled(enabled);
-        }
-    }
-
     private void clearError() {
         if (!TextUtils.isEmpty(mMsgView.getText())) {
             mMsgView.setText("");
@@ -254,7 +240,7 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         } else {
             mMsgView.setText(
                     mIsPin ? R.string.lockscreen_wrong_pin : R.string.lockscreen_wrong_password);
-            setPinPadEnabled(true);
+            mPinPad.setEnabled(true);
         }
 
         if (!mIsPin) {
