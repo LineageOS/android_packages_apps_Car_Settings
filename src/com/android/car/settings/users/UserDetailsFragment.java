@@ -37,8 +37,11 @@ import java.util.List;
  * Shows details for a user with the ability to remove user and switch.
  */
 public class UserDetailsFragment extends ListItemSettingsFragment implements
-        ConfirmRemoveUserDialog.ConfirmRemoveUserListener {
+        ConfirmRemoveUserDialog.ConfirmRemoveUserListener,
+        RemoveUserErrorDialog.RemoveUserErrorListener {
     public static final String EXTRA_USER_INFO = "extra_user_info";
+    private static final String ERROR_DIALOG_TAG = "RemoveUserErrorDialogTag";
+    private static final String CONFIRM_REMOVE_DIALOG_TAG = "ConfirmRemoveUserDialog";
 
     private Button mRemoveUserBtn;
     private Button mSwitchUserBtn;
@@ -66,6 +69,20 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
+
+        if (savedInstanceState != null) {
+            RemoveUserErrorDialog removeUserErrorDialog = (RemoveUserErrorDialog)
+                    getFragmentManager().findFragmentByTag(ERROR_DIALOG_TAG);
+            if (removeUserErrorDialog != null) {
+                removeUserErrorDialog.setRetryListener(this);
+            }
+
+            ConfirmRemoveUserDialog confirmRemoveUserDialog = (ConfirmRemoveUserDialog)
+                    getFragmentManager().findFragmentByTag(CONFIRM_REMOVE_DIALOG_TAG);
+            if (confirmRemoveUserDialog != null) {
+                confirmRemoveUserDialog.setConfirmRemoveUserListener(this);
+            }
+        }
     }
 
     @Override
@@ -82,15 +99,30 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     @Override
     public void onRemoveUserConfirmed() {
-        if (mCarUserManagerHelper.removeUser(
-                mUserInfo, getContext().getString(R.string.user_guest))) {
-            getActivity().onBackPressed();
-        }
+        removeUser();
+    }
+
+    @Override
+    public void onRetryRemoveUser() {
+        // Retry deleting user.
+        removeUser();
     }
 
     @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
+    }
+
+    private void removeUser() {
+        if (mCarUserManagerHelper.removeUser(
+                mUserInfo, getContext().getString(R.string.user_guest))) {
+            getActivity().onBackPressed();
+        } else {
+            // If failed, need to show error dialog for users, can offer retry.
+            RemoveUserErrorDialog removeUserErrorDialog = new RemoveUserErrorDialog();
+            removeUserErrorDialog.setRetryListener(this);
+            removeUserErrorDialog.show(getFragmentManager(), ERROR_DIALOG_TAG);
+        }
     }
 
     private void showActionButtons() {
@@ -126,7 +158,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         removeUserBtn.setOnClickListener(v -> {
             ConfirmRemoveUserDialog dialog = new ConfirmRemoveUserDialog();
             dialog.setConfirmRemoveUserListener(this);
-            dialog.show(this);
+            dialog.show(getFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
         });
     }
 
