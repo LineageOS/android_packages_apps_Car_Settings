@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.accounts;
@@ -28,7 +28,6 @@ import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.users.UserIconProvider;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,24 +35,22 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * Implementation of {@link ListItemProvider} for {@link CurrentUserDetailsFragment}.
- * Creates items that represent the current user and current user's accounts.
+ * Implementation of {@link ListItemProvider} for {@link AccountsListFragment}.
+ * Creates items that represent current user's accounts.
  */
-class UserAndAccountItemProvider extends ListItemProvider {
+class AccountsItemProvider extends ListItemProvider {
     private final List<ListItem> mItems = new ArrayList<>();
     private final Context mContext;
-    private final UserAndAccountClickListener mItemClickListener;
+    private final AccountClickListener mItemClickListener;
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final AccountManagerHelper mAccountManagerHelper;
-    private final UserIconProvider mUserIconProvider;
 
-    UserAndAccountItemProvider(Context context, UserAndAccountClickListener itemClickListener,
+    AccountsItemProvider(Context context, AccountClickListener itemClickListener,
             CarUserManagerHelper carUserManagerHelper, AccountManagerHelper accountManagerHelper) {
         mContext = context;
         mItemClickListener = itemClickListener;
         mCarUserManagerHelper = carUserManagerHelper;
         mAccountManagerHelper = accountManagerHelper;
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         refreshItems();
     }
 
@@ -75,20 +72,14 @@ class UserAndAccountItemProvider extends ListItemProvider {
 
         UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
 
-        // Show current user
-        mItems.add(createUserItem(
-                currUserInfo, mContext.getString(R.string.current_user_name, currUserInfo.name)));
-
         List<Account> accounts = getSortedUserAccounts();
-        if (accounts.isEmpty()) {
-            return;
-        }
 
         // Only add account-related items if the User can Modify Accounts
         if (mCarUserManagerHelper.canCurrentProcessModifyAccounts()) {
             // Add "Account for $User" title for a list of accounts.
             mItems.add(createSubtitleItem(
-                    mContext.getString(R.string.account_list_title, currUserInfo.name)));
+                    mContext.getString(R.string.account_list_title, currUserInfo.name),
+                    accounts.isEmpty() ? mContext.getString(R.string.no_accounts_added) : ""));
 
             // Add an item for each account owned by the current user (1st and 3rd party accounts)
             for (Account account : accounts) {
@@ -109,22 +100,11 @@ class UserAndAccountItemProvider extends ListItemProvider {
         return accounts;
     }
 
-    // Creates a line for a user, clicking on it leads to the user details page
-    private ListItem createUserItem(UserInfo userInfo, String title) {
-        TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(
-                mUserIconProvider.getUserIcon(userInfo, mContext),
-                /* useLargeIcon= */ false);
-        item.setTitle(title);
-        item.setOnClickListener(view -> mItemClickListener.onUserClicked(userInfo));
-        return item;
-    }
-
     // Creates a subtitle line for visual separation in the list
-    private ListItem createSubtitleItem(String title) {
+    private ListItem createSubtitleItem(String title, String body) {
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionEmptyIcon();
         item.setTitle(title);
+        item.setBody(body);
         item.addViewBinder(viewHolder ->
                 viewHolder.getTitle().setTextAppearance(R.style.SettingsListHeader));
         // Hiding the divider after subtitle, since subtitle is a header for a group of items.
@@ -155,16 +135,9 @@ class UserAndAccountItemProvider extends ListItemProvider {
     }
 
     /**
-     * Interface for registering clicks on user or account items.
+     * Interface for registering clicks on account items.
      */
-    interface UserAndAccountClickListener {
-        /**
-         * Invoked when user is clicked.
-         *
-         * @param userInfo User for which the click is registered.
-         */
-        void onUserClicked(UserInfo userInfo);
-
+    interface AccountClickListener {
         /**
          * Invoked when a specific account is clicked on.
          *

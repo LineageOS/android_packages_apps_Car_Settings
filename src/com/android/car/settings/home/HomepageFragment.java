@@ -32,6 +32,7 @@ import android.os.Bundle;
 import com.android.car.list.LaunchAppLineItem;
 import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
+import com.android.car.settings.accounts.AccountsListFragment;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.Logger;
@@ -189,15 +190,22 @@ public class HomepageFragment extends ListSettingsFragment implements
                 DatetimeSettingsFragment.getInstance(),
                 getFragmentController()));
         lineItems.add(new SimpleIconTransitionLineItem(
-                R.string.user_and_account_settings_title,
+                R.string.users_list_title,
                 R.drawable.ic_user,
                 getContext(),
                 null,
                 UsersListFragment.newInstance(),
                 getFragmentController()));
 
-        // Guest users can't set screen locks
+        // Guest users can't set screen locks or add/remove accounts.
         if (!mCarUserManagerHelper.isCurrentProcessGuestUser()) {
+            lineItems.add(new SimpleIconTransitionLineItem(
+                    R.string.accounts_settings_title,
+                    R.drawable.ic_account,
+                    getContext(),
+                    null,
+                    AccountsListFragment.newInstance(),
+                    getFragmentController()));
             lineItems.add(new LaunchAppLineItem(
                     getString(R.string.security_settings_title),
                     Icon.createWithResource(getContext(), R.drawable.ic_lock),

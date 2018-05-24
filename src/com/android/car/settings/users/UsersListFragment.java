@@ -29,7 +29,6 @@ import android.widget.ProgressBar;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
-import com.android.car.settings.accounts.CurrentUserDetailsFragment;
 import com.android.car.settings.common.ListItemSettingsFragment;
 
 /**
@@ -54,7 +53,7 @@ public class UsersListFragment extends ListItemSettingsFragment
     public static UsersListFragment newInstance() {
         UsersListFragment usersListFragment = new UsersListFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_and_account_settings_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.users_list_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         usersListFragment.setArguments(bundle);
         return usersListFragment;
@@ -138,8 +137,8 @@ public class UsersListFragment extends ListItemSettingsFragment
     @Override
     public void onUserClicked(UserInfo userInfo) {
         if (mCarUserManagerHelper.isForegroundUser(userInfo)) {
-            // If it's the foreground user, launch fragment that displays their accounts.
-            getFragmentController().launchFragment(CurrentUserDetailsFragment.newInstance());
+            // If it's the foreground user, launch fragment that allows them to edit their name.
+            getFragmentController().launchFragment(EditUsernameFragment.newInstance(userInfo));
         } else {
             // If it's another user, launch fragment that displays their information
             getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo));
