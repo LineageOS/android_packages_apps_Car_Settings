@@ -58,14 +58,6 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         return wifiSettingsFragment;
     }
 
-    /**
-     * Shows only saved wifi network.
-     */
-    public WifiSettingsFragment showSavedApOnly(boolean showSavedApOnly) {
-        mShowSavedApOnly = showSavedApOnly;
-        return this;
-    }
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
