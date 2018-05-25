@@ -16,6 +16,9 @@
 
 package com.android.car.settings.users;
 
+import static android.content.DialogInterface.BUTTON_NEGATIVE;
+import static android.content.DialogInterface.BUTTON_POSITIVE;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -32,7 +35,8 @@ import com.android.car.settings.R;
 public class ConfirmCreateNewUserDialog extends DialogFragment implements
         DialogInterface.OnClickListener {
     private static final String DIALOG_TAG = "ConfirmCreateNewUserDialog";
-    private ConfirmCreateNewUserListener mListener;
+    private ConfirmCreateNewUserListener mCreateListener;
+    private CancelCreateNewUserListener mCancelListener;
 
     /**
      * Interface for listeners that want to receive a callback when user confirms new user creation
@@ -40,6 +44,14 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
      */
     public interface ConfirmCreateNewUserListener {
         void onCreateNewUserConfirmed();
+    }
+
+    /**
+     * Interface for listeners that want to receive a callback when user cancels new user creation
+     * in the dialog.
+     */
+    public interface CancelCreateNewUserListener {
+        void onCreateNewUserCancelled();
     }
 
     /**
@@ -59,7 +71,18 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
      * @param listener Instance of {@link ConfirmCreateNewUserListener} to call when confirmed.
      */
     public void setConfirmCreateNewUserListener(ConfirmCreateNewUserListener listener) {
-        mListener = listener;
+        mCreateListener = listener;
+    }
+
+    /**
+     * Sets a listener for OnCancelNewUserConfirmed that will get called if user cancels
+     * the dialog.
+     *
+     * @param listener Instance of {@link CancelCreateNewUserListener} to call when user presses
+     * cancel.
+     */
+    public void setCancelCreateNewUserListener(CancelCreateNewUserListener listener) {
+        mCancelListener = listener;
     }
 
     @Override
@@ -72,16 +95,23 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
         return new CarAlertDialog.Builder(getContext())
                 .setTitle(R.string.user_add_user_title)
                 .setBody(message)
-                .setNegativeButton(android.R.string.cancel, null)
+                .setNegativeButton(android.R.string.cancel, this)
                 .setPositiveButton(android.R.string.ok, this)
                 .create();
     }
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        if (mListener != null) {
-            mListener.onCreateNewUserConfirmed();
+        if (which == BUTTON_POSITIVE) {
+            if (mCreateListener != null) {
+                mCreateListener.onCreateNewUserConfirmed();
+            }
+        } else if (which == BUTTON_NEGATIVE) {
+            if (mCancelListener != null) {
+                mCancelListener.onCreateNewUserCancelled();
+            }
         }
+
         dialog.dismiss();
     }
 }
