@@ -53,8 +53,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
         mContext = context;
         mFragmentController = fragmentController;
         mSwitchSavedWifiListener = v -> {
-            mFragmentController.launchFragment(
-                    WifiSettingsFragment.newInstance().showSavedApOnly(true));
+            mFragmentController.launchFragment(WifiSettingsFragment.newInstance());
         };
         mCarWifiManager = new CarWifiManager(context, /* listener= */ this);
         mCarWifiManager.start();

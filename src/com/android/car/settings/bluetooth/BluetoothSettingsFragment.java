@@ -16,6 +16,7 @@
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,11 +28,13 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.NonNull;
 import androidx.car.widget.PagedListView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -53,6 +56,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
     private BluetoothDeviceListAdapter mDeviceAdapter;
     private LocalBluetoothAdapter mLocalAdapter;
     private LocalBluetoothManager mLocalManager;
+    private boolean mShowPairedDeviceOnly;
 
     private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -153,6 +157,7 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
                 getContext() , mLocalManager, getFragmentController());
         mDeviceListView.setAdapter(mDeviceAdapter);
         mDeviceAdapter.start();
+        mDeviceAdapter.showPairedDeviceOnlyAndFresh(mShowPairedDeviceOnly);
     }
 
     @Override
@@ -167,6 +172,22 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         mLocalManager.setForegroundActivity(null);
         mLocalAdapter.stopScanning();
         mLocalManager.getEventManager().unregisterCallback(this);
+    }
+
+    /**
+     * This fragment will adapt to restriction, so can always be shown.
+     */
+    @Override
+    public boolean canBeShown(CarUxRestrictions carUxRestrictions) {
+        return true;
+    }
+
+    @Override
+    public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
+        mShowPairedDeviceOnly = CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
+        if (mDeviceAdapter != null) {
+            mDeviceAdapter.showPairedDeviceOnlyAndFresh(mShowPairedDeviceOnly);
+        }
     }
 
     @Override

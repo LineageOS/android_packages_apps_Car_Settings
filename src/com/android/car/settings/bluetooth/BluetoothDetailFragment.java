@@ -20,11 +20,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.car.list.EditTextLineItem;
-import com.android.car.list.SingleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.ListItemProvider.ListProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.EditTextListItem;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
@@ -38,8 +41,8 @@ import java.util.ArrayList;
  * e.g. forget etc. The intent should include information about the device, use that to
  * render UI, e.g. show name etc.
  */
-public class BluetoothDetailFragment extends ListSettingsFragment implements
-        BluetoothProfileLineItem.DataChangedListener {
+public class BluetoothDetailFragment extends ListItemSettingsFragment implements
+        BluetoothProfileListItem.DataChangedListener {
     private static final Logger LOG = new Logger(BluetoothDetailFragment.class);
 
     public static final String EXTRA_BT_DEVICE = "extra_bt_device";
@@ -49,12 +52,12 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
 
     private CachedBluetoothDeviceManager mDeviceManager;
     private LocalBluetoothManager mLocalManager;
-    private EditTextLineItem mInputLineItem;
+    private EditTextListItem mInputLineItem;
     private Button mOkButton;
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
         BluetoothDetailFragment bluetoothDetailFragment = new BluetoothDetailFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putParcelable(EXTRA_BT_DEVICE, btDevice);
         bundle.putInt(EXTRA_TITLE_ID, R.string.bluetooth_settings);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
@@ -96,26 +99,32 @@ public class BluetoothDetailFragment extends ListSettingsFragment implements
 
     @Override
     public void onDataChanged() {
-        mPagedListAdapter.notifyDataSetChanged();
+        refreshList();
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        mInputLineItem = new EditTextLineItem(
-                getContext().getText(R.string.bluetooth_preference_paired_dialog_name_label),
+    public ListItemProvider getItemProvider() {
+        return new ListProvider(getLineItems());
+    }
+
+    private ArrayList<ListItem> getLineItems() {
+        ArrayList<ListItem> lineItems = new ArrayList<>();
+        mInputLineItem = new EditTextListItem(
+                getContext().getString(R.string.bluetooth_preference_paired_dialog_name_label),
                 mCachedDevice.getName());
-        mInputLineItem.setTextType(EditTextLineItem.TextType.TEXT);
+        mInputLineItem.setTextType(EditTextListItem.TextType.TEXT);
         lineItems.add(mInputLineItem);
-        lineItems.add(new SingleTextLineItem(getContext().getText(
-                R.string.bluetooth_device_advanced_profile_header_title)));
+        TextListItem profileHeader = new TextListItem(getContext());
+        profileHeader.setTitle(getContext().getString(
+                R.string.bluetooth_device_advanced_profile_header_title));
+        lineItems.add(profileHeader);
         addProfileLineItems(lineItems);
         return lineItems;
     }
 
-    private void addProfileLineItems(ArrayList<TypedPagedListAdapter.LineItem> lineItems) {
+    private void addProfileLineItems(ArrayList<ListItem> lineItems) {
         for (LocalBluetoothProfile profile : mCachedDevice.getConnectableProfiles()) {
-            lineItems.add(new BluetoothProfileLineItem(
+            lineItems.add(new BluetoothProfileListItem(
                     getContext(), profile, mCachedDevice, this));
         }
     }

@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.bluetooth;
@@ -22,8 +22,8 @@ import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
 
-import com.android.car.list.CheckBoxLineItem;
 import com.android.car.settings.R;
+import com.android.car.settings.common.CheckBoxListItem;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 import com.android.settingslib.bluetooth.PanProfile;
@@ -31,21 +31,25 @@ import com.android.settingslib.bluetooth.PanProfile;
 /**
  * Represents a line item for a Bluetooth mProfile.
  */
-public class BluetoothProfileLineItem extends CheckBoxLineItem {
+public class BluetoothProfileListItem extends CheckBoxListItem {
     private final LocalBluetoothProfile mProfile;
     private final CachedBluetoothDevice mCachedDevice;
-    private CheckboxLineItemViewHolder mViewHolder;
     private DataChangedListener mDataChangedListener;
-    private final Context mContext;
 
+    /**
+     * Listens to data changes on list item.
+     */
     public interface DataChangedListener {
+
+        /**
+         * Called when data is changed, implementer should refresh the list.
+         */
         void onDataChanged();
     }
 
-    public BluetoothProfileLineItem(Context context, LocalBluetoothProfile profile,
+    public BluetoothProfileListItem(Context context, LocalBluetoothProfile profile,
             CachedBluetoothDevice cachedBluetoothDevice, DataChangedListener listener) {
-        super(context.getText(profile.getNameResource(cachedBluetoothDevice.getDevice())));
-        mContext = context;
+        super(context.getString(profile.getNameResource(cachedBluetoothDevice.getDevice())));
         mCachedDevice = cachedBluetoothDevice;
         mProfile = profile;
         mDataChangedListener = listener;
@@ -67,22 +71,6 @@ public class BluetoothProfileLineItem extends CheckBoxLineItem {
             mCachedDevice.connectProfile(mProfile);
         }
         mDataChangedListener.onDataChanged();
-    }
-
-    @Override
-    public boolean isExpandable() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    @Override
-    public void bindViewHolder(CheckboxLineItemViewHolder holder) {
-        super.bindViewHolder(holder);
-        mViewHolder = holder;
     }
 
     @Override
