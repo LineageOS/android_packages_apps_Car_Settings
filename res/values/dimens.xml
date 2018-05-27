@@ -39,4 +39,13 @@
     <dimen name="toggle_padding">10dp</dimen>
     <dimen name="toggle_ripple">90dp</dimen>
     <dimen name="brightness_knob_size">44dp</dimen>
+
+    <!-- dimensions for the car user switcher -->
+    <dimen name="car_user_switcher_name_text_size">@dimen/car_body1_size</dimen>
+    <dimen name="car_user_switcher_image_avatar_size">@dimen/car_large_avatar_size</dimen>
+    <dimen name="car_user_switcher_vertical_spacing_between_users">@dimen/car_padding_5</dimen>
+    <dimen name="car_user_switcher_vertical_spacing_between_name_and_avatar">@dimen/car_padding_4</dimen>
+    <dimen name="car_user_switcher_margin_top">@dimen/car_padding_4</dimen>
+    <dimen name="car_user_switcher_current_user_circle_width">126dp</dimen>
+    <dimen name="car_user_switcher_current_user_circle_stroke_width">7dp</dimen>
 </resources>

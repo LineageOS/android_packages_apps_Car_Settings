@@ -14,11 +14,17 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<resources>
-    <color name="toggle_bg_disabled">@color/car_grey_800</color>
-    <color name="toggle_icon_disabled">@color/car_grey_400</color>
-    <color name="google_blue_600">@color/google_blue_600_light</color>
-
-    <color name="car_user_switcher_add_user_background_color">@color/car_dark_blue_grey_600</color>
-    <color name="car_user_switcher_current_user_color">@color/car_teal_200</color>
-</resources>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid
+                android:color="@color/car_user_switcher_add_user_background_color"/>
+            <size
+                android:width="@dimen/car_user_switcher_image_avatar_size"
+                android:height="@dimen/car_user_switcher_image_avatar_size"/>
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/car_ic_add"
+        android:gravity="center"/>
+</layer-list>

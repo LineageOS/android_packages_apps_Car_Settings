@@ -365,6 +365,8 @@
 
     <!-- Title for settings that lead into User and Account information [CHAR LIMIT=35] -->
     <string name="user_and_account_settings_title">Users &amp; accounts</string>
+    <!-- Title for User Switcher page [CHAR LIMIT=35] -->
+    <string name="user_switcher_title">Users</string>
     <!-- Title for detailed user information page [CHAR LIMIT=25] -->
     <string name="user_settings_title">User</string>
     <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
@@ -389,6 +391,14 @@
     <string name="really_remove_user_title">Remove this user?</string>
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
     <string name="really_remove_user_message">"All apps and data will be deleted."</string>
+    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
+    <string name="remove_user_error_title">Failed to remove user.</string>
+    <!-- Message to ask to retry user deletion [CHAR LIMIT=30] -->
+    <string name="remove_user_error_message">Try again?</string>
+    <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
+    <string name="remove_user_error_dismiss">Dismiss</string>
+    <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
+    <string name="remove_user_error_retry">Retry</string>
     <!-- Title of the alert dialog to ask user to confirm creation of new user. [CHAR LIMIT=30] -->
     <string name="user_add_user_title">"Add new user?"</string>
     <!-- Message to inform user that creation of new user requires that user to set up their space. [CHAR LIMIT=100] -->
