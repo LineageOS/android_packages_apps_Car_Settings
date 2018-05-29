@@ -45,7 +45,7 @@ public class GuestFragment extends ListItemSettingsFragment {
     public static GuestFragment newInstance() {
         GuestFragment guestFragment = new GuestFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.user_details_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         guestFragment.setArguments(bundle);
         return guestFragment;
