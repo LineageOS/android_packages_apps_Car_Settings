@@ -35,7 +35,7 @@ public class UserSwitcherFragment extends BaseFragment {
     public static UserSwitcherFragment newInstance() {
         UserSwitcherFragment userSwitcherFragment = new UserSwitcherFragment();
         Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_switcher_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.users_list_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.car_user_switcher);
         userSwitcherFragment.setArguments(bundle);
