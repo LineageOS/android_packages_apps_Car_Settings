@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment.UXRestrictionsProvider;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 /**
@@ -32,9 +33,14 @@ import com.android.car.settings.quicksettings.QuickSettingFragment;
  * previous activity.
  */
 public class CarSettingActivity extends AppCompatActivity implements
-        BaseFragment.FragmentController {
+        BaseFragment.FragmentController, UXRestrictionsProvider {
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
-    private CarUxRestrictions mCarUxRestrictions;
+    // Default to minimum restriction.
+    private CarUxRestrictions mCarUxRestrictions = new CarUxRestrictions.Builder(
+            /* reqOpt= */ true,
+            CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+            /* timestamp= */ 0
+    ).build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,23 +48,23 @@ public class CarSettingActivity extends AppCompatActivity implements
         setContentView(R.layout.app_compat_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper =
                     new CarUxRestrictionsHelper(this, carUxRestrictions -> {
                         mCarUxRestrictions = carUxRestrictions;
                         BaseFragment currentFragment = getCurrentFragment();
                         if (currentFragment != null) {
-                            currentFragment.setCarUxRestrictions(carUxRestrictions);
+                            currentFragment.onUxRestrictionChanged(carUxRestrictions);
                         }
                     });
         }
 
         mUxRestrictionsHelper.start();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
 
         if (getCurrentFragment() == null) {
             launchFragment(QuickSettingFragment.newInstance());
@@ -66,9 +72,21 @@ public class CarSettingActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
+    public CarUxRestrictions getCarUxRestrictions() {
+        return mCarUxRestrictions;
+    }
+
+    @Override
+    public void notifyCurrentFragmentRestricted() {
+        DOBlockingDialogFragment alertDialog = new DOBlockingDialogFragment();
+        alertDialog.show(getSupportFragmentManager(), DOBlockingDialogFragment.DIALOG_TAG);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
         mUxRestrictionsHelper.stop();
+        mUxRestrictionsHelper = null;
     }
 
     @Override
@@ -78,14 +96,6 @@ public class CarSettingActivity extends AppCompatActivity implements
 
     @Override
     public void launchFragment(BaseFragment fragment) {
-        if (mCarUxRestrictions != null && !fragment.canBeShown(mCarUxRestrictions)) {
-            DoBlockingDialogFragment alertDialog = new DoBlockingDialogFragment();
-            alertDialog.show(getSupportFragmentManager(), DoBlockingDialogFragment.DIALOG_TAG);
-            return;
-        }
-        if (mCarUxRestrictions != null) {
-            fragment.setCarUxRestrictions(mCarUxRestrictions);
-        }
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(

@@ -54,6 +54,11 @@ public class BaseTestActivity extends AppCompatActivity implements
                 .commit();
     }
 
+    @Override
+    public void notifyCurrentFragmentRestricted() {
+        // no-op
+    }
+
     public void reattachFragment(BaseFragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
