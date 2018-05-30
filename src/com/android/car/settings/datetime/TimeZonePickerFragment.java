@@ -19,9 +19,11 @@ package com.android.car.settings.datetime;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.android.car.list.TypedPagedListAdapter;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.ArrayList;
@@ -31,13 +33,13 @@ import java.util.Map;
 /**
  * Lists all time zone and its offset from GMT.
  */
-public class TimeZonePickerFragment extends ListSettingsFragment implements
+public class TimeZonePickerFragment extends ListItemSettingsFragment implements
         TimeZoneLineItem.TimeZoneChangeListener {
     private List<Map<String, Object>> mZoneList;
 
     public static TimeZonePickerFragment getInstance() {
         TimeZonePickerFragment timeZonePickerFragment = new TimeZonePickerFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.date_time_set_timezone_title);
         timeZonePickerFragment.setArguments(bundle);
         return timeZonePickerFragment;
@@ -49,8 +51,13 @@ public class TimeZonePickerFragment extends ListSettingsFragment implements
         super.onActivityCreated(savedInstanceState);
     }
 
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+    @Override
+    public ListItemProvider getItemProvider() {
+        return new ListItemProvider.ListProvider(getListItems());
+    }
+
+    private List<ListItem> getListItems() {
+        List<ListItem> lineItems = new ArrayList<>();
         for (Map<String, Object> zone : mZoneList) {
             lineItems.add(new TimeZoneLineItem(getContext(), this, zone));
         }
