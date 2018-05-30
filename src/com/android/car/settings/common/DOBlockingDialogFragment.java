@@ -17,26 +17,39 @@ package com.android.car.settings.common;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
 import androidx.car.app.CarAlertDialog;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.BaseFragment.FragmentController;
+import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 /**
  * A dialog to block non-distrction optimized view when restriction is applied.
  */
-public class DoBlockingDialogFragment extends DialogFragment {
+public class DOBlockingDialogFragment extends DialogFragment implements
+        DialogInterface.OnClickListener {
     public static final String DIALOG_TAG = "block_dialog_tag";
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Context context = getContext();
-        return new CarAlertDialog.Builder(context)
+        Dialog dialog = new CarAlertDialog.Builder(context)
                 .setBody(context.getString(R.string.restricted_while_driving))
-                .setPositiveButton(context.getString(R.string.okay),
-                        /* listener= */ null)
+                .setPositiveButton(context.getString(R.string.okay),  /* listener= */ this)
+                .setCancelable(false)
                 .create();
+        return dialog;
+    }
+
+    // only one button, no need to check on negative.
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+        ((FragmentController) getActivity()).launchFragment(
+                QuickSettingFragment.newInstance());
+        dismiss();
     }
 }
