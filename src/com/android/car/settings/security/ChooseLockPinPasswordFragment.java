@@ -35,7 +35,6 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
@@ -71,11 +70,11 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     // Password must be entered twice.  This is what user entered the first time.
     private String mFirstEntry;
 
+    private PinPadView mPinPad;
     private TextView mHintMessage;
     private Button mSecondaryButton;
     private Button mPrimaryButton;
     private EditText mPasswordField;
-    private ImageButton mEnterKey;
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
     private TextViewInputDisabler mPasswordEntryInputDisabler;
@@ -249,7 +248,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         if (mIsPin) {
-            onPinViewCreated(view);
+            initPinView(view);
         } else {
             mPasswordField.requestFocus();
             InputMethodManager imm = (InputMethodManager)
@@ -322,23 +321,30 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         return mPasswordField.getText().toString();
     }
 
-    private void onPinViewCreated(View view) {
-        View backspace = view.findViewById(R.id.key_backspace);
-        backspace.setOnClickListener(v -> {
-            String pin = getPasswordField();
-            if (pin.length() > 0) {
-                setPasswordField(pin.substring(0, pin.length() - 1));
+    private void initPinView(View view) {
+        mPinPad = (PinPadView) view.findViewById(R.id.pin_pad);
+
+        PinPadView.PinPadClickListener pinPadClickListener = new PinPadView.PinPadClickListener() {
+            @Override
+            public void onDigitKeyClick(String digit) {
+                appendToPasswordEntry(digit);
             }
-        });
 
-        mEnterKey = (ImageButton) view.findViewById(R.id.key_enter);
-        mEnterKey.setOnClickListener(v -> handlePrimaryButtonClick());
+            @Override
+            public void onBackspaceClick() {
+                String pin = getPasswordField();
+                if (pin.length() > 0) {
+                    setPasswordField(pin.substring(0, pin.length() - 1));
+                }
+            }
 
-        for (int keyId : PasswordHelper.PIN_PAD_DIGIT_KEYS) {
-            TextView key = view.findViewById(keyId);
-            String digit = key.getTag().toString();
-            key.setOnClickListener(v -> appendToPasswordEntry(digit));
-        }
+            @Override
+            public void onEnterKeyClick() {
+                handlePrimaryButtonClick();
+            }
+        };
+
+        mPinPad.setPinPadClickListener(pinPadClickListener);
     }
 
     private void setPrimaryButtonEnabled(boolean enabled) {
@@ -468,7 +474,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         if (mIsPin) {
-            mEnterKey.setImageResource(mUiStage.enterKeyIcon);
+            mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
 
         switch(mUiStage) {

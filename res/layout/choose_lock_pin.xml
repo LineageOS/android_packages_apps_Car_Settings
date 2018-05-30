@@ -28,7 +28,12 @@
         android:layout_width="0dp"
         android:layout_height="match_parent">
 
-        <include layout="@layout/pin_pad"/>
+        <com.android.car.settings.security.PinPadView
+            android:id="@+id/pin_pad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"/>
     </FrameLayout>
 
     <!-- End side: pin entry field and messages -->
