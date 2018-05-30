@@ -338,10 +338,6 @@
          [CHAR LIMIT=20] -->
     <string name="time_picker_title">Time</string>
 
-    <!-- User settings header for list of users and profiles [CHAR LIMIT=40] -->
-    <string name="user_list_title">Users &amp; profiles</string>
-    <!-- User settings add user or restricted profile menu [CHAR LIMIT=35] -->
-    <string name="user_add_user_or_profile_menu">Add user or profile</string>
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>
     <!-- Button title for adding an account [CHAR LIMIT=35] -->
@@ -363,12 +359,14 @@
     <!-- Title for edit user name page [CHAR LIMIT=30] -->
     <string name="edit_user_name_title">Edit user name</string>
 
-    <!-- Title for settings that lead into User and Account information [CHAR LIMIT=35] -->
-    <string name="user_and_account_settings_title">Users &amp; accounts</string>
-    <!-- Title for User Switcher page [CHAR LIMIT=35] -->
-    <string name="user_switcher_title">Users</string>
+    <!-- User settings header for list of users on the system. [CHAR LIMIT=35] -->
+    <string name="users_list_title">Users</string>
+    <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
+    <string name="accounts_settings_title">Accounts</string>
     <!-- Title for detailed user information page [CHAR LIMIT=25] -->
-    <string name="user_settings_title">User</string>
+    <string name="user_details_title">User</string>
+    <!-- Text to display in Accounts settings if the user has not added any accounts yet [CHAR LIMIT=40] -->
+    <string name="no_accounts_added">No accounts added</string>
     <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
     <string name="account_list_title">Accounts for <xliff:g id="current_user_name">%1$s</xliff:g></string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
@@ -632,5 +630,5 @@
 
     <!-- Warn user that the action they are trying to perform is blocked while the car is in
          motion [CHAR LIMIT=60] -->
-    <string name="restricted_while_driving">Action not available while driving.</string>
+    <string name="restricted_while_driving">Feature not available while driving.</string>
 </resources>

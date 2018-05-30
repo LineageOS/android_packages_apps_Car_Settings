@@ -29,7 +29,6 @@ import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,15 +36,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowUserIconProvider.class })
-public class UserAndAccountItemProviderTest {
+public class AccountsItemProviderTest {
     @Mock
     private AccountManagerHelper mAccountManagerHelper;
     @Mock
@@ -57,7 +54,7 @@ public class UserAndAccountItemProviderTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
-    private UserAndAccountItemProvider mProvider;
+    private AccountsItemProvider mProvider;
 
     @Before
     public void setUp() {
@@ -70,7 +67,7 @@ public class UserAndAccountItemProviderTest {
         when(mAccountManagerHelper.getAccountsForCurrentUser()).thenReturn(new ArrayList<>());
 
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
-        mProvider = new UserAndAccountItemProvider(
+        mProvider = new AccountsItemProvider(
                 RuntimeEnvironment.application,
                 null,
                 mCarUserManagerHelper,

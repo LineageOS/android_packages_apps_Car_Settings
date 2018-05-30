@@ -32,7 +32,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 import java.util.Set;
 
@@ -62,6 +61,23 @@ public abstract class BaseFragment extends Fragment {
          * @return {@code false} if there's no stack to pop, {@code true} otherwise
          */
         void goBack();
+
+        /**
+         * Called when a Fragment expects itself to be blocked.
+         */
+        void notifyCurrentFragmentRestricted();
+    }
+
+    /**
+     * Provides current CarUxRestrictions.
+     */
+    public interface UXRestrictionsProvider {
+
+        /**
+         * Fetches current CarUxRestrictions
+         */
+        @NonNull
+        CarUxRestrictions getCarUxRestrictions();
     }
 
     @LayoutRes
@@ -73,22 +89,20 @@ public abstract class BaseFragment extends Fragment {
     @StringRes
     private int mTitleId;
 
-    @NonNull
-    private CarUxRestrictions mCurrentRestrictions;
-
     /**
      * Assume The activity holds this fragment also implements the FragmentController.
+     * This function should be called after onAttach()
      */
     public final FragmentController getFragmentController() {
         return (FragmentController) getActivity();
     }
 
     /**
-     * Sets the CarUxRestrictions and update this fragment by calling onUxRestrictionChanged().
+     * Assume The activity holds this fragment also implements the UXRestrictionsProvider.
+     * This function should be called after onAttach()
      */
-    void setCarUxRestrictions(@NonNull CarUxRestrictions restrictions) {
-        mCurrentRestrictions = restrictions;
-        onUxRestrictionChanged(restrictions);
+    protected final CarUxRestrictions getCurrentRestrictions() {
+        return ((UXRestrictionsProvider) getActivity()).getCarUxRestrictions();
     }
 
     protected static Bundle getBundle() {
@@ -110,9 +124,8 @@ public abstract class BaseFragment extends Fragment {
      * page when canBeShown() return false, no-op otherwise.
      */
     protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
-        mCurrentRestrictions = carUxRestrictions;
-        if (!canBeShown(carUxRestrictions)) {
-            getFragmentController().launchFragment(QuickSettingFragment.newInstance());
+        if (!canBeShown(getCurrentRestrictions())) {
+            getFragmentController().notifyCurrentFragmentRestricted();
         }
     }
 
@@ -122,13 +135,8 @@ public abstract class BaseFragment extends Fragment {
         if (!(getActivity() instanceof FragmentController)) {
             throw new IllegalArgumentException("Must attach to an FragmentController");
         }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (mCurrentRestrictions != null) {
-            onUxRestrictionChanged(mCurrentRestrictions);
+        if (!(getActivity() instanceof UXRestrictionsProvider)) {
+            throw new IllegalArgumentException("Must attach to an UXRestrictionsProvider");
         }
     }
 
@@ -150,6 +158,17 @@ public abstract class BaseFragment extends Fragment {
             mTitleId = getArguments().getInt(EXTRA_TITLE_ID);
         } else {
             throw new IllegalArgumentException("must specify a title");
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        CarUxRestrictions carUxRestrictions = getCurrentRestrictions();
+        if (!canBeShown(carUxRestrictions)) {
+            getFragmentController().notifyCurrentFragmentRestricted();
+        } else {
+            onUxRestrictionChanged(carUxRestrictions);
         }
     }
 

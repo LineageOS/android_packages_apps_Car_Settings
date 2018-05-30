@@ -14,12 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:columnCount="3">
-
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Row 1 -->
     <Button
         android:id="@+id/key1"
@@ -87,4 +82,4 @@ limitations under the License.
         android:id="@+id/key_enter"
         style="@style/PinPadKey"
         android:contentDescription="@string/enter_key"/>
-</GridLayout>
+</merge>

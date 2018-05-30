@@ -59,7 +59,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         UserDetailsFragment userDetailsFragment = new UserDetailsFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_settings_title);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.user_details_title);
         bundle.putParcelable(EXTRA_USER_INFO, userInfo);
         userDetailsFragment.setArguments(bundle);
         return userDetailsFragment;
