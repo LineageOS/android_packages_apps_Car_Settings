@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +29,8 @@ import com.android.car.settings.common.BaseFragment;
  * Used for testing {@code BaseFragment} instances.
  */
 public class BaseTestActivity extends AppCompatActivity implements
-        BaseFragment.FragmentController {
+        BaseFragment.FragmentController,
+        BaseFragment.UXRestrictionsProvider {
     private boolean mOnBackPressedFlag;
 
     @Override
@@ -56,6 +58,15 @@ public class BaseTestActivity extends AppCompatActivity implements
     @Override
     public void notifyCurrentFragmentRestricted() {
         // no-op
+    }
+
+    @Override
+    public CarUxRestrictions getCarUxRestrictions() {
+        return new CarUxRestrictions.Builder(
+                /* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                /* timestamp= */ 0
+        ).build();
     }
 
     public void reattachFragment(BaseFragment fragment) {
