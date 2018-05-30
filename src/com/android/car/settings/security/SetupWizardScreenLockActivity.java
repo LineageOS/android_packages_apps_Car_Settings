@@ -42,6 +42,12 @@ public class SetupWizardScreenLockActivity extends AppCompatActivity implements
     }
 
     @Override
+    public void notifyCurrentFragmentRestricted() {
+        // This activity is not DO, so this function should never get called.
+        throw new RuntimeException("Non DO activity should not handle restriction.");
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.app_compat_activity);
