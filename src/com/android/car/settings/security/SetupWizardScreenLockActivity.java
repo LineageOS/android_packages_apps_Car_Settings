@@ -18,19 +18,19 @@ package com.android.car.settings.security;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settingslib.util.ResultCodes;
 
 /**
  * Entry point Activity for Setup Wizard to set screen lock.
  */
-public class SetupWizardScreenLockActivity extends AppCompatActivity implements
-        LockTypeDialogFragment.OnLockSelectListener, BaseFragment.FragmentController {
+public class SetupWizardScreenLockActivity extends CarSettingActivity implements
+        LockTypeDialogFragment.OnLockSelectListener {
 
     @Override
     public void launchFragment(BaseFragment fragment) {
@@ -40,12 +40,6 @@ public class SetupWizardScreenLockActivity extends AppCompatActivity implements
     public void goBack() {
         setResult(RESULT_CANCELED);
         finish();
-    }
-
-    @Override
-    public void notifyCurrentFragmentRestricted() {
-        // This activity is not DO, so this function should never get called.
-        throw new RuntimeException("Non DO activity should not handle restriction.");
     }
 
     @Override
