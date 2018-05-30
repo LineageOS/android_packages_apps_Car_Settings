@@ -53,6 +53,7 @@ public class UserGridRecyclerView extends PagedListView implements
     private CarUserManagerHelper mCarUserManagerHelper;
     private Context mContext;
     private BaseFragment mBaseFragment;
+    public AddNewUserTask mAddNewUserTask;
 
     public UserGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -76,6 +77,9 @@ public class UserGridRecyclerView extends PagedListView implements
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         mCarUserManagerHelper.unregisterOnUsersUpdateListener();
+        if (mAddNewUserTask != null) {
+            mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
+        }
     }
 
     /**
@@ -255,7 +259,8 @@ public class UserGridRecyclerView extends PagedListView implements
 
         @Override
         public void onCreateNewUserConfirmed() {
-            new AddNewUserTask(mCarUserManagerHelper).execute(mNewUserName);
+            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper);
+            mAddNewUserTask.execute(mNewUserName);
         }
 
         /**
