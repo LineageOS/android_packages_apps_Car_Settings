@@ -15,13 +15,17 @@
  */
 package com.android.car.settings.common;
 
+import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment.UXRestrictionsProvider;
@@ -32,8 +36,9 @@ import com.android.car.settings.quicksettings.QuickSettingFragment;
  * previous activity.
  */
 public class CarSettingActivity extends AppCompatActivity implements
-        BaseFragment.FragmentController, UXRestrictionsProvider {
+        BaseFragment.FragmentController, UXRestrictionsProvider, OnBackStackChangedListener{
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
+    private View mRestrictedMessage;
     // Default to minimum restriction.
     private CarUxRestrictions mCarUxRestrictions = new CarUxRestrictions.Builder(
             /* reqOpt= */ true,
@@ -54,17 +59,31 @@ public class CarSettingActivity extends AppCompatActivity implements
                         BaseFragment currentFragment = getCurrentFragment();
                         if (currentFragment != null) {
                             currentFragment.onUxRestrictionChanged(carUxRestrictions);
+                            updateBlockingView(currentFragment);
                         }
                     });
         }
-
         mUxRestrictionsHelper.start();
+        getSupportFragmentManager().addOnBackStackChangedListener(this);
+        mRestrictedMessage = findViewById(R.id.restricted_message);
+    }
+
+    @Override
+    public void onBackStackChanged() {
+        updateBlockingView(getCurrentFragment());
+    }
+
+    private void updateBlockingView(@Nullable BaseFragment currentFragment) {
+        if (currentFragment == null) {
+            return;
+        }
+        boolean canBeShown = currentFragment.canBeShown(mCarUxRestrictions);
+        mRestrictedMessage.setVisibility(canBeShown ? View.GONE : View.VISIBLE);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
         if (getCurrentFragment() == null) {
             launchFragment(QuickSettingFragment.newInstance());
         }
@@ -73,12 +92,6 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public CarUxRestrictions getCarUxRestrictions() {
         return mCarUxRestrictions;
-    }
-
-    @Override
-    public void notifyCurrentFragmentRestricted() {
-        DOBlockingDialogFragment alertDialog = new DOBlockingDialogFragment();
-        alertDialog.show(getSupportFragmentManager(), DOBlockingDialogFragment.DIALOG_TAG);
     }
 
     @Override
@@ -110,6 +123,12 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public void goBack() {
         onBackPressed();
+    }
+
+    @Override
+    public void showDOBlockingMessage() {
+        Toast.makeText(
+                this, R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
     }
 
     @Override

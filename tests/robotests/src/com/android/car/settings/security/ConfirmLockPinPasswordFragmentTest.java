@@ -75,5 +75,8 @@ public class ConfirmLockPinPasswordFragmentTest {
 
         @Override
         public void goBack() {}
+
+        @Override
+        public void showDOBlockingMessage() {}
     }
 }

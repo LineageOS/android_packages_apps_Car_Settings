@@ -79,9 +79,9 @@ public class UserSwitcherFragment extends BaseFragment {
     private void applyRestriction(boolean restricted) {
         if (mUserGridView != null) {
             if (restricted) {
-                mUserGridView.hideAddUser();
+                mUserGridView.disableAddUser();
             } else {
-                mUserGridView.showAddUser();
+                mUserGridView.enableAddUser();
             }
         }
     }
