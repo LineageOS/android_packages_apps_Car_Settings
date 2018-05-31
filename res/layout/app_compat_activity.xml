@@ -33,6 +33,21 @@
         android:background="@color/car_list_divider"/>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment_container"/>
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!-- set the text clickable to true so that it blocks touch event -->
+        <TextView
+            android:id="@+id/restricted_message"
+            android:gravity="center"
+            android:background="@color/car_grey_1000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/restricted_while_driving"
+            android:clickable="true"
+            android:visibility="gone"
+            android:textAppearance="@style/TextAppearance.Car.Body1.Light" />
+    </FrameLayout>
 </LinearLayout>

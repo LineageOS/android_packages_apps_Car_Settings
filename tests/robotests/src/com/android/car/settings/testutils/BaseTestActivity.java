@@ -57,7 +57,7 @@ public class BaseTestActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void notifyCurrentFragmentRestricted() {
+    public void showDOBlockingMessage() {
         // no-op
     }
 

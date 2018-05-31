@@ -20,6 +20,7 @@ import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,15 +37,15 @@ import com.android.car.settings.users.UserSwitcherFragment;
  * Shows a page to access frequently used settings.
  */
 public class QuickSettingFragment extends BaseFragment {
-    private static final float RESTRICTED_ALPHA = 0.5f;
-    private static final float UNRESTRICTED_ALPHA = 1f;
-
     private CarUserManagerHelper  mCarUserManagerHelper;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private PagedListView mListView;
     private View mFullSettingBtn;
     private View mUserSwitcherBtn;
+    private HomeFragmentLauncher mHomeFragmentLauncher;
+    private float mOpacityDisabled;
+    private float mOpacityEnabled;
 
     /**
      * Returns an instance of this class.
@@ -62,9 +63,12 @@ public class QuickSettingFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mHomeFragmentLauncher = new HomeFragmentLauncher();
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> getActivity().finish());
 
+        mOpacityDisabled = getContext().getResources().getFloat(R.dimen.opacity_disabled);
+        mOpacityEnabled = getContext().getResources().getFloat(R.dimen.opacity_enabled);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mListView = (PagedListView) getActivity().findViewById(R.id.list);
@@ -72,15 +76,12 @@ public class QuickSettingFragment extends BaseFragment {
         mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
 
         mFullSettingBtn = getActivity().findViewById(R.id.full_setting_btn);
-        mFullSettingBtn.setOnClickListener(v -> {
-            getFragmentController().launchFragment(HomepageFragment.getInstance());
-        });
+        mFullSettingBtn.setOnClickListener(mHomeFragmentLauncher);
         mUserSwitcherBtn = getActivity().findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
             getFragmentController().launchFragment(UserSwitcherFragment.newInstance());
         });
 
-        setupAccountButton();
         View exitBtn = getActivity().findViewById(R.id.exit_button);
         exitBtn.setOnClickListener(v -> getFragmentController().goBack());
 
@@ -124,6 +125,24 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     private void applyRestriction(boolean restricted) {
-        mFullSettingBtn.setAlpha(restricted ? RESTRICTED_ALPHA : UNRESTRICTED_ALPHA);
+        mHomeFragmentLauncher.showDOBlockingMessage(restricted);
+        mFullSettingBtn.setAlpha(restricted ? mOpacityDisabled : mOpacityEnabled);
+    }
+
+    private class HomeFragmentLauncher implements OnClickListener {
+        private boolean mShowDOBlockingMessage;
+
+        private void showDOBlockingMessage(boolean show) {
+            mShowDOBlockingMessage = show;
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (mShowDOBlockingMessage) {
+                getFragmentController().showDOBlockingMessage();
+            } else {
+                getFragmentController().launchFragment(HomepageFragment.newInstance());
+            }
+        }
     }
 }
