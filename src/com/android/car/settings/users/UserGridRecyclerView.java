@@ -155,7 +155,8 @@ public class UserGridRecyclerView extends PagedListView implements
      * Adapter to populate the grid layout with the available user profiles
      */
     public final class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder>
-            implements ConfirmCreateNewUserListener, CancelCreateNewUserListener {
+            implements ConfirmCreateNewUserListener, CancelCreateNewUserListener,
+            AddNewUserTask.AddNewUserListener {
 
         private final Context mContext;
         private List<UserRecord> mUsers;
@@ -259,7 +260,8 @@ public class UserGridRecyclerView extends PagedListView implements
 
         @Override
         public void onCreateNewUserConfirmed() {
-            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper);
+            mAddNewUserTask =
+                    new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */ this);
             mAddNewUserTask.execute(mNewUserName);
         }
 
@@ -268,6 +270,13 @@ public class UserGridRecyclerView extends PagedListView implements
          */
         @Override
         public void onCreateNewUserCancelled() {
+            if (mAddUserView != null) {
+                mAddUserView.setEnabled(true);
+            }
+        }
+
+        @Override
+        public void onUserAdded() {
             if (mAddUserView != null) {
                 mAddUserView.setEnabled(true);
             }
