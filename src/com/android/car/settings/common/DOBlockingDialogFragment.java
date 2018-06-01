@@ -28,28 +28,62 @@ import com.android.car.settings.common.BaseFragment.FragmentController;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 /**
- * A dialog to block non-distrction optimized view when restriction is applied.
+ * A dialog to block non-distraction optimized view when restriction is applied.
  */
 public class DOBlockingDialogFragment extends DialogFragment implements
         DialogInterface.OnClickListener {
     public static final String DIALOG_TAG = "block_dialog_tag";
+    private static final String MESSAGE_ARG_KEY = "message";
+    private boolean mShowQuickSettingsMainScreen = true;
+
+    /**
+     * Creates a DOBlockingDialogFragment with a specified message
+     *
+     * @param message
+     * @return an instance of DOBlockingDialogFragment
+     */
+    public static DOBlockingDialogFragment newInstance(String message) {
+        DOBlockingDialogFragment fragment = new DOBlockingDialogFragment();
+
+        Bundle args = new Bundle();
+        args.putString(MESSAGE_ARG_KEY, message);
+        fragment.setArguments(args);
+
+        return fragment;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Context context = getContext();
+        // If a message is not set, use the default message.
+        String message = getArguments().getString(MESSAGE_ARG_KEY);
+        if (message == null) {
+            message = getContext().getString(R.string.restricted_while_driving);
+        }
         Dialog dialog = new CarAlertDialog.Builder(context)
-                .setBody(context.getString(R.string.restricted_while_driving))
+                .setBody(message)
                 .setPositiveButton(context.getString(R.string.okay),  /* listener= */ this)
                 .setCancelable(false)
                 .create();
         return dialog;
     }
 
+    /**
+     * Return to the quick settings main screen after the dialog is dismissed.
+     * @param showQuickSettingsMainScreen whether to return to the quick settings main screen, the
+     * default value is true
+     */
+    public void goBackToQuickSettingsMainScreen(boolean showQuickSettingsMainScreen) {
+        mShowQuickSettingsMainScreen = showQuickSettingsMainScreen;
+    }
+
     // only one button, no need to check on negative.
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        ((FragmentController) getActivity()).launchFragment(
-                QuickSettingFragment.newInstance());
+        if (mShowQuickSettingsMainScreen) {
+            ((FragmentController) getActivity()).launchFragment(
+                    QuickSettingFragment.newInstance());
+        }
         dismiss();
     }
 }
