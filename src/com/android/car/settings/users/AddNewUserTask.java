@@ -24,10 +24,12 @@ import android.os.AsyncTask;
  * Task to add a new user to the device
  */
 public class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final AddNewUserListener mAddNewUserListener;
 
-    public AddNewUserTask(CarUserManagerHelper helper) {
+    public AddNewUserTask(CarUserManagerHelper helper, AddNewUserListener addNewUserListener) {
         mCarUserManagerHelper = helper;
+        mAddNewUserListener = addNewUserListener;
     }
 
     @Override
@@ -44,8 +46,19 @@ public class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
 
     @Override
     protected void onPostExecute(UserInfo user) {
+        mAddNewUserListener.onUserAdded();
         if (user != null) {
             mCarUserManagerHelper.switchToUser(user);
         }
+    }
+
+    /**
+     * Interface for getting notified when AddNewUserTask has been completed.
+     */
+    public interface AddNewUserListener {
+        /**
+         * Invoked in AddNewUserTask.onPostExecute after the task has been completed.
+         */
+        void onUserAdded();
     }
 }
