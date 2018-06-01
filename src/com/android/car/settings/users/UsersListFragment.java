@@ -38,7 +38,8 @@ public class UsersListFragment extends ListItemSettingsFragment
         implements CarUserManagerHelper.OnUsersUpdateListener,
         UsersItemProvider.UserClickListener,
         ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener,
-        ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener {
+        ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener,
+        AddNewUserTask.AddNewUserListener {
     private static final String FACTORY_RESET_PACKAGE_NAME = "android";
     private static final String FACTORY_RESET_REASON = "ExitRetailModeConfirmed";
 
@@ -98,8 +99,11 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onCreateNewUserConfirmed() {
+        mAddUserButton.setEnabled(false);
+        mProgressBar.setVisibility(View.VISIBLE);
         mAddNewUserTask =
-                new AddNewUserTask().execute(getContext().getString(R.string.user_new_user_name));
+                new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */ this)
+                        .execute(getContext().getString(R.string.user_new_user_name));
     }
 
     /**
@@ -168,26 +172,9 @@ public class UsersListFragment extends ListItemSettingsFragment
         refreshList();
     }
 
-    private class AddNewUserTask extends AsyncTask<String, Void, UserInfo> {
-        @Override
-        protected UserInfo doInBackground(String... userNames) {
-            // Add non-admin users be default for now.
-            return mCarUserManagerHelper.createNewNonAdminUser(userNames[0]);
-        }
-
-        @Override
-        protected void onPreExecute() {
-            mAddUserButton.setEnabled(false);
-            mProgressBar.setVisibility(View.VISIBLE);
-        }
-
-        @Override
-        protected void onPostExecute(UserInfo user) {
-            mAddUserButton.setEnabled(true);
-            mProgressBar.setVisibility(View.GONE);
-            if (user != null) {
-                mCarUserManagerHelper.switchToUser(user);
-            }
-        }
+    @Override
+    public void onUserAdded() {
+        mAddUserButton.setEnabled(true);
+        mProgressBar.setVisibility(View.GONE);
     }
 }
