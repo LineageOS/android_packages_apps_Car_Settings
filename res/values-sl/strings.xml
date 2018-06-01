@@ -166,8 +166,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Razvrsti po časovnem pasu"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Datum"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Ura"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Uporabniki in profili"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Dodajanje uporabnika ali profila"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Dodajanje uporabnika"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj račun"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Brisanje uporabnika"</string>
@@ -178,8 +176,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Uporabnik ni nastavljen"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Urejanje imena uporabnika"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Uporabniki in računi"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Uporabnik"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Uporabniki"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Računi"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Uporabnik"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Dodan ni bil noben račun"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Računi uporabnika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Podatki o računu"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Dodajanje računa"</string>
@@ -191,6 +191,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Skrbnik ne dovoli te spremembe"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Odstranitev uporabnika?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Vse aplikacije in vsi podatki bodo izbrisani."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Odstranitev uporabnika ni uspela."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Želite poskusiti znova?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Opusti"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Poskusi znova"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Dodaj. novega uporabnika?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ko dodate novega uporabnika, mora ta nastaviti svoj prostor."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Vsak uporabnik lahko posodobi aplikacije za vse druge uporabnike."</string>
@@ -305,5 +309,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Zapri predstavitev"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"dokončaj nastavitev"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ne zdaj"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Dejanje med vožnjo ni na voljo."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Funkcija med vožnjo ni na voljo."</string>
 </resources>

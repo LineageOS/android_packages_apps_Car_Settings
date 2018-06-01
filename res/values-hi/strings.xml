@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"समय क्षेत्र के मुताबिक क्रम में लगाएं"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"तारीख"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
-    <string name="user_list_title" msgid="973865977445453930">"उपयोगकर्ता और प्रोफ़ाइल"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"उपयोगकर्ता या प्रोफ़ाइल जोड़ें"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"उपयोगकर्ता (का नाम) मिटाएं"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"\'उपयोगकर्ता नाम\' में बदलाव करें"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"उपयोगकर्ता और खाते"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"उपयोगकर्ता"</string>
+    <string name="users_list_title" msgid="770764290290240909">"उपयोगकर्ता"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"उपयोगकर्ता"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"कोई खाता जोड़ा नहीं गया है"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> के खाते"</string>
     <string name="account_details_title" msgid="7529571432258448573">"खाते की जानकारी"</string>
     <string name="add_account_title" msgid="5988746086885210040">"खाता जोड़ें"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"आपका एडमिन इस बदलाव की अनुमति नहीं देता"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"इस उपयोगकर्ता को हटाएं?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"सभी ऐप्लिकेशन और डेटा मिटा दिए जाएंगे."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"उपयोगकर्ता को हटाया नहीं जा सका."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"फिर से कोशिश करें?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारिज करें"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"फिर से कोशिश करें"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"नया उपयोगकर्ता जोड़ें?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं तो, उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोड से बाहर निकलें"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"सेटअप पूरा करें"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"अभी नहीं"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"गाड़ी चलाते समय यह काम नहीं किया जा सकता."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"गाड़ी चलाते समय इस सुविधा का इस्तेमाल नहीं किया जा सकता."</string>
 </resources>

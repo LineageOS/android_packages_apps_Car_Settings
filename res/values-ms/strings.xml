@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Isih mengikut zon waktu"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Tarikh"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Masa"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Pengguna &amp; profil"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Tambah pengguna atau profil"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Tambah pengguna"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Tambah akaun"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Padamkan pengguna"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nama"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Tidak disediakan"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Edit nama pengguna"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Pengguna &amp; akaun"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Pengguna"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Pengguna"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Akaun"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Pengguna"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Tiada akaun yang ditambahkan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaun untuk <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Maklumat akaun"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Tambah akaun"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Perubahan ini tidak dibenarkan oleh pentadbir anda"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Alih keluar pengguna ini?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Semua apl dan data akan dipadamkan."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Gagal mengalih keluar pengguna."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Cuba lagi?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ketepikan"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Cuba semula"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Tambah pengguna baharu?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Apabila anda menambahkan pengguna baharu, orang itu perlu menyediakan ruang mereka."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Mana-mana pengguna boleh mengemas kini apl untuk semua pengguna lain."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Keluar drpd Tunjuk Cara"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"selesaikan persediaan"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"bukan sekarang"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Tindakan tidak tersedia semasa memandu."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Ciri tidak tersedia semasa memandu."</string>
 </resources>

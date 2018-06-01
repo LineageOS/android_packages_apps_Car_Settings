@@ -150,7 +150,7 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data i godzina"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Ustaw datę i godzinę"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ustaw datę, godzinę, strefę czasową i formaty."</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i czas"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Użyj czasu podanego przez sieć"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatyczna strefa czasowa"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
@@ -166,8 +166,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sortuj według strefy czasowej"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Czas"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Użytkownicy i profile"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Dodaj użytkownika lub profil"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Dodaj użytkownika"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj konto"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Usuwanie użytkownika"</string>
@@ -178,8 +176,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nazwa"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nieskonfigurowany"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Edytowanie nazwy użytkownika"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Użytkownicy i konta"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Użytkownik"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Użytkownicy"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Konta"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Użytkownik"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nie dodano kont"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Konta użytkownika <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informacje o koncie"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Dodaj konto"</string>
@@ -191,6 +191,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Ta zmiana nie jest dozwolona przez administratora"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Usunąć tego użytkownika?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Wszystkie aplikacje i dane zostaną usunięte."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Nie udało się usunąć użytkownika."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Ponowić?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Zamknij"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Ponów"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Dodać nowego użytkownika?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Gdy dodasz nowego użytkownika, musi on skonfigurować swój profil."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Każdy użytkownik może aktualizować aplikacje wszystkich innych użytkowników."</string>
@@ -305,5 +309,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Zamknij tryb demo"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"dokończ konfigurację"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"nie teraz"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Czynność niedostępna podczas jazdy."</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

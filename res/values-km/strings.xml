@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"តម្រៀប​តាម​ល្វែងម៉ោង"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"កាលបរិច្ឆេទ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ម៉ោង"</string>
-    <string name="user_list_title" msgid="973865977445453930">"អ្នកប្រើប្រាស់ និងកម្រង​ព័ត៌មាន"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"បញ្ចូល​អ្នកប្រើប្រាស់ ឬកម្រង​ព័ត៌មាន"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"បញ្ចូល​អ្នក​ប្រើប្រាស់"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"មិន​បាន​រៀបចំ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"កែសម្រួល​ឈ្មោះអ្នក​ប្រើប្រាស់"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"អ្នកប្រើប្រាស់ និងគណនី"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"អ្នក​ប្រើប្រាស់"</string>
+    <string name="users_list_title" msgid="770764290290240909">"អ្នកប្រើប្រាស់"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"អ្នក​ប្រើប្រាស់"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"មិន​មាន​ការ​បញ្ចូល​គណនី​ទេ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ព័ត៌មាន​​អំពី​​គណនី"</string>
     <string name="add_account_title" msgid="5988746086885210040">"បញ្ចូលគណនី"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"ការផ្លាស់ប្ដូរនេះ​មិនត្រូវ​បាន​អនុញ្ញាត​ដោយ​អ្នក​គ្រប់គ្រង​របស់អ្នក​ទេ"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"លុប​អ្នកប្រើប្រាស់​នេះ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"មិនអាច​លុប​អ្នកប្រើប្រាស់​បានទេ។"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"ព្យាយាម​ម្ដងទៀត?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ច្រានចោល"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"ព្យាយាមម្ដងទៀត"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"នៅពេលដែល​អ្នក​បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី បុគ្គល​នោះ​ត្រូវតែ​រៀបចំ​ទំហំ​ផ្ទុក​របស់គេ។"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"អ្នកប្រើប្រាស់​ណាក៏​អាច​ដំឡើង​ជំនាន់កម្មវិធី​សម្រាប់​អ្នក​ប្រើប្រាស់​ទាំងអស់​ផ្សេង​ទៀត​បាន​ដែរ។"</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"បញ្ចប់​ការរៀបចំ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"កុំ​ទាន់"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"មិនមាន​សកម្មភាព​ទេ ខណៈពេល​កំពុង​បើកបរ។"</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"មិនអាច​ប្រើមុខងារ​បានទេ ខណៈពេល​កំពុង​បើកបរ។"</string>
 </resources>

@@ -166,8 +166,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Упорядочить по часовому поясу"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Дата"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Время"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Пользователи и профили"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Добавление пользователя или профиля"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Добавление пользователя"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавить аккаунт"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Удалить пользователя"</string>
@@ -178,8 +176,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Имя"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не настроен"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Изменение имени пользователя"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Пользователи и аккаунты"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Пользователь"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Пользователи"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Аккаунты"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Пользователь"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Аккаунтов нет."</string>
     <string name="account_list_title" msgid="7631588514613843065">"Аккаунты пользователя <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Информация об аккаунте"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Добавьте аккаунт"</string>
@@ -191,6 +191,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Это действие запрещено администратором"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Удалить пользователя?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Все приложения и данные будут удалены."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Не удалось удалить пользователя"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Повторить попытку?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Закрыть"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Повторить"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Добавить пользователя?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когда вы добавите пользователя, ему потребуется настроить профиль."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Любой пользователь устройства может обновлять приложения для всех аккаунтов."</string>
@@ -305,5 +309,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйти из деморежима"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"Завершить настройку"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"Не сейчас"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Это действие недоступно во время вождения."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Эта функция недоступна во время вождения."</string>
 </resources>

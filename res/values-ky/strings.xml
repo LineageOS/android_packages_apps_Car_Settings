@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Убакыт алкагы боюнча иргөө"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Күн"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Убакыт"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Колдонуучулар жана профилдер"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Колдонуучуну же профилди кошуу"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Колдонуучу кошуу"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Аккаунт кошуу"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Колдонуучуну жок кылуу"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Колдонуучунун аты"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Түзүлгөн жок"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Колдонуучунун атын түзөтүү"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Колдонуучулар жана аккаунттар"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Колдонуучу"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Колдонуучулар"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Аккаунттар"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Колдонуучу"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Бир да аккаунт кошулган эмес"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> аттуу колдонуучунун аккаунттары"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Аккаунт тууралуу маалымат"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Аккаунт кошуу"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Мындай өзгөртүүгө администраторуңуз тыюу салган"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Колдонуучуну өчүрөсүзбү?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Бардык колдонмолор жана дайындар жок кылынат."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Колдонуучу өчүрүлгөн жок."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Дагы аракет кыласызбы?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Жабуу"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Кайталоо"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Колдонуучуну кошосузбу?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Жаңы колдонуучу кошулганда, ал өзүнүн профилин жөндөп алышы керек."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Колдонмолорду бир колдонуучу калган бардык колдонуучулар үчүн да жаңырта алат."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демо режимден чыгуу"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"жөндөөнү бүтүрүү"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"азыр эмес"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Унаа айдаганда бул аракетти аткарууга болбойт."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Унаа айдаганда бул функция жеткиликтүү эмес."</string>
 </resources>
