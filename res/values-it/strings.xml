@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Ordina per fuso orario"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Utenti e profili"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Aggiungi utente o profilo"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Aggiungi utente"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Aggiungi account"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Elimina utente"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nome"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Non configurato"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Modifica il nome utente"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Utenti e account"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Utente"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Utenti"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Account"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Utente"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nessun account aggiunto"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Account per <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Dati dell\'account"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Aggiungi account"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Questa modifica non è consentita dall\'amministratore"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Rimuovere questo utente?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Tutte le app e i dati verranno eliminati."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Impossibile rimuovere l\'utente."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Vuoi riprovare?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ignora"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Riprova"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Aggiungere nuovo utente?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Il nuovo utente, una volta aggiunto, dovrà configurare il suo spazio."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualsiasi utente può aggiornare le app per tutti gli altri."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Chiudi demo"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"termina configurazione"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"non ora"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Azione non disponibile durante la guida."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Funzione non disponibile durante la guida."</string>
 </resources>

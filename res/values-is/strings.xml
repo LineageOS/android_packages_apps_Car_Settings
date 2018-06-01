@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Raða eftir tímabelti"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Dagsetning"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Tími"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Notendur og prófílar"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Bæta notanda eða sniði við"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Bæta notanda við"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Bæta reikningi við"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Eyða notanda"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nafn"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Ekki uppsett"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Breyta notandanafni"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Notendur og reikningar"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Notandi"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Notendur"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Reikningar"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Notandi"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Engum reikningum bætt við"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Reikningar fyrir <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Reikningsupplýsingar"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Bæta reikningi við"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Stjórnandinn þinn leyfir ekki þessa breytingu"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Fjarlægja þennan notanda?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Öllum forritum og gögnum verður eytt."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Ekki tókst að fjarlægja notanda."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Reyna aftur?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Hunsa"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Reyna aftur"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Bæta nýjum notanda við?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Þegar þú bætir nýjum notanda við þarf viðkomandi að setja upp sitt eigið svæði."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Allir notendur geta uppfært forrit fyrir alla aðra notendur."</string>
@@ -291,5 +295,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Hætta í kynningarútgáfu"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ljúka við uppsetningu"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ekki núna"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Aðgerðin er ekki í boði meðan á akstri stendur."</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

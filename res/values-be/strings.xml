@@ -166,8 +166,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Сартаваць па часавым поясе"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Дата"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Час"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Карыстальнікі і профілі"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Дадаць карыстальніка або профіль"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Дадаць карыстальніка"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Дадаць уліковы запіс"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Выдаліць карыстальніка"</string>
@@ -178,8 +176,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Імя"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Не наладжана"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Змяніць імя карыстальніка"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Карыстальнікі і ўл. запісы"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Карыстальнік"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Карыстальнікі"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Уліковыя запісы"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Карыстальнік"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Уліковыя запісы не дададзены"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Уліковыя запісы карыстальніка <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Даныя аб уліковым запісе"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Дадаць уліковы запіс"</string>
@@ -191,6 +191,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Адміністратар не дазваляе гэту змену"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Выдаліць карыстальніка?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Усе праграмы і даныя будуць выдалены."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Не атрымалася выдаліць карыстальніка."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Паўтарыць спробу?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Адхіліць"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Паўтарыць"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Дадаць карыстальніка?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Калі вы дадаяце новага карыстальніка, яму трэба наладзіць свой профіль."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Кожны карыстальнік прылады можа абнаўляць праграмы для іншых уліковых запісаў."</string>
@@ -305,5 +309,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйсці з дэма-рэжыму"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"завяршыць наладку"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"не зараз"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Дзеянне недаступнае, калі вы за рулём."</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

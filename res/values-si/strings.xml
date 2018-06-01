@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"වේලා කලාපය අනුව පෙළගස්වන්න"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"දිනය"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"වේලාව"</string>
-    <string name="user_list_title" msgid="973865977445453930">"පරිශීලකයින් සහ පැතිකඩයන්"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"පරිශීලකයෙකු හෝ පැතිකඩක් එක් කරන්න"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"පරිශීලක එක් කරන්න"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ගිණුම එක් කරන්න"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"පරිශීලකයා මකන්න"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"නම‍"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"සකසා නැත"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"පරිශීලක නම සංස්කරණය"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"පරිශීලකයින් සහ ගිණුම්"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"පරිශීලක"</string>
+    <string name="users_list_title" msgid="770764290290240909">"පරිශීලකයින්"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"ගිණුම්"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"පරිශීලක"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"ගිණුම් එක් නොකෙරිණි"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> සඳහා ගිණුම්"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ගිණුම් තතු"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ගිණුම එක් කරන්න"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"ඔබේ පරිපාලක විසින් මෙම වෙනස් කිරීමට ඉඩ නොදේ"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"මෙම පරිශීලක ඉවත් කරන්න ද?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"සියලුම යෙදුම් සහ දත්ත මකා දැමෙනු ඇත."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"පරිශීලක ඉවත් කිරීමට අසමත් විය."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"නැවත උත්සාහ කරන්න ද?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"අස් කරන්න"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"යළි උත්සාහ කරන්න"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"අලුත් පරිශීලක එක් කරනව ද?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ඔබ අලුත් පරිශීලකයෙක් එක් කරන විට, එම පුද්ගලයාට තමන්ගේ ඉඩ සකසා ගැනීමට අවශ්‍ය වේ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"සියලුම අනෙක් පරිශීලකයින් සඳහා ඕනෑම පරිශීලකයෙකුට යෙදුම් යාවත්කාලීන කළ හැක."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ආදර්ශනයෙන් ඉවත් වන්න"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"පිහිටුවීම අවසන් කරන්න"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"දැන් නොවේ"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"රිය පැදවීමේ දී ක්‍රියාව නොතිබේ."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"විශේෂාංගය රිය පැදවීමේ දී නොමැත."</string>
 </resources>

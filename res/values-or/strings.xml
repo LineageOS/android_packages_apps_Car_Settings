@@ -291,10 +291,6 @@
     <skip />
     <!-- no translation found for time_picker_title (7436045944320504639) -->
     <skip />
-    <!-- no translation found for user_list_title (973865977445453930) -->
-    <skip />
-    <!-- no translation found for user_add_user_or_profile_menu (7812971296037702898) -->
-    <skip />
     <!-- no translation found for user_add_user_menu (5319151436895941496) -->
     <skip />
     <!-- no translation found for user_add_account_menu (6625351983590713721) -->
@@ -314,10 +310,10 @@
     <!-- no translation found for user_summary_not_set_up (1473688119241224145) -->
     <skip />
     <string name="edit_user_name_title" msgid="6890782937520262478">"ୟୁଜର୍‍ ନାମକୁ ଏଡିଟ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for user_and_account_settings_title (1542965868877207832) -->
-    <skip />
-    <!-- no translation found for user_settings_title (5511846421187697406) -->
-    <skip />
+    <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"ୟୁଜର୍‌"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଡ଼ାଯାଇନାହିଁ"</string>
     <!-- no translation found for account_list_title (7631588514613843065) -->
     <skip />
     <!-- no translation found for account_details_title (7529571432258448573) -->
@@ -340,6 +336,10 @@
     <skip />
     <!-- no translation found for really_remove_user_message (3828090902833944533) -->
     <skip />
+    <string name="remove_user_error_title" msgid="2038275458657689420">"ୟୁଜର୍‍ଙ୍କୁ କାଢ଼ିହେଲା ନାହିଁ।"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"ପୁଣି ଚେଷ୍ଟା କରିବେ?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ଖାରଜ କରନ୍ତୁ"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
     <!-- no translation found for user_add_user_title (7458813670614932479) -->
     <skip />
     <!-- no translation found for user_add_user_message_setup (6030901156040053106) -->
@@ -476,5 +476,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ସେଟ୍-ଅପ୍ ସମାପ୍ତ କରନ୍ତୁ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ଏବେ ନୁହେଁଁ"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଏହି କାର୍ଯ୍ୟ କରିହେବ ନାହିଁ।"</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>
