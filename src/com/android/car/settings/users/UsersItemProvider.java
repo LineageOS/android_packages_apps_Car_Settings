@@ -85,11 +85,6 @@ class UsersItemProvider extends ListItemProvider {
             }
         }
 
-        UserInfo systemUser = mCarUserManagerHelper.getSystemUserInfo();
-        if (!mCarUserManagerHelper.isSystemUser(currUserInfo)) {
-            mItems.add(createUserItem(systemUser, systemUser.name));
-        }
-
         // Display guest session option.
         if (!currUserInfo.isGuest()) {
             mItems.add(createGuestItem());
