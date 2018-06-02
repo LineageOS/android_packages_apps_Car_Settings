@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Vaqt mintaqasi bo‘yicha saralash"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Sana"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Vaqt"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Foydalanuvchilar &amp; profillar"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Foydalanuvchi yoki profil qo‘shish"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Foydalanuvchi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob qo‘shish"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Foydalanuvchini o‘chirib tashlash"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Ism"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Sozlanmagan"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Foydalanuvchi nomini tahrirlash"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Foydalanuvchilar va hisoblar"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Foydalanuvchi"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Foydalanuvchilar"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Foydalanuvchi"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisob qo‘shilmagan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Ushbu o‘zgarishni amalga oshirish uchun administrator ruxsat bermagan"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Foyd-chi o‘chirilsinmi?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Barcha ilovalar va ma’lumotlar o‘chirib tashlanadi."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Foydalanuvchi olib tashlanmadi"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Takrorlansinmi?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Yopish"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Qayta urinish"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Foydalanuvchi qo‘shilsinmi?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yangi profil qo‘shilgach, uni sozlash lozim."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qurilmaning istalgan foydalanuvchisi ilovalarni barcha hisoblar uchun yangilashi mumkin."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan chiqish"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"sozlashni tugatish"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"hozir emas"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Avtomobilda harakatlanayotganda amal ishlamaydi."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Avtomobilda harakatlanayotganda bu funksiya ishlamaydi."</string>
 </resources>

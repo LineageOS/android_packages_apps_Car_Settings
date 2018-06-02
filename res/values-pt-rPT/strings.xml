@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Ordenar por fuso horário"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Hora"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Utilizadores e perfis"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Adicionar utilizador ou perfil"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Adicionar utilizador"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adicionar conta"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Eliminar utilizador"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nome"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Não configurado"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Editar o nome do utilizador"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Utilizadores e contas"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Utilizador"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Utilizadores"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Contas"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Utilizador"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada."</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Informações da conta"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Adicionar conta"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"O administrador não permite esta alteração."</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Remover este utilizador?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Todas as aplicações e os dados serão eliminados."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Falha ao remover o utilizador"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Pretende tentar novamente?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ignorar"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Tentar novamente"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Adicion. novo utilizador?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ao adicionar um novo utilizador, essa pessoa tem de configurar o respetivo espaço."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualquer utilizador pode atualizar aplicações para todos os outros utilizadores."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Sair da demonstração"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"concluir configuração"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"agora não"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Ação não disponível durante a condução."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Funcionalidade não disponível durante a condução."</string>
 </resources>

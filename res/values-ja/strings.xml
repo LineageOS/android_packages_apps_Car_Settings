@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"タイムゾーン順"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"日付"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"時刻"</string>
-    <string name="user_list_title" msgid="973865977445453930">"ユーザーとプロファイル"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"ユーザーまたはプロファイルを追加"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ユーザーを追加"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"アカウントを追加"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ユーザーの削除"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"名前"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"セットアップしていません"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ユーザー名の編集"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"ユーザーとアカウント"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"ユーザー"</string>
+    <string name="users_list_title" msgid="770764290290240909">"ユーザー"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"アカウント"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"ユーザー"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"アカウントが追加されていません"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> のアカウント"</string>
     <string name="account_details_title" msgid="7529571432258448573">"アカウント情報"</string>
     <string name="add_account_title" msgid="5988746086885210040">"アカウントの追加"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"この変更は管理者によって許可されていません"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ユーザーを削除しますか？"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"すべてのアプリとデータが削除されます。"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"ユーザーを削除できませんでした。"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"再試行しますか？"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"閉じる"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"再試行"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"新しいユーザーを追加しますか？"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"新しいユーザーを追加したら、そのユーザーは自分のスペースをセットアップする必要があります。"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"どのユーザーも他のすべてのユーザーに代わってアプリを更新できます。"</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"デモを終了"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"設定を完了"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"後で行う"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"この操作は運転中はできません。"</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"この機能は運転中は利用できません。"</string>
 </resources>

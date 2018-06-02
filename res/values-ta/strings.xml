@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"நேர மண்டலத்தின்படி வரிசைப்படுத்து"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"தேதி"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"நேரம்"</string>
-    <string name="user_list_title" msgid="973865977445453930">"பயனர்கள் &amp; சுயவிவரங்கள்"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"பயனர் அல்லது சுயவிவரத்தைச் சேர்"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"பயனரைச் சேர்"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"பயனரை நீக்கும்"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"அமைக்கவில்லை"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"பயனர் பெயரைத் திருத்தவும்"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"பயனர்கள் &amp; கணக்குகள்"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"பயனர்"</string>
+    <string name="users_list_title" msgid="770764290290240909">"பயனர்கள்"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"கணக்குகள்"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"பயனர்"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"கணக்குகள் எதுவும் சேர்க்கப்படவில்லை"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> இன் கணக்குகள்"</string>
     <string name="account_details_title" msgid="7529571432258448573">"கணக்குத் தகவல்"</string>
     <string name="add_account_title" msgid="5988746086885210040">"கணக்கைச் சேர்க்கவும்"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"உங்கள் நிர்வாகி இந்த மாற்றத்தை அனுமதிக்கவில்லை"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"இந்தப் பயனரை அகற்றவா?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"எல்லா ஆப்ஸும் தரவும் நீக்கப்படும்."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"பயனரை அகற்ற முடியவில்லை."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"மீண்டும் முயலவா?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"நிராகரி"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"மீண்டும் முயலவும்"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"புதிய பயனரைச் சேர்க்கவா?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"புதிய பயனரைச் சேர்க்கும்போது, அவர் தனக்கான இடத்தை அமைக்க வேண்டும்."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"எந்தவொரு பயனரும், மற்ற பயனர்களுக்காக ஆப்ஸைப் புதுப்பிக்கலாம்."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"டெமோவிலிருந்து வெளியேறு"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"அமைவை முடி"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"இப்போது வேண்டாம்"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"வாகனம் ஓட்டும்போது, இந்தச் செயலைச் செய்ய முடியாது."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"வாகனம் ஓட்டும்போது, இந்த அம்சத்தைப் பயன்படுத்த முடியாது."</string>
 </resources>

@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Saat dilimine göre sırala"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Tarih"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Saat"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Kullanıcılar ve profiller"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Kullanıcı veya profil ekle"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Kullanıcı ekle"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hesap ekle"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Kullanıcıyı sil"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Yapılandırılmamış"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Kullanıcı adını düzenleme"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Kullanıcılar ve hesaplar"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Kullanıcı"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Kullanıcılar"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Hesaplar"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Kullanıcı"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Hiçbir hesap eklenmedi"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> adlı kullanıcının hesapları"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hesap bilgileri"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hesap ekle"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Yöneticiniz bu değişikliğe izin vermiyor"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Kullanıcı kaldırılsın mı?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Tüm uygulamalar ve veriler silinecek."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Kullanıcı kaldırılamadı."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Tekrar denensin mi?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Kapat"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Tekrar dene"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Kullanıcı eklensin mi?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni kullanıcı eklediğinizde, bu kişinin alanını ayarlaması gerekir."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncelleyebilir."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çık"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"kurulumu bitir"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"şimdi değil"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Araç kullanılırken bu işlem gerçekleştirilemez."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Sürüş sırasında bu özellik kullanılamaz."</string>
 </resources>
