@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"સમય ઝોન પ્રમાણે સૉર્ટ કરો"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"તારીખ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"સમય"</string>
-    <string name="user_list_title" msgid="973865977445453930">"વપરાશકર્તાઓ અને પ્રોફાઇલ"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"વપરાશકર્તા અથવા પ્રોફાઇલ ઉમેરો"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"વપરાશકર્તા ઉમેરો"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"એકાઉન્ટ ઉમેરો"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"વપરાશકર્તા ડિલીટ કરો"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"નામ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"સેટ કરેલ નથી"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"વપરાશકર્તાના નામમાં ફેરફાર કરો"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"વપરાશકર્તાઓ અને એકાઉન્ટ"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"વપરાશકર્તા"</string>
+    <string name="users_list_title" msgid="770764290290240909">"વપરાશકર્તાઓ"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"એકાઉન્ટ"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"વપરાશકર્તા"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"કોઈ એકાઉન્ટ ઉમેરવામાં આવ્યા નથી"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> માટેના એકાઉન્ટ"</string>
     <string name="account_details_title" msgid="7529571432258448573">"એકાઉન્ટની માહિતી"</string>
     <string name="add_account_title" msgid="5988746086885210040">"એકાઉન્ટ ઉમેરો"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"તમારા વ્યવસ્થાપકે આ ફેરફારની મંજૂરી આપી નથી"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"આ વપરાશકર્તા કાઢી નાખીએ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"વપરાશકર્તા કાઢી નાખવામાં નિષ્ફળ રહ્યાં."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"ફરી પ્રયાસ કરીએ?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"છોડી દો"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"ફરી પ્રયાસ કરો"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"નવા વપરાશકર્તાને ઉમેરીએ?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"જ્યારે તમે કોઈ નવા વપરાશકર્તાને ઉમેરો છો, ત્યારે તે વ્યક્તિને તેમની સ્પેસ સેટ કરવાની જરૂર પડે છે."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"કોઈપણ વપરાશકર્તા બધા અન્ય વપરાશકર્તાઓ માટે ઍપને અપડેટ કરી શકે છે."</string>
@@ -291,5 +295,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ડેમોમાંથી બહાર નીકળો"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"સેટઅપ સમાપ્ત કરો"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"હમણાં નહીં"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"ડ્રાઇવિંગ કરતી વખતે આ ક્રિયા ઉપલબ્ધ રહેશે નહીં."</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

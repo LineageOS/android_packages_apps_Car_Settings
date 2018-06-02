@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"จัดเรียงตามเขตเวลา"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"วันที่"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"เวลา"</string>
-    <string name="user_list_title" msgid="973865977445453930">"ผู้ใช้และโปรไฟล์"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"เพิ่มผู้ใช้หรือโปรไฟล์"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"เพิ่มผู้ใช้"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"เพิ่มบัญชี"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ลบผู้ใช้"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"ชื่อ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ไม่ได้ตั้งค่า"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"แก้ไขชื่อผู้ใช้"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"ผู้ใช้และบัญชี"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"ผู้ใช้"</string>
+    <string name="users_list_title" msgid="770764290290240909">"ผู้ใช้"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"บัญชี"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"ผู้ใช้"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"ไม่ได้เพิ่มบัญชี"</string>
     <string name="account_list_title" msgid="7631588514613843065">"บัญชีของ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ข้อมูลบัญชี"</string>
     <string name="add_account_title" msgid="5988746086885210040">"เพิ่มบัญชี"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"ผู้ดูแลระบบไม่อนุญาตให้ทำการเปลี่ยนแปลงนี้"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"นำผู้ใช้รายนี้ออกใช่ไหม"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"แอปและข้อมูลทั้งหมดจะถูกลบ"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"นำผู้ใช้ออกไม่สำเร็จ"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"ลองอีกครั้งไหม"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ปิด"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"ลองอีกครั้ง"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"เพิ่มผู้ใช้ใหม่ไหม"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"เมื่อคุณเพิ่มผู้ใช้ใหม่ ผู้ใช้ดังกล่าวจะต้องตั้งค่าพื้นที่ของตนเอง"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ผู้ใช้ทุกคนจะอัปเดตแอปให้แก่ผู้ใช้คนอื่นๆ ได้"</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ออกจากการสาธิต"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ตั้งค่าให้เสร็จ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ไว้ทีหลัง"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"ดำเนินการไม่ได้ในขณะขับรถ"</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"ฟีเจอร์ไม่พร้อมใช้งานขณะขับรถ"</string>
 </resources>
