@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"সময় মণ্ডল অনুসৰি সজাওক"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"তাৰিখ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"সময়"</string>
-    <string name="user_list_title" msgid="973865977445453930">"ব্যৱহাৰকাৰী আৰু প্ৰ\'ফাইলসমূহ"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"ব্যৱহাৰকাৰী বা প্ৰ\'ফাইল যোগ কৰক"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ব্যৱহাৰকাৰী যোগ কৰক"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"একাউণ্ট যোগ কৰক"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ব্যৱহাৰকাৰীক মচক"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ছেট আপ কৰা হোৱা নাই"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ব্যৱহাৰকাৰীৰ নাম সম্পাদনা কৰক"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"ব্যৱহাৰকাৰী আৰু একাউণ্টবোৰ"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"ব্যৱহাৰকাৰী"</string>
+    <string name="users_list_title" msgid="770764290290240909">"ব্যৱহাৰকাৰীসকল"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"একাউণ্টসমূহ"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"ব্যৱহাৰকাৰী"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"কোনো একাউণ্ট যোগ কৰা হোৱা নাই"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>ৰ একাউণ্ট"</string>
     <string name="account_details_title" msgid="7529571432258448573">"একাউণ্টৰ তথ্য়"</string>
     <string name="add_account_title" msgid="5988746086885210040">"একাউণ্ট যোগ কৰক"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"আপোনাৰ প্ৰশাসকে এইটো সলনি কৰিব নিদিয়ে"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"এই ব্যৱহাৰকাৰীক আঁতৰাবনে?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"সকলো এপ আৰু ডেটা মচা হ\'ব।"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"ব্য়ৱহাৰকাৰীক আঁতৰাব পৰা নগ\'ল।"</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"আকৌ চেষ্টা কৰিবনে?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"বাতিল কৰক"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"পুনৰ চেষ্টা কৰক"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"নতুন ব্যৱহাৰকাৰী যোগ কৰেনে?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"আপুনি যেতিয়া কোনো ব্য়ৱহাৰকাৰীক যোগ কৰে সেই ব্য়ক্তিজনে নিজৰ বাবে খালী ঠাই ছেট আপ কৰা প্ৰয়োজন।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"যিকোনো ব্য়ৱহাৰকাৰীয়ে সকলো ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।"</string>
@@ -297,5 +301,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ছেট আপ সমাপ্ত কৰক"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"এতিয়াই নহয়"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"গাড়ী চলোৱা সময়ত কাৰ্যটো উপলব্ধ নাথাকে।"</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

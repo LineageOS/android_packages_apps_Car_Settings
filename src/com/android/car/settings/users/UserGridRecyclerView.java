@@ -36,6 +36,7 @@ import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.DOBlockingDialogFragment;
 import com.android.car.settings.users.ConfirmCreateNewUserDialog.CancelCreateNewUserListener;
 import com.android.car.settings.users.ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener;
 import com.android.internal.util.UserIcons;
@@ -54,11 +55,13 @@ public class UserGridRecyclerView extends PagedListView implements
     private Context mContext;
     private BaseFragment mBaseFragment;
     public AddNewUserTask mAddNewUserTask;
+    public boolean mShowAddUserButton;
 
     public UserGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+        mShowAddUserButton = true;
     }
 
     /**
@@ -120,6 +123,22 @@ public class UserGridRecyclerView extends PagedListView implements
     }
 
     /**
+     * Show the "Add User" Button
+     */
+    public void showAddUser() {
+        mShowAddUserButton = true;
+        onUsersUpdate();
+    }
+
+    /**
+     * Hide the "Add User" Button
+     */
+    public void hideAddUser() {
+        mShowAddUserButton = false;
+        onUsersUpdate();
+    }
+
+    /**
      * Create guest user record
      */
     private UserRecord addGuestUserRecord() {
@@ -145,6 +164,8 @@ public class UserGridRecyclerView extends PagedListView implements
 
     @Override
     public void onUsersUpdate() {
+        // If you can show the add user button, there is no restriction
+        mAdapter.setAddUserRestricted(mShowAddUserButton ? false : true);
         mAdapter.clearUsers();
         mAdapter.updateUsers(createUserRecords(mCarUserManagerHelper
                 .getAllUsersIncludingSystemUser()));
@@ -155,7 +176,8 @@ public class UserGridRecyclerView extends PagedListView implements
      * Adapter to populate the grid layout with the available user profiles
      */
     public final class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterViewHolder>
-            implements ConfirmCreateNewUserListener, CancelCreateNewUserListener {
+            implements ConfirmCreateNewUserListener, CancelCreateNewUserListener,
+            AddNewUserTask.AddNewUserListener {
 
         private final Context mContext;
         private List<UserRecord> mUsers;
@@ -164,6 +186,9 @@ public class UserGridRecyclerView extends PagedListView implements
         private final String mNewUserName;
         // View that holds the add user button.  Used to enable/disable the view
         private View mAddUserView;
+        private float mOpacityDisabled;
+        private float mOpacityEnabled;
+        private boolean mIsAddUserRestricted;
 
         public UserAdapter(Context context, List<UserRecord> users) {
             mRes = context.getResources();
@@ -171,6 +196,8 @@ public class UserGridRecyclerView extends PagedListView implements
             updateUsers(users);
             mGuestName = mRes.getString(R.string.user_guest);
             mNewUserName = mRes.getString(R.string.user_new_user_name);
+            mOpacityDisabled = mRes.getFloat(R.dimen.opacity_disabled);
+            mOpacityEnabled = mRes.getFloat(R.dimen.opacity_enabled);
         }
 
         /**
@@ -192,7 +219,7 @@ public class UserGridRecyclerView extends PagedListView implements
         public UserAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(mContext)
                     .inflate(R.layout.car_user_switcher_pod, parent, false);
-            view.setAlpha(1f);
+            view.setAlpha(mOpacityEnabled);
             view.bringToFront();
             return new UserAdapterViewHolder(view);
         }
@@ -205,11 +232,19 @@ public class UserGridRecyclerView extends PagedListView implements
             circleIcon.setCircular(true);
             holder.mUserAvatarImageView.setImageDrawable(circleIcon);
             holder.mUserNameTextView.setText(userRecord.mInfo.name);
+
             // Show the current user frame if current user
             if (userRecord.mIsForeground) {
                 holder.mFrame.setBackgroundResource(R.drawable.car_user_avatar_bg_circle);
             } else {
                 holder.mFrame.setBackgroundResource(0);
+            }
+
+            // If there are restrictions, show a 50% opaque "add user" view
+            if (userRecord.mIsAddUser && mIsAddUserRestricted) {
+                holder.mView.setAlpha(mOpacityDisabled);
+            } else {
+                holder.mView.setAlpha(mOpacityEnabled);
             }
 
             holder.mView.setOnClickListener(v -> {
@@ -225,16 +260,21 @@ public class UserGridRecyclerView extends PagedListView implements
 
                 // If the user wants to add a user, show dialog to confirm adding a user
                 if (userRecord.mIsAddUser) {
-                    // Disable button so it cannot be clicked multiple times
-                    mAddUserView = holder.mView;
-                    mAddUserView.setEnabled(false);
+                    if (mIsAddUserRestricted) {
+                        // Show a DO dialog as "Add User" is not available
+                        callDOBlockingDialog();
+                    } else {
+                        // Disable button so it cannot be clicked multiple times
+                        mAddUserView = holder.mView;
+                        mAddUserView.setEnabled(false);
 
-                    ConfirmCreateNewUserDialog dialog =
-                            new ConfirmCreateNewUserDialog();
-                    dialog.setConfirmCreateNewUserListener(this);
-                    dialog.setCancelCreateNewUserListener(this);
-                    if (mBaseFragment != null) {
-                        dialog.show(mBaseFragment);
+                        ConfirmCreateNewUserDialog dialog =
+                                new ConfirmCreateNewUserDialog();
+                        dialog.setConfirmCreateNewUserListener(this);
+                        dialog.setCancelCreateNewUserListener(this);
+                        if (mBaseFragment != null) {
+                            dialog.show(mBaseFragment);
+                        }
                     }
                     return;
                 }
@@ -242,6 +282,27 @@ public class UserGridRecyclerView extends PagedListView implements
                 mCarUserManagerHelper.switchToUser(userRecord.mInfo);
             });
 
+        }
+
+        /**
+         * Display a DO dialog
+         */
+        public void callDOBlockingDialog() {
+            DOBlockingDialogFragment DODialog = DOBlockingDialogFragment.newInstance(mContext
+                    .getString(R.string.add_user_restricted_while_driving));
+            DODialog.goBackToQuickSettingsMainScreen(false);
+            DODialog.show(mBaseFragment.getFragmentManager(),
+                    DOBlockingDialogFragment.DIALOG_TAG);
+        }
+
+        /**
+         * Specify if adding a user should be restricted.
+         *
+         * @param isAddUserRestricted should adding a user be restricted
+         *
+         */
+        public void setAddUserRestricted(boolean isAddUserRestricted) {
+            mIsAddUserRestricted = isAddUserRestricted;
         }
 
         private Bitmap getUserRecordIcon(UserRecord userRecord) {
@@ -259,7 +320,8 @@ public class UserGridRecyclerView extends PagedListView implements
 
         @Override
         public void onCreateNewUserConfirmed() {
-            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper);
+            mAddNewUserTask =
+                    new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */ this);
             mAddNewUserTask.execute(mNewUserName);
         }
 
@@ -268,6 +330,13 @@ public class UserGridRecyclerView extends PagedListView implements
          */
         @Override
         public void onCreateNewUserCancelled() {
+            if (mAddUserView != null) {
+                mAddUserView.setEnabled(true);
+            }
+        }
+
+        @Override
+        public void onUserAdded() {
             if (mAddUserView != null) {
                 mAddUserView.setEnabled(true);
             }

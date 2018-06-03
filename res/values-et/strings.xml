@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Sordi ajavööndi järgi"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Kuupäev"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Aeg"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Kasutajad ja profiilid"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Kasutaja või profiili lisamine"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Kasutaja lisamine"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lisa konto"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Kasutaja kustutamine"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Nimi"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Pole seadistatud"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Kasutajanime muutmine"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Kasutajad ja kontod"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Kasutaja"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Kasutajad"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Kontod"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Kasutaja"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Kontosid pole lisatud"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Kasutaja <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> kontod"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Konto teave"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Konto lisamine"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Administraator on selle muudatuse keelanud"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Kas eemaldada kasutaja?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Kõik rakendused ja andmed kustutatakse."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Kasutaja eemaldamine ebaõnnestus."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Kas soovite veel proovida?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Loobu"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Proovi uuesti"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Kas lisada uus kasutaja?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kui lisate uue kasutaja, siis peab ta seadistama oma ruumi."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Iga kasutaja saab rakendusi värskendada kõigi teiste kasutajate jaoks."</string>
@@ -291,5 +295,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Välju demorežimist"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"vii seadistus lõpule"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"mitte praegu"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Toiming pole sõidu ajal saadaval."</string>
+    <!-- no translation found for restricted_while_driving (6217369093121968299) -->
+    <skip />
 </resources>

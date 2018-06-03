@@ -164,8 +164,6 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Panga kulingana na saa za eneo"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Tarehe"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Saa"</string>
-    <string name="user_list_title" msgid="973865977445453930">"Watumiaji na wasifu"</string>
-    <string name="user_add_user_or_profile_menu" msgid="7812971296037702898">"Ongeza mtumiaji au wasifu"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Ongeza mtumiaji"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ongeza akaunti"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Futa mtumiaji"</string>
@@ -176,8 +174,10 @@
     <string name="user_name_label" msgid="3210832645046206845">"Jina"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Haijawekwa mipangilio"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Badilisha jina la mtumiaji"</string>
-    <string name="user_and_account_settings_title" msgid="1542965868877207832">"Akaunti na watumiaji"</string>
-    <string name="user_settings_title" msgid="5511846421187697406">"Mtumiaji"</string>
+    <string name="users_list_title" msgid="770764290290240909">"Watumiaji"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Akaunti"</string>
+    <string name="user_details_title" msgid="1104762783367701498">"Mtumiaji"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizizoongezwa"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaunti za <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Maelezo ya akaunti"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Ongeza akaunti"</string>
@@ -189,6 +189,10 @@
     <string name="remove_account_failed" msgid="7472511529086294087">"Mabadiliko haya hayaruhusiwi na msimamizi wako"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Mtumiaji huyu aondolewe?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Data na programu zote zitafutwa."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Imeshindwa kumwondoa mtumiaji."</string>
+    <string name="remove_user_error_message" msgid="6803947507134323358">"Utajaribu tena?"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ondoa"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Jaribu tena"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Ungependa kuongeza mtumiaji?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ukiongeza mtumiaji mpya, ni lazima aweke kikundi chake."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Mtumiaji yeyote anaweza kusasisha programu za watumiaji wengine."</string>
@@ -291,5 +295,5 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Funga Onyesho"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"maliza kuweka mipangilio"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"si sasa"</string>
-    <string name="restricted_while_driving" msgid="478954379611786852">"Huwezi kufanya kitendo hicho unapoendesha gari."</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"Kipengele hakipatikani unapoendesha gari."</string>
 </resources>
