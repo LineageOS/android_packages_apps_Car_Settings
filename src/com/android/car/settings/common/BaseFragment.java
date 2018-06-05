@@ -185,6 +185,13 @@ public abstract class BaseFragment extends Fragment {
         titleView.setText(title);
     }
 
+    /**
+     * Allow fragment to intercept back press and customize behavior.
+     */
+    protected void onBackPressed() {
+        getFragmentController().goBack();
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -202,7 +209,7 @@ public abstract class BaseFragment extends Fragment {
         Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
         toolbar.setPadding(0, 0, 0, 0);
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
-                v -> getFragmentController().goBack());
+                v -> onBackPressed());
         TextView titleView = getActivity().findViewById(R.id.title);
         titleView.setText(mTitleId);
     }

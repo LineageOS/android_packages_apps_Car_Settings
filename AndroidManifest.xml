@@ -60,7 +60,8 @@
     <application
         android:icon="@drawable/ic_launcher_settings"
         android:theme="@style/CarSettingTheme"
-        android:label="@string/settings_label">
+        android:label="@string/settings_label"
+        android:supportsRtl="true">
 
         <activity
             android:name=".common.CarSettingActivity"
