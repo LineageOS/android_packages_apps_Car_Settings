@@ -16,6 +16,8 @@
 package com.android.car.settings.wifi;
 
 import android.annotation.DrawableRes;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 
 import androidx.annotation.StringRes;
@@ -47,7 +49,6 @@ public class WifiUtil {
         }
     }
 
-
     /**
      * @return 0 if no proper description can be found.
      */
@@ -63,5 +64,12 @@ public class WifiUtil {
             default:
                 return 0;
         }
+    }
+
+    /**
+     * Returns {@Code true} if wifi is available on this device.
+     */
+    public static boolean isWifiAvailable(Context context) {
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI);
     }
 }
