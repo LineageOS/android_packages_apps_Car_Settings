@@ -66,7 +66,7 @@ class UsersItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
+        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
 
         // Show current user
         mItems.add(createUserItem(currUserInfo,
