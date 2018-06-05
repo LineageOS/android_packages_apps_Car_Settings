@@ -27,7 +27,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 /**
- * Class that helps registering {@link CarUxRestrictionsManager.onUxRestrictionsChangedListener} and
+ * Class that helps registering {@link CarUxRestrictionsManager.OnUxRestrictionsChangedListener} and
  * managing car connection.
  */
 public class CarUxRestrictionsHelper {
@@ -38,10 +38,10 @@ public class CarUxRestrictionsHelper {
     @Nullable private final Car mCar;
     @Nullable private CarUxRestrictionsManager mCarUxRestrictionsManager;
 
-    private final CarUxRestrictionsManager.onUxRestrictionsChangedListener mListener;
+    private final CarUxRestrictionsManager.OnUxRestrictionsChangedListener mListener;
 
     public CarUxRestrictionsHelper(Context context,
-            CarUxRestrictionsManager.onUxRestrictionsChangedListener listener) {
+            CarUxRestrictionsManager.OnUxRestrictionsChangedListener listener) {
         if (listener == null) {
             throw new IllegalArgumentException("Listener cannot be null.");
         }
