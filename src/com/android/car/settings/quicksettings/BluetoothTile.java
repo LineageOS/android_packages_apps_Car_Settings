@@ -16,8 +16,6 @@
 package com.android.car.settings.quicksettings;
 
 
-import android.annotation.DrawableRes;
-import android.annotation.Nullable;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,6 +23,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;

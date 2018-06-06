@@ -16,10 +16,10 @@
 
 package com.android.car.settings.datetime;
 
-import android.annotation.NonNull;
 import android.app.AlarmManager;
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.car.widget.TextListItem;
 
 import com.android.settingslib.datetime.ZoneGetter;

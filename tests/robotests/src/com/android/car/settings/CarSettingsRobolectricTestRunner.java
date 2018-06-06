@@ -15,7 +15,7 @@
  */
 package com.android.car.settings;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;
@@ -26,7 +26,9 @@ import org.robolectric.res.ResourcePath;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Custom test runner for the testing of BluetoothPairingDialogs. This is needed because the
@@ -34,6 +36,16 @@ import java.util.List;
  * We want to override this to add several spanning different projects.
  */
 public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
+    private static final Map<String, String> AAR_VERSIONS;
+    private static final String SUPPORT_RESOURCE_PATH_TEMPLATE =
+            "jar:file:prebuilts/sdk/current/androidx/m2repository/androidx/"
+                    + "%1$s/%1$s/%2$s/%1$s-%2$s.aar!/res";
+
+    static {
+        AAR_VERSIONS = new HashMap<>();
+        AAR_VERSIONS.put("car", "1.0.0-alpha3");
+        AAR_VERSIONS.put("appcompat", "1.0.0-alpha1");
+    }
 
     /**
      * We don't actually want to change this behavior, so we just call super.
@@ -51,6 +63,18 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
     }
 
     /**
+     * Create the resource path for a support library component's JAR.
+     */
+    private static String createSupportResourcePathFromJar(@NonNull String componentId) {
+        if (!AAR_VERSIONS.containsKey(componentId)) {
+            throw new IllegalArgumentException("Unknown component " + componentId
+                    + ". Update test with appropriate component name and version.");
+        }
+        return String.format(SUPPORT_RESOURCE_PATH_TEMPLATE, componentId,
+                AAR_VERSIONS.get(componentId));
+    }
+
+    /**
      * We are going to create our own custom manifest so that we can add multiple resource
      * paths to it. This lets us access resources in both Settings and SettingsLib in our tests.
      */
@@ -65,7 +89,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
         // By adding any resources from libraries we need to the AndroidManifest, we can access
         // them from within the parallel universe's resource loader.
         return new AndroidManifest(Fs.fileFromPath(manifestPath), Fs.fileFromPath(resDir),
-            Fs.fileFromPath(assetsDir)) {
+                Fs.fileFromPath(assetsDir)) {
             @Override
             public List<ResourcePath> getIncludedResourcePaths() {
                 List<ResourcePath> paths = super.getIncludedResourcePaths();
@@ -73,10 +97,8 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
 
                 // Support library resources. These need to point to the prebuilts of support
                 // library and not the source.
-                paths.add(createResourcePath(
-                        "file:prebuilts/sdk/current/support/v7/appcompat/res/"));
-                paths.add(createResourcePath("file:prebuilts/sdk/current/support/car/res"));
-
+                paths.add(createResourcePath(createSupportResourcePathFromJar("appcompat")));
+                paths.add(createResourcePath(createSupportResourcePathFromJar("car")));
 
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));

@@ -30,6 +30,7 @@ import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import androidx.annotation.Nullable;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -37,8 +38,6 @@ import androidx.car.widget.TextListItem;
 import com.android.car.settings.common.Logger;
 import com.android.internal.util.CharSequences;
 import com.android.settingslib.accounts.AuthenticatorHelper;
-
-import libcore.util.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;

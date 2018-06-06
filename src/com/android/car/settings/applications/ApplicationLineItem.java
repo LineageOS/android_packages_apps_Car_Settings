@@ -16,11 +16,11 @@
 
 package com.android.car.settings.applications;
 
-import android.annotation.NonNull;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
+import androidx.annotation.NonNull;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;

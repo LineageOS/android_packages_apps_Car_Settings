@@ -16,15 +16,12 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
-import android.support.annotation.VisibleForTesting;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.Spannable;
@@ -36,6 +33,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;

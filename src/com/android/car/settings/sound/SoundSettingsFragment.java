@@ -15,8 +15,6 @@
  */
 package com.android.car.settings.sound;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
@@ -32,6 +30,8 @@ import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.util.Xml;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemAdapter;
 import androidx.car.widget.ListItemProvider.ListProvider;

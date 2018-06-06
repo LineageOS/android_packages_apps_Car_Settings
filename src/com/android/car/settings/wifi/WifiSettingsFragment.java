@@ -15,8 +15,6 @@
  */
 package com.android.car.settings.wifi;
 
-import android.annotation.NonNull;
-import android.annotation.StringRes;
 import android.car.drivingstate.CarUxRestrictions;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -26,6 +24,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;

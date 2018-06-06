@@ -16,7 +16,6 @@
 
 package com.android.car.settings.bluetooth;
 
-import android.annotation.Nullable;
 import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
@@ -24,7 +23,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.annotation.VisibleForTesting;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 
 /**
  * BluetoothPairingDialog asks the user to enter a PIN / Passkey / simple confirmation

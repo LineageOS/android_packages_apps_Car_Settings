@@ -16,12 +16,13 @@
 package com.android.car.settings.quicksettings;
 
 
-import android.annotation.DrawableRes;
-import android.annotation.Nullable;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.View.OnClickListener;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment.FragmentController;
