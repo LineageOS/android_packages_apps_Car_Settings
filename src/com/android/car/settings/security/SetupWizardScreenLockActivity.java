@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.app.KeyguardManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -44,7 +45,17 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.app_compat_activity);
+
+        // This activity is meant for Setup Wizard therefore doesn't ask the user for credentials.
+        // It's pointless to launch this activity as the lock can't be changed without current
+        // credential.
+        if (getSystemService(KeyguardManager.class).isKeyguardSecure()) {
+            setResult(RESULT_CANCELED);
+            finish();
+            return;
+        }
+
+        setContentView(R.layout.suw_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
