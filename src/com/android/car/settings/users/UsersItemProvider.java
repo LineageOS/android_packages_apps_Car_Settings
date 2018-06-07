@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.annotation.Nullable;
 import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
@@ -69,8 +70,7 @@ class UsersItemProvider extends ListItemProvider {
         UserInfo currUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
 
         // Show current user
-        mItems.add(createUserItem(currUserInfo,
-                mContext.getString(R.string.current_user_name, currUserInfo.name)));
+        mItems.add(createUserItem(currUserInfo, /* isCurrentUser= */ true));
 
         // If the current user is a demo user, don't list any of the other users.
         if (currUserInfo.isDemo()) {
@@ -81,7 +81,7 @@ class UsersItemProvider extends ListItemProvider {
         List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
         for (UserInfo userInfo : infos) {
             if (!userInfo.isGuest()) { // Do not show guest users.
-                mItems.add(createUserItem(userInfo, userInfo.name));
+                mItems.add(createUserItem(userInfo, /* isCurrentUser= */ false));
             }
         }
 
@@ -92,20 +92,33 @@ class UsersItemProvider extends ListItemProvider {
     }
 
     // Creates a line for a user, clicking on it leads to the user details page.
-    private ListItem createUserItem(UserInfo userInfo, String title) {
+    private ListItem createUserItem(UserInfo userInfo, boolean isCurrentUser) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
                 /* useLargeIcon= */ false);
-        item.setTitle(title);
-
-        if (!userInfo.isInitialized()) {
-            // Indicate that the user has not been initialized yet.
-            item.setBody(mContext.getString(R.string.user_summary_not_set_up));
-        }
-
+        item.setTitle(getUserItemTitle(userInfo, isCurrentUser));
+        item.setBody(getUserItemSummary(userInfo, isCurrentUser));
         item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
         item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
+    }
+
+    @Nullable
+    private String getUserItemSummary(UserInfo userInfo, boolean isCurrentUser) {
+        if (!userInfo.isInitialized()) {
+            return mContext.getString(R.string.user_summary_not_set_up);
+        }
+        if (userInfo.isAdmin()) {
+            return isCurrentUser ? mContext.getString(R.string.signed_in_admin_user)
+                    : mContext.getString(R.string.user_admin);
+        }
+        // No summary for users who are initialized and not admins.
+        return null;
+    }
+
+    private String getUserItemTitle(UserInfo userInfo, boolean isCurrentUser)  {
+        return isCurrentUser ? mContext.getString(R.string.current_user_name, userInfo.name)
+                : userInfo.name;
     }
 
     // Creates a line for a guest session.
