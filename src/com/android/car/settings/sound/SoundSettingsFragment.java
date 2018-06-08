@@ -98,7 +98,7 @@ public class SoundSettingsFragment extends BaseFragment {
 
     private final ICarVolumeCallback mVolumeChangeCallback = new ICarVolumeCallback.Stub() {
         @Override
-        public void onGroupVolumeChanged(int groupId) {
+        public void onGroupVolumeChanged(int groupId, int flags) {
             for (ListItem lineItem : mVolumeLineItems) {
                 VolumeLineItem volumeLineItem = (VolumeLineItem) lineItem;
                 if (volumeLineItem.getVolumeGroupId() == groupId) {
@@ -109,7 +109,7 @@ public class SoundSettingsFragment extends BaseFragment {
         }
 
         @Override
-        public void onMasterMuteChanged() {
+        public void onMasterMuteChanged(int flags) {
             // ignored
         }
     };
