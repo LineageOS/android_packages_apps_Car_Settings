@@ -92,7 +92,10 @@ public class HomepageFragment extends ListSettingsFragment implements
     private final IntentFilter mBtStateChangeFilter =
             new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
 
-    public static HomepageFragment getInstance() {
+    /**
+     * Gets an instance of this class.
+     */
+    public static HomepageFragment newInstance() {
         HomepageFragment homepageFragment = new HomepageFragment();
         Bundle bundle = ListSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.settings_label);

@@ -34,6 +34,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       android-support-car \
       android-support-v7-preference \
       android-support-v14-preference \
+      android-arch-lifecycle-extensions \
       car-list \
       car-settings-lib \
       setup-wizard-lib-gingerbread-compat \
