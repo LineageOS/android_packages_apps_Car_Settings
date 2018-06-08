@@ -22,24 +22,26 @@ include $(CLEAR_VARS)
 # (for example, projected). See b/30064991
 ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_PACKAGE_NAME := CarSettings
-LOCAL_PRIVATE_PLATFORM_APIS := true
+  LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
   LOCAL_USE_AAPT2 := true
 
+  LOCAL_JAVA_LIBRARIES += android.car
+
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      android-support-v4 \
-      android-support-v7-recyclerview \
-      android-support-v7-appcompat \
+      android-support-car \
       android-support-v7-preference \
       android-support-v14-preference \
-      android-support-design
+      android-arch-lifecycle-extensions \
+      car-list \
+      car-settings-lib \
+      setup-wizard-lib-gingerbread-compat \
+      SettingsLib
 
   LOCAL_RESOURCE_DIR := \
       $(LOCAL_PATH)/res
-
-  include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
 
   LOCAL_CERTIFICATE := platform
 
@@ -53,17 +55,20 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_STATIC_JAVA_LIBRARIES += jsr305
 
-  include packages/apps/Car/libs/car-stream-ui-lib/car-stream-ui-lib.mk
-  include packages/apps/Car/libs/car-apps-common/car-apps-common.mk
-  include packages/services/Car/car-support-lib/car-support.mk
-  include frameworks/base/packages/SettingsLib/common.mk
+  LOCAL_DX_FLAGS := --multi-dex
 
+  ifdef DISABLE_AOSP_PHONE_SETTING
+    ifeq ($(DISABLE_AOSP_PHONE_SETTING),true)
+      # This will hide AOSP phone setting.
+      LOCAL_OVERRIDES_PACKAGES := Settings
+    endif
+  endif
   include $(BUILD_PACKAGE)
 endif
 
 # Use the following include to make our test apk.
 ifeq (,$(ONE_SHOT_MAKEFILE))
-include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(call first-makefiles-under, $(LOCAL_PATH))
 endif
 
 endif
