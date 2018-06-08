@@ -63,9 +63,9 @@ public abstract class BaseFragment extends Fragment {
         void goBack();
 
         /**
-         * Called when a Fragment expects itself to be blocked.
+         * Shows a message that current feature is not available when driving.
          */
-        void notifyCurrentFragmentRestricted();
+        void showDOBlockingMessage();
     }
 
     /**
@@ -120,13 +120,9 @@ public abstract class BaseFragment extends Fragment {
     }
 
     /**
-     * Notifies the fragment with the latest CarUxRestrictions change. Default to quick setting
-     * page when canBeShown() return false, no-op otherwise.
+     * Notifies the fragment with the latest CarUxRestrictions change.
      */
     protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
-        if (!canBeShown(getCurrentRestrictions())) {
-            getFragmentController().notifyCurrentFragmentRestricted();
-        }
     }
 
     @Override
@@ -164,12 +160,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        CarUxRestrictions carUxRestrictions = getCurrentRestrictions();
-        if (!canBeShown(carUxRestrictions)) {
-            getFragmentController().notifyCurrentFragmentRestricted();
-        } else {
-            onUxRestrictionChanged(carUxRestrictions);
-        }
+        onUxRestrictionChanged(getCurrentRestrictions());
     }
 
     /**

@@ -36,7 +36,6 @@ import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.DOBlockingDialogFragment;
 import com.android.car.settings.users.ConfirmCreateNewUserDialog.CancelCreateNewUserListener;
 import com.android.car.settings.users.ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener;
 import com.android.internal.util.UserIcons;
@@ -55,13 +54,13 @@ public class UserGridRecyclerView extends PagedListView implements
     private Context mContext;
     private BaseFragment mBaseFragment;
     public AddNewUserTask mAddNewUserTask;
-    public boolean mShowAddUserButton;
+    public boolean mEnableAddUserButton;
 
     public UserGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
-        mShowAddUserButton = true;
+        mEnableAddUserButton = true;
     }
 
     /**
@@ -125,16 +124,16 @@ public class UserGridRecyclerView extends PagedListView implements
     /**
      * Show the "Add User" Button
      */
-    public void showAddUser() {
-        mShowAddUserButton = true;
+    public void enableAddUser() {
+        mEnableAddUserButton = true;
         onUsersUpdate();
     }
 
     /**
      * Hide the "Add User" Button
      */
-    public void hideAddUser() {
-        mShowAddUserButton = false;
+    public void disableAddUser() {
+        mEnableAddUserButton = false;
         onUsersUpdate();
     }
 
@@ -165,7 +164,7 @@ public class UserGridRecyclerView extends PagedListView implements
     @Override
     public void onUsersUpdate() {
         // If you can show the add user button, there is no restriction
-        mAdapter.setAddUserRestricted(mShowAddUserButton ? false : true);
+        mAdapter.setAddUserRestricted(mEnableAddUserButton ? false : true);
         mAdapter.clearUsers();
         mAdapter.updateUsers(createUserRecords(mCarUserManagerHelper
                 .getAllUsers()));
@@ -261,8 +260,7 @@ public class UserGridRecyclerView extends PagedListView implements
                 // If the user wants to add a user, show dialog to confirm adding a user
                 if (userRecord.mIsAddUser) {
                     if (mIsAddUserRestricted) {
-                        // Show a DO dialog as "Add User" is not available
-                        callDOBlockingDialog();
+                        mBaseFragment.getFragmentController().showDOBlockingMessage();
                     } else {
                         // Disable button so it cannot be clicked multiple times
                         mAddUserView = holder.mView;
@@ -282,17 +280,6 @@ public class UserGridRecyclerView extends PagedListView implements
                 mCarUserManagerHelper.switchToUser(userRecord.mInfo);
             });
 
-        }
-
-        /**
-         * Display a DO dialog
-         */
-        public void callDOBlockingDialog() {
-            DOBlockingDialogFragment DODialog = DOBlockingDialogFragment.newInstance(mContext
-                    .getString(R.string.add_user_restricted_while_driving));
-            DODialog.goBackToQuickSettingsMainScreen(false);
-            DODialog.show(mBaseFragment.getFragmentManager(),
-                    DOBlockingDialogFragment.DIALOG_TAG);
         }
 
         /**
