@@ -95,6 +95,13 @@ public class PinPadView extends GridLayout {
         mEnterKey.setImageResource(drawableId);
     }
 
+    /**
+     * Sets if the enter key for submitting a PIN is enabled or disabled.
+     */
+    public void setEnterKeyEnabled(boolean enabled) {
+        mEnterKey.setEnabled(enabled);
+    }
+
     private void init() {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         inflater.inflate(R.layout.pin_pad_view, this, true);
