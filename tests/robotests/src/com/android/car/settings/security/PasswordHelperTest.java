@@ -47,40 +47,17 @@ public class PasswordHelperTest {
     public void testValidatePasswordTooShort() {
         String password = "lov";
         assertThat(mPasswordHelper.validate(password))
-                .isEqualTo(PasswordHelper.DOES_NOT_MATCH_PATTERN);
+                .isEqualTo(PasswordHelper.TOO_SHORT);
     }
 
     /**
-     * A test to check validate works as expected for alphanumeric password
-     * that are too long.
-     */
-    @Test
-    public void testValidatePasswordTooLong() {
-        String password = "passwordtoolong";
-        assertThat(mPasswordHelper.validate(password))
-                .isEqualTo(PasswordHelper.DOES_NOT_MATCH_PATTERN);
-    }
-
-    /**
-     * A test to check validate works as expected for alphanumeric password
-     * that contains white space.
+     * A test to check validate works when alphanumeric passwor contains white space.
      */
     @Test
     public void testValidatePasswordWhiteSpace() {
         String password = "pass wd";
         assertThat(mPasswordHelper.validate(password))
-                .isEqualTo(PasswordHelper.DOES_NOT_MATCH_PATTERN);
-    }
-
-    /**
-     * A test to check validate works as expected for alphanumeric password
-     * that don't have a digit.
-     */
-    @Test
-    public void testValidatePasswordNoDigit() {
-        String password = "password";
-        assertThat(mPasswordHelper.validate(password))
-                .isEqualTo(PasswordHelper.DOES_NOT_MATCH_PATTERN);
+                .isEqualTo(PasswordHelper.NO_ERROR);
     }
 
     /**
@@ -92,17 +69,6 @@ public class PasswordHelperTest {
         String password = "1passwýd";
         assertThat(mPasswordHelper.validate(password))
                 .isEqualTo(PasswordHelper.CONTAINS_INVALID_CHARACTERS);
-    }
-
-    /**
-     * A test to check validate works as expected for alphanumeric password
-     * that don't have a letter.
-     */
-    @Test
-    public void testValidatePasswordNoLetter() {
-        String password = "123456";
-        assertThat(mPasswordHelper.validate(password))
-                .isEqualTo(PasswordHelper.DOES_NOT_MATCH_PATTERN);
     }
 
     /**
@@ -122,6 +88,6 @@ public class PasswordHelperTest {
     public void testValidatePinWithTooFewDigits() {
         String password = "12";
         assertThat(mPinPresenter.validate(password))
-                .isEqualTo(PasswordHelper.TOO_FEW_DIGITS);
+                .isEqualTo(PasswordHelper.TOO_SHORT);
     }
 }

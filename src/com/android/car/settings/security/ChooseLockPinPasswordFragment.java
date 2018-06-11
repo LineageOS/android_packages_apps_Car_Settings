@@ -28,7 +28,6 @@ import android.support.annotation.VisibleForTesting;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.Spannable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -287,7 +286,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         updateStage(mUiStage);
 
         if (mSavePasswordWorker != null) {
-            setPrimaryButtonEnabled(true);
             mSavePasswordWorker.setListener(this::onChosenLockSaveFinished);
         }
     }
@@ -317,7 +315,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     /**
      * Returns the string in the password entry field
      */
-    private String getPasswordField() {
+    private String getEnteredPassword() {
         return mPasswordField.getText().toString();
     }
 
@@ -332,7 +330,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
             @Override
             public void onBackspaceClick() {
-                String pin = getPasswordField();
+                String pin = getEnteredPassword();
                 if (pin.length() > 0) {
                     setPasswordField(pin.substring(0, pin.length() - 1));
                 }
@@ -347,8 +345,18 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mPinPad.setPinPadClickListener(pinPadClickListener);
     }
 
-    private void setPrimaryButtonEnabled(boolean enabled) {
+    private boolean shouldEnableSubmit() {
+        return getEnteredPassword().length() >= PasswordHelper.MIN_LENGTH
+                && (mSavePasswordWorker == null || mSavePasswordWorker.isFinished());
+    }
+
+    private void updateSubmitButtonsState() {
+        boolean enabled = shouldEnableSubmit();
+
         mPrimaryButton.setEnabled(enabled);
+        if (mIsPin) {
+            mPinPad.setEnterKeyEnabled(enabled);
+        }
     }
 
     private void setPrimaryButtonText(@StringRes int textId) {
@@ -366,10 +374,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     // Updates display message and proceed to next step according to the different text on
     // the primary button.
     private void handlePrimaryButtonClick() {
-        mCurrentEntry = mPasswordField.getText().toString();
-        if (TextUtils.isEmpty(mCurrentEntry)) {
+        // Need to check this because it can be fired from the keyboard.
+        if (!shouldEnableSubmit()) {
             return;
         }
+
+        mCurrentEntry = getEnteredPassword();
 
         switch(mUiStage) {
             case Introduction:
@@ -443,7 +453,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         mPasswordEntryInputDisabler.setInputEnabled(false);
-        setPrimaryButtonEnabled(false);
 
         if (mSavePasswordWorker == null) {
             mSavePasswordWorker = new SavePasswordWorker();
@@ -457,19 +466,17 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mSavePasswordWorker.start(mUserId, mCurrentEntry, mExistingPassword,
                 mPasswordHelper.getPasswordQuality());
+
+        updateSubmitButtonsState();
     }
 
     // Updates the hint message, error, button text and state
     private void updateUi() {
+        updateSubmitButtonsState();
+
         boolean inputAllowed = mSavePasswordWorker == null || mSavePasswordWorker.isFinished();
 
-        if (mUiStage == Stage.Introduction) {
-            String password = mPasswordField.getText().toString();
-            // Enable/Disable the next button accordingly.
-            setPrimaryButtonEnabled(!TextUtils.isEmpty(password));
-        } else {
-            boolean hasPassword = !TextUtils.isEmpty(mCurrentEntry);
-            setPrimaryButtonEnabled(inputAllowed && hasPassword);
+        if (mUiStage != Stage.Introduction) {
             setSecondaryButtonEnabled(inputAllowed);
         }
 
@@ -512,12 +519,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
      * the error is shown as a hint message.
      */
     private void setError(String message) {
-        if (mIsPin) {
-            mHintMessage.setText(message);
-        } else {
-            mPasswordField.setError(message);
-            mHintMessage.setText(null);
-        }
+        mHintMessage.setText(message);
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)

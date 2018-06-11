@@ -240,7 +240,9 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         } else {
             mMsgView.setText(
                     mIsPin ? R.string.lockscreen_wrong_pin : R.string.lockscreen_wrong_password);
-            mPinPad.setEnabled(true);
+            if (mIsPin) {
+                mPinPad.setEnabled(true);
+            }
         }
 
         if (!mIsPin) {
