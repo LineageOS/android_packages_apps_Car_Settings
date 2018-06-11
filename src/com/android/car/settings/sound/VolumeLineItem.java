@@ -16,8 +16,6 @@
 
 package com.android.car.settings.sound;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
 import android.content.Context;
@@ -30,6 +28,8 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.widget.SeekBar;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.SeekbarListItem;
 
 import com.android.car.settings.common.Logger;

@@ -20,10 +20,10 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 
+import androidx.annotation.Nullable;
 import androidx.car.app.CarAlertDialog;
+import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
 

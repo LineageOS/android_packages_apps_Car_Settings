@@ -16,10 +16,6 @@
 
 package com.android.car.settings.system;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -28,6 +24,10 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.car.widget.ListItemProvider;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;

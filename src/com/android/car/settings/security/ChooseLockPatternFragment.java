@@ -16,13 +16,14 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.StringRes;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.support.annotation.VisibleForTesting;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;

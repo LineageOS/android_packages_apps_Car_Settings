@@ -26,12 +26,13 @@ import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
-import android.support.design.widget.TextInputEditText;
 import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.junit.Before;
 import org.junit.Test;

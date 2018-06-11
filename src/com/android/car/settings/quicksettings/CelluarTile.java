@@ -16,11 +16,12 @@
 package com.android.car.settings.quicksettings;
 
 
-import android.annotation.Nullable;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.telephony.TelephonyManager;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.android.car.settings.R;
 import com.android.settingslib.net.DataUsageController;

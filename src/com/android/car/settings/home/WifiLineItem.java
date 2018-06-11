@@ -16,11 +16,12 @@
 
 package com.android.car.settings.home;
 
-import android.annotation.DrawableRes;
 import android.content.Context;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Switch;
+
+import androidx.annotation.DrawableRes;
 
 import com.android.car.list.IconToggleLineItem;
 import com.android.car.settings.R;

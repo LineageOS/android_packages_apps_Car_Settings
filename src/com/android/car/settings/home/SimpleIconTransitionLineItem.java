@@ -16,10 +16,11 @@
 
 package com.android.car.settings.home;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.content.Context;
 import android.view.View;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 
 import com.android.car.list.SimpleIconLineItem;
 import com.android.car.settings.common.BaseFragment;

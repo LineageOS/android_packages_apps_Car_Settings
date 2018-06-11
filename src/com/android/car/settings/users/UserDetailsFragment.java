@@ -19,10 +19,10 @@ package com.android.car.settings.users;
 import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
-import android.support.annotation.VisibleForTesting;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;

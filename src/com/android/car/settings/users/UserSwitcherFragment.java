@@ -18,7 +18,8 @@ package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;

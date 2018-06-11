@@ -19,7 +19,9 @@ package com.android.car.settings.suggestions;
 import android.content.Context;
 import android.service.settings.suggestions.Suggestion;
 
-import com.android.car.settingslib.loader.AsyncLoader;
+import androidx.annotation.Nullable;
+import androidx.loader.content.AsyncTaskLoader;
+
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.suggestions.SuggestionController;
 
@@ -30,7 +32,7 @@ import java.util.List;
  * {@link com.android.settingslib.suggestions.SuggestionLoader}, only change is to extend from car
  * settings {@link AsyncLoader} which extends from support library {@link AsyncTaskLoader}.
  */
-public class SettingsSuggestionsLoader extends AsyncLoader<List<Suggestion>> {
+public class SettingsSuggestionsLoader extends AsyncTaskLoader<List<Suggestion>> {
     private static final Logger LOG = new Logger(SettingsSuggestionsLoader.class);
 
     /**
@@ -39,6 +41,43 @@ public class SettingsSuggestionsLoader extends AsyncLoader<List<Suggestion>> {
     public static final int LOADER_ID_SUGGESTIONS = 42;
 
     private final SuggestionController mSuggestionController;
+
+    @Nullable
+    private List<Suggestion> mResult;
+
+    @Override
+    protected void onStartLoading() {
+        if (mResult != null) {
+            deliverResult(mResult);
+        }
+
+        if (takeContentChanged() || mResult == null) {
+            forceLoad();
+        }
+    }
+
+    @Override
+    protected void onStopLoading() {
+        cancelLoad();
+    }
+
+    @Override
+    public void deliverResult(List<Suggestion> data) {
+        if (isReset()) {
+            return;
+        }
+        mResult = data;
+        if (isStarted()) {
+            super.deliverResult(data);
+        }
+    }
+
+    @Override
+    protected void onReset() {
+        super.onReset();
+        onStopLoading();
+        mResult = null;
+    }
 
     public SettingsSuggestionsLoader(Context context, SuggestionController controller) {
         super(context);
