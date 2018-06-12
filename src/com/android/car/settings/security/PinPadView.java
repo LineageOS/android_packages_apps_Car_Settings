@@ -22,6 +22,7 @@ import android.content.Context;
 import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
@@ -44,9 +45,21 @@ public class PinPadView extends GridLayout {
     static final int[] PIN_PAD_DIGIT_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
             R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
 
+    /**
+     * The delay in milliseconds between character deletion when the user continuously holds the
+     * backspace key.
+     */
+    private static final int LONG_CLICK_DELAY_MILLS = 100;
+
     private final List<View> mPinKeys = new ArrayList<>(NUM_KEYS);
     private PinPadClickListener mOnClickListener;
     private ImageButton mEnterKey;
+    private Runnable mOnBackspaceLongClick = new Runnable() {
+        public void run() {
+            mOnClickListener.onBackspaceClick();
+            getHandler().postDelayed(this, LONG_CLICK_DELAY_MILLS);
+        }
+    };
 
     public PinPadView(Context context) {
         super(context);
@@ -116,7 +129,19 @@ public class PinPadView extends GridLayout {
         }
 
         View backspace = findViewById(R.id.key_backspace);
-        backspace.setOnClickListener(v -> mOnClickListener.onBackspaceClick());
+        backspace.setOnTouchListener((v, event) -> {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    getHandler().post(mOnBackspaceLongClick);
+                    return true;
+                case MotionEvent.ACTION_UP:
+                    getHandler().removeCallbacks(mOnBackspaceLongClick);
+                    return true;
+                default:
+                    return false;
+            }
+        });
+
         mPinKeys.add(backspace);
 
         mEnterKey = (ImageButton) findViewById(R.id.key_enter);
