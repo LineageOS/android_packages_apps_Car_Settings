@@ -16,8 +16,11 @@
 package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
@@ -26,29 +29,48 @@ import androidx.car.widget.ListItem;
 
 import com.android.car.settings.R;
 
+import java.util.List;
+
 /**
  * Represents a listItem with title text and a checkbox.
+ * @param <T> type of item stored in the spinner.
  */
-public abstract class CheckBoxListItem extends ListItem<CheckBoxListItem.ViewHolder> {
-    private final String mTitle;
+public class SpinnerListItem<T> extends ListItem<SpinnerListItem.ViewHolder> {
+    private final ArrayAdapter<T> mArrayAdapter;
+    private final AdapterView.OnItemSelectedListener mOnItemSelectedListener;
+    private final CharSequence mTitle;
+    private final int mSelectedPosition;
     private boolean mIsEnabled = true;
 
-    public CheckBoxListItem(String title) {
-        mTitle = title;
-    }
-
     /**
-     * @return whether the CheckBox is checked
+     * Constructs a new SpinnerLineItem
+     *
+     * @param context Android context
+     * @param listener Listener for when an item in spinner is selected
+     * @param items The List of items in the spinner
+     * @param title The title next to the spinner
+     * @param selectedPosition The starting position of the spinner
      */
-    public abstract boolean isChecked();
+    public SpinnerListItem(
+            Context context,
+            AdapterView.OnItemSelectedListener listener,
+            List<T> items,
+            CharSequence title,
+            int selectedPosition) {
+        mArrayAdapter = new ArrayAdapter(context, R.layout.spinner, items);
+        mArrayAdapter.setDropDownViewResource(R.layout.spinner_drop_down);
+        mOnItemSelectedListener = listener;
+        mTitle = title;
+        mSelectedPosition = selectedPosition;
+    }
 
     @LayoutRes
     public static final int getViewLayoutId() {
-        return R.layout.checkbox_list_item;
+        return R.layout.spinner_line_item;
     }
 
     /**
-     * Creates a {@link CheckBoxListItem.ViewHolder}.
+     * Creates a {@link SpinnerListItem.ViewHolder}.
      */
     public static ViewHolder createViewHolder(View itemView) {
         return new ViewHolder(itemView);
@@ -56,7 +78,7 @@ public abstract class CheckBoxListItem extends ListItem<CheckBoxListItem.ViewHol
 
     @Override
     public final int getViewType() {
-        return CoustomListItemTypes.CHECK_BOX_VIEW_TYPE;
+        return CoustomListItemTypes.SPINNER_VIEW_TYPE;
     }
 
     @Override
@@ -71,31 +93,30 @@ public abstract class CheckBoxListItem extends ListItem<CheckBoxListItem.ViewHol
 
     @Override
     protected void onBind(ViewHolder viewHolder) {
+        viewHolder.spinner.setAdapter(mArrayAdapter);
+        viewHolder.spinner.setSelection(mSelectedPosition);
+        viewHolder.spinner.setOnItemSelectedListener(mOnItemSelectedListener);
+        viewHolder.spinner.setEnabled(mIsEnabled);
         viewHolder.titleView.setText(mTitle);
         viewHolder.titleView.setEnabled(mIsEnabled);
-        viewHolder.checkbox.setChecked(isChecked());
-        viewHolder.checkbox.setEnabled(mIsEnabled);
-        viewHolder.itemView.setOnClickListener(this::onClick);
         viewHolder.itemView.setEnabled(mIsEnabled);
     }
 
     /**
-     * Called when the LineItem is clicked, default behavior is nothing.
-     *
-     * @param view Passed in by the view's onClick listener
+     * Returns the item in the given position
      */
-    public void onClick(View view) {
-        // do nothing
+    public T getItem(int position) {
+        return mArrayAdapter.getItem(position);
     }
 
     static class ViewHolder extends ListItem.ViewHolder {
+        public final Spinner spinner;
         public final TextView titleView;
-        public final CheckBox checkbox;
 
         ViewHolder(View view) {
             super(view);
+            spinner = view.findViewById(R.id.spinner);
             titleView = view.findViewById(R.id.title);
-            checkbox = view.findViewById(R.id.checkbox);
         }
 
         @Override

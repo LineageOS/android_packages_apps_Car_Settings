@@ -21,15 +21,17 @@
     android:layout_height="@dimen/car_double_line_list_item_height"
     android:background="@drawable/car_list_item_background"
     android:orientation="vertical"
-    android:layout_gravity="center_vertical">
+    android:layout_centerVertical="true">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.Car.Body2.SingleLine" />
-    <EditText
-        android:id="@+id/input"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.Car.Body1" />
+        android:background="@drawable/spinner_background"
+        android:popupBackground="@color/car_card"
+        android:layout_marginTop="@dimen/car_padding_1" />
 </LinearLayout>

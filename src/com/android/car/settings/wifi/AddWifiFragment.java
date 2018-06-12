@@ -24,14 +24,16 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
 
-import com.android.car.list.EditTextLineItem;
-import com.android.car.list.PasswordLineItem;
-import com.android.car.list.SpinnerLineItem;
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.EditTextListItem;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.MutableListItemProvider;
+import com.android.car.settings.common.PasswordListItem;
+import com.android.car.settings.common.SpinnerListItem;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;
@@ -43,7 +45,7 @@ import java.util.regex.Pattern;
  * in the intent, then it needs to contain AccessPoint information, which is be use that to
  * render UI, e.g. show SSID etc.
  */
-public class AddWifiFragment extends ListSettingsFragment implements
+public class AddWifiFragment extends ListItemSettingsFragment implements
         AdapterView.OnItemSelectedListener {
     public static final String EXTRA_AP_STATE = "extra_ap_state";
 
@@ -54,7 +56,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
     @Nullable
     private AccessPoint mAccessPoint;
     @Nullable
-    private SpinnerLineItem<AccessPointSecurity> mSpinnerLineItem;
+    private SpinnerListItem<AccessPointSecurity> mSpinnerLineItem;
     private WifiManager mWifiManager;
     private Button mAddWifiButton;
     private final WifiManager.ActionListener mConnectionListener =
@@ -70,14 +72,15 @@ public class AddWifiFragment extends ListSettingsFragment implements
                             Toast.LENGTH_SHORT).show();
                 }
             };
-    private EditTextLineItem mWifiNameInput;
-    private EditTextLineItem mWifiPasswordInput;
+    private EditTextListItem mWifiNameInput;
+    private EditTextListItem mWifiPasswordInput;
+    private MutableListItemProvider mItemProvider;
 
     private int mSelectedPosition = AccessPointSecurity.SECURITY_NONE_POSITION;
 
     public static AddWifiFragment getInstance(AccessPoint accessPoint) {
         AddWifiFragment addWifiFragment = new AddWifiFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_setup_add_network);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         Bundle accessPointState = new Bundle();
@@ -112,16 +115,21 @@ public class AddWifiFragment extends ListSettingsFragment implements
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
+    public ListItemProvider getItemProvider() {
+        mItemProvider = new MutableListItemProvider(getLineItems());
+        return mItemProvider;
+    }
+
+    private ArrayList<ListItem> getLineItems() {
+        ArrayList<ListItem> lineItems = new ArrayList<>();
         if (mAccessPoint != null) {
-            mWifiNameInput = new EditTextLineItem(
-                    getContext().getText(R.string.wifi_ssid), mAccessPoint.getSsid());
-            mWifiNameInput.setTextType(EditTextLineItem.TextType.NONE);
+            mWifiNameInput = new EditTextListItem(
+                    getContext().getString(R.string.wifi_ssid), mAccessPoint.getSsid().toString());
+            mWifiNameInput.setTextType(EditTextListItem.TextType.NONE);
         } else {
-            mWifiNameInput = new EditTextLineItem(
-                    getContext().getText(R.string.wifi_ssid));
-            mWifiNameInput.setTextType(EditTextLineItem.TextType.TEXT);
+            mWifiNameInput = new EditTextListItem(
+                    getContext().getString(R.string.wifi_ssid));
+            mWifiNameInput.setTextType(EditTextListItem.TextType.TEXT);
             mWifiNameInput.setTextChangeListener(s ->
                     mAddWifiButton.setEnabled(VALID_SSID_PATTERN.matcher(s).matches()));
         }
@@ -130,7 +138,7 @@ public class AddWifiFragment extends ListSettingsFragment implements
         if (mAccessPoint == null) {
             List<AccessPointSecurity> securities =
                     AccessPointSecurity.getSecurityTypes(getContext());
-            mSpinnerLineItem = new SpinnerLineItem<>(
+            mSpinnerLineItem = new SpinnerListItem<>(
                     getContext(),
                     this,
                     securities,
@@ -141,7 +149,8 @@ public class AddWifiFragment extends ListSettingsFragment implements
 
         if (mAccessPoint != null
                 || mSelectedPosition != AccessPointSecurity.SECURITY_NONE_POSITION) {
-            mWifiPasswordInput = new PasswordLineItem(getContext().getText(R.string.wifi_password));
+            mWifiPasswordInput = new PasswordListItem(
+                    getContext().getString(R.string.wifi_password));
             lineItems.add(mWifiPasswordInput);
         }
         return lineItems;
@@ -153,7 +162,8 @@ public class AddWifiFragment extends ListSettingsFragment implements
             return;
         }
         mSelectedPosition = position;
-        mPagedListAdapter.setList(getLineItems());
+        mItemProvider.setItems(getLineItems());
+        refreshList();
     }
 
     @Override
