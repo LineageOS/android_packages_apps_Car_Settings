@@ -47,10 +47,14 @@ public abstract class ListItemSettingsFragment extends BaseFragment implements L
         super.onActivityCreated(savedInstanceState);
 
         mListAdapter = new ListItemAdapter(getContext(), getItemProvider());
-        mListAdapter.registerListItemViewType(CheckBoxListItem.CHECK_BOX_VIEW_TYPE,
+        mListAdapter.registerListItemViewType(CoustomListItemTypes.CHECK_BOX_VIEW_TYPE,
                 CheckBoxListItem.getViewLayoutId(), CheckBoxListItem::createViewHolder);
-        mListAdapter.registerListItemViewType(EditTextListItem.EDIT_TEXT_VIEW_TYPE,
+        mListAdapter.registerListItemViewType(CoustomListItemTypes.EDIT_TEXT_VIEW_TYPE,
                 EditTextListItem.getViewLayoutId(), EditTextListItem::createViewHolder);
+        mListAdapter.registerListItemViewType(CoustomListItemTypes.PASSWORD_VIEW_TYPE,
+                PasswordListItem.getViewLayoutId(), PasswordListItem::createViewHolder);
+        mListAdapter.registerListItemViewType(CoustomListItemTypes.SPINNER_VIEW_TYPE,
+                SpinnerListItem.getViewLayoutId(), SpinnerListItem::createViewHolder);
 
         PagedListView listView = getView().findViewById(R.id.list);
         listView.setAdapter(mListAdapter);

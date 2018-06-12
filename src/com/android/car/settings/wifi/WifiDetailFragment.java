@@ -24,11 +24,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.StringRes;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.ListItemProvider.ListProvider;
+import androidx.car.widget.TextListItem;
 
-import com.android.car.list.SimpleTextLineItem;
-import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListSettingsFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -39,7 +41,7 @@ import java.util.ArrayList;
  * e.g. ignore, disconnect, etc. The intent should include information about
  * access point, use that to render UI, e.g. show SSID etc.
  */
-public class WifiDetailFragment extends ListSettingsFragment {
+public class WifiDetailFragment extends ListItemSettingsFragment {
     public static final String EXTRA_AP_STATE = "extra_ap_state";
     private static final Logger LOG = new Logger(WifiDetailFragment.class);
 
@@ -68,7 +70,7 @@ public class WifiDetailFragment extends ListSettingsFragment {
 
     public static WifiDetailFragment getInstance(AccessPoint accessPoint) {
         WifiDetailFragment wifiDetailFragment = new WifiDetailFragment();
-        Bundle bundle = ListSettingsFragment.getBundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         Bundle accessPointState = new Bundle();
@@ -110,14 +112,24 @@ public class WifiDetailFragment extends ListSettingsFragment {
     }
 
     @Override
-    public ArrayList<TypedPagedListAdapter.LineItem> getLineItems() {
-        ArrayList<TypedPagedListAdapter.LineItem> lineItems = new ArrayList<>();
-        lineItems.add(
-                new SimpleTextLineItem(getText(R.string.wifi_status), mAccessPoint.getSummary()));
-        lineItems.add(
-                new SimpleTextLineItem(getText(R.string.wifi_signal), getSignalString()));
-        lineItems.add(new SimpleTextLineItem(getText(R.string.wifi_security),
-                mAccessPoint.getSecurityString(/* concise= */ true)));
+    public ListItemProvider getItemProvider() {
+        return new ListProvider(getLineItems());
+    }
+
+    private ArrayList<ListItem> getLineItems() {
+        ArrayList<ListItem> lineItems = new ArrayList<>();
+        TextListItem summaryItem = new TextListItem(getContext());
+        summaryItem.setTitle(getString(R.string.wifi_status));
+        summaryItem.setBody(mAccessPoint.getSummary());
+        lineItems.add(summaryItem);
+        TextListItem signalItem = new TextListItem(getContext());
+        signalItem.setTitle(getString(R.string.wifi_signal));
+        signalItem.setBody(getSignalString());
+        lineItems.add(signalItem);
+        TextListItem securityItem = new TextListItem(getContext());
+        securityItem.setTitle(getString(R.string.wifi_security));
+        securityItem.setBody(mAccessPoint.getSecurityString(/* concise= */ true));
+        lineItems.add(securityItem);
         return lineItems;
     }
 
