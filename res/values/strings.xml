@@ -351,6 +351,10 @@
     <string name="user_new_user_name">New user</string>
     <!-- Title for Guest user [CHAR LIMIT=35] -->
     <string name="user_guest">Guest</string>
+    <!-- Title for Admin user [CHAR LIMIT=35] -->
+    <string name="user_admin">Admin</string>
+    <!-- User summary to indicate Admin user is currently logged in[CHAR LIMIT=35] -->
+    <string name="signed_in_admin_user">Signed in as admin</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
