@@ -41,12 +41,16 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Car.Body1.SingleLine"/>
+                android:background="@color/car_suggestion_card"
+                android:textAppearance="@style/TextAppearance.Car.Body1.SingleLine"
+                android:textColor="@color/car_body1_light"/>
             <TextView
                 android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/car_suggestion_card"
                 android:textAppearance="@style/TextAppearance.Car.Body2.SingleLine"
+                android:textColor="@color/car_body2_light"
                 android:layout_marginTop="@dimen/car_padding_1"
                 android:layout_below="@id/title"
                 android:visibility="gone"/>
@@ -54,6 +58,7 @@
                 android:id="@+id/end_icon"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/car_padding_4"
+                android:background="@color/car_suggestion_card"
                 android:layout_width="@dimen/car_primary_icon_size"
                 android:layout_height="@dimen/car_primary_icon_size"
                 android:layout_centerVertical="true"

@@ -126,7 +126,7 @@ public class SoundSettingsFragment extends BaseFragment {
         SoundSettingsFragment soundSettingsFragment = new SoundSettingsFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.sound_settings);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.list_fragment);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
         soundSettingsFragment.setArguments(bundle);
         return soundSettingsFragment;
