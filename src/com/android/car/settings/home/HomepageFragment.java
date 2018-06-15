@@ -73,7 +73,6 @@ public class HomepageFragment extends ListItemSettingsFragment implements
     private int mNumSettingsSuggestions;
 
     private List<ListItem> mListItems;
-
     private final BroadcastReceiver mBtStateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
