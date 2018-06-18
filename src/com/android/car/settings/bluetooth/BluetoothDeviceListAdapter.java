@@ -81,6 +81,7 @@ public class BluetoothDeviceListAdapter
     private final Context mContext;
     private final BaseFragment.FragmentController mFragmentController;
     private final boolean mShowDevicesWithoutNames;
+    private boolean mShowPairedDeviceOnly;
 
     /* Talk-back descriptions for various BT icons */
     public final String mComputerDescription;
@@ -160,6 +161,15 @@ public class BluetoothDeviceListAdapter
         mSortTask.cancel(true);
     }
 
+    /**
+     * Sets the list to show only paired device or not. The shorter list is used to comply with
+     * distraction optimization.
+     */
+    void showPairedDeviceOnlyAndFresh(boolean pairedDeviceOnly) {
+        mShowPairedDeviceOnly = pairedDeviceOnly;
+        notifyDataSetChanged();
+    }
+
     @Override
     public BluetoothDeviceListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
             int viewType) {
@@ -167,16 +177,9 @@ public class BluetoothDeviceListAdapter
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         switch (viewType) {
             case BONDED_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.single_text_line_item, parent, false);
-                v.setEnabled(false);
-                ((TextView) v.findViewById(R.id.title)).setText(
-                        R.string.bluetooth_preference_paired_devices);
-                break;
             case AVAILABLE_DEVICE_HEADER_TYPE:
                 v = layoutInflater.inflate(R.layout.single_text_line_item, parent, false);
                 v.setEnabled(false);
-                ((TextView) v.findViewById(R.id.title)).setText(
-                        R.string.bluetooth_preference_found_devices);
                 break;
             default:
                 v = layoutInflater.inflate(R.layout.icon_widget_line_item, parent, false);
@@ -196,6 +199,21 @@ public class BluetoothDeviceListAdapter
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        // First row to show a header for paired device.
+        if (position == 0) {
+            holder.mTitle.setText(mBondedDevicesSorted.isEmpty()
+                    ? R.string.bluetooth_preference_no_paired_devices
+                    : R.string.bluetooth_preference_paired_devices);
+            return;
+        }
+        // Available device header after paired device section. the 1 is for the header
+        // of paired device.
+        if (position == mBondedDevicesSorted.size() + 1) {
+            holder.mTitle.setText(mAvailableDevicesSorted.isEmpty()
+                    ? R.string.bluetooth_preference_no_found_devices
+                    : R.string.bluetooth_preference_found_devices);
+            return;
+        }
         final CachedBluetoothDevice bluetoothDevice = getItem(position);
         if (bluetoothDevice == null) {
             // this row is for in-list headers
