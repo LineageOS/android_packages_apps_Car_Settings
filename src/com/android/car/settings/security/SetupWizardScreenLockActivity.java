@@ -16,24 +16,47 @@
 
 package com.android.car.settings.security;
 
-import android.app.KeyguardManager;
+import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.os.UserHandle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.Logger;
 import com.android.car.settingslib.util.ResultCodes;
+import com.android.internal.widget.LockPatternUtils;
 
 /**
  * Entry point Activity for Setup Wizard to set screen lock.
  */
 public class SetupWizardScreenLockActivity extends CarSettingActivity implements
+        CheckLockListener,
         LockTypeDialogFragment.OnLockSelectListener {
+
+    private static final Logger LOG = new Logger(SetupWizardScreenLockActivity.class);
+
+    private String mCurrLock;
+    private int mPasswordQuality;
 
     @Override
     public void launchFragment(BaseFragment fragment) {
+        Bundle args = fragment.getArguments();
+        if (args == null) {
+            args = new Bundle();
+        }
+        args.putBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD, true);
+        if (!TextUtils.isEmpty(mCurrLock)) {
+            args.putString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrLock);
+        }
+        fragment.setArguments(args);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 
     @Override
@@ -46,26 +69,43 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // This activity is meant for Setup Wizard therefore doesn't ask the user for credentials.
-        // It's pointless to launch this activity as the lock can't be changed without current
-        // credential.
-        if (getSystemService(KeyguardManager.class).isKeyguardSecure()) {
-            setResult(RESULT_CANCELED);
-            finish();
-            return;
-        }
-
         setContentView(R.layout.suw_activity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        BaseFragment pinFragment = ChooseLockPinPasswordFragment.newPinInstance();
-        setFragmentArgs(pinFragment);
+        mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
+                UserHandle.myUserId());
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.fragment_container, pinFragment)
-                .commit();
+        if (savedInstanceState == null) {
+            BaseFragment fragment;
+            switch (mPasswordQuality) {
+                case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
+                    // In Setup Wizard, the landing page is always the Pin screen
+                    fragment = ChooseLockPinPasswordFragment.newPinInstance(
+                            /* isInSetupWizard= */ true);
+                    break;
+                case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
+                    fragment = ConfirmLockPatternFragment.newInstance(
+                            /* isInSetupWizard= */ true);
+                    break;
+                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC: // Fall through
+                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
+                    fragment = ConfirmLockPinPasswordFragment.newPinInstance(
+                            /* isInSetupWizard= */ true);
+                    break;
+                case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC: // Fall through
+                case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
+                    fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
+                            /* isInSetupWizard= */ true);
+                    break;
+                default:
+                    LOG.e("Unexpected password quality: " + String.valueOf(mPasswordQuality));
+                    fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
+                            /* isInSetupWizard= */ true);
+            }
+
+            launchFragment(fragment);
+        }
     }
 
     /**
@@ -85,42 +125,42 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
     }
 
     @Override
+    public void onLockVerified(String lock) {
+        mCurrLock = lock;
+        // In Setup Wizard, the landing page is always the Pin screen
+        BaseFragment fragment = ChooseLockPinPasswordFragment.newPinInstance(
+                /* isInSetupWizard= */ true);
+        launchFragment(fragment);
+    }
+
+    @Override
     public void onLockTypeSelected(int position) {
-        Fragment fragment = null;
+        BaseFragment fragment = null;
 
         switch(position) {
             case LockTypeDialogFragment.POSITION_NONE:
+                if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
+                    new LockPatternUtils(this).clearLock(mCurrLock, UserHandle.myUserId());
+                }
                 setResult(ResultCodes.RESULT_NONE);
                 finish();
                 break;
             case LockTypeDialogFragment.POSITION_PIN:
-                fragment = ChooseLockPinPasswordFragment.newPinInstance();
+                fragment = ChooseLockPinPasswordFragment.newPinInstance(
+                        /* isInSetupWizard= */ true);
                 break;
             case LockTypeDialogFragment.POSITION_PATTERN:
-                fragment = ChooseLockPatternFragment.newInstance();
+                fragment = ChooseLockPatternFragment.newInstance(/* isInSetupWizard= */ true);
                 break;
             case LockTypeDialogFragment.POSITION_PASSWORD:
-                fragment = ChooseLockPinPasswordFragment.newPasswordInstance();
+                fragment = ChooseLockPinPasswordFragment.newPasswordInstance(
+                        /* isInSetupWizard= */ true);
                 break;
             default:
-                // Do nothing
+                LOG.e("Lock type position out of bounds");
         }
         if (fragment != null) {
-            setFragmentArgs(fragment);
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .commitNow();
+            launchFragment(fragment);
         }
-    }
-
-    private void setFragmentArgs(Fragment fragment) {
-        Bundle args = fragment.getArguments();
-        if (args == null) {
-            args = new Bundle();
-        }
-        args.putBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD, true);
-        fragment.setArguments(args);
     }
 }
