@@ -47,7 +47,7 @@ public class ConfirmLockPinPasswordFragmentTest {
                 .resume()
                 .get();
 
-        mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
+        mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance(/* isInSetupWizard= */ false);
         mTestActivity.launchFragment(mPinFragment);
     }
 
