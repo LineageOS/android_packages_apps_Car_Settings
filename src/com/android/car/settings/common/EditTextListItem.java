@@ -33,10 +33,10 @@ import com.android.car.settings.R;
 
 /**
  * Represents text only view of a title and a EditText as input.
+ * @param <VH> class that extends {@link ListItem.ViewHolder}.
  */
-public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
-    // According to ListItemAdapter, customized view type needs to be negative.
-    public static final int EDIT_TEXT_VIEW_TYPE = -2;
+public class EditTextListItem<VH extends EditTextListItem.ViewHolder>
+        extends ListItem<VH> {
     private final String mTitle;
     private final CharSequence mInitialInputText;
 
@@ -56,7 +56,7 @@ public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
     private TextChangeListener mTextChangeListener;
     private EditText mEditText;
     protected TextType mTextType = TextType.NONE;
-    private boolean mIsEnabled = true;
+    protected boolean mIsEnabled = true;
 
     /**
      * Input flags that determine the way the EditText takes input.
@@ -93,7 +93,7 @@ public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
     }
 
     @LayoutRes
-    public static final int getViewLayoutId() {
+    public static int getViewLayoutId() {
         return R.layout.edit_text_line_item;
     }
 
@@ -109,6 +109,10 @@ public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
      */
     public void setTextType(TextType textType) {
         mTextType = textType;
+    }
+
+    protected TextType getTextType() {
+        return mTextType;
     }
 
     /**
@@ -129,13 +133,17 @@ public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
     }
 
     @Override
-    public final int getViewType() {
-        return EDIT_TEXT_VIEW_TYPE;
+    public int getViewType() {
+        return CoustomListItemTypes.EDIT_TEXT_VIEW_TYPE;
     }
 
     @Override
     public void setEnabled(boolean enabled) {
         mIsEnabled = enabled;
+    }
+
+    protected boolean isEnabled() {
+        return mIsEnabled;
     }
 
     @Override
@@ -144,7 +152,7 @@ public class EditTextListItem extends ListItem<EditTextListItem.ViewHolder> {
     }
 
     @Override
-    protected void onBind(ViewHolder viewHolder) {
+    protected void onBind(VH viewHolder) {
         viewHolder.titleView.setText(mTitle);
         viewHolder.titleView.setEnabled(mIsEnabled);
         mEditText = viewHolder.editText;
