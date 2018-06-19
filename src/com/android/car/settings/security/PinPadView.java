@@ -19,6 +19,8 @@ package com.android.car.settings.security;
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.VisibleForTesting;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -63,23 +65,23 @@ public class PinPadView extends GridLayout {
 
     public PinPadView(Context context) {
         super(context);
-        init();
+        init(null, 0, 0);
     }
 
     public PinPadView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(attrs, 0, 0);
     }
 
     public PinPadView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(attrs, defStyleAttr, 0);
     }
 
     public PinPadView(Context context, @Nullable AttributeSet attrs, int defStyleAttr,
             int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(attrs, defStyleAttr, defStyleRes);
     }
 
     /**
@@ -115,16 +117,14 @@ public class PinPadView extends GridLayout {
         mEnterKey.setEnabled(enabled);
     }
 
-    private void init() {
+    private void init(AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         inflater.inflate(R.layout.pin_pad_view, this, true);
 
         for (int keyId : PIN_PAD_DIGIT_KEYS) {
             TextView key = (TextView) findViewById(keyId);
             String digit = key.getTag().toString();
-            key.setOnClickListener(v -> {
-                mOnClickListener.onDigitKeyClick(digit);
-            });
+            key.setOnClickListener(v -> mOnClickListener.onDigitKeyClick(digit));
             mPinKeys.add(key);
         }
 
@@ -141,10 +141,19 @@ public class PinPadView extends GridLayout {
                     return false;
             }
         });
-
         mPinKeys.add(backspace);
 
         mEnterKey = (ImageButton) findViewById(R.id.key_enter);
+
+        TypedArray typedArray = getContext().obtainStyledAttributes(
+                attrs, R.styleable.PinPadView, defStyleAttr, defStyleRes);
+        Drawable enterKeyDrawable = typedArray.getDrawable(R.styleable.PinPadView_enterKeyDrawable);
+        typedArray.recycle();
+
+        if (enterKeyDrawable != null) {
+            mEnterKey.setImageDrawable(enterKeyDrawable);
+        }
+
         mEnterKey.setOnClickListener(v -> mOnClickListener.onEnterKeyClick());
         mPinKeys.add(mEnterKey);
     }

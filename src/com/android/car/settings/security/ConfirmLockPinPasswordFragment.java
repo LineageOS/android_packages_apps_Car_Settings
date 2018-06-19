@@ -149,7 +149,6 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
 
     private void initPinView(View view) {
         mPinPad = (PinPadView) view.findViewById(R.id.pin_pad);
-        mPinPad.setEnterKeyIcon(R.drawable.ic_done);
 
         PinPadView.PinPadClickListener pinPadClickListener = new PinPadView.PinPadClickListener() {
             @Override
