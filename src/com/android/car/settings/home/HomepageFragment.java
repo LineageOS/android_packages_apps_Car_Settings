@@ -34,6 +34,7 @@ import com.android.car.list.TypedPagedListAdapter;
 import com.android.car.settings.R;
 import com.android.car.settings.accounts.AccountsListFragment;
 import com.android.car.settings.applications.ApplicationSettingsFragment;
+import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.ListSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -42,6 +43,7 @@ import com.android.car.settings.security.SettingsScreenLockActivity;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.suggestions.SettingsSuggestionsController;
 import com.android.car.settings.system.SystemSettingsFragment;
+import com.android.car.settings.users.UserDetailsFragment;
 import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiUtil;
@@ -200,7 +202,7 @@ public class HomepageFragment extends ListSettingsFragment implements
                 R.drawable.ic_user,
                 getContext(),
                 null,
-                UsersListFragment.newInstance(),
+                getUserManagementFragment(),
                 getFragmentController()));
 
         // Guest users can't set screen locks or add/remove accounts.
@@ -231,6 +233,17 @@ public class HomepageFragment extends ListSettingsFragment implements
         lineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
         lineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
         return lineItems;
+    }
+
+    private BaseFragment getUserManagementFragment() {
+        if (mCarUserManagerHelper.isCurrentProcessAdminUser()) {
+            // Admins can see a full list of users in Settings.
+            LOG.v("getUserManagementFragment Creating UsersListFragment for admin user.");
+            return UsersListFragment.newInstance();
+        }
+        // Non-admins can only manage themselves in Settings.
+        LOG.v("getUserManagementFragment Creating UserDetailsFragment for non-admin.");
+        return UserDetailsFragment.newInstance(mCarUserManagerHelper.getCurrentProcessUserId());
     }
 
     @Override

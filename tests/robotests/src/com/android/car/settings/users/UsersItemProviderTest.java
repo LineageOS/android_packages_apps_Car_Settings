@@ -63,25 +63,14 @@ public class UsersItemProviderTest {
         UserInfo currentUser = new UserInfo();
         String testName = "test_user_name";
         currentUser.name = testName;
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
+        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(currentUser);
 
         UsersItemProvider usersItemProvider = createProvider();
 
         ShadowTextListItem textListItem = Shadow.extract(usersItemProvider.get(0));
         assertThat(textListItem.getTitle())
                 .isEqualTo(application.getString(R.string.current_user_name, testName));
-    }
-
-    @Test
-    public void testDemoUserOnlySeesItself() {
-        UserInfo demoUser = new UserInfo(/* id= */ 10, /* name= */ "Demo", UserInfo.FLAG_DEMO);
-        doReturn(demoUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
-        doReturn(Arrays.asList(new UserInfo(), new UserInfo()))
-                .when(mCarUserManagerHelper).getAllSwitchableUsers();
-
-        UsersItemProvider usersItemProvider = createProvider();
-
-        assertThat(usersItemProvider.size()).isEqualTo(1);
     }
 
     @Test
@@ -93,11 +82,13 @@ public class UsersItemProviderTest {
         UserInfo user14 = new UserInfo(/* id= */ 14, "User 14", /* flags= */ 0);
         List<UserInfo> users = Arrays.asList(user10, user11, user12, user13);
 
-        doReturn(user14).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
+        doReturn(user14).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(user14);
         doReturn(users).when(mCarUserManagerHelper).getAllSwitchableUsers();
 
         UsersItemProvider provider = createProvider();
 
+        assertThat(provider.size()).isEqualTo(4); // 3 real users + guest item.
         assertThat(getItem(provider, 0).getTitle())
                 .isEqualTo(application.getString(R.string.current_user_name, user14.name));
         assertThat(getItem(provider, 1).getTitle()).isEqualTo(user10.name);
@@ -113,7 +104,7 @@ public class UsersItemProviderTest {
         List<UserInfo> users = Arrays.asList(user10, user11, user12, user13);
 
         doReturn(new UserInfo(/* id= */ 14, "User 14", /* flags= */ 0))
-                .when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
+                .when(mCarUserManagerHelper).getCurrentProcessUserInfo();
         doReturn(users).when(mCarUserManagerHelper).getAllSwitchableUsers();
 
         UsersItemProvider provider = createProvider();
@@ -128,7 +119,7 @@ public class UsersItemProviderTest {
         List<UserInfo> otherUsers = Arrays.asList(
                 new UserInfo(/* id= */ 10, "User 10", /* flags= */ 0));
 
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
+        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
         doReturn(otherUsers).when(mCarUserManagerHelper).getAllSwitchableUsers();
 
         UsersItemProvider provider = createProvider();
@@ -147,7 +138,7 @@ public class UsersItemProviderTest {
     @Test
     public void testClickOnGuestInvokesOnGuestClicked() {
         UserInfo currentUser = new UserInfo(/* id= */ 11, "User 11", /* flags= */ 0);
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
+        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
 
         UsersItemProvider provider = createProvider();
 
@@ -155,40 +146,6 @@ public class UsersItemProviderTest {
         ShadowTextListItem guestListItem = getItem(provider, 1);
         guestListItem.getOnClickListener().onClick(new View(application.getApplicationContext()));
         verify(mUserClickListener).onGuestClicked();
-    }
-
-    @Test
-    public void testSummariesForAdminUsers() {
-        UserInfo currentUser = new UserInfo(/* id= */ 11, "User 11",
-                UserInfo.FLAG_ADMIN | UserInfo.FLAG_INITIALIZED);
-        List<UserInfo> otherUsers = Arrays.asList(new UserInfo(/* id= */ 10, "User 10",
-                UserInfo.FLAG_ADMIN | UserInfo.FLAG_INITIALIZED));
-
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
-        doReturn(otherUsers).when(mCarUserManagerHelper).getAllSwitchableUsers();
-
-        UsersItemProvider provider = createProvider();
-
-        assertThat(getItem(provider, 0).getBody())
-                .isEqualTo(application.getString(R.string.signed_in_admin_user));
-        assertThat(getItem(provider, 1).getBody())
-                .isEqualTo(application.getString(R.string.user_admin));
-    }
-
-    @Test
-    public void testSummariesForNonInitializedUsers() {
-        UserInfo currentUser = new UserInfo(/* id= */ 11, "User 11", UserInfo.FLAG_INITIALIZED);
-        List<UserInfo> otherUsers = Arrays.asList(
-                new UserInfo(/* id= */ 10, "User 10", /* flags= */ 0));
-
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentForegroundUserInfo();
-        doReturn(otherUsers).when(mCarUserManagerHelper).getAllSwitchableUsers();
-
-        UsersItemProvider provider = createProvider();
-
-        assertThat(getItem(provider, 0).getBody()).isNull();
-        assertThat(getItem(provider, 1).getBody())
-                .isEqualTo(application.getString(R.string.user_summary_not_set_up));
     }
 
 
