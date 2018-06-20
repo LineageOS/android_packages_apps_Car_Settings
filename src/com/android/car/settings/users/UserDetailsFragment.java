@@ -17,50 +17,48 @@
 package com.android.car.settings.users;
 
 import android.car.user.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
- * Shows details for a user with the ability to remove user and switch.
+ * Shows details for a user with the ability to remove user and edit current user.
  */
 public class UserDetailsFragment extends ListItemSettingsFragment implements
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener,
-        RemoveUserErrorDialog.RemoveUserErrorListener {
-    public static final String EXTRA_USER_INFO = "extra_user_info";
+        RemoveUserErrorDialog.RemoveUserErrorListener,
+        UserDetailsItemProvider.EditUserListener,
+        CarUserManagerHelper.OnUsersUpdateListener {
+    public static final String EXTRA_USER_ID = "extra_user_id";
     private static final String ERROR_DIALOG_TAG = "RemoveUserErrorDialogTag";
-    private static final String CONFIRM_REMOVE_DIALOG_TAG = "ConfirmRemoveUserDialog";
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    static final String CONFIRM_REMOVE_DIALOG_TAG = "ConfirmRemoveUserDialog";
 
-    private Button mRemoveUserBtn;
-    private Button mSwitchUserBtn;
-
-    private UserInfo mUserInfo;
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     CarUserManagerHelper mCarUserManagerHelper;
-    private UserIconProvider mUserIconProvider;
-    private ListItemProvider mItemProvider;
+    private UserDetailsItemProvider mItemProvider;
+    private int mUserId;
+    private UserInfo mUserInfo;
 
     /**
      * Creates instance of UserDetailsFragment.
      */
-    public static UserDetailsFragment newInstance(UserInfo userInfo) {
+    public static UserDetailsFragment newInstance(int userId) {
         UserDetailsFragment userDetailsFragment = new UserDetailsFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_TITLE_ID, R.string.user_details_title);
-        bundle.putParcelable(EXTRA_USER_INFO, userInfo);
+        bundle.putInt(EXTRA_USER_ID, userId);
         userDetailsFragment.setArguments(bundle);
         return userDetailsFragment;
     }
@@ -68,7 +66,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
+        mUserId = getArguments().getInt(EXTRA_USER_ID);
 
         if (savedInstanceState != null) {
             RemoveUserErrorDialog removeUserErrorDialog = (RemoveUserErrorDialog)
@@ -88,13 +86,28 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         createUserManagerHelper();
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
-        mItemProvider = new ListItemProvider.ListProvider(getListItems());
+        mUserInfo = getUserInfo(mUserId);
+        mItemProvider = new UserDetailsItemProvider(mUserInfo, getContext(),
+                /* editUserListener= */ this, mCarUserManagerHelper);
 
         // Needs to be called after creation of item provider.
         super.onActivityCreated(savedInstanceState);
 
-        showActionButtons();
+        // Override title.
+        refreshFragmentTitle();
+
+        showRemoveUserButton();
+    }
+
+    @Override
+    public void onUsersUpdate() {
+        // Refresh UserInfo, since it might have changed.
+        mUserInfo = getUserInfo(mUserId);
+
+        // Because UserInfo might have changed, we should refresh the content that depends on it.
+        refreshFragmentTitle();
+        mItemProvider.refreshItem(mUserInfo);
+        refreshList();
     }
 
     @Override
@@ -109,8 +122,24 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
+    public void onEditUserClicked(UserInfo userInfo) {
+        getFragmentController().launchFragment(EditUsernameFragment.newInstance(userInfo));
+    }
+
+    @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
+    }
+
+    private UserInfo getUserInfo(int userId) {
+        UserManager userManager = (UserManager) getContext().getSystemService(Context.USER_SERVICE);
+        return userManager.getUserInfo(userId);
+    }
+
+    private void refreshFragmentTitle() {
+        TextView titleView = getActivity().findViewById(R.id.title);
+        titleView.setText(UserListItem.getUserItemTitle(mUserInfo,
+                mCarUserManagerHelper.isCurrentProcessUser(mUserInfo), getContext()));
     }
 
     private void removeUser() {
@@ -123,17 +152,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
             removeUserErrorDialog.setRetryListener(this);
             removeUserErrorDialog.show(getFragmentManager(), ERROR_DIALOG_TAG);
         }
-    }
-
-    private void showActionButtons() {
-        if (mCarUserManagerHelper.isForegroundUser(mUserInfo)) {
-            // Already foreground user, shouldn't show SWITCH button.
-            showRemoveUserButton();
-            return;
-        }
-
-        showRemoveUserButton();
-        showSwitchButton();
     }
 
     private void createUserManagerHelper() {
@@ -160,35 +178,5 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
             dialog.setConfirmRemoveUserListener(this);
             dialog.show(getFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
         });
-    }
-
-    private void showSwitchButton() {
-        Button switchUserBtn = (Button) getActivity().findViewById(R.id.action_button2);
-        // If the current process is not allowed to switch to another user, doe not show the switch
-        // button.
-        if (!mCarUserManagerHelper.canCurrentProcessSwitchUsers()) {
-            switchUserBtn.setVisibility(View.GONE);
-            return;
-        }
-        switchUserBtn.setVisibility(View.VISIBLE);
-        switchUserBtn.setText(R.string.user_switch);
-        switchUserBtn.setOnClickListener(v -> {
-            mCarUserManagerHelper.switchToUser(mUserInfo);
-            getActivity().onBackPressed();
-        });
-    }
-
-    private List<ListItem> getListItems() {
-        TextListItem item = new TextListItem(getContext());
-        item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(mUserInfo, getContext()),
-                /* useLargeIcon= */ false);
-        item.setTitle(mUserInfo.name);
-
-        if (!mUserInfo.isInitialized()) {
-            // Indicate that the user has not been initialized yet.
-            item.setBody(getContext().getString(R.string.user_summary_not_set_up));
-        }
-
-        return Arrays.asList(item);
     }
 }
