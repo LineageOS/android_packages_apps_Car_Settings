@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"សំណើ​ផ្គូផ្គង"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"ចុច​ដើម្បី​ផ្គូផ្គង​ជាមួយ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ។"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ភាសា"</string>
     <string name="sound_settings" msgid="3072423952331872246">"សំឡេង"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"កម្រិត​សំឡេង​រោទ៍"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"កម្រិតសំឡេង​ការរុករក"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"អ្នក​ប្រើប្រាស់​ថ្មី"</string>
     <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
+    <string name="user_admin" msgid="1535484812908584809">"អ្នកគ្រប់គ្រង"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"បាន​ចូលជា​អ្នក​គ្រប់គ្រង"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"អ្នក (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ព្យាយាមម្ដងទៀត"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"រំលង"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"កំណត់​ការចាក់​សោអេក្រង់"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ជ្រើសរើសកូដ PIN របស់អ្នក"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ជ្រើស​រើសលំនាំ​របស់​អ្នក"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ជ្រើសរើស​ពាក្យសម្ងាត់​របស់អ្នក"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ការចាក់សោអេក្រង់បច្ចុប្បន្ន"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ដើម្បីសុវត្ថិភាព សូមកំណត់លំនាំ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"សម្អាត"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"សម្អាត"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"បោះបង់"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"បញ្ជាក់"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"ពាក្យ​សម្ងាត់​ត្រូវ​តែ​មាន​​ចន្លោះពី 4-8 តួ និង​មាន​លេខ​យ៉ាងហោច​ណាស់ 1"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ត្រូវ​មាន​យ៉ាងហោចណាស់ 4 តួ"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ត្រូវ​​មាន​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"កូដ PIN ​ត្រូវ​មាន​លេខ​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> ខ្ទង់"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ត្រូវមានតិចជាង <xliff:g id="NUMBER">%d</xliff:g> តួ"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"អ្នក​គ្រប់គ្រង​ឧបករណ៍​មិន​អនុញ្ញាត​ឱ្យ​ប្រើ​កូដ PIN ​ទើបប្រើ​ហើយ​ទេ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"កូដ PIN លក្ខណៈ​សាមញ្ញ​ត្រូវ​បាន​ទប់ស្កាត់​ដោយ​អ្នក​គ្រប់គ្រង​ព័ត៌មាន​វិទ្យា​របស់អ្នក។ សាកល្បង​ប្រើ​កូដ PIN ផ្សេង​ពី​នេះ។"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"វាមិនអាច​ប្រើតួ​អក្សរដែល​មិន​ត្រឹមត្រូវ​បានទេ។"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ពាក្យសម្ងាត់​មិន​ត្រឹមត្រូវ​ទេ ត្រូវ​តែ​មាន 4-8 តួ ដែល​មាន​លេខយ៉ាង​ហោចណាស់ 1 ខ្ទង់ អក្សរ 1 តួ និងមិនមានដកឃ្លា។"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"ពាក្យ​សម្ងាត់​មិនត្រឹមត្រូវទេ ត្រូវ​មាន​យ៉ាងហោចណាស់ 4 តួ។"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">ត្រូវ​មាន​អក្សរ​យ៉ាង​ហោច​ណាស់ <xliff:g id="COUNT">%d</xliff:g> តួ</item>
       <item quantity="one">ត្រូវមានអក្សរយ៉ាងហោចណាស់ 1 តួ</item>
@@ -295,7 +300,6 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
     <string name="suggestion_primary_button" msgid="6421115494714083020">"បញ្ចប់​ការរៀបចំ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"កុំ​ទាន់"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"មិនអាច​ប្រើមុខងារ​បានទេ ខណៈពេល​កំពុង​បើកបរ។"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="restricted_while_driving" msgid="6217369093121968299">"មិនអាច​ប្រើមុខងារ​នេះបានទេ ខណៈពេល​កំពុង​បើកបរ។"</string>
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"មិនអាច​បញ្ចូល​អ្នកប្រើប្រាស់​ខណៈពេល​បើកបរ​បានទេ។"</string>
 </resources>

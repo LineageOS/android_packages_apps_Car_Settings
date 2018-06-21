@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Juftlash talabi"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qurilmasiga ulanish uchun bosing."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Tillar"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ovoz"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Chaqiruv tovushi"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigatsiya tovushi"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Foydalanuvchini o‘chirib tashlash"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Yangi foydalanuvchi"</string>
     <string name="user_guest" msgid="3465399481257448601">"Mehmon"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Administrator sifatida kirgansiz"</string>
     <string name="user_switch" msgid="6544839750534690781">"Almashtirish"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ism"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Qayta urinish"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Tashlab ketish"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran qulfini sozlang"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN kod tanlang"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Grafik kalit yarating"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Parol tanlang"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Joriy ekran qulfi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit o‘rnating"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tozalash"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Tozalash"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Bekor qilish"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Tasdiqlash"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Parol 4-8 ta belgidan, kamida 1 ta raqamli bo‘lsin"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Kamida 4 ta belgi kiriting"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Kamida <xliff:g id="COUNT">%d</xliff:g> ta belgi bo‘lishi kerak"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kod kamida <xliff:g id="COUNT">%d</xliff:g> raqamli bo‘lsin"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Parol maksimum <xliff:g id="NUMBER">%d</xliff:g> ta belgili bo‘lsin"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Qurilma administratori oxirgi PIN koddan yana foydalanishga ruxsat bermaydi"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Oddiy PIN kodlar AT admini tomonidan bloklangan. Murakkabroq PIN kod tanlang."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Parol yaroqsiz belgidan iborat bo‘lmasligi lozim."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Parol xato, 4-8 ta belgidan, kamida 1 ta raqam va 1 ta harf hamda bo‘sh joysiz bo‘lishi lozim."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Parol yaroqsiz, kamida 4 ta belgi kiriting"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Parol tarkibida kamida <xliff:g id="COUNT">%d</xliff:g> ta harf bo‘lishi lozim</item>
       <item quantity="one">Parol tarkibida kamida 1 ta harf bo‘lishi lozim</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"sozlashni tugatish"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"hozir emas"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Avtomobilda harakatlanayotganda bu funksiya ishlamaydi."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Avtomobilda harakatlanayotganda foydalanuvchi qo‘shilmaydi."</string>
 </resources>

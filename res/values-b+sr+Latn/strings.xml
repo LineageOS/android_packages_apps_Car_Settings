@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Zahtev za uparivanje"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Dodirnite da biste uparili sa uređajem <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Jezici"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Zvuk"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Jačina zvuka zvona"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Jačina zvuka za navigaciju"</string>
@@ -170,6 +171,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Izbrišite korisnika"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Novi korisnik"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gost"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Prijavljeni ste kao administrator"</string>
     <string name="user_switch" msgid="6544839750534690781">"Prebacite na drugog korisnika"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Vi (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
@@ -212,7 +215,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Probaj ponovo"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Preskoči"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Podesite zaključavanje ekrana"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Odaberite PIN"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Odaberite šablon"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Odaberite lozinku"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Trenutno zaključavanje ekrana"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Podesite šablon iz bezbednosnih razloga"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Obriši"</string>
@@ -245,7 +250,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Obriši"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Otkaži"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potvrdi"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Lozinka mora da ima 4–8 znakova sa najmanje 1 brojem"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mora da sadrži najmanje 4 znaka"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimalan broj znakova je <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Minimalan broj cifara za PIN je <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Maksimalan broj znakova je <xliff:g id="NUMBER">%d</xliff:g>"</string>
@@ -254,7 +259,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator uređaja ne dozvoljava upotrebu nedavno korišćenog PIN-a"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"IT administrator blokira česte PIN-ove. Izaberite drugi PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Ne sme da obuhvata nevažeći znak."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Lozinka je nevažeća, mora da sadrži 4–8 znakova, najmanje 1 cifru, 1 slovo, bez razmaka."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Lozinka je nevažeća, mora da sadrži najmanje 4 znaka."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Mora da sadrži najmanje <xliff:g id="COUNT">%d</xliff:g> slovo</item>
       <item quantity="few">Mora da sadrži najmanje <xliff:g id="COUNT">%d</xliff:g> slova</item>
@@ -303,6 +308,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"završite podešavanje"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ne sada"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Funkcija nije dostupna tokom vožnje."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Ne možete da dodate korisnika tokom vožnje."</string>
 </resources>

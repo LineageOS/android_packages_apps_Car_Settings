@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ജോടിയാക്കൽ അഭ്യർത്ഥന"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്ന ഉപകരണവുമായി ജോടിയാക്കാൻ ടാപ്പ് ചെയ്യുക."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ഭാഷകൾ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ശബ്‌ദം"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"റിംഗ് വോളിയം"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"നാവിഗേഷൻ വോളിയം"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"ഉപയോക്താവിനെ ഇല്ലാതാക്കുക"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"പുതിയ ഉപയോക്താവ്"</string>
     <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
+    <string name="user_admin" msgid="1535484812908584809">"അഡ്‌മിന്‍"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"അഡ്‌മിൻ ആയി സൈൻ ഇൻ ചെയ്‌തു"</string>
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
     <string name="current_user_name" msgid="3813671533249316823">"നിങ്ങൾ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ഒഴിവാക്കുക"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ഒരു സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിക്കുക"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"പിൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"പാറ്റേൺ തിരഞ്ഞെടുക്കൂ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"നിങ്ങളുടെ പാസ്‌വേഡ് തിരഞ്ഞെടുക്കുക"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"നിലവിലെ സ്‌ക്രീൻ ലോക്ക്"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"സുരക്ഷയ്‌ക്കായി, പാറ്റേൺ സജ്ജീകരിക്കുക"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"മായ്ക്കുക"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"മായ്ക്കുക"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"റദ്ദാക്കുക"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"സ്ഥിരീകരിക്കുക"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"പാസ്‌വേഡ് 4-8 പ്രതീകങ്ങൾക്ക് ഇടയിലായിരിക്കണം, ചുരുങ്ങിയത് ഒരു അക്കമെങ്കിലും ഉണ്ടായിരിക്കണം"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"കുറഞ്ഞത് 4 പ്രതീകങ്ങളെങ്കിലും ഉണ്ടായിരിക്കണം"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"<xliff:g id="COUNT">%d</xliff:g> പ്രതീകങ്ങളെങ്കിലും അടങ്ങിയിരിക്കണം"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"പിന്നിൽ <xliff:g id="COUNT">%d</xliff:g> അക്കങ്ങളെങ്കിലും ഉണ്ടാകണം"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> പ്രതീകങ്ങളേക്കാൾ കുറവായിരിക്കണം"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ഉപകരണ അഡ്‌മിൻ സമീപകാലത്തുള്ള പിൻ ഉപയോഗിക്കുന്നത് അനുവദിക്കുന്നില്ല"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"നിങ്ങളുടെ ഐടി അഡ്‌മിൻ സാധാരണ പിന്നുകൾ ബ്ലോക്ക് ചെയ്‌തിട്ടുണ്ട്. മറ്റൊരു പിൻ പരീക്ഷിക്കുക."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ഇതിൽ അസാധുവായൊരു പ്രതീകം ഉണ്ടായിരിക്കാൻ പാടില്ല."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"അസാധുവായ പാസ്‌വേഡ്, 4-8 പ്രതീകങ്ങൾ വരെ ഉണ്ടായിരിക്കണം, ചുരുങ്ങിയത് ഒരു അക്കവും ഒരു അക്ഷരവും അടങ്ങിയിരിക്കണം, വൈറ്റ് സ്പേസ് ഉണ്ടാകരുത്."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"പാസ്‌‌വേഡ് അസാധുവാണ്, കുറഞ്ഞത് 4 പ്രതീകങ്ങളെങ്കിലും ഉണ്ടായിരിക്കണം."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">കുറഞ്ഞത് <xliff:g id="COUNT">%d</xliff:g> അക്ഷരങ്ങളെങ്കിലും അടങ്ങിയിരിക്കണം</item>
       <item quantity="one">കുറഞ്ഞത് ഒരു അക്ഷരമെങ്കിലും അടങ്ങിയിരിക്കണം</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"സജ്ജീകരണം പൂർത്തിയാക്കുക"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ഇപ്പോൾ വേണ്ട"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഫീച്ചർ ലഭ്യമല്ല."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഉപയോക്താവിനെ ചേർക്കാനാവില്ല."</string>
 </resources>

@@ -153,6 +153,7 @@
     <!-- no translation found for bluetooth_notif_message (1060821000510108726) -->
     <skip />
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
     <!-- no translation found for sound_settings (3072423952331872246) -->
     <skip />
     <!-- no translation found for ring_volume_title (3135241004980719442) -->
@@ -301,6 +302,8 @@
     <skip />
     <!-- no translation found for user_guest (3465399481257448601) -->
     <skip />
+    <string name="user_admin" msgid="1535484812908584809">"ଆଡ୍‌ମିନ୍‌"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"ଆଡ୍‍ମିନ୍‍ ଭାବରେ ସାଇନ୍‍ ଇନ୍‍ କରିଛନ୍ତି"</string>
     <!-- no translation found for user_switch (6544839750534690781) -->
     <skip />
     <!-- no translation found for current_user_name (3813671533249316823) -->
@@ -371,7 +374,9 @@
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ଛାଡ଼ିଦିଅନ୍ତୁ"</string>
     <!-- no translation found for set_screen_lock (5239317292691332780) -->
     <skip />
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ନିଜ ପିନ୍‌ ନମ୍ବର ବାଛନ୍ତୁ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ନିଜ ପାର୍ଟନ୍‌ ବାଛନ୍ତୁ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ନିଜ ପାସ୍‌ୱର୍ଡ ବାଛନ୍ତୁ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ବର୍ତ୍ତମାନର ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <!-- no translation found for choose_lock_pattern_message (6242765203541309524) -->
     <skip />
@@ -428,8 +433,7 @@
     <skip />
     <!-- no translation found for lockpassword_confirm_label (5918463281546146953) -->
     <skip />
-    <!-- no translation found for choose_lock_password_hints (1802962836351866087) -->
-    <skip />
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର"</string>
     <!-- no translation found for lockpassword_password_too_short (6681218025001328405) -->
     <skip />
     <!-- no translation found for lockpassword_pin_too_short (6363004004424904218) -->
@@ -444,7 +448,7 @@
     <!-- no translation found for lockpassword_pin_blacklisted_by_admin (7412709707800738442) -->
     <skip />
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ଏହା ଗୋଟିଏ ଭୁଲ ଅକ୍ଷରକୁ ଯୋଡ଼ିପାରିବନାହିଁ"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ପାସ୍‌ୱର୍ଡ ଅମାନ୍ୟ ଅଟେ, ଏଥିରେ ନିହାତି 4-8ଟି ବର୍ଣ୍ଣ ରହିବା ଦରକାର, ଯେଉଁଥିରେ ଅତିକମରେ 1ଟି ସଂଖ୍ୟା, 1 ଅକ୍ଷର ଥିବ ଓ କୌଣସି ଖାଲି ସ୍ଥାନ ନଥିବ।"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"ପାସ୍‍ୱର୍ଡ ଭୁଲ ଅଟେ, ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର।"</string>
     <!-- no translation found for lockpassword_password_requires_letters (424616259312760303) -->
     <!-- no translation found for lockpassword_password_requires_lowercase (2267487180744744833) -->
     <!-- no translation found for lockpassword_password_requires_uppercase (7999264563026517898) -->
@@ -477,6 +481,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ସେଟ୍-ଅପ୍ ସମାପ୍ତ କରନ୍ତୁ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ଏବେ ନୁହେଁଁ"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବନାହିଁ।"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ୟୁଜର୍ ଯୋଡ଼ିପାରିବେ ନାହିଁ।"</string>
 </resources>

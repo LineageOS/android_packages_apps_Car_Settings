@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"בקשת התאמה"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"יש להקיש כדי ליצור התאמה עם <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"שפות"</string>
     <string name="sound_settings" msgid="3072423952331872246">"צליל"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"עוצמת הצלצול"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"עוצמת קול של ניווט"</string>
@@ -171,6 +172,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"מחיקת משתמש"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"משתמש חדש"</string>
     <string name="user_guest" msgid="3465399481257448601">"אורח"</string>
+    <string name="user_admin" msgid="1535484812908584809">"מנהל מערכת"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"כניסה בתור מנהל מערכת"</string>
     <string name="user_switch" msgid="6544839750534690781">"החלפה"</string>
     <string name="current_user_name" msgid="3813671533249316823">"את/ה (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"שם"</string>
@@ -213,7 +216,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ניסיון חוזר"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"דילוג"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"הגדרת מסך נעילה"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"בחירת קוד גישה"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"הגדרת הקו לביטול נעילה"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"בחירת סיסמה"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"נעילת המסך הנוכחית"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"מטעמי אבטחה, יש להגדיר קו ביטול נעילה"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ניקוי"</string>
@@ -246,7 +251,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ניקוי"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ביטול"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"אישור"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"הסיסמה צריכה להכיל בין 4-8 תווים עם מספר אחד לפחות"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"הסיסמה חייבת להיות באורך של ארבעה תווים לפחות"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"צריכה להכיל <xliff:g id="COUNT">%d</xliff:g> תווים לפחות"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"קוד הגישה צריך להיות באורך של <xliff:g id="COUNT">%d</xliff:g> ספרות לפחות"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"צריכה להכיל פחות מ-<xliff:g id="NUMBER">%d</xliff:g> תווים"</string>
@@ -255,7 +260,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"מנהל המכשיר לא מאפשר להשתמש בקוד גישה שנעשה בו שימוש לאחרונה"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"קודי גישה נפוצים חסומים בידי מנהל ה-IT. יש לנסות קוד גישה אחר."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"לא ניתן לכלול תו לא חוקי."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"הסיסמה לא חוקית, חייבת להכיל: 4-8 תווים, לפחות ספרה אחת, אות אחת, ללא רווח לבן."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"הסיסמה לא חוקית, היא חייבת להיות באורך של ארבעה תווים לפחות."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="two">צריכה להכיל לפחות <xliff:g id="COUNT">%d</xliff:g> אותיות</item>
       <item quantity="many">צריכה להכיל לפחות <xliff:g id="COUNT">%d</xliff:g> אותיות</item>
@@ -310,6 +315,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"סיום ההגדרה"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"לא עכשיו"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"התכונה לא זמינה במהלך הנהיגה."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"לא ניתן להוסיף משתמש בזמן הנהיגה."</string>
 </resources>
