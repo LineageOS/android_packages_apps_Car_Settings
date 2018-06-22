@@ -353,7 +353,7 @@
     <string name="user_guest">Guest</string>
     <!-- Title for Admin user [CHAR LIMIT=35] -->
     <string name="user_admin">Admin</string>
-    <!-- User summary to indicate Admin user is currently logged in[CHAR LIMIT=35] -->
+    <!-- User summary to be displayed next to the currently logged-in user if they are also an admin. [CHAR LIMIT=35] -->
     <string name="signed_in_admin_user">Signed in as admin</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
