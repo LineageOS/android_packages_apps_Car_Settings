@@ -321,6 +321,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     private void initPinView(View view) {
         mPinPad = (PinPadView) view.findViewById(R.id.pin_pad);
+        // ChooseLockPin fragment sets the icon dynamically and doesn't use the default tint.
+        mPinPad.setEnterKeyImageTint(null);
 
         PinPadView.PinPadClickListener pinPadClickListener = new PinPadView.PinPadClickListener() {
             @Override
