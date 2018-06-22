@@ -26,9 +26,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Presenter used by ChooseLockPinPasswordFragment
+ * Helper used by ChooseLockPinPasswordFragment
  */
 public class PasswordHelper {
+    public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
+
     /**
      * Allow non-control Latin-1 characters only.
      */

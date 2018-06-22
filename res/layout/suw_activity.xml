@@ -25,6 +25,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/car_app_bar_height"
+        app:contentInsetStart="0dp"
         style="@style/ActionBarStyle.Car" />
     <FrameLayout
         android:layout_width="match_parent"
