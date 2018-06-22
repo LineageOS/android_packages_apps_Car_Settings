@@ -204,11 +204,12 @@ public class ChooseLockPatternFragment extends BaseFragment {
     /**
      * Factory method for creating ChooseLockPatternFragment
      */
-    public static ChooseLockPatternFragment newInstance() {
+    public static ChooseLockPatternFragment newInstance(boolean isInSetupWizard) {
         ChooseLockPatternFragment patternFragment = new ChooseLockPatternFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pattern);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.suw_action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
+                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pattern);
         patternFragment.setArguments(bundle);
         return patternFragment;
@@ -223,7 +224,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
-            mCurrentPattern = args.getString(SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrentPattern = args.getString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
     }
 
