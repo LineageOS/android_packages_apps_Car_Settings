@@ -150,11 +150,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     /**
      * Factory method for creating fragment in password mode
      */
-    public static ChooseLockPinPasswordFragment newPasswordInstance() {
+    public static ChooseLockPinPasswordFragment newPasswordInstance(boolean isInSetupWizard) {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_password);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.suw_action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
+                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_password);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         passwordFragment.setArguments(bundle);
@@ -164,11 +165,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     /**
      * Factory method for creating fragment in Pin mode
      */
-    public static ChooseLockPinPasswordFragment newPinInstance() {
+    public static ChooseLockPinPasswordFragment newPinInstance(boolean isInSetupWizard) {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pin);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.suw_action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
+                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pin);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         passwordFragment.setArguments(bundle);
@@ -184,8 +186,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (args != null) {
             mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
-            mExistingPassword = args.getString(
-                    SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK);
+            mExistingPassword = args.getString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
 
         mPasswordHelper = new PasswordHelper(mIsPin);
