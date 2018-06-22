@@ -19,6 +19,7 @@ package com.android.car.settings.security;
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.VisibleForTesting;
@@ -108,6 +109,15 @@ public class PinPadView extends GridLayout {
      */
     public void setEnterKeyIcon(@DrawableRes int drawableId) {
         mEnterKey.setImageResource(drawableId);
+    }
+
+    /**
+     * Override the default tint of the enter key icon.
+     *
+     * @param tint A ColorStateList.
+     */
+    public void setEnterKeyImageTint(ColorStateList tint) {
+        mEnterKey.setImageTintList(tint);
     }
 
     /**
