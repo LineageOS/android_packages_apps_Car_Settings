@@ -31,6 +31,7 @@ import org.robolectric.annotation.Implements;
 public class ShadowTextListItem {
     private Drawable mDrawable;
     private int mSupplementalIconDrawableId;
+    private View.OnClickListener mSupplementalIconOnClickListener;
     private String mTitle;
     private String mBody;
     private View.OnClickListener mOnClickListener;
@@ -41,8 +42,10 @@ public class ShadowTextListItem {
     }
 
     @Implementation
-    public void setSupplementalIcon(int iconResId, boolean showDivider) {
+    public void setSupplementalIcon(int iconResId, boolean showDivider,
+            View.OnClickListener listener) {
         mSupplementalIconDrawableId = iconResId;
+        mSupplementalIconOnClickListener = listener;
     }
 
     @Implementation
@@ -98,5 +101,12 @@ public class ShadowTextListItem {
      */
     public View.OnClickListener getOnClickListener() {
         return mOnClickListener;
+    }
+
+    /**
+     * Returns the onclick listener for the supplemental icon.
+     */
+    public View.OnClickListener getSupplementalIconOnClickListener() {
+        return mSupplementalIconOnClickListener;
     }
 }
