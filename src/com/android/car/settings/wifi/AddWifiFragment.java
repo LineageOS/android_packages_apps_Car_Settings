@@ -18,6 +18,7 @@ package com.android.car.settings.wifi;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -51,8 +52,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
 
     private static final Logger LOG = new Logger(AddWifiFragment.class);
     private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
-    private static final Pattern VALID_SSID_PATTERN =
-            Pattern.compile("^[A-Za-z]+[\\w\\-\\:\\.]*$");
+    private static final int INVALID_NET_ID = -1;
     @Nullable
     private AccessPoint mAccessPoint;
     @Nullable
@@ -108,8 +108,11 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
         mAddWifiButton = getActivity().findViewById(R.id.action_button1);
         mAddWifiButton.setText(R.string.wifi_setup_connect);
         mAddWifiButton.setOnClickListener(v -> {
-            connectToAccessPoint();
-            getFragmentController().goBack();
+            int netId = connectToAccessPoint();
+            LOG.d("connected to netId: " + netId);
+            if (netId != INVALID_NET_ID) {
+                getFragmentController().goBack();
+            }
         });
         mAddWifiButton.setEnabled(mAccessPoint != null);
     }
@@ -131,7 +134,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
                     getContext().getString(R.string.wifi_ssid));
             mWifiNameInput.setTextType(EditTextListItem.TextType.TEXT);
             mWifiNameInput.setTextChangeListener(s ->
-                    mAddWifiButton.setEnabled(VALID_SSID_PATTERN.matcher(s).matches()));
+                    mAddWifiButton.setEnabled(!TextUtils.isEmpty(s)));
         }
         lineItems.add(mWifiNameInput);
 
@@ -170,7 +173,10 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-    private void connectToAccessPoint() {
+    /**
+     * Returns netId. -1 if connection fails.
+     */
+    private int connectToAccessPoint() {
         WifiConfiguration wifiConfig = new WifiConfiguration();
         wifiConfig.SSID = String.format("\"%s\"", getSsId());
         wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
@@ -215,13 +221,16 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
                 break;
         }
         int netId = mWifiManager.addNetwork(wifiConfig);
-        if (netId == -1) {
+        // this only means wifiManager failed writing the new wifiConfig to db, doesn't mean
+        // the network exists/is valid
+        if (netId == INVALID_NET_ID) {
             Toast.makeText(getContext(),
                     R.string.wifi_failed_connect_message,
                     Toast.LENGTH_SHORT).show();
         } else {
             mWifiManager.enableNetwork(netId, true);
         }
+        return netId;
     }
 
     private boolean isHexString(String password) {

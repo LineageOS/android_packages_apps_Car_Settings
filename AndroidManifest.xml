@@ -77,6 +77,17 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- Handles wifi related intent -->
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.WIFI_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.net.wifi.PICK_WIFI_NETWORK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
