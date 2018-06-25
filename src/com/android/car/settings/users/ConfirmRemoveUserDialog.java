@@ -40,7 +40,7 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
         mListener = listener;
     }
 
-    private void invokeConfirmRemoveUserListener() {
+    private void maybeNotifyRemoveUserListener() {
         if (mListener != null) {
             mListener.onRemoveUserConfirmed();
         }
@@ -52,7 +52,7 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
             .setTitle(R.string.really_remove_user_title)
             .setBody(R.string.really_remove_user_message)
             .setPositiveButton(R.string.delete_button, (dialog, which) -> {
-                invokeConfirmRemoveUserListener();
+                maybeNotifyRemoveUserListener();
                 dialog.dismiss();
             })
             .setNegativeButton(android.R.string.cancel, null)
