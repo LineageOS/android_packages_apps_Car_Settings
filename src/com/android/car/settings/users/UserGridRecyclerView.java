@@ -79,7 +79,7 @@ public class UserGridRecyclerView extends PagedListView implements
     @Override
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener();
+        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
         if (mAddNewUserTask != null) {
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
         }
