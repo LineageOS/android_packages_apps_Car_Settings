@@ -140,13 +140,7 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onUserClicked(UserInfo userInfo) {
-        if (mCarUserManagerHelper.isForegroundUser(userInfo)) {
-            // If it's the foreground user, launch fragment that allows them to edit their name.
-            getFragmentController().launchFragment(EditUsernameFragment.newInstance(userInfo));
-        } else {
-            // If it's another user, launch fragment that displays their information
-            getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo));
-        }
+        getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo.id));
     }
 
     /**

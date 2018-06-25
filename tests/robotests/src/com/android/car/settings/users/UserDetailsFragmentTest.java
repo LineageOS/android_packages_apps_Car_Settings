@@ -20,16 +20,21 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.verify;
+import static org.robolectric.RuntimeEnvironment.application;
 
 import android.car.user.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.ShadowTextListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
@@ -39,12 +44,14 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowApplication;
 
 /**
  * Tests for UserDetailsFragment.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowUserIconProvider.class })
+@Config(shadows = { ShadowUserIconProvider.class, ShadowTextListItem.class })
 public class UserDetailsFragmentTest {
     private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
@@ -52,27 +59,38 @@ public class UserDetailsFragmentTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
-    private UserIconProvider mUserIconProvider;
+    private UserManager mUserManager;
 
     private Button mRemoveUserButton;
-    private Button mSwitchUserButton;
 
     @Before
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
 
-        when(mUserIconProvider.getUserIcon(any(), any())).thenReturn(null);
+        ShadowApplication shadowApp = ShadowApplication.getInstance();
+        shadowApp.setSystemService(Context.USER_SERVICE, mUserManager);
 
         mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
                 .setup()
                 .get();
     }
 
+    /* Test that the fragment title correspond to the user's name. */
+    @Test
+    public void testFragmentTitle() {
+        String userName = "Test User";
+        UserInfo testUser = new UserInfo(/* id= */ 10, userName, /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        TextView titleView = mTestActivity.findViewById(R.id.title);
+        assertThat(titleView.getText()).isEqualTo(userName);
+    }
+
     /**
      * Tests that if the current user cannot remove other users, the removeUserButton is hidden.
      */
     @Test
-    public void test_canCurrentProcessRemoveUsers_isFalse_hidesRemoveUserButton() {
+    public void testRemoveUserButtonHiddenWhenCurrentUserCannotRemoveUsers() {
         doReturn(true).when(mCarUserManagerHelper).canCurrentProcessRemoveUsers();
         doReturn(true).when(mCarUserManagerHelper).canUserBeRemoved(any());
         doReturn(false).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
@@ -90,7 +108,7 @@ public class UserDetailsFragmentTest {
      * Tests that if the user cannot be removed, the remove button is hidden.
      */
     @Test
-    public void test_canUserBeRemoved_isFalse_hidesRemoveUserButton() {
+    public void testRemoveUserButtonHiddenIfUserCannotBeRemoved() {
         doReturn(true).when(mCarUserManagerHelper).canCurrentProcessRemoveUsers();
         doReturn(true).when(mCarUserManagerHelper).canUserBeRemoved(any());
         doReturn(false).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
@@ -108,7 +126,7 @@ public class UserDetailsFragmentTest {
      * Tests that demo user cannot remove other users.
      */
     @Test
-    public void test_isCurrentProcessDemoUser_isTrue_hidesRemoveUserButton() {
+    public void testRemoveUserButtonHiddenForDemoUser() {
         doReturn(true).when(mCarUserManagerHelper).canCurrentProcessRemoveUsers();
         doReturn(true).when(mCarUserManagerHelper).canUserBeRemoved(any());
         doReturn(false).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
@@ -122,49 +140,151 @@ public class UserDetailsFragmentTest {
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
 
-    /**
-     * Tests that if the current user cannot switch to other users, the switchUserButton is hidden.
-     */
+    /* Test that clicking remove user button creates a confirm user removal dialog. */
     @Test
-    public void test_canCurrentProcessSwitchUsers_isFalse_hidesSwitchUserButton() {
-        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessSwitchUsers();
-        doReturn(false).when(mCarUserManagerHelper).isForegroundUser(any());
+    public void testRemoveUserButtonClick() {
+        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessRemoveUsers();
+        doReturn(true).when(mCarUserManagerHelper).canUserBeRemoved(any());
+        doReturn(false).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
         createUserDetailsFragment();
 
-        assertThat(mSwitchUserButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.VISIBLE);
+        mRemoveUserButton.callOnClick();
 
-        doReturn(false).when(mCarUserManagerHelper).canCurrentProcessSwitchUsers();
-        refreshFragment();
-
-        assertThat(mSwitchUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mUserDetailsFragment.getFragmentManager().findFragmentByTag(
+                UserDetailsFragment.CONFIRM_REMOVE_DIALOG_TAG)).isNotNull();
     }
 
-    /**
-     * Tests that if UserDetailsFragment is displaying foreground user already, switch button is
-     * hidden.
-     */
+    /* Test that edit icon does not show up for non-current users. */
     @Test
-    public void test_isForegroundUser_isTrue_hidesSwitchUserButton() {
-        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessSwitchUsers();
-        doReturn(false).when(mCarUserManagerHelper).isForegroundUser(any());
-        createUserDetailsFragment();
+    public void testEditIconNotAvailableForNonCurrentUser() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).isCurrentProcessUser(testUser);
+        createUserDetailsFragment(testUser);
 
-        assertThat(mSwitchUserButton.getVisibility()).isEqualTo(View.VISIBLE);
-
-        doReturn(false).when(mCarUserManagerHelper).canCurrentProcessSwitchUsers();
-        refreshFragment();
-
-        assertThat(mSwitchUserButton.getVisibility()).isEqualTo(View.GONE);
+        // Edit not visible for non-current user.
+        assertThat(getUserItem().getSupplementalIconDrawableId()).isEqualTo(0);
     }
 
-    private void createUserDetailsFragment() {
-        UserInfo testUser = new UserInfo();
+    /* Test that edit becomes available for current user. (Each user can edit themselves) */
+    @Test
+    public void testEditIconAvailableForCurrentUser() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(testUser);
+        createUserDetailsFragment(testUser);
 
-        mUserDetailsFragment = UserDetailsFragment.newInstance(testUser);
+        // Edit icon available for current user.
+        assertThat(getUserItem().getSupplementalIconDrawableId())
+                .isEqualTo(R.drawable.ic_mode_edit);
+    }
+
+    /* Test that clicking edit launches EditUsernameFragment. */
+    @Test
+    public void testEditIconInvokesEditUsernameFragment() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(testUser);
+        createUserDetailsFragment(testUser);
+
+        // Invoke clicking on edit icon.
+        getUserItem().getSupplementalIconOnClickListener().onClick(null);
+
+        // Verify EditUsernameFragment is launched.
+        assertThat((EditUsernameFragment) mUserDetailsFragment.getFragmentManager()
+                .findFragmentById(R.id.fragment_container)).isNotNull();
+    }
+
+    /* /* Test that successful user removal invokes back press. */
+    @Test
+    public void testBackButtonPressedWhenRemoveUserSuccessful() {
+        doReturn(true).when(mCarUserManagerHelper).removeUser(any(), any());
+        createUserDetailsFragment();
+        mUserDetailsFragment.onRemoveUserConfirmed();
+
+        assertThat(mTestActivity.getOnBackPressedFlag()).isTrue();
+    }
+
+    /* Test that onRemoveUserConfirmed invokes user removal. */
+    @Test
+    public void testRemoveUserConfirmedInvokesRemoveUser() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+        mUserDetailsFragment.onRemoveUserConfirmed();
+
+        verify(mCarUserManagerHelper).removeUser(
+                testUser, application.getString(R.string.user_guest));
+    }
+
+    /* Test that onRetryRemoveUser invokes user removal. */
+    @Test
+    public void testRetryRemoveUserInvokesRemoveUser() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+        mUserDetailsFragment.onRetryRemoveUser();
+
+        verify(mCarUserManagerHelper).removeUser(
+                testUser, application.getString(R.string.user_guest));
+    }
+
+    /* Test that the fragment title refreshes after user name has been updated. */
+    @Test
+    public void testOnUsersUpdateRefreshesTitle() {
+        int userId = 10;
+
+        String oldUserName = "Test User";
+        UserInfo testUser = new UserInfo(userId, oldUserName, /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+        TextView titleView = mTestActivity.findViewById(R.id.title);
+
+        assertThat(titleView.getText()).isEqualTo(oldUserName);
+
+        String newUserName = "New Test User";
+        UserInfo changedUser = new UserInfo(userId, newUserName, /* flags= */ 0);
+        // Update the UserInfo for this user ID.
+        doReturn(changedUser).when(mUserManager).getUserInfo(userId);
+
+        // Trigger the refresh.
+        mUserDetailsFragment.onUsersUpdate();
+
+        // Title should reflect the name on the new UserInfo.
+        assertThat(titleView.getText()).isEqualTo(newUserName);
+    }
+
+    /* Test that the fragment refreshes after user name has been updated. */
+    @Test
+    public void testOnUsersUpdateRefreshesUserItem() {
+        int userId = 10;
+
+        String oldUserName = "Test User";
+        UserInfo testUser = new UserInfo(userId, oldUserName, /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        assertThat(getUserItem().getTitle()).isEqualTo(oldUserName);
+
+        String newUserName = "New Test User";
+        UserInfo changedUser = new UserInfo(userId, newUserName, /* flags= */ 0);
+        // Update the UserInfo for this user ID.
+        doReturn(changedUser).when(mUserManager).getUserInfo(userId);
+
+        // Trigger the refresh.
+        mUserDetailsFragment.onUsersUpdate();
+
+        // Title should reflect the name on the new UserInfo.
+        assertThat(getUserItem().getTitle()).isEqualTo(newUserName);
+    }
+
+    private void createUserDetailsFragment(UserInfo userInfo) {
+        UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;
+
+        mUserDetailsFragment = UserDetailsFragment.newInstance(testUser.id);
+        doReturn(testUser).when(mUserManager).getUserInfo(testUser.id);
         mUserDetailsFragment.mCarUserManagerHelper = mCarUserManagerHelper;
         mTestActivity.launchFragment(mUserDetailsFragment);
 
         refreshButtons();
+    }
+
+    private void createUserDetailsFragment() {
+        createUserDetailsFragment(null);
     }
 
     private void refreshFragment() {
@@ -176,6 +296,9 @@ public class UserDetailsFragmentTest {
     private void refreshButtons() {
         // Get buttons;
         mRemoveUserButton = (Button) mTestActivity.findViewById(R.id.action_button1);
-        mSwitchUserButton = (Button) mTestActivity.findViewById(R.id.action_button2);
+    }
+
+    private ShadowTextListItem getUserItem() {
+        return Shadow.extract(mUserDetailsFragment.getItemProvider().get(0));
     }
 }

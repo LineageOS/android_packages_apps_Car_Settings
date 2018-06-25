@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.users;
@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 
-import androidx.annotation.Nullable;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -40,14 +39,12 @@ class UsersItemProvider extends ListItemProvider {
     private final Context mContext;
     private final UserClickListener mUserClickListener;
     private final CarUserManagerHelper mCarUserManagerHelper;
-    private final UserIconProvider mUserIconProvider;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             CarUserManagerHelper userManagerHelper) {
         mContext = context;
         mUserClickListener = userClickListener;
         mCarUserManagerHelper = userManagerHelper;
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         refreshItems();
     }
 
@@ -67,58 +64,30 @@ class UsersItemProvider extends ListItemProvider {
     public void refreshItems() {
         mItems.clear();
 
-        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
+        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
-        mItems.add(createUserItem(currUserInfo, /* isCurrentUser= */ true));
-
-        // If the current user is a demo user, don't list any of the other users.
-        if (currUserInfo.isDemo()) {
-            return;
-        }
+        mItems.add(createUserItem(currUserInfo));
 
         // Display other users on the system
         List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
         for (UserInfo userInfo : infos) {
             if (!userInfo.isGuest()) { // Do not show guest users.
-                mItems.add(createUserItem(userInfo, /* isCurrentUser= */ false));
+                mItems.add(createUserItem(userInfo));
             }
         }
 
         // Display guest session option.
-        if (!currUserInfo.isGuest()) {
-            mItems.add(createGuestItem());
-        }
+        mItems.add(createGuestItem());
     }
 
     // Creates a line for a user, clicking on it leads to the user details page.
-    private ListItem createUserItem(UserInfo userInfo, boolean isCurrentUser) {
-        TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
-                /* useLargeIcon= */ false);
-        item.setTitle(getUserItemTitle(userInfo, isCurrentUser));
-        item.setBody(getUserItemSummary(userInfo, isCurrentUser));
+    private ListItem createUserItem(UserInfo userInfo) {
+        UserListItem item = new UserListItem(userInfo, mContext, mCarUserManagerHelper);
+
         item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
         item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
-    }
-
-    @Nullable
-    private String getUserItemSummary(UserInfo userInfo, boolean isCurrentUser) {
-        if (!userInfo.isInitialized()) {
-            return mContext.getString(R.string.user_summary_not_set_up);
-        }
-        if (userInfo.isAdmin()) {
-            return isCurrentUser ? mContext.getString(R.string.signed_in_admin_user)
-                    : mContext.getString(R.string.user_admin);
-        }
-        // No summary for users who are initialized and not admins.
-        return null;
-    }
-
-    private String getUserItemTitle(UserInfo userInfo, boolean isCurrentUser)  {
-        return isCurrentUser ? mContext.getString(R.string.current_user_name, userInfo.name)
-                : userInfo.name;
     }
 
     // Creates a line for a guest session.
