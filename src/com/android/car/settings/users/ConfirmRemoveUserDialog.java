@@ -17,8 +17,6 @@
 package com.android.car.settings.users;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 
 import androidx.car.app.CarAlertDialog;
@@ -30,16 +28,6 @@ import com.android.car.settings.R;
  * Dialog to confirm user removal.
  */
 public class ConfirmRemoveUserDialog extends DialogFragment {
-    private final DialogInterface.OnClickListener mDeleteUserListener = new OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            if (mListener != null && which == DialogInterface.BUTTON_POSITIVE) {
-                mListener.onRemoveUserConfirmed();
-            }
-            dialog.dismiss();
-        }
-    };
-
     private ConfirmRemoveUserListener mListener;
 
     /**
@@ -52,12 +40,21 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
         mListener = listener;
     }
 
+    private void invokeConfirmRemoveUserListener() {
+        if (mListener != null) {
+            mListener.onRemoveUserConfirmed();
+        }
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
             .setTitle(R.string.really_remove_user_title)
             .setBody(R.string.really_remove_user_message)
-            .setPositiveButton(R.string.delete_button, mDeleteUserListener)
+            .setPositiveButton(R.string.delete_button, (dialog, which) -> {
+                invokeConfirmRemoveUserListener();
+                dialog.dismiss();
+            })
             .setNegativeButton(android.R.string.cancel, null)
             .create();
     }

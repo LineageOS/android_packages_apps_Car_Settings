@@ -17,8 +17,6 @@
 package com.android.car.settings.users;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -31,16 +29,6 @@ import com.android.car.settings.R;
  * Dialog to inform that user deletion failed and offers to retry.
  */
 public class RemoveUserErrorDialog extends DialogFragment {
-    private DialogInterface.OnClickListener mRemoveUserRetryListener = new OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            if (mListener != null && which == DialogInterface.BUTTON_POSITIVE) {
-                mListener.onRetryRemoveUser();
-            }
-            dialog.dismiss();
-        }
-    };
-
     private RemoveUserErrorListener mListener;
 
     /**
@@ -53,12 +41,21 @@ public class RemoveUserErrorDialog extends DialogFragment {
         mListener = listener;
     }
 
+    private void invokeRetryListener() {
+        if (mListener != null) {
+            mListener.onRetryRemoveUser();
+        }
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
                 .setTitle(R.string.remove_user_error_title)
                 .setBody(R.string.remove_user_error_message)
-                .setPositiveButton(R.string.remove_user_error_retry, mRemoveUserRetryListener)
+                .setPositiveButton(R.string.remove_user_error_retry, (dialog, which) -> {
+                    invokeRetryListener();
+                    dialog.dismiss();
+                })
                 .setNegativeButton(R.string.remove_user_error_dismiss, null)
                 .create();
     }
