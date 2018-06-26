@@ -32,6 +32,8 @@ public class ShadowTextListItem {
     private Drawable mDrawable;
     private int mSupplementalIconDrawableId;
     private View.OnClickListener mSupplementalIconOnClickListener;
+    private View.OnClickListener mAction1OnClickListener;
+    private String mAction1Text;
     private String mTitle;
     private String mBody;
     private View.OnClickListener mOnClickListener;
@@ -46,6 +48,12 @@ public class ShadowTextListItem {
             View.OnClickListener listener) {
         mSupplementalIconDrawableId = iconResId;
         mSupplementalIconOnClickListener = listener;
+    }
+
+    @Implementation
+    public void setAction(String text, boolean showDivider, View.OnClickListener listener) {
+        mAction1Text = text;
+        mAction1OnClickListener = listener;
     }
 
     @Implementation
@@ -73,6 +81,13 @@ public class ShadowTextListItem {
      */
     public Drawable getDrawable() {
         return mDrawable;
+    }
+
+    /**
+     * Returns the text on the first action.
+     */
+    public String getAction1Text() {
+        return mAction1Text;
     }
 
     /**
@@ -108,5 +123,12 @@ public class ShadowTextListItem {
      */
     public View.OnClickListener getSupplementalIconOnClickListener() {
         return mSupplementalIconOnClickListener;
+    }
+
+    /**
+     * Returns the onclick listener for the first action.
+     */
+    public View.OnClickListener getAction1OnClickListener() {
+        return mAction1OnClickListener;
     }
 }

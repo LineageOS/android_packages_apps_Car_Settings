@@ -20,7 +20,6 @@ import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
@@ -29,41 +28,30 @@ import com.android.car.settings.R;
  * Implementation of {@link ListItemProvider} for {@link UserDetailsFragment}.
  * Creates a single item that represents the passed in user.
  */
-class UserDetailsItemProvider extends ListItemProvider {
-    private final Context mContext;
+class UserDetailsItemProvider extends AbstractRefreshableListItemProvider {
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final EditUserListener mEditUserListener;
-    private UserListItem mItem;
+    private final int mUserId;
 
-    UserDetailsItemProvider(UserInfo userInfo, Context context, EditUserListener editUserListener,
+    UserDetailsItemProvider(int userId, Context context, EditUserListener editUserListener,
             CarUserManagerHelper userManagerHelper) {
-        mContext = context;
+        super(context);
         mCarUserManagerHelper = userManagerHelper;
         mEditUserListener = editUserListener;
-        refreshItem(userInfo);
+        mUserId = userId;
+        populateItems();
     }
 
     @Override
-    public ListItem get(int position) {
-        return mItem;
-    }
-
-    @Override
-    public int size() {
-        // Single item being provided.
-        return 1;
-    }
-
-    /**
-     * Re-creates the user item.
-     */
-    public void refreshItem(UserInfo userInfo) {
-        mItem = new UserListItem(userInfo, mContext, mCarUserManagerHelper);
+    public void populateItems() {
+        UserInfo userInfo = UserUtils.getUserInfo(mContext, mUserId);
+        UserListItem item = new UserListItem(userInfo, mContext, mCarUserManagerHelper);
         if (mCarUserManagerHelper.isCurrentProcessUser(userInfo)) {
             // Current user should be able to edit their own username.
-            mItem.setSupplementalIcon(R.drawable.ic_mode_edit, /* showDivider= */ false,
+            item.setSupplementalIcon(R.drawable.ic_mode_edit, /* showDivider= */ false,
                     v -> mEditUserListener.onEditUserClicked(userInfo));
         }
+        mItems.add(item);
     }
 
     /**

@@ -141,7 +141,8 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onUsersUpdate() {
-        refreshListItems();
+        mItemProvider.refreshItems();
+        refreshList();
     }
 
     @Override
@@ -171,11 +172,6 @@ public class UsersListFragment extends ListItemSettingsFragment
     public void onUserAdded() {
         mAddUserButton.setEnabled(true);
         mProgressBar.setVisibility(View.GONE);
-    }
-
-    private void refreshListItems() {
-        mItemProvider.refreshItems();
-        refreshList();
     }
 
     private void handleAddUserClicked() {
