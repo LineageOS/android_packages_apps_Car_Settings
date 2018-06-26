@@ -85,9 +85,8 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public void onStart() {
         super.onStart();
-        if (getCurrentFragment() == null) {
-            launchFragment(QuickSettingFragment.newInstance());
-        }
+        // always launch setting with quick setting page.
+        launchFragment(QuickSettingFragment.newInstance());
     }
 
     @Override
