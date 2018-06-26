@@ -20,13 +20,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
 
-import android.widget.Button;
-
-import androidx.fragment.app.DialogFragment;
-
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.DialogTestUtils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -63,7 +59,7 @@ public class ConfirmRemoveUserDialogTest {
         showDialog();
 
         // Invoke confirm remove user.
-        clickPositiveButton(mConfirmRemoveUserDialog);
+        DialogTestUtils.clickPositiveButton(mConfirmRemoveUserDialog);
 
         verify(listener).onRemoveUserConfirmed();
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
@@ -76,7 +72,7 @@ public class ConfirmRemoveUserDialogTest {
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        clickNegativeButton(mConfirmRemoveUserDialog);
+        DialogTestUtils.clickNegativeButton(mConfirmRemoveUserDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -86,7 +82,7 @@ public class ConfirmRemoveUserDialogTest {
         showDialog();
 
         // Invoke confirm remove user.
-        clickPositiveButton(mConfirmRemoveUserDialog);
+        DialogTestUtils.clickPositiveButton(mConfirmRemoveUserDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -99,17 +95,5 @@ public class ConfirmRemoveUserDialogTest {
     private boolean isDialogShown() {
         return mTestActivity.getSupportFragmentManager()
                 .findFragmentByTag(CONFIRM_REMOVE_DIALOG_TAG) != null;
-    }
-
-    private void clickPositiveButton(DialogFragment dialogFragment) {
-        Button positiveButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.positive_button);
-        positiveButton.callOnClick();
-    }
-
-    private void clickNegativeButton(DialogFragment dialogFragment) {
-        Button negativeButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.negative_button);
-        negativeButton.callOnClick();
     }
 }
