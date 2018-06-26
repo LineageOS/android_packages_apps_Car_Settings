@@ -63,7 +63,7 @@ public class ConfirmRemoveUserDialogTest {
         showDialog();
 
         // Invoke confirm remove user.
-        invokePositiveButtonOnClick(mConfirmRemoveUserDialog);
+        clickPositiveButton(mConfirmRemoveUserDialog);
 
         verify(listener).onRemoveUserConfirmed();
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
@@ -76,7 +76,7 @@ public class ConfirmRemoveUserDialogTest {
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        invokeNegativeButtonOnClick(mConfirmRemoveUserDialog);
+        clickNegativeButton(mConfirmRemoveUserDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -86,7 +86,7 @@ public class ConfirmRemoveUserDialogTest {
         showDialog();
 
         // Invoke confirm remove user.
-        invokePositiveButtonOnClick(mConfirmRemoveUserDialog);
+        clickPositiveButton(mConfirmRemoveUserDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -101,13 +101,13 @@ public class ConfirmRemoveUserDialogTest {
                 .findFragmentByTag(CONFIRM_REMOVE_DIALOG_TAG) != null;
     }
 
-    private void invokePositiveButtonOnClick(DialogFragment dialogFragment) {
+    private void clickPositiveButton(DialogFragment dialogFragment) {
         Button positiveButton = (Button) dialogFragment.getDialog().getWindow()
                 .findViewById(R.id.positive_button);
         positiveButton.callOnClick();
     }
 
-    private void invokeNegativeButtonOnClick(DialogFragment dialogFragment) {
+    private void clickNegativeButton(DialogFragment dialogFragment) {
         Button negativeButton = (Button) dialogFragment.getDialog().getWindow()
                 .findViewById(R.id.negative_button);
         negativeButton.callOnClick();
