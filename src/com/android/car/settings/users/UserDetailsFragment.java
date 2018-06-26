@@ -38,15 +38,19 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener,
         RemoveUserErrorDialog.RemoveUserErrorListener,
         UserDetailsItemProvider.EditUserListener,
-        CarUserManagerHelper.OnUsersUpdateListener {
+        CarUserManagerHelper.OnUsersUpdateListener,
+        NonAdminManagementItemProvider.AssignAdminListener,
+        ConfirmAssignAdminPrivilegesDialog.ConfirmAssignAdminListener {
     public static final String EXTRA_USER_ID = "extra_user_id";
     private static final String ERROR_DIALOG_TAG = "RemoveUserErrorDialogTag";
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     static final String CONFIRM_REMOVE_DIALOG_TAG = "ConfirmRemoveUserDialog";
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    static final String CONFIRM_ASSIGN_ADMIN_DIALOG_TAG = "ConfirmAssignAdminDialog";
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     CarUserManagerHelper mCarUserManagerHelper;
-    private UserDetailsItemProvider mItemProvider;
+    private AbstractRefreshableListItemProvider mItemProvider;
     private int mUserId;
     private UserInfo mUserInfo;
 
@@ -80,15 +84,23 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
             if (confirmRemoveUserDialog != null) {
                 confirmRemoveUserDialog.setConfirmRemoveUserListener(this);
             }
+
+            ConfirmAssignAdminPrivilegesDialog confirmAssignAdminDialog =
+                    (ConfirmAssignAdminPrivilegesDialog) getFragmentManager()
+                            .findFragmentByTag(CONFIRM_ASSIGN_ADMIN_DIALOG_TAG);
+            if (confirmAssignAdminDialog != null) {
+                confirmAssignAdminDialog.setConfirmAssignAdminListener(this);
+            }
         }
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         createUserManagerHelper();
-        mUserInfo = getUserInfo(mUserId);
-        mItemProvider = new UserDetailsItemProvider(mUserInfo, getContext(),
-                /* editUserListener= */ this, mCarUserManagerHelper);
+        mUserInfo = UserUtils.getUserInfo(getContext(), mUserId);
+        mItemProvider = getUserDetailsItemProvider();
+
+        mCarUserManagerHelper.registerOnUsersUpdateListener(this);
 
         // Needs to be called after creation of item provider.
         super.onActivityCreated(savedInstanceState);
@@ -100,13 +112,34 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
+    }
+
+    @Override
+    public void onAssignAdminClicked() {
+        ConfirmAssignAdminPrivilegesDialog dialog = new ConfirmAssignAdminPrivilegesDialog();
+        dialog.setConfirmAssignAdminListener(this);
+        dialog.show(getFragmentManager(), CONFIRM_ASSIGN_ADMIN_DIALOG_TAG);
+    }
+
+    @Override
+    public void onAssignAdminConfirmed() {
+        mCarUserManagerHelper.assignAdminPrivileges(mUserInfo);
+        getActivity().onBackPressed();
+    }
+
+    @Override
     public void onUsersUpdate() {
         // Refresh UserInfo, since it might have changed.
         mUserInfo = getUserInfo(mUserId);
 
         // Because UserInfo might have changed, we should refresh the content that depends on it.
         refreshFragmentTitle();
-        mItemProvider.refreshItem(mUserInfo);
+
+        // Refresh the item provider, and then the list.
+        mItemProvider.refreshItems();
         refreshList();
     }
 
@@ -129,6 +162,17 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
+    }
+
+    private AbstractRefreshableListItemProvider getUserDetailsItemProvider() {
+        if (mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserInfo.isAdmin()) {
+            // Admins should be able to manage non-admins and upgrade their privileges.
+            return new NonAdminManagementItemProvider(mUserId, getContext(), this,
+                    mCarUserManagerHelper);
+        }
+        // Admins seeing other admins, and non-admins seeing themselves, should have a simpler view.
+        return new UserDetailsItemProvider(mUserId, getContext(),
+                /* editUserListener= */ this, mCarUserManagerHelper);
     }
 
     private UserInfo getUserInfo(int userId) {

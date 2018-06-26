@@ -27,43 +27,29 @@ import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Implementation of {@link ListItemProvider} for {@link UsersListFragment}.
  * Creates items that represent users on the system.
  */
-class UsersItemProvider extends ListItemProvider {
-    private final List<ListItem> mItems = new ArrayList<>();
-    private final Context mContext;
+class UsersItemProvider extends AbstractRefreshableListItemProvider  {
     private final UserClickListener mUserClickListener;
     private final CarUserManagerHelper mCarUserManagerHelper;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             CarUserManagerHelper userManagerHelper) {
-        mContext = context;
-        mUserClickListener = userClickListener;
+        super(context);
         mCarUserManagerHelper = userManagerHelper;
-        refreshItems();
-    }
-
-    @Override
-    public ListItem get(int position) {
-        return mItems.get(position);
-    }
-
-    @Override
-    public int size() {
-        return mItems.size();
+        mUserClickListener = userClickListener;
+        populateItems();
     }
 
     /**
      * Clears and recreates the list of items.
      */
-    public void refreshItems() {
-        mItems.clear();
-
+    @Override
+    public void populateItems() {
         UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
