@@ -41,7 +41,7 @@ public class RemoveUserErrorDialog extends DialogFragment {
         mListener = listener;
     }
 
-    private void invokeRetryListener() {
+    private void maybeNotifyRetryListener() {
         if (mListener != null) {
             mListener.onRetryRemoveUser();
         }
@@ -53,7 +53,7 @@ public class RemoveUserErrorDialog extends DialogFragment {
                 .setTitle(R.string.remove_user_error_title)
                 .setBody(R.string.remove_user_error_message)
                 .setPositiveButton(R.string.remove_user_error_retry, (dialog, which) -> {
-                    invokeRetryListener();
+                    maybeNotifyRetryListener();
                     dialog.dismiss();
                 })
                 .setNegativeButton(R.string.remove_user_error_dismiss, null)
