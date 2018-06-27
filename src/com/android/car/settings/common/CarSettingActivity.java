@@ -97,8 +97,10 @@ public class CarSettingActivity extends AppCompatActivity implements
                 return;
             }
         }
-        // always launch setting with quick setting page.
-        launchFragment(QuickSettingFragment.newInstance());
+
+        if (getCurrentFragment() == null) {
+            launchFragment(QuickSettingFragment.newInstance());
+        }
     }
 
     @Override
