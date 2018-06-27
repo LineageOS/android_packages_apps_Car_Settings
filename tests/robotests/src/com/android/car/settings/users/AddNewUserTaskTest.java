@@ -48,28 +48,45 @@ public class AddNewUserTaskTest {
 
     @Test
     public void testTaskCallsCreateNewNonAdminUser() {
-        mTask.execute("Test name");
+        String newUserName = "Test name";
+        mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
-        verify(mCarUserManagerHelper).createNewNonAdminUser("Test name");
+        verify(mCarUserManagerHelper).createNewNonAdminUser(newUserName);
     }
 
     @Test
     public void testSwitchToNewUserIfUserCreated() {
-        UserInfo newUser = new UserInfo(10, "Test name", /* flags= */ 0);
-        when(mCarUserManagerHelper.createNewNonAdminUser("Test name")).thenReturn(newUser);
+        String newUserName = "Test name";
+        UserInfo newUser = new UserInfo(10, newUserName, /* flags= */ 0);
+        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(newUser);
 
-        mTask.execute("Test name");
+        mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
         verify(mCarUserManagerHelper).switchToUser(newUser);
     }
 
     @Test
-    public void testAddNewUserListenerCalled() {
-        mTask.execute("Test name");
+    public void testOnUserAddedSuccessCalledIfUserCreated() {
+        String newUserName = "Test name";
+        UserInfo newUser = new UserInfo(10, newUserName, /* flags= */ 0);
+        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(newUser);
+
+        mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
-        verify(mAddNewUserListener).onUserAdded();
+        verify(mAddNewUserListener).onUserAddedSuccess();
+    }
+
+    @Test
+    public void testOnUserAddedFailureCalledIfNullReturned() {
+        String newUserName = "Test name";
+        when(mCarUserManagerHelper.createNewNonAdminUser(newUserName)).thenReturn(null);
+
+        mTask.execute(newUserName);
+        Robolectric.flushBackgroundThreadScheduler();
+
+        verify(mAddNewUserListener).onUserAddedFailure();
     }
 }
