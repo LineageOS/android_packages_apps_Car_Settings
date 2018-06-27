@@ -28,7 +28,7 @@ import androidx.annotation.Nullable;
 import com.android.car.settings.R;
 
 /**
- * Controls Day night mode tile on quick setting page.
+ * Toggles auto or night mode tile on quick setting page.
  */
 public class DayNightTile implements QuickSettingGridAdapter.Tile {
     private final Context mContext;
@@ -87,7 +87,7 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
     @Override
     public void onClick(View v) {
         if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_AUTO);
         } else {
             mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
         }
