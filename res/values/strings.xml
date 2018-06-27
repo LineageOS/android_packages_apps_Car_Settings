@@ -374,14 +374,42 @@
     <!-- Button text to confirm assigning admin privileges to another user. [CHAR LIMIT=40]-->
     <string name="confirm_assign_admin">Yes, make admin</string>
 
+    <!-- Adding new users -->
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>
-    <!-- Button title for adding an account [CHAR LIMIT=35] -->
-    <string name="user_add_account_menu">Add account</string>
-    <!-- Spoken content description for delete icon beside a user [CHAR LIMIT=none] -->
-    <string name="user_delete_user_description">Delete user</string>
     <!-- User details new user name [CHAR LIMIT=30] -->
     <string name="user_new_user_name">New user</string>
+    <!-- Title of the alert dialog to ask user to confirm creation of new user. [CHAR LIMIT=30] -->
+    <string name="user_add_user_title">"Add new user?"</string>
+    <!-- Message to inform user that creation of new user requires that user to set up their space. [CHAR LIMIT=100] -->
+    <string name="user_add_user_message_setup">When you add a new user, that person needs to set up their space.</string>
+    <!-- Message to inform user that the newly created user will have permissions to update apps for all other users. [CHAR LIMIT=100] -->
+    <string name="user_add_user_message_update">Any user can update apps for all other users.</string>
+    <!-- Title for the dialog that lets users know that the maximum allowed number of users on the device has been reached. [CHAR LIMIT=35]-->
+    <string name="user_limit_reached_title">User limit reached</string>
+    <!-- Message that tells people what's the maximum number of uses allowed on the device. [CHAR_LIMIT=NONE]-->
+    <plurals name="user_limit_reached_message">
+        <item quantity="one">Only one user can be created.</item>
+        <item quantity="other">You can add up to <xliff:g id="count" example="3">%d</xliff:g> users.</item>
+    </plurals>
+    <!-- Title of the alert dialog to notify that the creation of new user has failed. [CHAR LIMIT=40] -->
+    <string name="add_user_error_title">Failed to create a new user</string>
+
+    <!-- Deleting users -->
+    <!-- Spoken content description for delete icon beside a user [CHAR LIMIT=none] -->
+    <string name="user_delete_user_description">Delete user</string>
+    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=25] -->
+    <string name="really_remove_user_title">Remove this user?</string>
+    <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
+    <string name="really_remove_user_message">"All apps and data will be deleted."</string>
+    <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
+    <string name="remove_user_error_title">Failed to remove user.</string>
+    <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
+    <string name="remove_user_error_dismiss">Dismiss</string>
+    <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
+    <string name="remove_user_error_retry">Retry</string>
+
+    <!-- User info -->
     <!-- Title for Guest user [CHAR LIMIT=35] -->
     <string name="user_guest">Guest</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
@@ -394,13 +422,16 @@
     <string name="user_summary_not_set_up">Not set up</string>
     <!-- Title for edit user name page [CHAR LIMIT=30] -->
     <string name="edit_user_name_title">Edit user name</string>
-
     <!-- User settings header for list of users on the system. [CHAR LIMIT=35] -->
     <string name="users_list_title">Users</string>
-    <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
-    <string name="accounts_settings_title">Accounts</string>
     <!-- Title for detailed user information page [CHAR LIMIT=25] -->
     <string name="user_details_title">User</string>
+
+    <!-- Account management -->
+    <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
+    <string name="accounts_settings_title">Accounts</string>
+    <!-- Button title for adding an account [CHAR LIMIT=35] -->
+    <string name="user_add_account_menu">Add account</string>
     <!-- Text to display in Accounts settings if the user has not added any accounts yet [CHAR LIMIT=40] -->
     <string name="no_accounts_added">No accounts added</string>
     <!-- Account settings header for list of added accounts [CHAR LIMIT=40] -->
@@ -421,22 +452,6 @@
     <string name="really_remove_account_message">Removing this account will delete all of its messages, contacts, and other data from the device!</string>
     <!-- This is shown if the authenticator for a given account fails to remove it. [CHAR LIMIT=NONE] -->
     <string name="remove_account_failed">This change isn\'t allowed by your admin</string>
-    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=25] -->
-    <string name="really_remove_user_title">Remove this user?</string>
-    <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
-    <string name="really_remove_user_message">"All apps and data will be deleted."</string>
-    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
-    <string name="remove_user_error_title">Failed to remove user.</string>
-    <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
-    <string name="remove_user_error_dismiss">Dismiss</string>
-    <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
-    <string name="remove_user_error_retry">Retry</string>
-    <!-- Title of the alert dialog to ask user to confirm creation of new user. [CHAR LIMIT=30] -->
-    <string name="user_add_user_title">"Add new user?"</string>
-    <!-- Message to inform user that creation of new user requires that user to set up their space. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_setup">When you add a new user, that person needs to set up their space.</string>
-    <!-- Message to inform user that the newly created user will have permissions to update apps for all other users. [CHAR LIMIT=100] -->
-    <string name="user_add_user_message_update">Any user can update apps for all other users.</string>
 
     <!-- security lock -->
     <!-- Title for security settings [CHAR LIMIT=20] -->
