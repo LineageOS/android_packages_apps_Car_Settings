@@ -20,6 +20,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -32,7 +33,8 @@ import com.android.car.settings.R;
  */
 public class ConfirmExitRetailModeDialog extends DialogFragment implements
         DialogInterface.OnClickListener {
-    private static final String DIALOG_TAG = "ConfirmExitRetailModeDialog";
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    static final String DIALOG_TAG = "ConfirmExitRetailModeDialog";
     private ConfirmExitRetailModeListener mListener;
 
     /**

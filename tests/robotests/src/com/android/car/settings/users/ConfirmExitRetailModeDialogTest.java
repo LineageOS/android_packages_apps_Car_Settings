@@ -23,6 +23,7 @@ import static org.mockito.Mockito.verify;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
+import com.android.car.settings.testutils.TestBaseFragment;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -32,13 +33,13 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 
 /**
- * Tests for RemoveUserErrorDialog.
+ * Tests for ConfirmExitRetailModeDialog.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class RemoveUserErrorDialogTest {
-    private static final String ERROR_DIALOG_TAG = "RemoveUserErrorDialogTag";
+public class ConfirmExitRetailModeDialogTest {
     private BaseTestActivity mTestActivity;
-    private RemoveUserErrorDialog mRemoveUserErrorDialog;
+    private TestBaseFragment mTestFragment;
+    private ConfirmExitRetailModeDialog mDialog;
 
     @Before
     public void setUpTestActivity() {
@@ -48,20 +49,23 @@ public class RemoveUserErrorDialogTest {
                 .setup()
                 .get();
 
-        mRemoveUserErrorDialog = new RemoveUserErrorDialog();
+        mTestFragment = TestBaseFragment.newInstance();
+        mTestActivity.launchFragment(mTestFragment);
+
+        mDialog = new ConfirmExitRetailModeDialog();
     }
 
     @Test
-    public void testRetryInvokesOnRetryRemoveUser() {
-        RemoveUserErrorDialog.RemoveUserErrorListener listener = Mockito.mock(
-                RemoveUserErrorDialog.RemoveUserErrorListener.class);
-        mRemoveUserErrorDialog.setRetryListener(listener);
+    public void testConfirmExitRetailModeInvokesOnExitRetailModeConfirmed() {
+        ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener listener = Mockito.mock(
+                ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener.class);
+        mDialog.setConfirmExitRetailModeListener(listener);
         showDialog();
 
-        // Invoke retry.
-        DialogTestUtils.clickPositiveButton(mRemoveUserErrorDialog);
+        // Invoke exit retail mode.
+        DialogTestUtils.clickPositiveButton(mDialog);
 
-        verify(listener).onRetryRemoveUser();
+        verify(listener).onExitRetailModeConfirmed();
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
@@ -69,31 +73,29 @@ public class RemoveUserErrorDialogTest {
     public void testCancelDismissesDialog() {
         showDialog();
 
-        assertThat(isDialogShown()).isTrue(); // Dialog is shown.
-
         // Invoke cancel.
-        DialogTestUtils.clickNegativeButton(mRemoveUserErrorDialog);
+        DialogTestUtils.clickNegativeButton(mDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
     @Test
-    public void testNoClickListenerDismissesDialog() {
+    public void testNoConfirmClickListenerDismissesDialog() {
         showDialog();
 
-        // Invoke retry.
-        DialogTestUtils.clickPositiveButton(mRemoveUserErrorDialog);
+        // Invoke confirm add user.
+        DialogTestUtils.clickPositiveButton(mDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
     private void showDialog() {
-        mRemoveUserErrorDialog.show(
-                mTestActivity.getSupportFragmentManager(), ERROR_DIALOG_TAG);
+        mDialog.show(mTestFragment);
+        assertThat(isDialogShown()).isTrue();
     }
 
     private boolean isDialogShown() {
         return mTestActivity.getSupportFragmentManager()
-                .findFragmentByTag(ERROR_DIALOG_TAG) != null;
+                .findFragmentByTag(ConfirmExitRetailModeDialog.DIALOG_TAG) != null;
     }
 }
