@@ -272,6 +272,49 @@ public class UserDetailsFragmentTest {
         assertThat(getUserItem().getTitle()).isEqualTo(newUserName);
     }
 
+    @Test
+    public void testOnDestroyUnregistersListener() {
+        createUserDetailsFragment();
+
+        verify(mCarUserManagerHelper).registerOnUsersUpdateListener(mUserDetailsFragment);
+
+        mUserDetailsFragment.onDestroy();
+
+        verify(mCarUserManagerHelper).unregisterOnUsersUpdateListener(mUserDetailsFragment);
+    }
+
+    @Test
+    public void testNonAdminManagementItemProviderCreated() {
+        UserInfo nonAdmin = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessAdminUser();
+
+        createUserDetailsFragment(nonAdmin);
+
+        assertThat(mUserDetailsFragment.getItemProvider())
+                .isInstanceOf(NonAdminManagementItemProvider.class);
+    }
+
+    /* Test that clicking assign admin button creates a confirm assign admin dialog. */
+    @Test
+    public void testAssignAdminClick() {
+        createUserDetailsFragment();
+
+        mUserDetailsFragment.onAssignAdminClicked();
+
+        assertThat(mUserDetailsFragment.getFragmentManager().findFragmentByTag(
+                UserDetailsFragment.CONFIRM_ASSIGN_ADMIN_DIALOG_TAG)).isNotNull();
+    }
+
+    @Test
+    public void testAssignAdminConfirmed() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onAssignAdminConfirmed();
+
+        verify(mCarUserManagerHelper).assignAdminPrivileges(testUser);
+    }
+
     private void createUserDetailsFragment(UserInfo userInfo) {
         UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;
 
