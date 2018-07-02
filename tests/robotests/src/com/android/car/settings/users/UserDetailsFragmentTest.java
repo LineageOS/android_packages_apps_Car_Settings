@@ -214,17 +214,6 @@ public class UserDetailsFragmentTest {
                 testUser, application.getString(R.string.user_guest));
     }
 
-    /* Test that onRetryRemoveUser invokes user removal. */
-    @Test
-    public void testRetryRemoveUserInvokesRemoveUser() {
-        UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
-        createUserDetailsFragment(testUser);
-        mUserDetailsFragment.onRetryRemoveUser();
-
-        verify(mCarUserManagerHelper).removeUser(
-                testUser, application.getString(R.string.user_guest));
-    }
-
     /* Test that the fragment title refreshes after user name has been updated. */
     @Test
     public void testOnUsersUpdateRefreshesTitle() {

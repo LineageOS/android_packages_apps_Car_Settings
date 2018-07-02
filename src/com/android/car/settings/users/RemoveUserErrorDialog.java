@@ -19,55 +19,20 @@ package com.android.car.settings.users;
 import android.app.Dialog;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
 
 /**
- * Dialog to inform that user deletion failed and offers to retry.
+ * Dialog to inform that user deletion failed.
  */
 public class RemoveUserErrorDialog extends DialogFragment {
-    private RemoveUserErrorListener mListener;
-
-    /**
-     * Sets a listener for onRetryRemoveUser that will get called if user presses positive
-     * button.
-     *
-     * @param listener Instance of {@link RemoveUserErrorListener} to call when confirmed.
-     */
-    public void setRetryListener(@Nullable RemoveUserErrorListener listener) {
-        mListener = listener;
-    }
-
-    private void maybeNotifyRetryListener() {
-        if (mListener != null) {
-            mListener.onRetryRemoveUser();
-        }
-    }
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
                 .setTitle(R.string.remove_user_error_title)
-                .setBody(R.string.remove_user_error_message)
-                .setPositiveButton(R.string.remove_user_error_retry, (dialog, which) -> {
-                    maybeNotifyRetryListener();
-                    dialog.dismiss();
-                })
-                .setNegativeButton(R.string.remove_user_error_dismiss, null)
+                .setPositiveButton(android.R.string.ok, null)
                 .create();
-    }
-
-    /**
-     * Interface for listeners that want to receive a callback when user removal fails.
-     */
-    public interface RemoveUserErrorListener {
-
-        /**
-         * Method called only when user presses retry button.
-         */
-        void onRetryRemoveUser();
     }
 }

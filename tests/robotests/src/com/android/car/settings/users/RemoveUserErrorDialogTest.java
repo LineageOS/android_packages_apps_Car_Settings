@@ -18,8 +18,6 @@ package com.android.car.settings.users;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.verify;
-
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
@@ -27,7 +25,6 @@ import com.android.car.settings.testutils.DialogTestUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 
@@ -52,36 +49,12 @@ public class RemoveUserErrorDialogTest {
     }
 
     @Test
-    public void testRetryInvokesOnRetryRemoveUser() {
-        RemoveUserErrorDialog.RemoveUserErrorListener listener = Mockito.mock(
-                RemoveUserErrorDialog.RemoveUserErrorListener.class);
-        mRemoveUserErrorDialog.setRetryListener(listener);
-        showDialog();
-
-        // Invoke retry.
-        DialogTestUtils.clickPositiveButton(mRemoveUserErrorDialog);
-
-        verify(listener).onRetryRemoveUser();
-        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
-    }
-
-    @Test
-    public void testCancelDismissesDialog() {
+    public void testOkDismissesDialog() {
         showDialog();
 
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        DialogTestUtils.clickNegativeButton(mRemoveUserErrorDialog);
-
-        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
-    }
-
-    @Test
-    public void testNoClickListenerDismissesDialog() {
-        showDialog();
-
-        // Invoke retry.
         DialogTestUtils.clickPositiveButton(mRemoveUserErrorDialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.

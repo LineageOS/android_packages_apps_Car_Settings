@@ -36,7 +36,6 @@ import com.android.car.settings.common.ListItemSettingsFragment;
  */
 public class UserDetailsFragment extends ListItemSettingsFragment implements
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener,
-        RemoveUserErrorDialog.RemoveUserErrorListener,
         UserDetailsItemProvider.EditUserListener,
         CarUserManagerHelper.OnUsersUpdateListener,
         NonAdminManagementItemProvider.AssignAdminListener,
@@ -73,12 +72,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         mUserId = getArguments().getInt(EXTRA_USER_ID);
 
         if (savedInstanceState != null) {
-            RemoveUserErrorDialog removeUserErrorDialog = (RemoveUserErrorDialog)
-                    getFragmentManager().findFragmentByTag(ERROR_DIALOG_TAG);
-            if (removeUserErrorDialog != null) {
-                removeUserErrorDialog.setRetryListener(this);
-            }
-
             ConfirmRemoveUserDialog confirmRemoveUserDialog = (ConfirmRemoveUserDialog)
                     getFragmentManager().findFragmentByTag(CONFIRM_REMOVE_DIALOG_TAG);
             if (confirmRemoveUserDialog != null) {
@@ -149,12 +142,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
-    public void onRetryRemoveUser() {
-        // Retry deleting user.
-        removeUser();
-    }
-
-    @Override
     public void onEditUserClicked(UserInfo userInfo) {
         getFragmentController().launchFragment(EditUsernameFragment.newInstance(userInfo));
     }
@@ -191,9 +178,8 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
                 mUserInfo, getContext().getString(R.string.user_guest))) {
             getActivity().onBackPressed();
         } else {
-            // If failed, need to show error dialog for users, can offer retry.
+            // If failed, need to show error dialog for users.
             RemoveUserErrorDialog removeUserErrorDialog = new RemoveUserErrorDialog();
-            removeUserErrorDialog.setRetryListener(this);
             removeUserErrorDialog.show(getFragmentManager(), ERROR_DIALOG_TAG);
         }
     }
