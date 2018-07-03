@@ -16,8 +16,10 @@
 
 package com.android.car.settings.system;
 
+import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.view.View;
 
 import androidx.annotation.StringRes;
@@ -35,6 +37,7 @@ import java.util.ArrayList;
  */
 public class ResetOptionsFragment extends ListItemSettingsFragment {
 
+    private CarUserManagerHelper mCarUserManagerHelper;
     private ListItemProvider mItemProvider;
 
     /**
@@ -52,6 +55,7 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
         mItemProvider = new ListItemProvider.ListProvider(getListItems());
     }
 
@@ -61,17 +65,25 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
     }
 
     private ArrayList<ListItem> getListItems() {
+        boolean isAdmin = mCarUserManagerHelper.isCurrentProcessAdminUser();
+
         ArrayList<ListItem> lineItems = new ArrayList<>();
 
-        lineItems.add(createListItem(R.string.reset_network_title, v -> {
-            // TODO: launch reset network.
-        }));
+        if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                UserManager.DISALLOW_NETWORK_RESET)) {
+            lineItems.add(createListItem(R.string.reset_network_title, v ->
+                    getFragmentController().launchFragment(ResetNetworkFragment.newInstance())
+            ));
+        }
         lineItems.add(createListItem(R.string.reset_app_preferences_title, v -> {
             // TODO: launch reset app preferences.
         }));
-        lineItems.add(createListItem(R.string.master_clear_title, v -> {
-            // TODO: launch master clear.
-        }));
+        if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                UserManager.DISALLOW_FACTORY_RESET)) {
+            lineItems.add(createListItem(R.string.master_clear_title, v -> {
+                // TODO: launch master clear.
+            }));
+        }
 
         return lineItems;
     }

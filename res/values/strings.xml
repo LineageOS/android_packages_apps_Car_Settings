@@ -301,12 +301,26 @@
     <!-- Reset options --><skip />
     <!-- Title for a screen containing all device reset options. [CHAR LIMIT=50] -->
     <string name="reset_options_title">Reset options</string>
-    <!-- Summary text for a screen containing all device reset options. [CHAR LIMIT=None] -->
+    <!-- Summary text for a screen containing all device reset options. [CHAR LIMIT=NONE] -->
     <string name="reset_options_summary">Network, apps, or device reset</string>
 
     <!-- Reset Network --><skip />
-    <!-- Button title to reset Wi-Fi settings, bluetooth settings. [CHAR LIMIT=40]-->
+    <!-- Button title to reset Wi-Fi settings, bluetooth settings. [CHAR LIMIT=40] -->
     <string name="reset_network_title">Reset Wi-Fi, Bluetooth</string>
+    <!-- Message on screen after user selects reset network settings [CHAR LIMIT=NONE] -->
+    <string name="reset_network_desc">This will reset all network settings, including:</string>
+    <!-- List items on screen after user selects reset network settings [CHAR LIMIT=NONE] -->
+    <string name="reset_network_items"><li>Wi\u2011Fi</li>\n<li>Bluetooth</li></string>
+    <!-- Button on screen after user selects reset network settings [CHAR LIMIT=25] -->
+    <string name="reset_network_button_text">Reset settings</string>
+    <!-- Reset settings confirmation screen title [CHAR LIMIT=30] -->
+    <string name="reset_network_confirm_title">Reset?</string>
+    <!-- Message on screen after user selects Reset settings button [CHAR LIMIT=NONE] -->
+    <string name="reset_network_confirm_desc">Reset all network settings? You can\u2019t undo this action!</string>
+    <!-- Button on screen after user selects Reset settings button [CHAR LIMIT=25] -->
+    <string name="reset_network_confirm_button_text">Reset settings</string>
+    <!-- Reset settings complete toast text [CHAR LIMIT=75] -->
+    <string name="reset_network_complete_toast">Network settings have been reset</string>
 
     <!-- Reset apps --><skip />
     <!-- Button title to reset all of user's app preferences. [CHAR LIMIT=40] -->
