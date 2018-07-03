@@ -298,6 +298,23 @@
     <!-- About phone settings screen, Open source license dialog title until license is fully loaded -->
     <string name="settings_license_activity_loading">Loading\u2026</string>
 
+    <!-- Reset options --><skip />
+    <!-- Title for a screen containing all device reset options. [CHAR LIMIT=50] -->
+    <string name="reset_options_title">Reset options</string>
+    <!-- Summary text for a screen containing all device reset options. [CHAR LIMIT=None] -->
+    <string name="reset_options_summary">Network, apps, or device reset</string>
+
+    <!-- Reset Network --><skip />
+    <!-- Button title to reset Wi-Fi settings, bluetooth settings. [CHAR LIMIT=40]-->
+    <string name="reset_network_title">Reset Wi-Fi, Bluetooth</string>
+
+    <!-- Reset apps --><skip />
+    <!-- Button title to reset all of user's app preferences. [CHAR LIMIT=40] -->
+    <string name="reset_app_preferences_title">Reset app preferences</string>
+
+    <!-- Master Clear --><skip />
+    <!-- Button title to factory data reset the entire device. The "(factory reset)" part is optional for translation. [CHAR LIMIT=40]-->
+    <string name="master_clear_title">Erase all data (factory reset)</string>
 
     <!-- Date and time settings --><skip />
     <!-- Main Settings screen setting option name to go into the date and time settings-->
