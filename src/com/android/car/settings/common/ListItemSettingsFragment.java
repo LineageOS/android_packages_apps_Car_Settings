@@ -28,8 +28,7 @@ import com.android.car.settings.suggestions.SuggestionLineItem;
 /**
  * Settings page that only contain a list of items.
  * <p>
- * Uses support library ListItemAdapter, unlike ListSettingsFragment that uses the car-list
- * lists.
+ * Uses support library ListItemAdapter.
  */
 public abstract class ListItemSettingsFragment extends BaseFragment implements ListController {
     private ListItemAdapter mListAdapter;

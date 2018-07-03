@@ -35,7 +35,6 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx.car_car \
       androidx.preference_preference \
       androidx.legacy_legacy-preference-v14 \
-      car-list \
       car-settings-lib \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
