@@ -11,9 +11,8 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
-
 
 package com.android.car.settings.system;
 
@@ -80,6 +79,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         lineItems.addAll(createSystemUpdateListItems());
         lineItems.add(createAboutSystemListItem());
         lineItems.add(createLegalInfoListItem());
+        lineItems.add(createResetOptionsListItem());
 
         return lineItems;
     }
@@ -141,5 +141,18 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
             context.startActivity(intent);
         });
         return legalInfoItem;
+    }
+
+    private TextListItem createResetOptionsListItem() {
+        Context context = getContext();
+        TextListItem restoreOptionsItem = new TextListItem(context);
+        restoreOptionsItem.setTitle(context.getString(R.string.reset_options_title));
+        restoreOptionsItem.setBody(context.getString(R.string.reset_options_summary));
+        restoreOptionsItem.setPrimaryActionIcon(R.drawable.ic_restore, /* useLargeIcon= */ false);
+        restoreOptionsItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */
+                false);
+        restoreOptionsItem.setOnClickListener(
+                v -> getFragmentController().launchFragment(ResetOptionsFragment.newInstance()));
+        return restoreOptionsItem;
     }
 }
