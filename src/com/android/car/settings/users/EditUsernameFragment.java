@@ -19,6 +19,9 @@ import android.car.user.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 
@@ -71,9 +74,9 @@ public class EditUsernameFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
 
-        configureUsernameEditing();
         showOkButton();
         showCancelButton();
+        configureUsernameEditing();
     }
 
     private void configureUsernameEditing() {
@@ -81,6 +84,29 @@ public class EditUsernameFragment extends BaseFragment {
         mUserNameEditText.setText(mUserInfo.name);
         mUserNameEditText.setEnabled(true);
         mUserNameEditText.setSelectAllOnFocus(true);
+        mUserNameEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (TextUtils.isEmpty(s)) {
+                    mOkButton.setEnabled(false);
+                    mUserNameEditText.setError(getString(R.string.name_input_blank_error));
+                } else if (!TextUtils.isGraphic(s)) {
+                    mOkButton.setEnabled(false);
+                    mUserNameEditText.setError(getString(R.string.name_input_invalid_error));
+                } else {
+                    mOkButton.setEnabled(true);
+                    mUserNameEditText.setError(null);
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
     private void showOkButton() {
