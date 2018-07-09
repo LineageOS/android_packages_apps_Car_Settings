@@ -105,8 +105,7 @@ public class UsersListFragment extends ListItemSettingsFragment
 
     @Override
     public void onCreateNewUserConfirmed() {
-        mAddUserButton.setEnabled(false);
-        mProgressBar.setVisibility(View.VISIBLE);
+        setAddUserEnabled(false);
         mAddNewUserTask =
                 new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */ this)
                         .execute(getContext().getString(R.string.user_new_user_name));
@@ -169,9 +168,21 @@ public class UsersListFragment extends ListItemSettingsFragment
     }
 
     @Override
-    public void onUserAdded() {
-        mAddUserButton.setEnabled(true);
-        mProgressBar.setVisibility(View.GONE);
+    public void onUserAddedSuccess() {
+        setAddUserEnabled(true);
+    }
+
+    @Override
+    public void onUserAddedFailure() {
+        setAddUserEnabled(true);
+        // Display failure dialog.
+        AddUserErrorDialog dialog = new AddUserErrorDialog();
+        dialog.show(this);
+    }
+
+    private void setAddUserEnabled(boolean enabled) {
+        mAddUserButton.setEnabled(enabled);
+        mProgressBar.setVisibility(enabled ? View.VISIBLE : View.GONE);
     }
 
     private void handleAddUserClicked() {
@@ -181,8 +192,20 @@ public class UsersListFragment extends ListItemSettingsFragment
             ConfirmExitRetailModeDialog dialog = new ConfirmExitRetailModeDialog();
             dialog.setConfirmExitRetailModeListener(this);
             dialog.show(this);
+            return;
+        }
+
+        // If no more users can be added because the maximum allowed number is reached, let the user
+        // know.
+        if (mCarUserManagerHelper.isUserLimitReached()) {
+            MaxUsersLimitReachedDialog dialog = new MaxUsersLimitReachedDialog(
+                    mCarUserManagerHelper.getMaxSupportedRealUsers());
+            dialog.show(this);
+            return;
+        }
+
         // Only add the add user button if the current user is allowed to add a user.
-        } else if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
+        if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
             ConfirmCreateNewUserDialog dialog =
                     new ConfirmCreateNewUserDialog();
             dialog.setConfirmCreateNewUserListener(this);
