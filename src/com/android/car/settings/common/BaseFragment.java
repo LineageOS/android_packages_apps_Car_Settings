@@ -192,13 +192,17 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setCustomView(mActionBarLayout);
-        actionBar.setDisplayShowCustomEnabled(true);
-        // make the toolbar take the whole width.
-        Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
-        toolbar.setPadding(0, 0, 0, 0);
+        // Soon AppCompatActivity will no longer be used in Settings
+        if (getActivity() instanceof AppCompatActivity) {
+            ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
+            actionBar.setDisplayHomeAsUpEnabled(false);
+            actionBar.setCustomView(mActionBarLayout);
+            actionBar.setDisplayShowCustomEnabled(true);
+            // make the toolbar take the whole width.
+            Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
+            toolbar.setPadding(0, 0, 0, 0);
+        }
+
         getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> onBackPressed());
         TextView titleView = getActivity().findViewById(R.id.title);
