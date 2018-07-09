@@ -81,6 +81,7 @@ public class QuickSettingFragment extends BaseFragment {
         mUserSwitcherBtn.setOnClickListener(v -> {
             getFragmentController().launchFragment(UserSwitcherFragment.newInstance());
         });
+        setupUserButton();
 
         View exitBtn = getActivity().findViewById(R.id.exit_button);
         exitBtn.setOnClickListener(v -> getFragmentController().goBack());
@@ -100,7 +101,7 @@ public class QuickSettingFragment extends BaseFragment {
         mGridAdapter.stop();
     }
 
-    private void setupAccountButton() {
+    private void setupUserButton() {
         ImageView userIcon = (ImageView) getActivity().findViewById(R.id.user_icon);
         UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
         userIcon.setImageDrawable(mUserIconProvider.getUserIcon(currentUserInfo, getContext()));
