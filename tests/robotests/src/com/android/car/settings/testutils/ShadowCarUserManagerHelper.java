@@ -17,11 +17,14 @@
 package com.android.car.settings.testutils;
 
 import android.car.user.CarUserManagerHelper;
+import android.car.user.CarUserManagerHelper.OnUsersUpdateListener;
 import android.content.pm.UserInfo;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
+
+import java.util.List;
 
 /**
  * Shadow for {@link CarUserManagerHelper}
@@ -42,5 +45,80 @@ public class ShadowCarUserManagerHelper {
     @Implementation
     public void setUserName(UserInfo user, String name) {
         sMockInstance.setUserName(user, name);
+    }
+
+    @Implementation
+    public UserInfo getCurrentProcessUserInfo() {
+        return sMockInstance.getCurrentProcessUserInfo();
+    }
+
+    @Implementation
+    public boolean isCurrentProcessUser(UserInfo userInfo) {
+        return sMockInstance.isCurrentProcessUser(userInfo);
+    }
+
+    @Implementation
+    public List<UserInfo> getAllSwitchableUsers() {
+        return sMockInstance.getAllSwitchableUsers();
+    }
+
+    @Implementation
+    public UserInfo createNewNonAdminUser(String userName) {
+        return sMockInstance.createNewNonAdminUser(userName);
+    }
+
+    @Implementation
+    public void registerOnUsersUpdateListener(OnUsersUpdateListener listener) {
+        sMockInstance.registerOnUsersUpdateListener(listener);
+    }
+
+    @Implementation
+    public void unregisterOnUsersUpdateListener(OnUsersUpdateListener listener) {
+        sMockInstance.unregisterOnUsersUpdateListener(listener);
+    }
+
+    @Implementation
+    public boolean isCurrentProcessDemoUser() {
+        return sMockInstance.isCurrentProcessDemoUser();
+    }
+
+    @Implementation
+    public boolean isUserLimitReached() {
+        return sMockInstance.isUserLimitReached();
+    }
+
+    @Implementation
+    public boolean canCurrentProcessAddUsers() {
+        return sMockInstance.canCurrentProcessAddUsers();
+    }
+
+    @Implementation
+    public int getMaxSupportedRealUsers() {
+        return sMockInstance.getMaxSupportedRealUsers();
+    }
+
+    @Implementation
+    public boolean canCurrentProcessRemoveUsers() {
+        return sMockInstance.canCurrentProcessRemoveUsers();
+    }
+
+    @Implementation
+    public boolean canUserBeRemoved(UserInfo userInfo) {
+        return sMockInstance.canUserBeRemoved(userInfo);
+    }
+
+    @Implementation
+    public void assignAdminPrivileges(UserInfo user) {
+        sMockInstance.assignAdminPrivileges(user);
+    }
+
+    @Implementation
+    public boolean isCurrentProcessAdminUser() {
+        return sMockInstance.isCurrentProcessAdminUser();
+    }
+
+    @Implementation
+    public boolean removeUser(UserInfo userInfo, String guestUserName) {
+        return sMockInstance.removeUser(userInfo, guestUserName);
     }
 }

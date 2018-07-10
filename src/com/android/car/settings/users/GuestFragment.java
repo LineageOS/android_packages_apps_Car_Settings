@@ -38,6 +38,7 @@ import java.util.List;
 public class GuestFragment extends ListItemSettingsFragment {
     private CarUserManagerHelper mCarUserManagerHelper;
     private ListItemProvider mItemProvider;
+    private UserIconProvider mUserIconProvider;
 
     /**
      * Create new GuestFragment instance.
@@ -54,6 +55,7 @@ public class GuestFragment extends ListItemSettingsFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mItemProvider = new ListItemProvider.ListProvider(getListItems());
 
         // Super class's onActivityCreated need to be called after mItemProvider is initialized.
@@ -80,8 +82,7 @@ public class GuestFragment extends ListItemSettingsFragment {
     }
 
     private List<ListItem> getListItems() {
-        Drawable icon = UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
-                mCarUserManagerHelper, getContext());
+        Drawable icon = mUserIconProvider.getDefaultGuestIcon(getContext());
 
         TextListItem item = new TextListItem(getContext());
         item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);

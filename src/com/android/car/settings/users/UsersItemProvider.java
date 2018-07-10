@@ -36,11 +36,13 @@ import java.util.List;
 class UsersItemProvider extends AbstractRefreshableListItemProvider  {
     private final UserClickListener mUserClickListener;
     private final CarUserManagerHelper mCarUserManagerHelper;
+    private final UserIconProvider mUserIconProvider;
 
     UsersItemProvider(Context context, UserClickListener userClickListener,
             CarUserManagerHelper userManagerHelper) {
         super(context);
         mCarUserManagerHelper = userManagerHelper;
+        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mUserClickListener = userClickListener;
         populateItems();
     }
@@ -78,8 +80,7 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
 
     // Creates a line for a guest session.
     private ListItem createGuestItem() {
-        Drawable icon = UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
-                mCarUserManagerHelper, mContext);
+        Drawable icon = mUserIconProvider.getDefaultGuestIcon(mContext);
 
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
