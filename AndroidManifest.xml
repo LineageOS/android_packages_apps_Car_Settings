@@ -121,6 +121,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".security.CheckLockActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+
         <service android:name=".bluetooth.BluetoothPairingService" />
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
