@@ -19,7 +19,9 @@ import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment.UXRestrictionsProvider;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
+import com.android.car.settings.wifi.WifiSettingsFragment;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to
@@ -85,6 +88,15 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     public void onStart() {
         super.onStart();
+        Intent intent = getIntent();
+        if (intent != null) {
+            String action = intent.getAction();
+            if (Settings.ACTION_WIFI_SETTINGS.equals(action)
+                    || WifiManager.ACTION_PICK_WIFI_NETWORK.equals(action)) {
+                launchFragment(WifiSettingsFragment.newInstance());
+                return;
+            }
+        }
         // always launch setting with quick setting page.
         launchFragment(QuickSettingFragment.newInstance());
     }
