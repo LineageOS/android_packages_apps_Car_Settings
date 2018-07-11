@@ -56,7 +56,7 @@ public abstract class CheckBoxListItem extends ListItem<CheckBoxListItem.ViewHol
 
     @Override
     public final int getViewType() {
-        return CoustomListItemTypes.CHECK_BOX_VIEW_TYPE;
+        return CustomListItemTypes.CHECK_BOX_VIEW_TYPE;
     }
 
     @Override

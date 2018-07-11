@@ -52,7 +52,7 @@ public class PasswordListItem extends EditTextListItem<PasswordListItem.ViewHold
 
     @Override
     public final int getViewType() {
-        return CoustomListItemTypes.PASSWORD_VIEW_TYPE;
+        return CustomListItemTypes.PASSWORD_VIEW_TYPE;
     }
 
 

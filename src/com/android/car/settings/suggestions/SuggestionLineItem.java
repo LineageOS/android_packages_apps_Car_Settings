@@ -28,7 +28,7 @@ import androidx.annotation.LayoutRes;
 import androidx.car.widget.ListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CoustomListItemTypes;
+import com.android.car.settings.common.CustomListItemTypes;
 
 /**
  * Represents suggestion list item.
@@ -106,7 +106,7 @@ public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> 
 
     @Override
     public final int getViewType() {
-        return CoustomListItemTypes.SUGGESTION_VIEW_TYPE;
+        return CustomListItemTypes.SUGGESTION_VIEW_TYPE;
     }
 
     /**
