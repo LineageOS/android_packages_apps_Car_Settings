@@ -65,6 +65,16 @@ public class UserIconProvider {
     }
 
     /**
+     * Gets the default icon for guest user.
+     *
+     * @return Drawable representing the default guest icon.
+     */
+    public Drawable getDefaultGuestIcon(Context context) {
+        return UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
+                mCarUserManagerHelper, context);
+    }
+
+    /**
      * Scales passed in bitmap to the appropriate user icon size.
      *
      * @param bitmap Bitmap to scale.

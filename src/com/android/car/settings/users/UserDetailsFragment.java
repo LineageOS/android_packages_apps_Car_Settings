@@ -89,7 +89,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        createUserManagerHelper();
+        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mUserInfo = UserUtils.getUserInfo(getContext(), mUserId);
         mItemProvider = getUserDetailsItemProvider();
 
@@ -181,13 +181,6 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
             // If failed, need to show error dialog for users.
             RemoveUserErrorDialog removeUserErrorDialog = new RemoveUserErrorDialog();
             removeUserErrorDialog.show(getFragmentManager(), ERROR_DIALOG_TAG);
-        }
-    }
-
-    private void createUserManagerHelper() {
-        // Null check for testing. Don't want to override it if already set by a test.
-        if (mCarUserManagerHelper == null) {
-            mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         }
     }
 

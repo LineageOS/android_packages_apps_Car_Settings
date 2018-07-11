@@ -34,6 +34,7 @@ import android.widget.TextView;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowTextListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
@@ -51,7 +52,8 @@ import org.robolectric.shadows.ShadowApplication;
  * Tests for UserDetailsFragment.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowUserIconProvider.class, ShadowTextListItem.class })
+@Config(shadows = { ShadowUserIconProvider.class, ShadowTextListItem.class,
+        ShadowCarUserManagerHelper.class })
 public class UserDetailsFragmentTest {
     private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
@@ -66,6 +68,7 @@ public class UserDetailsFragmentTest {
     @Before
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
+        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
         ShadowApplication shadowApp = ShadowApplication.getInstance();
         shadowApp.setSystemService(Context.USER_SERVICE, mUserManager);
@@ -309,7 +312,6 @@ public class UserDetailsFragmentTest {
 
         mUserDetailsFragment = UserDetailsFragment.newInstance(testUser.id);
         doReturn(testUser).when(mUserManager).getUserInfo(testUser.id);
-        mUserDetailsFragment.mCarUserManagerHelper = mCarUserManagerHelper;
         mTestActivity.launchFragment(mUserDetailsFragment);
 
         refreshButtons();

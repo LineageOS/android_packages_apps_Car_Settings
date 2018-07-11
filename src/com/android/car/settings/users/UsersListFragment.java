@@ -206,8 +206,7 @@ public class UsersListFragment extends ListItemSettingsFragment
 
         // Only add the add user button if the current user is allowed to add a user.
         if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
-            ConfirmCreateNewUserDialog dialog =
-                    new ConfirmCreateNewUserDialog();
+            ConfirmCreateNewUserDialog dialog = new ConfirmCreateNewUserDialog();
             dialog.setConfirmCreateNewUserListener(this);
             dialog.show(this);
         }
