@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"Холбоосны хурд"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Давтамж"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP хаяг"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Муу"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Гуравдагч талын лиценз"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Лицензүүдийг ачаалах явцад алдаа гарлаа."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Ачаалж байна..."</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Сонголтыг шинэчлэх"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"Сүлжээ, апп эсвэл төхөөрөмжийг шинэчлэх"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"Wi-Fi, Bluetooth-г шинэчлэх"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"Аппын тохируулгыг шинэчлэх"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Бүх өгөгдлийг устгах (үйлдвэрийн тохиргоо руу шинэчлэх)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Огноо &amp; цаг"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Огноо болон цагийг тохируулах"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Огноо, цаг, цагийн бүс &amp; форматуудыг тохируулах"</string>
@@ -165,21 +186,39 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Цагийн бүсээр эрэмбэлэх"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Огноо"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Цаг"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Хэрэглэгч нэмэх"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Бүртгэл нэмэх"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Хэрэглэгчийг устгах"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"Шинэ хэрэглэгч"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Зочин"</string>
     <string name="user_admin" msgid="1535484812908584809">"Админ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Админаар нэвтэрсэн"</string>
+    <string name="grant_admin_privileges" msgid="931069208484384534">"Админы зөвшөөрөл олгох"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"Админ болгох"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"Тус хэрэглэгч бусад Aдмин зэрэг хэрэглэгчдийг устгах болон системийг үйлдвэрийн төлөвт шинэчлэх боломжтой болно."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"Энэ үйлдлийг буцаах боломжгүй."</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"Тийм, админ болгоно уу"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"Хэрэглэгч нэмэх"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"Шинэ хэрэглэгч"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Шинэ хэрэглэгч нэмэх үү?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Таныг шинэ хэрэглэгч нэмэх үед тухайн хэрэглэгч хувийн орон зайгаа тохируулах шаардлагатай."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"Бусад бүх хэрэглэгчийн аппуудыг дурын хэрэглэгч шинэчлэх боломжтой."</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"Хэрэглэгчийг устгах"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"Энэ хэрэглэгчийг устгах уу?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"Бүх апп болон өгөгдлийг устгах болно."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"Хэрэглэгчийг устгаж чадсангүй."</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Үл хэрэгсэх"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"Дахин оролдох"</string>
+    <string name="user_guest" msgid="3465399481257448601">"Зочин"</string>
     <string name="user_switch" msgid="6544839750534690781">"Сэлгэх"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Та (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Нэр"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Тохируулаагүй"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Хэрэглэгчийн нэрийг засах"</string>
     <string name="users_list_title" msgid="770764290290240909">"Хэрэглэгчид"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"Бүртгэл"</string>
     <string name="user_details_title" msgid="1104762783367701498">"Хэрэглэгч"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"Бүртгэл"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Бүртгэл нэмэх"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Нэмсэн бүртгэл алга"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>-н бүртгэл"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Бүртгэлийн мэдээлэл"</string>
@@ -190,15 +229,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"Бүртгэлийг устгах уу?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Энэ бүртгэлийг устгаснаар үүний бүх зурвас, харилцагч болон бусад өгөгдлийг төхөөрөмжөөс устгана!"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"Энэ өөрчлөлтийг таны админ зөвшөөрөөгүй байна"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Энэ хэрэглэгчийг устгах уу?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Бүх апп болон өгөгдлийг устгах болно."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Хэрэглэгчийг устгаж чадсангүй."</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"Дахин оролдох уу?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Үл хэрэгсэх"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Дахин оролдох"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Шинэ хэрэглэгч нэмэх үү?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Таныг шинэ хэрэглэгч нэмэх үед тухайн хэрэглэгч хувийн орон зайгаа тохируулах шаардлагатай."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Бусад бүх хэрэглэгчийн аппуудыг дурын хэрэглэгч шинэчлэх боломжтой."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Нууцлал"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Дэлгэцийн түгжээ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Байхгүй"</string>

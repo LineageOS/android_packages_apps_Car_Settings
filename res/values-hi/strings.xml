@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"कनेक्शन की रफ़्तार"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"फ़्रीक्वेंसी"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"आईपी पता"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"खराब"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"तीसरे पक्ष के लाइसेंस"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"लाइसेंस लोड करने में कोई समस्‍या है."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"लोड हो रहा है…"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"डिवाइस को रीसेट करने के विकल्प"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, ऐप्लिकेशन या डिवाइस को रीसेट करने के विकल्प"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"वाई-फ़ाई, ब्लूटूथ की सेटिंग रीसेट करें"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"ऐप्लिकेशन की सेटिंग रीसेट करें"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"पूरा डेटा हमेशा के लिए मिटाएं (फ़ैक्ट्री रीसेट)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"तारीख और समय"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"तारीख और समय सेट करें"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"तारीख, समय, समय क्षेत्र और फ़ॉर्मैट सेट करें"</string>
@@ -165,21 +186,44 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"समय क्षेत्र के मुताबिक क्रम में लगाएं"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"तारीख"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"उपयोगकर्ता (का नाम) मिटाएं"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"नया उपयोगकर्ता"</string>
-    <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
     <string name="user_admin" msgid="1535484812908584809">"एडमिन"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"एडमिन के तौर पर साइन-इन किया है"</string>
+    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
+    <skip />
+    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
+    <skip />
+    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
+    <skip />
+    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
+    <skip />
+    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
+    <skip />
+    <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"नया उपयोगकर्ता"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"नया उपयोगकर्ता जोड़ें?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं तो, उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"उपयोगकर्ता (का नाम) मिटाएं"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"इस उपयोगकर्ता को हटाएं?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"सभी ऐप्लिकेशन और डेटा मिटा दिए जाएंगे."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"उपयोगकर्ता को हटाया नहीं जा सका."</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारिज करें"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"फिर से कोशिश करें"</string>
+    <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच करें"</string>
     <string name="current_user_name" msgid="3813671533249316823">"आप (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"\'उपयोगकर्ता नाम\' में बदलाव करें"</string>
     <string name="users_list_title" msgid="770764290290240909">"उपयोगकर्ता"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
     <string name="user_details_title" msgid="1104762783367701498">"उपयोगकर्ता"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कोई खाता जोड़ा नहीं गया है"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> के खाते"</string>
     <string name="account_details_title" msgid="7529571432258448573">"खाते की जानकारी"</string>
@@ -190,15 +234,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाएं?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"यह खाता हटाने से इसके सभी मैसेज, संपर्क और दूसरा डेटा डिवाइस से मिट जाएगा!"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"आपका एडमिन इस बदलाव की अनुमति नहीं देता"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"इस उपयोगकर्ता को हटाएं?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"सभी ऐप्लिकेशन और डेटा मिटा दिए जाएंगे."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"उपयोगकर्ता को हटाया नहीं जा सका."</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"फिर से कोशिश करें?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारिज करें"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"फिर से कोशिश करें"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"नया उपयोगकर्ता जोड़ें?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं तो, उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>

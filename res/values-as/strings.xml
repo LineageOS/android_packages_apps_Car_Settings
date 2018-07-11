@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"লিংকৰ গতি"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ফ্ৰিকুৱেন্সী"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"আইপি ঠিকনা"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ক্ষীণ"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষৰ অনুজ্ঞাপত্ৰ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"অনুজ্ঞাপত্ৰসমূহ ল\'ড কৰাত সমস্যা।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ল’ড হৈ আছে…"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"বিকল্পসমূহ ৰিছেট কৰক"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"নেটৱৰ্ক, এপসমূহ বা ডিভাইচৰ ৰিছেট সম্পৰ্কীয় বিকল্প"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"ৱাই-ফাই, ব্লুটুথ ৰিছেট কৰক"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰক"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট কৰক)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"তাৰিখ আৰু সময়"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"তাৰিখ আৰু সময় ছেট কৰক"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"তাৰিখ, সময়, সময় মণ্ডল আৰু ফৰমেটসমূহ ছেট কৰক"</string>
@@ -165,21 +186,44 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"সময় মণ্ডল অনুসৰি সজাওক"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"তাৰিখ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"সময়"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"ব্যৱহাৰকাৰী যোগ কৰক"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"একাউণ্ট যোগ কৰক"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ব্যৱহাৰকাৰীক মচক"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"নতুন ব্যৱহাৰকাৰী"</string>
-    <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
     <string name="user_admin" msgid="1535484812908584809">"প্ৰশাসক"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"প্ৰশাসক হিচাপে ছাইন ইন হৈ আছে"</string>
+    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
+    <skip />
+    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
+    <skip />
+    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
+    <skip />
+    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
+    <skip />
+    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
+    <skip />
+    <string name="user_add_user_menu" msgid="5319151436895941496">"ব্যৱহাৰকাৰী যোগ কৰক"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"নতুন ব্যৱহাৰকাৰী"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"নতুন ব্যৱহাৰকাৰী যোগ কৰেনে?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"আপুনি যেতিয়া কোনো ব্য়ৱহাৰকাৰীক যোগ কৰে সেই ব্য়ক্তিজনে নিজৰ বাবে খালী ঠাই ছেট আপ কৰা প্ৰয়োজন।"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"যিকোনো ব্য়ৱহাৰকাৰীয়ে সকলো ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।"</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"ব্যৱহাৰকাৰীক মচক"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"এই ব্যৱহাৰকাৰীক আঁতৰাবনে?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"সকলো এপ আৰু ডেটা মচা হ\'ব।"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"ব্য়ৱহাৰকাৰীক আঁতৰাব পৰা নগ\'ল।"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"বাতিল কৰক"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"পুনৰ চেষ্টা কৰক"</string>
+    <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
     <string name="user_switch" msgid="6544839750534690781">"ছুইচ্চ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"আপুনি (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ছেট আপ কৰা হোৱা নাই"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ব্যৱহাৰকাৰীৰ নাম সম্পাদনা কৰক"</string>
     <string name="users_list_title" msgid="770764290290240909">"ব্যৱহাৰকাৰীসকল"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"একাউণ্টসমূহ"</string>
     <string name="user_details_title" msgid="1104762783367701498">"ব্যৱহাৰকাৰী"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"একাউণ্টসমূহ"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"একাউণ্ট যোগ কৰক"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"কোনো একাউণ্ট যোগ কৰা হোৱা নাই"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>ৰ একাউণ্ট"</string>
     <string name="account_details_title" msgid="7529571432258448573">"একাউণ্টৰ তথ্য়"</string>
@@ -190,15 +234,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"একাউণ্ট আঁতৰাবনে?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"এই একাউণ্টটো আঁতৰালে ডিভাইচৰ পৰা ইয়াৰ সকলো বাৰ্তা, সম্পৰ্কসূচী আৰু অন্য ডেটা মচা হ\'ব!"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"আপোনাৰ প্ৰশাসকে এইটো সলনি কৰিব নিদিয়ে"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"এই ব্যৱহাৰকাৰীক আঁতৰাবনে?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"সকলো এপ আৰু ডেটা মচা হ\'ব।"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ব্য়ৱহাৰকাৰীক আঁতৰাব পৰা নগ\'ল।"</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"আকৌ চেষ্টা কৰিবনে?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"বাতিল কৰক"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"পুনৰ চেষ্টা কৰক"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"নতুন ব্যৱহাৰকাৰী যোগ কৰেনে?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"আপুনি যেতিয়া কোনো ব্য়ৱহাৰকাৰীক যোগ কৰে সেই ব্য়ক্তিজনে নিজৰ বাবে খালী ঠাই ছেট আপ কৰা প্ৰয়োজন।"</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"যিকোনো ব্য়ৱহাৰকাৰীয়ে সকলো ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীণ লক"</string>
     <!-- no translation found for security_lock_none (1054645093754839638) -->
