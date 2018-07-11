@@ -30,4 +30,9 @@ public class ShadowUserIconProvider {
     public Drawable getUserIcon(UserInfo userInfo, Context context) {
         return null;
     }
+
+    @Implementation
+    public Drawable getDefaultGuestIcon(Context context) {
+        return null;
+    }
 }
