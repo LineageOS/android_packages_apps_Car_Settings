@@ -48,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/car_button_height"
         android:layout_toStartOf="@id/action_button1"
+        android:layout_marginEnd="@dimen/car_padding_4"
         android:layout_centerVertical="true"
         android:ellipsize="end"
         android:maxLines="1"/>
@@ -58,7 +59,7 @@
         android:layout_height="@dimen/car_button_height"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/car_padding_4"
+        android:layout_marginEnd="@dimen/car_keyline_1"
         android:ellipsize="end"
         android:maxLines="1"/>
 
