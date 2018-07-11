@@ -78,7 +78,7 @@ public class SpinnerListItem<T> extends ListItem<SpinnerListItem.ViewHolder> {
 
     @Override
     public final int getViewType() {
-        return CoustomListItemTypes.SPINNER_VIEW_TYPE;
+        return CustomListItemTypes.SPINNER_VIEW_TYPE;
     }
 
     @Override
