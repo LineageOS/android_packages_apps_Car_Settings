@@ -311,13 +311,13 @@
     <string name="reset_network_desc">This will reset all network settings, including:</string>
     <!-- List items on screen after user selects reset network settings [CHAR LIMIT=NONE] -->
     <string name="reset_network_items"><li>Wi\u2011Fi</li>\n<li>Bluetooth</li></string>
-    <!-- Button on screen after user selects reset network settings [CHAR LIMIT=25] -->
+    <!-- Button on screen after user selects reset network settings [CHAR LIMIT=30] -->
     <string name="reset_network_button_text">Reset settings</string>
     <!-- Reset settings confirmation screen title [CHAR LIMIT=30] -->
     <string name="reset_network_confirm_title">Reset?</string>
     <!-- Message on screen after user selects Reset settings button [CHAR LIMIT=NONE] -->
     <string name="reset_network_confirm_desc">Reset all network settings? You can\u2019t undo this action!</string>
-    <!-- Button on screen after user selects Reset settings button [CHAR LIMIT=25] -->
+    <!-- Button on screen after user selects Reset settings button [CHAR LIMIT=30] -->
     <string name="reset_network_confirm_button_text">Reset settings</string>
     <!-- Reset settings complete toast text [CHAR LIMIT=75] -->
     <string name="reset_network_complete_toast">Network settings have been reset</string>
