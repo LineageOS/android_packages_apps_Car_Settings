@@ -134,7 +134,7 @@ public class EditTextListItem<VH extends EditTextListItem.ViewHolder>
 
     @Override
     public int getViewType() {
-        return CoustomListItemTypes.EDIT_TEXT_VIEW_TYPE;
+        return CustomListItemTypes.EDIT_TEXT_VIEW_TYPE;
     }
 
     @Override
