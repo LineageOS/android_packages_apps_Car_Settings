@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ល្បឿនត​ភ្ជាប់"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ប្រេកង់"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"អាសយដ្ឋាន IP"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ខ្សោយ​"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"អាជ្ញាបណ្ណភាគីទីបី"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"មាន​បញ្ហា​ក្នុង​ការ​ផ្ទុក​អាជ្ញាបណ្ណ។"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"កំពុង​ផ្ទុក…"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"ជម្រើស​កំណត់​ឡើងវិញ"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"ការកំណត់​បណ្តាញ កម្មវិធី ឬ​ឧបករណ៍​ឡើងវិញ"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"កំណត់ Wi-Fi, ប៊្លូធូស​ឡើងវិញ"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"កំណត់​ចំណូល​ចិត្ត​កម្មវិធី​ឡើងវិញ"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"លុប​ទិន្នន័យ​ទាំងអស់ (កំណត់ដូច​ដើម​ឡើងវិញ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"កំណត់​កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"កំណត់​កាលបរិច្ឆេទ ម៉ោង ល្វែងម៉ោង និង​ទម្រង់"</string>
@@ -165,21 +186,39 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"តម្រៀប​តាម​ល្វែងម៉ោង"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"កាលបរិច្ឆេទ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ម៉ោង"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"បញ្ចូល​អ្នក​ប្រើប្រាស់"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"អ្នក​ប្រើប្រាស់​ថ្មី"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
     <string name="user_admin" msgid="1535484812908584809">"អ្នកគ្រប់គ្រង"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"បាន​ចូលជា​អ្នក​គ្រប់គ្រង"</string>
+    <string name="grant_admin_privileges" msgid="931069208484384534">"ផ្តល់​សិទ្ធិ​អនុញ្ញាត​របស់​អ្នកគ្រប់គ្រង"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"កំណត់​ជាអ្នក​គ្រប់គ្រង"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"អ្នក​ប្រើប្រាស់​នឹងអាច​លុបអ្នក​ប្រើប្រាស់ រួមទាំង​អ្នកគ្រប់គ្រង​ផ្សេង និង​កំណត់​ប្រព័ន្ធ​ដូចដើម​ឡើងវិញ​ផងដែរ។"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"សកម្មភាព​នេះ​មិនអាច​ត្រឡប់វិញ​បានទេ។"</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"បាទ/ចាស កំណត់​ជាអ្នក​គ្រប់គ្រង"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"បញ្ចូល​អ្នក​ប្រើប្រាស់"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"អ្នក​ប្រើប្រាស់​ថ្មី"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"នៅពេលដែល​អ្នក​បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី បុគ្គល​នោះ​ត្រូវតែ​រៀបចំ​ទំហំ​ផ្ទុក​របស់គេ។"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"អ្នកប្រើប្រាស់​ណាក៏​អាច​ដំឡើង​ជំនាន់កម្មវិធី​សម្រាប់​អ្នក​ប្រើប្រាស់​ទាំងអស់​ផ្សេង​ទៀត​បាន​ដែរ។"</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"លុប​អ្នកប្រើប្រាស់​នេះ?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"មិនអាច​លុប​អ្នកប្រើប្រាស់​បានទេ។"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ច្រានចោល"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"ព្យាយាមម្ដងទៀត"</string>
+    <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"អ្នក (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ឈ្មោះ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"មិន​បាន​រៀបចំ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"កែសម្រួល​ឈ្មោះអ្នក​ប្រើប្រាស់"</string>
     <string name="users_list_title" msgid="770764290290240909">"អ្នកប្រើប្រាស់"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
     <string name="user_details_title" msgid="1104762783367701498">"អ្នក​ប្រើប្រាស់"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"មិន​មាន​ការ​បញ្ចូល​គណនី​ទេ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"ព័ត៌មាន​​អំពី​​គណនី"</string>
@@ -190,15 +229,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"លុបគណនី​?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ការលុប​គណនី​នេះ​នឹង​លុប​សារ ទំនាក់ទំនង និង​ទិន្នន័យ​ផ្សេងៗ​របស់​គណនី​នេះ​ទាំង​អស់​ចេញ​ពី​ឧបករណ៍!"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"ការផ្លាស់ប្ដូរនេះ​មិនត្រូវ​បាន​អនុញ្ញាត​ដោយ​អ្នក​គ្រប់គ្រង​របស់អ្នក​ទេ"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"លុប​អ្នកប្រើប្រាស់​នេះ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"មិនអាច​លុប​អ្នកប្រើប្រាស់​បានទេ។"</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"ព្យាយាម​ម្ដងទៀត?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ច្រានចោល"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ព្យាយាមម្ដងទៀត"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"នៅពេលដែល​អ្នក​បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី បុគ្គល​នោះ​ត្រូវតែ​រៀបចំ​ទំហំ​ផ្ទុក​របស់គេ។"</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"អ្នកប្រើប្រាស់​ណាក៏​អាច​ដំឡើង​ជំនាន់កម្មវិធី​សម្រាប់​អ្នក​ប្រើប្រាស់​ទាំងអស់​ផ្សេង​ទៀត​បាន​ដែរ។"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"សុវត្ថិភាព"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ការចាក់សោអេក្រង់"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"គ្មាន"</string>

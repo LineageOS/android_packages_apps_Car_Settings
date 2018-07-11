@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"링크 속도"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"주파수"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP 주소"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"나쁨"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"타사 라이선스"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"라이선스를 로드하는 동안 문제가 발생했습니다."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"로드 중…"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"옵션 재설정"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"네트워크, 앱, 기기 재설정"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"Wi-Fi, 블루투스 재설정"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"앱 환경설정 초기화"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"날짜 및 시간"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"날짜 및 시간 설정"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"날짜, 시간, 표준시간대 및 형식 설정"</string>
@@ -165,21 +186,39 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"시간대 순으로 정렬"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"날짜"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"시간"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"사용자 추가"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"사용자 삭제"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"새 사용자"</string>
-    <string name="user_guest" msgid="3465399481257448601">"게스트"</string>
     <string name="user_admin" msgid="1535484812908584809">"관리자"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"관리자로 로그인했습니다."</string>
+    <string name="grant_admin_privileges" msgid="931069208484384534">"관리자 권한 부여 승인"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"관리자 권한 부여"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"사용자는 다른 관리자를 포함한 사용자를 삭제하고 시스템을 초기화할 수 있게 됩니다."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"이 작업은 되돌릴 수 없습니다."</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"관리자 권한 부여"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"사용자 추가"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"새 사용자"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가할까요?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"추가된 새로운 사용자는 자신의 공간을 설정해야 합니다."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"모든 사용자는 다른 사용자들을 위하여 앱을 업데이트할 수 있습니다."</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"사용자 삭제"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"사용자를 삭제할까요?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"모든 앱과 데이터가 삭제됩니다."</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"사용자를 삭제하지 못함"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"닫기"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"다시 시도"</string>
+    <string name="user_guest" msgid="3465399481257448601">"게스트"</string>
     <string name="user_switch" msgid="6544839750534690781">"전환"</string>
     <string name="current_user_name" msgid="3813671533249316823">"사용자(%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"이름"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"설정되지 않음"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"사용자 이름 수정"</string>
     <string name="users_list_title" msgid="770764290290240909">"사용자"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
     <string name="user_details_title" msgid="1104762783367701498">"사용자"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"추가된 계정이 없습니다."</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>님의 계정"</string>
     <string name="account_details_title" msgid="7529571432258448573">"계정 정보"</string>
@@ -190,15 +229,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"계정을 삭제할까요?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"계정을 삭제하면 기기의 메시지, 연락처 및 다른 데이터가 모두 지워집니다."</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"관리자가 이 변경을 허용하지 않습니다."</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"사용자를 삭제할까요?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"모든 앱과 데이터가 삭제됩니다."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"사용자를 삭제하지 못함"</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"다시 시도할까요?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"닫기"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"다시 시도"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가할까요?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"추가된 새로운 사용자는 자신의 공간을 설정해야 합니다."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"모든 사용자는 다른 사용자들을 위하여 앱을 업데이트할 수 있습니다."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>

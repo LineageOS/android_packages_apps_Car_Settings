@@ -48,6 +48,8 @@
     <string name="wifi_speed" msgid="1650692446731850781">"連線速度"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"頻率"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP 位址"</string>
+    <!-- no translation found for show_password (2074628020371139240) -->
+    <skip />
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"差"</item>
@@ -146,6 +148,25 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"第三方授權"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"載入授權時發生問題。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"載入中…"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"重設選項"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"重設網路、應用程式或裝置"</string>
+    <string name="reset_network_title" msgid="5571672360042035188">"重設 Wi-Fi 和藍牙設定"</string>
+    <!-- no translation found for reset_network_desc (602381374544634925) -->
+    <skip />
+    <!-- no translation found for reset_network_items (560284503269666087) -->
+    <skip />
+    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
+    <skip />
+    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
+    <skip />
+    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
+    <skip />
+    <string name="reset_app_preferences_title" msgid="1358092641530920263">"重設應用程式偏好設定"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"清除所有資料 (恢復原廠設定)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"設定日期和時間"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"設定日期、時間、時區及時間格式"</string>
@@ -165,21 +186,39 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"依照時區排序"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"日期"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"時間"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"新增使用者"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"新增帳戶"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"刪除使用者"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"新使用者"</string>
-    <string name="user_guest" msgid="3465399481257448601">"訪客"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理員"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"登入身分：管理員"</string>
+    <string name="grant_admin_privileges" msgid="931069208484384534">"授予管理員權限"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"指定為管理員"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"這位使用者將可以刪除使用者 (包括其他管理員)，以及將系統恢復原廠設定。"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"這個動作無法復原。"</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"是，指定為管理員"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"新增使用者"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"新使用者"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"要新增使用者嗎？"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"新增的使用者需要自行設定個人空間。"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"任何使用者都可以為所有其他使用者更新應用程式。"</string>
+    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
+    <skip />
+    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
+    <!-- no translation found for add_user_error_title (3206300411663817038) -->
+    <skip />
+    <string name="user_delete_user_description" msgid="2300280525351142435">"刪除使用者"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"要移除這位使用者嗎？"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"所有應用程式和資料都會遭到刪除。"</string>
+    <string name="remove_user_error_title" msgid="2038275458657689420">"無法移除使用者。"</string>
+    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"關閉"</string>
+    <string name="remove_user_error_retry" msgid="8291692909396995093">"重試"</string>
+    <string name="user_guest" msgid="3465399481257448601">"訪客"</string>
     <string name="user_switch" msgid="6544839750534690781">"切換"</string>
     <string name="current_user_name" msgid="3813671533249316823">"你 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名稱"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"尚未設定"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"編輯使用者名稱"</string>
     <string name="users_list_title" msgid="770764290290240909">"使用者"</string>
-    <string name="accounts_settings_title" msgid="436190037084293471">"帳戶"</string>
     <string name="user_details_title" msgid="1104762783367701498">"使用者"</string>
+    <string name="accounts_settings_title" msgid="436190037084293471">"帳戶"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"新增帳戶"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未新增任何帳戶"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> 的帳戶"</string>
     <string name="account_details_title" msgid="7529571432258448573">"帳戶資訊"</string>
@@ -190,15 +229,6 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帳戶嗎？"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"移除帳戶後，裝置上所有的訊息、聯絡人和其他資料將全部遭到刪除！"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"你的管理員不允許這項變更"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"要移除這位使用者嗎？"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"所有應用程式和資料都會遭到刪除。"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"無法移除使用者。"</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"再試一次？"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"關閉"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"重試"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"要新增使用者嗎？"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"新增的使用者需要自行設定個人空間。"</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"任何使用者都可以為所有其他使用者更新應用程式。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
