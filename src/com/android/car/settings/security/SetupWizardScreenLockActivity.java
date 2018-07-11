@@ -17,15 +17,15 @@
 package com.android.car.settings.security;
 
 import android.app.admin.DevicePolicyManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.common.Logger;
 import com.android.car.settingslib.util.ResultCodes;
 import com.android.internal.widget.LockPatternUtils;
@@ -33,7 +33,9 @@ import com.android.internal.widget.LockPatternUtils;
 /**
  * Entry point Activity for Setup Wizard to set screen lock.
  */
-public class SetupWizardScreenLockActivity extends CarSettingActivity implements
+public class SetupWizardScreenLockActivity extends FragmentActivity implements
+        BaseFragment.FragmentController,
+        BaseFragment.UXRestrictionsProvider,
         CheckLockListener,
         LockTypeDialogFragment.OnLockSelectListener {
 
@@ -41,6 +43,12 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
 
     private String mCurrLock;
     private int mPasswordQuality;
+
+    private CarUxRestrictions mCarUxRestrictions = new CarUxRestrictions.Builder(
+            /* reqOpt= */ true,
+            CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+            /* timestamp= */ 0
+    ).build();
 
     @Override
     public void launchFragment(BaseFragment fragment) {
@@ -67,12 +75,17 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
     }
 
     @Override
+    public void showDOBlockingMessage() {}
+
+    @Override
+    public CarUxRestrictions getCarUxRestrictions() {
+        return mCarUxRestrictions;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.suw_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
