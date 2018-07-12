@@ -40,11 +40,17 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
     private static final String SUPPORT_RESOURCE_PATH_TEMPLATE =
             "jar:file:prebuilts/sdk/current/androidx/m2repository/androidx/"
                     + "%1$s/%1$s/%2$s/%1$s-%2$s.aar!/res";
+    // contraint-layout aar lives in searpate path.
+    // Note its path contains a hyphen.
+    private static final String CONSTRAINT_LAYOUT_RESOURCE_PATH_TEMPLATE =
+            "jar:file:prebuilts/sdk/current/extras/constraint-layout-x/"
+                    + "%1$s/%2$s/%1$s-%2$s.aar!/res";
 
     static {
         AAR_VERSIONS = new HashMap<>();
-        AAR_VERSIONS.put("car", "1.0.0-alpha3");
+        AAR_VERSIONS.put("car", "1.0.0-alpha4");
         AAR_VERSIONS.put("appcompat", "1.0.0-alpha1");
+        AAR_VERSIONS.put("constraintlayout", "1.1.2");
     }
 
     /**
@@ -69,6 +75,10 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
         if (!AAR_VERSIONS.containsKey(componentId)) {
             throw new IllegalArgumentException("Unknown component " + componentId
                     + ". Update test with appropriate component name and version.");
+        }
+        if (componentId.equals("constraintlayout")) {
+            return String.format(CONSTRAINT_LAYOUT_RESOURCE_PATH_TEMPLATE, componentId,
+                    AAR_VERSIONS.get(componentId));
         }
         return String.format(SUPPORT_RESOURCE_PATH_TEMPLATE, componentId,
                 AAR_VERSIONS.get(componentId));
@@ -99,6 +109,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                 // library and not the source.
                 paths.add(createResourcePath(createSupportResourcePathFromJar("appcompat")));
                 paths.add(createResourcePath(createSupportResourcePathFromJar("car")));
+                paths.add(createResourcePath(createSupportResourcePathFromJar("constraintlayout")));
 
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
