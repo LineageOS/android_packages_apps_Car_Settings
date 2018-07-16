@@ -26,12 +26,14 @@ import androidx.car.widget.TextListItem;
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.Logger;
 
 
 /**
  * Represents the Bluetooth line item on settings home page.
  */
 public class BluetoothLineItem extends TextListItem {
+    private static final Logger LOG = new Logger(BluetoothLineItem.class);
     private BluetoothAdapter mBluetoothAdapter;
     private BaseFragment.FragmentController mFragmentController;
 
@@ -45,7 +47,9 @@ public class BluetoothLineItem extends TextListItem {
         mBluetoothAdapter =
                 ((BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE))
                         .getAdapter();
-        setSwitch(isBluetoothEnabled(), /* showDivider= */ false, (button, isChecked) -> {
+        boolean enabled = isBluetoothEnabled();
+        setPrimaryActionIcon(getIconRes(enabled), /* useLargeIcon= */ false);
+        setSwitch(enabled, /* showDivider= */ false, (button, isChecked) -> {
             if (isChecked) {
                 mBluetoothAdapter.enable();
             } else {
@@ -59,7 +63,9 @@ public class BluetoothLineItem extends TextListItem {
     }
 
     private boolean isBluetoothEnabled() {
-        return isBluetoothAvailable() && mBluetoothAdapter.isEnabled();
+        boolean enabled = isBluetoothAvailable() && mBluetoothAdapter.isEnabled();
+        LOG.d("BluetoothEnabled: " + enabled);
+        return enabled;
     }
 
     public void onBluetoothStateChanged(boolean enabled) {
