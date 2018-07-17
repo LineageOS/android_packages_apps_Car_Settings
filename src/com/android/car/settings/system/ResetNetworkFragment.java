@@ -20,24 +20,29 @@ import static android.app.Activity.RESULT_OK;
 
 import static java.util.Objects.requireNonNull;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.annotation.StringRes;
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.security.CheckLockActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Presents the user with information about restoring network settings to the factory default
  * values. If a user confirms, they will first be required to authenticate then presented with a
  * secondary confirmation: {@link ResetNetworkConfirmFragment}.
  */
-public class ResetNetworkFragment extends BaseFragment {
+public class ResetNetworkFragment extends ListItemSettingsFragment {
 
     private static final int REQUEST_CODE = 123;
 
@@ -46,8 +51,7 @@ public class ResetNetworkFragment extends BaseFragment {
      */
     public static ResetNetworkFragment newInstance() {
         ResetNetworkFragment fragment = new ResetNetworkFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_LAYOUT, R.layout.reset_network_fragment);
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.reset_network_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         fragment.setArguments(bundle);
@@ -55,22 +59,8 @@ public class ResetNetworkFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-
-        TextView description = requireNonNull(rootView.findViewById(R.id.description));
-        description.setText(getContext().getString(R.string.reset_network_desc));
-        TextView items = requireNonNull(rootView.findViewById(R.id.items));
-        items.setText(getContext().getString(R.string.reset_network_items));
-
-        return rootView;
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         Button resetSettingsButton = requireNonNull(getActivity()).findViewById(
                 R.id.action_button1);
         resetSettingsButton.setText(getContext().getString(R.string.reset_network_button_text));
@@ -84,5 +74,25 @@ public class ResetNetworkFragment extends BaseFragment {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             getFragmentController().launchFragment(ResetNetworkConfirmFragment.newInstance());
         }
+    }
+
+    @Override
+    public ListItemProvider getItemProvider() {
+        return new ListItemProvider.ListProvider(getListItems());
+    }
+
+    private List<ListItem> getListItems() {
+        List<ListItem> items = new ArrayList<>();
+        items.add(createTextOnlyItem(R.string.reset_network_desc));
+        items.add(createTextOnlyItem(R.string.reset_network_items));
+        return items;
+    }
+
+    private TextListItem createTextOnlyItem(@StringRes int stringResId) {
+        Context context = requireContext();
+        TextListItem item = new TextListItem(context);
+        item.setBody(context.getString(stringResId), /* asPrimary= */ true);
+        item.setHideDivider(true);
+        return item;
     }
 }
