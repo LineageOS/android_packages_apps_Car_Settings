@@ -25,29 +25,31 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.car.widget.ListItem;
+import androidx.car.widget.ListItemProvider;
+import androidx.car.widget.TextListItem;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.ListItemSettingsFragment;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Final warning presented to user to confirm restoring network settings to the factory default.
  * If a user confirms, all settings are reset for connectivity, Wi-Fi, and Bluetooth.
  */
-public class ResetNetworkConfirmFragment extends BaseFragment {
+public class ResetNetworkConfirmFragment extends ListItemSettingsFragment {
 
     /**
      * Creates new instance of {@link ResetNetworkConfirmFragment}.
      */
     public static ResetNetworkConfirmFragment newInstance() {
         ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_LAYOUT, R.layout.reset_network_confirm_fragment);
+        Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.reset_network_confirm_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         fragment.setArguments(bundle);
@@ -55,25 +57,26 @@ public class ResetNetworkConfirmFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-
-        TextView description = requireNonNull(rootView.findViewById(R.id.description));
-        description.setText(getContext().getString(R.string.reset_network_confirm_desc));
-
-        return rootView;
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         Button resetSettingsButton = requireNonNull(getActivity()).findViewById(
                 R.id.action_button1);
         resetSettingsButton.setText(
                 getContext().getString(R.string.reset_network_confirm_button_text));
         resetSettingsButton.setOnClickListener(v -> resetNetwork());
+    }
+
+    @Override
+    public ListItemProvider getItemProvider() {
+        return new ListItemProvider.ListProvider(getListItems());
+    }
+
+    private List<ListItem> getListItems() {
+        Context context = requireContext();
+        TextListItem item = new TextListItem(context);
+        item.setBody(context.getString(R.string.reset_network_confirm_desc), /* asPrimary= */ true);
+        item.setHideDivider(true);
+        return Collections.singletonList(item);
     }
 
     private void resetNetwork() {
