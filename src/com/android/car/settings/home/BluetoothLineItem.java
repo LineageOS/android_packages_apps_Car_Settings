@@ -41,7 +41,6 @@ public class BluetoothLineItem extends TextListItem {
         super(context);
         setTitle(context.getString(R.string.bluetooth_settings));
         setBody(context.getString(R.string.bluetooth_settings_summary));
-        setPrimaryActionIcon(getIconRes(isBluetoothEnabled()), /* useLargeIcon= */ false);
         setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         mFragmentController = fragmentController;
         mBluetoothAdapter =
