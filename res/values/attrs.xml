@@ -48,4 +48,8 @@
         <attr name="title" format="reference"/>
         <attr name="icon" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="PinPadView">
+        <attr name="enterKeyDrawable" format="reference"/>
+    </declare-styleable>
 </resources>

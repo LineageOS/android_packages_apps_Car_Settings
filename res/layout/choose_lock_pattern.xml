@@ -19,8 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/car_margin"
-    android:layout_marginEnd="@dimen/car_margin"
+    android:layout_marginHorizontal="@dimen/car_margin"
     android:orientation="horizontal"
     android:paddingTop="@dimen/car_app_bar_height"
     android:paddingBottom="@dimen/car_app_bar_height">
@@ -29,7 +28,7 @@
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="@integer/content_weight"
         android:layout_gravity="center_vertical">
 
         <com.android.internal.widget.LockPatternView
@@ -44,7 +43,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="@integer/illustration_weight"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -66,7 +65,6 @@
             android:id="@+id/description_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/car_padding_5"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body2"/>
 
@@ -74,6 +72,7 @@
             android:id="@+id/screen_lock_options"
             style="@style/Widget.Car.Button.Borderless.Colored"
             android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/car_padding_2"
             android:text="@string/screen_lock_options"
             android:visibility="gone"/>
     </LinearLayout>

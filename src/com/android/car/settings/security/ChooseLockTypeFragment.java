@@ -65,7 +65,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
-            mCurrPassword = args.getString(SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrPassword = args.getString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
             mPasswordQuality = args.getInt(EXTRA_CURRENT_PASSWORD_QUALITY);
         }
 
@@ -117,7 +117,8 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         if (mPasswordQuality == DevicePolicyManager.PASSWORD_QUALITY_SOMETHING) {
             item.setBody(getString(R.string.current_screen_lock));
         }
-        item.setOnClickListener(view -> launchFragment(ChooseLockPatternFragment.newInstance()));
+        item.setOnClickListener(view -> launchFragment(
+                ChooseLockPatternFragment.newInstance(/* isInSetupWizard= */ false)));
         return item;
     }
 
@@ -129,7 +130,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
             item.setBody(getString(R.string.current_screen_lock));
         }
         item.setOnClickListener(view -> launchFragment(
-                ChooseLockPinPasswordFragment.newPasswordInstance()));
+                ChooseLockPinPasswordFragment.newPasswordInstance(/* isInSetupWizard= */ false)));
         return item;
     }
 
@@ -141,7 +142,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
             item.setBody(getString(R.string.current_screen_lock));
         }
         item.setOnClickListener(view -> launchFragment(
-                ChooseLockPinPasswordFragment.newPinInstance()));
+                ChooseLockPinPasswordFragment.newPinInstance(/* isInSetupWizard= */ false)));
         return item;
     }
 
@@ -151,7 +152,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
             if (args == null) {
                 args = new Bundle();
             }
-            args.putString(SettingsScreenLockActivity.EXTRA_CURRENT_SCREEN_LOCK, mCurrPassword);
+            args.putString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrPassword);
             fragment.setArguments(args);
         }
 
