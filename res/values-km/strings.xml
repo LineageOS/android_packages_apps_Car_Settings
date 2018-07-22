@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ល្បឿនត​ភ្ជាប់"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ប្រេកង់"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"អាសយដ្ឋាន IP"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"បង្ហាញពាក្យសម្ងាត់"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ខ្សោយ​"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ជម្រើស​កំណត់​ឡើងវិញ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ការកំណត់​បណ្តាញ កម្មវិធី ឬ​ឧបករណ៍​ឡើងវិញ"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"កំណត់ Wi-Fi, ប៊្លូធូស​ឡើងវិញ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"សកម្មភាព​នេះ​នឹង​កំណត់​ការកំណត់​បណ្តាញ​ទាំងអស់​ឡើងវិញ រួម​ទាំង៖"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"ប៊្លូធូស"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"កំណត់ការកំណត់ឡើងវិញ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"កំណត់ឡើងវិញ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"កំណត់ការកំណត់បណ្តាញទាំងអស់ឡើងវិញ? អ្នកមិនអាចត្រឡប់សកម្មភាពនេះវិញបានទេ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"កំណត់ការកំណត់ឡើងវិញ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"បានកំណត់ការកំណត់បណ្តាញឡើងវិញ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"កំណត់​ចំណូល​ចិត្ត​កម្មវិធី​ឡើងវិញ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"លុប​ទិន្នន័យ​ទាំងអស់ (កំណត់ដូច​ដើម​ឡើងវិញ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"កាលបរិច្ឆេទ និង​ម៉ោង"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"នៅពេលដែល​អ្នក​បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី បុគ្គល​នោះ​ត្រូវតែ​រៀបចំ​ទំហំ​ផ្ទុក​របស់គេ។"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"អ្នកប្រើប្រាស់​ណាក៏​អាច​ដំឡើង​ជំនាន់កម្មវិធី​សម្រាប់​អ្នក​ប្រើប្រាស់​ទាំងអស់​ផ្សេង​ទៀត​បាន​ដែរ។"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"​បាន​ឈាន​ដល់ចំនួន​កំណត់អ្នកប្រើប្រាស់"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">អ្នកអាចបញ្ចូល​អ្នក​ប្រើប្រាស់បាន​រហូតដល់ <xliff:g id="COUNT">%d</xliff:g> នាក់។</item>
+      <item quantity="one">អាច​បង្កើត​អ្នក​ប្រើប្រាស់​បាន​​តែម្នាក់ប៉ុណ្ណោះ។</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"មិន​អាច​បង្កើត​អ្នកប្រើប្រាស់​ថ្មី​បាន​ទេ"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"លុប​អ្នកប្រើប្រាស់​នេះ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>

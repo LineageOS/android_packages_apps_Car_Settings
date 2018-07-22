@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"링크 속도"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"주파수"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP 주소"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"비밀번호 표시"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"나쁨"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"옵션 재설정"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"네트워크, 앱, 기기 재설정"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Wi-Fi, 블루투스 재설정"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"다음을 포함한 모든 네트워크 설정을 초기화합니다."</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"블루투스"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"설정 초기화"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"초기화하시겠습니까?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"모든 네트워크 설정을 초기화하시겠습니까? 이 작업은 실행취소할 수 없습니다."</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"설정 초기화"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"네트워크 설정이 초기화되었습니다."</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"앱 환경설정 초기화"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"날짜 및 시간"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가할까요?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"추가된 새로운 사용자는 자신의 공간을 설정해야 합니다."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"모든 사용자는 다른 사용자들을 위하여 앱을 업데이트할 수 있습니다."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"사용자 제한 도달"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">사용자를 <xliff:g id="COUNT">%d</xliff:g>명까지 추가할 수 있습니다.</item>
+      <item quantity="one">사용자를 한 명만 만들 수 있습니다.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"새 사용자를 만들지 못했습니다."</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"사용자 삭제"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"사용자를 삭제할까요?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"모든 앱과 데이터가 삭제됩니다."</string>

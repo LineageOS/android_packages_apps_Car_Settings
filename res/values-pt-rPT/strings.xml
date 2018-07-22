@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"Velocidade da ligação"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frequência"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"Endereço IP"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"Mostrar palavra-passe"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Fraca"</item>
@@ -151,22 +150,15 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Opções de reposição"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Reposição da rede, de aplicações ou do dispositivo"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Repor Wi-Fi e Bluetooth"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"Esta ação repõe todas as definições de rede, incluindo:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"Bluetooth"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Repor definições"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Pretende repor?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Pretende repor todas as definições de rede? Não é possível anular esta ação."</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Repor definições"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"As definições de rede foram repostas."</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"Repor as preferências das aplicações"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Apagar todos os dados (repor)"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Apagar todos os dados (repor dados de fábrica)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data e hora"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Definir data e hora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Definir data, hora, fuso horário e formatos"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"Adicion. novo utilizador?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ao adicionar um novo utilizador, essa pessoa tem de configurar o respetivo espaço."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualquer utilizador pode atualizar aplicações para todos os outros utilizadores."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite de utilizadores alcançado"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">Pode adicionar até <xliff:g id="COUNT">%d</xliff:g> utilizadores.</item>
+      <item quantity="one">Apenas é possível criar um utilizador.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"Falha ao criar um novo utilizador"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Eliminar utilizador"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Remover este utilizador?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Todas as aplicações e os dados serão eliminados."</string>

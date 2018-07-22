@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ຄວາມໄວລິ້ງ"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ຄວາມຖີ່"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"ທີ່ຢູ່ IP"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"ສະແດງລະຫັດຜ່ານ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ອ່ອນ"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ຕົວເລືອກການຣີເຊັດ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ຣີເຊັດເຄືອຂ່າຍ, ແອັບ ຫຼື ອຸປະກອນ"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"ຣີເຊັດ Wi-Fi, Bluetooth"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"ນີ້ຈະຣີເຊັດການຕັ້ງຄ່າເຄືອຂ່າຍທັງໝົດ ຮວມທັງ:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"Bluetooth"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ຣີເຊັດການຕັ້ງຄ່າ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ຣີເຊັດບໍ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ຣີການຕັ້ງຄ່າເຄືອຂ່າຍທັງໝົດບໍ? ທ່ານບໍ່ສາມາດຍົກເລີກການກະທຳນີ້ໄດ້!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ຣີເຊັດການຕັ້ງຄ່າ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ຣີເຊັດການຕັ້ງຄ່າເຄືອຂ່າຍແລ້ວ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"ຣີເຊັດການຕັ້ງຄ່າແອັບ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ລຶບຂໍ້ມູນທັງໝົດ (ຣີເຊັດເປັນຄ່າຈາກໂຮງງານ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ວັນທີ ແລະ ເວລາ"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"ເພີ່ມຜູ້ໃຊ້ໃໝ່ບໍ?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ເມື່ອທ່ານເພີ່ມຜູ້ໃຊ້ໃໝ່, ບຸກຄົນນັ້ນຈຳເປັນຕ້ອງຕັ້ງຄ່າພື້ນທີ່ຂອງເຂົາເຈົ້າ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ຜູ້ໃຊ້ຕ່າງໆສາມາດອັບເດດແອັບສຳລັບຜູ້ໃຊ້ອື່ນທັງໝົດໄດ້."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ຮອດຂີດຈຳກັດຜູ້ໃຊ້ແລ້ວ"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">ທ່ານສາມາດເພີ່ມຜູ້ໃຊ້ໄດ້ເຖິງ <xliff:g id="COUNT">%d</xliff:g> ຄົນ.</item>
+      <item quantity="one">ສ້າງຜູ້ໃຊ້ໄດ້ແຕ່ໜຶ່ງຄົນເທົ່ານັ້ນ.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"ສ້າງຜູ້ໃຊ້ໃໝ່ບໍ່ສຳເລັດ"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ລຶບຜູ້ໃຊ້"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ລຶບຜູ້ໃຊ້ນີ້ອອກບໍ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"ແອັບ ແລະ ຂໍ້ມູນທັງໝົດຈະຖືກລຶບ."</string>

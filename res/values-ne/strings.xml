@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"लिङ्कको गति"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"आवृत्ति"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ठेगाना"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"पासवर्ड देखाउनुहोस्"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"कमजोर"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"रिसेटका विकल्पहरू"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, अनुप्रयोग वा यन्त्रको रिसेटसम्बन्धी विकल्प"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Wi-Fi, ब्लुटुथ रिसेट गर्नुहोस्"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"यस कार्यले निम्नलगायत नेटवर्कसम्बन्धी सम्पूर्ण सेटिङहरू रिसेट गर्ने छ:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"ब्लुटुथ"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"सेटिङहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"रिसेट गर्ने हो?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"नेटवर्कसम्बन्धी सबै सेटिङहरू रिसेट गर्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
@@ -188,26 +180,22 @@
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
     <string name="user_admin" msgid="1535484812908584809">"प्रशासक"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"प्रशासकका रूपमा साइन इन गरियो"</string>
-    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
-    <skip />
-    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
-    <skip />
-    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
-    <skip />
+    <string name="grant_admin_privileges" msgid="931069208484384534">"प्रशासकीय अनुमती दिनुहोस्"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"प्रशासक बनाउनुहोस्"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"उक्त प्रयोगकर्ता अन्य प्रशासकहरूलगायतका प्रयोगकर्ताहरूलाई मेट्न र प्रणालीलाई फ्याक्ट्री रिसेट गर्न सक्ने छन्।"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"यो कारबाही उल्टाउन मिल्दैन।"</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"हो, प्रशासक बनाउनुहोस्"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"प्रयोगकर्ता थप्नुहोस्"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"नयाँ प्रयोगकर्ता"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"नयाँ प्रयोगकर्ता थप्ने?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"तपाईंले नयाँ प्रयोगकर्ता थप्दा, ती व्यक्तिले आफ्नो स्थान सेटअप गर्नु पर्नेे हुन्छ।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कुनै पनि प्रयोगकर्ताले अन्य सबै प्रयोगकर्ताहरूका लागि अनुप्रयोगहरू अद्यावधिक गर्न सक्नुहुन्छ।"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"प्रयोगकर्ताको सीमा पुग्यो"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">तपाईं अधिकतम <xliff:g id="COUNT">%d</xliff:g> प्रयोगहरू मात्र थप्न सक्नुहुन्छ।</item>
+      <item quantity="one">एउटा प्रयोगकर्ता मात्र सिर्जना गर्न सकिन्छ।</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"कुनै नयाँ प्रयोगकर्ता सिर्जना गर्न सकिएन"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"प्रयोगकर्ता मेटाउनुहोस्"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"यो प्रयोगकर्ता हटाउने हो?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"सबै अनुप्रयोगहरू र डेटा मेटाइने छन्।"</string>

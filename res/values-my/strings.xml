@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"လိုင်းအမြန်နှုန်း"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ကြိမ်နှုန်း"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP လိပ်စာ"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"စကားဝှက် ပြရန်"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ညံ့သည်"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ပြင်ဆင်သတ်မှတ်ရန် ရွေးစရာများ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ကွန်ရက်၊ အက်ပ်များ (သို့) စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ခြင်း"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Wi-Fi၊ ဘလူးတုသ် ပြင်ဆင်သတ်မှတ်ပါ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"၎င်းသည် အောက်ပါတို့အပါအဝင် ကွန်ရက်ဆက်တင်များအားလုံးကို ပြင်ဆင်သတ်မှတ်လိုက်ပါမည်−"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"ဘလူးတုသ်"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ဆက်တင်ပြင်ဆင်သတ်မှတ်ရန်"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ပြင်ဆင်သတ်မှတ်လိုပါသလား။"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ကွန်ရက်ဆက်တင်များ အားလုံးကို ပြင်ဆင်သတ်မှတ်လိုပါသလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍ မရပါ။"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ဆက်တင်ပြင်ဆင်သတ်မှတ်ရန်"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ကွန်ရက်ဆက်တင်များကို ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"အက်ပ်ဦးစားပေးများ ပြင်ဆင်သတ်မှတ်ပါ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ဒေတာအားလုံး ဖျက်ပါ (စက်ရုံထုတ်သတ်မှတ်ပါ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"အသုံးပြုသူအသစ် ထည့်မလား။"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"အသုံးပြုသူအသစ် ထည့်သည့်အခါ ထိုသူသည် မိမိ၏ နေရာကို စနစ်ထည့်သွင်းရပါမည်။"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"မည်သူမဆို အသုံးပြုသူအားလုံးအတွက် အက်ပ်များကို အပ်ဒိတ်လုပ်နိုင်သည်။"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"အသုံးပြုသူ အကန့်အသတ် ပြည့်သွားပါပြီ"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">အသုံးပြုသူ <xliff:g id="COUNT">%d</xliff:g> ဦးအထိ ထည့်နိုင်သည်။</item>
+      <item quantity="one">အသုံးပြုသူတစ်ဦးသာ ပြုလုပ်နိုင်သည်။</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"အသုံးပြုသူအသစ် ပြုလုပ်၍မရပါ"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"သုံးစွဲသူကို ဖျက်ရန်"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ဤသူကို ဖယ်ရှားလိုပါသလား။"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"အက်ပ်အားလုံးနှင့် ဒေတာများကို ဖျက်လိုက်ပါမည်။"</string>

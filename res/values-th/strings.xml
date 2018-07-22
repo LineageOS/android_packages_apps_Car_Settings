@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ความเร็วในการเชื่อมโยง"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ความถี่"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"ที่อยู่ IP"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"แสดงรหัสผ่าน"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"อ่อน"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ตัวเลือกการรีเซ็ต"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"การรีเซ็ตเครือข่าย แอป หรืออุปกรณ์"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"รีเซ็ต Wi-Fi, บลูทูธ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"การดำเนินการนี้จะรีเซ็ตการตั้งค่าเครือข่ายทั้งหมด รวมถึงการตั้งค่าต่อไปนี้"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"บลูทูธ"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"รีเซ็ตการตั้งค่า"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"รีเซ็ตไหม"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"หากรีเซ็ตการตั้งค่าเครือข่ายทั้งหมด คุณจะยกเลิกการทำงานนี้ไม่ได้"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"รีเซ็ตการตั้งค่า"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"รีเซ็ตการตั้งค่าเครือข่ายแล้ว"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"รีเซ็ตค่ากำหนดแอป"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"วันที่และเวลา"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"เพิ่มผู้ใช้ใหม่ไหม"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"เมื่อคุณเพิ่มผู้ใช้ใหม่ ผู้ใช้ดังกล่าวจะต้องตั้งค่าพื้นที่ของตนเอง"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ผู้ใช้ทุกคนจะอัปเดตแอปให้แก่ผู้ใช้คนอื่นๆ ได้"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ถึงขีดจำกัดผู้ใช้แล้ว"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">คุณเพิ่มผู้ใช้ได้สูงสุด <xliff:g id="COUNT">%d</xliff:g> คน</item>
+      <item quantity="one">สร้างผู้ใช้ได้เพียง 1 คนเท่านั้น</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"สร้างผู้ใช้ใหม่ไม่ได้"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ลบผู้ใช้"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"นำผู้ใช้รายนี้ออกใช่ไหม"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"แอปและข้อมูลทั้งหมดจะถูกลบ"</string>

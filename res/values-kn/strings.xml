@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ಲಿಂಕ್ ವೇಗ"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ತರಂಗಾಂತರ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ವಿಳಾಸ"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ಕಳಪೆ"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ಮರುಹೊಂದಿಸುವ ಆಯ್ಕೆಗಳು"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ನೆಟ್‌ವರ್ಕ್, ಆ್ಯಪ್‌ಗಳು ಅಥವಾ ಸಾಧನಗಳ ಮರುಹೊಂದಿಸುವಿಕೆ"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"ವೈ-ಫೈ, ಬ್ಲೂಟೂತ್ ಮರುಹೊಂದಿಸಿ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"ಇದು ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಎಲ್ಲವನ್ನೂ ಮರುಹೊಂದಿಸುತ್ತದೆ, ಅವುಗಳಲ್ಲಿ ಈ ಮುಂದಿನವುಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"ವೈ-ಫೈ"</li>\n<li>"ಬ್ಲೂಟೂತ್"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ಮರುಹೊಂದಿಸುವುದೇ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ಎಲ್ಲಾ ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸುವುದೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಬದಲಾಯಿಸಿ"</string>
@@ -188,26 +180,22 @@
     <string name="time_picker_title" msgid="7436045944320504639">"ಸಮಯ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"</string>
-    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
-    <skip />
-    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
-    <skip />
-    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
-    <skip />
+    <string name="grant_admin_privileges" msgid="931069208484384534">"ನಿರ್ವಹಣೆ ಅನುಮತಿಗಳನ್ನು ನೀಡಿ"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"ನಿರ್ವಾಹಕವನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"ಬಳಕೆದಾರರಿಗೆ ಇತರ ನಿರ್ವಾಹಕರು ಸೇರಿದಂತೆ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ, ಮತ್ತು ಫ್ಯಾಕ್ಟರಿ ವ್ಯವಸ್ಥೆಯನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗುವುದಿಲ್ಲ."</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"ಹೌದು, ನಿರ್ವಹಕವನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ಹೊಸ ಬಳಕೆದಾರರು"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸುವುದೇ?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ನೀವು ಹೊಸ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿದಾಗ, ಆ ವ್ಯಕ್ತಿಯು ಅವರ ಸ್ಥಳವನ್ನು ಸೆಟಪ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ಯಾವುದೇ ಬಳಕೆದಾರರು ಎಲ್ಲಾ ಇತರೆ ಬಳಕೆದಾರರಿಗಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬಹುದು."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ಬಳಕೆದಾರರ ಮಿತಿ ತಲುಪಿದೆ"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="one">ನೀವು <xliff:g id="COUNT">%d</xliff:g> ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
+      <item quantity="other">ನೀವು <xliff:g id="COUNT">%d</xliff:g>ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"ಹೊಸ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿ"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ಬಳಕೆದಾರರನ್ನು ತೆಗೆಯುವುದೇ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ."</string>

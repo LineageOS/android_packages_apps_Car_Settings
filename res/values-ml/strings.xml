@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ലിങ്ക് വേഗത"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ആവൃത്തി"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP വിലാസം"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"പാസ്‌വേഡ് കാണിക്കുക"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"മോശം"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ഓപ്‌ഷനുകള്‍ പുനഃക്രമീകരിക്കുക"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"നെറ്റ്‌വർക്ക്, ആപ്പുകൾ, അല്ലെങ്കിൽ ഉപകരണം പുനഃക്രമീകരിക്കുക"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"വൈഫൈ, Bluetooth എന്നിവ പുനഃക്രമീകരിക്കുക"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"ഇനിപ്പറയുന്നത് ഉൾപ്പെടെ, എല്ലാ നെറ്റ്‌വർക്ക് ക്രമീകരണവും ഇത് പുനഃസജ്ജീകരിക്കും:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"വൈഫൈ"</li>\n<li>"Bluetooth"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ക്രമീകരണം പുനഃസജ്ജീകരിക്കുക"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"പുനഃസജ്ജീകരിക്കണോ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"എല്ലാ നെറ്റ്‌വർക്കിംഗ് ക്രമീകരണവും പുനഃസജ്ജീകരിക്കണോ? നിങ്ങൾക്ക് ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ക്രമീകരണം പുനഃസജ്ജീകരിക്കുക"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"നെറ്റ്‌വർക്ക് ക്രമീകരണം പുനഃസജ്ജീകരിച്ചു"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"ആപ്പ് മുൻഗണനകൾ പുനഃക്രമീകരിക്കുക"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"എല്ലാ ഡാറ്റയും മായ്‌ക്കുക (ഫാക്‌ടറി റീസെറ്റ്)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"തീയതിയും സമയവും"</string>
@@ -188,26 +180,22 @@
     <string name="time_picker_title" msgid="7436045944320504639">"സമയം"</string>
     <string name="user_admin" msgid="1535484812908584809">"അഡ്‌മിന്‍"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"അഡ്‌മിൻ ആയി സൈൻ ഇൻ ചെയ്‌തു"</string>
-    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
-    <skip />
-    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
-    <skip />
-    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
-    <skip />
+    <string name="grant_admin_privileges" msgid="931069208484384534">"അഡ്‌മിൻ അനുമതികൾ നൽകുക"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"അഡ്‌മിനെ സൃഷ്‌ടിക്കുക"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"ഉപയോക്താവിന് മറ്റ് അഡ്‌മിനുകൾ ഉൾപ്പെടെയുള്ള ഉപയോക്താക്കളെ ഇല്ലാതാക്കാനും സിസ്‌റ്റം ഫാക്‌ടറി പുനഃസജ്ജീകരിക്കാനും കഴിയും."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"ഈ പ്രവൃത്തി പഴയപടിയാക്കാനാവില്ല."</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"വേണം, അഡ്‌മിനെ സൃഷ്‌ടിക്കുക"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ഉപയോക്താവിനെ ചേര്‍ക്കുക"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"പുതിയ ഉപയോക്താവ്"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"പുതിയ ഉപയോക്താവിനെ ചേർക്കണോ?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"നിങ്ങളൊരു പുതിയ ഉപയോക്താവിനെ ചേർക്കുമ്പോൾ, ആ വ്യക്തി സ്വന്തം ഇടം സജ്ജീകരിക്കേണ്ടതുണ്ട്."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ഏതൊരു ഉപയോക്താവിനും മറ്റെല്ലാ ഉപയോക്താക്കൾക്കുമായി ആപ്പുകൾ അപ്‌ഡേറ്റ് ചെയ്യാനാവും."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ഉപയോക്തൃ പരിധി എത്തി"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">നിങ്ങൾക്ക് <xliff:g id="COUNT">%d</xliff:g> ഉപയോക്താക്കളെ വരെ ചേർക്കാനാവും.</item>
+      <item quantity="one">ഒരു ഉപയോക്താവിന് മാത്രമേ സൃഷ്‌ടിക്കാനാവൂ.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"പുതിയ ഉപയോക്താവിനെ സൃഷ്‌ടിക്കാനായില്ല"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ഉപയോക്താവിനെ ഇല്ലാതാക്കുക"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ഈ ഉപയോക്താവിനെ നീക്കണോ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"ആപ്പുകളും ഡാറ്റയുമെല്ലാം ഇല്ലാതാക്കും."</string>

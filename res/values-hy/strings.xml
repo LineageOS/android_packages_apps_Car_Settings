@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"Կապի արագությունը"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Հաճախականություն"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP հասցե"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"Ցուցադրել գաղտնաբառը"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Թույլ"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Կարգավորումների վերակայում"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Ցանցի, հավելվածների և սարքի վերակայում"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Վերակայել Wi-Fi-ը և Bluetooth-ը"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"Ցանցի բոլոր կարգավորումները կվերակայվեն, այդ թվում՝"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi-Fi"</li>\n<li>"Bluetooth"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Վերակայել կարգավորումները"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Վերակայե՞լ"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Վերակայե՞լ ցանցի բոլոր կարգավորումները: Այս գործողությունը հնարավոր չի լինի հետարկել:"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Վերակայել կարգավորումները"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Ցանցի կարգավորումները վերակայվել են"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"Վերակայել կարգավորումները"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ջնջել բոլոր տվյալները (գործ. վերակայում)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ամսաթիվ և ժամ"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"Ավելացնե՞լ նոր օգտատեր"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Երբ դուք նոր օգտատեր եք ավելացնում, նա պետք է կարգավորի իր պրոֆիլը:"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Ցանկացած օգտատեր կարող է թարմացնել հավելվածները բոլոր մյուս հաշիվների համար:"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"Սահմանաչափը սպառված է"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="one">Հնարավոր է ավելացնել առավելագույնը <xliff:g id="COUNT">%d</xliff:g> օգտատեր։</item>
+      <item quantity="other">Հնարավոր է ավելացնել առավելագույնը <xliff:g id="COUNT">%d</xliff:g> օգտատեր։</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"Չհաջողվեց ստեղծել նոր օգտատեր"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Ջնջել օգտատիրոջը"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Հեռացնե՞լ այս օգտատիրոջը"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Բոլոր հավելվածներն ու տվյալները կջնջվեն:"</string>

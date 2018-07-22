@@ -76,8 +76,7 @@
     <skip />
     <!-- no translation found for wifi_ip_address (3128140627890954061) -->
     <skip />
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"ପାସ୍‍ୱାର୍ଡ ଦେଖାନ୍ତୁ"</string>
     <!-- no translation found for access_point_tag_key (1517143378973053337) -->
     <skip />
     <!-- no translation found for wifi_signals:0 (4897376984576812606) -->
@@ -259,20 +258,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ରିସେଟ୍‌ କରିବାର ବିକଳ୍ପମାନ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ନେଟ୍‌ୱାର୍କ, ଆପ୍‌, କିମ୍ବା ଡିଭାଇସ୍‌ ରିସେଟ୍‍"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"ୱାଇ-ଫାଇ, ବ୍ଲୁଟୂଥ୍‌ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"ଏହା ସମସ୍ତ ନେଟ୍‍ୱାର୍କ ସେଟିଂକୁ ରିସେଟ୍‍ କରିବ, ଅନ୍ତର୍ଭୁକ୍ତ ଅଟେ:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"ୱାଇ-ଫାଇ"</li>\n<li>"ବ୍ଲୁଟୁଥ"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ରିସେଟ୍‌ କରିବେ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ସବୁ ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିବେ? ଏହାକୁ ଆପଣ ଆଉ ପୂର୍ବବତ୍‍ କରିପାରିବେ ନାହିଁ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିଦିଆଯାଇଛି"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"ଆପ୍‌ ପସନ୍ଦଗୁଡ଼ିକୁ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ସମସ୍ତ ଡାଟା ଲିଭାନ୍ତୁ (ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍‌)"</string>
     <!-- no translation found for date_and_time_settings_title (4058492663544475485) -->
@@ -315,16 +307,11 @@
     <skip />
     <string name="user_admin" msgid="1535484812908584809">"ଆଡ୍‌ମିନ୍‌"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ଆଡ୍‍ମିନ୍‍ ଭାବରେ ସାଇନ୍‍ ଇନ୍‍ କରିଛନ୍ତି"</string>
-    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
-    <skip />
-    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
-    <skip />
-    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
-    <skip />
+    <string name="grant_admin_privileges" msgid="931069208484384534">"ଆଡ୍‍ମିନ୍‍ ଅନୁମତିଗୁଡିକୁ ଅନୁମୋଦନ କରନ୍ତୁ"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"ଆଡ୍‍ମିନ୍‍ କରନ୍ତୁ"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"ବ୍ୟବହାରକାରୀ ଅନ୍ୟ ଆଡ୍‌ମିନ୍‌, ଏବଂ ଫ୍ୟାକ୍ଟେରୀ ରିସେଟ୍‌ ସିଷ୍ଟମ୍‌ ସହ, ବ୍ୟବହାରକାରୀମାନଙ୍କୁ ବିଲୋପ କରିପାରିବେ।"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"ଏହି କାର୍ଯ୍ୟକୁ ଫେରାଇ ନେଇ ହେବ ନାହିଁ।"</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"ହଁ, ଆଡ୍‍ମି‍ନ୍‍ କରନ୍ତୁ"</string>
     <!-- no translation found for user_add_user_menu (5319151436895941496) -->
     <skip />
     <!-- no translation found for user_new_user_name (7115771396412339662) -->
@@ -335,11 +322,12 @@
     <skip />
     <!-- no translation found for user_add_user_message_update (1528170913388932459) -->
     <skip />
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ଉପଯୋଗକର୍ତ୍ତା ସୀମାରେ ପହଞ୍ଚିଛି"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">କେବଳ <xliff:g id="COUNT">%d</xliff:g> ଉପଯୋଗକର୍ତ୍ତା ହିଁ ତିଆରି କରିହେବ।</item>
+      <item quantity="one">କେବଳ ଜଣେ ଉପଯୋଗକର୍ତ୍ତା ହିଁ ତିଆରି କରିହେବ।</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"ନୂଆ ଉପଯୋଗକର୍ତ୍ତା ତିଆରି ହୋଇପାରିଲା ନାହିଁ"</string>
     <!-- no translation found for user_delete_user_description (2300280525351142435) -->
     <skip />
     <!-- no translation found for really_remove_user_title (4990029019291756762) -->

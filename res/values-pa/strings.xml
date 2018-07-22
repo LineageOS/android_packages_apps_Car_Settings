@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"ਲਿੰਕ ਸਪੀਡ"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ਬਾਰੰਬਾਰਤਾ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ਪਤਾ"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"ਪਾਸਵਰਡ ਦਿਖਾਓ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ਕਮਜ਼ੋਰ"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"ਰੀਸੈੱਟ ਵਿਕਲਪ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ਨੈੱਟਵਰਕ, ਐਪਾਂ ਜਾਂ ਡੀਵਾਈਸ ਰੀਸੈੱਟ"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"ਵਾਈ-ਫਾਈ, ਬਲੂਟੁੱਥ ਰੀਸੈੱਟ ਕਰੋ"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"ਇਹ  ਸਾਰੀਆਂ ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰ ਦੇਵੇਗਾ, ਜਿਸ ਵਿੱਚ ਇਹ ਵੀ ਸ਼ਾਮਲ ਹਨ:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"ਵਾਈ-ਫਾਈ"</li>\n<li>"ਬਲੂਟੁੱਥ"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ਕੀ ਰੀਸੈੱਟ ਕਰਨੀਆਂ ਹਨ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ਕੀ ਸਾਰੀਆਂ ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰਨੀਆਂ ਹਨ? ਤੁਸੀਂ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਅਣਕੀਤਾ ਨਹੀ ਕਰ ਸਕਦੇ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ਨੈੱਟਵਰਕ ਸੈਟਿੰਗਾਂ ਰੀਸੈੱਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"ਐਪ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ਸਭ ਡਾਟਾ ਮਿਟਾਓ (ਫੈਕਟਰੀ ਰੀਸੈੱਟ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
@@ -188,26 +180,22 @@
     <string name="time_picker_title" msgid="7436045944320504639">"ਸਮਾਂ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ਪ੍ਰਸ਼ਾਸਕ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ਪ੍ਰਸ਼ਾਸਕ ਵਜੋਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਗਿਆ"</string>
-    <!-- no translation found for grant_admin_privileges (931069208484384534) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges (5984310883483215656) -->
-    <skip />
-    <!-- no translation found for assign_admin_privileges_message (2568957340592800419) -->
-    <skip />
-    <!-- no translation found for action_not_reversible_message (740401337875726973) -->
-    <skip />
-    <!-- no translation found for confirm_assign_admin (8326579654857377888) -->
-    <skip />
+    <string name="grant_admin_privileges" msgid="931069208484384534">"ਪ੍ਰਸ਼ਾਸਕ ਇਜਾਜ਼ਤਾਂ ਦਿਓ"</string>
+    <string name="assign_admin_privileges" msgid="5984310883483215656">"ਪ੍ਰਸ਼ਾਸਕ ਬਣਾਓ"</string>
+    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"ਵਰਤੋਂਕਾਰ ਹੋਰ ਪ੍ਰਸ਼ਾਸਕਾਂ ਸਮੇਤ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਮਿਟਾ ਸਕੇਗਾ ਅਤੇ ਸਿਸਟਮ ਨੂੰ ਫੈਕਟਰੀ ਰੀਸੈੱਟ ਕਰ ਸਕੇਗਾ।"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"ਇਹ ਕਾਰਵਾਈ ਪਲਟਾਉਣਯੋਗ ਨਹੀਂ ਹੈ।"</string>
+    <string name="confirm_assign_admin" msgid="8326579654857377888">"ਹਾਂ, ਪ੍ਰਸ਼ਾਸਕ ਬਣਾਓ"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ਨਵਾਂ ਵਰਤੋਂਕਾਰ"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰੀਏ?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ਜਦੋਂ ਤੁਸੀਂ ਇੱਕ ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰਦੇ ਹੋ, ਤਾਂ ਉਸ ਵਿਅਕਤੀ ਨੂੰ ਆਪਣੀ ਜਗ੍ਹਾ ਸੈੱਟਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ਕੋਈ ਵੀ ਵਰਤੋਂਕਾਰ ਹੋਰ ਸਾਰੇ ਵਰਤੋਂਕਾਰਾਂ ਦੀਆਂ ਐਪਾਂ ਨੂੰ ਅੱਪਡੇਟ ਕਰ ਸਕਦਾ ਹੈ।"</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰਨ ਦੀ ਸੀਮਾ ਪੂਰੀ ਹੋਈ"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="one">ਤੁਸੀਂ <xliff:g id="COUNT">%d</xliff:g> ਤੱਕ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।</item>
+      <item quantity="other">ਤੁਸੀਂ <xliff:g id="COUNT">%d</xliff:g> ਤੱਕ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"ਇੱਕ ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਬਣਾਉਣਾ ਅਸਫਲ ਰਿਹਾ"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਓ"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ਕੀ ਇਹ ਵਰਤੋਂਕਾਰ ਹਟਾਉਣਾ ਹੈ?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"ਸਾਰੀਆਂ ਐਪਾਂ ਅਤੇ ਡਾਟਾ ਮਿਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।"</string>

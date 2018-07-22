@@ -48,8 +48,7 @@
     <string name="wifi_speed" msgid="1650692446731850781">"länkhastighet"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frekvens"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP-adress"</string>
-    <!-- no translation found for show_password (2074628020371139240) -->
-    <skip />
+    <string name="show_password" msgid="2074628020371139240">"Visa lösenord"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Dålig"</item>
@@ -151,20 +150,13 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Återställningsalternativ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Nätverk, appar eller ehetsåterställning"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Återställ Wi-Fi och Bluetooth"</string>
-    <!-- no translation found for reset_network_desc (602381374544634925) -->
-    <skip />
-    <!-- no translation found for reset_network_items (560284503269666087) -->
-    <skip />
-    <!-- no translation found for reset_network_button_text (8374174455632765033) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_title (5255502723840197663) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_desc (7721698076856330212) -->
-    <skip />
-    <!-- no translation found for reset_network_confirm_button_text (5246859685069024851) -->
-    <skip />
-    <!-- no translation found for reset_network_complete_toast (3804108209431416865) -->
-    <skip />
+    <string name="reset_network_desc" msgid="602381374544634925">"Om du gör detta återställs alla nätverksinställningar, inklusive:"</string>
+    <string name="reset_network_items" msgid="560284503269666087"><li>"Wi‑Fi"</li>\n<li>"Bluetooth"</li></string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Återställ inställningar"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vill du återställa?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Vill du återställa alla nätverksinställningar? Det går inte att ångra den här åtgärden."</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Återställ inställningar"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Nätverksinställningarna har återställts"</string>
     <string name="reset_app_preferences_title" msgid="1358092641530920263">"Återställ appinställningarna"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Rensa all data (återställ standardinst.)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum och tid"</string>
@@ -198,11 +190,12 @@
     <string name="user_add_user_title" msgid="7458813670614932479">"Lägga till ny användare?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"När du lägger till en ny användare måste den personen konfigurera sitt utrymme."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Alla användare kan uppdatera appar för andra användare."</string>
-    <!-- no translation found for user_limit_reached_title (8803355734556061238) -->
-    <skip />
-    <!-- no translation found for user_limit_reached_message (4809364467389495355) -->
-    <!-- no translation found for add_user_error_title (3206300411663817038) -->
-    <skip />
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"Användargränsen har nåtts"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+      <item quantity="other">Det går att lägga till upp till <xliff:g id="COUNT">%d</xliff:g> användare.</item>
+      <item quantity="one">Det går bara att skapa en användare.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"Det gick inte att skapa en ny användare"</string>
     <string name="user_delete_user_description" msgid="2300280525351142435">"Radera användare"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"Ta bort användaren?"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"Alla appar och all data raderas."</string>
