@@ -75,9 +75,8 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
                     getFragmentController().launchFragment(ResetNetworkFragment.newInstance())
             ));
         }
-        lineItems.add(createListItem(R.string.reset_app_preferences_title, v -> {
-            // TODO: launch reset app preferences.
-        }));
+        lineItems.add(createListItem(R.string.reset_app_pref_title,
+                v -> getFragmentController().launchFragment(ResetAppPrefFragment.newInstance())));
         if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_FACTORY_RESET)) {
             lineItems.add(createListItem(R.string.master_clear_title, v -> {
