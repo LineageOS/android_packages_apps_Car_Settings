@@ -48,7 +48,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
 
     static {
         AAR_VERSIONS = new HashMap<>();
-        AAR_VERSIONS.put("car", "1.0.0-alpha4");
+        AAR_VERSIONS.put("car", "1.0.0-alpha5");
         AAR_VERSIONS.put("appcompat", "1.0.0-alpha1");
         AAR_VERSIONS.put("constraintlayout", "1.1.2");
     }
