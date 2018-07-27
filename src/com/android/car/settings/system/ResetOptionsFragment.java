@@ -67,24 +67,24 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
     private ArrayList<ListItem> getListItems() {
         boolean isAdmin = mCarUserManagerHelper.isCurrentProcessAdminUser();
 
-        ArrayList<ListItem> lineItems = new ArrayList<>();
+        ArrayList<ListItem> listItems = new ArrayList<>();
 
         if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_NETWORK_RESET)) {
-            lineItems.add(createListItem(R.string.reset_network_title, v ->
+            listItems.add(createListItem(R.string.reset_network_title, v ->
                     getFragmentController().launchFragment(ResetNetworkFragment.newInstance())
             ));
         }
-        lineItems.add(createListItem(R.string.reset_app_pref_title,
+        listItems.add(createListItem(R.string.reset_app_pref_title,
                 v -> getFragmentController().launchFragment(ResetAppPrefFragment.newInstance())));
         if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_FACTORY_RESET)) {
-            lineItems.add(createListItem(R.string.master_clear_title, v -> {
+            listItems.add(createListItem(R.string.master_clear_title, v -> {
                 // TODO: launch master clear.
             }));
         }
 
-        return lineItems;
+        return listItems;
     }
 
     private TextListItem createListItem(@StringRes int titleResId,

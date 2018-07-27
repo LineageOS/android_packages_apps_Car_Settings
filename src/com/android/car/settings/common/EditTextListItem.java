@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -94,7 +95,7 @@ public class EditTextListItem<VH extends EditTextListItem.ViewHolder>
 
     @LayoutRes
     public static int getViewLayoutId() {
-        return R.layout.edit_text_line_item;
+        return R.layout.edit_text_list_item;
     }
 
     /**

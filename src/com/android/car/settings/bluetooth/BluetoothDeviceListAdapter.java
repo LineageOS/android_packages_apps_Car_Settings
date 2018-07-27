@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
@@ -178,11 +179,11 @@ public class BluetoothDeviceListAdapter
         switch (viewType) {
             case BONDED_DEVICE_HEADER_TYPE:
             case AVAILABLE_DEVICE_HEADER_TYPE:
-                v = layoutInflater.inflate(R.layout.single_text_line_item, parent, false);
+                v = layoutInflater.inflate(R.layout.single_text_list_item, parent, false);
                 v.setEnabled(false);
                 break;
             default:
-                v = layoutInflater.inflate(R.layout.icon_widget_line_item, parent, false);
+                v = layoutInflater.inflate(R.layout.icon_widget_list_item, parent, false);
         }
         return new ViewHolder(v);
     }

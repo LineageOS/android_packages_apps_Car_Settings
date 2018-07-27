@@ -88,14 +88,14 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
 
     private List<ListItem> getListItems() {
         List<ListItem> items = new ArrayList<>();
-        items.add(createNoneLineItem());
-        items.add(createLockPatternLineItem());
-        items.add(createLockPasswordLineItem());
-        items.add(createLockPinLineItem());
+        items.add(createNoneListItem());
+        items.add(createLockPatternListItem());
+        items.add(createLockPasswordListItem());
+        items.add(createLockPinListItem());
         return items;
     }
 
-    private ListItem createNoneLineItem() {
+    private ListItem createNoneListItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_none));
         if (mPasswordQuality == DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
@@ -111,7 +111,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         return item;
     }
 
-    private ListItem createLockPatternLineItem() {
+    private ListItem createLockPatternListItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_pattern));
         if (mPasswordQuality == DevicePolicyManager.PASSWORD_QUALITY_SOMETHING) {
@@ -122,7 +122,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         return item;
     }
 
-    private ListItem createLockPasswordLineItem() {
+    private ListItem createLockPasswordListItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_password));
         if (mPasswordQuality == DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC
@@ -134,7 +134,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         return item;
     }
 
-    private ListItem createLockPinLineItem() {
+    private ListItem createLockPinListItem() {
         TextListItem item = new TextListItem(getContext());
         item.setTitle(getString(R.string.security_lock_pin));
         if (mPasswordQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC

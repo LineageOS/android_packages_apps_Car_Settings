@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -43,7 +44,7 @@ public class SpinnerListItem<T> extends ListItem<SpinnerListItem.ViewHolder> {
     private boolean mIsEnabled = true;
 
     /**
-     * Constructs a new SpinnerLineItem
+     * Constructs a new SpinnerListItem
      *
      * @param context Android context
      * @param listener Listener for when an item in spinner is selected
@@ -66,7 +67,7 @@ public class SpinnerListItem<T> extends ListItem<SpinnerListItem.ViewHolder> {
 
     @LayoutRes
     public static final int getViewLayoutId() {
-        return R.layout.spinner_line_item;
+        return R.layout.spinner_list_item;
     }
 
     /**

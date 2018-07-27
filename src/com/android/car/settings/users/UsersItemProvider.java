@@ -69,7 +69,7 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         mItems.add(createGuestItem());
     }
 
-    // Creates a line for a user, clicking on it leads to the user details page.
+    // Creates a list item for a user, clicking on it leads to the user details page.
     private ListItem createUserItem(UserInfo userInfo) {
         UserListItem item = new UserListItem(userInfo, mContext, mCarUserManagerHelper);
 
@@ -78,7 +78,7 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         return item;
     }
 
-    // Creates a line for a guest session.
+    // Creates a list item for a guest session.
     private ListItem createGuestItem() {
         Drawable icon = mUserIconProvider.getDefaultGuestIcon(mContext);
 

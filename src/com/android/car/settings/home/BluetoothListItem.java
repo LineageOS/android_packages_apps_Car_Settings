@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.home;
@@ -30,14 +30,14 @@ import com.android.car.settings.common.Logger;
 
 
 /**
- * Represents the Bluetooth line item on settings home page.
+ * Represents the Bluetooth list item on settings home page.
  */
-public class BluetoothLineItem extends TextListItem {
-    private static final Logger LOG = new Logger(BluetoothLineItem.class);
+public class BluetoothListItem extends TextListItem {
+    private static final Logger LOG = new Logger(BluetoothListItem.class);
     private BluetoothAdapter mBluetoothAdapter;
     private BaseFragment.FragmentController mFragmentController;
 
-    public BluetoothLineItem(Context context, BaseFragment.FragmentController fragmentController) {
+    public BluetoothListItem(Context context, BaseFragment.FragmentController fragmentController) {
         super(context);
         setTitle(context.getString(R.string.bluetooth_settings));
         setBody(context.getString(R.string.bluetooth_settings_summary));
@@ -67,6 +67,11 @@ public class BluetoothLineItem extends TextListItem {
         return enabled;
     }
 
+    /**
+     * Updates this list item to reflect the given Bluetooth state.
+     *
+     * @param enabled {@code true} if Bluetooth is enabled
+     */
     public void onBluetoothStateChanged(boolean enabled) {
         setPrimaryActionIcon(getIconRes(enabled), /* useLargeIcon= */ false);
         setSwitchState(enabled);

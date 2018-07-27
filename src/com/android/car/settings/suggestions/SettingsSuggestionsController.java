@@ -116,8 +116,8 @@ public class SettingsSuggestionsController implements
         for (final Suggestion suggestion : suggestionList) {
             LOG.v("Suggestion ID: " + suggestion.getId());
             Drawable itemIcon = mIconCache.getIcon(suggestion.getIcon());
-            SuggestionLineItem suggestionLineItem =
-                    new SuggestionLineItem(
+            SuggestionListItem suggestionListItem =
+                    new SuggestionListItem(
                             suggestion.getTitle(),
                             suggestion.getSummary(),
                             itemIcon,
@@ -136,7 +136,7 @@ public class SettingsSuggestionsController implements
                                 mListener.onSuggestionDismissed(adapterPosition);
 
                             });
-            items.add(suggestionLineItem);
+            items.add(suggestionListItem);
         }
         mListener.onSuggestionsLoaded(items);
     }

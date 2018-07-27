@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.wifi;
 
 import android.net.NetworkInfo.State;
@@ -113,24 +114,24 @@ public class WifiDetailFragment extends ListItemSettingsFragment {
 
     @Override
     public ListItemProvider getItemProvider() {
-        return new ListProvider(getLineItems());
+        return new ListProvider(getListItems());
     }
 
-    private ArrayList<ListItem> getLineItems() {
-        ArrayList<ListItem> lineItems = new ArrayList<>();
+    private ArrayList<ListItem> getListItems() {
+        ArrayList<ListItem> listItems = new ArrayList<>();
         TextListItem summaryItem = new TextListItem(getContext());
         summaryItem.setTitle(getString(R.string.wifi_status));
         summaryItem.setBody(mAccessPoint.getSummary());
-        lineItems.add(summaryItem);
+        listItems.add(summaryItem);
         TextListItem signalItem = new TextListItem(getContext());
         signalItem.setTitle(getString(R.string.wifi_signal));
         signalItem.setBody(getSignalString());
-        lineItems.add(signalItem);
+        listItems.add(signalItem);
         TextListItem securityItem = new TextListItem(getContext());
         securityItem.setTitle(getString(R.string.wifi_security));
         securityItem.setBody(mAccessPoint.getSecurityString(/* concise= */ true));
-        lineItems.add(securityItem);
-        return lineItems;
+        listItems.add(securityItem);
+        return listItems;
     }
 
     private String getSignalString() {

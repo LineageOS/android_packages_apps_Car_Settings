@@ -23,7 +23,7 @@ import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.suggestions.SuggestionLineItem;
+import com.android.car.settings.suggestions.SuggestionListItem;
 
 /**
  * Settings page that only contain a list of items.
@@ -56,7 +56,7 @@ public abstract class ListItemSettingsFragment extends BaseFragment implements L
         mListAdapter.registerListItemViewType(CustomListItemTypes.SPINNER_VIEW_TYPE,
                 SpinnerListItem.getViewLayoutId(), SpinnerListItem::createViewHolder);
         mListAdapter.registerListItemViewType(CustomListItemTypes.SUGGESTION_VIEW_TYPE,
-                SuggestionLineItem.getViewLayoutId(), SuggestionLineItem::createViewHolder);
+                SuggestionListItem.getViewLayoutId(), SuggestionListItem::createViewHolder);
 
         PagedListView listView = getView().findViewById(R.id.list);
         listView.setAdapter(mListAdapter);

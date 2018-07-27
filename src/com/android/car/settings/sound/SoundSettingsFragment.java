@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
+
 package com.android.car.settings.sound;
 
 import android.annotation.DrawableRes;
@@ -58,7 +59,7 @@ public class SoundSettingsFragment extends BaseFragment {
 
     private final SparseArray<VolumeItem> mVolumeItems = new SparseArray<>();
 
-    private final List<ListItem> mVolumeLineItems = new ArrayList<>();
+    private final List<ListItem> mVolumeListItems = new ArrayList<>();
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
@@ -66,12 +67,12 @@ public class SoundSettingsFragment extends BaseFragment {
             try {
                 mCarAudioManager = (CarAudioManager) mCar.getCarManager(Car.AUDIO_SERVICE);
                 int volumeGroupCount = mCarAudioManager.getVolumeGroupCount();
-                cleanUpVolumeLineItems();
+                cleanUpVolumeListItems();
                 // Populates volume slider items from volume groups to UI.
                 for (int groupId = 0; groupId < volumeGroupCount; groupId++) {
                     final VolumeItem volumeItem = getVolumeItemForUsages(
                             mCarAudioManager.getUsagesForVolumeGroupId(groupId));
-                    mVolumeLineItems.add(new VolumeLineItem(
+                    mVolumeListItems.add(new VolumeListItem(
                             getContext(),
                             mCarAudioManager,
                             groupId,
@@ -99,10 +100,10 @@ public class SoundSettingsFragment extends BaseFragment {
     private final ICarVolumeCallback mVolumeChangeCallback = new ICarVolumeCallback.Stub() {
         @Override
         public void onGroupVolumeChanged(int groupId, int flags) {
-            for (ListItem lineItem : mVolumeLineItems) {
-                VolumeLineItem volumeLineItem = (VolumeLineItem) lineItem;
-                if (volumeLineItem.getVolumeGroupId() == groupId) {
-                    volumeLineItem.updateProgress();
+            for (ListItem listItem : mVolumeListItems) {
+                VolumeListItem volumeListItem = (VolumeListItem) listItem;
+                if (volumeListItem.getVolumeGroupId() == groupId) {
+                    volumeListItem.updateProgress();
                 }
             }
             updateList();
@@ -138,7 +139,7 @@ public class SoundSettingsFragment extends BaseFragment {
         } catch (CarNotConnectedException e) {
             LOG.e("Car is not connected!", e);
         }
-        cleanUpVolumeLineItems();
+        cleanUpVolumeListItems();
         mCarAudioManager = null;
     }
 
@@ -155,7 +156,7 @@ public class SoundSettingsFragment extends BaseFragment {
         loadAudioUsageItems();
         mCar = Car.createCar(getContext(), mServiceConnection);
         mListView = getView().findViewById(R.id.list);
-        mPagedListAdapter = new ListItemAdapter(getContext(), new ListProvider(mVolumeLineItems));
+        mPagedListAdapter = new ListItemAdapter(getContext(), new ListProvider(mVolumeListItems));
         mListView.setAdapter(mPagedListAdapter);
         mListView.setMaxPages(PagedListView.UNLIMITED_PAGES);
     }
@@ -169,16 +170,16 @@ public class SoundSettingsFragment extends BaseFragment {
     @Override
     public void onStop() {
         super.onStop();
-        cleanUpVolumeLineItems();
+        cleanUpVolumeListItems();
         cleanupAudioManager();
         mCar.disconnect();
     }
 
-    private void cleanUpVolumeLineItems() {
-        for (ListItem item : mVolumeLineItems) {
-            ((VolumeLineItem) item).stop();
+    private void cleanUpVolumeListItems() {
+        for (ListItem item : mVolumeListItems) {
+            ((VolumeListItem) item).stop();
         }
-        mVolumeLineItems.clear();
+        mVolumeListItems.clear();
     }
 
     private void loadAudioUsageItems() {

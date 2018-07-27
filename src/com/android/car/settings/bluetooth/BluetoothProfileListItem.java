@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import com.android.settingslib.bluetooth.LocalBluetoothProfile;
 import com.android.settingslib.bluetooth.PanProfile;
 
 /**
- * Represents a line item for a Bluetooth mProfile.
+ * Represents a list item for a Bluetooth mProfile.
  */
 public class BluetoothProfileListItem extends CheckBoxListItem {
     private final LocalBluetoothProfile mProfile;

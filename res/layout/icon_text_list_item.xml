@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2017 The Android Open Source Project
+  ~ Copyright (C) 2018 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/LineItem">
+    style="@style/ListItem">
     <ImageView
         android:id="@+id/icon"
         android:layout_marginStart="@dimen/car_keyline_1"
@@ -56,7 +56,7 @@
             android:visibility="gone"/>
     </LinearLayout>
     <View
-        android:id="@+id/line_item_divider"
+        android:id="@+id/list_item_divider"
         android:layout_alignParentBottom="true"
         android:background="@color/car_list_divider"
         android:layout_width="match_parent"

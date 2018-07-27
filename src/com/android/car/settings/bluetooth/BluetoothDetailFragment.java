@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothDevice;
@@ -52,7 +53,7 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
 
     private CachedBluetoothDeviceManager mDeviceManager;
     private LocalBluetoothManager mLocalManager;
-    private EditTextListItem mInputLineItem;
+    private EditTextListItem mInputListItem;
     private Button mOkButton;
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
@@ -104,27 +105,27 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
 
     @Override
     public ListItemProvider getItemProvider() {
-        return new ListProvider(getLineItems());
+        return new ListProvider(getListItems());
     }
 
-    private ArrayList<ListItem> getLineItems() {
-        ArrayList<ListItem> lineItems = new ArrayList<>();
-        mInputLineItem = new EditTextListItem(
+    private ArrayList<ListItem> getListItems() {
+        ArrayList<ListItem> listItems = new ArrayList<>();
+        mInputListItem = new EditTextListItem(
                 getContext().getString(R.string.bluetooth_preference_paired_dialog_name_label),
                 mCachedDevice.getName());
-        mInputLineItem.setTextType(EditTextListItem.TextType.TEXT);
-        lineItems.add(mInputLineItem);
+        mInputListItem.setTextType(EditTextListItem.TextType.TEXT);
+        listItems.add(mInputListItem);
         TextListItem profileHeader = new TextListItem(getContext());
         profileHeader.setTitle(getContext().getString(
                 R.string.bluetooth_device_advanced_profile_header_title));
-        lineItems.add(profileHeader);
-        addProfileLineItems(lineItems);
-        return lineItems;
+        listItems.add(profileHeader);
+        addProfileListItems(listItems);
+        return listItems;
     }
 
-    private void addProfileLineItems(ArrayList<ListItem> lineItems) {
+    private void addProfileListItems(ArrayList<ListItem> listItems) {
         for (LocalBluetoothProfile profile : mCachedDevice.getConnectableProfiles()) {
-            lineItems.add(new BluetoothProfileListItem(
+            listItems.add(new BluetoothProfileListItem(
                     getContext(), profile, mCachedDevice, this));
         }
     }
@@ -143,8 +144,8 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
         mOkButton = getActivity().findViewById(R.id.action_button1);
         mOkButton.setText(android.R.string.ok);
         mOkButton.setOnClickListener(v -> {
-            if (!mInputLineItem.getInput().equals(mCachedDevice.getName())) {
-                mCachedDevice.setName(mInputLineItem.getInput());
+            if (!mInputListItem.getInput().equals(mCachedDevice.getName())) {
+                mCachedDevice.setName(mInputListItem.getInput());
             }
             getFragmentController().goBack();
         });

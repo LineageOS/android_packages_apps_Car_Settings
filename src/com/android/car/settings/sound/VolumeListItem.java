@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.sound;
@@ -37,8 +37,8 @@ import com.android.car.settings.common.Logger;
 /**
  * Contains logic about volume controller UI.
  */
-public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBarChangeListener {
-    private static final Logger LOG = new Logger(VolumeLineItem.class);
+public class VolumeListItem extends SeekbarListItem implements SeekBar.OnSeekBarChangeListener {
+    private static final Logger LOG = new Logger(VolumeListItem.class);
     private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
 
     private final Handler mUiHandler;
@@ -46,7 +46,7 @@ public class VolumeLineItem extends SeekbarListItem implements SeekBar.OnSeekBar
     private final int mVolumeGroupId;
     private final CarAudioManager mCarAudioManager;
 
-    public VolumeLineItem(
+    public VolumeListItem(
             Context context,
             CarAudioManager carAudioManager,
             int volumeGroupId,
