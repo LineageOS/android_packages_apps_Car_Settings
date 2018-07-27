@@ -68,7 +68,7 @@ public class AccountsListFragment extends ListItemSettingsFragment
         mCarUserManagerHelper.registerOnUsersUpdateListener(this);
 
         // Super class's onActivityCreated need to be called after mContext is initialized.
-        // Because getLineItems is called in there.
+        // Because getListItems is called in there.
         super.onActivityCreated(savedInstanceState);
 
         mAddAccountButton = (Button) getActivity().findViewById(R.id.action_button1);

@@ -23,7 +23,7 @@ import android.widget.RelativeLayout;
 
 /**
  * Intercepts all touch event, so they don't pass onto child views. One use case for this is to
- * make the line item in a list view clickable and control the logic and update the sub view.
+ * make the list item in a list view clickable and control the logic and update the sub view.
  */
 public class InterceptTouchRelativeLayout extends RelativeLayout {
 

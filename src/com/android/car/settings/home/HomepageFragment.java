@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.home;
 
 
@@ -64,8 +65,8 @@ public class HomepageFragment extends ListItemSettingsFragment implements
 
     private SettingsSuggestionsController mSettingsSuggestionsController;
     private CarWifiManager mCarWifiManager;
-    private WifiLineItem mWifiLineItem;
-    private BluetoothLineItem mBluetoothLineItem;
+    private WifiListItem mWifiListItem;
+    private BluetoothListItem mBluetoothListItem;
     private CarUserManagerHelper mCarUserManagerHelper;
     // This tracks the number of suggestions currently shown in the fragment. This is based off of
     // the assumption that suggestions are 0 through (num suggestions - 1) in the adapter. Do not
@@ -85,11 +86,11 @@ public class HomepageFragment extends ListItemSettingsFragment implements
                     case BluetoothAdapter.STATE_TURNING_OFF:
                         // TODO show a different status icon?
                     case BluetoothAdapter.STATE_OFF:
-                        mBluetoothLineItem.onBluetoothStateChanged(false);
+                        mBluetoothListItem.onBluetoothStateChanged(false);
                         refreshList();
                         break;
                     default:
-                        mBluetoothLineItem.onBluetoothStateChanged(true);
+                        mBluetoothListItem.onBluetoothStateChanged(true);
                         refreshList();
                 }
             }
@@ -120,11 +121,11 @@ public class HomepageFragment extends ListItemSettingsFragment implements
                         /* listener= */ this);
         mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
         if (WifiUtil.isWifiAvailable(getContext())) {
-            mWifiLineItem = new WifiLineItem(
+            mWifiListItem = new WifiListItem(
                     getContext(), mCarWifiManager, getFragmentController(),
                     /* listController= */ this);
         }
-        mBluetoothLineItem = new BluetoothLineItem(getContext(), getFragmentController());
+        mBluetoothListItem = new BluetoothListItem(getContext(), getFragmentController());
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mListItems = getListItems();
 
@@ -139,7 +140,7 @@ public class HomepageFragment extends ListItemSettingsFragment implements
 
     @Override
     public void onWifiStateChanged(int state) {
-        mWifiLineItem.onWifiStateChanged(state);
+        mWifiListItem.onWifiStateChanged(state);
     }
 
     @Override
@@ -173,42 +174,42 @@ public class HomepageFragment extends ListItemSettingsFragment implements
         ExtraSettingsLoader extraSettingsLoader = new ExtraSettingsLoader(getContext());
         Map<String, Collection<ListItem>> extraSettings =
                 extraSettingsLoader.load();
-        ArrayList<ListItem> lineItems = new ArrayList<>();
+        ArrayList<ListItem> listItems = new ArrayList<>();
 
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.display_settings,
                 R.drawable.ic_settings_display,
                 getContext(),
                 null,
                 DisplaySettingsFragment.newInstance(),
                 getFragmentController()));
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.sound_settings,
                 R.drawable.ic_settings_sound,
                 getContext(),
                 null,
                 SoundSettingsFragment.newInstance(),
                 getFragmentController()));
-        if (mWifiLineItem != null) {
-            lineItems.add(mWifiLineItem);
+        if (mWifiListItem != null) {
+            listItems.add(mWifiListItem);
         }
-        lineItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
-        lineItems.add(mBluetoothLineItem);
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
+        listItems.add(mBluetoothListItem);
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.applications_settings,
                 R.drawable.ic_settings_applications,
                 getContext(),
                 null,
                 ApplicationSettingsFragment.newInstance(),
                 getFragmentController()));
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.date_and_time_settings_title,
                 R.drawable.ic_settings_date_time,
                 getContext(),
                 null,
                 DatetimeSettingsFragment.getInstance(),
                 getFragmentController()));
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.users_list_title,
                 R.drawable.ic_user,
                 getContext(),
@@ -219,7 +220,7 @@ public class HomepageFragment extends ListItemSettingsFragment implements
         // Guest users can't set screen locks or add/remove accounts.
         if (!mCarUserManagerHelper.isCurrentProcessGuestUser()) {
 
-            lineItems.add(new SimpleIconTransitionLineItem(
+            listItems.add(new SimpleIconTransitionListItem(
                     R.string.accounts_settings_title,
                     R.drawable.ic_account,
                     getContext(),
@@ -234,10 +235,10 @@ public class HomepageFragment extends ListItemSettingsFragment implements
             item.setOnClickListener(v -> startActivity(new Intent(
                     getContext(), SettingsScreenLockActivity.class)));
 
-            lineItems.add(item);
+            listItems.add(item);
         }
 
-        lineItems.add(new SimpleIconTransitionLineItem(
+        listItems.add(new SimpleIconTransitionListItem(
                 R.string.system_setting_title,
                 R.drawable.ic_settings_about,
                 getContext(),
@@ -245,9 +246,9 @@ public class HomepageFragment extends ListItemSettingsFragment implements
                 SystemSettingsFragment.getInstance(),
                 getFragmentController()));
 
-        lineItems.addAll(extraSettings.get(DEVICE_CATEGORY));
-        lineItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
-        return lineItems;
+        listItems.addAll(extraSettings.get(DEVICE_CATEGORY));
+        listItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
+        return listItems;
     }
 
     private BaseFragment getUserManagementFragment() {

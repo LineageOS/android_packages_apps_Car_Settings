@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
+
 package com.android.car.settings.datetime;
 
 import android.content.BroadcastReceiver;
@@ -74,18 +75,18 @@ public class DatetimeSettingsFragment extends ListItemSettingsFragment {
 
     private List<ListItem> initializeListItems() {
         mListItems = new ArrayList<>();
-        mListItems.add(new DateTimeToggleLineItem(getContext(),
+        mListItems.add(new DateTimeToggleListItem(getContext(),
                 getString(R.string.date_time_auto),
                 getString(R.string.date_time_auto_summary),
                 Settings.Global.AUTO_TIME));
-        mListItems.add(new DateTimeToggleLineItem(getContext(),
+        mListItems.add(new DateTimeToggleListItem(getContext(),
                 getString(R.string.zone_auto),
                 getString(R.string.zone_auto_summary),
                 Settings.Global.AUTO_TIME_ZONE));
-        mListItems.add(new SetDateLineItem(getContext(), getFragmentController()));
-        mListItems.add(new SetTimeLineItem(getContext(), getFragmentController()));
-        mListItems.add(new SetTimeZoneLineItem(getContext(), getFragmentController()));
-        mListItems.add(new TimeFormatToggleLineItem(getContext()));
+        mListItems.add(new SetDateListItem(getContext(), getFragmentController()));
+        mListItems.add(new SetTimeListItem(getContext(), getFragmentController()));
+        mListItems.add(new SetTimeZoneListItem(getContext(), getFragmentController()));
+        mListItems.add(new TimeFormatToggleListItem(getContext()));
         return mListItems;
     }
 

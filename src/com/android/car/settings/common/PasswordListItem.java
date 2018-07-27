@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.common;
 
 import android.view.View;
@@ -23,8 +24,8 @@ import androidx.annotation.LayoutRes;
 import com.android.car.settings.R;
 
 /**
- * Contains logic for a line item represents text only view of a title and a EditText
- * as password input followed by a checkbox to toggle between show/hide password.
+ * Contains logic for a list item that represents a text only view of a title and an EditText
+ * password input followed by a checkbox to toggle between show/hide password.
  */
 public class PasswordListItem extends EditTextListItem<PasswordListItem.ViewHolder> {
     private boolean mShowPassword;
@@ -58,7 +59,7 @@ public class PasswordListItem extends EditTextListItem<PasswordListItem.ViewHold
 
     @Override
     protected void onBind(ViewHolder viewHolder) {
-        // setTextType is public but with PasswordLineItem it should only be
+        // setTextType is public but with PasswordListItem it should only be
         // set to be one of the two types as follows so we use super and
         // throw exception on our setTextType.
         super.setTextType(mShowPassword ? TextType.VISIBLE_PASSWORD : TextType.HIDDEN_PASSWORD);

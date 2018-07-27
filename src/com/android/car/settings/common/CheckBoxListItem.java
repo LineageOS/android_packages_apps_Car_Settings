@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -80,7 +81,7 @@ public abstract class CheckBoxListItem extends ListItem<CheckBoxListItem.ViewHol
     }
 
     /**
-     * Called when the LineItem is clicked, default behavior is nothing.
+     * Called when the ListItem is clicked, default behavior is nothing.
      *
      * @param view Passed in by the view's onClick listener
      */

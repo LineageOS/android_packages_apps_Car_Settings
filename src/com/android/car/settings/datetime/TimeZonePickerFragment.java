@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
+
 package com.android.car.settings.datetime;
 
 
@@ -34,7 +35,7 @@ import java.util.Map;
  * Lists all time zone and its offset from GMT.
  */
 public class TimeZonePickerFragment extends ListItemSettingsFragment implements
-        TimeZoneLineItem.TimeZoneChangeListener {
+        TimeZoneListItem.TimeZoneChangeListener {
     private List<Map<String, Object>> mZoneList;
 
     public static TimeZonePickerFragment getInstance() {
@@ -57,11 +58,11 @@ public class TimeZonePickerFragment extends ListItemSettingsFragment implements
     }
 
     private List<ListItem> getListItems() {
-        List<ListItem> lineItems = new ArrayList<>();
+        List<ListItem> listItems = new ArrayList<>();
         for (Map<String, Object> zone : mZoneList) {
-            lineItems.add(new TimeZoneLineItem(getContext(), this, zone));
+            listItems.add(new TimeZoneListItem(getContext(), this, zone));
         }
-        return lineItems;
+        return listItems;
     }
 
     @Override

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.wifi;
 
 import android.net.wifi.WifiConfiguration;
@@ -56,7 +57,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
     @Nullable
     private AccessPoint mAccessPoint;
     @Nullable
-    private SpinnerListItem<AccessPointSecurity> mSpinnerLineItem;
+    private SpinnerListItem<AccessPointSecurity> mSpinnerListItem;
     private WifiManager mWifiManager;
     private Button mAddWifiButton;
     private final WifiManager.ActionListener mConnectionListener =
@@ -119,12 +120,12 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
 
     @Override
     public ListItemProvider getItemProvider() {
-        mItemProvider = new MutableListItemProvider(getLineItems());
+        mItemProvider = new MutableListItemProvider(getListItems());
         return mItemProvider;
     }
 
-    private ArrayList<ListItem> getLineItems() {
-        ArrayList<ListItem> lineItems = new ArrayList<>();
+    private ArrayList<ListItem> getListItems() {
+        ArrayList<ListItem> listItems = new ArrayList<>();
         if (mAccessPoint != null) {
             mWifiNameInput = new EditTextListItem(
                     getContext().getString(R.string.wifi_ssid), mAccessPoint.getSsid().toString());
@@ -136,27 +137,27 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
             mWifiNameInput.setTextChangeListener(s ->
                     mAddWifiButton.setEnabled(!TextUtils.isEmpty(s)));
         }
-        lineItems.add(mWifiNameInput);
+        listItems.add(mWifiNameInput);
 
         if (mAccessPoint == null) {
             List<AccessPointSecurity> securities =
                     AccessPointSecurity.getSecurityTypes(getContext());
-            mSpinnerLineItem = new SpinnerListItem<>(
+            mSpinnerListItem = new SpinnerListItem<>(
                     getContext(),
                     this,
                     securities,
                     getContext().getText(R.string.wifi_security),
                     mSelectedPosition);
-            lineItems.add(mSpinnerLineItem);
+            listItems.add(mSpinnerListItem);
         }
 
         if (mAccessPoint != null
                 || mSelectedPosition != AccessPointSecurity.SECURITY_NONE_POSITION) {
             mWifiPasswordInput = new PasswordListItem(
                     getContext().getString(R.string.wifi_password));
-            lineItems.add(mWifiPasswordInput);
+            listItems.add(mWifiPasswordInput);
         }
-        return lineItems;
+        return listItems;
     }
 
     @Override
@@ -165,7 +166,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
             return;
         }
         mSelectedPosition = position;
-        mItemProvider.setItems(getLineItems());
+        mItemProvider.setItems(getListItems());
         refreshList();
     }
 
@@ -187,7 +188,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
         wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
         int security;
         if (mAccessPoint == null) {
-            security = mSpinnerLineItem.getItem(mSelectedPosition).getSecurityType();
+            security = mSpinnerListItem.getItem(mSelectedPosition).getSecurityType();
             wifiConfig.hiddenSSID = true;
         } else {
             security = mAccessPoint.getSecurity();

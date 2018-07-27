@@ -53,11 +53,11 @@ public class DisplaySettingsFragment extends ListItemSettingsFragment {
 
     @Override
     public ListItemProvider getItemProvider() {
-        return new ListProvider(getLineItems());
+        return new ListProvider(getListItems());
     }
 
-    private List<ListItem> getLineItems() {
-        List<ListItem> lineItems = new ArrayList<>();
+    private List<ListItem> getListItems() {
+        List<ListItem> listItems = new ArrayList<>();
         Context context = getContext();
         if (supportsAdaptiveBrightness()) {
             TextListItem adaptiveBrightnessItem = new TextListItem(context);
@@ -72,10 +72,10 @@ public class DisplaySettingsFragment extends ListItemSettingsFragment {
                                     SCREEN_BRIGHTNESS_MODE,
                                     isChecked ? SCREEN_BRIGHTNESS_MODE_AUTOMATIC
                                             : SCREEN_BRIGHTNESS_MODE_MANUAL));
-            lineItems.add(adaptiveBrightnessItem);
+            listItems.add(adaptiveBrightnessItem);
         }
-        lineItems.add(new BrightnessLineItem(context));
-        return lineItems;
+        listItems.add(new BrightnessListItem(context));
+        return listItems;
     }
 
     private boolean isAdaptiveBrightnessChecked() {

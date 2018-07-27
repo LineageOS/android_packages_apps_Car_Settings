@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,12 +11,13 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.home;
 
 import android.content.Context;
+import android.net.wifi.WifiManager;
 
 import androidx.car.widget.TextListItem;
 
@@ -29,13 +30,13 @@ import com.android.car.settings.wifi.WifiUtil;
 
 
 /**
- * Represents the wifi line item on settings home page.
+ * Represents the wifi list item on settings home page.
  */
-public class WifiLineItem extends TextListItem {
+public class WifiListItem extends TextListItem {
     private final CarWifiManager mCarWifiManager;
     private final ListController mListController;
 
-    public WifiLineItem(
+    public WifiListItem(
             Context context,
             CarWifiManager carWifiManager,
             BaseFragment.FragmentController fragmentController,
@@ -54,6 +55,13 @@ public class WifiLineItem extends TextListItem {
                 .launchFragment(WifiSettingsFragment.newInstance()));
     }
 
+    /**
+     * Updates this list item to reflect the given Wifi state.
+     *
+     * @param state one of {@link WifiManager#WIFI_STATE_DISABLED},
+     *         {@link WifiManager#WIFI_STATE_ENABLED}, {@link WifiManager#WIFI_STATE_DISABLING},
+     *         {@link WifiManager#WIFI_STATE_ENABLING}, {@link WifiManager#WIFI_STATE_UNKNOWN}
+     */
     public void onWifiStateChanged(int state) {
         setPrimaryActionIcon(WifiUtil.getIconRes(state), /* useLargeIcon= */ false);
         setSwitchState(WifiUtil.isWifiOn(state));

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -73,15 +73,15 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
     }
 
     private ArrayList<ListItem> getListItems() {
-        ArrayList<ListItem> lineItems = new ArrayList<>();
+        ArrayList<ListItem> listItems = new ArrayList<>();
 
-        lineItems.add(createLanguageListItem());
-        lineItems.addAll(createSystemUpdateListItems());
-        lineItems.add(createAboutSystemListItem());
-        lineItems.add(createLegalInfoListItem());
-        lineItems.add(createResetOptionsListItem());
+        listItems.add(createLanguageListItem());
+        listItems.addAll(createSystemUpdateListItems());
+        listItems.add(createAboutSystemListItem());
+        listItems.add(createLegalInfoListItem());
+        listItems.add(createResetOptionsListItem());
 
-        return lineItems;
+        return listItems;
     }
 
     private TextListItem createLanguageListItem() {

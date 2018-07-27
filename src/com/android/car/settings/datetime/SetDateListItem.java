@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.datetime;
@@ -29,32 +29,32 @@ import com.android.car.settings.common.BaseFragment.FragmentController;
 import java.util.Calendar;
 
 /**
- * A LineItem that displays and sets system time.
+ * A ListItem that displays and sets system date.
  */
-class SetTimeLineItem extends TextListItem implements DatetimeSettingsFragment.ListRefreshObserver {
+class SetDateListItem extends TextListItem implements DatetimeSettingsFragment.ListRefreshObserver {
 
     private final Context mContext;
     private final FragmentController mFragmentController;
 
-    public SetTimeLineItem(Context context, BaseFragment.FragmentController fragmentController) {
+    SetDateListItem(Context context, BaseFragment.FragmentController fragmentController) {
         super(context);
         mContext = context;
         mFragmentController = fragmentController;
-        setTitle(context.getString(R.string.date_time_set_time));
-        updateLineItemData();
+        setTitle(context.getString(R.string.date_time_set_date));
+        updateListItemData();
     }
 
     @Override
     public void onPreRefresh() {
-        updateLineItemData();
+        updateListItemData();
     }
 
-    private void updateLineItemData() {
-        setBody(DateFormat.getTimeFormat(mContext).format(Calendar.getInstance().getTime()));
+    private void updateListItemData() {
+        setBody(DateFormat.getLongDateFormat(mContext).format(Calendar.getInstance().getTime()));
         if (isEnabled()) {
             setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
             setOnClickListener(v ->
-                    mFragmentController.launchFragment(TimePickerFragment.getInstance()));
+                    mFragmentController.launchFragment(DatePickerFragment.getInstance()));
         } else {
             setSupplementalIcon(null, /* showDivider= */ false);
             setOnClickListener(null);

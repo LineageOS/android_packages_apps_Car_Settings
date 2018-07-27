@@ -33,7 +33,7 @@ import com.android.car.settings.common.CustomListItemTypes;
 /**
  * Represents suggestion list item.
  */
-public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> {
+public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> {
     private final CharSequence mTitle;
     private final CharSequence mPrimaryAction;
     private final CharSequence mSecondaryAction;
@@ -45,9 +45,9 @@ public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> 
     private boolean mIsEnabled = true;
 
     /**
-     * Creates a {@link SuggestionLineItem} with title, summary, icons, and click handlers.
+     * Creates a {@link SuggestionListItem} with title, summary, icons, and click handlers.
      */
-    public SuggestionLineItem(
+    public SuggestionListItem(
             CharSequence title,
             CharSequence summary,
             Drawable iconDrawable,
@@ -66,7 +66,7 @@ public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> 
 
     @LayoutRes
     public static final int getViewLayoutId() {
-        return R.layout.action_icon_button_line_item;
+        return R.layout.action_icon_button_list_item;
     }
 
     @Override
@@ -125,7 +125,7 @@ public class SuggestionLineItem extends ListItem<SuggestionLineItem.ViewHolder> 
     }
 
     /**
-     * ViewHolder that contains the elements that make up an ActionIconButtonLineItem,
+     * ViewHolder that contains the elements that make up an ActionIconButtonListItem,
      * including the title, description, icon, end action button, and divider.
      */
     public static class ViewHolder extends ListItem.ViewHolder {
