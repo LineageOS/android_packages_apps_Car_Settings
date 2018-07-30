@@ -34,6 +34,7 @@ import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -46,6 +47,7 @@ import org.robolectric.annotation.Config;
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = { ShadowCarUserManagerHelper.class })
+@Ignore
 public class EditUsernameFragmentTest {
     private BaseTestActivity mTestActivity;
 
