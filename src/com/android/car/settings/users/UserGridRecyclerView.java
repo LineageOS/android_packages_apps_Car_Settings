@@ -97,25 +97,27 @@ public class UserGridRecyclerView extends PagedListView implements
     private List<UserRecord> createUserRecords(List<UserInfo> userInfoList) {
         List<UserRecord> userRecords = new ArrayList<>();
         for (UserInfo userInfo : userInfoList) {
-            if (userInfo.isGuest()) {
-                // Don't display guests in the switcher.
-                continue;
-            }
             boolean isForeground =
                     mCarUserManagerHelper.getCurrentForegroundUserId() == userInfo.id;
+
+            if (!isForeground && userInfo.isGuest()) {
+                // Don't display temporary running background guests in the switcher.
+                continue;
+            }
+
             UserRecord record = new UserRecord(userInfo, false /* isStartGuestSession */,
                     false /* isAddUser */, isForeground);
             userRecords.add(record);
         }
 
-        // Add guest user record if the foreground user is not a guest
+        // Add start guest user record if the system is not logged in as guest already.
         if (!mCarUserManagerHelper.isForegroundUserGuest()) {
-            userRecords.add(addGuestUserRecord());
+            userRecords.add(createStartGuestUserRecord());
         }
 
         // Add "add user" record if the foreground user can add users
         if (mCarUserManagerHelper.canForegroundUserAddUsers()) {
-            userRecords.add(addUserRecord());
+            userRecords.add(createAddUserRecord());
         }
 
         return userRecords;
@@ -140,9 +142,9 @@ public class UserGridRecyclerView extends PagedListView implements
     /**
      * Create guest user record
      */
-    private UserRecord addGuestUserRecord() {
+    private UserRecord createStartGuestUserRecord() {
         UserInfo userInfo = new UserInfo();
-        userInfo.name = mContext.getString(R.string.user_guest);
+        userInfo.name = mContext.getString(R.string.start_guest_session);
         return new UserRecord(userInfo, true /* isStartGuestSession */,
                 false /* isAddUser */, false /* isForeground */);
     }
@@ -150,7 +152,7 @@ public class UserGridRecyclerView extends PagedListView implements
     /**
      * Create add user record
      */
-    private UserRecord addUserRecord() {
+    private UserRecord createAddUserRecord() {
         UserInfo userInfo = new UserInfo();
         userInfo.name = mContext.getString(R.string.user_add_user_menu);
         return new UserRecord(userInfo, false /* isStartGuestSession */,
@@ -251,7 +253,6 @@ public class UserGridRecyclerView extends PagedListView implements
                     return;
                 }
 
-                // If the user selects Guest, start the guest session.
                 if (userRecord.mIsStartGuestSession) {
                     mCarUserManagerHelper.startNewGuestSession(mGuestName);
                     return;
@@ -270,7 +271,8 @@ public class UserGridRecyclerView extends PagedListView implements
                     }
                     return;
                 }
-                // If the user doesn't want to be a guest or add a user, switch to the user selected
+                // If the user doesn't want to start a new guest or add a user, switch to the user
+                // selected
                 mCarUserManagerHelper.switchToUser(userRecord.mInfo);
             });
 
