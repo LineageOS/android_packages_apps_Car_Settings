@@ -39,6 +39,7 @@ import com.android.car.settings.testutils.ShadowTextListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -183,6 +184,7 @@ public class UserDetailsFragmentTest {
 
     /* Test that clicking edit launches EditUsernameFragment. */
     @Test
+    @Ignore
     public void testEditIconInvokesEditUsernameFragment() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
         doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(testUser);
