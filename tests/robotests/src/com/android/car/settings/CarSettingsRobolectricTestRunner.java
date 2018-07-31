@@ -113,6 +113,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
 
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
                 paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
+                paths.add(createResourcePath("file:packages/apps/Car/libs/car-settings-lib/res"));
                 paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
                 paths.add(createResourcePath(
                         "file:frameworks/opt/setupwizard/library/gingerbread/res"));
