@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"solğun ekran, gecə, rəng"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Gecə rejimi"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"Simsiz giriş nöqtələrini quraşdırın və idarə edin"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi yandırılır…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi söndürülür…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Şəbəkəni unutmaq alınmadı"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth deaktiv edildi"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Bağlantıları idarə edin, cihaz adı və görünmə rejimini təyin edin"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Kompüter"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Qulaqlıq"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"Telefon"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Bütün şəbəkə ayarları sıfırlansın? Bu əməliyyatı geri qaytara bilməzsiniz!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ayarları sıfırlayın"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Şəbəkə ayarları sıfırlandı"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"Tətbiq seçimlərini sıfırlayın"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Tətbiq seçimlərini sıfırlayın"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Bu, aşağıdakı səbəbdən bütün seçimlərinizi sıfırlayacaq:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Deaktiv tətbiqlər"</li>\n<li>"Deaktiv tətbiq bildirişləri"</li>\n<li>"Əməliyyatlar üçün varsayılan tətbiqlər"</li>\n<li>"Tətbiqlər üçün fon data məhdudlaşdırmaları"</li>\n<li>"Hər hansı icazə məhdudiyyətləri"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Hər hansı tətbiq məlumatını itirməyəcəksiniz."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tətbiqləri sıfırla"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Tətbiq seçimləri sıfırlanıb"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Bütün datanı silin (fabrika sıfırlaması)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarix və vaxt"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Tarix və vaxtı təyin edin"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Keçin"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"Yenidən cəhd edin"</string>
     <string name="user_guest" msgid="3465399481257448601">"Qonaq"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"Dəyişin"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran kilidi təyin edin"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PİN seçin"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Modelinizi seçin"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Parolunuzu seçin"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Parolunuzu seçin"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Cari ekran kilidi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Təhlükəsizlik üçün model təyin edin"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Silin"</string>

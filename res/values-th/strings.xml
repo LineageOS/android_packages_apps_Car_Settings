@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"หรี่หน้าจอ กลางคืน แต้มสี"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"โหมดกลางคืน"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ตั้งค่าและจัดการจุดเข้าใช้งานระบบไร้สาย"</string>
     <string name="wifi_starting" msgid="473253087503153167">"กำลังเปิด Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"กำลังปิด Wi-Fi…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ไม่สามารถเลิกการจดจำเครือข่าย"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"บลูทูธ"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"บลูทูธปิดอยู่"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"บลูทูธ"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"จัดการการเชื่อมต่อ ตั้งชื่ออุปกรณ์และการค้นพบ"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"คอมพิวเตอร์"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ชุดหูฟัง"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"โทรศัพท์"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"หากรีเซ็ตการตั้งค่าเครือข่ายทั้งหมด คุณจะยกเลิกการทำงานนี้ไม่ได้"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"รีเซ็ตการตั้งค่า"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"รีเซ็ตการตั้งค่าเครือข่ายแล้ว"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"รีเซ็ตค่ากำหนดแอป"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"รีเซ็ตค่ากำหนดของแอป"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"การดำเนินการนี้จะรีเซ็ตค่ากำหนดทั้งหมดต่อไปนี้"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"แอปที่ปิดใช้"</li>\n<li>"การแจ้งเตือนแอปที่ปิดใช้"</li>\n<li>"แอปพลิเคชันเริ่มต้นสำหรับการทำงานต่างๆ"</li>\n<li>"ข้อจำกัดข้อมูลในพื้นหลังสำหรับแอป"</li>\n<li>"ข้อจำกัดสิทธิ์ใดๆ"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"ข้อมูลของแอปจะไม่หายไป"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"รีเซ็ตแอป"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"รีเซ็ตค่ากำหนดของแอปแล้ว"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"วันที่และเวลา"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ตั้งวันที่และเวลา"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ปิด"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"ลองอีกครั้ง"</string>
     <string name="user_guest" msgid="3465399481257448601">"ผู้มาเยือน"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"เปลี่ยน"</string>
     <string name="current_user_name" msgid="3813671533249316823">"คุณ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ชื่อ"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"ตั้งค่าการล็อกหน้าจอ"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"เลือก PIN ของคุณ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"เลือกรูปแบบของคุณ"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"เลือกรหัสผ่านของคุณ"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"เลือกรหัสผ่านของคุณ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"การล็อกหน้าจอปัจจุบัน"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ตั้งรูปแบบเพื่อความปลอดภัย"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ล้าง"</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"కాంతివిహీన స్క్రీన్, రాత్రి, లేత రంగు"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"రాత్రి మోడ్"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"వైర్‌లెస్ యాక్సెస్ స్థానాలను సెటప్ చేయండి &amp; నిర్వహించండి"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fiని ఆన్ చేస్తోంది…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fiని ఆఫ్ చేస్తోంది…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"నెట్‌వర్క్‌ను మర్చిపోవడంలో విఫలమైంది"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"బ్లూటూత్"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"బ్లూటూత్ నిలిపివేయబడింది"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"బ్లూటూత్"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"కనెక్షన్‌లను నిర్వహించండి, పరికరం పేరును &amp; శోధనలో కనుగొనబడే సామర్థ్యాన్ని సెట్ చేయండి"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"కంప్యూటర్"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"హెడ్‌సెట్"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ఫోన్"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"అన్ని నెట్‌వర్క్ సెట్టింగ్‌లను రీసెట్ చేయాలా? మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"సెట్టింగ్‌లను రీసెట్ చేయి"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"నెట్‌వర్క్ సెట్టింగ్‌లు రీసెట్ చేయబడ్డాయి"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"యాప్ ప్రాధాన్యతలను రీసెట్ చేయి"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"యాప్ ప్రాధాన్యతలను రీసెట్ చేయి"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"దీని కోసం అన్ని ప్రాధాన్యతలను రీసెట్ చేస్తుంది:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"నిలిపివేయబడిన యాప్‌లు"</li>\n<li>"నిలిపివేయబడిన యాప్ నోటిఫికేషన్‌లు"</li>\n<li>"చర్యల కోసం డిఫాల్ట్ యాప్‌లు"</li>\n<li>"యాప్‌ల కోసం నేపథ్య డేటా పరిమితులు"</li>\n<li>"ఏవైనా అనుమతి పరిమితులు"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"మీరు ఎలాంటి యాప్ డేటాను కోల్పోరు."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"యాప్‌లను రీసెట్ చేయి"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"మొత్తం డేటాను తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"తేదీ &amp; సమయం"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"తేదీ మరియు సమయాన్ని సెట్ చేయండి"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"విస్మరించండి"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"మళ్లీ ప్రయత్నించండి"</string>
     <string name="user_guest" msgid="3465399481257448601">"అతిథి"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"మార్చు"</string>
     <string name="current_user_name" msgid="3813671533249316823">"మీరు (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"పేరు"</string>
@@ -239,7 +244,8 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"స్క్రీన్ లాక్‌ను సెట్ చేయండి"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"మీ పిన్ ఎంచుకోండి"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"మీ నమూనాను ఎంచుకోండి"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"మీ పాస్‌వర్డ్‌ను ఎంచుకోండి"</string>
+    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
+    <skip />
     <string name="current_screen_lock" msgid="637651611145979587">"ప్రస్తుత స్క్రీన్ లాక్"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"భద్రత కోసం, ఆకృతిని సెట్ చేయండి"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"తీసివేయి"</string>
