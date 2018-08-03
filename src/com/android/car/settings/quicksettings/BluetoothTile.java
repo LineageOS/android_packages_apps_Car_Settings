@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.quicksettings;
 
+package com.android.car.settings.quicksettings;
 
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
@@ -27,6 +27,8 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.android.car.settings.R;
+import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
+import com.android.car.settings.common.BaseFragment.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -40,6 +42,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
     private final StateChangedListener mStateChangedListener;
     private LocalBluetoothAdapter mLocalAdapter;
     private LocalBluetoothManager mLocalManager;
+    private View.OnLongClickListener mLaunchBluetoothSettings;
 
     @DrawableRes
     private int mIconRes = R.drawable.ic_settings_bluetooth;
@@ -84,7 +87,10 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         }
     };
 
-    BluetoothTile(Context context, StateChangedListener stateChangedListener) {
+    BluetoothTile(
+            Context context,
+            StateChangedListener stateChangedListener,
+            FragmentController fragmentController) {
         mStateChangedListener = stateChangedListener;
         mContext = context;
         IntentFilter mBtStateChangeFilter = new IntentFilter();
@@ -106,11 +112,15 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
             mIconRes = R.drawable.ic_settings_bluetooth_disabled;
             mState = State.OFF;
         }
+        mLaunchBluetoothSettings = v -> {
+            fragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
+            return true;
+        };
     }
 
     @Nullable
-    public View.OnClickListener getDeepDiveListener() {
-        return null;
+    public View.OnLongClickListener getOnLongClickListener() {
+        return mLaunchBluetoothSettings;
     }
 
     @Override
@@ -145,6 +155,6 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         if (mLocalAdapter == null) {
             return;
         }
-        mLocalAdapter.setBluetoothEnabled(mLocalAdapter.isEnabled() ? false : true);
+        mLocalAdapter.setBluetoothEnabled(!mLocalAdapter.isEnabled());
     }
 }

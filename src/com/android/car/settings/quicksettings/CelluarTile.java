@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.quicksettings;
 
+package com.android.car.settings.quicksettings;
 
 import android.annotation.Nullable;
 import android.content.Context;
@@ -56,7 +56,7 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
     }
 
     @Nullable
-    public View.OnClickListener getDeepDiveListener() {
+    public View.OnLongClickListener getOnLongClickListener() {
         return null;
     }
 
