@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"मधुरो स्क्रिन, रात, हल्का रङ"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"रात्रि मोड"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ताररहित पहुँच बिन्दुहरू सेटअप र प्रबन्ध गर्नुहोस्"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi निष्क्रिय पारिँदै…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"नेटवर्कलाई बिर्सन सकिएन"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"ब्लुटुथ"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"ब्लुटुथ असक्षम गरियो"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लुटुथ"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"जडानहरूको व्यवस्थापन गर्नुहोस्, यन्त्रको नाम तथा भेटिने क्षमता नामक सेवा सेट गर्नुहोस्"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"कम्प्युटर"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"हेडसेट"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"फोन"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"नेटवर्कसम्बन्धी सबै सेटिङहरू रिसेट गर्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"यस कार्यले निम्न अनुप्रयोगका सम्पूर्ण प्राथमिकताहरू रिसेट गर्ने छ:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएको अनुप्रयोगसम्बन्धी सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिको डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"तपाईं अनुप्रयोगको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अनुप्रयोगहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"मिति र समय सेट गर्नुहोस्"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारेज गर्नुहोस्"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"पुनः प्रयास गर्नुहोस्"</string>
     <string name="user_guest" msgid="3465399481257448601">"अतिथि"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"बदल्नुहोस्‌"</string>
     <string name="current_user_name" msgid="3813671533249316823">"तपाईं (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
@@ -239,7 +244,8 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"आफ्नो PIN छनौट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"आफ्नो ढाँचा छनौट गर्नुहोस्"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"आफ्नो पासवर्ड छनौट गर्नुहोस्"</string>
+    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
+    <skip />
     <string name="current_screen_lock" msgid="637651611145979587">"हालको स्क्रिन लक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि ढाँचा सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>

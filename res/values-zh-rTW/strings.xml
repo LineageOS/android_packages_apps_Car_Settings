@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"調暗螢幕, 夜間, 色調"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"夜間模式"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"設定、管理無線網路存取點"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在開啟 Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在關閉 Wi-Fi…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"無法清除網路設定"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"藍牙"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"藍牙已停用"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"藍牙"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"管理連線，設定裝置名稱和可偵測性"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"電腦"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"耳機"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"手機"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"要重設所有網路設定嗎？這個動作無法復原！"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"重設設定"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"已重設網路設定"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"重設應用程式偏好設定"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"重設應用程式偏好設定"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"這麼做會重設下列項目的所有偏好設定："</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"已停用的應用程式"</li>\n<li>"已停用的應用程式通知"</li>\n<li>"執行動作的預設應用程式"</li>\n<li>"應用程式背景資料限制"</li>\n<li>"任何權限限制"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"你不會遺失任何應用程式資料。"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重設應用程式"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重設應用程式偏好設定"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"清除所有資料 (恢復原廠設定)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"設定日期和時間"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"關閉"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"重試"</string>
     <string name="user_guest" msgid="3465399481257448601">"訪客"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"切換"</string>
     <string name="current_user_name" msgid="3813671533249316823">"你 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名稱"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"設定螢幕鎖定"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"選擇 PIN 碼"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"選擇圖案"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"選擇密碼"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"選擇密碼"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"目前的螢幕鎖定方式"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為了安全起見，請設定圖案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>

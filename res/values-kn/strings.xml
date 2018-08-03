@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ಮಂದ ಪರದೆ, ರಾತ್ರಿ ,ಟಿಂಟ್"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ರಾತ್ರಿ ಮೋಡ್"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ವೈ‑ಫೈ"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ವಯರ್‌ಲೆಸ್‌ ಪ್ರವೇಶಿಸುವಿಕೆ ಅಂಶಗಳನ್ನು ಸೆಟಪ್‌ ಮಾಡಿ ಮತ್ತು ನಿರ್ವಹಿಸಿ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ವೈ-ಫೈ ಆನ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ವೈ-ಫೈ ಆಫ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆಯಲು ವಿಫಲವಾಗಿದೆ"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"ಬ್ಲೂಟೂತ್‌ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"ಸಂಪರ್ಕಗಳನ್ನು ನಿರ್ವಹಿಸಿ, ಸಾಧನದ ಹೆಸರು &amp; ಅನ್ವೇಷಣೆಯಾಗುವಿಕೆಯನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"ಕಂಪ್ಯೂಟರ್‌"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ಹೆಡ್‌ಸೆಟ್"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ಫೋನ್"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ಎಲ್ಲಾ ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸುವುದೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"ಇದಕ್ಕಾಗಿ ಎಲ್ಲಾ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗುತ್ತದೆ:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</li>\n<li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾದ ಅಪ್ಲಿಕೇಶನ್‌ ಅಧಿಸೂಚನೆಗಳು"</li>\n<li>"ಕ್ರಮಗಳಿಗಾಗಿ ಡೀಫಾಲ್ಟ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು"</li>\n<li>"ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗಾಗಿ ಹಿನ್ನೆಲೆ ಡೇಟಾ ನಿರ್ಬಂಧಗಳು"</li>\n<li>"ಯಾವುದೇ ಅನುಮತಿ ನಿರ್ಬಂಧಗಳು"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"ನೀವು ಯಾವುದೇ ಅಪ್ಲಿಕೇಶನ್ ಡೇಟಾವನ್ನು ಕಳೆದುಕೊಳ್ಳುವುದಿಲ್ಲ."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆಪ್‌‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಬದಲಾಯಿಸಿ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಹೊಂದಿಸಿ"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ವಜಾಗೊಳಿಸಿ"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"ಬದಲಿಸಿ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ನೀವು (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ಹೆಸರು"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"ಪರದೆ ಲಾಕ್ ಹೊಂದಿಸಿ"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ನಿಮ್ಮ ಪಿನ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ಪ್ಯಾಟರ್ನ್ ಆಯ್ಕೆ ಮಾಡಿ"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ಪ್ರಸ್ತುತ ಸ್ಕ್ರೀನ್ ಲಾಕ್"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪ್ಯಾಟ್ರನ್ ಹೊಂದಿಸಿ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ತೆರವುಗೊಳಿಸಿ"</string>

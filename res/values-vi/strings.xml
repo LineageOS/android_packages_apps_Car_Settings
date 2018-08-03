@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"làm mờ màn hình, ban đêm, phủ màu"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Chế độ ban đêm"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"Thiết lập và quản lý điểm truy cập không dây"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Đang bật Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Đang tắt Wi‑Fi…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Không bỏ qua mạng được"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Đã tắt Bluetooth"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Quản lý kết nối, đặt tên thiết bị và khả năng phát hiện thiết bị"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Máy tính"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Tai nghe"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"Điện thoại"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Bạn có muốn đặt lại tất cả cài đặt mạng không? Bạn không thể hoàn tác hành động này!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Đặt lại cài đặt"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Đã đặt lại cài đặt mạng"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"Đặt lại tùy chọn ứng dụng"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Đặt lại tùy chọn ứng dụng"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Thao tác này sẽ đặt lại tất cả tùy chọn cho:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Ứng dụng bị tắt"</li>\n<li>"Thông báo của ứng dụng bị tắt"</li>\n<li>"Ứng dụng mặc định cho thao tác"</li>\n<li>"Giới hạn dữ liệu trong nền cho ứng dụng"</li>\n<li>"Mọi giới hạn về quyền"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Bạn sẽ không mất dữ liệu ứng dụng nào."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Đặt lại ứng dụng"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Đã đặt lại tùy chọn ứng dụng"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Xóa mọi dữ liệu (khôi phục cài đặt gốc)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ngày và giờ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Đặt ngày và giờ"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Bỏ qua"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"Thử lại"</string>
     <string name="user_guest" msgid="3465399481257448601">"Khách"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"Nút chuyển"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Bạn (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Tên"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Đặt khóa màn hình"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Chọn mã PIN của bạn"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Chọn hình mở khóa của bạn"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Chọn mật khẩu của bạn"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Chọn mật khẩu của bạn"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Khóa màn hình hiện tại"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Để bảo mật, hãy đặt hình mở khóa"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Xóa"</string>

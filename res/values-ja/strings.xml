@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"画面を暗くする、夜間、ティント"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"夜間モード"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ワイヤレス アクセス ポイントを設定、管理する"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi を ON にしています…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi を OFF にしています…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ネットワークを削除できませんでした"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth が無効"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"接続を管理し、デバイス名や検出の許可を設定する"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"パソコン"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ヘッドセット"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"スマートフォン"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"すべてのネットワーク設定をリセットしますか？この操作は元に戻せません。"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"設定をリセット"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ネットワーク設定をリセットしました"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"アプリの設定をリセット"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"アプリの設定をリセット"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"以下のアプリの設定がすべてリセットされます。"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"無効化されているアプリ"</li>\n<li>"無効化されているアプリの通知"</li>\n<li>"特定の操作で使用するデフォルトのアプリ"</li>\n<li>"アプリのバックグラウンドデータの制限"</li>\n<li>"権限のすべての制限"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"アプリのデータは失われません。"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"アプリをリセット"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"アプリの設定をリセットしました"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"全データを消去（出荷時リセット）"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日付と時刻"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"日時の設定"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"閉じる"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"再試行"</string>
     <string name="user_guest" msgid="3465399481257448601">"ゲスト"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"切り替える"</string>
     <string name="current_user_name" msgid="3813671533249316823">"自分（%1$s）"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名前"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"画面ロックの設定"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN の選択"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"パターンの選択"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"パスワードの選択"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"パスワードの選択"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"現在の画面ロック"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"セキュリティ強化のためにパターンを設定"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"消去"</string>

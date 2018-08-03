@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"മങ്ങിയ സ്ക്രീൻ, രാത്രി, ടിന്റ്"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"നൈറ്റ് മോഡ്"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"വൈഫൈ"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"വയർലെസ് ആക്‌സസ് പോയിന്റുകൾ സജ്ജീകരിക്കുക, നിയന്ത്രിക്കുക"</string>
     <string name="wifi_starting" msgid="473253087503153167">"വൈഫൈ ഓണാക്കുന്നു…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"വൈഫൈ ഓഫാക്കുന്നു…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"നെറ്റ്‌വർക്ക് നിരസിക്കുന്നത് പരാജയപ്പെട്ടു"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth പ്രവർത്തനരഹിതമാക്കി"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"കണ‌ക്ഷനുകൾ നിയന്ത്രിച്ച് ഉപകരണത്തിന്റെ പേരും കണ്ടെത്തൽ ക്ഷമതയും സജ്ജീകരിക്കുക"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"കമ്പ്യൂട്ടർ"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ഹെഡ്‌സെറ്റ്"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ഫോൺ"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"എല്ലാ നെറ്റ്‌വർക്കിംഗ് ക്രമീകരണവും പുനഃസജ്ജീകരിക്കണോ? നിങ്ങൾക്ക് ഈ പ്രവർത്തനം പഴയപടിയാക്കാനാവില്ല!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ക്രമീകരണം പുനഃസജ്ജീകരിക്കുക"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"നെറ്റ്‌വർക്ക് ക്രമീകരണം പുനഃസജ്ജീകരിച്ചു"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"ആപ്പ് മുൻഗണനകൾ പുനഃക്രമീകരിക്കുക"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"ആപ്പ് മുൻഗണനകൾ പുനഃസജ്ജീകരിക്കുക"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"ഇനിപ്പറയുന്നതിനായുള്ള എല്ലാ മുൻഗണനകളും ഇതിലൂടെ പുനഃസജ്ജീകരിക്കും:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"പ്രവർത്തനരഹിതമാക്കിയ ആപ്പുകൾ"</li>\n<li>"പ്രവർത്തനരഹിതമാക്കിയ ആപ്പ് അറിയിപ്പുകൾ"</li>\n<li>"പ്രവർത്തനങ്ങൾക്കുള്ള ഡിഫോൾട്ട് ആപ്പുകൾ"</li>\n<li>"ആപ്പുകൾക്കുള്ള പശ്ചാത്തല ഡാറ്റാ നിയന്ത്രണങ്ങൾ"</li>\n<li>"ഏതെങ്കിലും അനുമതി നിയന്ത്രണങ്ങൾ"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"നിങ്ങൾക്ക് ആപ്പ് ഡാറ്റയൊന്നും നഷ്‌ടമാകില്ല."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ആപ്പുകൾ പുനഃസജ്ജീകരിക്കുക"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ആപ്പ് മുൻഗണനകൾ പുനഃസജ്ജീകരിച്ചു"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"എല്ലാ ഡാറ്റയും മായ്‌ക്കുക (ഫാക്‌ടറി റീസെറ്റ്)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"തീയതിയും സമയവും"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"തീയതിയും സമയവും സജ്ജമാക്കുക"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
     <string name="current_user_name" msgid="3813671533249316823">"നിങ്ങൾ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
@@ -239,7 +244,8 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"ഒരു സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിക്കുക"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"പിൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"പാറ്റേൺ തിരഞ്ഞെടുക്കൂ"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"നിങ്ങളുടെ പാസ്‌വേഡ് തിരഞ്ഞെടുക്കുക"</string>
+    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
+    <skip />
     <string name="current_screen_lock" msgid="637651611145979587">"നിലവിലെ സ്‌ക്രീൻ ലോക്ക്"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"സുരക്ഷയ്‌ക്കായി, പാറ്റേൺ സജ്ജീകരിക്കുക"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"മായ്ക്കുക"</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ஒளிமங்கல் திரை, இரவு, மென்னிறம்"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"இரவுப் பயன்முறை"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"வைஃபை"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"வயர்லெஸ் ஆக்சஸ் பாயிண்ட்களை அமைத்து நிர்வகிக்கவும்"</string>
     <string name="wifi_starting" msgid="473253087503153167">"வைஃபையை ஆன் செய்கிறது…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"வைஃபையை ஆஃப் செய்கிறது…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"நெட்வொர்க்கை நீக்க முடியவில்லை"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"புளூடூத்"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"புளூடூத் முடக்கப்பட்டுள்ளது"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"இணைப்புகளை நிர்வகிக்கவும், சாதனப் பெயரையும் கண்டறியத்தக்க நிலையையும் அமைக்கவும்"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"கம்ப்யூட்டர்"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ஹெட்செட்"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"மொபைல்"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"எல்லா நெட்வொர்க் அமைப்புகளையும் மீட்டமைக்கவா? இதைச் செயல்தவிர்க்க முடியாது!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"அமைப்புகளை மீட்டமை"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"நெட்வொர்க் அமைப்புகள் மீட்டமைக்கப்பட்டன"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"ஆப்ஸ் விருப்பத்தேர்வுகளை மீட்டமை"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"ஆப்ஸ் விருப்பத்தேர்வுகளை மீட்டமை"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"பின்வருபவற்றின் விருப்பத்தேர்வுகளை மீட்டமைக்கும்:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"முடக்கப்பட்ட ஆப்ஸ்"</li>\n<li>"முடக்கப்பட்ட ஆப்ஸின் அறிவிப்புகள்"</li>\n<li>"செயல்பாடுகளுக்கான இயல்புநிலை ஆப்ஸ்"</li>\n<li>"பின்புல டேட்டா கட்டுப்பாடுகளுள்ள ஆப்ஸ்"</li>\n<li>"ஏதேனும் அனுமதிக் கட்டுப்பாடுகள்"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"ஆப்ஸ் தரவை இழக்கமாட்டீர்கள்."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ஆப்ஸை மீட்டமை"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ஆப்ஸ் விருப்பத்தேர்வுகள் மீட்டமைக்கப்பட்டன"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"எல்லாத் தரவையும் அழி (ஆரம்பநிலை ரீசெட்)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"தேதி &amp; நேரம்"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"தேதி மற்றும் நேரத்தை அமை"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"நிராகரி"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"மீண்டும் முயலவும்"</string>
     <string name="user_guest" msgid="3465399481257448601">"விருந்தினர்"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"பயனரை மாற்றும்"</string>
     <string name="current_user_name" msgid="3813671533249316823">"நீங்கள் (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
@@ -239,7 +244,8 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"திரைப் பூட்டை அமைக்கவும்"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"பின்னைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"பேட்டர்னைத் தேர்வுசெய்யவும்"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்"</string>
+    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
+    <skip />
     <string name="current_screen_lock" msgid="637651611145979587">"தற்போதைய திரைப் பூட்டு"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>

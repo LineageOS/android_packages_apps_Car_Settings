@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,8 +41,6 @@
     <skip />
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ନାଇଟ୍ ମୋଡ୍"</string>
     <!-- no translation found for wifi_settings (7701477685273103841) -->
-    <skip />
-    <!-- no translation found for wifi_settings_summary (6095898149997291025) -->
     <skip />
     <!-- no translation found for wifi_starting (473253087503153167) -->
     <skip />
@@ -92,8 +90,6 @@
     <!-- no translation found for bluetooth_disabled (4187409401590350572) -->
     <skip />
     <!-- no translation found for bluetooth_settings_title (3794688574569688649) -->
-    <skip />
-    <!-- no translation found for bluetooth_settings_summary (4023303473646769835) -->
     <skip />
     <!-- no translation found for bluetooth_talkback_computer (5223330129934365312) -->
     <skip />
@@ -265,7 +261,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ସବୁ ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିବେ? ଏହାକୁ ଆପଣ ଆଉ ପୂର୍ବବତ୍‍ କରିପାରିବେ ନାହିଁ!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ସେଟିଂ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ନେଟ୍‌ୱାର୍କ ସେଟିଂ ରିସେଟ୍‌ କରିଦିଆଯାଇଛି"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"ଆପ୍‌ ପସନ୍ଦଗୁଡ଼ିକୁ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"ଆପ୍‌ ଅଗ୍ରାଧିକାରଗୁଡିକୁ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"ଏହା ସମସ୍ତ ଅଗ୍ରାଧିକାରଗୁଡିକୁ ରିସେଟ୍‍ କରିବ:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"ଅକ୍ଷମ ହୋଇଥିବା ଆପ୍‍ସ"</li>\n<li>"ଆପ୍‌ ବିଜ୍ଞପ୍ତିଗୁଡିକ ଅକ୍ଷମ ହୋଇଛି"</li>\n<li>"କାର୍ଯ୍ୟ କରିବା ପାଇଁ ଡିଫଲ୍ଟ ଆପ୍ଲିକେସନ୍‌"</li>\n<li>"ଆପ୍ସ ପାଇଁ ପୃଷ୍ଠପଟ ଡାଟା ପ୍ରତିବନ୍ଧଗୁଡିକ"</li>\n<li>"ଯେକୌଣସି ଅନୁମତି ପ୍ରତିବନ୍ଧଗୁଡିକ"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"ଆପଣ କୌଣସି ଆପ୍‍ ଡାଟା ହରାଇବେ ନାହିଁ।"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ଆପ୍ସ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ଆପ୍‍ ଅଗ୍ରାଧିକାର ରିସେଟ୍‍ ହୋଇଛି"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ସମସ୍ତ ଡାଟା ଲିଭାନ୍ତୁ (ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍‌)"</string>
     <!-- no translation found for date_and_time_settings_title (4058492663544475485) -->
     <skip />
@@ -339,6 +340,8 @@
     <string name="remove_user_error_retry" msgid="8291692909396995093">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
     <!-- no translation found for user_guest (3465399481257448601) -->
     <skip />
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <!-- no translation found for user_switch (6544839750534690781) -->
     <skip />
     <!-- no translation found for current_user_name (3813671533249316823) -->
@@ -399,7 +402,8 @@
     <skip />
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ନିଜ ପିନ୍‌ ନମ୍ବର ବାଛନ୍ତୁ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ନିଜ ପାର୍ଟନ୍‌ ବାଛନ୍ତୁ"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ନିଜ ପାସ୍‌ୱର୍ଡ ବାଛନ୍ତୁ"</string>
+    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
+    <skip />
     <string name="current_screen_lock" msgid="637651611145979587">"ବର୍ତ୍ତମାନର ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <!-- no translation found for choose_lock_pattern_message (6242765203541309524) -->
     <skip />

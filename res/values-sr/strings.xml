@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"затамнити екран, ноћ, нијанса"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Ноћни режим"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"Подешавајте бежичне приступне тачке и управљајте њима"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi се укључује..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi се искључује..."</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Брисање мреже није успело"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth је онемогућен"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Управљајте везама, подешавајте назив и видљивост уређаја"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Рачунар"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Слушалице"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"Телефон"</string>
@@ -158,7 +156,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Желите ли да ресетујете сва подешавања мреже? Ова радња не може да се опозове!"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ресетуј подешавања"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Подешавања мреже су ресетована"</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"Ресетуј подешавања апликација"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Ресетуј подешавања апликација"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Овим ће се ресетовати сва подешавања за:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Нећете изгубити податке апликација."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Подесите датум и време"</string>
@@ -205,6 +208,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Одбаци"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"Пробај поново"</string>
     <string name="user_guest" msgid="3465399481257448601">"Гост"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"Пребаците на другог корисника"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ви (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Име"</string>
@@ -241,7 +246,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Подесите закључавање екрана"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Одаберите PIN"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Одаберите шаблон"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Одаберите лозинку"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Одаберите лозинку"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Тренутно закључавање екрана"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Подесите шаблон из безбедносних разлога"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Обриши"</string>

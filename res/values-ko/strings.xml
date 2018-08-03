@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"화면 어둡게 하기, 밤, 농담 효과"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"야간 모드"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"무선 액세스 포인트 설정 및 관리"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi 사용 설정 중..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi 사용 중지 중..."</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"네트워크 기록 삭제 실패"</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"블루투스"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"블루투스 사용 중지됨"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"블루투스"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"연결 관리, 기기 이름 및 검색 가능 여부 설정"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"컴퓨터"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"헤드셋"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"전화"</string>
@@ -157,7 +155,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"모든 네트워크 설정을 초기화하시겠습니까? 이 작업은 실행취소할 수 없습니다."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"설정 초기화"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"네트워크 설정이 초기화되었습니다."</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"앱 환경설정 초기화"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"앱 환경설정 초기화"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"다음을 포함한 모든 환경설정을 초기화합니다."</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"사용 중지된 앱"</li>\n<li>"사용 중지된 앱 알림"</li>\n<li>"작업에 사용하는 기본 애플리케이션"</li>\n<li>"앱의 백그라운드 데이터 제한"</li>\n<li>"그 밖의 권한 제한"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"앱 데이터는 손실되지 않습니다."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"앱 초기화"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"날짜 및 시간"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"날짜 및 시간 설정"</string>
@@ -203,6 +206,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"닫기"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"다시 시도"</string>
     <string name="user_guest" msgid="3465399481257448601">"게스트"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"전환"</string>
     <string name="current_user_name" msgid="3813671533249316823">"사용자(%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"이름"</string>
@@ -239,7 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"화면 잠금 설정"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN 선택"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"패턴 선택"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"비밀번호 선택"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"비밀번호 선택"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"현재 화면 잠금"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"보안을 위해 패턴을 설정하세요."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"삭제"</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
+ * Copyright (c) 2018, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,6 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"تعتيم الشاشة، ليل، تلوين خفيف"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"الوضع الليلي"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"إعداد نقاط الدخول اللاسلكية وإدارتها"</string>
     <string name="wifi_starting" msgid="473253087503153167">"جارٍ تفعيل Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"جارٍ إيقاف Wi-Fi…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"تعذّر حذف الشبكة."</string>
@@ -61,7 +60,6 @@
     <string name="bluetooth_settings" msgid="3878243366013638982">"بلوتوث"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"تم إيقاف البلوتوث."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"إدارة الاتصالات وتعيين اسم الجهاز وقابلية الاكتشاف"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"جهاز الكمبيوتر"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"سماعة الرأس"</string>
     <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"هاتف"</string>
@@ -161,7 +159,12 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"هل تريد إعادة ضبط جميع إعدادات الشبكة؟ لا يمكنك التراجع عن هذا الإجراء."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"إعادة ضبط الإعدادات"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"تمت إعادة ضبط إعدادات الشبكة."</string>
-    <string name="reset_app_preferences_title" msgid="1358092641530920263">"إعادة تعيين تفضيلات التطبيقات"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"إعادة ضبط خيارات التطبيقات المفضّلة"</string>
+    <string name="reset_app_pref_desc" msgid="3356451885960078577">"سيؤدي هذا إلى إعادة ضبط جميع الخيارات المفضّلة في:"</string>
+    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"التطبيقات غير المفعّلة"</li>\n<li>"إشعارات التطبيقات غير المفعّلة"</li>\n<li>"التطبيقات التلقائية للإجراءات"</li>\n<li>"قيود بيانات الخلفية للتطبيقات"</li>\n<li>"أي قيود على الأذونات"</li></string>
+    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"لن تفقد أي بيانات تطبيقات."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"إعادة ضبط التطبيقات"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"تم إعادة ضبط خيارات التطبيقات المفضّلة"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"محو جميع البيانات (factory reset)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"التاريخ والوقت"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"تعيين التاريخ والوقت"</string>
@@ -211,6 +214,8 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"تجاهل"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"إعادة المحاولة"</string>
     <string name="user_guest" msgid="3465399481257448601">"الضيف"</string>
+    <!-- no translation found for start_guest_session (4438752398760283201) -->
+    <skip />
     <string name="user_switch" msgid="6544839750534690781">"تبديل"</string>
     <string name="current_user_name" msgid="3813671533249316823">"أنت (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"الاسم"</string>
@@ -247,7 +252,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"تعيين قفل شاشة"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"اختيار رقم التعريف الشخصي"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"اختيار النّقش"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"اختيار كلمة المرور"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"اختيار كلمة المرور"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"قفل الشاشة الحالي"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"للحفاظ على الأمان، يجب تعيين نقش."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"محو"</string>
