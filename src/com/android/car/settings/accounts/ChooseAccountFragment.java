@@ -44,7 +44,7 @@ public class ChooseAccountFragment extends ListItemSettingsFragment
                 chooseAccountFragment = new ChooseAccountFragment();
         Bundle bundle = ListItemSettingsFragment.getBundle();
         bundle.putInt(EXTRA_TITLE_ID, R.string.add_an_account);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
         chooseAccountFragment.setArguments(bundle);
         return chooseAccountFragment;
     }
