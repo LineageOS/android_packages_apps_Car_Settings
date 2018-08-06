@@ -81,7 +81,6 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
         if (mCachedDevice == null) {
             mCachedDevice = mDeviceManager.addDevice(
                     mLocalManager.getBluetoothAdapter(),
-                    mLocalManager.getProfileManager(),
                     mDevice);
         }
     }
