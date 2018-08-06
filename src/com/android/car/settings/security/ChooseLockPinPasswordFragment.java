@@ -31,6 +31,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
@@ -75,6 +76,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private Button mSecondaryButton;
     private Button mPrimaryButton;
     private EditText mPasswordField;
+    private ProgressBar mProgressBar;
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
     private TextViewInputDisabler mPasswordEntryInputDisabler;
@@ -237,6 +239,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         });
 
         mPasswordEntryInputDisabler = new TextViewInputDisabler(mPasswordField);
+        mProgressBar = (ProgressBar) getActivity().findViewById(R.id.progress_bar);
 
         mHintMessage = view.findViewById(R.id.hint_text);
 
@@ -442,6 +445,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
+        setProgressBarVisible(false);
         if (isSaveSuccessful) {
             onComplete();
         } else {
@@ -471,6 +475,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mSavePasswordWorker.start(mUserId, mCurrentEntry, mExistingPassword,
                 mPasswordHelper.getPasswordQuality());
 
+        setProgressBarVisible(true);
         updateSubmitButtonsState();
     }
 
@@ -515,6 +520,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             setSecondaryButtonText(mUiStage.secondaryButtonText);
         }
         mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
+    }
+
+    private void setProgressBarVisible(boolean visible) {
+        if (mProgressBar != null) {
+            mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
     }
 
     /**
