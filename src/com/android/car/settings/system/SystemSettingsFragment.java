@@ -46,9 +46,6 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
     private static final String ACTION_SYSTEM_UPDATE_SETTINGS =
             "android.settings.SYSTEM_UPDATE_SETTINGS";
 
-    private static final String ACTION_SETTING_VIEW_LICENSE =
-            "android.settings.WEBVIEW_LICENSE";
-
     private ListItemProvider mItemProvider;
 
     public static SystemSettingsFragment getInstance() {
@@ -135,11 +132,9 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         legalInfoItem.setPrimaryActionIcon(
                 R.drawable.ic_settings_about, /* useLargeIcon= */ false);
         legalInfoItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
-        legalInfoItem.setOnClickListener(v -> {
-            Intent intent = new Intent();
-            intent.setAction(ACTION_SETTING_VIEW_LICENSE);
-            context.startActivity(intent);
-        });
+        legalInfoItem.setOnClickListener(v ->
+                getFragmentController().launchFragment(LegalInformationFragment.newInstance())
+        );
         return legalInfoItem;
     }
 
