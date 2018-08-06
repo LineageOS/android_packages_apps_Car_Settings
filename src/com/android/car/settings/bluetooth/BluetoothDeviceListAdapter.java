@@ -325,11 +325,6 @@ public class BluetoothDeviceListAdapter
     }
 
     @Override
-    public void onScanningStateChanged(boolean started) {
-        // don't care
-    }
-
-    @Override
     public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
         onDeviceDeleted(cachedDevice);
         onDeviceAdded(cachedDevice);
@@ -343,16 +338,6 @@ public class BluetoothDeviceListAdapter
     public void onConnectionStateChanged(CachedBluetoothDevice cachedDevice, int state) {
         onDeviceDeleted(cachedDevice);
         onDeviceAdded(cachedDevice);
-    }
-
-    @Override
-    public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
-        // Not used (for now)
-    }
-
-    @Override
-    public void onAudioModeChanged() {
-        // Not used (for now)
     }
 
     private void addDevices(Collection<CachedBluetoothDevice> cachedDevices) {

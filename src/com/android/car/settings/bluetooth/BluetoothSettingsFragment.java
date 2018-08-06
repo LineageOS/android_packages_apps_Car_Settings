@@ -37,7 +37,6 @@ import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.BluetoothCallback;
-import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
@@ -219,36 +218,6 @@ public class BluetoothSettingsFragment extends BaseFragment implements Bluetooth
         if (!started) {
             setProgressBarVisible(false);
         }
-    }
-
-    @Override
-    public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
-        // no-op
-    }
-
-    @Override
-    public void onDeviceAdded(CachedBluetoothDevice cachedDevice) {
-        // no-op
-    }
-
-    @Override
-    public void onDeviceDeleted(CachedBluetoothDevice cachedDevice) {
-        // no-op
-    }
-
-    @Override
-    public void onConnectionStateChanged(CachedBluetoothDevice cachedDevice, int state) {
-        // no-op
-    }
-
-    @Override
-    public void onActiveDeviceChanged(CachedBluetoothDevice activeDevice, int bluetoothProfile) {
-        // no-op
-    }
-
-    @Override
-    public void onAudioModeChanged() {
-        // no-op
     }
 
     private  void setProgressBarVisible(boolean visible) {
