@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
@@ -59,6 +60,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     private TextView mMessageText;
     private Button mSecondaryButton;
     private Button mPrimaryButton;
+    private ProgressBar mProgressBar;
     private List<LockPatternView.Cell> mChosenPattern;
     private String mCurrentPattern;
     private SavePatternWorker mSavePatternWorker;
@@ -235,6 +237,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
         mMessageText = view.findViewById(R.id.description_text);
         mMessageText.setText(getString(R.string.choose_lock_pattern_message));
+
+        mProgressBar = (ProgressBar) getActivity().findViewById(R.id.progress_bar);
 
         mLockPatternView = view.findViewById(R.id.lockPattern);
         mLockPatternView.setVisibility(View.VISIBLE);
@@ -528,10 +532,18 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
+        setProgressBarVisible(false);
+
         if (isSaveSuccessful) {
             onComplete();
         } else {
             updateStage(Stage.SaveFailure);
+        }
+    }
+
+    private void setProgressBarVisible(boolean visible) {
+        if (mProgressBar != null) {
+            mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
     }
 
@@ -555,6 +567,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
 
         mSavePatternWorker.start(mUserId, mChosenPattern, mCurrentPattern);
+        setProgressBarVisible(true);
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
