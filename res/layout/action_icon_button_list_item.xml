@@ -78,17 +78,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/car_padding_4"
-                style="?android:attr/borderlessButtonStyle"
                 android:textColor="@color/car_body1_light"
-                android:textAppearance="@style/TextAppearance.Car.Action1"/>
+                style="?android:attr/borderlessButtonStyle" />
             <Button
                 android:id="@+id/action_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/car_padding_4"
-                style="?android:attr/borderlessButtonStyle"
                 android:textColor="@color/car_body1_light"
-                android:textAppearance="@style/TextAppearance.Car.Action1"/>
+                style="?android:attr/borderlessButtonStyle" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
