@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (C) 2017 The Android Open Source Project
+  ~ Copyright (C) 2018 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -46,24 +46,9 @@
             android:tint="@color/toggle_icon_tint"
             style="@style/ListIcon" />
     </FrameLayout>
-    <LinearLayout
-        android:id="@+id/text_container"
+    <TextView
+        android:id="@+id/tile_text"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tile_text"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Car.Label1"/>
-        <ImageView
-            android:id="@+id/deep_dive_icon"
-            android:layout_width="@dimen/car_primary_icon_size"
-            android:layout_height="@dimen/car_primary_icon_size"
-            android:src="@drawable/ic_arrow_drop_down"
-            android:tint="@color/car_label1"
-            android:layout_marginStart="@dimen/car_padding_1"
-            android:visibility="gone"/>
-    </LinearLayout>
+        android:textAppearance="@style/TextAppearance.Car.Label1"/>
 </LinearLayout>

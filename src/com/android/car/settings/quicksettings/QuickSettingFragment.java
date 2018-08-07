@@ -13,10 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings.quicksettings;
 
+import android.app.Activity;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.user.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +27,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
@@ -37,7 +41,7 @@ import com.android.car.settings.users.UserSwitcherFragment;
  * Shows a page to access frequently used settings.
  */
 public class QuickSettingFragment extends BaseFragment {
-    private CarUserManagerHelper  mCarUserManagerHelper;
+    private CarUserManagerHelper mCarUserManagerHelper;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private PagedListView mListView;
@@ -52,7 +56,7 @@ public class QuickSettingFragment extends BaseFragment {
      */
     public static QuickSettingFragment newInstance() {
         QuickSettingFragment quickSettingFragment = new QuickSettingFragment();
-        Bundle bundle = quickSettingFragment.getBundle();
+        Bundle bundle = QuickSettingFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_quick_settings);
         bundle.putInt(EXTRA_LAYOUT, R.layout.quick_settings);
         bundle.putInt(EXTRA_TITLE_ID, R.string.settings_label);
@@ -64,34 +68,35 @@ public class QuickSettingFragment extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mHomeFragmentLauncher = new HomeFragmentLauncher();
-        getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
-                v -> getActivity().finish());
+        Activity activity = requireActivity();
+        activity.findViewById(R.id.action_bar_icon_container).setOnClickListener(
+                v -> activity.finish());
 
-        mOpacityDisabled = getContext().getResources().getFloat(R.dimen.opacity_disabled);
-        mOpacityEnabled = getContext().getResources().getFloat(R.dimen.opacity_enabled);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mOpacityDisabled = activity.getResources().getFloat(R.dimen.opacity_disabled);
+        mOpacityEnabled = activity.getResources().getFloat(R.dimen.opacity_enabled);
+        mCarUserManagerHelper = new CarUserManagerHelper(activity);
         mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
-        mListView = (PagedListView) getActivity().findViewById(R.id.list);
-        mGridAdapter = new QuickSettingGridAdapter(getContext());
+        mListView = activity.findViewById(R.id.list);
+        mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
 
-        mFullSettingBtn = getActivity().findViewById(R.id.full_setting_btn);
+        mFullSettingBtn = activity.findViewById(R.id.full_setting_btn);
         mFullSettingBtn.setOnClickListener(mHomeFragmentLauncher);
-        mUserSwitcherBtn = getActivity().findViewById(R.id.user_switcher_btn);
+        mUserSwitcherBtn = activity.findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
             getFragmentController().launchFragment(UserSwitcherFragment.newInstance());
         });
-        setupUserButton();
+        setupUserButton(activity);
 
-        View exitBtn = getActivity().findViewById(R.id.exit_button);
+        View exitBtn = activity.findViewById(R.id.exit_button);
         exitBtn.setOnClickListener(v -> getFragmentController().goBack());
 
         mGridAdapter
-                .addTile(new WifiTile(getContext(), mGridAdapter, getFragmentController()))
-                .addTile(new BluetoothTile(getContext(), mGridAdapter))
-                .addTile(new DayNightTile(getContext(), mGridAdapter))
-                .addTile(new CelluarTile(getContext(), mGridAdapter))
-                .addSeekbarTile(new BrightnessTile(getContext()));
+                .addTile(new WifiTile(activity, mGridAdapter, getFragmentController()))
+                .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentController()))
+                .addTile(new DayNightTile(activity, mGridAdapter, getFragmentController()))
+                .addTile(new CelluarTile(activity, mGridAdapter))
+                .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
     }
 
@@ -101,13 +106,13 @@ public class QuickSettingFragment extends BaseFragment {
         mGridAdapter.stop();
     }
 
-    private void setupUserButton() {
-        ImageView userIcon = (ImageView) getActivity().findViewById(R.id.user_icon);
+    private void setupUserButton(Context context) {
+        ImageView userIcon = requireActivity().findViewById(R.id.user_icon);
         UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
-        userIcon.setImageDrawable(mUserIconProvider.getUserIcon(currentUserInfo, getContext()));
+        userIcon.setImageDrawable(mUserIconProvider.getUserIcon(currentUserInfo, context));
         userIcon.clearColorFilter();
 
-        TextView userSwitcherText = (TextView) getActivity().findViewById(R.id.user_switcher_text);
+        TextView userSwitcherText = requireActivity().findViewById(R.id.user_switcher_text);
         userSwitcherText.setText(currentUserInfo.name);
     }
 
@@ -115,12 +120,12 @@ public class QuickSettingFragment extends BaseFragment {
      * Quick setting fragment is distraction optimized, so is allowed at all times.
      */
     @Override
-    public boolean canBeShown(CarUxRestrictions carUxRestrictions) {
+    public boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
         return true;
     }
 
     @Override
-    public void onUxRestrictionChanged(CarUxRestrictions carUxRestrictions) {
+    public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
         // TODO: update tiles
         applyRestriction(CarUxRestrictionsHelper.isNoSetup(carUxRestrictions));
     }
