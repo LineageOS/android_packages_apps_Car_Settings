@@ -52,6 +52,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     private static final String LOCK_OPTIONS_DIALOG_TAG = "lock_options_dialog_tag";
     private static final String FRAGMENT_TAG_SAVE_PASSWORD_WORKER = "save_password_worker";
+    private static final String STATE_UI_STAGE = "state_ui_stage";
+    private static final String STATE_FIRST_ENTRY = "state_first_entry";
     private static final Logger LOG = new Logger(ChooseLockPinPasswordFragment.class);
     private static final String EXTRA_IS_PIN = "extra_is_pin";
 
@@ -197,6 +199,11 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mIsAlphaMode = DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC == passwordQuality
                 || DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC == passwordQuality
                 || DevicePolicyManager.PASSWORD_QUALITY_COMPLEX == passwordQuality;
+
+        if (savedInstanceState != null) {
+            mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
+            mFirstEntry = savedInstanceState.getString(STATE_FIRST_ENTRY);
+        }
     }
 
     @Override
@@ -293,6 +300,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (mSavePasswordWorker != null) {
             mSavePasswordWorker.setListener(this::onChosenLockSaveFinished);
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(STATE_UI_STAGE, mUiStage.ordinal());
+        outState.putString(STATE_FIRST_ENTRY, mFirstEntry);
     }
 
     @Override
