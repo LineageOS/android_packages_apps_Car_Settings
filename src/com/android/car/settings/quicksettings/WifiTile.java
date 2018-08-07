@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,15 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
-package com.android.car.settings.quicksettings;
 
+package com.android.car.settings.quicksettings;
 
 import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
-import android.view.View.OnClickListener;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment.FragmentController;
@@ -37,9 +36,8 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
     private final StateChangedListener mStateChangedListener;
     private final CarWifiManager mCarWifiManager;
     private final Context mContext;
-    private final FragmentController mFragmentController;
 
-    private final OnClickListener mSwitchSavedWifiListener;
+    private final View.OnLongClickListener mLaunchWifiSettings;
 
     @DrawableRes
     private int mIconRes = R.drawable.ic_settings_wifi;
@@ -48,12 +46,14 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
 
     private State mState = State.OFF;
 
-    WifiTile(Context context, StateChangedListener stateChangedListener,
+    WifiTile(
+            Context context,
+            StateChangedListener stateChangedListener,
             FragmentController fragmentController) {
         mContext = context;
-        mFragmentController = fragmentController;
-        mSwitchSavedWifiListener = v -> {
-            mFragmentController.launchFragment(WifiSettingsFragment.newInstance());
+        mLaunchWifiSettings = v -> {
+            fragmentController.launchFragment(WifiSettingsFragment.newInstance());
+            return true;
         };
         mCarWifiManager = new CarWifiManager(context, /* listener= */ this);
         mCarWifiManager.start();
@@ -64,9 +64,8 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
     }
 
     @Nullable
-    public OnClickListener getDeepDiveListener() {
-        return !mCarWifiManager.getSavedAccessPoints().isEmpty()
-                ? mSwitchSavedWifiListener : null;
+    public View.OnLongClickListener getOnLongClickListener() {
+        return mLaunchWifiSettings;
     }
 
     @Override
@@ -129,6 +128,7 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
 
     /**
      * Updates the text with access point connected, if any
+     *
      * @return {@code true} if the text is updated, {@code false} other wise.
      */
     private boolean updateAccessPointSsid() {
