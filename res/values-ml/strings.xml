@@ -139,7 +139,8 @@
     <string name="copyright_title" msgid="4220237202917417876">"പകർപ്പവകാശം"</string>
     <string name="license_title" msgid="936705938435249965">"ലൈസന്‍സ്"</string>
     <string name="terms_title" msgid="5201471373602628765">"നിബന്ധനകളും വ്യവസ്ഥകളും"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"സിസ്‌റ്റം WebView ലൈസൻസ്"</string>
+    <!-- no translation found for webview_license_title (6442372337052056463) -->
+    <skip />
     <string name="wallpaper_attributions" msgid="9201272150014500697">"വാൾപേപ്പറുകൾ"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ഉപഗ്രഹ ഇമേജറി ദാതാക്കൾ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"മൂന്നാം കക്ഷി ലൈസൻസുകൾ"</string>
@@ -206,8 +207,7 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"വീണ്ടും ശ്രമിക്കുക"</string>
     <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
-    <!-- no translation found for start_guest_session (4438752398760283201) -->
-    <skip />
+    <string name="start_guest_session" msgid="4438752398760283201">"അതിഥി"</string>
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
     <string name="current_user_name" msgid="3813671533249316823">"നിങ്ങൾ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"പേര്"</string>
@@ -244,8 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"ഒരു സ്‌ക്രീൻ ലോക്ക് സജ്ജീകരിക്കുക"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"പിൻ തിരഞ്ഞെടുക്കുക"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"പാറ്റേൺ തിരഞ്ഞെടുക്കൂ"</string>
-    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
-    <skip />
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"പാസ്‌വേഡ് തിരഞ്ഞെടുക്കുക"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"നിലവിലെ സ്‌ക്രീൻ ലോക്ക്"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"സുരക്ഷയ്‌ക്കായി, പാറ്റേൺ സജ്ജീകരിക്കുക"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"മായ്ക്കുക"</string>

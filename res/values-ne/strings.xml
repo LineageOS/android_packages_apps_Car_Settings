@@ -139,7 +139,8 @@
     <string name="copyright_title" msgid="4220237202917417876">"प्रतिलिपि अधिकार"</string>
     <string name="license_title" msgid="936705938435249965">"इजाजतपत्र"</string>
     <string name="terms_title" msgid="5201471373602628765">"सेवाका सर्तहरू"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"प्रणालीको WebView इजाजतपत्र"</string>
+    <!-- no translation found for webview_license_title (6442372337052056463) -->
+    <skip />
     <string name="wallpaper_attributions" msgid="9201272150014500697">"वालपेपरहरू"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"स्याटेलाइटमार्फत इमेजरी प्रदायकहरू:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"तेस्रो पक्षीय इजाजतपत्रहरू"</string>
@@ -206,8 +207,7 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारेज गर्नुहोस्"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"पुनः प्रयास गर्नुहोस्"</string>
     <string name="user_guest" msgid="3465399481257448601">"अतिथि"</string>
-    <!-- no translation found for start_guest_session (4438752398760283201) -->
-    <skip />
+    <string name="start_guest_session" msgid="4438752398760283201">"अतिथि"</string>
     <string name="user_switch" msgid="6544839750534690781">"बदल्नुहोस्‌"</string>
     <string name="current_user_name" msgid="3813671533249316823">"तपाईं (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
@@ -244,8 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रिन लक सेट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"आफ्नो PIN छनौट गर्नुहोस्"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"आफ्नो ढाँचा छनौट गर्नुहोस्"</string>
-    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
-    <skip />
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"आफ्नो पासवर्ड छनौट गर्नुहोस्"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"हालको स्क्रिन लक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षाका लागि ढाँचा सेट गर्नुहोस्"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"खाली गर्नुहोस्"</string>

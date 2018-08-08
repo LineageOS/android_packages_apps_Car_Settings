@@ -82,7 +82,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"Pincode bevat letters of symbolen"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Typ de koppelingscode en druk op Return of Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Koppelen met <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Toestaan dat <xliff:g id="DEVICE_NAME">%1$s</xliff:g> toegang heeft tot je contacten en oproepgeschiedenis"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Toestaan dat <xliff:g id="DEVICE_NAME">%1$s</xliff:g> toegang heeft tot je contacten en gespreksgeschiedenis"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"U moet deze pincode wellicht ook opgeven op het andere apparaat."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"U moet deze toegangscode wellicht ook opgeven op het andere apparaat."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Moet 16 cijfers zijn"</string>
@@ -139,7 +139,8 @@
     <string name="copyright_title" msgid="4220237202917417876">"Copyright"</string>
     <string name="license_title" msgid="936705938435249965">"Licentie"</string>
     <string name="terms_title" msgid="5201471373602628765">"Algemene voorwaarden"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"Systeemlicentie voor webweergave"</string>
+    <!-- no translation found for webview_license_title (6442372337052056463) -->
+    <skip />
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Achtergronden"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Providers van satellietbeelden:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenties van derden"</string>
@@ -206,8 +207,7 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Sluiten"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"Opnieuw proberen"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
-    <!-- no translation found for start_guest_session (4438752398760283201) -->
-    <skip />
+    <string name="start_guest_session" msgid="4438752398760283201">"Gast"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wijzigen"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Jij (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Naam"</string>
