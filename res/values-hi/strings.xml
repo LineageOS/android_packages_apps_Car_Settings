@@ -139,7 +139,8 @@
     <string name="copyright_title" msgid="4220237202917417876">"कॉपीराइट"</string>
     <string name="license_title" msgid="936705938435249965">"लाइसेंस"</string>
     <string name="terms_title" msgid="5201471373602628765">"नियम और शर्तें"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"सिस्टम वेबव्यू लाइसेंस"</string>
+    <!-- no translation found for webview_license_title (6442372337052056463) -->
+    <skip />
     <string name="wallpaper_attributions" msgid="9201272150014500697">"वॉलपेपर"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"सैटेलाइट के ज़रिए इमेज उपलब्ध कराने वाली संस्थाएं:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"तीसरे पक्ष के लाइसेंस"</string>
@@ -159,7 +160,7 @@
     <string name="reset_app_pref_desc" msgid="3356451885960078577">"ऐसा करने से ऐप्लिकेशन की ये सेटिंग रीसेट हो जाएंगी:"</string>
     <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"बंद किए गए ऐप्लिकेशन"</li>\n<li>"ऐप्लिकेशन से जुड़ी बंद की गईं सूचनाएं"</li>\n<li>"कार्रवाइयों के लिए डिफ़ॉल्ट ऐप्लिकेशन"</li>\n<li>"ऐप्लिकेशन के बैकग्राउंड में डेटा इस्तेमाल करने पर पाबंदियां"</li>\n<li>"अनुमति देने पर किसी भी तरह की पाबंदियां"</li></string>
     <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"ऐप्लिकेशन का किसी भी तरह का डेटा मिटाया नहीं जाएगा."</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ऐप्लिकेशन की सेटिंग रीसेट करें"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ऐप्लिकेशन रीसेट करें"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ऐप्लिकेशन की सेटिंग रीसेट कर दी गई हैं"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"पूरा डेटा हमेशा के लिए मिटाएं (फ़ैक्ट्री रीसेट)"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"तारीख और समय"</string>
@@ -206,8 +207,7 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारिज करें"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"फिर से कोशिश करें"</string>
     <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
-    <!-- no translation found for start_guest_session (4438752398760283201) -->
-    <skip />
+    <string name="start_guest_session" msgid="4438752398760283201">"मेहमान"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच करें"</string>
     <string name="current_user_name" msgid="3813671533249316823">"आप (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"नाम"</string>
@@ -244,8 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"स्क्रीन लॉक सेट करना"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"अनलॉक करने के लिए पिन चुनें"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"अनलॉक करने के लिए पैटर्न चुनें"</string>
-    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
-    <skip />
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"अनलॉक करने के लिए पासवर्ड चुनें"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"मौजूदा स्क्रीन लॉक"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"सुरक्षा के लिए पैटर्न सेट करें"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"हटाएं"</string>

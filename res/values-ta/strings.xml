@@ -139,7 +139,8 @@
     <string name="copyright_title" msgid="4220237202917417876">"பதிப்புரிமை"</string>
     <string name="license_title" msgid="936705938435249965">"உரிமம்"</string>
     <string name="terms_title" msgid="5201471373602628765">"விதிமுறைகளும் நிபந்தனைகளும்"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"சிஸ்டம் WebView உரிமம்"</string>
+    <!-- no translation found for webview_license_title (6442372337052056463) -->
+    <skip />
     <string name="wallpaper_attributions" msgid="9201272150014500697">"வால்பேப்பர்கள்"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"சாட்டிலைட் படங்களை வழங்குபவர்கள்:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"மூன்றாம் தரப்பு உரிமங்கள்"</string>
@@ -206,8 +207,7 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"நிராகரி"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"மீண்டும் முயலவும்"</string>
     <string name="user_guest" msgid="3465399481257448601">"விருந்தினர்"</string>
-    <!-- no translation found for start_guest_session (4438752398760283201) -->
-    <skip />
+    <string name="start_guest_session" msgid="4438752398760283201">"விருந்தினர்"</string>
     <string name="user_switch" msgid="6544839750534690781">"பயனரை மாற்றும்"</string>
     <string name="current_user_name" msgid="3813671533249316823">"நீங்கள் (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
@@ -244,8 +244,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"திரைப் பூட்டை அமைக்கவும்"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"பின்னைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"பேட்டர்னைத் தேர்வுசெய்யவும்"</string>
-    <!-- no translation found for lockscreen_choose_your_password (4487577710136014069) -->
-    <skip />
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"கடவுச்சொல்லைத் தேர்வுசெய்க"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"தற்போதைய திரைப் பூட்டு"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
