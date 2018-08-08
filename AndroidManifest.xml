@@ -127,6 +127,11 @@
                   android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <activity android:name=".system.ThirdPartyLicensesActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+
         <service android:name=".bluetooth.BluetoothPairingService" />
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
@@ -134,6 +139,18 @@
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
             </intent-filter>
         </receiver>
+
+        <!-- FileProvider to share a generated license html file.
+             Note that "com.android.settings.files" is set here as its authorities because a Uri
+             permission grant should be allowed to share a file with an external browser but it is
+             allowed only for Settings' authorities in ActivityManagerService.  -->
+        <provider android:name="androidx.core.content.FileProvider"
+                  android:authorities="com.android.settings.files"
+                  android:grantUriPermissions="true"
+                  android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                       android:resource="@xml/file_paths" />
+        </provider>
 
     </application>
 </manifest>
