@@ -112,7 +112,7 @@
         </activity>
 
         <activity android:name=".security.SetupWizardScreenLockActivity"
-                  android:theme="@style/Theme.Car.Shared.SetupWizard.NoActionBar"
+                  android:theme="@style/Theme.Car.SetupWizard.NoActionBar.Accent"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
