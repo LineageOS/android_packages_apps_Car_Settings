@@ -254,7 +254,10 @@ public class UserGridRecyclerView extends PagedListView implements
                 }
 
                 if (userRecord.mIsStartGuestSession) {
-                    mCarUserManagerHelper.startNewGuestSession(mGuestName);
+                    if (mCarUserManagerHelper.startNewGuestSession(mGuestName)) {
+                        // Successful start, will switch to guest now. Close Settings app.
+                        mBaseFragment.getActivity().finish();
+                    }
                     return;
                 }
 
@@ -273,7 +276,10 @@ public class UserGridRecyclerView extends PagedListView implements
                 }
                 // If the user doesn't want to start a new guest or add a user, switch to the user
                 // selected
-                mCarUserManagerHelper.switchToUser(userRecord.mInfo);
+                if (mCarUserManagerHelper.switchToUser(userRecord.mInfo)) {
+                    // Successful switch, close Settings app.
+                    mBaseFragment.getActivity().finish();
+                }
             });
 
         }
@@ -338,6 +344,8 @@ public class UserGridRecyclerView extends PagedListView implements
         @Override
         public void onUserAddedSuccess() {
             enableAddView();
+            // New user added. Will switch to new user, therefore close the app.
+            mBaseFragment.getActivity().finish();
         }
 
         @Override
