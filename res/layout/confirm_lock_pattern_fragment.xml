@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/car_padding_2"
-        android:textAppearance="@style/TextAppearance.Car.Title2"
+        android:textAppearance="@style/TextAppearance.Car.Body1.Medium"
         android:text="@string/lock_settings_enter_pattern"/>
 
     <TextView
