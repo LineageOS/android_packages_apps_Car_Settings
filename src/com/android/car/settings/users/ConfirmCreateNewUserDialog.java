@@ -34,7 +34,7 @@ import com.android.car.settings.R;
  * Dialog to confirm creation of new user.
  */
 public class ConfirmCreateNewUserDialog extends DialogFragment implements
-        DialogInterface.OnClickListener {
+        DialogInterface.OnClickListener, DialogInterface.OnDismissListener {
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     static final String DIALOG_TAG = "ConfirmCreateNewUserDialog";
     private ConfirmCreateNewUserListener mCreateListener;
@@ -112,6 +112,15 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
             if (mCancelListener != null) {
                 mCancelListener.onCreateNewUserCancelled();
             }
+        }
+
+        dialog.dismiss();
+    }
+
+    @Override
+    public void onCancel(DialogInterface dialog) {
+        if (mCancelListener != null) {
+            mCancelListener.onCreateNewUserCancelled();
         }
 
         dialog.dismiss();
