@@ -81,5 +81,7 @@ limitations under the License.
     <ImageButton
         android:id="@+id/key_enter"
         style="@style/PinPadKey"
+        android:src="@drawable/ic_done"
+        android:tint="@color/car_body3"
         android:contentDescription="@string/enter_key"/>
 </merge>

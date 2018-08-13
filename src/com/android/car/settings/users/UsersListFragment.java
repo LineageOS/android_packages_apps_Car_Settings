@@ -130,7 +130,7 @@ public class UsersListFragment extends ListItemSettingsFragment
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
         }
 
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener();
+        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
     }
 
     @Override

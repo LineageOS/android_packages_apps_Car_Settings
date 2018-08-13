@@ -351,6 +351,10 @@
     <string name="user_new_user_name">New user</string>
     <!-- Title for Guest user [CHAR LIMIT=35] -->
     <string name="user_guest">Guest</string>
+    <!-- Title for Admin user [CHAR LIMIT=35] -->
+    <string name="user_admin">Admin</string>
+    <!-- User summary to indicate Admin user is currently logged in[CHAR LIMIT=35] -->
+    <string name="signed_in_admin_user">Signed in as admin</string>
     <!-- Description for icon to switch user [CHAR LIMIT=35] -->
     <string name="user_switch">Switch</string>
     <!-- Description for user name that is currently in use -->
@@ -438,8 +442,12 @@
     <string name="lockscreen_skip_button_text">Skip</string>
     <!-- Title string shown in choose screen lock [CHAR LIMIT=40] -->
     <string name="set_screen_lock">Set a screen lock</string>
+    <!-- Title string shown in choose lock PIN [CHAR LIMIT=40] -->
+    <string name="lockscreen_choose_your_pin">Choose your PIN</string>
     <!-- Title string shown in choose lock pattern [CHAR LIMIT=40] -->
     <string name="lockscreen_choose_your_pattern">Choose your pattern</string>
+    <!-- Title string shown in choose lock password [CHAR LIMIT=40] -->
+    <string name="lockscreen_choose_your_password">Choose your passowrd</string>
     <!-- Subtitle indicating the current screen lock type (none/PIN/pattern/password) [CHAR LIMIT=40] -->
     <string name="current_screen_lock">Current screen lock</string>
     <!-- Message on first screen of choose pattern flow [CHAR LIMIT=40] -->
@@ -506,7 +514,7 @@
     <!-- Label for Confirm button when entering PIN / password the second time. [CHAR LIMIT=30] -->
     <string name="lockpassword_confirm_label">Confirm</string>
     <!-- Hints for Choose Lock Password Screen [CHAR_LIMIT=73] -->
-    <string name="choose_lock_password_hints">Password must be between 4-8 characters with at least 1 number</string>
+    <string name="choose_lock_password_hints">Must be at least 4 characters</string>
     <!-- Hint shown in dialog screen when password is too short [CHAR LIMIT=40] -->
     <string name="lockpassword_password_too_short">Must be at least <xliff:g id="count" example="3">%d</xliff:g> characters</string>
     <!-- Hint shown in dialog screen when PIN is too short [CHAR LIMIT=44] -->
@@ -532,7 +540,7 @@
     <string name="lockpassword_illegal_character">This can\'t include an invalid character.</string>
 
     <!-- Error shown when in PASSWORD doesn't meet requirement. Because this may be concatenated with other messages, please make sure there's a period at the end of the sentence. [CHAR LIMIT=NONE] -->
-    <string name="lockpassword_invalid_password">Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace.</string>
+    <string name="lockpassword_invalid_password">Password invalid, must be at least 4 characters.</string>
 
     <!-- Error shown when in PASSWORD mode and password doesn't contain the required number of letters [CHAR LIMIT=NONE] -->
     <plurals name="lockpassword_password_requires_letters">
