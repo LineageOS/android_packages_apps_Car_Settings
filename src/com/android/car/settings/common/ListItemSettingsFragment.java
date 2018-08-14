@@ -65,6 +65,7 @@ public abstract class ListItemSettingsFragment extends BaseFragment implements L
         PagedListView listView = getView().findViewById(R.id.list);
         listView.setAdapter(mListAdapter);
         listView.setDividerVisibilityManager(mListAdapter);
+        listView.setMaxPages(PagedListView.UNLIMITED_PAGES);
     }
 
     @Override
