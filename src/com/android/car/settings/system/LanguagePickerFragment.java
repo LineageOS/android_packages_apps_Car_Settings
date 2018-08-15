@@ -31,6 +31,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.common.Logger;
 import com.android.car.settingslib.language.LanguagePickerUtils;
 import com.android.car.settingslib.language.LocaleListItemProvider;
 import com.android.car.settingslib.language.LocaleSelectionListener;
@@ -46,6 +47,8 @@ import java.util.Set;
  */
 public class LanguagePickerFragment extends ListItemSettingsFragment implements
         LocaleSelectionListener {
+
+    private static final Logger LOG = new Logger(LanguagePickerFragment.class);
 
     private LocaleListItemProvider mLocaleListItemProvider;
     private final HashSet<String> mLangTagsToIgnore = new HashSet<>();
@@ -90,6 +93,21 @@ public class LanguagePickerFragment extends ListItemSettingsFragment implements
         }
 
         Locale locale = localeInfo.getLocale();
+        if (locale.getCountry().isEmpty()) {
+            // The locale only has the language info. Need to look up the sub-level
+            // locale to get the country/region info as well.
+            Set<LocaleStore.LocaleInfo> subLocales = LocaleStore.getLevelLocales(
+                    getContext(),
+                    mLangTagsToIgnore,
+                    /* parent */ localeInfo,
+                    /* translatedOnly */ true);
+            if (subLocales.size() != 1) {
+                LOG.e("Failed to look up region level locale for " + localeInfo.getLocale());
+                return;
+            }
+            locale = subLocales.iterator().next().getLocale();
+            LOG.v("New locale to use=" + locale);
+        }
 
         Resources res = getResources();
         Configuration baseConfig = res.getConfiguration();
