@@ -135,20 +135,6 @@ public class UsersItemProviderTest {
         verify(mUserClickListener).onUserClicked(otherUsers.get(0));
     }
 
-    @Test
-    public void testClickOnGuestInvokesOnGuestClicked() {
-        UserInfo currentUser = new UserInfo(/* id= */ 11, "User 11", /* flags= */ 0);
-        doReturn(currentUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-
-        UsersItemProvider provider = createProvider();
-
-        // Clicking on guest user invokes OnGuestClicked.
-        ShadowTextListItem guestListItem = getItem(provider, 1);
-        guestListItem.getOnClickListener().onClick(new View(application.getApplicationContext()));
-        verify(mUserClickListener).onGuestClicked();
-    }
-
-
     private UsersItemProvider createProvider() {
         return new UsersItemProvider(RuntimeEnvironment.application.getApplicationContext(),
                 mUserClickListener, mCarUserManagerHelper);
