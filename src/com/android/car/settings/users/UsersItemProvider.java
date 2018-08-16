@@ -85,9 +85,6 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
         item.setTitle(mContext.getString(R.string.user_guest));
-
-        item.setOnClickListener(view -> mUserClickListener.onGuestClicked());
-        item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
         return item;
     }
 
@@ -101,10 +98,5 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
          * @param userInfo User for which the click is registered.
          */
         void onUserClicked(UserInfo userInfo);
-
-        /**
-         * Invoked when guest is clicked.
-         */
-        void onGuestClicked();
     }
 }

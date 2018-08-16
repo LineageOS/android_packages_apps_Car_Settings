@@ -143,16 +143,6 @@ public class UsersListFragmentTest {
                 .findFragmentById(R.id.fragment_container)).isNotNull();
     }
 
-    /* Test that clicking on a guest invokes user details fragment. */
-    @Test
-    public void testOnGuestClicked() {
-        createUsersListFragment();
-        mFragment.onGuestClicked();
-
-        assertThat((GuestFragment) mFragment.getFragmentManager()
-                .findFragmentById(R.id.fragment_container)).isNotNull();
-    }
-
     private void createUsersListFragment(UserInfo userInfo) {
         UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;
 
