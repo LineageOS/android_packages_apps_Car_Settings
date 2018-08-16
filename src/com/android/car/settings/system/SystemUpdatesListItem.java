@@ -40,7 +40,8 @@ class SystemUpdatesListItem extends TextListItem {
         mContext = context;
         mSettingsIntent = settingsIntent;
         setTitle(context.getString(R.string.system_update_settings_list_item_title));
-        setPrimaryActionIcon(R.drawable.ic_system_update, /*useLargeIcon=*/ false);
+        setPrimaryActionIcon(R.drawable.ic_system_update,
+                TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         setSupplementalIcon(R.drawable.ic_chevron_right, /*showDivider=*/ false);
         setOnClickListener(this::onClick);
     }

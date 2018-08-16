@@ -88,7 +88,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         Locale locale = LanguagePickerUtils.getConfiguredLocale();
         languageItem.setBody(LocaleHelper.getDisplayName(locale, locale, /* sentenceCase= */ true));
         languageItem.setPrimaryActionIcon(
-                R.drawable.ic_language, /* useLargeIcon= */ false);
+                R.drawable.ic_language, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         languageItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         languageItem.setOnClickListener(
                 v -> getFragmentController().launchFragment(LanguagePickerFragment.newInstance()));

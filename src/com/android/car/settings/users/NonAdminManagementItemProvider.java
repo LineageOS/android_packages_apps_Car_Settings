@@ -50,7 +50,7 @@ public class NonAdminManagementItemProvider  extends AbstractRefreshableListItem
 
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
-                /* useLargeIcon= */ false);
+                TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setTitle(mContext.getString(R.string.grant_admin_privileges));
         item.setAction(mContext.getString(R.string.assign_admin_privileges),
                 /* showDivider= */ false,

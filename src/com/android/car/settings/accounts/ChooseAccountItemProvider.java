@@ -107,7 +107,7 @@ class ChooseAccountItemProvider extends ListItemProvider {
             Drawable icon = mAuthenticatorHelper.getDrawableForType(mContext, accountType);
 
             TextListItem item = new TextListItem(mContext);
-            item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
+            item.setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
             item.setTitle(mProviderList.get(i).name.toString());
             item.setOnClickListener(v -> onItemSelected(accountType));
             mItems.add(item);

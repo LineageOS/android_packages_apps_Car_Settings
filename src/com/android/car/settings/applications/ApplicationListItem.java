@@ -47,7 +47,7 @@ public class ApplicationListItem extends TextListItem {
             boolean clickable) {
         super(context);
         setTitle(resolveInfo.loadLabel(pm).toString());
-        setPrimaryActionIcon(resolveInfo.loadIcon(pm), /* useLargeIcon= */ false);
+        setPrimaryActionIcon(resolveInfo.loadIcon(pm), TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         if (clickable) {
             setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
             setOnClickListener(v ->

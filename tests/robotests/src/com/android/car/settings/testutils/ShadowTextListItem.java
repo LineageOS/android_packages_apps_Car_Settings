@@ -16,7 +16,6 @@
 
 package com.android.car.settings.testutils;
 
-import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import androidx.car.widget.TextListItem;
@@ -29,7 +28,6 @@ import org.robolectric.annotation.Implements;
  */
 @Implements(TextListItem.class)
 public class ShadowTextListItem {
-    private Drawable mDrawable;
     private int mSupplementalIconDrawableId;
     private View.OnClickListener mSupplementalIconOnClickListener;
     private View.OnClickListener mAction1OnClickListener;
@@ -37,11 +35,6 @@ public class ShadowTextListItem {
     private String mTitle;
     private String mBody;
     private View.OnClickListener mOnClickListener;
-
-    @Implementation
-    public void setPrimaryActionIcon(Drawable drawable, boolean useLargeIcon) {
-        mDrawable = drawable;
-    }
 
     @Implementation
     public void setSupplementalIcon(int iconResId, boolean showDivider,
@@ -74,13 +67,6 @@ public class ShadowTextListItem {
     @Implementation
     public void setOnClickListener(View.OnClickListener listener) {
         mOnClickListener = listener;
-    }
-
-    /**
-     * Returns the drawable set on this item.
-     */
-    public Drawable getDrawable() {
-        return mDrawable;
     }
 
     /**
