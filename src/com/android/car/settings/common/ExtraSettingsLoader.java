@@ -136,7 +136,8 @@ public class ExtraSettingsLoader {
             TextListItem item = new TextListItem(mContext);
             item.setTitle(title);
             item.setBody(summary);
-            item.setPrimaryActionIcon(icon.loadDrawable(mContext), /* useLargeIcon= */ false);
+            item.setPrimaryActionIcon(icon.loadDrawable(mContext),
+                    TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
             item.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
             item.setOnClickListener(v -> mContext.startActivity(extraSettingIntent));
             extraSettings.get(category).add(item);

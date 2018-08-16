@@ -83,7 +83,7 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         Drawable icon = mUserIconProvider.getDefaultGuestIcon(mContext);
 
         TextListItem item = new TextListItem(mContext);
-        item.setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
+        item.setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setTitle(mContext.getString(R.string.user_guest));
         return item;
     }

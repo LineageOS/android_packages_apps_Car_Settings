@@ -117,7 +117,7 @@ class AccountsItemProvider extends ListItemProvider {
             UserInfo userInfo) {
         TextListItem item = new TextListItem(mContext);
         item.setPrimaryActionIcon(mAccountManagerHelper.getDrawableForType(accountType),
-                /* useLargeIcon= */ false);
+                TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setTitle(account.name);
 
         // Set item body = account label.

@@ -41,7 +41,7 @@ class UserListItem extends TextListItem {
         mIsCurrentUser = userManagerHelper.isCurrentProcessUser(mUserInfo);
 
         Drawable icon = new UserIconProvider(userManagerHelper).getUserIcon(mUserInfo, mContext);
-        setPrimaryActionIcon(icon, /* useLargeIcon= */ false);
+        setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         setTitle(getUserItemTitle(mUserInfo, mIsCurrentUser, mContext));
         setSummary();
     }

@@ -170,7 +170,7 @@ public class HomepageFragment extends ListItemSettingsFragment implements
         Context context = requireContext();
         TextListItem item = new TextListItem(context);
         item.setTitle(context.getString(titleId));
-        item.setPrimaryActionIcon(iconRes, /* useLargeIcon= */ false);
+        item.setPrimaryActionIcon(iconRes, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         item.setOnClickListener(onClickListener);
         return item;
