@@ -32,8 +32,8 @@ public class ShadowTextListItem {
     private View.OnClickListener mSupplementalIconOnClickListener;
     private View.OnClickListener mAction1OnClickListener;
     private String mAction1Text;
-    private String mTitle;
-    private String mBody;
+    private CharSequence mTitle;
+    private CharSequence mBody;
     private View.OnClickListener mOnClickListener;
 
     @Implementation
@@ -50,17 +50,17 @@ public class ShadowTextListItem {
     }
 
     @Implementation
-    public void setTitle(String title) {
+    public void setTitle(CharSequence title) {
         mTitle = title;
     }
 
     @Implementation
-    public void setBody(String body) {
+    public void setBody(CharSequence body) {
         mBody = body;
     }
 
     @Implementation
-    public void setBody(String body, boolean asPrimary) {
+    public void setBody(CharSequence body, boolean asPrimary) {
         mBody = body;
     }
 
@@ -86,14 +86,14 @@ public class ShadowTextListItem {
     /**
      * Returns the title set on this item.
      */
-    public String getTitle() {
+    public CharSequence getTitle() {
         return mTitle;
     }
 
     /**
      * Returns the body set on this item.
      */
-    public String getBody() {
+    public CharSequence getBody() {
         return mBody;
     }
 
