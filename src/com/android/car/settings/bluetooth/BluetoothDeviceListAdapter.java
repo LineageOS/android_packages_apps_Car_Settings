@@ -383,7 +383,7 @@ public class BluetoothDeviceListAdapter
         for (BluetoothDevice device : bondedDevices) {
             CachedBluetoothDevice cachedDevice = mDeviceManager.findDevice(device);
             if (cachedDevice == null) {
-                cachedDevice = mDeviceManager.addDevice(mLocalAdapter, device);
+                cachedDevice = mDeviceManager.addDevice(device);
             }
             cachedBluetoothDevices.add(cachedDevice);
         }
