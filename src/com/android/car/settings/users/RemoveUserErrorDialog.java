@@ -31,7 +31,7 @@ public class RemoveUserErrorDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
-                .setTitle(R.string.remove_user_error_title)
+                .setTitle(R.string.delete_user_error_title)
                 .setPositiveButton(android.R.string.ok, null)
                 .create();
     }

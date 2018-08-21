@@ -17,6 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -40,9 +41,18 @@ public class DialogTestUtils {
     /**
      * Invokes onClick on the dialog's negative button.
      */
-    public static void  clickNegativeButton(DialogFragment dialogFragment) {
+    public static void clickNegativeButton(DialogFragment dialogFragment) {
         Button negativeButton = (Button) dialogFragment.getDialog().getWindow()
                 .findViewById(R.id.negative_button);
         negativeButton.callOnClick();
+    }
+
+    /**
+     * Gets dialog's title.
+     */
+    public static String getTitle(DialogFragment dialogFragment) {
+        TextView titleView = (TextView) dialogFragment.getDialog().getWindow()
+                .findViewById(R.id.title);
+        return titleView.getText().toString();
     }
 }

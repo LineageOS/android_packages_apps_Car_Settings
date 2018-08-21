@@ -418,18 +418,22 @@
     <string name="add_user_error_title">Failed to create a new user</string>
 
     <!-- Deleting users -->
-    <!-- Spoken content description for delete icon beside a user [CHAR LIMIT=none] -->
-    <string name="user_delete_user_description">Delete user</string>
     <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=25] -->
-    <string name="really_remove_user_title">Remove this user?</string>
+    <string name="delete_user_dialog_title">Delete this user?</string>
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
-    <string name="really_remove_user_message">"All apps and data will be deleted."</string>
+    <string name="delete_user_dialog_message">"All apps and data will be deleted."</string>
     <!-- Title of the alert dialog to notify that user deletion has failed. [CHAR LIMIT=40] -->
-    <string name="remove_user_error_title">Failed to remove user.</string>
+    <string name="delete_user_error_title">Failed to delete user.</string>
     <!-- Button label to dismiss user deletion error [CHAR LIMIT=25] -->
-    <string name="remove_user_error_dismiss">Dismiss</string>
+    <string name="delete_user_error_dismiss">Dismiss</string>
     <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
-    <string name="remove_user_error_retry">Retry</string>
+    <string name="delete_user_error_retry">Retry</string>
+    <!-- Title of the alert dialog to ask user to confirm deletion of the last user on the device. [CHAR LIMIT=25] -->
+    <string name="delete_last_user_dialog_title">Delete last user?</string>
+    <!-- Message to inform user that deletion of the last user will prompt the creation of a new admin user. [CHAR LIMIT=NONE] -->
+    <string name="delete_last_user_admin_created_message">"After deleting the only remaining user for this car, a new admin user will be created."</string>
+    <!-- Message to inform user that deletion of the last user will require new system setup. [CHAR LIMIT=NONE] -->
+    <string name="delete_last_user_system_setup_required_message">"All data, settings, and apps associated with this user will be deleted. You'll need to set up the system again."</string>
 
     <!-- User info -->
     <!-- Title for Guest user [CHAR LIMIT=35] -->

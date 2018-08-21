@@ -30,6 +30,7 @@ import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.users.ConfirmRemoveUserDialog.UserToRemove;
 
 /**
  * Shows details for a user with the ability to remove user and edit current user.
@@ -196,10 +197,14 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         }
         removeUserBtn.setVisibility(View.VISIBLE);
         removeUserBtn.setText(R.string.delete_button);
-        removeUserBtn.setOnClickListener(v -> {
-            ConfirmRemoveUserDialog dialog = new ConfirmRemoveUserDialog();
-            dialog.setConfirmRemoveUserListener(this);
-            dialog.show(getFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
-        });
+        removeUserBtn.setOnClickListener(v -> showConfirmRemoveUserDialog());
+    }
+
+    private void showConfirmRemoveUserDialog() {
+        boolean isLastUser = mCarUserManagerHelper.getAllPersistentUsers().size() == 1;
+        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.create(
+                isLastUser ? UserToRemove.LAST_USER : UserToRemove.ANY_USER);
+        dialog.setConfirmRemoveUserListener(this);
+        dialog.show(getFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
     }
 }
