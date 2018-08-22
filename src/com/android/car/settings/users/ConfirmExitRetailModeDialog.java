@@ -33,7 +33,7 @@ import com.android.car.settings.R;
  */
 public class ConfirmExitRetailModeDialog extends DialogFragment implements
         DialogInterface.OnClickListener {
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final String DIALOG_TAG = "ConfirmExitRetailModeDialog";
     private ConfirmExitRetailModeListener mListener;
 

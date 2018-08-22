@@ -89,7 +89,7 @@ abstract class SaveLockWorkerBase extends Fragment {
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     boolean saveAndVerifyInBackground(Void... params) {
         boolean isSaveSuccessful = true;
 

@@ -80,24 +80,27 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
         super.onCreate(savedInstanceState);
         mAccount = getArguments().getParcelable(EXTRA_ACCOUNT_INFO);
         mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
-    }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        // Should be created before calling getListItem().
         mAccountManagerHelper = new AccountManagerHelper(getContext(), this);
         mAccountManagerHelper.startListeningToAccountUpdates();
 
         mItemProvider = new ListItemProvider.ListProvider(getListItems());
+    }
 
-        // Super is called only AFTER item provider is instantiated, because
-        // super.onActivityCreated calls getItemProvider().
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         // Title was set in super.onActivityCreated, but override if account label is available.
         setFragmentTitle();
 
         showRemoveButton();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mAccountManagerHelper.stopListeningToAccountUpdates();
     }
 
     @Override

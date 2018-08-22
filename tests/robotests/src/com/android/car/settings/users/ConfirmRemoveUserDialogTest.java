@@ -52,8 +52,7 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testConfirmRemoveUserTitle() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createDefault(null);
 
         showDialog(dlg);
 
@@ -63,8 +62,7 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testConfirmRemoveLastUserTitle() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastUser(null);
 
         showDialog(dlg);
 
@@ -73,12 +71,20 @@ public class ConfirmRemoveUserDialogTest {
     }
 
     @Test
+    public void testConfirmRemoveLastAdminTitle() {
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastAdmin(null);
+
+        showDialog(dlg);
+
+        assertThat(DialogTestUtils.getTitle(dlg))
+                .isEqualTo(application.getString(R.string.choose_new_admin_title));
+    }
+
+    @Test
     public void testConfirmAnyUserInvokesOnRemoveUserConfirmed() {
-        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog
-                .UserToRemove.ANY_USER);
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
                 ConfirmRemoveUserDialog.ConfirmRemoveUserListener.class);
-        dialog.setConfirmRemoveUserListener(listener);
+        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.createDefault(listener);
         showDialog(dialog);
 
         // Invoke confirm remove user.
@@ -90,14 +96,28 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testConfirmLastUserInvokesOnRemoveUserConfirmed() {
-        ConfirmRemoveUserDialog dialog =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
                 ConfirmRemoveUserDialog.ConfirmRemoveUserListener.class);
+        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.createForLastUser(listener);
         dialog.setConfirmRemoveUserListener(listener);
         showDialog(dialog);
 
-        // Invoke confirm remove user.
+        // Invoke confirm remove last user.
+        DialogTestUtils.clickPositiveButton(dialog);
+
+        verify(listener).onRemoveUserConfirmed();
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    @Test
+    public void testConfirmLastAdminInvokesOnRemoveUserConfirmed() {
+        ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
+                ConfirmRemoveUserDialog.ConfirmRemoveUserListener.class);
+        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.createForLastAdmin(listener);
+        dialog.setConfirmRemoveUserListener(listener);
+        showDialog(dialog);
+
+        // Invoke confirm remove last admin.
         DialogTestUtils.clickPositiveButton(dialog);
 
         verify(listener).onRemoveUserConfirmed();
@@ -106,8 +126,7 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testCancelOnRemoveAnyUserDialogDismissesDialog() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createDefault(null);
 
         showDialog(dlg);
 
@@ -121,8 +140,21 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testCancelOnRemoveLastUserDialogDismissesDialog() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastUser(null);
+
+        showDialog(dlg);
+
+        assertThat(isDialogShown()).isTrue(); // Dialog is shown.
+
+        // Invoke cancel.
+        DialogTestUtils.clickNegativeButton(dlg);
+
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    @Test
+    public void testCancelOnRemoveLastAdminDialogDismissesDialog() {
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastAdmin(null);
 
         showDialog(dlg);
 
@@ -136,8 +168,7 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testNoClickListenerDismissesRemoveAnyUserDialog() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createDefault(null);
 
         showDialog(dlg);
 
@@ -149,12 +180,23 @@ public class ConfirmRemoveUserDialogTest {
 
     @Test
     public void testNoClickListenerDismissesRemoveLastUserDialog() {
-        ConfirmRemoveUserDialog dlg =
-                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastUser(null);
 
         showDialog(dlg);
 
-        // Invoke confirm remove user.
+        // Invoke confirm remove last user.
+        DialogTestUtils.clickPositiveButton(dlg);
+
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    @Test
+    public void testNoClickListenerDismissesRemoveLastAdminrDialog() {
+        ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.createForLastAdmin(null);
+
+        showDialog(dlg);
+
+        // Invoke confirm remove last admin.
         DialogTestUtils.clickPositiveButton(dlg);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.

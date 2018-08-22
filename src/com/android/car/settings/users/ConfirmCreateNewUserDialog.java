@@ -35,7 +35,7 @@ import com.android.car.settings.R;
  */
 public class ConfirmCreateNewUserDialog extends DialogFragment implements
         DialogInterface.OnClickListener, DialogInterface.OnDismissListener {
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final String DIALOG_TAG = "ConfirmCreateNewUserDialog";
     private ConfirmCreateNewUserListener mCreateListener;
     private CancelCreateNewUserListener mCancelListener;

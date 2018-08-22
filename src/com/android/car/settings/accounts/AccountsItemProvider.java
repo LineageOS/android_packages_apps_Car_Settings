@@ -88,7 +88,7 @@ class AccountsItemProvider extends ListItemProvider {
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     List<Account> getSortedUserAccounts() {
         List<Account> accounts = mAccountManagerHelper.getAccountsForCurrentUser();
 

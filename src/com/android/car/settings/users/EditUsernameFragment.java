@@ -16,6 +16,7 @@
 package com.android.car.settings.users;
 
 import android.car.user.CarUserManagerHelper;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -35,7 +36,6 @@ import com.google.android.material.textfield.TextInputEditText;
  * Enables user to edit their username.
  */
 public class EditUsernameFragment extends BaseFragment {
-    public static final String EXTRA_USER_INFO = "extra_user_info";
     private UserInfo mUserInfo;
 
     private TextInputEditText mUserNameEditText;
@@ -52,7 +52,7 @@ public class EditUsernameFragment extends BaseFragment {
         Bundle bundle = BaseFragment.getBundle();
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putInt(EXTRA_TITLE_ID, R.string.edit_user_name_title);
-        bundle.putParcelable(EXTRA_USER_INFO, userInfo);
+        bundle.putParcelable(Intent.EXTRA_USER, userInfo);
         bundle.putInt(EXTRA_LAYOUT, R.layout.edit_username_fragment);
         userSettingsFragment.setArguments(bundle);
         return userSettingsFragment;
@@ -61,7 +61,7 @@ public class EditUsernameFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
+        mUserInfo = getArguments().getParcelable(Intent.EXTRA_USER);
     }
 
     @Override
