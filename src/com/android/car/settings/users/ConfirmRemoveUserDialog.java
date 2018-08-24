@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.users;
@@ -28,8 +28,24 @@ import com.android.car.settings.R;
  * Dialog to confirm user removal.
  */
 public class ConfirmRemoveUserDialog extends DialogFragment {
+    private static final String REMOVE_LAST_USER_KEY = "remove_last_user";
     private ConfirmRemoveUserListener mListener;
 
+    public enum UserToRemove { ANY_USER, LAST_USER }
+
+    /**
+     * Creates a new {@code ConfirmRemoveUserDialog}.
+     *
+     * @param userToRemove {@code UserToRemove.LAST_USER} if the user is trying to remove the last
+     *                     existing user on the device, {@code UserToRemove.ANY_USER} otherwise.
+     */
+    public static ConfirmRemoveUserDialog create(UserToRemove userToRemove) {
+        ConfirmRemoveUserDialog dialog = new ConfirmRemoveUserDialog();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(REMOVE_LAST_USER_KEY, userToRemove);
+        dialog.setArguments(bundle);
+        return dialog;
+    }
     /**
      * Sets a listener for OnRemoveUserConfirmed that will get called if user confirms
      * the dialog.
@@ -48,15 +64,37 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        UserToRemove userToRemove = (UserToRemove) getArguments().get(REMOVE_LAST_USER_KEY);
+        return userToRemove == UserToRemove.LAST_USER
+                ? getRemoveLastUserDialog() : getRemoveAnyUserDialog();
+    }
+
+    private Dialog getRemoveAnyUserDialog() {
+        String title = getContext().getString(R.string.delete_user_dialog_title);
+        String body = getContext().getString(R.string.delete_user_dialog_message);
+        return getRemoveUserDialog(title, body);
+    }
+
+    private Dialog getRemoveLastUserDialog() {
+        String body = getString(R.string.delete_last_user_admin_created_message)
+                .concat(System.getProperty("line.separator"))
+                .concat(System.getProperty("line.separator"))
+                .concat(getString(R.string.delete_last_user_system_setup_required_message));
+        String title = getContext().getString(R.string.delete_last_user_dialog_title);
+        return getRemoveUserDialog(title, body);
+    }
+
+    private Dialog getRemoveUserDialog(String title, String body) {
         return new CarAlertDialog.Builder(getContext())
-            .setTitle(R.string.really_remove_user_title)
-            .setBody(R.string.really_remove_user_message)
-            .setPositiveButton(R.string.delete_button, (dialog, which) -> {
-                maybeNotifyRemoveUserListener();
-                dialog.dismiss();
-            })
-            .setNegativeButton(android.R.string.cancel, null)
-            .create();
+                .setTitle(title)
+                .setBody(body)
+                .setPositiveButton(R.string.delete_button, (dialog, which) -> {
+                    maybeNotifyRemoveUserListener();
+                    dialog.dismiss();
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .create();
     }
 
     /**

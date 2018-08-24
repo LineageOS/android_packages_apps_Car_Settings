@@ -19,8 +19,10 @@ package com.android.car.settings.users;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
+import static org.robolectric.RuntimeEnvironment.application;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
 
@@ -38,7 +40,6 @@ import org.robolectric.Robolectric;
 public class ConfirmRemoveUserDialogTest {
     private static final String CONFIRM_REMOVE_DIALOG_TAG = "ConfirmRemoveUserDialog";
     private BaseTestActivity mTestActivity;
-    private ConfirmRemoveUserDialog mConfirmRemoveUserDialog;
 
     @Before
     public void setUpTestActivity() {
@@ -47,49 +48,120 @@ public class ConfirmRemoveUserDialogTest {
         mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
                 .setup()
                 .get();
-
-        mConfirmRemoveUserDialog = new ConfirmRemoveUserDialog();
     }
 
     @Test
-    public void testConfirmRemoveUserInvokesOnRemoveUserConfirmed() {
+    public void testConfirmRemoveUserTitle() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+
+        showDialog(dlg);
+
+        assertThat(DialogTestUtils.getTitle(dlg))
+                .isEqualTo(application.getString(R.string.delete_user_dialog_title));
+    }
+
+    @Test
+    public void testConfirmRemoveLastUserTitle() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
+
+        showDialog(dlg);
+
+        assertThat(DialogTestUtils.getTitle(dlg))
+                .isEqualTo(application.getString(R.string.delete_last_user_dialog_title));
+    }
+
+    @Test
+    public void testConfirmAnyUserInvokesOnRemoveUserConfirmed() {
+        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog
+                .UserToRemove.ANY_USER);
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
                 ConfirmRemoveUserDialog.ConfirmRemoveUserListener.class);
-        mConfirmRemoveUserDialog.setConfirmRemoveUserListener(listener);
-        showDialog();
+        dialog.setConfirmRemoveUserListener(listener);
+        showDialog(dialog);
 
         // Invoke confirm remove user.
-        DialogTestUtils.clickPositiveButton(mConfirmRemoveUserDialog);
+        DialogTestUtils.clickPositiveButton(dialog);
 
         verify(listener).onRemoveUserConfirmed();
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
     @Test
-    public void testCancelDismissesDialog() {
-        showDialog();
+    public void testConfirmLastUserInvokesOnRemoveUserConfirmed() {
+        ConfirmRemoveUserDialog dialog =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
+        ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
+                ConfirmRemoveUserDialog.ConfirmRemoveUserListener.class);
+        dialog.setConfirmRemoveUserListener(listener);
+        showDialog(dialog);
+
+        // Invoke confirm remove user.
+        DialogTestUtils.clickPositiveButton(dialog);
+
+        verify(listener).onRemoveUserConfirmed();
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    @Test
+    public void testCancelOnRemoveAnyUserDialogDismissesDialog() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+
+        showDialog(dlg);
 
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        DialogTestUtils.clickNegativeButton(mConfirmRemoveUserDialog);
+        DialogTestUtils.clickNegativeButton(dlg);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
     @Test
-    public void testNoClickListenerDismissesDialog() {
-        showDialog();
+    public void testCancelOnRemoveLastUserDialogDismissesDialog() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
 
-        // Invoke confirm remove user.
-        DialogTestUtils.clickPositiveButton(mConfirmRemoveUserDialog);
+        showDialog(dlg);
+
+        assertThat(isDialogShown()).isTrue(); // Dialog is shown.
+
+        // Invoke cancel.
+        DialogTestUtils.clickNegativeButton(dlg);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
-    private void showDialog() {
-        mConfirmRemoveUserDialog.show(
-                mTestActivity.getSupportFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
+    @Test
+    public void testNoClickListenerDismissesRemoveAnyUserDialog() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.ANY_USER);
+
+        showDialog(dlg);
+
+        // Invoke confirm remove user.
+        DialogTestUtils.clickPositiveButton(dlg);
+
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    @Test
+    public void testNoClickListenerDismissesRemoveLastUserDialog() {
+        ConfirmRemoveUserDialog dlg =
+                ConfirmRemoveUserDialog.create(ConfirmRemoveUserDialog.UserToRemove.LAST_USER);
+
+        showDialog(dlg);
+
+        // Invoke confirm remove user.
+        DialogTestUtils.clickPositiveButton(dlg);
+
+        assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
+    }
+
+    private void showDialog(ConfirmRemoveUserDialog dialog) {
+        dialog.show(mTestActivity.getSupportFragmentManager(), CONFIRM_REMOVE_DIALOG_TAG);
     }
 
     private boolean isDialogShown() {
