@@ -64,7 +64,8 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
                 ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.confirm_lock_pin_fragment);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_confirm_lock_pin : R.layout.confirm_lock_pin);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         patternFragment.setArguments(bundle);
         return patternFragment;
@@ -79,7 +80,8 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_settings_title);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
                 ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.confirm_lock_password_fragment);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_confirm_lock_password : R.layout.confirm_lock_password);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         patternFragment.setArguments(bundle);
         return patternFragment;

@@ -51,5 +51,6 @@
 
     <declare-styleable name="PinPadView">
         <attr name="enterKeyDrawable" format="reference"/>
+        <attr name="keyTextColor" format="color"/>
     </declare-styleable>
 </resources>

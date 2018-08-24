@@ -224,7 +224,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pattern);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
                 ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pattern);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_choose_lock_pattern : R.layout.choose_lock_pattern);
         patternFragment.setArguments(bundle);
         return patternFragment;
     }
