@@ -160,7 +160,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_password);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
                 ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_password);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_choose_lock_password : R.layout.choose_lock_password);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         passwordFragment.setArguments(bundle);
         return passwordFragment;
@@ -175,7 +176,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pin);
         bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
                 ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.choose_lock_pin);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_choose_lock_pin : R.layout.choose_lock_pin);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         passwordFragment.setArguments(bundle);
         return passwordFragment;

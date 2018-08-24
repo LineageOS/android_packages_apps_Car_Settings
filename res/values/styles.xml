@@ -76,6 +76,10 @@
         <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
 
+    <style name="ListIcon.ActionBar.SetupWizard" parent="ListIcon.ActionBar">
+        <item name="android:tint">@color/car_tint_light</item>
+    </style>
+
     <style name="SettingsListHeader" parent="TextAppearance.Car.Body2">
         <item name="android:textColor">@color/car_accent</item>
     </style>
@@ -89,9 +93,15 @@
     <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary" />
 
     <!-- Style for security lock pattern. -->
-    <style name="LockPatternStyle">
+    <style name="LockPattern">
         <item name="*android:regularColor">@color/lock_pattern_regular</item>
         <item name="*android:successColor">@color/lock_pattern_success</item>
+        <item name="*android:errorColor">?android:attr/colorError</item>
+    </style>
+
+    <style name="LockPattern.SetupWizard">
+        <item name="*android:regularColor">@color/lock_pattern_regular_light</item>
+        <item name="*android:successColor">@color/lock_pattern_success_light</item>
         <item name="*android:errorColor">?android:attr/colorError</item>
     </style>
 

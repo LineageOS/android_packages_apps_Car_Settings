@@ -17,12 +17,13 @@
 
 <!--
     NOTE:
-    This layout is mirrored in suw_choose_lock_pin.xml with just the styling differences
-    between setup wizard and settings applied. Any changes to ids/components outside of styling
-    needs to be duplicated in that file or breakages will occur.
+    This layout mirrors choose_lock_pin.xml with just the styling differences between setup
+    wizard and settings applied. Any changes to ids/components outside of styling needs to be
+    duplicated in that file or breakages will occur.
 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="@dimen/car_margin"
@@ -39,7 +40,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:columnCount="3"/>
+            android:columnCount="3"
+            app:keyTextColor="@color/car_body3_light"/>
     </FrameLayout>
 
     <!-- End side: pin entry field and messages -->
@@ -62,7 +64,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginBottom="@dimen/car_padding_5"
-            android:textAppearance="@style/TextAppearance.Car.Body1"
+            android:textAppearance="@style/TextAppearance.Car.Body1.Light"
             android:text="@string/lockscreen_choose_your_pin"/>
 
         <EditText
@@ -71,7 +73,7 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="@dimen/car_padding_2"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Car.Body1"
+            android:textAppearance="@style/TextAppearance.Car.Body1.Light"
             android:maxLines="1"
             android:inputType="textPassword"
             android:cursorVisible="false"
@@ -84,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Car.Body2" />
+            android:textAppearance="@style/TextAppearance.Car.Body2.Light" />
 
         <Button
             android:id="@+id/screen_lock_options"

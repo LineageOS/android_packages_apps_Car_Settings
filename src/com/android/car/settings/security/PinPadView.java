@@ -16,7 +16,6 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.DrawableRes;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -29,6 +28,8 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
@@ -54,6 +55,7 @@ public class PinPadView extends GridLayout {
      * backspace key.
      */
     private static final int LONG_CLICK_DELAY_MILLS = 100;
+    private static final int NO_COLOR_SET = -1;
 
     private final List<View> mPinKeys = new ArrayList<>(NUM_KEYS);
     private PinPadClickListener mOnClickListener;
@@ -98,7 +100,7 @@ public class PinPadView extends GridLayout {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        for (View key: mPinKeys) {
+        for (View key : mPinKeys) {
             key.setEnabled(enabled);
         }
     }
@@ -106,7 +108,7 @@ public class PinPadView extends GridLayout {
     /**
      * Set the resource Id of the enter key icon.
      *
-     * @param drawableId  The resource Id of the drawable.
+     * @param drawableId The resource Id of the drawable.
      */
     public void setEnterKeyIcon(@DrawableRes int drawableId) {
         mEnterKey.setImageResource(drawableId);
@@ -130,16 +132,27 @@ public class PinPadView extends GridLayout {
 
     private void init(AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         LayoutInflater inflater = LayoutInflater.from(getContext());
+        TypedArray typedArray = getContext().obtainStyledAttributes(
+                attrs, R.styleable.PinPadView, defStyleAttr, defStyleRes);
+        @ColorInt int keyTextColor = typedArray.getColor(R.styleable.PinPadView_keyTextColor,
+                NO_COLOR_SET);
+        boolean useDefaultKeyColor = keyTextColor == NO_COLOR_SET;
         inflater.inflate(R.layout.pin_pad_view, this, true);
 
         for (int keyId : PIN_PAD_DIGIT_KEYS) {
             TextView key = (TextView) findViewById(keyId);
             String digit = key.getTag().toString();
             key.setOnClickListener(v -> mOnClickListener.onDigitKeyClick(digit));
+            if (!useDefaultKeyColor) {
+                key.setTextColor(keyTextColor);
+            }
             mPinKeys.add(key);
         }
 
-        View backspace = findViewById(R.id.key_backspace);
+        ImageButton backspace = (ImageButton) findViewById(R.id.key_backspace);
+        if (!useDefaultKeyColor) {
+            backspace.setImageTintList(ColorStateList.valueOf(keyTextColor));
+        }
         backspace.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
@@ -155,12 +168,11 @@ public class PinPadView extends GridLayout {
         mPinKeys.add(backspace);
 
         mEnterKey = (ImageButton) findViewById(R.id.key_enter);
-
-        TypedArray typedArray = getContext().obtainStyledAttributes(
-                attrs, R.styleable.PinPadView, defStyleAttr, defStyleRes);
+        if (!useDefaultKeyColor) {
+            mEnterKey.setImageTintList(ColorStateList.valueOf(keyTextColor));
+        }
         Drawable enterKeyDrawable = typedArray.getDrawable(R.styleable.PinPadView_enterKeyDrawable);
         typedArray.recycle();
-
         if (enterKeyDrawable != null) {
             mEnterKey.setImageDrawable(enterKeyDrawable);
         }
