@@ -54,7 +54,7 @@ class SetTimeListItem extends TextListItem implements DatetimeSettingsFragment.L
         if (isEnabled()) {
             setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
             setOnClickListener(v ->
-                    mFragmentController.launchFragment(TimePickerFragment.getInstance()));
+                    mFragmentController.launchFragment(new TimePickerFragment()));
         } else {
             setSupplementalIcon(null, /* showDivider= */ false);
             setOnClickListener(null);

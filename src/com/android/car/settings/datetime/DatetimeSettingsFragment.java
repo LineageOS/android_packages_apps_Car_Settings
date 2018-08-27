@@ -20,9 +20,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
 import android.provider.Settings;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.ListItemProvider.ListProvider;
@@ -60,12 +60,10 @@ public class DatetimeSettingsFragment extends ListItemSettingsFragment {
         void onPreRefresh();
     }
 
-    public static DatetimeSettingsFragment getInstance() {
-        DatetimeSettingsFragment datetimeSettingsFragment = new DatetimeSettingsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.date_and_time_settings_title);
-        datetimeSettingsFragment.setArguments(bundle);
-        return datetimeSettingsFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.date_and_time_settings_title;
     }
 
     @Override

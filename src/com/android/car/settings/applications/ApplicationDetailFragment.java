@@ -32,6 +32,8 @@ import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -62,12 +64,22 @@ public class ApplicationDetailFragment extends ListItemSettingsFragment {
 
     public static ApplicationDetailFragment getInstance(ResolveInfo resolveInfo) {
         ApplicationDetailFragment applicationDetailFragment = new ApplicationDetailFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
+        Bundle bundle = new Bundle();
         bundle.putParcelable(EXTRA_RESOLVE_INFO, resolveInfo);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.applications_settings);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         applicationDetailFragment.setArguments(bundle);
         return applicationDetailFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.applications_settings;
     }
 
     @Override

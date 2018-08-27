@@ -26,6 +26,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.car.widget.ListItemProvider;
 
@@ -60,12 +62,22 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
      */
     public static UserDetailsFragment newInstance(int userId) {
         UserDetailsFragment userDetailsFragment = new UserDetailsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.user_details_title);
+        Bundle bundle = new Bundle();
         bundle.putInt(Intent.EXTRA_USER_ID, userId);
         userDetailsFragment.setArguments(bundle);
         return userDetailsFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.user_details_title;
     }
 
     @Override

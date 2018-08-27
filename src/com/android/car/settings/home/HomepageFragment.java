@@ -23,7 +23,6 @@ import static com.android.car.settings.common.ExtraSettingsLoader.WIRELESS_CATEG
 import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.DrawableRes;
@@ -74,17 +73,6 @@ public class HomepageFragment extends ListItemSettingsFragment implements
 
     private List<ListItem> mListItems;
 
-    /**
-     * Gets an instance of this class.
-     */
-    public static HomepageFragment newInstance() {
-        HomepageFragment homepageFragment = new HomepageFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.settings_label);
-        homepageFragment.setArguments(bundle);
-        return homepageFragment;
-    }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -125,35 +113,35 @@ public class HomepageFragment extends ListItemSettingsFragment implements
 
         listItems.add(
                 createFragmentListItem(R.string.display_settings, R.drawable.ic_settings_display,
-                        DisplaySettingsFragment.newInstance()));
+                        new DisplaySettingsFragment()));
         listItems.add(createFragmentListItem(R.string.sound_settings, R.drawable.ic_settings_sound,
-                SoundSettingsFragment.newInstance()));
+                new SoundSettingsFragment()));
         if (WifiUtil.isWifiAvailable(requireContext())) {
             listItems.add(
                     createFragmentListItem(R.string.wifi_settings, R.drawable.ic_settings_wifi,
-                            WifiSettingsFragment.newInstance()));
+                            new WifiSettingsFragment()));
         }
         listItems.addAll(extraSettings.get(WIRELESS_CATEGORY));
         listItems.add(createFragmentListItem(R.string.bluetooth_settings,
-                R.drawable.ic_settings_bluetooth, BluetoothSettingsFragment.getInstance()));
+                R.drawable.ic_settings_bluetooth, new BluetoothSettingsFragment()));
         listItems.add(createFragmentListItem(R.string.applications_settings,
-                R.drawable.ic_settings_applications, ApplicationSettingsFragment.newInstance()));
+                R.drawable.ic_settings_applications, new ApplicationSettingsFragment()));
         listItems.add(createFragmentListItem(R.string.date_and_time_settings_title,
-                R.drawable.ic_settings_date_time, DatetimeSettingsFragment.getInstance()));
+                R.drawable.ic_settings_date_time, new DatetimeSettingsFragment()));
         listItems.add(createFragmentListItem(R.string.users_list_title, R.drawable.ic_user,
                 getUserManagementFragment()));
         // Guest users can't set screen locks or add/remove accounts.
         if (!mCarUserManagerHelper.isCurrentProcessGuestUser()) {
             listItems.add(
                     createFragmentListItem(R.string.accounts_settings_title, R.drawable.ic_account,
-                            AccountsListFragment.newInstance()));
+                            new AccountsListFragment()));
             listItems.add(createListItem(R.string.security_settings_title, R.drawable.ic_lock,
                     v -> startActivity(
                             new Intent(requireContext(), SettingsScreenLockActivity.class))));
         }
         listItems.add(
                 createFragmentListItem(R.string.system_setting_title, R.drawable.ic_settings_about,
-                        SystemSettingsFragment.getInstance()));
+                        new SystemSettingsFragment()));
         listItems.addAll(extraSettings.get(DEVICE_CATEGORY));
         listItems.addAll(extraSettings.get(PERSONAL_CATEGORY));
         return listItems;
@@ -180,7 +168,7 @@ public class HomepageFragment extends ListItemSettingsFragment implements
         if (mCarUserManagerHelper.isCurrentProcessAdminUser()) {
             // Admins can see a full list of users in Settings.
             LOG.v("getUserManagementFragment Creating UsersListFragment for admin user.");
-            return UsersListFragment.newInstance();
+            return new UsersListFragment();
         }
         // Non-admins can only manage themselves in Settings.
         LOG.v("getUserManagementFragment Creating UserDetailsFragment for non-admin.");
