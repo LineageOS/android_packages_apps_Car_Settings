@@ -29,6 +29,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.users.ConfirmRemoveUserDialog.UserToRemove;
 
@@ -180,8 +181,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
             getActivity().onBackPressed();
         } else {
             // If failed, need to show error dialog for users.
-            RemoveUserErrorDialog removeUserErrorDialog = new RemoveUserErrorDialog();
-            removeUserErrorDialog.show(getFragmentManager(), ERROR_DIALOG_TAG);
+            ErrorDialog.show(this, R.string.delete_user_error_title);
         }
     }
 

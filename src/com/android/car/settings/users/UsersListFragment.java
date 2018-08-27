@@ -31,6 +31,7 @@ import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
+import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.ListItemSettingsFragment;
 
 /**
@@ -171,8 +172,7 @@ public class UsersListFragment extends ListItemSettingsFragment
     public void onUserAddedFailure() {
         setAddUserEnabled(true);
         // Display failure dialog.
-        AddUserErrorDialog dialog = new AddUserErrorDialog();
-        dialog.show(this);
+        ErrorDialog.show(this, R.string.add_user_error_title);
     }
 
     private void setAddUserEnabled(boolean enabled) {

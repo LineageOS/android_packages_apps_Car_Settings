@@ -14,38 +14,44 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.users;
+package com.android.car.settings.common;
 
 import android.app.Dialog;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.R;
-
 /**
- * Dialog to inform that user deletion failed and offers to retry.
+ * Dialog to inform that an action failed.
  */
-public class AddUserErrorDialog extends DialogFragment {
-    private static final String DIALOG_TAG = "AddUserErrorDialog";
+public class ErrorDialog extends DialogFragment {
+    private static final String ERROR_DIALOG_TITLE_KEY = "error_dialog_title";
+    private static final String DIALOG_TAG = "ErrorDialogTag";
 
     /**
-     * Shows the dialog.
+     * Shows the error dialog.
      *
      * @param parent Fragment associated with the dialog.
+     * @param title Title for the error dialog.
      */
-    public void show(Fragment parent) {
-        setTargetFragment(parent, 0);
-        show(parent.getFragmentManager(), DIALOG_TAG);
+    public static ErrorDialog show(Fragment parent, @StringRes int title) {
+        ErrorDialog dialog = new ErrorDialog();
+        Bundle bundle = new Bundle();
+        bundle.putInt(ERROR_DIALOG_TITLE_KEY, title);
+        dialog.setArguments(bundle);
+        dialog.setTargetFragment(parent, 0);
+        dialog.show(parent.getFragmentManager(), DIALOG_TAG);
+        return dialog;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new CarAlertDialog.Builder(getContext())
-                .setTitle(R.string.add_user_error_title)
-                .setPositiveButton(android.R.string.ok, null)
+                .setTitle(getArguments().getInt(ERROR_DIALOG_TITLE_KEY))
+                .setPositiveButton(android.R.string.ok, /* listener =*/ null)
                 .create();
     }
 }
