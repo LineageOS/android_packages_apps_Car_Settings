@@ -49,7 +49,7 @@ public class ErrorDialogTest {
                 .setup()
                 .get();
 
-        mTestFragment = TestBaseFragment.newInstance();
+        mTestFragment = new TestBaseFragment();
         mTestActivity.launchFragment(mTestFragment);
     }
 

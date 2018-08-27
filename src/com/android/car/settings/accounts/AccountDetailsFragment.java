@@ -18,7 +18,6 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerCallback;
-import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
@@ -32,6 +31,8 @@ import android.os.UserHandle;
 import android.text.TextUtils;
 import android.widget.Button;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.car.app.CarAlertDialog;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
@@ -66,13 +67,23 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
             Account account, UserInfo userInfo) {
         AccountDetailsFragment
                 accountDetailsFragment = new AccountDetailsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.account_details_title);
+        Bundle bundle = new Bundle();
         bundle.putParcelable(EXTRA_ACCOUNT_INFO, account);
         bundle.putParcelable(EXTRA_USER_INFO, userInfo);
         accountDetailsFragment.setArguments(bundle);
         return accountDetailsFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.account_details_title;
     }
 
     @Override
@@ -157,9 +168,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
         private UserHandle mUserHandle;
 
         private final AccountManagerCallback<Bundle> mCallback =
-            new AccountManagerCallback<Bundle>() {
-                @Override
-                public void run(AccountManagerFuture<Bundle> future) {
+                future -> {
                     // If already out of this screen, don't proceed.
                     if (!getTargetFragment().isResumed()) {
                         return;
@@ -168,18 +177,19 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
                     boolean success = false;
                     try {
                         success =
-                                future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
+                                future.getResult().getBoolean(
+                                        AccountManager.KEY_BOOLEAN_RESULT);
                     } catch (OperationCanceledException | IOException | AuthenticatorException e) {
                         LOG.v("removeAccount error: " + e);
                     }
                     final Activity activity = getTargetFragment().getActivity();
                     if (!success && activity != null && !activity.isFinishing()) {
-                        ErrorDialog.show(getTargetFragment(), R.string.remove_account_error_title);
+                        ErrorDialog.show(getTargetFragment(),
+                                R.string.remove_account_error_title);
                     } else {
                         getTargetFragment().getFragmentManager().popBackStack();
                     }
-                }
-            };
+                };
 
         public static void show(
                 Fragment parent, Account account, UserHandle userHandle) {

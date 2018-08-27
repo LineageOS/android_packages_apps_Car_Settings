@@ -113,7 +113,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
             mState = State.OFF;
         }
         mLaunchBluetoothSettings = v -> {
-            fragmentController.launchFragment(BluetoothSettingsFragment.getInstance());
+            fragmentController.launchFragment(new BluetoothSettingsFragment());
             return true;
         };
     }

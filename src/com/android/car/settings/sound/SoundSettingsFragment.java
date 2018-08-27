@@ -16,8 +16,6 @@
 
 package com.android.car.settings.sound;
 
-import android.annotation.DrawableRes;
-import android.annotation.StringRes;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.media.CarAudioManager;
@@ -33,6 +31,9 @@ import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.util.Xml;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemAdapter;
 import androidx.car.widget.ListItemProvider.ListProvider;
@@ -76,9 +77,9 @@ public class SoundSettingsFragment extends BaseFragment {
                             getContext(),
                             mCarAudioManager,
                             groupId,
-                            volumeItem.usage,
-                            volumeItem.icon,
-                            volumeItem.title));
+                            volumeItem.mUsage,
+                            volumeItem.mIcon,
+                            volumeItem.mTitle));
                 }
                 updateList();
                 mCarAudioManager.registerVolumeCallback(mVolumeChangeCallback.asBinder());
@@ -120,17 +121,16 @@ public class SoundSettingsFragment extends BaseFragment {
     private PagedListView mListView;
     private ListItemAdapter mPagedListAdapter;
 
-    /**
-     * Creates a new instance of this fragment.
-     */
-    public static SoundSettingsFragment newInstance() {
-        SoundSettingsFragment soundSettingsFragment = new SoundSettingsFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.sound_settings);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list_fragment);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
-        soundSettingsFragment.setArguments(bundle);
-        return soundSettingsFragment;
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return R.layout.list_fragment;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.sound_settings;
     }
 
     private void cleanupAudioManager() {
@@ -187,7 +187,7 @@ public class SoundSettingsFragment extends BaseFragment {
             AttributeSet attrs = Xml.asAttributeSet(parser);
             int type;
             // Traverse to the first start tag
-            while ((type=parser.next()) != XmlResourceParser.END_DOCUMENT
+            while ((type = parser.next()) != XmlResourceParser.END_DOCUMENT
                     && type != XmlResourceParser.START_TAG) {
             }
 
@@ -196,7 +196,7 @@ public class SoundSettingsFragment extends BaseFragment {
             }
             int outerDepth = parser.getDepth();
             int rank = 0;
-            while ((type=parser.next()) != XmlResourceParser.END_DOCUMENT
+            while ((type = parser.next()) != XmlResourceParser.END_DOCUMENT
                     && (type != XmlResourceParser.END_TAG || parser.getDepth() > outerDepth)) {
                 if (type == XmlResourceParser.END_TAG) {
                     continue;
@@ -225,8 +225,8 @@ public class SoundSettingsFragment extends BaseFragment {
         VolumeItem result = null;
         for (int usage : usages) {
             VolumeItem volumeItem = mVolumeItems.get(usage);
-            if (volumeItem.rank < rank) {
-                rank = volumeItem.rank;
+            if (volumeItem.mRank < rank) {
+                rank = volumeItem.mRank;
                 result = volumeItem;
             }
         }
@@ -237,17 +237,20 @@ public class SoundSettingsFragment extends BaseFragment {
      * Wrapper class which contains information to render volume item on UI.
      */
     private static class VolumeItem {
-        private final @AudioAttributes.AttributeUsage int usage;
-        private final int rank;
-        private final @StringRes int title;
-        private final @DrawableRes int icon;
+        @AudioAttributes.AttributeUsage
+        private final int mUsage;
+        private final int mRank;
+        @StringRes
+        private final int mTitle;
+        @DrawableRes
+        private final int mIcon;
 
         private VolumeItem(@AudioAttributes.AttributeUsage int usage, int rank,
                 @StringRes int title, @DrawableRes int icon) {
-            this.usage = usage;
-            this.rank = rank;
-            this.title = title;
-            this.icon = icon;
+            mUsage = usage;
+            mRank = rank;
+            mTitle = title;
+            mIcon = icon;
         }
     }
 }

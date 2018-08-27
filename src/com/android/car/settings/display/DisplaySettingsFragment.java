@@ -20,9 +20,9 @@ import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.provider.Settings;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.ListItemProvider.ListProvider;
@@ -39,16 +39,10 @@ import java.util.List;
  */
 public class DisplaySettingsFragment extends ListItemSettingsFragment {
 
-    /**
-     * Gets a new instance of this class.
-     */
-    public static DisplaySettingsFragment newInstance() {
-        DisplaySettingsFragment displaySettingsFragment = new DisplaySettingsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.display_settings);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
-        displaySettingsFragment.setArguments(bundle);
-        return displaySettingsFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.display_settings;
     }
 
     @Override

@@ -23,6 +23,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItemProvider;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -53,16 +54,10 @@ public class LanguagePickerFragment extends ListItemSettingsFragment implements
     private LocaleListItemProvider mLocaleListItemProvider;
     private final HashSet<String> mLangTagsToIgnore = new HashSet<>();
 
-    /**
-     * Factory method for creating LanguagePickerFragment.
-     */
-    public static LanguagePickerFragment newInstance() {
-        LanguagePickerFragment LanguagePickerFragment = new LanguagePickerFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.language_settings);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
-        LanguagePickerFragment.setArguments(bundle);
-        return LanguagePickerFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.language_settings;
     }
 
     @Override

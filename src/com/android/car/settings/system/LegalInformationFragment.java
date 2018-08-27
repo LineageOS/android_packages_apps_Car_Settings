@@ -18,8 +18,8 @@ package com.android.car.settings.system;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -35,15 +35,10 @@ import java.util.ArrayList;
 public class LegalInformationFragment extends ListItemSettingsFragment {
     private static final String ACTION_WEBVIEW_LICENSE = "android.settings.WEBVIEW_LICENSE";
 
-    /**
-     * Factory method for creating the fragment.
-     */
-    public static LegalInformationFragment newInstance() {
-        LegalInformationFragment fragment = new LegalInformationFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.legal_information);
-        fragment.setArguments(bundle);
-        return fragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.legal_information;
     }
 
     @Override

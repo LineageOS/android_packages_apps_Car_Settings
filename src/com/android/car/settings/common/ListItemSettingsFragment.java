@@ -20,6 +20,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.car.widget.ListItemAdapter;
 import androidx.car.widget.ListItemProvider;
@@ -37,13 +38,10 @@ import com.android.car.settings.suggestions.SuggestionListItem;
 public abstract class ListItemSettingsFragment extends BaseFragment implements ListController {
     private ListItemAdapter mListAdapter;
 
-    /**
-     * Gets bundle adding the list_fragment layout to it.
-     */
-    protected static Bundle getBundle() {
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list_fragment);
-        return bundle;
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return R.layout.list_fragment;
     }
 
     @Override
