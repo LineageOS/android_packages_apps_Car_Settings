@@ -16,7 +16,7 @@
 
 package com.android.car.settings.testutils;
 
-import android.os.Bundle;
+import androidx.annotation.LayoutRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
@@ -26,13 +26,10 @@ import com.android.car.settings.common.BaseFragment;
  * which fragment is being used.
  */
 public class TestBaseFragment extends BaseFragment {
-    public static TestBaseFragment newInstance() {
-        TestBaseFragment testFragment = new TestBaseFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.users_list_title);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.list_fragment); // random layout.
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button); //random layout.
-        testFragment.setArguments(bundle);
-        return testFragment;
+
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return R.layout.list_fragment;
     }
 }

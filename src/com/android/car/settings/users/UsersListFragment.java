@@ -26,7 +26,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
@@ -57,13 +59,16 @@ public class UsersListFragment extends ListItemSettingsFragment
     private float mOpacityEnabled;
     private boolean mRestricted;
 
-    public static UsersListFragment newInstance() {
-        UsersListFragment usersListFragment = new UsersListFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.users_list_title);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        usersListFragment.setArguments(bundle);
-        return usersListFragment;
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.users_list_title;
     }
 
     @Override

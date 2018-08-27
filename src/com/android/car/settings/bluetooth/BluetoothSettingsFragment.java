@@ -27,8 +27,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.car.widget.PagedListView;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -57,14 +59,22 @@ public class BluetoothSettingsFragment extends BaseFragment {
     private LocalBluetoothManager mLocalManager;
     private boolean mShowPairedDeviceOnly;
 
-    public static BluetoothSettingsFragment getInstance() {
-        BluetoothSettingsFragment bluetoothSettingsFragment = new BluetoothSettingsFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.bluetooth_settings);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.bluetooth_list);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_toggle);
-        bluetoothSettingsFragment.setArguments(bundle);
-        return bluetoothSettingsFragment;
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_toggle;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return R.layout.bluetooth_list;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.bluetooth_settings;
     }
 
     @Override

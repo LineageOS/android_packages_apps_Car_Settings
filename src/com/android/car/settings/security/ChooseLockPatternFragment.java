@@ -16,7 +16,6 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.StringRes;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
@@ -24,6 +23,8 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
@@ -220,14 +221,29 @@ public class ChooseLockPatternFragment extends BaseFragment {
      */
     public static ChooseLockPatternFragment newInstance(boolean isInSetupWizard) {
         ChooseLockPatternFragment patternFragment = new ChooseLockPatternFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pattern);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
-                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
-                ? R.layout.suw_choose_lock_pattern : R.layout.choose_lock_pattern);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
         patternFragment.setArguments(bundle);
         return patternFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return mIsInSetupWizard ? R.layout.suw_action_bar_with_button
+                : R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return mIsInSetupWizard ? R.layout.suw_choose_lock_pattern : R.layout.choose_lock_pattern;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.security_lock_pattern;
     }
 
     @Override
@@ -326,6 +342,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
      * Updates the messages and buttons appropriate to what stage the user
      * is at in choosing a pattern. This doesn't handle clearing out the pattern;
      * the pattern is expected to be in the right state.
+     *
      * @param stage The stage UI should be updated to match with.
      */
     protected void updateStage(Stage stage) {
@@ -407,7 +424,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
                 @Override
                 public void onPatternDetected(List<LockPatternView.Cell> pattern) {
-                    switch(mUiStage) {
+                    switch (mUiStage) {
                         case Introduction:
                         case ChoiceTooShort:
                             handlePatternEntered(pattern);
@@ -423,7 +440,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
                 }
 
                 @Override
-                public void onPatternCellAdded(List<Cell> pattern) {}
+                public void onPatternCellAdded(List<Cell> pattern) {
+                }
 
                 private void handleConfirmPattern(List<LockPatternView.Cell> pattern) {
                     if (mChosenPattern == null) {
@@ -496,7 +514,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     // Update display message and decide on next step according to the different mText
     // on the primary button
     private void handlePrimaryButtonClick() {
-        switch(mUiStage.mPrimaryButtonState) {
+        switch (mUiStage.mPrimaryButtonState) {
             case Continue:
                 if (mUiStage != Stage.FirstChoiceValid) {
                     throw new IllegalStateException("expected ui stage "
@@ -536,7 +554,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     // Update display message and proceed to next step according to the different mText on
     // the secondary button.
     private void handleSecondaryButtonClick() {
-        switch(mUiStage.mSecondaryButtonState) {
+        switch (mUiStage.mSecondaryButtonState) {
             case Retry:
                 mChosenPattern = null;
                 mLockPatternView.clearPattern();

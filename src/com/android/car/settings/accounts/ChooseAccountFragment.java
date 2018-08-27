@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
@@ -39,14 +40,10 @@ public class ChooseAccountFragment extends ListItemSettingsFragment
 
     private ChooseAccountItemProvider mItemProvider;
 
-    public static ChooseAccountFragment newInstance() {
-        ChooseAccountFragment
-                chooseAccountFragment = new ChooseAccountFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.add_an_account);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
-        chooseAccountFragment.setArguments(bundle);
-        return chooseAccountFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.add_an_account;
     }
 
     @Override

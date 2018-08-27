@@ -19,8 +19,8 @@ package com.android.car.settings.applications;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 
@@ -35,15 +35,10 @@ import java.util.List;
  */
 public class ApplicationSettingsFragment extends ListItemSettingsFragment {
 
-    /**
-     * Gets an instance of this object.
-     */
-    public static ApplicationSettingsFragment newInstance() {
-        ApplicationSettingsFragment applicationSettingsFragment = new ApplicationSettingsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.applications_settings);
-        applicationSettingsFragment.setArguments(bundle);
-        return applicationSettingsFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.applications_settings;
     }
 
     @Override
@@ -53,7 +48,7 @@ public class ApplicationSettingsFragment extends ListItemSettingsFragment {
 
     private List<ListItem> getListItems() {
         PackageManager pm = getContext().getPackageManager();
-        Intent intent= new Intent(Intent.ACTION_MAIN);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ResolveInfo> resolveInfos = pm.queryIntentActivities(intent,
                 PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS

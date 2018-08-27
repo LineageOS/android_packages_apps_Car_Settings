@@ -46,7 +46,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
             BaseFragment fragment;
             switch (mPasswordQuality) {
                 case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
-                    fragment = ChooseLockTypeFragment.newInstance();
+                    fragment = new ChooseLockTypeFragment();
                     break;
                 case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                     fragment = ConfirmLockPatternFragment.newInstance(
@@ -84,7 +84,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
 
     @Override
     public void onLockVerified(String lock) {
-        BaseFragment fragment = ChooseLockTypeFragment.newInstance();
+        BaseFragment fragment = new ChooseLockTypeFragment();
         Bundle bundle = fragment.getArguments();
         if (bundle == null) {
             bundle = new Bundle();

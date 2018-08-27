@@ -21,6 +21,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.ListItemProvider.ListProvider;
@@ -58,12 +60,22 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
 
     public static BluetoothDetailFragment getInstance(BluetoothDevice btDevice) {
         BluetoothDetailFragment bluetoothDetailFragment = new BluetoothDetailFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
+        Bundle bundle = new Bundle();
         bundle.putParcelable(EXTRA_BT_DEVICE, btDevice);
-        bundle.putInt(EXTRA_TITLE_ID, R.string.bluetooth_settings);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bluetoothDetailFragment.setArguments(bundle);
         return bluetoothDetailFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.bluetooth_settings;
     }
 
     @Override

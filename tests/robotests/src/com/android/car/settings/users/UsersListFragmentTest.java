@@ -146,7 +146,7 @@ public class UsersListFragmentTest {
     private void createUsersListFragment(UserInfo userInfo) {
         UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;
 
-        mFragment = UsersListFragment.newInstance();
+        mFragment = new UsersListFragment();
         doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
         doReturn(testUser).when(mUserManager).getUserInfo(anyInt());
         doReturn(new ArrayList<UserInfo>()).when(mCarUserManagerHelper).getAllSwitchableUsers();

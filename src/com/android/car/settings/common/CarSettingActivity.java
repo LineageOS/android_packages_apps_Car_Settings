@@ -92,13 +92,13 @@ public class CarSettingActivity extends FragmentActivity implements BaseFragment
             String action = intent.getAction();
             if (Settings.ACTION_WIFI_SETTINGS.equals(action)
                     || WifiManager.ACTION_PICK_WIFI_NETWORK.equals(action)) {
-                launchFragment(WifiSettingsFragment.newInstance());
+                launchFragment(new WifiSettingsFragment());
                 return;
             }
         }
 
         if (getCurrentFragment() == null) {
-            launchFragment(QuickSettingFragment.newInstance());
+            launchFragment(new QuickSettingFragment());
         }
     }
 
