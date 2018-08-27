@@ -19,6 +19,7 @@ package com.android.car.settings.system;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -37,12 +38,10 @@ public class AboutSettingsFragment extends ListItemSettingsFragment {
 
     private ListItemProvider mItemProvider;
 
-    public static AboutSettingsFragment getInstance() {
-        AboutSettingsFragment aboutSettingsFragment = new AboutSettingsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.about_settings);
-        aboutSettingsFragment.setArguments(bundle);
-        return aboutSettingsFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.about_settings;
     }
 
     @Override

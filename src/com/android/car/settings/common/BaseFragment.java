@@ -32,15 +32,11 @@ import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 
-import java.util.Set;
-
 /**
  * Base fragment for setting activity.
  */
 public abstract class BaseFragment extends Fragment {
-    public static final String EXTRA_TITLE_ID = "extra_title_id";
-    public static final String EXTRA_LAYOUT = "extra_layout";
-    public static final String EXTRA_ACTION_BAR_LAYOUT = "extra_action_bar_layout";
+
     /**
      * For indicating a fragment is running in Setup Wizard
      */
@@ -78,15 +74,6 @@ public abstract class BaseFragment extends Fragment {
         CarUxRestrictions getCarUxRestrictions();
     }
 
-    @LayoutRes
-    protected int mLayout;
-
-    @LayoutRes
-    private int mActionBarLayout;
-
-    @StringRes
-    private int mTitleId;
-
     /**
      * Assume The activity holds this fragment also implements the FragmentController.
      * This function should be called after onAttach()
@@ -103,12 +90,6 @@ public abstract class BaseFragment extends Fragment {
         return ((UXRestrictionsProvider) getActivity()).getCarUxRestrictions();
     }
 
-    protected static Bundle getBundle() {
-        Bundle bundle = new Bundle();
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
-        return bundle;
-    }
-
     /**
      * Checks if this fragment can be shown or not given the CarUxRestrictions. Default to
      * {@code false} if UX_RESTRICTIONS_NO_SETUP is set.
@@ -123,47 +104,35 @@ public abstract class BaseFragment extends Fragment {
     protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (!(getActivity() instanceof FragmentController)) {
-            throw new IllegalArgumentException("Must attach to an FragmentController");
-        }
-        if (!(getActivity() instanceof UXRestrictionsProvider)) {
-            throw new IllegalArgumentException("Must attach to an UXRestrictionsProvider");
-        }
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Set<String> extraKeys = getArguments().keySet();
-        if (extraKeys.contains(EXTRA_ACTION_BAR_LAYOUT)) {
-            mActionBarLayout = getArguments().getInt(EXTRA_ACTION_BAR_LAYOUT);
-        } else {
-            throw new IllegalArgumentException("must specify a actionBar layout");
-        }
-        if (extraKeys.contains(EXTRA_LAYOUT)) {
-            mLayout = getArguments().getInt(EXTRA_LAYOUT);
-        } else {
-            throw new IllegalArgumentException("must specify a layout");
-        }
-        if (extraKeys.contains(EXTRA_TITLE_ID)) {
-            mTitleId = getArguments().getInt(EXTRA_TITLE_ID);
-        } else {
-            throw new IllegalArgumentException("must specify a title");
-        }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        onUxRestrictionChanged(getCurrentRestrictions());
+    /**
+     * Returns the layout id to use with the {@link ActionBar}. Subclasses should override this
+     * method to customize the action bar layout. The default action bar contains a back button
+     * and the title.
+     */
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar;
     }
 
     /**
-     * Should be used to override fragment's title. Should be called after
-     * {@link #onActivityCreated}, so that it's called after the default title setter.
+     * Returns the layout id of the current Fragment.
+     */
+    @LayoutRes
+    protected abstract int getLayoutId();
+
+    /**
+     * Returns the string id for the current Fragment title. Subclasses should override this
+     * method to set the title to display. Use {@link #setTitle(CharSequence)} to update the
+     * displayed title while resumed. The default title is the Settings Activity label.
+     */
+    @StringRes
+    protected int getTitleId() {
+        return R.string.settings_label;
+    }
+
+    /**
+     * Should be used to override fragment's title. This should only be called after
+     * {@link #onActivityCreated(Bundle)}.
      *
      * @param title CharSequence to set as the new title.
      */
@@ -174,17 +143,22 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    /**
-     * Allow fragment to intercept back press and customize behavior.
-     */
-    protected void onBackPressed() {
-        getFragmentController().goBack();
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (!(getActivity() instanceof FragmentController)) {
+            throw new IllegalStateException("Must attach to a FragmentController");
+        }
+        if (!(getActivity() instanceof UXRestrictionsProvider)) {
+            throw new IllegalStateException("Must attach to a UXRestrictionsProvider");
+        }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        return inflater.inflate(mLayout, container, false);
+        @LayoutRes int layoutId = getLayoutId();
+        return inflater.inflate(layoutId, container, false);
     }
 
     @Override
@@ -193,12 +167,26 @@ public abstract class BaseFragment extends Fragment {
         FrameLayout actionBarContainer = requireActivity().findViewById(R.id.action_bar);
         if (actionBarContainer != null) {
             actionBarContainer.removeAllViews();
-            getLayoutInflater().inflate(mActionBarLayout, actionBarContainer);
+            getLayoutInflater().inflate(getActionBarLayoutId(), actionBarContainer);
 
             TextView titleView = actionBarContainer.requireViewById(R.id.title);
-            titleView.setText(mTitleId);
+            titleView.setText(getTitleId());
             actionBarContainer.requireViewById(R.id.action_bar_icon_container).setOnClickListener(
                     v -> onBackPressed());
         }
+    }
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        onUxRestrictionChanged(getCurrentRestrictions());
+    }
+
+    /**
+     * Allow fragment to intercept back press and customize behavior.
+     */
+    protected void onBackPressed() {
+        getFragmentController().goBack();
     }
 }

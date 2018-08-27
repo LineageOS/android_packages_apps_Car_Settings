@@ -24,6 +24,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.car.widget.PagedListView;
@@ -45,17 +46,22 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     private ViewSwitcher mViewSwitcher;
     private boolean mShowSavedApOnly;
 
-    /**
-     * Gets a new instance of this object.
-     */
-    public static WifiSettingsFragment newInstance() {
-        WifiSettingsFragment wifiSettingsFragment = new WifiSettingsFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
-        bundle.putInt(EXTRA_LAYOUT, R.layout.wifi_list);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_toggle);
-        wifiSettingsFragment.setArguments(bundle);
-        return wifiSettingsFragment;
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_toggle;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        return R.layout.wifi_list;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.wifi_settings;
     }
 
     @Override

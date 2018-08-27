@@ -58,7 +58,7 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
         }
         mText = mContext.getString(R.string.night_mode_tile_label);
         mLaunchDisplaySettings = v -> {
-            fragmentController.launchFragment(DisplaySettingsFragment.newInstance());
+            fragmentController.launchFragment(new DisplaySettingsFragment());
             return true;
         };
     }
