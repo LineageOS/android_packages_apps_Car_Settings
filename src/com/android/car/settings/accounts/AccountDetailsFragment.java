@@ -40,6 +40,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -170,7 +171,7 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
                     }
                     final Activity activity = getTargetFragment().getActivity();
                     if (!success && activity != null && !activity.isFinishing()) {
-                        RemoveAccountFailureDialog.show(getTargetFragment());
+                        ErrorDialog.show(getTargetFragment(), R.string.remove_account_error_title);
                     } else {
                         getTargetFragment().getFragmentManager().popBackStack();
                     }
@@ -213,29 +214,5 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
                     mAccount, activity, mCallback, null, mUserHandle);
             dialog.dismiss();
         }
-    }
-
-    /**
-     * Dialog to tell user about account removal failure
-     */
-    public static class RemoveAccountFailureDialog extends DialogFragment {
-
-        private static final String DIALOG_TAG = "removeAccountFailed";
-
-        public static void show(Fragment parent) {
-            final RemoveAccountFailureDialog dialog = new RemoveAccountFailureDialog();
-            dialog.setTargetFragment(parent, 0);
-            dialog.show(parent.getFragmentManager(), DIALOG_TAG);
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new CarAlertDialog.Builder(getContext())
-                    .setTitle(R.string.really_remove_account_title)
-                    .setBody(R.string.remove_account_failed)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .create();
-        }
-
     }
 }
