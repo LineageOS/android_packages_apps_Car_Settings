@@ -478,8 +478,8 @@
     <string name="really_remove_account_title">Remove account?</string>
     <!-- Remove account message in dialog [CHAR LIMIT=NONE] -->
     <string name="really_remove_account_message">Removing this account will delete all of its messages, contacts, and other data from the device!</string>
-    <!-- This is shown if the authenticator for a given account fails to remove it. [CHAR LIMIT=NONE] -->
-    <string name="remove_account_failed">This change isn\'t allowed by your admin</string>
+    <!-- Title of the alert dialog to notify that account deletion has failed. [CHAR LIMIT=40] -->
+    <string name="remove_account_error_title">Failed to remove account.</string>
 
     <!-- security lock -->
     <!-- Title for security settings [CHAR LIMIT=20] -->

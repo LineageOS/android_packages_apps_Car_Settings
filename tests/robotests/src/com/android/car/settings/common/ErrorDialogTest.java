@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.users;
+package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.robolectric.RuntimeEnvironment.application;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
+import com.android.car.settings.testutils.TestBaseFragment;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,13 +33,13 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 
 /**
- * Tests for RemoveUserErrorDialog.
+ * Tests for ErrorDialog.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class RemoveUserErrorDialogTest {
-    private static final String ERROR_DIALOG_TAG = "RemoveUserErrorDialogTag";
+public class ErrorDialogTest {
+    private static final String ERROR_DIALOG_TAG = "ErrorDialogTag";
     private BaseTestActivity mTestActivity;
-    private RemoveUserErrorDialog mRemoveUserErrorDialog;
+    private TestBaseFragment mTestFragment;
 
     @Before
     public void setUpTestActivity() {
@@ -45,24 +49,28 @@ public class RemoveUserErrorDialogTest {
                 .setup()
                 .get();
 
-        mRemoveUserErrorDialog = new RemoveUserErrorDialog();
+        mTestFragment = TestBaseFragment.newInstance();
+        mTestActivity.launchFragment(mTestFragment);
     }
 
     @Test
     public void testOkDismissesDialog() {
-        showDialog();
+        ErrorDialog dialog = ErrorDialog.show(mTestFragment, R.string.delete_user_error_title);
 
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        DialogTestUtils.clickPositiveButton(mRemoveUserErrorDialog);
+        DialogTestUtils.clickPositiveButton(dialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
-    private void showDialog() {
-        mRemoveUserErrorDialog.show(
-                mTestActivity.getSupportFragmentManager(), ERROR_DIALOG_TAG);
+    @Test
+    public void testErrorDialogSetsTitle() {
+        int testTitleId = R.string.add_user_error_title;
+        ErrorDialog dialog = ErrorDialog.show(mTestFragment, testTitleId);
+
+        assertThat(DialogTestUtils.getTitle(dialog)).isEqualTo(application.getString(testTitleId));
     }
 
     private boolean isDialogShown() {
