@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +25,7 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.car.uxrestrictions.CarUxRestrictions;
 import androidx.car.widget.ListItem;
 
 import com.android.car.settings.R;
@@ -121,7 +121,7 @@ public class SpinnerListItem<T> extends ListItem<SpinnerListItem.ViewHolder> {
         }
 
         @Override
-        public void applyUxRestrictions(@NonNull CarUxRestrictions restrictions) {
+        public void onUxRestrictionsChanged(@NonNull CarUxRestrictions restrictions) {
             // no-op
         }
     }
