@@ -16,7 +16,6 @@
 
 package com.android.car.settings.suggestions;
 
-import android.car.drivingstate.CarUxRestrictions;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
+import androidx.car.uxrestrictions.CarUxRestrictions;
 import androidx.car.widget.ListItem;
 
 import com.android.car.settings.R;
@@ -147,7 +147,7 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
         }
 
         @Override
-        public void applyUxRestrictions(CarUxRestrictions restrictions) {
+        public void onUxRestrictionsChanged(CarUxRestrictions restrictions) {
             // no-op
         }
     }
