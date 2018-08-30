@@ -554,7 +554,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
         setProgressBarVisible(false);
 
@@ -594,7 +594,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         setProgressBarVisible(true);
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void onComplete() {
         if (mIsInSetupWizard) {
             ((SetupWizardScreenLockActivity) getActivity()).onComplete();

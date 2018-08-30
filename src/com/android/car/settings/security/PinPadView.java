@@ -42,10 +42,10 @@ import java.util.List;
  */
 public class PinPadView extends GridLayout {
     // Number of keys in the pin pad, 0-9 plus backspace and enter keys.
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final int NUM_KEYS = 12;
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final int[] PIN_PAD_DIGIT_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
             R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
 

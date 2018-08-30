@@ -86,7 +86,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private PasswordHelper mPasswordHelper;
 
     // Keep track internally of where the user is in choosing a password.
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     enum Stage {
         Introduction(
                 R.string.choose_lock_password_hints,
@@ -457,7 +457,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
         setProgressBarVisible(false);
         if (isSaveSuccessful) {
@@ -551,13 +551,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         mHintMessage.setText(message);
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void updateStage(Stage stage) {
         mUiStage = stage;
         updateUi();
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void onComplete() {
         if (mIsInSetupWizard) {
             ((SetupWizardScreenLockActivity) getActivity()).onComplete();

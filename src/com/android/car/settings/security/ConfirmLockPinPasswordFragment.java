@@ -257,7 +257,7 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         }
     }
 
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     void onCheckCompleted(boolean lockMatched) {
         if (lockMatched) {
             mCheckLockListener.onLockVerified(mEnteredPassword);

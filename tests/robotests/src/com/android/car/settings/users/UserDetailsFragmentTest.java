@@ -156,7 +156,7 @@ public class UserDetailsFragmentTest {
         mRemoveUserButton.callOnClick();
 
         assertThat(mUserDetailsFragment.getFragmentManager().findFragmentByTag(
-                UserDetailsFragment.CONFIRM_REMOVE_DIALOG_TAG)).isNotNull();
+                UserDetailsFragment.CONFIRM_REMOVE_USER_DIALOG_TAG)).isNotNull();
     }
 
     /* Test that edit icon does not show up for non-current users. */
@@ -203,17 +203,17 @@ public class UserDetailsFragmentTest {
     public void testBackButtonPressedWhenRemoveUserSuccessful() {
         doReturn(true).when(mCarUserManagerHelper).removeUser(any(), any());
         createUserDetailsFragment();
-        mUserDetailsFragment.onRemoveUserConfirmed();
+        mUserDetailsFragment.removeUser();
 
         assertThat(mTestActivity.getOnBackPressedFlag()).isTrue();
     }
 
-    /* Test that onRemoveUserConfirmed invokes user removal. */
+    /* Test that removeUser invokes user removal. */
     @Test
-    public void testRemoveUserConfirmedInvokesRemoveUser() {
+    public void testRemoveUserInvokesRemoveUser() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Test User", /* flags= */ 0);
         createUserDetailsFragment(testUser);
-        mUserDetailsFragment.onRemoveUserConfirmed();
+        mUserDetailsFragment.removeUser();
 
         verify(mCarUserManagerHelper).removeUser(
                 testUser, application.getString(R.string.user_guest));
@@ -300,11 +300,11 @@ public class UserDetailsFragmentTest {
     }
 
     @Test
-    public void testAssignAdminConfirmed() {
+    public void testAssignAdmin() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
         createUserDetailsFragment(testUser);
 
-        mUserDetailsFragment.onAssignAdminConfirmed();
+        mUserDetailsFragment.assignAdmin();
 
         verify(mCarUserManagerHelper).assignAdminPrivileges(testUser);
     }

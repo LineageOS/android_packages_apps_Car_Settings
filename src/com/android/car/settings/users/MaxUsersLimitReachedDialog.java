@@ -30,7 +30,7 @@ import com.android.car.settings.R;
  * Dialog to inform that user deletion failed and offers to retry.
  */
 public class MaxUsersLimitReachedDialog extends DialogFragment {
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    @VisibleForTesting
     static final String DIALOG_TAG = "MaxUsersLimitReachedDialog";
     private final int mMaxUserLimit;
 

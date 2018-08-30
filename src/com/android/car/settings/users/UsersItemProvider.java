@@ -37,25 +37,35 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
     private final UserClickListener mUserClickListener;
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final UserIconProvider mUserIconProvider;
+    private final boolean mIncludeCurrentUser;
+    private final boolean mIncludeGuest;
+    private final boolean mIncludeSuplementalIcon;
 
-    UsersItemProvider(Context context, UserClickListener userClickListener,
-            CarUserManagerHelper userManagerHelper) {
+    private UsersItemProvider(Context context, CarUserManagerHelper userManagerHelper,
+            Builder builder) {
         super(context);
         mCarUserManagerHelper = userManagerHelper;
         mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
-        mUserClickListener = userClickListener;
+
+        mUserClickListener = builder.mUserClickListener;
+        mIncludeCurrentUser = builder.mIncludeCurrentUser;
+        mIncludeGuest = builder.mIncludeGuest;
+        mIncludeSuplementalIcon = builder.mIncludeSuplementalIcon;
+
         populateItems();
     }
 
     /**
-     * Clears and recreates the list of items.
+     * Recreates the list of items.
      */
     @Override
     public void populateItems() {
         UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
 
         // Show current user
-        mItems.add(createUserItem(currUserInfo));
+        if (mIncludeCurrentUser) {
+            mItems.add(createUserItem(currUserInfo));
+        }
 
         // Display other users on the system
         List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
@@ -66,15 +76,22 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         }
 
         // Display guest session option.
-        mItems.add(createGuestItem());
+        if (mIncludeGuest) {
+            mItems.add(createGuestItem());
+        }
     }
 
     // Creates a list item for a user, clicking on it leads to the user details page.
     private ListItem createUserItem(UserInfo userInfo) {
         UserListItem item = new UserListItem(userInfo, mContext, mCarUserManagerHelper);
 
-        item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
-        item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
+        if (mUserClickListener != null) {
+            item.setOnClickListener(view -> mUserClickListener.onUserClicked(userInfo));
+        }
+
+        if (mIncludeSuplementalIcon) {
+            item.setSupplementalIcon(R.drawable.ic_chevron_right, false);
+        }
         return item;
     }
 
@@ -86,6 +103,68 @@ class UsersItemProvider extends AbstractRefreshableListItemProvider  {
         item.setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setTitle(mContext.getString(R.string.user_guest));
         return item;
+    }
+
+    public static final class Builder {
+        private final Context mContext;
+        private final CarUserManagerHelper mUserManagerHelper;
+
+        private UserClickListener mUserClickListener;
+        private boolean mIncludeCurrentUser = true;
+        private boolean mIncludeGuest = true;
+        private boolean mIncludeSuplementalIcon;
+
+        /**
+         * Builder for constructing an instance of {@link UsersItemProvider}
+         */
+        Builder(Context context, CarUserManagerHelper userManagerHelper) {
+            mContext = context;
+            mUserManagerHelper = userManagerHelper;
+        }
+
+        /**
+         * Setter for {@link UserClickListener} to be invoked when any item returned by the provider
+         * is clicked.
+         */
+        public Builder setOnUserClickListener(UserClickListener listener) {
+            mUserClickListener = listener;
+            return this;
+        }
+
+        /**
+         * If set to {@code true}, current user will be in the list of users returned by the
+         * provider, otherwise it will not. Default is {@code true}.
+         */
+        public Builder setIncludeCurrentUser(boolean include) {
+            mIncludeCurrentUser = include;
+            return this;
+        }
+
+        /**
+         * If set to {@code true}, guest user will be in the list of users returned by the
+         * provider, otherwise it will not. Default is {@code true}.
+         */
+        public Builder setIncludeGuest(boolean include) {
+            mIncludeGuest = include;
+            return this;
+        }
+
+        /**
+         * If set to {@code true}, supplemental icon will be set on all items returned by the
+         * provider, otherwise it will not. Default is {@code false}.
+         */
+        public Builder setIncludeSupplementalIcon(boolean include) {
+            mIncludeSuplementalIcon = include;
+            return this;
+        }
+
+        /**
+         * Returns an instance of {@link UsersItemProvider} constructed from the {@link Builder}
+         * parameters.
+         */
+        public UsersItemProvider create() {
+            return new UsersItemProvider(mContext, mUserManagerHelper, /* builder= */ this);
+        }
     }
 
     /**

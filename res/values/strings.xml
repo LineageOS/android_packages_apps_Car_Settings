@@ -434,6 +434,12 @@
     <string name="delete_last_user_admin_created_message">"After deleting the only remaining user for this car, a new admin user will be created."</string>
     <!-- Message to inform user that deletion of the last user will require new system setup. [CHAR LIMIT=NONE] -->
     <string name="delete_last_user_system_setup_required_message">"All data, settings, and apps associated with this user will be deleted. You'll need to set up the system again."</string>
+    <!-- Title of the alert dialog to notify that new admin should be chosen. [CHAR LIMIT=40] -->
+    <string name="choose_new_admin_title">Choose new admin</string>
+    <!-- Message to notify that new admin must be chosen in order to delete the current one. [CHAR LIMIT=150] -->
+    <string name="choose_new_admin_message">You need at least one admin. To delete this one, first choose a replacement. </string>
+    <!-- Label for choosing new admin. [CHAR LIMIT=25] -->
+    <string name="choose_new_admin_label">Choose admin</string>
 
     <!-- User info -->
     <!-- Title for Guest user [CHAR LIMIT=35] -->

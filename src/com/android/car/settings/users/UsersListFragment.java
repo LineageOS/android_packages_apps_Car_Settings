@@ -67,18 +67,22 @@ public class UsersListFragment extends ListItemSettingsFragment
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         mOpacityDisabled = getContext().getResources().getFloat(R.dimen.opacity_disabled);
         mOpacityEnabled = getContext().getResources().getFloat(R.dimen.opacity_enabled);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
-        mItemProvider =
-                new UsersItemProvider(getContext(), this, mCarUserManagerHelper);
+        mItemProvider = new UsersItemProvider.Builder(getContext(), mCarUserManagerHelper)
+                .setOnUserClickListener(this)
+                .setIncludeSupplementalIcon(true)
+                .create();
 
         // Register to receive changes to the users.
         mCarUserManagerHelper.registerOnUsersUpdateListener(this);
+    }
 
-        // Super class's onActivityCreated need to be called after itemProvider is initialized.
-        // Because getItemProvider is called in there.
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         mProgressBar = getActivity().findViewById(R.id.progress_bar);
