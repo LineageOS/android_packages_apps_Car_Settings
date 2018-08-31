@@ -118,7 +118,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         aboutSystemItem.setBody(
                 context.getString(R.string.about_summary, Build.VERSION.RELEASE));
         aboutSystemItem.setPrimaryActionIcon(
-                R.drawable.ic_settings_about, /* useLargeIcon= */ false);
+                R.drawable.ic_settings_about, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         aboutSystemItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         aboutSystemItem.setOnClickListener(
                 v -> getFragmentController().launchFragment(AboutSettingsFragment.getInstance()));
@@ -130,7 +130,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         TextListItem legalInfoItem = new TextListItem(context);
         legalInfoItem.setTitle(context.getString(R.string.legal_information));
         legalInfoItem.setPrimaryActionIcon(
-                R.drawable.ic_settings_about, /* useLargeIcon= */ false);
+                R.drawable.ic_settings_about, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         legalInfoItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         legalInfoItem.setOnClickListener(v ->
                 getFragmentController().launchFragment(LegalInformationFragment.newInstance())
@@ -143,7 +143,8 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         TextListItem restoreOptionsItem = new TextListItem(context);
         restoreOptionsItem.setTitle(context.getString(R.string.reset_options_title));
         restoreOptionsItem.setBody(context.getString(R.string.reset_options_summary));
-        restoreOptionsItem.setPrimaryActionIcon(R.drawable.ic_restore, /* useLargeIcon= */ false);
+        restoreOptionsItem.setPrimaryActionIcon(R.drawable.ic_restore,
+                TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         restoreOptionsItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */
                 false);
         restoreOptionsItem.setOnClickListener(
