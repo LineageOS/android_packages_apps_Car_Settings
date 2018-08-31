@@ -75,7 +75,7 @@ public class ResetNetworkConfirmFragment extends ListItemSettingsFragment {
         Context context = requireContext();
         TextListItem item = new TextListItem(context);
         item.setBody(context.getString(R.string.reset_network_confirm_desc), /* asPrimary= */ true);
-        item.setHideDivider(true);
+        item.setShowDivider(false);
         return Collections.singletonList(item);
     }
 

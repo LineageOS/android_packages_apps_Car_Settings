@@ -92,7 +92,7 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
         Context context = requireContext();
         TextListItem item = new TextListItem(context);
         item.setBody(context.getString(stringResId), /* asPrimary= */ true);
-        item.setHideDivider(true);
+        item.setShowDivider(false);
         return item;
     }
 }

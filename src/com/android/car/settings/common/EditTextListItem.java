@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.car.drivingstate.CarUxRestrictions;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -28,6 +27,7 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.car.uxrestrictions.CarUxRestrictions;
 import androidx.car.widget.ListItem;
 
 import com.android.car.settings.R;
@@ -194,7 +194,7 @@ public class EditTextListItem<VH extends EditTextListItem.ViewHolder>
         }
 
         @Override
-        public void applyUxRestrictions(@NonNull CarUxRestrictions restrictions) {
+        public void onUxRestrictionsChanged(@NonNull CarUxRestrictions restrictions) {
             // no-op
         }
     }
