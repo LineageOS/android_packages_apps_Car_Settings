@@ -412,13 +412,13 @@
     <!-- Message that tells people what's the maximum number of uses allowed on the device. [CHAR_LIMIT=NONE]-->
     <plurals name="user_limit_reached_message">
         <item quantity="one">Only one user can be created.</item>
-        <item quantity="other">You can add up to <xliff:g id="count" example="3">%d</xliff:g> users.</item>
+        <item quantity="other">You can create up to <xliff:g id="count" example="3">%d</xliff:g> users.</item>
     </plurals>
     <!-- Title of the alert dialog to notify that the creation of new user has failed. [CHAR LIMIT=40] -->
     <string name="add_user_error_title">Failed to create a new user</string>
 
     <!-- Deleting users -->
-    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=25] -->
+    <!-- Title of the alert dialog to ask user to confirm user deletion [CHAR LIMIT=40] -->
     <string name="delete_user_dialog_title">Delete this user?</string>
     <!-- Message to inform user that all of user's data will be deleted if confirmed [CHAR LIMIT=NONE] -->
     <string name="delete_user_dialog_message">"All apps and data will be deleted."</string>
@@ -428,7 +428,7 @@
     <string name="delete_user_error_dismiss">Dismiss</string>
     <!-- Button label to retry user deletion [CHAR LIMIT=25] -->
     <string name="delete_user_error_retry">Retry</string>
-    <!-- Title of the alert dialog to ask user to confirm deletion of the last user on the device. [CHAR LIMIT=25] -->
+    <!-- Title of the alert dialog to ask user to confirm deletion of the last user on the device. [CHAR LIMIT=40] -->
     <string name="delete_last_user_dialog_title">Delete last user?</string>
     <!-- Message to inform user that deletion of the last user will prompt the creation of a new admin user. [CHAR LIMIT=NONE] -->
     <string name="delete_last_user_admin_created_message">"After deleting the only remaining user for this car, a new admin user will be created."</string>
@@ -438,7 +438,7 @@
     <string name="choose_new_admin_title">Choose new admin</string>
     <!-- Message to notify that new admin must be chosen in order to delete the current one. [CHAR LIMIT=150] -->
     <string name="choose_new_admin_message">You need at least one admin. To delete this one, first choose a replacement. </string>
-    <!-- Label for choosing new admin. [CHAR LIMIT=25] -->
+    <!-- Label for choosing new admin. [CHAR LIMIT=30] -->
     <string name="choose_new_admin_label">Choose admin</string>
 
     <!-- User info -->
