@@ -28,7 +28,7 @@ import android.view.View;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.ShadowTextListItem;
+import com.android.car.settings.testutils.ShadowActionListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
@@ -45,7 +45,7 @@ import org.robolectric.shadows.ShadowApplication;
  * Tests for UsersItemProviderTest.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowTextListItem.class, ShadowUserIconProvider.class })
+@Config(shadows = { ShadowActionListItem.class, ShadowUserIconProvider.class })
 public class NonAdminManagementItemProviderTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -74,8 +74,8 @@ public class NonAdminManagementItemProviderTest {
         int userId = 10;
         NonAdminManagementItemProvider provider = createProvider(userId);
 
-        ShadowTextListItem textListItem = Shadow.extract(provider.get(0));
-        assertThat(textListItem.getTitle())
+        ShadowActionListItem actionListItem = Shadow.extract(provider.get(0));
+        assertThat(actionListItem.getTitle())
                 .isEqualTo(application.getString(R.string.grant_admin_privileges));
     }
 
@@ -84,8 +84,8 @@ public class NonAdminManagementItemProviderTest {
         int userId = 10;
         NonAdminManagementItemProvider provider = createProvider(userId);
 
-        ShadowTextListItem textListItem = Shadow.extract(provider.get(0));
-        textListItem.getAction1OnClickListener().onClick(
+        ShadowActionListItem actionListItem = Shadow.extract(provider.get(0));
+        actionListItem.getPrimaryActionOnClickListener().onClick(
                 new View(application.getApplicationContext()));
         verify(mListener).onAssignAdminClicked();
     }
@@ -94,9 +94,5 @@ public class NonAdminManagementItemProviderTest {
         return new NonAdminManagementItemProvider(userId,
                 RuntimeEnvironment.application.getApplicationContext(), mListener,
                 mCarUserManagerHelper);
-    }
-
-    private ShadowTextListItem getItem(UsersItemProvider provider, int index) {
-        return Shadow.extract(provider.get(index));
     }
 }

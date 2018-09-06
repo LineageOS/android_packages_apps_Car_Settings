@@ -20,7 +20,7 @@ import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import androidx.car.widget.TextListItem;
+import androidx.car.widget.ActionListItem;
 
 import com.android.car.settings.R;
 
@@ -48,9 +48,9 @@ public class NonAdminManagementItemProvider  extends AbstractRefreshableListItem
     protected void populateItems() {
         UserInfo userInfo = UserUtils.getUserInfo(mContext, mUserId);
 
-        TextListItem item = new TextListItem(mContext);
+        ActionListItem item = new ActionListItem(mContext);
         item.setPrimaryActionIcon(mUserIconProvider.getUserIcon(userInfo, mContext),
-                TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
+                ActionListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         item.setTitle(mContext.getString(R.string.grant_admin_privileges));
         item.setAction(mContext.getString(R.string.assign_admin_privileges),
                 /* showDivider= */ false,
