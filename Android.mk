@@ -28,7 +28,9 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_USE_AAPT2 := true
 
-  LOCAL_JAVA_LIBRARIES += android.car
+  LOCAL_JAVA_LIBRARIES := \
+      android.car \
+      android.car.user
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.car_car \
