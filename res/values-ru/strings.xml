@@ -196,19 +196,24 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когда вы добавите пользователя, ему потребуется настроить профиль."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Любой пользователь устройства может обновлять приложения для всех аккаунтов."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Достигнуто ограничение"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Можно добавить не более <xliff:g id="COUNT">%d</xliff:g> пользователя.</item>
-      <item quantity="few">Можно добавить не более <xliff:g id="COUNT">%d</xliff:g> пользователей.</item>
-      <item quantity="many">Можно добавить не более <xliff:g id="COUNT">%d</xliff:g> пользователей.</item>
-      <item quantity="other">Можно добавить не более <xliff:g id="COUNT">%d</xliff:g> пользователей.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">Можно создать не более <xliff:g id="COUNT">%d</xliff:g> пользователя.</item>
+      <item quantity="few">Можно создать не более <xliff:g id="COUNT">%d</xliff:g> пользователей.</item>
+      <item quantity="many">Можно создать не более <xliff:g id="COUNT">%d</xliff:g> пользователей.</item>
+      <item quantity="other">Можно создать не более <xliff:g id="COUNT">%d</xliff:g> пользователя.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Не удалось создать пользователя"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Удалить пользователя"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Удалить пользователя?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Все приложения и данные будут удалены."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Не удалось удалить пользователя"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Закрыть"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Повторить"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Удалить пользователя?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Будут удалены все приложения и данные."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Не удалось удалить пользователя"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Закрыть"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Повторить попытку"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Удалить последнего пользователя?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"После удаления единственного оставшегося пользователя в системе вам будет предложено создать новый профиль администратора."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Будут удалены все данные, настройки и приложения, связанные с этим пользователем. Вам потребуется заново настроить систему."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Выберите нового администратора"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"В системе должен быть хотя бы один администратор. Прежде чем удалить этого администратора, выберите того, кто его заменит."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Выбрать администратора"</string>
     <string name="user_guest" msgid="3465399481257448601">"Гость"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Гость"</string>
     <string name="user_switch" msgid="6544839750534690781">"Сменить пользователя"</string>
@@ -229,7 +234,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Удалить аккаунт"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Удалить аккаунт?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"С устройства будут удалены все сообщения, контакты и другие данные этого аккаунта."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Это действие запрещено администратором"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Не удалось удалить аккаунт"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безопасность"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокировка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нет"</string>

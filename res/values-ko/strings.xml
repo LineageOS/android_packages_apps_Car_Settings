@@ -194,19 +194,24 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"추가된 새로운 사용자는 자신의 공간을 설정해야 합니다."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"모든 사용자는 다른 사용자들을 위하여 앱을 업데이트할 수 있습니다."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"사용자 제한 도달"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">사용자를 <xliff:g id="COUNT">%d</xliff:g>명까지 추가할 수 있습니다.</item>
-      <item quantity="one">사용자를 한 명만 만들 수 있습니다.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">사용자는 <xliff:g id="COUNT">%d</xliff:g>명까지 만들 수 있습니다.</item>
+      <item quantity="one">사용자는 한 명만 만들 수 있습니다.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"새 사용자를 만들지 못했습니다."</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"사용자 삭제"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"사용자를 삭제할까요?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"모든 앱과 데이터가 삭제됩니다."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"사용자를 삭제하지 못함"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"닫기"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"다시 시도"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"이 사용자를 삭제하시겠습니까?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"모든 앱과 데이터가 삭제됩니다."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"사용자를 삭제하지 못했습니다"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"닫기"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"재시도"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"마지막 사용자를 삭제하시겠습니까?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"이 자동차의 남은 사용자만 삭제한 후에 새 관리자를 생성합니다."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"이 사용자와 관련된 모든 데이터, 설정 및 앱이 삭제됩니다. 시스템을 다시 설정해야 합니다."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"새 관리자 선택"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"관리자 한 명 이상을 선택해야 합니다. 이 관리자를 삭제하려면 먼저 대체 관리자를 선택하세요."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"관리자 선택"</string>
     <string name="user_guest" msgid="3465399481257448601">"게스트"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"손님"</string>
+    <string name="start_guest_session" msgid="4438752398760283201">"게스트"</string>
     <string name="user_switch" msgid="6544839750534690781">"전환"</string>
     <string name="current_user_name" msgid="3813671533249316823">"사용자(%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"이름"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"계정 삭제"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"계정을 삭제할까요?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"계정을 삭제하면 기기의 메시지, 연락처 및 다른 데이터가 모두 지워집니다."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"관리자가 이 변경을 허용하지 않습니다."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"계정을 삭제하지 못했습니다"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>

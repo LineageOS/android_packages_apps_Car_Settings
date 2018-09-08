@@ -196,19 +196,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"בעת הוספת משתמש חדש, על משתמש זה להגדיר את המרחב שלו."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"כל משתמש יכול לעדכן אפליקציות לכל שאר המשתמשים."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"הגעת למגבלת המשתמשים שניתן להוסיף"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="two">ניתן להוסיף עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
-      <item quantity="many">ניתן להוסיף עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
-      <item quantity="other">ניתן להוסיף עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
-      <item quantity="one">ניתן ליצור רק משתמש אחד.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"ניסיון היצירה של משתמש חדש נכשל"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"מחיקת משתמש"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"האם להסיר משתמש זה?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"כל האפליקציות והנתונים יימחקו."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"הניסיון להסרת המשתמש נכשל."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"סגירה"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ניסיון חוזר"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"למחוק את המשתמש הזה?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"כל האפליקציות והנתונים יימחקו."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"לא ניתן היה למחוק את המשתמש."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ביטול"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ניסיון חוזר"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"למחוק את המשתמש האחרון?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"לאחר מחיקת המשתמש היחיד שנשאר למכונית הזאת, ייווצר מנהל מערכת חדש."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"כל הנתונים, ההגדרות והאפליקציות ששויכו למשתמש הזה, יימחקו. יהיה עליך להגדיר שוב את המערכת."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"בחירת מנהל מערכת חדש"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"יש צורך במנהל מערכת אחד לפחות: לפני שמוחקים את מנהל המערכת הזה, צריך לבחור מחליף."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"לבחירת מנהל מערכת"</string>
     <string name="user_guest" msgid="3465399481257448601">"אורח"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"אורח"</string>
     <string name="user_switch" msgid="6544839750534690781">"החלפה"</string>
@@ -229,7 +229,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"הסרת חשבון"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"להסיר את החשבון?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"הסרת חשבון זה תגרום למחיקת כל ההודעות, אנשי הקשר ונתונים נוספים מהמכשיר!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"מנהל המכשיר אינו מתיר שינוי זה"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"לא ניתן היה להסיר את החשבון."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"אבטחה"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"נעילת מסך"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ללא"</string>

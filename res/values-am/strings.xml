@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"አዲስ ተጠቃሚ ሲያክሉ ያ ሰው የራሳቸውን ቦታ ማቀናበር አለባቸው።"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ማንኛውም ተጠቃሚ መተግበሪያዎችን ለሌሎች ተጠቃሚዎች ሁሉ ማዘመን ይችላል።"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"የተጠቃሚ ገደብ ላይ ተደርሷል"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one"><xliff:g id="COUNT">%d</xliff:g> ተጠቃሚዎች ብቻ ናቸው ሊፈጠሩ የሚችሉት።</item>
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> ተጠቃሚዎች ብቻ ናቸው ሊፈጠሩ የሚችሉት።</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">እስከ <xliff:g id="COUNT">%d</xliff:g> ተጠቃሚዎች መፍጠር ይችላሉ።</item>
+      <item quantity="other">እስከ <xliff:g id="COUNT">%d</xliff:g> ተጠቃሚዎች መፍጠር ይችላሉ።</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"አዲስ ተጠቃሚን መፍጠር አልተሳካም"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ተጠቃሚን ሰርዝ"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ይህ ተጠቃሚ ይወገድ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ሁሉም መተግበሪያዎች እና ውሂብ ይሰረዛሉ።"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ተጠቃሚውን ማስወገድ አልተሳካም።"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"አሰናብት"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"እንደገና ሞክር"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ይህ ተጠቃሚ ይሰረዝ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"ሁሉም መተግበሪያዎች እና ውሂብ ይሰረዛሉ።"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ተጠቃሚን መሰረዝ አልተሳካም።"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"አሰናብት"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"እንደገና ሞክር"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"የመጨረሻው ተጠቃሚ ይሰረዝ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ለዚህ መኪና ብቻ ያለው ብቸኛውን ተጠቃሚ ከተሰረዘ በኋላ አዲስ አስተዳዳሪ ተጠቃሚ ይፈጠራል።"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ከዚህ ተጠቃሚ ጋር የተጎዳኙ ሁሉም ውሂብ፣ ቅንብሮች እና መተግበሪያዎች ይሰረዛሉ። ስርዓቱን እንደገና ማዋቀር ይኖርብዎታል።"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"አዲስ አስተዳዳሪ ይምረጡ"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ቢያንስ አንድ አስተዳዳሪ ያስፈልገዎታል። ይህን ለመሰረዝ መጀመሪያ ምትኩን ይምረጡ።"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"አስተዳዳሪ ይምረጡ"</string>
     <string name="user_guest" msgid="3465399481257448601">"እንግዳ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"እንግዳ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ቀይር"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"መለያን አስወግድ"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"መለያ ይወገድ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ይህን መለያ ማስወገድ ሁሉንም መልዕክቶቹ፣ እውቂያዎቹ እና ሌላ ውሂቡ ከስልኩ ላይ ይሰርዛቸዋል!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ይህ ለውጥ በአስተዳዳሪዎ አይፈቀድም"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"መለያን ማስወገድ አልተሳካም።"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ደኅንነት"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ማያ ገጽ መቆለፊያ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ምንም"</string>

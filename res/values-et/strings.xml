@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kui lisate uue kasutaja, siis peab ta seadistama oma ruumi."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Iga kasutaja saab rakendusi värskendada kõigi teiste kasutajate jaoks."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Kasutajate limiit on täis"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Võite lisada kuni <xliff:g id="COUNT">%d</xliff:g> kasutajat.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Luua saab kuni <xliff:g id="COUNT">%d</xliff:g> kasutajat.</item>
       <item quantity="one">Luua saab ainult ühe kasutaja.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Uue kasutaja loomine ebaõnnestus"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Kasutaja kustutamine"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Kas eemaldada kasutaja?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Kõik rakendused ja andmed kustutatakse."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Kasutaja eemaldamine ebaõnnestus."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Loobu"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Proovi uuesti"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Kas kustutada kasutaja?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Kõik rakendused ja andmed kustutatakse."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Kasutaja kustutamine ebaõnnestus."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Loobu"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Proovi uuesti"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Kas kustutada viimane kasutaja?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Pärast selle auto viimase allesjäänud kasutaja kustutamist luuakse uus administratiivkasutaja."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Kõik selle kasutajaga seotud andmed, seaded ja rakendused kustutatakse. Peate süsteemi uuesti seadistama."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Valige uus administraator"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Vajate vähemalt ühte administraatorit. Selle kustutamiseks valige mõni teine administraator."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Valige administraator"</string>
     <string name="user_guest" msgid="3465399481257448601">"Külaline"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Külaline"</string>
     <string name="user_switch" msgid="6544839750534690781">"Lüliti"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Eemalda konto"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Kas eemaldada konto?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Selle konto eemaldamisel kustutatakse kõik seal olevad sõnumid, kontaktid ja muud seadmes olevad andmed."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Administraator on selle muudatuse keelanud"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Konto eemaldamine ebaõnnestus."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Turvalisus"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekraanilukk"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Puudub"</string>

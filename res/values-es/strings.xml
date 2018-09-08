@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Al añadir un nuevo usuario, este debe configurar su espacio."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Cualquier usuario puede actualizar las aplicaciones del resto de los usuarios."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Has alcanzado el límite de usuarios"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Puedes añadir hasta <xliff:g id="COUNT">%d</xliff:g> usuarios.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Puedes crear hasta <xliff:g id="COUNT">%d</xliff:g> usuarios.</item>
       <item quantity="one">Solo se puede crear un usuario.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"No se ha podido crear el usuario"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Eliminar usuario"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"¿Quitar este usuario?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Se eliminarán los datos y las aplicaciones."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"No se ha podido quitar el usuario."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ignorar"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Reintentar"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"¿Eliminar este usuario?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Se eliminarán los datos y las aplicaciones."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"No se ha podido eliminar al usuario."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignorar"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Reintentar"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"¿Eliminar último usuario?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Después de eliminar el único usuario que queda de este coche, se creará un nuevo administrador."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Se eliminarán las aplicaciones, los datos y los ajustes asociados a este usuario, y tendrás que volver a configurar el sistema."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Elegir nuevo administrador"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Necesitas al menos un administrador. Para eliminar este, primero debes elegir otro."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Elegir administrador"</string>
     <string name="user_guest" msgid="3465399481257448601">"Invitado"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Invitado"</string>
     <string name="user_switch" msgid="6544839750534690781">"Cambiar"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Quitar cuenta"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar la cuenta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del dispositivo."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"El administrador no permite realizar este cambio"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"No se ha podido eliminar la cuenta."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>

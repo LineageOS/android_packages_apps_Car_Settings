@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kur shton një përdorues të ri, ai person duhet të konfigurojë hapësirën e vet."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Çdo përdorues mund t\'i përditësojë aplikacionet për të gjithë përdoruesit e tjerë."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"U arrit kufiri i përdoruesve"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Mund të shtosh deri në <xliff:g id="COUNT">%d</xliff:g> përdorues.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Mund të krijosh deri në <xliff:g id="COUNT">%d</xliff:g> përdorues.</item>
       <item quantity="one">Mund të krijohet vetëm një përdorues.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Krijimi i një përdoruesi të ri dështoi"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Fshi përdoruesin"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Të fshihet ky përdorues?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Të gjitha aplikacionet dhe të dhënat do të fshihen."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Heqja e përdoruesit dështoi."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Hiq"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Riprovo"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Të fshihet ky përdorues?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Të gjitha aplikacionet dhe të dhënat do të fshihen."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Fshirja e përdoruesit dështoi."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Hiq"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Riprovo"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Të fshihet përdoruesi i fundit?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Pas fshirjes së përdoruesit të vetëm të mbetur për këtë makinë, do të krijohet një përdorues i ri administrator."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Të gjitha të dhënat, cilësimet dhe aplikacionet e lidhura me këtë përdorues do të fshihen. Do të duhet ta konfigurosh përsëri sistemin."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Zgjidh një administrator të ri"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Të duhet të paktën një administrator. Për ta fshirë këtë, në fillim zgjidh një zëvendësues."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Zgjidh administratorin"</string>
     <string name="user_guest" msgid="3465399481257448601">"I ftuar"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"I ftuar"</string>
     <string name="user_switch" msgid="6544839750534690781">"Ndërro"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Hiq llogarinë"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Të hiqet llogaria?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Heqja e kësaj llogarie do të fshijë të gjitha mesazhet, kontaktet e saj dhe të dhëna të tjera nga pajisja!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Ky ndryshim nuk lejohet nga administratori"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Heqja e llogarisë dështoi."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Siguria"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kyçja e ekranit"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Asnjë"</string>

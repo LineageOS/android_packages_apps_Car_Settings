@@ -195,18 +195,23 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kada dodate novog korisnika, ta osoba treba da podesi svoj prostor."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Svaki korisnik može da ažurira aplikacije za sve ostale korisnike."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Dostignut maksimalni broj korisnika"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Možete da dodate najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
-      <item quantity="few">Možete da dodate najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
-      <item quantity="other">Možete da dodate najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">Možete da napravite najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
+      <item quantity="few">Možete da napravite najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
+      <item quantity="other">Možete da napravite najviše <xliff:g id="COUNT">%d</xliff:g> korisnika.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Pravljenje novog korisnika nije uspelo"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Izbrišite korisnika"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Uklanjate ovog korisnika?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Sve aplikacije i podaci će biti izbrisani."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Uklanjanje korisnika nije uspelo."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Odbaci"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Probaj ponovo"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Želite da izbrišete ovog korisnika?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Sve aplikacije i podaci će biti izbrisani."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Brisanje korisnika nije uspelo."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Odbaci"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Probaj ponovo"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Želite da izbrišete poslednjeg korisnika?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Novi administrator će se napraviti kada izbrišete jedinog preostalog korisnika za ovaj automobil."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Izbrisaće se svi podaci, podešavanja i aplikacije koji su povezani sa ovim korisnikom. Moraćete da podesite sistem ponovo."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Odaberite novog administratora"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Treba vam najmanje jedan administrator. Da biste izbrisali ovog, prvo odaberite zamenu."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Odaberite administratora"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gost"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gost"</string>
     <string name="user_switch" msgid="6544839750534690781">"Prebacite na drugog korisnika"</string>
@@ -227,7 +232,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Ukloni nalog"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Želite da uklonite nalog?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Ako uklonite ovaj nalog, izbrisaćete sve poruke, kontakte i druge podatke sa uređaja!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Administrator ne dozvoljava ovu promenu"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Uklanjanje naloga nije uspelo."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Bezbednost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaključavanje ekrana"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nema"</string>

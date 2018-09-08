@@ -118,7 +118,7 @@
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Systemopdateringer"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Niveau for sikkerhedsrettelse på Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Seneste sikkerhedsopdatering i Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Basebandversion"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernesystem"</string>
@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Når du tilføjer en ny bruger, skal vedkommende konfigurere sit område."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Alle brugere kan opdatere apps for alle andre brugere."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Grænsen for brugere er nået"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Du kan tilføje op til <xliff:g id="COUNT">%d</xliff:g> bruger.</item>
-      <item quantity="other">Du kan tilføje op til <xliff:g id="COUNT">%d</xliff:g> brugere.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">Der kan kun oprettes <xliff:g id="COUNT">%d</xliff:g> bruger.</item>
+      <item quantity="other">Der kan kun oprettes <xliff:g id="COUNT">%d</xliff:g> brugere.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Der kunne ikke oprettes en ny bruger"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Slet bruger"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Vil du fjerne brugeren?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Alle apps og data slettes."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Brugeren kunne ikke fjernes."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Afvis"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Prøv igen"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Vil du slette brugeren?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Alle apps og data slettes."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Brugeren kunne ikke slettes."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Luk"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Prøv igen"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Vil du slette den sidste bruger?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Når den sidste tilbageværende bruger er slettet for denne bil, oprettes en ny administrator."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Alle data, indstillinger og apps, der er knyttet til denne bruger, slettes. Du skal konfigurere systemet igen."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Vælg en ny administrator"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Der skal være mindst én administrator. Hvis du vil slette denne, skal du først vælge en anden."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Vælg en administrator"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gæst"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gæst"</string>
     <string name="user_switch" msgid="6544839750534690781">"Skift"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Fjern konto"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Vil du fjerne kontoen?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Hvis du fjerner denne konto, slettes alle tilknyttede beskeder, kontaktpersoner og andre data fra enheden."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Din administrator har ikke givet tilladelse til at foretage denne ændring"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Kontoen kunne ikke fjernes."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhed"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skærmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ingen"</string>

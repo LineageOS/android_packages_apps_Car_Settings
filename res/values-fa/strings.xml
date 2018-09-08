@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"وقتی کاربر جدیدی اضافه می‌کنید آن فرد باید فضای خودش را تنظیم کند."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"هر کاربری می‌تواند برنامه‌ها را برای همه کاربران دیگر به‌روزرسانی کند."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"به حداکثر کاربر مجاز رسیده است"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">تا <xliff:g id="COUNT">%d</xliff:g> کاربر می‌توانید اضافه کنید.</item>
-      <item quantity="other">تا <xliff:g id="COUNT">%d</xliff:g> کاربر می‌توانید اضافه کنید.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">می‌توانید تا <xliff:g id="COUNT">%d</xliff:g> کاربر ایجاد کنید.</item>
+      <item quantity="other">می‌توانید تا <xliff:g id="COUNT">%d</xliff:g> کاربر ایجاد کنید.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"کاربر جدید ایجاد نشد"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"حذف کاربر"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"این کاربر حذف شود؟"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"همه برنامه‌ها و اطلاعات حذف خواهند شد."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"کاربر حذف نشد."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"نپذیرفتن"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"امتحان مجدد"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"این کاربر حذف شود؟"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"همه برنامه‌ها و داده‌ها حذف خواهد شد."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"کاربر حذف نشد."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"نپذیرفتن"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"امتحان مجدد"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"آخرین کاربر حذف شود؟"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"بعد از حذف تنها کاربر باقی‌ماندهٔ این خودرو، کاربرِ سرپرست جدیدی ایجاد خواهد شد."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"همه داده‌ها، تنظیمات، و برنامه‌های مرتبط با این کاربر حذف می‌شود. باید سیستم را دوباره راه‌‌اندازی کنید."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"انتخاب سرپرست جدید"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"حداقل یک سرپرست لازم دارید. برای حذف این سرپرست، ابتدا جایگزینی انتخاب کنید."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"انتخاب سرپرست"</string>
     <string name="user_guest" msgid="3465399481257448601">"مهمان"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"مهمان"</string>
     <string name="user_switch" msgid="6544839750534690781">"جابه‌جایی"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"حذف حساب"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"حساب برداشته شود؟"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"با پاک کردن این حساب، همه پیام‌ها، مخاطبین و داده‌های دیگر از دستگاه حذف خواهد شد!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"سرپرست سیستم شما این تغییر را مجاز نمی‌داند"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"حساب برداشته نشد."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل صفحه"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"هیچ‌کدام"</string>

@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni istifadəçi əlavə etdiyinizdə həmin şəxs öz yerini təyin etməlidir."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"İstənilən istifadəçi digər bütün istifadəçilər üçün tətbiqləri güncəlləyə bilər."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"İstifadəçi limitinə çatmısınız"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> qədər istifadəçi əlavə edə bilərsiniz.</item>
-      <item quantity="one">Yalnız bir istifadəçi yaradıla bilər.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Yeni istifadəçi yaradılmadı"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"İstifadəçinin silinməsi"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Bu istifadəçi silinsin?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Bütün tətbiqlər və data silinəcək."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"İstifadəçini silmək mümkün olmadı."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Keçin"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Yenidən cəhd edin"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Bu istifadəçi silinsin?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Bütün tətbiqlər və data silinəcək."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"İstifadəçi silinmədi"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Silin"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Yenidən cəhd edin"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Son istifadəçi silinsin?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Bu avtomobil üçün qalan yeganə istifadəçini sildikdən sonra yeni admin istifadəçi yaradılacaq."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Bu istifadəçi ilə əlaqələndirilmiş bütün verilənlər, ayarlar və tətbiqlər silinəcək. Sistemi yenidən quraşdırmalı olacaqsınız."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Yeni admin seçin"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Ən azı bir admininiz olmalıdır. Bunu silmək üçün ilk növbədə əvəzləyici seçin."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Admin seçin"</string>
     <string name="user_guest" msgid="3465399481257448601">"Qonaq"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Qonaq"</string>
     <string name="user_switch" msgid="6544839750534690781">"Dəyişin"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Hesabı silin"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Hesab silinsin?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Bu hesabın silinməsi bütün mesajları, kontaktları və digər datanı cihazdan siləcək!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Admin bu dəyişikliyə icazə vermir"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Hesab silinmədi."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Təhlükəsizlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yoxdur"</string>

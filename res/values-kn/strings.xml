@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ನೀವು ಹೊಸ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿದಾಗ, ಆ ವ್ಯಕ್ತಿಯು ಅವರ ಸ್ಥಳವನ್ನು ಸೆಟಪ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ಯಾವುದೇ ಬಳಕೆದಾರರು ಎಲ್ಲಾ ಇತರೆ ಬಳಕೆದಾರರಿಗಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬಹುದು."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"ಬಳಕೆದಾರರ ಮಿತಿ ತಲುಪಿದೆ"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">ನೀವು <xliff:g id="COUNT">%d</xliff:g> ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
-      <item quantity="other">ನೀವು <xliff:g id="COUNT">%d</xliff:g>ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"ಹೊಸ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿ"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ಬಳಕೆದಾರರನ್ನು ತೆಗೆಯುವುದೇ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ಬಳಕೆದಾರರನ್ನು ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ವಜಾಗೊಳಿಸಿ"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ಈ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸುವುದೇ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ವಜಾಗೊಳಿಸಿ"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ಮರುಪ್ರಯತ್ನ"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"ಬಳಕೆದಾರನನ್ನು ಅಳಿಸುವುದೇ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ಈ ಕಾರಿಗೆ ಉಳಿದಿರುವ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿದ ನಂತರ, ಹೊಸ ನಿರ್ವಾಹಕ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ಈ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಯೋಜಿತವಾಗಿರುವ ಎಲ್ಲಾ ಡೇಟಾ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಆ್ಯಪ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ನೀವು ಸಿಸ್ಟಮ್ ಅನ್ನು ಮತ್ತೆ ಹೊಂದಿಸಬೇಕಾಗಿದೆ."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"ಹೊಸ ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ನಿಮಗೆ ಕನಿಷ್ಟ ಒಂದು ನಿರ್ವಾಹಕ ಅಗತ್ಯವಿರುತ್ತದೆ. ಇದನ್ನು ಅಳಿಸಲು, ಮೊದಲು ಬದಲಿ ಆಯ್ಕೆ ಮಾಡಿ."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ಅತಿಥಿ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ಬದಲಿಸಿ"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ಈ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದರಿಂದ ಸಾಧನದಲ್ಲಿರುವ ಅದರ ಎಲ್ಲ ಸಂದೇಶಗಳು, ಸಂಪರ್ಕಗಳು ಮತ್ತು ಇತರೆ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ಈ ಬದಲಾವಣೆಗೆ ನಿಮ್ಮ ನಿರ್ವಾಹಕರು ಅನುಮತಿಸುವುದಿಲ್ಲ"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ಖಾತೆ ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ಭದ್ರತೆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ಪರದೆ ಲಾಕ್"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ಯಾವುದೂ ಅಲ್ಲ"</string>

@@ -196,19 +196,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Калі вы дадаяце новага карыстальніка, яму трэба наладзіць свой профіль."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Кожны карыстальнік прылады можа абнаўляць праграмы для іншых уліковых запісаў."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Дасягнуты ліміт карыстальнікаў"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Можна дадаць <xliff:g id="COUNT">%d</xliff:g> карыстальніка.</item>
-      <item quantity="few">Можна дадаць <xliff:g id="COUNT">%d</xliff:g> карыстальнікаў.</item>
-      <item quantity="many">Можна дадаць <xliff:g id="COUNT">%d</xliff:g> карыстальнікаў.</item>
-      <item quantity="other">Можна дадаць <xliff:g id="COUNT">%d</xliff:g> карыстальніка.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Не ўдалося стварыць новага карыстальніка"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Выдаліць карыстальніка"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Выдаліць карыстальніка?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Усе праграмы і даныя будуць выдалены."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Не атрымалася выдаліць карыстальніка."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Адхіліць"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Паўтарыць"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Выдаліць карыстальніка?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Усе праграмы і даныя будуць выдалены."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Не ўдалося выдаліць карыстальніка."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Закрыць"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Паўтарыць"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Выдаліць карыстальніка?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Пасля выдалення апошняга з карыстальнікаў гэтага аўтамабіля будзе створаны новы адміністратар."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Усе даныя, налады і праграмы, звязаныя з гэтым карыстальнікам, будуць выдалены. Спатрэбіцца наладзіць сістэму паўторна."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Выберыце новага адміністратара"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Патрэбны па меншай меры адзін адміністратар. Каб выдаліць існуючага, спачатку выберыце яму замену."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Выберыце адміністратара"</string>
     <string name="user_guest" msgid="3465399481257448601">"Госць"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Госць"</string>
     <string name="user_switch" msgid="6544839750534690781">"Пераключыцца"</string>
@@ -229,7 +229,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Выдаліць уліковы запіс"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Выдаліць уліковы запіс?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Выдаленне гэтага ўліковага запісу прывядзе да выдалення з прылады ўсіх паведамленняў, кантактаў і іншых даных!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Адміністратар не дазваляе гэту змену"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Не ўдалося выдаліць уліковы запіс."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Бяспека"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блакіроўка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Няма"</string>

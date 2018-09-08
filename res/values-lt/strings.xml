@@ -196,19 +196,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Kai pridedate naują naudotoją, šis asmuo turi nustatyti savo vietą."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Bet kuris naudotojas gali atnaujinti visų kitų naudotojų programas."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Pasiekta naudotojų riba"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Galite pridėti iki <xliff:g id="COUNT">%d</xliff:g> naudotojo.</item>
-      <item quantity="few">Galite pridėti iki <xliff:g id="COUNT">%d</xliff:g> naudotojų.</item>
-      <item quantity="many">Galite pridėti iki <xliff:g id="COUNT">%d</xliff:g> naudotojo.</item>
-      <item quantity="other">Galite pridėti iki <xliff:g id="COUNT">%d</xliff:g> naudotojų.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Nepavyko sukurti naujo naudotojo"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Naudotojo ištrynimas"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Pašalinti šį naudotoją?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Visos programos ir duomenys bus ištrinti."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Nepavyko pašalinti naudotojo."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Atsisakyti"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Bandyti dar kartą"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ištrinti šį naudotoją?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Visos programos ir duomenys bus ištrinti."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Nepavyko ištrinti naudotojo."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Atsisakyti"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Bandyti dar kartą"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Ištrinti pask. naudotoją?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Ištrynus vienintelį likusį šio automobilio naudotoją, bus sukurtas naujas administratoriaus teises turintis naudotojas."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Visi su šiuo naudotoju susiję duomenys, nustatymai ir programos bus ištrinti. Turėsite nustatyti sistemą iš naujo."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Naujo administratoriaus pasirinkimas"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Jums reikalingas bent vienas administratorius. Kad galėtumėte ištrinti šį, pirmiausia pasirinkite kitą administratorių."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Pasir. administratorių"</string>
     <string name="user_guest" msgid="3465399481257448601">"Svečias"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Svečias"</string>
     <string name="user_switch" msgid="6544839750534690781">"Jungiklis"</string>
@@ -229,7 +229,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Pašalinti paskyrą"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Pašalinti paskyrą?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Pašalinus šią paskyrą iš įrenginio bus ištrinti visi pranešimai, kontaktai ir kiti duomenys."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Administratorius neleidžia atlikti šio pakeitimo"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Nepavyko pašalinti paskyros."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sauga"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekrano užraktas"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nėra"</string>

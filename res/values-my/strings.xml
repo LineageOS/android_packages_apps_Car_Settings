@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"အသုံးပြုသူအသစ် ထည့်သည့်အခါ ထိုသူသည် မိမိ၏ နေရာကို စနစ်ထည့်သွင်းရပါမည်။"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"မည်သူမဆို အသုံးပြုသူအားလုံးအတွက် အက်ပ်များကို အပ်ဒိတ်လုပ်နိုင်သည်။"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"အသုံးပြုသူ အကန့်အသတ် ပြည့်သွားပါပြီ"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">အသုံးပြုသူ <xliff:g id="COUNT">%d</xliff:g> ဦးအထိ ထည့်နိုင်သည်။</item>
-      <item quantity="one">အသုံးပြုသူတစ်ဦးသာ ပြုလုပ်နိုင်သည်။</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">အသုံးပြုသူ <xliff:g id="COUNT">%d</xliff:g> ဦးအထိ သင်ဖန်တီးနိုင်သည်။</item>
+      <item quantity="one">အသုံးပြုသူ တစ်ဦးသာ ထည့်နိုင်သည်။</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"အသုံးပြုသူအသစ် ပြုလုပ်၍မရပါ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"သုံးစွဲသူကို ဖျက်ရန်"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ဤသူကို ဖယ်ရှားလိုပါသလား။"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"အက်ပ်အားလုံးနှင့် ဒေတာများကို ဖျက်လိုက်ပါမည်။"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"အသုံးပြုသူကို ဖယ်ရှား၍ မရပါ။"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ပယ်ရန်"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ထပ်စမ်းကြည့်ရန်"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ဤအသုံးပြုသူကို ဖျက်မလား။"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"အက်ပ်နှင့် ဒေတာများ အားလုံးကို ဖျက်လိုက်ပါမည်။"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"အသုံးပြုသူကို ဖျက်၍မရပါ။"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ပယ်ရန်"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ထပ်စမ်းကြည့်ရန်"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"နောက်ဆုံးတစ်ဦး ဖျက်မလား။"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ဤကားအတွက် တစ်ဦးတည်းကျန်ရှိသော အသုံးပြုသူကို ဖျက်ပြီးလျှင် စီမံခန့်ခွဲသည့် အသုံးပြုသူအသစ် ပြုလုပ်ပါမည်။"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ဤအသုံးပြုသူနှင့် ဆက်စပ်နေသော ဒေတာ၊ ဆက်တင်နှင့် အက်ပ်အားလုံးကို ဖျက်ပါမည်။ သင် စနစ်ပြန်လည်ထည့်သွင်းရန် လိုအပ်ပါမည်။"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"စီမံခန့်ခွဲသူအသစ် ရွေးခြင်း"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"အနည်းဆုံး စီမံခန့်ခွဲသူတစ်ဦး လိုအပ်ပါသည်။ လူစား ဦးစွာရွေးချယ်ပြီးမှ ဤတစ်ဦးကိုဖျက်ပါ။"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"စီမံခန့်ခွဲသူ ရွေးရန်"</string>
     <string name="user_guest" msgid="3465399481257448601">"ဧည့်သည်"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ဧည့်သည်"</string>
     <string name="user_switch" msgid="6544839750534690781">"ပြောင်းရန်"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"အကောင့်ကို ဖယ်ရှားရန်"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"အကောင့်ကို ဖယ်ရှားမလား။"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ဤအကောင့်ကို ဖယ်ရှားလိုက်ခြင်းဖြင့် စက်ပစ္စည်းထဲရှိ မက်ဆေ့ဂျ်၊ အဆက်အသွယ်နှင့် အခြားဒေတာများ အားလုံးကို ဖျက်လိုက်ပါမည်။"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ဤပြောင်းလဲမှုကို သင့်စီမံခန့်ခွဲသူက ခွင့်မပြုပါ"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"အကောင့်ဖယ်ရှား၍ မရပါ။"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"မျက်နှာပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>

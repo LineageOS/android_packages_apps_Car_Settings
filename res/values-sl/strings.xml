@@ -196,19 +196,24 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ko dodate novega uporabnika, mora ta nastaviti svoj prostor."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Vsak uporabnik lahko posodobi aplikacije za vse druge uporabnike."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Omejitev uporabnikov je dosežena"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">Dodate lahko do <xliff:g id="COUNT">%d</xliff:g> uporabnika.</item>
-      <item quantity="two">Dodate lahko do <xliff:g id="COUNT">%d</xliff:g> uporabnika.</item>
-      <item quantity="few">Dodate lahko do <xliff:g id="COUNT">%d</xliff:g> uporabnike.</item>
-      <item quantity="other">Dodate lahko do <xliff:g id="COUNT">%d</xliff:g> uporabnikov.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> uporabnika.</item>
+      <item quantity="two">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> uporabnika.</item>
+      <item quantity="few">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> uporabnike.</item>
+      <item quantity="other">Ustvariti je mogoče do <xliff:g id="COUNT">%d</xliff:g> uporabnikov.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Ni uspelo ustvariti novega uporabnika."</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Brisanje uporabnika"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Odstranitev uporabnika?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Vse aplikacije in vsi podatki bodo izbrisani."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Odstranitev uporabnika ni uspela."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Opusti"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Poskusi znova"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Izbris tega uporabnika?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Vse aplikacije in vsi podatki bodo izbrisani."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Brisanje uporabnika ni uspelo."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Opusti"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Poskusi znova"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Izbris zadnj. uporabnika?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Po izbrisu edinega preostalega uporabnika za ta avtomobil bo ustvarjen nov skrbnik."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Vsi podatki, nastavitve in aplikacije, povezani s tem uporabnikom, bodo izbrisani. Znova boste morali nastaviti sistem."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Izberite novega skrbnika"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Potrebujete vsaj enega skrbnika. Če želite izbrisati tega, najprej izberite zamenjavo."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Izberite skrbnika"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gost"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gost"</string>
     <string name="user_switch" msgid="6544839750534690781">"Preklop"</string>
@@ -229,7 +234,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Odstrani račun"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Želite odstraniti račun?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Z odstranitvijo računa boste iz naprave izbrisali vsa sporočila, stike in druge podatke v računu."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Skrbnik ne dovoli te spremembe"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Odstranitev računa ni uspela."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Varnost"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Zaklepanje zaslona"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brez"</string>

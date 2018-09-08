@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ukiongeza mtumiaji mpya, ni lazima aweke kikundi chake."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Mtumiaji yeyote anaweza kusasisha programu za watumiaji wengine."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Umefikia kima cha juu cha watumiaji"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other">Unaruhusiwa kuongeza hadi watumiaji <xliff:g id="COUNT">%d</xliff:g>.</item>
       <item quantity="one">Unaruhusiwa kuongeza mtumiaji mmoja pekee.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Imeshindwa kuongeza mtumiaji mpya"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Futa mtumiaji"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Mtumiaji huyu aondolewe?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Data na programu zote zitafutwa."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Imeshindwa kumwondoa mtumiaji."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ondoa"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Jaribu tena"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Utafuta mtumiaji huyu?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Data na programu zote zitafutwa."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Imeshindwa kumfuta mtumiaji."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ondoa"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Jaribu tena"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Ifute mtumiaji wa mwisho?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Baada ya kufuta mtumiaji aliyesalia wa gari hili, itaweka mtumiaji mwingine ambaye ni msimamizi."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Data, mipangilio, na programu zote zinazohusishwa na mtumiaji huyu zitafutwa. Utahitaji kuweka tena mipangilio ya mfumo."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Chagua msimamizi mwingine"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Unahitaji angalau msimamizi mmoja. Chagua kwanza msimamizi mwingine ili ufute msimamizi huyu."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Chagua msimamizi"</string>
     <string name="user_guest" msgid="3465399481257448601">"Mgeni"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Mgeni"</string>
     <string name="user_switch" msgid="6544839750534690781">"Badilisha"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Ondoa akaunti"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Unataka kuondoa akaunti?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Kuondoa akaunti hii kutasabibisha kufutwa kwa ujumbe, anwani na data nyingine kwenye kifaa!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Mabadiliko haya hayaruhusiwi na msimamizi wako"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Imeshindwa kuondoa akaunti."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Usalama"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kufunga skrini"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Hamna"</string>

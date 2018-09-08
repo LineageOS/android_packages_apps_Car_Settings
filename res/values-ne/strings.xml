@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"तपाईंले नयाँ प्रयोगकर्ता थप्दा, ती व्यक्तिले आफ्नो स्थान सेटअप गर्नु पर्नेे हुन्छ।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कुनै पनि प्रयोगकर्ताले अन्य सबै प्रयोगकर्ताहरूका लागि अनुप्रयोगहरू अद्यावधिक गर्न सक्नुहुन्छ।"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"प्रयोगकर्ताको सीमा पुग्यो"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">तपाईं अधिकतम <xliff:g id="COUNT">%d</xliff:g> प्रयोगहरू मात्र थप्न सक्नुहुन्छ।</item>
-      <item quantity="one">एउटा प्रयोगकर्ता मात्र सिर्जना गर्न सकिन्छ।</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"कुनै नयाँ प्रयोगकर्ता सिर्जना गर्न सकिएन"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"प्रयोगकर्ता मेटाउनुहोस्"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"यो प्रयोगकर्ता हटाउने हो?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"सबै अनुप्रयोगहरू र डेटा मेटाइने छन्।"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"प्रयोगकर्ता हटाउन सकिएन"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारेज गर्नुहोस्"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"पुनः प्रयास गर्नुहोस्"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"यस प्रयोगकर्तालाई हटाउने हो?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"सबै अनुप्रयोग र डेटा मेटाइने छन्।"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"प्रयोगकर्ता मेटाउन सकिएन।"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"खारेज गर्नुहोस्"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"पुनः प्रयास गर्नुहोस्"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"पछिल्लो प्रयोगकर्ता मेटाउने हो?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"यो कारको बाँकी रहेको प्रयोगकर्ता मेटाए पछि नयाँ प्रशासक प्रयोगकर्ता सिर्जना गरिने छ।"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"यो प्रयोगकर्तासँग सम्बन्धित सबै डेटा, सेटिङ र अनुप्रयोगहरू मेटिने छन्। तपाईंले प्रणाली फेरि सेट अप गर्न पर्ने छ।"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"नयाँ प्रशासक छनौट गर्नुहोस्‌"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"तपाईंलाई कम्तिमा एक प्रशासक चाहिन्छ। यो मेट्न पहिले प्रतिस्थापन छनौट गर्नुहोस्‌।"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"प्रशासक छनौट गर्नुहोस्‌"</string>
     <string name="user_guest" msgid="3465399481257448601">"अतिथि"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"अतिथि"</string>
     <string name="user_switch" msgid="6544839750534690781">"बदल्नुहोस्‌"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"खाता हटाउनुहोस्"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाउने हो?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस यन्त्रबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"तपाईंका प्रशासकले यो परिवर्तनलाई अनुमति दिनुहुन्न"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"खाता हटाउन सकिएन।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कुनै पनि होइन"</string>

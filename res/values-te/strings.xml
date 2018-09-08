@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"మీరు కొత్త వినియోగదారును జోడించినప్పుడు, ఆ వ్యక్తి తన స్థలాన్ని సెటప్ చేసుకోవాలి."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ఏ వినియోగదారు అయినా మిగతా అందరు వినియోగదారుల కోసం యాప్‌లను అప్‌డేట్ చేయవచ్చు."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"వినియోగదారు పరిమితిని చేరుకున్నారు"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">మీరు <xliff:g id="COUNT">%d</xliff:g> వినియోగదారుల వరకు జోడించవచ్చు.</item>
-      <item quantity="one">ఒక్క వినియోగదారుని మాత్రమే సృష్టించవచ్చు.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"కొత్త వినియోగదారుని సృష్టించడంలో విఫలమైంది"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"వినియోగదారుని తొలగించు"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ఈ వినియోగదారుని తీసేయాలా?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"అన్ని యాప్‌లు మరియు డేటా తొలగించబడతాయి."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"వినియోగదారును తీసివేయడంలో విఫలమైంది."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"విస్మరించండి"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"మళ్లీ ప్రయత్నించండి"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ఈ వినియోగదారును తొలగించాలా?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"అన్ని యాప్‌లు మరియు డేటా తొలగించబడతాయి."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"వినియెగదారును తొలగించడం విఫలమైంది."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"విస్మరించు"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"మళ్లీ ప్రయత్నించు"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"చివరి వినియోగదారుని తొలగించాలా?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ఈ కార్ యొక్క ఏకైక వినియోగదారుని తొలగించిన తర్వాత, కొత్త నిర్వాహక వినియోగదారు సృష్టించబడతారు."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ఈ వినియోగదారుకు అనుబంధంగా ఉన్న మొత్తం డేటా, సెట్టింగ్‌లు మరియు యాప్‌లు తొలగించబడతాయి. మీరు సిస్టమ్‌ను మళ్లీ సెటప్ చేయవలసి ఉంటుంది."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"కొత్త నిర్వాహకుడిని ఎంచుకోండి"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"మీకు కనీసం ఒక నిర్వాహకుడు అవసరం. ఈ నిర్వహకుడిని తొలగించడానికి, ముందుగా ఒక ప్రత్యామ్నాయాన్ని ఎంచుకోండి."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"నిర్వాహకుడిని ఎంచుకోండి"</string>
     <string name="user_guest" msgid="3465399481257448601">"అతిథి"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"అతిథి"</string>
     <string name="user_switch" msgid="6544839750534690781">"మార్చు"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ఖాతాను తీసివేయి"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ఖాతాను తీసివేయాలా?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ఈ ఖాతాను తీసివేయడం వలన పరికరం నుండి దానికి సంబంధించిన అన్ని సందేశాలు, పరిచయాలు మరియు ఇతర డేటా తొలగించబడతాయి!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ఈ మార్పును మీ నిర్వాహకులు అనుమతించలేదు"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ఖాతాను తీసివేయడం విఫలమైంది."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"భద్రత"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>

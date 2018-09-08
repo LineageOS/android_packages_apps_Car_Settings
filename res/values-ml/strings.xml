@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"നിങ്ങളൊരു പുതിയ ഉപയോക്താവിനെ ചേർക്കുമ്പോൾ, ആ വ്യക്തി സ്വന്തം ഇടം സജ്ജീകരിക്കേണ്ടതുണ്ട്."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ഏതൊരു ഉപയോക്താവിനും മറ്റെല്ലാ ഉപയോക്താക്കൾക്കുമായി ആപ്പുകൾ അപ്‌ഡേറ്റ് ചെയ്യാനാവും."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"ഉപയോക്തൃ പരിധി എത്തി"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">നിങ്ങൾക്ക് <xliff:g id="COUNT">%d</xliff:g> ഉപയോക്താക്കളെ വരെ ചേർക്കാനാവും.</item>
-      <item quantity="one">ഒരു ഉപയോക്താവിന് മാത്രമേ സൃഷ്‌ടിക്കാനാവൂ.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"പുതിയ ഉപയോക്താവിനെ സൃഷ്‌ടിക്കാനായില്ല"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ഉപയോക്താവിനെ ഇല്ലാതാക്കുക"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ഈ ഉപയോക്താവിനെ നീക്കണോ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ആപ്പുകളും ഡാറ്റയുമെല്ലാം ഇല്ലാതാക്കും."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ഉപയോക്താവിനെ നീക്കംചെയ്യാനായില്ല."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ഈ ഉപയോക്താവിനെ ഇല്ലാതാക്കണോ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"എല്ലാ ആപ്പുകളും ഡാറ്റയും ഇല്ലാതാക്കപ്പെടും."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ഉപയോക്താവിനെ ഇല്ലാതാക്കാനായില്ല."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ഡിസ്‌മിസ്സ് ചെയ്യുക"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"വീണ്ടും ശ്രമിക്കുക"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"അവസാന ഉപയോക്താവിനെ ഇല്ലാതാക്കണോ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ഈ കാറിന്റെ ബാക്കിയുള്ള ഒരേയൊരു ഉപയോക്താവിനെ ഇല്ലാതാക്കിയ ശേഷം, ഒരു പുതിയ അഡ്‌മിൻ ഉപയോക്താവിനെ സൃഷ്‌ടിക്കും."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ഈ ഉപയോക്താവുമായി ബന്ധപ്പെട്ട എല്ലാ ഡാറ്റയും ക്രമീകരണവും ആപ്പുകളും ഇല്ലാതാക്കപ്പെടും. നിങ്ങൾ സിസ്‌റ്റം വീണ്ടും സജ്ജീകരിക്കേണ്ടതുണ്ട്."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"പുതിയ അഡ്‌മിനെ തിരഞ്ഞെടുക്കുക"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ഒരു അഡ്‌മിൻ എങ്കിലും നിങ്ങൾക്ക് ആവശ്യമുണ്ട്. ഇത് ഇല്ലാതാക്കാൻ, നിലവിലുള്ളതിന്റെ ഒരു മാറ്റി സ്ഥാപിക്കൽ ആദ്യം തിരഞ്ഞെടുക്കുക."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"അഡ്‌മിനെ തിരഞ്ഞെടുക്കുക"</string>
     <string name="user_guest" msgid="3465399481257448601">"അതിഥി"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"അതിഥി"</string>
     <string name="user_switch" msgid="6544839750534690781">"മാറുക"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"അക്കൗണ്ട് നീക്കം ചെയ്യുക"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"അക്കൗണ്ട് നീക്കം ചെയ്യണോ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ഈ അക്കൗണ്ട് നീക്കം ചെയ്യുന്നതിലൂടെ, അതുമായി ബന്ധപ്പെട്ട എല്ലാ സന്ദേശങ്ങളും കോൺടാക്റ്റുകളും മറ്റ് വിവരങ്ങളും ഉപകരണത്തിൽ നിന്ന് ഇല്ലാതാക്കപ്പെടും!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ഈ മാറ്റം നിങ്ങളുടെ അഡ്‌മിൻ അനുവദിക്കുന്നില്ല"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"അക്കൗണ്ട് നീക്കാനായില്ല."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"സുരക്ഷ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"സ്ക്രീൻ ലോക്ക്"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ഒന്നുമില്ല"</string>

@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Når du legger til en ny bruker, må vedkommende konfigurere sitt eget område."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Alle brukere kan oppdatere apper for alle andre brukere."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Grensen for antall brukere er nådd"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Du kan legge til opptil <xliff:g id="COUNT">%d</xliff:g> brukere.</item>
-      <item quantity="one">Du kan bare opprette én bruker.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Kunne ikke opprette noen ny bruker"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Slett bruker"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Vil du fjerne brukeren?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Alle apper og data slettes."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Kunne ikke fjerne brukeren."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Avvis"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Prøv på nytt"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Vil du slette brukeren?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Alle appene og dataene slettes."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Kunne ikke slette brukeren."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Avvis"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Prøv på nytt"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Slett den siste brukeren?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Når du har slettet den eneste gjenværende brukeren for bilen, blir en ny administratorbruker opprettet."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Alle dataene, innstillingene og appene som er knyttet til bruken, blir slettet. Du må konfigurere systemet på nytt."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Velg en ny administrator"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Du trenger minst én administrator. For å slette denne administratoren må du først finne en erstatter."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Velg en administrator"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gjest"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gjest"</string>
     <string name="user_switch" msgid="6544839750534690781">"Bytt"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Fjern kontoen"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Vil du fjerne kontoen?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Hvis du fjerner denne kontoen, slettes alle tilhørende e-poster, kontakter og andre data fra enheten."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Denne endringen er ikke tillatt av administratoren"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Kunne ikke fjerne kontoen."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhet"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skjermlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ingen"</string>

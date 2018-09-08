@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"আপনি একজন নতুন ব্যবহারকারী যোগ করলে তাকে তার স্পেস সেট-আপ করে নিতে হবে৷"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"যেকোনও ব্যবহারকারী বাকি সব ব্যবহারকারীর জন্য অ্যাপ আপডেট করতে পারবেন।"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"আর কোনও প্রোফাইল যোগ করা যাবে না"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">আপনি সর্বাধিক <xliff:g id="COUNT">%d</xliff:g> জন ব্যবহারকারীর প্রোফাইল যোগ করতে পারেন।</item>
-      <item quantity="other">আপনি সর্বাধিক <xliff:g id="COUNT">%d</xliff:g> জন ব্যবহারকারীর প্রোফাইল যোগ করতে পারেন।</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">আপনি <xliff:g id="COUNT">%d</xliff:g>টি প্রোফাইল তৈরি করতে পারবেন।</item>
+      <item quantity="other">আপনি <xliff:g id="COUNT">%d</xliff:g>টি প্রোফাইল তৈরি করতে পারবেন।</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"নতুন প্রোফাইল তৈরি করা যায়নি"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ব্যবহারকারীকে মুছুন"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"এই ব্যবহারকারীকে সরাবেন?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"সব অ্যাপ ও ডেটা মুছে ফেলা হবে।"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ব্যবহারকারীকে সরানো যায়নি।"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"খারিজ করুন"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"আবার চেষ্টা করুন"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"এই ব্যবহারকারীর অ্যাকাউন্টটি মুছবেন?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"সব অ্যাপ ও ডেটা মুছে ফেলা হবে।"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ব্যবহারকারীকে মুছে ফেলা যায়নি।"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"খারিজ"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"আবার চেষ্টা করুন"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"শেষ ব্যবহারকারীকে মুছে দিতে চান?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"এই গাড়ির আগের ব্যবহারকারীকে মুছে ফেলার পর, নতুন অ্যাডমিন ব্যবহারকারী তৈরি করা হবে।"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"এই ব্যবহারকারীর সব ডেটা, সেটিংস, এবং অ্যাপ মুছে ফেলা হবে। আপনাকে সিস্টেম আবার সেট-আপ করতে হবে।"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"নতুন অ্যাডমিন বেছে নিন"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"আপনার একজন অ্যাডমিন প্রয়োজন। এটি মুছে ফেলতে, অন্য একটি বিকল্প বেছে নিন।"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"অ্যাডমিন বেছে নিন"</string>
     <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"অতিথি"</string>
     <string name="user_switch" msgid="6544839750534690781">"পরিবর্তন করুন"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"অ্যাকাউন্ট সরিয়ে দিন"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"অ্যাকাউন্টটি সরাবেন?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"এই অ্যাকাউন্টটি মুছে দিলে এটির সমস্ত মেসেজ, পরিচিতি এবং অন্যান্য ডেটা ডিভাইস থেকে মুছে দেওয়া হবে!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"আপনার অ্যাডমিন এই পরিবর্তনটি করার অনুমতি দেয় না"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"অ্যাকাউন্ট সরানো যায়নি।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"নিরাপত্তা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্রিন লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"কোনওটিই নয়"</string>

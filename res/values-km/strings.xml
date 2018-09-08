@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"នៅពេលដែល​អ្នក​បញ្ចូល​អ្នក​ប្រើប្រាស់​ថ្មី បុគ្គល​នោះ​ត្រូវតែ​រៀបចំ​ទំហំ​ផ្ទុក​របស់គេ។"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"អ្នកប្រើប្រាស់​ណាក៏​អាច​ដំឡើង​ជំនាន់កម្មវិធី​សម្រាប់​អ្នក​ប្រើប្រាស់​ទាំងអស់​ផ្សេង​ទៀត​បាន​ដែរ។"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"​បាន​ឈាន​ដល់ចំនួន​កំណត់អ្នកប្រើប្រាស់"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">អ្នកអាចបញ្ចូល​អ្នក​ប្រើប្រាស់បាន​រហូតដល់ <xliff:g id="COUNT">%d</xliff:g> នាក់។</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">អ្នកអាច​បង្កើត​អ្នកប្រើប្រាស់​បាន​រហូតដល់ <xliff:g id="COUNT">%d</xliff:g> នាក់។</item>
       <item quantity="one">អាច​បង្កើត​អ្នក​ប្រើប្រាស់​បាន​​តែម្នាក់ប៉ុណ្ណោះ។</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"មិន​អាច​បង្កើត​អ្នកប្រើប្រាស់​ថ្មី​បាន​ទេ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"លុប​អ្នក​ប្រើប្រាស់"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"លុប​អ្នកប្រើប្រាស់​នេះ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"មិនអាច​លុប​អ្នកប្រើប្រាស់​បានទេ។"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ច្រានចោល"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ព្យាយាមម្ដងទៀត"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"លុបអ្នកប្រើប្រាស់​នេះមែនទេ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"កម្មវិធី និង​ទិន្នន័យ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប។"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"មិនអាច​លុបអ្នកប្រើប្រាស់​បានទេ។"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ច្រានចោល"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ព្យាយាមម្ដងទៀត"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"លុបអ្នកប្រើប្រាស់​ចុងក្រោយ​មែនទេ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"​បន្ទាប់ពី​លុបអ្នក​ប្រើប្រាស់​នៅសល់ចុងក្រោយ​សម្រាប់​រថយន្តនេះ អ្នកប្រើប្រាស់​ដែលជា​អ្នកគ្រប់គ្រងថ្មី​នឹងត្រូវបាន​បង្កើត។"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ទិន្នន័យ ការកំណត់ និងកម្មវិធី​ទាំងអស់​ដែលពាក់ព័ន្ធ​ជាមួយ​អ្នកប្រើប្រាស់​នេះនឹង​ត្រូវបាន​លុប។ អ្នកនឹង​​ត្រូវរៀបចំ​ប្រព័ន្ធ​ម្ដងទៀត។"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"ជ្រើសរើស​អ្នកគ្រប់គ្រងថ្មី"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"អ្នកត្រូវការ​​អ្នកគ្រប់គ្រងយ៉ាងហោចណាស់​ម្នាក់។ ដើម្បីលុប​អ្នកគ្រប់គ្រង​នេះ សូមជ្រើសរើស​អ្នកជំនួស​ជាមុនសិន។"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"ជ្រើសរើសអ្នកគ្រប់គ្រង"</string>
     <string name="user_guest" msgid="3465399481257448601">"ភ្ញៀវ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ភ្ញៀវ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ប្ដូរ"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"លុប​គណនី​​"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"លុបគណនី​?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ការលុប​គណនី​នេះ​នឹង​លុប​សារ ទំនាក់ទំនង និង​ទិន្នន័យ​ផ្សេងៗ​របស់​គណនី​នេះ​ទាំង​អស់​ចេញ​ពី​ឧបករណ៍!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ការផ្លាស់ប្ដូរនេះ​មិនត្រូវ​បាន​អនុញ្ញាត​ដោយ​អ្នក​គ្រប់គ្រង​របស់អ្នក​ទេ"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"មិនអាច​លុបគណនី​បានទេ។"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"សុវត្ថិភាព"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ការចាក់សោអេក្រង់"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"គ្មាន"</string>

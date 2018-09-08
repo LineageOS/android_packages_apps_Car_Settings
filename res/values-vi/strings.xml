@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Khi bạn thêm một người dùng mới, người đó cần thiết lập không gian của họ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Bất kỳ người dùng nào cũng có thể cập nhật ứng dụng cho tất cả những người dùng khác."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Đã đạt đến giới hạn người dùng"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Bạn có thể thêm tối đa <xliff:g id="COUNT">%d</xliff:g> người dùng.</item>
-      <item quantity="one">Chỉ có thể tạo một người dùng.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Không thể tạo người dùng mới"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Xóa người dùng"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Xóa người dùng này?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Mọi ứng dụng và dữ liệu sẽ bị xóa."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Không xóa được người dùng."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Bỏ qua"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Thử lại"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Xóa người dùng này?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Mọi ứng dụng và dữ liệu sẽ bị xóa."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Không xóa được người dùng."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Bỏ qua"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Thử lại"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Xóa người dùng cuối?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Sau khi xóa người dùng còn lại duy nhất của chiếc xe này, người dùng quản trị mới sẽ được tạo."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Tất cả dữ liệu, tùy chọn cài đặt và ứng dụng liên kết với người dùng này sẽ bị xóa. Bạn sẽ cần phải thiết lập lại hệ thống."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Chọn quản trị viên mới"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Bạn cần chọn ít nhất một quản trị viên. Để xóa người này, hãy chọn một người thay thế."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Chọn quản trị viên"</string>
     <string name="user_guest" msgid="3465399481257448601">"Khách"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Khách"</string>
     <string name="user_switch" msgid="6544839750534690781">"Nút chuyển"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Xóa tài khoản"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Bạn muốn xóa tài khoản?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Xóa tài khoản này sẽ xóa tất cả thư, danh bạ và dữ liệu khác khỏi thiết bị!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Quản trị viên của bạn không cho phép thực hiện thay đổi này"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Không xóa được tài khoản."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Bảo mật"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Khóa màn hình"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Không"</string>

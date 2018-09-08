@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"तुम्ही नवीन वापरकर्त्याला जोडल्यावर, त्या व्यक्तीने त्यांचे स्थान सेट करणे आवश्यक असते."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोणताही वापरकर्ता इतर सर्व वापरकर्त्यांसाठी अॅप्स अपडेट करू शकतो."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"वापरकर्ता मर्यादा गाठली"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्त्यापर्यंत जोडू शकता.</item>
-      <item quantity="other">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्त्यांपर्यंत जोडू शकता.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्ता तयार करू शकता.</item>
+      <item quantity="other">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्ते तयार करू शकता.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"नवीन वापरकर्ता तयार करता आला नाही"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"वापरकर्ता हटवा"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"हा वापरकर्ता काढायचा?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"सर्व अॅप्स आणि डेटा हटवला जाईल."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"वापरकर्ता काढता आला नाही."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"डिसमिस करा"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"पुन्हा प्रयत्न करा"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"हा वापरकर्ता हटवायचा?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"सर्व अॅप्स आणि डेटा हटवला जाईल."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"वापरकर्ता हटवता आला नाही."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"डिसमिस करा"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"पुन्हा प्रयत्न करा"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"शेवटचा वापरकर्ता हटवायचा?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"या कारसाठी फक्त उर्वरित वापरकर्ता हटवल्यानंतर नवीन प्रशासक तयार होईल."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"या वापरकर्त्याशी संबंधित सर्व डेटा, सेटिंग्ज आणि अॅप्स हटवले जातील. तुम्हाला पुन्हा सिस्टम सेट करण्याची आवश्यकता असेल"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"नवीन प्रशासक निवडा"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"तुमच्याकडे किमान एक प्रशासक आवश्यक आहे. हे हटवण्यासाठी, पहिले बदली निवडा."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"प्रशासक निवडा"</string>
     <string name="user_guest" msgid="3465399481257448601">"अतिथी"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"अतिथी"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"खाते काढा"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाते काढायचे?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"हे खाते काढल्याने त्याचे सर्व संदेश, संपर्क आणि डिव्हाइसवरील इतर डेटा हटवला जाईल!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"या बदलास तुमच्या प्रशासकाने अनुमती नाही"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"खाते काढता आले नाही"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षितता"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"काहीही नाही"</string>

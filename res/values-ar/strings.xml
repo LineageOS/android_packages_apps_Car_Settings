@@ -198,21 +198,26 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"عند إضافة مستخدم جديد، عليه إعداد مساحته."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"يمكن لأي مستخدم تحديث التطبيقات لجميع المستخدمين الآخرين."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"تم الوصول إلى أقصى عدد للمستخدمين"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="zero">يمكنك إضافة ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>
-      <item quantity="two">يمكنك إضافة ما يصل إلى مستخدمينِ (<xliff:g id="COUNT">%d</xliff:g>).</item>
-      <item quantity="few">يمكنك إضافة ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدمين.</item>
-      <item quantity="many">يمكنك إضافة ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدمًا.</item>
-      <item quantity="other">يمكنك إضافة ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="zero">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>
+      <item quantity="two">يمكنك إنشاء ما يصل إلى مستخدمينِ (<xliff:g id="COUNT">%d</xliff:g>).</item>
+      <item quantity="few">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدمين.</item>
+      <item quantity="many">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدمًا.</item>
+      <item quantity="other">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>
       <item quantity="one">يمكن إنشاء مستخدم واحد فقط.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"تعذّر إنشاء مستخدم جديد."</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"حذف حساب مستخدم"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"أتريد إزالة هذا المستخدم؟"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"سيتم حذف جميع التطبيقات والبيانات."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"تعذّرت إزالة المستخدم."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"تجاهل"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"إعادة المحاولة"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"هل تريد حذف هذا المستخدم؟"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"سيتم حذف جميع التطبيقات والبيانات."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"تعذّر حذف المستخدم."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"رفض"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"إعادة المحاولة"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"حذف المستخدم الأخير؟"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"سيتم إنشاء مستخدم إداري جديد بعد حذف المستخدم المتبقي الوحيد لهذه السيارة."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"سيتم حذف جميع البيانات والإعدادات والتطبيقات المرتبطة بهذا المستخدم. وستحتاج إلى إعداد النظام مرة أخرى."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"اختر مسؤولًا جديدًا."</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"أنت بحاجة إلى مدير واحد على الأقل. ولحذف هذا المدير، اختر بديلًا أولًا."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"اختر المدير"</string>
     <string name="user_guest" msgid="3465399481257448601">"الضيف"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ضيف"</string>
     <string name="user_switch" msgid="6544839750534690781">"تبديل"</string>
@@ -233,7 +238,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"إزالة الحساب"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"هل تريد إزالة الحساب؟"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ستؤدي إزالة هذا الحساب إلى حذف جميع الرسائل وجهات الاتصال والبيانات الأخرى من الجهاز."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"لا يسمح المشرف بإجراء هذا التغيير."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"أخفق حذف الحساب."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"الأمان"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل الشاشة"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"بدون"</string>

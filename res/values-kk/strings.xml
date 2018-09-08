@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Енгізілген жаңа пайдаланушы өз профилін реттеуі керек."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Кез келген пайдаланушы қолданбаларды басқа пайдаланушылар үшін жаңарта алады."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Пайдаланушылар саны шегіне жетті"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> пайдаланушыға дейін енгізуге болады.</item>
-      <item quantity="one">Тек бір пайдаланушыны жасауға болады.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Жаңа пайдаланушы жасалмады"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Пайдаланушыны жою"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Пайдаланушы өшірілсін ба?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Барлық қолданбалар және деректер жойылады."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Пайдаланушы өшірілмеді."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Жабу"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Қайталау"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Пайдаланушы жойылсын ба?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Барлық қолданбалар және деректер жойылады."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Пайдаланушы жойылмады."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Қабылдамау"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Қайталау"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Соңғы пайдаланушы жойылсын ба?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Бұл көлік үшін соңғы қалған пайдаланушыны жойғаннан кейін, жаңа әкімші пайдаланушы жасалады."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Бұл пайдаланушымен байланыстырылған деректер, параметрлер және қолданба жойылады. Жүйені қайта реттеу қажет болады."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Жаңа әкімшіні таңдаңыз"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Кемінде бір әкімші болуы керек. Ағымдағы әкімшіні жою үшін алдымен жаңасын таңдаңыз."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Әкімшіні таңдау"</string>
     <string name="user_guest" msgid="3465399481257448601">"Қонақ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Қонақ"</string>
     <string name="user_switch" msgid="6544839750534690781">"Ауысу"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Есептік жазбаны өшіру"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Есептік жазба өшірілсін бе?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Бұл есептік жазба өшірілсе, құрылғыдағы барлық хабарлар, контактілер және басқа деректер қоса жойылады!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Бұл өзгертуге әкімші рұқсат етпеген"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Есептік жазба өшірілмеді."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Қауіпсіздік"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экранды құлыптау"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Жоқ"</string>

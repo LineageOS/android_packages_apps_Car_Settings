@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"আপুনি যেতিয়া কোনো ব্য়ৱহাৰকাৰীক যোগ কৰে সেই ব্য়ক্তিজনে নিজৰ বাবে খালী ঠাই ছেট আপ কৰা প্ৰয়োজন।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"যিকোনো ব্য়ৱহাৰকাৰীয়ে সকলো ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"অধিকতম ব্য়ৱহাৰকাৰী সৃষ্টি কৰা হ’ল"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">আপুনি <xliff:g id="COUNT">%d</xliff:g> জনলৈকে ব্য়ৱহাৰকাৰী যোগ কৰিব পাৰে।</item>
-      <item quantity="other">আপুনি <xliff:g id="COUNT">%d</xliff:g> জনলৈকে ব্য়ৱহাৰকাৰী যোগ কৰিব পাৰে।</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"নতুন ব্য়ৱহাৰকাৰী সৃষ্টি কৰিব পৰা নগ’ল"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ব্যৱহাৰকাৰীক মচক"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"এই ব্যৱহাৰকাৰীক আঁতৰাবনে?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"সকলো এপ আৰু ডেটা মচা হ\'ব।"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ব্য়ৱহাৰকাৰীক আঁতৰাব পৰা নগ\'ল।"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"বাতিল কৰক"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"পুনৰ চেষ্টা কৰক"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"এই ব্যৱহাৰকাৰীক মচেনে?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"সকলো এপ্ আৰু ডেটা মচা হ’ব।"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ব্যৱহাৰকাৰীক মচিব পৰা নগ’ল।"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"অগ্ৰাহ্য কৰক"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"পুনৰায় চেষ্টা কৰক"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"অন্তিমজন ব্যৱহাৰকাৰীক মচেনে?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"এই গাড়ীখনৰ বাবে বাকী থকা একমাত্ৰ ব্যৱহাৰকাৰীজনক মচাৰ পিছত, এজন নতুন প্ৰশাসক ব্যৱহাৰকাৰী সৃষ্টি কৰা হ’ব।"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"এই ব্যৱহাৰকাৰীৰ লগত জড়িত সকলো ডেটা, ছেটিং আৰু এপ্ মচা হ’ব। আপুনি ছিষ্টেমটো আকৌ ছেট আপ কৰিব লাগিব।"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"নতুন প্ৰশাসক বাছনি কৰক"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"আপোনাক অতি কমেও এজন প্ৰশাসক দৰকাৰ। এইজনক মচিবলৈ হ’লে প্ৰথমে আপুনি এজন বিকল্প প্ৰশাসক নিৰ্বাচন কৰিব লাগিব।"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"প্ৰশাসক বাছনি কৰক"</string>
     <string name="user_guest" msgid="3465399481257448601">"অতিথি"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"অতিথি"</string>
     <string name="user_switch" msgid="6544839750534690781">"ছুইচ্চ"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"একাউণ্ট আঁতৰাওক"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"একাউণ্ট আঁতৰাবনে?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"এই একাউণ্টটো আঁতৰালে ডিভাইচৰ পৰা ইয়াৰ সকলো বাৰ্তা, সম্পৰ্কসূচী আৰু অন্য ডেটা মচা হ\'ব!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"আপোনাৰ প্ৰশাসকে এইটো সলনি কৰিব নিদিয়ে"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"একাউণ্ট আঁতৰাব পৰা নগ’ল।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীণ লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>

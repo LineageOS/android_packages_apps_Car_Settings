@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"જ્યારે તમે કોઈ નવા વપરાશકર્તાને ઉમેરો છો, ત્યારે તે વ્યક્તિને તેમની સ્પેસ સેટ કરવાની જરૂર પડે છે."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"કોઈપણ વપરાશકર્તા બધા અન્ય વપરાશકર્તાઓ માટે ઍપને અપડેટ કરી શકે છે."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"વપરાશકર્તાની મર્યાદા સુધી પહોંચ્યાં"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી ઉમેરી શકો છો.</item>
-      <item quantity="other">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી ઉમેરી શકો છો.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"નવો વપરાશકર્તા બનાવવામાં નિષ્ફળ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"વપરાશકર્તા ડિલીટ કરો"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"આ વપરાશકર્તા કાઢી નાખીએ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"વપરાશકર્તા કાઢી નાખવામાં નિષ્ફળ રહ્યાં."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"છોડી દો"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ફરી પ્રયાસ કરો"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ યુઝરને ડિલીટ કરીએ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"વપરાશકર્તાને ડિલીટ કરવામાં નિષ્ફળ થયાં."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"છોડી દો"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ફરી પ્રયાસ કરો"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"છેલ્લા યુઝરને ડિલીટ કરીએ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"આ કાર માટેના બચેલા એકમાત્ર વપરાશકર્તાને ડિલીટ કર્યા પછી, નવા વ્યવસ્થાપકની રચના થશે."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"આ વપરાશકર્તા સાથે સંબંધિત બધો ડેટા, સેટિંગ અને ઍપ ડિલીટ થશે. તમારે સિસ્ટમને ફરીથી સેટ કરવી જરૂરી થશે."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"નવા વ્યવસ્થાપકની પસંદગી કરો"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"તમારી પાસે એક વ્યવસ્થાપકનું હોવું જરૂરી છે. આને ડિલીટ કરવા માટે, પહેલા નવાની પસંદગી કરો."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"વ્યવસ્થાપક પસંદ કરો"</string>
     <string name="user_guest" msgid="3465399481257448601">"અતિથિ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"અતિથિ"</string>
     <string name="user_switch" msgid="6544839750534690781">"સ્વિચ કરો"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"એકાઉન્ટ કાઢી નાખો"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"એકાઉન્ટ કાઢી નાખીએ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"આ એકાઉન્ટને કાઢી નાખવાથી તેમાંના બધા સંદેશા, સંપર્કો તેમજ ઉપકરણમાંનો અન્ય ડેટા ડિલીટ થઈ જશે!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"તમારા વ્યવસ્થાપકે આ ફેરફારની મંજૂરી આપી નથી"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"એકાઉન્ટ કાઢી નાખવામાં નિષ્ફળ થયાં."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"સુરક્ષા"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"સ્ક્રીન લૉક"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"કોઈ લૉક નથી"</string>

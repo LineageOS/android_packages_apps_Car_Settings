@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Quan s\'afegeix un usuari nou, aquest usuari ha de configurar el seu espai."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualsevol usuari pot actualitzar les aplicacions de la resta d\'usuaris."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"S\'ha assolit el límit d\'usuaris"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Pots afegir fins a <xliff:g id="COUNT">%d</xliff:g> usuaris.</item>
-      <item quantity="one">Només es pot crear un usuari.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Pots crear fins a <xliff:g id="COUNT">%d</xliff:g> usuaris.</item>
+      <item quantity="one">Només es pot crear 1 usuari.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"No s\'ha pogut crear l\'usuari"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Suprimeix l\'usuari"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Vols suprimir l\'usuari?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Se suprimiran totes les dades i totes les aplicacions."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"No s\'ha pogut suprimir l\'usuari."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ignora"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Torna-ho a provar"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Vols suprimir l\'usuari?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Se suprimiran totes les dades i totes les aplicacions."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"No s\'ha pogut suprimir l\'usuari."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignora"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Torna-ho a provar"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Suprimir l\'últim usuari?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Després de suprimir l\'únic usuari restant d\'aquest cotxe, es crearà un usuari administrador nou."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"S\'esborraran totes les dades, les opcions de configuració i les aplicacions associades a aquest usuari. Hauràs de tornar a configurar el sistema."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Tria un administrador nou"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Hi ha d\'haver com a mínim un administrador. Per suprimir aquest administrador, primer n\'has de triar un altre."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Tria un administrador"</string>
     <string name="user_guest" msgid="3465399481257448601">"Convidat"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Convidat"</string>
     <string name="user_switch" msgid="6544839750534690781">"Canvia"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Suprimeix el compte"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Vols suprimir el compte?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"En suprimir aquest compte, se\'n suprimiran tots els missatges, els contactes i la resta de dades del dispositiu."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"L\'administrador no permet aquest canvi"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"No s\'ha pogut suprimir el compte."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguretat"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueig de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Cap"</string>

@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni kullanıcı eklediğinizde, bu kişinin alanını ayarlaması gerekir."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncelleyebilir."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Kullanıcı sınırına ulaşıldı"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">En fazla <xliff:g id="COUNT">%d</xliff:g> kullanıcı ekleyebilirsiniz.</item>
-      <item quantity="one">Yalnızca bir kullanıcı oluşturulabilir.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"Yeni kullanıcı oluşturulamadı"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Kullanıcıyı sil"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Kullanıcı kaldırılsın mı?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Tüm uygulamalar ve veriler silinecek."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Kullanıcı kaldırılamadı."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Kapat"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Tekrar dene"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Bu kullanıcı silinsin mi?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Tüm uygulamalar ve veriler silinecek."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Kullanıcı silinemedi."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Kapat"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Tekrar dene"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Kullanıcı silinsin mi?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Bu aracın kalan son kullanıcısı silindikten sonra yeni bir yönetici kullanıcı oluşturulacak."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Bu kullanıcıyla ilişkili tüm veriler, ayarlar ve uygulamalar silinecek. Sistemi tekrar ayarlamanız gerekecek."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Yeni yönetici seçin"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"En az bir yöneticiye ihtiyacınız var. Bu yöneticiyi silmek için önce yedek yönetici seçin."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Yönetici seçin"</string>
     <string name="user_guest" msgid="3465399481257448601">"Misafir"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Misafir"</string>
     <string name="user_switch" msgid="6544839750534690781">"Değiştir"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Hesabı kaldır"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Hesap kaldırılsın mı?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Bu hesabın kaldırılması, hesaba ait tüm mesajların, kişilerin ve cihazdaki diğer verilerin silinmesine neden olacak!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Yöneticiniz bu değişikliğe izin vermiyor"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Hesap kaldırılamadı."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Güvenlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yok"</string>

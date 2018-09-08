@@ -196,19 +196,24 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Gdy dodasz nowego użytkownika, musi on skonfigurować swój profil."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Każdy użytkownik może aktualizować aplikacje wszystkich innych użytkowników."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Osiągnięto limit użytkowników"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="few">Możesz dodać maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkowników.</item>
-      <item quantity="many">Możesz dodać maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkowników.</item>
-      <item quantity="other">Możesz dodać maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkownika.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="few">Możesz utworzyć maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkowników.</item>
+      <item quantity="many">Możesz utworzyć maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkowników.</item>
+      <item quantity="other">Możesz utworzyć maksymalnie <xliff:g id="COUNT">%d</xliff:g> użytkownika.</item>
       <item quantity="one">Można utworzyć tylko jednego użytkownika.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Nowy użytkownik nie został utworzony"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Usuwanie użytkownika"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Usunąć tego użytkownika?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Wszystkie aplikacje i dane zostaną usunięte."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Nie udało się usunąć użytkownika."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Zamknij"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Ponów"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Usunąć tego użytkownika?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Zostaną usunięte wszystkie aplikacje i dane."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Nie udało się usunąć użytkownika."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Zamknij"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Ponów"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Usunąć użytkownika?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Usunięcie ostatniego aktywnego użytkownika tego samochodu spowoduje utworzenie nowego administratora."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Zostaną usunięte wszystkie dane, ustawienia i aplikacje powiązane z tym użytkownikiem. Konieczne będzie ponowne skonfigurowanie systemu."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Wybierz nowego administratora"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Potrzebujesz co najmniej jednego administratora. Aby usunąć tego, najpierw wybierz jego następcę."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Wybierz administratora"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gość"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gość"</string>
     <string name="user_switch" msgid="6544839750534690781">"Przełącz"</string>
@@ -229,7 +234,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Usuń konto"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Usunąć konto?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Usunięcie tego konta spowoduje usunięcie z urządzenia wszystkich wiadomości, kontaktów i innych danych powiązanych z kontem."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Ta zmiana nie jest dozwolona przez administratora"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Nie udało się usunąć konta."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Zabezpieczenia"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blokada ekranu"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Brak"</string>

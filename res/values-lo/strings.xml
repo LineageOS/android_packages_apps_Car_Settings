@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ເມື່ອທ່ານເພີ່ມຜູ້ໃຊ້ໃໝ່, ບຸກຄົນນັ້ນຈຳເປັນຕ້ອງຕັ້ງຄ່າພື້ນທີ່ຂອງເຂົາເຈົ້າ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ຜູ້ໃຊ້ຕ່າງໆສາມາດອັບເດດແອັບສຳລັບຜູ້ໃຊ້ອື່ນທັງໝົດໄດ້."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"ຮອດຂີດຈຳກັດຜູ້ໃຊ້ແລ້ວ"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">ທ່ານສາມາດເພີ່ມຜູ້ໃຊ້ໄດ້ເຖິງ <xliff:g id="COUNT">%d</xliff:g> ຄົນ.</item>
-      <item quantity="one">ສ້າງຜູ້ໃຊ້ໄດ້ແຕ່ໜຶ່ງຄົນເທົ່ານັ້ນ.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">ທ່ານສາມາດສ້າງຜູ້ໃຊ້ໄດ້ບໍ່ເກີນ <xliff:g id="COUNT">%d</xliff:g> ຄົນ.</item>
+      <item quantity="one">ສາມາດສ້າງຜູ້ໃຊ້ໄດ້ໜຶ່ງຄົນເທົ່ານັ້ນ.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"ສ້າງຜູ້ໃຊ້ໃໝ່ບໍ່ສຳເລັດ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ລຶບຜູ້ໃຊ້"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ລຶບຜູ້ໃຊ້ນີ້ອອກບໍ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ແອັບ ແລະ ຂໍ້ມູນທັງໝົດຈະຖືກລຶບ."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ລຶບຜູ້ໃຊ້ບໍ່ສຳເລັດ."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ປິດໄວ້"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ລອງໃໝ່"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ລຶບຜູ້ໃຊ້ນີ້ບໍ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"ແອັບ ແລະ ຂໍ້ມູນທັງໝົດຈະຖືກລຶບ."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ລຶບຜູ້ໃຊ້ບໍ່ສຳເລັດ."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ປິດໄວ້"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ລອງໃໝ່"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"ລຶບຜູ້ໃຊ້ສຸດທ້າຍບໍ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ຫຼັງຈາກລຶບຜູ້ໃຊ້ທີ່ຍັງເຫຼືອໜຶ່ງດຽວສຳລັບລົດນີ້ອອກ, ຜູ້ໃຊ້ທີ່ເປັນຜູ້ເບິ່ງແຍງລະບົບໃໝ່ຈະຖືກສ້າງຂຶ້ນ."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ຂໍ້ມູນ, ການຕັ້ງຄ່າ ແລະ ແອັບທັງໝົດທີ່ກ່ຽວຂ້ອງກັບຜູ້ໃຊ້ນີ້ຈະຖືກລຶບ. ທ່ານຈະຈຳເປັນຕ້ອງຕັ້ງຄ່າລະບົບອີກຄັ້ງ."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"ເລືອກຜູ້ເບິ່ງແຍງລະບົບໃໝ່"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ທ່ານຈຳເປັນຕ້ອງມີຜູ້ເບິ່ງແຍງລະບົບຢ່າງໜ້ອຍໜຶ່ງຄົນ. ເພື່ອລຶບຜູ້ເບິ່ງແຍງລະບົບນີ້ອອກ, ກະລຸນາເລືອກຜູ້ປ່ຽນແທນກ່ອນ."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"ເລືອກຜູ້ເບິ່ງແຍງລະບົບ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ແຂກ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ແຂກ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ສະຫຼັບ"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ລຶບບັນຊີອອກ"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ລຶບບັນຊີອອກບໍ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ການລຶບບັນຊີນີ້ຈະລຶບຂໍ້ຄວາມ, ລາຍຊື່ຜູ້ຕິດຕໍ່ ແລະ ຂໍ້ມູນອື່ນທັງໝົດຂອງມັນອອກຈາກອຸປະກອນ!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ຜູ້ເບິ່ງແຍງລະບົບຂອງທ່ານບໍ່ອະນຸຍາດໃຫ້ປ່ຽນແປງສິ່ງນີ້"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ລຶບບັນຊີອອກບໍ່ສຳເລັດ."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ຄວາມປອດໄພ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ການລັອກໜ້າຈໍ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ບໍ່ມີ"</string>

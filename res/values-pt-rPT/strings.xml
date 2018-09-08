@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ao adicionar um novo utilizador, essa pessoa tem de configurar o respetivo espaço."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualquer utilizador pode atualizar aplicações para todos os outros utilizadores."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite de utilizadores alcançado"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Pode adicionar até <xliff:g id="COUNT">%d</xliff:g> utilizadores.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Pode criar até <xliff:g id="COUNT">%d</xliff:g> utilizadores.</item>
       <item quantity="one">Apenas é possível criar um utilizador.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Falha ao criar um novo utilizador"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Eliminar utilizador"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Remover este utilizador?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Todas as aplicações e os dados serão eliminados."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Falha ao remover o utilizador"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ignorar"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Tentar novamente"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Eliminar este utilizador?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Todas as aplicações e os dados serão eliminados."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Falha ao eliminar o utilizador"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignorar"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Tentar novamente"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Elim. último utilizador?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Depois de eliminar o único utilizador restante deste automóvel, será criado um novo administrador."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Todos os dados, as definições e as aplicações associados a este utilizador serão eliminados. Terá de configurar o sistema novamente."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Escolher novo administrador"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Necessita de, pelo menos, um administrador. Para eliminar este, primeiro escolha um substituto."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Escolher administrador"</string>
     <string name="user_guest" msgid="3465399481257448601">"Convidado"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Convidado"</string>
     <string name="user_switch" msgid="6544839750534690781">"Mudar"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Remover conta"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Pretende remover a conta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"A remoção desta conta elimina todas as mensagens, os contactos e outros dados do dispositivo."</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"O administrador não permite esta alteração."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Falha ao remover a conta"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurança"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueio de ecrã"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nenhum"</string>

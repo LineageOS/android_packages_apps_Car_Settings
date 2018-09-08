@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Apabila anda menambahkan pengguna baharu, orang itu perlu menyediakan ruang mereka."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Mana-mana pengguna boleh mengemas kini apl untuk semua pengguna lain."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Had pengguna dicapai"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Anda boleh menambah sehingga <xliff:g id="COUNT">%d</xliff:g> pengguna.</item>
-      <item quantity="one">Hanya satu pengguna boleh dibuat.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Anda boleh membuat hingga <xliff:g id="COUNT">%d</xliff:g> pengguna.</item>
+      <item quantity="one">Hanya satu pengguna yang boleh dibuat.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Gagal membuat pengguna baharu"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Padamkan pengguna"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Alih keluar pengguna ini?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Semua apl dan data akan dipadamkan."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Gagal mengalih keluar pengguna."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Ketepikan"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Cuba semula"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Padamkan pengguna ini?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Semua apl dan data akan dipadamkan."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Gagal memadamkan pengguna."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ketepikan"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Cuba semula"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Padamkan pengguna terakhir?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Selepas memadamkan satu-satunya pengguna yang tinggal untuk kereta ini, pengguna pentadbir baharu akan dibuat."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Semua data, tetapan dan apl yang dikaitkan dengan pengguna ini akan dipadamkan. Anda perlu menyediakan sistem sekali lagi."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Pilih pentadbir baharu"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Anda memerlukan sekurang-kurangnya satu pentadbir. Untuk memadamkan pentadbir ini, pilih pengganti dahulu."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Pilih pentadbir"</string>
     <string name="user_guest" msgid="3465399481257448601">"Tetamu"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Tetamu"</string>
     <string name="user_switch" msgid="6544839750534690781">"Tukar"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Alih keluar akaun"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Alih keluar akaun?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Pengalihan keluar akaun ini akan memadamkan semua mesej, kenalan dan data lain daripada peranti!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Perubahan ini tidak dibenarkan oleh pentadbir anda"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Gagal mengalih keluar iklan."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Keselamatan"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Kunci skrin"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Tiada"</string>

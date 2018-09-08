@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Wenn du einen neuen Nutzer hinzufügst, muss dieser seinen Bereich einrichten."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Jeder Nutzer kann Apps für alle anderen Nutzer aktualisieren."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Nutzerlimit erreicht"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">Du kannst bis zu <xliff:g id="COUNT">%d</xliff:g> Nutzer hinzufügen.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Du kannst bis zu <xliff:g id="COUNT">%d</xliff:g> Nutzer erstellen.</item>
       <item quantity="one">Es kann nur ein Nutzer erstellt werden.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Nutzer konnte nicht erstellt werden"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Nutzer löschen"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Diesen Nutzer entfernen?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Sämtliche Apps und Daten werden gelöscht."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Entfernen von Nutzer fehlgeschlagen."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Schließen"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Wiederholen"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Diesen Nutzer löschen?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Sämtliche Apps und Daten werden gelöscht."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Der Nutzer konnte nicht gelöscht werden."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Schließen"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Noch einmal versuchen"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Letzten Nutzer löschen?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Nachdem du den letzten Nutzer für dieses Auto gelöscht hast, wird ein neuer Administrator erstellt."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Sämtliche Daten, Einstellungen und Apps, die mit diesem Nutzer zugeordnet sind, werden gelöscht. Du musst das System dann neu einrichten."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Neuen Administrator auswählen"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Du benötigst mindestens einen Administrator. Damit diesen Administrator löschen kannst, musst du zuerst einen Ersatz auswählen."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Administrator auswählen"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Gast"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wechseln"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Konto entfernen"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Konto entfernen?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Durch das Entfernen dieses Kontos werden alle zugehörigen Nachrichten, Kontakte und andere Daten vom Gerät gelöscht!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Dein Administrator lässt diese Änderung nicht zu"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Das Konto konnte nicht entfernt werden."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sicherheit"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Displaysperre"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Keine"</string>

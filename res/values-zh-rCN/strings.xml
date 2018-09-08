@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"当您添加新用户时，该用户必须设置自己的空间。"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"任何用户均可为所有其他用户更新应用。"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"已达到用户数上限"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">您最多可以添加 <xliff:g id="COUNT">%d</xliff:g> 位用户。</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">您最多可以创建 <xliff:g id="COUNT">%d</xliff:g> 位用户。</item>
       <item quantity="one">您只能创建一位用户。</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"无法创建新用户"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"删除用户"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"要移除此用户吗？"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"该用户名下的所有应用和数据都将随之删除。"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"无法移除用户。"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"关闭"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"重试"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"要删除此用户吗？"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"所有应用和数据都将随之删除。"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"无法删除用户。"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"关闭"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"重试"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"要删除最后一位用户吗？"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"删除这量车唯一的用户后，系统便会创建新的管理员用户。"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"所有与此用户关联的数据、设置以及应用都将随之删除。您将需要重新设置系统。"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"选择新的管理员"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"您至少要有一位管理员。要删除现有的这位管理员，请先选择接替者。"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"选择管理员"</string>
     <string name="user_guest" msgid="3465399481257448601">"访客"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"访客"</string>
     <string name="user_switch" msgid="6544839750534690781">"开关"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"移除帐号"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帐号吗？"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"移除该帐号后，设备上的相关消息、联系人和其他数据也将全部删除！"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"您的管理员不允许进行这项更改"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"无法移除帐号。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"无"</string>

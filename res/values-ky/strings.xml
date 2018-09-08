@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Жаңы колдонуучу кошулганда, ал өзүнүн профилин жөндөп алышы керек."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Колдонмолорду бир колдонуучу калган бардык колдонуучулар үчүн да жаңырта алат."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Дагы колдонуучу кошууга болбойт"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> колдонуучуга чейин кошууга болот.</item>
       <item quantity="one">Бир колдонуучуну гана кошууга болот.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Жаңы колдонуучу кошулбай калды"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Колдонуучуну жок кылуу"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Колдонуучуну өчүрөсүзбү?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Бардык колдонмолор жана дайындар жок кылынат."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Колдонуучу өчүрүлгөн жок."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Жабуу"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Кайталоо"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Бул колдонуучу өчүрүлсүнбү?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Бардык колдонмолор жана дайындар жок кылынат."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Колдонуучу өчүрүлгөн жок."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Четке кагуу"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Кайталоо"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Акыркы колдонуучу өчүрүлсүнбү?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Бул унаанын жалгыз колдонуучусун өчүргөндөн кийин, жаңы администратордун профили түзүлөт."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Бул колдонуучуга байланышкан бардык дайындар, жөндөөлөр жана колдонмолор өчүрүлөт. Тутумду кайрадан жөндөшүңүз керек болот."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Жаңы администраторду тандоо"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"Жок дегенде бир администраторуңуз болушу керек. Бул администраторду өчүрүү үчүн, биринчиден ордуна башка бирөөнү тандаңыз."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Администраторду тандоо"</string>
     <string name="user_guest" msgid="3465399481257448601">"Конок"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Конок"</string>
     <string name="user_switch" msgid="6544839750534690781">"Которуштуруу"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Аккаунтту алып салуу"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Аккаунт өчүрүлсүнбү?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Бул аккаунт өчүрүлсө, ага байланыштуу бардык билдирүүлөр, байланыштар жана башка дайындар түзмөктөн өчүрүлөт!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Мындай өзгөртүүгө администраторуңуз тыюу салган"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Аккаунт өчүрүлгөн жок."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Коопсуздук"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экран кулпусу"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Жок"</string>

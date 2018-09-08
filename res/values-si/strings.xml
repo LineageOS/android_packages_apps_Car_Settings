@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ඔබ අලුත් පරිශීලකයෙක් එක් කරන විට, එම පුද්ගලයාට තමන්ගේ ඉඩ සකසා ගැනීමට අවශ්‍ය වේ."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"සියලුම අනෙක් පරිශීලකයින් සඳහා ඕනෑම පරිශීලකයෙකුට යෙදුම් යාවත්කාලීන කළ හැක."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"පරිශීලක සීමාවට ළඟා විය"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">ඔබට පරිශීලකයින් <xliff:g id="COUNT">%d</xliff:g>ක් දක්වා එක් කළ හැකිය.</item>
-      <item quantity="other">ඔබට පරිශීලකයින් <xliff:g id="COUNT">%d</xliff:g>ක් දක්වා එක් කළ හැකිය.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">ඔබට පරිශීලකයින් <xliff:g id="COUNT">%d</xliff:g> දෙනෙක් දක්වා නිර්මාණ කළ හැක.</item>
+      <item quantity="other">ඔබට පරිශීලකයින් <xliff:g id="COUNT">%d</xliff:g> දෙනෙක් දක්වා නිර්මාණ කළ හැක.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"නව පරිශීලකයෙකු සෑදීමට අසමත් විය"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"පරිශීලකයා මකන්න"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"මෙම පරිශීලක ඉවත් කරන්න ද?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"සියලුම යෙදුම් සහ දත්ත මකා දැමෙනු ඇත."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"පරිශීලක ඉවත් කිරීමට අසමත් විය."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"අස් කරන්න"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"යළි උත්සාහ කරන්න"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"මෙම පරිශීලකයා මකන්නද?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"සියලුම යෙදුම් සහ දත්ත මකා දැමෙනු ඇත."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"පරිශීලක මකා දැමීමට අසමත් විය."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ඉවතලන්න"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"යළි උත්සාහ කරන්න"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"අවසාන පරිශීලක මකන්නද?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"මෙම මෝටර් රථය සඳහා ඉතිරිව ඇති ඉතිරි පරිශීලක මකා දැමීමෙන් පසු, නව පරිපාලක පරිශීලකයකු තනනු ඇත."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"මෙම පරිශීලකයාට සම්බන්ධ සියලු දත්ත, සැකසීම් සහ යෙදුම් මකා දමනු ලැබේ. ඔබ නැවතත් පද්ධතිය සැකසිය යුතුයි."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"නව පරිපාලක තෝරන්න"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ඔබට අවම වශයෙන් එක් පරිපාලකයෙකු සිටිය යුතුය. මෙම කොටස මකා දැමීම සඳහා, මුලින්ම විකල්පයක් තෝරා ගන්න."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"පරිපාලක තෝරන්න"</string>
     <string name="user_guest" msgid="3465399481257448601">"අමුත්තා"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"අමුත්තා"</string>
     <string name="user_switch" msgid="6544839750534690781">"මාරු වෙන්න"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ගිණුම ඉවත් කරන්න"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ගිණුම ඉවත් කරන්න ද?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"මෙම ගිණුම ඉවත් කිරීමෙන් උපාංගයෙන් එහි සියලු පණිවිඩ, සම්බන්ධතා සහ වෙනත් දත්ත මකනු ඇත!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ඔබේ පරිපාලක විසින් මෙම වෙනස් කිරීමට ඉඩ නොදේ"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ගිණුම ඉවත් කිරීමට අසමත් විය."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ආරක්ෂාව"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"තිර අගුල"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"කිසිවක් නැත"</string>

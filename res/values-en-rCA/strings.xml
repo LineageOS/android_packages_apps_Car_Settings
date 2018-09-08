@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"When you add a new user, that person needs to set up their space."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Any user can update apps for all other users."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"User limit reached"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">You can add up to <xliff:g id="COUNT">%d</xliff:g> users.</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">You can create up to <xliff:g id="COUNT">%d</xliff:g> users.</item>
       <item quantity="one">Only one user can be created.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Failed to create a new user"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Delete user"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Remove this user?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"All apps and data will be deleted."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Failed to remove user."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Dismiss"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Retry"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Delete this user?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"All apps and data will be deleted."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Failed to delete user."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Dismiss"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Retry"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Delete last user?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"After deleting the only remaining user for this car, a new admin user will be created."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"All data, settings and apps associated with this user will be deleted. You\'ll need to set up the system again."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Choose new admin"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"You need at least one admin. To delete this one, choose a replacement first."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Choose admin"</string>
     <string name="user_guest" msgid="3465399481257448601">"Guest"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"Guest"</string>
     <string name="user_switch" msgid="6544839750534690781">"Switch"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Remove account"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Remove account?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Removing this account will delete all of its messages, contacts and other data from the device!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"This change isn\'t allowed by your admin"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Failed to remove account."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Security"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Screen lock"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"None"</string>

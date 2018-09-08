@@ -194,17 +194,19 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"ਜਦੋਂ ਤੁਸੀਂ ਇੱਕ ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰਦੇ ਹੋ, ਤਾਂ ਉਸ ਵਿਅਕਤੀ ਨੂੰ ਆਪਣੀ ਜਗ੍ਹਾ ਸੈੱਟਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ਕੋਈ ਵੀ ਵਰਤੋਂਕਾਰ ਹੋਰ ਸਾਰੇ ਵਰਤੋਂਕਾਰਾਂ ਦੀਆਂ ਐਪਾਂ ਨੂੰ ਅੱਪਡੇਟ ਕਰ ਸਕਦਾ ਹੈ।"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰਨ ਦੀ ਸੀਮਾ ਪੂਰੀ ਹੋਈ"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">ਤੁਸੀਂ <xliff:g id="COUNT">%d</xliff:g> ਤੱਕ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।</item>
-      <item quantity="other">ਤੁਸੀਂ <xliff:g id="COUNT">%d</xliff:g> ਤੱਕ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"ਇੱਕ ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਬਣਾਉਣਾ ਅਸਫਲ ਰਿਹਾ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਓ"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ਕੀ ਇਹ ਵਰਤੋਂਕਾਰ ਹਟਾਉਣਾ ਹੈ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ਸਾਰੀਆਂ ਐਪਾਂ ਅਤੇ ਡਾਟਾ ਮਿਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ਵਰਤੋਂਕਾਰ ਹਟਾਉਣਾ ਅਸਫਲ ਰਿਹਾ।"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ਖਾਰਜ ਕਰੋ"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ਇਸ ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਈਏ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"ਸਾਰੀਆਂ ਐਪਾਂ ਅਤੇ ਡਾਟਾ ਮਿਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ਵਰਤੋਂਕਾਰ ਮਿਟਾਉਣਾ ਅਸਫਲ ਰਿਹਾ।"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ਖਾਰਜ ਕਰੋ"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"ਪਿਛਲਾ ਵਰਤੋਂਕਾਰ ਮਿਟਾਈਏ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ਇਸ ਕਾਰ ਦੇ ਇੱਕੋ ਬਚੇ ਹੋਏ ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਉਣ ਤੋਂ ਬਾਅਦ, ਕੋਈ ਨਵਾਂ ਪ੍ਰਸ਼ਾਸਕ ਵਰਤੋਂਕਾਰ ਬਣਾਇਆ ਜਾਵੇਗਾ।"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ਇਸ ਵਰਤੋਂਕਾਰ ਨਾਲ ਸੰਬੰਧਿਤ ਸਾਰੇ ਡਾਟੇ, ਸੈਟਿੰਗਾਂ ਅਤੇ ਐਪਾਂ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ। ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਸਿਸਟਮ ਸੈੱਟਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"ਨਵਾਂ ਪ੍ਰਸ਼ਾਸਕ ਚੁਣੋ"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ਤੁਹਾਨੂੰ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਪ੍ਰਸ਼ਾਸਕ ਦੀ ਲੋੜ ਹੈ। ਇਸ ਪ੍ਰਸ਼ਾਸਕ ਨੂੰ ਮਿਟਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਇਸਦੇ ਬਦਲੇ ਕੋਈ ਹੋਰ ਚੁਣੋ।"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"ਪ੍ਰਸ਼ਾਸਕ ਚੁਣੋ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ਮਹਿਮਾਨ"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ਮਹਿਮਾਨ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ਅਦਲਾ-ਬਦਲੀ ਕਰੋ"</string>
@@ -225,7 +227,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ਖਾਤਾ ਹਟਾਓ"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ਕੀ ਖਾਤਾ ਹਟਾਉਣਾ ਹੈ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ਇਸ ਖਾਤੇ ਨੂੰ ਹਟਾਉਣ ਨਾਲ ਡੀਵਾਈਸ ਤੋਂ ਇਸਦੇ ਸਾਰੇ ਸੁਨੇਹੇ, ਸੰਪਰਕ ਅਤੇ ਹੋਰ ਡਾਟਾ ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ਤੁਹਾਡੇ ਪ੍ਰਸ਼ਾਸਕ ਵੱਲੋਂ ਇਸ ਬਦਲਾਅ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ਖਾਤਾ ਹਟਾਉਣਾ ਅਸਫਲ ਰਿਹਾ।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ਸੁਰੱਖਿਆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ਸਕ੍ਰੀਨ ਲਾਕ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ਕੋਈ ਨਹੀਂ"</string>

@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"เมื่อคุณเพิ่มผู้ใช้ใหม่ ผู้ใช้ดังกล่าวจะต้องตั้งค่าพื้นที่ของตนเอง"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"ผู้ใช้ทุกคนจะอัปเดตแอปให้แก่ผู้ใช้คนอื่นๆ ได้"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"ถึงขีดจำกัดผู้ใช้แล้ว"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">คุณเพิ่มผู้ใช้ได้สูงสุด <xliff:g id="COUNT">%d</xliff:g> คน</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">คุณสร้างผู้ใช้ได้สูงสุด <xliff:g id="COUNT">%d</xliff:g> คน</item>
       <item quantity="one">สร้างผู้ใช้ได้เพียง 1 คนเท่านั้น</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"สร้างผู้ใช้ใหม่ไม่ได้"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ลบผู้ใช้"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"นำผู้ใช้รายนี้ออกใช่ไหม"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"แอปและข้อมูลทั้งหมดจะถูกลบ"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"นำผู้ใช้ออกไม่สำเร็จ"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ปิด"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ลองอีกครั้ง"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ลบผู้ใช้นี้ใช่ไหม"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"แอปและข้อมูลทั้งหมดจะถูกลบ"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ลบผู้ใช้ไม่สำเร็จ"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ปิด"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ลองอีกครั้ง"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"ลบผู้ใช้สุดท้ายไหม"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"หลังจากลบผู้ใช้ที่เหลืออยู่เพียงรายเดียวของรถคันนี้ ระบบจะสร้างผู้ดูแลระบบใหม่ขึ้น"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ระบบจะลบข้อมูล การตั้งค่า และแอปทั้งหมดที่เชื่อมโยงกับผู้ใช้นี้ คุณจะต้องตั้งค่าระบบอีกครั้ง"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"เลือกผู้ดูแลระบบใหม่"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"คุณต้องมีผู้ดูแลระบบอย่างน้อย 1 ราย หากต้องการลบผู้ดูแลระบบรายนี้ ก่อนอื่นให้เลือกคนที่จะมาแทน"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"เลือกผู้ดูแลระบบ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ผู้มาเยือน"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"ผู้มาเยือน"</string>
     <string name="user_switch" msgid="6544839750534690781">"เปลี่ยน"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"นำบัญชีออก"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"นำบัญชีออกใช่ไหม"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"การนำบัญชีนี้ออกจะเป็นการลบข้อความ รายชื่อติดต่อ และข้อมูลอื่นๆ ทั้งหมดออกจากอุปกรณ์!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ผู้ดูแลระบบไม่อนุญาตให้ทำการเปลี่ยนแปลงนี้"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"นำบัญชีออกไม่สำเร็จ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ความปลอดภัย"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ล็อกหน้าจอ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ไม่มี"</string>

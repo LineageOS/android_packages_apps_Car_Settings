@@ -194,17 +194,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"新增的使用者需要自行設定個人空間。"</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"任何使用者都可以為所有其他使用者更新應用程式。"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"已達使用者數量上限"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="other">你最多可新增 <xliff:g id="COUNT">%d</xliff:g> 位使用者。</item>
-      <item quantity="one">你只能建立一個使用者設定檔。</item>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">最多可建立 <xliff:g id="COUNT">%d</xliff:g> 位使用者。</item>
+      <item quantity="one">只能建立 1 位使用者。</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"無法建立新的使用者設定檔"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"刪除使用者"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"要移除這位使用者嗎？"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"所有應用程式和資料都會遭到刪除。"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"無法移除使用者。"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"關閉"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"重試"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"要刪除這位使用者嗎？"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"所有應用程式和資料都會遭到刪除。"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"無法刪除使用者。"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"關閉"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"重試"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"要刪除最後一位使用者嗎？"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"刪除這輛車的唯一使用者後，系統會建立新的管理員使用者。"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"所有與這位使用者相關聯的資料、設定和應用程式都會遭到刪除。你必須重新設定系統。"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"選擇新管理員"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"你必須設定至少一位管理員。如要刪除這位管理員，請先選擇新的管理員。"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"選擇管理員"</string>
     <string name="user_guest" msgid="3465399481257448601">"訪客"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"訪客"</string>
     <string name="user_switch" msgid="6544839750534690781">"切換"</string>
@@ -225,7 +230,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"移除帳戶"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帳戶嗎？"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"移除帳戶後，裝置上所有的訊息、聯絡人和其他資料將全部遭到刪除！"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"你的管理員不允許這項變更"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"無法移除帳戶。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全性"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"螢幕鎖定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"無"</string>
