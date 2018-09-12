@@ -18,8 +18,15 @@ package com.android.car.settings.display;
 
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS;
 
+import static com.android.settingslib.display.BrightnessUtils.GAMMA_SPACE_MAX;
+import static com.android.settingslib.display.BrightnessUtils.convertGammaToLinear;
+import static com.android.settingslib.display.BrightnessUtils.convertLinearToGamma;
+
+import android.car.user.CarUserManagerHelper;
 import android.content.Context;
-import android.provider.Settings;
+import android.os.PowerManager;
+import android.provider.Settings.SettingNotFoundException;
+import android.provider.Settings.System;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
@@ -33,8 +40,10 @@ import com.android.car.settings.common.Logger;
  */
 public class BrightnessListItem extends SeekbarListItem {
     private static final Logger LOG = new Logger(BrightnessListItem.class);
-    private static final int MAX_BRIGHTNESS = 255;
+    private CarUserManagerHelper mCarUserManagerHelper;
     private final Context mContext;
+    private final int mMaximumBacklight;
+    private final int mMinimumBacklight;
 
     /**
      * Handles brightness change from user
@@ -52,29 +61,35 @@ public class BrightnessListItem extends SeekbarListItem {
                 }
 
                 @Override
-                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                    Settings.System.putInt(
-                            mContext.getContentResolver(), SCREEN_BRIGHTNESS, progress);
+                public void onProgressChanged(SeekBar seekBar, int gamma, boolean fromUser) {
+                    int linear = convertGammaToLinear(gamma, mMinimumBacklight, mMaximumBacklight);
+                    System.putIntForUser(mContext.getContentResolver(), SCREEN_BRIGHTNESS, linear,
+                                         mCarUserManagerHelper.getCurrentForegroundUserId());
                 }
             };
 
     public BrightnessListItem(Context context) {
         super(context);
         mContext = context;
-        setMax(MAX_BRIGHTNESS);
-        setProgress(getSeekbarValue(context));
+        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+        PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        mMaximumBacklight = powerManager.getMaximumScreenBrightnessSetting();
+        mMinimumBacklight = powerManager.getMinimumScreenBrightnessSetting();
+        setMax(GAMMA_SPACE_MAX);
+        setProgress(getSeekbarValue());
         setOnSeekBarChangeListener(mOnSeekBarChangeListener);
         setText(context.getString(R.string.brightness));
     }
 
-    private static int getSeekbarValue(Context context) {
-        int currentBrightness = 0;
+    private int getSeekbarValue() {
+        int gamma = GAMMA_SPACE_MAX;
         try {
-            currentBrightness = Settings.System.getInt(context.getContentResolver(),
-                    SCREEN_BRIGHTNESS);
-        } catch (Settings.SettingNotFoundException e) {
+            int linear = System.getIntForUser(mContext.getContentResolver(), SCREEN_BRIGHTNESS,
+                                          mCarUserManagerHelper.getCurrentForegroundUserId());
+            gamma = convertLinearToGamma(linear, mMinimumBacklight, mMaximumBacklight);
+        } catch (SettingNotFoundException e) {
             LOG.w("Can't find setting for SCREEN_BRIGHTNESS.");
         }
-        return currentBrightness;
+        return gamma;
     }
 }
