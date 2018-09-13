@@ -670,6 +670,10 @@
     <!-- Label for button in screen lock settings, allowing users to choose other types of screen locks. [CHAR LIMIT=40] -->
     <string name="setup_lock_settings_options_button_label">Screen lock options</string>
 
+    <!-- Format of the message displayed at the bottom of the quick settings page, that shows build information in
+         user-debug and eng builds. -->
+    <string name="build_info_fmt"><xliff:g id="fingerprint" example="google/gcar_emu_x86/...">%1$s</xliff:g>\n<xliff:g id="date" example="Thu Aug 30">%2$s</xliff:g> : <xliff:g id="num_days" example="4">%3$s</xliff:g> days ago</string>
+
     <!-- generic -->
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
