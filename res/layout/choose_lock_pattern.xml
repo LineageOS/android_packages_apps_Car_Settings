@@ -15,6 +15,12 @@
     limitations under the License.
 -->
 
+<!--
+    NOTE:
+    This layout is mirrored in suw_choose_lock_pattern.xml with just the styling differences
+    between setup wizard and settings applied. Any changes to ids/components outside of styling
+    needs to be duplicated in that file or breakages will occur.
+-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -32,7 +38,7 @@
         android:layout_gravity="center_vertical">
 
         <com.android.internal.widget.LockPatternView
-            style="@style/LockPatternStyle"
+            style="@style/LockPattern"
             android:id="@+id/lockPattern"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

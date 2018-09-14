@@ -17,7 +17,7 @@
 
 <!--
     NOTE:
-    This layout is mirrored in suw_choose_lock_pin.xml with just the styling differences
+    This layout is mirrored in suw_confirm_lock_pin.xml with just the styling differences
     between setup wizard and settings applied. Any changes to ids/components outside of styling
     needs to be duplicated in that file or breakages will occur.
 -->
@@ -28,11 +28,12 @@
     android:layout_marginHorizontal="@dimen/car_margin"
     android:orientation="horizontal">
 
-    <!-- Start side: lock pattern -->
+    <!-- Start side: lock PIN -->
     <FrameLayout
         android:layout_weight="@integer/content_weight"
         android:layout_width="0dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <com.android.car.settings.security.PinPadView
             android:id="@+id/pin_pad"
@@ -47,29 +48,14 @@
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:layout_weight="@integer/illustration_weight"
-        android:gravity="center"
         android:orientation="vertical"
         android:layout_gravity="center_vertical">
-
-        <ImageView
-            android:src="@drawable/ic_lock"
-            android:layout_height="@dimen/car_primary_icon_size"
-            android:layout_width="@dimen/car_primary_icon_size"/>
-
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/car_padding_5"
-            android:textAppearance="@style/TextAppearance.Car.Body1"
-            android:text="@string/lockscreen_choose_your_pin"/>
 
         <EditText
             android:id="@+id/password_entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="@dimen/car_padding_2"
+            android:layout_marginHorizontal="@dimen/car_padding_5"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body1"
             android:maxLines="1"
@@ -77,21 +63,19 @@
             android:cursorVisible="false"
             android:focusable="false"/>
 
-        <!--  hint text -->
         <TextView
-            android:id="@+id/hint_text"
-            android:text="@string/choose_lock_pin_hints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/car_padding_2"
+            android:textAppearance="@style/TextAppearance.Car.Body1"
+            android:text="@string/lock_settings_enter_pin"/>
+
+        <TextView
+            android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Car.Body2" />
-
-        <Button
-            android:id="@+id/screen_lock_options"
-            style="@style/Widget.Car.Button.Borderless.Colored"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="@dimen/car_padding_2"
-            android:text="@string/screen_lock_options"
-            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>
