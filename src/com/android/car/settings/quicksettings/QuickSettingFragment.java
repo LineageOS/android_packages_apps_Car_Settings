@@ -21,7 +21,9 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.user.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -36,6 +38,8 @@ import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.users.UserIconProvider;
 import com.android.car.settings.users.UserSwitcherFragment;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Shows a page to access frequently used settings.
@@ -98,6 +102,24 @@ public class QuickSettingFragment extends BaseFragment {
                 .addTile(new CelluarTile(activity, mGridAdapter))
                 .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // In non-user builds (that is, user-debug, eng, etc), display some version information.
+        if (!Build.IS_USER) {
+            long buildTimeDiffDays =
+                    TimeUnit.MILLISECONDS.toDays(System.currentTimeMillis() - Build.TIME);
+            String str = String.format(view.getResources().getString(R.string.build_info_fmt),
+                    Build.FINGERPRINT, SystemProperties.get("ro.build.date", "<unknown>"),
+                    buildTimeDiffDays);
+
+            TextView buildInfo = view.requireViewById(R.id.build_info);
+            buildInfo.setVisibility(View.VISIBLE);
+            buildInfo.setText(str);
+        }
     }
 
     @Override
