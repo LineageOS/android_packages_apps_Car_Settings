@@ -17,6 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.view.View;
+import android.widget.CompoundButton;
 
 import androidx.car.widget.TextListItem;
 
@@ -32,6 +33,8 @@ public class ShadowTextListItem {
     private View.OnClickListener mSupplementalIconOnClickListener;
     private CharSequence mTitle;
     private CharSequence mBody;
+    private boolean mSwitchChecked;
+    private CompoundButton.OnCheckedChangeListener mSwitchOnCheckedChangeListener;
     private View.OnClickListener mOnClickListener;
 
     @Implementation
@@ -54,6 +57,13 @@ public class ShadowTextListItem {
     @Implementation
     public void setBody(CharSequence body, boolean asPrimary) {
         mBody = body;
+    }
+
+    @Implementation
+    public void setSwitch(boolean checked, boolean showDivider,
+            CompoundButton.OnCheckedChangeListener listener) {
+        mSwitchChecked = checked;
+        mSwitchOnCheckedChangeListener = listener;
     }
 
     @Implementation
@@ -80,6 +90,20 @@ public class ShadowTextListItem {
      */
     public CharSequence getBody() {
         return mBody;
+    }
+
+    /**
+     * Returns whether the switch is checked.
+     */
+    public boolean getSwitchChecked() {
+        return mSwitchChecked;
+    }
+
+    /**
+     * Returns the on switch checked changed listener.
+     */
+    public CompoundButton.OnCheckedChangeListener getSwitchOnCheckedChangeListener() {
+        return mSwitchOnCheckedChangeListener;
     }
 
     /**

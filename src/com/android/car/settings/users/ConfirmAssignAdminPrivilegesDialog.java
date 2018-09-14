@@ -43,13 +43,13 @@ public class ConfirmAssignAdminPrivilegesDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        String message = getString(R.string.assign_admin_privileges_message)
+        String message = getString(R.string.grant_admin_privileges_message)
                 .concat(System.getProperty("line.separator"))
                 .concat(System.getProperty("line.separator"))
                 .concat(getString(R.string.action_not_reversible_message));
 
         return new CarAlertDialog.Builder(getContext())
-                .setTitle(R.string.grant_admin_privileges)
+                .setTitle(R.string.grant_admin_privileges_title)
                 .setBody(message)
                 .setPositiveButton(R.string.confirm_assign_admin, (dialog, which) -> {
                     if (mListener != null) {

@@ -121,4 +121,14 @@ public class ShadowCarUserManagerHelper {
     public boolean removeUser(UserInfo userInfo, String guestUserName) {
         return sMockInstance.removeUser(userInfo, guestUserName);
     }
+
+    @Implementation
+    public void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
+        sMockInstance.setUserRestriction(userInfo, restriction, enable);
+    }
+
+    @Implementation
+    public boolean hasUserRestriction(String restriction, UserInfo userInfo) {
+        return sMockInstance.hasUserRestriction(restriction, userInfo);
+    }
 }

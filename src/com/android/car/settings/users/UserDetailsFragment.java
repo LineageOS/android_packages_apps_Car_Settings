@@ -42,9 +42,10 @@ import com.android.car.settings.users.ConfirmRemoveUserDialog.ConfirmRemoveUserL
 public class UserDetailsFragment extends ListItemSettingsFragment implements
         UserDetailsItemProvider.EditUserListener,
         CarUserManagerHelper.OnUsersUpdateListener,
-        NonAdminManagementItemProvider.AssignAdminListener {
+        NonAdminManagementItemProvider.UserRestrictionsListener,
+        NonAdminManagementItemProvider.UserRestrictionsProvider {
     @VisibleForTesting
-    static final String CONFIRM_ASSIGN_ADMIN_DIALOG_TAG = "ConfirmAssignAdminDialog";
+    static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
     @VisibleForTesting
     static final String CONFIRM_REMOVE_USER_DIALOG_TAG = "ConfirmRemoveUserDialog";
     @VisibleForTesting
@@ -91,7 +92,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
             reattachListenerToRemoveUserDialog(CONFIRM_REMOVE_USER_DIALOG_TAG, this::removeUser);
 
-            reattachListenerToAssignAdminDialog(CONFIRM_ASSIGN_ADMIN_DIALOG_TAG, this::assignAdmin);
+            reattachListenerToAssignAdminDialog(CONFIRM_GRANT_ADMIN_DIALOG_TAG, this::grantAdmin);
         }
 
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
@@ -118,16 +119,32 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
-    public void onAssignAdminClicked() {
+    public void onGrantAdminPermission() {
         ConfirmAssignAdminPrivilegesDialog dialog = new ConfirmAssignAdminPrivilegesDialog();
-        dialog.setConfirmAssignAdminListener(this::assignAdmin);
-        dialog.show(getFragmentManager(), CONFIRM_ASSIGN_ADMIN_DIALOG_TAG);
+        dialog.setConfirmAssignAdminListener(this::grantAdmin);
+        dialog.show(getFragmentManager(), CONFIRM_GRANT_ADMIN_DIALOG_TAG);
     }
 
     @VisibleForTesting
-    void assignAdmin() {
+    void grantAdmin() {
         mCarUserManagerHelper.assignAdminPrivileges(mUserInfo);
         getActivity().onBackPressed();
+    }
+
+    @Override
+    public boolean canCreateUsers() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_ADD_USER, mUserInfo);
+    }
+
+    @Override
+    public void onCreateUserPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_ADD_USER restriction should be removed and
+         * vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_ADD_USER, !granted);
     }
 
     @Override
@@ -156,8 +173,10 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     private AbstractRefreshableListItemProvider getUserDetailsItemProvider() {
         if (mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserInfo.isAdmin()) {
             // Admins should be able to manage non-admins and upgrade their privileges.
-            return new NonAdminManagementItemProvider(mUserId, getContext(),
-                    this, mCarUserManagerHelper);
+            return new NonAdminManagementItemProvider(getContext(),
+                    /* userRestrictionsListener= */ this, /* userRestrictionsProvider= */this,
+                    new UserIconProvider(mCarUserManagerHelper).getUserIcon(mUserInfo,
+                            getContext()));
         }
         // Admins seeing other admins, and non-admins seeing themselves, should have a simpler view.
         return new UserDetailsItemProvider(mUserId, getContext(),
@@ -236,10 +255,10 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     private void reattachListenerToAssignAdminDialog(String tag,
             ConfirmAssignAdminPrivilegesDialog.ConfirmAssignAdminListener listener) {
-        ConfirmAssignAdminPrivilegesDialog confirmAssignAdminDialog =
+        ConfirmAssignAdminPrivilegesDialog confirmGrantAdminDialog =
                 (ConfirmAssignAdminPrivilegesDialog) getFragmentManager().findFragmentByTag(tag);
-        if (confirmAssignAdminDialog != null) {
-            confirmAssignAdminDialog.setConfirmAssignAdminListener(listener);
+        if (confirmGrantAdminDialog != null) {
+            confirmGrantAdminDialog.setConfirmAssignAdminListener(listener);
         }
     }
 }
