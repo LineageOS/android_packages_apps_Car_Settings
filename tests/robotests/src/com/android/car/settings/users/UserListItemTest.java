@@ -21,7 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.doReturn;
 import static org.robolectric.RuntimeEnvironment.application;
 
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;

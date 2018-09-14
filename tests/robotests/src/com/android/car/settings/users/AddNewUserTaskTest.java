@@ -19,7 +19,7 @@ package com.android.car.settings.users;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;

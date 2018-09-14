@@ -20,7 +20,7 @@ import static java.util.Objects.requireNonNull;
 
 import android.app.AppOpsManager;
 import android.app.INotificationManager;
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;

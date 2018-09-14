@@ -16,8 +16,8 @@
 
 package com.android.car.settings.testutils;
 
-import android.car.user.CarUserManagerHelper;
-import android.car.user.CarUserManagerHelper.OnUsersUpdateListener;
+import android.car.userlib.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper.OnUsersUpdateListener;
 import android.content.pm.UserInfo;
 
 import org.robolectric.annotation.Implementation;
