@@ -24,6 +24,8 @@ import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItemProvider;
 
 import com.android.car.settings.R;
@@ -43,16 +45,16 @@ public class AccountsListFragment extends ListItemSettingsFragment
 
     private Button mAddAccountButton;
 
-    /**
-     * Creates new instance of CurrentUserDetailsFragment.
-     */
-    public static AccountsListFragment newInstance() {
-        AccountsListFragment accountsFragment = new AccountsListFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.accounts_settings_title);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        accountsFragment.setArguments(bundle);
-        return accountsFragment;
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.accounts_settings_title;
     }
 
     @Override
@@ -119,6 +121,6 @@ public class AccountsListFragment extends ListItemSettingsFragment
     }
 
     private void onAddAccountClicked() {
-        getFragmentController().launchFragment(ChooseAccountFragment.newInstance());
+        getFragmentController().launchFragment(new ChooseAccountFragment());
     }
 }

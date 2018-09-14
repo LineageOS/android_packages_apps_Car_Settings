@@ -25,7 +25,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 
@@ -81,9 +83,7 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
 
     public static AddWifiFragment getInstance(AccessPoint accessPoint) {
         AddWifiFragment addWifiFragment = new AddWifiFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_setup_add_network);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        Bundle bundle = new Bundle();
         Bundle accessPointState = new Bundle();
         if (accessPoint != null) {
             accessPoint.saveWifiState(accessPointState);
@@ -91,6 +91,18 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
         }
         addWifiFragment.setArguments(bundle);
         return addWifiFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.wifi_setup_add_network;
     }
 
     @Override

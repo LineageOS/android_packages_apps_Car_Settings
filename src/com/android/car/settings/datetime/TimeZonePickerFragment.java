@@ -20,6 +20,7 @@ package com.android.car.settings.datetime;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 
@@ -38,12 +39,10 @@ public class TimeZonePickerFragment extends ListItemSettingsFragment implements
         TimeZoneListItem.TimeZoneChangeListener {
     private List<Map<String, Object>> mZoneList;
 
-    public static TimeZonePickerFragment getInstance() {
-        TimeZonePickerFragment timeZonePickerFragment = new TimeZonePickerFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.date_time_set_timezone_title);
-        timeZonePickerFragment.setArguments(bundle);
-        return timeZonePickerFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.date_time_set_timezone_title;
     }
 
     @Override

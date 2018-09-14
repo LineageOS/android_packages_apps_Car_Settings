@@ -22,6 +22,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -48,12 +49,10 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
 
     private ListItemProvider mItemProvider;
 
-    public static SystemSettingsFragment getInstance() {
-        SystemSettingsFragment systemSettingsFragment = new SystemSettingsFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.system_setting_title);
-        systemSettingsFragment.setArguments(bundle);
-        return systemSettingsFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.system_setting_title;
     }
 
     @Override
@@ -91,7 +90,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
                 R.drawable.ic_language, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         languageItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         languageItem.setOnClickListener(
-                v -> getFragmentController().launchFragment(LanguagePickerFragment.newInstance()));
+                v -> getFragmentController().launchFragment(new LanguagePickerFragment()));
         return languageItem;
     }
 
@@ -121,7 +120,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
                 R.drawable.ic_settings_about, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         aboutSystemItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         aboutSystemItem.setOnClickListener(
-                v -> getFragmentController().launchFragment(AboutSettingsFragment.getInstance()));
+                v -> getFragmentController().launchFragment(new AboutSettingsFragment()));
         return aboutSystemItem;
     }
 
@@ -133,7 +132,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
                 R.drawable.ic_settings_about, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
         legalInfoItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
         legalInfoItem.setOnClickListener(v ->
-                getFragmentController().launchFragment(LegalInformationFragment.newInstance())
+                getFragmentController().launchFragment(new LegalInformationFragment())
         );
         return legalInfoItem;
     }
@@ -148,7 +147,7 @@ public class SystemSettingsFragment extends ListItemSettingsFragment {
         restoreOptionsItem.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */
                 false);
         restoreOptionsItem.setOnClickListener(
-                v -> getFragmentController().launchFragment(ResetOptionsFragment.newInstance()));
+                v -> getFragmentController().launchFragment(new ResetOptionsFragment()));
         return restoreOptionsItem;
     }
 }

@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 
+import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -51,13 +52,10 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
         getFragmentController().goBack();
     };
 
-    public static ChooseLockTypeFragment newInstance() {
-        ChooseLockTypeFragment chooseLockTypeFragment = new ChooseLockTypeFragment();
-        Bundle bundle = ListItemSettingsFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.lock_settings_picker_title);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
-        chooseLockTypeFragment.setArguments(bundle);
-        return chooseLockTypeFragment;
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.lock_settings_picker_title;
     }
 
     @Override

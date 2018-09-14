@@ -29,6 +29,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
@@ -60,12 +62,8 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
      */
     public static ConfirmLockPinPasswordFragment newPinInstance(boolean isInSetupWizard) {
         ConfirmLockPinPasswordFragment patternFragment = new ConfirmLockPinPasswordFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.security_settings_title);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
-                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
-                ? R.layout.suw_confirm_lock_pin : R.layout.confirm_lock_pin);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         patternFragment.setArguments(bundle);
         return patternFragment;
@@ -76,15 +74,34 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
      */
     public static ConfirmLockPinPasswordFragment newPasswordInstance(boolean isInSetupWizard) {
         ConfirmLockPinPasswordFragment patternFragment = new ConfirmLockPinPasswordFragment();
-        Bundle bundle = BaseFragment.getBundle();
-        bundle.putInt(EXTRA_TITLE_ID, R.string.security_settings_title);
-        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
-                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
-        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
-                ? R.layout.suw_confirm_lock_password : R.layout.confirm_lock_password);
+        Bundle bundle = new Bundle();
+        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         patternFragment.setArguments(bundle);
         return patternFragment;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getActionBarLayoutId() {
+        return mIsInSetupWizard ? R.layout.suw_action_bar_with_button
+                : R.layout.action_bar_with_button;
+    }
+
+    @Override
+    @LayoutRes
+    protected int getLayoutId() {
+        if (mIsInSetupWizard) {
+            return mIsPin ? R.layout.suw_confirm_lock_pin : R.layout.suw_confirm_lock_password;
+        } else {
+            return mIsPin ? R.layout.confirm_lock_pin : R.layout.confirm_lock_password;
+        }
+    }
+
+    @Override
+    @StringRes
+    protected int getTitleId() {
+        return R.string.security_settings_title;
     }
 
     @Override
@@ -226,10 +243,12 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
 
         mPasswordField.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
 
             @Override
             public void afterTextChanged(Editable s) {
