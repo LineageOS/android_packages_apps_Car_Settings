@@ -14,12 +14,28 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
   -->
-
-<androidx.car.widget.PagedListView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/list"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:showPagedListViewDivider="false"
-    style="@style/SettingList" />
+    android:layout_height="match_parent">
+
+    <androidx.car.widget.PagedListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/build_info"
+        app:showPagedListViewDivider="false"
+        style="@style/SettingList" />
+
+    <TextView
+        android:id="@+id/build_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.Car.Body1.Medium"
+        />
+
+</RelativeLayout>
