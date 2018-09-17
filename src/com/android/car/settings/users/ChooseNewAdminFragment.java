@@ -23,8 +23,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.car.widget.ListItemProvider;
 
@@ -51,6 +49,7 @@ public class ChooseNewAdminFragment extends ListItemSettingsFragment
     private UsersItemProvider mItemProvider;
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserInfo mAdminInfo;
+    private UserInfo mUserToMakeAdmin;
 
     /**
      * Creates a new instance of {@link ChooseNewAdminFragment} that enables the last remaining
@@ -60,22 +59,12 @@ public class ChooseNewAdminFragment extends ListItemSettingsFragment
      */
     public static ChooseNewAdminFragment newInstance(UserInfo adminInfo) {
         ChooseNewAdminFragment usersListFragment = new ChooseNewAdminFragment();
-        Bundle bundle = new Bundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.choose_new_admin_label);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         bundle.putParcelable(Intent.EXTRA_USER, adminInfo);
         usersListFragment.setArguments(bundle);
         return usersListFragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.choose_new_admin_label;
     }
 
     @Override

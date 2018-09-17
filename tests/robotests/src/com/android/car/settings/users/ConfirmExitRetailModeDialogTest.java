@@ -49,7 +49,7 @@ public class ConfirmExitRetailModeDialogTest {
                 .setup()
                 .get();
 
-        mTestFragment = new TestBaseFragment();
+        mTestFragment = TestBaseFragment.newInstance();
         mTestActivity.launchFragment(mTestFragment);
 
         mDialog = new ConfirmExitRetailModeDialog();

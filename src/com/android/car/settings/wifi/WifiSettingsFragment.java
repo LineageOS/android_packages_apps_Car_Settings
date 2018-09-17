@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.wifi;
 
+import android.annotation.NonNull;
+import android.annotation.StringRes;
 import android.car.drivingstate.CarUxRestrictions;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -24,9 +26,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
 import androidx.car.widget.PagedListView;
 
 import com.android.car.settings.R;
@@ -46,22 +45,17 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     private ViewSwitcher mViewSwitcher;
     private boolean mShowSavedApOnly;
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_toggle;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.wifi_list;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.wifi_settings;
+    /**
+     * Gets a new instance of this object.
+     */
+    public static WifiSettingsFragment newInstance() {
+        WifiSettingsFragment wifiSettingsFragment = new WifiSettingsFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.wifi_list);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_toggle);
+        wifiSettingsFragment.setArguments(bundle);
+        return wifiSettingsFragment;
     }
 
     @Override
@@ -145,7 +139,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         refreshData();
     }
 
-    private void setProgressBarVisible(boolean visible) {
+    private  void setProgressBarVisible(boolean visible) {
         if (mProgressBar != null) {
             mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
         }

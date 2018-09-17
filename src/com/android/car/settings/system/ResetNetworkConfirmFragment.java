@@ -28,8 +28,6 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -46,16 +44,16 @@ import java.util.List;
  */
 public class ResetNetworkConfirmFragment extends ListItemSettingsFragment {
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_network_confirm_title;
+    /**
+     * Creates new instance of {@link ResetNetworkConfirmFragment}.
+     */
+    public static ResetNetworkConfirmFragment newInstance() {
+        ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.reset_network_confirm_title);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override

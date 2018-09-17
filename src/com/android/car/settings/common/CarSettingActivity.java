@@ -93,13 +93,13 @@ public class CarSettingActivity extends AppCompatActivity implements
             String action = intent.getAction();
             if (Settings.ACTION_WIFI_SETTINGS.equals(action)
                     || WifiManager.ACTION_PICK_WIFI_NETWORK.equals(action)) {
-                launchFragment(new WifiSettingsFragment());
+                launchFragment(WifiSettingsFragment.newInstance());
                 return;
             }
         }
 
         if (getCurrentFragment() == null) {
-            launchFragment(new QuickSettingFragment());
+            launchFragment(QuickSettingFragment.newInstance());
         }
     }
 
