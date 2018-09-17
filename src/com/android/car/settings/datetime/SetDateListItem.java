@@ -23,8 +23,7 @@ import android.text.format.DateFormat;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.BaseFragment.FragmentController;
+import com.android.car.settings.common.FragmentController;
 
 import java.util.Calendar;
 
@@ -36,7 +35,7 @@ class SetDateListItem extends TextListItem implements DatetimeSettingsFragment.L
     private final Context mContext;
     private final FragmentController mFragmentController;
 
-    SetDateListItem(Context context, BaseFragment.FragmentController fragmentController) {
+    SetDateListItem(Context context, FragmentController fragmentController) {
         super(context);
         mContext = context;
         mFragmentController = fragmentController;

@@ -39,7 +39,7 @@ import androidx.car.widget.PagedListView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
@@ -80,7 +80,7 @@ public class BluetoothDeviceListAdapter
     private final LocalBluetoothManager mLocalManager;
     private final CachedBluetoothDeviceManager mDeviceManager;
     private final Context mContext;
-    private final BaseFragment.FragmentController mFragmentController;
+    private final FragmentController mFragmentController;
     private final boolean mShowDevicesWithoutNames;
     private boolean mShowPairedDeviceOnly;
 
@@ -119,7 +119,7 @@ public class BluetoothDeviceListAdapter
     public BluetoothDeviceListAdapter(
             Context context,
             LocalBluetoothManager localBluetoothManager,
-            BaseFragment.FragmentController fragmentController) {
+            FragmentController fragmentController) {
         mContext = context;
         mLocalManager = localBluetoothManager;
         mFragmentController = fragmentController;
@@ -239,7 +239,7 @@ public class BluetoothDeviceListAdapter
             holder.mActionButton.setOnClickListener(v -> {
                 mFragmentController.launchFragment(
                         BluetoothDetailFragment.getInstance(bluetoothDevice.getDevice()));
-                });
+            });
         } else {
             holder.mActionButton.setVisibility(View.GONE);
         }

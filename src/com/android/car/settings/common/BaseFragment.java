@@ -45,38 +45,6 @@ public abstract class BaseFragment extends Fragment implements
     public static final String EXTRA_RUNNING_IN_SETUP_WIZARD = "extra_running_in_setup_wizard";
 
     /**
-     * Controls the transition of fragment.
-     */
-    public interface FragmentController {
-        /**
-         * Launches fragment in the main container of current activity.
-         */
-        void launchFragment(BaseFragment fragment);
-
-        /**
-         * Pops the top off the fragment stack.
-         */
-        void goBack();
-
-        /**
-         * Shows a message that current feature is not available when driving.
-         */
-        void showDOBlockingMessage();
-    }
-
-    /**
-     * Provides current CarUxRestrictions.
-     */
-    public interface UXRestrictionsProvider {
-
-        /**
-         * Fetches current CarUxRestrictions
-         */
-        @NonNull
-        CarUxRestrictions getCarUxRestrictions();
-    }
-
-    /**
      * Assume The activity holds this fragment also implements the FragmentController.
      * This function should be called after onAttach()
      */
@@ -85,11 +53,11 @@ public abstract class BaseFragment extends Fragment implements
     }
 
     /**
-     * Assume The activity holds this fragment also implements the UXRestrictionsProvider.
+     * Assume The activity holds this fragment also implements the UxRestrictionsProvider.
      * This function should be called after onAttach()
      */
     protected final CarUxRestrictions getCurrentRestrictions() {
-        return ((UXRestrictionsProvider) getActivity()).getCarUxRestrictions();
+        return ((UxRestrictionsProvider) getActivity()).getCarUxRestrictions();
     }
 
     /**
@@ -149,8 +117,8 @@ public abstract class BaseFragment extends Fragment implements
         if (!(getActivity() instanceof FragmentController)) {
             throw new IllegalStateException("Must attach to a FragmentController");
         }
-        if (!(getActivity() instanceof UXRestrictionsProvider)) {
-            throw new IllegalStateException("Must attach to a UXRestrictionsProvider");
+        if (!(getActivity() instanceof UxRestrictionsProvider)) {
+            throw new IllegalStateException("Must attach to a UxRestrictionsProvider");
         }
     }
 

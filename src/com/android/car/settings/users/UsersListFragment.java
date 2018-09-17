@@ -94,7 +94,7 @@ public class UsersListFragment extends ListItemSettingsFragment
         mAddUserButton = (Button) getActivity().findViewById(R.id.action_button1);
         mAddUserButton.setOnClickListener(v -> {
             if (mRestricted) {
-                UsersListFragment.this.getFragmentController().showDOBlockingMessage();
+                getFragmentController().showBlockingMessage();
             } else {
                 handleAddUserClicked();
             }

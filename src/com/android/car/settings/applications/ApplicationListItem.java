@@ -24,7 +24,7 @@ import android.content.pm.ResolveInfo;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.FragmentController;
 
 /**
  * Represents an application in application settings page.
@@ -35,7 +35,7 @@ public class ApplicationListItem extends TextListItem {
             @NonNull Context context,
             PackageManager pm,
             ResolveInfo resolveInfo,
-            BaseFragment.FragmentController fragmentController) {
+            FragmentController fragmentController) {
         this(context, pm, resolveInfo, fragmentController, true);
     }
 
@@ -43,7 +43,7 @@ public class ApplicationListItem extends TextListItem {
             @NonNull Context context,
             PackageManager pm,
             ResolveInfo resolveInfo,
-            BaseFragment.FragmentController fragmentController,
+            FragmentController fragmentController,
             boolean clickable) {
         super(context);
         setTitle(resolveInfo.loadLabel(pm).toString());

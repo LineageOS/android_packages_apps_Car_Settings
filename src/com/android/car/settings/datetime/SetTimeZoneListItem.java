@@ -22,8 +22,7 @@ import android.provider.Settings;
 import androidx.car.widget.TextListItem;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.BaseFragment.FragmentController;
+import com.android.car.settings.common.FragmentController;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.Calendar;
@@ -37,7 +36,7 @@ class SetTimeZoneListItem extends TextListItem
     private final Context mContext;
     private final FragmentController mFragmentController;
 
-    SetTimeZoneListItem(Context context, BaseFragment.FragmentController fragmentController) {
+    SetTimeZoneListItem(Context context, FragmentController fragmentController) {
         super(context);
         mContext = context;
         mFragmentController = fragmentController;
