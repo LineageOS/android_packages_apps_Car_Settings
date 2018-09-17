@@ -26,9 +26,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
@@ -52,28 +49,13 @@ public class EditUsernameFragment extends BaseFragment {
     public static EditUsernameFragment newInstance(UserInfo userInfo) {
         EditUsernameFragment
                 userSettingsFragment = new EditUsernameFragment();
-        Bundle bundle = new Bundle();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.edit_user_name_title);
         bundle.putParcelable(Intent.EXTRA_USER, userInfo);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.edit_username_fragment);
         userSettingsFragment.setArguments(bundle);
         return userSettingsFragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.edit_username_fragment;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.edit_user_name_title;
     }
 
     @Override
