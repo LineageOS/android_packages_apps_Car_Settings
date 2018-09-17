@@ -49,7 +49,7 @@ public class ConfirmCreateNewUserDialogTest {
                 .setup()
                 .get();
 
-        mTestFragment = new TestBaseFragment();
+        mTestFragment = TestBaseFragment.newInstance();
         mTestActivity.launchFragment(mTestFragment);
 
         mDialog = new ConfirmCreateNewUserDialog();

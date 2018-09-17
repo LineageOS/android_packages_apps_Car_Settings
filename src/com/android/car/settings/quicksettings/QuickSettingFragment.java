@@ -27,7 +27,6 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.car.widget.PagedListView;
 
@@ -52,16 +51,17 @@ public class QuickSettingFragment extends BaseFragment {
     private float mOpacityDisabled;
     private float mOpacityEnabled;
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_quick_settings;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.quick_settings;
+    /**
+     * Returns an instance of this class.
+     */
+    public static QuickSettingFragment newInstance() {
+        QuickSettingFragment quickSettingFragment = new QuickSettingFragment();
+        Bundle bundle = QuickSettingFragment.getBundle();
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_quick_settings);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.quick_settings);
+        bundle.putInt(EXTRA_TITLE_ID, R.string.settings_label);
+        quickSettingFragment.setArguments(bundle);
+        return quickSettingFragment;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class QuickSettingFragment extends BaseFragment {
         mFullSettingBtn.setOnClickListener(mHomeFragmentLauncher);
         mUserSwitcherBtn = activity.findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
-            getFragmentController().launchFragment(new UserSwitcherFragment());
+            getFragmentController().launchFragment(UserSwitcherFragment.newInstance());
         });
         setupUserButton(activity);
 
@@ -147,7 +147,7 @@ public class QuickSettingFragment extends BaseFragment {
             if (mShowDOBlockingMessage) {
                 getFragmentController().showDOBlockingMessage();
             } else {
-                getFragmentController().launchFragment(new HomepageFragment());
+                getFragmentController().launchFragment(HomepageFragment.newInstance());
             }
         }
     }

@@ -18,6 +18,7 @@ package com.android.car.settings.system;
 
 import android.car.user.CarUserManagerHelper;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.UserManager;
 import android.view.View;
 
@@ -39,10 +40,16 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
     private CarUserManagerHelper mCarUserManagerHelper;
     private ListItemProvider mItemProvider;
 
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_options_title;
+    /**
+     * Factory method for creating LanguagePickerFragment.
+     */
+    public static ResetOptionsFragment newInstance() {
+        ResetOptionsFragment fragment = new ResetOptionsFragment();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.reset_options_title);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override
@@ -65,11 +72,11 @@ public class ResetOptionsFragment extends ListItemSettingsFragment {
         if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_NETWORK_RESET)) {
             listItems.add(createListItem(R.string.reset_network_title, v ->
-                    getFragmentController().launchFragment(new ResetNetworkFragment())
+                    getFragmentController().launchFragment(ResetNetworkFragment.newInstance())
             ));
         }
         listItems.add(createListItem(R.string.reset_app_pref_title,
-                v -> getFragmentController().launchFragment(new ResetAppPrefFragment())));
+                v -> getFragmentController().launchFragment(ResetAppPrefFragment.newInstance())));
         if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_FACTORY_RESET)) {
             listItems.add(createListItem(R.string.master_clear_title, v -> {

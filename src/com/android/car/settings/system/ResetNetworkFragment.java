@@ -25,7 +25,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
@@ -47,16 +46,16 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
 
     private static final int REQUEST_CODE = 123;
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_network_title;
+    /**
+     * Creates new instance of {@link ResetNetworkFragment}.
+     */
+    public static ResetNetworkFragment newInstance() {
+        ResetNetworkFragment fragment = new ResetNetworkFragment();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.reset_network_title);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override
@@ -73,7 +72,7 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            getFragmentController().launchFragment(new ResetNetworkConfirmFragment());
+            getFragmentController().launchFragment(ResetNetworkConfirmFragment.newInstance());
         }
     }
 

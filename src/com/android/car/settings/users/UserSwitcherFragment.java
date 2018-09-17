@@ -19,8 +19,6 @@ package com.android.car.settings.users;
 import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.android.car.settings.R;
@@ -34,22 +32,18 @@ public class UserSwitcherFragment extends BaseFragment {
 
     private UserGridRecyclerView mUserGridView;
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.car_user_switcher;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.users_list_title;
+    /**
+     * Initializes the UserSwitcherFragment
+     * @return instance of the UserSwitcherFragment
+     */
+    public static UserSwitcherFragment newInstance() {
+        UserSwitcherFragment userSwitcherFragment = new UserSwitcherFragment();
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.users_list_title);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_LAYOUT, R.layout.car_user_switcher);
+        userSwitcherFragment.setArguments(bundle);
+        return userSwitcherFragment;
     }
 
     @Override

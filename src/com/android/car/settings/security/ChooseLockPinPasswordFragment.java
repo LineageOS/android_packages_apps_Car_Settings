@@ -35,7 +35,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
-import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 
@@ -157,8 +156,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
      */
     public static ChooseLockPinPasswordFragment newPasswordInstance(boolean isInSetupWizard) {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
-        Bundle bundle = new Bundle();
-        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_password);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
+                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_choose_lock_password : R.layout.choose_lock_password);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         passwordFragment.setArguments(bundle);
         return passwordFragment;
@@ -169,34 +172,15 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
      */
     public static ChooseLockPinPasswordFragment newPinInstance(boolean isInSetupWizard) {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
-        Bundle bundle = new Bundle();
-        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
+        Bundle bundle = BaseFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.security_lock_pin);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, isInSetupWizard
+                ? R.layout.suw_action_bar_with_button : R.layout.action_bar_with_button);
+        bundle.putInt(EXTRA_LAYOUT, isInSetupWizard
+                ? R.layout.suw_choose_lock_pin : R.layout.choose_lock_pin);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         passwordFragment.setArguments(bundle);
         return passwordFragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return mIsInSetupWizard ? R.layout.suw_action_bar_with_button
-                : R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        if (mIsInSetupWizard) {
-            return mIsPin ? R.layout.suw_choose_lock_pin : R.layout.suw_choose_lock_password;
-        } else {
-            return mIsPin ? R.layout.choose_lock_pin : R.layout.choose_lock_password;
-        }
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return mIsPin ? R.string.security_lock_pin : R.string.security_lock_password;
     }
 
     @Override
@@ -420,7 +404,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mCurrentEntry = getEnteredPassword();
 
-        switch (mUiStage) {
+        switch(mUiStage) {
             case Introduction:
                 mErrorCode = mPasswordHelper.validate(mCurrentEntry);
                 if (mErrorCode == PasswordHelper.NO_ERROR) {
@@ -525,7 +509,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
 
-        switch (mUiStage) {
+        switch(mUiStage) {
             case Introduction:
             case NeedToConfirm:
                 mPasswordField.setError(null);

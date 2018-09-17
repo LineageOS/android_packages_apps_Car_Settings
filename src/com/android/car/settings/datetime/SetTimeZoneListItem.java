@@ -55,7 +55,7 @@ class SetTimeZoneListItem extends TextListItem
         if (isEnabled()) {
             setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
             setOnClickListener(v ->
-                    mFragmentController.launchFragment(new TimeZonePickerFragment()));
+                    mFragmentController.launchFragment(TimeZonePickerFragment.getInstance()));
         } else {
             setSupplementalIcon(null, /* showDivider= */ false);
             setOnClickListener(null);
