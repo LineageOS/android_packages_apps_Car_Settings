@@ -34,7 +34,6 @@ import android.webkit.IWebViewUpdateService;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
@@ -55,16 +54,16 @@ public class ResetAppPrefFragment extends ListItemSettingsFragment {
 
     private static final Logger LOG = new Logger(ResetAppPrefFragment.class);
 
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_app_pref_title;
+    /**
+     * Creates new instance of {@link ResetAppPrefFragment}.
+     */
+    public static ResetAppPrefFragment newInstance() {
+        ResetAppPrefFragment fragment = new ResetAppPrefFragment();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.reset_app_pref_title);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override

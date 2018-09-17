@@ -24,7 +24,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
@@ -72,24 +71,14 @@ public class WifiDetailFragment extends ListItemSettingsFragment {
 
     public static WifiDetailFragment getInstance(AccessPoint accessPoint) {
         WifiDetailFragment wifiDetailFragment = new WifiDetailFragment();
-        Bundle bundle = new Bundle();
+        Bundle bundle = ListItemSettingsFragment.getBundle();
+        bundle.putInt(EXTRA_TITLE_ID, R.string.wifi_settings);
+        bundle.putInt(EXTRA_ACTION_BAR_LAYOUT, R.layout.action_bar_with_button);
         Bundle accessPointState = new Bundle();
         accessPoint.saveWifiState(accessPointState);
         bundle.putBundle(EXTRA_AP_STATE, accessPointState);
         wifiDetailFragment.setArguments(bundle);
         return wifiDetailFragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.wifi_settings;
     }
 
     @Override
