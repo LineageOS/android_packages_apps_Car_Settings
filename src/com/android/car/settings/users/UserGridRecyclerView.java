@@ -273,7 +273,7 @@ public class UserGridRecyclerView extends PagedListView implements
                     // If there are restrictions, show a 50% opaque "add user" view
                     holder.mView.setAlpha(mOpacityDisabled);
                     holder.mView.setOnClickListener(
-                            v -> mBaseFragment.getFragmentController().showDOBlockingMessage());
+                            v -> mBaseFragment.getFragmentController().showBlockingMessage());
                 } else {
                     holder.mView.setOnClickListener(v -> handleAddUserClicked(v));
                 }

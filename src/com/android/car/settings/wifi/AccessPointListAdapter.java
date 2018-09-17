@@ -33,7 +33,7 @@ import androidx.car.widget.PagedListView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.FragmentController;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.List;
@@ -55,7 +55,7 @@ public class AccessPointListAdapter
 
     private final StateListDrawable mWifiSld;
     private final Context mContext;
-    private final BaseFragment.FragmentController mFragmentController;
+    private final FragmentController mFragmentController;
     private final CarWifiManager mCarWifiManager;
     private final WifiManager.ActionListener mConnectionListener;
     private boolean mShowAddNetworkRow;
@@ -66,7 +66,7 @@ public class AccessPointListAdapter
             @NonNull Context context,
             CarWifiManager carWifiManager,
             @NonNull List<AccessPoint> accesssPoints,
-            BaseFragment.FragmentController fragmentController) {
+            FragmentController fragmentController) {
         mContext = context;
         mFragmentController = fragmentController;
         mCarWifiManager = carWifiManager;
@@ -78,6 +78,7 @@ public class AccessPointListAdapter
             @Override
             public void onSuccess() {
             }
+
             @Override
             public void onFailure(int reason) {
                 Toast.makeText(mContext,
@@ -138,7 +139,7 @@ public class AccessPointListAdapter
                 mFragmentController.launchFragment(AddWifiFragment.getInstance(mAccessPoint));
             }
         }
-    };
+    }
 
     @Override
     public int getItemViewType(int position) {

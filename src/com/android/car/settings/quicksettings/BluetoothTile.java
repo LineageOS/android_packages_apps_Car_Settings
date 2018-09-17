@@ -29,7 +29,7 @@ import androidx.annotation.Nullable;
 
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
-import com.android.car.settings.common.BaseFragment.FragmentController;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;

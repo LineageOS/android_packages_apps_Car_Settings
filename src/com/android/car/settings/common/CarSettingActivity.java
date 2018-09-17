@@ -33,7 +33,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment.UXRestrictionsProvider;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 
@@ -41,8 +40,8 @@ import com.android.car.settings.wifi.WifiSettingsFragment;
  * Base activity class for car settings, provides a action bar with a back button that goes to
  * previous activity.
  */
-public class CarSettingActivity extends FragmentActivity implements BaseFragment.FragmentController,
-        OnUxRestrictionsChangedListener, UXRestrictionsProvider, OnBackStackChangedListener {
+public class CarSettingActivity extends FragmentActivity implements FragmentController,
+        OnUxRestrictionsChangedListener, UxRestrictionsProvider, OnBackStackChangedListener {
 
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
@@ -107,7 +106,7 @@ public class CarSettingActivity extends FragmentActivity implements BaseFragment
     }
 
     @Override
-    public void launchFragment(BaseFragment fragment) {
+    public void launchFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
@@ -126,7 +125,7 @@ public class CarSettingActivity extends FragmentActivity implements BaseFragment
     }
 
     @Override
-    public void showDOBlockingMessage() {
+    public void showBlockingMessage() {
         Toast.makeText(
                 this, R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
     }
