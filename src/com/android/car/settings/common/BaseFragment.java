@@ -22,14 +22,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
@@ -59,7 +57,6 @@ public abstract class BaseFragment extends Fragment {
 
         /**
          * Pops the top off the fragment stack.
-         * @return {@code false} if there's no stack to pop, {@code true} otherwise
          */
         void goBack();
 
@@ -165,15 +162,16 @@ public abstract class BaseFragment extends Fragment {
     }
 
     /**
-     * Should be used to override fragment's title.
-     * Should be called after {@code super.onActivityCreated}, so that it's called AFTER the default title
-     * setter.
+     * Should be used to override fragment's title. Should be called after
+     * {@link #onActivityCreated}, so that it's called after the default title setter.
      *
      * @param title CharSequence to set as the new title.
      */
     protected final void setTitle(CharSequence title) {
-        TextView titleView = getActivity().findViewById(R.id.title);
-        titleView.setText(title);
+        TextView titleView = requireActivity().findViewById(R.id.title);
+        if (titleView != null) {
+            titleView.setText(title);
+        }
     }
 
     /**
@@ -192,20 +190,15 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        // Soon AppCompatActivity will no longer be used in Settings
-        if (getActivity() instanceof AppCompatActivity) {
-            ActionBar actionBar = ((AppCompatActivity) getActivity()).getSupportActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(false);
-            actionBar.setCustomView(mActionBarLayout);
-            actionBar.setDisplayShowCustomEnabled(true);
-            // make the toolbar take the whole width.
-            Toolbar toolbar = (Toolbar) actionBar.getCustomView().getParent();
-            toolbar.setPadding(0, 0, 0, 0);
-        }
+        FrameLayout actionBarContainer = requireActivity().findViewById(R.id.action_bar);
+        if (actionBarContainer != null) {
+            actionBarContainer.removeAllViews();
+            getLayoutInflater().inflate(mActionBarLayout, actionBarContainer);
 
-        getActivity().findViewById(R.id.action_bar_icon_container).setOnClickListener(
-                v -> onBackPressed());
-        TextView titleView = getActivity().findViewById(R.id.title);
-        titleView.setText(mTitleId);
+            TextView titleView = actionBarContainer.requireViewById(R.id.title);
+            titleView.setText(mTitleId);
+            actionBarContainer.requireViewById(R.id.action_bar_icon_container).setOnClickListener(
+                    v -> onBackPressed());
+        }
     }
 }
