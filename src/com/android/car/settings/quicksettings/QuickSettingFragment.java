@@ -147,9 +147,9 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     @Override
-    public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
         // TODO: update tiles
-        applyRestriction(CarUxRestrictionsHelper.isNoSetup(carUxRestrictions));
+        applyRestriction(CarUxRestrictionsHelper.isNoSetup(restrictionInfo));
     }
 
     private void applyRestriction(boolean restricted) {

@@ -25,7 +25,6 @@ import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.car.widget.PagedListView;
 
@@ -140,12 +139,12 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     }
 
     @Override
-    public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
-        mShowSavedApOnly = CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+        mShowSavedApOnly = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
         refreshData();
     }
 
-    private  void setProgressBarVisible(boolean visible) {
+    private void setProgressBarVisible(boolean visible) {
         if (mProgressBar != null) {
             mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
