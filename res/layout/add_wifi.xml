@@ -30,8 +30,7 @@
             style="@style/TextAppearance.Car.Body1.SingleLine" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/wifi_name_input"
                 android:layout_width="match_parent"
@@ -44,8 +43,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/wifi_password_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:layout_height="wrap_content">
         <EditText
             android:id="@+id/wifi_password"
             android:layout_width="match_parent"

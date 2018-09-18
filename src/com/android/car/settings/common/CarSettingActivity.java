@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License
  */
+
 package com.android.car.settings.common;
 
 import android.annotation.Nullable;
@@ -26,8 +27,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
 
 import com.android.car.settings.R;
@@ -39,8 +39,9 @@ import com.android.car.settings.wifi.WifiSettingsFragment;
  * Base activity class for car settings, provides a action bar with a back button that goes to
  * previous activity.
  */
-public class CarSettingActivity extends AppCompatActivity implements
-        BaseFragment.FragmentController, UXRestrictionsProvider, OnBackStackChangedListener{
+public class CarSettingActivity extends FragmentActivity implements BaseFragment.FragmentController,
+        UXRestrictionsProvider, OnBackStackChangedListener {
+
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
     // Default to minimum restriction.
@@ -53,9 +54,7 @@ public class CarSettingActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.app_compat_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.car_setting_activity);
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper =
                     new CarUxRestrictionsHelper(this, carUxRestrictions -> {
@@ -125,7 +124,7 @@ public class CarSettingActivity extends AppCompatActivity implements
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
-                        R.animator.trans_right_in ,
+                        R.animator.trans_right_in,
                         R.animator.trans_left_out,
                         R.animator.trans_left_in,
                         R.animator.trans_right_out)
@@ -160,7 +159,7 @@ public class CarSettingActivity extends AppCompatActivity implements
     }
 
     private void hideKeyboard() {
-        InputMethodManager imm = (InputMethodManager)this.getSystemService(
+        InputMethodManager imm = (InputMethodManager) this.getSystemService(
                 Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
     }

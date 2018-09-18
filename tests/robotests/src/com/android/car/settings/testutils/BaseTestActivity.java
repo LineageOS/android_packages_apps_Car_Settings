@@ -19,17 +19,15 @@ package com.android.car.settings.testutils;
 import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 
 /**
- * Test activity that extends {@link AppCompatActivity}.
- * Used for testing {@code BaseFragment} instances.
+ * Test activity used for testing {@code BaseFragment} instances.
  */
-public class BaseTestActivity extends AppCompatActivity implements
+public class BaseTestActivity extends FragmentActivity implements
         BaseFragment.FragmentController,
         BaseFragment.UXRestrictionsProvider {
     private boolean mOnBackPressedFlag;
@@ -37,9 +35,7 @@ public class BaseTestActivity extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.app_compat_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.car_setting_activity);
     }
 
     /**
