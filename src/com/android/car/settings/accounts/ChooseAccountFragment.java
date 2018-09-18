@@ -16,6 +16,7 @@
 
 package com.android.car.settings.accounts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserHandle;
 
@@ -36,6 +37,7 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
 public class ChooseAccountFragment extends ListItemSettingsFragment
         implements AuthenticatorHelper.OnAccountsUpdateListener {
     private static final Logger LOG = new Logger(ChooseAccountFragment.class);
+    private static final int ADD_ACCOUNT_REQUEST_CODE = 1001;
 
     private ChooseAccountItemProvider mItemProvider;
 
@@ -65,5 +67,22 @@ public class ChooseAccountFragment extends ListItemSettingsFragment
     @Override
     public ListItemProvider getItemProvider() {
         return mItemProvider;
+    }
+
+    /** Starts the activity that handles adding an account. */
+    void onAddAccount(String accountType) {
+        Intent intent = new Intent(getContext(), AddAccountActivity.class);
+        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
+        startActivityForResult(intent, ADD_ACCOUNT_REQUEST_CODE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != ADD_ACCOUNT_REQUEST_CODE) {
+            LOG.d("Unidentified activity returned a result! Ignoring the result.");
+            return;
+        }
+        // Done with adding the account, so go back.
+        getFragmentController().goBack();
     }
 }
