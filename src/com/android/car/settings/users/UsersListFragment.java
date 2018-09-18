@@ -103,6 +103,14 @@ public class UsersListFragment extends ListItemSettingsFragment
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+
+        // Make sure user list is refreshed.
+        onUsersUpdate();
+    }
+
+    @Override
     public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
         mRestricted = CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
         mAddUserButton.setAlpha(mRestricted ? mOpacityDisabled : mOpacityEnabled);
