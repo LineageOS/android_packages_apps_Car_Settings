@@ -309,23 +309,23 @@ public class UserDetailsFragmentTest {
     }
 
     @Test
-    public void testCanCreateUsers_cannotCreateUsers_shouldBeFalse() {
+    public void testHasCreateUserPermission_cannotCreateUsers_shouldBeFalse() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
         doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
                 eq(UserManager.DISALLOW_ADD_USER), eq(testUser));
         createUserDetailsFragment(testUser);
 
-        assertThat(mUserDetailsFragment.canCreateUsers()).isFalse();
+        assertThat(mUserDetailsFragment.hasCreateUserPermission()).isFalse();
     }
 
     @Test
-    public void testCanCreateUsers_canCreateUsers_shouldBeTrue() {
+    public void testHasCreateUserPermission_canCreateUsers_shouldBeTrue() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
         doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
                 eq(UserManager.DISALLOW_ADD_USER), eq(testUser));
         createUserDetailsFragment(testUser);
 
-        assertThat(mUserDetailsFragment.canCreateUsers()).isTrue();
+        assertThat(mUserDetailsFragment.hasCreateUserPermission()).isTrue();
     }
 
 
@@ -339,6 +339,39 @@ public class UserDetailsFragmentTest {
         verify(mCarUserManagerHelper).setUserRestriction(
                 eq(testUser), eq(UserManager.DISALLOW_ADD_USER), eq(false));
     }
+
+    @Test
+    public void testHasOutgoingCallsPermission_cannotMakeOutgoingCalls_shouldBeFalse() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_OUTGOING_CALLS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasOutgoingCallsPermission()).isFalse();
+    }
+
+    @Test
+    public void testHasOutgoingCallsPermission_cantMakeOutgoingCalls_shouldBeTrue() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_OUTGOING_CALLS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasOutgoingCallsPermission()).isTrue();
+    }
+
+
+    @Test
+    public void testOnGrantOutgoingCallsPermission() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onOutgoingCallsPermissionChanged(/* enabled= */ true);
+
+        verify(mCarUserManagerHelper).setUserRestriction(
+                eq(testUser), eq(UserManager.DISALLOW_OUTGOING_CALLS), eq(false));
+    }
+
 
     private void createUserDetailsFragment(UserInfo userInfo) {
         UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;

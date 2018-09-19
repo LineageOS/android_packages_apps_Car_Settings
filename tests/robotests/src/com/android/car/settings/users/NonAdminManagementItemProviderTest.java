@@ -52,7 +52,7 @@ import org.robolectric.shadows.ShadowApplication;
 @Config(shadows = {ShadowActionListItem.class, ShadowTextListItem.class,
         ShadowUserIconProvider.class})
 public class NonAdminManagementItemProviderTest {
-    private static final int NUM_ITEMS = 2;
+    private static final int NUM_ITEMS = 3;
 
     @Mock
     private NonAdminManagementItemProvider.UserRestrictionsListener mListener;
@@ -126,8 +126,8 @@ public class NonAdminManagementItemProviderTest {
     }
 
     @Test
-    public void testItems_canCreateUsers_secondItemChecked() {
-        when(mRestrictionsProvider.canCreateUsers()).thenReturn(true);
+    public void testItems_hasCreateUserPermission_secondItemChecked() {
+        when(mRestrictionsProvider.hasCreateUserPermission()).thenReturn(true);
         // Recreate the provider so the mocked changes take effect.
         mProvider = createProvider();
         TextListItem createUserItem = (TextListItem) mProvider.get(1);
@@ -137,8 +137,8 @@ public class NonAdminManagementItemProviderTest {
     }
 
     @Test
-    public void testItems_cannotCreateUsers_secondItemNotChecked() {
-        when(mRestrictionsProvider.canCreateUsers()).thenReturn(false);
+    public void testItems_doesNotHaveCreateUserPermission_secondItemNotChecked() {
+        when(mRestrictionsProvider.hasCreateUserPermission()).thenReturn(false);
         // Recreate the provider so the mocked changes take effect.
         mProvider = createProvider();
         TextListItem createUserItem = (TextListItem) mProvider.get(1);
@@ -156,6 +156,57 @@ public class NonAdminManagementItemProviderTest {
         listener.onCheckedChanged(null, true);
 
         verify(mListener).onCreateUserPermissionChanged(true);
+    }
+
+    @Test
+    public void testItems_thirdItemShouldHaveOutgoingCallsPermissionTitle() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getTitle().toString()).isEqualTo(
+                application.getText(R.string.outgoing_calls_permission_title));
+    }
+
+    @Test
+    public void testItems_thirdItemShouldHaveOutgoingCallsPermissionBody() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getBody().toString()).isEqualTo(
+                application.getText(R.string.outgoing_calls_permission_body));
+    }
+
+    @Test
+    public void testItems_hasOutgoingCallsPermission_thirdItemChecked() {
+        when(mRestrictionsProvider.hasOutgoingCallsPermission()).thenReturn(true);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchChecked()).isTrue();
+    }
+
+    @Test
+    public void testItems_doesNotHaveOutgoingCallsPermission_thirdItemNotChecked() {
+        when(mRestrictionsProvider.hasOutgoingCallsPermission()).thenReturn(false);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchChecked()).isFalse();
+    }
+
+    @Test
+    public void testItems_thirdItemOnCheckedChanged_shouldCallOnOutgoingCallsPermissionChanged() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
+
+        CompoundButton.OnCheckedChangeListener listener = ((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchOnCheckedChangeListener();
+        listener.onCheckedChanged(null, true);
+
+        verify(mListener).onOutgoingCallsPermissionChanged(true);
     }
 
     private NonAdminManagementItemProvider createProvider() {
