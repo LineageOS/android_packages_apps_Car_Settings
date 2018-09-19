@@ -18,8 +18,9 @@ package com.android.car.settings.security;
 
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.user.CarUserManagerHelper;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.text.TextUtils;
 
 import androidx.fragment.app.FragmentActivity;
@@ -40,7 +41,10 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
         LockTypeDialogFragment.OnLockSelectListener {
 
     private static final Logger LOG = new Logger(SetupWizardScreenLockActivity.class);
+    private static final String EXTRA_PASSWORD_QUALITY = "EXTRA_PASSWORD_QUALITY";
 
+    private int mUserId;
+    private LockPatternUtils mLockPatternUtils;
     private String mCurrLock;
     private int mPasswordQuality;
 
@@ -87,8 +91,9 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.suw_activity);
 
-        mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
-                UserHandle.myUserId());
+        mUserId = new CarUserManagerHelper(this).getCurrentForegroundUserId();
+        mLockPatternUtils = new LockPatternUtils(/* context= */ this);
+        mPasswordQuality = mLockPatternUtils.getKeyguardStoredPasswordQuality(mUserId);
 
         if (savedInstanceState == null) {
             BaseFragment fragment;
@@ -134,7 +139,10 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
      * Handler that will be invoked when lock save is completed.
      */
     public void onComplete() {
-        setResult(RESULT_OK);
+        Intent data = new Intent();
+        int passwordQuality = mLockPatternUtils.getKeyguardStoredPasswordQuality(mUserId);
+        data.putExtra(EXTRA_PASSWORD_QUALITY, passwordQuality);
+        setResult(RESULT_OK, data);
         finish();
     }
 
@@ -154,7 +162,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
         switch(position) {
             case LockTypeDialogFragment.POSITION_NONE:
                 if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
-                    new LockPatternUtils(this).clearLock(mCurrLock, UserHandle.myUserId());
+                    mLockPatternUtils.clearLock(mCurrLock, mUserId);
                 }
                 setResult(ResultCodes.RESULT_NONE);
                 finish();
