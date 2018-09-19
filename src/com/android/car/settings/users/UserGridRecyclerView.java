@@ -302,7 +302,7 @@ public class UserGridRecyclerView extends PagedListView implements
         }
 
         private void handleGuestSessionClicked() {
-            if (mCarUserManagerHelper.startNewGuestSession(mGuestName)) {
+            if (mCarUserManagerHelper.startGuestSession(mGuestName)) {
                 // Successful start, will switch to guest now. Close Settings app.
                 mBaseFragment.getActivity().finish();
             }
