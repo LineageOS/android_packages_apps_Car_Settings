@@ -21,7 +21,6 @@ import android.accounts.AuthenticatorDescription;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SyncAdapterType;
 import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
@@ -58,14 +57,15 @@ class ChooseAccountItemProvider extends ListItemProvider {
     private final ChooseAccountFragment mFragment;
     private final UserManager mUserManager;
     private final ArrayList<ProviderEntry> mProviderList = new ArrayList<>();
-    @Nullable private AuthenticatorDescription[] mAuthDescs;
-    @Nullable private HashMap<String, ArrayList<String>> mAccountTypeToAuthorities;
-    private Map<String, AuthenticatorDescription> mTypeToAuthDescription = new HashMap<>();
     private final AuthenticatorHelper mAuthenticatorHelper;
-
     // The UserHandle of the user we are choosing an account for
     private final UserHandle mUserHandle;
     private final String[] mAuthorities;
+    @Nullable
+    private AuthenticatorDescription[] mAuthDescs;
+    @Nullable
+    private HashMap<String, ArrayList<String>> mAccountTypeToAuthorities;
+    private Map<String, AuthenticatorDescription> mTypeToAuthDescription = new HashMap<>();
 
     ChooseAccountItemProvider(Context context, ChooseAccountFragment fragment) {
         mContext = context;
@@ -109,16 +109,9 @@ class ChooseAccountItemProvider extends ListItemProvider {
             TextListItem item = new TextListItem(mContext);
             item.setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
             item.setTitle(mProviderList.get(i).name.toString());
-            item.setOnClickListener(v -> onItemSelected(accountType));
+            item.setOnClickListener(v -> mFragment.onAddAccount(accountType));
             mItems.add(item);
         }
-    }
-
-    // Starts a AddAccountActivity for the accountType that was clicked on.
-    private void onItemSelected(String accountType) {
-        Intent intent = new Intent(mContext, AddAccountActivity.class);
-        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
-        mContext.startActivity(intent);
     }
 
     /**
@@ -207,6 +200,7 @@ class ChooseAccountItemProvider extends ListItemProvider {
     private static class ProviderEntry implements Comparable<ProviderEntry> {
         private final CharSequence name;
         private final String type;
+
         ProviderEntry(CharSequence providerName, String accountType) {
             name = providerName;
             type = accountType;
