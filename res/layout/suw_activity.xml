@@ -21,7 +21,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/suw_action_bar_with_button"/>
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_app_bar_height"/>
 
     <FrameLayout
         android:layout_width="match_parent"
