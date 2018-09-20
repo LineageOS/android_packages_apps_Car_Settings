@@ -84,7 +84,7 @@ public class NonAdminManagementItemProviderTest {
 
         assertThat(((ShadowActionListItem) Shadow.extract(
                 grandAdminItem)).getTitle().toString()).isEqualTo(
-                application.getString(R.string.grant_admin_privileges_title));
+                application.getString(R.string.grant_admin_permissions_title));
     }
 
     @Test
@@ -93,7 +93,7 @@ public class NonAdminManagementItemProviderTest {
 
         assertThat(((ShadowActionListItem) Shadow.extract(
                 grandAdminItem)).getPrimaryActionText().toString()).isEqualTo(
-                application.getString(R.string.grant_admin_privileges_button_text));
+                application.getString(R.string.grant_admin_permissions_button_text));
     }
 
     @Test

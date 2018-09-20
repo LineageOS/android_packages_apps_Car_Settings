@@ -385,16 +385,16 @@
     <string name="user_admin">Admin</string>
     <!-- User summary to be displayed next to the currently logged-in user if they are also an admin. [CHAR LIMIT=35] -->
     <string name="signed_in_admin_user">Signed in as admin</string>
-    <!-- Title for the dialog that assigns the user additional Admin privileges. [CHAR LIMIT=50]-->
-    <string name="grant_admin_privileges_title">Grant Admin permissions</string>
-    <!-- Button text for assigning admin privileges to a user [CHAR LIMIT=35]-->
-    <string name="grant_admin_privileges_button_text">Make Admin</string>
+    <!-- Title for the dialog that grants the user admin permissions. [CHAR LIMIT=50]-->
+    <string name="grant_admin_permissions_title">Grant Admin permissions</string>
+    <!-- Button text for granting admin permissions to a user [CHAR LIMIT=35]-->
+    <string name="grant_admin_permissions_button_text">Make Admin</string>
     <!-- Message to inform the user of what will happen when another user is upgraded to Admin status. [CHAR LIMIT=NONE]-->
-    <string name="grant_admin_privileges_message">The user will be able to delete users, including other Admins, and factory reset the system.</string>
-    <!-- Message to inform the user that assigning admin privileges to another user is not reversible. [CHAR LIMIT=100]-->
+    <string name="grant_admin_permissions_message">The user will be able to delete users, including other Admins, and factory reset the system.</string>
+    <!-- Message to inform the user that granting admin permissions to another user is not reversible. [CHAR LIMIT=100]-->
     <string name="action_not_reversible_message">This action is not reversible.</string>
-    <!-- Button text to confirm assigning admin privileges to another user. [CHAR LIMIT=40]-->
-    <string name="confirm_assign_admin">Yes, make admin</string>
+    <!-- Button text to confirm granting admin permissions to another user. [CHAR LIMIT=40]-->
+    <string name="confirm_grant_admin">Yes, make admin</string>
 
     <!-- User Restrictions -->
     <!-- Creating Users -->

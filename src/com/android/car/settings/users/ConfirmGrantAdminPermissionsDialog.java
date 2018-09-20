@@ -25,35 +25,35 @@ import androidx.fragment.app.DialogFragment;
 import com.android.car.settings.R;
 
 /**
- * Dialog to confirm assigning of admin privileges.
+ * Dialog to confirm granting of admin permissions.
  */
-public class ConfirmAssignAdminPrivilegesDialog extends DialogFragment {
-    private ConfirmAssignAdminListener mListener;
+public class ConfirmGrantAdminPermissionsDialog extends DialogFragment {
+    private ConfirmGrantAdminListener mListener;
 
     /**
-     * Sets a listener for onAssignAdminPrivilegesConfirmed that will get called if user confirms
+     * Sets a listener for onGrantAdminPermissionsConfirmed that will get called if user confirms
      * the dialog.
      *
-     * @param listener Instance of {@link ConfirmAssignAdminListener} to call when
+     * @param listener Instance of {@link ConfirmGrantAdminListener} to call when
      * confirmed.
      */
-    public void setConfirmAssignAdminListener(ConfirmAssignAdminListener listener) {
+    public void setConfirmGrantAdminListener(ConfirmGrantAdminListener listener) {
         mListener = listener;
     }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        String message = getString(R.string.grant_admin_privileges_message)
+        String message = getString(R.string.grant_admin_permissions_message)
                 .concat(System.getProperty("line.separator"))
                 .concat(System.getProperty("line.separator"))
                 .concat(getString(R.string.action_not_reversible_message));
 
         return new CarAlertDialog.Builder(getContext())
-                .setTitle(R.string.grant_admin_privileges_title)
+                .setTitle(R.string.grant_admin_permissions_title)
                 .setBody(message)
-                .setPositiveButton(R.string.confirm_assign_admin, (dialog, which) -> {
+                .setPositiveButton(R.string.confirm_grant_admin, (dialog, which) -> {
                     if (mListener != null) {
-                        mListener.onAssignAdminConfirmed();
+                        mListener.onGrantAdminPermissionsConfirmed();
                     }
                     dialog.dismiss();
                 })
@@ -63,12 +63,12 @@ public class ConfirmAssignAdminPrivilegesDialog extends DialogFragment {
 
     /**
      * Interface for listeners that want to receive a callback when user confirms they want to
-     * assign admin privileges to another user.
+     * grant admin permissions to another user.
      */
-    public interface ConfirmAssignAdminListener {
+    public interface ConfirmGrantAdminListener {
         /**
          * Method called only when user presses confirm button.
          */
-        void onAssignAdminConfirmed();
+        void onGrantAdminPermissionsConfirmed();
     }
 }

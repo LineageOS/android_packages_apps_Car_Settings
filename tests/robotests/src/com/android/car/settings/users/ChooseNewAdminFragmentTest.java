@@ -48,7 +48,7 @@ import org.robolectric.annotation.Config;
 @Config(shadows = { ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
         ShadowTextListItem.class })
 public class ChooseNewAdminFragmentTest {
-    private static final String CONFIRM_ASSIGN_ADMIN_DIALOG_TAG = "ConfirmAssignAdminDialog";
+    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
     private BaseTestActivity mTestActivity;
     private ChooseNewAdminFragment mFragment;
 
@@ -74,18 +74,18 @@ public class ChooseNewAdminFragmentTest {
         mFragment.assignNewAdminAndRemoveOldAdmin(nonAdmin);
 
         // Assigns new admin.
-        verify(mCarUserManagerHelper).assignAdminPrivileges(nonAdmin);
+        verify(mCarUserManagerHelper).grantAdminPermissions(nonAdmin);
 
         // Removes old admin.
         verify(mCarUserManagerHelper).removeUser(eq(oldAdmin), anyString());
     }
 
     @Test
-    public void testUserClick_showsConfirmAssignAdminDialog() {
+    public void testUserClick_showsConfirmGrantAdminDialog() {
         createChooseNewAdminFragment();
         mFragment.onUserClicked(new UserInfo());
 
-        assertThat(isDialogShown(CONFIRM_ASSIGN_ADMIN_DIALOG_TAG)).isTrue();
+        assertThat(isDialogShown(CONFIRM_GRANT_ADMIN_DIALOG_TAG)).isTrue();
     }
 
     /* Test that upon creation, fragment is registered for listening on user updates. */

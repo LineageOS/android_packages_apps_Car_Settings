@@ -46,7 +46,7 @@ import static java.util.Objects.requireNonNull;
 public class ChooseNewAdminFragment extends ListItemSettingsFragment
         implements CarUserManagerHelper.OnUsersUpdateListener,
         UsersItemProvider.UserClickListener {
-    private static final String CONFIRM_ASSIGN_ADMIN_DIALOG_TAG = "ConfirmAssignAdminDialog";
+    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
 
     private UsersItemProvider mItemProvider;
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -120,15 +120,15 @@ public class ChooseNewAdminFragment extends ListItemSettingsFragment
 
     @Override
     public void onUserClicked(final UserInfo userToMakeAdmin) {
-        ConfirmAssignAdminPrivilegesDialog dialog = new ConfirmAssignAdminPrivilegesDialog();
-        dialog.setConfirmAssignAdminListener(
+        ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
+        dialog.setConfirmGrantAdminListener(
                 () -> assignNewAdminAndRemoveOldAdmin(userToMakeAdmin));
-        dialog.show(getFragmentManager(), CONFIRM_ASSIGN_ADMIN_DIALOG_TAG);
+        dialog.show(getFragmentManager(), CONFIRM_GRANT_ADMIN_DIALOG_TAG);
     }
 
     @VisibleForTesting
     void assignNewAdminAndRemoveOldAdmin(UserInfo userToMakeAdmin) {
-        mCarUserManagerHelper.assignAdminPrivileges(userToMakeAdmin);
+        mCarUserManagerHelper.grantAdminPermissions(userToMakeAdmin);
 
         requireActivity().onBackPressed();
         removeOldAdmin();

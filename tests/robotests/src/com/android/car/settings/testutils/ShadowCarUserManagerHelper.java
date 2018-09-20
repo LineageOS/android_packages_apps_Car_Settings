@@ -108,8 +108,8 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    public void assignAdminPrivileges(UserInfo user) {
-        sMockInstance.assignAdminPrivileges(user);
+    public void grantAdminPermissions(UserInfo user) {
+        sMockInstance.grantAdminPermissions(user);
     }
 
     @Implementation
