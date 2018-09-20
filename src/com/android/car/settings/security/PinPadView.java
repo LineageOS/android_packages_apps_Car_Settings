@@ -157,10 +157,12 @@ public class PinPadView extends GridLayout {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     getHandler().post(mOnBackspaceLongClick);
-                    return true;
+                    // Must return false so that ripple can show
+                    return false;
                 case MotionEvent.ACTION_UP:
                     getHandler().removeCallbacks(mOnBackspaceLongClick);
-                    return true;
+                    // Must return false so that ripple can show
+                    return false;
                 default:
                     return false;
             }
