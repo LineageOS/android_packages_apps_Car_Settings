@@ -372,6 +372,36 @@ public class UserDetailsFragmentTest {
                 eq(testUser), eq(UserManager.DISALLOW_OUTGOING_CALLS), eq(false));
     }
 
+    @Test
+    public void testHasMessagingPermission_cannotMessage_shouldBeFalse() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_SMS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasSmsMessagingPermission()).isFalse();
+    }
+
+    @Test
+    public void testHasMessagingPermission_cantMessage_shouldBeTrue() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_SMS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasSmsMessagingPermission()).isTrue();
+    }
+
+    @Test
+    public void testOnGrantMessagingPermission() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onSmsMessagingPermissionChanged(/* enabled= */ true);
+
+        verify(mCarUserManagerHelper).setUserRestriction(
+                eq(testUser), eq(UserManager.DISALLOW_SMS), eq(false));
+    }
 
     private void createUserDetailsFragment(UserInfo userInfo) {
         UserInfo testUser = userInfo == null ? new UserInfo() : userInfo;

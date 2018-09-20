@@ -52,7 +52,7 @@ import org.robolectric.shadows.ShadowApplication;
 @Config(shadows = {ShadowActionListItem.class, ShadowTextListItem.class,
         ShadowUserIconProvider.class})
 public class NonAdminManagementItemProviderTest {
-    private static final int NUM_ITEMS = 3;
+    private static final int NUM_ITEMS = 4;
 
     @Mock
     private NonAdminManagementItemProvider.UserRestrictionsListener mListener;
@@ -207,6 +207,57 @@ public class NonAdminManagementItemProviderTest {
         listener.onCheckedChanged(null, true);
 
         verify(mListener).onOutgoingCallsPermissionChanged(true);
+    }
+
+    @Test
+    public void testItems_fourthItemShouldHaveMessagingPermissionTitle() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getTitle().toString()).isEqualTo(
+                application.getText(R.string.sms_messaging_permission_title));
+    }
+
+    @Test
+    public void testItems_fourthItemShouldHaveMessagingPermissionBody() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getBody().toString()).isEqualTo(
+                application.getText(R.string.sms_messaging_permission_body));
+    }
+
+    @Test
+    public void testItems_hasMessagingPermission_fourthItemChecked() {
+        when(mRestrictionsProvider.hasSmsMessagingPermission()).thenReturn(true);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchChecked()).isTrue();
+    }
+
+    @Test
+    public void testItems_doesNotHaveMessagingPermission_fourthItemNotChecked() {
+        when(mRestrictionsProvider.hasSmsMessagingPermission()).thenReturn(false);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchChecked()).isFalse();
+    }
+
+    @Test
+    public void testItems_fourthItemOnCheckedChanged_shouldCallOnMessagingPermissionChanged() {
+        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
+
+        CompoundButton.OnCheckedChangeListener listener = ((ShadowTextListItem) Shadow.extract(
+                outgoingCallsItem)).getSwitchOnCheckedChangeListener();
+        listener.onCheckedChanged(null, true);
+
+        verify(mListener).onSmsMessagingPermissionChanged(true);
     }
 
     private NonAdminManagementItemProvider createProvider() {

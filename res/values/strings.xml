@@ -409,6 +409,12 @@
     <!-- Description for the toggle that controls whether a user is able to make outgoing calls [CHAR LIMIT=50]-->
     <string name="outgoing_calls_permission_body" translatable="false">All calls allowed</string>
 
+    <!-- SMS Messaging -->
+    <!-- Title for toggle that controls whether a user is able to send and receive sms messages [CHAR LIMIT=35] -->
+    <string name="sms_messaging_permission_title" translatable="false">Messaging</string>
+    <!-- Description for the toggle that controls whether a user is able to send and receive sms messages [CHAR LIMIT=50]-->
+    <string name="sms_messaging_permission_body" translatable="false">Allow messaging through vehicle mobile data</string>
+
     <!-- Adding new users -->
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>

@@ -60,6 +60,7 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
         mItems.add(createGrantAdminItem());
         mItems.add(createCreateUserItem());
         mItems.add(createOutgoingCallsItem());
+        mItems.add(createSmsMessagingItem());
     }
 
     private ActionListItem createGrantAdminItem() {
@@ -100,6 +101,19 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
         return outgoingCallsItem;
     }
 
+    private TextListItem createSmsMessagingItem() {
+        boolean canSendAndReceiveMessaging = mUserRestrictionsProvider.hasSmsMessagingPermission();
+
+        TextListItem messagingItem = new TextListItem(mContext);
+        messagingItem.setTitle(mContext.getText(R.string.sms_messaging_permission_title));
+        messagingItem.setBody(mContext.getText(R.string.sms_messaging_permission_body));
+        messagingItem.setSwitch(canSendAndReceiveMessaging, /* showDivider= */ false,
+                (CompoundButton buttonView, boolean checked) ->
+                        mUserRestrictionsListener.onSmsMessagingPermissionChanged(checked));
+
+        return messagingItem;
+    }
+
     /**
      * Interface for registering changes to user permissions.
      */
@@ -118,6 +132,11 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
          * Called when the outgoing calls permission should be changed.
          */
         void onOutgoingCallsPermissionChanged(boolean granted);
+
+        /**
+         * Called when the sms messaging permission should be changed.
+         */
+        void onSmsMessagingPermissionChanged(boolean granted);
     }
 
     /**
@@ -129,6 +148,9 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
 
         /** Returns whether the user has the Outgoing Calls permission. */
         boolean hasOutgoingCallsPermission();
+
+        /** Returns whether the user has the SMS Messaging permission. */
+        boolean hasSmsMessagingPermission();
     }
 }
 
