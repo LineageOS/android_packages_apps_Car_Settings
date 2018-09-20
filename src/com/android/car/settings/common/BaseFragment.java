@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -35,7 +36,8 @@ import com.android.car.settings.R;
 /**
  * Base fragment for setting activity.
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
 
     /**
      * For indicating a fragment is running in Setup Wizard
@@ -98,10 +100,8 @@ public abstract class BaseFragment extends Fragment {
         return !CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
     }
 
-    /**
-     * Notifies the fragment with the latest CarUxRestrictions change.
-     */
-    protected void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
+    @Override
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
     }
 
     /**
@@ -180,7 +180,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        onUxRestrictionChanged(getCurrentRestrictions());
+        onUxRestrictionsChanged(getCurrentRestrictions());
     }
 
     /**

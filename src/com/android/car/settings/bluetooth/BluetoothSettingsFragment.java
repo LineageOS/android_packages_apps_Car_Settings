@@ -165,8 +165,8 @@ public class BluetoothSettingsFragment extends BaseFragment {
     }
 
     @Override
-    public void onUxRestrictionChanged(@NonNull CarUxRestrictions carUxRestrictions) {
-        mShowPairedDeviceOnly = CarUxRestrictionsHelper.isNoSetup(carUxRestrictions);
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+        mShowPairedDeviceOnly = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
         if (mDeviceAdapter != null) {
             mDeviceAdapter.showPairedDeviceOnlyAndFresh(mShowPairedDeviceOnly);
         }

@@ -79,8 +79,8 @@ public class UserSwitcherFragment extends BaseFragment {
 
 
     @Override
-    public void onUxRestrictionChanged(CarUxRestrictions carUxRestrictions) {
-        applyRestriction(CarUxRestrictionsHelper.isNoSetup(carUxRestrictions));
+    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+        applyRestriction(CarUxRestrictionsHelper.isNoSetup(restrictionInfo));
     }
 
     private void applyRestriction(boolean restricted) {
