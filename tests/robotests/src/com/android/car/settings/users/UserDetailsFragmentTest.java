@@ -289,7 +289,7 @@ public class UserDetailsFragmentTest {
                 .isInstanceOf(NonAdminManagementItemProvider.class);
     }
 
-    /* Test that trying to grant admin permissions creates a confirm assign admin dialog. */
+    /* Test that trying to grant admin permissions creates a confirm grant admin dialog. */
     @Test
     public void testOnGrantAdminPermission_confirmDialogShown() {
         createUserDetailsFragment();
@@ -307,7 +307,7 @@ public class UserDetailsFragmentTest {
 
         mUserDetailsFragment.grantAdmin();
 
-        verify(mCarUserManagerHelper).assignAdminPrivileges(testUser);
+        verify(mCarUserManagerHelper).grantAdminPermissions(testUser);
     }
 
     @Test
