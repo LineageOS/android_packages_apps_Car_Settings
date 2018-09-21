@@ -180,21 +180,21 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     private void applyRestriction(boolean restricted) {
-        mHomeFragmentLauncher.showDOBlockingMessage(restricted);
+        mHomeFragmentLauncher.showBlockingMessage(restricted);
         mFullSettingBtn.setAlpha(restricted ? mOpacityDisabled : mOpacityEnabled);
     }
 
     private class HomeFragmentLauncher implements OnClickListener {
-        private boolean mShowDOBlockingMessage;
+        private boolean mShowBlockingMessage;
 
-        private void showDOBlockingMessage(boolean show) {
-            mShowDOBlockingMessage = show;
+        private void showBlockingMessage(boolean show) {
+            mShowBlockingMessage = show;
         }
 
         @Override
         public void onClick(View v) {
-            if (mShowDOBlockingMessage) {
-                getFragmentController().showDOBlockingMessage();
+            if (mShowBlockingMessage) {
+                getFragmentController().showBlockingMessage();
             } else {
                 getFragmentController().launchFragment(new HomepageFragment());
             }

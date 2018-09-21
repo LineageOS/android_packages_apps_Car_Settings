@@ -24,7 +24,6 @@ import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment.FragmentController;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 
 /**
