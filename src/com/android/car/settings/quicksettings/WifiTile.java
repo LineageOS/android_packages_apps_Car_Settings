@@ -23,7 +23,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment.FragmentController;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiUtil;

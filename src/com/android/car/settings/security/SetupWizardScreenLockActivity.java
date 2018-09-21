@@ -23,11 +23,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.UxRestrictionsProvider;
 import com.android.car.settingslib.util.ResultCodes;
 import com.android.internal.widget.LockPatternUtils;
 
@@ -35,8 +38,8 @@ import com.android.internal.widget.LockPatternUtils;
  * Entry point Activity for Setup Wizard to set screen lock.
  */
 public class SetupWizardScreenLockActivity extends FragmentActivity implements
-        BaseFragment.FragmentController,
-        BaseFragment.UXRestrictionsProvider,
+        FragmentController,
+        UxRestrictionsProvider,
         CheckLockListener,
         LockTypeDialogFragment.OnLockSelectListener {
 
@@ -55,7 +58,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
     ).build();
 
     @Override
-    public void launchFragment(BaseFragment fragment) {
+    public void launchFragment(Fragment fragment) {
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
@@ -79,7 +82,8 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
     }
 
     @Override
-    public void showDOBlockingMessage() {}
+    public void showBlockingMessage() {
+    }
 
     @Override
     public CarUxRestrictions getCarUxRestrictions() {
@@ -159,7 +163,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
     public void onLockTypeSelected(int position) {
         BaseFragment fragment = null;
 
-        switch(position) {
+        switch (position) {
             case LockTypeDialogFragment.POSITION_NONE:
                 if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
                     mLockPatternUtils.clearLock(mCurrLock, mUserId);
