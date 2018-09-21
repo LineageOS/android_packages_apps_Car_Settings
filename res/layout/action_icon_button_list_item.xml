@@ -42,15 +42,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/car_suggestion_card"
-                android:textAppearance="@style/TextAppearance.Car.Body1.SingleLine"
-                android:textColor="@color/car_body1_light"/>
+                android:textAppearance="@style/TextAppearance.Car.Body1.SingleLine"/>
             <TextView
                 android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/car_suggestion_card"
                 android:textAppearance="@style/TextAppearance.Car.Body2.SingleLine"
-                android:textColor="@color/car_body2_light"
                 android:layout_marginTop="@dimen/car_padding_1"
                 android:layout_below="@id/title"
                 android:visibility="gone"/>
@@ -78,14 +76,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/car_padding_4"
-                android:textColor="@color/car_body1_light"
+                android:textColor="@color/action_button_text_color"
                 style="?android:attr/borderlessButtonStyle" />
             <Button
                 android:id="@+id/action_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/car_padding_4"
-                android:textColor="@color/car_body1_light"
+                android:textColor="@color/action_button_text_color"
                 style="?android:attr/borderlessButtonStyle" />
         </LinearLayout>
     </LinearLayout>
