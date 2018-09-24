@@ -20,7 +20,7 @@ import static com.android.car.settings.common.ExtraSettingsLoader.DEVICE_CATEGOR
 import static com.android.car.settings.common.ExtraSettingsLoader.PERSONAL_CATEGORY;
 import static com.android.car.settings.common.ExtraSettingsLoader.WIRELESS_CATEGORY;
 
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;

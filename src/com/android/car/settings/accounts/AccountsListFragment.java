@@ -17,7 +17,7 @@
 package com.android.car.settings.accounts;
 
 import android.accounts.Account;
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;

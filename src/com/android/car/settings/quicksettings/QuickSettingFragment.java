@@ -18,7 +18,7 @@ package com.android.car.settings.quicksettings;
 
 import android.app.Activity;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Build;
