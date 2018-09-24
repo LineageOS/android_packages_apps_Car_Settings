@@ -18,7 +18,7 @@ package com.android.car.settings.security;
 
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.user.CarUserManagerHelper;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
