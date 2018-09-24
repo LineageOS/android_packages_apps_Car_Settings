@@ -29,8 +29,7 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_USE_AAPT2 := true
 
   LOCAL_JAVA_LIBRARIES := \
-      android.car \
-      android.car.user
+      android.car
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.lifecycle_lifecycle-extensions \
@@ -55,7 +54,9 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DEX_PREOPT := false
 
-  LOCAL_STATIC_JAVA_LIBRARIES += jsr305
+  LOCAL_STATIC_JAVA_LIBRARIES += \
+      android.car.user \
+      jsr305
 
   LOCAL_DX_FLAGS := --multi-dex
 
