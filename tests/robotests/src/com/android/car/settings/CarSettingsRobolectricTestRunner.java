@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.android.car.settings;
 
 import androidx.annotation.NonNull;
@@ -31,8 +32,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Custom test runner for the testing of BluetoothPairingDialogs. This is needed because the
- * default behavior for robolectric is just to grab the resource directory in the target package.
+ * Custom test runner for CarSettings. This is needed because the default behavior for
+ * robolectric is just to grab the resource directory in the target package.
  * We want to override this to add several spanning different projects.
  */
 public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
@@ -90,38 +91,45 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
      */
     @Override
     protected AndroidManifest getAppManifest(Config config) {
-        // Using the manifest file's relative path, we can figure out the application directory.
-        final String appRoot = "packages/apps/Car/Settings/";
-        final String manifestPath = appRoot + "/AndroidManifest.xml";
-        final String resDir = appRoot + "/res";
-        final String assetsDir = appRoot + config.assetDir();
+        try {
+            // Using the manifest file's relative path, we can figure out the application directory.
+            URL appRoot = new URL("file:packages/apps/Car/Settings/");
+            URL manifestPath = new URL(appRoot, "AndroidManifest.xml");
+            URL resDir = new URL(appRoot, "tests/robotests/res");
+            URL assetsDir = new URL(appRoot, config.assetDir());
 
-        // By adding any resources from libraries we need to the AndroidManifest, we can access
-        // them from within the parallel universe's resource loader.
-        return new AndroidManifest(Fs.fileFromPath(manifestPath), Fs.fileFromPath(resDir),
-                Fs.fileFromPath(assetsDir)) {
-            @Override
-            public List<ResourcePath> getIncludedResourcePaths() {
-                List<ResourcePath> paths = super.getIncludedResourcePaths();
-                paths.add(createResourcePath("file:packages/apps/Car/Settings/res"));
+            // By adding any resources from libraries we need to the AndroidManifest, we can access
+            // them from within the parallel universe's resource loader.
+            return new AndroidManifest(Fs.fromURL(manifestPath), Fs.fromURL(resDir),
+                    Fs.fromURL(assetsDir)) {
+                @Override
+                public List<ResourcePath> getIncludedResourcePaths() {
+                    List<ResourcePath> paths = super.getIncludedResourcePaths();
+                    paths.add(createResourcePath("file:packages/apps/Car/Settings/res"));
 
-                // Support library resources. These need to point to the prebuilts of support
-                // library and not the source.
-                paths.add(createResourcePath(createSupportResourcePathFromJar("appcompat")));
-                paths.add(createResourcePath(createSupportResourcePathFromJar("car")));
-                paths.add(createResourcePath(createSupportResourcePathFromJar("constraintlayout")));
+                    // Support library resources. These need to point to the prebuilts of support
+                    // library and not the source.
+                    paths.add(createResourcePath(createSupportResourcePathFromJar("appcompat")));
+                    paths.add(createResourcePath(createSupportResourcePathFromJar("car")));
+                    paths.add(createResourcePath(
+                            createSupportResourcePathFromJar("constraintlayout")));
 
-                paths.add(createResourcePath("file:packages/apps/Car/libs/car-stream-ui-lib/res "));
-                paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
-                paths.add(createResourcePath("file:packages/apps/Car/libs/car-settings-lib/res"));
-                paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
-                paths.add(createResourcePath(
-                        "file:frameworks/opt/setupwizard/library/gingerbread/res"));
-                paths.add(createResourcePath(
-                        "file:frameworks/opt/setupwizard/library/main/res"));
+                    paths.add(createResourcePath(
+                            "file:packages/apps/Car/libs/car-stream-ui-lib/res "));
+                    paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
+                    paths.add(
+                            createResourcePath("file:packages/apps/Car/libs/car-settings-lib/res"));
+                    paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
+                    paths.add(createResourcePath(
+                            "file:frameworks/opt/setupwizard/library/gingerbread/res"));
+                    paths.add(createResourcePath(
+                            "file:frameworks/opt/setupwizard/library/main/res"));
 
-                return paths;
-            }
-        };
+                    return paths;
+                }
+            };
+        } catch (MalformedURLException e) {
+            throw new RuntimeException("CarSettingsobolectricTestRunner failure", e);
+        }
     }
 }
