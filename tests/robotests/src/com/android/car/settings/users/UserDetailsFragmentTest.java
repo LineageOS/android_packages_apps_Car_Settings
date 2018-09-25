@@ -19,6 +19,7 @@ package com.android.car.settings.users;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.RuntimeEnvironment.application;
@@ -52,8 +53,8 @@ import org.robolectric.shadows.ShadowApplication;
  * Tests for UserDetailsFragment.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowUserIconProvider.class, ShadowTextListItem.class,
-        ShadowCarUserManagerHelper.class })
+@Config(shadows = {ShadowUserIconProvider.class, ShadowTextListItem.class,
+        ShadowCarUserManagerHelper.class})
 public class UserDetailsFragmentTest {
     private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
@@ -286,25 +287,57 @@ public class UserDetailsFragmentTest {
                 .isInstanceOf(NonAdminManagementItemProvider.class);
     }
 
-    /* Test that clicking assign admin button creates a confirm assign admin dialog. */
+    /* Test that trying to grant admin permissions creates a confirm assign admin dialog. */
     @Test
-    public void testAssignAdminClick() {
+    public void testOnGrantAdminPermission_confirmDialogShown() {
         createUserDetailsFragment();
 
-        mUserDetailsFragment.onAssignAdminClicked();
+        mUserDetailsFragment.onGrantAdminPermission();
 
         assertThat(mUserDetailsFragment.getFragmentManager().findFragmentByTag(
-                UserDetailsFragment.CONFIRM_ASSIGN_ADMIN_DIALOG_TAG)).isNotNull();
+                UserDetailsFragment.CONFIRM_GRANT_ADMIN_DIALOG_TAG)).isNotNull();
     }
 
     @Test
-    public void testAssignAdmin() {
+    public void testGrantAdmin() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
         createUserDetailsFragment(testUser);
 
-        mUserDetailsFragment.assignAdmin();
+        mUserDetailsFragment.grantAdmin();
 
         verify(mCarUserManagerHelper).assignAdminPrivileges(testUser);
+    }
+
+    @Test
+    public void testCanCreateUsers_cannotCreateUsers_shouldBeFalse() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_ADD_USER), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.canCreateUsers()).isFalse();
+    }
+
+    @Test
+    public void testCanCreateUsers_canCreateUsers_shouldBeTrue() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_ADD_USER), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.canCreateUsers()).isTrue();
+    }
+
+
+    @Test
+    public void testOnCreateUserPermissionChanged() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onCreateUserPermissionChanged(/* enabled= */ true);
+
+        verify(mCarUserManagerHelper).setUserRestriction(
+                eq(testUser), eq(UserManager.DISALLOW_ADD_USER), eq(false));
     }
 
     private void createUserDetailsFragment(UserInfo userInfo) {
