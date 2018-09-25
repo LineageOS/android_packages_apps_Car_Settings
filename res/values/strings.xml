@@ -385,16 +385,23 @@
     <string name="user_admin">Admin</string>
     <!-- User summary to be displayed next to the currently logged-in user if they are also an admin. [CHAR LIMIT=35] -->
     <string name="signed_in_admin_user">Signed in as admin</string>
-    <!-- Description for button that assigns a user additional Admin privileges. [CHAR LIMIT=50]-->
-    <string name="grant_admin_privileges">Grant Admin permissions</string>
-    <!-- Button title for assigning admin privileges to a user [CHAR LIMIT=35]-->
-    <string name="assign_admin_privileges">Make Admin</string>
+    <!-- Title for the dialog that assigns the user additional Admin privileges. [CHAR LIMIT=50]-->
+    <string name="grant_admin_privileges_title">Grant Admin permissions</string>
+    <!-- Button text for assigning admin privileges to a user [CHAR LIMIT=35]-->
+    <string name="grant_admin_privileges_button_text">Make Admin</string>
     <!-- Message to inform the user of what will happen when another user is upgraded to Admin status. [CHAR LIMIT=NONE]-->
-    <string name="assign_admin_privileges_message">The user will be able to delete users, including other Admins, and factory reset the system.</string>
+    <string name="grant_admin_privileges_message">The user will be able to delete users, including other Admins, and factory reset the system.</string>
     <!-- Message to inform the user that assigning admin privileges to another user is not reversible. [CHAR LIMIT=100]-->
     <string name="action_not_reversible_message">This action is not reversible.</string>
     <!-- Button text to confirm assigning admin privileges to another user. [CHAR LIMIT=40]-->
     <string name="confirm_assign_admin">Yes, make admin</string>
+
+    <!-- User Restrictions -->
+    <!-- Creating Users -->
+    <!-- Title for toggle that controls whether a user is able to create other users [CHAR LIMIT=35] -->
+    <string name="create_user_permission_title" translatable="false">Create Users</string>
+    <!-- Description for the toggle that controls whether a user is able to create other users [CHAR LIMIT=50]-->
+    <string name="create_user_permission_body" translatable="false">Ability to add users</string>
 
     <!-- Adding new users -->
     <!-- User settings add user menu [CHAR LIMIT=35] -->

@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import androidx.car.widget.ActionListItem;
@@ -29,6 +30,8 @@ import org.robolectric.annotation.Implements;
 @Implements(ActionListItem.class)
 public class ShadowActionListItem {
     private CharSequence mTitle;
+    private Drawable mIcon;
+    private CharSequence mPrimaryActionText;
     private View.OnClickListener mPrimaryActionOnClickListener;
 
     @Implementation
@@ -37,7 +40,13 @@ public class ShadowActionListItem {
     }
 
     @Implementation
+    public void setPrimaryActionIcon(Drawable icon, int size) {
+        mIcon = icon;
+    }
+
+    @Implementation
     public void setAction(String text, boolean showDivider, View.OnClickListener listener) {
+        mPrimaryActionText = text;
         mPrimaryActionOnClickListener = listener;
     }
 
@@ -46,6 +55,20 @@ public class ShadowActionListItem {
      */
     public CharSequence getTitle() {
         return mTitle;
+    }
+
+    /**
+     * Returns the icon set on this item.
+     */
+    public Drawable getPrimaryActionIcon() {
+        return mIcon;
+    }
+
+    /**
+     * Returns the primary action text set on this item.
+     */
+    public CharSequence getPrimaryActionText() {
+        return mPrimaryActionText;
     }
 
     /**
