@@ -17,7 +17,6 @@
 */
 -->
 
-<!-- Defines the attributes and values used in res/xml/car_volume_items.xml -->
 <resources>
     <declare-styleable name="carVolumeItems"/>
 
@@ -52,5 +51,10 @@
     <declare-styleable name="PinPadView">
         <attr name="enterKeyDrawable" format="reference"/>
         <attr name="keyTextColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="Preference">
+        <!-- Classname of a PreferenceController corresponding to the preference -->
+        <attr name="controller" format="string" />
     </declare-styleable>
 </resources>

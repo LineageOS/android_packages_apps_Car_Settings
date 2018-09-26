@@ -20,7 +20,7 @@ LOCAL_JAVA_LIBRARIES := \
     testng \
     truth-prebuilt
 
-LOCAL_INSTRUMENTATION_FOR := CarSettings
+LOCAL_INSTRUMENTATION_FOR := CarSettingsForTesting
 
 LOCAL_MODULE_TAGS := optional
 
@@ -44,7 +44,7 @@ LOCAL_JAVA_LIBRARIES := \
     testng \
     truth-prebuilt
 
-LOCAL_TEST_PACKAGE := CarSettings
+LOCAL_TEST_PACKAGE := CarSettingsForTesting
 
 LOCAL_INSTRUMENT_SOURCE_DIRS := $(dir $(LOCAL_PATH))../src
 
