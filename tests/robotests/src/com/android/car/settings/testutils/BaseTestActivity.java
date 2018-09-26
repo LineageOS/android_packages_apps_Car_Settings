@@ -33,6 +33,8 @@ import com.android.car.settings.common.UxRestrictionsProvider;
 public class BaseTestActivity extends FragmentActivity implements FragmentController,
         UxRestrictionsProvider {
     private boolean mOnBackPressedFlag;
+    private CarUxRestrictions mRestrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+            CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +63,11 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
 
     @Override
     public CarUxRestrictions getCarUxRestrictions() {
-        return new CarUxRestrictions.Builder(
-                /* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
-                /* timestamp= */ 0
-        ).build();
+        return mRestrictionInfo;
+    }
+
+    public void setCarUxRestrictions(CarUxRestrictions restrictionInfo) {
+        mRestrictionInfo = restrictionInfo;
     }
 
     public void reattachFragment(BaseFragment fragment) {

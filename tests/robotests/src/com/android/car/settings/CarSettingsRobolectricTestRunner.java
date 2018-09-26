@@ -52,6 +52,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
         AAR_VERSIONS.put("car", "1.0.0-alpha5");
         AAR_VERSIONS.put("appcompat", "1.1.0-alpha01");
         AAR_VERSIONS.put("constraintlayout", "1.1.2");
+        AAR_VERSIONS.put("preference", "1.1.0-alpha01");
     }
 
     /**
@@ -113,6 +114,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                     paths.add(createResourcePath(createSupportResourcePathFromJar("car")));
                     paths.add(createResourcePath(
                             createSupportResourcePathFromJar("constraintlayout")));
+                    paths.add(createResourcePath(createSupportResourcePathFromJar("preference")));
 
                     paths.add(createResourcePath(
                             "file:packages/apps/Car/libs/car-stream-ui-lib/res "));
