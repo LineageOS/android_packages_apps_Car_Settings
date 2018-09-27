@@ -24,7 +24,7 @@
     <string name="brightness" msgid="2919605130898772866">"明るさのレベル"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"明るさの自動調節"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"周囲に合わせて明るさを最適化する"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"読書灯 ON"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"夜間モード ON"</string>
     <string name="keywords_display" msgid="3978416985146943922">"画面、タッチスクリーン"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"画面を暗くする、タッチスクリーン、電池"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"画面を暗くする、タッチスクリーン、電池"</string>
@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"時刻"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理者"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログインしました"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"管理者権限を付与"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"管理者にする"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"このユーザーは、他の管理者を含むユーザーの削除、システムデータの初期化を行えるようになります。"</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"この操作は元に戻せません。"</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"はい、管理者にする"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ユーザーを追加"</string>
@@ -320,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"一般的なパスワードは IT 管理者によってブロックされています。別のパスワードをお試しください。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
     <string name="forget" msgid="3971143908183848527">"削除"</string>
     <string name="delete_button" msgid="5840500432614610850">"削除"</string>
     <string name="remove_button" msgid="6664656962868194178">"削除"</string>

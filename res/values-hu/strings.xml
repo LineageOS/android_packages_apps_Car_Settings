@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Idő"</string>
     <string name="user_admin" msgid="1535484812908584809">"Rendszergazda"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Rendszergazdaként bejelentkezve"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"Rendszergazdai engedélyek megadása"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"Rendszergazdai jogosultság megadása"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"A felhasználó képes lesz más felhasználókat törölni, beleértve a többi rendszergazdát is, és vissza tudja majd állítani a rendszer gyári beállításait."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"A művelet nem vonható vissza."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Igen, tegye rendszergazdává"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Felhasználó felvétele"</string>
@@ -194,7 +197,10 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ha új felhasználót ad hozzá, az illetőnek be kell állítania saját felületét."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Bármely felhasználó frissítheti az alkalmazásokat valamennyi felhasználó számára."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Maximális felhasználószám elérve"</string>
-    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Legfeljebb <xliff:g id="COUNT">%d</xliff:g> felhasználót lehet létrehozni.</item>
+      <item quantity="one">Csak egy felhasználót lehet létrehozni.</item>
+    </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Az új felhasználó létrehozása sikertelen"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Törli a felhasználót?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Az összes alkalmazás és adat törlődik."</string>
@@ -317,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Rendszergazdája letiltotta a gyakran használt jelszavakat. Próbálkozzon másik jelszóval."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> nappal ezelőtt"</string>
     <string name="forget" msgid="3971143908183848527">"Elfelejtés"</string>
     <string name="delete_button" msgid="5840500432614610850">"Törlés"</string>
     <string name="remove_button" msgid="6664656962868194178">"Eltávolítás"</string>

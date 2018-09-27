@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"时间"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理员"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"目前登录的是管理员帐号"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"授予管理员权限"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"指定为管理员"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"该用户将可以删除用户（包括其他管理员）以及将系统恢复出厂设置。"</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"此操作无法撤消。"</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"是的，指定为管理员"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"添加用户"</string>
@@ -320,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"常用密码已被您的 IT 管理员屏蔽。请尝试一个不同的密码。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="forget" msgid="3971143908183848527">"忽略"</string>
     <string name="delete_button" msgid="5840500432614610850">"删除"</string>
     <string name="remove_button" msgid="6664656962868194178">"移除"</string>

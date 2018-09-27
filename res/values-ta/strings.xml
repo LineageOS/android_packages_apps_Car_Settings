@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"நேரம்"</string>
     <string name="user_admin" msgid="1535484812908584809">"நிர்வாகி"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"நிர்வாகியாக உள்நுழைந்துள்ளீர்கள்"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"நிர்வாகிக்கான அனுமதிகளை வழங்கும்"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"நிர்வாகியாக்கு"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"மற்ற நிர்வாகிகள் உட்பட எவரையும் நீக்க முடிவதோடு, சிஸ்டத்தையும் ஆரம்பநிலைக்கு மீட்டமைக்க முடியும்."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"இந்தச் செயலைத் திரும்பப் பெற இயலாது."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"ஆம், நிர்வாகியாக்கு"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"பயனரைச் சேர்"</string>
@@ -194,17 +197,22 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"புதிய பயனரைச் சேர்க்கும்போது, அவர் தனக்கான இடத்தை அமைக்க வேண்டும்."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"எந்தவொரு பயனரும், மற்ற பயனர்களுக்காக ஆப்ஸைப் புதுப்பிக்கலாம்."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"பயனர் வரம்பை அடைந்துவிட்டீர்கள்"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other"><xliff:g id="COUNT">%d</xliff:g> பயனர்கள் வரை சேர்க்க முடியும்.</item>
       <item quantity="one">ஒரு பயனரை மட்டுமே சேர்க்க முடியும்.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"புதிய பயனரைச் சேர்க்க முடியவில்லை"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"பயனரை நீக்கும்"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"இந்தப் பயனரை அகற்றவா?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"எல்லா ஆப்ஸும் தரவும் நீக்கப்படும்."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"பயனரை அகற்ற முடியவில்லை."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"நிராகரி"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"மீண்டும் முயலவும்"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"இந்தப் பயனரை நீக்கவா?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"அனைத்து ஆப்ஸ் மற்றும் தரவு நீக்கப்படும்."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"பயனரை நீக்க இயலவில்லை."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"நிராகரி"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"மீண்டும் முயலவும்"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"கடைசிப் பயனரை நீக்கவா?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"இந்தக் காருக்கான மீதியிருக்கும் ஒரேயொரு பயனரையும் நீக்கியபிறகு, புதிதாக ஒரு ’நிர்வாகிப் பயனர் கணக்கு’ உருவாக்கப்படும்."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"இந்தப் பயனர் கணக்குடன் தொடர்புடைய ஆப்ஸ், தரவு மற்றும் அமைப்புகள் அனைத்தும் நீக்கப்படும். சிஸ்டத்தை நீங்கள் மீண்டும் அமைத்திட வேண்டியிருக்கும்."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"புதிய \'நிர்வாகிக் கணக்கைத்\' தேர்வு செய்க"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"குறைந்தபட்சம் ஒரு \'நிர்வாகிக் கணக்காவது’ இருக்க வேண்டும். இக்கணக்கை நீக்க, முதலில் ஒரு மாற்றுக் கணக்கைத் தேர்வு செய்யவும்."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"நிர்வாகியைத் தேர்வு செய்க"</string>
     <string name="user_guest" msgid="3465399481257448601">"விருந்தினர்"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"விருந்தினர்"</string>
     <string name="user_switch" msgid="6544839750534690781">"பயனரை மாற்றும்"</string>
@@ -225,7 +233,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"கணக்கை அகற்று"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"கணக்கை அகற்றவா?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"இந்தக் கணக்கை அகற்றினால், இதன் செய்திகள், தொடர்புகள், பிற தரவு ஆகியவை சாதனத்திலிருந்து நீக்கப்படும்!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"உங்கள் நிர்வாகி இந்த மாற்றத்தை அனுமதிக்கவில்லை"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"கணக்கை அகற்ற இயலவில்லை."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"பாதுகாப்பு"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"திரைப் பூட்டு"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"எதுவுமில்லை"</string>
@@ -315,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"உங்கள் IT நிர்வாகி, பொதுவான கடவுச்சொற்களைத் தடுத்துள்ளார். வேறு கடவுச்சொல்லைப் பயன்படுத்திப் பார்க்கவும்."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"இலக்கங்கள் ஏறுவரிசையில், இறங்குவரிசையில் அல்லது ஒரே இலக்கத்தைத் தொடர்ந்து பயன்படுத்துவது அனுமதிக்கப்படாது."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
     <string name="forget" msgid="3971143908183848527">"அகற்று"</string>
     <string name="delete_button" msgid="5840500432614610850">"நீக்கு"</string>
     <string name="remove_button" msgid="6664656962868194178">"அகற்று"</string>
