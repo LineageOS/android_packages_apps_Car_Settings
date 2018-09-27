@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
+import android.content.res.TypedArray;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -36,6 +37,7 @@ import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -54,6 +56,7 @@ import java.util.List;
 public class ResetAppPrefFragment extends ListItemSettingsFragment {
 
     private static final Logger LOG = new Logger(ResetAppPrefFragment.class);
+    @StyleRes private int mTitleTextAppearance;
 
     @Override
     @LayoutRes
@@ -65,6 +68,18 @@ public class ResetAppPrefFragment extends ListItemSettingsFragment {
     @StringRes
     protected int getTitleId() {
         return R.string.reset_app_pref_title;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        TypedArray a = context.getTheme().obtainStyledAttributes(R.styleable.ListItem);
+
+        mTitleTextAppearance = a.getResourceId(
+                R.styleable.ListItem_listItemTitleTextAppearance,
+                R.style.TextAppearance_Car_Body1_Light);
+
+        a.recycle();
     }
 
     @Override
@@ -91,8 +106,9 @@ public class ResetAppPrefFragment extends ListItemSettingsFragment {
     private TextListItem createTextOnlyItem(@StringRes int stringResId) {
         Context context = requireContext();
         TextListItem item = new TextListItem(context);
-        item.setBody(context.getString(stringResId), /* asPrimary= */ true);
+        item.setBody(context.getString(stringResId));
         item.setShowDivider(false);
+        item.addViewBinder(vh -> vh.getBody().setTextAppearance(mTitleTextAppearance));
         return item;
     }
 
