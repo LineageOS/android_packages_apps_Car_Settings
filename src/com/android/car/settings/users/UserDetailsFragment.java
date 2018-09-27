@@ -132,9 +132,21 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
-    public boolean canCreateUsers() {
+    public boolean hasCreateUserPermission() {
         return !mCarUserManagerHelper.hasUserRestriction(
                 UserManager.DISALLOW_ADD_USER, mUserInfo);
+    }
+
+    @Override
+    public boolean hasOutgoingCallsPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_OUTGOING_CALLS, mUserInfo);
+    }
+
+    @Override
+    public boolean hasSmsMessagingPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_SMS, mUserInfo);
     }
 
     @Override
@@ -145,6 +157,26 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
          */
         mCarUserManagerHelper.setUserRestriction(
                 mUserInfo, UserManager.DISALLOW_ADD_USER, !granted);
+    }
+
+    @Override
+    public void onOutgoingCallsPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_OUTGOING_CALLS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_OUTGOING_CALLS, !granted);
+    }
+
+    @Override
+    public void onSmsMessagingPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_SMS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_SMS, !granted);
     }
 
     @Override

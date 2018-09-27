@@ -59,6 +59,8 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
     protected void populateItems() {
         mItems.add(createGrantAdminItem());
         mItems.add(createCreateUserItem());
+        mItems.add(createOutgoingCallsItem());
+        mItems.add(createSmsMessagingItem());
     }
 
     private ActionListItem createGrantAdminItem() {
@@ -74,7 +76,7 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
     }
 
     private TextListItem createCreateUserItem() {
-        boolean canCreateUsers = mUserRestrictionsProvider.canCreateUsers();
+        boolean canCreateUsers = mUserRestrictionsProvider.hasCreateUserPermission();
 
         TextListItem createUserItem = new TextListItem(mContext);
         createUserItem.setTitle(mContext.getText(R.string.create_user_permission_title));
@@ -84,6 +86,32 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
                         mUserRestrictionsListener.onCreateUserPermissionChanged(checked));
 
         return createUserItem;
+    }
+
+    private TextListItem createOutgoingCallsItem() {
+        boolean canMakeOutgoingCalls = mUserRestrictionsProvider.hasOutgoingCallsPermission();
+
+        TextListItem outgoingCallsItem = new TextListItem(mContext);
+        outgoingCallsItem.setTitle(mContext.getText(R.string.outgoing_calls_permission_title));
+        outgoingCallsItem.setBody(mContext.getText(R.string.outgoing_calls_permission_body));
+        outgoingCallsItem.setSwitch(canMakeOutgoingCalls, /* showDivider= */ false,
+                (CompoundButton buttonView, boolean checked) ->
+                        mUserRestrictionsListener.onOutgoingCallsPermissionChanged(checked));
+
+        return outgoingCallsItem;
+    }
+
+    private TextListItem createSmsMessagingItem() {
+        boolean canSendAndReceiveMessaging = mUserRestrictionsProvider.hasSmsMessagingPermission();
+
+        TextListItem messagingItem = new TextListItem(mContext);
+        messagingItem.setTitle(mContext.getText(R.string.sms_messaging_permission_title));
+        messagingItem.setBody(mContext.getText(R.string.sms_messaging_permission_body));
+        messagingItem.setSwitch(canSendAndReceiveMessaging, /* showDivider= */ false,
+                (CompoundButton buttonView, boolean checked) ->
+                        mUserRestrictionsListener.onSmsMessagingPermissionChanged(checked));
+
+        return messagingItem;
     }
 
     /**
@@ -99,6 +127,16 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
          * Called when the create user permission should be changed.
          */
         void onCreateUserPermissionChanged(boolean granted);
+
+        /**
+         * Called when the outgoing calls permission should be changed.
+         */
+        void onOutgoingCallsPermissionChanged(boolean granted);
+
+        /**
+         * Called when the sms messaging permission should be changed.
+         */
+        void onSmsMessagingPermissionChanged(boolean granted);
     }
 
     /**
@@ -106,7 +144,13 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
      */
     interface UserRestrictionsProvider {
         /** Returns whether the user can create other users. */
-        boolean canCreateUsers();
+        boolean hasCreateUserPermission();
+
+        /** Returns whether the user has the Outgoing Calls permission. */
+        boolean hasOutgoingCallsPermission();
+
+        /** Returns whether the user has the SMS Messaging permission. */
+        boolean hasSmsMessagingPermission();
     }
 }
 
