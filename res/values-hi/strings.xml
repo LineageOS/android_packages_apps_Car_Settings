@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
     <string name="user_admin" msgid="1535484812908584809">"एडमिन"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"एडमिन के तौर पर साइन-इन किया है"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"एडमिन के अधिकार दें"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"एडमिन बनाएं"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"एडमिन बनने वाला उपयोगकर्ता, दूसरे उपयोगकर्ताअों और एडमिन के नाम मिटा सकता है और सिस्‍टम को फ़ैक्ट्री रीसेट कर सकता है."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"दूसरे उपयोगकर्ता को एडमिन के अधिकार देने के बाद वापस नहीं लिए जा सकते."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"हां, एडमिन बना दें"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
@@ -194,17 +197,30 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"जब आप कोई नया उपयोगकर्ता जोड़ते हैं तो, उस व्यक्ति को अपनी जगह सेट करनी होती है."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोई भी उपयोगकर्ता बाकी सभी उपयोगकर्ताओं के लिए ऐप्लिकेशन अपडेट कर सकते हैं."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"अब और उपयोगकर्ता नहीं जोड़े जा सकते"</string>
-    <plurals name="user_limit_reached_message" formatted="false" msgid="4809364467389495355">
-      <item quantity="one">आप ज़्यादा से ज़्यादा <xliff:g id="COUNT">%d</xliff:g> उपयोगकर्ता जोड़ सकते हैं.</item>
-      <item quantity="other">आप ज़्यादा से ज़्यादा <xliff:g id="COUNT">%d</xliff:g> उपयोगकर्ता जोड़ सकते हैं.</item>
-    </plurals>
+    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
     <string name="add_user_error_title" msgid="3206300411663817038">"नया उपयोगकर्ता नहीं जोड़ पाए"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"उपयोगकर्ता (का नाम) मिटाएं"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"इस उपयोगकर्ता को हटाएं?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"सभी ऐप्लिकेशन और डेटा मिटा दिए जाएंगे."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"उपयोगकर्ता को हटाया नहीं जा सका."</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"खारिज करें"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"फिर से कोशिश करें"</string>
+    <!-- no translation found for delete_user_dialog_title (3422867434431562007) -->
+    <skip />
+    <!-- no translation found for delete_user_dialog_message (4346777604351785057) -->
+    <skip />
+    <!-- no translation found for delete_user_error_title (7609819398530124827) -->
+    <skip />
+    <!-- no translation found for delete_user_error_dismiss (429156446763738273) -->
+    <skip />
+    <!-- no translation found for delete_user_error_retry (5116434895572670563) -->
+    <skip />
+    <!-- no translation found for delete_last_user_dialog_title (3644392025675369680) -->
+    <skip />
+    <!-- no translation found for delete_last_user_admin_created_message (1856897729010319054) -->
+    <skip />
+    <!-- no translation found for delete_last_user_system_setup_required_message (8550730509371697989) -->
+    <skip />
+    <!-- no translation found for choose_new_admin_title (1915428454917699587) -->
+    <skip />
+    <!-- no translation found for choose_new_admin_message (7468286545352043354) -->
+    <skip />
+    <!-- no translation found for choose_new_admin_label (5987653639387437939) -->
+    <skip />
     <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"मेहमान"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच करें"</string>
@@ -225,7 +241,8 @@
     <string name="remove_account_title" msgid="8840386525787836381">"खाता हटाएं"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाएं?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"यह खाता हटाने से इसके सभी मैसेज, संपर्क और दूसरा डेटा डिवाइस से मिट जाएगा!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"आपका एडमिन इस बदलाव की अनुमति नहीं देता"</string>
+    <!-- no translation found for remove_account_error_title (8368044943174826635) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
@@ -315,6 +332,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"आपके आईटी एडमिन ने आम तौर पर इस्तेमाल होने वाले पासवर्ड पर रोक लगा रखी है. कोई दूसरा पासवर्ड बनाएं."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अंकों को बढ़ते, घटते या दोहराए गए क्रम में लिखने की मंज़ूरी नहीं है."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक विकल्प"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="delete_button" msgid="5840500432614610850">"मिटाएं"</string>
     <string name="remove_button" msgid="6664656962868194178">"हटाएं"</string>

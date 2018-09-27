@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Hora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrador"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Iniciouse sesión como administrador"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"Concede permisos de administrador"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"Converter en administrador"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"O usuario poderá eliminar usuarios, incluídos outros administradores, e facer un restablecemento de fábrica do sistema."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Esta acción non se pode desfacer."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Si, converter en administrador"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Engadir usuario"</string>
@@ -194,7 +197,10 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Cando engades un usuario novo, este deberá configurar o seu espazo."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Calquera usuario pode actualizar as aplicacións para o resto dos usuarios."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Alcanzouse o límite de usuarios"</string>
-    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Pódense crear <xliff:g id="COUNT">%d</xliff:g> usuarios como máximo.</item>
+      <item quantity="one">Só se pode crear un usuario.</item>
+    </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Non se puido crear un novo usuario"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Eliminar este usuario?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Eliminaranse todas as aplicacións e os datos."</string>
@@ -317,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"O teu administrador de TI bloqueou os contrasinais comúns. Proba cun contrasinal diferente."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Non se permite unha secuencia de díxitos ascendente, descendente nin repetida."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcións de bloqueo de pantalla"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: hai <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
     <string name="forget" msgid="3971143908183848527">"Borrar"</string>
     <string name="delete_button" msgid="5840500432614610850">"Eliminar"</string>
     <string name="remove_button" msgid="6664656962868194178">"Quitar"</string>

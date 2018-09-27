@@ -147,7 +147,7 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licence třetích stran"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Při načítání licencí došlo k chybě."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Načítání…"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Resetování možností"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Možnosti resetu"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Resetování sítě, aplikací nebo zařízení"</string>
     <string name="reset_network_title" msgid="5571672360042035188">"Resetovat Wi-Fi, Bluetooth"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Budou resetovány všechny sítě, včetně těchto:"</string>
@@ -185,9 +185,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Čas"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrátor"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Jste přihlášeni jako administrátor"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"Udělit oprávnění administrátora"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"Nastavit jako administrátora"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"Uživatel bude moci mazat ostatní uživatele (včetně administrátorů) a resetovat systém do továrního nastavení."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Tuto akci nelze vrátit zpět."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Ano, nastavit jako administrátora"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Přidat uživatele"</string>
@@ -336,6 +339,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Obvyklá hesla jsou blokována administrátorem IT. Použijte jiné heslo."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Posloupnost rostoucích, klesajících nebo opakujících se číslic není povolena."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámku obrazovky"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : před <xliff:g id="NUM_DAYS">%3$s</xliff:g> dny"</string>
     <string name="forget" msgid="3971143908183848527">"Odstranit"</string>
     <string name="delete_button" msgid="5840500432614610850">"Smazat"</string>
     <string name="remove_button" msgid="6664656962868194178">"Odstranit"</string>

@@ -185,9 +185,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"שעה"</string>
     <string name="user_admin" msgid="1535484812908584809">"מנהל מערכת"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"כניסה בתור מנהל מערכת"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"הענקת הרשאות של מנהל מערכת"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"הגדרה כמנהל מערכת"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"למשתמש תהיה היכולת למחוק משתמשים, כולל מנהלי מערכת אחרים, ולאפס את המערכת להגדרות היצרן."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"פעולה זו אינה הפיכה."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"כן, הגדר כמנהל מערכת"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"הוספת משתמש"</string>
@@ -196,7 +199,12 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"בעת הוספת משתמש חדש, על משתמש זה להגדיר את המרחב שלו."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"כל משתמש יכול לעדכן אפליקציות לכל שאר המשתמשים."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"הגעת למגבלת המשתמשים שניתן להוסיף"</string>
-    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="two">ניתן ליצור עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
+      <item quantity="many">ניתן ליצור עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
+      <item quantity="other">ניתן ליצור עד <xliff:g id="COUNT">%d</xliff:g> משתמשים.</item>
+      <item quantity="one">ניתן ליצור רק משתמש אחד.</item>
+    </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"ניסיון היצירה של משתמש חדש נכשל"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"למחוק את המשתמש הזה?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"כל האפליקציות והנתונים יימחקו."</string>
@@ -331,6 +339,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"סיסמאות נפוצות חסומות בידי מנהל ה-IT. יש לנסות סיסמה אחרת."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"אין להגדיר רצף ספרות עולה, יורד או חוזר."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
     <string name="forget" msgid="3971143908183848527">"מחיקה"</string>
     <string name="delete_button" msgid="5840500432614610850">"מחיקה"</string>
     <string name="remove_button" msgid="6664656962868194178">"הסרה"</string>

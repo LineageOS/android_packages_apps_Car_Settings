@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Hora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrador"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Sessió iniciada com a administrador"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"Concedeix permisos d\'administrador"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"Converteix en administrador"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"L\'usuari podrà suprimir usuaris, inclosos altres administradors, així com restablir les dades de fàbrica del sistema."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Aquesta acció no es pot desfer."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Sí, converteix en administrador"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Afegeix un usuari"</string>
@@ -320,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"L\'administrador de TI ha bloquejat les contrasenyes més comunes. Prova una altra contrasenya."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No es permet cap seqüència de dígits ascendents, descendents ni repetits."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcions de bloqueig de pantalla"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: fa <xliff:g id="NUM_DAYS">%3$s</xliff:g> dies"</string>
     <string name="forget" msgid="3971143908183848527">"Oblida"</string>
     <string name="delete_button" msgid="5840500432614610850">"Suprimeix"</string>
     <string name="remove_button" msgid="6664656962868194178">"Suprimeix"</string>

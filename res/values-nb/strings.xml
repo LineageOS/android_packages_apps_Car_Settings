@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Klokkeslett"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Logget på som administrator"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"Gi administratorrettigheter"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"Gjør til administrator"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"Administratorer kan slette brukere, inkludert andre administratorer, og tilbakestille systemet til fabrikkstandard."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Denne handlingen kan ikke angres."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Ja, gjør til administrator"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Legg til bruker"</string>
@@ -194,7 +197,10 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Når du legger til en ny bruker, må vedkommende konfigurere sitt eget område."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Alle brukere kan oppdatere apper for alle andre brukere."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Grensen for antall brukere er nådd"</string>
-    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">Du kan opprette opptil <xliff:g id="COUNT">%d</xliff:g> brukere.</item>
+      <item quantity="one">Du kan bare opprette én bruker.</item>
+    </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Kunne ikke opprette noen ny bruker"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Vil du slette brukeren?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Alle appene og dataene slettes."</string>
@@ -317,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Vanlige passord er blokkert av IT-administratoren din. Prøv et annet passord."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"En sekvens av stigende, synkende eller like sifre er ikke tillatt."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Alternativer for skjermlås"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : for <xliff:g id="NUM_DAYS">%3$s</xliff:g> dager siden"</string>
     <string name="forget" msgid="3971143908183848527">"Glem"</string>
     <string name="delete_button" msgid="5840500432614610850">"Slett"</string>
     <string name="remove_button" msgid="6664656962868194178">"Fjern"</string>

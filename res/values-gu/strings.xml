@@ -183,9 +183,12 @@
     <string name="time_picker_title" msgid="7436045944320504639">"સમય"</string>
     <string name="user_admin" msgid="1535484812908584809">"વ્યવસ્થાપક"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"વ્યવસ્થાપક તરીકે સાઇન ઇન થયા"</string>
-    <string name="grant_admin_privileges" msgid="931069208484384534">"વ્યવસ્થાપકની પરવાનગીઓ આપો"</string>
-    <string name="assign_admin_privileges" msgid="5984310883483215656">"વ્યવસ્થાપક બનાવો"</string>
-    <string name="assign_admin_privileges_message" msgid="2568957340592800419">"આ વપરાશકર્તા, અન્ય વ્યવસ્થાપકો સહિત અન્ય વપરાશકર્તાઓને ડિલીટ કરી શકશે અને સિસ્ટમને ફેક્ટરી રીસેટ પણ કરી શકશે."</string>
+    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
+    <skip />
+    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"આ ક્રિયા ઉલટાવી શકવા યોગ્ય નથી."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"હા, આમને વ્યવસ્થાપક બનાવો"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"વપરાશકર્તા ઉમેરો"</string>
@@ -194,7 +197,10 @@
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"જ્યારે તમે કોઈ નવા વપરાશકર્તાને ઉમેરો છો, ત્યારે તે વ્યક્તિને તેમની સ્પેસ સેટ કરવાની જરૂર પડે છે."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"કોઈપણ વપરાશકર્તા બધા અન્ય વપરાશકર્તાઓ માટે ઍપને અપડેટ કરી શકે છે."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"વપરાશકર્તાની મર્યાદા સુધી પહોંચ્યાં"</string>
-    <!-- no translation found for user_limit_reached_message (2651922256448824747) -->
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી મંજૂરી આપી શકશો.</item>
+      <item quantity="other">તમે <xliff:g id="COUNT">%d</xliff:g> વપરાશકર્તા સુધી મંજૂરી આપી શકશો.</item>
+    </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"નવો વપરાશકર્તા બનાવવામાં નિષ્ફળ"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"આ યુઝરને ડિલીટ કરીએ?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"બધી ઍપ અને ડેટા ડિલીટ કરવામાં આવશે."</string>
@@ -317,6 +323,7 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"સામાન્ય પાસવર્ડ તમારા IT વ્યવસ્થાપક દ્વારા બ્લૉક કરવામાં આવે છે. એક અલગ પાસવર્ડ અજમાવી જુઓ."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>
     <string name="forget" msgid="3971143908183848527">"ભૂલી જાઓ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ડિલીટ કરો"</string>
     <string name="remove_button" msgid="6664656962868194178">"કાઢી નાખો"</string>
