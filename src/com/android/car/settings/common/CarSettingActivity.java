@@ -31,6 +31,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.car.settings.R;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
@@ -41,7 +43,8 @@ import com.android.car.settings.wifi.WifiSettingsFragment;
  * previous activity.
  */
 public class CarSettingActivity extends FragmentActivity implements FragmentController,
-        OnUxRestrictionsChangedListener, UxRestrictionsProvider, OnBackStackChangedListener {
+        OnUxRestrictionsChangedListener, UxRestrictionsProvider, OnBackStackChangedListener,
+        PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
 
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
@@ -149,6 +152,17 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     @Override
     public void onBackStackChanged() {
         updateBlockingView(getCurrentFragment());
+    }
+
+    @Override
+    public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) {
+        if (pref.getFragment() != null) {
+            Fragment fragment = Fragment.instantiate(/* context= */ this, pref.getFragment(),
+                    pref.getExtras());
+            launchFragment(fragment);
+            return true;
+        }
+        return false;
     }
 
     private Fragment getCurrentFragment() {
