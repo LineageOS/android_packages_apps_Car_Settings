@@ -22,11 +22,13 @@ import static java.util.Objects.requireNonNull;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -47,6 +49,8 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
 
     private static final int REQUEST_CODE = 123;
 
+    @StyleRes private int mTitleTextAppearance;
+
     @Override
     @LayoutRes
     protected int getActionBarLayoutId() {
@@ -57,6 +61,18 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
     @StringRes
     protected int getTitleId() {
         return R.string.reset_network_title;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        TypedArray a = context.getTheme().obtainStyledAttributes(R.styleable.ListItem);
+
+        mTitleTextAppearance = a.getResourceId(
+                R.styleable.ListItem_listItemTitleTextAppearance,
+                R.style.TextAppearance_Car_Body1_Light);
+
+        a.recycle();
     }
 
     @Override
@@ -92,8 +108,9 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
     private TextListItem createTextOnlyItem(@StringRes int stringResId) {
         Context context = requireContext();
         TextListItem item = new TextListItem(context);
-        item.setBody(context.getString(stringResId), /* asPrimary= */ true);
+        item.setBody(context.getString(stringResId));
         item.setShowDivider(false);
+        item.addViewBinder(vh -> vh.getBody().setTextAppearance(mTitleTextAppearance));
         return item;
     }
 }
