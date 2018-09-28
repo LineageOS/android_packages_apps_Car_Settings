@@ -32,10 +32,9 @@ ifeq (,$(TARGET_BUILD_APPS))
       android.car
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      androidx.lifecycle_lifecycle-extensions \
       androidx.car_car \
+      androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
-      androidx.legacy_legacy-preference-v14 \
       car-settings-lib \
       car-setup-wizard-lib \
       setup-wizard-lib-gingerbread-compat \
@@ -54,7 +53,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DEX_PREOPT := false
 
-  LOCAL_STATIC_JAVA_LIBRARIES += \
+  LOCAL_STATIC_JAVA_LIBRARIES := \
       android.car.user \
       jsr305
 
@@ -89,10 +88,9 @@ ifeq (,$(TARGET_BUILD_APPS))
       android.car.user
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      androidx.lifecycle_lifecycle-extensions \
       androidx.car_car \
+      androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
-      androidx.legacy_legacy-preference-v14 \
       car-settings-lib \
       car-setup-wizard-lib \
       setup-wizard-lib-gingerbread-compat \
@@ -112,7 +110,9 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DEX_PREOPT := false
 
-  LOCAL_STATIC_JAVA_LIBRARIES += jsr305
+  LOCAL_STATIC_JAVA_LIBRARIES := \
+      android.car.user \
+      jsr305
 
   LOCAL_DX_FLAGS := --multi-dex
 

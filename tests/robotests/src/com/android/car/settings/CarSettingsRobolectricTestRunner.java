@@ -41,7 +41,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
     private static final String SUPPORT_RESOURCE_PATH_TEMPLATE =
             "jar:file:prebuilts/sdk/current/androidx/m2repository/androidx/"
                     + "%1$s/%1$s/%2$s/%1$s-%2$s.aar!/res";
-    // contraint-layout aar lives in searpate path.
+    // contraint-layout aar lives in separate path.
     // Note its path contains a hyphen.
     private static final String CONSTRAINT_LAYOUT_RESOURCE_PATH_TEMPLATE =
             "jar:file:prebuilts/sdk/current/extras/constraint-layout-x/"
@@ -116,16 +116,9 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                             createSupportResourcePathFromJar("constraintlayout")));
                     paths.add(createResourcePath(createSupportResourcePathFromJar("preference")));
 
-                    paths.add(createResourcePath(
-                            "file:packages/apps/Car/libs/car-stream-ui-lib/res "));
-                    paths.add(createResourcePath("file:packages/apps/Car/libs/car-list/res"));
                     paths.add(
                             createResourcePath("file:packages/apps/Car/libs/car-settings-lib/res"));
                     paths.add(createResourcePath("file:frameworks/base/packages/SettingsLib/res"));
-                    paths.add(createResourcePath(
-                            "file:frameworks/opt/setupwizard/library/gingerbread/res"));
-                    paths.add(createResourcePath(
-                            "file:frameworks/opt/setupwizard/library/main/res"));
 
                     return paths;
                 }
