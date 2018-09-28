@@ -44,9 +44,9 @@ import java.lang.reflect.InvocationTargetException;
  * <li>Evaluate if the default behavior of {@link #canBeShownWithRestrictions(CarUxRestrictions)}
  * is sufficient and override the method if different requirements are desired.
  * <li>Override {@link #getSummary()} if the summary can change at runtime. The summary will be
- * updated each time the fragment resumes.
+ * updated each time the fragment starts or driving restrictions change.
  * <li>Override {@link #updateState(Preference)} if advanced handling of the preference state is
- * required. It is called each time the fragment resumes.
+ * required. It is called each time the fragment starts or driving restrictions change.
  * </ul>
  *
  * <p>Most controllers can be automatically instantiated from XML. To do so, define a preference

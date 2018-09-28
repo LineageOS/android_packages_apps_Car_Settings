@@ -40,6 +40,7 @@
     <attr name="WifiSignalColor" format="reference" />
 
     <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlayCar</item>
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="WifiSignalColor">?android:attr/colorAccent</item>
         <item name="android:windowBackground">@color/car_card</item>
