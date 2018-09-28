@@ -36,7 +36,6 @@ import com.android.car.settings.common.CustomListItemTypes;
 public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> {
     private final CharSequence mTitle;
     private final CharSequence mPrimaryAction;
-    private final CharSequence mSecondaryAction;
     private final Drawable mIconDrawable;
     private final CharSequence mSummary;
     private final View.OnClickListener mOnClickListener;
@@ -52,12 +51,10 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
             CharSequence summary,
             Drawable iconDrawable,
             CharSequence primaryAction,
-            CharSequence secondaryAction,
             View.OnClickListener onClickListener,
             ActionListener actionListener) {
         mTitle = title;
         mPrimaryAction = primaryAction;
-        mSecondaryAction = secondaryAction;
         mIconDrawable = iconDrawable;
         mSummary = summary;
         mOnClickListener = onClickListener;
@@ -71,15 +68,14 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
 
     @Override
     protected void onBind(ViewHolder viewHolder) {
-        viewHolder.mActionButton1.setText(mPrimaryAction);
-        viewHolder.mActionButton1.setEnabled(mIsEnabled);
-        viewHolder.mActionButton2.setText(mSecondaryAction);
-        viewHolder.mActionButton2.setEnabled(mIsEnabled);
+        viewHolder.mDismissButton.setText(mPrimaryAction);
+        viewHolder.mDismissButton.setEnabled(mIsEnabled);
         viewHolder.mTitleView.setText(mTitle);
         viewHolder.mTitleView.setEnabled(mIsEnabled);
         viewHolder.mEndIconView.setImageDrawable(mIconDrawable);
         viewHolder.mEndIconView.setEnabled(mIsEnabled);
         viewHolder.mDescView.setEnabled(mIsEnabled);
+
         viewHolder.itemView.setEnabled(mIsEnabled);
         if (TextUtils.isEmpty(mSummary)) {
             viewHolder.mDescView.setVisibility(View.GONE);
@@ -87,11 +83,10 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
             viewHolder.mDescView.setVisibility(View.VISIBLE);
             viewHolder.mDescView.setText(mSummary);
         }
-        viewHolder.mActionButton2.setOnClickListener(
-                v -> onSecondaryActionButtonClick(viewHolder.getAdapterPosition()));
 
-        viewHolder.mActionButton1.setOnClickListener(
-                v -> onPrimaryActionButtonClick(viewHolder.mView));
+        viewHolder.mView.setOnClickListener(mOnClickListener);
+        viewHolder.mDismissButton.setOnClickListener(
+                v -> onDismissButtonClicked(viewHolder.getAdapterPosition()));
     }
 
     @Override
@@ -116,12 +111,8 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
         return new ViewHolder(itemView);
     }
 
-    private void onSecondaryActionButtonClick(int adapterPosition) {
+    private void onDismissButtonClicked(int adapterPosition) {
         mActionListener.onSuggestionItemDismissed(adapterPosition);
-    }
-
-    private void onPrimaryActionButtonClick(View view) {
-        mOnClickListener.onClick(view);
     }
 
     /**
@@ -132,8 +123,7 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
         final TextView mTitleView;
         final TextView mDescView;
         final ImageView mEndIconView;
-        final Button mActionButton1;
-        final Button mActionButton2;
+        final Button mDismissButton;
         final View mView;
 
         public ViewHolder(View view) {
@@ -142,8 +132,7 @@ public class SuggestionListItem extends ListItem<SuggestionListItem.ViewHolder> 
             mEndIconView = (ImageView) mView.findViewById(R.id.end_icon);
             mTitleView = (TextView) mView.findViewById(R.id.title);
             mDescView = (TextView) mView.findViewById(R.id.desc);
-            mActionButton1 = (Button) mView.findViewById(R.id.action_button_1);
-            mActionButton2 = (Button) mView.findViewById(R.id.action_button_2);
+            mDismissButton = (Button) mView.findViewById(R.id.action_button_1);
         }
 
         @Override
