@@ -24,7 +24,6 @@ import android.service.settings.suggestions.Suggestion;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import androidx.car.widget.ListItem;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
@@ -49,15 +48,9 @@ public class SettingsSuggestionsController implements
         SuggestionController.ServiceConnectionListener,
         LoaderManager.LoaderCallbacks<List<Suggestion>> {
     private static final Logger LOG = new Logger(SettingsSuggestionsController.class);
-    private static final ComponentName mComponentName = new ComponentName(
+    private static final ComponentName COMPONENT_NAME = new ComponentName(
             "com.android.settings.intelligence",
             "com.android.settings.intelligence.suggestions.SuggestionService");
-    // These values are hard coded until we receive the OK to plumb them through
-    // SettingsIntelligence. This is ok as right now only SUW uses this framework.
-    @StringRes
-    private static final int PRIMARY_ACTION_ID = R.string.suggestion_primary_button;
-    @StringRes
-    private static final int SECONDARY_ACTION_ID = R.string.suggestion_secondary_button;
 
     private final Context mContext;
     private final LoaderManager mLoaderManager;
@@ -75,7 +68,7 @@ public class SettingsSuggestionsController implements
         mIconCache = new IconCache(context);
         mSuggestionController = new SuggestionController(
                 mContext,
-                mComponentName,
+                COMPONENT_NAME,
                 /* listener= */ this);
     }
 
@@ -121,8 +114,7 @@ public class SettingsSuggestionsController implements
                             suggestion.getTitle(),
                             suggestion.getSummary(),
                             itemIcon,
-                            mContext.getString(PRIMARY_ACTION_ID),
-                            mContext.getString(SECONDARY_ACTION_ID),
+                            mContext.getString(R.string.suggestion_dismiss_button),
                             v -> {
                                 try {
                                     suggestion.getPendingIntent().send();

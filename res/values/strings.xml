@@ -733,10 +733,8 @@
     <string name="exit_retail_mode_dialog_confirmation_button_text">Exit Demo</string>
 
     <!-- String values for settings suggestions. -->
-    <!-- Button that allows users to re-open the setup wizard (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
-    <string name="suggestion_primary_button">finish setup</string>
-    <!-- Button that dismisses the suggestion to finish setting up their device (changed to all caps so case doesn't matter) [CHAR_LIMIT=30] -->
-    <string name="suggestion_secondary_button">not now</string>
+    <!-- Button that dismisses the suggestion to finish setting up their device [CHAR_LIMIT=30] -->
+    <string name="suggestion_dismiss_button">DISMISS</string>
 
     <!-- Warn user that the action they are trying to perform is blocked while the car is in
          motion [CHAR LIMIT=60] -->
