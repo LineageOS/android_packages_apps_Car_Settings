@@ -18,460 +18,280 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- no translation found for settings_label (5147911978211079839) -->
-    <skip />
+    <string name="settings_label" msgid="5147911978211079839">"ସେଟିଙ୍ଗ"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"ଅଧିକ"</string>
-    <!-- no translation found for display_settings (5325515247739279185) -->
-    <skip />
-    <!-- no translation found for brightness (2919605130898772866) -->
-    <skip />
-    <!-- no translation found for auto_brightness_title (9124647862844666581) -->
-    <skip />
-    <!-- no translation found for auto_brightness_summary (4741887033140384352) -->
-    <skip />
-    <!-- no translation found for condition_night_display_title (3777509730126972675) -->
-    <skip />
-    <!-- no translation found for keywords_display (3978416985146943922) -->
-    <skip />
-    <!-- no translation found for keywords_display_brightness_level (3956411572536209195) -->
-    <skip />
-    <!-- no translation found for keywords_display_auto_brightness (2700310050333468752) -->
-    <skip />
-    <!-- no translation found for keywords_display_night_display (2922294576679769957) -->
-    <skip />
+    <string name="display_settings" msgid="5325515247739279185">"ଡିସ୍‌ପ୍ଲେ"</string>
+    <string name="brightness" msgid="2919605130898772866">"ଉଜ୍ଜ୍ୱଳତା ସ୍ତର"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"ଅନୁକୂଳ ଉଜ୍ଜ୍ୱଳତା"</string>
+    <string name="auto_brightness_summary" msgid="4741887033140384352">"ଉପଲବ୍ଧ ଆଲୋକ ପାଇଁ ଉଜ୍ଜ୍ୱଳତା ଅନୁକୂଳ କରନ୍ତୁ"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"ରାତି ଆଲୋକ ଅନ୍ ହୋଇଛି"</string>
+    <string name="keywords_display" msgid="3978416985146943922">"ସ୍କ୍ରୀନ୍‌, ଟଚ୍‌ସ୍କ୍ରୀନ୍‌"</string>
+    <string name="keywords_display_brightness_level" msgid="3956411572536209195">"ଡିମ୍‌ ସ୍କ୍ରିନ୍‌, ଟଚ୍‌ସ୍କ୍ରିନ୍‌, ବ୍ୟାଟେରୀ"</string>
+    <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ଡିମ୍‌ ସ୍କ୍ରିନ୍‌, ଟଚ୍‌ସ୍କ୍ରିନ୍‌, ବ୍ୟାଟେରୀ"</string>
+    <string name="keywords_display_night_display" msgid="2922294576679769957">"ଅଳ୍ପ ଆଲୋକ ଥିବା ସ୍କ୍ରୀନ୍‌, ରାତି, ଟିଣ୍ଟ"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ନାଇଟ୍ ମୋଡ୍"</string>
-    <!-- no translation found for wifi_settings (7701477685273103841) -->
-    <skip />
-    <!-- no translation found for wifi_settings_summary (6095898149997291025) -->
-    <skip />
-    <!-- no translation found for wifi_starting (473253087503153167) -->
-    <skip />
-    <!-- no translation found for wifi_stopping (3534173972547890148) -->
-    <skip />
-    <!-- no translation found for wifi_failed_forget_message (121732682699377206) -->
-    <skip />
-    <!-- no translation found for wifi_failed_connect_message (4447498225022147324) -->
-    <skip />
-    <!-- no translation found for wifi_setup_add_network (3660498520389954620) -->
-    <skip />
-    <!-- no translation found for wifi_disabled (5013262438128749950) -->
-    <skip />
-    <!-- no translation found for wifi_setup_connect (3512399573397979101) -->
-    <skip />
-    <!-- no translation found for wifi_password (5565632142720292397) -->
-    <skip />
-    <!-- no translation found for wifi_show_password (8423293211933521097) -->
-    <skip />
-    <!-- no translation found for wifi_ssid (488604828159458741) -->
-    <skip />
-    <!-- no translation found for wifi_security (158358046038876532) -->
-    <skip />
-    <!-- no translation found for wifi_signal (1817579728350364549) -->
-    <skip />
-    <!-- no translation found for wifi_status (5688013206066543952) -->
-    <skip />
-    <!-- no translation found for wifi_speed (1650692446731850781) -->
-    <skip />
-    <!-- no translation found for wifi_frequency (8951455949682864922) -->
-    <skip />
-    <!-- no translation found for wifi_ip_address (3128140627890954061) -->
-    <skip />
-    <!-- no translation found for access_point_tag_key (1517143378973053337) -->
-    <skip />
-    <!-- no translation found for wifi_signals:0 (4897376984576812606) -->
-    <!-- no translation found for wifi_signals:1 (2032262610626057081) -->
-    <!-- no translation found for wifi_signals:2 (3859756017461098953) -->
-    <!-- no translation found for wifi_signals:3 (1521103743353335724) -->
-    <!-- no translation found for bluetooth_quick_toggle_title (637869245038061523) -->
-    <skip />
-    <!-- no translation found for bluetooth_quick_toggle_summary (4390699431893305353) -->
-    <skip />
-    <!-- no translation found for bluetooth_settings (3878243366013638982) -->
-    <skip />
-    <!-- no translation found for bluetooth_disabled (4187409401590350572) -->
-    <skip />
-    <!-- no translation found for bluetooth_settings_title (3794688574569688649) -->
-    <skip />
-    <!-- no translation found for bluetooth_settings_summary (4023303473646769835) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_computer (5223330129934365312) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_headset (6155254514321149935) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_phone (8833977851215000426) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_imaging (8762390801115154654) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_headphone (5362155791551671490) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_input_peripheral (868933277567862622) -->
-    <skip />
-    <!-- no translation found for bluetooth_talkback_bluetooth (1715933297419387985) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_paired_devices (5875643105380630583) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_found_devices (125155123214560511) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_no_paired_devices (483742146117390001) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_no_found_devices (1391812056491062262) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_paired_dialog_title (2470829827455850904) -->
-    <skip />
-    <!-- no translation found for bluetooth_preference_paired_dialog_name_label (3528740139365123415) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_advanced_profile_header_title (8165093257483965783) -->
-    <skip />
-    <!-- no translation found for wifi_ssid_hint (4155050863239489553) -->
-    <skip />
-    <!-- no translation found for bluetooth_notif_ticker (7192577740198156792) -->
-    <skip />
-    <!-- no translation found for bluetooth_device_context_pair_connect (3138105800372470422) -->
-    <skip />
-    <!-- no translation found for bluetooth (5235115159234688629) -->
-    <skip />
-    <!-- no translation found for bluetooth_pairing_key_msg (5066825929751599037) -->
-    <skip />
-    <!-- no translation found for bluetooth_enable_alphanumeric_pin (1636575922217263060) -->
-    <skip />
-    <!-- no translation found for bluetooth_enter_passkey_msg (5955236916732265593) -->
-    <skip />
-    <!-- no translation found for bluetooth_pairing_request (4769675459526556801) -->
-    <skip />
-    <!-- no translation found for bluetooth_pairing_shares_phonebook (2015966932886300630) -->
-    <skip />
-    <!-- no translation found for bluetooth_enter_pin_other_device (7825091249522704764) -->
-    <skip />
-    <!-- no translation found for bluetooth_enter_passkey_other_device (7147248221018865922) -->
-    <skip />
-    <!-- no translation found for bluetooth_pin_values_hint_16_digits (418776900816984778) -->
-    <skip />
-    <!-- no translation found for bluetooth_pin_values_hint (1561325817559141687) -->
-    <skip />
-    <!-- no translation found for bluetooth_notif_title (8374602799367803335) -->
-    <skip />
-    <!-- no translation found for bluetooth_notif_message (1060821000510108726) -->
-    <skip />
+    <string name="wifi_settings" msgid="7701477685273103841">"ୱାଇ-ଫାଇ"</string>
+    <string name="wifi_settings_summary" msgid="6095898149997291025">"ୱାୟର୍‌ଲେସ୍‌ ଆକ୍ସେସ୍‌ ପଏଣ୍ଟର ସେଟ୍‌ଅପ୍‍ ଓ ପରିଚାଳନା"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"ୱାଇ-ଫାଇ ଅନ୍‌ କରୁଛି…"</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"ୱାଇ-ଫାଇ ବନ୍ଦ‌ ହେଉଛି…"</string>
+    <string name="wifi_failed_forget_message" msgid="121732682699377206">"ନେଟ୍‌ୱର୍କ ଭୁଲିଯିବାରେ ବିଫଳ ହେଲା"</string>
+    <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ନେଟ୍‌ୱର୍କକୁ ସଂଯୋଗ କରିପାରିଲା ନାହିଁ।"</string>
+    <string name="wifi_setup_add_network" msgid="3660498520389954620">"ନେଟ୍‌ୱର୍କ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"ୱାଇ-ଫାଇ ଅକ୍ଷମ କରାଯାଇଛି"</string>
+    <string name="wifi_setup_connect" msgid="3512399573397979101">"ସଂଯୋଗ"</string>
+    <string name="wifi_password" msgid="5565632142720292397">"ପାସୱର୍ଡ"</string>
+    <string name="wifi_show_password" msgid="8423293211933521097">"ପାସୱାର୍ଡ ଦେଖାନ୍ତୁ"</string>
+    <string name="wifi_ssid" msgid="488604828159458741">"ନେଟୱାର୍କ ନାମ"</string>
+    <string name="wifi_security" msgid="158358046038876532">"ସୁରକ୍ଷା"</string>
+    <string name="wifi_signal" msgid="1817579728350364549">"ସିଗନାଲ୍‌ ଦକ୍ଷତା"</string>
+    <string name="wifi_status" msgid="5688013206066543952">"ସ୍ଥିତି"</string>
+    <string name="wifi_speed" msgid="1650692446731850781">"ଲିଙ୍କର ବେଗ"</string>
+    <string name="wifi_frequency" msgid="8951455949682864922">"ବାରମ୍ଵାରତା"</string>
+    <string name="wifi_ip_address" msgid="3128140627890954061">"IP ଠିକଣା"</string>
+    <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
+  <string-array name="wifi_signals">
+    <item msgid="4897376984576812606">"ଖରାପ"</item>
+    <item msgid="2032262610626057081">"ଠିକଠାକ"</item>
+    <item msgid="3859756017461098953">"ଭଲ"</item>
+    <item msgid="1521103743353335724">"ସର୍ବୋତ୍ତମ"</item>
+  </string-array>
+    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"ବ୍ଲୁଟୁଥ୍‌ ଅନ୍‌ କରନ୍ତୁ"</string>
+    <string name="bluetooth_settings" msgid="3878243366013638982">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_disabled" msgid="4187409401590350572">"ବ୍ଲୁ-ଟୁଥ୍‌ ଅକ୍ଷମ ହୋଇଛି"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"ସଂଯୋଗଗୁଡ଼ିକର ପରିଚାଳନା, ଡିଭାଇସ୍‌ ନାମ ଓ ଖୋଜିବାଯୋଗ୍ୟତା ସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"କମ୍ପ୍ୟୁଟର୍"</string>
+    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ହେଡସେଟ୍‍"</string>
+    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ଫୋନ୍"</string>
+    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"ଇମେଜିଙ୍ଗ"</string>
+    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"ହେଡ୍‌ଫୋନ୍‌"</string>
+    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"ଇନ୍‌ପୁଟ୍‌ ଉପକରଣ"</string>
+    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"ପେୟାର୍‌ ହୋଇଥିବା ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
+    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"ଉପଲବ୍ଧ ଡିଭାଇସ୍"</string>
+    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"ପେୟାର୍‌ ହୋଇଥିବା କୌଣସି ଡିଭାଇସ୍‌ ନାହିଁ"</string>
+    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"ଡିଭାଇସ୍ ଉପଲବ୍ଧ ନାହିଁ"</string>
+    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"ପେୟାର୍‌ ହୋଇଥିବା ଡିଭାଇସ୍‌"</string>
+    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"ନାମ"</string>
+    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"ଏହା ପାଇଁ ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="wifi_ssid_hint" msgid="4155050863239489553">"ବ୍ଲୁଟୁଥ୍‌ ଡିଭାଇସ୍‌ର ନାମ ବଦଳାନ୍ତୁ"</string>
+    <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ବ୍ଲୁଟୂଥ୍‍ ପେୟାର୍ କରିବା ପାଇଁ ଅନୁରୋଧ"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ପେୟାର୍‌ ଓ ସଂଯୋଗ"</string>
+    <string name="bluetooth" msgid="5235115159234688629">"ବ୍ଲୁଟୁଥ୍‌"</string>
+    <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ବ୍ଲୁଟୂଥ୍‌ ପେୟାରିଂ କୋଡ୍"</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ପିନ୍‌ରେ ଅକ୍ଷର କିମ୍ୱା ସଙ୍କେତ ରହିଥାଏ"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"ପେୟାରିଂ କୋଡ୍ ଟାଇପ୍‌ କରନ୍ତୁ ତାପରେ ଫେରନ୍ତୁ କିମ୍ବା ପ୍ରବେଶ ଦବାନ୍ତୁ"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ସହ ପେୟାର୍‌ କରିବେ?"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"ଆପଣଙ୍କ ଯୋଗାଯୋଗ ଓ କଲ୍‌ ହିଷ୍ଟୋରୀକୁ ଆକ୍‌ସେସ୍‌ କରିବାକୁ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>କୁ ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ଆପଣ ଏହି PIN ଅନ୍ୟ ଡିଭାଇସ୍‌ରେ ମଧ୍ୟ ଟାଇପ୍‌ କରିବା ଆବଶ୍ୟକ କରିପାରନ୍ତି।"</string>
+    <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ଏହି ପାସ୍‌-କୀକୁ ଅନ୍ୟ ଡିଭାଇସ୍‌ରେ ମଧ୍ୟ ଟାଇପ୍‌ କରିବା ଆବଶ୍ୟକ ହୋଇପରେ।"</string>
+    <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"16 ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଦରକାର"</string>
+    <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ସାଧାରଣତଃ 0000 କିମ୍ବା 1234"</string>
+    <string name="bluetooth_notif_title" msgid="8374602799367803335">"ପେୟାରିଙ୍ଗ ଅନୁରୋଧ"</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ସହ ପେୟାର୍‌ କରିବାକୁ ଟାପ୍‌ କରନ୍ତୁ"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ଭାଷା"</string>
-    <!-- no translation found for sound_settings (3072423952331872246) -->
-    <skip />
-    <!-- no translation found for ring_volume_title (3135241004980719442) -->
-    <skip />
-    <!-- no translation found for navi_volume_title (946292066759195165) -->
-    <skip />
-    <!-- no translation found for incoming_call_volume_title (6972117872424656876) -->
-    <skip />
-    <!-- no translation found for notification_volume_title (6749411263197157876) -->
-    <skip />
-    <!-- no translation found for media_volume_title (6697416686272606865) -->
-    <skip />
-    <!-- no translation found for media_volume_summary (2961762827637127239) -->
-    <skip />
-    <!-- no translation found for alarm_volume_title (840384014895796587) -->
-    <skip />
-    <!-- no translation found for applications_settings (794261395191035632) -->
-    <skip />
-    <!-- no translation found for disable_text (4358165448648990820) -->
-    <skip />
-    <!-- no translation found for enable_text (1794971777861881238) -->
-    <skip />
-    <!-- no translation found for permissions_label (2701446753515612685) -->
-    <skip />
-    <!-- no translation found for application_version_label (8556889839783311649) -->
-    <skip />
-    <!-- no translation found for runtime_permissions_summary_no_permissions_granted (6001439205270250021) -->
-    <skip />
-    <!-- no translation found for runtime_permissions_summary_no_permissions_requested (4074220596273432442) -->
-    <skip />
-    <!-- no translation found for data_usage_summary_title (4368024763485916986) -->
-    <skip />
-    <!-- no translation found for data_usage_app_summary_title (5012851696585421420) -->
-    <skip />
-    <!-- no translation found for force_stop (2153183697014720520) -->
-    <skip />
-    <!-- no translation found for computing_size (5791407621793083965) -->
-    <skip />
-    <!-- no translation found for runtime_permissions_additional_count (3513360187065317613) -->
-    <!-- no translation found for system_setting_title (6864599341809463440) -->
-    <skip />
-    <!-- no translation found for system_update_settings_list_item_title (5182439376921868735) -->
-    <skip />
+    <string name="sound_settings" msgid="3072423952331872246">"ଶବ୍ଦ"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"ରିଙ୍ଗ ଭଲ୍ୟୁମ୍"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"ନେଭିଗେସନ୍‌ ଭଲ୍ୟୁମ୍‌"</string>
+    <string name="incoming_call_volume_title" msgid="6972117872424656876">"ରିଙ୍ଗଟୋନ୍‌"</string>
+    <string name="notification_volume_title" msgid="6749411263197157876">"ବିଜ୍ଞପ୍ତି"</string>
+    <string name="media_volume_title" msgid="6697416686272606865">"ମିଡିଆ"</string>
+    <string name="media_volume_summary" msgid="2961762827637127239">"ମ୍ୟୁଜିକ୍‌ ଓ ଭିଡିଓଗୁଡିକ ପାଇଁ ଭଲ୍ୟୁମ ସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="alarm_volume_title" msgid="840384014895796587">"ଆଲାର୍ମ"</string>
+    <string name="applications_settings" msgid="794261395191035632">"ଆପ୍‌ ସୂଚନା"</string>
+    <string name="disable_text" msgid="4358165448648990820">"ଅକ୍ଷମ"</string>
+    <string name="enable_text" msgid="1794971777861881238">"ସକ୍ଷମ"</string>
+    <string name="permissions_label" msgid="2701446753515612685">"ଅନୁମତିଗୁଡ଼ିକ"</string>
+    <string name="application_version_label" msgid="8556889839783311649">"ଭର୍ସନ୍‌: %1$s"</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"କୌଣସି ଅନୁମତି ଦିଆଯାଇ ନାହିଁ"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"କୌଣସି ଅନୁମତିର ଅନୁରୋଧ କରାଯାଇ ନାହିଁ"</string>
+    <string name="data_usage_summary_title" msgid="4368024763485916986">"ଡାଟାର ବ୍ୟବହାର"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ଆପ୍‌ ଦ୍ୱାରା ଡାଟା ବ୍ୟବହାର"</string>
+    <string name="force_stop" msgid="2153183697014720520">"ବାଧ୍ୟତାର ସହ ବନ୍ଦ କର"</string>
+    <string name="computing_size" msgid="5791407621793083965">"ଗଣୁଛି…"</string>
+    <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଅତିରିକ୍ତ ଅନୁମତି</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ଅତିରିକ୍ତ ଅନୁମତି</item>
+    </plurals>
+    <string name="system_setting_title" msgid="6864599341809463440">"ସିଷ୍ଟମ୍‌"</string>
+    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"ସିଷ୍ଟମ୍‌ ଅପଡେଟ୍‌‍"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
-    <!-- no translation found for firmware_version (8491753744549309333) -->
-    <skip />
-    <!-- no translation found for security_patch (4794276590178386903) -->
-    <skip />
-    <!-- no translation found for model_info (4966408071657934452) -->
-    <skip />
-    <!-- no translation found for baseband_version (2370088062235041897) -->
-    <skip />
-    <!-- no translation found for kernel_version (7327212934187011508) -->
-    <skip />
-    <!-- no translation found for build_number (3997326631001009102) -->
-    <skip />
-    <!-- no translation found for device_info_not_available (2095601973977376655) -->
-    <skip />
-    <!-- no translation found for device_status_activity_title (4083567497305368200) -->
-    <skip />
-    <!-- no translation found for device_status (267298179806290920) -->
-    <skip />
-    <!-- no translation found for device_status_summary (600543254608862075) -->
-    <skip />
-    <!-- no translation found for device_status_summary (9130360324418117815) -->
-    <skip />
-    <!-- no translation found for about_settings (4329457966672592345) -->
-    <skip />
-    <!-- no translation found for about_summary (5374623866267691206) -->
-    <skip />
-    <!-- no translation found for about_settings_summary (7975072809083281401) -->
-    <skip />
-    <!-- no translation found for legal_information (1838443759229784762) -->
-    <skip />
-    <!-- no translation found for contributors_title (7698463793409916113) -->
-    <skip />
-    <!-- no translation found for manual (4819839169843240804) -->
-    <skip />
-    <!-- no translation found for regulatory_labels (3165587388499646779) -->
-    <skip />
-    <!-- no translation found for safety_and_regulatory_info (1204127697132067734) -->
-    <skip />
-    <!-- no translation found for copyright_title (4220237202917417876) -->
-    <skip />
-    <!-- no translation found for license_title (936705938435249965) -->
-    <skip />
-    <!-- no translation found for terms_title (5201471373602628765) -->
-    <skip />
-    <!-- no translation found for webview_license_title (2531829466541104826) -->
-    <skip />
-    <!-- no translation found for wallpaper_attributions (9201272150014500697) -->
-    <skip />
-    <!-- no translation found for wallpaper_attributions_values (4292446851583307603) -->
-    <skip />
-    <!-- no translation found for settings_license_activity_title (8499293744313077709) -->
-    <skip />
-    <!-- no translation found for settings_license_activity_unavailable (6104592821991010350) -->
-    <skip />
-    <!-- no translation found for settings_license_activity_loading (6163263123009681841) -->
-    <skip />
-    <!-- no translation found for date_and_time_settings_title (4058492663544475485) -->
-    <skip />
-    <!-- no translation found for date_and_time_settings_title_setup_wizard (7580119979694174107) -->
-    <skip />
-    <!-- no translation found for date_and_time_settings_summary (7669856855390804666) -->
-    <skip />
-    <!-- no translation found for date_time_auto (3570339569471779767) -->
-    <skip />
-    <!-- no translation found for date_time_auto_summary (3311706425095342759) -->
-    <skip />
-    <!-- no translation found for zone_auto (3701878581920206160) -->
-    <skip />
-    <!-- no translation found for zone_auto_summary (4345856882906981864) -->
-    <skip />
-    <!-- no translation found for date_time_24hour_title (3025576547136168692) -->
-    <skip />
-    <!-- no translation found for date_time_24hour (1137618702556486913) -->
-    <skip />
-    <!-- no translation found for date_time_set_time_title (5884883050656937853) -->
-    <skip />
-    <!-- no translation found for date_time_set_time (6449555153906058248) -->
-    <skip />
-    <!-- no translation found for date_time_set_timezone_title (3001779256157093425) -->
-    <skip />
-    <!-- no translation found for date_time_set_timezone (4759353576185916944) -->
-    <skip />
-    <!-- no translation found for date_time_set_date_title (6834785820357051138) -->
-    <skip />
-    <!-- no translation found for date_time_set_date (2537494485643283230) -->
-    <skip />
-    <!-- no translation found for zone_list_menu_sort_alphabetically (7041628618528523514) -->
-    <skip />
-    <!-- no translation found for zone_list_menu_sort_by_timezone (4944880536057914136) -->
-    <skip />
-    <!-- no translation found for date_picker_title (1533614225273770178) -->
-    <skip />
-    <!-- no translation found for time_picker_title (7436045944320504639) -->
-    <skip />
-    <!-- no translation found for user_add_user_menu (5319151436895941496) -->
-    <skip />
-    <!-- no translation found for user_add_account_menu (6625351983590713721) -->
-    <skip />
-    <!-- no translation found for user_delete_user_description (2300280525351142435) -->
-    <skip />
-    <!-- no translation found for user_new_user_name (7115771396412339662) -->
-    <skip />
-    <!-- no translation found for user_guest (3465399481257448601) -->
-    <skip />
+    <string name="firmware_version" msgid="8491753744549309333">"Android ଭର୍ସନ୍‌"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Android ସୁରକ୍ଷା ପାଚ୍‌ ସ୍ତର"</string>
+    <string name="model_info" msgid="4966408071657934452">"ମଡେଲ୍‌"</string>
+    <string name="baseband_version" msgid="2370088062235041897">"ବେସ୍‌ବ୍ୟାଣ୍ଡ ଭର୍ସନ୍‌"</string>
+    <string name="kernel_version" msgid="7327212934187011508">"କର୍ନେଲ୍‌ ଭର୍ସନ୍‌"</string>
+    <string name="build_number" msgid="3997326631001009102">"ନମ୍ୱ‍ର୍‌ ଗଠନ କରନ୍ତୁ"</string>
+    <string name="device_info_not_available" msgid="2095601973977376655">"ଉପଲବ୍ଧ ନାହିଁ"</string>
+    <string name="device_status_activity_title" msgid="4083567497305368200">"ସ୍ଥିତି"</string>
+    <string name="device_status" msgid="267298179806290920">"ସ୍ଥିତି"</string>
+    <string name="device_status_summary" product="tablet" msgid="600543254608862075">"ବ୍ୟାଟେରୀ, ନେଟ୍‌ୱର୍କର ସ୍ଥିତି ଓ ଅନ୍ୟାନ୍ୟ ସୂଚନା"</string>
+    <string name="device_status_summary" product="default" msgid="9130360324418117815">"ଫୋନ ନମ୍ୱର, ସିଗ୍ନାଲ ଆଦି"</string>
+    <string name="about_settings" msgid="4329457966672592345">"ପରିଚୟ"</string>
+    <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
+    <string name="about_settings_summary" msgid="7975072809083281401">"ଆଇନଗତ ସୂଚନା, ଷ୍ଟେଟସ୍, ସଫ୍ଟୱେର୍‌ ଭର୍ସନ୍‌ ଦେଖନ୍ତୁ"</string>
+    <string name="legal_information" msgid="1838443759229784762">"ଆଇନ ସୂଚନା"</string>
+    <string name="contributors_title" msgid="7698463793409916113">"ଅବଦାନକାରୀ"</string>
+    <string name="manual" msgid="4819839169843240804">"ମାନୁଆଲ୍‌"</string>
+    <string name="regulatory_labels" msgid="3165587388499646779">"ରେଗୁଲେଟରୀ ଲେବଲ୍ସ"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"ସୁରକ୍ଷା ଓ ନିୟାମକ ପୁସ୍ତିକା"</string>
+    <string name="copyright_title" msgid="4220237202917417876">"କପୀରାଇଟ୍‌"</string>
+    <string name="license_title" msgid="936705938435249965">"ଲାଇସେନ୍ସ"</string>
+    <string name="terms_title" msgid="5201471373602628765">"ନିୟମ ଓ ସର୍ତ୍ତାବଳୀ"</string>
+    <string name="webview_license_title" msgid="2531829466541104826">"ସିଷ୍ଟମ୍‌ ୱେବ୍‌‌ଭ୍ୟୁ ଲାଇସେନ୍ସ"</string>
+    <string name="wallpaper_attributions" msgid="9201272150014500697">"ୱାଲପେପର୍‌"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସ୍ୟାଟେଲାଇଟ୍‌ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"ତୃତୀୟ-ପକ୍ଷ ଲାଇସେନ୍ସ"</string>
+    <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ଲାଇସେନ୍ସ ଲୋଡ୍‌ କରିବାରେ ସମସ୍ୟା ହୋଇଛି।"</string>
+    <string name="settings_license_activity_loading" msgid="6163263123009681841">"ଲୋଡ୍ କରୁଛି…"</string>
+    <string name="date_and_time_settings_title" msgid="4058492663544475485">"ତାରିଖ ଓ ସମୟ"</string>
+    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ତାରିଖ ଓ ସମୟ ସେଟ କରନ୍ତୁ"</string>
+    <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ତାରିଖ, ସମୟ, ସମୟ ଅଞ୍ଚଳ, ଓ ଫର୍ମାଟ୍‌ ସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"ଅଟୋମେଟିକ୍ ତାରିଖ ଓ ସମୟ"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"ନେଟ୍‌ୱର୍କ ପ୍ରଦତ୍ତ ସମୟ ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="zone_auto" msgid="3701878581920206160">"ସ୍ୱଚାଳିତ ସମୟ କ୍ଷେତ୍ର"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"ନେଟ୍‌ୱର୍କ ପ୍ରଦତ୍ତ ସମୟ କ୍ଷେତ୍ର ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="date_time_24hour_title" msgid="3025576547136168692">"24‑ଘଣ୍ଟିଆ ଫର୍ମାଟ୍‌"</string>
+    <string name="date_time_24hour" msgid="1137618702556486913">"24-ଘଣ୍ଟିଆ ଫର୍ମାଟ ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="date_time_set_time_title" msgid="5884883050656937853">"ସମୟ"</string>
+    <string name="date_time_set_time" msgid="6449555153906058248">"ସମୟ ସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="date_time_set_timezone_title" msgid="3001779256157093425">"ଟାଇମ୍‌ ଜୋନ୍‌"</string>
+    <string name="date_time_set_timezone" msgid="4759353576185916944">"ସମୟ କ୍ଷେତ୍ର ବାଛନ୍ତୁ"</string>
+    <string name="date_time_set_date_title" msgid="6834785820357051138">"ତାରିଖ"</string>
+    <string name="date_time_set_date" msgid="2537494485643283230">"ତାରିଖ ସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"ବର୍ଣ୍ଣାନୁକ୍ରମିକ ସର୍ଟ୍ କରନ୍ତୁ"</string>
+    <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ସମୟ କ୍ଷେତ୍ର ଦ୍ୱାରା କ୍ରମବଦ୍ଧ"</string>
+    <string name="date_picker_title" msgid="1533614225273770178">"ତାରିଖ"</string>
+    <string name="time_picker_title" msgid="7436045944320504639">"ସମୟ"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"ୟୁଜର୍‍ଙ୍କୁ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="user_delete_user_description" msgid="2300280525351142435">"ୟୁଜର୍‌‌ଙ୍କୁ ଡିଲିଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"ନୂଆ ୟୁଜର୍‌"</string>
+    <string name="user_guest" msgid="3465399481257448601">"ଅତିଥି"</string>
     <string name="user_admin" msgid="1535484812908584809">"ଆଡ୍‌ମିନ୍‌"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ଆଡ୍‍ମିନ୍‍ ଭାବରେ ସାଇନ୍‍ ଇନ୍‍ କରିଛନ୍ତି"</string>
-    <!-- no translation found for user_switch (6544839750534690781) -->
-    <skip />
-    <!-- no translation found for current_user_name (3813671533249316823) -->
-    <skip />
-    <!-- no translation found for user_name_label (3210832645046206845) -->
-    <skip />
-    <!-- no translation found for user_summary_not_set_up (1473688119241224145) -->
-    <skip />
+    <string name="user_switch" msgid="6544839750534690781">"ବଦଳାନ୍ତୁ"</string>
+    <string name="current_user_name" msgid="3813671533249316823">"ଆପଣ (%1$s)"</string>
+    <string name="user_name_label" msgid="3210832645046206845">"ନାମ"</string>
+    <string name="user_summary_not_set_up" msgid="1473688119241224145">"ସେଟ୍ ହୋଇନାହିଁ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ୟୁଜର୍‍ ନାମକୁ ଏଡିଟ୍ କରନ୍ତୁ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
     <string name="user_details_title" msgid="1104762783367701498">"ୟୁଜର୍‌"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଡ଼ାଯାଇନାହିଁ"</string>
-    <!-- no translation found for account_list_title (7631588514613843065) -->
-    <skip />
-    <!-- no translation found for account_details_title (7529571432258448573) -->
-    <skip />
-    <!-- no translation found for add_account_title (5988746086885210040) -->
-    <skip />
-    <!-- no translation found for add_an_account (1072285034300995091) -->
-    <skip />
-    <!-- no translation found for user_cannot_add_accounts_message (6775605884544906797) -->
-    <skip />
-    <!-- no translation found for remove_account_title (8840386525787836381) -->
-    <skip />
-    <!-- no translation found for really_remove_account_title (3555164432587924900) -->
-    <skip />
-    <!-- no translation found for really_remove_account_message (4296769280849579900) -->
-    <skip />
-    <!-- no translation found for remove_account_failed (7472511529086294087) -->
-    <skip />
-    <!-- no translation found for really_remove_user_title (4990029019291756762) -->
-    <skip />
-    <!-- no translation found for really_remove_user_message (3828090902833944533) -->
-    <skip />
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ପାଇଁ ଆକାଉଣ୍ଟ"</string>
+    <string name="account_details_title" msgid="7529571432258448573">"ଆକାଉଣ୍ଟ ସୂଚନା"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"ଗୋଟିଏ ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"ପ୍ରତିବନ୍ଧିତ ପ୍ରୋଫାଇଲ୍‌ଗୁଡ଼ିକ ଆକାଉଣ୍ଟ ଆଡ୍‌ କରିପାରିବ ନାହିଁ"</string>
+    <string name="remove_account_title" msgid="8840386525787836381">"ଆକାଉଣ୍ଟ କାଢ଼ିଦିଅନ୍ତୁ"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"ଆକାଉଣ୍ଟ କାଢ଼ିଦେବେ?"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"ଏହି ଆକାଉଣ୍ଟକୁ କାଢ଼ିଦେଲେ, ଡିଭାଇସ୍‌ରେ ଥିବା ସମସ୍ତ ମେସେଜ୍‌, ଯୋଗାଯୋଗ ଓ ଅନ୍ୟାନ୍ୟ ଡାଟା ଡିଲିଟ୍‌ ହୋଇଯିବ!"</string>
+    <string name="remove_account_failed" msgid="7472511529086294087">"ଏହି ପରିବର୍ତ୍ତନ ପାଇଁ ଆପଣଙ୍କ ଆଡମିନ୍‌ ଅନୁମତି ଦେଇନାହାନ୍ତି"</string>
+    <string name="really_remove_user_title" msgid="4990029019291756762">"ଏହି ୟୁଜରଙ୍କୁ ବାହାର କରିବେ?"</string>
+    <string name="really_remove_user_message" msgid="3828090902833944533">"ସବୁ ଏପ୍ସ ଓ ଡାଟା ଉଡ଼ାଇଦିଆଯିବ"</string>
     <string name="remove_user_error_title" msgid="2038275458657689420">"ୟୁଜର୍‍ଙ୍କୁ କାଢ଼ିହେଲା ନାହିଁ।"</string>
     <string name="remove_user_error_message" msgid="6803947507134323358">"ପୁଣି ଚେଷ୍ଟା କରିବେ?"</string>
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
-    <!-- no translation found for user_add_user_title (7458813670614932479) -->
-    <skip />
-    <!-- no translation found for user_add_user_message_setup (6030901156040053106) -->
-    <skip />
-    <!-- no translation found for user_add_user_message_update (1528170913388932459) -->
-    <skip />
-    <!-- no translation found for security_settings_title (6955331714774709746) -->
-    <skip />
-    <!-- no translation found for security_settings_subtitle (2244635550239273229) -->
-    <skip />
+    <string name="user_add_user_title" msgid="7458813670614932479">"ନୂତନ ୟୁଜର୍‍ ଯୋଡ଼ିବେ?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"ଜଣେ ନୂଆ ୟୁଜର୍‍ଙ୍କୁ ଯୋଡ଼ିବାବେଳେ, ସେହି ବ୍ୟକ୍ତି ତାଙ୍କ ସ୍ଥାନ ସେଟ୍‍ ଅପ୍‌ କରିବା ଆବଶ୍ୟକ କରନ୍ତି।"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"ସମସ୍ତ ୟୁଜର୍‌ଙ୍କ ପାଇଁ ଯେକୌଣସି ୟୁଜର୍‌ ଆପ୍‌ ଅପଡେଟ୍‌ କରିପାରିବେ।"</string>
+    <string name="security_settings_title" msgid="6955331714774709746">"ସୁରକ୍ଷା"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"କିଛି ନାହିଁ"</string>
-    <!-- no translation found for security_lock_pattern (1174352995619563104) -->
-    <skip />
+    <string name="security_lock_pattern" msgid="1174352995619563104">"ପାଟର୍ନ"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
-    <!-- no translation found for security_lock_password (4420203740048322494) -->
-    <skip />
-    <!-- no translation found for lock_settings_picker_title (6590330165050361632) -->
-    <skip />
+    <string name="security_lock_password" msgid="4420203740048322494">"ପାସୱର୍ଡ"</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"ଏକ ଲକ୍‌ ପ୍ରକାର ବାଛନ୍ତୁ"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପ"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ଆପଣଙ୍କର ପାଟର୍ନ ଆଙ୍କନ୍ତୁ"</string>
-    <!-- no translation found for lockpattern_confirm_button_text (7784925958324484965) -->
-    <skip />
-    <!-- no translation found for lockpattern_restart_button_text (9355771277617537) -->
-    <skip />
-    <!-- no translation found for continue_button_text (5129979170426836641) -->
-    <skip />
-    <!-- no translation found for lockscreen_retry_button_text (5314212350698701242) -->
-    <skip />
+    <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ନିଶ୍ଚିତ"</string>
+    <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ପୁନଃଅଙ୍କନ"</string>
+    <string name="continue_button_text" msgid="5129979170426836641">"ଜାରି ରଖନ୍ତୁ"</string>
+    <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ଛାଡ଼ିଦିଅନ୍ତୁ"</string>
-    <!-- no translation found for set_screen_lock (5239317292691332780) -->
-    <skip />
+    <string name="set_screen_lock" msgid="5239317292691332780">"ଏକ ସ୍କ୍ରିନ୍‌ ଲକ୍‌ ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ନିଜ ପିନ୍‌ ନମ୍ବର ବାଛନ୍ତୁ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ନିଜ ପାର୍ଟନ୍‌ ବାଛନ୍ତୁ"</string>
     <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ନିଜ ପାସ୍‌ୱର୍ଡ ବାଛନ୍ତୁ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ବର୍ତ୍ତମାନର ସ୍କ୍ରୀନ୍‌ ଲକ୍‌"</string>
-    <!-- no translation found for choose_lock_pattern_message (6242765203541309524) -->
-    <skip />
-    <!-- no translation found for lockpattern_retry_button_text (4655398824001857843) -->
-    <skip />
-    <!-- no translation found for lockpattern_cancel_button_text (4068764595622381766) -->
-    <skip />
-    <!-- no translation found for lockpattern_pattern_confirmed (5984306638250515385) -->
-    <skip />
-    <!-- no translation found for lockpattern_recording_intro_header (7864149726033694408) -->
-    <skip />
-    <!-- no translation found for lockpattern_recording_inprogress (1575019990484725964) -->
-    <skip />
-    <!-- no translation found for lockpattern_pattern_entered (6103071005285320575) -->
-    <skip />
-    <!-- no translation found for lockpattern_need_to_confirm (4648070076022940382) -->
-    <skip />
-    <!-- no translation found for lockpattern_recording_incorrect_too_short (2417932185815083082) -->
-    <skip />
-    <!-- no translation found for lockpattern_pattern_wrong (929223969555399363) -->
-    <skip />
-    <!-- no translation found for lockpattern_settings_help_how_to_record (4436556875843192284) -->
-    <skip />
-    <!-- no translation found for error_saving_lockpattern (2933512812768570130) -->
-    <skip />
-    <!-- no translation found for okay (4589873324439764349) -->
-    <skip />
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ସୁରକ୍ଷା ପାଇଁ ଗୋଟିଏ ପାଟର୍ନ ସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ଖାଲି କରନ୍ତୁ"</string>
+    <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"ଆପଣଙ୍କର ନୂଆ ଅନ୍‌ଲକ୍‌ ପାଟର୍ନ"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ଏକ ଅନଲକ ପାଟର୍ନ ଆଙ୍କନ୍ତୁ"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ହୋଇଯିବା ପରେ ଆଙ୍ଗୁଠି କାଢ଼ିଦିଅନ୍ତୁ"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ପାଟର୍ନ ରେକର୍ଡ ହେଲା"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ନିଶ୍ଚିତ କରିବାକୁ ପାଟର୍ନ ପୁନଃ ଅଙ୍କନ କରନ୍ତୁ"</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ଅତିକମ୍‌ରେ 4ଟି ଡଟ୍ସ ସହ ସଂଯୋଗ କରନ୍ତୁ। ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ।"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ଭୁଲ ପାଟର୍ନ"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ଏକ ଅନ୍‌ଲକ୍‌ ପାଟର୍ନ କିପରି ଅଙ୍କାଯିବ"</string>
+    <string name="error_saving_lockpattern" msgid="2933512812768570130">"ପାଟର୍ନ ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
+    <string name="okay" msgid="4589873324439764349">"ଓକେ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ସ୍କ୍ରୀନ ଲକ୍ ରିମୁଭ୍‍ କରିବେ କି?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"ଏହା ଯେକୌଣସି ବ୍ୟକ୍ତି ଆପଣଙ୍କ ଆକାଉଣ୍ଟରେ ପ୍ରବେଶ ପାଇଁ ଅନୁମତି ଦେବ"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"ନିଜର PIN ଲେଖନ୍ତୁ"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"ନିଜ ପାସ୍‌ୱର୍ଡ ଲେଖନ୍ତୁ"</string>
-    <!-- no translation found for choose_lock_pin_message (2963792070267774417) -->
-    <skip />
-    <!-- no translation found for confirm_your_pin_header (9096581288537156102) -->
-    <skip />
-    <!-- no translation found for choose_lock_pin_hints (7362906249992020844) -->
-    <skip />
+    <string name="choose_lock_pin_message" msgid="2963792070267774417">"ସୁରକ୍ଷା ପାଇଁ, ଏକ PIN ସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"ନିଜ PIN ପୁଣି ପ୍ରବେଶ କରନ୍ତୁ"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PINରେ ଅତିକମ୍‌ରେ 4ଟିଅଙ୍କ ରହିବା ଦରକାର"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin ଅମାନ୍ୟ ଅଟେ, ଅତିକମରେ 4ଟି ସଂଖ୍ୟା ରହିବା ଆବଶ୍ୟକ।"</string>
-    <!-- no translation found for confirm_pins_dont_match (4607110139373520720) -->
-    <skip />
-    <!-- no translation found for error_saving_lockpin (9011960139736000393) -->
-    <skip />
+    <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINଗୁଡିକ ମେଳ ଖାଉ ନାହିଁ"</string>
+    <string name="error_saving_lockpin" msgid="9011960139736000393">"PIN ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"ଭୁଲ PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"ଭୁଲ ପାସ୍‌ୱର୍ଡ"</string>
-    <!-- no translation found for choose_lock_password_message (6124341145027370784) -->
-    <skip />
-    <!-- no translation found for confirm_your_password_header (7052891840366724938) -->
-    <skip />
-    <!-- no translation found for confirm_passwords_dont_match (7300229965206501753) -->
-    <skip />
-    <!-- no translation found for lockpassword_clear_label (6363680971025188064) -->
-    <skip />
-    <!-- no translation found for lockpassword_cancel_label (5791237697404166450) -->
-    <skip />
-    <!-- no translation found for lockpassword_confirm_label (5918463281546146953) -->
-    <skip />
+    <string name="choose_lock_password_message" msgid="6124341145027370784">"ସୁରକ୍ଷା ପାଇଁ ଗୋଟିଏ ପାସ୍‌ୱର୍ଡ ସେଟ୍‌ କରନ୍ତୁ"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"ପାସ୍‌ୱର୍ଡ ପୁନଃ-ପ୍ରବେଶ କରନ୍ତୁ"</string>
+    <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"ପାସ୍‌ୱର୍ଡ ମେଳ ଖାଉନାହିଁ"</string>
+    <string name="lockpassword_clear_label" msgid="6363680971025188064">"ଖାଲି କରନ୍ତୁ"</string>
+    <string name="lockpassword_cancel_label" msgid="5791237697404166450">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ନିଶ୍ଚିତ"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର"</string>
-    <!-- no translation found for lockpassword_password_too_short (6681218025001328405) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_short (6363004004424904218) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_too_long (7530214940279491291) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_too_long (62957683396974404) -->
-    <skip />
+    <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଅକ୍ଷର ରହିବା ଦରକାର"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଅଙ୍କ ବିଶିଷ୍ଟ ହେବା ଦରକାର"</string>
+    <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> ଅକ୍ଷରଠାରୁ କମ୍‌ ହେବା ଦରକାର"</string>
+    <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> ଅଙ୍କରୁ କମ୍‌ ରହିବା ଦରକାର"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"କେବଳ 0-9 ପର୍ଯ୍ୟନ୍ତ ସଂଖ୍ୟା ରହିବା ଦରକାର"</string>
-    <!-- no translation found for lockpassword_pin_recently_used (7901918311213276207) -->
-    <skip />
-    <!-- no translation found for lockpassword_pin_blacklisted_by_admin (7412709707800738442) -->
-    <skip />
+    <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ଏକ ସାମ୍ପ୍ରତିକ ପିନ୍‌ର ବ୍ୟବହାରକୁ ଡିଭାଇସ୍‌ ଆଡ୍‌ମିନ୍‌ ଅନୁମତି ଦେବନାହିଁ"</string>
+    <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ସାଧାରଣ PINଗୁଡିକ ଆପଣଙ୍କ IT ଆଡମିନ୍‌ଙ୍କ ଦ୍ୱାରା ଅବରୋଧ କରିଦିଆଯାଇଛି। ଭିନ୍ନ PIN ଚେଷ୍ଟା କରନ୍ତୁ।"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ଏହା ଗୋଟିଏ ଭୁଲ ଅକ୍ଷରକୁ ଯୋଡ଼ିପାରିବନାହିଁ"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"ପାସ୍‍ୱର୍ଡ ଭୁଲ ଅଟେ, ଅତିକମ୍‌ରେ 4 ଅକ୍ଷର ରହିବା ଦରକାର।"</string>
-    <!-- no translation found for lockpassword_password_requires_letters (424616259312760303) -->
-    <!-- no translation found for lockpassword_password_requires_lowercase (2267487180744744833) -->
-    <!-- no translation found for lockpassword_password_requires_uppercase (7999264563026517898) -->
-    <!-- no translation found for lockpassword_password_requires_numeric (7935079851855168646) -->
-    <!-- no translation found for lockpassword_password_requires_symbols (3994046435150094132) -->
-    <!-- no translation found for lockpassword_password_requires_nonletter (6878486326748506524) -->
-    <!-- no translation found for lockpassword_password_recently_used (8255729487108602924) -->
-    <skip />
-    <!-- no translation found for error_saving_password (8334882262622500658) -->
-    <skip />
-    <!-- no translation found for lockpassword_password_blacklisted_by_admin (7965893810326503891) -->
-    <skip />
+    <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
+      <item quantity="other">ଅତିକମରେ <xliff:g id="COUNT">%d</xliff:g>ଟି ଅକ୍ଷର ରହିବା ଦରକାର</item>
+      <item quantity="one">ଅତିକମରେ ୧ଟି ଅକ୍ଷର ରହିବା ଦରକାର</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
+      <item quantity="other">ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଟି ଲୋୱର୍‌କେସ୍‌ ଅକ୍ଷର ରହିବା ଦରକାର</item>
+      <item quantity="one">ଅତିକମ୍‌ରେ 1ଟି ଲୋୱର୍‍କେସ୍ ଅକ୍ଷର ରହିବା ଦରକାର</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
+      <item quantity="other">ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g>ଟି ବଡ଼ ଅକ୍ଷର ଆବଶ୍ୟକ</item>
+      <item quantity="one"> ଅତିକମ୍‌ରେ 1ଟି ବଡ଼ ଅକ୍ଷର ଆବଶ୍ୟକ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
+      <item quantity="other">ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g>ଟି ସଂଖ୍ୟା ନିହାତି ରହିବା ଦରକାର</item>
+      <item quantity="one">ଅତିକମ୍‌ରେ 1ଟି ସଂଖ୍ୟା ନିହାତି ରହିବା ଦରକାର</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
+      <item quantity="other">ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g> ଟି ବିଶେଷ ସଙ୍କେତ ରହିଥିବା ଜରୁରୀ</item>
+      <item quantity="one">ଅତିକମ୍‌ରେ 1 ବିଶେଷ ସଙ୍କେତ ରହିଥିବା ଜରୁରୀ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
+      <item quantity="other">ଅତିକମ୍‌ରେ <xliff:g id="COUNT">%d</xliff:g>ଟି ବିଶେଷ ଅକ୍ଷର କିମ୍ୱା ସଂଖ୍ୟା ଆବଶ୍ୟକ</item>
+      <item quantity="one">ଅତିକମ୍‌ରେ 1ଟି ବିଶେଷ ଅକ୍ଷର କିମ୍ୱା ସଂଖ୍ୟା ଆବଶ୍ୟକ</item>
+    </plurals>
+    <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"ଏକ ସମ୍ପ୍ରତି ପାସ୍‌ୱର୍ଡ ବ୍ୟବହାର କରିବାକୁ ଡିଭାଇସ୍‌ ଆଡମିନ୍‌ ଅନୁମତି ଦିଅନ୍ତି ନାହିଁ"</string>
+    <string name="error_saving_password" msgid="8334882262622500658">"ପାସୱର୍ଡ ସେଭ୍‌ କରିବାରେ ତ୍ରୁଟି"</string>
+    <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ଆପଣଙ୍କର ଆଇଟି ଆଡ୍‌ମିନ୍‌ ଦ୍ୱାରା ସାଧାରଣ ପାସ୍‌ୱର୍ଡଗୁଡ଼ିକୁ ରୋକିଦିଆଯାଇଛି। ଏକ ଭିନ୍ନ ପାସ୍‌ୱର୍ଡ ଦିଅନ୍ତୁ।"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ସଂଖ୍ୟାର କ୍ରମବୃଦ୍ଧି, କ୍ରମହ୍ରାସ, କିମ୍ବା କ୍ରମ ଦୋହରାଇବାର ଅନୁମତି ନାହିଁ।"</string>
-    <!-- no translation found for setup_lock_settings_options_button_label (3337845811029780896) -->
-    <skip />
-    <!-- no translation found for forget (3971143908183848527) -->
-    <skip />
-    <!-- no translation found for delete_button (5840500432614610850) -->
-    <skip />
-    <!-- no translation found for remove_button (6664656962868194178) -->
-    <skip />
-    <!-- no translation found for cancel (750286395700355455) -->
-    <skip />
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପମାନ"</string>
+    <string name="forget" msgid="3971143908183848527">"ଭୁଲିଗଲେ"</string>
+    <string name="delete_button" msgid="5840500432614610850">"ଡିଲିଟ୍‍"</string>
+    <string name="remove_button" msgid="6664656962868194178">"କାଢ଼ିଦିଅନ୍ତୁ"</string>
+    <string name="cancel" msgid="750286395700355455">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace କୀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"କୀ ଦବାନ୍ତୁ"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
