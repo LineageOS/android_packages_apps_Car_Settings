@@ -183,12 +183,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Idő"</string>
     <string name="user_admin" msgid="1535484812908584809">"Rendszergazda"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Rendszergazdaként bejelentkezve"</string>
-    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
-    <skip />
+    <string name="grant_admin_privileges_title" msgid="6477999444384992523">"Rendszergazdai engedélyek megadása"</string>
+    <string name="grant_admin_privileges_button_text" msgid="778965511126836155">"Rendszergazdai jogosultság megadása"</string>
+    <string name="grant_admin_privileges_message" msgid="4946396905189324060">"A felhasználó képes lesz más felhasználókat törölni, beleértve a többi rendszergazdát is, és vissza tudja majd állítani a rendszer gyári beállításait."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"A művelet nem vonható vissza."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"Igen, tegye rendszergazdává"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Felhasználó felvétele"</string>
