@@ -183,12 +183,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"시간"</string>
     <string name="user_admin" msgid="1535484812908584809">"관리자"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"관리자로 로그인했습니다."</string>
-    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
-    <skip />
+    <string name="grant_admin_privileges_title" msgid="6477999444384992523">"관리자 권한 부여 승인"</string>
+    <string name="grant_admin_privileges_button_text" msgid="778965511126836155">"관리자 권한 부여"</string>
+    <string name="grant_admin_privileges_message" msgid="4946396905189324060">"사용자는 다른 관리자를 포함한 사용자를 삭제하고 시스템을 초기화할 수 있게 됩니다."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"이 작업은 되돌릴 수 없습니다."</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"관리자 권한 부여"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"사용자 추가"</string>

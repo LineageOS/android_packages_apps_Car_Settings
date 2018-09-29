@@ -183,12 +183,9 @@
     <string name="time_picker_title" msgid="7436045944320504639">"時刻"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理者"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログインしました"</string>
-    <!-- no translation found for grant_admin_privileges_title (6477999444384992523) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_button_text (778965511126836155) -->
-    <skip />
-    <!-- no translation found for grant_admin_privileges_message (4946396905189324060) -->
-    <skip />
+    <string name="grant_admin_privileges_title" msgid="6477999444384992523">"管理者権限の付与"</string>
+    <string name="grant_admin_privileges_button_text" msgid="778965511126836155">"管理者にする"</string>
+    <string name="grant_admin_privileges_message" msgid="4946396905189324060">"このユーザーは、他の管理者を含むユーザーの削除、システムデータの初期化を行えるようになります。"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"この操作は元に戻せません。"</string>
     <string name="confirm_assign_admin" msgid="8326579654857377888">"はい、管理者にする"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ユーザーを追加"</string>
