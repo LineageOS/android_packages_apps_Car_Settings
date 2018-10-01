@@ -177,10 +177,10 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
 
     /**
      * Returns {@code true} if the preference for this controller can be shown given the {@param
-     * restrictionInfo}. Defaults to {@code false} if
-     * {@link CarUxRestrictions#UX_RESTRICTIONS_NO_SETUP} is set.
+     * restrictionInfo}. Defaults to {@code true}. Subclasses may override this method to modify
+     * availability based on driving restrictions.
      */
     protected boolean canBeShownWithRestrictions(CarUxRestrictions restrictionInfo) {
-        return !CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
+        return true;
     }
 }

@@ -25,7 +25,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.testng.Assert.expectThrows;
 
-import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -71,39 +70,29 @@ public class BasePreferenceControllerTest {
     }
 
     @Test
-    public void isAvailable_available_noRestrictions_returnsTrue() {
+    public void isAvailable_available_returnsTrue() {
         mController.setAvailabilityStatus(AVAILABLE);
 
         assertThat(mController.isAvailable()).isTrue();
     }
 
     @Test
-    public void isAvailable_conditionallyUnavailable_noRestrictions_returnsFalse() {
+    public void isAvailable_conditionallyUnavailable_returnsFalse() {
         mController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
 
         assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test
-    public void isAvailable_unsupportedOnDevice_noRestrictions_returnsFalse() {
+    public void isAvailable_unsupportedOnDevice_returnsFalse() {
         mController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
 
         assertThat(mController.isAvailable()).isFalse();
     }
 
     @Test
-    public void isAvailable_disabledForUser_noRestrictions_returnsFalse() {
+    public void isAvailable_disabledForUser_returnsFalse() {
         mController.setAvailabilityStatus(DISABLED_FOR_USER);
-
-        assertThat(mController.isAvailable()).isFalse();
-    }
-
-    @Test
-    public void isAvailable_available_restrictions_returnsFalse() {
-        mController.setAvailabilityStatus(AVAILABLE);
-        CarUxRestrictions restrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
-        mController.onUxRestrictionsChanged(restrictionInfo);
 
         assertThat(mController.isAvailable()).isFalse();
     }
