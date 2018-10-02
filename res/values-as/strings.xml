@@ -201,16 +201,13 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"যিকোনো ব্য়ৱহাৰকাৰীয়ে সকলো ব্য়ৱহাৰকাৰীৰ বাবে এপসমূহ আপডেট কৰিব পাৰে।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীণ লক"</string>
-    <!-- no translation found for security_lock_none (1054645093754839638) -->
-    <skip />
+    <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"আৰ্হি"</string>
-    <!-- no translation found for security_lock_pin (4891899974369503200) -->
-    <skip />
+    <string name="security_lock_pin" msgid="4891899974369503200">"পিন"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"পাছৱৰ্ড"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"কোনো লকৰ প্ৰকাৰ বাছক"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"স্ক্ৰীণ লকৰ বিকল্পসমূহ"</string>
-    <!-- no translation found for lock_settings_enter_pattern (4826034565853171624) -->
-    <skip />
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"আপোনাৰ আৰ্হি দিয়ক"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"নিশ্চিত কৰক"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"আকৌ আঁকক"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"অব্য়াহত ৰাখক"</string>
@@ -220,8 +217,7 @@
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"আপোনাৰ পিন বাছনি কৰক"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"আপোনাৰ আৰ্হি বাছক"</string>
     <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"আপোনাৰ পাছৱর্ড বাছনি কৰক"</string>
-    <!-- no translation found for current_screen_lock (637651611145979587) -->
-    <skip />
+    <string name="current_screen_lock" msgid="637651611145979587">"বৰ্তমান ব্যৱহাৰ হৈ থকা স্ক্ৰীণ লক"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"সুৰক্ষাৰ বাবে কোনো আৰ্হি ছেট কৰক"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"মচক"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"বাতিল কৰক"</string>
@@ -235,10 +231,8 @@
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"লক খোলাৰ আৰ্হি অঁকা উপায়"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"আৰ্হি ছেভ কৰোঁতে আঁসোৱাহ"</string>
     <string name="okay" msgid="4589873324439764349">"ঠিক আছে"</string>
-    <!-- no translation found for remove_screen_lock_title (1234382338764193387) -->
-    <skip />
-    <!-- no translation found for remove_screen_lock_message (6675850371585564965) -->
-    <skip />
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"স্ক্ৰীণ লক আঁতৰাবনে?"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"এই কাৰ্যই সকলোকে আপোনাৰ একাউণ্টৰ এক্সেছ দিব"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"আপোনাৰ পিন দিয়ক"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"আপোনাৰ পাছৱৰ্ড দিয়ক"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"সুৰক্ষাৰ বাবে কোনো পিন ছেট কৰক"</string>
