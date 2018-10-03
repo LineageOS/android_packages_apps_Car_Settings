@@ -84,22 +84,45 @@ public class BasePreferenceFragmentTest {
     }
 
     @Test
-    public void onStart_callsDisplayPreference() {
-        mFragmentController.create().start();
+    public void onCreate_initializesUxRestrictions() {
+        mFragmentController.create();
+
+        CarUxRestrictions initialUxRestrictions =
+                ((UxRestrictionsProvider) mFragment.requireActivity()).getCarUxRestrictions();
+        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(initialUxRestrictions);
+    }
+
+    @Test
+    public void onCreate_callsDisplayPreference() {
+        mFragmentController.create();
 
         verify(mFragment.mSpyPreferenceController).displayPreference(
                 mFragment.getPreferenceScreen());
     }
 
     @Test
-    public void onStart_initializesUxRestrictions() {
+    public void onStart_callsDisplayPreference() {
         mFragmentController.create().start();
 
+        // Times 2: onCreatePreferences, onStart.
+        verify(mFragment.mSpyPreferenceController, times(2)).displayPreference(
+                mFragment.getPreferenceScreen());
+    }
+
+    @Test
+    public void onStart_updatesUxRestrictions() {
+        mFragmentController.create();
         CarUxRestrictions initialUxRestrictions =
                 ((UxRestrictionsProvider) mFragment.requireActivity()).getCarUxRestrictions();
-        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(
-                argThat(restrictionInfo -> restrictionInfo.isSameRestrictions(
-                        initialUxRestrictions)));
+        CarUxRestrictions updatedUxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD, /* timestamp= */ 0).build();
+        ((BaseTestActivity) mFragment.requireActivity()).setCarUxRestrictions(
+                updatedUxRestrictions);
+
+        mFragmentController.start();
+
+        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(initialUxRestrictions);
+        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(updatedUxRestrictions);
     }
 
     @Test
@@ -161,9 +184,7 @@ public class BasePreferenceFragmentTest {
         mFragment.onUxRestrictionsChanged(initialUxRestrictions);
 
         // Only called once in setup. No additional call.
-        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(
-                argThat(restrictionInfo -> restrictionInfo.isSameRestrictions(
-                        initialUxRestrictions)));
+        verify(mFragment.mSpyPreferenceController).onUxRestrictionsChanged(initialUxRestrictions);
     }
 
     @Test
@@ -175,8 +196,8 @@ public class BasePreferenceFragmentTest {
 
         mFragment.onUxRestrictionsChanged(restrictionInfo);
 
-        // Times 2: onStart from setup, onUxRestrictionsChanged.
-        verify(mFragment.mSpyPreferenceController, times(2)).displayPreference(
+        // Times 3: onCreatePreferences and onStart from setup, onUxRestrictionsChanged.
+        verify(mFragment.mSpyPreferenceController, times(3)).displayPreference(
                 mFragment.getPreferenceScreen());
     }
 
