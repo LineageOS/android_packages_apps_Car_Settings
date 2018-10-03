@@ -223,10 +223,8 @@
     <!-- System --><skip />
     <!-- Main setting menu item to go into system settings -->
     <string name="system_setting_title">System</string>
-    <!-- About phone screen, list item title.  Takes the user to the screen for seeing and installing system updates. [CHAR LIMIT=40] -->
-    <string name="system_update_settings_list_item_title">System updates</string>
-    <!-- About phone screen, list item summary.  Takes the user to the screen for seeing and installing system updates. [CHAR LIMIT=40] -->
-    <string name="system_update_settings_list_item_summary">""</string>
+    <!-- System updates title.  Takes the user to the screen for seeing and installing system updates. [CHAR LIMIT=40] -->
+    <string name="system_update_settings_title">System updates</string>
 
     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
     <string name="firmware_version">Android version</string>

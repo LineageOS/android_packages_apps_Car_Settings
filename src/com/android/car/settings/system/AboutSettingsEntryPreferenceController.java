@@ -16,16 +16,21 @@
 
 package com.android.car.settings.system;
 
-import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import android.content.Context;
+import android.os.Build;
 
-/**
- * Shows basic info about the system and provide some actions like update, reset etc.
- */
-public class SystemSettingsFragment extends BasePreferenceFragment {
+import com.android.car.settings.R;
+import com.android.car.settings.common.NoSetupPreferenceController;
+
+/** Updates the about settings entry summary with the build version. */
+public class AboutSettingsEntryPreferenceController extends NoSetupPreferenceController {
+
+    public AboutSettingsEntryPreferenceController(Context context, String preferenceKey) {
+        super(context, preferenceKey);
+    }
 
     @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.system_settings_fragment;
+    public CharSequence getSummary() {
+        return mContext.getString(R.string.about_summary, Build.VERSION.RELEASE);
     }
 }
