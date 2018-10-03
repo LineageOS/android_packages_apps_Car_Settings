@@ -34,9 +34,11 @@ import android.text.TextUtils;
 
 import androidx.car.widget.ListItem;
 import androidx.car.widget.TextListItem;
+import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -46,6 +48,7 @@ import java.util.Map;
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
  */
+// TODO: investigate using SettingsLib Tiles.
 public class ExtraSettingsLoader {
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
@@ -61,7 +64,10 @@ public class ExtraSettingsLoader {
 
     /**
      * Returns a map of category and setting items pair loaded from 3rd party.
+     *
+     * @deprecated use {@link #loadPreferences(String)} instead.
      */
+    @Deprecated
     public Map<String, Collection<ListItem>> load() {
         PackageManager pm = mContext.getPackageManager();
         Intent intent = new Intent(EXTRA_SETTINGS_ACTION);
@@ -143,5 +149,97 @@ public class ExtraSettingsLoader {
             extraSettings.get(category).add(item);
         }
         return extraSettings;
+    }
+
+    /**
+     * Returns a list of {@link Preference} instances representing settings injected from system
+     * apps. The given intent must specify the action to use for resolving activities and a
+     * category with the key "com.android.settings.category" and one of
+     * {@link #WIRELESS_CATEGORY}, {@link #DEVICE_CATEGORY}, {@link #SYSTEM_CATEGORY},
+     * {@link #PERSONAL_CATEGORY} as the value.
+     *
+     * @param intent intent specifying the extra settings category to load
+     */
+    public List<Preference> loadPreferences(Intent intent) {
+        PackageManager pm = mContext.getPackageManager();
+
+        List<ResolveInfo> results = pm.queryIntentActivitiesAsUser(intent,
+                PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
+        List<Preference> preferences = new ArrayList<>();
+
+        String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
+        for (ResolveInfo resolved : results) {
+            if (!resolved.system) {
+                // Do not allow any app to be added to settings, only system ones.
+                continue;
+            }
+            String title = null;
+            String summary = null;
+            String category = null;
+            ActivityInfo activityInfo = resolved.activityInfo;
+            Bundle metaData = activityInfo.metaData;
+            try {
+                Resources res = pm.getResourcesForApplication(activityInfo.packageName);
+                if (metaData.containsKey(META_DATA_PREFERENCE_TITLE)) {
+                    if (metaData.get(META_DATA_PREFERENCE_TITLE) instanceof Integer) {
+                        title = res.getString(metaData.getInt(META_DATA_PREFERENCE_TITLE));
+                    } else {
+                        title = metaData.getString(META_DATA_PREFERENCE_TITLE);
+                    }
+                }
+                if (TextUtils.isEmpty(title)) {
+                    LOG.d("no title.");
+                    title = activityInfo.loadLabel(pm).toString();
+                }
+                if (metaData.containsKey(META_DATA_PREFERENCE_SUMMARY)) {
+                    if (metaData.get(META_DATA_PREFERENCE_SUMMARY) instanceof Integer) {
+                        summary = res.getString(metaData.getInt(META_DATA_PREFERENCE_SUMMARY));
+                    } else {
+                        summary = metaData.getString(META_DATA_PREFERENCE_SUMMARY);
+                    }
+                } else {
+                    LOG.d("no description.");
+                }
+                if (metaData.containsKey(META_DATA_PREFERENCE_CATEGORY)) {
+                    if (metaData.get(META_DATA_PREFERENCE_CATEGORY) instanceof Integer) {
+                        category = res.getString(metaData.getInt(META_DATA_PREFERENCE_CATEGORY));
+                    } else {
+                        category = metaData.getString(META_DATA_PREFERENCE_CATEGORY);
+                    }
+                } else {
+                    LOG.d("no category.");
+                }
+            } catch (PackageManager.NameNotFoundException | Resources.NotFoundException e) {
+                LOG.d("Couldn't find info", e);
+            }
+            Icon icon = null;
+            if (metaData.containsKey(META_DATA_PREFERENCE_ICON)) {
+                int iconRes = metaData.getInt(META_DATA_PREFERENCE_ICON);
+                icon = Icon.createWithResource(activityInfo.packageName, iconRes);
+            } else {
+                icon = Icon.createWithResource(mContext, R.drawable.ic_settings_gear);
+                LOG.d("use default icon.");
+            }
+            Intent extraSettingIntent =
+                    new Intent().setClassName(activityInfo.packageName, activityInfo.name);
+            if (category == null) {
+                // If category is not specified or not supported, default to device.
+                category = DEVICE_CATEGORY;
+            }
+
+            if (!TextUtils.equals(extraCategory, category)) {
+                continue;
+            }
+            Preference preference = new Preference(mContext);
+            preference.setTitle(title);
+            preference.setSummary(summary);
+            if (icon != null) {
+                preference.setIcon(icon.loadDrawable(mContext));
+                // TODO: handle icon tint
+            }
+            preference.setIntent(extraSettingIntent);
+            preferences.add(preference);
+        }
+        return preferences;
     }
 }
