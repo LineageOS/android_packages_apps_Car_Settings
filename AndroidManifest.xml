@@ -132,6 +132,20 @@
                   android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <!-- This logic is copied from phone.-->
+        <!-- Ensures there's lightweight fallback activity when no other MAIN/HOME activity is present.-->
+        <activity android:name=".FallbackHome"
+                  android:excludeFromRecents="true"
+                  android:label=""
+                  android:screenOrientation="nosensor"
+                  android:theme="@style/FallbackHome">
+            <intent-filter android:priority="-1000">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <service android:name=".bluetooth.BluetoothPairingService" />
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
