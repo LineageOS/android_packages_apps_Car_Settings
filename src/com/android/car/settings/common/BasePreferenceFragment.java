@@ -173,6 +173,11 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
             return;
         }
         addPreferencesFromResource(resId);
+        CarUxRestrictions restrictionInfo =
+                ((UxRestrictionsProvider) requireActivity()).getCarUxRestrictions();
+        updateUxRestrictions(restrictionInfo);
+        // Allow controllers to set initial visibility.
+        updateDisplayedPreferences();
     }
 
     @Override
