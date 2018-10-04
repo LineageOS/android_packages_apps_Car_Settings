@@ -92,7 +92,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
             reattachListenerToRemoveUserDialog(CONFIRM_REMOVE_USER_DIALOG_TAG, this::removeUser);
 
-            reattachListenerToAssignAdminDialog(CONFIRM_GRANT_ADMIN_DIALOG_TAG, this::grantAdmin);
+            reattachListenerToGrantAdminDialog(CONFIRM_GRANT_ADMIN_DIALOG_TAG, this::grantAdmin);
         }
 
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
@@ -120,14 +120,14 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     @Override
     public void onGrantAdminPermission() {
-        ConfirmAssignAdminPrivilegesDialog dialog = new ConfirmAssignAdminPrivilegesDialog();
-        dialog.setConfirmAssignAdminListener(this::grantAdmin);
+        ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
+        dialog.setConfirmGrantAdminListener(this::grantAdmin);
         dialog.show(getFragmentManager(), CONFIRM_GRANT_ADMIN_DIALOG_TAG);
     }
 
     @VisibleForTesting
     void grantAdmin() {
-        mCarUserManagerHelper.assignAdminPrivileges(mUserInfo);
+        mCarUserManagerHelper.grantAdminPermissions(mUserInfo);
         getActivity().onBackPressed();
     }
 
@@ -204,7 +204,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     private AbstractRefreshableListItemProvider getUserDetailsItemProvider() {
         if (mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserInfo.isAdmin()) {
-            // Admins should be able to manage non-admins and upgrade their privileges.
+            // Admins should be able to manage non-admins and upgrade their permissions.
             return new NonAdminManagementItemProvider(getContext(),
                     /* userRestrictionsListener= */ this, /* userRestrictionsProvider= */this,
                     new UserIconProvider(mCarUserManagerHelper).getUserIcon(mUserInfo,
@@ -285,12 +285,12 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
         }
     }
 
-    private void reattachListenerToAssignAdminDialog(String tag,
-            ConfirmAssignAdminPrivilegesDialog.ConfirmAssignAdminListener listener) {
-        ConfirmAssignAdminPrivilegesDialog confirmGrantAdminDialog =
-                (ConfirmAssignAdminPrivilegesDialog) getFragmentManager().findFragmentByTag(tag);
+    private void reattachListenerToGrantAdminDialog(String tag,
+            ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener listener) {
+        ConfirmGrantAdminPermissionsDialog confirmGrantAdminDialog =
+                (ConfirmGrantAdminPermissionsDialog) getFragmentManager().findFragmentByTag(tag);
         if (confirmGrantAdminDialog != null) {
-            confirmGrantAdminDialog.setConfirmAssignAdminListener(listener);
+            confirmGrantAdminDialog.setConfirmGrantAdminListener(listener);
         }
     }
 }
