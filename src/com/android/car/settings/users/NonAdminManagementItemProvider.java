@@ -26,7 +26,7 @@ import androidx.car.widget.TextListItem;
 import com.android.car.settings.R;
 
 /**
- * Provides list items for screen that manages non-admin privileges.
+ * Provides list items for screen that manages non-admin permissions.
  */
 public class NonAdminManagementItemProvider extends AbstractRefreshableListItemProvider {
     private final UserRestrictionsListener mUserRestrictionsListener;
@@ -67,8 +67,8 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
         ActionListItem grantAdminItem = new ActionListItem(mContext);
         grantAdminItem.setPrimaryActionIcon(mUserIcon,
                 ActionListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
-        grantAdminItem.setTitle(mContext.getString(R.string.grant_admin_privileges_title));
-        grantAdminItem.setAction(mContext.getString(R.string.grant_admin_privileges_button_text),
+        grantAdminItem.setTitle(mContext.getString(R.string.grant_admin_permissions_title));
+        grantAdminItem.setAction(mContext.getString(R.string.grant_admin_permissions_button_text),
                 /* showDivider= */ false,
                 v -> mUserRestrictionsListener.onGrantAdminPermission());
 
