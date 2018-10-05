@@ -35,6 +35,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx.car_car \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
+      androidx-constraintlayout_constraintlayout \
       car-settings-lib \
       car-setup-wizard-lib \
       setup-wizard-lib-gingerbread-compat \
@@ -55,6 +56,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_STATIC_JAVA_LIBRARIES := \
       android.car.user \
+      androidx-constraintlayout_constraintlayout-solver \
       jsr305
 
   LOCAL_DX_FLAGS := --multi-dex
@@ -91,6 +93,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx.car_car \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
+      androidx-constraintlayout_constraintlayout \
       car-settings-lib \
       car-setup-wizard-lib \
       setup-wizard-lib-gingerbread-compat \
@@ -112,6 +115,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_STATIC_JAVA_LIBRARIES := \
       android.car.user \
+      androidx-constraintlayout_constraintlayout-solver \
       jsr305
 
   LOCAL_DX_FLAGS := --multi-dex
