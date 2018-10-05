@@ -109,6 +109,10 @@
         <activity android:name=".security.SettingsScreenLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.car.settings.SCREEN_LOCK_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".security.SetupWizardScreenLockActivity"
