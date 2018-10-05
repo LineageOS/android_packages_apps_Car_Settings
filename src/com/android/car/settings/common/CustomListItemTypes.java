@@ -24,7 +24,6 @@ public final class CustomListItemTypes {
     public static final int EDIT_TEXT_VIEW_TYPE = -2;
     public static final int PASSWORD_VIEW_TYPE = -3;
     public static final int SPINNER_VIEW_TYPE = -4;
-    public static final int SUGGESTION_VIEW_TYPE = -5;
 
     /**
      * No one should instantiate this class.
