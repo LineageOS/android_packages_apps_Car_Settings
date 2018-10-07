@@ -183,11 +183,15 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Thời gian"</string>
     <string name="user_admin" msgid="1535484812908584809">"Quản trị viên"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Đã đăng nhập là quản trị viên"</string>
-    <string name="grant_admin_privileges_title" msgid="6477999444384992523">"Cấp quyền quản trị viên"</string>
-    <string name="grant_admin_privileges_button_text" msgid="778965511126836155">"Đặt làm quản trị viên"</string>
-    <string name="grant_admin_privileges_message" msgid="4946396905189324060">"Người dùng này có thể xóa những người dùng, bao gồm cả các Quản trị viên khác và khôi phục cài đặt gốc hệ thống."</string>
+    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
+    <skip />
+    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
+    <skip />
+    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Không thể hoàn tác hành động này."</string>
-    <string name="confirm_assign_admin" msgid="8326579654857377888">"Có, đặt làm quản trị viên"</string>
+    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
+    <skip />
     <string name="user_add_user_menu" msgid="5319151436895941496">"Thêm người dùng"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Người dùng mới"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Thêm người dùng mới?"</string>
@@ -331,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Thoát chế độ demo"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Thao tác này sẽ xóa tài khoản demo và thiết lập lại dữ liệu ban đầu cho hệ thống. Tất cả dữ liệu người dùng sẽ bị mất."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Thoát chế độ demo"</string>
-    <string name="suggestion_primary_button" msgid="6421115494714083020">"hoàn tất thiết lập"</string>
-    <string name="suggestion_secondary_button" msgid="7075088546904464681">"để sau"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BỎ QUA"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Bạn không sử dụng được tính năng này khi đang lái xe."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Không thể thêm người dùng trong khi lái xe."</string>
 </resources>

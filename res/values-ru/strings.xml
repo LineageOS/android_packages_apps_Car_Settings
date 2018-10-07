@@ -185,11 +185,15 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Время"</string>
     <string name="user_admin" msgid="1535484812908584809">"Администратор"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Вы вошли как администратор"</string>
-    <string name="grant_admin_privileges_title" msgid="6477999444384992523">"Предоставить права администратора?"</string>
-    <string name="grant_admin_privileges_button_text" msgid="778965511126836155">"Назначить администратором"</string>
-    <string name="grant_admin_privileges_message" msgid="4946396905189324060">"Пользователь сможет удалять других пользователей (в том числе администраторов) и сбрасывать системные настройки."</string>
+    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
+    <skip />
+    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
+    <skip />
+    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
+    <skip />
     <string name="action_not_reversible_message" msgid="740401337875726973">"Это действие нельзя будет отменить."</string>
-    <string name="confirm_assign_admin" msgid="8326579654857377888">"Назначить администратором"</string>
+    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
+    <skip />
     <string name="user_add_user_menu" msgid="5319151436895941496">"Добавление пользователя"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Новый пользователь"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Добавить пользователя?"</string>
@@ -347,8 +351,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Выход из деморежима"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Произойдет сброс настроек. Тестовый аккаунт и все пользовательские данные будут удалены."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйти из деморежима"</string>
-    <string name="suggestion_primary_button" msgid="6421115494714083020">"Завершить настройку"</string>
-    <string name="suggestion_secondary_button" msgid="7075088546904464681">"Не сейчас"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРЫТЬ"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Эта функция недоступна во время вождения."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Невозможно добавить пользователя во время вождения."</string>
 </resources>
