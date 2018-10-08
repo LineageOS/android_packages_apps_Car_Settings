@@ -17,6 +17,7 @@
 package com.android.car.settings.datetime;
 
 import android.content.Context;
+import android.graphics.drawable.Icon;
 import android.provider.Settings;
 
 import androidx.car.widget.TextListItem;
@@ -56,7 +57,7 @@ class SetTimeZoneListItem extends TextListItem
             setOnClickListener(v ->
                     mFragmentController.launchFragment(new TimeZonePickerFragment()));
         } else {
-            setSupplementalIcon(null, /* showDivider= */ false);
+            setSupplementalIcon((Icon) null, /* showDivider= */ false);
             setOnClickListener(null);
         }
     }
