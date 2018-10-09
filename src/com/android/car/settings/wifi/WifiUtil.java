@@ -16,9 +16,15 @@
 package com.android.car.settings.wifi;
 
 import android.annotation.DrawableRes;
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.NetworkCapabilities;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
+import android.provider.Settings;
 
 import androidx.annotation.StringRes;
 
@@ -71,5 +77,59 @@ public class WifiUtil {
      */
     public static boolean isWifiAvailable(Context context) {
         return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI);
+    }
+
+    /**
+     * This method is a stripped and negated version of WifiConfigStore.canModifyNetwork.
+     *
+     * @param context Context of caller
+     * @param config  The WiFi config.
+     * @return {@code true} if Settings cannot modify the config due to lockDown.
+     */
+    public static boolean isNetworkLockedDown(Context context, WifiConfiguration config) {
+        if (config == null) {
+            return false;
+        }
+
+        final DevicePolicyManager dpm =
+                (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+        final PackageManager pm = context.getPackageManager();
+
+        // Check if device has DPM capability. If it has and dpm is still null, then we
+        // treat this case with suspicion and bail out.
+        if (pm.hasSystemFeature(PackageManager.FEATURE_DEVICE_ADMIN) && dpm == null) {
+            return true;
+        }
+
+        boolean isConfigEligibleForLockdown = false;
+        if (dpm != null) {
+            final ComponentName deviceOwner = dpm.getDeviceOwnerComponentOnAnyUser();
+            if (deviceOwner != null) {
+                final int deviceOwnerUserId = dpm.getDeviceOwnerUserId();
+                try {
+                    final int deviceOwnerUid = pm.getPackageUidAsUser(deviceOwner.getPackageName(),
+                            deviceOwnerUserId);
+                    isConfigEligibleForLockdown = deviceOwnerUid == config.creatorUid;
+                } catch (PackageManager.NameNotFoundException e) {
+                    // don't care
+                }
+            }
+        }
+        if (!isConfigEligibleForLockdown) {
+            return false;
+        }
+
+        final ContentResolver resolver = context.getContentResolver();
+        final boolean isLockdownFeatureEnabled = Settings.Global.getInt(resolver,
+                Settings.Global.WIFI_DEVICE_OWNER_CONFIGS_LOCKDOWN, 0) != 0;
+        return isLockdownFeatureEnabled;
+    }
+
+    /**
+     * Returns {@code true} if the provided NetworkCapabilities indicate a captive portal network.
+     */
+    public static boolean canSignIntoNetwork(NetworkCapabilities capabilities) {
+        return (capabilities != null
+                && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL));
     }
 }
