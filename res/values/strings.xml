@@ -42,14 +42,16 @@
     <string name="wifi_starting">Turning Wi\u2011Fi on\u2026</string>
     <!-- Summary text when turning Wi-Fi or bluetooth off -->
     <string name="wifi_stopping">Turning off Wi\u2011Fi\u2026</string>
+    <!-- Summary text when loading Wi-Fi list -->
+    <string name="loading_wifi_list">Loading Wi\u2011Fi list</string>
+    <!-- Summary text shown in place of the Wi-Fi list when wifi is off -->
+    <string name="wifi_disabled">Wi\u2011Fi disabled</string>
     <!-- Failured notification for forget -->
     <string name="wifi_failed_forget_message">Failed to forget network</string>
     <!-- Failured notification for connect -->
     <string name="wifi_failed_connect_message">Failed to connect to network</string>
     <!-- Button message shown on the button adding manual setting. Used in Wifi Setup For Setup Wizard with XL screen. -->
     <string name="wifi_setup_add_network">Add network</string>
-    <!-- Summary text when Wi-Fi is turned off -->
-    <string name="wifi_disabled">Wi\u2011Fi disabled</string>
     <!-- Button label to connect to a Wi-Fi network. Used in SetupWizard for XLarge screen [CHAR LIMIT=10] -->
     <string name="wifi_setup_connect">Connect</string>
     <!-- Label for the password of the secured network -->
