@@ -17,6 +17,7 @@
 package com.android.car.settings.datetime;
 
 import android.content.Context;
+import android.graphics.drawable.Icon;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 
@@ -55,7 +56,7 @@ class SetTimeListItem extends TextListItem implements DatetimeSettingsFragment.L
             setOnClickListener(v ->
                     mFragmentController.launchFragment(new TimePickerFragment()));
         } else {
-            setSupplementalIcon(null, /* showDivider= */ false);
+            setSupplementalIcon((Icon) null, /* showDivider= */ false);
             setOnClickListener(null);
         }
     }
