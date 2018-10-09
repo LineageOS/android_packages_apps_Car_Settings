@@ -34,6 +34,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.wifi.details.WifiDetailFragment;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.List;

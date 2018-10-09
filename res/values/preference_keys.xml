@@ -37,6 +37,18 @@
     <string name="pk_device_extra_settings" translatable="false">device_extra_settings</string>
     <string name="pk_personal_extra_settings" translatable="false">personal_extra_settings</string>
 
+    <!-- WIFI -->
+    <string name="pk_wifi_frequency" translatable="false">wifi_frequency</string>
+    <string name="pk_wifi_signal_strength" translatable="false">wifi_signal_strength</string>
+    <string name="pk_wifi_security" translatable="false">wifi_security</string>
+    <string name="pk_wifi_mac_address" translatable="false">wifi_mac_address</string>
+    <string name="pk_wifi_ip" translatable="false">wifi_ip</string>
+    <string name="pk_wifi_ipv6" translatable="false">wifi_ipv6</string>
+    <string name="pk_wifi_gateway" translatable="false">wifi_gateway</string>
+    <string name="pk_wifi_subnet_mask" translatable="false">wifi_subnet_mask</string>
+    <string name="pk_wifi_dns" translatable="false">wifi_dns</string>
+    <string name="pk_wifi_link_speed" translatable="false">wifi_link_speed</string>
+
     <!-- Applications Settings -->
     <string name="pk_applications_settings_screen" translatable="false">
         applications_settings_screen

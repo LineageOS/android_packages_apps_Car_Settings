@@ -89,6 +89,13 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
     }
 
     /**
+     * Returns the {@link FragmentController}, this function should only be called after onAttach().
+     */
+    public final FragmentController getFragmentController() {
+        return (FragmentController) requireActivity();
+    }
+
+    /**
      * Returns the layout id to use as the activity action bar. Subclasses should override this
      * method to customize the action bar layout (e.g. additional buttons, switches, etc.). The
      * default action bar contains a back button and the title.
