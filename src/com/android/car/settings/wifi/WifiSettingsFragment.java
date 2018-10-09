@@ -15,35 +15,26 @@
  */
 package com.android.car.settings.wifi;
 
-import android.car.drivingstate.CarUxRestrictions;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.ViewSwitcher;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.car.widget.PagedListView;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.CarUxRestrictionsHelper;
+import com.android.car.settings.common.BasePreferenceFragment;
 
 /**
  * Main page to host Wifi related preferences.
  */
-public class WifiSettingsFragment extends BaseFragment implements CarWifiManager.Listener {
+public class WifiSettingsFragment extends BasePreferenceFragment
+        implements CarWifiManager.Listener {
     private CarWifiManager mCarWifiManager;
-    private AccessPointListAdapter mAdapter;
-    private Switch mWifiSwitch;
     private ProgressBar mProgressBar;
-    private PagedListView mListView;
-    private TextView mMessageView;
-    private ViewSwitcher mViewSwitcher;
-    private boolean mShowSavedApOnly;
+    private Switch mWifiSwitch;
 
     @Override
     @LayoutRes
@@ -52,47 +43,24 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     }
 
     @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.wifi_list;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.wifi_settings;
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.wifi_list_fragment;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
+        mCarWifiManager = new CarWifiManager(getContext());
 
         mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-        mListView = getView().findViewById(R.id.list);
-        mMessageView = getView().findViewById(R.id.message);
-        mViewSwitcher = getView().findViewById(R.id.view_switcher);
         setupWifiSwitch();
-        if (mCarWifiManager.isWifiEnabled()) {
-            showList();
-            setProgressBarVisible(true);
-        } else {
-            showMessage(R.string.wifi_disabled);
-        }
-        mAdapter = new AccessPointListAdapter(
-                getContext(),
-                mCarWifiManager,
-                mShowSavedApOnly
-                        ? mCarWifiManager.getSavedAccessPoints()
-                        : mCarWifiManager.getAllAccessPoints(),
-                getFragmentController());
-        mAdapter.showAddNetworkRow(!mShowSavedApOnly);
-        mListView.setAdapter(mAdapter);
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        mCarWifiManager.addListener(this);
         mCarWifiManager.start();
         onWifiStateChanged(mCarWifiManager.getWifiState());
     }
@@ -100,8 +68,9 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     @Override
     public void onStop() {
         super.onStop();
+        mCarWifiManager.removeListener(this);
         mCarWifiManager.stop();
-        setProgressBarVisible(false);
+        mProgressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -112,7 +81,7 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
 
     @Override
     public void onAccessPointsChanged() {
-        refreshData();
+        // don't care
     }
 
     @Override
@@ -120,66 +89,10 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         switch (state) {
             case WifiManager.WIFI_STATE_ENABLING:
-                showList();
-                setProgressBarVisible(true);
-                break;
-            case WifiManager.WIFI_STATE_DISABLED:
-                setProgressBarVisible(false);
-                showMessage(R.string.wifi_disabled);
+                mProgressBar.setVisibility(View.VISIBLE);
                 break;
             default:
-                showList();
-        }
-    }
-
-    /**
-     * This fragment will adapt to restriction, so can always be shown.
-     */
-    @Override
-    public boolean canBeShown(CarUxRestrictions carUxRestrictions) {
-        return true;
-    }
-
-    @Override
-    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-        mShowSavedApOnly = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
-        refreshData();
-    }
-
-    private void setProgressBarVisible(boolean visible) {
-        if (mProgressBar != null) {
-            mProgressBar.setVisibility(visible ? View.VISIBLE : View.GONE);
-        }
-    }
-
-    private void refreshData() {
-        if (mAdapter != null) {
-            mAdapter.showAddNetworkRow(!mShowSavedApOnly);
-            mAdapter.updateAccessPoints(mShowSavedApOnly
-                    ? mCarWifiManager.getSavedAccessPoints()
-                    : mCarWifiManager.getAllAccessPoints());
-            // if the list is empty, keep showing the progress bar, the list should reset
-            // every couple seconds.
-            // TODO: Consider show a message in the list view place.
-            if (!mAdapter.isEmpty()) {
-                setProgressBarVisible(false);
-            }
-        }
-        if (mCarWifiManager != null) {
-            mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
-        }
-    }
-
-    private void showMessage(@StringRes int resId) {
-        if (mViewSwitcher.getCurrentView() != mMessageView) {
-            mViewSwitcher.showNext();
-        }
-        mMessageView.setText(getResources().getString(resId));
-    }
-
-    private void showList() {
-        if (mViewSwitcher.getCurrentView() != mListView) {
-            mViewSwitcher.showPrevious();
+                mProgressBar.setVisibility(View.GONE);
         }
     }
 
@@ -187,8 +100,8 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         mWifiSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         mWifiSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (mWifiSwitch.isChecked() != mCarWifiManager.isWifiEnabled()) {
-                mCarWifiManager.setWifiEnabled(mWifiSwitch.isChecked());
+            if (isChecked != mCarWifiManager.isWifiEnabled()) {
+                mCarWifiManager.setWifiEnabled(isChecked);
             }
         });
     }

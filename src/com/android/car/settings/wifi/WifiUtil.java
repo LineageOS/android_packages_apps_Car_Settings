@@ -29,6 +29,7 @@ import android.provider.Settings;
 import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
+import com.android.settingslib.wifi.AccessPoint;
 
 /**
  * A collections of util functions for WIFI.
@@ -77,6 +78,13 @@ public class WifiUtil {
      */
     public static boolean isWifiAvailable(Context context) {
         return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_WIFI);
+    }
+
+    /**
+     * Gets a unique key for a {@link AccessPoint}.
+     */
+    public static String getKey(AccessPoint accessPoint) {
+        return String.valueOf(accessPoint.hashCode());
     }
 
     /**
