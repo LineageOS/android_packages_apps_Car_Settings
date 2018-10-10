@@ -126,7 +126,7 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     private void refreshBuildInfo() {
-        if (isDetached()) {
+        if (!isAdded()) {
             // This can happen if the delayed post happens before we're stopped. Just give up
             // trying to get the right clock.
             return;
