@@ -79,9 +79,32 @@ public class UserDetailsFragmentTest {
                 .get();
     }
 
-    /* Test that the fragment title correspond to the user's name. */
     @Test
-    public void testFragmentTitle() {
+    public void testFragmentTitle_adminViewingNonAdmin() {
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessAdminUser();
+        String userName = "Test User";
+        UserInfo testUser = new UserInfo(/* id= */ 10, userName, /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        TextView titleView = mTestActivity.findViewById(R.id.title);
+        assertThat(titleView.getText())
+                .isEqualTo(application.getString(R.string.user_details_admin_title, userName));
+    }
+
+    @Test
+    public void testFragmentTitle_adminViewingAdmin() {
+        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessAdminUser();
+        String userName = "Test User";
+        UserInfo testUser = new UserInfo(/* id= */ 10, userName, /* flags= */ UserInfo.FLAG_ADMIN);
+        createUserDetailsFragment(testUser);
+
+        TextView titleView = mTestActivity.findViewById(R.id.title);
+        assertThat(titleView.getText()).isEqualTo(userName);
+    }
+
+    @Test
+    public void testFragmentTitle_nonAdmin() {
+        doReturn(false).when(mCarUserManagerHelper).isCurrentProcessAdminUser();
         String userName = "Test User";
         UserInfo testUser = new UserInfo(/* id= */ 10, userName, /* flags= */ 0);
         createUserDetailsFragment(testUser);

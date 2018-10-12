@@ -80,7 +80,6 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
 
         TextListItem createUserItem = new TextListItem(mContext);
         createUserItem.setTitle(mContext.getText(R.string.create_user_permission_title));
-        createUserItem.setBody(mContext.getText(R.string.create_user_permission_body));
         createUserItem.setSwitch(canCreateUsers, /* showDivider= */ false,
                 (CompoundButton buttonView, boolean checked) ->
                         mUserRestrictionsListener.onCreateUserPermissionChanged(checked));
@@ -93,7 +92,6 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
 
         TextListItem outgoingCallsItem = new TextListItem(mContext);
         outgoingCallsItem.setTitle(mContext.getText(R.string.outgoing_calls_permission_title));
-        outgoingCallsItem.setBody(mContext.getText(R.string.outgoing_calls_permission_body));
         outgoingCallsItem.setSwitch(canMakeOutgoingCalls, /* showDivider= */ false,
                 (CompoundButton buttonView, boolean checked) ->
                         mUserRestrictionsListener.onOutgoingCallsPermissionChanged(checked));
@@ -106,7 +104,6 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
 
         TextListItem messagingItem = new TextListItem(mContext);
         messagingItem.setTitle(mContext.getText(R.string.sms_messaging_permission_title));
-        messagingItem.setBody(mContext.getText(R.string.sms_messaging_permission_body));
         messagingItem.setSwitch(canSendAndReceiveMessaging, /* showDivider= */ false,
                 (CompoundButton buttonView, boolean checked) ->
                         mUserRestrictionsListener.onSmsMessagingPermissionChanged(checked));

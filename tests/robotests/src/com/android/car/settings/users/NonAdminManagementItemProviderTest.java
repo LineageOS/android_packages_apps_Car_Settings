@@ -88,15 +88,6 @@ public class NonAdminManagementItemProviderTest {
     }
 
     @Test
-    public void testItems_firstItemShouldHaveGrantAdminBody() {
-        ActionListItem grandAdminItem = (ActionListItem) mProvider.get(0);
-
-        assertThat(((ShadowActionListItem) Shadow.extract(
-                grandAdminItem)).getPrimaryActionText().toString()).isEqualTo(
-                application.getString(R.string.grant_admin_permissions_button_text));
-    }
-
-    @Test
     public void testItems_firstItemActionClicked_shouldCallOnGrantAdminPermission() {
         ActionListItem grandAdminItem = (ActionListItem) mProvider.get(0);
 
@@ -114,15 +105,6 @@ public class NonAdminManagementItemProviderTest {
         assertThat(((ShadowTextListItem) Shadow.extract(
                 createUserItem)).getTitle().toString()).isEqualTo(
                 application.getText(R.string.create_user_permission_title));
-    }
-
-    @Test
-    public void testItems_secondItemShouldHaveCreateUserPermissionBody() {
-        TextListItem createUserItem = (TextListItem) mProvider.get(1);
-
-        assertThat(((ShadowTextListItem) Shadow.extract(
-                createUserItem)).getBody().toString()).isEqualTo(
-                application.getText(R.string.create_user_permission_body));
     }
 
     @Test
@@ -168,15 +150,6 @@ public class NonAdminManagementItemProviderTest {
     }
 
     @Test
-    public void testItems_thirdItemShouldHaveOutgoingCallsPermissionBody() {
-        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(2);
-
-        assertThat(((ShadowTextListItem) Shadow.extract(
-                outgoingCallsItem)).getBody().toString()).isEqualTo(
-                application.getText(R.string.outgoing_calls_permission_body));
-    }
-
-    @Test
     public void testItems_hasOutgoingCallsPermission_thirdItemChecked() {
         when(mRestrictionsProvider.hasOutgoingCallsPermission()).thenReturn(true);
         // Recreate the provider so the mocked changes take effect.
@@ -216,15 +189,6 @@ public class NonAdminManagementItemProviderTest {
         assertThat(((ShadowTextListItem) Shadow.extract(
                 outgoingCallsItem)).getTitle().toString()).isEqualTo(
                 application.getText(R.string.sms_messaging_permission_title));
-    }
-
-    @Test
-    public void testItems_fourthItemShouldHaveMessagingPermissionBody() {
-        TextListItem outgoingCallsItem = (TextListItem) mProvider.get(3);
-
-        assertThat(((ShadowTextListItem) Shadow.extract(
-                outgoingCallsItem)).getBody().toString()).isEqualTo(
-                application.getText(R.string.sms_messaging_permission_body));
     }
 
     @Test
