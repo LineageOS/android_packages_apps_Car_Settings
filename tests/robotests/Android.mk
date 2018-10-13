@@ -12,12 +12,12 @@ LOCAL_JAVA_RESOURCE_DIRS := config
 
 # Include the testing libraries
 LOCAL_JAVA_LIBRARIES := \
-    android.car \
-    robolectric_android-all-stub \
     Robolectric_all-target \
+    robolectric_android-all-stub \
     mockito-robolectric-prebuilt \
+    truth-prebuilt \
     testng \
-    truth-prebuilt
+    android.car
 
 LOCAL_INSTRUMENTATION_FOR := CarSettingsForTesting
 
@@ -33,14 +33,13 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := RunCarSettingsRoboTests
 
 LOCAL_JAVA_LIBRARIES := \
-    android.car \
-    CarSettingsRoboTests \
-    android.car \
-    robolectric_android-all-stub \
     Robolectric_all-target \
+    robolectric_android-all-stub \
     mockito-robolectric-prebuilt \
+    truth-prebuilt \
     testng \
-    truth-prebuilt
+    CarSettingsRoboTests \
+    android.car
 
 LOCAL_TEST_PACKAGE := CarSettingsForTesting
 
