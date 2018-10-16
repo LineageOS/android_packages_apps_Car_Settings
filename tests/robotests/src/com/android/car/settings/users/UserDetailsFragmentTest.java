@@ -290,6 +290,7 @@ public class UserDetailsFragmentTest {
     }
 
     /* Test that trying to grant admin permissions creates a confirm grant admin dialog. */
+    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testOnGrantAdminPermission_confirmDialogShown() {
         createUserDetailsFragment();
