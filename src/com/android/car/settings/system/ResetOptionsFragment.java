@@ -16,77 +16,16 @@
 
 package com.android.car.settings.system;
 
-import android.car.userlib.CarUserManagerHelper;
-import android.content.Context;
-import android.os.UserManager;
-import android.view.View;
-
-import androidx.annotation.StringRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
-
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
-
-import java.util.ArrayList;
+import com.android.car.settings.common.BasePreferenceFragment;
 
 /**
  * Shows options to reset network settings, reset app preferences, and factory reset the device.
  */
-public class ResetOptionsFragment extends ListItemSettingsFragment {
-
-    private CarUserManagerHelper mCarUserManagerHelper;
-    private ListItemProvider mItemProvider;
+public class ResetOptionsFragment extends BasePreferenceFragment {
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_options_title;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
-        mItemProvider = new ListItemProvider.ListProvider(getListItems());
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return mItemProvider;
-    }
-
-    private ArrayList<ListItem> getListItems() {
-        boolean isAdmin = mCarUserManagerHelper.isCurrentProcessAdminUser();
-
-        ArrayList<ListItem> listItems = new ArrayList<>();
-
-        if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_NETWORK_RESET)) {
-            listItems.add(createListItem(R.string.reset_network_title, v ->
-                    getFragmentController().launchFragment(new ResetNetworkFragment())
-            ));
-        }
-        listItems.add(createListItem(R.string.reset_app_pref_title,
-                v -> getFragmentController().launchFragment(new ResetAppPrefFragment())));
-        if (isAdmin && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_FACTORY_RESET)) {
-            listItems.add(createListItem(R.string.master_clear_title, v -> {
-                // TODO: launch master clear.
-            }));
-        }
-
-        return listItems;
-    }
-
-    private TextListItem createListItem(@StringRes int titleResId,
-            View.OnClickListener onClickListener) {
-        Context context = getContext();
-        TextListItem item = new TextListItem(context);
-        item.setTitle(context.getString(titleResId));
-        item.setSupplementalIcon(R.drawable.ic_chevron_right, /* showDivider= */ false);
-        item.setOnClickListener(onClickListener);
-        return item;
+    protected int getPreferenceScreenResId() {
+        return R.xml.reset_options_fragment;
     }
 }
