@@ -49,7 +49,7 @@ public class PreferenceXmlParser {
 
     private static final String PREF_TAG_ENDS_WITH = "Preference";
     private static final List<String> SUPPORTED_PREF_TYPES = Arrays.asList("Preference",
-            "PreferenceCategory");
+            "PreferenceCategory", "PreferenceScreen");
 
     /**
      * Flag definition to indicate which metadata should be extracted when
