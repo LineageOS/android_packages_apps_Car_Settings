@@ -18,6 +18,7 @@ package com.android.car.settings.accounts;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
+import android.annotation.Nullable;
 import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -36,8 +37,6 @@ import androidx.car.widget.TextListItem;
 import com.android.car.settings.common.Logger;
 import com.android.internal.util.CharSequences;
 import com.android.settingslib.accounts.AuthenticatorHelper;
-
-import libcore.util.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;
