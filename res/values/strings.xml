@@ -219,6 +219,9 @@
         <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> additional permissions</item>
     </plurals>
 
+    <!-- Location --><skip />
+    <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
+    <string name="location_settings_title">Location</string>
 
     <!-- System --><skip />
     <!-- Main setting menu item to go into system settings -->
