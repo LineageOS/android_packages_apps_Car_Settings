@@ -407,6 +407,12 @@
     <!-- Title for toggle that controls whether a user is able to send and receive sms messages using the car's mobile data [CHAR LIMIT=35] -->
     <string name="sms_messaging_permission_title">Messaging via car\u0027s mobile data</string>
 
+    <!-- Apps -->
+    <!-- Title for toggle that controls whether a user is able to install new apps [CHAR LIMIT=35] -->
+    <string name="install_apps_permission_title">Install new apps</string>
+    <!-- Title for toggle that controls whether a user is able to uninstall apps [CHAR LIMIT=35] -->
+    <string name="uninstall_apps_permission_title">Uninstall apps</string>
+
     <!-- Adding new users -->
     <!-- User settings add user menu [CHAR LIMIT=35] -->
     <string name="user_add_user_menu">Add user</string>

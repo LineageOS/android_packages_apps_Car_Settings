@@ -406,7 +406,7 @@ public class UserDetailsFragmentTest {
     }
 
     @Test
-    public void testHasMessagingPermission_cantMessage_shouldBeTrue() {
+    public void testHasMessagingPermission_canMessage_shouldBeTrue() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
         doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
                 eq(UserManager.DISALLOW_SMS), eq(testUser));
@@ -424,6 +424,68 @@ public class UserDetailsFragmentTest {
 
         verify(mCarUserManagerHelper).setUserRestriction(
                 eq(testUser), eq(UserManager.DISALLOW_SMS), eq(false));
+    }
+
+    @Test
+    public void testHasInstallAppsPermission_cannotInstallApps_shouldBeFalse() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_INSTALL_APPS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasInstallAppsPermission()).isFalse();
+    }
+
+    @Test
+    public void testHasInstallAppsPermission_canInstallApps_shouldBeTrue() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_INSTALL_APPS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasInstallAppsPermission()).isTrue();
+    }
+
+    @Test
+    public void testOnGrantInstallAppsPermission() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onInstallAppsPermissionChanged(/* enabled= */ true);
+
+        verify(mCarUserManagerHelper).setUserRestriction(
+                eq(testUser), eq(UserManager.DISALLOW_INSTALL_APPS), eq(false));
+    }
+
+    @Test
+    public void testHasUninstallAppsPermission_cannotUninstallApps_shouldBeFalse() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(true).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_UNINSTALL_APPS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasUninstallAppsPermission()).isFalse();
+    }
+
+    @Test
+    public void testHasUninstallAppsPermission_canUninstallApps_shouldBeTrue() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        doReturn(false).when(mCarUserManagerHelper).hasUserRestriction(
+                eq(UserManager.DISALLOW_UNINSTALL_APPS), eq(testUser));
+        createUserDetailsFragment(testUser);
+
+        assertThat(mUserDetailsFragment.hasUninstallAppsPermission()).isTrue();
+    }
+
+    @Test
+    public void testOnGrantUninstallAppsPermission() {
+        UserInfo testUser = new UserInfo(/* id= */ 10, "Non admin", /* flags= */ 0);
+        createUserDetailsFragment(testUser);
+
+        mUserDetailsFragment.onUninstallAppsPermissionChanged(/* enabled= */ true);
+
+        verify(mCarUserManagerHelper).setUserRestriction(
+                eq(testUser), eq(UserManager.DISALLOW_UNINSTALL_APPS), eq(false));
     }
 
     private void createUserDetailsFragment(UserInfo userInfo) {

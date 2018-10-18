@@ -61,6 +61,8 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
         mItems.add(createCreateUserItem());
         mItems.add(createOutgoingCallsItem());
         mItems.add(createSmsMessagingItem());
+        mItems.add(createInstallAppsItem());
+        mItems.add(createUninstallAppsItem());
     }
 
     private ActionListItem createGrantAdminItem() {
@@ -111,6 +113,30 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
         return messagingItem;
     }
 
+    private TextListItem createInstallAppsItem() {
+        boolean canInstallApps = mUserRestrictionsProvider.hasInstallAppsPermission();
+
+        TextListItem installAppsItem = new TextListItem(mContext);
+        installAppsItem.setTitle(mContext.getText(R.string.install_apps_permission_title));
+        installAppsItem.setSwitch(canInstallApps, /* showDivider= */ false,
+                (CompoundButton buttonView, boolean checked) ->
+                        mUserRestrictionsListener.onInstallAppsPermissionChanged(checked));
+
+        return installAppsItem;
+    }
+
+    private TextListItem createUninstallAppsItem() {
+        boolean canUninstallApps = mUserRestrictionsProvider.hasUninstallAppsPermission();
+
+        TextListItem uninstallAppsItem = new TextListItem(mContext);
+        uninstallAppsItem.setTitle(mContext.getText(R.string.uninstall_apps_permission_title));
+        uninstallAppsItem.setSwitch(canUninstallApps, /* showDivider= */ false,
+                (CompoundButton buttonView, boolean checked) ->
+                        mUserRestrictionsListener.onUninstallAppsPermissionChanged(checked));
+
+        return uninstallAppsItem;
+    }
+
     /**
      * Interface for registering changes to user permissions.
      */
@@ -134,6 +160,16 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
          * Called when the sms messaging permission should be changed.
          */
         void onSmsMessagingPermissionChanged(boolean granted);
+
+        /**
+         * Called when the install apps permission should be changed.
+         */
+        void onInstallAppsPermissionChanged(boolean granted);
+
+        /**
+         * Called when the uninstall apps permission should be changed.
+         */
+        void onUninstallAppsPermissionChanged(boolean granted);
     }
 
     /**
@@ -148,6 +184,12 @@ public class NonAdminManagementItemProvider extends AbstractRefreshableListItemP
 
         /** Returns whether the user has the SMS Messaging permission. */
         boolean hasSmsMessagingPermission();
+
+        /** Returns whether the user can install apps. */
+        boolean hasInstallAppsPermission();
+
+        /** Returns whether the user can uninstall apps. */
+        boolean hasUninstallAppsPermission();
     }
 }
 

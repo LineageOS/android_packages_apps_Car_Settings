@@ -52,7 +52,7 @@ import org.robolectric.shadows.ShadowApplication;
 @Config(shadows = {ShadowActionListItem.class, ShadowTextListItem.class,
         ShadowUserIconProvider.class})
 public class NonAdminManagementItemProviderTest {
-    private static final int NUM_ITEMS = 4;
+    private static final int NUM_ITEMS = 6;
 
     @Mock
     private NonAdminManagementItemProvider.UserRestrictionsListener mListener;
@@ -222,6 +222,90 @@ public class NonAdminManagementItemProviderTest {
         listener.onCheckedChanged(null, true);
 
         verify(mListener).onSmsMessagingPermissionChanged(true);
+    }
+
+    @Test
+    public void testItems_fifthItemShouldHaveInstallAppsPermissionTitle() {
+        TextListItem installAppsItem = (TextListItem) mProvider.get(4);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                installAppsItem)).getTitle().toString()).isEqualTo(
+                application.getText(R.string.install_apps_permission_title));
+    }
+
+    @Test
+    public void testItems_hasInstallAppsPermission_fifthItemChecked() {
+        when(mRestrictionsProvider.hasInstallAppsPermission()).thenReturn(true);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem installAppsItem = (TextListItem) mProvider.get(4);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                installAppsItem)).getSwitchChecked()).isTrue();
+    }
+
+    @Test
+    public void testItems_doesNotHaveInstallAppsPermission_fifthItemNotChecked() {
+        when(mRestrictionsProvider.hasInstallAppsPermission()).thenReturn(false);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem installAppsItem = (TextListItem) mProvider.get(4);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                installAppsItem)).getSwitchChecked()).isFalse();
+    }
+
+    @Test
+    public void testItems_fifthItemOnCheckedChanged_shouldCallOnInstallAppsPermissionChanged() {
+        TextListItem installAppsItem = (TextListItem) mProvider.get(4);
+
+        CompoundButton.OnCheckedChangeListener listener = ((ShadowTextListItem) Shadow.extract(
+                installAppsItem)).getSwitchOnCheckedChangeListener();
+        listener.onCheckedChanged(null, true);
+
+        verify(mListener).onInstallAppsPermissionChanged(true);
+    }
+
+    @Test
+    public void testItems_sixthItemShouldHaveUninstallAppsPermissionTitle() {
+        TextListItem uninstallAppsItem = (TextListItem) mProvider.get(5);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                uninstallAppsItem)).getTitle().toString()).isEqualTo(
+                application.getText(R.string.uninstall_apps_permission_title));
+    }
+
+    @Test
+    public void testItems_hasUninstallAppsPermission_sixthItemChecked() {
+        when(mRestrictionsProvider.hasUninstallAppsPermission()).thenReturn(true);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem uninstallAppsItem = (TextListItem) mProvider.get(5);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                uninstallAppsItem)).getSwitchChecked()).isTrue();
+    }
+
+    @Test
+    public void testItems_doesNotHaveUninstallAppsPermission_sixthItemNotChecked() {
+        when(mRestrictionsProvider.hasUninstallAppsPermission()).thenReturn(false);
+        // Recreate the provider so the mocked changes take effect.
+        mProvider = createProvider();
+        TextListItem uninstallAppsItem = (TextListItem) mProvider.get(5);
+
+        assertThat(((ShadowTextListItem) Shadow.extract(
+                uninstallAppsItem)).getSwitchChecked()).isFalse();
+    }
+
+    @Test
+    public void testItems_sixthItemOnCheckedChanged_shouldCallOnUninstallAppsPermissionChanged() {
+        TextListItem uninstallAppsItem = (TextListItem) mProvider.get(5);
+
+        CompoundButton.OnCheckedChangeListener listener = ((ShadowTextListItem) Shadow.extract(
+                uninstallAppsItem)).getSwitchOnCheckedChangeListener();
+        listener.onCheckedChanged(null, true);
+
+        verify(mListener).onUninstallAppsPermissionChanged(true);
     }
 
     private NonAdminManagementItemProvider createProvider() {

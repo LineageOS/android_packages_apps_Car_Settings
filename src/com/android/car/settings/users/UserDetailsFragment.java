@@ -150,6 +150,18 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
+    public boolean hasInstallAppsPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_INSTALL_APPS, mUserInfo);
+    }
+
+    @Override
+    public boolean hasUninstallAppsPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_UNINSTALL_APPS, mUserInfo);
+    }
+
+    @Override
     public void onCreateUserPermissionChanged(boolean granted) {
         /*
          * If the permission is granted, the DISALLOW_ADD_USER restriction should be removed and
@@ -177,6 +189,26 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
          */
         mCarUserManagerHelper.setUserRestriction(
                 mUserInfo, UserManager.DISALLOW_SMS, !granted);
+    }
+
+    @Override
+    public void onInstallAppsPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_INSTALL_APPS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_INSTALL_APPS, !granted);
+    }
+
+    @Override
+    public void onUninstallAppsPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_UNINSTALL_APPS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_UNINSTALL_APPS, !granted);
     }
 
     @Override
