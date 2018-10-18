@@ -94,6 +94,8 @@
         <activity android:name=".bluetooth.BluetoothPairingDialog"
                   android:excludeFromRecents="true"
                   android:windowSoftInputMode="stateVisible|adjustResize"
+                  android:taskAffinity="car.settings.bluetooth"
+                  android:launchMode="singleTask"
                   android:theme="@*android:style/Theme.DeviceDefault.Settings.Dialog.NoActionBar">
         </activity>
 
