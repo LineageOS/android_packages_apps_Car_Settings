@@ -22,7 +22,7 @@
     <Preference
         android:key="key1"
         settings:controller="com.android.car.settings.common.FakePreferenceController"/>
-    <Preference
+    <PreferenceCategory
         android:key="key2"
         settings:controller="com.android.car.settings.common.FakePreferenceController"/>
 </PreferenceScreen>

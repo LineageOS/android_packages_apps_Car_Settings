@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -47,6 +48,8 @@ public class PreferenceXmlParser {
     private static final Logger LOG = new Logger(PreferenceXmlParser.class);
 
     private static final String PREF_TAG_ENDS_WITH = "Preference";
+    private static final List<String> SUPPORTED_PREF_TYPES = Arrays.asList("Preference",
+            "PreferenceCategory");
 
     /**
      * Flag definition to indicate which metadata should be extracted when
@@ -94,7 +97,8 @@ public class PreferenceXmlParser {
                 continue;
             }
             final String nodeName = parser.getName();
-            if (!nodeName.endsWith(PREF_TAG_ENDS_WITH)) {
+            if (!SUPPORTED_PREF_TYPES.contains(nodeName) && !nodeName.endsWith(
+                    PREF_TAG_ENDS_WITH)) {
                 continue;
             }
             final Bundle preferenceMetadata = new Bundle();
