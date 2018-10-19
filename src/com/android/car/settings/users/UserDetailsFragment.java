@@ -78,7 +78,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     @Override
     @StringRes
     protected int getTitleId() {
-        return R.string.user_details_title;
+        return R.string.user_details_admin_title;
     }
 
     @Override
@@ -150,6 +150,18 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
+    public boolean hasInstallAppsPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_INSTALL_APPS, mUserInfo);
+    }
+
+    @Override
+    public boolean hasUninstallAppsPermission() {
+        return !mCarUserManagerHelper.hasUserRestriction(
+                UserManager.DISALLOW_UNINSTALL_APPS, mUserInfo);
+    }
+
+    @Override
     public void onCreateUserPermissionChanged(boolean granted) {
         /*
          * If the permission is granted, the DISALLOW_ADD_USER restriction should be removed and
@@ -180,6 +192,26 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     @Override
+    public void onInstallAppsPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_INSTALL_APPS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_INSTALL_APPS, !granted);
+    }
+
+    @Override
+    public void onUninstallAppsPermissionChanged(boolean granted) {
+        /*
+         * If the permission is granted, the DISALLOW_UNINSTALL_APPS restriction should be removed
+         * and vice versa.
+         */
+        mCarUserManagerHelper.setUserRestriction(
+                mUserInfo, UserManager.DISALLOW_UNINSTALL_APPS, !granted);
+    }
+
+    @Override
     public void onUsersUpdate() {
         // Refresh UserInfo, since it might have changed.
         mUserInfo = getUserInfo(mUserId);
@@ -203,7 +235,7 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
     }
 
     private AbstractRefreshableListItemProvider getUserDetailsItemProvider() {
-        if (mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserInfo.isAdmin()) {
+        if (isAdminViewingNonAdmin()) {
             // Admins should be able to manage non-admins and upgrade their permissions.
             return new NonAdminManagementItemProvider(getContext(),
                     /* userRestrictionsListener= */ this, /* userRestrictionsProvider= */this,
@@ -222,8 +254,21 @@ public class UserDetailsFragment extends ListItemSettingsFragment implements
 
     private void refreshFragmentTitle() {
         TextView titleView = getActivity().findViewById(R.id.title);
-        titleView.setText(UserListItem.getUserItemTitle(mUserInfo,
-                mCarUserManagerHelper.isCurrentProcessUser(mUserInfo), getContext()));
+        String userName = UserListItem.getUserItemTitle(mUserInfo,
+                mCarUserManagerHelper.isCurrentProcessUser(mUserInfo), getContext());
+        if (isAdminViewingNonAdmin()) {
+            titleView.setText(getContext().getString(R.string.user_details_admin_title, userName));
+            return;
+        }
+        titleView.setText(userName);
+    }
+
+    /**
+     * Returns whether or not the current user is an admin and whether the user info they are
+     * viewing is of a non-admin.
+     */
+    private boolean isAdminViewingNonAdmin() {
+        return mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserInfo.isAdmin();
     }
 
     @VisibleForTesting

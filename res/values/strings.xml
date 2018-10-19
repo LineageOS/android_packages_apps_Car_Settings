@@ -384,7 +384,7 @@
     <!-- User summary to be displayed next to the currently logged-in user if they are also an admin. [CHAR LIMIT=35] -->
     <string name="signed_in_admin_user">Signed in as admin</string>
     <!-- Title for the dialog that grants the user admin permissions. [CHAR LIMIT=50]-->
-    <string name="grant_admin_permissions_title">Grant Admin permissions</string>
+    <string name="grant_admin_permissions_title">All admin permissions</string>
     <!-- Button text for granting admin permissions to a user [CHAR LIMIT=35]-->
     <string name="grant_admin_permissions_button_text">Make Admin</string>
     <!-- Message to inform the user of what will happen when another user is upgraded to Admin status. [CHAR LIMIT=NONE]-->
@@ -397,21 +397,21 @@
     <!-- User Restrictions -->
     <!-- Creating Users -->
     <!-- Title for toggle that controls whether a user is able to create other users [CHAR LIMIT=35] -->
-    <string name="create_user_permission_title" translatable="false">Create Users</string>
-    <!-- Description for the toggle that controls whether a user is able to create other users [CHAR LIMIT=50]-->
-    <string name="create_user_permission_body" translatable="false">Ability to add users</string>
+    <string name="create_user_permission_title">Create new users</string>
 
     <!-- Outgoing Calls -->
     <!-- Title for toggle that controls whether a user is able to make outgoing calls [CHAR LIMIT=35] -->
-    <string name="outgoing_calls_permission_title" translatable="false">Phone Calls</string>
-    <!-- Description for the toggle that controls whether a user is able to make outgoing calls [CHAR LIMIT=50]-->
-    <string name="outgoing_calls_permission_body" translatable="false">All calls allowed</string>
+    <string name="outgoing_calls_permission_title">Make phone calls</string>
 
     <!-- SMS Messaging -->
-    <!-- Title for toggle that controls whether a user is able to send and receive sms messages [CHAR LIMIT=35] -->
-    <string name="sms_messaging_permission_title" translatable="false">Messaging</string>
-    <!-- Description for the toggle that controls whether a user is able to send and receive sms messages [CHAR LIMIT=50]-->
-    <string name="sms_messaging_permission_body" translatable="false">Allow messaging through vehicle mobile data</string>
+    <!-- Title for toggle that controls whether a user is able to send and receive sms messages using the car's mobile data [CHAR LIMIT=35] -->
+    <string name="sms_messaging_permission_title">Messaging via car\u0027s mobile data</string>
+
+    <!-- Apps -->
+    <!-- Title for toggle that controls whether a user is able to install new apps [CHAR LIMIT=35] -->
+    <string name="install_apps_permission_title">Install new apps</string>
+    <!-- Title for toggle that controls whether a user is able to uninstall apps [CHAR LIMIT=35] -->
+    <string name="uninstall_apps_permission_title">Uninstall apps</string>
 
     <!-- Adding new users -->
     <!-- User settings add user menu [CHAR LIMIT=35] -->
@@ -475,8 +475,8 @@
     <string name="edit_user_name_title">Edit user name</string>
     <!-- User settings header for list of users on the system. [CHAR LIMIT=35] -->
     <string name="users_list_title">Users</string>
-    <!-- Title for detailed user information page [CHAR LIMIT=25] -->
-    <string name="user_details_title">User</string>
+    <!-- Title for the user details page that shows the permissions granted to the user. The parameter is the name of the user. [CHAR LIMIT=30] -->
+    <string name="user_details_admin_title">Permissions granted to %1$s</string>
 
     <!-- Account management -->
     <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
