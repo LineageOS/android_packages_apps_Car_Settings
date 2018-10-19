@@ -36,23 +36,23 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-/** Unit test for {@link NetworkResetPreferenceController}. */
+/** Unit test for {@link ResetNetworkEntryPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class})
-public class NetworkResetPreferenceControllerTest {
+public class ResetNetworkEntryPreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "preference_key";
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    private NetworkResetPreferenceController mController;
+    private ResetNetworkEntryPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
-        mController = new NetworkResetPreferenceController(RuntimeEnvironment.application,
+        mController = new ResetNetworkEntryPreferenceController(RuntimeEnvironment.application,
                 PREFERENCE_KEY);
     }
 

@@ -20,17 +20,17 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
-import com.android.car.settings.common.BasePreferenceController;
+import com.android.car.settings.common.NoSetupPreferenceController;
 
 /**
- * Controller which determines if factory reset (aka "master clear") should be displayed based on
+ * Controller which determines if master clear (aka "factory reset") should be displayed based on
  * user status.
  */
-public class FactoryResetPreferenceController extends BasePreferenceController {
+public class MasterClearEntryPreferenceController extends NoSetupPreferenceController {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public FactoryResetPreferenceController(Context context, String preferenceKey) {
+    public MasterClearEntryPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }

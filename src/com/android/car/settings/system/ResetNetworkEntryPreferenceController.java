@@ -19,14 +19,14 @@ package com.android.car.settings.system;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
-import com.android.car.settings.common.BasePreferenceController;
+import com.android.car.settings.common.NoSetupPreferenceController;
 
 /** Controller which determines if network reset should be displayed based on user status. */
-public class NetworkResetPreferenceController extends BasePreferenceController {
+public class ResetNetworkEntryPreferenceController extends NoSetupPreferenceController {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public NetworkResetPreferenceController(Context context, String preferenceKey) {
+    public ResetNetworkEntryPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
