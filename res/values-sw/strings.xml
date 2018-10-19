@@ -170,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Futa mtumiaji"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Mtumiaji mpya"</string>
     <string name="user_guest" msgid="3465399481257448601">"Mgeni"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Msimamizi"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Umeingia katika akaunti ya msimamizi"</string>
     <string name="user_switch" msgid="6544839750534690781">"Badilisha"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Wewe (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Jina"</string>
@@ -178,7 +180,7 @@
     <string name="users_list_title" msgid="770764290290240909">"Watumiaji"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Akaunti"</string>
     <string name="user_details_title" msgid="1104762783367701498">"Mtumiaji"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizizoongezwa"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizoongezwa"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaunti za <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Maelezo ya akaunti"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Ongeza akaunti"</string>
@@ -212,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Jaribu tena"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Ruka"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Weka mbinu ya kufunga skrini"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Chagua PIN yako"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Chagua mchoro wako"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Chagua nenosiri lako"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Mbinu inayotumika kufunga skrini"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Kwa sababu za usalama, weka mchoro"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Futa"</string>
@@ -245,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Futa"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Ghairi"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Thibitisha"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Lazima nenosiri liwe na herufi 4-8 na angalau tarakimu 1"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Ni lazima liwe na angalau herufi 4"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Ni lazima liwe na angalau herufi <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Ni lazima PIN iwe na angalau tarakimu <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Lazima nenosiri liwe na chini ya herufi <xliff:g id="NUMBER">%d</xliff:g>"</string>
@@ -254,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Msimamizi wa kifaa haruhusu utumie PIN uliyotumia hivi majuzi"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"PIN zinazotumika zaidi zimezuiwa na msimamizi wako wa Tehama. Jaribu PIN tofauti."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Hali hii haiwezi kujumuisha herufi isiyoruhusiwa."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Nenosiri si sahihi, ni lazima liwe na kati ya herufi 4 hadi 8, liwe na tarakimu 1, herufi 1 ya alfabeti na lisiwe na nafasi."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Nenosiri si sahihi. Ni lazima liwe na angalau herufi 4"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Ni lazima liwe na angalau herufi <xliff:g id="COUNT">%d</xliff:g></item>
       <item quantity="one">Ni lazima liwe na angalau herufi 1</item>

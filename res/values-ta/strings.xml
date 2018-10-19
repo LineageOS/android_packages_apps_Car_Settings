@@ -170,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"பயனரை நீக்கும்"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"புதிய பயனர்"</string>
     <string name="user_guest" msgid="3465399481257448601">"விருந்தினர்"</string>
+    <string name="user_admin" msgid="1535484812908584809">"நிர்வாகி"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"நிர்வாகியாக உள்நுழைந்துள்ளீர்கள்"</string>
     <string name="user_switch" msgid="6544839750534690781">"பயனரை மாற்றும்"</string>
     <string name="current_user_name" msgid="3813671533249316823">"நீங்கள் (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
@@ -212,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"மீண்டும் முயலவும்"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"தவிர்"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"திரைப் பூட்டை அமைக்கவும்"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"பின்னைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"பேட்டர்னைத் தேர்வுசெய்யவும்"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"கடவுச்சொல்லைத் தேர்ந்தெடுக்கவும்"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"தற்போதைய திரைப் பூட்டு"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"பாதுகாப்பிற்கு, பேட்டர்னை அமைக்கவும்"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"அழி"</string>
@@ -245,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"அழி"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ரத்துசெய்"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"உறுதிப்படுத்து"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"கடவுச்சொல்லில் குறைந்தது 1 எண்ணுடன் சேர்த்து, 4-8 வரையிலான எழுத்துகள் இருக்க வேண்டும்"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்து இருக்க வேண்டும்"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"குறைந்தது <xliff:g id="COUNT">%d</xliff:g> இலக்கங்கள் இருக்க வேண்டும்"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g>எழுத்தை விட குறைவாக இருக்கவேண்டும்"</string>
@@ -254,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"சாதன நிர்வாகி சமீபத்திய பின்னைப் பயன்படுத்துவதை அனுமதிக்கவில்லை"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"உங்கள் IT நிர்வாகி, பொதுவான பின்களைத் தடுத்துள்ளார். வேறு பின்னைப் பயன்படுத்திப் பார்க்கவும்."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"இதில் தவறான எழுத்து இருக்கக்கூடாது."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"கடவுச்சொல் தவறானது. இதில் 4-8 எழுத்துகள் இருக்க வேண்டும். குறைந்தது 1 இலக்கம், 1 எழுத்து இருக்க வேண்டும், இடைவெளி இருக்கக்கூடாது."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"கடவுச்சொல் செல்லாது, குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">குறைந்தது <xliff:g id="COUNT">%d</xliff:g> எழுத்துகள் இருக்க வேண்டும்</item>
       <item quantity="one">குறைந்தது 1 எழுத்து இருக்க வேண்டும்</item>

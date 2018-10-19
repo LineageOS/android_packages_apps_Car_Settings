@@ -170,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Foydalanuvchini o‘chirib tashlash"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Yangi foydalanuvchi"</string>
     <string name="user_guest" msgid="3465399481257448601">"Mehmon"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Administrator sifatida kirgansiz"</string>
     <string name="user_switch" msgid="6544839750534690781">"Almashtirish"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ism"</string>
@@ -178,7 +180,7 @@
     <string name="users_list_title" msgid="770764290290240909">"Foydalanuvchilar"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
     <string name="user_details_title" msgid="1104762783367701498">"Foydalanuvchi"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisob qo‘shilmagan"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisobga kirilmagan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
@@ -212,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Qayta urinish"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Tashlab ketish"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran qulfini sozlang"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN kod tanlang"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Grafik kalit yarating"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Parol tanlang"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Joriy ekran qulfi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit o‘rnating"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tozalash"</string>
@@ -245,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Tozalash"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Bekor qilish"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Tasdiqlash"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Parol 4-8 ta belgidan, kamida 1 ta raqamli bo‘lsin"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Kamida 4 ta belgi kiriting"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Kamida <xliff:g id="COUNT">%d</xliff:g> ta belgi bo‘lishi kerak"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kod kamida <xliff:g id="COUNT">%d</xliff:g> raqamli bo‘lsin"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Parol maksimum <xliff:g id="NUMBER">%d</xliff:g> ta belgili bo‘lsin"</string>
@@ -254,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Qurilma administratori oxirgi PIN koddan yana foydalanishga ruxsat bermaydi"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Oddiy PIN kodlar AT admini tomonidan bloklangan. Murakkabroq PIN kod tanlang."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Parol yaroqsiz belgidan iborat bo‘lmasligi lozim."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Parol xato, 4-8 ta belgidan, kamida 1 ta raqam va 1 ta harf hamda bo‘sh joysiz bo‘lishi lozim."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Parol yaroqsiz, kamida 4 ta belgi kiriting"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Parol tarkibida kamida <xliff:g id="COUNT">%d</xliff:g> ta harf bo‘lishi lozim</item>
       <item quantity="one">Parol tarkibida kamida 1 ta harf bo‘lishi lozim</item>

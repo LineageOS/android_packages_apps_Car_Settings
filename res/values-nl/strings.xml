@@ -83,7 +83,7 @@
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"Pincode bevat letters of symbolen"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Typ de koppelingscode en druk op Return of Enter"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Koppelen met <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Toestaan dat <xliff:g id="DEVICE_NAME">%1$s</xliff:g> toegang heeft tot je contacten en oproepgeschiedenis"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Toestaan dat <xliff:g id="DEVICE_NAME">%1$s</xliff:g> toegang heeft tot je contacten en gespreksgeschiedenis"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"U moet deze pincode wellicht ook opgeven op het andere apparaat."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"U moet deze toegangscode wellicht ook opgeven op het andere apparaat."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Moet 16 cijfers zijn"</string>
@@ -170,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Gebruiker verwijderen"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nieuwe gebruiker"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Beheerder"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Ingelogd als beheerder"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wijzigen"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Jij (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Naam"</string>
@@ -180,7 +182,7 @@
     <string name="user_details_title" msgid="1104762783367701498">"Gebruiker"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Geen accounts toegevoegd"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Accounts voor <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
-    <string name="account_details_title" msgid="7529571432258448573">"Accountinformatie"</string>
+    <string name="account_details_title" msgid="7529571432258448573">"Accountgegevens"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Account toevoegen"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Een account toevoegen"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Beperkte profielen kunnen geen accounts toevoegen"</string>
@@ -212,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Opnieuw proberen"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Overslaan"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Een schermvergrendeling instellen"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Je pincode kiezen"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Je patroon kiezen"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Je wachtwoord kiezen"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Huidige schermvergrendeling"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Stel wachtwoord in voor beveiliging"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Wissen"</string>
@@ -245,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Wissen"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Annuleren"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bevestigen"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Het wachtwoord moet vier tot acht tekens lang zijn en ten minste één cijfer bevatten"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Moet ten minste vier tekens zijn"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Moet ten minste <xliff:g id="COUNT">%d</xliff:g> tekens zijn"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Pincode moet ten minste <xliff:g id="COUNT">%d</xliff:g> cijfers zijn"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Moet korter zijn dan <xliff:g id="NUMBER">%d</xliff:g> tekens"</string>
@@ -254,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Apparaatbeheer staat het gebruik van een recente pincode niet toe"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Veelvoorkomende pincodes worden geblokkeerd door je IT-beheerder. Probeer een andere pincode."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Mag geen ongeldig teken bevatten"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Wachtwoord ongeldig, moet vier tot acht tekens lang zijn, zonder spaties en met ten minste één cijfer en één letter."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Wachtwoord ongeldig. Moet ten minste vier tekens zijn."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Moet ten minste <xliff:g id="COUNT">%d</xliff:g> letters bevatten</item>
       <item quantity="one">Moet ten minste één letter bevatten</item>

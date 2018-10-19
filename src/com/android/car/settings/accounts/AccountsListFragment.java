@@ -83,7 +83,7 @@ public class AccountsListFragment extends ListItemSettingsFragment
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener();
+        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
         mAccountManagerHelper.stopListeningToAccountUpdates();
 
         // The action button may be hidden at some point, so make it visible again
