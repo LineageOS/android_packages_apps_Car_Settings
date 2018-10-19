@@ -38,23 +38,23 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-/** Unit test for {@link FactoryResetPreferenceController}. */
+/** Unit test for {@link MasterClearEntryPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class})
-public class FactoryResetPreferenceControllerTest {
+public class MasterClearEntryPreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "preference_key";
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    private FactoryResetPreferenceController mController;
+    private MasterClearEntryPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
-        mController = new FactoryResetPreferenceController(RuntimeEnvironment.application,
+        mController = new MasterClearEntryPreferenceController(RuntimeEnvironment.application,
                 PREFERENCE_KEY);
     }
 

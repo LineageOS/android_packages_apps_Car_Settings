@@ -21,7 +21,7 @@
         android:fragment="com.android.car.settings.system.ResetNetworkFragment"
         android:key="reset_network"
         android:title="@string/reset_network_title"
-        settings:controller="com.android.car.settings.system.NetworkResetPreferenceController"
+        settings:controller="com.android.car.settings.system.ResetNetworkEntryPreferenceController"
         settings:useAdminDisabledSummary="true"
         settings:userRestriction="no_network_reset"/>
     <Preference
@@ -32,7 +32,7 @@
     <com.android.car.settings.common.RestrictedPreference
         android:key="master_clear"
         android:title="@string/master_clear_title"
-        settings:controller="com.android.car.settings.system.FactoryResetPreferenceController"
+        settings:controller="com.android.car.settings.system.MasterClearEntryPreferenceController"
         settings:useAdminDisabledSummary="true"
         settings:userRestriction="no_factory_reset"/>
 </PreferenceScreen>
