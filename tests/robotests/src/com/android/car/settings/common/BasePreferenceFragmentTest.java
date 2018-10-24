@@ -49,10 +49,6 @@ import java.util.List;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class BasePreferenceFragmentTest {
 
-    private static final String SPY_CONTROLLER_KEY = "spy_controller_key";
-    private static final String LIFECYCLE_CONTROLLER_KEY = "lifecycle_controller_key";
-    private static final String XML_CONTROLLER_KEY = "xml_controller_key";
-
     private FragmentController<TestBasePreferenceFragment> mFragmentController;
     private TestBasePreferenceFragment mFragment;
 
@@ -66,7 +62,8 @@ public class BasePreferenceFragmentTest {
     public void use_returnsController() {
         mFragmentController.setup();
 
-        assertThat(mFragment.use(FakePreferenceController.class, XML_CONTROLLER_KEY)).isNotNull();
+        assertThat(mFragment.use(FakePreferenceController.class,
+                R.string.tpk_xml_controller)).isNotNull();
     }
 
     @Test
@@ -74,7 +71,7 @@ public class BasePreferenceFragmentTest {
         mFragmentController.create();
         LifecycleFakePreferenceController controller = mFragment.use(
                 LifecycleFakePreferenceController.class,
-                LIFECYCLE_CONTROLLER_KEY);
+                R.string.tpk_lifecycle_controller);
 
         assertThat(controller.mOnCreateCalled).isTrue();
 
@@ -130,7 +127,8 @@ public class BasePreferenceFragmentTest {
         mFragmentController.create().start();
 
         verify(mFragment.mSpyPreferenceController).updateState(
-                argThat(pref -> pref.getKey().equals(SPY_CONTROLLER_KEY)));
+                argThat(pref -> pref.getKey().equals(
+                        mFragment.mSpyPreferenceController.getPreferenceKey())));
     }
 
     @Test
@@ -212,7 +210,8 @@ public class BasePreferenceFragmentTest {
 
         // Times 2: onStart from setup, onUxRestrictionsChanged.
         verify(mFragment.mSpyPreferenceController, times(2)).updateState(
-                argThat(pref -> pref.getKey().equals(SPY_CONTROLLER_KEY)));
+                argThat(pref -> pref.getKey().equals(
+                        mFragment.mSpyPreferenceController.getPreferenceKey())));
     }
 
     /** Concrete {@link BasePreferenceFragment} for exercising base methods. */
@@ -228,7 +227,7 @@ public class BasePreferenceFragmentTest {
         @Override
         protected List<BasePreferenceController> createPreferenceControllers(Context context) {
             mSpyPreferenceController = spy(
-                    new FakePreferenceController(context, SPY_CONTROLLER_KEY));
+                    new FakePreferenceController(context, getString(R.string.tpk_spy_controller)));
             return Collections.singletonList(mSpyPreferenceController);
         }
     }

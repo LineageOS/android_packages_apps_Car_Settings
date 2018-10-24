@@ -28,6 +28,7 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.annotation.XmlRes;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
@@ -97,7 +98,7 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
     }
 
     /**
-     * Returns the controller of the given {@param clazz} for the given {@param preferenceKey}.
+     * Returns the controller of the given {@param clazz} for the given {@param preferenceKeyResId}.
      * Subclasses may use this method in {@link #onAttach(Context)} to call setters on your
      * controller to pass arguments in addition to the context and preference key after
      * construction.
@@ -107,15 +108,16 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
      * @Override
      * public void onAttach(Context context) {
      *     super.onAttach(context);
-     *     use(MyPreferenceController.class, "myKey").setMyArg(myArg);
+     *     use(MyPreferenceController.class, R.string.pk_my_key).setMyArg(myArg);
      * }
      * }</pre>
      */
     @SuppressWarnings("unchecked") // Class is used as map key.
     protected <T extends BasePreferenceController> T use(Class<T> clazz,
-            String preferenceKey) {
+            @StringRes int preferenceKeyResId) {
         List<BasePreferenceController> controllerList = mPreferenceControllersLookup.get(clazz);
         if (controllerList != null) {
+            String preferenceKey = getString(preferenceKeyResId);
             for (BasePreferenceController controller : controllerList) {
                 if (controller.getPreferenceKey().equals(preferenceKey)) {
                     return (T) controller;

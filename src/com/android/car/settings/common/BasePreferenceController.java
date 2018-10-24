@@ -134,7 +134,7 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
      * Controllers should generally be instantiated from XML via reflection using
      * {@link #createInstance(Context, String, String)} from
      * {@link PreferenceControllerListHelper} if possible. To pass additional arguments see
-     * {@link BasePreferenceFragment#use(Class, String)}.
+     * {@link BasePreferenceFragment#use(Class, int)}.
      *
      * @throws IllegalArgumentException if the preference key is null or empty
      */

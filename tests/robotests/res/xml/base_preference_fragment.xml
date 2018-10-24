@@ -20,11 +20,11 @@
                   android:key="fake_title_key"
                   android:title="screen_title">
     <Preference
-        android:key="xml_controller_key"
+        android:key="@string/tpk_xml_controller"
         settings:controller="com.android.car.settings.common.FakePreferenceController"/>
     <Preference
-        android:key="lifecycle_controller_key"
+        android:key="@string/tpk_lifecycle_controller"
         settings:controller="com.android.car.settings.common.LifecycleFakePreferenceController"/>
     <Preference
-        android:key="spy_controller_key"/>
+        android:key="@string/tpk_spy_controller"/>
 </PreferenceScreen>

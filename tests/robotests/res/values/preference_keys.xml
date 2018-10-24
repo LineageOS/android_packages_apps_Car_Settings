@@ -13,9 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:key="@string/pk_timezone_picker_screen"
-                  android:title="@string/date_time_set_timezone_title"
-                  settings:controller="com.android.car.settings.datetime.TimeZonePickerScreenPreferenceController"/>
+<!-- Namespaced with "tpk" (Test Preference Key) to avoid conflicts. -->
+<resources>
+    <!-- BasePreferenceFragmentTest -->
+    <string name="tpk_xml_controller" translatable="false">xml_controller</string>
+    <string name="tpk_lifecycle_controller" translatable="false">lifecycle_controller</string>
+    <string name="tpk_spy_controller" translatable="false">spy_controller</string>
+</resources>

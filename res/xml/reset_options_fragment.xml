@@ -19,18 +19,18 @@
                   android:title="@string/reset_options_title">
     <com.android.car.settings.common.RestrictedPreference
         android:fragment="com.android.car.settings.system.ResetNetworkFragment"
-        android:key="reset_network"
+        android:key="@string/pk_reset_network"
         android:title="@string/reset_network_title"
         settings:controller="com.android.car.settings.system.ResetNetworkEntryPreferenceController"
         settings:useAdminDisabledSummary="true"
         settings:userRestriction="no_network_reset"/>
     <Preference
         android:fragment="com.android.car.settings.system.ResetAppPrefFragment"
-        android:key="reset_app_pref"
+        android:key="@string/pk_reset_app_pref"
         android:title="@string/reset_app_pref_title"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <com.android.car.settings.common.RestrictedPreference
-        android:key="master_clear"
+        android:key="@string/pk_master_clear"
         android:title="@string/master_clear_title"
         settings:controller="com.android.car.settings.system.MasterClearEntryPreferenceController"
         settings:useAdminDisabledSummary="true"
