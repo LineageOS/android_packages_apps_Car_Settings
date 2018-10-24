@@ -55,5 +55,5 @@
         android:key="@string/pk_use_24hour_switch"
         android:order="500"
         android:title="@string/date_time_24hour"
-        settings:controller="com.android.car.settings.datetime.AutoTimeFormatTogglePreferenceController"/>
+        settings:controller="com.android.car.settings.datetime.TimeFormatTogglePreferenceController"/>
 </PreferenceScreen>
