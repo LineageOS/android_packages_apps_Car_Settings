@@ -264,6 +264,11 @@ public class SeekBarPreference extends Preference {
         mContinuousUpdate = continuousUpdate;
     }
 
+    /** Setter for the whether the text should be visible. */
+    public void setShowSeekBarValue(boolean showSeekBarValue) {
+        mShowSeekBarValue = showSeekBarValue;
+    }
+
     /** Setter for the current value of the seek bar. */
     public void setValue(int seekBarValue) {
         setValueInternal(seekBarValue, true);
