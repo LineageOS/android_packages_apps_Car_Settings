@@ -13,11 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="test_volume_call">Call Volume</string>
-    <string name="test_volume_music">Music Volume</string>
 
-    <!-- AccountListPreferenceControllerTest -->
-    <string name="account_type1_label" translatable="false">Type 1</string>
-    <string name="account_type2_label" translatable="false">Type 2</string>
-</resources>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
+                  android:title="@string/accounts_settings_title">
+    <PreferenceCategory
+        android:key="@string/pk_account_list"
+        android:title="@string/account_list_title"
+        settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"/>
+</PreferenceScreen>

@@ -18,18 +18,16 @@ package com.android.car.settings.accounts;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.annotation.Nullable;
-import android.app.ActivityManager;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SyncAdapterType;
 import android.content.pm.PackageManager;
-import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
-import android.os.UserManager;
 
+import androidx.annotation.Nullable;
 import androidx.car.widget.ListItem;
 import androidx.car.widget.ListItemProvider;
 import androidx.car.widget.TextListItem;
@@ -53,12 +51,10 @@ class ChooseAccountItemProvider extends ListItemProvider {
 
     private final List<ListItem> mItems = new ArrayList<>();
     private final Context mContext;
+    private final UserHandle mUserHandle;
     private final ChooseAccountFragment mFragment;
-    private final UserManager mUserManager;
     private final ArrayList<ProviderEntry> mProviderList = new ArrayList<>();
     private final AuthenticatorHelper mAuthenticatorHelper;
-    // The UserHandle of the user we are choosing an account for
-    private final UserHandle mUserHandle;
     private final String[] mAuthorities;
     @Nullable
     private AuthenticatorDescription[] mAuthDescs;
@@ -69,17 +65,13 @@ class ChooseAccountItemProvider extends ListItemProvider {
     ChooseAccountItemProvider(Context context, ChooseAccountFragment fragment) {
         mContext = context;
         mFragment = fragment;
-        mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
-        mUserHandle =
-                mUserManager.getUserInfo(ActivityManager.getCurrentUser()).getUserHandle();
+        mUserHandle = new CarUserManagerHelper(context).getCurrentProcessUserInfo().getUserHandle();
 
         mAuthorities = fragment.getActivity().getIntent().getStringArrayExtra(
                 AUTHORITIES_FILTER_KEY);
 
         // create auth helper
-        UserInfo currUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
-        mAuthenticatorHelper =
-                new AuthenticatorHelper(mContext, currUserInfo.getUserHandle(), mFragment);
+        mAuthenticatorHelper = new AuthenticatorHelper(mContext, mUserHandle, mFragment);
 
         updateAuthDescriptions();
         refreshItems();
