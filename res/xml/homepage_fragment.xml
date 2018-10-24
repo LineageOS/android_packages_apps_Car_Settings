@@ -74,7 +74,7 @@
         android:title="@string/users_list_title"
         settings:controller="com.android.car.settings.users.UsersEntryPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.accounts.AccountsListFragment"
+        android:fragment="com.android.car.settings.accounts.AccountSettingsFragment"
         android:icon="@drawable/ic_account"
         android:key="@string/pk_accounts_settings_entry"
         android:title="@string/accounts_settings_title"
