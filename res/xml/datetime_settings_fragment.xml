@@ -45,7 +45,7 @@
         android:title="@string/date_time_set_time"
         settings:controller="com.android.car.settings.datetime.TimePickerPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.datetime.TimeZonePickerFragment"
+        android:fragment="com.android.car.settings.datetime.TimeZonePickerScreenFragment"
         android:key="timezone_picker_entry"
         android:order="400"
         android:title="@string/date_time_set_timezone"
