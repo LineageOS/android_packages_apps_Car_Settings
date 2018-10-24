@@ -21,13 +21,11 @@ import android.content.Context;
 import android.content.Intent;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 import com.android.settingslib.datetime.ZoneGetter;
 
@@ -44,26 +42,13 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
         LifecycleObserver {
 
     private List<Preference> mZonesList;
-    private FragmentManager mFragmentManager;
     @VisibleForTesting
     AlarmManager mAlarmManager;
 
-    public TimeZonePickerScreenPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public TimeZonePickerScreenPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-    }
-
-    /** Setter method which gets the TimeZoneChangeListener from the Fragment. */
-    public void setFragmentManager(FragmentManager fragmentManager) {
-        mFragmentManager = fragmentManager;
-    }
-
-    /** Make sure that the fragment manager is provided on create time. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void checkInitialized() {
-        if (mFragmentManager == null) {
-            throw new IllegalStateException("FragmentManager should not be null");
-        }
     }
 
     @Override
@@ -102,7 +87,7 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
         preference.setSummary(timeZone.get(ZoneGetter.KEY_OFFSET_LABEL).toString());
         preference.setOnPreferenceClickListener(pref -> {
             mAlarmManager.setTimeZone(timeZone.get(ZoneGetter.KEY_ID).toString());
-            mFragmentManager.popBackStackImmediate();
+            getFragmentController().goBack();
 
             // Note: This is intentionally ACTION_TIME_CHANGED, not ACTION_TIMEZONE_CHANGED.
             // Timezone change is handled by the alarm manager. This broadcast message is used

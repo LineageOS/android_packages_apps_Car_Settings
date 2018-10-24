@@ -227,7 +227,9 @@ public class BasePreferenceFragmentTest {
         @Override
         protected List<BasePreferenceController> createPreferenceControllers(Context context) {
             mSpyPreferenceController = spy(
-                    new FakePreferenceController(context, getString(R.string.tpk_spy_controller)));
+                    new FakePreferenceController(context, getString(R.string.tpk_spy_controller),
+                            (com.android.car.settings.common.FragmentController)
+                                    requireActivity()));
             return Collections.singletonList(mSpyPreferenceController);
         }
     }

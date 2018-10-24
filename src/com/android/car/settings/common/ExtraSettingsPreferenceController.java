@@ -53,8 +53,9 @@ public class ExtraSettingsPreferenceController extends NoSetupPreferenceControll
     private final ExtraSettingsLoader mExtraSettingsLoader;
     private final List<Preference> mExtraSettings = new ArrayList<>();
 
-    public ExtraSettingsPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public ExtraSettingsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mExtraSettingsLoader = new ExtraSettingsLoader(context);
     }
 

@@ -18,6 +18,8 @@ package com.android.car.settings.datetime;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
@@ -27,6 +29,7 @@ import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.common.FragmentController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +49,8 @@ public class TimeZonePickerPreferenceControllerTest {
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mController = new TimeZonePickerPreferenceController(mContext, PREFERENCE_KEY);
+        mController = new TimeZonePickerPreferenceController(mContext, PREFERENCE_KEY,
+                mock(FragmentController.class));
         mPreference = new Preference(mContext);
         mPreference.setKey(mController.getPreferenceKey());
     }

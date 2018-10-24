@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 /**
@@ -29,8 +30,9 @@ public class AccountsEntryPreferenceController extends NoSetupPreferenceControll
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public AccountsEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public AccountsEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 

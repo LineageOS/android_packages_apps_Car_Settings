@@ -29,6 +29,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 import java.util.Calendar;
@@ -51,8 +52,9 @@ public class TimePickerPreferenceController extends NoSetupPreferenceController 
     };
     private Preference mPreference;
 
-    public TimePickerPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public TimePickerPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
 
         // ACTION_TIME_CHANGED listens to changes to the autoDatetime toggle to update the time.
         // ACTION_TIME_TICK listens to the minute changes to update the shown time.

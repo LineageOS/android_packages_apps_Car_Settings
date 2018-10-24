@@ -29,6 +29,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 import java.util.Calendar;
@@ -51,8 +52,9 @@ public class DatePickerPreferenceController extends NoSetupPreferenceController 
     };
     private Preference mPreference;
 
-    public DatePickerPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public DatePickerPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
 
         // Listens to all three actions because they can all affect the date shown on the
         // screen.

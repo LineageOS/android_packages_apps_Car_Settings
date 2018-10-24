@@ -21,10 +21,13 @@ import static com.android.car.settings.common.BasePreferenceController.UNSUPPORT
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+
 import android.content.Context;
 import android.content.pm.PackageManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.common.FragmentController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -46,7 +49,8 @@ public class WifiEntryPreferenceControllerTest {
     public void setUp() {
         Context context = RuntimeEnvironment.application;
         mShadowPackageManager = Shadows.shadowOf(context.getPackageManager());
-        mController = new WifiEntryPreferenceController(context, PREFERENCE_KEY);
+        mController = new WifiEntryPreferenceController(context, PREFERENCE_KEY,
+                mock(FragmentController.class));
     }
 
     @Test

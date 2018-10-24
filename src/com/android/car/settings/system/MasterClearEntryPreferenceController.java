@@ -20,6 +20,7 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 /**
@@ -30,8 +31,9 @@ public class MasterClearEntryPreferenceController extends NoSetupPreferenceContr
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public MasterClearEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public MasterClearEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 

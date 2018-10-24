@@ -21,7 +21,10 @@ import static com.android.car.settings.common.BasePreferenceController.UNSUPPORT
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.common.FragmentController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -42,7 +45,7 @@ public class BluetoothEntryPreferenceControllerTest {
     @Before
     public void setUp() {
         mController = new BluetoothEntryPreferenceController(RuntimeEnvironment.application,
-                PREFERENCE_KEY);
+                PREFERENCE_KEY, mock(FragmentController.class));
     }
 
     @Test

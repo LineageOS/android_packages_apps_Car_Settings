@@ -17,8 +17,6 @@
 package com.android.car.settings.datetime;
 
 
-import android.content.Context;
-
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -35,13 +33,6 @@ public class TimeZonePickerScreenFragment extends BasePreferenceFragment {
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.timezone_picker_screen_fragment;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        use(TimeZonePickerScreenPreferenceController.class,
-                R.string.pk_timezone_picker_screen).setFragmentManager(getFragmentManager());
     }
 
     @Override

@@ -23,6 +23,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 /**
@@ -31,8 +32,9 @@ import com.android.car.settings.common.NoSetupPreferenceController;
 public class AutoDatetimeTogglePreferenceController extends NoSetupPreferenceController
         implements Preference.OnPreferenceChangeListener {
 
-    public AutoDatetimeTogglePreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public AutoDatetimeTogglePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

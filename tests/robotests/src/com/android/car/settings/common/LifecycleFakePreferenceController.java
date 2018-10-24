@@ -32,8 +32,9 @@ public class LifecycleFakePreferenceController extends FakePreferenceController 
     boolean mOnCreateCalled = false;
     boolean mOnDestroyCalled = false;
 
-    public LifecycleFakePreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public LifecycleFakePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)

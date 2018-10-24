@@ -104,7 +104,8 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
      */
     public static final int DISABLED_FOR_USER = 3;
 
-    protected final String mPreferenceKey;
+    private final String mPreferenceKey;
+    private final FragmentController mFragmentController;
 
     private CarUxRestrictions mRestrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
             CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -116,12 +117,12 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
      * doing. See class documentation for more details.
      */
     public static BasePreferenceController createInstance(Context context,
-            String controllerName, String key) {
+            String controllerName, String key, FragmentController fragmentController) {
         try {
             final Class<?> clazz = Class.forName(controllerName);
             final Constructor<?> preferenceConstructor =
-                    clazz.getConstructor(Context.class, String.class);
-            final Object[] params = new Object[]{context, key};
+                    clazz.getConstructor(Context.class, String.class, FragmentController.class);
+            final Object[] params = new Object[]{context, key, fragmentController};
             return (BasePreferenceController) preferenceConstructor.newInstance(params);
         } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException
                 | IllegalArgumentException | InvocationTargetException | IllegalAccessException e) {
@@ -132,17 +133,23 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
 
     /**
      * Controllers should generally be instantiated from XML via reflection using
-     * {@link #createInstance(Context, String, String)} from
+     * {@link #createInstance(Context, String, String, FragmentController)} from
      * {@link PreferenceControllerListHelper} if possible. To pass additional arguments see
      * {@link BasePreferenceFragment#use(Class, int)}.
      *
-     * @throws IllegalArgumentException if the preference key is null or empty
+     * @throws IllegalArgumentException if the preference key is null or empty or if the fragment
+     *         controller is null
      */
-    public BasePreferenceController(Context context, String preferenceKey) {
+    public BasePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
         super(context);
         mPreferenceKey = preferenceKey;
         if (TextUtils.isEmpty(mPreferenceKey)) {
             throw new IllegalArgumentException("Preference key must be set");
+        }
+        mFragmentController = fragmentController;
+        if (mFragmentController == null) {
+            throw new IllegalArgumentException("Fragment controller must be set");
         }
     }
 
@@ -161,6 +168,14 @@ public abstract class BasePreferenceController extends AbstractPreferenceControl
     @Override
     public String getPreferenceKey() {
         return mPreferenceKey;
+    }
+
+    /**
+     * Returns the {@link FragmentController} to use to launch fragments and go back to previous
+     * fragments.
+     */
+    public FragmentController getFragmentController() {
+        return mFragmentController;
     }
 
     @Override

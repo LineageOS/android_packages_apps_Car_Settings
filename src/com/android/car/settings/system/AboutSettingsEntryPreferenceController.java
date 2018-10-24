@@ -20,13 +20,15 @@ import android.content.Context;
 import android.os.Build;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 /** Updates the about settings entry summary with the build version. */
 public class AboutSettingsEntryPreferenceController extends NoSetupPreferenceController {
 
-    public AboutSettingsEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public AboutSettingsEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

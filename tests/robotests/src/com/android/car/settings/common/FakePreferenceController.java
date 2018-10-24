@@ -26,8 +26,9 @@ public class FakePreferenceController extends BasePreferenceController {
     @AvailabilityStatus
     private int mAvailabilityStatus = AVAILABLE;
 
-    public FakePreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public FakePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

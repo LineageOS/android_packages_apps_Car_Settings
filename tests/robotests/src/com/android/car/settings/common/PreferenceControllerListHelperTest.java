@@ -18,6 +18,8 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 
@@ -38,7 +40,8 @@ public class PreferenceControllerListHelperTest {
         List<String> validKeys = Arrays.asList("key1", "key2");
         List<BasePreferenceController> controllers =
                 PreferenceControllerListHelper.getPreferenceControllersFromXml(
-                        RuntimeEnvironment.application, R.xml.preference_controller_list_helper);
+                        RuntimeEnvironment.application, R.xml.preference_controller_list_helper,
+                        mock(FragmentController.class));
 
         assertThat(controllers).hasSize(validKeys.size());
         List<String> foundKeys = new ArrayList<>();
