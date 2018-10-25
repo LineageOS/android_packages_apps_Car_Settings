@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- Identifiers for preferences. Namespaced with "pk" (Preference Key) to avoid conflicts.
+     Key values should be unique.
+-->
+<resources>
+    <!-- Homepage -->
+    <string name="pk_suggestions" translatable="false">suggestions</string>
+    <string name="pk_display_settings_entry" translatable="false">display_settings_entry</string>
+    <string name="pk_sound_settings_entry" translatable="false">sound_settings_entry</string>
+    <string name="pk_wifi_settings_entry" translatable="false">wifi_settings_entry</string>
+    <string name="pk_wireless_extra_settings" translatable="false">wireless_extra_settings</string>
+    <string name="pk_bluetooth_settings_entry" translatable="false">bluetooth_settings_entry
+    </string>
+    <string name="pk_applications_settings_entry" translatable="false">applications_settings_entry
+    </string>
+    <string name="pk_date_time_settings_entry" translatable="false">date_time_settings_entry
+    </string>
+    <string name="pk_users_settings_entry" translatable="false">users_settings_entry</string>
+    <string name="pk_accounts_settings_entry" translatable="false">accounts_settings_entry</string>
+    <string name="pk_security_settings_entry" translatable="false">security_settings_entry</string>
+    <string name="pk_system_settings_entry" translatable="false">system_settings_entry</string>
+    <string name="pk_device_extra_settings" translatable="false">device_extra_settings</string>
+    <string name="pk_personal_extra_settings" translatable="false">personal_extra_settings</string>
+
+    <!-- DateTime Settings -->
+    <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>
+    <string name="pk_auto_timezone_switch" translatable="false">auto_timezone_switch</string>
+    <string name="pk_date_picker_entry" translatable="false">date_picker_entry</string>
+    <string name="pk_time_picker_entry" translatable="false">time_picker_entry</string>
+    <string name="pk_timezone_picker_screen_entry" translatable="false">
+        timezone_picker_screen_entry
+    </string>
+    <string name="pk_use_24hour_switch" translatable="false">use_24hour_switch</string>
+    <string name="pk_timezone_picker_screen" translatable="false">timezone_picker_screen</string>
+
+    <!-- System Settings -->
+    <string name="pk_language_settings_entry" translatable="false">language_settings_entry</string>
+    <string name="pk_system_update_settings" translatable="false">system_update_settings</string>
+    <string name="pk_system_extra_settings" translatable="false">system_extra_settings</string>
+    <string name="pk_about_settings_entry" translatable="false">about_settings_entry</string>
+    <string name="pk_legal_information_entry" translatable="false">legal_information_entry</string>
+    <string name="pk_reset_options_entry" translatable="false">reset_options_entry</string>
+
+    <!-- Reset Options -->
+    <string name="pk_reset_network" translatable="false">reset_network</string>
+    <string name="pk_reset_app_pref" translatable="false">reset_app_pref</string>
+    <string name="pk_master_clear" translatable="false">master_clear</string>
+</resources>

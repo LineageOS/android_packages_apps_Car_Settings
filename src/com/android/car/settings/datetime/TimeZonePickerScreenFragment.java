@@ -30,7 +30,6 @@ import java.util.TimeZone;
  * Lists all time zone and its offset from GMT.
  */
 public class TimeZonePickerScreenFragment extends BasePreferenceFragment {
-    private static final String PREFERENCE_CATEGORY_KEY = "timezone_picker_screen";
 
     @Override
     @XmlRes
@@ -41,8 +40,8 @@ public class TimeZonePickerScreenFragment extends BasePreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(TimeZonePickerScreenPreferenceController.class, PREFERENCE_CATEGORY_KEY)
-                .setFragmentManager(getFragmentManager());
+        use(TimeZonePickerScreenPreferenceController.class,
+                R.string.pk_timezone_picker_screen).setFragmentManager(getFragmentManager());
     }
 
     @Override

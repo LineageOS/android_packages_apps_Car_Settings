@@ -39,7 +39,7 @@ public class HomepageFragment extends BasePreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(SuggestionsPreferenceController.class, "suggestions").setLoaderManager(
+        use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
                 LoaderManager.getInstance(/* owner= */ this));
     }
 }
