@@ -25,8 +25,9 @@ import android.content.Context;
  */
 public class NoSetupPreferenceController extends BasePreferenceController {
 
-    public NoSetupPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public NoSetupPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

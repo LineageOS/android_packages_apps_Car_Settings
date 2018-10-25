@@ -18,6 +18,7 @@ package com.android.car.settings.system;
 
 import android.content.Context;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 import com.android.car.settingslib.language.LanguagePickerUtils;
 import com.android.internal.app.LocaleHelper;
@@ -27,8 +28,9 @@ import java.util.Locale;
 /** Updates the language settings entry summary with the currently configured locale. */
 public class LanguageSettingsEntryPreferenceController extends NoSetupPreferenceController {
 
-    public LanguageSettingsEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public LanguageSettingsEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

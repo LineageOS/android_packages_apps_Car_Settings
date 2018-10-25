@@ -30,6 +30,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.Utils;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
@@ -46,8 +47,9 @@ public class SystemUpdatePreferenceController extends NoSetupPreferenceControlle
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public SystemUpdatePreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public SystemUpdatePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 

@@ -19,6 +19,7 @@ package com.android.car.settings.wifi;
 import android.content.Context;
 
 import com.android.car.settings.common.BasePreferenceController;
+import com.android.car.settings.common.FragmentController;
 
 /**
  * Controller which determines if the top level entry into Wi-Fi settings should be displayed
@@ -26,8 +27,9 @@ import com.android.car.settings.common.BasePreferenceController;
  */
 public class WifiEntryPreferenceController extends BasePreferenceController {
 
-    public WifiEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public WifiEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
     }
 
     @Override

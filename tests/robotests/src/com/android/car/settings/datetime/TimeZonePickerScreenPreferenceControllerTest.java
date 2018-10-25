@@ -24,12 +24,12 @@ import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 
-import androidx.fragment.app.FragmentManager;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.common.FragmentController;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import org.junit.Before;
@@ -52,9 +52,9 @@ public class TimeZonePickerScreenPreferenceControllerTest {
     private PreferenceScreen mPreferenceScreen;
     private TimeZonePickerScreenPreferenceController mController;
     @Mock
-    private AlarmManager mAlarmManager;
+    private FragmentController mFragmentController;
     @Mock
-    private FragmentManager mFragmentManager;
+    private AlarmManager mAlarmManager;
 
     @Before
     public void setUp() {
@@ -63,11 +63,11 @@ public class TimeZonePickerScreenPreferenceControllerTest {
 
         mPreferenceScreen = new PreferenceManager(context).createPreferenceScreen(context);
         mPreferenceScreen.setKey(PREFERENCE_KEY);
-        mController = new TimeZonePickerScreenPreferenceController(context, PREFERENCE_KEY);
+        mController = new TimeZonePickerScreenPreferenceController(context, PREFERENCE_KEY,
+                mFragmentController);
 
         // Test setup.
         mController.mAlarmManager = mAlarmManager;
-        mController.setFragmentManager(mFragmentManager);
     }
 
     @Test
@@ -100,7 +100,7 @@ public class TimeZonePickerScreenPreferenceControllerTest {
     }
 
     @Test
-    public void testOnPreferenceClick_fragmentManagerPopBackStack() {
+    public void testOnPreferenceClick_fragmentControllerGoBack() {
         List<Map<String, Object>> testTimeZone = new ArrayList<>();
         testTimeZone.add(createTimeZoneMap("testKey", "London", "GMT+01:00", 100));
         mController.setZonesList(testTimeZone);
@@ -108,7 +108,7 @@ public class TimeZonePickerScreenPreferenceControllerTest {
         Preference preference = mPreferenceScreen.findPreference("testKey");
         preference.performClick();
 
-        verify(mFragmentManager).popBackStackImmediate();
+        verify(mFragmentController).goBack();
     }
 
     @Test

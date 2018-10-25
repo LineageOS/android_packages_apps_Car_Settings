@@ -18,10 +18,10 @@ package com.android.car.settings.users;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
@@ -37,8 +37,9 @@ public class UsersEntryPreferenceController extends NoSetupPreferenceController 
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public UsersEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public UsersEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
@@ -50,15 +51,13 @@ public class UsersEntryPreferenceController extends NoSetupPreferenceController 
         if (mCarUserManagerHelper.isCurrentProcessAdminUser()) {
             // Admins can see a full list of users in Settings.
             LOG.v("Creating UsersListFragment for admin user.");
-            preference.setFragment(UsersListFragment.class.getName());
+            getFragmentController().launchFragment(new UsersListFragment());
         } else {
             // Non-admins can only manage themselves in Settings.
             LOG.v("Creating UserDetailsFragment for non-admin.");
-            preference.setFragment(UserDetailsFragment.class.getName());
-            preference.getExtras().putInt(Intent.EXTRA_USER_ID,
-                    mCarUserManagerHelper.getCurrentProcessUserId());
+            getFragmentController().launchFragment(UserDetailsFragment.newInstance(
+                    mCarUserManagerHelper.getCurrentProcessUserId()));
         }
-        // Don't handle so that the preference fragment gets launched.
-        return false;
+        return true;
     }
 }

@@ -28,6 +28,7 @@ import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 import com.android.settingslib.datetime.ZoneGetter;
 
@@ -51,8 +52,9 @@ public class TimeZonePickerPreferenceController extends NoSetupPreferenceControl
     };
     private Preference mPreference;
 
-    public TimeZonePickerPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public TimeZonePickerPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
 
         // Listen to ACTION_TIME_CHANGED because it could be sent by the autoTimeZone toggle.
         // Listen to ACTION_TIMEZONE_CHANGED because the change in timezone should update the

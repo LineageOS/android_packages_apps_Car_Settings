@@ -36,7 +36,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.testutils.FragmentController;
+import com.android.car.settings.common.FragmentController;
 import com.android.settingslib.suggestions.SuggestionController;
 
 import org.junit.Before;
@@ -72,12 +72,14 @@ public class SuggestionsPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        FragmentController<TestPreferenceFragment> fragmentController = FragmentController.of(
+        com.android.car.settings.testutils.FragmentController<TestPreferenceFragment>
+                fragmentController = com.android.car.settings.testutils.FragmentController.of(
                 new TestPreferenceFragment());
         mScreen = fragmentController.setup().getPreferenceScreen();
 
         mContext = RuntimeEnvironment.application;
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY);
+        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
+                mock(FragmentController.class));
         mController.setLoaderManager(mLoaderManager);
         mController.mSuggestionController = mSuggestionController;
     }
@@ -133,7 +135,8 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void checkInitialized_loaderManagerSet_doesNothing() {
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY);
+        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
+                mock(FragmentController.class));
         mController.setLoaderManager(mLoaderManager);
 
         mController.checkInitialized();
@@ -141,7 +144,8 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void checkInitialized_nullLoaderManager_throwsIllegalStateException() {
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY);
+        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
+                mock(FragmentController.class));
 
         assertThrows(IllegalStateException.class, () -> mController.checkInitialized());
     }

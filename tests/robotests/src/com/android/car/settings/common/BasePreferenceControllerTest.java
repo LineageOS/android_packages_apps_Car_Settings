@@ -32,6 +32,8 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
 /**
@@ -42,31 +44,44 @@ public class BasePreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "preference_key";
 
+    @Mock
+    private FragmentController mFragmentController;
+
     private Context mContext;
     private FakePreferenceController mController;
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
+
         mContext = RuntimeEnvironment.application;
-        mController = new FakePreferenceController(mContext, PREFERENCE_KEY);
+        mController = new FakePreferenceController(mContext, PREFERENCE_KEY, mFragmentController);
     }
 
     @Test
     public void createInstance() {
         BasePreferenceController controller = BasePreferenceController.createInstance(mContext,
-                FakePreferenceController.class.getName(),
-                PREFERENCE_KEY);
+                FakePreferenceController.class.getName(), PREFERENCE_KEY, mFragmentController);
 
         assertThat(controller).isInstanceOf(FakePreferenceController.class);
         assertThat(controller.getPreferenceKey()).isEqualTo(PREFERENCE_KEY);
+        assertThat(controller.getFragmentController()).isEqualTo(mFragmentController);
     }
 
     @Test
     public void keyMustBeSet() {
         expectThrows(IllegalArgumentException.class,
-                () -> new FakePreferenceController(mContext, /* preferenceKey= */ null));
+                () -> new FakePreferenceController(mContext, /* preferenceKey= */ null,
+                        mFragmentController));
         expectThrows(IllegalArgumentException.class,
-                () -> new FakePreferenceController(mContext, /* preferenceKey= */ ""));
+                () -> new FakePreferenceController(mContext, /* preferenceKey= */ "",
+                        mFragmentController));
+    }
+
+    @Test
+    public void fragmentControllerMustBeSet() {
+        expectThrows(IllegalArgumentException.class, () -> new FakePreferenceController(mContext,
+                PREFERENCE_KEY, /* fragmentController= */ null));
     }
 
     @Test

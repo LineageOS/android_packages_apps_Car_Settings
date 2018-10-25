@@ -20,6 +20,8 @@ import static com.android.car.settings.common.BasePreferenceController.AVAILABLE
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -44,7 +46,8 @@ public class NoSetupPreferenceControllerTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mController = new NoSetupPreferenceController(mContext, PREFERENCE_KEY);
+        mController = new NoSetupPreferenceController(mContext, PREFERENCE_KEY,
+                mock(FragmentController.class));
     }
 
     @Test

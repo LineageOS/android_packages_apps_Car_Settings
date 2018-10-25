@@ -19,6 +19,7 @@ package com.android.car.settings.security;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 /**
@@ -29,8 +30,9 @@ public class SecurityEntryPreferenceController extends NoSetupPreferenceControll
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
-    public SecurityEntryPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public SecurityEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 

@@ -30,6 +30,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
 import java.util.Calendar;
@@ -60,8 +61,9 @@ public class AutoTimeFormatTogglePreferenceController extends NoSetupPreferenceC
     };
     private Preference mPreference;
 
-    public AutoTimeFormatTogglePreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public AutoTimeFormatTogglePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
 
         // Listens to ACTION_TIME_CHANGED because the description needs to be changed based on
         // the ACTION_TIME_CHANGED intent that this toggle sends.

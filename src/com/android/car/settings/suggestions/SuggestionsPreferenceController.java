@@ -35,6 +35,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
 import com.android.settingslib.suggestions.SuggestionController;
@@ -75,8 +76,9 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     private PreferenceScreen mPreferenceScreen;
     private SuggestionPreferenceGroup mPreferenceGroup;
 
-    public SuggestionsPreferenceController(Context context, String preferenceKey) {
-        super(context, preferenceKey);
+    public SuggestionsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController) {
+        super(context, preferenceKey, fragmentController);
         mSuggestionController = new SuggestionController(context,
                 COMPONENT_NAME, /* serviceConnectionListener= */ this);
     }

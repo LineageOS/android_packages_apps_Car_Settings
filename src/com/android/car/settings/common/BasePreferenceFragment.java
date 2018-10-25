@@ -55,10 +55,11 @@ import java.util.Map;
  * {@link LifecycleObserver} is registered with this fragment's {@link Lifecycle}.
  *
  * <p>{@code preferenceTheme} must be specified in the application theme, and the parent to which
- * this fragment attaches must implement {@link UxRestrictionsProvider} or an
- * {@link IllegalStateException} will be thrown during {@link #onAttach(Context)}. Changes to
- * driving state restrictions are propagated to controllers. If a controller becomes unavailable
- * for a particular driving state, its preference is hidden from the UI.
+ * this fragment attaches must implement {@link UxRestrictionsProvider} and
+ * {@link FragmentController} or an {@link IllegalStateException} will be thrown during
+ * {@link #onAttach(Context)}. Changes to driving state restrictions are propagated to
+ * controllers. If a controller becomes unavailable for a particular driving state, its
+ * preference is hidden from the UI.
  */
 public abstract class BasePreferenceFragment extends PreferenceFragmentCompat implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
@@ -133,6 +134,9 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
         if (!(getActivity() instanceof UxRestrictionsProvider)) {
             throw new IllegalStateException("Must attach to a UxRestrictionsProvider");
         }
+        if (!(getActivity() instanceof FragmentController)) {
+            throw new IllegalStateException("Must attach to a FragmentController");
+        }
         /*
          * If this fragment was detached and then reattached, it is possible that the local
          * restriction info will match the restriction info from the provider, and the newly
@@ -156,7 +160,7 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat im
         mPreferenceControllers.addAll(createPreferenceControllers(styledContext));
         mPreferenceControllers.addAll(
                 PreferenceControllerListHelper.getPreferenceControllersFromXml(styledContext,
-                        getPreferenceScreenResId()));
+                        getPreferenceScreenResId(), (FragmentController) requireActivity()));
 
         Lifecycle lifecycle = getLifecycle();
         mPreferenceControllers.forEach(controller -> {
