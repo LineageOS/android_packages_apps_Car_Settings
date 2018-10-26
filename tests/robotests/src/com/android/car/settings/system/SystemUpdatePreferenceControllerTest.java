@@ -82,6 +82,7 @@ public class SystemUpdatePreferenceControllerTest {
     @After
     public void tearDown() {
         getSystemServiceMap().remove(Context.CARRIER_CONFIG_SERVICE);
+        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

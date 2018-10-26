@@ -37,6 +37,7 @@ import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowTextListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -75,6 +76,11 @@ public class UsersListFragmentTest {
         mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
                 .setup()
                 .get();
+    }
+
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
     }
 
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */

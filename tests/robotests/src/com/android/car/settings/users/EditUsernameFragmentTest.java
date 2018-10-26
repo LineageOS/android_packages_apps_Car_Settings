@@ -33,6 +33,7 @@ import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -61,6 +62,11 @@ public class EditUsernameFragmentTest {
         mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
                 .setup()
                 .get();
+    }
+
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
     }
 
     /**
