@@ -49,7 +49,7 @@ import java.util.List;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ApplicationsSettingsPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "application_settings_screen";
+    private static final String PREFERENCE_KEY = "applications_settings_screen";
     private static final String APP_NAME_1 = "Some Application";
     private static final String APP_NAME_2 = "Other Application";
 
@@ -110,7 +110,7 @@ public class ApplicationsSettingsPreferenceControllerTest {
         mController.displayPreference(mPreferenceScreen);
         Preference preference = mPreferenceScreen.getPreference(0);
         preference.performClick();
-        verify(mFragmentController).launchFragment(any(ApplicationDetailFragment.class));
+        verify(mFragmentController).launchFragment(any(ApplicationDetailsFragment.class));
     }
 
     @Test
