@@ -30,6 +30,7 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,6 +57,11 @@ public class ResetNetworkEntryPreferenceControllerTest {
 
         mController = new ResetNetworkEntryPreferenceController(RuntimeEnvironment.application,
                 PREFERENCE_KEY, mock(FragmentController.class));
+    }
+
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

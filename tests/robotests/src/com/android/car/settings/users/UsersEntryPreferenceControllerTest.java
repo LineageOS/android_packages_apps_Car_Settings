@@ -32,6 +32,7 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -63,6 +64,11 @@ public class UsersEntryPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         mController = new UsersEntryPreferenceController(mContext, PREFERENCE_KEY,
                 mFragmentController);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

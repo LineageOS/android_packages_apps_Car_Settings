@@ -64,6 +64,7 @@ public class MasterClearEntryPreferenceControllerTest {
     public void tearDown() {
         Settings.Global.putInt(RuntimeEnvironment.application.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 0);
+        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
