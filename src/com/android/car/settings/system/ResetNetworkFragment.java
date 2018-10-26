@@ -20,36 +20,33 @@ import static android.app.Activity.RESULT_OK;
 
 import static java.util.Objects.requireNonNull;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.annotation.StyleRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.security.CheckLockActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Presents the user with information about restoring network settings to the factory default
  * values. If a user confirms, they will first be required to authenticate then presented with a
  * secondary confirmation: {@link ResetNetworkConfirmFragment}.
  */
-public class ResetNetworkFragment extends ListItemSettingsFragment {
+public class ResetNetworkFragment extends BasePreferenceFragment {
 
+    // Arbitrary request code for starting CheckLockActivity when the reset button is clicked.
     private static final int REQUEST_CODE = 123;
 
-    @StyleRes private int mTitleTextAppearance;
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.reset_network_fragment;
+    }
 
     @Override
     @LayoutRes
@@ -58,29 +55,11 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
     }
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_network_title;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        TypedArray a = context.getTheme().obtainStyledAttributes(R.styleable.ListItem);
-
-        mTitleTextAppearance = a.getResourceId(
-                R.styleable.ListItem_listItemTitleTextAppearance,
-                R.style.TextAppearance_Car_Body1_Light);
-
-        a.recycle();
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Button resetSettingsButton = requireNonNull(getActivity()).findViewById(
                 R.id.action_button1);
-        resetSettingsButton.setText(getContext().getString(R.string.reset_network_button_text));
+        resetSettingsButton.setText(requireContext().getString(R.string.reset_network_button_text));
         resetSettingsButton.setOnClickListener(v -> startActivityForResult(new Intent(
                 getContext(), CheckLockActivity.class), REQUEST_CODE));
     }
@@ -89,28 +68,8 @@ public class ResetNetworkFragment extends ListItemSettingsFragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
-            getFragmentController().launchFragment(new ResetNetworkConfirmFragment());
+            ((FragmentController) requireActivity()).launchFragment(
+                    new ResetNetworkConfirmFragment());
         }
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return new ListItemProvider.ListProvider(getListItems());
-    }
-
-    private List<ListItem> getListItems() {
-        List<ListItem> items = new ArrayList<>();
-        items.add(createTextOnlyItem(R.string.reset_network_desc));
-        items.add(createTextOnlyItem(R.string.reset_network_items));
-        return items;
-    }
-
-    private TextListItem createTextOnlyItem(@StringRes int stringResId) {
-        Context context = requireContext();
-        TextListItem item = new TextListItem(context);
-        item.setBody(context.getString(stringResId));
-        item.setShowDivider(false);
-        item.addViewBinder(vh -> vh.getBody().setTextAppearance(mTitleTextAppearance));
-        return item;
     }
 }

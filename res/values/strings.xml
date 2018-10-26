@@ -299,12 +299,24 @@
     <string name="reset_options_summary">Network, apps, or device reset</string>
 
     <!-- Reset Network --><skip />
-    <!-- Button title to reset Wi-Fi settings, bluetooth settings. [CHAR LIMIT=40] -->
-    <string name="reset_network_title">Reset Wi-Fi, Bluetooth</string>
+    <!-- Button title to reset Wi-Fi settings, mobile data settings, and Bluetooth settings. [CHAR LIMIT=40] -->
+    <string name="reset_network_title">Reset network</string>
     <!-- Message on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
     <string name="reset_network_desc">This will reset all network settings, including:</string>
-    <!-- List items on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
-    <string name="reset_network_items"><li>Wi\u2011Fi</li>\n<li>Bluetooth</li></string>
+    <!-- List item for Wi-Fi on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
+    <string name="reset_network_item_wifi"><li>Wi\u2011Fi</li></string>
+    <!-- List item for Mobile data on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
+    <string name="reset_network_item_mobile"><li>Mobile data</li></string>
+    <!-- List item for Bluetooth on screen after user selects reset network settings. [CHAR LIMIT=NONE] -->
+    <string name="reset_network_item_bluetooth"><li>Bluetooth</li></string>
+    <!-- Title for option to reset all eSIMs for the vehicle. [CHAR LIMIT=50] -->
+    <string name="reset_esim_title">Erase all vehicle eSIMs</string>
+    <!-- Description text for option to reset all eSIMs for the vehicle. [CHAR LIMIT=NONE] -->
+    <string name="reset_esim_desc">This will not cancel your service plan.</string>
+    <!-- Fallback representation of a network subscription that does not supply a display name, number, or carrier name. -->
+    <string name="reset_network_fallback_subscription_name" translatable="false">MCC:%s MNC:%s Slot:%s Id:%s</string>
+    <!-- Title of dialog to select network to reset. [CHAR LIMIT=30] -->
+    <string name="reset_network_select">Select network</string>
     <!-- Button on screen after user selects reset network settings. [CHAR LIMIT=30] -->
     <string name="reset_network_button_text">Reset settings</string>
     <!-- Reset settings confirmation screen title. [CHAR LIMIT=30] -->
