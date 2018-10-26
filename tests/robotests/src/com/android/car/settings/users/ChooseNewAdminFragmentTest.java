@@ -33,6 +33,7 @@ import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowTextListItem;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -65,6 +66,11 @@ public class ChooseNewAdminFragmentTest {
         mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
                 .setup()
                 .get();
+    }
+
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
