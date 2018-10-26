@@ -16,59 +16,19 @@
 
 package com.android.car.settings.system;
 
-import android.content.Context;
-import android.content.Intent;
-
-import androidx.annotation.StringRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
-
-import java.util.ArrayList;
+import com.android.car.settings.common.BasePreferenceFragment;
 
 /**
  * Fragment showing legal information.
  */
-public class LegalInformationFragment extends ListItemSettingsFragment {
-    private static final String ACTION_WEBVIEW_LICENSE = "android.settings.WEBVIEW_LICENSE";
+public class LegalInformationFragment extends BasePreferenceFragment {
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.legal_information;
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return new ListItemProvider.ListProvider(getListItems());
-    }
-
-    private ArrayList<ListItem> getListItems() {
-        ArrayList<ListItem> listItems = new ArrayList<>();
-
-        listItems.add(createSystemWebviewLicensesListItem());
-        listItems.add(createThirdPartyLicensesListItem());
-
-        return listItems;
-    }
-
-    private TextListItem createSystemWebviewLicensesListItem() {
-        Context context = requireContext();
-        return createSimpleListItem(R.string.webview_license_title, v -> {
-            Intent intent = new Intent();
-            intent.setAction(ACTION_WEBVIEW_LICENSE);
-            context.startActivity(intent);
-        });
-    }
-
-    private TextListItem createThirdPartyLicensesListItem() {
-        Context context = requireContext();
-        return createSimpleListItem(R.string.settings_license_activity_title, v -> {
-            Intent intent = new Intent(context, ThirdPartyLicensesActivity.class);
-            context.startActivity(intent);
-        });
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.legal_information_fragment;
     }
 }
