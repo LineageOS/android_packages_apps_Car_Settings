@@ -115,8 +115,7 @@
       <item quantity="one">Нэмэлт <xliff:g id="COUNT_0">%d</xliff:g> зөвшөөрөл</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Системийн шинэчлэлтүүд"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Андройд хувилбар"</string>
     <string name="security_patch" msgid="4794276590178386903">"Андройдын аюулгүй байдлын patch-н түвшин"</string>
     <string name="model_info" msgid="4966408071657934452">"Загвар"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Цаг"</string>
     <string name="user_admin" msgid="1535484812908584809">"Админ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Админаар нэвтэрсэн"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Бүх админы зөвшөөрөл"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Админ болгоно уу"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Тус хэрэглэгч бусад Aдмин зэрэг хэрэглэгчдийг устгах болон системийг үйлдвэрийн тохиргоонд шинэчлэх боломжтой болно."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Энэ үйлдлийг буцаах боломжгүй."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"Тийм, админ болгоно уу"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"Шинэ хэрэглэгчид үүсгэх"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Утасны дуудлагууд хийх"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Машины утасны датанаас мессеж бичих"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"Шинэ аппууд суулгах"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Аппууд устгах"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Хэрэглэгч нэмэх"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Шинэ хэрэглэгч"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Шинэ хэрэглэгч нэмэх үү?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Тохируулаагүй"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Хэрэглэгчийн нэрийг засах"</string>
     <string name="users_list_title" msgid="770764290290240909">"Хэрэглэгчид"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"Хэрэглэгч"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"Зөвшөөрлийг %1$s-д олгосон"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Бүртгэл"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Бүртгэл нэмэх"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Нэмсэн бүртгэл алга"</string>

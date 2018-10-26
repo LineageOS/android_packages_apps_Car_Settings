@@ -115,8 +115,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"सिस्‍टम अपडेट"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android का वर्शन"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा पैच लेवल"</string>
     <string name="model_info" msgid="4966408071657934452">"मॉडल"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"समय"</string>
     <string name="user_admin" msgid="1535484812908584809">"एडमिन"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"एडमिन के तौर पर साइन-इन किया है"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"एडमिन के सभी अधिकार"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"एडमिन बनाएं"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"एडमिन बनने वाला उपयोगकर्ता, दूसरे उपयोगकर्ताअों और एडमिन के नाम मिटा सकता है और सिस्टम को फ़ैक्ट्री रीसेट कर सकता है."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"दूसरे उपयोगकर्ता को एडमिन के अधिकार देने के बाद वापस नहीं लिए जा सकते."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"हां, एडमिन बना दें"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"नए उपयोगकर्ता बनाएं"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"फ़ोन कॉल करें"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"कार के मोबाइल डेटा से मैसेज भेजना"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"नए ऐप्लिकेशन इंस्टॉल करें"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ऐप्लिकेशन अनइंस्टॉल करें"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"उपयोगकर्ता जोड़ें"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"नया उपयोगकर्ता"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"नया उपयोगकर्ता जोड़ें?"</string>
@@ -203,28 +203,17 @@
       <item quantity="other">आप <xliff:g id="COUNT">%d</xliff:g> उपयोगकर्ता जोड़ सकते हैं.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"नया उपयोगकर्ता नहीं जोड़ पाए"</string>
-    <!-- no translation found for delete_user_dialog_title (3422867434431562007) -->
-    <skip />
-    <!-- no translation found for delete_user_dialog_message (4346777604351785057) -->
-    <skip />
-    <!-- no translation found for delete_user_error_title (7609819398530124827) -->
-    <skip />
-    <!-- no translation found for delete_user_error_dismiss (429156446763738273) -->
-    <skip />
-    <!-- no translation found for delete_user_error_retry (5116434895572670563) -->
-    <skip />
-    <!-- no translation found for delete_last_user_dialog_title (3644392025675369680) -->
-    <skip />
-    <!-- no translation found for delete_last_user_admin_created_message (1856897729010319054) -->
-    <skip />
-    <!-- no translation found for delete_last_user_system_setup_required_message (8550730509371697989) -->
-    <skip />
-    <!-- no translation found for choose_new_admin_title (1915428454917699587) -->
-    <skip />
-    <!-- no translation found for choose_new_admin_message (7468286545352043354) -->
-    <skip />
-    <!-- no translation found for choose_new_admin_label (5987653639387437939) -->
-    <skip />
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"इस उपयोगकर्ता को हटाएं?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"पूरा डेटा और सभी ऐप्लिकेशन मिटा दिए जाएंगे."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"उपयोगकर्ता को नहीं हटाया जा सका."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"खारिज करें"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"फिर से कोशिश करें"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"आखिरी उपयोगकर्ता हटाएं?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"इस कार के आखिरी उपयोगकर्ता को हटाने के बाद, आपको एडमिन के अधिकारों वाला नया उपयोगकर्ता खाता बनाना होगा."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"इस उपयोगकर्ता का पूरा डेटा, सभी सेटिंग और ऐप्लिकेशन मिटा दिए जाएंगे. आपको सिस्टम फिर से सेट अप करना होगा."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"नया एडमिन चुनें"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"कम से कम एक एडमिन का होना ज़रूरी है. मौजूदा एडमिन को हटाने से पहले कोई दूसरा एडमिन चुनें."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"एडमिन चुनें"</string>
     <string name="user_guest" msgid="3465399481257448601">"मेहमान"</string>
     <string name="start_guest_session" msgid="4438752398760283201">"मेहमान"</string>
     <string name="user_switch" msgid="6544839750534690781">"स्विच करें"</string>
@@ -233,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"सेट नहीं है"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"\'उपयोगकर्ता नाम\' में बदलाव करें"</string>
     <string name="users_list_title" msgid="770764290290240909">"उपयोगकर्ता"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"उपयोगकर्ता"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s को अनुमतियां दी गईं"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कोई खाता जोड़ा नहीं गया है"</string>
@@ -245,8 +234,7 @@
     <string name="remove_account_title" msgid="8840386525787836381">"खाता हटाएं"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाएं?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"यह खाता हटाने से इसके सभी मैसेज, संपर्क और दूसरा डेटा डिवाइस से मिट जाएगा!"</string>
-    <!-- no translation found for remove_account_error_title (8368044943174826635) -->
-    <skip />
+    <string name="remove_account_error_title" msgid="8368044943174826635">"खाता नहीं हटाया जा सका."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
@@ -347,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"डेमो मोड से बाहर निकलें"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"डेमो मोड से बाहर निकलने पर, डेमो खाता मिट जाएगा और सिस्टम का डेटा फ़ैक्ट्री रीसेट हो जाएगा. साथ ही, उपयोगकर्ता का पूरा डेटा भी मिट जाएगा."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोड से बाहर निकलें"</string>
-    <!-- no translation found for suggestion_dismiss_button (4539412646977050641) -->
-    <skip />
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"खारिज करें"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"गाड़ी चलाते समय इस सुविधा का इस्तेमाल नहीं किया जा सकता."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"गाड़ी चलाते समय उपयोगकर्ता को जोड़ा नहीं जा सकता."</string>
 </resources>

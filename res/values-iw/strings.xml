@@ -95,7 +95,7 @@
     <string name="ring_volume_title" msgid="3135241004980719442">"עוצמת הצלצול"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"עוצמת קול של ניווט"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"רינגטון"</string>
-    <string name="notification_volume_title" msgid="6749411263197157876">"הודעה"</string>
+    <string name="notification_volume_title" msgid="6749411263197157876">"התראה"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"מדיה"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"הגדרת עוצמת קול למוזיקה ולסרטונים"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"התראה"</string>
@@ -117,8 +117,7 @@
       <item quantity="one">הרשאה אחת (<xliff:g id="COUNT_0">%d</xliff:g>) נוספת</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"מערכת"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"עדכוני מערכת"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"עדכוני מערכת"</string>
     <string name="firmware_version" msgid="8491753744549309333">"גרסת Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"רמת תיקון האבטחה ב-Android"</string>
     <string name="model_info" msgid="4966408071657934452">"דגם"</string>
@@ -185,15 +184,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"שעה"</string>
     <string name="user_admin" msgid="1535484812908584809">"מנהל מערכת"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"כניסה בתור מנהל מערכת"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"כל ההרשאות של מנהל מערכת"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"הגדרה כמנהל מערכת"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"למשתמש תהיה היכולת למחוק משתמשים, כולל מנהלי מערכת אחרים, ולאפס את המערכת להגדרות היצרן."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"פעולה זו אינה הפיכה."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"כן, הגדרה כמנהל מערכת"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"יצירת משתמשים חדשים"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ביצוע שיחות טלפון"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"העברת הודעות דרך חבילת הגלישה ברכב"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"התקנת אפליקציות חדשות"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"הסרת התקנה של אפליקציות"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"הוספת משתמש"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"משתמש חדש"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"האם להוסיף משתמש חדש?"</string>
@@ -226,7 +226,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"לא מוגדר"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"עריכת שם המשתמש"</string>
     <string name="users_list_title" msgid="770764290290240909">"משתמשים"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"משתמש"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"הרשאות הוענקו למשתמש %1$s"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"חשבונות"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"הוספת חשבון"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"לא נוספו חשבונות"</string>

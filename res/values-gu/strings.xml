@@ -115,8 +115,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> વધારાની પરવાનગીઓ</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"સિસ્ટમ"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"સિસ્ટમ અપડેટ"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"સિસ્ટમ અપડેટ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android વર્ઝન"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android સુરક્ષા પૅચ લેવલ"</string>
     <string name="model_info" msgid="4966408071657934452">"મૉડલ"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"સમય"</string>
     <string name="user_admin" msgid="1535484812908584809">"વ્યવસ્થાપક"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"વ્યવસ્થાપક તરીકે સાઇન ઇન થયા"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"વ્યવસ્થાપક માટેની બધી પરવાનગીઓ"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"વ્યવસ્થાપક બનાવો"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"આ વપરાશકર્તા, અન્ય વ્યવસ્થાપકો સહિત અન્ય વપરાશકર્તાઓને ડિલીટ કરી શકશે અને સિસ્ટમને ફેક્ટરી રીસેટ પણ કરી શકશે."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"આ ક્રિયા ઉલટાવી શકવા યોગ્ય નથી."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"હા, આમને વ્યવસ્થાપક બનાવો"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"નવા વપરાશકર્તાઓ બનાવો"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ફોન કૉલ કરો"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"કારના મોબાઇલ ડેટા મારફતે મેસેજિંગ"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"નવી ઍપ ઇન્સ્ટૉલ કરો"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ઍપ અનઇન્સ્ટૉલ કરો"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"વપરાશકર્તા ઉમેરો"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"નવા વપરાશકર્તા"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"નવા વપરાશકર્તાને ઉમેરીએ?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"સેટ કરેલ નથી"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"વપરાશકર્તાના નામમાં ફેરફાર કરો"</string>
     <string name="users_list_title" msgid="770764290290240909">"વપરાશકર્તાઓ"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"વપરાશકર્તા"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sને આપેલી પરવાનગીઓ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"એકાઉન્ટ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"એકાઉન્ટ ઉમેરો"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"કોઈ એકાઉન્ટ ઉમેરવામાં આવ્યા નથી"</string>
@@ -335,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ડેમો મોડમાંથી બહાર નીકળો"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"આ ક્રિયા ડેમો એકાઉન્ટ ડિલીટ કરશે અને સિસ્ટમને ફેક્ટરી ડેટા પર રીસેટ કરશે. વપરાશકર્તાનો બધો ડેટા ગુમ થશે."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ડેમોમાંથી બહાર નીકળો"</string>
-    <!-- no translation found for suggestion_dismiss_button (4539412646977050641) -->
-    <skip />
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"છોડી દો"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ડ્રાઇવિંગ કરતી વખતે આ સુવિધા ઉપલબ્ધ રહેશે નહીં."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ડ્રાઇવ કરતી વખતે વપરાશકર્તાને ઉમેરી શકાતા નથી."</string>
 </resources>

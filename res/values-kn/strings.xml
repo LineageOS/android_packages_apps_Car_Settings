@@ -115,8 +115,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"ಸಿಸ್ಟಂ"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ಆವೃತ್ತಿ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ಭದ್ರತೆ ಪ್ಯಾಚ್ ಮಟ್ಟ"</string>
     <string name="model_info" msgid="4966408071657934452">"ಮಾಡೆಲ್"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"ಸಮಯ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"ಎಲ್ಲಾ ನಿರ್ವಾಹಕರ ಅನುಮತಿಗಳು"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"ನಿರ್ವಹಣೆ ಮಾಡಿ"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"ಬಳಕೆದಾರರಿಗೆ ಇತರ ನಿರ್ವಾಹಕರು ಸೇರಿದಂತೆ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ, ಮತ್ತು ಸಿಸ್ಟಂ ಅನ್ನು ಫ್ಯಾಕ್ಟರಿ ರಿಸೆಟ್‌ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗುವುದಿಲ್ಲ."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"ಹೌದು, ನಿರ್ವಹಣೆ ಮಾಡಿ"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"ಹೊಸ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಿ"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ಫೋನ್ ಕರೆಗಳನ್ನು ಮಾಡಿ"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"ಕಾರ್‌ನ ಮೊಬೈಲ್ ಡೇಟಾದ ಮೂಲಕ ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆ"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"ಹೊಸ ಆ್ಯಪ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ಆ್ಯಪ್‌ಗಳನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ಹೊಸ ಬಳಕೆದಾರರು"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸುವುದೇ?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ಇನ್ನೂ ಸೆಟಪ್‌ ಮಾಡಿಲ್ಲ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ಬಳಕೆದಾರರ ಹೆಸರನ್ನು ಎಡಿಟ್ ಮಾಡಿ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ಬಳಕೆದಾರರು"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"ಬಳಕೆದಾರ"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ಗೆ ಅನುಮತಿಗಳನ್ನು ನೀಡಲಾಗಿದೆ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ಖಾತೆಗಳು"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ಯಾವುದೇ ಖಾತೆಗಳನ್ನು ಸೇರಿಸಿಲ್ಲ"</string>

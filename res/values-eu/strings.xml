@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> baimen gehigarri</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Sistemaren eguneratzeak"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android bertsioa"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android segurtasun-adabakiaren maila"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeloa"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Ordua"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administratzailea"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Administratzaile gisa hasi da saioa"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Administratzaile-baimen guztiak"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Egin administratzaile"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Erabiltzaile horrek beste erabiltzaileak ezabatu ahal izango ditu (beste administratzaileak barne), eta sistemako jatorrizko datuak berrezarri."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Ekintza hau ezingo da desegin."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"Bai, egin administratzaile"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"Erabiltzaile berriak sortu"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Telefono-deiak egin"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Autoko datu-konexioa mezuetarako"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"Aplikazio berriak instalatu"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Aplikazioak desinstalatu"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Gehitu erabiltzailea"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Erabiltzaile berria"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Beste erabiltzaile bat gehitu?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Konfiguratu gabe"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Editatu erabiltzaile-izena"</string>
     <string name="users_list_title" msgid="770764290290240909">"Erabiltzaileak"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"Erabiltzailea"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s erabiltzailearen baimenak"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontuak"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontua"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ez da gehitu konturik"</string>

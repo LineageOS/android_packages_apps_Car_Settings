@@ -31,8 +31,8 @@
     <string name="keywords_display_night_display" msgid="2922294576679769957">"zatamnjenje zaslona, noć, preljev"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Noćni način rada"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Uključivanje Wi-Fi-ja…"</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Isključivanje Wi-Fi-ja…"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"Uključivanje Wi-Fija…"</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"Isključivanje Wi-Fija…"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Zaboravljanje mreže nije uspjelo"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Povezivanje s mrežom nije uspjelo"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Dodaj mrežu"</string>
@@ -116,8 +116,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatnih dopuštenja</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"Sustav"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Ažuriranja sustava"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sustava"</string>
     <string name="firmware_version" msgid="8491753744549309333">"verziju Androida"</string>
     <string name="security_patch" msgid="4794276590178386903">"Razina Androidove sigurnosne zakrpe"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -184,15 +183,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Vrijeme"</string>
     <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Prijavljeni ste kao administrator"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Sva administratorska dopuštenja"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Dodijeli status administratora"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Korisnik će moći brisati korisnike, uključujući druge administratore, i vratiti sustav na tvorničke postavke."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Ta se radnja ne može poništiti."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"Da, dodijeli status administratora"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"Izrada novih korisnika"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Upućivanje telefonskih poziva"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Poruke putem mobilnih podataka auta"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"Instaliranje novih aplikacija"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Deinstaliranje aplikacija"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Dodavanje korisnika"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Novi korisnik"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Dodati novog korisnika?"</string>
@@ -224,7 +224,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nije postavljen"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Uređivanje korisničkog imena"</string>
     <string name="users_list_title" msgid="770764290290240909">"Korisnici"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"Korisnik"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"Dopušteno korisniku %1$s"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Računi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj račun"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nije dodan nijedan račun"</string>
