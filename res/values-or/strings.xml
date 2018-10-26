@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ଅତିରିକ୍ତ ଅନୁମତି</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"ସିଷ୍ଟମ୍‌"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"ସିଷ୍ଟମ୍‌ ଅପଡେଟ୍‌‍"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ଭର୍ସନ୍‌"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ସୁରକ୍ଷା ପାଚ୍‌ ସ୍ତର"</string>
     <string name="model_info" msgid="4966408071657934452">"ମଡେଲ୍‌"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"ସମୟ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ଆଡ୍‌ମିନ୍‌"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ଆଡ୍‍ମିନ୍‍ ଭାବରେ ସାଇନ୍‍ ଇନ୍‍ କରିଛନ୍ତି"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"ସମସ୍ତ ଆଡ୍‌ମିନ୍‌ ଅନୁମତିଗୁଡିକ"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"ଆଡ୍‍ମିନ୍‍ କରନ୍ତୁ"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"ଉପଯୋଗକର୍ତ୍ତାଗଣ ଅନ୍ୟ ଆଡ୍‌ମିନ୍‌, ଏବଂ ଫ୍ୟାକ୍ଟେରୀ ରିସେଟ୍‌ ସିଷ୍ଟମ୍‌ ସହ, ଉପଯୋଗକର୍ତ୍ତାଗଣଙ୍କୁ ଡିଲିଟ୍‌ କରିପାରିବେ।"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ଏହି କାର୍ଯ୍ୟକୁ ଫେରାଇ ନେଇ ହେବ ନାହିଁ।"</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"ହଁ, ଆଡ୍‍ମି‍ନ୍‍ କରନ୍ତୁ"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"ନୂଆ ଉପଯୋଗକର୍ତ୍ତା ତିଆରି କରନ୍ତୁ"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ଫୋନ୍ କଲ୍‌ କରନ୍ତୁ"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"କାର୍\'ର ମୋବାଇଲ୍ ଡାଟା ମାଧ୍ୟମରେ ମେସେଜିଂ"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"ନୂଆ ଆପ୍ସ ଇନ୍‌ଷ୍ଟଲ୍‌ କରନ୍ତୁ"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ଆପ୍‌ଗୁଡ଼ିକ ଅନ୍‌ଇଷ୍ଟଲ୍‌ କରନ୍ତୁ"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ୟୁଜର୍‍ଙ୍କୁ ଯୋଡ଼ନ୍ତୁ"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ନୂଆ ୟୁଜର୍‌"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"ନୂତନ ୟୁଜର୍‍ ଯୋଡ଼ିବେ?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ସେଟ୍ ହୋଇନାହିଁ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ୟୁଜର୍‍ ନାମକୁ ଏଡିଟ୍ କରନ୍ତୁ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ୟୁଜର୍"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"ୟୁଜର୍‌"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ପାଇଁ ଅନୁମତି ଅନୁମୋଦିତ ହୋଇଛି"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଡ଼ାଯାଇନାହିଁ"</string>
@@ -335,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ଡେମୋ ମୋଡ୍‌ରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ଏହା ଡେମୋ ଆକାଉଣ୍ଟକୁ ଡିଲିଟ୍ କରିଦେବ ଏବଂ ଫ୍ୟାକ୍ଟୋରୀ ଡାଟା ସିଷ୍ଟମ୍‍କୁ ରିସେଟ୍ କରିବ। ସମସ୍ତ ୟୁଜର୍ ଡାଟା ନଷ୍ଟ ହୋ‍ଇଯିବ।"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
-    <!-- no translation found for suggestion_dismiss_button (4539412646977050641) -->
-    <skip />
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବନାହିଁ।"</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ୟୁଜର୍ ଯୋଡ଼ିପାରିବେ ନାହିଁ।"</string>
 </resources>

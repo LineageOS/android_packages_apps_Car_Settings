@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> autorizzazione aggiuntiva</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Aggiornamenti di sistema"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Aggiornamenti di sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versione Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Livello patch di sicurezza Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modello"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Amministratore"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Accesso eseguito da amministratore"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Tutte le autorizzazioni di amministratore"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Imposta come amministratore"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"L\'utente potrà eliminare utenti, includere altri amministratori e ripristinare le impostazioni di fabbrica del sistema."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"Questa azione è irreversibile."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"Sì, imposta come amministratore"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"Creazione di nuovi utenti"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Fare telefonate"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Messaggi tramite dati mobili auto"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"Installazione di nuove app"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Disinstallazione di app"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Aggiungi utente"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nuovo utente"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Aggiungere nuovo utente?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Non configurato"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Modifica il nome utente"</string>
     <string name="users_list_title" msgid="770764290290240909">"Utenti"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"Utente"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"Autorizzazioni concesse a %1$s"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Account"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Aggiungi account"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nessun account aggiunto"</string>

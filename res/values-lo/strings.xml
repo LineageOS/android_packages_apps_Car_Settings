@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ການອະນຸຍາດເພີ່ມເຕີມ</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"ລະບົບ"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"ການອັບເດດລະບົບ"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"ການອັບເດດລະບົບ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"ເວີຊັນ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"ລະດັບໂປຣແກຣມແກ້ໄຂຄວາມປອດໄພ Android"</string>
     <string name="model_info" msgid="4966408071657934452">"ລຸ້ນ"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"ເວລາ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ຜູ້ເບິ່ງແຍງລະບົບ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ເຂົ້າສູ່ລະບົບເປັນຜູ້ເບິ່ງແຍງລະບົບ"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"ການອະນຸຍາດຂອງຜູ້ເບິ່ງແຍງລະບົບທັງໝົດ"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"ຕັ້ງໃຫ້ເປັນຜູ້ເບິ່ງແຍງລະບົບ"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"ຜູ້ໃຊ້ນີ້ຈະສາມາດລຶບຜູ້ໃຊ້ອື່ນ ຮວມທັງຜູ້ເບິ່ງແຍງລະບົບອື່ນ ແລະ ຣີເຊັດລະບົບເປັນຄ່າໂຮງງານໄດ້."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ຄຳສັ່ງນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"ແມ່ນ, ຕັ້ງໃຫ້ເປັນຜູ້ເບິ່ງແຍງລະບົບ"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"ສ້າງຜູ້ໃຊ້ໃໝ່"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ໂທລະສັບ"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"ການຮັບສົ່ງຂໍ້ຄວາມຜ່ານອິນເຕີເນັດມືຖືຂອງລົດ"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"ຕິດຕັ້ງແອັບໃໝ່"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ຖອນຕິດຕັ້ງແອັບ"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"ເພີ່ມຜູ້ໃຊ້"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ຜູ້ໃຊ້ໃໝ່"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"ເພີ່ມຜູ້ໃຊ້ໃໝ່ບໍ?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ບໍ່ໄດ້ຕັ້ງຄ່າ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ແກ້ໄຊຊື່ຜູ້ໃຊ້"</string>
     <string name="users_list_title" msgid="770764290290240909">"ຜູ້ໃຊ້"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"ຜູ້ໃຊ້"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"ໃຫ້ການອະນຸຍາດແກ່ %1$s"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ບັນຊີ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ເພີ່ມບັນຊີ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ບໍ່ໄດ້ເພີ່ມບັນຊີໃດ"</string>

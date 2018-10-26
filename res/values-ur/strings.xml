@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> اضافی اجازت</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"سسٹم"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"سسٹم اپ ڈیٹس"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"سسٹم اپ ڈیٹس"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ورژن"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android سیکیورٹی پیچ کی سطح"</string>
     <string name="model_info" msgid="4966408071657934452">"ماڈل"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"وقت"</string>
     <string name="user_admin" msgid="1535484812908584809">"منتظم"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"منتظم کے طور پر سائن ان کردہ"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"منتظم کی سبھی اجازتیں"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"منتظم بنائیں"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"صارف دیگر منتظمین سمیت صارفین کو حذف اور سسٹم کو فیکٹری ری سیٹ نہیں کر سکے گا۔"</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"یہ کارروائی منسوخ نہیں کی جا سکتی۔"</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"جی ہاں، منتظم بنائیں"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"نئے صارفین بنائیں"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"فون کالز کریں"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"کار کے موبائل ڈیٹا کے ذریعے پیغام رسانی کی جا رہی ہے"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"نئی ایپس انسٹال کریں"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ایپس کو اَن انسٹال کریں"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"صارف کو شامل کریں"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"نیا صارف"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"نیا صارف شامل کریں؟"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ترتیب نہیں دیا گیا"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"صارف نام میں ترمیم کریں"</string>
     <string name="users_list_title" msgid="770764290290240909">"صارفین"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"صارف"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s کو اجازتیں دی گئیں"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"اکاؤنٹس"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"اکاؤنٹ شامل کریں"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"کوئی اکاؤنٹ شامل نہیں ہے"</string>

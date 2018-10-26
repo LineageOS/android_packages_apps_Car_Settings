@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> అదనపు అనుమతి</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"సిస్టమ్ అప్‌డేట్‌లు"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android భద్రతా ప్యాచ్ స్థాయి"</string>
     <string name="model_info" msgid="4966408071657934452">"మోడల్"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"సమయం"</string>
     <string name="user_admin" msgid="1535484812908584809">"నిర్వాహకుడు"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"నిర్వాహకుడిగా సైన్ ఇన్ చేసారు"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"అన్ని నిర్వాహక అనుమతులు"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"నిర్వాహకుడిగా చేయి"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"వినియోగదారు ఇతర నిర్వాహకులతో సహా వినియోగదారులను తొలగించగలరు మరియు సిస్టమ్‌ని ఫ్యాక్టరీ రీసెట్ చేయగలరు."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"ఈ చర్యను రద్దు చేయలేరు."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"అవును, నిర్వాహకుడిగా చేయి"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"కొత్త వినియోగదారులను సృష్టించడం"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ఫోన్ కాల్‌లు చేయడం"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"కారు మొబైల్ డేటాతో సందేశం పంపడం"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"కొత్త యాప్‌లను ఇన్‌స్టాల్ చేయడం"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"యాప్‌లను అన్‌ఇన్‌స్టాల్ చేయడం"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"వినియోగదారుని జోడించు"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"కొత్త వినియోగదారు"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"కొత్త వినియోగదారుని జోడించాలా?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"సెటప్ చేయలేదు"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"వినియోగదారు పేరుని సవరించండి"</string>
     <string name="users_list_title" msgid="770764290290240909">"వినియోగదారులు"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"వినియోగదారు"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s కి అనుమతులు మంజూరు చేయబడ్డాయి"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ఖాతాలు"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించు"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
@@ -335,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"డెమో మోడ్ నుండి నిష్క్రమించండి"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ఫ్యాక్టరీ డేటా డెమో ఖాతాను తొలగించి, సిస్టమ్‌ను రీసెట్ చేస్తుంది. మొత్తం వినియోగదారు డేటాను కోల్పోతారు."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"డెమో నుండి నిష్క్రమించండి"</string>
-    <!-- no translation found for suggestion_dismiss_button (4539412646977050641) -->
-    <skip />
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"డ్రైవింగ్ చేస్తున్నప్పుడు ఫీచర్ అందుబాటులో ఉండదు."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"డ్రైవింగ్ చేస్తున్నప్పుడు వినియోగదారుని జోడించడం సాధ్యం కాదు."</string>
 </resources>

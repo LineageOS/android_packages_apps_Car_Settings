@@ -115,8 +115,7 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"சிஸ்டம்"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"இயங்குதளப் புதுப்பிப்புகள்"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android பதிப்பு"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android பாதுகாப்பின் பேட்ச் நிலை"</string>
     <string name="model_info" msgid="4966408071657934452">"மாடல்"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"நேரம்"</string>
     <string name="user_admin" msgid="1535484812908584809">"நிர்வாகி"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"நிர்வாகியாக உள்நுழைந்துள்ளீர்கள்"</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"நிர்வாகி அனுமதிகளை வழங்குதல்"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"நிர்வாகியாக்கு"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"நிர்வாகியாக்கப்பட்ட பயனரால் மற்ற ’நிர்வாகிகள்’ உட்பட எவரையும் நீக்க முடிவதோடு சிஸ்டத்தையும் ஆரம்பநிலைக்கு மீட்டமைக்க முடியும்."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"இந்தச் செயலைத் திரும்பப் பெற இயலாது."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"ஆம், நிர்வாகியாக்கு"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"புதிய பயனர்களை உருவாக்குதல்"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ஃபோன் அழைப்புகளைச் செய்தல்"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"காரின் மொபைல் டேட்டா மூலம் மெசேஜிங்"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"புதிய ஆப்ஸை நிறுவுதல்"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ஆப்ஸை நிறுவல்நீக்குதல்"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"பயனரைச் சேர்"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"புதிய பயனர்"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"புதிய பயனரைச் சேர்க்கவா?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"அமைக்கவில்லை"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"பயனர் பெயரைத் திருத்தவும்"</string>
     <string name="users_list_title" msgid="770764290290240909">"பயனர்கள்"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"பயனர்"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sக்கு இந்த அனுமதிகள் உள்ளன"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"கணக்குகள்"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"கணக்குகள் எதுவும் சேர்க்கப்படவில்லை"</string>
@@ -335,8 +335,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"டெமோ மோடிலிருந்து வெளியேறுதல்"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"இவ்வாறு செய்தால், டெமோ கணக்கு நீக்கப்படுவதோடு, சாதனமானது தரவின் ஆரம்பநிலைக்கு மீட்டமைக்கப்படும். எல்லாப் பயனர் தரவையும் இழப்பீர்கள்."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"டெமோவிலிருந்து வெளியேறு"</string>
-    <!-- no translation found for suggestion_dismiss_button (4539412646977050641) -->
-    <skip />
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"நிராகரி"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"வாகனம் ஓட்டும்போது, இந்த அம்சத்தைப் பயன்படுத்த முடியாது."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"வாகனம் ஓட்டும்போது, பயனரைச் சேர்க்க முடியாது."</string>
 </resources>

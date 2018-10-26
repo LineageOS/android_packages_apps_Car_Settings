@@ -115,8 +115,7 @@
       <item quantity="one">추가 권한 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"시스템 업데이트"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 보안 패치 수준"</string>
     <string name="model_info" msgid="4966408071657934452">"모델"</string>
@@ -183,15 +182,16 @@
     <string name="time_picker_title" msgid="7436045944320504639">"시간"</string>
     <string name="user_admin" msgid="1535484812908584809">"관리자"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"관리자로 로그인했습니다."</string>
-    <!-- no translation found for grant_admin_permissions_title (7657671336369602749) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_button_text (988239414372882401) -->
-    <skip />
-    <!-- no translation found for grant_admin_permissions_message (1751910369004774830) -->
-    <skip />
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"모든 관리자 권한"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"관리자 권한 부여"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"사용자는 다른 관리자를 포함한 사용자를 삭제하고 시스템을 초기화할 수 있게 됩니다."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"이 작업은 되돌릴 수 없습니다."</string>
-    <!-- no translation found for confirm_grant_admin (7852596890218647682) -->
-    <skip />
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"관리자 권한 부여"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"새 사용자 만들기"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"전화 걸기"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"자동차의 모바일 데이터를 통해 메시지 보내기"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"새 앱 설치"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"앱 제거"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"사용자 추가"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"새 사용자"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"새 사용자를 추가할까요?"</string>
@@ -222,7 +222,7 @@
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"설정되지 않음"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"사용자 이름 수정"</string>
     <string name="users_list_title" msgid="770764290290240909">"사용자"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"사용자"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s에 부여된 권한"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"추가된 계정이 없습니다."</string>
