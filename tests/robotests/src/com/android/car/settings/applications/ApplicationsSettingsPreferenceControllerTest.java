@@ -112,4 +112,14 @@ public class ApplicationsSettingsPreferenceControllerTest {
         preference.performClick();
         verify(mFragmentController).launchFragment(any(ApplicationDetailFragment.class));
     }
+
+    @Test
+    public void displayPreference_multipleCalls() {
+        mController.displayPreference(mPreferenceScreen);
+        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(2);
+
+        // Second call shouldn't add more items to the list.
+        mController.displayPreference(mPreferenceScreen);
+        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(2);
+    }
 }
