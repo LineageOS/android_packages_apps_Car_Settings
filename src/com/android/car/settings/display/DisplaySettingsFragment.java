@@ -15,71 +15,19 @@
  */
 package com.android.car.settings.display;
 
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
-import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
-
-import android.content.Context;
-import android.provider.Settings;
-
-import androidx.annotation.StringRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.ListItemProvider.ListProvider;
-import androidx.car.widget.TextListItem;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.android.car.settings.common.BasePreferenceFragment;
 
 /**
- * Activity to host Display related preferences.
+ * Preference fragment to host Display related preferences.
  */
-public class DisplaySettingsFragment extends ListItemSettingsFragment {
+public class DisplaySettingsFragment extends BasePreferenceFragment {
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.display_settings;
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return new ListProvider(getListItems());
-    }
-
-    private List<ListItem> getListItems() {
-        List<ListItem> listItems = new ArrayList<>();
-        Context context = getContext();
-        if (supportsAdaptiveBrightness()) {
-            TextListItem adaptiveBrightnessItem = new TextListItem(context);
-            adaptiveBrightnessItem.setTitle(context.getString(R.string.auto_brightness_title));
-            adaptiveBrightnessItem.setBody(
-                    context.getString(R.string.auto_brightness_summary));
-            adaptiveBrightnessItem.setSwitch(
-                    isAdaptiveBrightnessChecked(),
-                    /* showDivider= */false,
-                    (button, isChecked) ->
-                            Settings.System.putInt(context.getContentResolver(),
-                                    SCREEN_BRIGHTNESS_MODE,
-                                    isChecked ? SCREEN_BRIGHTNESS_MODE_AUTOMATIC
-                                            : SCREEN_BRIGHTNESS_MODE_MANUAL));
-            listItems.add(adaptiveBrightnessItem);
-        }
-        listItems.add(new BrightnessListItem(context));
-        return listItems;
-    }
-
-    private boolean isAdaptiveBrightnessChecked() {
-        int brightnessMode = Settings.System.getInt(getContext().getContentResolver(),
-                SCREEN_BRIGHTNESS_MODE, SCREEN_BRIGHTNESS_MODE_MANUAL);
-        return brightnessMode != SCREEN_BRIGHTNESS_MODE_MANUAL;
-    }
-
-    private boolean supportsAdaptiveBrightness() {
-        return getContext().getResources().getBoolean(
-                com.android.internal.R.bool.config_automatic_brightness_available);
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.display_settings_fragment;
     }
 }
