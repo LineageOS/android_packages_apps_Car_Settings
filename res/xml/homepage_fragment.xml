@@ -58,7 +58,7 @@
         android:title="@string/bluetooth_settings"
         settings:controller="com.android.car.settings.bluetooth.BluetoothEntryPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.applications.ApplicationSettingsFragment"
+        android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
         android:icon="@drawable/ic_settings_applications"
         android:key="@string/pk_applications_settings_entry"
         android:order="600"
