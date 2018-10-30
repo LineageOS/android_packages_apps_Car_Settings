@@ -27,6 +27,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,7 +35,7 @@ import java.util.List;
 public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceController {
 
     private final PackageManager mPackageManager;
-    private List<ResolveInfo> mApplications;
+    private List<Preference> mApplications;
 
     public ApplicationsSettingsPreferenceController(Context context,
             String preferenceKey,
@@ -48,22 +49,27 @@ public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceC
         if (mApplications == null) {
             populateApplicationList();
         }
-        for (ResolveInfo resolveInfo : mApplications) {
-            screen.addPreference(createApplicationPreference(resolveInfo));
+        for (Preference application : mApplications) {
+            screen.addPreference(application);
         }
     }
 
     private void populateApplicationList() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        mApplications = mPackageManager.queryIntentActivities(intent,
+        List<ResolveInfo> resolveInfos = mPackageManager.queryIntentActivities(intent,
                 PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS
                         | PackageManager.MATCH_DISABLED_COMPONENTS);
-        Collections.sort(mApplications, (resolveInfo1, resolveInfo2) -> {
+        Collections.sort(resolveInfos, (resolveInfo1, resolveInfo2) -> {
             String appName1 = resolveInfo1.loadLabel(mPackageManager).toString();
             String appName2 = resolveInfo2.loadLabel(mPackageManager).toString();
             return appName1.compareTo(appName2);
         });
+
+        mApplications = new ArrayList<>(resolveInfos.size());
+        for (ResolveInfo resolveInfo : resolveInfos) {
+            mApplications.add(createApplicationPreference(resolveInfo));
+        }
     }
 
     private Preference createApplicationPreference(ResolveInfo resolveInfo) {
