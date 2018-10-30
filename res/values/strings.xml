@@ -416,7 +416,7 @@
     <string name="outgoing_calls_permission_title">Make phone calls</string>
 
     <!-- SMS Messaging -->
-    <!-- Title for toggle that controls whether a user is able to send and receive sms messages using the car's mobile data [CHAR LIMIT=35] -->
+    <!-- Title for toggle that controls whether a user is able to send and receive sms messages using the car's mobile data [CHAR LIMIT=55] -->
     <string name="sms_messaging_permission_title">Messaging via car\u0027s mobile data</string>
 
     <!-- Apps -->
@@ -487,7 +487,7 @@
     <string name="edit_user_name_title">Edit user name</string>
     <!-- User settings header for list of users on the system. [CHAR LIMIT=35] -->
     <string name="users_list_title">Users</string>
-    <!-- Title for the user details page that shows the permissions granted to the user. The parameter is the name of the user. [CHAR LIMIT=30] -->
+    <!-- Title for the user details page that shows the permissions granted to the user. The parameter is the name of the user. [CHAR LIMIT=40] -->
     <string name="user_details_admin_title">Permissions granted to %1$s</string>
 
     <!-- Account management -->
