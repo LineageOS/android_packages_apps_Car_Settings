@@ -31,6 +31,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceUtil;
 import com.android.car.settings.common.SeekBarPreference;
 
 /** Business logic for changing the brightness of the display. */
@@ -56,10 +57,7 @@ public class BrightnessLevelPreferenceController extends NoSetupPreferenceContro
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         Preference preference = screen.findPreference(getPreferenceKey());
-        if (!(preference instanceof SeekBarPreference)) {
-            throw new IllegalStateException(
-                    "Preference for this controller should be SeekBarPreference");
-        }
+        PreferenceUtil.requirePreferenceType(preference, SeekBarPreference.class);
 
         mPreference = (SeekBarPreference) preference;
         mPreference.setMax(GAMMA_SPACE_MAX);
@@ -69,9 +67,7 @@ public class BrightnessLevelPreferenceController extends NoSetupPreferenceContro
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (!(preference instanceof SeekBarPreference)) {
-            throw new IllegalArgumentException("Expecting SeekBarPreference");
-        }
+        PreferenceUtil.requirePreferenceType(preference, SeekBarPreference.class);
         int gamma = (Integer) newValue;
         int linear = convertGammaToLinear(gamma, mMinimumBacklight, mMaximumBacklight);
         Settings.System.putIntForUser(mContext.getContentResolver(),

@@ -19,11 +19,13 @@ package com.android.car.settings.datetime;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
+import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -74,7 +76,13 @@ public class AutoDatetimeTogglePreferenceControllerTest {
     }
 
     @Test
-    public void updatePreference_autoTimeZoneSet_shouldSendIntent() {
+    public void testUpdateState_wrongPreferenceType() {
+        assertThrows(IllegalStateException.class,
+                () -> mController.updateState(new Preference(mContext)));
+    }
+
+    @Test
+    public void testOnPreferenceChange_autoTimeZoneSet_shouldSendIntent() {
         mPreference.setChecked(true);
         mController.onPreferenceChange(mPreference, true);
 
@@ -85,7 +93,7 @@ public class AutoDatetimeTogglePreferenceControllerTest {
     }
 
     @Test
-    public void updatePreference_autoTimeZoneUnset_shouldSendIntent() {
+    public void testOnPreferenceChange_autoTimeZoneUnset_shouldSendIntent() {
         mPreference.setChecked(false);
         mController.onPreferenceChange(mPreference, false);
 
@@ -93,6 +101,12 @@ public class AutoDatetimeTogglePreferenceControllerTest {
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
+    }
+
+    @Test
+    public void testOnPreferenceChange_wrongPreferenceType() {
+        assertThrows(IllegalStateException.class,
+                () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }
 

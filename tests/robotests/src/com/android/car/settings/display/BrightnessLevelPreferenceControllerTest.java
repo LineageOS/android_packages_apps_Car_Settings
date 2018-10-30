@@ -23,6 +23,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.testng.Assert.assertThrows;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
@@ -138,6 +139,16 @@ public class BrightnessLevelPreferenceControllerTest {
     }
 
     @Test
+    public void testDisplayPreferences_wrongPreferenceType() {
+        androidx.preference.SeekBarPreference preference =
+                new androidx.preference.SeekBarPreference(mContext);
+        preference.setKey(PREFERENCE_KEY);
+        mPreferenceScreen.addPreference(preference);
+        assertThrows(IllegalStateException.class,
+                () -> mController.displayPreference(mPreferenceScreen));
+    }
+
+    @Test
     public void testOnPreferenceChange_minValue() throws Settings.SettingNotFoundException {
         mController.onPreferenceChange(mSeekBarPreference, 0);
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
@@ -162,5 +173,12 @@ public class BrightnessLevelPreferenceControllerTest {
                 Settings.System.SCREEN_BRIGHTNESS,
                 mCarUserManagerHelper.getCurrentProcessUserId());
         assertThat(currentSettingsVal).isEqualTo(mMid);
+    }
+
+    @Test
+    public void testOnPreferenceChange_wrongPreferenceType() {
+        assertThrows(IllegalStateException.class,
+                () -> mController.onPreferenceChange(
+                        new androidx.preference.SeekBarPreference(mContext), true));
     }
 }
