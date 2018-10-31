@@ -63,7 +63,7 @@
         android:key="@string/pk_location_settings_entry"
         android:order="600"
         android:title="@string/location_settings_title"
-        settings:controller="com.android.car.settings.location.NoSetupPreferenceController"/>
+        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
         android:icon="@drawable/ic_settings_applications"
