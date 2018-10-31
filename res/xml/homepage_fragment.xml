@@ -58,36 +58,43 @@
         android:title="@string/bluetooth_settings"
         settings:controller="com.android.car.settings.bluetooth.BluetoothEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.location.LocationSettingsFragment"
+        android:icon="@drawable/ic_settings_location"
+        android:key="@string/pk_location_settings_entry"
+        android:order="600"
+        android:title="@string/location_settings_title"
+        settings:controller="com.android.car.settings.location.NoSetupPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
         android:icon="@drawable/ic_settings_applications"
         android:key="@string/pk_applications_settings_entry"
-        android:order="600"
+        android:order="700"
         android:title="@string/applications_settings"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"
         android:icon="@drawable/ic_settings_date_time"
         android:key="@string/pk_date_time_settings_entry"
-        android:order="700"
+        android:order="800"
         android:title="@string/date_and_time_settings_title"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:icon="@drawable/ic_user"
         android:key="@string/pk_users_settings_entry"
-        android:order="800"
+        android:order="900"
         android:title="@string/users_list_title"
         settings:controller="com.android.car.settings.users.UsersEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.accounts.AccountsListFragment"
         android:icon="@drawable/ic_account"
         android:key="@string/pk_accounts_settings_entry"
-        android:order="900"
+        android:order="1000"
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
     <Preference
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_security_settings_entry"
-        android:order="1000"
+        android:order="1100"
         android:title="@string/security_settings_title"
         settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController">
         <intent
@@ -98,12 +105,12 @@
         android:fragment="com.android.car.settings.system.SystemSettingsFragment"
         android:icon="@drawable/ic_settings_about"
         android:key="@string/pk_system_settings_entry"
-        android:order="1100"
+        android:order="1200"
         android:title="@string/system_setting_title"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:key="@string/pk_device_extra_settings"
-        android:order="1200"
+        android:order="1300"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
         <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
             <extra android:name="com.android.settings.category"
@@ -112,7 +119,7 @@
     </Preference>
     <Preference
         android:key="@string/pk_personal_extra_settings"
-        android:order="1300"
+        android:order="1400"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
         <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
             <extra android:name="com.android.settings.category"
