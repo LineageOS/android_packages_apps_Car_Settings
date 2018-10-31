@@ -34,7 +34,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
@@ -46,14 +45,14 @@ import java.util.List;
 /**
  * Injects {@link SuggestionPreference} instances loaded from the SuggestionService at the
  * location in the hierarchy of the controller's placeholder preference. The placeholder should
- * be a {@link Preference} which sets the controller attribute to this name. If the order
- * attribute is set, it will be applied to the injected suggestions.
+ * be a {@link PreferenceGroup} which sets the controller attribute to the fully qualified name
+ * of this class.
  *
  * <p>For example:
  * <pre>{@code
- * <Preference
- *     android:key="suggestions"
- *     android:order="100"
+ * <PreferenceCategory
+ *     android:key="@string/pk_suggestions"
+ *     android:title="@string/suggestions_title"
  *     settings:controller="com.android.settings.suggestions.SuggestionsPreferenceController"/>
  * }</pre>
  */
@@ -73,8 +72,7 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     SuggestionController mSuggestionController;
     private List<Suggestion> mSuggestionsList = new ArrayList<>();
     private LoaderManager mLoaderManager;
-    private PreferenceScreen mPreferenceScreen;
-    private SuggestionPreferenceGroup mPreferenceGroup;
+    private PreferenceGroup mPreferenceGroup;
 
     public SuggestionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
@@ -89,17 +87,8 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
-        Preference placeholder = screen.findPreference(getPreferenceKey());
-        if (placeholder != null) {
-            mPreferenceScreen = screen;
-            mPreferenceGroup = new SuggestionPreferenceGroup(mContext);
-            mPreferenceGroup.setOrder(placeholder.getOrder());
-            screen.removePreference(placeholder);
-            screen.addPreference(mPreferenceGroup);
-            updateSuggestionPreferences(mSuggestionsList);
-        } else {
-            updatePreferenceGroupVisibility();
-        }
+        mPreferenceGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
+        updatePreferenceGroupVisibility();
     }
 
     /**
@@ -171,11 +160,6 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     }
 
     private void updateSuggestionPreferences(List<Suggestion> suggestions) {
-        if (mPreferenceGroup == null) {
-            // Not attached to a hierarchy yet.
-            return;
-        }
-
         // Remove suggestions that are not in the new list.
         for (Suggestion oldSuggestion : mSuggestionsList) {
             boolean isInNewSuggestionList = false;
@@ -186,7 +170,7 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
                 }
             }
             if (!isInNewSuggestionList) {
-                boolean success = mPreferenceGroup.removePreference(
+                mPreferenceGroup.removePreference(
                         mPreferenceGroup.findPreference(getSuggestionPreferenceKey(oldSuggestion)));
             }
         }
@@ -239,15 +223,7 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     }
 
     private void updatePreferenceGroupVisibility() {
-        if (mPreferenceGroup == null) {
-            return;
-        }
-        boolean addToScreen = isAvailable() && mPreferenceGroup.getPreferenceCount() > 0;
-        if (addToScreen) {
-            mPreferenceScreen.addPreference(mPreferenceGroup);
-        } else {
-            mPreferenceScreen.removePreference(mPreferenceGroup);
-        }
+        mPreferenceGroup.setVisible(isAvailable() && mPreferenceGroup.getPreferenceCount() > 0);
     }
 
     private void cleanupLoader() {
@@ -257,14 +233,5 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
 
     private String getSuggestionPreferenceKey(Suggestion suggestion) {
         return SuggestionPreference.SUGGESTION_PREFERENCE_KEY + suggestion.getId();
-    }
-
-    /** Concrete preference group with a layout that removes unused views. */
-    private class SuggestionPreferenceGroup extends PreferenceGroup {
-
-        SuggestionPreferenceGroup(Context context) {
-            super(context, /* attrs= */ null);
-            setLayoutResource(R.layout.suggestion_preference_group);
-        }
     }
 }

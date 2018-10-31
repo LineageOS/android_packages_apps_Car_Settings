@@ -48,6 +48,7 @@ public class PreferenceXmlParser {
     private static final Logger LOG = new Logger(PreferenceXmlParser.class);
 
     private static final String PREF_TAG_ENDS_WITH = "Preference";
+    private static final String PREF_GROUP_TAG_ENDS_WITH = "PreferenceGroup";
     private static final List<String> SUPPORTED_PREF_TYPES = Arrays.asList("Preference",
             "PreferenceCategory", "PreferenceScreen");
 
@@ -97,8 +98,8 @@ public class PreferenceXmlParser {
                 continue;
             }
             final String nodeName = parser.getName();
-            if (!SUPPORTED_PREF_TYPES.contains(nodeName) && !nodeName.endsWith(
-                    PREF_TAG_ENDS_WITH)) {
+            if (!SUPPORTED_PREF_TYPES.contains(nodeName) && !nodeName.endsWith(PREF_TAG_ENDS_WITH)
+                    && !nodeName.endsWith(PREF_GROUP_TAG_ENDS_WITH)) {
                 continue;
             }
             final Bundle preferenceMetadata = new Bundle();

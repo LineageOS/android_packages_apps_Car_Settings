@@ -26,4 +26,7 @@
     <PreferenceCategory
         android:key="key2"
         settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="key3"
+        settings:controller="com.android.car.settings.common.FakePreferenceController"/>
 </PreferenceScreen>

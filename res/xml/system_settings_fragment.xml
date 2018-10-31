@@ -16,51 +16,44 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:orderingFromXml="false"
                   android:title="@string/system_setting_title">
     <Preference
         android:fragment="com.android.car.settings.system.LanguagePickerFragment"
         android:icon="@drawable/ic_language"
         android:key="@string/pk_language_settings_entry"
-        android:order="0"
         android:title="@string/language_settings"
         settings:controller="com.android.car.settings.system.LanguageSettingsEntryPreferenceController"/>
     <Preference
         android:icon="@drawable/ic_system_update"
         android:key="@string/pk_system_update_settings"
-        android:order="100"
         android:title="@string/system_update_settings_title"
         settings:controller="com.android.car.settings.system.SystemUpdatePreferenceController">
         <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
     </Preference>
-    <Preference
+    <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_system_extra_settings"
-        android:order="200"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
         <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
             <extra android:name="com.android.settings.category"
                    android:value="com.android.settings.category.system"/>
         </intent>
-    </Preference>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
     <Preference
         android:fragment="com.android.car.settings.system.AboutSettingsFragment"
         android:icon="@drawable/ic_settings_about"
         android:key="@string/pk_about_settings_entry"
-        android:order="300"
         android:title="@string/about_settings"
         settings:controller="com.android.car.settings.system.AboutSettingsEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.LegalInformationFragment"
         android:icon="@drawable/ic_settings_about"
         android:key="@string/pk_legal_information_entry"
-        android:order="400"
         android:title="@string/legal_information"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.ResetOptionsFragment"
         android:icon="@drawable/ic_restore"
         android:key="@string/pk_reset_options_entry"
-        android:order="500"
         android:summary="@string/reset_options_summary"
         android:title="@string/reset_options_title"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>

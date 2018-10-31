@@ -44,7 +44,7 @@ public class PreferenceXmlParserTest {
                 PreferenceXmlParser.MetadataFlag.FLAG_NEED_KEY
                         | PreferenceXmlParser.MetadataFlag.FLAG_NEED_PREF_CONTROLLER);
 
-        assertThat(metadata).hasSize(3);
+        assertThat(metadata).hasSize(4);
         for (Bundle bundle : metadata) {
             assertThat(bundle.getString(PreferenceXmlParser.METADATA_KEY)).isNotNull();
             assertThat(bundle.getString(PreferenceXmlParser.METADATA_CONTROLLER)).isNotNull();

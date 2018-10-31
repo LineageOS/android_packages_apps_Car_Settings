@@ -20,29 +20,28 @@ import android.content.Context;
 import android.content.Intent;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Injects preferences from other system applications at a placeholder location. The placeholder
- * should be a {@link Preference} which sets the controller attribute to this name. If the order
- * attribute is set, it will be applied to the extra settings in the category. The preference
- * should contain an intent which will be passed to
+ * should be a {@link PreferenceGroup} which sets the controller attribute to the fully qualified
+ * name of this class. The preference should contain an intent which will be passed to
  * {@link ExtraSettingsLoader#loadPreferences(Intent)}.
  *
  * <p>For example:
  * <pre>{@code
- * <Preference
- *     android:key="system_extra_settings"
- *     android:order="100"
+ * <PreferenceCategory
+ *     android:key="@string/pk_system_extra_settings"
+ *     android:title="@string/system_extra_settings_title"
  *     settings:controller="com.android.settings.common.ExtraSettingsPreferenceController">
  *     <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
  *         <extra android:name="com.android.settings.category"
  *                android:value="com.android.settings.category.system"/>
  *     </intent>
- * </Preference>
+ * </PreferenceCategory>
  * }</pre>
  *
  * @see ExtraSettingsLoader
@@ -51,7 +50,7 @@ import java.util.List;
 public class ExtraSettingsPreferenceController extends NoSetupPreferenceController {
 
     private final ExtraSettingsLoader mExtraSettingsLoader;
-    private final List<Preference> mExtraSettings = new ArrayList<>();
+    private boolean mSettingsLoaded;
 
     public ExtraSettingsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
@@ -61,23 +60,16 @@ public class ExtraSettingsPreferenceController extends NoSetupPreferenceControll
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
-        Preference placeholder = screen.findPreference(getPreferenceKey());
-        if (placeholder != null) {
-            mExtraSettings.clear();
-            int order = placeholder.getOrder();
-            screen.removePreference(placeholder);
+        PreferenceGroup preferenceGroup = (PreferenceGroup) screen.findPreference(
+                getPreferenceKey());
+        if (!mSettingsLoaded) {
             List<Preference> extraSettings = mExtraSettingsLoader.loadPreferences(
-                    placeholder.getIntent());
+                    preferenceGroup.getIntent());
             for (Preference setting : extraSettings) {
-                setting.setVisible(isAvailable());
-                setting.setOrder(order);
-                screen.addPreference(setting);
-                mExtraSettings.add(setting);
+                preferenceGroup.addPreference(setting);
             }
-        } else {
-            for (Preference pref : mExtraSettings) {
-                pref.setVisible(isAvailable());
-            }
+            mSettingsLoaded = true;
         }
+        preferenceGroup.setVisible(isAvailable() && preferenceGroup.getPreferenceCount() > 0);
     }
 }
