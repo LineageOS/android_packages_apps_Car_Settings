@@ -73,6 +73,6 @@ public class AccountSettingsFragment extends BasePreferenceFragment {
     }
 
     private void onAddAccountClicked() {
-        ((FragmentController) requireActivity()).launchFragment(new ChooseAccountFragment());
+        ((FragmentController) requireActivity()).launchFragment(new AddAccountFragment());
     }
 }

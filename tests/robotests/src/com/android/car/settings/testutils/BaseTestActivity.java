@@ -104,6 +104,6 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
 
     @Override
     public void goBack() {
-
+        getSupportFragmentManager().popBackStackImmediate();
     }
 }
