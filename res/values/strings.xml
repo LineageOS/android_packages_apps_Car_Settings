@@ -222,6 +222,14 @@
     <!-- Location --><skip />
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
     <string name="location_settings_title">Location</string>
+    <!-- Title of Recent Location Requests setting [CHAR LIMIT=60] -->
+    <string name="location_settings_recent_locations_title">Recent Location Requests</string>
+    <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
+    <string name="location_settings_app_permissions_title">App-level permissions</string>
+    <!-- Title of Location Scanning setting [CHAR LIMIT=60] -->
+    <string name="location_settings_scanning_title">Scanning</string>
+    <!-- Title of Location Services category [CHAR LIMIT=60] -->
+    <string name="location_settings_services_title">Location Services</string>
 
     <!-- System --><skip />
     <!-- Main setting menu item to go into system settings -->
