@@ -23,16 +23,15 @@ import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertThrows;
 
 import android.app.PendingIntent;
-import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.Bundle;
 import android.service.settings.suggestions.Suggestion;
 
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -64,73 +63,25 @@ public class SuggestionsPreferenceControllerTest {
     private Loader<List<Suggestion>> mLoader;
     @Mock
     private SuggestionController mSuggestionController;
-    private PreferenceScreen mScreen;
     private Context mContext;
+    private PreferenceScreen mScreen;
+    private PreferenceGroup mGroup;
     private SuggestionsPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        com.android.car.settings.testutils.FragmentController<TestPreferenceFragment>
-                fragmentController = com.android.car.settings.testutils.FragmentController.of(
-                new TestPreferenceFragment());
-        mScreen = fragmentController.setup().getPreferenceScreen();
-
         mContext = RuntimeEnvironment.application;
+        mScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
+        mGroup = new PreferenceCategory(mContext);
+        mGroup.setKey(PREFERENCE_KEY);
+        mScreen.addPreference(mGroup);
+
         mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
                 mock(FragmentController.class));
         mController.setLoaderManager(mLoaderManager);
         mController.mSuggestionController = mSuggestionController;
-    }
-
-    @Test
-    public void displayPreference_removesPlaceholder() {
-        Preference placeholder = new Preference(mContext);
-        placeholder.setKey(PREFERENCE_KEY);
-        mScreen.addPreference(placeholder);
-
-        mController.displayPreference(mScreen);
-
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(0);
-    }
-
-    @Test
-    public void displayPreference_injectsSuggestionsAtPlaceholder() {
-        // Add suggestion so that group is not removed for having 0 suggestions.
-        mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        Preference placeholder = new Preference(mContext);
-        placeholder.setKey(PREFERENCE_KEY);
-        placeholder.setOrder(-1000);
-        mScreen.addPreference(placeholder);
-
-        mController.displayPreference(mScreen);
-
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(1);
-        Preference injectedPref = mScreen.getPreference(0);
-        assertThat(injectedPref).isInstanceOf(PreferenceGroup.class);
-        assertThat(injectedPref.getOrder()).isEqualTo(placeholder.getOrder());
-    }
-
-    @Test
-    public void displayPreference_availabilityChange_addsAndRemovesGroup() {
-        CarUxRestrictions restrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
-        // Add suggestion so that group is not removed for having 0 suggestions.
-        mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        addPlaceholderAndDisplayPreference();
-
-        // Group is added to screen.
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(1);
-        Preference injectedPref = mScreen.getPreference(0);
-        assertThat(injectedPref).isInstanceOf(PreferenceGroup.class);
-
-        // Controller becomes unavailable.
-        mController.onUxRestrictionsChanged(restrictionInfo);
-        mController.displayPreference(mScreen);
-
-        // Group is removed from screen.
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
@@ -148,6 +99,13 @@ public class SuggestionsPreferenceControllerTest {
                 mock(FragmentController.class));
 
         assertThrows(IllegalStateException.class, () -> mController.checkInitialized());
+    }
+
+    @Test
+    public void displayPreference_noSuggestions_hidesGroup() {
+        mController.displayPreference(mScreen);
+
+        assertThat(mGroup.isVisible()).isFalse();
     }
 
     @Test
@@ -200,63 +158,49 @@ public class SuggestionsPreferenceControllerTest {
     }
 
     @Test
-    public void onLoadFinished_firstSuggestion_addGroup() {
-        addPlaceholderAndDisplayPreference();
-
-        mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(1);
-        Preference group = mScreen.getPreference(0);
-        assertThat(group).isInstanceOf(PreferenceGroup.class);
-    }
-
-    @Test
     public void onLoadFinished_groupContainsSuggestionPreference() {
-        addPlaceholderAndDisplayPreference();
+        mController.displayPreference(mScreen);
 
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
 
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
-        Preference addedPref = group.getPreference(0);
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
+        Preference addedPref = mGroup.getPreference(0);
         assertThat(addedPref).isInstanceOf(SuggestionPreference.class);
     }
 
     @Test
-    public void onLoadFinished_newSuggestion_addToGroup() {
-        addPlaceholderAndDisplayPreference();
+    public void onLoadFinished_newSuggestion_addsToGroup() {
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
 
         mController.onLoadFinished(mLoader, Arrays.asList(SUGGESTION_1, SUGGESTION_2));
 
-        assertThat(group.getPreferenceCount()).isEqualTo(2);
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(2);
     }
 
     @Test
-    public void onLoadFinished_removedSuggestion_removeFromGroup() {
-        addPlaceholderAndDisplayPreference();
+    public void onLoadFinished_removedSuggestion_removesFromGroup() {
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Arrays.asList(SUGGESTION_1, SUGGESTION_2));
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        assertThat(group.getPreferenceCount()).isEqualTo(2);
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(2);
 
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_2));
 
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
-        assertThat(((SuggestionPreference) group.getPreference(0)).getSuggestion()).isEqualTo(
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
+        assertThat(((SuggestionPreference) mGroup.getPreference(0)).getSuggestion()).isEqualTo(
                 SUGGESTION_2);
     }
 
     @Test
-    public void onLoadFinished_noSuggestions_removesGroup() {
-        addPlaceholderAndDisplayPreference();
+    public void onLoadFinished_noSuggestions_hidesGroup() {
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(1);
+        assertThat(mScreen.findPreference(PREFERENCE_KEY).isVisible()).isTrue();
 
         mController.onLoadFinished(mLoader, Collections.emptyList());
 
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mGroup.isVisible()).isFalse();
     }
 
     @Test
@@ -285,59 +229,37 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void dismissSuggestion_removesSuggestion() {
-        addPlaceholderAndDisplayPreference();
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Arrays.asList(SUGGESTION_1, SUGGESTION_2));
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        assertThat(group.getPreferenceCount()).isEqualTo(2);
-        SuggestionPreference pref = (SuggestionPreference) group.getPreference(0);
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(2);
+        SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
 
         mController.dismissSuggestion(pref);
 
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
-        assertThat(((SuggestionPreference) group.getPreference(0)).getSuggestion()).isEqualTo(
+        assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
+        assertThat(((SuggestionPreference) mGroup.getPreference(0)).getSuggestion()).isEqualTo(
                 SUGGESTION_2);
     }
 
     @Test
-    public void dismissSuggestion_lastSuggestion_removesGroup() {
-        addPlaceholderAndDisplayPreference();
+    public void dismissSuggestion_lastSuggestion_hidesGroup() {
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        SuggestionPreference pref = (SuggestionPreference) group.getPreference(0);
+        SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
 
         mController.dismissSuggestion(pref);
 
-        assertThat(mScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mScreen.findPreference(PREFERENCE_KEY).isVisible()).isFalse();
     }
 
     @Test
     public void dismissSuggestion_callsSuggestionControllerDismiss() {
-        addPlaceholderAndDisplayPreference();
+        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        PreferenceGroup group = ((PreferenceGroup) mScreen.getPreference(0));
-        SuggestionPreference pref = (SuggestionPreference) group.getPreference(0);
+        SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
 
         mController.dismissSuggestion(pref);
 
         verify(mSuggestionController).dismissSuggestions(pref.getSuggestion());
     }
-
-    private void addPlaceholderAndDisplayPreference() {
-        Preference placeholder = new Preference(mContext);
-        placeholder.setKey(PREFERENCE_KEY);
-        mScreen.addPreference(placeholder);
-        mController.displayPreference(mScreen);
-    }
-
-    /**
-     * Preference fragment which is initialized with an empty {@link PreferenceScreen} when created.
-     */
-    public static class TestPreferenceFragment extends PreferenceFragmentCompat {
-
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferenceScreen(getPreferenceManager().createPreferenceScreen(getContext()));
-        }
-    }
-
 }
