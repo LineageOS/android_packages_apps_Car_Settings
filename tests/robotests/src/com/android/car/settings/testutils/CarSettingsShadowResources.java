@@ -35,7 +35,7 @@ import org.robolectric.shadows.ShadowResources;
  * to pull resources from binaries at this time.
  * TODO: Delete this shadow when robolectric supports binary resource loading
  */
-@Implements(value = Resources.class, inheritImplementationMethods = true)
+@Implements(value = Resources.class)
 public class CarSettingsShadowResources extends ShadowResources {
     @RealObject
     public Resources realResources;

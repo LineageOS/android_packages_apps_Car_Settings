@@ -37,27 +37,21 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.testutils.ShadowSubscriptionManager;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
-import org.robolectric.shadows.ShadowContextImpl;
 import org.robolectric.shadows.ShadowPackageManager;
-import org.robolectric.util.ReflectionHelpers;
+import org.robolectric.shadows.ShadowSubscriptionManager;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Map;
 
 /** Unit test for {@link ResetNetworkSubscriptionPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowSubscriptionManager.class})
 public class ResetNetworkSubscriptionPreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "preference_key";
@@ -75,10 +69,6 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
 
     @Before
     public void setUp() {
-        // Robolectric doesn't know about the euicc manager, so we must add it ourselves.
-        getSystemServiceMap().put(Context.TELEPHONY_SUBSCRIPTION_SERVICE,
-                SubscriptionManager.class.getName());
-
         mContext = RuntimeEnvironment.application;
         mShadowSubscriptionManager = Shadow.extract(
                 mContext.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE));
@@ -94,12 +84,6 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         ShadowPackageManager shadowPackageManager = Shadows.shadowOf(mContext.getPackageManager());
         shadowPackageManager.setSystemFeature(PackageManager.FEATURE_TELEPHONY, /* supported= */
                 true);
-    }
-
-    @After
-    public void tearDown() {
-        getSystemServiceMap().remove(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
-        ShadowSubscriptionManager.resetStaticState();
     }
 
     @Test
@@ -207,7 +191,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         mController.displayPreference(mScreen);
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_4));
@@ -219,8 +203,8 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
-        ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
         mController.displayPreference(mScreen);
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_3));
@@ -232,9 +216,9 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
-        ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
-        ShadowSubscriptionManager.setDefaultVoiceSubId(SUBID_2);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
+        ShadowSubscriptionManager.setDefaultVoiceSubscriptionId(SUBID_2);
         mController.displayPreference(mScreen);
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_2));
@@ -246,10 +230,10 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
-        ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
-        ShadowSubscriptionManager.setDefaultVoiceSubId(SUBID_2);
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
+        ShadowSubscriptionManager.setDefaultVoiceSubscriptionId(SUBID_2);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
         mController.displayPreference(mScreen);
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_1));
@@ -265,7 +249,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         // Multiple subscriptions so that preference is shown / title is set.
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
         mController.displayPreference(mScreen);
 
@@ -286,7 +270,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         // Multiple subscriptions so that preference is shown / title is set.
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
         mController.displayPreference(mScreen);
 
@@ -303,7 +287,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         // Multiple subscriptions so that preference is shown / title is set.
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
         mController.displayPreference(mScreen);
 
@@ -320,7 +304,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         // Multiple subscriptions so that preference is shown / title is set.
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
         mController.displayPreference(mScreen);
 
@@ -331,7 +315,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     public void onPreferenceChange_updatesTitle() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
         mController.displayPreference(mScreen);
 
         mController.onPreferenceChange(mListPreference, String.valueOf(SUBID_2));
@@ -343,7 +327,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     public void onPreferenceChange_returnsTrue() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2")));
-        ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
+        ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
         mController.displayPreference(mScreen);
 
         assertThat(
@@ -368,9 +352,5 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         when(subscriptionInfo.getMcc()).thenReturn(222);
         when(subscriptionInfo.getMnc()).thenReturn(333);
         return subscriptionInfo;
-    }
-
-    private Map<String, String> getSystemServiceMap() {
-        return ReflectionHelpers.getStaticField(ShadowContextImpl.class, "SYSTEM_SERVICE_MAP");
     }
 }
