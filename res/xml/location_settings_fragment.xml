@@ -15,6 +15,24 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orderingFromXml="false"
                   android:title="@string/location_settings_title">
+    <Preference
+        android:key="@string/pk_location_recent_locations"
+        android:title="@string/location_settings_recent_locations_title"/>
+    <Preference
+        android:key="@string/pk_location_app_permissions"
+        android:title="@string/location_settings_app_permissions_title">
+        <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
+            <extra android:name="android.intent.extra.PERMISSION_NAME"
+                   android:value="android.permission-group.LOCATION" />
+        </intent>
+    </Preference>
+    <Preference
+        android:key="@string/pk_location_scanning"
+        android:title="@string/location_settings_scanning_title"/>
+    <PreferenceCategory
+        android:key="@string/pk_location_services"
+        android:title="@string/location_settings_services_title"/>
+    <PreferenceCategory
+        android:key="@string/pk_location_footer"/>
 </PreferenceScreen>
