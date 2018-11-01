@@ -38,19 +38,19 @@ import org.robolectric.shadows.ShadowApplication;
 import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class AutoTimeFormatTogglePreferenceControllerTest {
+public class TimeFormatTogglePreferenceControllerTest {
     private static final String PREFERENCE_KEY = "use_24hour_switch_entry";
 
     private ShadowApplication mApplication;
     private Context mContext;
     private SwitchPreference mPreference;
-    private AutoTimeFormatTogglePreferenceController mController;
+    private TimeFormatTogglePreferenceController mController;
 
     @Before
     public void setUp() {
         mApplication = ShadowApplication.getInstance();
         mContext = RuntimeEnvironment.application;
-        mController = new AutoTimeFormatTogglePreferenceController(mContext, PREFERENCE_KEY,
+        mController = new TimeFormatTogglePreferenceController(mContext, PREFERENCE_KEY,
                 mock(FragmentController.class));
         mPreference = new SwitchPreference(mContext);
         mPreference.setKey(mController.getPreferenceKey());
@@ -59,7 +59,7 @@ public class AutoTimeFormatTogglePreferenceControllerTest {
     @Test
     public void updateState_24HourSet_shouldCheckPreference() {
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
-                AutoTimeFormatTogglePreferenceController.HOURS_24);
+                TimeFormatTogglePreferenceController.HOURS_24);
         mController.updateState(mPreference);
         assertThat(mPreference.isChecked()).isTrue();
     }
@@ -67,7 +67,7 @@ public class AutoTimeFormatTogglePreferenceControllerTest {
     @Test
     public void updateState_12HourSet_shouldUncheckPreference() {
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
-                AutoTimeFormatTogglePreferenceController.HOURS_12);
+                TimeFormatTogglePreferenceController.HOURS_12);
         mController.updateState(mPreference);
         assertThat(mPreference.isChecked()).isFalse();
     }

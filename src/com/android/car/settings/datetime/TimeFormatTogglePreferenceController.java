@@ -38,7 +38,7 @@ import java.util.Calendar;
 /**
  * Business logic for toggle which chooses between 12 hour or 24 hour formats.
  */
-public class AutoTimeFormatTogglePreferenceController extends NoSetupPreferenceController
+public class TimeFormatTogglePreferenceController extends NoSetupPreferenceController
         implements LifecycleObserver, Preference.OnPreferenceChangeListener {
     public static final String HOURS_12 = "12";
     public static final String HOURS_24 = "24";
@@ -61,7 +61,7 @@ public class AutoTimeFormatTogglePreferenceController extends NoSetupPreferenceC
     };
     private Preference mPreference;
 
-    public AutoTimeFormatTogglePreferenceController(Context context, String preferenceKey,
+    public TimeFormatTogglePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
         super(context, preferenceKey, fragmentController);
 
