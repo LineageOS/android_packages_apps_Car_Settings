@@ -15,6 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/location_settings_title">
     <Preference
         android:key="@string/pk_location_recent_locations"
@@ -32,7 +33,8 @@
         android:title="@string/location_settings_scanning_title"/>
     <PreferenceCategory
         android:key="@string/pk_location_services"
-        android:title="@string/location_settings_services_title"/>
+        android:title="@string/location_settings_services_title"
+        settings:controller="com.android.car.settings.location.LocationServicesPreferenceController"/>
     <PreferenceCategory
         android:key="@string/pk_location_footer"/>
 </PreferenceScreen>
