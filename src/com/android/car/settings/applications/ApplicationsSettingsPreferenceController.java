@@ -46,6 +46,7 @@ public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceC
 
     @Override
     public void displayPreference(PreferenceScreen screen) {
+        super.displayPreference(screen);
         if (mApplications == null) {
             populateApplicationList();
         }
@@ -78,7 +79,7 @@ public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceC
         preference.setIcon(resolveInfo.loadIcon(mPackageManager));
         preference.setOnPreferenceClickListener((p) -> {
             getFragmentController().launchFragment(
-                    ApplicationDetailFragment.getInstance(resolveInfo));
+                    ApplicationDetailsFragment.getInstance(resolveInfo));
             return true;
         });
         return preference;

@@ -11,7 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License
+ * limitations under the License.
  */
 
 package com.android.car.settings.applications;
@@ -33,26 +33,21 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.Utils;
 
 import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Shows details about an application and action associated with that application,
  * like uninstall, forceStop.
  */
-public class ApplicationDetailFragment extends ListItemSettingsFragment {
-    private static final Logger LOG = new Logger(ApplicationDetailFragment.class);
+public class ApplicationDetailsFragment extends BasePreferenceFragment {
+    private static final Logger LOG = new Logger(ApplicationDetailsFragment.class);
     public static final String EXTRA_RESOLVE_INFO = "extra_resolve_info";
 
     private ResolveInfo mResolveInfo;
@@ -62,12 +57,19 @@ public class ApplicationDetailFragment extends ListItemSettingsFragment {
     private Button mForceStopButton;
     private DevicePolicyManager mDpm;
 
-    public static ApplicationDetailFragment getInstance(ResolveInfo resolveInfo) {
-        ApplicationDetailFragment applicationDetailFragment = new ApplicationDetailFragment();
+    /** Creates an instance of this fragment, passing resolveInfo as an argument. */
+    public static ApplicationDetailsFragment getInstance(ResolveInfo resolveInfo) {
+        ApplicationDetailsFragment applicationDetailFragment = new ApplicationDetailsFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable(EXTRA_RESOLVE_INFO, resolveInfo);
         applicationDetailFragment.setArguments(bundle);
         return applicationDetailFragment;
+    }
+
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.application_details_fragment;
     }
 
     @Override
@@ -77,20 +79,22 @@ public class ApplicationDetailFragment extends ListItemSettingsFragment {
     }
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.applications_settings;
-    }
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        // These should be loaded before onCreate() so that the controller operates as expected.
         mResolveInfo = getArguments().getParcelable(EXTRA_RESOLVE_INFO);
+        mPackageInfo = getPackageInfo();
+        use(ApplicationPreferenceController.class,
+                R.string.pk_application_details_app).setResolveInfo(mResolveInfo);
+        use(PermissionsPreferenceController.class,
+                R.string.pk_application_details_permissions).setResolveInfo(mResolveInfo);
+        use(VersionPreferenceController.class,
+                R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        mPackageInfo = getPackageInfo();
         super.onActivityCreated(savedInstanceState);
         if (mResolveInfo == null) {
             LOG.w("No application info set.");
@@ -113,27 +117,6 @@ public class ApplicationDetailFragment extends ListItemSettingsFragment {
         super.onStart();
         updateForceStopButton();
         updateDisableable();
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return new ListItemProvider.ListProvider(getListItems());
-    }
-
-    private List<ListItem> getListItems() {
-        ArrayList<ListItem> items = new ArrayList<>();
-        items.add(new ApplicationListItem(
-                getContext(),
-                getContext().getPackageManager(),
-                mResolveInfo,
-                /* fragmentController= */ null,
-                false));
-        items.add(new ApplicationPermissionListItem(getContext(), mResolveInfo, this));
-        TextListItem versionItem = new TextListItem(getContext());
-        versionItem.setTitle(getContext().getString(
-                R.string.application_version_label, mPackageInfo.versionName));
-        items.add(versionItem);
-        return items;
     }
 
     // fetch the latest ApplicationInfo instead of caching it so it reflects the current state.
