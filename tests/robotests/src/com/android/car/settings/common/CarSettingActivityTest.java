@@ -18,6 +18,8 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.car.Car;
+import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
@@ -25,10 +27,13 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.ShadowCar;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 
@@ -39,9 +44,13 @@ public class CarSettingActivityTest {
     private Context mContext;
     private ActivityController<CarSettingActivity> mActivityController;
     private CarSettingActivity mActivity;
+    @Mock
+    private CarUxRestrictionsManager mCarUxRestrictionsManager;
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mCarUxRestrictionsManager);
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
