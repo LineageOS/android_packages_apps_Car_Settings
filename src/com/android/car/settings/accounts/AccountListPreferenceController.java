@@ -90,8 +90,9 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     public boolean handlePreferenceTreeClick(Preference preference) {
         // Show the account's details when an account is clicked on.
         if (preference instanceof AccountPreference) {
+            AccountPreference accountPreference = (AccountPreference) preference;
             getFragmentController().launchFragment(AccountDetailsFragment.newInstance(
-                    ((AccountPreference) preference).getAccount(), mUserInfo));
+                    accountPreference.getAccount(), accountPreference.getLabel(), mUserInfo));
             return true;
         }
         return false;
@@ -257,11 +258,13 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     private static class AccountPreference extends Preference {
         /** Account that this Preference represents. */
         private final Account mAccount;
+        private final CharSequence mLabel;
 
         private AccountPreference(Context context, Account account, CharSequence label,
                 Drawable icon) {
             super(context);
             mAccount = account;
+            mLabel = label;
 
             setKey(buildKey(account));
             setTitle(account.name);
@@ -278,6 +281,10 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
 
         public Account getAccount() {
             return mAccount;
+        }
+
+        public CharSequence getLabel() {
+            return mLabel;
         }
     }
 }
