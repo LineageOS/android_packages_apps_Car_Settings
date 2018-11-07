@@ -18,6 +18,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.car.settings"
+    coreApp="true"
     android:sharedUserId="android.uid.system"
     android:versionCode="1"
     android:versionName="1.0">
@@ -61,6 +62,8 @@
         android:icon="@drawable/ic_launcher_settings"
         android:theme="@style/CarSettingTheme"
         android:label="@string/settings_label"
+        android:requiredForAllUsers="true"
+        android:directBootAware="true"
         android:supportsRtl="true">
 
         <activity
@@ -70,12 +73,9 @@
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
             <!-- Set priority high enough to trump the phone setting app -->
-            <!-- TODO: once phone setting is removed from car system image, set priority to 1 -->
-            <intent-filter android:priority="10">
-                <action android:name="android.intent.action.MAIN" />
+            <intent-filter android:priority="1">
                 <action android:name="android.settings.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <!-- Handles wifi related intent -->
@@ -90,6 +90,19 @@
 
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
+
+        <!-- Alias for launcher activity only, as this belongs to each profile. -->
+        <!-- TODO: once phone setting is removed from car system image, set priority to 1 -->
+        <activity-alias android:name="Settings"
+                        android:label="@string/settings_label"
+                        android:launchMode="singleTask"
+                        android:targetActivity=".common.CarSettingActivity">
+            <intent-filter android:priority="10">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
 
         <activity android:name=".bluetooth.BluetoothPairingDialog"
                   android:excludeFromRecents="true"
