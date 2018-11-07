@@ -18,10 +18,14 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+
 import android.car.Car;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
 
@@ -32,8 +36,6 @@ import com.android.car.settings.testutils.ShadowCar;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 
@@ -44,13 +46,11 @@ public class CarSettingActivityTest {
     private Context mContext;
     private ActivityController<CarSettingActivity> mActivityController;
     private CarSettingActivity mActivity;
-    @Mock
-    private CarUxRestrictionsManager mCarUxRestrictionsManager;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mCarUxRestrictionsManager);
+        ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE,
+                mock(CarUxRestrictionsManager.class));
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
@@ -66,6 +66,13 @@ public class CarSettingActivityTest {
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(
                 R.id.fragment_container)).isInstanceOf(TestFragment.class);
+    }
+
+    @Test
+    public void testLaunchFragment_launchDialogFragment() {
+        DialogFragment dialogFragment = mock(DialogFragment.class);
+        mActivity.launchFragment(dialogFragment);
+        verify(dialogFragment).show(mActivity.getSupportFragmentManager(), null);
     }
 
     /** Simple Fragment for testing use. */

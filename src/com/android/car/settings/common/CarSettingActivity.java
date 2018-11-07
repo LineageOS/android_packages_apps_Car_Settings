@@ -28,6 +28,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
@@ -110,16 +111,21 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
 
     @Override
     public void launchFragment(Fragment fragment) {
-        getSupportFragmentManager()
-                .beginTransaction()
-                .setCustomAnimations(
-                        R.animator.trans_right_in,
-                        R.animator.trans_left_out,
-                        R.animator.trans_left_in,
-                        R.animator.trans_right_out)
-                .replace(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit();
+        if (fragment instanceof DialogFragment) {
+            DialogFragment dialogFragment = (DialogFragment) fragment;
+            dialogFragment.show(getSupportFragmentManager(), null);
+        } else {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .setCustomAnimations(
+                            R.animator.trans_right_in,
+                            R.animator.trans_left_out,
+                            R.animator.trans_left_in,
+                            R.animator.trans_right_out)
+                    .replace(R.id.fragment_container, fragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
     }
 
     @Override
