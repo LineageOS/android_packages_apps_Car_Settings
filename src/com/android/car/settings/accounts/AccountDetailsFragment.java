@@ -104,6 +104,11 @@ public class AccountDetailsFragment extends BasePreferenceFragment implements
                 .setAccount(mAccount);
         use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
                 .setUserHandle(mUserInfo.getUserHandle());
+
+        use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
+                .setAccount(mAccount);
+        use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
+                .setUserHandle(mUserInfo.getUserHandle());
     }
 
     @Override

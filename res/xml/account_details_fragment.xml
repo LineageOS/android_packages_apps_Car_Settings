@@ -20,5 +20,11 @@
                   settings:controller="com.android.car.settings.accounts.AccountDetailsTitlePreferenceController">
     <Preference
         android:key="@string/pk_account_details"
+        android:selectable="false"
         settings:controller="com.android.car.settings.accounts.AccountDetailsPreferenceController"/>
+    <Preference
+        android:key="@string/pk_account_sync"
+        android:selectable="false"
+        android:title="@string/account_sync_title"
+        settings:controller="com.android.car.settings.accounts.AccountSyncPreferenceController"/>
 </PreferenceScreen>
