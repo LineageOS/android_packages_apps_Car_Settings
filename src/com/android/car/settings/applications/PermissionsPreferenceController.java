@@ -31,7 +31,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.AnimationUtil;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.NoSetupPreferenceController;
@@ -100,8 +99,7 @@ public class PermissionsPreferenceController extends NoSetupPreferenceController
         Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
         intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
         try {
-            mContext.startActivity(
-                    intent, AnimationUtil.slideInFromRightOption(mContext).toBundle());
+            mContext.startActivity(intent);
         } catch (ActivityNotFoundException e) {
             LOG.w("No app can handle android.intent.action.MANAGE_APP_PERMISSIONS");
         }

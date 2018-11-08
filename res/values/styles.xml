@@ -35,17 +35,23 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings" />
+    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings"/>
 
-    <attr name="WifiSignalColor" format="reference" />
+    <attr name="WifiSignalColor" format="reference"/>
 
     <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="preferenceTheme">@style/PreferenceThemeOverlayCar</item>
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="WifiSignalColor">?android:attr/colorAccent</item>
         <item name="android:windowBackground">@color/car_card</item>
-        <item name="android:windowAnimationStyle">@style/SettingAnimationStyle</item>
-        <item name="android:borderlessButtonStyle">@style/Widget.Car.Button.Borderless.Colored</item>
+        <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@animator/trans_right_in</item>
+        <item name="android:fragmentOpenExitAnimation">@animator/trans_left_out</item>
+        <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
+        <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
+        <item name="android:borderlessButtonStyle">@style/Widget.Car.Button.Borderless.Colored
+        </item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">
@@ -60,7 +66,8 @@
         <item name="android:navigationBarColor">#00000000</item>
     </style>
 
-    <style name="FallbackHome.SetupWizard" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+    <style name="FallbackHome.SetupWizard"
+           parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
         <item name="android:windowBackground">@android:color/black</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="android:windowNoTitle">true</item>
@@ -69,13 +76,11 @@
         <item name="android:navigationBarColor">#00000000</item>
     </style>
 
-    <style name="SettingAnimationStyle">
-        <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
-        <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
-    </style>
-
-    <style name="TrimmedHorizontalProgressBar" parent="android:Widget.Material.ProgressBar.Horizontal">
-        <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal_material_trimmed</item>
+    <style name="TrimmedHorizontalProgressBar"
+           parent="android:Widget.Material.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">
+            @drawable/progress_indeterminate_horizontal_material_trimmed
+        </item>
         <item name="android:minHeight">3dp</item>
         <item name="android:maxHeight">3dp</item>
     </style>
@@ -108,7 +113,7 @@
         <item name="android:layout_marginStart">-16dp</item>
     </style>
 
-    <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary" />
+    <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary"/>
 
     <!-- Style for security lock pattern. -->
     <style name="LockPattern">

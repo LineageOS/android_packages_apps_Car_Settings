@@ -38,6 +38,7 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.android.car.settings.R;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
+import com.android.car.theme.Themes;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to
@@ -118,10 +119,14 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
             getSupportFragmentManager()
                     .beginTransaction()
                     .setCustomAnimations(
-                            R.animator.trans_right_in,
-                            R.animator.trans_left_out,
-                            R.animator.trans_left_in,
-                            R.animator.trans_right_out)
+                            Themes.getAttrResourceId(/* context= */ this,
+                                    android.R.attr.fragmentOpenEnterAnimation),
+                            Themes.getAttrResourceId(/* context= */ this,
+                                    android.R.attr.fragmentOpenExitAnimation),
+                            Themes.getAttrResourceId(/* context= */ this,
+                                    android.R.attr.fragmentCloseEnterAnimation),
+                            Themes.getAttrResourceId(/* context= */ this,
+                                    android.R.attr.fragmentCloseExitAnimation))
                     .replace(R.id.fragment_container, fragment)
                     .addToBackStack(null)
                     .commit();
