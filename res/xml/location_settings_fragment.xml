@@ -35,6 +35,7 @@
         android:key="@string/pk_location_services"
         android:title="@string/location_settings_services_title"
         settings:controller="com.android.car.settings.location.LocationServicesPreferenceController"/>
-    <PreferenceCategory
-        android:key="@string/pk_location_footer"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_location_footer"
+        settings:controller="com.android.car.settings.location.LocationFooterPreferenceController"/>
 </PreferenceScreen>
