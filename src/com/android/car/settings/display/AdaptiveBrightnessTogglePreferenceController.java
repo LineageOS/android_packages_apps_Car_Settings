@@ -24,6 +24,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceUtil;
 
 /** Business logic for controlling the adaptive brightness setting. */
 public class AdaptiveBrightnessTogglePreferenceController extends
@@ -37,9 +38,8 @@ public class AdaptiveBrightnessTogglePreferenceController extends
 
     @Override
     public void updateState(Preference preference) {
-        if (!(preference instanceof TwoStatePreference)) {
-            throw new IllegalArgumentException("Expecting an instance of TwoStatePreference");
-        }
+        super.updateState(preference);
+        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
         ((TwoStatePreference) preference).setChecked(isAdaptiveBrightnessChecked());
     }
 
@@ -50,9 +50,7 @@ public class AdaptiveBrightnessTogglePreferenceController extends
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (!(preference instanceof TwoStatePreference)) {
-            throw new IllegalArgumentException("Expecting an instance of TwoStatePreference");
-        }
+        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
         boolean enableAdaptiveBrightness = (boolean) newValue;
         Settings.System.putInt(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
