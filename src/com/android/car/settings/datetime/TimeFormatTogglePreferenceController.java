@@ -28,10 +28,11 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceUtil;
 
 import java.util.Calendar;
 
@@ -104,17 +105,13 @@ public class TimeFormatTogglePreferenceController extends NoSetupPreferenceContr
     @Override
     public void updateState(Preference preference) {
         super.updateState(preference);
-        if (!(preference instanceof SwitchPreference)) {
-            throw new IllegalArgumentException("Expecting SwitchPreference");
-        }
-        ((SwitchPreference) preference).setChecked(is24Hour());
+        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
+        ((TwoStatePreference) preference).setChecked(is24Hour());
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (!(preference instanceof SwitchPreference)) {
-            throw new IllegalArgumentException("Expecting SwitchPreference");
-        }
+        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
         boolean isUse24HourFormatEnabled = (boolean) newValue;
         Settings.System.putString(mContext.getContentResolver(),
                 Settings.System.TIME_12_24,

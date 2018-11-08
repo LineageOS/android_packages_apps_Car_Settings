@@ -19,10 +19,12 @@ package com.android.car.settings.display;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
 import android.provider.Settings;
 
+import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -71,6 +73,12 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
     }
 
     @Test
+    public void testUpdateState_wrongPreferenceType() {
+        assertThrows(IllegalStateException.class,
+                () -> mController.updateState(new Preference(mContext)));
+    }
+
+    @Test
     public void testOnPreferenceChanged_setFalse() {
         mController.onPreferenceChange(mSwitchPreference, false);
         int brightnessMode = Settings.System.getInt(mContext.getContentResolver(),
@@ -86,5 +94,11 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         assertThat(brightnessMode).isEqualTo(Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
+    }
+
+    @Test
+    public void testOnPreferenceChange_wrongPreferenceType() {
+        assertThrows(IllegalStateException.class,
+                () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }
