@@ -20,8 +20,9 @@ import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.fragment.app.Fragment;
+
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
@@ -43,7 +44,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
                 UserHandle.myUserId());
 
         if (savedInstanceState == null) {
-            BaseFragment fragment;
+            Fragment fragment;
             switch (mPasswordQuality) {
                 case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
                     fragment = new ChooseLockTypeFragment();
@@ -84,7 +85,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
 
     @Override
     public void onLockVerified(String lock) {
-        BaseFragment fragment = new ChooseLockTypeFragment();
+        Fragment fragment = new ChooseLockTypeFragment();
         Bundle bundle = fragment.getArguments();
         if (bundle == null) {
             bundle = new Bundle();

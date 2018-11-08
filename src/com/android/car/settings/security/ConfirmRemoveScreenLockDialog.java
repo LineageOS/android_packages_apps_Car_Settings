@@ -17,6 +17,8 @@
 package com.android.car.settings.security;
 
 import android.app.Dialog;
+import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -24,6 +26,8 @@ import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
+import com.android.internal.widget.LockPatternUtils;
 
 /**
  * Dialog to confirm screen lock removal.
@@ -31,15 +35,16 @@ import com.android.car.settings.R;
 public class ConfirmRemoveScreenLockDialog extends DialogFragment implements
         DialogInterface.OnClickListener {
 
-    private ConfirmRemoveLockListener mListener;
+    private Context mContext;
+    private FragmentController mFragmentController;
+    private String mCurrentPassword;
 
-    /**
-     * Sets a listener for OnRemoveLockConfirmed that will get called if user confirms the dialog.
-     *
-     * @param listener Instance of {@link ConfirmRemoveLockListener} to call when confirmed.
-     */
-    public void setConfirmRemoveLockListener(ConfirmRemoveLockListener listener) {
-        mListener = listener;
+    public ConfirmRemoveScreenLockDialog(Context context, FragmentController controller,
+            String currentPassword) {
+        super();
+        mContext = context;
+        mFragmentController = controller;
+        mCurrentPassword = currentPassword;
     }
 
     @Override
@@ -54,19 +59,8 @@ public class ConfirmRemoveScreenLockDialog extends DialogFragment implements
 
     @Override
     public void onClick(DialogInterface dialog, int which) {
-        if (mListener != null) {
-            mListener.onRemoveLockConfirmed();
-        }
-    }
-
-    /**
-     * Interface for listeners that want to receive a callback when user confirms lock removal in
-     * the dialog.
-     */
-    public interface ConfirmRemoveLockListener {
-        /**
-         * Callback when user confirms locks removal.
-         */
-        void onRemoveLockConfirmed();
+        int userId = new CarUserManagerHelper(mContext).getCurrentProcessUserId();
+        new LockPatternUtils(mContext).clearLock(mCurrentPassword, userId);
+        mFragmentController.goBack();
     }
 }

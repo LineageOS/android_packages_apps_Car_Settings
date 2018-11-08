@@ -80,6 +80,12 @@
     <string name="pk_location_services" translatable="false">location_services</string>
     <string name="pk_location_footer" translatable="false">location_footer</string>
 
+    <!-- Security Settings -->
+    <string name="pk_no_lock" translatable="false">no_lock</string>
+    <string name="pk_pattern_lock" translatable="false">pattern_lock</string>
+    <string name="pk_password_lock" translatable="false">password_lock</string>
+    <string name="pk_pin_lock" translatable="false">pin_lock</string>
+
     <!-- System Settings -->
     <string name="pk_language_settings_entry" translatable="false">language_settings_entry</string>
     <string name="pk_system_update_settings" translatable="false">system_update_settings</string>
