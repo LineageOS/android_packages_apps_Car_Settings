@@ -20,11 +20,15 @@ import android.accounts.Account;
 import android.annotation.UserIdInt;
 import android.content.ContentResolver;
 import android.content.SyncAdapterType;
+import android.content.SyncInfo;
+import android.content.SyncStatusInfo;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,13 +39,15 @@ import java.util.Map;
  * com.android.settingslib.accounts.AuthenticatorHelper#buildAccountTypeToAuthoritiesMap}.
  */
 @Implements(ContentResolver.class)
-public class ShadowContentResolver {
+public class ShadowContentResolver extends org.robolectric.shadows.ShadowContentResolver {
     private static final int SYNCABLE = 1;
 
     private static SyncAdapterType[] sSyncAdapterTypes = new SyncAdapterType[0];
     private static Map<String, Integer> sSyncable = new HashMap<>();
     private static Map<String, Boolean> sSyncAutomatically = new HashMap<>();
     private static Map<Integer, Boolean> sMasterSyncAutomatically = new HashMap<>();
+    private static Map<String, SyncStatusInfo> sSyncStatus = new HashMap<>();
+    private static List<SyncInfo> sSyncs = new ArrayList<>();
 
     @Implementation
     protected static SyncAdapterType[] getSyncAdapterTypesAsUser(int userId) {
@@ -64,12 +70,23 @@ public class ShadowContentResolver {
         return sMasterSyncAutomatically.getOrDefault(userId, true);
     }
 
+    @Implementation
+    protected static List<SyncInfo> getCurrentSyncsAsUser(@UserIdInt int userId) {
+        return sSyncs;
+    }
+
+    @Implementation
+    protected static SyncStatusInfo getSyncStatusAsUser(Account account, String authority,
+            @UserIdInt int userId) {
+        return sSyncStatus.get(authority);
+    }
+
     public static void setSyncAdapterTypes(SyncAdapterType[] syncAdapterTypes) {
         sSyncAdapterTypes = syncAdapterTypes;
     }
 
     @Implementation
-    protected static void setIsSyncable(Account account, String authority, int syncable) {
+    public static void setIsSyncable(Account account, String authority, int syncable) {
         sSyncable.put(authority, syncable);
     }
 
@@ -84,10 +101,21 @@ public class ShadowContentResolver {
         sMasterSyncAutomatically.put(userId, sync);
     }
 
+    public static void setCurrentSyncs(List<SyncInfo> syncs) {
+        sSyncs = syncs;
+    }
+
+    public static void setSyncStatus(Account account, String authority, SyncStatusInfo status) {
+        sSyncStatus.put(authority, status);
+    }
+
     public static void reset() {
+        org.robolectric.shadows.ShadowContentResolver.reset();
         sSyncable.clear();
         sSyncAutomatically.clear();
         sMasterSyncAutomatically.clear();
         sSyncAdapterTypes = new SyncAdapterType[0];
+        sSyncStatus.clear();
+        sSyncs = new ArrayList<>();
     }
 }
