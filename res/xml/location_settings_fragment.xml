@@ -29,6 +29,7 @@
         </intent>
     </Preference>
     <Preference
+        android:fragment="com.android.car.settings.location.LocationScanningFragment"
         android:key="@string/pk_location_scanning"
         android:title="@string/location_settings_scanning_title"/>
     <PreferenceCategory
