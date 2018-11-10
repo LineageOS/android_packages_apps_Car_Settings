@@ -99,6 +99,11 @@ public abstract class UsersBasePreferenceController extends NoSetupPreferenceCon
         }
     }
 
+    /** Gets the car user manager helper. */
+    protected CarUserManagerHelper getCarUserManagerHelper() {
+        return mCarUserManagerHelper;
+    }
+
     /** Handles the user click on a preference for a certain user. */
     protected abstract void userClicked(UserInfo userInfo);
 

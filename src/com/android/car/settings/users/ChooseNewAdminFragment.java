@@ -16,7 +16,9 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
+import static java.util.Objects.requireNonNull;
+
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
@@ -24,15 +26,10 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.annotation.VisibleForTesting;
-import androidx.car.widget.ListItemProvider;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ErrorDialog;
-import com.android.car.settings.common.ListItemSettingsFragment;
-
-import static java.util.Objects.requireNonNull;
+import com.android.car.settings.common.BasePreferenceFragment;
 
 /**
  * This screen appears after the last admin on the device tries to delete themselves. (but only if
@@ -43,14 +40,7 @@ import static java.util.Objects.requireNonNull;
  *
  * <p> After new admin has been selected and upgraded, the old Admin is removed.
  */
-public class ChooseNewAdminFragment extends ListItemSettingsFragment
-        implements CarUserManagerHelper.OnUsersUpdateListener,
-        UsersItemProvider.UserClickListener {
-    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
-
-    private UsersItemProvider mItemProvider;
-    private CarUserManagerHelper mCarUserManagerHelper;
-    private UserInfo mAdminInfo;
+public class ChooseNewAdminFragment extends BasePreferenceFragment {
 
     /**
      * Creates a new instance of {@link ChooseNewAdminFragment} that enables the last remaining
@@ -67,83 +57,33 @@ public class ChooseNewAdminFragment extends ListItemSettingsFragment
     }
 
     @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.choose_new_admin_fragment;
+    }
+
+    @Override
     @LayoutRes
     protected int getActionBarLayoutId() {
         return R.layout.action_bar_with_button;
     }
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.choose_new_admin_label;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mAdminInfo = (UserInfo) requireNonNull(getArguments()).getParcelable(Intent.EXTRA_USER);
-
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
-        mItemProvider = new UsersItemProvider.Builder(getContext(), mCarUserManagerHelper)
-                .setOnUserClickListener(this)
-                .setIncludeCurrentUser(false)
-                .setIncludeGuest(false)
-                .create();
-
-
-        // Register to receive changes to the users.
-        mCarUserManagerHelper.registerOnUsersUpdateListener(this);
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        UserInfo adminInfo = requireNonNull(getArguments()).getParcelable(
+                Intent.EXTRA_USER);
+        use(ChooseNewAdminPreferenceController.class, R.string.pk_choose_new_admin).setAdminInfo(
+                adminInfo);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Button cancelBtn = (Button) getActivity().findViewById(R.id.action_button1);
+        Button cancelBtn = getActivity().findViewById(R.id.action_button1);
         cancelBtn.setVisibility(View.VISIBLE);
         cancelBtn.setText(R.string.cancel);
         cancelBtn.setOnClickListener(v -> getActivity().onBackPressed());
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
-    }
-
-    @Override
-    public void onUsersUpdate() {
-        mItemProvider.refreshItems();
-        refreshList();
-    }
-
-    @Override
-    public void onUserClicked(final UserInfo userToMakeAdmin) {
-        ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
-        dialog.setConfirmGrantAdminListener(
-                () -> assignNewAdminAndRemoveOldAdmin(userToMakeAdmin));
-        dialog.show(getFragmentManager(), CONFIRM_GRANT_ADMIN_DIALOG_TAG);
-    }
-
-    @VisibleForTesting
-    void assignNewAdminAndRemoveOldAdmin(UserInfo userToMakeAdmin) {
-        mCarUserManagerHelper.grantAdminPermissions(userToMakeAdmin);
-
-        requireActivity().onBackPressed();
-        removeOldAdmin();
-    }
-
-    private void removeOldAdmin() {
-        if (!mCarUserManagerHelper.removeUser(
-                mAdminInfo, getContext().getString(R.string.user_guest))) {
-            // If failed, need to show error dialog for users.
-            ErrorDialog.show(this, R.string.delete_user_error_title);
-        }
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return mItemProvider;
     }
 }
