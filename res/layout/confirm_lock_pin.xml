@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2018 The Android Open Source Project
+    Copyright 2018 The Android Open Source Project
 
-    Licensed under the Apache License, Version 2.0 (the "License")
+    Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,9 +30,9 @@
 
     <!-- Start side: lock PIN -->
     <FrameLayout
-        android:layout_weight="@integer/content_weight"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="@integer/content_weight"
         android:gravity="center">
 
         <com.android.car.settings.security.PinPadView
@@ -45,37 +45,37 @@
 
     <!-- End side: pin entry field and messages -->
     <LinearLayout
-        android:layout_height="wrap_content"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_weight="@integer/illustration_weight"
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/password_entry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/car_padding_5"
-            android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Car.Body1"
-            android:maxLines="1"
-            android:inputType="textPassword"
             android:cursorVisible="false"
-            android:focusable="false"/>
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Car.Body1"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/car_padding_2"
-            android:textAppearance="@style/TextAppearance.Car.Body1"
-            android:text="@string/lock_settings_enter_pin"/>
+            android:gravity="center"
+            android:text="@string/lock_settings_enter_pin"
+            android:textAppearance="@style/TextAppearance.Car.Body1"/>
 
         <TextView
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Car.Body2" />
+            android:textAppearance="@style/TextAppearance.Car.Body2"/>
     </LinearLayout>
 </LinearLayout>

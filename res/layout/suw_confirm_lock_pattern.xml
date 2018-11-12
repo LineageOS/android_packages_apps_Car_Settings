@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright (C) 2018 The Android Open Source Project
+    Copyright 2018 The Android Open Source Project
 
-    Licensed under the Apache License, Version 2.0 (the "License")
+    Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,17 +24,17 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/car_padding_2"
-        android:textAppearance="@style/TextAppearance.Car.Body1.Medium.Light"
-        android:text="@string/lock_settings_enter_pattern"/>
+        android:text="@string/lock_settings_enter_pattern"
+        android:textAppearance="@style/TextAppearance.Car.Body1.Medium.Light"/>
 
     <TextView
         android:id="@+id/message"
@@ -45,8 +45,8 @@
         android:textAppearance="@style/TextAppearance.Car.Body2.Light"/>
 
     <com.android.internal.widget.LockPatternView
-        style="@style/LockPattern.SetupWizard"
         android:id="@+id/lockPattern"
+        style="@style/LockPattern.SetupWizard"
         android:layout_width="@dimen/confirm_pattern_dimension"
         android:layout_height="@dimen/confirm_pattern_dimension"/>
 </LinearLayout>
