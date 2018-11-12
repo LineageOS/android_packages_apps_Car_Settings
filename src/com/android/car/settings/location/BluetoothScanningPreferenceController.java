@@ -38,7 +38,7 @@ public class BluetoothScanningPreferenceController extends NoSetupPreferenceCont
 
     @Override
     public int getAvailabilityStatus() {
-        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)
+        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)
                 ? AVAILABLE
                 : UNSUPPORTED_ON_DEVICE;
     }
