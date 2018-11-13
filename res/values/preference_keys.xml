@@ -96,10 +96,6 @@
     <!-- Sound Settings -->
     <string name="pk_volume_settings" translatable="false">volume_settings</string>
 
-    <!-- Users Settings -->
-    <string name="pk_users_list" translatable="false">users_list</string>
-    <string name="pk_choose_new_admin" translatable="false">choose_new_admin</string>
-
     <!-- Location Settings -->
     <string name="pk_location_recent_requests_entry" translatable="false">
         location_recent_requests_entry
@@ -115,6 +111,13 @@
     </string>
     <string name="pk_location_services" translatable="false">location_services</string>
     <string name="pk_location_footer" translatable="false">location_footer</string>
+
+    <!-- Users Settings -->
+    <string name="pk_users_list" translatable="false">users_list</string>
+    <string name="pk_choose_new_admin" translatable="false">choose_new_admin</string>
+    <string name="pk_edit_user_name_entry" translatable="false">edit_user_name_entry</string>
+    <string name="pk_make_user_admin" translatable="false">make_user_admin</string>
+    <string name="pk_user_permissions" translatable="false">user_permissions</string>
 
     <!-- Security Settings -->
     <string name="pk_no_lock" translatable="false">no_lock</string>

@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static android.content.pm.UserInfo.FLAG_ADMIN;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -50,7 +52,7 @@ public class UsersListPreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "users_list";
     private static final UserInfo TEST_CURRENT_USER = new UserInfo(/* id= */ 10,
-            "TEST_USER_NAME", /* flags= */ 0);
+            "TEST_USER_NAME", FLAG_ADMIN);
     private static final UserInfo TEST_OTHER_USER = new UserInfo(/* id= */ 11,
             "TEST_OTHER_NAME", /* flags= */ 0);
     private UsersListPreferenceController mController;
@@ -72,6 +74,7 @@ public class UsersListPreferenceControllerTest {
 
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
     }
@@ -82,7 +85,7 @@ public class UsersListPreferenceControllerTest {
     }
 
     @Test
-    public void testPreferencePerformClick_currentUser_openNewFragment() {
+    public void testPreferencePerformClick_currentAdminUser_openNewFragment() {
         mController.displayPreference(mPreferenceScreen);
 
         mPreferenceScreen.getPreference(0).performClick();
@@ -91,12 +94,12 @@ public class UsersListPreferenceControllerTest {
     }
 
     @Test
-    public void testPreferencePerformClick_otherUser_openNewFragment() {
+    public void testPreferencePerformClick_otherNonAdminUser_openNewFragment() {
         mController.displayPreference(mPreferenceScreen);
 
         mPreferenceScreen.getPreference(1).performClick();
 
-        verify(mFragmentController).launchFragment(any(UserDetailsFragment.class));
+        verify(mFragmentController).launchFragment(any(UserDetailsPermissionsFragment.class));
     }
 
     @Test

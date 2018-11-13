@@ -110,8 +110,8 @@ public class UsersPreferenceProvider {
         Preference preference = new Preference(mContext);
         preference.setIcon(
                 new UserIconProvider(mCarUserManagerHelper).getUserIcon(userInfo, mContext));
-        preference.setTitle(isCurrentUser(userInfo) ? mContext.getString(R.string.current_user_name,
-                userInfo.name) : userInfo.name);
+        preference.setTitle(
+                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, userInfo));
 
         if (!userInfo.isInitialized()) {
             preference.setSummary(R.string.user_summary_not_set_up);

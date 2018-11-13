@@ -19,6 +19,7 @@ package com.android.car.settings.common;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
 import android.content.Context;
@@ -81,5 +82,27 @@ public class ButtonPreferenceTest {
         assertThat(
                 mViewHolder.findViewById(R.id.button_preference_button).getVisibility()).isEqualTo(
                 View.GONE);
+    }
+
+    @Test
+    public void performButtonClick_listenerSetAndButtonVisible_listenerFired() {
+        ButtonPreference.OnButtonClickListener listener = mock(
+                ButtonPreference.OnButtonClickListener.class);
+        mButtonPreference.setOnButtonClickListener(listener);
+        mButtonPreference.showButton(true);
+
+        mButtonPreference.performButtonClick();
+        verify(listener).onButtonClick(mButtonPreference);
+    }
+
+    @Test
+    public void performButtonClick_listenerSetAndButtonInvisible_listenerNotFired() {
+        ButtonPreference.OnButtonClickListener listener = mock(
+                ButtonPreference.OnButtonClickListener.class);
+        mButtonPreference.setOnButtonClickListener(listener);
+        mButtonPreference.showButton(false);
+
+        mButtonPreference.performButtonClick();
+        verify(listener, never()).onButtonClick(mButtonPreference);
     }
 }

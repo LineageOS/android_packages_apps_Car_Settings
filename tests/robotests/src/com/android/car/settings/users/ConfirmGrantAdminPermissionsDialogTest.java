@@ -20,8 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
 
-import android.content.pm.UserInfo;
-
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
@@ -39,7 +37,7 @@ import org.robolectric.Robolectric;
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ConfirmGrantAdminPermissionsDialogTest {
-    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
+
     private BaseTestActivity mTestActivity;
 
     @Before
@@ -52,7 +50,6 @@ public class ConfirmGrantAdminPermissionsDialogTest {
     @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testConfirmGrantAdminInvokesOnGrantAdminConfirmed() {
-        UserInfo testUser = new UserInfo();
         ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
 
         ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener listener =
@@ -94,11 +91,12 @@ public class ConfirmGrantAdminPermissionsDialogTest {
     }
 
     private void showDialog(ConfirmGrantAdminPermissionsDialog dialog) {
-        dialog.show(mTestActivity.getSupportFragmentManager(), CONFIRM_GRANT_ADMIN_DIALOG_TAG);
+        dialog.show(mTestActivity.getSupportFragmentManager(),
+                ConfirmGrantAdminPermissionsDialog.TAG);
     }
 
     private boolean isDialogShown() {
         return mTestActivity.getSupportFragmentManager()
-                .findFragmentByTag(CONFIRM_GRANT_ADMIN_DIALOG_TAG) != null;
+                .findFragmentByTag(ConfirmGrantAdminPermissionsDialog.TAG) != null;
     }
 }

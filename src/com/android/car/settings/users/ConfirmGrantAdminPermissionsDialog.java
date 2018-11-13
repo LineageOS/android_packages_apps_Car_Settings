@@ -28,6 +28,12 @@ import com.android.car.settings.R;
  * Dialog to confirm granting of admin permissions.
  */
 public class ConfirmGrantAdminPermissionsDialog extends DialogFragment {
+
+    /**
+     * Tag used to open and identify the dialog fragment from the FragmentManager or
+     * FragmentController.
+     */
+    public static final String TAG = "confirm_grant_admin_permissions_dialog";
     private ConfirmGrantAdminListener mListener;
 
     /**
@@ -35,7 +41,7 @@ public class ConfirmGrantAdminPermissionsDialog extends DialogFragment {
      * the dialog.
      *
      * @param listener Instance of {@link ConfirmGrantAdminListener} to call when
-     * confirmed.
+     *                 confirmed.
      */
     public void setConfirmGrantAdminListener(ConfirmGrantAdminListener listener) {
         mListener = listener;

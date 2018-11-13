@@ -24,13 +24,18 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Shadow for {@link CarUserManagerHelper}
  */
 @Implements(CarUserManagerHelper.class)
 public class ShadowCarUserManagerHelper {
+    // First Map keys from user id to map of restrictions. Second Map keys from restriction id to
+    // bool.
+    private static Map<Integer, Map<String, Boolean>> sUserRestrictionMap = new HashMap<>();
     private static CarUserManagerHelper sMockInstance;
 
     public static void setMockInstance(CarUserManagerHelper userManagerHelper) {
@@ -40,6 +45,7 @@ public class ShadowCarUserManagerHelper {
     @Resetter
     public static void reset() {
         sMockInstance = null;
+        sUserRestrictionMap.clear();
     }
 
     @Implementation
@@ -68,7 +74,12 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected UserInfo createNewNonAdminUser(String userName) {
+    public List<UserInfo> getAllPersistentUsers() {
+        return sMockInstance.getAllPersistentUsers();
+    }
+
+    @Implementation
+    public UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
     }
 
@@ -138,12 +149,19 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
-        sMockInstance.setUserRestriction(userInfo, restriction, enable);
+    public void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
+        Map<String, Boolean> permissionsMap = sUserRestrictionMap.getOrDefault(userInfo.id,
+                new HashMap<>());
+        permissionsMap.put(restriction, enable);
+        sUserRestrictionMap.put(userInfo.id, permissionsMap);
     }
 
     @Implementation
-    protected boolean hasUserRestriction(String restriction, UserInfo userInfo) {
-        return sMockInstance.hasUserRestriction(restriction, userInfo);
+    public boolean hasUserRestriction(String restriction, UserInfo userInfo) {
+        // False by default, if nothing was added to our map,
+        if (!sUserRestrictionMap.containsKey(userInfo.id)) {
+            return false;
+        }
+        return sUserRestrictionMap.get(userInfo.id).getOrDefault(restriction, false);
     }
 }
