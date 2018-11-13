@@ -19,11 +19,11 @@ package com.android.car.settings.accounts;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.doReturn;
+import static org.robolectric.RuntimeEnvironment.application;
 
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Intent;
 import android.content.pm.UserInfo;
-import android.view.View;
-import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -39,6 +39,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 /**
@@ -47,9 +48,11 @@ import org.robolectric.annotation.Config;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
         ShadowContentResolver.class})
-public class AccountSettingsFragmentTest {
+public class AddAccountFragmentTest {
+    private static final int ADD_ACCOUNT_REQUEST_CODE = 1001;
+
     private BaseTestActivity mActivity;
-    private AccountSettingsFragment mFragment;
+    private AddAccountFragment mFragment;
 
     @Mock
     private CarUserManagerHelper mMockCarUserManagerHelper;
@@ -60,10 +63,12 @@ public class AccountSettingsFragmentTest {
 
         // Set up user info
         ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
-        doReturn(new UserInfo()).when(
+        doReturn(new UserInfo(0, "name", 0)).when(
                 mMockCarUserManagerHelper).getCurrentProcessUserInfo();
 
         mActivity = Robolectric.setupActivity(BaseTestActivity.class);
+        mFragment = new AddAccountFragment();
+        mActivity.launchFragment(mFragment);
     }
 
     @After
@@ -72,37 +77,27 @@ public class AccountSettingsFragmentTest {
     }
 
     @Test
-    public void cannotModifyUsers_addAccountButtonShouldNotBeVisible() {
-        doReturn(false).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
-        initFragment();
-
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(addAccountButton.getVisibility()).isEqualTo(View.GONE);
+    public void preferenceCategoryTitleShouldBeSet() {
+        String expectedTitle = application.getString(R.string.add_an_account);
+        assertThat(mFragment.getPreferenceScreen().getTitle()).isEqualTo(expectedTitle);
     }
 
     @Test
-    public void canModifyUsers_addAccountButtonShouldBeVisible() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
-        initFragment();
+    public void onAddAccount_startsAddAccountActivity() {
+        mFragment.addAccount("accountType");
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(addAccountButton.getVisibility()).isEqualTo(View.VISIBLE);
+        Intent activityIntent = Shadows.shadowOf(
+                mFragment.getActivity()).getNextStartedActivityForResult().intent;
+        assertThat(
+                activityIntent.getStringExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT)).isEqualTo(
+                "accountType");
     }
 
     @Test
-    public void clickAddAccountButton_shouldOpenAddAccountFragment() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
-        initFragment();
+    public void onActivityResult_shouldGoBack() {
+        mFragment.onActivityResult(ADD_ACCOUNT_REQUEST_CODE, /* resultCode= */ 1, /* data= */
+                new Intent());
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        addAccountButton.performClick();
-
-        assertThat(mActivity.getSupportFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(AddAccountFragment.class);
-    }
-
-    private void initFragment() {
-        mFragment = new AccountSettingsFragment();
-        mActivity.launchFragment(mFragment);
+        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(0);
     }
 }
