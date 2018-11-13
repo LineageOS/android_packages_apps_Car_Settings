@@ -64,7 +64,7 @@
     <!-- Label for the security of the connection -->
     <string name="wifi_security">Security</string>
     <!-- Label for the signal strength of the connection -->
-    <string name="wifi_signal">Signal strength</string>
+    <string name="wifi_signal_strength">Signal strength</string>
     <!-- Label for the status of the connection -->
     <string name="wifi_status">Status</string>
     <!-- Label for the link speed of the connection -->
@@ -85,6 +85,26 @@
         <item>Good</item>
         <item>Excellent</item>
     </string-array>
+    <!-- Link speed on Wifi Status screen -->
+    <string name="link_speed">%1$d Mbps</string>
+    <!-- Wifi 2.4GHz is used as an universal itendifier for 2.4GHz band -->
+    <string name="wifi_band_24ghz">2.4 GHz</string>
+    <!-- Wifi Internal 5GHz as an universal itendifier for 5GHz band -->
+    <string name="wifi_band_5ghz">5 GHz</string>
+    <!-- Label to the section to show details about a Wi-Fi settings -->
+    <string name="wifi_network_detail">Network details</string>
+    <!-- Wi-Fi settings screen, advanced, title of the item to show the Wi-Fi device's MAC address. -->
+    <string name="wifi_mac_address">MAC address</string>
+    <!-- Wi-Fi settings screen, advanced, title of the item to show the Wi-Fi device's current IP address. -->
+    <string name="wifi_ip_address_title">IP address</string>
+    <!-- Wifi details preference title to display router IP subnet mask -->
+    <string name="wifi_subnet_mask">Subnet mask</string>
+    <!-- Wifi details preference title to display router DNS info -->
+    <string name="wifi_dns">DNS</string>
+    <!-- Wifi details preference category title for IPv6 information -->
+    <string name="wifi_details_ipv6_address_header">IPv6 addresses</string>
+    <!-- Label for the gateway of the network -->
+    <string name="wifi_gateway">Gateway</string>
 
     <!-- Bluetooth settings --><skip />
     <!-- Bluetooth settings check box title on Main Settings screen -->
