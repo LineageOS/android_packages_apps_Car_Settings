@@ -101,6 +101,13 @@ public class ButtonPreference extends Preference {
         notifyChanged();
     }
 
+    /** Virtually clicks the button contained inside this preference. */
+    public void performButtonClick() {
+        if (mIsButtonShown && mOnButtonClickListener != null) {
+            mOnButtonClickListener.onButtonClick(this);
+        }
+    }
+
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);

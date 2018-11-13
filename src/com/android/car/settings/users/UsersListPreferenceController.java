@@ -31,6 +31,12 @@ public class UsersListPreferenceController extends UsersBasePreferenceController
 
     @Override
     protected void userClicked(UserInfo userInfo) {
-        getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo.id));
+        if (UserUtils.isAdminViewingNonAdmin(getCarUserManagerHelper(), userInfo)) {
+            // Admin viewing non admin.
+            getFragmentController().launchFragment(
+                    UserDetailsPermissionsFragment.newInstance(userInfo.id));
+        } else {
+            getFragmentController().launchFragment(UserDetailsFragment.newInstance(userInfo.id));
+        }
     }
 }
