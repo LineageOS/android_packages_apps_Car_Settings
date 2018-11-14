@@ -18,8 +18,10 @@
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/location_settings_title">
     <Preference
-        android:key="@string/pk_location_recent_locations"
-        android:title="@string/location_settings_recent_locations_title"/>
+        android:fragment="com.android.car.settings.location.RecentLocationRequestsFragment"
+        android:key="@string/pk_location_recent_requests_entry"
+        android:title="@string/location_settings_recent_requests_title"
+        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
     <Preference
         android:key="@string/pk_location_app_permissions"
         android:title="@string/location_settings_app_permissions_title">
