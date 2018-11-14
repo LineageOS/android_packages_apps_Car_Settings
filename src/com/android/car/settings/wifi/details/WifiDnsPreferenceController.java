@@ -37,7 +37,7 @@ public class WifiDnsPreferenceController extends WifiDetailPreferenceControllerB
     @Override
     public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
         super.onLinkPropertiesChanged(network, lp);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override

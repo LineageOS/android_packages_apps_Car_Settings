@@ -26,7 +26,8 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi signal strength.
  */
-public class WifiSignalStrengthPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiSignalStrengthPreferenceController
+        extends ActiveWifiDetailPreferenceControllerBase {
 
     private int mRssiSignalLevel = -1;
     private String[] mSignalStr;
@@ -40,14 +41,14 @@ public class WifiSignalStrengthPreferenceController extends WifiDetailPreference
     @Override
     public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiChanged(networkInfo, wifiInfo);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
     public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
             NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override

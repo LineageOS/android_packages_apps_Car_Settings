@@ -46,7 +46,7 @@ public abstract class WifiDetailPreferenceControllerBase extends WifiControllerB
 
         mWifiDetailPreference =
                 (WifiDetailPreference) screen.findPreference(getPreferenceKey());
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
@@ -59,6 +59,12 @@ public abstract class WifiDetailPreferenceControllerBase extends WifiControllerB
     public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiChanged(networkInfo, wifiInfo);
         mWifiDetailPreference.setEnabled(true);
+    }
+
+    protected final void updateIfAvailable() {
+        if (isAvailable()) {
+            updateInfo();
+        }
     }
 
     /**

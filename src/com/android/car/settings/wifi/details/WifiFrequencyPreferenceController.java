@@ -39,14 +39,14 @@ public class WifiFrequencyPreferenceController extends WifiDetailPreferenceContr
     @Override
     public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiChanged(networkInfo, wifiInfo);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
     public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
             NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
