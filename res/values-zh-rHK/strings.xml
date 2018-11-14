@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -114,6 +112,11 @@
       <item quantity="other">還有其他 <xliff:g id="COUNT_1">%d</xliff:g> 項權限</item>
       <item quantity="one">還有其他 <xliff:g id="COUNT_0">%d</xliff:g> 項權限</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"最近的位置資訊要求"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"應用程式層級權限"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"掃瞄"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"定位服務"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系統"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
@@ -146,21 +149,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"載入中…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"重設選項"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"網絡、應用程式或裝置重設"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"重設網絡"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"這項操作將會重設所有網絡設定，包括："</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"流動數據"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"藍牙"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"清除所有汽車 eSIM 卡"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"此操作不會取消您的服務計劃。"</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"選擇網絡"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"重設設定"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"要重設嗎？"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"您要重設所有網絡設定嗎？您將無法復原這項操作！"</string>

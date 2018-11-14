@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -114,6 +112,11 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> quyền bổ sung</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> quyền bổ sung</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Các yêu cầu vị trí gần đây"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Quét"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Hệ thống"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Bản cập nhật hệ thống"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Phiên bản Android"</string>
@@ -146,21 +149,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Đang tải…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Tùy chọn đặt lại"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Đặt lại mạng, ứng dụng hoặc thiết bị"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"Đặt lại mạng"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Hành động này sẽ đặt lại tất cả tùy chọn cài đặt mạng, bao gồm:"</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dữ liệu di động"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Xóa tất cả eSIM của xe"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Thao tác này sẽ không hủy gói dịch vụ của bạn."</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"Chọn mạng"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Đặt lại cài đặt"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Bạn có muốn đặt lại không?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Bạn có muốn đặt lại tất cả cài đặt mạng không? Bạn không thể hoàn tác hành động này!"</string>

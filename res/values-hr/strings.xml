@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -115,6 +113,11 @@
       <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dodatna dopuštenja</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatnih dopuštenja</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Nedavni zahtjevi za lokaciju"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dopuštenja na razini aplikacije"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Traženje"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sustav"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sustava"</string>
     <string name="firmware_version" msgid="8491753744549309333">"verziju Androida"</string>
@@ -147,21 +150,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Učitavanje..."</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Poništavanje opcija"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Vraćanje mreže, aplikacija ili uređaja na zadano"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"Poništi mrežu"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Time će se na zadano vratiti sve postavke mreže, uključujući:"</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobilni podaci"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Izbriši sve eSIM-ove vozila"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Time se neće otkazati vaš paket usluge."</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"Odaberite mrežu"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Vrati postavke na zadano"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Vratiti na zadano?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Želite li vratiti sve postavke mreže na zadano? Tu radnju nije moguće poništiti!"</string>

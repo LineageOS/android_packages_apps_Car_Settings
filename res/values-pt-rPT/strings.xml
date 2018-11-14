@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -107,13 +105,18 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nenhuma autorização concedida."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nenhuma autorização solicitada."</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Utilização de dados"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Utiliz. dados da aplic."</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Utiliz. dados da app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forçar paragem"</string>
     <string name="computing_size" msgid="5791407621793083965">"A calcular…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorizações adicionais.</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> autorização adicional.</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Pedidos de localização recentes"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizações de nível de aplicação"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Procura"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Atualizações do sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versão do Android"</string>
@@ -146,21 +149,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"A carregar…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opções de reposição"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Reposição da rede, de aplicações ou do dispositivo"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"Repor rede"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Esta ação repõe todas as definições de rede, incluindo:"</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Dados móveis"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Apagar todos os eSIMs do veículo"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Esta opção não cancela o seu plano de serviço."</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"Selecionar rede"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Repor definições"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Pretende repor?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Pretende repor todas as definições de rede? Não é possível anular esta ação."</string>

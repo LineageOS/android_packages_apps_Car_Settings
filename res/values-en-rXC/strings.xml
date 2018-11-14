@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -114,6 +112,11 @@
       <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‎‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‏‏‎‎‏‏‎‏‏‏‏‏‎‎‎‎‎‎‏‏‏‎‎‏‏‏‎‎‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎<xliff:g id="COUNT_1">%d</xliff:g>‎‏‎‎‏‏‏‎ additional permissions‎‏‎‎‏‎</item>
       <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‎‎‎‎‎‏‏‏‏‏‎‏‏‎‎‏‏‏‏‎‎‏‏‎‏‏‏‏‏‎‎‎‎‎‎‏‏‏‎‎‏‏‏‎‎‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎<xliff:g id="COUNT_0">%d</xliff:g>‎‏‎‎‏‏‏‎ additional permission‎‏‎‎‏‎</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‏‎‎‏‎‎‎‎‎‏‎‎‎‏‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎‏‎‎‏‏‏‏‎‏‎‎‏‎‎‏‏‏‏‎‏‎‏‏‏‏‏‏‏‎Location‎‏‎‎‏‎"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‏‎‎‏‏‎‎‏‏‎‎‎‏‎‏‎‎‏‏‎‎‎‎‏‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‏‏‎‎‎‏‏‎‏‏‎‎Recent Location Requests‎‏‎‎‏‎"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‏‎‏‏‏‎‏‏‏‎‏‏‎‎‏‏‏‏‎‎‏‏‏‎‎‎‏‏‏‏‎‎‏‎‏‏‏‎‎‏‏‎‏‏‎‏‏‏‎‏‎‎‏‏‏‎‎‎App-level permissions‎‏‎‎‏‎"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‏‏‎‎‎‎‏‎‎‏‎‎‎‎‏‏‎‏‎‎‏‏‏‎‏‎‏‏‏‏‎‏‎‏‏‏‎‎‏‏‎‏‏‎‎‏‏‎‏‎‏‎‎‎‎‏‎‎‎Scanning‎‏‎‎‏‎"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‎‎‎‏‏‏‎‏‎‏‏‏‏‏‏‏‏‎‎‏‎‎‎‎‎‏‎‎‏‎‏‎‎‎‏‎‏‏‎‎‎‎‎‏‎‏‏‏‏‏‎‏‏‎‎‏‎‎‎Location Services‎‏‎‎‏‎"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‏‏‎‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‏‎‏‏‏‎‏‏‎‎‏‎‏‏‎‏‏‏‏‎‏‏‏‎‏‏‏‏‎‎‎‎‏‎‎‏‎‎‎‎‎System‎‏‎‎‏‎"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‎‎‏‏‏‏‏‏‎‏‏‎‏‎‏‎‎‏‎‎‎‏‎‎‎‏‎‏‏‎‏‎‏‏‎‎‏‏‏‎‎‏‏‏‎‎‎‎‎‏‏‎‎‏‏‏‎System updates‎‏‎‎‏‎"</string>
     <string name="firmware_version" msgid="8491753744549309333">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‏‎‎‎‎‏‎‏‎‎‎‎‏‎‏‏‏‏‏‏‏‎‏‎‎‎‏‏‎‏‎‏‏‏‎‎‏‎‏‎‏‎Android version‎‏‎‎‏‎"</string>
