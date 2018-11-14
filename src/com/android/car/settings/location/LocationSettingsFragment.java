@@ -16,8 +16,15 @@
 
 package com.android.car.settings.location;
 
+import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.widget.Switch;
 
 import androidx.annotation.LayoutRes;
@@ -25,13 +32,23 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.settingslib.Utils;
 
 /**
  * Main page that hosts Location related preferences.
  */
 public class LocationSettingsFragment extends BasePreferenceFragment {
-    private LocationController mLocationController;
+    private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
+            new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
+
+    private LocationManager mLocationManager;
     private Switch mLocationSwitch;
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            mLocationSwitch.setChecked(mLocationManager.isLocationEnabled());
+        }
+    };
 
     @Override
     @XmlRes
@@ -48,9 +65,7 @@ public class LocationSettingsFragment extends BasePreferenceFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mLocationController = new LocationController(context, enabled ->
-                mLocationSwitch.setChecked(enabled));
-        getLifecycle().addObserver(mLocationController);
+        mLocationManager = (LocationManager) context.getSystemService(Service.LOCATION_SERVICE);
     }
 
     @Override
@@ -62,19 +77,21 @@ public class LocationSettingsFragment extends BasePreferenceFragment {
     @Override
     public void onStart() {
         super.onStart();
+        requireContext().registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
         updateLocationSwitch();
     }
 
     @Override
-    public void onDetach() {
-        super.onDetach();
-        getLifecycle().removeObserver(mLocationController);
+    public void onStop() {
+        super.onStop();
+        requireContext().unregisterReceiver(mReceiver);
     }
 
     // Update the location master switch's state upon starting the fragment.
     private void updateLocationSwitch() {
-        mLocationSwitch.setChecked(mLocationController.isEnabled());
+        mLocationSwitch.setChecked(mLocationManager.isLocationEnabled());
         mLocationSwitch.setOnCheckedChangeListener((buttonView, isChecked) ->
-                mLocationController.setLocationEnabled(isChecked));
+                Utils.updateLocationEnabled(requireContext(), isChecked, UserHandle.myUserId(),
+                        Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS));
     }
 }
