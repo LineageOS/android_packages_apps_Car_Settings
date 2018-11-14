@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -114,6 +112,11 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি অতিরিক্ত অনুমতি</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি অতিরিক্ত অনুমতি</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"স্ক্যান করা হচ্ছে"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"লোকেশন পরিষেবা"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"সিস্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ভার্সন"</string>
@@ -146,21 +149,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"লোড করা হচ্ছে…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"রিসেটের বিকল্পগুলি"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"নেটওয়ার্ক, অ্যাপ অথবা ডিভাইস রিসেট"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"নেটওয়ার্ক রিসেট করুন"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"এর ফলে সমস্ত নেটওয়ার্ক সেটিংস রিসেট করা হবে, এগুলি সহ:"</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"ওয়াই-ফাই"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"মোবাইল ডেটা"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ব্লুটুথ"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"সব গাড়ির ই-সিম মুছে ফেলুন"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"এতে আপনার এর পরিষেবার প্ল্যান বাতিল হবে না।"</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"নেটওয়ার্ক বেছে নিন"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"সেটিংস রিসেট করুন"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"রিসেট করবেন?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"সমস্ত নেটওয়ার্ক সেটিংস রিসেট করবেন? এখনকার সেটিংস আর ফিরিয়ে আনা যাবে না!"</string>

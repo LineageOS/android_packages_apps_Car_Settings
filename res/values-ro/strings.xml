@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -115,6 +113,11 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de permisiuni suplimentare</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permisiune suplimentară</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Solicitări de localizare recente"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisiuni la nivel de aplicație"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Căutare"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Servicii de localizare"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizări de sistem"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versiunea Android"</string>
@@ -147,21 +150,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Se încarcă…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"Opțiuni de resetare"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Resetați rețeaua, aplicațiile sau dispozitivul"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"Resetați rețeaua"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Această acțiune va reseta toate setările pentru rețea, inclusiv:"</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Date mobile"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Ștergeți toate eSIM-urile vehiculului"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Astfel, planul de servicii nu va fi anulat."</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"Selectați o rețea"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Resetați setările"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Resetați?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Resetați toate setările pentru rețea? Nu puteți anula această acțiune!"</string>

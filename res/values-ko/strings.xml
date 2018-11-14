@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
- * Copyright (c) 2018, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+<!--  Copyright (C) 2018 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -114,6 +112,11 @@
       <item quantity="other">추가 권한 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
       <item quantity="one">추가 권한 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
     </plurals>
+    <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
+    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"최근 위치 요청"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"앱 수준 권한"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"검색 중"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"위치 서비스"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
@@ -146,21 +149,14 @@
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"로드 중…"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"옵션 재설정"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"네트워크, 앱, 기기 재설정"</string>
-    <!-- no translation found for reset_network_title (1284233059990797263) -->
-    <skip />
+    <string name="reset_network_title" msgid="1284233059990797263">"네트워크 재설정"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"다음을 포함한 모든 네트워크 설정을 초기화합니다."</string>
-    <!-- no translation found for reset_network_item_wifi (7569481589699982698) -->
-    <skip />
-    <!-- no translation found for reset_network_item_mobile (5747282716664480997) -->
-    <skip />
-    <!-- no translation found for reset_network_item_bluetooth (6035019931106921284) -->
-    <skip />
-    <!-- no translation found for reset_esim_title (8132107637911831211) -->
-    <skip />
-    <!-- no translation found for reset_esim_desc (1437276625485586740) -->
-    <skip />
-    <!-- no translation found for reset_network_select (2433825874868038739) -->
-    <skip />
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"모바일 데이터"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"블루투스"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"모든 자동차 eSIM 삭제"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"서비스 요금제는 취소되지 않습니다."</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"네트워크 선택"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"설정 초기화"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"초기화하시겠습니까?"</string>
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"모든 네트워크 설정을 초기화하시겠습니까? 이 작업은 실행취소할 수 없습니다."</string>
