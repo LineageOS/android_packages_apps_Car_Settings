@@ -88,7 +88,11 @@
     <string name="pk_volume_settings" translatable="false">volume_settings</string>
 
     <!-- Location Settings -->
-    <string name="pk_location_recent_locations" translatable="false">location_recent_locations
+    <string name="pk_location_recent_requests_entry" translatable="false">
+        location_recent_requests_entry
+    </string>
+    <string name="pk_location_recent_requests_screen" translatable="false">
+        location_recent_requests_screen
     </string>
     <string name="pk_location_app_permissions" translatable="false">location_app_permissions
     </string>
