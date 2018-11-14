@@ -159,7 +159,7 @@
                   android:label=""
                   android:screenOrientation="nosensor"
                   android:theme="@style/FallbackHome">
-            <intent-filter android:priority="-1000">
+            <intent-filter android:priority="-900">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
