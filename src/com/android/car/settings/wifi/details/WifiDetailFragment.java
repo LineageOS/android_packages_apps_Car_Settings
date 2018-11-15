@@ -110,7 +110,7 @@ public class WifiDetailFragment extends BasePreferenceFragment
         super.onAttach(context);
         mAccessPoint = new AccessPoint(getContext(), getArguments().getBundle(EXTRA_AP_STATE));
         mWifiManager = context.getSystemService(WifiManager.class);
-        LOG.d("Creating WifiInfoProvider.");
+        LOG.d("Creating WifiInfoProvider for " + mAccessPoint);
         if (mWifiInfoProvider == null) {
             mWifiInfoProvider = new WifiInfoProviderImpl(getContext(), mAccessPoint);
         }

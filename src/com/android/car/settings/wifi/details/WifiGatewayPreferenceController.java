@@ -35,7 +35,7 @@ public class WifiGatewayPreferenceController extends WifiDetailPreferenceControl
     @Override
     public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
         super.onLinkPropertiesChanged(network, lp);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override

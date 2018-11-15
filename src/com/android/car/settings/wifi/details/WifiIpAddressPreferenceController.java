@@ -27,7 +27,7 @@ import java.net.Inet4Address;
 /**
  * Shows info about Wifi IP address.
  */
-public class WifiIpAddressPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiIpAddressPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiIpAddressPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {
@@ -37,7 +37,7 @@ public class WifiIpAddressPreferenceController extends WifiDetailPreferenceContr
     @Override
     public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
         super.onLinkPropertiesChanged(network, lp);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
