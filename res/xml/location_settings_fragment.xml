@@ -21,13 +21,13 @@
         android:fragment="com.android.car.settings.location.RecentLocationRequestsFragment"
         android:key="@string/pk_location_recent_requests_entry"
         android:title="@string/location_settings_recent_requests_title"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
+        settings:controller="com.android.car.settings.location.RecentLocationRequestsEntryPreferenceController"/>
     <Preference
         android:key="@string/pk_location_app_permissions"
         android:title="@string/location_settings_app_permissions_title">
         <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
             <extra android:name="android.intent.extra.PERMISSION_NAME"
-                   android:value="android.permission-group.LOCATION" />
+                   android:value="android.permission-group.LOCATION"/>
         </intent>
     </Preference>
     <Preference
