@@ -27,6 +27,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.wifi.WifiUtil;
 
 import java.net.Inet6Address;
 import java.util.StringJoiner;
@@ -66,7 +67,17 @@ public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
         super.displayPreference(screen);
 
         mPreference = screen.findPreference(getPreferenceKey());
-        updateInfo();
+        if (isAvailable()) {
+            updateInfo();
+        }
+    }
+
+    @Override
+    public int getAvailabilityStatus() {
+        if (!WifiUtil.isWifiAvailable(mContext)) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
+        return mAccessPoint.isActive() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 
     private void updateInfo() {

@@ -19,8 +19,10 @@ package com.android.car.settings.wifi.details;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
+import static org.robolectric.Shadows.shadowOf;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.LinkProperties;
 import android.net.Network;
 import android.net.RouteInfo;
@@ -38,6 +40,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowPackageManager;
 
 import java.net.InetAddress;
 import java.util.Arrays;
@@ -74,11 +77,14 @@ public class WifiGatewayPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
+        ShadowPackageManager pm = shadowOf(mContext.getPackageManager());
+        pm.setSystemFeature(PackageManager.FEATURE_WIFI, true);
         mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mPreference = new WifiDetailPreference(mContext);
         mPreference.setKey(PREFERENCE_KEY);
         mPreferenceScreen.addPreference(mPreference);
         when(mMockWifiInfoProvider.getLinkProperties()).thenReturn(mMockLinkProperties);
+        when(mMockAccessPoint.isActive()).thenReturn(true);
 
         mController = newController();
     }
