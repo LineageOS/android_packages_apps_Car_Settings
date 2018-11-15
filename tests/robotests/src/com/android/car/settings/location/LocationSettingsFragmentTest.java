@@ -20,13 +20,12 @@ import static com.google.common.truth.Truth.assertThat;
 import android.app.Service;
 import android.content.Intent;
 import android.location.LocationManager;
-import android.os.UserHandle;
-import android.provider.Settings;
 import android.widget.Switch;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 
 import org.junit.Before;
@@ -35,15 +34,12 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.annotation.Implementation;
-import org.robolectric.annotation.Implements;
 import org.robolectric.shadows.ShadowApplication;
 
 import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowSecureSettings.class,
-        LocationSettingsFragmentTest.ShadowLocationManager.class})
+@Config(shadows = {ShadowSecureSettings.class, ShadowLocationManager.class})
 public class LocationSettingsFragmentTest {
     private BaseTestActivity mActivity;
     private LocationManager mLocationManager;
@@ -89,28 +85,5 @@ public class LocationSettingsFragmentTest {
     private void initFragment() {
         mActivity.launchFragment(new LocationSettingsFragment());
         mLocationSwitch = (Switch) mActivity.findViewById(R.id.toggle_switch);
-    }
-
-    @Implements(value = LocationManager.class)
-    public static class ShadowLocationManager {
-
-        @Implementation
-        public void setLocationEnabledForUser(boolean enabled, UserHandle userHandle) {
-            int newMode = enabled
-                    ? Settings.Secure.LOCATION_MODE_HIGH_ACCURACY
-                    : Settings.Secure.LOCATION_MODE_OFF;
-
-            Settings.Secure.putIntForUser(RuntimeEnvironment.application.getContentResolver(),
-                    Settings.Secure.LOCATION_MODE, newMode, userHandle.getIdentifier());
-            RuntimeEnvironment.application.sendBroadcast(new Intent(
-                    LocationManager.MODE_CHANGED_ACTION));
-        }
-
-        @Implementation
-        public boolean isLocationEnabled() {
-            return Settings.Secure.getInt(RuntimeEnvironment.application.getContentResolver(),
-                    Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF)
-                    != Settings.Secure.LOCATION_MODE_OFF;
-        }
     }
 }
