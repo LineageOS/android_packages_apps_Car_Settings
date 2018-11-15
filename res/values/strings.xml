@@ -353,6 +353,8 @@
     <string name="reset_esim_title">Erase all vehicle eSIMs</string>
     <!-- Description text for option to reset all eSIMs for the vehicle. [CHAR LIMIT=NONE] -->
     <string name="reset_esim_desc">This will not cancel your service plan.</string>
+    <!-- Title for error dialog when esim reset fails. [CHAR LIMIT=NONE] -->
+    <string name="reset_esim_error_title">Can\u2019t reset eSIMs</string>
     <!-- Fallback representation of a network subscription that does not supply a display name, number, or carrier name. -->
     <string name="reset_network_fallback_subscription_name" translatable="false">MCC:%s MNC:%s Slot:%s Id:%s</string>
     <!-- Title of dialog to select network to reset. [CHAR LIMIT=30] -->
