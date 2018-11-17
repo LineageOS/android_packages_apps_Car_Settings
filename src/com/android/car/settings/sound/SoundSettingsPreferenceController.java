@@ -90,10 +90,7 @@ public class SoundSettingsPreferenceController extends NoSetupPreferenceControll
             }
         }
 
-        /**
-         * This does not gets called when service is properly disconnected.
-         * So we need to also handle cleanups in onStop().
-         */
+        /** Cleanup audio related fields when car is disconnected. */
         @Override
         public void onServiceDisconnected(ComponentName name) {
             cleanupAudioManager();
@@ -113,16 +110,15 @@ public class SoundSettingsPreferenceController extends NoSetupPreferenceControll
         mRingtoneManager = new SoundSettingsRingtoneManager(mContext);
     }
 
-    /** Connect to car on start. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
+    /** Connect to car on create. */
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    public void onCreate() {
         mCar.connect();
     }
 
-    /** Disconnect from car on start and perform any necessary cleanup. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
-        cleanupAudioManager();
+    /** Disconnect from car on destroy. */
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    public void onDestroy() {
         mCar.disconnect();
     }
 
