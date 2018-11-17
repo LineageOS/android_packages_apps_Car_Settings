@@ -114,14 +114,14 @@ public class SoundSettingsPreferenceControllerTest {
     @Test
     public void testDisplayPreference_serviceStarted() {
         mController.displayPreference(mPreferenceScreen);
-        mController.onStart();
+        mController.onCreate();
         assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
     public void testDisplayPreference_serviceStarted_multipleCalls() {
         mController.displayPreference(mPreferenceScreen);
-        mController.onStart();
+        mController.onCreate();
 
         // Calling this multiple times shouldn't increase the number of elements.
         mController.displayPreference(mPreferenceScreen);
@@ -132,7 +132,7 @@ public class SoundSettingsPreferenceControllerTest {
     @Test
     public void testDisplayPreference_createdPreferenceHasMinMax() {
         mController.displayPreference(mPreferenceScreen);
-        mController.onStart();
+        mController.onCreate();
         SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
         assertThat(preference.getMin()).isEqualTo(TEST_MIN_VOLUME);
         assertThat(preference.getValue()).isEqualTo(TEST_VOLUME);
@@ -142,7 +142,7 @@ public class SoundSettingsPreferenceControllerTest {
     @Test
     public void testOnPreferenceClick_ringtonePlays() {
         mController.displayPreference(mPreferenceScreen);
-        mController.onStart();
+        mController.onCreate();
         SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
         preference.getOnPreferenceChangeListener().onPreferenceChange(preference, TEST_NEW_VOLUME);
         verify(mRingtone).play();
@@ -151,7 +151,7 @@ public class SoundSettingsPreferenceControllerTest {
     @Test
     public void testOnPreferenceClick_audioManagerSet() throws CarNotConnectedException {
         mController.displayPreference(mPreferenceScreen);
-        mController.onStart();
+        mController.onCreate();
         SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
         preference.getOnPreferenceChangeListener().onPreferenceChange(preference, TEST_NEW_VOLUME);
         verify(mCarAudioManager).setGroupVolume(GROUP_ID, TEST_NEW_VOLUME, 0);
