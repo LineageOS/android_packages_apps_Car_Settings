@@ -22,56 +22,66 @@ import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.Dialog;
+import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.UserInfo;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
+import androidx.annotation.XmlRes;
 import androidx.car.app.CarAlertDialog;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.ErrorDialog;
-import com.android.car.settings.common.ListItemSettingsFragment;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * Shows account details, and delete account option.
  */
-public class AccountDetailsFragment extends ListItemSettingsFragment
-        implements AuthenticatorHelper.OnAccountsUpdateListener {
-    public static final String EXTRA_ACCOUNT_INFO = "extra_account_info";
+public class AccountDetailsFragment extends BasePreferenceFragment implements
+        AuthenticatorHelper.OnAccountsUpdateListener {
+    public static final String EXTRA_ACCOUNT = "extra_account";
+    public static final String EXTRA_ACCOUNT_LABEL = "extra_account_label";
     public static final String EXTRA_USER_INFO = "extra_user_info";
 
     private Account mAccount;
     private UserInfo mUserInfo;
-    private ListItemProvider mItemProvider;
-    private AccountManagerHelper mAccountManagerHelper;
+    private AuthenticatorHelper mAuthenticatorHelper;
 
-    public static AccountDetailsFragment newInstance(
-            Account account, UserInfo userInfo) {
+    /**
+     * Creates a new AccountDetailsFragment.
+     *
+     * <p>Passes the provided account, label, and user info to the fragment via fragment arguments.
+     */
+    public static AccountDetailsFragment newInstance(Account account, CharSequence label,
+            UserInfo userInfo) {
         AccountDetailsFragment
                 accountDetailsFragment = new AccountDetailsFragment();
         Bundle bundle = new Bundle();
-        bundle.putParcelable(EXTRA_ACCOUNT_INFO, account);
+        bundle.putParcelable(EXTRA_ACCOUNT, account);
+        bundle.putCharSequence(EXTRA_ACCOUNT_LABEL, label);
         bundle.putParcelable(EXTRA_USER_INFO, userInfo);
         accountDetailsFragment.setArguments(bundle);
         return accountDetailsFragment;
+    }
+
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.account_details_fragment;
     }
 
     @Override
@@ -81,92 +91,88 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
     }
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.account_details_title;
-    }
+    public void onAttach(Context context) {
+        super.onAttach(context);
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mAccount = getArguments().getParcelable(EXTRA_ACCOUNT_INFO);
+        mAccount = getArguments().getParcelable(EXTRA_ACCOUNT);
         mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
 
-        mAccountManagerHelper = new AccountManagerHelper(getContext(), this);
-        mAccountManagerHelper.startListeningToAccountUpdates();
+        use(AccountDetailsTitlePreferenceController.class, R.string.pk_account_details_title)
+                .setTitle(getArguments().getCharSequence(EXTRA_ACCOUNT_LABEL));
 
-        mItemProvider = new ListItemProvider.ListProvider(getListItems());
+        use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
+                .setAccount(mAccount);
+        use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
+                .setUserHandle(mUserInfo.getUserHandle());
+
+        use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
+                .setAccount(mAccount);
+        use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
+                .setUserHandle(mUserInfo.getUserHandle());
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        // Title was set in super.onActivityCreated, but override if account label is available.
-        setFragmentTitle();
-
-        showRemoveButton();
+        // Enable the remove account button if the user is allowed to modify accounts.
+        Button removeAccountButton = requireActivity().findViewById(R.id.action_button1);
+        if (new CarUserManagerHelper(getContext()).canCurrentProcessModifyAccounts()) {
+            removeAccountButton.setText(R.string.remove_button);
+            removeAccountButton.setOnClickListener(v -> onRemoveAccountClicked());
+        } else {
+            removeAccountButton.setVisibility(View.GONE);
+        }
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mAccountManagerHelper.stopListeningToAccountUpdates();
+    public void onStart() {
+        super.onStart();
+
+        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserInfo.getUserHandle(),
+                this);
+        mAuthenticatorHelper.listenToAccountUpdates();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mAuthenticatorHelper.stopListeningToAccountUpdates();
     }
 
     @Override
     public void onAccountsUpdate(UserHandle userHandle) {
-        if (!mAccountManagerHelper.accountExists(mAccount)) {
+        if (!accountExists()) {
             // The account was deleted. Pop back.
             getFragmentController().goBack();
         }
     }
 
-    @Override
-    public ListItemProvider getItemProvider() {
-        return mItemProvider;
-    }
-
-    private void showRemoveButton() {
-        Button removeAccountBtn = getActivity().findViewById(R.id.action_button1);
-        removeAccountBtn.setText(R.string.remove_button);
-        removeAccountBtn.setOnClickListener(v -> removeAccount());
-    }
-
-    private void setFragmentTitle() {
-        CharSequence accountLabel = mAccountManagerHelper.getLabelForType(mAccount.type);
-        if (!TextUtils.isEmpty(accountLabel)) {
-            setTitle(accountLabel);
+    /** Returns whether the account being shown by this fragment still exists. */
+    @VisibleForTesting
+    boolean accountExists() {
+        if (mAccount == null) {
+            return false;
         }
+
+        Account[] accounts = AccountManager.get(getContext()).getAccountsByTypeAsUser(mAccount.type,
+                mUserInfo.getUserHandle());
+
+        return Arrays.asList(accounts).contains(mAccount);
     }
 
-    private List<ListItem> getListItems() {
-        Drawable icon = mAccountManagerHelper.getDrawableForType(mAccount.type);
-
-        TextListItem item = new TextListItem(getContext());
-        item.setPrimaryActionIcon(icon, TextListItem.PRIMARY_ACTION_ICON_SIZE_SMALL);
-        item.setTitle(mAccount.name);
-
-        List<ListItem> items = new ArrayList<>();
-        items.add(item);
-        return items;
-    }
-
-    public void removeAccount() {
-        ConfirmRemoveAccountDialog.show(this, mAccount, mUserInfo.getUserHandle());
+    private void onRemoveAccountClicked() {
+        ConfirmRemoveAccountDialogFragment.show(this, mAccount, mUserInfo.getUserHandle());
     }
 
     /**
      * Dialog to confirm with user about account removal
      */
-    public static class ConfirmRemoveAccountDialog extends DialogFragment implements
+    public static class ConfirmRemoveAccountDialogFragment extends DialogFragment implements
             DialogInterface.OnClickListener {
         private static final String KEY_ACCOUNT = "account";
         private static final String DIALOG_TAG = "confirmRemoveAccount";
-        private static final Logger LOG = new Logger(ConfirmRemoveAccountDialog.class);
-        private Account mAccount;
-        private UserHandle mUserHandle;
-
+        private static final Logger LOG = new Logger(ConfirmRemoveAccountDialogFragment.class);
         private final AccountManagerCallback<Bundle> mCallback =
                 future -> {
                     // If already out of this screen, don't proceed.
@@ -190,10 +196,13 @@ public class AccountDetailsFragment extends ListItemSettingsFragment
                         getTargetFragment().getFragmentManager().popBackStack();
                     }
                 };
+        private Account mAccount;
+        private UserHandle mUserHandle;
 
         public static void show(
                 Fragment parent, Account account, UserHandle userHandle) {
-            final ConfirmRemoveAccountDialog dialog = new ConfirmRemoveAccountDialog();
+            final ConfirmRemoveAccountDialogFragment dialog =
+                    new ConfirmRemoveAccountDialogFragment();
             Bundle bundle = new Bundle();
             bundle.putParcelable(KEY_ACCOUNT, account);
             bundle.putParcelable(Intent.EXTRA_USER, userHandle);
