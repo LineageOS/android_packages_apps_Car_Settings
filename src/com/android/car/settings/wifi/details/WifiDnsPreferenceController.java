@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 /**
  * Shows info about Wifi DNS info.
  */
-public class WifiDnsPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiDnsPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiDnsPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {

@@ -76,23 +76,30 @@ public class WifiMacAddressPreferenceControllerTest {
         mPreference.setKey(PREFERENCE_KEY);
         mPreferenceScreen.addPreference(mPreference);
         when(mMockWifiInfoProvider.getWifiInfo()).thenReturn(mMockWifiInfo);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-
-        mController = newController();
-    }
-
-    private WifiMacAddressPreferenceController newController() {
-        return (WifiMacAddressPreferenceController) new WifiMacAddressPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                        mMockAccessPoint, mMockWifiInfoProvider);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
+        when(mMockAccessPoint.isActive()).thenReturn(true);
+        mController = (WifiMacAddressPreferenceController) new WifiMacAddressPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController).init(
+                mMockAccessPoint, mMockWifiInfoProvider);
         mController.displayPreference(mPreferenceScreen);
         when(mMockWifiInfo.getMacAddress()).thenReturn(MAC_ADDRESS);
         mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
 
         assertThat(mPreference.getDetailText()).isEqualTo(MAC_ADDRESS);
+    }
+
+    @Test
+    public void onWifiChanged_isNotActive_noUpdate() {
+        when(mMockAccessPoint.isActive()).thenReturn(false);
+        mController = (WifiMacAddressPreferenceController) new WifiMacAddressPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController).init(
+                mMockAccessPoint, mMockWifiInfoProvider);
+        mController.displayPreference(mPreferenceScreen);
+        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
+
+        assertThat(mPreference.getDetailText()).isNull();
     }
 }

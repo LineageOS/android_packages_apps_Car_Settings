@@ -26,7 +26,7 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi link speed info.
  */
-public class WifiLinkSpeedPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiLinkSpeedPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiLinkSpeedPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {

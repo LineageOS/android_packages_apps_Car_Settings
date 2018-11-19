@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,19 +16,50 @@
 package com.android.car.settings.wifi.details;
 
 import android.content.Context;
+import android.net.Network;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+
+import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.wifi.WifiUtil;
 
 /**
- * Only available when wifi is active.
+ * Controller for logic pertaining to displaying Wifi information for the
+ * {@link WifiDetailsFragment}. Only available when wifi is active.
+ *
+ * <p>
+ * Subclass should use {@link updateInfo} to render UI with latest info if desired.
  */
-public abstract class ActiveWifiDetailPreferenceControllerBase
-        extends WifiDetailPreferenceControllerBase {
+public abstract class ActiveWifiDetailPreferenceControllerBase extends WifiControllerBase {
+
+    protected WifiDetailPreference mWifiDetailPreference;
 
     public ActiveWifiDetailPreferenceControllerBase(
             Context context, String preferenceKey, FragmentController fragmentController) {
         super(context, preferenceKey, fragmentController);
+    }
+
+    @Override
+    public void displayPreference(PreferenceScreen screen) {
+        super.displayPreference(screen);
+
+        mWifiDetailPreference =
+                (WifiDetailPreference) screen.findPreference(getPreferenceKey());
+        updateIfAvailable();
+    }
+
+    @Override
+    public void onLost(Network network) {
+        super.onLost(network);
+        mWifiDetailPreference.setEnabled(false);
+    }
+
+    @Override
+    public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
+        super.onWifiChanged(networkInfo, wifiInfo);
+        mWifiDetailPreference.setEnabled(true);
     }
 
     @Override
@@ -38,4 +69,15 @@ public abstract class ActiveWifiDetailPreferenceControllerBase
         }
         return mAccessPoint.isActive() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
+
+    protected final void updateIfAvailable() {
+        if (isAvailable()) {
+            updateInfo();
+        }
+    }
+
+    /**
+     * Updates UI based on new network/wifi info.
+     */
+    protected abstract void updateInfo();
 }

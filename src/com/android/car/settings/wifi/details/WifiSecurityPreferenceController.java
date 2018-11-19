@@ -22,7 +22,7 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows security info about the Wifi connection.
  */
-public class WifiSecurityPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiSecurityPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
     public WifiSecurityPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {
         super(context, preferenceKey, fragmentController);

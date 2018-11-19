@@ -28,7 +28,7 @@ import com.android.settingslib.wifi.AccessPoint;
 /**
  * Shows frequency info about the Wifi connection.
  */
-public class WifiFrequencyPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiFrequencyPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
     private static final Logger LOG = new Logger(WifiFrequencyPreferenceController.class);
 
     public WifiFrequencyPreferenceController(
