@@ -17,30 +17,27 @@
 package com.android.car.settings.accounts;
 
 import android.accounts.Account;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserHandle;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 /** Controller for the preference that shows the details of an account. */
-public class AccountDetailsPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public class AccountDetailsPreferenceController extends PreferenceController<Preference> {
     private static final Logger LOG = new Logger(AccountDetailsPreferenceController.class);
 
     private Account mAccount;
     private UserHandle mUserHandle;
 
     public AccountDetailsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     /** Sets the account that the details are shown for. */
@@ -53,14 +50,19 @@ public class AccountDetailsPreferenceController extends NoSetupPreferenceControl
         mUserHandle = userHandle;
     }
 
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
     /**
      * Verifies that the controller was properly initialized with
-     * {@link #setAccount(Account)}.
+     * {@link #setAccount(Account)} and {@link #setUserHandle(UserHandle)}.
      *
-     * @throws IllegalStateException if the account is {@code null}
+     * @throws IllegalStateException if the account or user handle are {@code null}
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void checkInitialized() {
+    @Override
+    protected void checkInitialized() {
         LOG.v("checkInitialized");
         if (mAccount == null) {
             throw new IllegalStateException(
@@ -75,13 +77,11 @@ public class AccountDetailsPreferenceController extends NoSetupPreferenceControl
     }
 
     @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
-
+    protected void updateState(Preference preference) {
         preference.setTitle(mAccount.name);
         // Get the icon corresponding to the account's type and set it.
-        AuthenticatorHelper helper = new AuthenticatorHelper(mContext, mUserHandle, null);
-        preference.setIcon(helper.getDrawableForType(mContext, mAccount.type));
+        AuthenticatorHelper helper = new AuthenticatorHelper(getContext(), mUserHandle, null);
+        preference.setIcon(helper.getDrawableForType(getContext(), mAccount.type));
 
     }
 }

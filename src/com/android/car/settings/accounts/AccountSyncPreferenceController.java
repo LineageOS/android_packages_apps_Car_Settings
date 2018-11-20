@@ -17,35 +17,32 @@
 package com.android.car.settings.accounts;
 
 import android.accounts.Account;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SyncAdapterType;
 import android.os.UserHandle;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller for the account syncing preference.
  *
  * <p>Largely derived from {@link com.android.settings.accounts.AccountSyncPreferenceController}.
  */
-public class AccountSyncPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public class AccountSyncPreferenceController extends PreferenceController<Preference> {
     private static final Logger LOG = new Logger(AccountSyncPreferenceController.class);
     private Account mAccount;
     private UserHandle mUserHandle;
 
     public AccountSyncPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     /** Sets the account that the sync preferences are being shown for. */
@@ -58,14 +55,19 @@ public class AccountSyncPreferenceController extends NoSetupPreferenceController
         mUserHandle = userHandle;
     }
 
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
     /**
      * Verifies that the controller was properly initialized with
      * {@link #setAccount(Account)} and {@link #setUserHandle(UserHandle)}.
      *
      * @throws IllegalStateException if the account is {@code null}
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void checkInitialized() {
+    @Override
+    protected void checkInitialized() {
         LOG.v("checkInitialized");
         if (mAccount == null) {
             throw new IllegalStateException(
@@ -80,17 +82,18 @@ public class AccountSyncPreferenceController extends NoSetupPreferenceController
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (preference.getKey().equals(getPreferenceKey())) {
-            getFragmentController().launchFragment(
-                    AccountSyncDetailsFragment.newInstance(mAccount, mUserHandle));
-            return true;
-        }
-        return super.handlePreferenceTreeClick(preference);
+    protected void updateState(Preference preference) {
+        preference.setSummary(getSummary());
     }
 
     @Override
-    public CharSequence getSummary() {
+    protected boolean handlePreferenceClicked(Preference preference) {
+        getFragmentController().launchFragment(
+                AccountSyncDetailsFragment.newInstance(mAccount, mUserHandle));
+        return true;
+    }
+
+    private CharSequence getSummary() {
         int userId = mUserHandle.getIdentifier();
         SyncAdapterType[] syncAdapters = ContentResolver.getSyncAdapterTypesAsUser(userId);
         int total = 0;
@@ -123,11 +126,11 @@ public class AccountSyncPreferenceController extends NoSetupPreferenceController
             }
         }
         if (enabled == 0) {
-            return mContext.getText(R.string.account_sync_summary_all_off);
+            return getContext().getText(R.string.account_sync_summary_all_off);
         } else if (enabled == total) {
-            return mContext.getText(R.string.account_sync_summary_all_on);
+            return getContext().getText(R.string.account_sync_summary_all_on);
         } else {
-            return mContext.getString(R.string.account_sync_summary_some_on, enabled, total);
+            return getContext().getString(R.string.account_sync_summary_some_on, enabled, total);
         }
     }
 }

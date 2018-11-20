@@ -17,6 +17,8 @@
 package com.android.car.settings.common;
 
 import android.content.Intent;
+import android.content.IntentSender;
+import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -69,4 +71,25 @@ public interface FragmentController {
      * @param callback    Defines how the result from the started activity should be handled.
      */
     void startActivityForResult(Intent intent, int requestCode, ActivityResultCallback callback);
+
+    /**
+     * Starts an intent sender for a result. When the result is received, the {@link
+     * ActivityResultCallback} is passed the result. Note that the implementer of this interface
+     * must ensure that the callback is valid throughout the lifecycle of the new activity that is
+     * created.
+     *
+     * @param intent       The IntentSender to launch.
+     * @param requestCode  User defined code which is passed to the callback when the activity
+     *                     exits. Values must use the first 8 bits of the int (i.e. 0-255).
+     * @param fillInIntent If non-null, this will be provided as the intent parameter to {@link
+     *                     IntentSender#sendIntent}.
+     * @param flagsMask    Intent flags in the original IntentSender that you would like to change.
+     * @param flagsValues  Desired values for any bits set in <var>flagsMask</var>
+     * @param options      Additional options for how the Activity should be started.
+     * @param callback     Defines how the result from the started IntentSender should be handled.
+     */
+    void startIntentSenderForResult(IntentSender intent, int requestCode,
+            @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
+            ActivityResultCallback callback)
+            throws IntentSender.SendIntentException;
 }

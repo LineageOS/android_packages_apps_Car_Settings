@@ -18,42 +18,40 @@ package com.android.car.settings.accounts;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.robolectric.RuntimeEnvironment.application;
 import static org.testng.Assert.assertThrows;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.app.ApplicationPackageManager;
-import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowAccountManager;
+import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.annotation.Implementation;
-import org.robolectric.annotation.Implements;
 import org.robolectric.shadow.api.Shadow;
 
 /** Unit test for {@link AccountDetailsPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowAccountManager.class, ShadowContentResolver.class,
-        AccountDetailsPreferenceControllerTest.ShadowApplicationPackageManager.class})
+        ShadowApplicationPackageManager.class})
 public class AccountDetailsPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "preference_key";
     private static final String ACCOUNT_NAME = "Name";
-    private final Account mAccount = new Account(ACCOUNT_NAME, "com.acct");
+    private static final String ACCOUNT_TYPE = "com.acct";
+    private final Account mAccount = new Account(ACCOUNT_NAME, ACCOUNT_TYPE);
     private final UserHandle mUserHandle = new UserHandle(0);
 
     private AccountDetailsPreferenceController mController;
@@ -61,19 +59,27 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Before
     public void setUp() {
-        mController = new AccountDetailsPreferenceController(application, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        PreferenceControllerTestHelper<AccountDetailsPreferenceController> helper =
+                new PreferenceControllerTestHelper<>(application,
+                        AccountDetailsPreferenceController.class);
+        mController = helper.getController();
         mController.setAccount(mAccount);
         mController.setUserHandle(mUserHandle);
 
         mPreference = new Preference(application);
-        mPreference.setKey(mController.getPreferenceKey());
+        helper.setPreference(mPreference);
+        helper.markState(Lifecycle.State.STARTED);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowContentResolver.reset();
     }
 
     @Test
     public void checkInitialized_accountSetAndUserHandleSet_doesNothing() {
-        mController = new AccountDetailsPreferenceController(application, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(application,
+                AccountDetailsPreferenceController.class).getController();
         mController.setAccount(mAccount);
         mController.setUserHandle(mUserHandle);
 
@@ -82,8 +88,8 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Test
     public void checkInitialized_nullAccount_throwsIllegalStateException() {
-        mController = new AccountDetailsPreferenceController(application, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(application,
+                AccountDetailsPreferenceController.class).getController();
         mController.setUserHandle(mUserHandle);
 
         assertThrows(IllegalStateException.class, () -> mController.checkInitialized());
@@ -91,27 +97,27 @@ public class AccountDetailsPreferenceControllerTest {
 
     @Test
     public void checkInitialized_nullUserHandle_throwsIllegalStateException() {
-        mController = new AccountDetailsPreferenceController(application, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(application,
+                AccountDetailsPreferenceController.class).getController();
         mController.setAccount(mAccount);
 
         assertThrows(IllegalStateException.class, () -> mController.checkInitialized());
     }
 
     @Test
-    public void updateState_shouldSetTitle() {
-        mController.updateState(mPreference);
+    public void refreshUi_shouldSetTitle() {
+        mController.refreshUi();
 
         assertThat(mPreference.getTitle().toString()).isEqualTo(ACCOUNT_NAME);
     }
 
     @Test
-    public void updateState_shouldSetIcon() {
+    public void refreshUi_shouldSetIcon() {
         // Add authenticator description with icon resource
-        addAuthenticator(/* type= */ "com.acct", /* labelRes= */
+        addAuthenticator(/* type= */ ACCOUNT_TYPE, /* labelRes= */
                 R.string.account_type1_label, /* iconId= */ R.drawable.ic_add);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getIcon()).isNotNull();
         assertThat(Shadows.shadowOf(mPreference.getIcon()).getCreatedFromResId()).isEqualTo(
@@ -127,16 +133,5 @@ public class AccountDetailsPreferenceControllerTest {
 
     private ShadowAccountManager getShadowAccountManager() {
         return Shadow.extract(AccountManager.get(application));
-    }
-
-    /** Shadow of ApplicationPackageManager that returns the icon passed to getUserBadgedIcon. */
-    @Implements(value = ApplicationPackageManager.class, isInAndroidSdk = false,
-            looseSignatures = true)
-    public static class ShadowApplicationPackageManager extends
-            org.robolectric.shadows.ShadowApplicationPackageManager {
-        @Implementation
-        public Drawable getUserBadgedIcon(Drawable icon, UserHandle user) {
-            return icon;
-        }
     }
 }

@@ -22,14 +22,16 @@ import androidx.annotation.Nullable;
 
 /**
  * Handles activity results after a {@link FragmentController} fires {@link
- * FragmentController#startActivityForResult(Intent, int, ActivityResultCallback)}.
+ * FragmentController#startActivityForResult(Intent, int, ActivityResultCallback)}
+ * or {@link FragmentController#startIntentSenderForResult}.
  */
 public interface ActivityResultCallback {
 
     /**
      * Callback used when an activity started by
      * {@link FragmentController#startActivityForResult(Intent,
-     * int, ActivityResultCallback)} receives a result.
+     * int, ActivityResultCallback)} or {@link FragmentController#startIntentSenderForResult}
+     * receives a result.
      */
     void processActivityResult(int requestCode, int resultCode, @Nullable Intent data);
 }

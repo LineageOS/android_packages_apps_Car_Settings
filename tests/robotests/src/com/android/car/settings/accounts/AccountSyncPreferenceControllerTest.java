@@ -27,20 +27,19 @@ import android.content.ContentResolver;
 import android.content.SyncAdapterType;
 import android.os.UserHandle;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 /**
@@ -53,24 +52,29 @@ import org.robolectric.annotation.Config;
 public class AccountSyncPreferenceControllerTest {
     private static final int SYNCABLE = 1;
     private static final int NOT_SYNCABLE = 0;
-    private static final String PREFERENCE_KEY = "preference_key";
+
     private final Account mAccount = new Account("acct1", "type1");
     private final int mUserId = 3;
     private final UserHandle mUserHandle = new UserHandle(mUserId);
-    @Mock
-    FragmentController mMockFragmentController;
+
     private AccountSyncPreferenceController mController;
+    private FragmentController mMockFragmentController;
     private Preference mPreference;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        mController = new AccountSyncPreferenceController(RuntimeEnvironment.application,
-                PREFERENCE_KEY, mMockFragmentController);
-        mPreference = new Preference(application);
-        mPreference.setKey(mController.getPreferenceKey());
+        PreferenceControllerTestHelper<AccountSyncPreferenceController> helper =
+                new PreferenceControllerTestHelper<>(application,
+                        AccountSyncPreferenceController.class);
+        mController = helper.getController();
+        mMockFragmentController = helper.getMockFragmentController();
+
         mController.setAccount(mAccount);
         mController.setUserHandle(mUserHandle);
+
+        mPreference = new Preference(application);
+        helper.setPreference(mPreference);
+        helper.markState(Lifecycle.State.STARTED);
     }
 
     @After
@@ -79,7 +83,7 @@ public class AccountSyncPreferenceControllerTest {
     }
 
     @Test
-    public void updateState_notSameAccountType_shouldNotCount() {
+    public void refreshUi_notSameAccountType_shouldNotCount() {
         // Adds a sync adapter type that has a visible user, is syncable, and syncs automatically
         // but does not have the right account type.
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority", /* accountType */
@@ -90,14 +94,14 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setSyncAutomaticallyAsUser(mAccount,
                 "authority", /* sync= */ true, /* userId= */ mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_off));
     }
 
     @Test
-    public void updateState_adapterInvisible_shouldNotCount() {
+    public void refreshUi_adapterInvisible_shouldNotCount() {
         // Adds a sync adapter type that has the right account type, is syncable, and syncs
         // automatically, but doesn't have a visible user
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority",
@@ -108,14 +112,14 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 true, /* userId= */ mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_off));
     }
 
     @Test
-    public void updateState_notSyncable_shouldNotCount() {
+    public void refreshUi_notSyncable_shouldNotCount() {
         // Adds a sync adapter type that is the right account type and a visible user, but is not
         // syncable
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority", /* accountType */
@@ -124,14 +128,14 @@ public class AccountSyncPreferenceControllerTest {
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         ContentResolver.setIsSyncable(mAccount, "authority", NOT_SYNCABLE);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_off));
     }
 
     @Test
-    public void updateState_masterAutomaticSyncIgnoredAndAccountSyncDisabled_shouldNotCount() {
+    public void refreshUi_masterAutomaticSyncIgnoredAndAccountSyncDisabled_shouldNotCount() {
         // Adds a sync adapter type that is the right account type, has a visible user, and is
         // syncable, but has master automatic sync ignored and account-level sync disabled
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority", /* accountType */
@@ -143,14 +147,14 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 false, /* userId= */ mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_off));
     }
 
     @Test
-    public void updateState_masterAutomaticSyncUsed_shouldCount() {
+    public void refreshUi_masterAutomaticSyncUsed_shouldCount() {
         // Adds a sync adapter type that is the right account type, has a visible user, is
         // syncable, and has master-level automatic syncing enabled
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority", /* accountType */
@@ -160,14 +164,14 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
         ContentResolver.setMasterSyncAutomaticallyAsUser(false, mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_on));
     }
 
     @Test
-    public void updateState_automaticSyncEnabled_shouldCount() {
+    public void refreshUi_automaticSyncEnabled_shouldCount() {
         // Adds a sync adapter type that is the right account type, has a visible user, is
         // syncable, and has account-level automatic syncing enabled
         SyncAdapterType syncAdapterType = new SyncAdapterType("authority", /* accountType */
@@ -178,14 +182,14 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 true, /* userId= */ mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_all_on));
     }
 
     @Test
-    public void updateState_someEnabled_shouldSetSummary() {
+    public void refreshUi_someEnabled_shouldSetSummary() {
         SyncAdapterType syncAdapterType1 = new SyncAdapterType("authority1", /* accountType */
                 "type1", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType syncAdapterType2 = new SyncAdapterType("authority2", /* accountType */
@@ -214,16 +218,16 @@ public class AccountSyncPreferenceControllerTest {
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority4", /* sync= */
                 false, /* userId= */ mUserId);
 
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_some_on, 3, 4));
     }
 
     @Test
-    public void handlePreferenceTreeClick_shouldLaunchAccountSyncDetailsFragment() {
-        mController.updateState(mPreference);
-        mController.handlePreferenceTreeClick(mPreference);
+    public void handlePreferenceClicked_shouldLaunchAccountSyncDetailsFragment() {
+        mController.refreshUi();
+        mController.handlePreferenceClicked(mPreference);
 
         verify(mMockFragmentController).launchFragment(any(AccountSyncDetailsFragment.class));
     }

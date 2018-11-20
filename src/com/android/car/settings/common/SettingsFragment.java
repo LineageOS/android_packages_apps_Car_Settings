@@ -20,6 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.util.ArrayMap;
 import android.util.SparseArray;
@@ -71,7 +72,6 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
 
     private CarUxRestrictions mUxRestrictions;
     private int mCurrentRequestIndex = 0;
-
 
     /**
      * Returns the resource id for the preference XML of this fragment.
@@ -248,6 +248,17 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
     }
 
     @Override
+    public void startIntentSenderForResult(IntentSender intent, int requestCode,
+            @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
+            ActivityResultCallback callback)
+            throws IntentSender.SendIntentException {
+        validateRequestCodeForPreferenceController(requestCode);
+        int requestIndex = allocateRequestIndex(callback);
+        super.startIntentSenderForResult(intent, ((requestIndex + 1) << 8) + (requestCode & 0xff),
+                fillInIntent, flagsMask, flagsValues, /* extraFlags= */ 0, options);
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         int requestIndex = (requestCode >> 8) & 0xff;
@@ -262,6 +273,7 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
     }
 
     // Allocates the next available startActivityForResult request index.
+
     private int allocateRequestIndex(ActivityResultCallback callback) {
         // Sanity check that we haven't exhausted the request index space.
         if (mActivityResultCallbackMap.size() >= MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS) {
