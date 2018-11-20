@@ -76,19 +76,14 @@ public class WifiFrequencyPreferenceControllerTest {
         mPreferenceScreen.addPreference(mPreference);
         when(mMockWifiInfoProvider.getWifiInfo()).thenReturn(mMockWifiInfo);
         when(mMockWifiInfo.getFrequency()).thenReturn(AccessPoint.LOWER_FREQ_24GHZ);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-
-        mController = newController();
-    }
-
-    private WifiFrequencyPreferenceController newController() {
-        return (WifiFrequencyPreferenceController) new WifiFrequencyPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController)
-                .init(mMockAccessPoint, mMockWifiInfoProvider);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
+        when(mMockAccessPoint.isActive()).thenReturn(true);
+        mController = (WifiFrequencyPreferenceController) new WifiFrequencyPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController)
+                .init(mMockAccessPoint, mMockWifiInfoProvider);
         String expected =
                 mContext.getResources().getString(R.string.wifi_band_5ghz);
 
@@ -97,5 +92,20 @@ public class WifiFrequencyPreferenceControllerTest {
         mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
 
         assertThat(mPreference.getDetailText()).isEqualTo(expected);
+    }
+
+    @Test
+    public void onWifiChanged_isNotActive_noUpdate() {
+        when(mMockAccessPoint.isActive()).thenReturn(false);
+        mController = (WifiFrequencyPreferenceController) new WifiFrequencyPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController)
+                .init(mMockAccessPoint, mMockWifiInfoProvider);
+        String expected =
+                mContext.getResources().getString(R.string.wifi_band_5ghz);
+
+        mController.displayPreference(mPreferenceScreen);
+        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
+
+        assertThat(mPreference.getDetailText()).isNull();
     }
 }

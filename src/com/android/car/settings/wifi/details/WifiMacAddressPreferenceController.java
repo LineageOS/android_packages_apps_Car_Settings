@@ -25,7 +25,7 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi MAC address.
  */
-public class WifiMacAddressPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiMacAddressPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiMacAddressPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {

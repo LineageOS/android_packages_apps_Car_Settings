@@ -55,8 +55,6 @@ public class WifiSignalStrengthPreferenceControllerTest {
     @Mock
     private AccessPoint mMockAccessPoint;
     @Mock
-    private AccessPoint mMockNotActiveAccessPoint;
-    @Mock
     private WifiInfoProvider mMockWifiInfoProvider;
     @Mock
     private NetworkInfo mMockNetworkInfo;
@@ -81,8 +79,6 @@ public class WifiSignalStrengthPreferenceControllerTest {
         when(mMockPreference.getKey()).thenReturn(PREFERENCE_KEY);
         mPreferenceScreen.addPreference(mMockPreference);
         when(mMockAccessPoint.getLevel()).thenReturn(LEVEL);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-        when(mMockNotActiveAccessPoint.isActive()).thenReturn(false);
     }
 
     private WifiSignalStrengthPreferenceController newController(AccessPoint accessPoint) {
@@ -93,6 +89,7 @@ public class WifiSignalStrengthPreferenceControllerTest {
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
+        when(mMockAccessPoint.isActive()).thenReturn(true);
         mController = newController(mMockAccessPoint);
         String expectedStrength =
                 mContext.getResources().getStringArray(R.array.wifi_signals)[LEVEL];
@@ -105,8 +102,9 @@ public class WifiSignalStrengthPreferenceControllerTest {
     }
 
     @Test
-    public void onWifiChanged_notActiveShouldNotUpdate() {
-        mController = newController(mMockNotActiveAccessPoint);
+    public void onWifiChanged_isNotActive_noUpdate() {
+        when(mMockAccessPoint.isActive()).thenReturn(false);
+        mController = newController(mMockAccessPoint);
 
         mController.displayPreference(mPreferenceScreen);
         mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
