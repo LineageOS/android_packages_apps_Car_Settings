@@ -16,7 +16,10 @@
 
 package com.android.car.settings.common;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+
+import javax.annotation.Nullable;
 
 /**
  * Controls launching {@link Fragment} instances and back navigation.
@@ -37,4 +40,17 @@ public interface FragmentController {
      * Shows a message to inform the user that the current feature is not available when driving.
      */
     void showBlockingMessage();
+
+    /**
+     * Shows dialog with given tag.
+     */
+    void showDialog(DialogFragment dialogFragment, @Nullable String tag);
+
+    /**
+     * Finds dialog by tag. This is primarily used to reattach listeners to dialogs after
+     * configuration change. This method will return null if the tag references a fragment that
+     * isn't a dialog fragment or no dialog with the given tag exists.
+     */
+    @Nullable
+    DialogFragment findDialogByTag(String tag);
 }

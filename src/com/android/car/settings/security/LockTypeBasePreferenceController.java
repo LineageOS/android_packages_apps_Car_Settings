@@ -84,6 +84,11 @@ public abstract class LockTypeBasePreferenceController extends NoSetupPreference
         return mCurrentPassword;
     }
 
+    /** Gets the preference controlled by this controller. */
+    protected Preference getCurrentPreference() {
+        return mPreference;
+    }
+
     @Override
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);

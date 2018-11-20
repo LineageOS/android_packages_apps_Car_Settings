@@ -16,73 +16,60 @@
 
 package com.android.car.settings.security;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
-import android.content.Context;
-
-import androidx.car.app.CarAlertDialog;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowLockPatternUtils;
-import com.android.internal.widget.LockPatternUtils;
+import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.DialogTestUtils;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.robolectric.Robolectric;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {
-        ShadowCarUserManagerHelper.class,
-        ShadowLockPatternUtils.class
-})
 public class ConfirmRemoveScreenLockDialogTest {
 
-    private static final String TEST_CURRENT_PASSWORD = "test_password";
-    private static final int TEST_USER = 10;
-    private Context mContext;
-    private ConfirmRemoveScreenLockDialog mDialogFragment;
+    private static final String TEST_TAG = "test_dialog_tag";
+
+    private BaseTestActivity mTestActivity;
+    private ConfirmRemoveScreenLockDialog mDialog;
     @Mock
-    private FragmentController mFragmentController;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private LockPatternUtils mLockPatternUtils;
+    private ConfirmRemoveScreenLockDialog.ConfirmRemoveScreenLockListener mListener;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
-        mContext = RuntimeEnvironment.application;
-        mDialogFragment = new ConfirmRemoveScreenLockDialog(mContext, mFragmentController,
-                TEST_CURRENT_PASSWORD);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
-        ShadowLockPatternUtils.reset();
+        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
+                .setup()
+                .get();
+        mDialog = new ConfirmRemoveScreenLockDialog();
+        mDialog.setConfirmRemoveScreenLockListener(mListener);
+        mTestActivity.showDialog(mDialog, TEST_TAG);
     }
 
     @Test
-    public void testOnClick_goBack() {
-        mDialogFragment.onClick(new CarAlertDialog.Builder(mContext).create(), 0);
-        verify(mFragmentController).goBack();
+    public void testInitialState_dialogShown() {
+        assertThat(isDialogShown()).isTrue();
     }
 
     @Test
-    public void testOnClick_clearLock() {
-        mDialogFragment.onClick(new CarAlertDialog.Builder(mContext).create(), 0);
-        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD, TEST_USER);
+    public void testConfirmRemoveScreenLockListenerCalled_listenerCalled() {
+        DialogTestUtils.clickPositiveButton(mDialog);
+        verify(mListener).onConfirmRemoveScreenLock();
+    }
+
+    @Test
+    public void testConfirmRemoveScreenLockListenerCalled_dialogDismissed() {
+        DialogTestUtils.clickPositiveButton(mDialog);
+        assertThat(isDialogShown()).isFalse();
+    }
+
+    private boolean isDialogShown() {
+        return mTestActivity.findDialogByTag(TEST_TAG) != null;
     }
 }
