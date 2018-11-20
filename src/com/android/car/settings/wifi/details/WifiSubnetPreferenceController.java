@@ -30,7 +30,7 @@ import java.net.UnknownHostException;
 /**
  * Shows info about Wifi subnet.
  */
-public class WifiSubnetPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiSubnetPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiSubnetPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {

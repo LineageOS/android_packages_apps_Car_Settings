@@ -25,7 +25,7 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi Gateway info.
  */
-public class WifiGatewayPreferenceController extends WifiDetailPreferenceControllerBase {
+public class WifiGatewayPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
 
     public WifiGatewayPreferenceController(
             Context context, String preferenceKey, FragmentController fragmentController) {

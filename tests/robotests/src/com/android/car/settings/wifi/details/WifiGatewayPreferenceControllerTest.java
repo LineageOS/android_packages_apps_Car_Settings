@@ -84,24 +84,16 @@ public class WifiGatewayPreferenceControllerTest {
         mPreference.setKey(PREFERENCE_KEY);
         mPreferenceScreen.addPreference(mPreference);
         when(mMockWifiInfoProvider.getLinkProperties()).thenReturn(mMockLinkProperties);
-        when(mMockAccessPoint.isActive()).thenReturn(true);
-
-        mController = newController();
-    }
-
-    private WifiGatewayPreferenceController newController() {
-        return (WifiGatewayPreferenceController) new WifiGatewayPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                        mMockAccessPoint, mMockWifiInfoProvider);
-    }
-
-    private void displayAndStart() {
-        mController.displayPreference(mPreferenceScreen);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
-        displayAndStart();
+        when(mMockAccessPoint.isActive()).thenReturn(true);
+        mController = (WifiGatewayPreferenceController) new WifiGatewayPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController).init(
+                mMockAccessPoint, mMockWifiInfoProvider);
+
+        mController.displayPreference(mPreferenceScreen);
         when(mMockLinkProperties.getRoutes()).thenReturn(Arrays.asList(mMockRouteInfo));
         when(mMockRouteInfo.isIPv4Default()).thenReturn(true);
         when(mMockRouteInfo.hasGateway()).thenReturn(true);
@@ -110,5 +102,18 @@ public class WifiGatewayPreferenceControllerTest {
         mController.onLinkPropertiesChanged(mMockNetwork, mMockLinkProperties);
 
         assertThat(mPreference.getDetailText()).isEqualTo(GATE_WAY);
+    }
+
+    @Test
+    public void onWifiChanged_isNotActive_noUpdate() {
+        when(mMockAccessPoint.isActive()).thenReturn(false);
+        mController = (WifiGatewayPreferenceController) new WifiGatewayPreferenceController(
+                mContext, PREFERENCE_KEY, mMockFragmentController).init(
+                mMockAccessPoint, mMockWifiInfoProvider);
+
+        mController.displayPreference(mPreferenceScreen);
+        mController.onLinkPropertiesChanged(mMockNetwork, mMockLinkProperties);
+
+        assertThat(mPreference.getDetailText()).isNull();
     }
 }

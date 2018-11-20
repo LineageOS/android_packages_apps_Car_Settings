@@ -47,7 +47,7 @@ public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
     public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiChanged(networkInfo, wifiInfo);
         mPreference.setEnabled(true);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
@@ -59,7 +59,7 @@ public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
     public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
             NetworkInfo networkInfo, WifiInfo wifiInfo) {
         super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateInfo();
+        updateIfAvailable();
     }
 
     @Override
@@ -67,9 +67,7 @@ public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
         super.displayPreference(screen);
 
         mPreference = screen.findPreference(getPreferenceKey());
-        if (isAvailable()) {
-            updateInfo();
-        }
+        updateIfAvailable();
     }
 
     @Override
@@ -78,6 +76,12 @@ public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
             return UNSUPPORTED_ON_DEVICE;
         }
         return mAccessPoint.isActive() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    }
+
+    protected final void updateIfAvailable() {
+        if (isAvailable()) {
+            updateInfo();
+        }
     }
 
     private void updateInfo() {

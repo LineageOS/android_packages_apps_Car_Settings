@@ -215,7 +215,6 @@ public class WifiDetailFragment extends BasePreferenceFragment
                 || mWifiInfoProvider.getNetworkInfo() == null
                 || mWifiInfoProvider.getWifiInfo() == null) {
             LOG.d("WIFI not available.");
-            getFragmentController().goBack();
             return;
         }
 
