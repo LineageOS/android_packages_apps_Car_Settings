@@ -16,10 +16,10 @@
 
 package com.android.car.settings.users;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
@@ -48,9 +48,9 @@ public class ConfirmGrantAdminPermissionsDialog extends DialogFragment {
                 .concat(System.getProperty("line.separator"))
                 .concat(getString(R.string.action_not_reversible_message));
 
-        return new CarAlertDialog.Builder(getContext())
+        return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.grant_admin_permissions_title)
-                .setBody(message)
+                .setMessage(message)
                 .setPositiveButton(R.string.confirm_grant_admin, (dialog, which) -> {
                     if (mListener != null) {
                         mListener.onGrantAdminPermissionsConfirmed();

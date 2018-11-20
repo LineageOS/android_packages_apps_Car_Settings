@@ -16,11 +16,11 @@
 
 package com.android.car.settings.users;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.StringRes;
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
@@ -41,7 +41,9 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
      * ANY_USER = default case; removing admin but other admins are present, or removing a non-admin
      * but other users exist on the device.
      */
-    private enum UserType { ANY_USER, LAST_USER, LAST_ADMIN }
+    private enum UserType {
+        ANY_USER, LAST_USER, LAST_ADMIN
+    }
 
     /**
      * Create dialog for removing the last user on the device.
@@ -116,26 +118,26 @@ public class ConfirmRemoveUserDialog extends DialogFragment {
 
         return getDialogBuilder(R.string.delete_button)
                 .setTitle(R.string.delete_last_user_dialog_title)
-                .setBody(body)
+                .setMessage(body)
                 .create();
     }
 
     private Dialog getChooseNewAdminDialog() {
         return getDialogBuilder(R.string.choose_new_admin_label)
                 .setTitle(R.string.choose_new_admin_title)
-                .setBody(R.string.choose_new_admin_message)
+                .setMessage(R.string.choose_new_admin_message)
                 .create();
     }
 
     private Dialog getRemoveAnyUserDialog() {
         return getDialogBuilder(R.string.delete_button)
                 .setTitle(R.string.delete_user_dialog_title)
-                .setBody(R.string.delete_user_dialog_message)
+                .setMessage(R.string.delete_user_dialog_message)
                 .create();
     }
 
-    private CarAlertDialog.Builder getDialogBuilder(@StringRes int posButtonLabelId) {
-        return new CarAlertDialog.Builder(getContext())
+    private AlertDialog.Builder getDialogBuilder(@StringRes int posButtonLabelId) {
+        return new AlertDialog.Builder(getContext())
                 .setPositiveButton(posButtonLabelId, (dialog, which) -> {
                     maybeNotifyRemoveUserListener();
                     dialog.dismiss();

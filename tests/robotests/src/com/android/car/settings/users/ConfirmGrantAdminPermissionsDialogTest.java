@@ -21,13 +21,10 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.verify;
 
 import android.content.pm.UserInfo;
-import android.widget.Button;
-
-import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.DialogTestUtils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +38,7 @@ import org.robolectric.Robolectric;
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ConfirmGrantAdminPermissionsDialogTest {
-    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";;
+    private static final String CONFIRM_GRANT_ADMIN_DIALOG_TAG = "ConfirmGrantAdminDialog";
     private BaseTestActivity mTestActivity;
 
     @Before
@@ -64,7 +61,7 @@ public class ConfirmGrantAdminPermissionsDialogTest {
         showDialog(dialog);
 
         // Invoke confirm grant admin.
-        clickPositiveButton(dialog);
+        DialogTestUtils.clickPositiveButton(dialog);
 
         verify(listener).onGrantAdminPermissionsConfirmed();
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
@@ -78,7 +75,7 @@ public class ConfirmGrantAdminPermissionsDialogTest {
         assertThat(isDialogShown()).isTrue(); // Dialog is shown.
 
         // Invoke cancel.
-        clickNegativeButton(dialog);
+        DialogTestUtils.clickNegativeButton(dialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -89,7 +86,7 @@ public class ConfirmGrantAdminPermissionsDialogTest {
         showDialog(dialog);
 
         // Invoke confirm grant admin.
-        clickPositiveButton(dialog);
+        DialogTestUtils.clickPositiveButton(dialog);
 
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
@@ -101,17 +98,5 @@ public class ConfirmGrantAdminPermissionsDialogTest {
     private boolean isDialogShown() {
         return mTestActivity.getSupportFragmentManager()
                 .findFragmentByTag(CONFIRM_GRANT_ADMIN_DIALOG_TAG) != null;
-    }
-
-    private void clickPositiveButton(DialogFragment dialogFragment) {
-        Button positiveButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.positive_button);
-        positiveButton.callOnClick();
-    }
-
-    private void clickNegativeButton(DialogFragment dialogFragment) {
-        Button negativeButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.negative_button);
-        negativeButton.callOnClick();
     }
 }

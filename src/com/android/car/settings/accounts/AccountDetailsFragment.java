@@ -21,6 +21,7 @@ import android.accounts.AccountManagerCallback;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
@@ -35,7 +36,6 @@ import android.widget.Button;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
@@ -221,9 +221,9 @@ public class AccountDetailsFragment extends BasePreferenceFragment implements
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new CarAlertDialog.Builder(getContext())
+            return new AlertDialog.Builder(getContext())
                     .setTitle(R.string.really_remove_account_title)
-                    .setBody(R.string.really_remove_account_message)
+                    .setMessage(R.string.really_remove_account_message)
                     .setNegativeButton(android.R.string.cancel, null)
                     .setPositiveButton(R.string.remove_account_title, this)
                     .create();

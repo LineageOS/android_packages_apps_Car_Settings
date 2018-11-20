@@ -21,20 +21,19 @@ import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
-import com.android.car.settings.R;
-
 /**
  * Helper methods for DialogFragment testing.
  */
 public class DialogTestUtils {
-    private DialogTestUtils() {}
+    private DialogTestUtils() {
+    }
 
     /**
      * Invokes onClick on the dialog's positive button.
      */
     public static void clickPositiveButton(DialogFragment dialogFragment) {
-        Button positiveButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.positive_button);
+        Button positiveButton = dialogFragment.getDialog().getWindow().findViewById(
+                com.android.internal.R.id.button1);
         positiveButton.callOnClick();
     }
 
@@ -42,8 +41,8 @@ public class DialogTestUtils {
      * Invokes onClick on the dialog's negative button.
      */
     public static void clickNegativeButton(DialogFragment dialogFragment) {
-        Button negativeButton = (Button) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.negative_button);
+        Button negativeButton = dialogFragment.getDialog().getWindow().findViewById(
+                com.android.internal.R.id.button2);
         negativeButton.callOnClick();
     }
 
@@ -51,8 +50,8 @@ public class DialogTestUtils {
      * Gets dialog's title.
      */
     public static String getTitle(DialogFragment dialogFragment) {
-        TextView titleView = (TextView) dialogFragment.getDialog().getWindow()
-                .findViewById(R.id.title);
+        TextView titleView = dialogFragment.getDialog().getWindow().findViewById(
+                com.android.internal.R.id.alertTitle);
         return titleView.getText().toString();
     }
 }
