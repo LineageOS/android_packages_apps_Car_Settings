@@ -25,7 +25,6 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
-import android.content.res.TypedArray;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -36,27 +35,27 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-import androidx.annotation.StyleRes;
-import androidx.car.widget.ListItem;
-import androidx.car.widget.ListItemProvider;
-import androidx.car.widget.TextListItem;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ListItemSettingsFragment;
+import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.Logger;
 
 import java.lang.ref.WeakReference;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Presents the user with information about resetting app preferences.
  */
-public class ResetAppPrefFragment extends ListItemSettingsFragment {
+public class ResetAppPrefFragment extends BasePreferenceFragment {
 
     private static final Logger LOG = new Logger(ResetAppPrefFragment.class);
-    @StyleRes private int mTitleTextAppearance;
+
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.reset_app_pref_fragment;
+    }
 
     @Override
     @LayoutRes
@@ -65,51 +64,11 @@ public class ResetAppPrefFragment extends ListItemSettingsFragment {
     }
 
     @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.reset_app_pref_title;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        TypedArray a = context.getTheme().obtainStyledAttributes(R.styleable.ListItem);
-
-        mTitleTextAppearance = a.getResourceId(
-                R.styleable.ListItem_listItemTitleTextAppearance,
-                R.style.TextAppearance_Car_Body1_Light);
-
-        a.recycle();
-    }
-
-    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Button resetAppsButton = requireNonNull(getActivity()).findViewById(R.id.action_button1);
         resetAppsButton.setText(requireContext().getString(R.string.reset_app_pref_button_text));
         resetAppsButton.setOnClickListener(v -> resetAppPreferences());
-    }
-
-    @Override
-    public ListItemProvider getItemProvider() {
-        return new ListItemProvider.ListProvider(getListItems());
-    }
-
-    private List<ListItem> getListItems() {
-        List<ListItem> items = new ArrayList<>();
-        items.add(createTextOnlyItem(R.string.reset_app_pref_desc));
-        items.add(createTextOnlyItem(R.string.reset_app_pref_items));
-        items.add(createTextOnlyItem(R.string.reset_app_pref_desc_data));
-        return items;
-    }
-
-    private TextListItem createTextOnlyItem(@StringRes int stringResId) {
-        Context context = requireContext();
-        TextListItem item = new TextListItem(context);
-        item.setBody(context.getString(stringResId));
-        item.setShowDivider(false);
-        item.addViewBinder(vh -> vh.getBody().setTextAppearance(mTitleTextAppearance));
-        return item;
     }
 
     private void resetAppPreferences() {
