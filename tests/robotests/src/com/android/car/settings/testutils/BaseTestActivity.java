@@ -19,6 +19,7 @@ package com.android.car.settings.testutils;
 import android.car.drivingstate.CarUxRestrictions;
 import android.os.Bundle;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -26,6 +27,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.UxRestrictionsProvider;
+
+import javax.annotation.Nullable;
 
 /**
  * Test activity used for testing {@code BaseFragment} instances.
@@ -59,6 +62,21 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
     @Override
     public void showBlockingMessage() {
         // no-op
+    }
+
+    @Override
+    public void showDialog(DialogFragment dialogFragment, @Nullable String tag) {
+        dialogFragment.show(getSupportFragmentManager(), tag);
+    }
+
+    @Override
+    @Nullable
+    public DialogFragment findDialogByTag(String tag) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
+        if (fragment instanceof DialogFragment) {
+            return (DialogFragment) fragment;
+        }
+        return null;
     }
 
     @Override

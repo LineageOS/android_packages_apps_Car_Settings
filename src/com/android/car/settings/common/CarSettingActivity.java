@@ -112,25 +112,20 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
 
     @Override
     public void launchFragment(Fragment fragment) {
-        if (fragment instanceof DialogFragment) {
-            DialogFragment dialogFragment = (DialogFragment) fragment;
-            dialogFragment.show(getSupportFragmentManager(), null);
-        } else {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .setCustomAnimations(
-                            Themes.getAttrResourceId(/* context= */ this,
-                                    android.R.attr.fragmentOpenEnterAnimation),
-                            Themes.getAttrResourceId(/* context= */ this,
-                                    android.R.attr.fragmentOpenExitAnimation),
-                            Themes.getAttrResourceId(/* context= */ this,
-                                    android.R.attr.fragmentCloseEnterAnimation),
-                            Themes.getAttrResourceId(/* context= */ this,
-                                    android.R.attr.fragmentCloseExitAnimation))
-                    .replace(R.id.fragment_container, fragment)
-                    .addToBackStack(null)
-                    .commit();
-        }
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(
+                        Themes.getAttrResourceId(/* context= */ this,
+                                android.R.attr.fragmentOpenEnterAnimation),
+                        Themes.getAttrResourceId(/* context= */ this,
+                                android.R.attr.fragmentOpenExitAnimation),
+                        Themes.getAttrResourceId(/* context= */ this,
+                                android.R.attr.fragmentCloseEnterAnimation),
+                        Themes.getAttrResourceId(/* context= */ this,
+                                android.R.attr.fragmentCloseExitAnimation))
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     @Override
@@ -142,6 +137,21 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     public void showBlockingMessage() {
         Toast.makeText(
                 this, R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showDialog(DialogFragment dialogFragment, @Nullable String tag) {
+        dialogFragment.show(getSupportFragmentManager(), tag);
+    }
+
+    @Override
+    @Nullable
+    public DialogFragment findDialogByTag(String tag) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
+        if (fragment instanceof DialogFragment) {
+            return (DialogFragment) fragment;
+        }
+        return null;
     }
 
     @Override

@@ -43,6 +43,8 @@ import org.robolectric.android.controller.ActivityController;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class CarSettingActivityTest {
 
+    private static final String TEST_TAG = "test_tag";
+
     private Context mContext;
     private ActivityController<CarSettingActivity> mActivityController;
     private CarSettingActivity mActivity;
@@ -54,11 +56,11 @@ public class CarSettingActivityTest {
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
+        mActivityController.create();
     }
 
     @Test
     public void onPreferenceStartFragment_launchesFragment() {
-        mActivityController.create();
         Preference pref = new Preference(mContext);
         pref.setFragment(TestFragment.class.getName());
 
@@ -69,10 +71,37 @@ public class CarSettingActivityTest {
     }
 
     @Test
-    public void testLaunchFragment_launchDialogFragment() {
+    public void testShowDialog_launchDialogFragment_noTag() {
         DialogFragment dialogFragment = mock(DialogFragment.class);
-        mActivity.launchFragment(dialogFragment);
+        mActivity.showDialog(dialogFragment, /* tag */ null);
         verify(dialogFragment).show(mActivity.getSupportFragmentManager(), null);
+    }
+
+    @Test
+    public void testShowDialog_launchDialogFragment_withTag() {
+        DialogFragment dialogFragment = mock(DialogFragment.class);
+        mActivity.showDialog(dialogFragment, TEST_TAG);
+        verify(dialogFragment).show(mActivity.getSupportFragmentManager(), TEST_TAG);
+    }
+
+    @Test
+    public void testFindDialogByTag_retrieveOriginalDialog() {
+        DialogFragment dialogFragment = new DialogFragment();
+        mActivity.showDialog(dialogFragment, TEST_TAG);
+        assertThat(mActivity.findDialogByTag(TEST_TAG)).isEqualTo(dialogFragment);
+    }
+
+    @Test
+    public void testFindDialogByTag_notDialogFragment() {
+        TestFragment fragment = new TestFragment();
+        mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                fragment, TEST_TAG).commit();
+        assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
+    }
+
+    @Test
+    public void testFindDialogByTag_noSuchFragment() {
+        assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
     }
 
     /** Simple Fragment for testing use. */

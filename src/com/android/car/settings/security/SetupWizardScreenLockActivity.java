@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -33,6 +34,8 @@ import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.UxRestrictionsProvider;
 import com.android.car.settingslib.util.ResultCodes;
 import com.android.internal.widget.LockPatternUtils;
+
+import javax.annotation.Nullable;
 
 /**
  * Entry point Activity for Setup Wizard to set screen lock.
@@ -83,6 +86,21 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
 
     @Override
     public void showBlockingMessage() {
+    }
+
+    @Override
+    public void showDialog(DialogFragment dialogFragment, @Nullable String tag) {
+        dialogFragment.show(getSupportFragmentManager(), tag);
+    }
+
+    @Override
+    @Nullable
+    public DialogFragment findDialogByTag(String tag) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag(tag);
+        if (fragment instanceof DialogFragment) {
+            return (DialogFragment) fragment;
+        }
+        return null;
     }
 
     @Override
