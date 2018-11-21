@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static android.content.pm.UserInfo.FLAG_ADMIN;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -26,6 +28,7 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
+import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
@@ -43,7 +46,9 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
@@ -115,5 +120,71 @@ public class UsersBasePreferenceControllerTest {
 
         // Three users. Current user, other user, guest user.
         assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(3);
+    }
+
+    @Test
+    public void testDisplayPreference_screenNotRefreshed() {
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+        when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+                Arrays.asList(TEST_OTHER_USER));
+
+        // Initially populate screen.
+        mController.displayPreference(mPreferenceScreen);
+
+        // Store the list of previous Preferences.
+        List<Preference> currentPreferences = new ArrayList<>();
+        for (int i = 0; i < mPreferenceScreen.getPreferenceCount(); i++) {
+            currentPreferences.add(mPreferenceScreen.getPreference(i));
+        }
+
+        // Mock a change so that other user becomes an admin.
+        UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
+        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+                Arrays.asList(adminOtherUser));
+
+        // Call displayPreference.
+        mController.displayPreference(mPreferenceScreen);
+
+        // Verify that preferences are the same.
+        List<Preference> newPreferences = new ArrayList<>();
+        for (int i = 0; i < mPreferenceScreen.getPreferenceCount(); i++) {
+            newPreferences.add(mPreferenceScreen.getPreference(i));
+        }
+
+        assertThat(newPreferences.containsAll(currentPreferences)).isTrue();
+    }
+
+    @Test
+    public void testOnStart_screenRefreshed() {
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+        when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+                Arrays.asList(TEST_OTHER_USER));
+
+        // Initially populate screen.
+        mController.displayPreference(mPreferenceScreen);
+
+        // Store the list of previous Preferences.
+        List<Preference> currentPreferences = new ArrayList<>();
+        for (int i = 0; i < mPreferenceScreen.getPreferenceCount(); i++) {
+            currentPreferences.add(mPreferenceScreen.getPreference(i));
+        }
+
+        // Mock a change so that other user becomes an admin.
+        UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
+        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+                Arrays.asList(adminOtherUser));
+
+        // Call onCreate.
+        mController.updateState(null);
+
+        // Verify that preferences are different.
+        List<Preference> newPreferences = new ArrayList<>();
+        for (int i = 0; i < mPreferenceScreen.getPreferenceCount(); i++) {
+            newPreferences.add(mPreferenceScreen.getPreference(i));
+        }
+
+        assertThat(newPreferences.containsAll(currentPreferences)).isFalse();
     }
 }
