@@ -15,12 +15,12 @@
  */
 package com.android.car.settings.common;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
@@ -58,8 +58,8 @@ public class DOBlockingDialogFragment extends DialogFragment implements
         if (message == null) {
             message = getContext().getString(R.string.restricted_while_driving);
         }
-        Dialog dialog = new CarAlertDialog.Builder(context)
-                .setBody(message)
+        Dialog dialog = new AlertDialog.Builder(context)
+                .setMessage(message)
                 .setPositiveButton(context.getString(R.string.okay),  /* listener= */ this)
                 .setCancelable(false)
                 .create();
