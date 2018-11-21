@@ -16,11 +16,11 @@
 
 package com.android.car.settings.users;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
@@ -51,9 +51,9 @@ public class MaxUsersLimitReachedDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new CarAlertDialog.Builder(getContext())
+        return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.user_limit_reached_title)
-                .setBody(getResources().getQuantityString(
+                .setMessage(getResources().getQuantityString(
                         R.plurals.user_limit_reached_message, mMaxUserLimit, mMaxUserLimit))
                 .setPositiveButton(android.R.string.ok, null)
                 .create();

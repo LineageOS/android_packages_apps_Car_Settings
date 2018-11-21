@@ -19,12 +19,12 @@ package com.android.car.settings.users;
 import static android.content.DialogInterface.BUTTON_NEGATIVE;
 import static android.content.DialogInterface.BUTTON_POSITIVE;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.car.app.CarAlertDialog;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
@@ -94,9 +94,9 @@ public class ConfirmCreateNewUserDialog extends DialogFragment implements
                 .concat(System.getProperty("line.separator"))
                 .concat(getString(R.string.user_add_user_message_update));
 
-        return new CarAlertDialog.Builder(getContext())
+        return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.user_add_user_title)
-                .setBody(message)
+                .setMessage(message)
                 .setNegativeButton(android.R.string.cancel, this)
                 .setPositiveButton(android.R.string.ok, this)
                 .create();
