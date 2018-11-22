@@ -23,6 +23,7 @@ import static org.testng.Assert.assertThrows;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.net.INetworkPolicyManager.Default;
 import android.net.NetworkPolicyManager;
 import android.net.Uri;
 import android.provider.Telephony;
@@ -49,12 +50,11 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowContentResolver;
 import org.robolectric.shadows.ShadowContextImpl;
-import org.robolectric.util.ReflectionHelpers;
 
 import java.util.List;
-import java.util.Map;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {
@@ -74,10 +74,13 @@ public class ResetNetworkConfirmFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        getSystemServiceMap().put(Context.NETWORK_POLICY_SERVICE,
-                NetworkPolicyManager.class.getName());
-
         mContext = RuntimeEnvironment.application;
+
+        final NetworkPolicyManager npm = new NetworkPolicyManager(mContext, new Default());
+        ShadowContextImpl shadowContext =
+                Shadow.extract(RuntimeEnvironment.application.getBaseContext());
+        shadowContext.setSystemService(Context.NETWORK_POLICY_SERVICE, npm);
+
         mContentResolver = mContext.getContentResolver();
 
         setEuiccResetCheckbox(false);
@@ -95,7 +98,6 @@ public class ResetNetworkConfirmFragmentTest {
 
     @After
     public void tearDown() {
-        getSystemServiceMap().remove(Context.NETWORK_POLICY_SERVICE);
         ShadowConnectivityManager.reset();
         ShadowWifiManager.reset();
         ShadowBluetoothAdapter.reset();
@@ -223,9 +225,5 @@ public class ResetNetworkConfirmFragmentTest {
     private void setNetworkSubscriptionId(String id) {
         PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString(
                 mContext.getString(R.string.pk_reset_network_subscription), id).commit();
-    }
-
-    private Map<String, String> getSystemServiceMap() {
-        return ReflectionHelpers.getStaticField(ShadowContextImpl.class, "SYSTEM_SERVICE_MAP");
     }
 }
