@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import android.content.Intent;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -54,4 +56,17 @@ public interface FragmentController {
      */
     @Nullable
     DialogFragment findDialogByTag(String tag);
+
+    /**
+     * Starts an activity for a result. When the result is received, the {@link
+     * ActivityResultCallback} is passed the result. Note that the implementer of this interface
+     * must ensure that the callback is valid throughout the lifecycle of the new activity that is
+     * created.
+     *
+     * @param intent      The intent used to start an activity.
+     * @param requestCode User defined code which is passed to the callback when the activity exits.
+     *                    Values must use the first 8 bits of the int (i.e. 0-255).
+     * @param callback    Defines how the result from the started activity should be handled.
+     */
+    void startActivityForResult(Intent intent, int requestCode, ActivityResultCallback callback);
 }

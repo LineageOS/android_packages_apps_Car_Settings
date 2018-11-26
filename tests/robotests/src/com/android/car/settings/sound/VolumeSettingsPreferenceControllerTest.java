@@ -73,8 +73,7 @@ public class VolumeSettingsPreferenceControllerTest {
             VolumeSettingsPreferenceController {
 
         public TestVolumeSettingsPreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController,
-                CarUxRestrictions uxRestrictions) {
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
             super(context, preferenceKey, fragmentController, uxRestrictions);
         }
 
@@ -92,9 +91,8 @@ public class VolumeSettingsPreferenceControllerTest {
 
         Context context = RuntimeEnvironment.application;
         mPreferenceGroup = new LogicalPreferenceGroup(context);
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(
-                RuntimeEnvironment.application, TestVolumeSettingsPreferenceController.class,
-                mPreferenceGroup);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
+                TestVolumeSettingsPreferenceController.class, mPreferenceGroup);
         mController = mPreferenceControllerHelper.getController();
 
         when(mCarAudioManager.getVolumeGroupCount()).thenReturn(1);

@@ -14,19 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.sound;
+package com.android.car.settings.common;
 
-import androidx.annotation.XmlRes;
+import android.content.Intent;
 
-import com.android.car.settings.R;
-import com.android.car.settings.common.SettingsFragment;
+import androidx.annotation.Nullable;
 
-/** Fragment which shows the settings for sounds. */
-public class SoundSettingsFragment extends SettingsFragment {
+/**
+ * Handles activity results after a {@link FragmentController} fires {@link
+ * FragmentController#startActivityForResult(Intent, int, ActivityResultCallback)}.
+ */
+public interface ActivityResultCallback {
 
-    @Override
-    @XmlRes
-    protected int getPreferenceScreenResId() {
-        return R.xml.sound_settings_fragment;
-    }
+    /**
+     * Callback used when an activity started by
+     * {@link FragmentController#startActivityForResult(Intent,
+     * int, ActivityResultCallback)} receives a result.
+     */
+    void processActivityResult(int requestCode, int resultCode, @Nullable Intent data);
 }

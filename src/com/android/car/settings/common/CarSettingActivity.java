@@ -174,6 +174,13 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     }
 
     @Override
+    public void startActivityForResult(Intent intent, int requestCode,
+            ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
+    }
+
+    @Override
     public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
         mCarUxRestrictions = restrictionInfo;
         Fragment currentFragment = getCurrentFragment();

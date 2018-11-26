@@ -17,23 +17,25 @@
 package com.android.car.settings.testutils;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.UxRestrictionsProvider;
-
-import javax.annotation.Nullable;
 
 /**
  * Test activity used for testing {@code BaseFragment} instances.
  */
 public class BaseTestActivity extends FragmentActivity implements FragmentController,
         UxRestrictionsProvider {
+
     private boolean mOnBackPressedFlag;
     private CarUxRestrictions mRestrictionInfo = new CarUxRestrictions.Builder(/* reqOpt= */ true,
             CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -80,6 +82,13 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
             return (DialogFragment) fragment;
         }
         return null;
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode,
+            ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
     }
 
     @Override
