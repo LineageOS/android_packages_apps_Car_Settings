@@ -52,7 +52,7 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
         AAR_VERSIONS.put("car", "1.0.0-alpha6");
         AAR_VERSIONS.put("appcompat", "1.1.0-alpha01");
         AAR_VERSIONS.put("constraintlayout", "1.1.2");
-        AAR_VERSIONS.put("preference", "1.1.0-alpha01");
+        AAR_VERSIONS.put("preference", "1.1.0-alpha02");
     }
 
     /**
