@@ -46,9 +46,7 @@ public class ConfirmRemoveUserDialogTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
 
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @Test

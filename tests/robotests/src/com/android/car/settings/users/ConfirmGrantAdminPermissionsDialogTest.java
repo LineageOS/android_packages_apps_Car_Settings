@@ -46,9 +46,7 @@ public class ConfirmGrantAdminPermissionsDialogTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
 
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder

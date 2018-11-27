@@ -42,7 +42,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
@@ -73,7 +73,7 @@ public class UsersListPreferenceControllerTest {
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
-                Arrays.asList(TEST_OTHER_USER));
+                Collections.singletonList(TEST_OTHER_USER));
     }
 
     @After

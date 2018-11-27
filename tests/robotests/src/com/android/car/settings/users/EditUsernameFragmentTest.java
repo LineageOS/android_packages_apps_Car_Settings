@@ -47,7 +47,7 @@ import org.robolectric.annotation.Config;
  * Tests for EditUsernameFragment.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowCarUserManagerHelper.class })
+@Config(shadows = {ShadowCarUserManagerHelper.class })
 @Ignore
 public class EditUsernameFragmentTest {
     private BaseTestActivity mTestActivity;
@@ -61,9 +61,7 @@ public class EditUsernameFragmentTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After

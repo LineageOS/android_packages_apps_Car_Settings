@@ -27,17 +27,17 @@ import org.robolectric.annotation.Implements;
 @Implements(AccountManager.class)
 public class ShadowAccountManager extends org.robolectric.shadows.ShadowAccountManager {
     @Implementation
-    public Account[] getAccountsByTypeAsUser(String type, UserHandle userHandle) {
+    protected Account[] getAccountsByTypeAsUser(String type, UserHandle userHandle) {
         return getAccountsByType(type);
     }
 
     @Implementation
-    public AuthenticatorDescription[] getAuthenticatorTypesAsUser(int userId) {
+    protected AuthenticatorDescription[] getAuthenticatorTypesAsUser(int userId) {
         return getAuthenticatorTypes();
     }
 
     @Implementation
-    public Account[] getAccountsAsUser(int userId) {
+    protected Account[] getAccountsAsUser(int userId) {
         return getAccounts();
     }
 }

@@ -46,10 +46,7 @@ public class ConfirmCreateNewUserDialogTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
 
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
-
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
         mTestFragment = new TestBaseFragment();
         mTestActivity.launchFragment(mTestFragment);
 

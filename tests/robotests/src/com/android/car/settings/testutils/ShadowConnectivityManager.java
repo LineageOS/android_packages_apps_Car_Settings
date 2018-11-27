@@ -32,7 +32,7 @@ public class ShadowConnectivityManager extends org.robolectric.shadows.ShadowCon
     }
 
     @Implementation
-    public void factoryReset() {
+    protected void factoryReset() {
         sResetCalledCount++;
     }
 

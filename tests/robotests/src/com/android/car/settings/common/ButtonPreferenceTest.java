@@ -21,6 +21,8 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
+import android.content.Context;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
@@ -42,10 +44,12 @@ public class ButtonPreferenceTest {
 
     @Before
     public void setUp() {
-        View rootView = View.inflate(RuntimeEnvironment.application, R.layout.button_preference,
-                null);
+        final Context context = RuntimeEnvironment.application;
+        final Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+
+        View rootView = View.inflate(themedContext, R.layout.button_preference, null);
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
-        mButtonPreference = new ButtonPreference(RuntimeEnvironment.application);
+        mButtonPreference = new ButtonPreference(context);
     }
 
     @Test

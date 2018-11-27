@@ -76,9 +76,7 @@ public class UserDetailsFragmentTest {
         ShadowApplication shadowApp = ShadowApplication.getInstance();
         shadowApp.setSystemService(Context.USER_SERVICE, mUserManager);
 
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
