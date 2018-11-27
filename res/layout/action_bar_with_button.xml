@@ -68,13 +68,4 @@
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/action_bar_end_widget_margin_end"/>
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/Widget.Car.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:indeterminate="true"
-        android:visibility="gone"/>
 </RelativeLayout>
