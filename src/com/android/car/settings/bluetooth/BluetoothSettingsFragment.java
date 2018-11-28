@@ -154,6 +154,7 @@ public class BluetoothSettingsFragment extends BaseFragment {
         mBluetoothAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
         mBluetoothAdapter.cancelDiscovery();
         mLocalManager.setForegroundActivity(null);
+        mProgressBar.setVisibility(View.GONE);
     }
 
     /**
