@@ -37,12 +37,12 @@ public class ShadowPowerManager {
     }
 
     @Implementation
-    public int getMinimumScreenBrightnessSetting() {
+    protected int getMinimumScreenBrightnessSetting() {
         return sInstance.getMinimumScreenBrightnessSetting();
     }
 
     @Implementation
-    public int getMaximumScreenBrightnessSetting() {
+    protected int getMaximumScreenBrightnessSetting() {
         return sInstance.getMaximumScreenBrightnessSetting();
     }
 }

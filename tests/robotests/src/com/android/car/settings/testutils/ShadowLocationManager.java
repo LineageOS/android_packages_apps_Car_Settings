@@ -29,7 +29,7 @@ import org.robolectric.annotation.Implements;
 public class ShadowLocationManager {
 
     @Implementation
-    public void setLocationEnabledForUser(boolean enabled, UserHandle userHandle) {
+    protected void setLocationEnabledForUser(boolean enabled, UserHandle userHandle) {
         int newMode = enabled
                 ? Settings.Secure.LOCATION_MODE_HIGH_ACCURACY
                 : Settings.Secure.LOCATION_MODE_OFF;
@@ -41,7 +41,7 @@ public class ShadowLocationManager {
     }
 
     @Implementation
-    public boolean isLocationEnabled() {
+    protected boolean isLocationEnabled() {
         return Settings.Secure.getInt(RuntimeEnvironment.application.getContentResolver(),
                 Settings.Secure.LOCATION_MODE, Settings.Secure.LOCATION_MODE_OFF)
                 != Settings.Secure.LOCATION_MODE_OFF;

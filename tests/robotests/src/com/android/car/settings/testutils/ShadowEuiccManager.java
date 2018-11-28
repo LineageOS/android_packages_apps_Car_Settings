@@ -33,7 +33,7 @@ public class ShadowEuiccManager {
     }
 
     @Implementation
-    public boolean isEnabled() {
+    protected boolean isEnabled() {
         return mIsEnabled;
     }
 

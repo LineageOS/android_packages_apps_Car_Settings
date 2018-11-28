@@ -44,11 +44,9 @@ public class ConfirmRemoveScreenLockDialogTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
         mDialog = new ConfirmRemoveScreenLockDialog();
         mDialog.setConfirmRemoveScreenLockListener(mListener);
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
         mTestActivity.showDialog(mDialog, TEST_TAG);
     }
 

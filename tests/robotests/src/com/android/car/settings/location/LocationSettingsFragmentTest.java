@@ -51,9 +51,7 @@ public class LocationSettingsFragmentTest {
         mLocationManager = (LocationManager) RuntimeEnvironment.application
                 .getSystemService(Service.LOCATION_SERVICE);
 
-        mActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After

@@ -1,5 +1,5 @@
 #############################################
-# Car Settings Robolectric test target. #
+# Car Settings Robolectric test target.     #
 #############################################
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -26,7 +26,7 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 #############################################################
-# Car Settings runner target to run the previous target. #
+# Car Settings runner target to run the previous target.    #
 #############################################################
 include $(CLEAR_VARS)
 
