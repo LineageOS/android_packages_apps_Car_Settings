@@ -68,10 +68,10 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
         super.onActivityCreated(savedInstanceState);
         mCarWifiManager = new CarWifiManager(getContext(), /* listener= */ this);
 
-        mProgressBar = (ProgressBar) getView().findViewById(R.id.wifi_search_progress);
-        mListView = (PagedListView) getView().findViewById(R.id.list);
-        mMessageView = (TextView) getView().findViewById(R.id.message);
-        mViewSwitcher = (ViewSwitcher) getView().findViewById(R.id.view_switcher);
+        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
+        mListView = getView().findViewById(R.id.list);
+        mMessageView = getView().findViewById(R.id.message);
+        mViewSwitcher = getView().findViewById(R.id.view_switcher);
         setupWifiSwitch();
         if (mCarWifiManager.isWifiEnabled()) {
             showList();

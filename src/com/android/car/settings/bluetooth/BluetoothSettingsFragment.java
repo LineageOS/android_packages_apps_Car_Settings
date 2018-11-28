@@ -126,8 +126,8 @@ public class BluetoothSettingsFragment extends BaseFragment {
                 }
         );
 
+        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
         View rootView = requireNonNull(getView());
-        mProgressBar = rootView.findViewById(R.id.bt_search_progress);
         mDeviceListView = rootView.findViewById(R.id.list);
         mViewSwitcher = rootView.findViewById(R.id.view_switcher);
         mMessageView = rootView.findViewById(R.id.bt_message);
