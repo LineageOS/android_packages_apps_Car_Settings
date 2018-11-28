@@ -21,13 +21,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <ProgressBar
-        android:id="@+id/wifi_search_progress"
-        style="@style/TrimmedHorizontalProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:visibility="gone"/>
     <ViewSwitcher
         android:id="@+id/view_switcher"
         android:layout_width="match_parent"
