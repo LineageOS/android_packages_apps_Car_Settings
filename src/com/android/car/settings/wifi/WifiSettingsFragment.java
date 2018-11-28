@@ -94,12 +94,14 @@ public class WifiSettingsFragment extends BaseFragment implements CarWifiManager
     public void onStart() {
         super.onStart();
         mCarWifiManager.start();
+        onWifiStateChanged(mCarWifiManager.getWifiState());
     }
 
     @Override
     public void onStop() {
         super.onStop();
         mCarWifiManager.stop();
+        setProgressBarVisible(false);
     }
 
     @Override
