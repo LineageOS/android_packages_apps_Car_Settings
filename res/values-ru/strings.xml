@@ -77,12 +77,12 @@
     <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"Использовать для"</string>
     <string name="wifi_ssid_hint" msgid="4155050863239489553">"Измените имя Bluetooth-устройства"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Запрос на подключение через Bluetooth"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Выполнить сопряжение и подключить"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Установить соединение и подключить"</string>
     <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код подключения через Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN-код содержит буквы или символы"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Введите код подключения и нажмите клавишу ввода"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Подключиться к устройству <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Установить соединение с устройством <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Разрешить устройству <xliff:g id="DEVICE_NAME">%1$s</xliff:g> доступ к списку контактов и журналу звонков"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Возможно, потребуется ввести PIN-код на другом устройстве."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Возможно, потребуется ввести ключ доступа на другом устройстве."</string>
@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Запрос на подключение"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Нажмите, чтобы установить соединение с устройством \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Языки"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Звук"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Громкость звонка"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Громкость навигации"</string>
@@ -171,6 +172,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Удалить пользователя"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Новый пользователь"</string>
     <string name="user_guest" msgid="3465399481257448601">"Гость"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Администратор"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Вы вошли как администратор"</string>
     <string name="user_switch" msgid="6544839750534690781">"Сменить пользователя"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Вы (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Имя"</string>
@@ -213,7 +216,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Повторить попытку"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Пропустить"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Блокировка экрана"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Выберите PIN-код"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Выберите графический ключ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Выберите пароль"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Текущий способ блокировки"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Для защиты системы создайте граф. ключ."</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Очистить"</string>
@@ -246,7 +251,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Очистить"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Отмена"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Подтвердить"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Пароль должен содержать от 4 до 8 символов, в т. ч. не менее 1 цифры."</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Не менее 4 символов"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Пароль должен быть не короче <xliff:g id="COUNT">%d</xliff:g> симв."</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-код должен содержать не менее <xliff:g id="COUNT">%d</xliff:g> цифр"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Пароль должен быть короче <xliff:g id="NUMBER">%d</xliff:g> симв."</string>
@@ -255,7 +260,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Использовать недавний PIN-код запрещено"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ИТ-администратор запретил использовать простые PIN-коды. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Использованы недопустимые символы."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Ошибка. Пароль должен содержать от 4 до 8 символов, в том числе не менее 1 цифры и 1 буквы. Использовать пробелы нельзя."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Пароль должен содержать не менее четырех символов."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Пароль должен содержать не менее <xliff:g id="COUNT">%d</xliff:g> буквы.</item>
       <item quantity="few">Пароль должен содержать не менее <xliff:g id="COUNT">%d</xliff:g> букв.</item>
@@ -310,6 +315,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"Завершить настройку"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"Не сейчас"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Эта функция недоступна во время вождения."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Невозможно добавить пользователя во время вождения."</string>
 </resources>

@@ -26,29 +26,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Presenter used by ChooseLockPinPasswordFragment
+ * Helper used by ChooseLockPinPasswordFragment
  */
 public class PasswordHelper {
-    /**
-     * Password must contain at least one number, one letter, can not have white space, should be
-     * between 4 to 8 characters.
-     */
-    private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=\\S+$).{4,8}$";
+    public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
 
     /**
      * Allow non-control Latin-1 characters only.
      */
-    private static final String VALID_CHAR_PATTERN = "^[\\x20-\\x7F]*$";
+    private static final String VALID_CHAR_PATTERN = "^[\\x20-\\x7F ]*$";
 
-    private static final int MIN_PIN_LENGTH = 4;
+    /**
+     * Required minimum length of PIN or password.
+     */
+    static final int MIN_LENGTH = 4;
 
     // Error code returned from validate(String).
     static final int NO_ERROR = 0;
     static final int CONTAINS_INVALID_CHARACTERS = 1;
-    static final int DOES_NOT_MATCH_PATTERN = 1 << 1;
+    static final int TOO_SHORT = 1 << 1;
     static final int CONTAINS_NON_DIGITS = 1 << 2;
     static final int CONTAINS_SEQUENTIAL_DIGITS = 1 << 3;
-    static final int TOO_FEW_DIGITS = 1 << 4;
 
     private final boolean mIsPin;
 
@@ -90,12 +88,12 @@ public class PasswordHelper {
     private int validatePassword(String password) {
         int errorCode = NO_ERROR;
 
-        if (!password.matches(VALID_CHAR_PATTERN)) {
-            errorCode |= CONTAINS_INVALID_CHARACTERS;
+        if (password.length() < MIN_LENGTH) {
+            errorCode |= TOO_SHORT;
         }
 
-        if (!password.matches(PASSWORD_PATTERN)) {
-            errorCode |= DOES_NOT_MATCH_PATTERN;
+        if (!password.matches(VALID_CHAR_PATTERN)) {
+            errorCode |= CONTAINS_INVALID_CHARACTERS;
         }
 
         return errorCode;
@@ -107,8 +105,8 @@ public class PasswordHelper {
         PasswordMetrics metrics = PasswordMetrics.computeForPassword(pin);
         int passwordQuality = getPasswordQuality();
 
-        if (metrics.length > 0 && metrics.length < MIN_PIN_LENGTH) {
-            errorCode |= TOO_FEW_DIGITS;
+        if (metrics.length < MIN_LENGTH) {
+            errorCode |= TOO_SHORT;
         }
 
         if (metrics.letters > 0 || metrics.symbols > 0) {
@@ -133,8 +131,8 @@ public class PasswordHelper {
             messages.add(context.getString(R.string.lockpassword_illegal_character));
         }
 
-        if ((errorCode & DOES_NOT_MATCH_PATTERN) > 0) {
-            messages.add(context.getString(R.string.lockpassword_invalid_password));
+        if ((errorCode & TOO_SHORT) > 0) {
+            messages.add(context.getString(R.string.lockpassword_password_too_short, MIN_LENGTH));
         }
 
         return messages;
@@ -151,7 +149,7 @@ public class PasswordHelper {
             messages.add(context.getString(R.string.lockpassword_pin_no_sequential_digits));
         }
 
-        if ((errorCode & TOO_FEW_DIGITS) > 0) {
+        if ((errorCode & TOO_SHORT) > 0) {
             messages.add(context.getString(R.string.lockpin_invalid_pin));
         }
 

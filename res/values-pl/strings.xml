@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Prośba o sparowanie"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Dotknij, by sparować z: <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Języki"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Dźwięk"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Głośność dzwonka"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Głośność nawigacji"</string>
@@ -150,7 +151,7 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data i godzina"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Ustaw datę i godzinę"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ustaw datę, godzinę, strefę czasową i formaty."</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i czas"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Użyj czasu podanego przez sieć"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatyczna strefa czasowa"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
@@ -171,6 +172,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Usuwanie użytkownika"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nowy użytkownik"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gość"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Zalogowano jako administratora"</string>
     <string name="user_switch" msgid="6544839750534690781">"Przełącz"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Ty (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nazwa"</string>
@@ -213,7 +216,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Ponów"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Pomiń"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Ustawianie blokady ekranu"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Ustaw kod PIN"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Wybierz wzór"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Ustaw hasło"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Aktualna blokada ekranu"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Ze względów bezpieczeństwa ustaw wzór"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Wyczyść"</string>
@@ -246,7 +251,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Wyczyść"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Anuluj"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Potwierdź"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Hasło: 4–8 znaków, co najmniej 1 cyfra"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Musisz użyć co najmniej czterech znaków"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimalna liczba znaków to <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Minimalna liczba cyfr w kodzie PIN to <xliff:g id="COUNT">%d</xliff:g>"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Musi mieć mniej znaków niż <xliff:g id="NUMBER">%d</xliff:g>"</string>
@@ -255,7 +260,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Administrator urządzenia nie zezwala na ustawianie niedawno używanego kodu PIN"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Popularne kody PIN zostały zablokowane przez administratora. Użyj innego kodu PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Nie może zawierać nieprawidłowego znaku."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Hasło jest nieprawidłowe. Musi mieć od 4 do 8 znaków i zawierać co najmniej jedną cyfrę i jedną literę, bez spacji."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Hasło jest nieprawidłowe. Musisz użyć co najmniej czterech znaków."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="few">Musi zawierać co najmniej <xliff:g id="COUNT">%d</xliff:g> litery</item>
       <item quantity="many">Musi zawierać co najmniej <xliff:g id="COUNT">%d</xliff:g> liter</item>
@@ -310,6 +315,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"dokończ konfigurację"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"nie teraz"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Funkcja niedostępna podczas jazdy."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Nie można dodać użytkownika podczas jazdy."</string>
 </resources>

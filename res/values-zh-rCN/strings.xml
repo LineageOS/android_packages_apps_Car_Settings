@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"配对请求"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"点按即可与 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 配对。"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"语言"</string>
     <string name="sound_settings" msgid="3072423952331872246">"提示音"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"铃声音量"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"导航音量"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"删除用户"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"新用户"</string>
     <string name="user_guest" msgid="3465399481257448601">"访客"</string>
+    <string name="user_admin" msgid="1535484812908584809">"管理员"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"目前登录的是管理员帐号"</string>
     <string name="user_switch" msgid="6544839750534690781">"开关"</string>
     <string name="current_user_name" msgid="3813671533249316823">"您 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名称"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"重试"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"跳过"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"设置屏幕锁定"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"选择 PIN 码"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"选择您的图案"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"选择密码"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"当前屏幕锁定设置"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"为了安全起见，请设置解锁图案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"清除"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"确认"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"密码必须介于 4-8 个字符之间，并且至少包含 1 个数字"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"必须至少包含 4 个字符"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"必须至少包含 <xliff:g id="COUNT">%d</xliff:g> 个字符"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 码必须至少为 <xliff:g id="COUNT">%d</xliff:g> 位数"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"必须少于 <xliff:g id="NUMBER">%d</xliff:g> 个字符"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"设备管理员不允许使用最近用过的 PIN 码"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"常用 PIN 码已被您的 IT 管理员屏蔽。请尝试一个不同的 PIN 码。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"此密码不得包含无效字符。"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"密码无效。密码的长度必须介于 4-8 个字符之间，并包含至少 1 个数字和 1 个字母，且不得包含空格。"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"密码无效，密码必须至少包含 4 个字符。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">必须包含至少 <xliff:g id="COUNT">%d</xliff:g> 个字母</item>
       <item quantity="one">必须包含至少 1 个字母</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"完成设置"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"以后再说"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"无法在驾驶时使用此功能。"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"驾车时无法添加用户。"</string>
 </resources>

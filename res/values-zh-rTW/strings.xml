@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"配對要求"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"輕觸即可與「<xliff:g id="DEVICE_NAME">%1$s</xliff:g>」配對。"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"語言"</string>
     <string name="sound_settings" msgid="3072423952331872246">"音效"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"鈴聲音量"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"導航音量"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"刪除使用者"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"新使用者"</string>
     <string name="user_guest" msgid="3465399481257448601">"訪客"</string>
+    <string name="user_admin" msgid="1535484812908584809">"管理員"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"登入身分：管理員"</string>
     <string name="user_switch" msgid="6544839750534690781">"切換"</string>
     <string name="current_user_name" msgid="3813671533249316823">"你 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名稱"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"重試"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"略過"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"設定螢幕鎖定"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"選擇 PIN 碼"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"選擇圖案"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"選擇密碼"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"目前的螢幕鎖定方式"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"為了安全起見，請設定圖案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"清除"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"取消"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"確認"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"密碼長度必須介於 4 到 8 個字元之間，當中要包含至少 1 個數字"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"至少要有 4 個字元"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"至少要有 <xliff:g id="COUNT">%d</xliff:g> 個字元"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN 碼至少要有 <xliff:g id="COUNT">%d</xliff:g> 個數字"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"長度必須少於 <xliff:g id="NUMBER">%d</xliff:g> 個字元"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"裝置管理員不允許使用最近用過的 PIN 碼"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"你的 IT 管理員已封鎖常見 PIN 碼，請改用其他 PIN 碼。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"不得包含無效字元。"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"密碼無效。長度必須介於 4 到 8 個字元之間，並包含至少 1 個數字和 1 個字母；不得使用空白字元。"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"密碼無效，至少要有 4 個字元。"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">至少必須包含 <xliff:g id="COUNT">%d</xliff:g> 個字母</item>
       <item quantity="one">至少必須包含 1 個字母</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"完成設定"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"暫時不要"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"開車時無法使用這項功能。"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"無法在開車期間新增使用者。"</string>
 </resources>

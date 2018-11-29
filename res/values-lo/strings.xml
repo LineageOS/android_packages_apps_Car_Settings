@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ຄຳຂໍຈັບຄູ່"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"ແຕະເພື່ອຈັບຄູ່ກັບ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ພາສາ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ສຽງ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ລະດັບສຽງໂທລະສັບ"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"ລະດັບສຽງການນຳທາງ"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"ລຶບຜູ້ໃຊ້"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ຜູ້ໃຊ້ໃໝ່"</string>
     <string name="user_guest" msgid="3465399481257448601">"ແຂກ"</string>
+    <string name="user_admin" msgid="1535484812908584809">"ຜູ້ເບິ່ງແຍງລະບົບ"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"ເຂົ້າສູ່ລະບົບເປັນຜູ້ເບິ່ງແຍງລະບົບ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ສະຫຼັບ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ທ່ານ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ຊື່"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ລອງໃໝ່"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ຂ້າມ"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ຕັ້ງຄ່າໜ້າຈໍລັອກ"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ເລືອກ PIN ຂອງທ່ານ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ເລືອກຮູບແບບຂອງທ່ານ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ເລືອກລະຫັດຜ່ານຂອງທ່ານ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ການລັອກໜ້າຈໍປັດຈຸບັນ"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ເພື່ອຄວາມປອດໄພ, ກະລຸນາຕັ້ງຮູບແບບປົດລັອກ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ລຶບ"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ລຶບ"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ຍົກເລີກ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ຢືນຢັນ"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"ລະຫັດຜ່ານຕ້ອງມີອັກຂະລະ 4-8 ຕົວ ໂດຍມີຢ່າງໜ້ອຍ 1 ຕົວເລກ"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ຕ້ອງມີຢ່າງໜ້ອຍ 4 ຕົວອັກສອນ"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ຕ້ອງມີອັກຂະລະຢ່າງໜ້ອຍ <xliff:g id="COUNT">%d</xliff:g> ຕົວ"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN ຕ້ອງມີຢ່າງໜ້ອຍ <xliff:g id="COUNT">%d</xliff:g> ຕົວເລກ"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"ຕ້ອງມີອັກຂະລະໜ້ອຍກວ່າ <xliff:g id="NUMBER">%d</xliff:g> ຕົວ"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ຜູ້ເບິ່ງແຍງລະບົບອຸປະກອນບໍ່ອະນຸຍາດໃຫ້ໃຊ້ລະຫັດ PIN ເມື່ອບໍ່ດົນມານີ້"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"PIN ທີ່ມັກໃຊ້ທົ່ວໄປຖືກບລັອກໄວ້ໂດຍຜູ້ເບິ່ງແຍງລະບົບໄອທີຂອງທ່ານ. ກະລຸນາລອງໃຊ້ PIN ອື່ນ."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ນີ້ບໍ່ສາມາດຮວມມີອັກຂະລະທີ່ບໍ່ຖືກຕ້ອງໄດ້."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ, ຕ້ອງມີອັກຂະລະ 4-8 ຕົວ, ໂດຍມີຢ່າງໜ້ອຍ 1 ຕົວເລກ, 1 ຕົວອັກສອນ, ບໍ່ມີຍະຫວ່າງ."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"ລະຫັດຜ່ານໃຊ້ບໍ່ໄດ້, ຕ້ອງມີຢ່າງໜ້ອຍ 4 ຕົວອັກສອນ."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ <xliff:g id="COUNT">%d</xliff:g> ຕົວ</item>
       <item quantity="one">ຕ້ອງມີຕົວອັກສອນຢ່າງໜ້ອຍ 1 ຕົວ</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ສຳເລັດການຕັ້ງຄ່າ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ບໍ່ແມ່ນຕອນນີ້"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ຄຸນສົມບັດບໍ່ສາມາດໃຊ້ໄດ້ໃນເວລາຂັບລົດ."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ບໍ່ສາມາດເພີ່ມຜູ້ໃຊ້ໃນຂະນະທີ່ຂັບລົດໄດ້."</string>
 </resources>

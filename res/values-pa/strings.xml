@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ਜੋੜਾਬੱਧ ਕਰਨ ਦੀ ਬੇਨਤੀ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨਾਲ ਜੋੜਾ ਬਣਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ਭਾਸ਼ਾਵਾਂ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ਧੁਨੀ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ਰਿੰਗ ਵੌਲਿਊਮ"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"ਨੈਵੀਗੇਸ਼ਨ ਵੌਲਿਊਮ"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"ਵਰਤੋਂਕਾਰ ਨੂੰ ਮਿਟਾਓ"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"ਨਵਾਂ ਵਰਤੋਂਕਾਰ"</string>
     <string name="user_guest" msgid="3465399481257448601">"ਮਹਿਮਾਨ"</string>
+    <string name="user_admin" msgid="1535484812908584809">"ਪ੍ਰਸ਼ਾਸਕ"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"ਪ੍ਰਸ਼ਾਸਕ ਵਜੋਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਗਿਆ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ਅਦਲਾ-ਬਦਲੀ ਕਰੋ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ਤੁਸੀਂ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ਨਾਮ"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ਛੱਡੋ"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"ਕੋਈ ਸਕ੍ਰੀਨ ਲਾਕ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ਆਪਣਾ ਪਿੰਨ ਚੁਣੋ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ਆਪਣਾ ਪੈਟਰਨ ਚੁਣੋ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ਆਪਣਾ ਪਾਸਵਰਡ ਚੁਣੋ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ਮੌਜੂਦਾ ਸਕ੍ਰੀਨ ਲਾਕ"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ਸੁਰੱਖਿਆ ਲਈ, ਕੋਈ ਪੈਟਰਨ ਸੈੱਟ ਕਰੋ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ਕਲੀਅਰ ਕਰੋ"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"ਰੱਦ ਕਰੋ"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"ਪੁਸ਼ਟੀ ਕਰੋ"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 1 ਅੰਕ ਨਾਲ 4-8 ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦੇ ਵਿਚਕਾਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"ਘੱਟੋ-ਘੱਟ 4 ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦਾ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ਪਿੰਨ ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੰਕਾਂ ਦਾ ਹੋਣਾ ਲਾਜ਼ਮੀ ਹੈ"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਤੋਂ ਘੱਟ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"ਡੀਵਾਈਸ ਪ੍ਰਸ਼ਾਸਕ ਇੱਕ ਹਾਲੀਆ ਪਿੰਨ ਵਰਤਣ ਨਹੀਂ ਦਿੰਦਾ ਹੈ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ਆਮ ਪਿੰਨ ਤੁਹਾਡੇ IT ਪ੍ਰਸ਼ਾਸਕ ਵੱਲੋਂ ਬਲਾਕ ਕੀਤੇ ਗਏ ਹਨ। ਕੋਈ ਵੱਖਰਾ ਪਿੰਨ ਵਰਤੋ।"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"ਇਸ ਵਿੱਚ ਇੱਕ ਅਵੈਧ ਅੱਖਰ-ਚਿੰਨ੍ਹ ਸ਼ਾਮਲ ਨਹੀਂ ਹੋ ਸਕਦਾ।"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"ਪਾਸਵਰਡ ਅਵੈਧ ਹੈ, ਇਹ 4-8 ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ ਜਿਸ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ 1 ਅੰਕ, 1 ਅੱਖਰ ਹੋਵੇ ਅਤੇ ਕੋਈ ਖਾਲੀ ਜਗ੍ਹਾ ਸ਼ਾਮਲ ਨਾ ਹੋਵੇ।"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"ਪਾਸਵਰਡ ਵੈਧ ਹੈ, ਘੱਟੋ-ਘੱਟ 4 ਅੱਖਰ-ਚਿੰਨ੍ਹਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ</item>
       <item quantity="other">ਘੱਟੋ-ਘੱਟ <xliff:g id="COUNT">%d</xliff:g> ਅੱਖਰ ਸ਼ਾਮਲ ਕਰਨੇ ਲਾਜ਼ਮੀ ਹਨ</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ਸੈੱਟਅੱਪ ਪੂਰਾ ਕਰੋ"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ਹੁਣੇ ਨਹੀਂ"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ਗੱਡੀ ਚਲਾਉਣ ਵੇਲੇ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ਗੱਡੀ ਚਲਾਉਣ ਦੌਰਾਨ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"</string>
 </resources>

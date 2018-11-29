@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kopplungsanfrage"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Zum Koppeln mit <xliff:g id="DEVICE_NAME">%1$s</xliff:g> tippen."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Sprachen"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ton"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Klingeltonlautstärke"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Lautstärke für Navigation"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Nutzer löschen"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Neuer Nutzer"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gast"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Als Administrator angemeldet"</string>
     <string name="user_switch" msgid="6544839750534690781">"Wechseln"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Du (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Name"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Wiederholen"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Überspringen"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Displaysperre einrichten"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN wählen"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Muster wählen"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Passwort ändern"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Aktuelle Displaysperre"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Richte zur Sicherheit ein Muster ein"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Löschen"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Löschen"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Abbrechen"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bestätigen"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Passwort muss 4–8 Zeichen und mindestens 1 Zahl enthalten"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Muss mindestens 4 Zeichen haben"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Passwort muss mindestens <xliff:g id="COUNT">%d</xliff:g> Zeichen haben"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN muss mindestens <xliff:g id="COUNT">%d</xliff:g> Ziffern haben"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Passwort muss weniger als <xliff:g id="NUMBER">%d</xliff:g> Zeichen haben"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Der Geräteadministrator hat festgelegt, dass bereits verwendete PINs nicht noch einmal verwendet werden dürfen"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Dein IT-Administrator hat die Verwendung allzu häufiger PINs blockiert. Versuch es mit einer anderen PIN."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Ungültige Zeichen sind nicht zulässig."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Passwort ungültig. Es muss 4–8 Zeichen lang sein und mindestens eine Zahl und einen Buchstaben enthalten. Leerzeichen sind nicht zulässig."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Ungültiges Passwort – muss mindestens 4 Zeichen haben."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Passwort muss mindestens <xliff:g id="COUNT">%d</xliff:g> Buchstaben enthalten</item>
       <item quantity="one">Passwort muss mindestens einen Buchstaben enthalten</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"Einrichtung abschließen"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"jetzt nicht"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Funktion während der Fahrt nicht verfügbar."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Während der Fahrt kann kein Nutzer hinzugefügt werden."</string>
 </resources>

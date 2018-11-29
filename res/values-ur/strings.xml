@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"جوڑا بنانے کی درخواست"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کے ساتھ جوڑا بنانے کیلئے تھپتھپائیں۔"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"زبانیں"</string>
     <string name="sound_settings" msgid="3072423952331872246">"آواز"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"رِنگ والیوم"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"نیویگیشن والیوم"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"صارف کو حذف کریں"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"نیا صارف"</string>
     <string name="user_guest" msgid="3465399481257448601">"مہمان"</string>
+    <string name="user_admin" msgid="1535484812908584809">"منتظم"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"منتظم کے طور پر سائن ان کردہ"</string>
     <string name="user_switch" msgid="6544839750534690781">"سوئچ کریں"</string>
     <string name="current_user_name" msgid="3813671533249316823">"آپ (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"دوبارہ کوشش کریں"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"نظر انداز کریں"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"اسکرین لاک سیٹ کریں"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"اپنا PIN منتخب کریں"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"اپنا پیٹرن منتخب کریں"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"اپنا پاس ورڈ منتخب کریں"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"موجودہ اسکرین لاک"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"سیکیورٹی کیلئے پیٹرن سیٹ کریں"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"صاف کریں"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"صاف کریں"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"منسوخ کریں"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"تصدیق کریں"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"پاس ورڈ 4 سے 8 کیریکٹرز کا ہونا چاہئے جس میں کم از کم 1 نمبر ہونا چاہئے"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"کم از کم 4 حروف ہونا ضروری ہے"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"کم از کم <xliff:g id="COUNT">%d</xliff:g> حروف پر مشتمل ہونا چاہیے"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN کم از کم <xliff:g id="COUNT">%d</xliff:g> ہندسوں کا ہونا چاہیے"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"کریکٹرز <xliff:g id="NUMBER">%d</xliff:g> سے کم ہونے چاہئیں"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"آلہ کا منتظم ایک حالیہ PIN استعمال کرنے کی اجازت نہیں دیتا ہے"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"آپ کے IT منتظم نے عمومی PINs کو مسدود کر دیا ہے۔ کوئی دوسرا PIN آزمائیں۔"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"اس میں غلط کریکٹر شامل نہیں ہو سکتا۔"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"پاس ورڈ غلط ہے، 4 سے 8 کیریکٹرز کا ہونا لازمی ہے، کم از کم 1 ہندسہ، 1 حرف ہونا چاہئے، کوئی وہائٹ اسپیس نہیں ہونا چاہئے۔"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"پاس ورڈ غلط ہے، کم از کم 4 حروف لمبا ہونا ضروری ہے۔"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">کم از کم <xliff:g id="COUNT">%d</xliff:g> حروف پر مشتمل ہونا چاہیے</item>
       <item quantity="one">کم از کم 1 حرف پر مشتمل ہونا چاہیئے</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"سیٹ اپ مکمل کریں"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ابھی نہیں"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ڈرائیونگ کے دوران یہ خصوصیت دستیاب نہیں ہے۔"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ڈرائیونگ کے دوران صارف کو شامل نہیں کیا جا سکتا۔"</string>
 </resources>

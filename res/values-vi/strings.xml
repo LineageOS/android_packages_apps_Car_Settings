@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Yêu cầu ghép nối"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Nhấn để ghép nối với <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Ngôn ngữ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Âm báo"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Âm lượng chuông"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Âm lượng điều hướng"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Xóa người dùng"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Người dùng mới"</string>
     <string name="user_guest" msgid="3465399481257448601">"Khách"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Quản trị viên"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Đã đăng nhập là quản trị viên"</string>
     <string name="user_switch" msgid="6544839750534690781">"Nút chuyển"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Bạn (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Tên"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Thử lại"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Bỏ qua"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Đặt khóa màn hình"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Chọn mã PIN của bạn"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Chọn hình mở khóa của bạn"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Chọn mật khẩu của bạn"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Khóa màn hình hiện tại"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Để bảo mật, hãy đặt hình mở khóa"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Xóa"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Xóa"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Hủy"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Xác nhận"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Mật khẩu phải có 4-8 ký tự, ít nhất 1 số"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Phải có ít nhất 4 ký tự"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> ký tự"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Mã PIN phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> chữ số"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Chỉ được có ít hơn <xliff:g id="NUMBER">%d</xliff:g> ký tự"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Quản trị viên thiết bị không cho phép dùng mã PIN gần đây"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Quản vị viên CNTT đã chặn những mã PIN phổ biến. Hãy thử mã PIN khác."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Mật khẩu này không được bao gồm ký tự không hợp lệ."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Mật khẩu không hợp lệ. Mật khẩu phải dài từ 4 đến 8 ký tự, chứa ít nhất 1 chữ số, 1 chữ cái, không có khoảng trắng."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Mật khẩu không hợp lệ, phải có ít nhất 4 ký tự."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> chữ cái</item>
       <item quantity="one">Phải chứa ít nhất 1 chữ cái</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"hoàn tất thiết lập"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"để sau"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Bạn không sử dụng được tính năng này khi đang lái xe."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Không thể thêm người dùng trong khi lái xe."</string>
 </resources>

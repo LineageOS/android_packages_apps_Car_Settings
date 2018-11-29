@@ -22,7 +22,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Flere"</string>
     <string name="display_settings" msgid="5325515247739279185">"Visning"</string>
     <string name="brightness" msgid="2919605130898772866">"Lysstyrke"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Selvjusterende lysstyrke"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Automatisk lysstyrke"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimer lysstyrken til det omgivende lys"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nattelys er aktiveret"</string>
     <string name="keywords_display" msgid="3978416985146943922">"skærm, touchskærm"</string>
@@ -77,7 +77,7 @@
     <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"Brug til"</string>
     <string name="wifi_ssid_hint" msgid="4155050863239489553">"Skift navn for Bluetooth-enheden"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Anmodning om Bluetooth-parring"</string>
-    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Dan par, og forbind"</string>
+    <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Tilknyt og forbind"</string>
     <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-parringskode"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"Pinkoden indeholder bogstaver eller symboler"</string>
@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Anmodning om parring"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tryk for at parre med <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Sprog"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Lyd"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Lydstyrke for ringetone"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigationslydstyrke"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Slet bruger"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Ny bruger"</string>
     <string name="user_guest" msgid="3465399481257448601">"Gæst"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Administrator"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Logget ind som administrator"</string>
     <string name="user_switch" msgid="6544839750534690781">"Skift"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Dig (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Navn"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Prøv igen"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Spring over"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Konfigurer en skærmlås"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Vælg din pinkode"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Vælg dit mønster"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Vælg din adgangskode"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Aktuel skærmlås"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Angiv et mønster af sikkerhedshensyn"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Ryd"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Ryd"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Annuller"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Bekræft"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Krav til adgangskode: 4-8 tegn, heraf mindst 1 tal"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Adgangskoden skal fylde mindst 4 tegn"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Adgangskoden skal indeholde min. <xliff:g id="COUNT">%d</xliff:g> tegn"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Pinkoden skal indeholde min. <xliff:g id="COUNT">%d</xliff:g> tal"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Adgangskoden må indeholde maks. <xliff:g id="NUMBER">%d</xliff:g> tegn"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Enhedens administrator tillader ikke brug af en nylig brugt pinkode"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"Brug af almindelige pinkoder er blokeret af din it-administrator. Prøv en anden pinkode."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Der må ikke bruges et ugyldigt tegn."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Adgangskoden er ugyldig. Den skal indeholde 4-8 tegn, heraf mindst 1 tal og 1 bogstav. Den må ikke indeholde mellemrum."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Adgangskoden er ugyldig. Den skal fylde mindst 4 tegn."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Skal indeholde mindst <xliff:g id="COUNT">%d</xliff:g> bogstav</item>
       <item quantity="other">Skal indeholde mindst <xliff:g id="COUNT">%d</xliff:g> bogstaver</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"afslut konfiguration"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ikke nu"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Funktionen er ikke tilgængelig under kørsel."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Du kan ikke tilføje brugere under kørsel."</string>
 </resources>

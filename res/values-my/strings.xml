@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>နှင့် တွဲချိတ်ရန် တို့ပါ။"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"ဘာသာစကားများ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"အသံ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ဖုန်းမြည်သံ အတိုးအကျယ်"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"လမ်းညွှန်မှု အသံ"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"သုံးစွဲသူကို ဖျက်ရန်"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"အသုံးပြုသူ အသစ်"</string>
     <string name="user_guest" msgid="3465399481257448601">"ဧည့်သည်"</string>
+    <string name="user_admin" msgid="1535484812908584809">"စီမံခန့်ခွဲသူ"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"စီမံခန့်ခွဲသူအဖြစ် ဝင်ထားသည်"</string>
     <string name="user_switch" msgid="6544839750534690781">"ပြောင်းရန်"</string>
     <string name="current_user_name" msgid="3813671533249316823">"သင် (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"အမည်"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ထပ်လုပ်ရန်"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ကျော်ရန်"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"မျက်နှာပြင်လော့ခ်တစ်ခု သတ်မှတ်ခြင်း"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"သင့် PIN နံပါတ် ရွေးချယ်ခြင်း"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"သင့်လော့ခ်ဖွင့်ပုံစံ ရွေးပါ"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"သင့်စကားဝှက် ရွေးချယ်ခြင်း"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"လက်ရှိ မျက်နှာပြင်လော့ခ်"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"လုံခြုံရေးအတွက် ပုံစံတစ်ခု သတ်မှတ်ပါ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ရှင်းရန်"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"ရှင်းရန်"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"မလုပ်တော့"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"အတည်ပြုရန်"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"စကားဝှက်၌ စာ ၄−၈လုံး၊ ဂဏန်း ၁လုံး ပါရမည်"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"အနည်းဆုံး အက္ခရာ ၄ လုံး ရှိရမည်"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"အနည်းဆုံး အက္ခရာ <xliff:g id="COUNT">%d</xliff:g> လုံး ရှိရမည်"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"ပင်နံပါတ်သည် အနည်းဆုံးဂဏန်း <xliff:g id="COUNT">%d</xliff:g> လုံးရှိရမည်"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"အက္ခရာ <xliff:g id="NUMBER">%d</xliff:g> လုံးထက် နည်းရပါမည်"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"စက်ပစ္စည်း၏ စီမံခန့်ခွဲသူသည် မကြာသေးမီက အသုံးပြုခဲ့သည့် ပင်နံပါတ်ကို သုံးခွင့်မပြုပါ"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"အသုံးပြုလေ့ရှိသော ပင်နံပါတ်များကို သင်၏ IT စီမံခန့်ခွဲသူက ပိတ်ထားသည်။ အခြား ပင်နံပါတ်တစ်ခုဖြင့် စမ်းကြည့်ပါ။"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"၎င်းတွင် မမှန်ကန်သည့် အက္ခရာများ ပါဝင်၍မရပါ။"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"စကားဝှက် မမှန်ကန်ပါ၊ အက္ခရာ ၄−၈ လုံး၊ အနည်းဆုံး ဂဏန်း ၁ လုံး၊ စာလုံး ၁ လုံးရှိရမည်ဖြစ်ပြီး နေရာမခြားရပါ။"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"စကားဝှက် မမှန်ပါ၊ အနည်းဆုံး အက္ခရာ ၄ လုံး ရှိရမည်။"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">အနည်းဆုံး စကားလုံး <xliff:g id="COUNT">%d</xliff:g> လုံးပါဝင်ရမည်</item>
       <item quantity="one">အနည်းဆုံး စကားလုံး ၁ လုံးပါဝင်ရမည်</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"စနစ်ထည့်သွင်းမှု အပြီးသတ်ရန်"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ယခုမလုပ်ပါ"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"ကားမောင်းနေစဉ် ဝန်ဆောင်မှု မရနိုင်ပါ။"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ကားမောင်းနေစဉ် အသုံးပြုသူကို ထည့်၍မရပါ။"</string>
 </resources>

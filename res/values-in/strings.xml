@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Permintaan penyambungan"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tap untuk menyambungkan dengan <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Bahasa"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Suara"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume dering"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume navigasi"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Menghapus pengguna"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Pengguna baru"</string>
     <string name="user_guest" msgid="3465399481257448601">"Tamu"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Admin"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Sedang login admin"</string>
     <string name="user_switch" msgid="6544839750534690781">"Ganti"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Anda (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nama"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Coba lagi"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Lewati"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Setel kunci layar"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Pilih PIN Anda"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Pilih pola Anda"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Pilih sandi Anda"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Kunci layar saat ini"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Untuk keamanan, setel pola"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Hapus"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Hapus"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Batal"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Konfirmasi"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Sandi harus terdiri dari 4-8 karakter dengan minimal 1 angka"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Minimal 4 karakter"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Minimal berisi <xliff:g id="COUNT">%d</xliff:g> karakter"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN minimal <xliff:g id="COUNT">%d</xliff:g> digit"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Harus kurang dari <xliff:g id="NUMBER">%d</xliff:g> karakter"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Admin perangkat tidak mengizinkan penggunaan PIN yang baru-baru ini digunakan"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"PIN umum diblokir oleh admin IT. Coba PIN lain."</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Tidak boleh berisi karakter yang tidak valid."</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Sandi tidak valid, harus terdiri dari 4-8 karakter, minimal berisi 1 digit, 1 huruf, tanpa spasi kosong."</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Sandi tidak valid, minimal 4 karakter."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">Minimal berisi <xliff:g id="COUNT">%d</xliff:g> huruf</item>
       <item quantity="one">Minimal berisi 1 huruf</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"selesaikan penyiapan"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"lain kali"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Fitur tidak tersedia saat mengemudi."</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Tidak dapat menambahkan pengguna saat mengemudi."</string>
 </resources>

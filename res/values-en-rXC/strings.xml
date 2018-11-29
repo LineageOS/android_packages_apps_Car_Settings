@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‎‎‎‏‏‏‎‎‎‏‎‎‏‎‎‎‎‏‏‏‎‎‎‎‎‎‎‎‏‏‏‏‏‎‏‎‎‏‏‏‏‎‏‎‏‎‎‎‏‏‏‎‎‎‏‏‏‎Pairing request‎‏‎‎‏‎"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‏‏‎‏‎‏‏‏‎‎‎‏‏‎‎‏‎‏‏‎‎‎‏‎‏‎‎‎‏‎‏‏‎‎‏‏‎‏‎‏‏‎‏‏‏‏‏‎‏‎‎‎‎‏‏‎‏‏‎‎Tap to pair with ‎‏‎‎‏‏‎<xliff:g id="DEVICE_NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎.‎‏‎‎‏‎"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‎‏‏‎‏‏‎‏‏‎‎‎‎‎‎‏‎‏‎‏‎‏‏‎‏‏‏‎‎‎‏‏‎‎‎‎‏‎‎‎‏‎‏‏‏‎‎‎‏‎‏‏‎‏‎‏‎‎Languages‎‏‎‎‏‎"</string>
     <string name="sound_settings" msgid="3072423952331872246">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‎‏‎‏‎‎‎‏‏‎‏‏‏‎‎‎‏‎‏‎‎‏‏‏‎‎‏‏‎‎‏‏‎‎‎‏‎‎‏‎‎‏‎‎‏‎‏‏‏‏‏‏‏‎‏‏‎‎Sound‎‏‎‎‏‎"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‎‏‏‏‎‎‎‎‎‏‎‏‎‎‏‏‏‎‏‎‎‎‏‎‏‎‏‎‎‏‏‎‎‏‏‎‎‎‏‏‏‎‏‎‏‎‎‏‏‏‏‎‏‎‏‎‎‏‎‎Ring volume‎‏‎‎‏‎"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‏‎‏‎‎‏‎‎‎‎‏‏‏‏‎‎‏‏‏‏‎‎‏‏‏‏‎‏‏‏‏‏‏‎‎‏‏‏‏‎‎‏‏‏‎‏‏‏‎‏‎‎‎‎‏‏‏‎‏‎Navigation volume‎‏‎‎‏‎"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‎‏‏‏‏‎‎‏‏‎‏‎‎‏‏‎‏‎‏‎‎‏‏‎‏‏‏‎‎‎‏‎‎‎‎‏‎‎‎‏‏‎Delete user‎‏‎‎‏‎"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‎‏‎‏‏‎‎‎‎‎‎‎‏‎‎‏‏‎‎‎‏‏‎‎‎‏‎‎‏‎‏‎‎‏‎‎‎‎‎‏‎‏‎‏‏‏‏‎‏‎‏‏‏‎‎‏‏‏‎‎New user‎‏‎‎‏‎"</string>
     <string name="user_guest" msgid="3465399481257448601">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‎‏‎‏‏‏‏‎‎‏‎‎‏‎‎‏‏‏‎‏‏‏‏‎‏‏‏‏‎‏‎‎‏‎‏‏‎‎‎‏‎‏‎‏‎‎‏‎‎‏‏‎‎‏‎Guest‎‏‎‎‏‎"</string>
+    <string name="user_admin" msgid="1535484812908584809">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‎‏‎‎‏‏‏‏‎‎‏‎‎‎‏‏‎‏‎‎‏‏‎‏‎‏‎‎‏‏‏‏‎‏‏‎‏‏‎‎‎‏‎‏‏‏‏‏‎‏‏‎‏‎‎‏‎Admin‎‏‎‎‏‎"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‎‎‏‏‎‎‏‎‏‏‎‎‎‎‏‎‏‏‎‏‏‏‏‏‏‎‏‎‏‏‎‏‎‏‎‎‏‏‎‎‎‎‏‎‏‎‏‎‎‏‎‎‏‏‏‏‎‏‎‎Signed in as admin‎‏‎‎‏‎"</string>
     <string name="user_switch" msgid="6544839750534690781">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‎‏‏‎‏‎‎‏‏‏‏‏‏‎‎‎‏‎‎‎‏‎‎‏‏‏‎‏‏‏‎‏‎‎‏‏‏‏‎‎‏‏‏‏‏‎‏‏‏‏‏‎‏‏‏‎‏‎Switch‎‏‎‎‏‎"</string>
     <string name="current_user_name" msgid="3813671533249316823">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‎‎‏‏‏‎‏‏‎‎‏‏‏‎‎‎‏‎‎‎‎‎‏‏‎‏‏‏‎‎‎‏‎‏‎‏‎‏‏‎‎‎‎‏‎‎‎‏‏‏‏‏‎‏‎‏‏‏‎You (%1$s)‎‏‎‎‏‎"</string>
     <string name="user_name_label" msgid="3210832645046206845">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‏‎‎‏‎‎‎‏‏‏‏‎‎‏‎‏‎‏‏‎‏‎‎‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎‏‎‏‎‎‎‎‎‎‎‏‎‏‏‏‏‏‎‏‎Name‎‏‎‎‏‎"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‎‏‏‎‏‏‏‏‏‏‏‏‎‏‏‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‎‎‎‏‏‎‎‎‏‏‏‏‎‎‎‎‎‏‏‎‏‏‏‎‏‎‎Retry‎‏‎‎‏‎"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‎‎‎‎‎‏‏‏‏‏‎‎‎‏‏‎‎‏‏‎‎‏‏‏‏‏‎‏‎‏‎‏‏‎‏‎‏‏‏‏‏‏‏‏‏‏‎‏‎‎‏‏‎‎‏‎‏‏‎Skip‎‏‎‎‏‎"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‎‎‎‏‎‏‏‎‏‎‏‏‏‎‎‏‎‏‏‎‏‎‏‎‎‎‏‏‎‎‏‎‎‎‎‎‏‏‎‏‏‎‏‏‎‎‏‏‏‏‎‏‎‏‎‏‏‎‎‎Set a screen lock‎‏‎‎‏‎"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‎‏‏‎‏‎‏‎‏‎‎‎‎‎‏‏‏‏‎‎‏‎‎‎‎‎‏‎‏‏‎‎‎‎‎‏‏‎‎‎‎‏‏‎‎‏‎‎‎‏‏‎‏‎‏‏‎‎Choose your PIN‎‏‎‎‏‎"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‏‎‎‏‏‎‎‎‏‎‏‎‏‎‎‎‎‎‏‎‏‏‏‎‏‎‏‎‏‏‏‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‏‏‎‏‏‏‏‏‎‎‎Choose your pattern‎‏‎‎‏‎"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‏‏‏‎‎‏‎‎‏‏‏‏‏‎‎‏‎‎‎‎‏‏‎‏‏‏‎‏‎‎‏‎‎‎‏‏‏‏‎‏‏‎‎‏‎‎‏‎‏‎‏‏‎‏‏‎‏‎‎‎Choose your passowrd‎‏‎‎‏‎"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‎‎‏‏‎‏‏‎‎‏‎‏‏‎‎‏‎‎‏‏‎‎‎‎‏‏‎‎‎‎‏‏‎‎‏‏‎‎‏‏‏‏‏‏‎‎‎‏‏‎‏‏‎‎‎‎‏‏‎Current screen lock‎‏‎‎‏‎"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‏‎‏‎‏‎‎‎‏‎‏‏‎‎‎‎‎‏‏‏‏‎‎‎‎‎‏‎‎‎‎‏‎‏‎‎‏‏‏‏‏‏‏‎‏‏‏‎‎‎‎‏‎‏‎‏‎‎‎For security, set a pattern‎‏‎‎‏‎"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‎‎‎‏‎‎‏‏‎‏‏‎‏‎‎‏‏‎‎‏‎‎‏‎‎‎‎‏‎‏‎‏‎‎‎‎‏‏‎‎‏‏‎‏‏‏‎‏‎‎‏‎‎‏‏‎‎‏‏‎Clear‎‏‎‎‏‎"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‏‎‏‎‎‎‎‎‏‎‏‎‏‏‎‎‎‏‎‎‎‎‎‎‏‏‏‏‏‎‏‏‏‎‏‏‏‏‎‏‎‎‎‎‏‎‎‏‏‏‎‎‎‎‎‎Clear‎‏‎‎‏‎"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‎‎‏‎‏‏‏‏‎‏‎‎‏‏‏‎‎‎‎‎‎‎‎‎‎‏‎‏‎‎‎‏‏‏‎‏‎‎‎‎‎‎‏‏‎‎‎‎‏‎‎‏‏‎‎‏‎‎Cancel‎‏‎‎‏‎"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‎‎‎‏‎‎‎‏‎‏‎‎‏‏‎‏‎‏‏‏‏‏‏‏‏‎‏‎‎‏‎‎‎‏‏‎‎‎‎‎‎‎‎‏‏‎‏‎‎‏‎‎‎‏‎‎‏‎Confirm‎‏‎‎‏‎"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‎‏‎‎‎‎‎‏‎‏‎‏‏‎‏‎‎‏‎‎‏‎‎‏‎‏‏‎‏‎‏‎‏‏‏‏‏‏‏‎‏‏‏‏‎‏‎‏‎‎‏‏‏‎‎‏‏‏‎Password must be between 4-8 characters with at least 1 number‎‏‎‎‏‎"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‎‎‎‏‎‏‏‎‎‏‎‏‏‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‏‏‎‎‎‎‏‏‎‎‎‏‎‏‏‎‎‏‎‎‏‎Must be at least 4 characters‎‏‎‎‏‎"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‎‎‎‏‏‎‎‏‎‏‎‎‏‎‎‏‏‏‎‎‏‎‎‏‎‎‎‎‎‏‏‏‏‏‎‎‎‏‎‏‎‏‎Must be at least ‎‏‎‎‏‏‎<xliff:g id="COUNT">%d</xliff:g>‎‏‎‎‏‏‏‎ characters‎‏‎‎‏‎"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‎‎‏‎‎‏‏‎‏‏‏‏‎‏‏‏‎‎‏‏‎‏‏‎‏‏‏‏‎‏‏‎‎‎‎‏‎‎‎‏‎‎‏‏‎‏‏‏‎‎‎‎‏‏‎‏‎‎PIN must be at least ‎‏‎‎‏‏‎<xliff:g id="COUNT">%d</xliff:g>‎‏‎‎‏‏‏‎ digits‎‏‎‎‏‎"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‎‎‎‎‎‎‏‎‏‏‎‎‏‎‏‎‎‏‎‏‏‏‎‏‏‎‎‏‎‏‏‎‏‏‎‎‏‎‏‏‎‎‏‎‏‎‏‏‎‏‏‎‏‏‎Must be fewer than ‎‏‎‎‏‏‎<xliff:g id="NUMBER">%d</xliff:g>‎‏‎‎‏‏‏‎ characters‎‏‎‎‏‎"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‏‎‏‏‎‏‎‏‎‎‏‎‏‎‎‎‎‎‎‏‏‎‏‎‏‏‎‏‎‎‎‎‎‎‎‎‎‎‎‎‏‎‏‏‎‎‏‏‏‎‎‎‎‏‎‏‏‏‏‎Device admin doesn\'t allow using a recent PIN‎‏‎‎‏‎"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‏‎‏‏‎‏‏‏‏‏‎‎‏‏‏‏‎‎‎‎‏‏‎‏‎‎‎‏‏‏‏‏‎‎‏‎‎‎‏‏‎‏‎‏‏‏‏‎‏‎‏‎‎‎‏‎‏‎‎Common PINs are blocked by your IT admin. Try a different PIN.‎‏‎‎‏‎"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‏‏‏‎‎‎‏‏‎‎‎‎‎‎‎‏‏‏‏‏‎‎‎‎‎‎‏‏‎‏‎‎‏‏‎‏‎‎‏‏‎‎‎‎‎‎‎‎‏‏‏‎‏‎‎‎‏‎‎This can\'t include an invalid character.‎‏‎‎‏‎"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‏‎‎‏‏‎‏‏‏‏‏‎‏‎‏‎‏‎‏‏‏‎‏‎‎‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‎‎‎‎‎‏‏‏‏‎‏‎‎‏‏‏‎Password invalid, must be 4-8 characters, contain at least 1 digit, 1 letter, no whitespace.‎‏‎‎‏‎"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‏‏‎‏‏‏‎‏‏‏‎‏‏‏‏‎‏‏‏‎‏‎‎‎‎‎‎‏‎‏‏‎‎‎‏‏‏‎‎‏‏‎‏‏‎‏‏‎‎‏‏‎‏‏‏‏‏‎‎Password invalid, must be at least 4 characters.‎‏‎‎‏‎"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="other">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‎‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‎Must contain at least ‎‏‎‎‏‏‎<xliff:g id="COUNT">%d</xliff:g>‎‏‎‎‏‏‏‎ letters‎‏‎‎‏‎</item>
       <item quantity="one">‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‎‏‏‏‏‎‎‏‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‎‎‏‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‎Must contain at least 1 letter‎‏‎‎‏‎</item>

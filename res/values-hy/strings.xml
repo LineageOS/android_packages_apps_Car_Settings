@@ -91,6 +91,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Զուգակցման հարցում"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Հպեք` <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ի հետ զուգակցելու համար:"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="language_settings" msgid="2079258598337245546">"Լեզուներ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ձայն"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Զանգի ձայնը"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Նավիգացիայի ձայնը"</string>
@@ -169,6 +170,8 @@
     <string name="user_delete_user_description" msgid="2300280525351142435">"Ջնջել օգտատիրոջը"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Նոր օգտատեր"</string>
     <string name="user_guest" msgid="3465399481257448601">"Հյուր"</string>
+    <string name="user_admin" msgid="1535484812908584809">"Ադմինիստրատոր"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Դուք մտել եք որպես ադմինիստրատոր"</string>
     <string name="user_switch" msgid="6544839750534690781">"Փոխել օգտատիրոջը"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Դուք (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Անուն"</string>
@@ -211,7 +214,9 @@
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Կրկնել"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Բաց թողնել"</string>
     <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպման կարգավորում"</string>
+    <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Ընտրեք ձեր PIN-ը"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Ընտրեք ձեր նախշը"</string>
+    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Ընտրեք ձեր գաղտնաբառը"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Կողպման ընթացիկ եղանակը"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Անվտանգության համար ավելացրեք նախշ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Մաքրել"</string>
@@ -244,7 +249,7 @@
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Մաքրել"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Չեղարկել"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Հաստատել"</string>
-    <string name="choose_lock_password_hints" msgid="1802962836351866087">"Գաղտնաբառ՝ 4-8 նիշ (առնվազն 1 թիվ)"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Պետք է լինի առնվազն 4 նիշ"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> նիշ"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-ը պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> թվանշան"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Պետք է <xliff:g id="NUMBER">%d</xliff:g>-ից քիչ նիշ պարունակի"</string>
@@ -253,7 +258,7 @@
     <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"Սարքի ադմինիստրատորը չի թույլատրում օգտագործել վերջին PIN կոդերը"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"ՏՏ ադմինիստրատորն արգելափակել է պարզ PIN կոդերը: Փորձեք մեկ այլ PIN:"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"Գաղտնաբառն անվավեր նիշ է պարունակում:"</string>
-    <string name="lockpassword_invalid_password" msgid="4987689810161043367">"Գաղտնաբառն անվավեր է. պետք է լինի 4-8 նիշ և պարունակի առնվազն 1 թիվ ու 1 տառ՝ առանց բացատի:"</string>
+    <string name="lockpassword_invalid_password" msgid="1690956113717418430">"Գաղտնաբառը պետք է պարունակի առնվազն 4 նիշ:"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
       <item quantity="one">Պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> տառ</item>
       <item quantity="other">Պետք է պարունակի առնվազն <xliff:g id="COUNT">%d</xliff:g> տառ</item>
@@ -296,6 +301,5 @@
     <string name="suggestion_primary_button" msgid="6421115494714083020">"ավարտել կարգավորումը"</string>
     <string name="suggestion_secondary_button" msgid="7075088546904464681">"ոչ հիմա"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Վարելու ընթացքում գործառույթը հասանելի չէ:"</string>
-    <!-- no translation found for add_user_restricted_while_driving (6384004350628271556) -->
-    <skip />
+    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Վարելու ժամանակ հնարավոր չէ օգտատեր ավելացնել:"</string>
 </resources>
