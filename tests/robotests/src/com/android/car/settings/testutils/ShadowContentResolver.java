@@ -44,23 +44,23 @@ public class ShadowContentResolver {
     private static Map<Integer, Boolean> sMasterSyncAutomatically = new HashMap<>();
 
     @Implementation
-    public static SyncAdapterType[] getSyncAdapterTypesAsUser(int userId) {
+    protected static SyncAdapterType[] getSyncAdapterTypesAsUser(int userId) {
         return sSyncAdapterTypes;
     }
 
     @Implementation
-    public static int getIsSyncableAsUser(Account account, String authority, int userId) {
+    protected static int getIsSyncableAsUser(Account account, String authority, int userId) {
         return sSyncable.getOrDefault(authority, SYNCABLE);
     }
 
     @Implementation
-    public static boolean getSyncAutomaticallyAsUser(Account account, String authority,
+    protected static boolean getSyncAutomaticallyAsUser(Account account, String authority,
             int userId) {
         return sSyncAutomatically.getOrDefault(authority, true);
     }
 
     @Implementation
-    public static boolean getMasterSyncAutomaticallyAsUser(int userId) {
+    protected static boolean getMasterSyncAutomaticallyAsUser(int userId) {
         return sMasterSyncAutomatically.getOrDefault(userId, true);
     }
 
@@ -69,18 +69,18 @@ public class ShadowContentResolver {
     }
 
     @Implementation
-    public static void setIsSyncable(Account account, String authority, int syncable) {
+    protected static void setIsSyncable(Account account, String authority, int syncable) {
         sSyncable.put(authority, syncable);
     }
 
     @Implementation
-    public static void setSyncAutomaticallyAsUser(Account account, String authority, boolean sync,
-            @UserIdInt int userId) {
+    protected static void setSyncAutomaticallyAsUser(Account account, String authority,
+            boolean sync, @UserIdInt int userId) {
         sSyncAutomatically.put(authority, sync);
     }
 
     @Implementation
-    public static void setMasterSyncAutomaticallyAsUser(boolean sync, @UserIdInt int userId) {
+    protected static void setMasterSyncAutomaticallyAsUser(boolean sync, @UserIdInt int userId) {
         sMasterSyncAutomatically.put(userId, sync);
     }
 

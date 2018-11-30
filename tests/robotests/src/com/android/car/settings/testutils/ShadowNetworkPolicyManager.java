@@ -36,7 +36,7 @@ public class ShadowNetworkPolicyManager {
     }
 
     @Implementation
-    public void factoryReset(String subscriber) {
+    protected void factoryReset(String subscriber) {
         sResetCalledForSubscriberCount.put(subscriber,
                 sResetCalledForSubscriberCount.getOrDefault(subscriber, 0) + 1);
     }

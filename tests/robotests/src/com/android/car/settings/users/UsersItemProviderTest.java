@@ -46,7 +46,7 @@ import java.util.List;
  * Tests for UsersItemProviderTest.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = { ShadowTextListItem.class })
+@Config(shadows = {ShadowTextListItem.class })
 public class UsersItemProviderTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;

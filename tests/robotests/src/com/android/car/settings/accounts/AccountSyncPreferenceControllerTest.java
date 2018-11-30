@@ -22,6 +22,7 @@ import static org.mockito.Mockito.mock;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
+import android.content.ContentResolver;
 import android.content.SyncAdapterType;
 import android.os.UserHandle;
 
@@ -80,8 +81,8 @@ public class AccountSyncPreferenceControllerTest {
                 "type5", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount,
+        ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount,
                 "authority", /* sync= */ true, /* userId= */ mUserId);
 
         mController.updateState(mPreference);
@@ -98,8 +99,8 @@ public class AccountSyncPreferenceControllerTest {
                 /* accountType */ "type1", /* userVisible */ false, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 true, /* userId= */ mUserId);
 
         mController.updateState(mPreference);
@@ -116,7 +117,7 @@ public class AccountSyncPreferenceControllerTest {
                 "type1", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", NOT_SYNCABLE);
+        ContentResolver.setIsSyncable(mAccount, "authority", NOT_SYNCABLE);
 
         mController.updateState(mPreference);
 
@@ -132,9 +133,9 @@ public class AccountSyncPreferenceControllerTest {
                 "type1", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
-        ShadowContentResolver.setMasterSyncAutomaticallyAsUser(true, mUserId);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
+        ContentResolver.setMasterSyncAutomaticallyAsUser(true, mUserId);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 false, /* userId= */ mUserId);
 
         mController.updateState(mPreference);
@@ -151,8 +152,8 @@ public class AccountSyncPreferenceControllerTest {
                 "type1", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
-        ShadowContentResolver.setMasterSyncAutomaticallyAsUser(false, mUserId);
+        ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
+        ContentResolver.setMasterSyncAutomaticallyAsUser(false, mUserId);
 
         mController.updateState(mPreference);
 
@@ -168,8 +169,8 @@ public class AccountSyncPreferenceControllerTest {
                 "type1", /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        ShadowContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority", /* sync= */
                 true, /* userId= */ mUserId);
 
         mController.updateState(mPreference);
@@ -193,19 +194,19 @@ public class AccountSyncPreferenceControllerTest {
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
         // Enable sync for the first three authorities and disable it for the fourth one
-        ShadowContentResolver.setIsSyncable(mAccount, "authority1", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority1", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority1", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority1", /* sync= */
                 true, /* userId= */ mUserId);
 
-        ShadowContentResolver.setIsSyncable(mAccount, "authority2", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority2", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority2", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority2", /* sync= */
                 true, /* userId= */ mUserId);
 
-        ShadowContentResolver.setIsSyncable(mAccount, "authority3", SYNCABLE);
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority3", /* sync= */
+        ContentResolver.setIsSyncable(mAccount, "authority3", SYNCABLE);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority3", /* sync= */
                 true, /* userId= */ mUserId);
 
-        ShadowContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority4", /* sync= */
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, "authority4", /* sync= */
                 false, /* userId= */ mUserId);
 
         mController.updateState(mPreference);

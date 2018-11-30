@@ -27,7 +27,6 @@ import static org.testng.Assert.assertThrows;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.os.PowerManager;
 import android.provider.Settings;
 
 import androidx.preference.PreferenceManager;
@@ -37,7 +36,6 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.SeekBarPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowPowerManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -46,10 +44,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowPowerManager.class})
 public class BrightnessLevelPreferenceControllerTest {
 
     private static final String PREFERENCE_KEY = "brightness_level";
@@ -63,8 +59,6 @@ public class BrightnessLevelPreferenceControllerTest {
     private int mMid;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private PowerManager mPowerManager;
 
     @Before
     public void setUp() {
@@ -79,9 +73,6 @@ public class BrightnessLevelPreferenceControllerTest {
 
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(CURRENT_USER);
-        ShadowPowerManager.setInstance(mPowerManager);
-        when(mPowerManager.getMinimumScreenBrightnessSetting()).thenReturn(mMin);
-        when(mPowerManager.getMaximumScreenBrightnessSetting()).thenReturn(mMax);
 
         mController = new BrightnessLevelPreferenceController(mContext, PREFERENCE_KEY,
                 mock(FragmentController.class));
@@ -93,7 +84,6 @@ public class BrightnessLevelPreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
-        ShadowPowerManager.reset();
     }
 
     @Test

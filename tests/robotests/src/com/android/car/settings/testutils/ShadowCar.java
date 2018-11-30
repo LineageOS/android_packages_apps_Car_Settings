@@ -46,7 +46,7 @@ public class ShadowCar {
      * Returns a mocked version of a {@link Car} object.
      */
     @Implementation
-    public static Car createCar(Context context, ServiceConnection serviceConnection) {
+    protected static Car createCar(Context context, ServiceConnection serviceConnection) {
         if (serviceConnection != null) {
             doAnswer((Answer<Void>) invocation -> {
                 serviceConnection.onServiceConnected(null, null);

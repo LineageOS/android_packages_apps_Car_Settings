@@ -54,9 +54,7 @@ public class ChooseNewAdminFragmentTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After

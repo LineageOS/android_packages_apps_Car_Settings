@@ -29,7 +29,7 @@ import org.robolectric.util.ReflectionHelpers;
 public class ShadowSecureSettings extends ShadowSettings.ShadowSecure {
 
     @Implementation
-    public static int getIntForUser(ContentResolver resolver, String name, int def,
+    protected static int getIntForUser(ContentResolver resolver, String name, int def,
             int userHandle) {
         if (Settings.Secure.LOCATION_MODE.equals(name)) {
             // Map from to underlying location provider storage API to location mode
@@ -50,7 +50,7 @@ public class ShadowSecureSettings extends ShadowSettings.ShadowSecure {
     }
 
     @Implementation
-    public static boolean putIntForUser(ContentResolver resolver, String name, int value,
+    protected static boolean putIntForUser(ContentResolver resolver, String name, int value,
             int userHandle) {
         if (Settings.Secure.LOCATION_MODE.equals(name)) {
             // Map LOCATION_MODE to underlying location provider storage API

@@ -34,7 +34,7 @@ public class ShadowRingtoneManager {
     }
 
     @Implementation
-    public static Ringtone getRingtone(final Context context, Uri ringtoneUri) {
+    protected static Ringtone getRingtone(final Context context, Uri ringtoneUri) {
         return sRingtone;
     }
 

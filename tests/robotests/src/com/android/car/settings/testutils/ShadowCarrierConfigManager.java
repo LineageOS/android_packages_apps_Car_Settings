@@ -29,7 +29,7 @@ public class ShadowCarrierConfigManager {
     private SparseArray<PersistableBundle> mBundles = new SparseArray<>();
 
     @Implementation
-    public PersistableBundle getConfigForSubId(int subId) {
+    protected PersistableBundle getConfigForSubId(int subId) {
         return mBundles.get(subId);
     }
 

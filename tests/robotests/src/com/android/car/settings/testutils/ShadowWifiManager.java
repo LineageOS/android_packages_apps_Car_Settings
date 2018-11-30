@@ -32,7 +32,7 @@ public class ShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager
     }
 
     @Implementation
-    public void factoryReset() {
+    protected void factoryReset() {
         sResetCalledCount++;
     }
 

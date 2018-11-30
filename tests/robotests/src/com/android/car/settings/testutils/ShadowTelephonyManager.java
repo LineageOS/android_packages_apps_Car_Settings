@@ -38,13 +38,13 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
     }
 
     @Implementation
-    public void factoryReset(int subId) {
+    protected void factoryReset(int subId) {
         sSubIdsWithResetCalledCount.put(subId,
                 sSubIdsWithResetCalledCount.getOrDefault(subId, 0) + 1);
     }
 
     @Implementation
-    public String getSubscriberId(int subId) {
+    protected String getSubscriberId(int subId) {
         return subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID ? null : SUBSCRIBER_ID;
     }
 

@@ -35,7 +35,7 @@ public class ShadowLocalePicker {
     }
 
     @Implementation
-    public static void updateLocale(Locale locale) {
+    protected static void updateLocale(Locale locale) {
         sLocaleUpdated = true;
     }
 

@@ -42,7 +42,6 @@ import android.net.wifi.WifiManager;
 import android.os.Handler;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.wifi.details.WifiInfoProvider.Listener;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -65,8 +64,6 @@ public class WifiInfoProviderImplTest {
 
     @Mock
     private AccessPoint mMockAccessPoint;
-    @Mock
-    private FragmentController mMockFragmentController;
     @Mock
     private ConnectivityManager mMockConnectivityManager;
     @Mock
