@@ -35,12 +35,12 @@ public class ShadowSecureSettings {
             new WeakHashMap<>();
 
     @Implementation
-    public static int getInt(ContentResolver cr, String name, int def) {
+    protected static int getInt(ContentResolver cr, String name, int def) {
         return getIntForUser(cr, name, def, cr.getUserId());
     }
 
     @Implementation
-    public static int getIntForUser(ContentResolver resolver, String name, int def,
+    protected static int getIntForUser(ContentResolver resolver, String name, int def,
             int userHandle) {
         final Table<Integer, String, Object> userTable = getUserTable(resolver);
         synchronized (userTable) {
@@ -50,7 +50,7 @@ public class ShadowSecureSettings {
     }
 
     @Implementation
-    public static boolean putIntForUser(ContentResolver resolver, String name, int value,
+    protected static boolean putIntForUser(ContentResolver resolver, String name, int value,
             int userHandle) {
         final Table<Integer, String, Object> userTable = getUserTable(resolver);
         synchronized (userTable) {

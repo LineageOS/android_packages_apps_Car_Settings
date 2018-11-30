@@ -63,7 +63,6 @@ public class UsersBasePreferenceControllerTest {
 
         @Override
         protected void userClicked(UserInfo userInfo) {
-            return;
         }
     }
 

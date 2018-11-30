@@ -83,9 +83,7 @@ public class ResetNetworkConfirmFragmentTest {
         setEuiccResetCheckbox(false);
         setNetworkSubscriptionId("");
 
-        BaseTestActivity testActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        BaseTestActivity testActivity = Robolectric.setupActivity(BaseTestActivity.class);
 
         ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
         testActivity.launchFragment(fragment);

@@ -51,7 +51,7 @@ public class ShadowLocaleStore {
     }
 
     @Implementation
-    public static Set<LocaleStore.LocaleInfo> getLevelLocales(Context context,
+    protected static Set<LocaleStore.LocaleInfo> getLevelLocales(Context context,
             Set<String> ignorables, LocaleStore.LocaleInfo parent, boolean translatedOnly) {
         if (parent != null) {
             return sLocaleInfoRelationships.getOrDefault(parent, new HashSet<>());

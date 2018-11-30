@@ -33,7 +33,7 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
     }
 
     @Implementation
-    public boolean factoryReset() {
+    protected boolean factoryReset() {
         sResetCalledCount++;
         return true;
     }

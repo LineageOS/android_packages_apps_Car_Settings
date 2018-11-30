@@ -27,12 +27,12 @@ import org.robolectric.annotation.Implements;
 @Implements(UserIconProvider.class)
 public class ShadowUserIconProvider {
     @Implementation
-    public Drawable getUserIcon(UserInfo userInfo, Context context) {
+    protected Drawable getUserIcon(UserInfo userInfo, Context context) {
         return null;
     }
 
     @Implementation
-    public Drawable getDefaultGuestIcon(Context context) {
+    protected Drawable getDefaultGuestIcon(Context context) {
         return null;
     }
 }

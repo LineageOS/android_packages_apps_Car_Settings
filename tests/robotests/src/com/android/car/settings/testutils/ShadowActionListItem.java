@@ -35,17 +35,17 @@ public class ShadowActionListItem {
     private View.OnClickListener mPrimaryActionOnClickListener;
 
     @Implementation
-    public void setTitle(CharSequence title) {
+    protected void setTitle(CharSequence title) {
         mTitle = title;
     }
 
     @Implementation
-    public void setPrimaryActionIcon(Drawable icon, int size) {
+    protected void setPrimaryActionIcon(Drawable icon, int size) {
         mIcon = icon;
     }
 
     @Implementation
-    public void setAction(String text, boolean showDivider, View.OnClickListener listener) {
+    protected void setAction(String text, boolean showDivider, View.OnClickListener listener) {
         mPrimaryActionText = text;
         mPrimaryActionOnClickListener = listener;
     }

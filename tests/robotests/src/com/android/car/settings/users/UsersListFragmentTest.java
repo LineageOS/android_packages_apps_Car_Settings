@@ -70,9 +70,7 @@ public class UsersListFragmentTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        mTestActivity = Robolectric.buildActivity(BaseTestActivity.class)
-                .setup()
-                .get();
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After

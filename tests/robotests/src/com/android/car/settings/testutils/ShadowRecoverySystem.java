@@ -33,7 +33,7 @@ public class ShadowRecoverySystem {
     }
 
     @Implementation
-    public static boolean wipeEuiccData(Context context, final String packageName) {
+    protected static boolean wipeEuiccData(Context context, final String packageName) {
         sWipeEuiccDataCalledCount++;
         return true;
     }

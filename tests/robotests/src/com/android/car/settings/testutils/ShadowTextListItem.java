@@ -45,29 +45,29 @@ public class ShadowTextListItem {
     }
 
     @Implementation
-    public void setTitle(CharSequence title) {
+    protected void setTitle(CharSequence title) {
         mTitle = title;
     }
 
     @Implementation
-    public void setBody(CharSequence body) {
+    protected void setBody(CharSequence body) {
         mBody = body;
     }
 
     @Implementation
-    public void setBody(CharSequence body, boolean asPrimary) {
+    protected void setBody(CharSequence body, boolean asPrimary) {
         mBody = body;
     }
 
     @Implementation
-    public void setSwitch(boolean checked, boolean showDivider,
+    protected void setSwitch(boolean checked, boolean showDivider,
             CompoundButton.OnCheckedChangeListener listener) {
         mSwitchChecked = checked;
         mSwitchOnCheckedChangeListener = listener;
     }
 
     @Implementation
-    public void setOnClickListener(View.OnClickListener listener) {
+    protected void setOnClickListener(View.OnClickListener listener) {
         mOnClickListener = listener;
     }
 
