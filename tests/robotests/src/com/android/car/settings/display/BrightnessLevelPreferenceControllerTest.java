@@ -144,7 +144,7 @@ public class BrightnessLevelPreferenceControllerTest {
                 new androidx.preference.SeekBarPreference(mContext);
         preference.setKey(PREFERENCE_KEY);
         mPreferenceScreen.addPreference(preference);
-        assertThrows(IllegalStateException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> mController.displayPreference(mPreferenceScreen));
     }
 
@@ -177,7 +177,7 @@ public class BrightnessLevelPreferenceControllerTest {
 
     @Test
     public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalStateException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> mController.onPreferenceChange(
                         new androidx.preference.SeekBarPreference(mContext), true));
     }

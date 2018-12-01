@@ -26,16 +26,15 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.service.settings.suggestions.Suggestion;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.suggestions.SuggestionController;
 
 import org.junit.Before;
@@ -44,6 +43,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.util.ReflectionHelpers;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -53,7 +53,6 @@ import java.util.List;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class SuggestionsPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
     private static final Suggestion SUGGESTION_1 = new Suggestion.Builder("1").build();
     private static final Suggestion SUGGESTION_2 = new Suggestion.Builder("2").build();
 
@@ -64,8 +63,8 @@ public class SuggestionsPreferenceControllerTest {
     @Mock
     private SuggestionController mSuggestionController;
     private Context mContext;
-    private PreferenceScreen mScreen;
     private PreferenceGroup mGroup;
+    private PreferenceControllerTestHelper<SuggestionsPreferenceController> mControllerHelper;
     private SuggestionsPreferenceController mController;
 
     @Before
@@ -73,58 +72,59 @@ public class SuggestionsPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
-        mScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mGroup = new PreferenceCategory(mContext);
-        mGroup.setKey(PREFERENCE_KEY);
-        mScreen.addPreference(mGroup);
 
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                SuggestionsPreferenceController.class);
+        mController = mControllerHelper.getController();
         mController.setLoaderManager(mLoaderManager);
-        mController.mSuggestionController = mSuggestionController;
+        ReflectionHelpers.setField(SuggestionsPreferenceController.class, mController,
+                "mSuggestionController", mSuggestionController);
+        mControllerHelper.setPreference(mGroup);
+        mControllerHelper.markState(Lifecycle.State.STARTED);
     }
 
     @Test
-    public void checkInitialized_loaderManagerSet_doesNothing() {
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+    public void setPreference_loaderManagerSet_doesNothing() {
+        PreferenceControllerTestHelper<SuggestionsPreferenceController> helper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        SuggestionsPreferenceController.class);
+        mController = helper.getController();
         mController.setLoaderManager(mLoaderManager);
 
-        mController.checkInitialized();
+        helper.setPreference(new PreferenceCategory(mContext));
     }
 
     @Test
     public void checkInitialized_nullLoaderManager_throwsIllegalStateException() {
-        mController = new SuggestionsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        PreferenceControllerTestHelper<SuggestionsPreferenceController> helper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        SuggestionsPreferenceController.class);
 
-        assertThrows(IllegalStateException.class, () -> mController.checkInitialized());
+        assertThrows(IllegalStateException.class,
+                () -> helper.setPreference(new PreferenceCategory(mContext)));
     }
 
     @Test
-    public void displayPreference_noSuggestions_hidesGroup() {
-        mController.displayPreference(mScreen);
-
+    public void onStart_noSuggestions_hidesGroup() {
         assertThat(mGroup.isVisible()).isFalse();
     }
 
     @Test
     public void onStart_startsSuggestionController() {
-        mController.onStart();
-
         verify(mSuggestionController).start();
     }
 
     @Test
     public void onStop_stopsSuggestionController() {
-        mController.onStop();
+        mControllerHelper.markState(Lifecycle.State.CREATED);
 
         verify(mSuggestionController).stop();
     }
 
     @Test
     public void onStop_destroysLoader() {
-        mController.onStop();
+        mControllerHelper.markState(Lifecycle.State.CREATED);
 
         verify(mLoaderManager).destroyLoader(SettingsSuggestionsLoader.LOADER_ID_SUGGESTIONS);
     }
@@ -159,8 +159,6 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void onLoadFinished_groupContainsSuggestionPreference() {
-        mController.displayPreference(mScreen);
-
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
 
         assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
@@ -170,7 +168,6 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void onLoadFinished_newSuggestion_addsToGroup() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
         assertThat(mGroup.getPreferenceCount()).isEqualTo(1);
 
@@ -181,7 +178,6 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void onLoadFinished_removedSuggestion_removesFromGroup() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Arrays.asList(SUGGESTION_1, SUGGESTION_2));
         assertThat(mGroup.getPreferenceCount()).isEqualTo(2);
 
@@ -194,9 +190,8 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void onLoadFinished_noSuggestions_hidesGroup() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
-        assertThat(mScreen.findPreference(PREFERENCE_KEY).isVisible()).isTrue();
+        assertThat(mGroup.isVisible()).isTrue();
 
         mController.onLoadFinished(mLoader, Collections.emptyList());
 
@@ -229,7 +224,6 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void dismissSuggestion_removesSuggestion() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Arrays.asList(SUGGESTION_1, SUGGESTION_2));
         assertThat(mGroup.getPreferenceCount()).isEqualTo(2);
         SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
@@ -243,18 +237,16 @@ public class SuggestionsPreferenceControllerTest {
 
     @Test
     public void dismissSuggestion_lastSuggestion_hidesGroup() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
         SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
 
         mController.dismissSuggestion(pref);
 
-        assertThat(mScreen.findPreference(PREFERENCE_KEY).isVisible()).isFalse();
+        assertThat(mGroup.isVisible()).isFalse();
     }
 
     @Test
     public void dismissSuggestion_callsSuggestionControllerDismiss() {
-        mController.displayPreference(mScreen);
         mController.onLoadFinished(mLoader, Collections.singletonList(SUGGESTION_1));
         SuggestionPreference pref = (SuggestionPreference) mGroup.getPreference(0);
 

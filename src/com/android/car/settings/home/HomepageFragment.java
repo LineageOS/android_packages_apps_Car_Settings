@@ -22,13 +22,13 @@ import androidx.annotation.XmlRes;
 import androidx.loader.app.LoaderManager;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.suggestions.SuggestionsPreferenceController;
 
 /**
  * Homepage for settings for car.
  */
-public class HomepageFragment extends BasePreferenceFragment {
+public class HomepageFragment extends SettingsFragment {
 
     @Override
     @XmlRes

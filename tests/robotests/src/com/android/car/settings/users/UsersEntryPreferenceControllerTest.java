@@ -26,10 +26,11 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -47,13 +48,11 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class UsersEntryPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
-    @Mock
-    private FragmentController mFragmentController;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     private Context mContext;
+    private Preference mPreference;
+    private PreferenceControllerTestHelper<UsersEntryPreferenceController> mControllerHelper;
     private UsersEntryPreferenceController mController;
 
     @Before
@@ -62,8 +61,11 @@ public class UsersEntryPreferenceControllerTest {
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
         mContext = RuntimeEnvironment.application;
-        mController = new UsersEntryPreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController);
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                UsersEntryPreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+        mControllerHelper.markState(Lifecycle.State.STARTED);
     }
 
     @After
@@ -72,56 +74,43 @@ public class UsersEntryPreferenceControllerTest {
     }
 
     @Test
-    public void handlePreferenceTreeClick_keyMismatch_doesNothing() {
-        Preference preference = new Preference(mContext);
-        preference.setKey(mController.getPreferenceKey() + " wrong key");
-
-        assertThat(mController.handlePreferenceTreeClick(preference)).isFalse();
-        assertThat(preference.getFragment()).isNull();
-    }
-
-    @Test
-    public void handlePreferenceTreeClick_adminUser_returnsTrue() {
+    public void preferenceClicked_adminUser_handled() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        Preference preference = new Preference(mContext);
-        preference.setKey(mController.getPreferenceKey());
 
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
+        assertThat(
+                mPreference.getOnPreferenceClickListener().onPreferenceClick(mPreference)).isTrue();
     }
 
     @Test
-    public void handlePreferenceTreeClick_adminUser_launchesUsersListFragment() {
+    public void preferenceClicked_adminUser_launchesUsersListFragment() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        Preference preference = new Preference(mContext);
-        preference.setKey(mController.getPreferenceKey());
 
-        mController.handlePreferenceTreeClick(preference);
+        mPreference.performClick();
 
-        verify(mFragmentController).launchFragment(any(UsersListFragment.class));
+        verify(mControllerHelper.getMockFragmentController()).launchFragment(
+                any(UsersListFragment.class));
     }
 
     @Test
-    public void handlePreferenceTreeClick_nonAdminUser_returnsTrue() {
+    public void preferenceClicked_nonAdminUser_handled() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        Preference preference = new Preference(mContext);
-        preference.setKey(mController.getPreferenceKey());
 
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
+        assertThat(
+                mPreference.getOnPreferenceClickListener().onPreferenceClick(mPreference)).isTrue();
     }
 
     @Test
-    public void handlePreferenceTreeClick_nonAdminUser_launchesUserDetailsFragment() {
+    public void preferenceClicked_nonAdminUser_launchesUserDetailsFragment() {
         int userId = 1234;
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        Preference preference = new Preference(mContext);
-        preference.setKey(mController.getPreferenceKey());
 
-        mController.handlePreferenceTreeClick(preference);
+        mPreference.performClick();
 
         ArgumentCaptor<UserDetailsFragment> fragmentCaptor = ArgumentCaptor.forClass(
                 UserDetailsFragment.class);
-        verify(mFragmentController).launchFragment(fragmentCaptor.capture());
+        verify(mControllerHelper.getMockFragmentController()).launchFragment(
+                fragmentCaptor.capture());
         UserDetailsFragment launchedFragment = fragmentCaptor.getValue();
         assertThat(launchedFragment.getArguments()).isNotNull();
         assertThat(launchedFragment.getArguments().getInt(Intent.EXTRA_USER_ID)).isEqualTo(userId);

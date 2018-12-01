@@ -21,7 +21,7 @@
                   android:title="screen_title">
     <Preference
         android:key="@string/tpk_xml_controller"
-        settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+        settings:controller="com.android.car.settings.common.FakeBasePreferenceController"/>
     <Preference
         android:key="@string/tpk_lifecycle_controller"
         settings:controller="com.android.car.settings.common.LifecycleFakePreferenceController"/>

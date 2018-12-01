@@ -18,32 +18,26 @@ package com.android.car.settings.common;
 
 import android.content.Context;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
-
 /**
- * Preference controller which implements {@link LifecycleObserver} for testing automatic
- * registration.
+ * Concrete {@link BasePreferenceController} with an accessible {@link AvailabilityStatus}.
  */
-public class LifecycleFakePreferenceController extends FakeBasePreferenceController implements
-        LifecycleObserver {
+public class FakeBasePreferenceController extends BasePreferenceController {
 
-    boolean mOnCreateCalled = false;
-    boolean mOnDestroyCalled = false;
+    @AvailabilityStatus
+    private int mAvailabilityStatus = AVAILABLE;
 
-    public LifecycleFakePreferenceController(Context context, String preferenceKey,
+    public FakeBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
         super(context, preferenceKey, fragmentController);
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
-        mOnCreateCalled = true;
+    @Override
+    @AvailabilityStatus
+    public int getAvailabilityStatus() {
+        return mAvailabilityStatus;
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public void onDestroy() {
-        mOnDestroyCalled = true;
+    public void setAvailabilityStatus(@AvailabilityStatus int availabilityStatus) {
+        mAvailabilityStatus = availabilityStatus;
     }
 }

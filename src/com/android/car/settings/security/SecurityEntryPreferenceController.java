@@ -16,24 +16,32 @@
 
 package com.android.car.settings.security;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the top level entry into Security settings should be displayed
  * based on the user status.
  */
-public class SecurityEntryPreferenceController extends NoSetupPreferenceController {
+public class SecurityEntryPreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
     public SecurityEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override

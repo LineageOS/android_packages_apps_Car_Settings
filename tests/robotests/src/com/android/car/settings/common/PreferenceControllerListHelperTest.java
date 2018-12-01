@@ -46,7 +46,7 @@ public class PreferenceControllerListHelperTest {
         assertThat(controllers).hasSize(validKeys.size());
         List<String> foundKeys = new ArrayList<>();
         for (BasePreferenceController controller : controllers) {
-            assertThat(controller).isInstanceOf(FakePreferenceController.class);
+            assertThat(controller).isInstanceOf(FakeBasePreferenceController.class);
             foundKeys.add(controller.getPreferenceKey());
         }
         assertThat(foundKeys).containsAllIn(validKeys);

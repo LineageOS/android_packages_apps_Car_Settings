@@ -16,24 +16,32 @@
 
 package com.android.car.settings.wifi;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import com.android.car.settings.common.BasePreferenceController;
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the top level entry into Wi-Fi settings should be displayed
  * based on device capabilities.
  */
-public class WifiEntryPreferenceController extends BasePreferenceController {
+public class WifiEntryPreferenceController extends PreferenceController<Preference> {
 
     public WifiEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return WifiUtil.isWifiAvailable(mContext) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+        return WifiUtil.isWifiAvailable(getContext()) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 }

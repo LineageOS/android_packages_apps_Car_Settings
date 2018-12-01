@@ -34,7 +34,10 @@ import java.util.List;
 /**
  * Helper to load {@link BasePreferenceController} instances from XML. Based on com.android
  * .settings.core.PreferenceControllerListHelper.
+ *
+ * @deprecated Use {@link PreferenceControllerListHelper2}.
  */
+@Deprecated
 class PreferenceControllerListHelper {
 
     private static final Logger LOG = new Logger(PreferenceControllerListHelper.class);

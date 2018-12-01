@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
@@ -23,31 +24,31 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
-
-import java.util.Objects;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the top level entry into User settings should direct to a list
  * of all users or a user details page based on the current user's admin status.
  */
-public class UsersEntryPreferenceController extends NoSetupPreferenceController {
+public class UsersEntryPreferenceController extends PreferenceController<Preference> {
 
     private static final Logger LOG = new Logger(UsersEntryPreferenceController.class);
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
     public UsersEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (!Objects.equals(getPreferenceKey(), preference.getKey())) {
-            return false;
-        }
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    public boolean handlePreferenceClicked(Preference preference) {
         if (mCarUserManagerHelper.isCurrentProcessAdminUser()) {
             // Admins can see a full list of users in Settings.
             LOG.v("Creating UsersListFragment for admin user.");

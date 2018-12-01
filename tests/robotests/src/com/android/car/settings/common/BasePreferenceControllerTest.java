@@ -48,22 +48,23 @@ public class BasePreferenceControllerTest {
     private FragmentController mFragmentController;
 
     private Context mContext;
-    private FakePreferenceController mController;
+    private FakeBasePreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
-        mController = new FakePreferenceController(mContext, PREFERENCE_KEY, mFragmentController);
+        mController = new FakeBasePreferenceController(mContext, PREFERENCE_KEY,
+                mFragmentController);
     }
 
     @Test
     public void createInstance() {
         BasePreferenceController controller = BasePreferenceController.createInstance(mContext,
-                FakePreferenceController.class.getName(), PREFERENCE_KEY, mFragmentController);
+                FakeBasePreferenceController.class.getName(), PREFERENCE_KEY, mFragmentController);
 
-        assertThat(controller).isInstanceOf(FakePreferenceController.class);
+        assertThat(controller).isInstanceOf(FakeBasePreferenceController.class);
         assertThat(controller.getPreferenceKey()).isEqualTo(PREFERENCE_KEY);
         assertThat(controller.getFragmentController()).isEqualTo(mFragmentController);
     }
@@ -71,17 +72,18 @@ public class BasePreferenceControllerTest {
     @Test
     public void keyMustBeSet() {
         expectThrows(IllegalArgumentException.class,
-                () -> new FakePreferenceController(mContext, /* preferenceKey= */ null,
+                () -> new FakeBasePreferenceController(mContext, /* preferenceKey= */ null,
                         mFragmentController));
         expectThrows(IllegalArgumentException.class,
-                () -> new FakePreferenceController(mContext, /* preferenceKey= */ "",
+                () -> new FakeBasePreferenceController(mContext, /* preferenceKey= */ "",
                         mFragmentController));
     }
 
     @Test
     public void fragmentControllerMustBeSet() {
-        expectThrows(IllegalArgumentException.class, () -> new FakePreferenceController(mContext,
-                PREFERENCE_KEY, /* fragmentController= */ null));
+        expectThrows(IllegalArgumentException.class,
+                () -> new FakeBasePreferenceController(mContext,
+                        PREFERENCE_KEY, /* fragmentController= */ null));
     }
 
     @Test
