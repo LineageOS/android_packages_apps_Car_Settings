@@ -112,6 +112,10 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
 
     @Override
     public void launchFragment(Fragment fragment) {
+        if (fragment instanceof DialogFragment) {
+            throw new IllegalArgumentException(
+                    "cannot launch dialogs with launchFragment() - use showDialog() instead");
+        }
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(

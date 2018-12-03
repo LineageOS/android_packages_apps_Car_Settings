@@ -31,10 +31,11 @@ import com.android.car.settings.common.FragmentController;
 public class MakeAdminPreferenceController extends BaseUserDetailsPreferenceController implements
         LifecycleObserver {
 
-    private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mListener = () -> {
-        getCarUserManagerHelper().grantAdminPermissions(getUserInfo());
-        getFragmentController().goBack();
-    };
+    private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mListener =
+            userToMakeAdmin -> {
+                getCarUserManagerHelper().grantAdminPermissions(userToMakeAdmin);
+                getFragmentController().goBack();
+            };
 
     public MakeAdminPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
@@ -59,6 +60,7 @@ public class MakeAdminPreferenceController extends BaseUserDetailsPreferenceCont
         ButtonPreference preference = (ButtonPreference) screen.findPreference(getPreferenceKey());
         preference.setOnButtonClickListener(pref -> {
             ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
+            dialog.setUserToMakeAdmin(getUserInfo());
             dialog.setConfirmGrantAdminListener(mListener);
             getFragmentController().showDialog(dialog, ConfirmGrantAdminPermissionsDialog.TAG);
         });

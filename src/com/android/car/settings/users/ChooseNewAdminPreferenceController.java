@@ -35,6 +35,12 @@ import com.android.car.settings.common.FragmentController;
 public class ChooseNewAdminPreferenceController extends UsersBasePreferenceController implements
         LifecycleObserver {
 
+    private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mGrantAdminListener =
+            userToMakeAdmin -> {
+                assignNewAdminAndRemoveOldAdmin(userToMakeAdmin);
+                getFragmentController().goBack();
+            };
+
     private UserInfo mAdminInfo;
 
     public ChooseNewAdminPreferenceController(Context context, String preferenceKey,
@@ -56,16 +62,20 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
         if (mAdminInfo == null) {
             throw new IllegalStateException("Admin info should be set by this point");
         }
+        ConfirmGrantAdminPermissionsDialog dialog =
+                (ConfirmGrantAdminPermissionsDialog) getFragmentController().findDialogByTag(
+                        ConfirmGrantAdminPermissionsDialog.TAG);
+        if (dialog != null) {
+            dialog.setConfirmGrantAdminListener(mGrantAdminListener);
+        }
     }
 
     @Override
     protected void userClicked(UserInfo userToMakeAdmin) {
         ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
-        dialog.setConfirmGrantAdminListener(() -> {
-            assignNewAdminAndRemoveOldAdmin(userToMakeAdmin);
-            getFragmentController().goBack();
-        });
-        getFragmentController().launchFragment(dialog);
+        dialog.setUserToMakeAdmin(userToMakeAdmin);
+        dialog.setConfirmGrantAdminListener(mGrantAdminListener);
+        getFragmentController().showDialog(dialog, ConfirmGrantAdminPermissionsDialog.TAG);
     }
 
     @VisibleForTesting
@@ -78,8 +88,8 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
         if (!getCarUserManagerHelper().removeUser(mAdminInfo,
                 mContext.getString(R.string.user_guest))) {
             // If failed, need to show error dialog for users.
-            getFragmentController().launchFragment(
-                    ErrorDialog.newInstance(R.string.delete_user_error_title));
+            getFragmentController().showDialog(
+                    ErrorDialog.newInstance(R.string.delete_user_error_title), /* tag= */ null);
         }
     }
 }

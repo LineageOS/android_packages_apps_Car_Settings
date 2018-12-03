@@ -106,7 +106,6 @@ public class UserDetailsFragmentTest {
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUserUpdated));
     }
 
-
     private void createUserDetailsFragment() {
         mUserDetailsFragment = UserDetailsFragment.newInstance(TEST_USER_ID);
         mTestActivity.launchFragment(mUserDetailsFragment);
