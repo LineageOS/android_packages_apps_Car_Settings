@@ -23,4 +23,10 @@
         android:key="@string/pk_language_settings_entry"
         android:title="@string/language_settings"
         settings:controller="com.android.car.settings.language.LanguageSettingsEntryPreferenceController"/>
+    <Preference
+        android:fragment="com.android.car.settings.tts.TextToSpeechOutputFragment"
+        android:title="@string/text_to_speech_settings"
+        android:key="@string/pk_tts_settings_entry"
+        settings:iconSpaceReserved="true"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
 </PreferenceScreen>
