@@ -164,6 +164,7 @@
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
         <service android:name=".bluetooth.BluetoothPairingService" />
