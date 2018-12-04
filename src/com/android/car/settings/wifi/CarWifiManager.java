@@ -33,7 +33,7 @@ import java.util.List;
  */
 public class CarWifiManager implements WifiTracker.WifiListener {
     private final Context mContext;
-    private Listener mListener;
+    private final List<Listener> mListeners = new ArrayList<>();
     private boolean mStarted;
 
     private WifiTracker mWifiTracker;
@@ -60,11 +60,24 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         void onWifiStateChanged(int state);
     }
 
-    public CarWifiManager(Context context, Listener listener) {
+    public CarWifiManager(Context context) {
         mContext = context;
-        mListener = listener;
         mWifiManager = (WifiManager) mContext.getSystemService(WifiManager.class);
         mWifiTracker = new WifiTracker(context, this, true, true);
+    }
+
+    /**
+     * Adds {@link Listener}.
+     */
+    public boolean addListener(Listener listener) {
+        return mListeners.add(listener);
+    }
+
+    /**
+     * Removes {@link Listener}.
+     */
+    public boolean removeListener(Listener listener) {
+        return mListeners.remove(listener);
     }
 
     /**
@@ -161,7 +174,9 @@ public class CarWifiManager implements WifiTracker.WifiListener {
 
     @Override
     public void onWifiStateChanged(int state) {
-        mListener.onWifiStateChanged(state);
+        for (Listener listener : mListeners) {
+            listener.onWifiStateChanged(state);
+        }
     }
 
     @Override
@@ -170,6 +185,8 @@ public class CarWifiManager implements WifiTracker.WifiListener {
 
     @Override
     public void onAccessPointsChanged() {
-        mListener.onAccessPointsChanged();
+        for (Listener listener : mListeners) {
+            listener.onAccessPointsChanged();
+        }
     }
 }
