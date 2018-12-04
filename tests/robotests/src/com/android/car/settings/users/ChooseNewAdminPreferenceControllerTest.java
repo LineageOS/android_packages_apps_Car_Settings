@@ -90,7 +90,8 @@ public class ChooseNewAdminPreferenceControllerTest {
     public void testUserClicked_opensDialog() {
         mController.setAdminInfo(TEST_ADMIN_USER);
         mController.userClicked(/* userToMakeAdmin= */ TEST_OTHER_USER);
-        verify(mFragmentController).launchFragment(any(ConfirmGrantAdminPermissionsDialog.class));
+        verify(mFragmentController).showDialog(any(ConfirmGrantAdminPermissionsDialog.class),
+                eq(ConfirmGrantAdminPermissionsDialog.TAG));
     }
 
     @Test
@@ -113,7 +114,7 @@ public class ChooseNewAdminPreferenceControllerTest {
         doReturn(true).when(mCarUserManagerHelper).removeUser(TEST_ADMIN_USER,
                 mContext.getString(R.string.user_guest));
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
-        verify(mFragmentController, never()).launchFragment(any(ErrorDialog.class));
+        verify(mFragmentController, never()).showDialog(any(ErrorDialog.class), any());
     }
 
     @Test
@@ -122,6 +123,6 @@ public class ChooseNewAdminPreferenceControllerTest {
         doReturn(false).when(mCarUserManagerHelper).removeUser(TEST_ADMIN_USER,
                 mContext.getString(R.string.user_guest));
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
-        verify(mFragmentController).launchFragment(any(ErrorDialog.class));
+        verify(mFragmentController).showDialog(any(ErrorDialog.class), any());
     }
 }

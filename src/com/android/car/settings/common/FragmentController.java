@@ -27,7 +27,9 @@ import javax.annotation.Nullable;
 public interface FragmentController {
 
     /**
-     * Launches a Fragment in the main container of the current Activity.
+     * Launches a Fragment in the main container of the current Activity. This cannot be used to
+     * show dialog fragments and will throw an IllegalArgumentException if attempted. The method
+     * {@link #showDialog} should be used instead.
      */
     void launchFragment(Fragment fragment);
 

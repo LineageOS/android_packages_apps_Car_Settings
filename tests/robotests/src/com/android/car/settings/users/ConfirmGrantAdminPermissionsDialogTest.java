@@ -20,6 +20,8 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
 
+import android.content.pm.UserInfo;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
@@ -50,17 +52,19 @@ public class ConfirmGrantAdminPermissionsDialogTest {
     @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testConfirmGrantAdminInvokesOnGrantAdminConfirmed() {
+        UserInfo testUser = new UserInfo();
         ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
 
         ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener listener =
                 Mockito.mock(ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener.class);
+        dialog.setUserToMakeAdmin(testUser);
         dialog.setConfirmGrantAdminListener(listener);
         showDialog(dialog);
 
         // Invoke confirm grant admin.
         DialogTestUtils.clickPositiveButton(dialog);
 
-        verify(listener).onGrantAdminPermissionsConfirmed();
+        verify(listener).onGrantAdminPermissionsConfirmed(testUser);
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 

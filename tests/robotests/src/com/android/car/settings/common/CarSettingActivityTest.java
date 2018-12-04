@@ -20,6 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.testng.Assert.assertThrows;
 
 import android.car.Car;
 import android.car.drivingstate.CarUxRestrictionsManager;
@@ -68,6 +69,14 @@ public class CarSettingActivityTest {
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(
                 R.id.fragment_container)).isInstanceOf(TestFragment.class);
+    }
+
+    @Test
+    public void testLaunchFragment_dialogFragment_throwsError() {
+        DialogFragment dialogFragment = new DialogFragment();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> mActivity.launchFragment(dialogFragment));
     }
 
     @Test

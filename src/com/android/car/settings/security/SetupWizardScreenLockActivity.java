@@ -62,6 +62,10 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
 
     @Override
     public void launchFragment(Fragment fragment) {
+        if (fragment instanceof DialogFragment) {
+            throw new IllegalArgumentException(
+                    "cannot launch dialogs with launchFragment() - use showDialog() instead");
+        }
         Bundle args = fragment.getArguments();
         if (args == null) {
             args = new Bundle();
