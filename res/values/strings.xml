@@ -585,8 +585,8 @@
     <string name="security_lock_password">Password</string>
     <!--  Title for security picker to choose the unlock method: None/Pattern/PIN/Password [CHAR LIMIT=30] -->
     <string name="lock_settings_picker_title">Choose a lock type</string>
-    <!--  Button caption to open a dialog for user to choose an screen lock method: Pattern/PIN/Password [CHAR LIMIT=40] -->
-    <string name="screen_lock_options">Screen lock options</string>
+    <!--  Button caption to open a dialog for user to choose an screen lock method: Pattern/PIN/Password [CHAR LIMIT=20] -->
+    <string name="screen_lock_options">Lock options</string>
     <!--  Title for screen asking user to enter their existing lock pattern [CHAR LIMIT=30] -->
     <string name="lock_settings_enter_pattern">Enter your pattern</string>
     <!-- Security & location settings screen, change unlock pattern screen button, on bottom of screen.  After they draw a pattern and release their finger, we display the pattern so they remember.  When they are ready to draw it once again to confirm it, they press this button. -->
