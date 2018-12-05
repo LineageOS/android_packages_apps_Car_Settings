@@ -28,7 +28,6 @@ import com.android.car.settings.testutils.DialogTestUtils;
 import com.android.car.settings.users.ConfirmRemoveUserDialog.UserType;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -60,7 +59,6 @@ public class ConfirmRemoveUserDialogTest {
                 .isEqualTo(application.getString(R.string.delete_user_dialog_title));
     }
 
-    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testConfirmRemoveDialogTitle_lastUser() {
         ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.newInstance(
@@ -97,7 +95,6 @@ public class ConfirmRemoveUserDialogTest {
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
-    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testConfirmInvokesOnRemoveUserConfirmed_lastUser() {
         ConfirmRemoveUserDialog.ConfirmRemoveUserListener listener = Mockito.mock(
@@ -144,7 +141,6 @@ public class ConfirmRemoveUserDialogTest {
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
-    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testCancelOnRemoveDialogDismissesDialog_lastUser() {
         ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.newInstance(
@@ -185,7 +181,6 @@ public class ConfirmRemoveUserDialogTest {
         assertThat(isDialogShown()).isFalse(); // Dialog is dismissed.
     }
 
-    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testNoClickListenerDismissesRemoveDialog_lastUser() {
         ConfirmRemoveUserDialog dlg = ConfirmRemoveUserDialog.newInstance(

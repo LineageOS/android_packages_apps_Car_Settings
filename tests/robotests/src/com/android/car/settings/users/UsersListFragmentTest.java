@@ -37,7 +37,6 @@ import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -111,7 +110,6 @@ public class UsersListFragmentTest {
     }
 
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
-    @Ignore // Failing with IllegalStateException in android.graphics.text.MeasuredText.Builder
     @Test
     public void testCallOnClick_showAddUserDialog() {
         doReturn(true).when(mCarUserManagerHelper).canCurrentProcessAddUsers();
