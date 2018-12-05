@@ -336,6 +336,17 @@
     <!-- About phone settings screen, Open source license dialog title until license is fully loaded -->
     <string name="settings_license_activity_loading">Loading\u2026</string>
 
+    <!-- Developer Settings -->
+    <!-- Device Info screen. Countdown for user taps to enable development settings. [CHAR LIMIT=NONE] -->
+    <plurals name="show_dev_countdown">
+        <item quantity="one">You are now <xliff:g id="step_count">%1$d</xliff:g> step away from being a developer.</item>
+        <item quantity="other">You are now <xliff:g id="step_count">%1$d</xliff:g> steps away from being a developer.</item>
+    </plurals>
+    <!-- Device Info screen. Confirmation that developer settings are enabled. [CHAR LIMIT=NONE] -->
+    <string name="show_dev_on">You are now a developer!</string>
+    <!-- Device Info screen. Okay we get it, stop pressing, you already have it on. [CHAR LIMIT=NONE] -->
+    <string name="show_dev_already">No need, you are already a developer.</string>
+
     <!-- Reset options --><skip/>
     <!-- Title for a screen containing all device reset options. [CHAR LIMIT=50] -->
     <string name="reset_options_title">Reset options</string>
