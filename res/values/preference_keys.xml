@@ -126,7 +126,6 @@
     <string name="pk_pin_lock" translatable="false">pin_lock</string>
 
     <!-- System Settings -->
-    <string name="pk_language_settings_entry" translatable="false">language_settings_entry</string>
     <string name="pk_system_update_settings" translatable="false">system_update_settings</string>
     <string name="pk_system_extra_settings" translatable="false">system_extra_settings</string>
     <string name="pk_about_settings_entry" translatable="false">about_settings_entry</string>
@@ -134,6 +133,9 @@
     <string name="pk_reset_options_entry" translatable="false">reset_options_entry</string>
 
     <!-- Language Settings -->
+    <string name="pk_language_settings_entry" translatable="false">language_settings_entry</string>
+    <string name="pk_current_languages" translatable="false">current_languages</string>
+    <string name="pk_add_language" translatable="false">add_language</string>
     <string name="pk_language_picker" translatable="false">language_picker</string>
     <string name="pk_child_locale_picker" translatable="false">child_locale_picker</string>
 
