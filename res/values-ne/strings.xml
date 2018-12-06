@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi निष्क्रिय पारिँदै…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi असक्षम पारिएको छ"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"नेटवर्कलाई बिर्सन सकिएन"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"नेटवर्कमा जडान गर्न सकिएन"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"नेटवर्क थप्नुहोस्"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi असक्षम पारिएको छ"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"जडान गर्ने"</string>
     <string name="wifi_password" msgid="5565632142720292397">"पासवर्ड"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"पासवर्ड देखाउनुहोस्"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"नेटवर्कको नाम"</string>
     <string name="wifi_security" msgid="158358046038876532">"सुरक्षा"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"सिग्नलको क्षमता"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"सिङ्केतको क्षमता"</string>
     <string name="wifi_status" msgid="5688013206066543952">"स्थिति"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"लिङ्कको गति"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"आवृत्ति"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"कमजोर"</item>
-    <item msgid="2032262610626057081">"ठिकै"</item>
-    <item msgid="3859756017461098953">"राम्रो"</item>
-    <item msgid="1521103743353335724">"उत्कृष्ट"</item>
+    <item msgid="7683058295076342057">"कमजोर"</item>
+    <item msgid="1639222824821660744">"ठिकठाक"</item>
+    <item msgid="1838705897358163300">"राम्रो"</item>
+    <item msgid="6067166649320533751">"उत्कृष्ट"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"२.४ GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"५ GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"नेटवर्कसम्बन्धी विवरणहरू"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC ठेगाना"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP ठेगाना"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"सबनेट मास्क"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ठेगानाहरू"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"ब्लुटुथ"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"ब्लुटुथ सक्रिय गर्नुहोस्"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"ब्लुटुथ"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>सँग जोडा बनाउन ट्याप गर्नुहोस्।"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"भाषाहरू"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"आवाज"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"घन्टीको भोल्युम"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"नेभिगेसन भोल्युम"</string>
@@ -113,10 +129,15 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त अनुमति</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"अनुप्रयोग स्तरीय अनुमति"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"स्क्यान गर्दै"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"स्थानसम्बन्धी सेवाहरू"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi स्क्यान हुँदै"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"अनुप्रयोग र सेवाहरूलाई जुनसुकै बेला (Wi‑Fi निष्क्रिय भएको बेलामा पनि) वरपरका Wi-Fi नेटवर्कहरू स्क्यान गर्न अनुमति दिनुहोस्। यसलाई स्थानमा आधारित सुविधा तथा सेवाहरू सुधार गर्ने जस्ता कार्यहरू गर्नाका लागि प्रयोग गर्न सकिन्छ।"</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"ब्लुटुथ स्क्यान हुँदै"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"अनुप्रयोग तथा सेवाहरूलाई जुनसुकै बेला (ब्लुटुथ निष्क्रिय भएको बेलामा पनि) वरपरका यन्त्रहरू स्क्यान गर्न अनुमति दिनुहोस्‌। यसलाई स्थानमा आधारित सुविधा तथा सेवाहरू सुधार गर्ने जस्ता कार्यहरू गर्नाका लागि प्रयोग गर्न सकिन्छ।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"प्रणाली"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android संस्करण"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ब्लुटुथ"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"सबै सवारीका eSIM हरू मेट्नुहोस्‌"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"यस कार्यले तपाईंको सेवाको योजना रद्द गर्ने छैन।"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM हरू रिसेट गर्न सकिएन"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"नेटवर्क चयन गर्नुहोस्"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"रिसेट गर्ने हो?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"यस कार्यले निम्न अनुप्रयोगका सम्पूर्ण प्राथमिकताहरू रिसेट गर्ने छ:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएको अनुप्रयोगसम्बन्धी सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिको डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"तपाईं अनुप्रयोगको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n\n असक्षम पारिएका अनुप्रयोगहरू\n असक्षम पारिएका अनुप्रयोगका सूचनाहरू \n कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू\n अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू\n अनुमतिसम्बन्धी सबै बन्देजहरू\n\n\n तपाईं अनुप्रयोगको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अनुप्रयोगहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"खाता हटाउने हो?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"यो खातालाई हटाउनुले यस यन्त्रबाट यस खातामा रहेका सम्पूर्ण सन्देश, सम्पर्कहरू र अन्य डेटा मेटाउने छ!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"खाता हटाउन सकिएन।"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"खाताको सिंक"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> मध्ये <xliff:g id="ID_1">%1$d</xliff:g> वस्तुहरूका लागि सिंक गर्ने सेवा सक्रिय छ"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"सबै वस्तुहरूका लागि सिंक गर्ने सेवा सक्रिय छ"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"सबै वस्तुहरूका लागि सिंक गर्ने सेवा निष्क्रिय छ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रिन लक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कुनै पनि होइन"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रिन लकका विकल्पहरू"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"आफ्नो ढाँचा प्रविष्ट गर्नुहोस्"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>

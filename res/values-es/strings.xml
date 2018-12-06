@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activando Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Desactivando Wi‑Fi…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi inhabilitado"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"No se ha podido olvidar la red"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"No se ha podido conectar a la red"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Añadir red"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi inhabilitado"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Conectar"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Contraseña"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostrar contraseña"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nombre de red"</string>
     <string name="wifi_security" msgid="158358046038876532">"Seguridad"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Intensidad de la señal"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Intensidad de la señal"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Estado"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Velocidad de enlace"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frecuencia"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Mala"</item>
-    <item msgid="2032262610626057081">"Aceptable"</item>
-    <item msgid="3859756017461098953">"Buena"</item>
-    <item msgid="1521103743353335724">"Excelente"</item>
+    <item msgid="7683058295076342057">"Mala"</item>
+    <item msgid="1639222824821660744">"Aceptable"</item>
+    <item msgid="1838705897358163300">"Buena"</item>
+    <item msgid="6067166649320533751">"Excelente"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Detalles de la red"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"Dirección MAC"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"Dirección IP"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Máscara de subred"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Direcciones IPv6"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Pasarela"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Activar Bluetooth"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para vincular con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Sonido"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volumen del tono"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volumen de navegación"</string>
@@ -113,10 +129,15 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permiso adicional</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Solicitudes de ubicación recientes"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ninguna solicitud de ubicación reciente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos de las aplicaciones"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Búsqueda"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servicios de ubicación"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Búsqueda de redes Wi‑Fi"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Permite que las aplicaciones y los servicios busquen redes Wi‑Fi en cualquier momento aunque la conexión Wi‑Fi esté desactivada. Se utiliza, por ejemplo, para mejorar los servicios y funciones basados en la ubicación."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Búsqueda de dispositivos Bluetooth"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Permite que las aplicaciones y los servicios busquen dispositivos cercanos en cualquier momento aunque la conexión Bluetooth esté desactivada. Se utiliza, por ejemplo, para mejorar los servicios y funciones basados en la ubicación."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizaciones del sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versión de Android"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Borrar todas las eSIM del vehículo"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"No se cancelará tu plan de servicios."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"No se puede recuperar el estado de las tarjetas eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Seleccionar red"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Restablecer ajustes"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"¿Restablecer?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Restablecer ajustes"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Se han restablecido los ajustes de red"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Restablecer preferencias de aplicaciones"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Se restablecerán las preferencias de:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Aplicaciones inhabilitadas"</li>\n<li>"Notificaciones de aplicaciones inhabilitadas"</li>\n<li>"Aplicaciones para acciones predeterminadas"</li>\n<li>"Restricciones de datos en segundo plano para aplicaciones"</li>\n<li>"Restricciones de cualquier permiso"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"No perderás los datos de las aplicaciones."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"Se restablecerán todas las preferencias de:\n\n\n Aplicaciones inhabilitadas\n Notificaciones de aplicaciones inhabilitadas\n Aplicaciones predeterminadas para realizar acciones\n Restricciones de datos en segundo plano de aplicaciones\n Restricciones de permisos\n\n\n No perderás los datos de las aplicaciones."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer aplicaciones"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se han restablecido las preferencias de las aplicaciones"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos los datos (restablecer)"</string>
@@ -214,7 +234,7 @@
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"¿Eliminar este usuario?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Se eliminarán los datos y las aplicaciones."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"No se ha podido eliminar al usuario."</string>
-    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ignorar"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Cerrar"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Reintentar"</string>
     <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"¿Eliminar último usuario?"</string>
     <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Después de eliminar el único usuario que queda de este coche, se creará un nuevo administrador."</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"¿Quitar la cuenta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Si quitas esta cuenta, se eliminarán todos sus mensajes, contactos y otros datos del dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"No se ha podido eliminar la cuenta."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Sincronización"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Elementos con la sincronización activada: <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g>"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronización activada para todos los elementos"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Sincronización desactivada para todos los elementos"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Contraseña"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Elegir tipo de bloqueo"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Opciones de bloqueo de pantalla"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Introduce tu patrón"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmar"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Crear un patrón nuevo"</string>
@@ -343,7 +368,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Salir del modo demostración"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Se eliminará la cuenta de demostración y se recuperarán los ajustes de fábrica del sistema. Se perderán todos los datos de usuario."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Salir de demostración"</string>
-    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORAR"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"CERRAR"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Esta función no está disponible mientras conduces."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"No puedes añadir usuarios mientras conduces."</string>
 </resources>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi 사용 설정 중..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi 사용 중지 중..."</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi가 사용 중지됨"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"네트워크 기록 삭제 실패"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"네트워크에 연결하지 못했습니다."</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"네트워크 추가"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi가 사용 중지됨"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"연결"</string>
     <string name="wifi_password" msgid="5565632142720292397">"비밀번호"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"비밀번호 표시"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"네트워크 이름"</string>
     <string name="wifi_security" msgid="158358046038876532">"보안"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"신호 강도"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"신호 강도"</string>
     <string name="wifi_status" msgid="5688013206066543952">"상태"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"링크 속도"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"주파수"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"나쁨"</item>
-    <item msgid="2032262610626057081">"양호"</item>
-    <item msgid="3859756017461098953">"좋음"</item>
-    <item msgid="1521103743353335724">"우수함"</item>
+    <item msgid="7683058295076342057">"나쁨"</item>
+    <item msgid="1639222824821660744">"양호"</item>
+    <item msgid="1838705897358163300">"좋음"</item>
+    <item msgid="6067166649320533751">"우수함"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$dMbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2.4GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"네트워크 세부정보"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC 주소"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP 주소"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"서브넷 마스크"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 주소"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"게이트웨이"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"블루투스"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"블루투스 켜기"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"블루투스"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>에 페어링하려면 탭하세요."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"언어"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"소리"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"벨소리 볼륨"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"내비게이션 볼륨"</string>
@@ -113,10 +129,15 @@
       <item quantity="one">추가 권한 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"최근 위치 요청"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"최근 위치 요청 없음"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"앱 수준 권한"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"검색 중"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"위치 서비스"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi 검색"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi‑Fi가 꺼져 있을 때도 항상 앱과 서비스에서 Wi-Fi 네트워크를 검색하도록 허용합니다. 이 설정은 예를 들면 위치 기반 기능 및 서비스를 개선하는 데 사용될 수 있습니다."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"블루투스 검색"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"블루투스가 꺼져 있을 때도 항상 앱과 서비스에서 주변 기기를 검색하도록 허용합니다. 이 설정은 예를 들면 위치 기반 기능 및 서비스를 개선하는 데 사용될 수 있습니다."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"블루투스"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"모든 자동차 eSIM 삭제"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"서비스 요금제는 취소되지 않습니다."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM을 재설정할 수 없음"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"네트워크 선택"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"설정 초기화"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"초기화하시겠습니까?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"설정 초기화"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"네트워크 설정이 초기화되었습니다."</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"앱 환경설정 초기화"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"다음을 포함한 모든 환경설정을 초기화합니다."</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"사용 중지된 앱"</li>\n<li>"사용 중지된 앱 알림"</li>\n<li>"작업에 사용하는 기본 애플리케이션"</li>\n<li>"앱의 백그라운드 데이터 제한"</li>\n<li>"그 밖의 권한 제한"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"앱 데이터는 손실되지 않습니다."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"이 작업을 하면 다음 환경설정이 재설정됩니다.\n\n\n 사용 중지된 앱\n 사용 중지된 앱 알림\n 작업에 사용하는 기본 애플리케이션\n 앱에 대한 백그라운드 데이터 제한\n 그 밖의 권한 제한\n\n\n 앱 데이터는 손실되지 않습니다."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"앱 초기화"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"계정을 삭제할까요?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"계정을 삭제하면 기기의 메시지, 연락처 및 다른 데이터가 모두 지워집니다."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"계정을 삭제하지 못했습니다"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"계정 동기화"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>개 항목 중 <xliff:g id="ID_1">%1$d</xliff:g>개 동기화"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"모든 항목 동기화"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"모든 항목을 동기화하지 않음"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"보안"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"화면 잠금"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"없음"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"비밀번호"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"잠금 유형 선택"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"화면 잠금 옵션"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"패턴 입력"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"확인"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"다시 그리기"</string>
