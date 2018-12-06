@@ -30,4 +30,10 @@
 
     <!-- user switcher column number TODO: move to support library-->
     <integer name="user_switcher_num_col">3</integer>
+
+    <!-- Number of times to select build number before enabling developer settings -->
+    <integer name="enable_developer_settings_click_count">7</integer>
+
+    <!-- Number of times to select build number before toast appears -->
+    <integer name="enable_developer_settings_clicks_to_show_toast_count">3</integer>
 </resources>
