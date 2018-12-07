@@ -58,4 +58,10 @@
         android:summary="@string/reset_options_summary"
         android:title="@string/reset_options_title"
         settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
+    <Preference
+        android:fragment="com.android.car.settings.development.DeveloperOptionsFragment"
+        android:icon="@drawable/ic_settings_development"
+        android:key="@string/pk_developer_options_entry"
+        android:title="@string/developer_options_settings"
+        settings:controller="com.android.car.settings.system.DeveloperOptionsEntryPreferenceController"/>
 </PreferenceScreen>
