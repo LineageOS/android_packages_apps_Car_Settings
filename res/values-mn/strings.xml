@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi-г асааж байна…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi-г унтрааж байна…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi-г идэвхгүй болгосон"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Сүлжээг мартаж чадсангүй"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Сүлжээнд холбогдож чадсангүй"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Сүлжээ нэмэх"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi-г идэвхгүй болгосон"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Холбох"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Нууц үг"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Нууц үгийг харуулах"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Сүлжээний нэр"</string>
     <string name="wifi_security" msgid="158358046038876532">"Нууцлал"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Дохионы хүч"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Дохионы хүч"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Төлөв"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Холбоосны хурд"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Давтамж"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Муу"</item>
-    <item msgid="2032262610626057081">"Дундаж"</item>
-    <item msgid="3859756017461098953">"Сайн"</item>
-    <item msgid="1521103743353335724">"Маш сайн"</item>
+    <item msgid="7683058295076342057">"Муу"</item>
+    <item msgid="1639222824821660744">"Дундаж"</item>
+    <item msgid="1838705897358163300">"Сайн"</item>
+    <item msgid="6067166649320533751">"Маш сайн"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 Гц"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 Гц"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Сүлжээний дэлгэрэнгүй"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC хаяг"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP хаяг"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Дэд сүлжээний маск"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 хаяг"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Гэйтвэй"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Bluetooth-г асаах"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-тай хослуулахын тулд товшино уу."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Хэл"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Дуу"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Хонх дуугаргах түвшин"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Шилжүүлгийн түвшин"</string>
@@ -113,10 +129,15 @@
       <item quantity="one">Нэмэлт <xliff:g id="COUNT_0">%d</xliff:g> зөвшөөрөл</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"Байршил"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Саяхны байршлын хүсэлтүүд"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Саяхны байршлын хүсэлтүүд"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Саяхны байршлын хүсэлт алга"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Скан хийж байна"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi скан хийх"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Апп болон үйлчилгээнд Wi‑Fi унтраалттай үед ч Wi‑Fi сүлжээг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүд зэрэгт ашиглах боломжтой."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth скан хийх"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Апп болон үйлчилгээнд Bluetooth унтраалттай үед ч ойролцоох төхөөрөмжийг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүд зэрэгт ашиглах боломжтой."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Андройд хувилбар"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Бүх тээврийн хэрэгслийн eSIMs-г устгах"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Энэ таны үйлчилгээний төлөвлөгөөг цуцлахгүй."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-г шинэчлэх боломжгүй байна"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Сүлжээг сонгох"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Тохиргоог шинэчлэх"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Шинэчлэх үү?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Тохиргоог шинэчлэх"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Сүлжээний тохиргоог шинэчиллээ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Аппын тохиргоог шинэчлэх"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Энэ нь дараахын бүх тохиргоог шинэчилнэ:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Идэвхгүй болгосон аппууд"</li>\n<li>"Идэвхгүй болгосон аппын мэдэгдлүүд"</li>\n<li>"Үйлдэл хийх өгөгдмөл аппууд"</li>\n<li>"Аппуудын арын датаны хязгаарлалт"</li>\n<li>"Зөвшөөрлийн бүх хязгаарлалт"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Таны аппын бүх өгөгдөл хэвээр үлдэнэ."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"Энэ нь бүх тохируулгыг дахин шинэчлэх болно:\n\n\n Идэвхгүй болгосон аппууд\n Идэвхгүй болгосон аппын мэдэгдлүүд\n Үйлдлийн өгөгдмөл аппууд\n Аппуудын арын датаны хязгаарлалт\n Дурын зөвшөөрлийн хязгаарлалт\n\n\n Та аппын ямар ч өгөгдөл алдахгүй."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Аппуудыг шинэчлэх"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Аппын тохиргоог шинэчиллээ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Бүх өгөгдлийг устгах (үйлдвэрийн тохиргоо руу шинэчлэх)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"Бүртгэлийг устгах уу?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Энэ бүртгэлийг устгаснаар үүний бүх зурвас, харилцагч болон бусад өгөгдлийг төхөөрөмжөөс устгана!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Бүртгэлийг хасаж чадсангүй."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Бүртгэл синк хийх"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g>-с <xliff:g id="ID_1">%1$d</xliff:g> зүйлд синк асаалттай"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Бүх зүйлд синк асаалттай"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Бүх зүйлд синкийг унтраасан"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Нууцлал"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Дэлгэцийн түгжээ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Байхгүй"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"ПИН"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Нууц үг"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Түгжих төрлийг сонгох"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Дэлгэцийн түгжээний сонголт"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Хээгээ оруулна уу"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Баталгаажуулах"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Дахин зурах"</string>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在开启 WLAN…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在关闭 WLAN…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"已停用 WLAN"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"无法取消保存网络"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"无法连接到网络"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"添加网络"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"已停用 WLAN"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"连接"</string>
     <string name="wifi_password" msgid="5565632142720292397">"密码"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"显示密码"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"网络名称"</string>
     <string name="wifi_security" msgid="158358046038876532">"安全性"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"信号强度"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"信号强度"</string>
     <string name="wifi_status" msgid="5688013206066543952">"状态"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"连接速度"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"频率"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"微弱"</item>
-    <item msgid="2032262610626057081">"一般"</item>
-    <item msgid="3859756017461098953">"良好"</item>
-    <item msgid="1521103743353335724">"极佳"</item>
+    <item msgid="7683058295076342057">"微弱"</item>
+    <item msgid="1639222824821660744">"一般"</item>
+    <item msgid="1838705897358163300">"良好"</item>
+    <item msgid="6067166649320533751">"极佳"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2.4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"网络详情"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC 地址"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP 地址"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"子网掩码"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 地址"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"网关"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"蓝牙"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"开启蓝牙"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"蓝牙"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"点按即可与 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 配对。"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"语言"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"提示音"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"铃声音量"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"导航音量"</string>
@@ -113,10 +129,15 @@
       <item quantity="one">另外 <xliff:g id="COUNT_0">%d</xliff:g> 项权限</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"最近的位置信息请求"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"扫描"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"WLAN 扫描"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"允许应用和服务随时扫描 WLAN 网络（即使 WLAN 已关闭）。这可用于改进基于位置的功能和服务。"</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"蓝牙扫描"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"允许应用和服务随时扫描附近的设备（即使蓝牙已关闭）。这可用于改进基于位置的功能和服务。"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系统"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系统更新"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"蓝牙"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"清空所有车辆 eSIM"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"此操作不会取消您的服务套餐。"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"无法重置 eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"选择网络"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"重置设置"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"要重置吗？"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"重置设置"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"网络设置已重置"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"重置应用偏好设置"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"这将重置以下项的所有偏好设置："</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"停用的应用"</li>\n<li>"停用的应用通知"</li>\n<li>"执行操作的默认应用"</li>\n<li>"应用的后台流量限制"</li>\n<li>"任何权限限制"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"您将不会丢失任何应用数据。"</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"此操作将会重置以下所有偏好设置：\n\n\n已停用的应用\n已停用的应用通知\n执行操作的默认应用\n应用的后台流量限制\n任何权限限制\n\n\n您将不会丢失任何应用数据。"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"清空所有数据（恢复出厂设置）"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帐号吗？"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"移除该帐号后，设备上的相关消息、联系人和其他数据也将全部删除！"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"无法移除帐号。"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"帐号同步"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"已开启 <xliff:g id="ID_1">%1$d</xliff:g> 项（共 <xliff:g id="ID_2">%2$d</xliff:g> 项）的同步功能"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"已开启所有项的同步功能"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"已关闭所有项的同步功能"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"无"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN 码"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"密码"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"选择一种锁定类型"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"屏幕锁定选项"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"绘制您的图案"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"确认"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"重新绘制"</string>

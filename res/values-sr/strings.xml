@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi се укључује..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi се искључује..."</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi је онемогућен"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Брисање мреже није успело"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Повезивање са мрежом није успело"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Додај мрежу"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi је онемогућен"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Повежи се"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Лозинка"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Прикажи лозинку"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Назив мреже"</string>
     <string name="wifi_security" msgid="158358046038876532">"Безбедност"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Јачина сигнала"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Јачина сигнала"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Статус"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Брзина везе"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Фреквенција"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Слаба"</item>
-    <item msgid="2032262610626057081">"Задовољавајућа"</item>
-    <item msgid="3859756017461098953">"Добра"</item>
-    <item msgid="1521103743353335724">"Одлична"</item>
+    <item msgid="7683058295076342057">"Слаба"</item>
+    <item msgid="1639222824821660744">"Задовољавајућа"</item>
+    <item msgid="1838705897358163300">"Добра"</item>
+    <item msgid="6067166649320533751">"Одлична"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d MB/s"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Детаљи о мрежи"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC адреса"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP адреса"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Маска подмреже"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 адресе"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Мрежни пролаз"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Укључи Bluetooth"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Додирните да бисте упарили са уређајем <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Језици"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Звук"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Јачина звука звона"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Јачина звука за навигацију"</string>
@@ -114,10 +130,15 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додатних дозвола</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Недавни захтеви за локацију"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволе на нивоу апликација"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Скенирање"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуге локације"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi скенирање"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Дозволите апликацијама и услугама да траже Wi‑Fi мреже у било ком тренутку, чак и када је Wi‑Fi искључен. Ово може да се користи, на пример, за побољшање функција и услуга заснованих на локацији."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth скенирање"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Дозволите апликацијама и услугама да траже уређаје у близини у сваком тренутку, чак и када је Bluetooth искључен. Ово може да се користи, на пример, за побољшање функција и услуга заснованих на локацији."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања система"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Верзија Android-а"</string>
@@ -157,6 +178,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Избриши све eSIM-ове возила"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Тиме нећете отказати тарифни пакет."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"Ресетовање eSIM-ова није успело"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Изаберите мрежу"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Ресетуј подешавања"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Желите ли да ресетујете?"</string>
@@ -164,9 +186,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ресетуј подешавања"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Подешавања мреже су ресетована"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Ресетуј подешавања апликација"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Овим ће се ресетовати сва подешавања за:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Онемогућене апликације"</li>\n<li>"Обавештења о онемогућеним апликацијама"</li>\n<li>"Подразумеване апликације за радње"</li>\n<li>"Ограничења за позадинске податке за апликације"</li>\n<li>"Сва ограничења за дозволе"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Нећете изгубити податке апликација."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"Овим ће се ресетовати сва подешавања за:\n\n\n Онемогућене апликације\n Обавештења о онемогућеним апликацијама\n Подразумеване апликације за радње\n Ограничења за позадинске податке за апликације\n Сва ограничења за дозволе\n\n\n Нећете изгубити никакве податке апликације."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
@@ -245,6 +265,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"Желите да уклоните налог?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Ако уклоните овај налог, избрисаћете све поруке, контакте и друге податке са уређаја!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Уклањање налога није успело."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Синхронизација налога"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Синхронизација је укључена за одређене ставке (<xliff:g id="ID_1">%1$d</xliff:g> од <xliff:g id="ID_2">%2$d</xliff:g>)"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Синхронизација је укључена за све ставке"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Синхронизација је искључена за све ставке"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безбедност"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Закључавање екрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нема"</string>
@@ -252,7 +276,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Лозинка"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Изаберите закључавање"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Опције закључавања екрана"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Унесите шаблон"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Потврди"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Поново нацртајте"</string>

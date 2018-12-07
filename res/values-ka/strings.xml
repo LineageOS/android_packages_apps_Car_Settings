@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi ირთვება…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"WiFi-ის გამორთვა…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi გათიშულია"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ქსელის დავიწყება ვერ მოხერხდა"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ქსელთან დაკავშირება ვერ ხერხდება"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"ქსელის დამატება"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi გათიშულია"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"დაკავშირება"</string>
     <string name="wifi_password" msgid="5565632142720292397">"პაროლი"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"პაროლის გამოჩენა"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ქსელის სახელი"</string>
     <string name="wifi_security" msgid="158358046038876532">"უსაფრთხოება"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"სიგნალის სიძლიერე"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"სიგნალის სიძლიერე"</string>
     <string name="wifi_status" msgid="5688013206066543952">"სტატუსი"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"დაკავშირების სიჩქარე"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"სიხშირე"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ცუდი"</item>
-    <item msgid="2032262610626057081">"ნორმალური"</item>
-    <item msgid="3859756017461098953">"კარგი"</item>
-    <item msgid="1521103743353335724">"შესანიშნავი"</item>
+    <item msgid="7683058295076342057">"ცუდი"</item>
+    <item msgid="1639222824821660744">"ნორმალური"</item>
+    <item msgid="1838705897358163300">"კარგი"</item>
+    <item msgid="6067166649320533751">"შესანიშნავი"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d მბიტი/წმ"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 გჰც"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 გჰც"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"ქსელის დეტალები"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC მისამართი"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP მისამართი"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"ქვექსელის ნიღაბი"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 მისამართები"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"შლუზი"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Bluetooth-ის ჩართვა"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"შეეხეთ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>-თან დასაწყვილებლად."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ენები"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"ხმა"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ზარის სიმძლავრე"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"ნავიგაციის ხმა"</string>
@@ -113,10 +129,15 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> დამატებითი ნებართვა</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"მდებარეობა"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"მდებარეობის ბოლოდროინდელი მოთხოვნები"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"მდებარეობის ბოლოდროინდელი მოთხოვნები"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"მდებარეობის ბოლოდროინდელი მოთხოვნები არ არის"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ნებართვები აპის დონეზე"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"სკანირება"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"მდებარეობის სერვისები"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi სკანირება"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"აპებისა და სერვისებისთვის Wi‑Fi ქსელების ნებისმიერ დროს სკანირების დაშვება, მაშინაც კი, როცა Wi‑Fi გამორთულია. მაგალითად, აღნიშნული გამოიყენება მდებარეობაზე დაფუძნებული ფუნქციებისა და სერვისების გასაუმჯობესებლად."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth სკანირება"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"აპებისა და სერვისებისთვის ახლომდებარე მოწყობილობების ნებისმიერ დროს სკანირების დაშვება, მაშინაც კი, როცა Bluetooth გამორთულია. მაგალითად, აღნიშნული გამოიყენება მდებარეობაზე დაფუძნებული ფუნქციებისა და სერვისების გასაუმჯობესებლად."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"სისტემა"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"სისტემის განახლებები"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-ის ვერსია"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"სატრანსპორტო საშუალების ყველა eSIM-ის ამოშლა"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"ეს ქმედება არ გააუქმებს თქვენს სატარიფო გეგმას."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM-ების გადაყენება ვერ ხერხდება"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"აირჩიეთ ქსელი"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"პარამეტრების გადაყენება"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"გსურთ გადაყენება?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"პარამეტრების გადაყენება"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ქსელის პარამეტრები გადაყენებულია"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"აპთა პარამეტრების გადაყენება"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"ეს გადააყენებს ყველა პარამეტრს შემდეგისთვის:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"გათიშული აპები"</li>\n<li>"გათიშულ აპთა შეტყობინებები"</li>\n<li>"ნაგულისხმევი აპლიკაციები გარკვეული ქმედებებისთვის"</li>\n<li>"ფონურ მონაცემთა შეზღუდვები აპებისთვის"</li>\n<li>"ნებართვის ნებისმიერი შეზღუდვა"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"თქვენ არ დაკარგავთ აპთა მონაცემებს."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"ეს ქმედება გადააყენებს ყველა პარამეტრს, რომელიც ეხება:\n\n\n გათიშულ აპებს\n გათიშული აპების შეტყობინებებს\n ქმედებებზე მიმაგრებულ ნაგულისხმევ აპლიკაციებს\n ფონურ რეჟიმში მონაცემთა გამოყენების შეზღუდვებს აპებისთვის\n ნებისმიერი ნებართვის შეზღუდვას\n\n\n აპების მონაცემები არ დაიკარგება."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"აპების გადაყენება"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"აპების პარამეტრები გადაყენებულია"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ყველა მონაცემის ამოშლა (ქარხნული პარამეტრების დაბრუნება)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"გსურთ ანგარიშის ამოშლა?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ამ ანგარიშის წაშლის შემთხვევაში მოწყობილობაზე წაიშლება მასთან დაკავშირებული ყველა შეტყობინება, კონტაქტი და სხვა მონაცემი!"</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"ანგარიშის ამოშლა ვერ მოხერხდა."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"ანგარიშის სინქრონიზაცია"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"სინქრონიზაცია ჩართულია <xliff:g id="ID_2">%2$d</xliff:g>-დან <xliff:g id="ID_1">%1$d</xliff:g> ერთეულისთვის"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"სინქრონიზაცია ჩართულია ყველა ერთეულისთვის"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"სინქრონიზაცია გამორთულია ყველა ერთეულისთვის"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"უსაფრთხოება"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ეკრანის დაბლოკვა"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"არცერთი"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN-კოდი"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"პაროლი"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"აირჩიეთ ჩაკეტვის ტიპი"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"ეკრანის დაბლოკვის ვარიანტები"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"შეიყვანეთ განმბლოკავი ნიმუში"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"დადასტურება"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ხელმეორედ აღწარმოება"</string>

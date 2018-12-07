@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"A Wi-Fi bekapcsolása…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"A Wi-Fi kikapcsolása…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi kikapcsolva"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Nem sikerült elfelejteni a hálózatot."</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Nem sikerült hálózathoz csatlakozni."</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Hálózat hozzáadása"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi kikapcsolva"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Csatlakozás"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Jelszó"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Jelszó megjelenítése"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Hálózat neve"</string>
     <string name="wifi_security" msgid="158358046038876532">"Biztonság"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Jelerősség"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Jelerősség"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Állapot"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Kapcsolódás sebessége"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frekvencia"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Gyenge"</item>
-    <item msgid="2032262610626057081">"Közepes"</item>
-    <item msgid="3859756017461098953">"Jó"</item>
-    <item msgid="1521103743353335724">"Kiváló"</item>
+    <item msgid="7683058295076342057">"Gyenge"</item>
+    <item msgid="1639222824821660744">"Közepes"</item>
+    <item msgid="1838705897358163300">"Jó"</item>
+    <item msgid="6067166649320533751">"Kiváló"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Hálózati információk"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC-cím"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP-cím"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Alhálózati maszk"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-címek"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Átjáró"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Bluetooth bekapcsolása"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Koppintson a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> eszközzel való párosításhoz."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Nyelvek"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Hang"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Csengés hangereje"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigáció hangereje"</string>
@@ -113,10 +129,15 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> további engedély</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Legutóbbi helylekérdezések"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Keresés"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi-alapú keresés"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy Wi-Fi-hálózatokat keressenek még akkor is, ha ki van kapcsolva a Wi-Fi. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-alapú keresés"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy közeli eszközöket keressenek még akkor is, ha ki van kapcsolva a Bluetooth. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Rendszer"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-verzió"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"A jármű összes eSIM-jének törlése"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Ezzel előfizetése nem szűnik meg."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"Nem lehet visszaállítani az eSIM-eket"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Hálózat kiválasztása"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Beállítások visszaállítása"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Visszaállítja?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Beállítások visszaállítása"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"A hálózati beállítások vissza lettek állítva."</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Alkalmazásbeállítások visszaállítása"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Ez visszaállítja az összes beállítást a következőnél:"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Letiltott alkalmazások"</li>\n<li>"Letiltott alkalmazásértesítések"</li>\n<li>"Alapértelmezett alkalmazások az egyes műveletekhez"</li>\n<li>"Az alkalmazások háttérben történő adatforgalmára vonatkozó korlátozások"</li>\n<li>"Minden engedélykorlátozás"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Az alkalmazásadatok nem vesznek el."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"Ez visszaállítja a következőkre vonatkozó összes beállítást:\n\n\n Letiltott alkalmazások\n Letiltott alkalmazásértesítések\n Alapértelmezett alkalmazások adott műveletekhez\n Az alkalmazások háttéradataira vonatkozó korlátozások\n Minden engedélykorlátozás\n\n\n Az alkalmazásadatok nem vesznek el."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Alkalmazások visszaállítása"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Az alkalmazásbeállítások vissza lettek állítva"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Minden adat törlése (visszaállítás)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"Eltávolítja a fiókot?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"A fiók eltávolításával az összes üzenetet, névjegyet és egyéb adatot is törli az eszközről."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Nem sikerült eltávolítani a fiókot."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Fiók szinkronizálása"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Szinkronizálás bekapcsolva <xliff:g id="ID_2">%2$d</xliff:g>/<xliff:g id="ID_1">%1$d</xliff:g> elemnél"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Szinkronizálás bekapcsolva minden elemnél"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Szinkronizálás kikapcsolva minden elemnél"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Biztonság"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Képernyőzár"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Egyik sem"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN-kód"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Jelszó"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Lezárás típusa"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"A képernyőzár beállításai"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Adja meg a mintáját"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Megerősítés"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Újrarajzolás"</string>

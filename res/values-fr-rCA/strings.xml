@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2018 The Android Open Source Project
+<!-- 
+    Copyright 2018 The Android Open Source Project
 
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,16 +32,18 @@
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activation du Wi-Fi en cours…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Désactivation du Wi-Fi en cours…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi désactivé"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Impossible de supprimer le réseau"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Échec de la connexion au réseau"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Ajouter un réseau"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi désactivé"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Associer"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Mot de passe"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Afficher le mot de passe"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nom du réseau"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sécurité"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Force du signal"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Force du signal"</string>
     <string name="wifi_status" msgid="5688013206066543952">"État"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Vitesse de connexion"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Fréquence"</string>
@@ -49,10 +52,21 @@
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Faible"</item>
-    <item msgid="2032262610626057081">"Passable"</item>
-    <item msgid="3859756017461098953">"Bonne"</item>
-    <item msgid="1521103743353335724">"Excellente"</item>
+    <item msgid="7683058295076342057">"Faible"</item>
+    <item msgid="1639222824821660744">"Passable"</item>
+    <item msgid="1838705897358163300">"Bonne"</item>
+    <item msgid="6067166649320533751">"Excellente"</item>
   </string-array>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Détails du réseau"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"Adresse MAC"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"Adresse IP"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Masque de sous-réseau"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adresses IPv6"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Passerelle"</string>
     <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Activer le Bluetooth"</string>
     <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
@@ -89,6 +103,8 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Touchez pour associer à <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Langues"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Son"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume de la sonnerie"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume de navigation"</string>
@@ -113,10 +129,15 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorisations supplémentaires</item>
     </plurals>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
-    <string name="location_settings_recent_locations_title" msgid="518781212106200630">"Récentes demandes de localisation"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applications"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Recherche"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Recherche de réseaux Wi-Fi"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Autorisez les applications et les services à rechercher les réseaux Wi-Fi en tout temps, même lorsque le Wi-Fi est désactivé. Cette option peut, par exemple, être utilisée pour améliorer les fonctionnalités et les services qui utilisent la localisation."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Recherche d\'appareils Bluetooth"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Autorisez les applications et les services à rechercher les appareils à proximité en tout temps, même lorsque le Bluetooth est désactivé. Cette option peut, par exemple, être utilisée pour améliorer les fonctionnalités et les services qui utilisent la localisation."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour système"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
@@ -156,6 +177,7 @@
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Effacer toutes les cartes eSIM du véhicule"</string>
     <string name="reset_esim_desc" msgid="1437276625485586740">"Cette action n\'annulera pas votre forfait."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"Impossible de réinitialiser les cartes eSIM"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Sélectionner un réseau"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Réinitialiser les paramètres"</string>
     <string name="reset_network_confirm_title" msgid="5255502723840197663">"Réinitialiser?"</string>
@@ -163,9 +185,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Réinitialiser les paramètres"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont été réinitialisés"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitial. préférences des applications"</string>
-    <string name="reset_app_pref_desc" msgid="3356451885960078577">"Cette action réinitialisera toutes les préférences pour :"</string>
-    <string name="reset_app_pref_items" msgid="5546867272168895443"><li>"Applications désactivées"</li>\n<li>"Notifications d\'applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions des données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisation"</li></string>
-    <string name="reset_app_pref_desc_data" msgid="9069623832516883414">"Vous ne perdrez aucune donnée d\'application."</string>
+    <string name="reset_app_pref_desc" msgid="3410882662142097726">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n\n Applications désactivées\n Notifications associées aux applications désactivées\n Applications par défaut pour les actions\n Restrictions de données en arrière-plan pour les applications\n Toutes les restrictions d\'autorisations\n\n\n Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Effacer toutes les données (réinitial.)"</string>
@@ -243,6 +263,10 @@
     <string name="really_remove_account_title" msgid="3555164432587924900">"Supprimer le compte?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"La suppression de ce compte entraînera la suppression de tous les messages, les contacts et les autres données de l\'appareil."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Impossible de supprimer le compte."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Synchronisation du compte"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"La synchronisation est activée pour <xliff:g id="ID_1">%1$d</xliff:g> éléments sur <xliff:g id="ID_2">%2$d</xliff:g>"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"La synchronisation est activée pour tous les éléments"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"La synchronisation est désactivée pour tous les éléments"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouill. de l\'écran"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Aucun"</string>
@@ -250,7 +274,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"NIP"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Mot de passe"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Choisissez un type de verrouillage"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Options de verrouillage de l\'écran"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Entrez votre schéma"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmer"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Redessiner"</string>
