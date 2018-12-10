@@ -20,8 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.robolectric.RuntimeEnvironment.application;
 
@@ -32,7 +30,6 @@ import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -179,9 +176,9 @@ public class AccountSyncDetailsPreferenceControllerTest {
         // Sets that the sync adapter to syncable.
         ShadowContentResolver.setIsSyncable(mAccount, AUTHORITY, /* syncable= */ SYNCABLE);
         // Sets provider info for the sync adapter but it does not have a label.
-        ProviderInfo info = mock(ProviderInfo.class);
+        ProviderInfo info = new ProviderInfo();
         info.authority = AUTHORITY;
-        doReturn("").when(info).loadLabel(any(PackageManager.class));
+        info.name = "";
 
         ProviderInfo[] providers = {info};
         PackageInfo packageInfo = new PackageInfo();
@@ -198,7 +195,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_providerLabelShouldBeSet() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-            ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
@@ -223,7 +220,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_masterSyncOff_syncDisabled_shouldNotBeChecked() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns off master sync and automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
@@ -238,7 +235,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_masterSyncOn_syncDisabled_shouldBeChecked() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns on master sync and turns off automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
@@ -253,7 +250,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_masterSyncOff_syncEnabled_shouldBeChecked() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns off master sync and turns on automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
@@ -268,7 +265,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_syncDisabled_summaryShouldBeSet() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns off automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
                 mUserHandle.getIdentifier());
@@ -282,7 +279,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_syncEnabled_activelySyncing_summaryShouldBeSet() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
                 mUserHandle.getIdentifier());
@@ -302,7 +299,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_syncEnabled_syncHasHappened_summaryShouldBeSet() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
                 mUserHandle.getIdentifier());
@@ -323,7 +320,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_activelySyncing_notInitialSync_shouldHaveActiveSyncIcon() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Adds the sync adapter to the list of currently syncing adapters.
         SyncInfo syncInfo = new SyncInfo(/* authorityId= */ 0, mAccount, AUTHORITY, /* startTime= */
                 0);
@@ -347,7 +344,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_syncPending_notInitialSync_shouldHaveActiveSyncIcon() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Sets the sync adapter's initializing state to false (i.e. it's not performing an
         // initial sync).
         // Also sets the the sync status to pending
@@ -367,7 +364,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_syncFailed_shouldHaveProblemSyncIcon() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
                 mUserHandle.getIdentifier());
@@ -389,7 +386,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void refreshUi_noSyncStatus_shouldHaveNoIcon() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         mController.refreshUi();
 
@@ -402,7 +399,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onAccountsUpdate_correctUserId_shouldForceUpdatePreferences() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         mController.refreshUi();
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
@@ -415,7 +412,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onAccountsUpdate_incorrectUserId_shouldNotForceUpdatePreferences() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         mController.refreshUi();
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
@@ -428,7 +425,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onSyncPreferenceClicked_preferenceUnchecked_shouldSetSyncAutomaticallyOff() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         // Turns off one time sync and turns on automatic sync for the adapter so the preference is
         // checked.
@@ -446,7 +443,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onSyncPreferenceClicked_preferenceUnchecked_shouldCancelSync() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         // Turns off one time sync and turns on automatic sync for the adapter so the preference is
         // checked.
@@ -463,7 +460,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onSyncPreferenceClicked_preferenceChecked_shouldSetSyncAutomaticallyOn() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         // Turns off one time sync and automatic sync for the adapter so the preference is
         // unchecked.
@@ -481,7 +478,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onSyncPreferenceClicked_preferenceChecked_masterSyncOff_shouldRequestSync() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         // Turns off master sync and automatic sync for the adapter so the preference is unchecked.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
@@ -501,7 +498,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     @Test
     public void onSyncPreferenceClicked_oneTimeSyncOn_shouldRequestSync() {
-        setUpVisibleSyncAdapter();
+        setUpVisibleSyncAdapters(AUTHORITY);
 
         // Turns on one time sync mode
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
@@ -514,24 +511,30 @@ public class AccountSyncDetailsPreferenceControllerTest {
                 any(Bundle.class));
     }
 
-    private void setUpVisibleSyncAdapter() {
-        // Adds a sync adapter type that has the right account type and is visible.
-        SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-            ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
-        SyncAdapterType[] syncAdapters = {syncAdapterType};
-        ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
-        // Sets that the sync adapter to syncable.
-        ShadowContentResolver.setIsSyncable(mAccount, AUTHORITY, /* syncable= */ SYNCABLE);
-        // Sets provider info for the sync adapter with a label.
-        ProviderInfo info = new ProviderInfo();
-        info.authority = AUTHORITY;
-        info.name = "label";
+    private void setUpVisibleSyncAdapters(String... authorities) {
+        SyncAdapterType[] syncAdapters = new SyncAdapterType[authorities.length];
+        for (int i = 0; i < authorities.length; i++) {
+            String authority = authorities[i];
+            // Adds a sync adapter type that has the right account type and is visible.
+            SyncAdapterType syncAdapterType = new SyncAdapterType(authority,
+                    ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+            syncAdapters[i] = syncAdapterType;
 
-        ProviderInfo[] providers = {info};
-        PackageInfo packageInfo = new PackageInfo();
-        packageInfo.packageName = AUTHORITY;
-        packageInfo.providers = providers;
-        getShadowApplicationManager().addPackage(packageInfo);
+            // Sets that the sync adapter is syncable.
+            ShadowContentResolver.setIsSyncable(mAccount, authority, /* syncable= */ SYNCABLE);
+
+            // Sets provider info with a label for the sync adapter.
+            ProviderInfo info = new ProviderInfo();
+            info.authority = AUTHORITY;
+            info.name = "label";
+            ProviderInfo[] providers = {info};
+
+            PackageInfo packageInfo = new PackageInfo();
+            packageInfo.packageName = authority;
+            packageInfo.providers = providers;
+            getShadowApplicationManager().addPackage(packageInfo);
+        }
+        ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
     }
 
     private ShadowApplicationPackageManager getShadowApplicationManager() {

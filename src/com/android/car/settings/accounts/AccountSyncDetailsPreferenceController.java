@@ -30,7 +30,6 @@ import android.content.SyncStatusInfo;
 import android.content.SyncStatusObserver;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
-import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
@@ -71,7 +70,6 @@ public class AccountSyncDetailsPreferenceController extends
      * sync.
      */
     private final Map<String, SyncPreference> mSyncPreferences = new ArrayMap<>();
-    private final Set<SyncAdapterType> mInvisibleAdapters = new HashSet<>();
     private boolean mIsStarted = false;
     private Account mAccount;
     private UserHandle mUserHandle;
@@ -200,49 +198,29 @@ public class AccountSyncDetailsPreferenceController extends
             boolean oldSyncState = ContentResolver.getSyncAutomaticallyAsUser(mAccount,
                     authority, userId);
             if (syncOn != oldSyncState) {
-                // Toggling this switch triggers sync but we may need a user approval.
-                // If the sync adapter doesn't have access to the account we either
-                // request access by starting an activity if possible or kick off the
-                // sync which will end up posting an access request notification.
+                // Toggling this switch triggers sync but we may need a user approval. If the
+                // sync adapter doesn't have access to the account we either request access by
+                // starting an activity if possible or kick off the sync which will end up
+                // posting an access request notification.
                 if (syncOn && requestAccountAccessIfNeeded(packageName, uid)) {
                     return true;
                 }
-                // if we're enabling sync, this will request a sync as well
+                // If we're enabling sync, this will request a sync as well.
                 ContentResolver.setSyncAutomaticallyAsUser(mAccount, authority, syncOn, userId);
-                // if the master sync switch is off, the request above will
-                // get dropped.  when the user clicks on this toggle,
-                // we want to force the sync, however.
-                if (!ContentResolver.getMasterSyncAutomaticallyAsUser(userId) || !syncOn) {
-                    if (syncOn) {
-                        requestSync(authority);
-                    } else {
-                        cancelSync(authority);
-                    }
+                if (syncOn) {
+                    requestSync(authority);
+                } else {
+                    cancelSync(authority);
                 }
             }
         }
         return true;
     }
 
-    /**
-     * Requests a sync.
-     *
-     * <p>Derived from
-     * {@link com.android.settings.accounts.AccountSyncSettings#requestOrCancelSync}.
-     */
     private void requestSync(String authority) {
-        Bundle extras = new Bundle();
-        extras.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
-        ContentResolver.requestSyncAsUser(mAccount, authority, mUserHandle.getIdentifier(),
-                extras);
+        AccountSyncHelper.requestSyncIfAllowed(mAccount, authority, mUserHandle.getIdentifier());
     }
 
-    /**
-     * Cancels a sync.
-     *
-     * <p>Derived from
-     * {@link com.android.settings.accounts.AccountSyncSettings#requestOrCancelSync}.
-     */
     private void cancelSync(String authority) {
         ContentResolver.cancelSyncAsUser(mAccount, authority, mUserHandle.getIdentifier());
     }
@@ -327,37 +305,21 @@ public class AccountSyncDetailsPreferenceController extends
     private List<SyncPreference> getSyncPreferences(Set<String> preferencesToRemove) {
         int userId = mUserHandle.getIdentifier();
         PackageManager packageManager = getContext().getPackageManager();
-        SyncAdapterType[] syncAdapters = ContentResolver.getSyncAdapterTypesAsUser(
-                mUserHandle.getIdentifier());
         List<SyncInfo> currentSyncs = ContentResolver.getCurrentSyncsAsUser(userId);
         // Whether one time sync is enabled rather than automtic sync
         boolean oneTimeSyncMode = !ContentResolver.getMasterSyncAutomaticallyAsUser(userId);
         boolean syncIsFailing = false;
-        mInvisibleAdapters.clear();
 
         List<SyncPreference> syncPreferences = new ArrayList<>();
 
-        for (int i = 0; i < syncAdapters.length; i++) {
-            SyncAdapterType syncAdapter = syncAdapters[i];
+        Set<SyncAdapterType> syncAdapters = AccountSyncHelper.getSyncableSyncAdaptersForAccount(
+                mAccount,
+                mUserHandle);
+        for (SyncAdapterType syncAdapter : syncAdapters) {
             String authority = syncAdapter.authority;
 
-            // If the sync adapter is not for this account type, don't show it
-            if (!syncAdapter.accountType.equals(mAccount.type)) {
-                continue;
-            }
-
             if (!syncAdapter.isUserVisible()) {
-                // keep track of invisible sync adapters, so sync now forces them to sync as well.
-                // TODO: sync invisible adapters
-                mInvisibleAdapters.add(syncAdapter);
                 // If the sync adapter is not visible, don't show it
-                continue;
-            }
-
-            boolean isSyncable = ContentResolver.getIsSyncableAsUser(mAccount, authority,
-                    mUserHandle.getIdentifier()) > 0;
-            // If the adapter is not syncable, don't show it
-            if (!isSyncable) {
                 continue;
             }
 
