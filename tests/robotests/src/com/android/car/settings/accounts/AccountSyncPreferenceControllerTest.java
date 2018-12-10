@@ -18,7 +18,8 @@ package com.android.car.settings.accounts;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
@@ -37,6 +38,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -54,14 +57,16 @@ public class AccountSyncPreferenceControllerTest {
     private final Account mAccount = new Account("acct1", "type1");
     private final int mUserId = 3;
     private final UserHandle mUserHandle = new UserHandle(mUserId);
-
+    @Mock
+    FragmentController mMockFragmentController;
     private AccountSyncPreferenceController mController;
     private Preference mPreference;
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
         mController = new AccountSyncPreferenceController(RuntimeEnvironment.application,
-                PREFERENCE_KEY, mock(FragmentController.class));
+                PREFERENCE_KEY, mMockFragmentController);
         mPreference = new Preference(application);
         mPreference.setKey(mController.getPreferenceKey());
         mController.setAccount(mAccount);
@@ -213,5 +218,13 @@ public class AccountSyncPreferenceControllerTest {
 
         assertThat(mPreference.getSummary())
                 .isEqualTo(application.getString(R.string.account_sync_summary_some_on, 3, 4));
+    }
+
+    @Test
+    public void handlePreferenceTreeClick_shouldLaunchAccountSyncDetailsFragment() {
+        mController.updateState(mPreference);
+        mController.handlePreferenceTreeClick(mPreference);
+
+        verify(mMockFragmentController).launchFragment(any(AccountSyncDetailsFragment.class));
     }
 }

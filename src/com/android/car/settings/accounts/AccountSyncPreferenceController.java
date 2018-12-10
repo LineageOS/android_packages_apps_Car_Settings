@@ -25,6 +25,7 @@ import android.os.UserHandle;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
+import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -76,6 +77,16 @@ public class AccountSyncPreferenceController extends NoSetupPreferenceController
                     "AccountSyncPreferenceController must be initialized by calling "
                             + "setUserHandle(UserHandle)");
         }
+    }
+
+    @Override
+    public boolean handlePreferenceTreeClick(Preference preference) {
+        if (preference.getKey().equals(getPreferenceKey())) {
+            getFragmentController().launchFragment(
+                    AccountSyncDetailsFragment.newInstance(mAccount, mUserHandle));
+            return true;
+        }
+        return super.handlePreferenceTreeClick(preference);
     }
 
     @Override

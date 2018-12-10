@@ -582,6 +582,16 @@
     <string name="account_sync_summary_all_on">Sync on for all items</string>
     <!-- Preference summary for account sync when syncing is off for everything [CHAR LIMIT=NONE] -->
     <string name="account_sync_summary_all_off">Sync off for all items</string>
+    <!-- Sync status shown when sync is disabled [CHAR LIMIT=25] -->
+    <string name="sync_disabled">Sync is OFF</string>
+    <!-- Sync status shown when last sync resulted in an error [CHAR LIMIT=25] -->
+    <string name="sync_error">Sync error</string>
+    <!-- Last synced date/time for accounts that synced [CHAR LIMIT=none] -->
+    <string name="last_synced">Last synced <xliff:g id="last_sync_time" example="12/05/18, 12:30 PM">%1$s</xliff:g></string>
+    <!-- Sync status shown when sync is in progress [CHAR LIMIT=30] -->
+    <string name="sync_in_progress">Syncing now\u2026</string>
+    <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. [CHAR LIMIT=none] -->
+    <string name="sync_one_time_sync">Tap to sync now<xliff:g id="last_sync_time" example="12/05/18, 12:30 PM">\n%1$s</xliff:g></string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
