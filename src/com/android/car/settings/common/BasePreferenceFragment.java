@@ -60,7 +60,10 @@ import java.util.Map;
  * {@link #onAttach(Context)}. Changes to driving state restrictions are propagated to
  * controllers. If a controller becomes unavailable for a particular driving state, its
  * preference is hidden from the UI.
+ *
+ * @deprecated Use {@link SettingsFragment}.
  */
+@Deprecated
 public abstract class BasePreferenceFragment extends PreferenceFragmentCompat implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
 

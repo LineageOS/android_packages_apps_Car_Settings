@@ -71,7 +71,7 @@ public class PreferenceUtilTest {
     @Test
     public void testRequirePreferenceType_false() {
         Preference preference = new ListPreference(RuntimeEnvironment.application);
-        assertThrows(IllegalStateException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class));
     }
 }

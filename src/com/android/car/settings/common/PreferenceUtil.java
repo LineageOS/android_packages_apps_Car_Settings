@@ -29,11 +29,11 @@ public class PreferenceUtil {
     /**
      * Requires that the preference is of given type.
      *
-     * @throws IllegalStateException if the preference is not of the given type.
+     * @throws IllegalArgumentException if the preference is not of the given type.
      */
     public static void requirePreferenceType(Preference preference, Class expectedType) {
         if (!checkPreferenceType(preference, expectedType)) {
-            throw new IllegalStateException(
+            throw new IllegalArgumentException(
                     "Preference should be of type " + expectedType.getName());
         }
     }
