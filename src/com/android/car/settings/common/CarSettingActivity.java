@@ -38,7 +38,6 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.android.car.settings.R;
-import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.theme.Themes;
 
 /**
@@ -99,7 +98,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         }
 
         if (getCurrentFragment() == null) {
-            launchFragment(new QuickSettingFragment());
+            launchFragment(Fragment.instantiate(this,
+                    getString(R.string.config_settings_hierarchy_root_fragment)));
         }
     }
 

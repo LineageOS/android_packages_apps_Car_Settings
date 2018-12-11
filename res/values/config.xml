@@ -16,6 +16,8 @@
 -->
 
 <resources>
+    <!-- The fully qualified class name of the fragment to launch when the settings application starts. -->
+    <string name="config_settings_hierarchy_root_fragment">com.android.car.settings.quicksettings.QuickSettingFragment</string>
     <!-- Whether system_update_settings should be shown or not. -->
     <bool name="config_show_system_update_settings">true</bool>
 </resources>
