@@ -38,13 +38,13 @@ import org.robolectric.shadows.ShadowLooper;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowRingtoneManager.class})
-public class SoundSettingsRingtoneManagerTest {
+public class VolumeSettingsRingtoneManagerTest {
 
     private static final int TEST_GROUP_ID = 1;
     private static final int TEST_USAGE_ID = 18;
 
     private Context mContext;
-    private SoundSettingsRingtoneManager mRingtoneManager;
+    private VolumeSettingsRingtoneManager mRingtoneManager;
     @Mock
     private Ringtone mRingtone;
 
@@ -53,7 +53,7 @@ public class SoundSettingsRingtoneManagerTest {
         MockitoAnnotations.initMocks(this);
         ShadowRingtoneManager.setRingtone(mRingtone);
         mContext = RuntimeEnvironment.application;
-        mRingtoneManager = new SoundSettingsRingtoneManager(mContext);
+        mRingtoneManager = new VolumeSettingsRingtoneManager(mContext);
     }
 
     @After

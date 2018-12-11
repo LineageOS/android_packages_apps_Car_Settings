@@ -20,10 +20,10 @@ package com.android.car.settings.sound;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /** Fragment which shows the settings for sounds. */
-public class SoundSettingsFragment extends BasePreferenceFragment {
+public class SoundSettingsFragment extends SettingsFragment {
 
     @Override
     @XmlRes

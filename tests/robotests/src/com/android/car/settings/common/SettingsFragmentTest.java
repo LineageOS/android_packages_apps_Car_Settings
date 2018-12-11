@@ -18,7 +18,13 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.testng.Assert.assertThrows;
+
 import android.car.drivingstate.CarUxRestrictions;
+
+import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -31,6 +37,8 @@ import org.junit.runner.RunWith;
 /** Unit test for {@link SettingsFragment}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class SettingsFragmentTest {
+
+    private static final String TEST_TAG = "test_tag";
 
     private FragmentController<TestSettingsFragment> mFragmentController;
     private SettingsFragment mFragment;
@@ -73,6 +81,64 @@ public class SettingsFragmentTest {
         mFragment.onUxRestrictionsChanged(uxRestrictions);
 
         assertThat(controller.getUxRestrictions()).isEqualTo(uxRestrictions);
+    }
+
+    @Test
+    public void launchFragment_otherFragment_opensFragment() {
+        mFragmentController.setup();
+        TestSettingsFragment otherFragment = new TestSettingsFragment();
+        mFragment.launchFragment(otherFragment);
+
+        assertThat(
+                mFragment.getFragmentManager().findFragmentById(R.id.fragment_container)).isEqualTo(
+                otherFragment);
+    }
+
+    @Test
+    public void launchFragment_dialogFragment_throwsError() {
+        mFragmentController.setup();
+        DialogFragment dialogFragment = new DialogFragment();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> mFragment.launchFragment(dialogFragment));
+    }
+
+    @Test
+    public void showDialog_noTag_launchesDialogFragment() {
+        mFragmentController.setup();
+        DialogFragment dialogFragment = mock(DialogFragment.class);
+        mFragment.showDialog(dialogFragment, /* tag */ null);
+        verify(dialogFragment).show(mFragment.getFragmentManager(), null);
+    }
+
+    @Test
+    public void showDialog_withTag_launchesDialogFragment() {
+        mFragmentController.setup();
+        DialogFragment dialogFragment = mock(DialogFragment.class);
+        mFragment.showDialog(dialogFragment, TEST_TAG);
+        verify(dialogFragment).show(mFragment.getFragmentManager(), TEST_TAG);
+    }
+
+    @Test
+    public void findDialogByTag_retrieveOriginalDialog_returnsDialog() {
+        mFragmentController.setup();
+        DialogFragment dialogFragment = new DialogFragment();
+        mFragment.showDialog(dialogFragment, TEST_TAG);
+        assertThat(mFragment.findDialogByTag(TEST_TAG)).isEqualTo(dialogFragment);
+    }
+
+    @Test
+    public void findDialogByTag_notDialogFragment_returnsNull() {
+        mFragmentController.setup();
+        TestSettingsFragment fragment = new TestSettingsFragment();
+        mFragment.getFragmentManager().beginTransaction().add(fragment, TEST_TAG).commit();
+        assertThat(mFragment.findDialogByTag(TEST_TAG)).isNull();
+    }
+
+    @Test
+    public void findDialogByTag_noSuchFragment_returnsNull() {
+        mFragmentController.setup();
+        assertThat(mFragment.findDialogByTag(TEST_TAG)).isNull();
     }
 
     /** Concrete {@link SettingsFragment} for testing. */
