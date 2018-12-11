@@ -23,6 +23,9 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 import org.robolectric.shadows.ShadowApplication;
 
+import java.util.Collections;
+import java.util.List;
+
 @Implements(BluetoothAdapter.class)
 public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBluetoothAdapter {
 
@@ -41,6 +44,11 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
     @Implementation
     protected static synchronized BluetoothAdapter getDefaultAdapter() {
         return (BluetoothAdapter) ShadowApplication.getInstance().getBluetoothAdapter();
+    }
+
+    @Implementation
+    protected List<Integer> getSupportedProfiles() {
+        return Collections.emptyList();
     }
 
     @Resetter
