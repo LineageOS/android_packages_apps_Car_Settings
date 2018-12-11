@@ -176,7 +176,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
 
     @Override
     public void onBackStackChanged() {
-        updateBlockingView(getCurrentFragment());
+        // Notify in case restrictions changed while current fragment was in back stack.
+        onUxRestrictionsChanged(mCarUxRestrictions);
     }
 
     @Override
