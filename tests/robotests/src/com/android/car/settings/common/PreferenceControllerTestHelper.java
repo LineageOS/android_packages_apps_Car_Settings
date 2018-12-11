@@ -23,8 +23,10 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LifecycleRegistry;
+import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -71,8 +73,19 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
                 ClassParameter.from(String.class, PREFERENCE_KEY),
                 ClassParameter.from(FragmentController.class, mMockFragmentController),
                 ClassParameter.from(CarUxRestrictions.class, UX_RESTRICTIONS));
-        mLifecycleRegistry.addObserver(mPreferenceController);
         mScreen = new PreferenceManager(context).createPreferenceScreen(context);
+        mLifecycleRegistry.addObserver(mPreferenceController);
+        mLifecycleRegistry.addObserver(new LifecycleObserver() {
+            @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+            public void onCreate() {
+                mScreen.onAttached();
+            }
+
+            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+            public void onDestroy() {
+                mScreen.onDetached();
+            }
+        });
     }
 
     /**
