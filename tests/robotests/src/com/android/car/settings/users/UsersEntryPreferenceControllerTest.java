@@ -50,21 +50,18 @@ public class UsersEntryPreferenceControllerTest {
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    private Context mContext;
     private Preference mPreference;
     private PreferenceControllerTestHelper<UsersEntryPreferenceController> mControllerHelper;
-    private UsersEntryPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
-        mContext = RuntimeEnvironment.application;
-        mPreference = new Preference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+        Context context = RuntimeEnvironment.application;
+        mPreference = new Preference(context);
+        mControllerHelper = new PreferenceControllerTestHelper<>(context,
                 UsersEntryPreferenceController.class, mPreference);
-        mController = mControllerHelper.getController();
         mControllerHelper.markState(Lifecycle.State.STARTED);
     }
 
