@@ -21,13 +21,13 @@
                   android:title="screen_title">
     <Preference
         android:key="key1"
-        settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+        settings:controller="com.android.car.settings.common.FakeBasePreferenceController"/>
     <Preference
         android:key="key2"
-        settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+        settings:controller="com.android.car.settings.common.FakeBasePreferenceController"/>
     <!-- This will log a warning but shouldn't crash. -->
     <Preference
-        settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+        settings:controller="com.android.car.settings.common.FakeBasePreferenceController"/>
     <!-- This will log a warning but shouldn't crash. -->
     <Preference
         android:key="key3"

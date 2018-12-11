@@ -17,6 +17,7 @@
 package com.android.car.settings.suggestions;
 
 import android.app.PendingIntent;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
@@ -24,19 +25,14 @@ import android.service.settings.suggestions.Suggestion;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.VisibleForTesting;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.suggestions.SuggestionController;
 
 import java.util.ArrayList;
@@ -56,8 +52,9 @@ import java.util.List;
  *     settings:controller="com.android.settings.suggestions.SuggestionsPreferenceController"/>
  * }</pre>
  */
-public class SuggestionsPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver, SuggestionController.ServiceConnectionListener,
+public class SuggestionsPreferenceController extends
+        PreferenceController<PreferenceGroup> implements
+        SuggestionController.ServiceConnectionListener,
         LoaderManager.LoaderCallbacks<List<Suggestion>>, SuggestionPreference.Callback {
 
     private static final Logger LOG = new Logger(SuggestionsPreferenceController.class);
@@ -68,27 +65,27 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
             "com.android.settings.intelligence",
             "com.android.settings.intelligence.suggestions.SuggestionService");
 
-    @VisibleForTesting
-    SuggestionController mSuggestionController;
+    private final SuggestionController mSuggestionController;
     private List<Suggestion> mSuggestionsList = new ArrayList<>();
     private LoaderManager mLoaderManager;
-    private PreferenceGroup mPreferenceGroup;
 
     public SuggestionsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mSuggestionController = new SuggestionController(context,
                 COMPONENT_NAME, /* serviceConnectionListener= */ this);
     }
 
-    public void setLoaderManager(LoaderManager loaderManager) {
-        mLoaderManager = loaderManager;
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        mPreferenceGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
-        updatePreferenceGroupVisibility();
+    /**
+     * Sets the {@link LoaderManager} used to load suggestions.
+     */
+    public void setLoaderManager(LoaderManager loaderManager) {
+        mLoaderManager = loaderManager;
     }
 
     /**
@@ -97,8 +94,8 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
      *
      * @throws IllegalStateException if the loader manager is {@code null}
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void checkInitialized() {
+    @Override
+    protected void checkInitialized() {
         LOG.v("checkInitialized");
         if (mLoaderManager == null) {
             throw new IllegalStateException(
@@ -108,16 +105,16 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     }
 
     /** Starts the suggestions controller. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
-        LOG.v("onStart");
+    @Override
+    protected void onStartInternal() {
+        LOG.v("onStartInternal");
         mSuggestionController.start();
     }
 
     /** Stops the suggestions controller. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
-        LOG.v("onStop");
+    @Override
+    protected void onStopInternal() {
+        LOG.v("onStopInternal");
         mSuggestionController.stop();
         cleanupLoader();
     }
@@ -140,7 +137,7 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
     public Loader<List<Suggestion>> onCreateLoader(int id, @Nullable Bundle args) {
         LOG.v("onCreateLoader: " + id);
         if (id == SettingsSuggestionsLoader.LOADER_ID_SUGGESTIONS) {
-            return new SettingsSuggestionsLoader(mContext, mSuggestionController);
+            return new SettingsSuggestionsLoader(getContext(), mSuggestionController);
         }
         throw new IllegalArgumentException("This loader id is not supported " + id);
     }
@@ -170,25 +167,25 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
                 }
             }
             if (!isInNewSuggestionList) {
-                mPreferenceGroup.removePreference(
-                        mPreferenceGroup.findPreference(getSuggestionPreferenceKey(oldSuggestion)));
+                getPreference().removePreference(
+                        getPreference().findPreference(getSuggestionPreferenceKey(oldSuggestion)));
             }
         }
 
         // Add suggestions that are not in the old list and update the existing suggestions.
         for (Suggestion suggestion : suggestions) {
-            Preference curPref = mPreferenceGroup.findPreference(
+            Preference curPref = getPreference().findPreference(
                     getSuggestionPreferenceKey(suggestion));
             if (curPref == null) {
-                SuggestionPreference newSuggPref = new SuggestionPreference(mContext,
+                SuggestionPreference newSuggPref = new SuggestionPreference(getContext(),
                         suggestion, /* callback= */ this);
-                mPreferenceGroup.addPreference(newSuggPref);
+                getPreference().addPreference(newSuggPref);
             } else {
                 ((SuggestionPreference) curPref).updateSuggestion(suggestion);
             }
         }
 
-        updatePreferenceGroupVisibility();
+        refreshUi();
     }
 
     @Override
@@ -218,12 +215,13 @@ public class SuggestionsPreferenceController extends NoSetupPreferenceController
         Suggestion suggestion = preference.getSuggestion();
         mSuggestionController.dismissSuggestions(suggestion);
         mSuggestionsList.remove(suggestion);
-        mPreferenceGroup.removePreference(preference);
-        updatePreferenceGroupVisibility();
+        getPreference().removePreference(preference);
+        refreshUi();
     }
 
-    private void updatePreferenceGroupVisibility() {
-        mPreferenceGroup.setVisible(isAvailable() && mPreferenceGroup.getPreferenceCount() > 0);
+    @Override
+    protected void updateState(PreferenceGroup preference) {
+        preference.setVisible(preference.getPreferenceCount() > 0);
     }
 
     private void cleanupLoader() {

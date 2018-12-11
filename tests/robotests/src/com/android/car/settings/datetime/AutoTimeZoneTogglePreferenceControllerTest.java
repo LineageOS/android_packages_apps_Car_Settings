@@ -77,7 +77,7 @@ public class AutoTimeZoneTogglePreferenceControllerTest {
 
     @Test
     public void testUpdateState_wrongPreferenceType() {
-        assertThrows(IllegalStateException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> mController.updateState(new Preference(mContext)));
     }
 
@@ -105,7 +105,7 @@ public class AutoTimeZoneTogglePreferenceControllerTest {
 
     @Test
     public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalStateException.class,
+        assertThrows(IllegalArgumentException.class,
                 () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }

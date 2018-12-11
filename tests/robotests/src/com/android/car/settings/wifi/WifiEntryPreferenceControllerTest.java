@@ -21,48 +21,44 @@ import static com.android.car.settings.common.BasePreferenceController.UNSUPPORT
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-
 import android.content.Context;
 import android.content.pm.PackageManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.shadows.ShadowPackageManager;
 
 /** Unit test for {@link WifiEntryPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiEntryPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
-    private ShadowPackageManager mShadowPackageManager;
+    private Context mContext;
     private WifiEntryPreferenceController mController;
 
     @Before
     public void setUp() {
-        Context context = RuntimeEnvironment.application;
-        mShadowPackageManager = Shadows.shadowOf(context.getPackageManager());
-        mController = new WifiEntryPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mContext = RuntimeEnvironment.application;
+        mController = new PreferenceControllerTestHelper<>(mContext,
+                WifiEntryPreferenceController.class).getController();
     }
 
     @Test
     public void getAvailabilityStatus_wifiAvailable_available() {
-        mShadowPackageManager.setSystemFeature(PackageManager.FEATURE_WIFI, /* supported= */ true);
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
     public void getAvailabilityStatus_wifiNotAvailable_unsupportedOnDevice() {
-        mShadowPackageManager.setSystemFeature(PackageManager.FEATURE_WIFI, /* supported= */ false);
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }

@@ -69,7 +69,10 @@ import java.lang.reflect.InvocationTargetException;
  * <p>In special cases, subclasses may also override {@link #displayPreference(PreferenceScreen)}
  * to obtain a reference to a preference object or do advanced layout modifications. This is
  * generally not recommended.
+ *
+ * @deprecated Use {@link PreferenceController}.
  */
+@Deprecated
 public abstract class BasePreferenceController extends AbstractPreferenceController implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
 

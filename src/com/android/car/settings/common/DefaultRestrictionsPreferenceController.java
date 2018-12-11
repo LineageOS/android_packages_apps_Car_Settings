@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,39 +14,28 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.accounts;
+package com.android.car.settings.common;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
-
 /**
- * Controller which determines if the top level entry into Account settings should be displayed
- * based on the user status.
+ * Concrete implementation of {@link PreferenceController} which allows for applying the default
+ * {@link #getAvailabilityStatus()} and {@link #canBeShownWithRestrictions(CarUxRestrictions)}
+ * behavior to preferences which do not require additional controller logic.
  */
-public class AccountsEntryPreferenceController extends PreferenceController<Preference> {
+public final class DefaultRestrictionsPreferenceController extends
+        PreferenceController<Preference> {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
-
-    public AccountsEntryPreferenceController(Context context, String preferenceKey,
+    public DefaultRestrictionsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
     protected Class<Preference> getPreferenceType() {
         return Preference.class;
-    }
-
-    @Override
-    public int getAvailabilityStatus() {
-        return mCarUserManagerHelper.canCurrentProcessModifyAccounts() ? AVAILABLE
-                : DISABLED_FOR_USER;
     }
 }

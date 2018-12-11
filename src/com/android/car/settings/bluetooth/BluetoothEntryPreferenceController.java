@@ -17,20 +17,28 @@
 package com.android.car.settings.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import com.android.car.settings.common.BasePreferenceController;
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the top level entry into Bluetooth settings should be displayed
  * based on device capabilities.
  */
-public class BluetoothEntryPreferenceController extends BasePreferenceController {
+public class BluetoothEntryPreferenceController extends PreferenceController<Preference> {
 
     public BluetoothEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override

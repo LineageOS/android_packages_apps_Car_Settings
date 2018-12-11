@@ -16,12 +16,12 @@
 
 package com.android.car.settings.common;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
 import java.util.List;
 
@@ -47,29 +47,32 @@ import java.util.List;
  * @see ExtraSettingsLoader
  */
 // TODO: investigate using SettingsLib Tiles.
-public class ExtraSettingsPreferenceController extends NoSetupPreferenceController {
+public class ExtraSettingsPreferenceController extends PreferenceController<PreferenceGroup> {
 
     private final ExtraSettingsLoader mExtraSettingsLoader;
     private boolean mSettingsLoaded;
 
     public ExtraSettingsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions restrictionInfo) {
+        super(context, preferenceKey, fragmentController, restrictionInfo);
         mExtraSettingsLoader = new ExtraSettingsLoader(context);
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        PreferenceGroup preferenceGroup = (PreferenceGroup) screen.findPreference(
-                getPreferenceKey());
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preference) {
         if (!mSettingsLoaded) {
             List<Preference> extraSettings = mExtraSettingsLoader.loadPreferences(
-                    preferenceGroup.getIntent());
+                    preference.getIntent());
             for (Preference setting : extraSettings) {
-                preferenceGroup.addPreference(setting);
+                preference.addPreference(setting);
             }
             mSettingsLoaded = true;
         }
-        preferenceGroup.setVisible(isAvailable() && preferenceGroup.getPreferenceCount() > 0);
+        preference.setVisible(preference.getPreferenceCount() > 0);
     }
 }
