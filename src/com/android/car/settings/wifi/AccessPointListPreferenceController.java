@@ -102,16 +102,21 @@ public class AccessPointListPreferenceController extends WifiPreferenceControlle
 
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
-        AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
-        // for new open unsecuried wifi network, connect to it right away
-        if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
-                && !accessPoint.isSaved() && !accessPoint.isActive()) {
-            getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
-        } else if (accessPoint.isSaved()) {
-            getFragmentController().launchFragment(WifiDetailFragment.getInstance(accessPoint));
+        if (preference instanceof AccessPointPreference) {
+            AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
+            // for new open unsecuried wifi network, connect to it right away
+            if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
+                    && !accessPoint.isSaved() && !accessPoint.isActive()) {
+                getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
+            } else if (accessPoint.isSaved()) {
+                getFragmentController().launchFragment(WifiDetailFragment.getInstance(accessPoint));
+            } else {
+                getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
+            }
         } else {
-            getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
+            getFragmentController().launchFragment(AddWifiFragment.getInstance(null));
         }
+
         return true;
     }
 

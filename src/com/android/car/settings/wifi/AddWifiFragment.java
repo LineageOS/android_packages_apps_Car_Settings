@@ -81,7 +81,10 @@ public class AddWifiFragment extends ListItemSettingsFragment implements
 
     private int mSelectedPosition = AccessPointSecurity.SECURITY_NONE_POSITION;
 
-    public static AddWifiFragment getInstance(AccessPoint accessPoint) {
+    /**
+     * Gets an instance of this class.
+     */
+    public static AddWifiFragment getInstance(@Nullable AccessPoint accessPoint) {
         AddWifiFragment addWifiFragment = new AddWifiFragment();
         Bundle bundle = new Bundle();
         Bundle accessPointState = new Bundle();
