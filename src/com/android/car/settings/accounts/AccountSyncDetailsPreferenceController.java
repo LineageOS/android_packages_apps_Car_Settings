@@ -71,14 +71,21 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      */
     private final Map<String, SyncPreference> mSyncPreferences = new ArrayMap<>();
     private final Set<SyncAdapterType> mInvisibleAdapters = new HashSet<>();
-    private boolean mIsStopped = true;
+    private boolean mIsStarted = false;
     private Account mAccount;
     private UserHandle mUserHandle;
     private PreferenceGroup mSyncGroup;
     private AuthenticatorHelper mAuthenticatorHelper;
     private Object mStatusChangeListenerHandle;
     private SyncStatusObserver mSyncStatusObserver =
-            which -> ThreadUtils.postOnMainThread(() -> forceUpdateSyncCategory());
+            which -> ThreadUtils.postOnMainThread(() -> {
+                // The observer call may occur even if the fragment hasn't been started, so
+                // only force an update if the fragment hasn't been stopped.
+                if (mIsStarted) {
+                    forceUpdateSyncCategory();
+                }
+            });
+
 
     public AccountSyncDetailsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
@@ -130,7 +137,7 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      */
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     public void onStart() {
-        mIsStopped = false;
+        mIsStarted = true;
         mAuthenticatorHelper.listenToAccountUpdates();
 
         mStatusChangeListenerHandle = ContentResolver.addStatusChangeListener(
@@ -144,7 +151,7 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      */
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     public void onStop() {
-        mIsStopped = true;
+        mIsStarted = false;
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         if (mStatusChangeListenerHandle != null) {
             ContentResolver.removeStatusChangeListener(mStatusChangeListenerHandle);
@@ -172,11 +179,6 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
 
     /** Forces a refresh of the sync adapter preferences. */
     private void forceUpdateSyncCategory() {
-        // forceUpdateSyncCategory may be called after the fragment is stopped, so make sure that
-        // it hasn't been
-        if (!mIsStopped) {
-            return;
-        }
         Set<String> preferencesToRemove = new HashSet<>(mSyncPreferences.keySet());
         List<SyncPreference> preferences = getSyncPreferences(preferencesToRemove);
 
