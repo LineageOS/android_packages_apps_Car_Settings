@@ -19,12 +19,12 @@ package com.android.car.settings.datetime;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Configures date and time.
  */
-public class DatetimeSettingsFragment extends BasePreferenceFragment {
+public class DatetimeSettingsFragment extends SettingsFragment {
     // Minimum time is Nov 5, 2007, 0:00.
     public static final long MIN_DATE = 1194220800000L;
 

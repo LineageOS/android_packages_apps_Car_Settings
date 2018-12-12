@@ -16,20 +16,17 @@
 
 package com.android.car.settings.datetime;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.Calendar;
@@ -37,24 +34,19 @@ import java.util.Calendar;
 /**
  * Business logic for the preference that allows for changing the timezone.
  */
-public class TimeZonePickerPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public class TimeZonePickerPreferenceController extends PreferenceController<Preference> {
 
     private final IntentFilter mIntentFilter;
     private final BroadcastReceiver mTimeChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (mPreference == null) {
-                throw new IllegalStateException("Preference cannot be null");
-            }
-            updateState(mPreference);
+            refreshUi();
         }
     };
-    private Preference mPreference;
 
     public TimeZonePickerPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
 
         // Listen to ACTION_TIME_CHANGED because it could be sent by the autoTimeZone toggle.
         // Listen to ACTION_TIMEZONE_CHANGED because the change in timezone should update the
@@ -64,39 +56,33 @@ public class TimeZonePickerPreferenceController extends NoSetupPreferenceControl
         mIntentFilter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
     }
 
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
     /** Starts the broadcast receiver which listens for time changes */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
-        mContext.registerReceiver(mTimeChangeReceiver, mIntentFilter);
+    @Override
+    protected void onStartInternal() {
+        getContext().registerReceiver(mTimeChangeReceiver, mIntentFilter);
     }
 
     /** Stops the broadcast receiver which listens for time changes */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
-        mContext.unregisterReceiver(mTimeChangeReceiver);
+    @Override
+    protected void onStopInternal() {
+        getContext().unregisterReceiver(mTimeChangeReceiver);
     }
 
     @Override
-    public CharSequence getSummary() {
+    protected void updateState(Preference preference) {
         Calendar now = Calendar.getInstance();
-        return ZoneGetter.getTimeZoneOffsetAndName(mContext, now.getTimeZone(), now.getTime())
-                .toString();
-    }
-
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference = screen.findPreference(getPreferenceKey());
-    }
-
-    @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
+        preference.setSummary(ZoneGetter.getTimeZoneOffsetAndName(getContext(), now.getTimeZone(),
+                now.getTime()));
         preference.setEnabled(!autoTimezoneIsEnabled());
     }
 
     private boolean autoTimezoneIsEnabled() {
-        return Settings.Global.getInt(
-                mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0) > 0;
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.AUTO_TIME_ZONE, 0) > 0;
     }
 }

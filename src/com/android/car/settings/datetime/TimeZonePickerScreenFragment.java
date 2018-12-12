@@ -20,14 +20,14 @@ package com.android.car.settings.datetime;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 import java.util.TimeZone;
 
 /**
  * Lists all time zone and its offset from GMT.
  */
-public class TimeZonePickerScreenFragment extends BasePreferenceFragment {
+public class TimeZonePickerScreenFragment extends SettingsFragment {
 
     @Override
     @XmlRes

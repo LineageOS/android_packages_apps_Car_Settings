@@ -18,18 +18,16 @@ package com.android.car.settings.datetime;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-import static org.testng.Assert.assertThrows;
-
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,51 +39,45 @@ import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class TimeFormatTogglePreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "use_24hour_switch_entry";
 
-    private ShadowApplication mApplication;
     private Context mContext;
-    private SwitchPreference mPreference;
+    private TwoStatePreference mPreference;
+    private PreferenceControllerTestHelper<TimeFormatTogglePreferenceController>
+            mPreferenceControllerHelper;
     private TimeFormatTogglePreferenceController mController;
 
     @Before
     public void setUp() {
-        mApplication = ShadowApplication.getInstance();
         mContext = RuntimeEnvironment.application;
-        mController = new TimeFormatTogglePreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
         mPreference = new SwitchPreference(mContext);
-        mPreference.setKey(mController.getPreferenceKey());
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                TimeFormatTogglePreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
     }
 
     @Test
-    public void updateState_24HourSet_shouldCheckPreference() {
+    public void testRefreshUi_24HourSet_shouldCheckPreference() {
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatTogglePreferenceController.HOURS_24);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isTrue();
     }
 
     @Test
-    public void updateState_12HourSet_shouldUncheckPreference() {
+    public void testRefreshUi_12HourSet_shouldUncheckPreference() {
         Settings.System.putString(mContext.getContentResolver(), Settings.System.TIME_12_24,
                 TimeFormatTogglePreferenceController.HOURS_12);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isFalse();
-    }
-
-    @Test
-    public void testUpdateState_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.updateState(new Preference(mContext)));
     }
 
     @Test
     public void testOnPreferenceChange_24HourSet_shouldSendIntent() {
         mPreference.setChecked(true);
-        mController.onPreferenceChange(mPreference, true);
+        mPreference.callChangeListener(true);
 
-        List<Intent> intentsFired = mApplication.getBroadcastIntents();
+        List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
@@ -96,19 +88,13 @@ public class TimeFormatTogglePreferenceControllerTest {
     @Test
     public void testOnPreferenceChange_12HourSet_shouldSendIntent() {
         mPreference.setChecked(false);
-        mController.onPreferenceChange(mPreference, false);
+        mPreference.callChangeListener(false);
 
-        List<Intent> intentsFired = mApplication.getBroadcastIntents();
+        List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
         assertThat(intentFired.getIntExtra(Intent.EXTRA_TIME_PREF_24_HOUR_FORMAT, -1))
                 .isEqualTo(Intent.EXTRA_TIME_PREF_VALUE_USE_12_HOUR);
-    }
-
-    @Test
-    public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }
