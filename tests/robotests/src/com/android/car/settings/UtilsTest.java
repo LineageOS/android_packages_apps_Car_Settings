@@ -18,10 +18,6 @@ package com.android.car.settings;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -31,7 +27,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +47,7 @@ public class UtilsTest {
     }
 
     @Test
-    public void updatePreferenceToSpecificActivityOrRemove_activityFound_updatesComponent() {
+    public void updatePreferenceToSpecificActivity_activityFound_updatesComponent() {
         // Arrange
         ApplicationInfo applicationInfo = new ApplicationInfo();
         applicationInfo.flags |= ApplicationInfo.FLAG_SYSTEM;
@@ -69,15 +64,11 @@ public class UtilsTest {
         ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
         packageManager.addResolveInfoForIntent(intent, resolveInfo);
 
-        PreferenceGroup group = mock(PreferenceGroup.class);
         Preference preference = new Preference(mContext);
-        preference.setKey("key");
         preference.setIntent(intent);
-        when(group.findPreference(preference.getKey())).thenReturn(preference);
 
         // Act
-        assertThat(Utils.updatePreferenceToSpecificActivityOrRemove(mContext, group,
-                preference.getKey(), /* flags= */ 0)).isTrue();
+        Utils.updatePreferenceToSpecificActivity(mContext, preference, /* flags= */ 0);
 
         // Assert
         Intent updatedIntent = preference.getIntent();
@@ -87,7 +78,31 @@ public class UtilsTest {
     }
 
     @Test
-    public void updatePreferenceToSpecificActivityOrRemove_setTitleFlag_updatesTitle() {
+    public void updatePreferenceToSpecificActivity_activityFound_returnsTrue() {
+        ApplicationInfo applicationInfo = new ApplicationInfo();
+        applicationInfo.flags |= ApplicationInfo.FLAG_SYSTEM;
+
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.applicationInfo = applicationInfo;
+        activityInfo.packageName = "some.test.package";
+        activityInfo.name = "SomeActivity";
+
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.activityInfo = activityInfo;
+
+        Intent intent = new Intent();
+        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
+        packageManager.addResolveInfoForIntent(intent, resolveInfo);
+
+        Preference preference = new Preference(mContext);
+        preference.setIntent(intent);
+
+        assertThat(Utils.updatePreferenceToSpecificActivity(mContext, preference, /* flags= */
+                0)).isTrue();
+    }
+
+    @Test
+    public void updatePreferenceToSpecificActivity_setTitleFlag_updatesTitle() {
         // Arrange
         ApplicationInfo applicationInfo = new ApplicationInfo();
         applicationInfo.flags |= ApplicationInfo.FLAG_SYSTEM;
@@ -110,15 +125,11 @@ public class UtilsTest {
         ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
         packageManager.addResolveInfoForIntent(intent, resolveInfo);
 
-        PreferenceGroup group = mock(PreferenceGroup.class);
         Preference preference = new Preference(mContext);
-        preference.setKey("key");
         preference.setIntent(intent);
-        when(group.findPreference(preference.getKey())).thenReturn(preference);
 
         // Act
-        assertThat(Utils.updatePreferenceToSpecificActivityOrRemove(mContext, group,
-                preference.getKey(),
+        assertThat(Utils.updatePreferenceToSpecificActivity(mContext, preference,
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY)).isTrue();
 
         // Assert
@@ -126,18 +137,12 @@ public class UtilsTest {
     }
 
     @Test
-    public void updatePreferenceToSpecificActivityOrRemove_activityNotFound_removesPreference() {
+    public void updatePreferenceToSpecificActivityOrRemove_activityNotFound_returnsFalse() {
         Intent intent = new Intent();
-        PreferenceGroup group = mock(PreferenceGroup.class);
         Preference preference = new Preference(mContext);
-        preference.setKey("key");
         preference.setIntent(intent);
-        when(group.findPreference(preference.getKey())).thenReturn(preference);
 
-        assertThat(Utils.updatePreferenceToSpecificActivityOrRemove(mContext, group,
-                preference.getKey(),
+        assertThat(Utils.updatePreferenceToSpecificActivity(mContext, preference,
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY)).isFalse();
-
-        verify(group).removePreference(preference);
     }
 }
