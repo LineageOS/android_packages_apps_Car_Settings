@@ -21,20 +21,24 @@ import static com.android.car.settings.common.BasePreferenceController.DISABLED_
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.PersistableBundle;
 import android.telephony.CarrierConfigManager;
 import android.telephony.SubscriptionManager;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowCarrierConfigManager;
 
@@ -45,10 +49,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowContextImpl;
+import org.robolectric.shadows.ShadowPackageManager;
 import org.robolectric.util.ReflectionHelpers;
 
 import java.util.List;
@@ -59,11 +65,11 @@ import java.util.Map;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowCarrierConfigManager.class})
 public class SystemUpdatePreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     private Context mContext;
+    private Preference mPreference;
+    private PreferenceControllerTestHelper<SystemUpdatePreferenceController> mControllerHelper;
     private SystemUpdatePreferenceController mController;
 
     @Before
@@ -73,10 +79,13 @@ public class SystemUpdatePreferenceControllerTest {
                 CarrierConfigManager.class.getName());
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
 
         mContext = RuntimeEnvironment.application;
-        mController = new SystemUpdatePreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                SystemUpdatePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
     }
 
     @After
@@ -100,7 +109,46 @@ public class SystemUpdatePreferenceControllerTest {
     }
 
     @Test
-    public void handlePreferenceTreeClick_triggersClientInitiatedAction() {
+    public void onCreate_setsActivityLabelAsTitle() {
+        ApplicationInfo applicationInfo = new ApplicationInfo();
+        applicationInfo.flags |= ApplicationInfo.FLAG_SYSTEM;
+
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.applicationInfo = applicationInfo;
+        activityInfo.packageName = "some.test.package";
+        activityInfo.name = "SomeActivity";
+
+        String label = "Activity Label";
+        ResolveInfo resolveInfo = new ResolveInfo() {
+            @Override
+            public CharSequence loadLabel(PackageManager pm) {
+                return label;
+            }
+        };
+        resolveInfo.activityInfo = activityInfo;
+
+        Intent intent = new Intent();
+        ShadowPackageManager packageManager = Shadows.shadowOf(mContext.getPackageManager());
+        packageManager.addResolveInfoForIntent(intent, resolveInfo);
+        mPreference.setIntent(intent);
+
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+
+        assertThat(mPreference.getTitle()).isEqualTo(label);
+    }
+
+    @Test
+    public void refreshUi_activityNotFount_hidesPreference() {
+        mPreference.setIntent(new Intent());
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+
+        mController.refreshUi();
+
+        assertThat(mPreference.isVisible()).isFalse();
+    }
+
+    @Test
+    public void preferenceClicked_triggersClientInitiatedAction() {
         // Arrange
         String action = "action";
         String key = "key";
@@ -112,16 +160,13 @@ public class SystemUpdatePreferenceControllerTest {
         config.putString(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING, key);
         config.putString(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING, value);
 
-        ShadowCarrierConfigManager shadowCarrierConfigManager = Shadow.extract(
-                mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE));
-        shadowCarrierConfigManager.setConfigForSubId(SubscriptionManager.getDefaultSubscriptionId(),
-                config);
+        getShadowCarrierConfigManager().setConfigForSubId(
+                SubscriptionManager.getDefaultSubscriptionId(), config);
 
-        Preference preference = new Preference(mContext);
-        preference.setKey(PREFERENCE_KEY);
+        mControllerHelper.markState(Lifecycle.State.STARTED);
 
         // Act
-        mController.handlePreferenceTreeClick(preference);
+        mPreference.performClick();
 
         // Assert
         List<Intent> broadcasts = ShadowApplication.getInstance().getBroadcastIntents();
@@ -129,6 +174,17 @@ public class SystemUpdatePreferenceControllerTest {
         Intent broadcast = broadcasts.get(0);
         assertThat(broadcast.getAction()).isEqualTo(action);
         assertThat(broadcast.getStringExtra(key)).isEqualTo(value);
+    }
+
+    @Test
+    public void preferenceClicked_handledReturnsFalse() {
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+        assertThat(mPreference.getOnPreferenceClickListener().onPreferenceClick(
+                mPreference)).isFalse();
+    }
+
+    private ShadowCarrierConfigManager getShadowCarrierConfigManager() {
+        return Shadow.extract(mContext.getSystemService(Context.CARRIER_CONFIG_SERVICE));
     }
 
     private Map<String, String> getSystemServiceMap() {

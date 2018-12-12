@@ -18,6 +18,7 @@ package com.android.car.settings.system;
 
 import static android.content.Context.CARRIER_CONFIG_SERVICE;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
@@ -26,13 +27,12 @@ import android.telephony.CarrierConfigManager;
 import android.text.TextUtils;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.Utils;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the system update preference should be displayed based on
@@ -41,46 +41,52 @@ import com.android.car.settings.common.NoSetupPreferenceController;
  *
  * @see CarrierConfigManager#KEY_CI_ACTION_ON_SYS_UPDATE_BOOL
  */
-public class SystemUpdatePreferenceController extends NoSetupPreferenceController {
+public class SystemUpdatePreferenceController extends PreferenceController<Preference> {
 
     private static final Logger LOG = new Logger(SystemUpdatePreferenceController.class);
 
     private final CarUserManagerHelper mCarUserManagerHelper;
+    private boolean mActivityFound;
 
     public SystemUpdatePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        if (!mContext.getResources().getBoolean(R.bool.config_show_system_update_settings)) {
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        if (!getContext().getResources().getBoolean(R.bool.config_show_system_update_settings)) {
             return UNSUPPORTED_ON_DEVICE;
         }
         return mCarUserManagerHelper.isCurrentProcessAdminUser() ? AVAILABLE : DISABLED_FOR_USER;
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        if (isAvailable()) {
-            Utils.updatePreferenceToSpecificActivityOrRemove(mContext, screen, getPreferenceKey(),
-                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        }
+    protected void onCreateInternal() {
+        mActivityFound = Utils.updatePreferenceToSpecificActivity(getContext(), getPreference(),
+                Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (TextUtils.equals(getPreferenceKey(), preference.getKey())) {
-            CarrierConfigManager configManager = (CarrierConfigManager) mContext.getSystemService(
-                    CARRIER_CONFIG_SERVICE);
-            PersistableBundle b = configManager.getConfig();
-            if (b != null && b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-                ciActionOnSysUpdate(b);
-            }
+    protected void updateState(Preference preference) {
+        preference.setVisible(mActivityFound);
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(Preference preference) {
+        CarrierConfigManager configManager = (CarrierConfigManager) getContext().getSystemService(
+                CARRIER_CONFIG_SERVICE);
+        PersistableBundle b = configManager.getConfig();
+        if (b != null && b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
+            ciActionOnSysUpdate(b);
         }
-        // Return false as to not block other handlers.
+        // Don't handle so that preference framework will launch the preference intent.
         return false;
     }
 
@@ -100,7 +106,7 @@ public class SystemUpdatePreferenceController extends NoSetupPreferenceControlle
             }
             LOG.d("ciActionOnSysUpdate: broadcasting intent " + intentStr + " with extra " + extra
                     + ", " + extraVal);
-            mContext.getApplicationContext().sendBroadcast(intent);
+            getContext().getApplicationContext().sendBroadcast(intent);
         }
     }
 }

@@ -21,7 +21,6 @@ import static com.android.car.settings.common.BasePreferenceController.CONDITION
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
@@ -33,7 +32,7 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -49,11 +48,8 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class DeveloperOptionsEntryPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private Context mContext;
     private DeveloperOptionsEntryPreferenceController mController;
-    private Preference mPreference;
     private UserInfo mUserInfo;
     @Mock
     private CarUserManagerHelper mShadowCarUserManagerHelper;
@@ -63,10 +59,9 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mShadowCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        mController = new DeveloperOptionsEntryPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreference = new Preference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
+        mController = new PreferenceControllerTestHelper<>(mContext,
+                DeveloperOptionsEntryPreferenceController.class,
+                new Preference(mContext)).getController();
 
         // Setup admin user who is able to enable developer settings.
         mUserInfo = new UserInfo();
