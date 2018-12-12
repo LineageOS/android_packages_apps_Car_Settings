@@ -23,4 +23,9 @@
         android:key="@string/pk_account_list"
         android:title="@string/account_list_title"
         settings:controller="com.android.car.settings.accounts.AccountListPreferenceController"/>
+    <SwitchPreference
+        android:key="@string/pk_account_auto_sync"
+        android:title="@string/account_auto_sync_title"
+        android:summary="@string/account_auto_sync_summary"
+        settings:controller="com.android.car.settings.accounts.AccountAutoSyncPreferenceController"/>
 </PreferenceScreen>

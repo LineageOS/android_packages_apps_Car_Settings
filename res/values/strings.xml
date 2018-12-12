@@ -561,6 +561,18 @@
     <string name="account_list_title">Accounts for
         <xliff:g id="current_user_name">%1$s</xliff:g>
     </string>
+    <!-- Switch label to enable auto sync account [CHAR LIMIT=60] -->
+    <string name="account_auto_sync_title">Automatically sync data</string>
+    <!-- Switch summary to enable auto sync account [CHAR LIMIT=60] -->
+    <string name="account_auto_sync_summary">Let apps refresh data automatically</string>
+    <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=32] -->
+    <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
+    <!--  Body of dialog shown when user enables global auto sync [CHAR LIMIT=NONE] -->
+    <string name="data_usage_auto_sync_on_dialog">Any changes you make to your accounts on the web will be automatically copied to your device.\n\nSome accounts may also automatically copy any changes you make on the phone to the web. A Google Account works this way.</string>
+    <!--  Title of dialog shown when user disables global auto sync [CHAR LIMIT=32] -->
+    <string name="data_usage_auto_sync_off_dialog_title">Turn auto-sync data off?</string>
+    <!--  Body of dialog shown when user disables global auto sync [CHAR LIMIT=NONE] -->
+    <string name="data_usage_auto_sync_off_dialog">This will conserve data, but you\u2019ll need to sync each account manually to collect recent information. And you won\u2019t receive notifications when updates occur.</string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
     <string name="account_details_title">Account info</string>
     <!-- Account details in Settings screen title [CHAR LIMIT=25] -->
