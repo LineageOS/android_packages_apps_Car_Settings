@@ -74,7 +74,7 @@ public class BluetoothSettingsFragment extends BaseFragment {
     @Override
     @StringRes
     protected int getTitleId() {
-        return R.string.bluetooth_settings;
+        return R.string.bluetooth_settings_title;
     }
 
     @Override

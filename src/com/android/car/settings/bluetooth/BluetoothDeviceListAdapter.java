@@ -204,7 +204,7 @@ public class BluetoothDeviceListAdapter
         if (position == 0) {
             holder.mTitle.setText(mBondedDevicesSorted.isEmpty()
                     ? R.string.bluetooth_preference_no_paired_devices
-                    : R.string.bluetooth_preference_paired_devices);
+                    : R.string.bluetooth_paired_devices);
             return;
         }
         // Available device header after paired device section. the 1 is for the header
@@ -212,7 +212,7 @@ public class BluetoothDeviceListAdapter
         if (position == mBondedDevicesSorted.size() + 1) {
             holder.mTitle.setText(mAvailableDevicesSorted.isEmpty()
                     ? R.string.bluetooth_preference_no_found_devices
-                    : R.string.bluetooth_preference_found_devices);
+                    : R.string.bluetooth_available_devices);
             return;
         }
         final CachedBluetoothDevice bluetoothDevice = getItem(position);

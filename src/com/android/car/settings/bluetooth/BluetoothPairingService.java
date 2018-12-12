@@ -103,7 +103,7 @@ public final class BluetoothPairingService extends Service {
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         NotificationChannel notificationChannel = new NotificationChannel(
                 BLUETOOTH_NOTIFICATION_CHANNEL,
-                this.getString(R.string.bluetooth),
+                this.getString(R.string.bluetooth_settings_title),
                 NotificationManager.IMPORTANCE_HIGH);
         mgr.createNotificationChannel(notificationChannel);
     }
