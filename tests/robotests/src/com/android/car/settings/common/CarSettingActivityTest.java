@@ -23,7 +23,6 @@ import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertThrows;
 
 import android.car.Car;
-import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 
@@ -46,10 +45,6 @@ import org.robolectric.android.controller.ActivityController;
 public class CarSettingActivityTest {
 
     private static final String TEST_TAG = "test_tag";
-
-    private static final CarUxRestrictions UX_RESTRICTIONS =
-            new CarUxRestrictions.Builder(/* reqOpt= */ true,
-                    CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
     private Context mContext;
     private ActivityController<CarSettingActivity> mActivityController;
@@ -118,49 +113,7 @@ public class CarSettingActivityTest {
         assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
     }
 
-    @Test
-    public void testOnUxRestrictionsChanged_notifiesCurrentFragment() {
-        TestFragment fragment = new TestFragment();
-        mActivity.launchFragment(fragment);
-
-        mActivity.onUxRestrictionsChanged(UX_RESTRICTIONS);
-
-        // Once when launched, once onUxRestrictionsChanged.
-        assertThat(fragment.getOnUxRestrictionsChangedCallCount()).isEqualTo(2);
-    }
-
-    @Test
-    public void testOnBackStackChanged_notifiesCurrentFragmentOfUxRestrictions() {
-        TestFragment fragment = new TestFragment();
-        mActivity.launchFragment(fragment);
-        mActivity.launchFragment(new Fragment());
-
-        assertThat(fragment.getOnUxRestrictionsChangedCallCount()).isEqualTo(1);
-
-        mActivity.onUxRestrictionsChanged(UX_RESTRICTIONS);
-        // Other fragment is the current fragment.
-        assertThat(fragment.getOnUxRestrictionsChangedCallCount()).isEqualTo(1);
-
-        // Pop other fragment.
-        mActivity.goBack();
-
-        // Once when launched, once when restored from back stack.
-        assertThat(fragment.getOnUxRestrictionsChangedCallCount()).isEqualTo(2);
-    }
-
     /** Simple Fragment for testing use. */
-    public static class TestFragment extends Fragment implements
-            CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
-
-        private int mOnUxRestrictionsChangedCallCount;
-
-        @Override
-        public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-            mOnUxRestrictionsChangedCallCount++;
-        }
-
-        int getOnUxRestrictionsChangedCallCount() {
-            return mOnUxRestrictionsChangedCallCount;
-        }
+    public static class TestFragment extends Fragment {
     }
 }
