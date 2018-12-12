@@ -75,7 +75,7 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
     @Override
     @StringRes
     protected int getTitleId() {
-        return R.string.bluetooth_settings;
+        return R.string.bluetooth_settings_title;
     }
 
     @Override
@@ -126,7 +126,7 @@ public class BluetoothDetailFragment extends ListItemSettingsFragment implements
         listItems.add(mInputListItem);
         TextListItem profileHeader = new TextListItem(getContext());
         profileHeader.setTitle(getContext().getString(
-                R.string.bluetooth_device_advanced_profile_header_title));
+                R.string.bluetooth_profiles));
         listItems.add(profileHeader);
         addProfileListItems(listItems);
         return listItems;

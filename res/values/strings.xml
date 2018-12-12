@@ -61,7 +61,7 @@
     <!-- Label for the SSID of the network -->
     <string name="wifi_ssid">Network name</string>
     <!-- Hint for a text field to enter the SSID of a hidden wifi network. [CHAR LIMIT=35] -->
-    <!-- <string name="wifi_ssid_hint">Enter the SSID</string> -->
+    <string name="wifi_ssid_hint">Enter the SSID</string>
     <!-- Label for the security of the connection -->
     <string name="wifi_security">Security</string>
     <!-- Label for the signal strength of the connection -->
@@ -109,61 +109,44 @@
     <string name="wifi_gateway">Gateway</string>
 
     <!-- Bluetooth settings --><skip/>
-    <!-- Bluetooth settings check box title on Main Settings screen -->
-    <string name="bluetooth_quick_toggle_title">Bluetooth</string>
-    <!-- Bluetooth settings check box summary for turning on bluetooth -->
-    <string name="bluetooth_quick_toggle_summary">Turn on Bluetooth</string>
-    <!--Used as title on second screen after selecting Bluetooth settings -->
-    <string name="bluetooth_settings">Bluetooth</string>
-    <!--Bluetooth was disabled. -->
-    <string name="bluetooth_disabled">Bluetooth disabled</string>
-    <!--Wireless controls screen, settings title for the item to take you to the bluetooth settings screen -->
+    <!-- Title of Bluetooth settings pages. [CHAR LIMIT=30] -->
     <string name="bluetooth_settings_title">Bluetooth</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_computer">Computer</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_headset">Headset</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_phone">Phone</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_imaging">Imaging</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_headphone">Headphone</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_input_peripheral">Input Peripheral</string>
-
-    <!-- Message for telling the user the kind of BT device being displayed in list. -->
-    <string name="bluetooth_talkback_bluetooth">Bluetooth</string>
-    <!-- Bluetooth settings: The sub heading for devices which have already been paired with this device. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_paired_devices">Paired devices</string>
-    <!-- Bluetooth settings: The sub heading for available devices during and after scanning. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_found_devices">Available devices</string>
-    <!-- Bluetooth settings: The sub heading for no bluetooth device has been paired with this device. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_no_paired_devices">No paired devices</string>
-    <!-- Bluetooth settings: The sub heading for no available bluetooth devices during and after scanning. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_no_found_devices">No available devices</string>
-    <!-- Bluetooth settings: Paired dialog title [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_paired_dialog_title">Paired device</string>
-    <!-- Bluetooth settings: Name label [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_paired_dialog_name_label">Name</string>
-    <!-- Bluetooth settings.  Connection options screen.  The title of the header that is above all of the profiles. When a user decides what Bluetooth capabilities to use with the device.  -->
-    <string name="bluetooth_device_advanced_profile_header_title">Use for</string>
-    <!-- Hint for a text field to change the name of the Bluetooth device. [CHAR LIMIT=35] -->
-    <string name="wifi_ssid_hint">Change the name of the Bluetooth device</string>
+    <!--Bluetooth settings screen, text for Bluetooth device with no name. [CHAR LIMIT=40] -->
+    <string name="bluetooth_device">Unnamed device</string>
+    <!-- Category title for paired Bluetooth devices. [CHAR LIMIT=40] -->
+    <string name="bluetooth_paired_devices">Paired devices</string>
+    <!-- Title for option to pair a new Bluetooth device. [CHAR LIMIT=40] -->
+    <string name="bluetooth_pair_new_device">Pair new device</string>
+    <!-- Summary for option to pair a new Bluetooth device; alerts user that selecting the option enables Bluetooth. [CHAR LIMIT=NONE]-->
+    <string name="bluetooth_pair_new_device_summary">Bluetooth will turn on to pair</string>
+    <!-- Dialog title to confirm disconnecting from all profiles of a Bluetooth device. [CHAR LIMIT=30] -->
+    <string name="bluetooth_disconnect_title">Disconnect device?</string>
+    <!-- Message for disconnecting a vehicle from all profiles of a Bluetooth device. [CHAR LIMIT=NONE] -->
+    <string name="bluetooth_disconnect_all_profiles">Your vehicle will disconnect from "<xliff:g example="Pixel" id="device_name">%1$s</xliff:g>."</string>
+    <!-- Description of a vehicle's Bluetooth MAC address. [CHAR LIMIT=50] -->
+    <string name="bluetooth_vehicle_mac_address">Vehicle\'s Bluetooth address: <xliff:g example="12:34:56:AB:CD:EF" id="address">%1$s</xliff:g></string>
+    <!-- Description of a remote device's Bluetooth MAC address. [CHAR LIMIT=50] -->
+    <string name="bluetooth_device_mac_address">Device\'s Bluetooth address: <xliff:g example="12:34:56:AB:CD:EF" id="address">%1$s</xliff:g></string>
+    <!-- Title for the vehicle's current Bluetooth name, e.g. "My Car". [CHAR LIMIT=30] -->
+    <string name="bluetooth_name">Vehicle name</string>
+    <!-- Dialog title to change the vehicle's Bluetooth name. [CHAR LIMIT=30] -->
+    <string name="bluetooth_rename_vehicle">Rename this vehicle</string>
+    <!-- Dialog title to change a remote device's Bluetooth name. [CHAR LIMIT=30] -->
+    <string name="bluetooth_rename_device">Rename device</string>
+    <!-- Confirmation button in dialog to rename a Bluetooth device. [CHAR LIMIT=20] -->
+    <string name="bluetooth_rename_button">Rename</string>
+    <!-- Category title for Bluetooth devices available for pairing. [CHAR LIMIT=40] -->
+    <string name="bluetooth_available_devices">Available devices</string>
+    <!-- Category title for Bluetooth profiles. [CHAR LIMIT=40] -->
+    <string name="bluetooth_profiles">Profiles</string>
+    <!-- Title for BT error dialogs. -->
+    <string name="bluetooth_error_title"></string>
 
     <!-- Bluetooth pairing --><skip/>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_ticker">Bluetooth pairing request</string>
     <!-- Bluetooth settings.  Context menu item for a device.  Action will first pair, and then connect to all profiles on the device. -->
     <string name="bluetooth_device_context_pair_connect">Pair &amp; connect</string>
-    <!-- Used as setting title (for checkbox) on second screen after selecting Bluetooth settings -->
-    <string name="bluetooth">Bluetooth</string>
     <!-- Message when bluetooth is informing the user of the pairing key. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_pairing_key_msg">Bluetooth pairing code</string>
     <!-- Checkbox label for alphanumeric PIN entry (default is numeric PIN). [CHAR LIMIT=50] -->
@@ -171,9 +154,9 @@
     <!-- Message when bluetooth dialog for passkey entry is showing. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_enter_passkey_msg">Type the pairing code then press Return or Enter</string>
     <!-- Title for the dialog to enter PIN. [CHAR LIMIT=40] -->
-    <string name="bluetooth_pairing_request">Pair with <xliff:g id="device_name">%1$s</xliff:g>?</string>
+    <string name="bluetooth_pairing_request">Pair with <xliff:g example="Pixel" id="device_name">%1$s</xliff:g>?</string>
     <!-- Checkbox message in pairing dialogs.  [CHAR LIMIT=NONE] -->
-    <string name="bluetooth_pairing_shares_phonebook">Allow <xliff:g id="device_name">%1$s</xliff:g> to access your contacts and call history</string>
+    <string name="bluetooth_pairing_shares_phonebook">Allow <xliff:g example="Pixel" id="device_name">%1$s</xliff:g> to access your contacts and call history</string>
     <!-- Pairing dialog text to remind user to enter the PIN on the other device. [CHAR LIMIT=NONE] -->
     <string name="bluetooth_enter_pin_other_device">You may also need to type this PIN on the other device.</string>
     <!-- Pairing dialog text to remind user to enter the passkey on the other device. [CHAR LIMIT=NONE] -->
@@ -186,8 +169,16 @@
     <string name="bluetooth_notif_title">Pairing request</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_message">Tap to pair with <xliff:g id="device_name">%1$s</xliff:g>.</string>
-    <!-- Title for BT error dialogs. -->
-    <string name="bluetooth_error_title"></string>
+
+    <!-- Bluetooth strings to remove post preference migration --><skip/>
+    <!--Bluetooth was disabled. -->
+    <string name="bluetooth_disabled">Bluetooth disabled</string>
+    <!-- Bluetooth settings: Name label [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_paired_dialog_name_label">Name</string>
+    <!-- Bluetooth settings: The sub heading for no bluetooth device has been paired with this device. [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_no_paired_devices">No paired devices</string>
+    <!-- Bluetooth settings: The sub heading for no available bluetooth devices during and after scanning. [CHAR LIMIT=40] -->
+    <string name="bluetooth_preference_no_found_devices">No available devices</string>
 
     <!-- Language settings screen heading. [CHAR LIMIT=30] -->
     <string name="language_settings">Languages</string>

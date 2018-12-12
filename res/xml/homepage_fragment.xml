@@ -50,7 +50,7 @@
         android:fragment="com.android.car.settings.bluetooth.BluetoothSettingsFragment"
         android:icon="@drawable/ic_settings_bluetooth"
         android:key="@string/pk_bluetooth_settings_entry"
-        android:title="@string/bluetooth_settings"
+        android:title="@string/bluetooth_settings_title"
         settings:controller="com.android.car.settings.bluetooth.BluetoothEntryPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.location.LocationSettingsFragment"

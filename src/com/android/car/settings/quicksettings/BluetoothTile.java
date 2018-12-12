@@ -68,7 +68,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
                         break;
                     default:
                         mIconRes = R.drawable.ic_settings_bluetooth;
-                        mText = mContext.getString(R.string.bluetooth_settings);
+                        mText = mContext.getString(R.string.bluetooth_settings_title);
                         mState = State.ON;
                 }
             } else if (action.equals(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED)) {
@@ -103,7 +103,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
             LOG.e("Bluetooth is not supported on this device");
             return;
         }
-        mText = mContext.getString(R.string.bluetooth_settings);
+        mText = mContext.getString(R.string.bluetooth_settings_title);
         mLocalAdapter = mLocalManager.getBluetoothAdapter();
         if (mLocalAdapter.isEnabled()) {
             mIconRes = R.drawable.ic_settings_bluetooth;
