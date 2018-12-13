@@ -20,6 +20,7 @@ import static com.android.car.settings.sound.VolumeItemParser.VolumeItem;
 
 import android.car.Car;
 import android.car.CarNotConnectedException;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -32,15 +33,12 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
 
 import java.util.ArrayList;
@@ -50,18 +48,17 @@ import java.util.List;
  * Business logic which parses car volume items into groups, creates a seek bar preference for each
  * group, and interfaces with the ringtone manager and audio manager.
  *
- * @see SoundSettingsRingtoneManager
+ * @see VolumeSettingsRingtoneManager
  * @see android.car.media.CarAudioManager
  */
-public class SoundSettingsPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
-    private static final Logger LOG = new Logger(SoundSettingsPreferenceController.class);
+public class VolumeSettingsPreferenceController extends PreferenceController<PreferenceGroup> {
+    private static final Logger LOG = new Logger(VolumeSettingsPreferenceController.class);
     private static final String VOLUME_GROUP_KEY = "volume_group_key";
     private static final String VOLUME_USAGE_KEY = "volume_usage_key";
 
     private final SparseArray<VolumeItem> mVolumeItems;
     private final List<SeekBarPreference> mVolumePreferences = new ArrayList<>();
-    private final SoundSettingsRingtoneManager mRingtoneManager;
+    private final VolumeSettingsRingtoneManager mRingtoneManager;
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
@@ -80,11 +77,7 @@ public class SoundSettingsPreferenceController extends NoSetupPreferenceControll
                     mVolumePreferences.add(volumePreference);
                 }
 
-                // If service connected before preference screen was displayed, it should be called
-                // later. If the preference screen is already displayed, refresh the views.
-                if (mPreferenceScreen != null) {
-                    displayPreference(mPreferenceScreen);
-                }
+                refreshUi();
             } catch (CarNotConnectedException e) {
                 LOG.e("Car is not connected!", e);
             }
@@ -99,27 +92,38 @@ public class SoundSettingsPreferenceController extends NoSetupPreferenceControll
 
     private Car mCar;
     private CarAudioManager mCarAudioManager;
-    private PreferenceScreen mPreferenceScreen;
 
-    public SoundSettingsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-
-        mCar = Car.createCar(mContext, mServiceConnection);
+    public VolumeSettingsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCar = Car.createCar(getContext(), mServiceConnection);
         mVolumeItems = VolumeItemParser.loadAudioUsageItems(context, carVolumeItemsXml());
-        mRingtoneManager = new SoundSettingsRingtoneManager(mContext);
+        mRingtoneManager = new VolumeSettingsRingtoneManager(getContext());
+    }
+
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     /** Connect to car on create. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
+    @Override
+    protected void onCreateInternal() {
         mCar.connect();
     }
 
     /** Disconnect from car on destroy. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public void onDestroy() {
+    @Override
+    protected void onDestroyInternal() {
         mCar.disconnect();
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        for (SeekBarPreference preference : mVolumePreferences) {
+            preferenceGroup.addPreference(preference);
+        }
     }
 
     /**
@@ -131,23 +135,13 @@ public class SoundSettingsPreferenceController extends NoSetupPreferenceControll
         return R.xml.car_volume_items;
     }
 
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreferenceScreen = screen;
-        for (SeekBarPreference preference : mVolumePreferences) {
-            screen.addPreference(preference);
-        }
-    }
-
     private SeekBarPreference createVolumeSeekBarPreference(
             int volumeGroupId, int usage, @DrawableRes int iconResId,
             @StringRes int titleId) {
-        SeekBarPreference preference = new SeekBarPreference(mContext);
-        preference.setTitle(mContext.getString(titleId));
-        preference.setIcon(mContext.getDrawable(iconResId));
+        SeekBarPreference preference = new SeekBarPreference(getContext());
+        preference.setTitle(getContext().getString(titleId));
+        preference.setIcon(getContext().getDrawable(iconResId));
         try {
-
             preference.setValue(mCarAudioManager.getGroupVolume(volumeGroupId));
             preference.setMin(mCarAudioManager.getGroupMinVolume(volumeGroupId));
             preference.setMax(mCarAudioManager.getGroupMaxVolume(volumeGroupId));

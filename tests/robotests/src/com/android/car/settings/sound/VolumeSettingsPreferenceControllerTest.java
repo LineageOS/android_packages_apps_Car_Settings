@@ -18,22 +18,24 @@ package com.android.car.settings.sound;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.Car;
 import android.car.CarNotConnectedException;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.media.CarAudioManager;
 import android.content.Context;
 import android.media.Ringtone;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.LogicalPreferenceGroup;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.SeekBarPreference;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowRingtoneManager;
@@ -49,30 +51,31 @@ import org.robolectric.annotation.Config;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowRingtoneManager.class})
-public class SoundSettingsPreferenceControllerTest {
+public class VolumeSettingsPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "sound_settings";
     private static final int GROUP_ID = 0;
     private static final int TEST_MIN_VOLUME = 0;
     private static final int TEST_VOLUME = 40;
     private static final int TEST_NEW_VOLUME = 80;
     private static final int TEST_MAX_VOLUME = 100;
 
-    private Context mContext;
-    private TestSoundSettingsPreferenceController mController;
-    private PreferenceScreen mPreferenceScreen;
+    private PreferenceControllerTestHelper<TestVolumeSettingsPreferenceController>
+            mPreferenceControllerHelper;
+    private TestVolumeSettingsPreferenceController mController;
+    private PreferenceGroup mPreferenceGroup;
     @Mock
     private CarAudioManager mCarAudioManager;
     @Mock
     private Ringtone mRingtone;
 
     /** Extend class to provide test resource which doesn't require internal android resources. */
-    public static class TestSoundSettingsPreferenceController extends
-            SoundSettingsPreferenceController {
+    public static class TestVolumeSettingsPreferenceController extends
+            VolumeSettingsPreferenceController {
 
-        public TestSoundSettingsPreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController) {
-            super(context, preferenceKey, fragmentController);
+        public TestVolumeSettingsPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController,
+                CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
         }
 
         @Override
@@ -87,11 +90,13 @@ public class SoundSettingsPreferenceControllerTest {
         ShadowCar.setCarManager(Car.AUDIO_SERVICE, mCarAudioManager);
         ShadowRingtoneManager.setRingtone(mRingtone);
 
-        mContext = RuntimeEnvironment.application;
-        mController = new TestSoundSettingsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mPreferenceScreen.setKey(PREFERENCE_KEY);
+        Context context = RuntimeEnvironment.application;
+        mPreferenceGroup = new LogicalPreferenceGroup(context);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(
+                RuntimeEnvironment.application, TestVolumeSettingsPreferenceController.class,
+                mPreferenceGroup);
+        mController = mPreferenceControllerHelper.getController();
+
         when(mCarAudioManager.getVolumeGroupCount()).thenReturn(1);
         when(mCarAudioManager.getUsagesForVolumeGroupId(GROUP_ID)).thenReturn(new int[]{1, 2});
         when(mCarAudioManager.getGroupMinVolume(GROUP_ID)).thenReturn(TEST_MIN_VOLUME);
@@ -106,53 +111,52 @@ public class SoundSettingsPreferenceControllerTest {
     }
 
     @Test
-    public void testDisplayPreference_serviceNotStarted() {
-        mController.displayPreference(mPreferenceScreen);
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+    public void testRefreshUi_serviceNotStarted() {
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void testDisplayPreference_serviceStarted() {
-        mController.displayPreference(mPreferenceScreen);
-        mController.onCreate();
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+    public void testRefreshUi_serviceStarted() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
-    public void testDisplayPreference_serviceStarted_multipleCalls() {
-        mController.displayPreference(mPreferenceScreen);
-        mController.onCreate();
+    public void testRefreshUi_serviceStarted_multipleCalls() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
 
         // Calling this multiple times shouldn't increase the number of elements.
-        mController.displayPreference(mPreferenceScreen);
-        mController.displayPreference(mPreferenceScreen);
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+        mController.refreshUi();
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
-    public void testDisplayPreference_createdPreferenceHasMinMax() {
-        mController.displayPreference(mPreferenceScreen);
-        mController.onCreate();
-        SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
+    public void testRefreshUi_createdPreferenceHasMinMax() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.refreshUi();
+        SeekBarPreference preference = (SeekBarPreference) mPreferenceGroup.getPreference(0);
         assertThat(preference.getMin()).isEqualTo(TEST_MIN_VOLUME);
         assertThat(preference.getValue()).isEqualTo(TEST_VOLUME);
         assertThat(preference.getMax()).isEqualTo(TEST_MAX_VOLUME);
     }
 
     @Test
-    public void testOnPreferenceClick_ringtonePlays() {
-        mController.displayPreference(mPreferenceScreen);
-        mController.onCreate();
-        SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
+    public void testOnPreferenceChange_ringtonePlays() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.refreshUi();
+        SeekBarPreference preference = (SeekBarPreference) mPreferenceGroup.getPreference(0);
         preference.getOnPreferenceChangeListener().onPreferenceChange(preference, TEST_NEW_VOLUME);
         verify(mRingtone).play();
     }
 
     @Test
-    public void testOnPreferenceClick_audioManagerSet() throws CarNotConnectedException {
-        mController.displayPreference(mPreferenceScreen);
-        mController.onCreate();
-        SeekBarPreference preference = (SeekBarPreference) mPreferenceScreen.getPreference(0);
+    public void testOnPreferenceChange_audioManagerSet() throws CarNotConnectedException {
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.refreshUi();
+        SeekBarPreference preference = (SeekBarPreference) mPreferenceGroup.getPreference(0);
         preference.getOnPreferenceChangeListener().onPreferenceChange(preference, TEST_NEW_VOLUME);
         verify(mCarAudioManager).setGroupVolume(GROUP_ID, TEST_NEW_VOLUME, 0);
     }

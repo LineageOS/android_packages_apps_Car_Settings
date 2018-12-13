@@ -16,10 +16,9 @@
 
 package com.android.car.settings.common;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-
-import javax.annotation.Nullable;
 
 /**
  * Controls launching {@link Fragment} instances and back navigation.

@@ -25,10 +25,14 @@ import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.XmlRes;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
@@ -53,7 +57,7 @@ import java.util.Map;
  * controllers.
  */
 public abstract class SettingsFragment extends PreferenceFragmentCompat implements
-        CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
 
     private final Map<Class, List<PreferenceController>> mPreferenceControllersLookup =
             new ArrayMap<>();
@@ -66,13 +70,6 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
      */
     @XmlRes
     protected abstract int getPreferenceScreenResId();
-
-    /**
-     * Returns the {@link FragmentController}, this function should only be called after onAttach().
-     */
-    public final FragmentController getFragmentController() {
-        return (FragmentController) requireActivity();
-    }
 
     /**
      * Returns the layout id to use as the activity action bar. Subclasses should override this
@@ -139,7 +136,7 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         mPreferenceControllers.clear();
         mPreferenceControllers.addAll(
                 PreferenceControllerListHelper2.getPreferenceControllersFromXml(styledContext,
-                        getPreferenceScreenResId(), (FragmentController) requireActivity(),
+                        getPreferenceScreenResId(), /* fragmentController= */ this,
                         mUxRestrictions));
 
         Lifecycle lifecycle = getLifecycle();
@@ -201,5 +198,35 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
                 controller.onUxRestrictionsChanged(uxRestrictions);
             }
         }
+    }
+
+    @Override
+    public void launchFragment(Fragment fragment) {
+        ((FragmentController) requireActivity()).launchFragment(fragment);
+    }
+
+    @Override
+    public void goBack() {
+        requireActivity().onBackPressed();
+    }
+
+    @Override
+    public void showBlockingMessage() {
+        Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showDialog(DialogFragment dialogFragment, @Nullable String tag) {
+        dialogFragment.show(getFragmentManager(), tag);
+    }
+
+    @Nullable
+    @Override
+    public DialogFragment findDialogByTag(String tag) {
+        Fragment fragment = getFragmentManager().findFragmentByTag(tag);
+        if (fragment instanceof DialogFragment) {
+            return (DialogFragment) fragment;
+        }
+        return null;
     }
 }
