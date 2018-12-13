@@ -17,6 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.bluetooth.BluetoothAdapter;
+import android.os.ParcelUuid;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -44,6 +45,11 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
     @Implementation
     public static synchronized BluetoothAdapter getDefaultAdapter() {
         return (BluetoothAdapter) ShadowApplication.getInstance().getBluetoothAdapter();
+    }
+
+    @Implementation
+    public ParcelUuid[] getUuids() {
+        return null;
     }
 
     @Implementation
