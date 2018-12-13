@@ -264,35 +264,35 @@ public class PreferenceControllerTest {
     @Test
     public void onCreate_unsupportedOnDevice_hidesPreference() {
         mController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
-        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         verify(mPreference).setVisible(false);
     }
 
     @Test
     public void onCreate_callsSubclassHook() {
-        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mController.getOnCreateInternalCallCount()).isEqualTo(1);
     }
 
     @Test
     public void onCreate_available_updatesState() {
-        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mController.getUpdateStateCallCount()).isEqualTo(1);
     }
 
     @Test
     public void onStart_callsSubclassHook() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mController.getOnStartInternalCallCount()).isEqualTo(1);
     }
 
     @Test
     public void onStart_available_updatesState() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         // onCreate, onStart.
         assertThat(mController.getUpdateStateCallCount()).isEqualTo(2);
@@ -300,9 +300,8 @@ public class PreferenceControllerTest {
 
     @Test
     public void onStop_callsSubclassHook() {
-        // INITIALIZED -> STARTED -> CREATED equivalent to stop. See Lifecycle.State documentation.
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
 
         assertThat(mController.getOnStopInternalCallCount()).isEqualTo(1);
     }
@@ -310,7 +309,7 @@ public class PreferenceControllerTest {
     @Test
     public void onDestroy_callsSubclassHook() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.markState(Lifecycle.State.DESTROYED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
 
         assertThat(mController.getOnDestroyInternalCallCount()).isEqualTo(1);
     }
