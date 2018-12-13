@@ -21,9 +21,10 @@
     android:title="@string/system_setting_title">
     <Preference
         android:fragment="com.android.car.settings.language.LanguagesAndInputFragment"
+        android:key="@string/pk_languages_and_input_settings"
         android:icon="@drawable/ic_language"
         android:title="@string/languages_and_input_settings"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:icon="@drawable/ic_system_update"
         android:key="@string/pk_system_update_settings"
@@ -50,14 +51,14 @@
         android:icon="@drawable/ic_settings_about"
         android:key="@string/pk_legal_information_entry"
         android:title="@string/legal_information"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.system.ResetOptionsFragment"
         android:icon="@drawable/ic_restore"
         android:key="@string/pk_reset_options_entry"
         android:summary="@string/reset_options_summary"
         android:title="@string/reset_options_title"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController"/>
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.development.DeveloperOptionsFragment"
         android:icon="@drawable/ic_settings_development"
