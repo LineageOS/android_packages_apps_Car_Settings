@@ -139,7 +139,7 @@ public class BluetoothPreferenceControllerTest {
                 FEATURE_BLUETOOTH, /* supported= */ true);
         BluetoothAdapter.getDefaultAdapter().enable();
         getShadowBluetoothAdapter().setState(BluetoothAdapter.STATE_ON);
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         verify(mEventManager).registerCallback(mController);
     }
@@ -151,7 +151,7 @@ public class BluetoothPreferenceControllerTest {
         BluetoothAdapter.getDefaultAdapter().enable();
         getShadowBluetoothAdapter().setState(BluetoothAdapter.STATE_ON);
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
 
         verify(mEventManager).unregisterCallback(mController);
     }

@@ -130,9 +130,23 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
     }
 
     /**
+     * Sends a {@link Lifecycle.Event} to the controller. This is preferred over calling the
+     * controller's lifecycle methods directly as it ensures intermediate events are dispatched.
+     * For example, sending {@link Lifecycle.Event#ON_START} to an
+     * {@link Lifecycle.State#INITIALIZED} controller will dispatch
+     * {@link Lifecycle.Event#ON_CREATE} and {@link Lifecycle.Event#ON_START} while moving the
+     * controller to the {@link Lifecycle.State#STARTED} state.
+     */
+    public void sendLifecycleEvent(Lifecycle.Event event) {
+        mLifecycleRegistry.handleLifecycleEvent(event);
+    }
+
+    /**
      * Move the {@link PreferenceController} to the given {@code state}. This is preferred over
-     * calling the controllers lifecycle methods directly as it ensures intermediate events are
-     * dispatched.
+     * calling the controller's lifecycle methods directly as it ensures intermediate events are
+     * dispatched. For example, marking the {@link Lifecycle.State#STARTED} state on an
+     * {@link Lifecycle.State#INITIALIZED} controller will also send the
+     * {@link Lifecycle.Event#ON_CREATE} and {@link Lifecycle.Event#ON_START} events.
      */
     public void markState(Lifecycle.State state) {
         mLifecycleRegistry.markState(state);
