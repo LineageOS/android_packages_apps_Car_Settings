@@ -17,12 +17,12 @@
 package com.android.car.settings.system;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Shows basic info about the system and provide some actions like update, reset etc.
  */
-public class SystemSettingsFragment extends BasePreferenceFragment {
+public class SystemSettingsFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {

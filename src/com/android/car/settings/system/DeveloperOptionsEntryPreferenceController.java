@@ -16,28 +16,35 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 /** Controls the visibility of the developer options setting. */
-public class DeveloperOptionsEntryPreferenceController extends NoSetupPreferenceController {
+public class DeveloperOptionsEntryPreferenceController extends PreferenceController<Preference> {
 
     private CarUserManagerHelper mCarUserManagerHelper;
 
-    public DeveloperOptionsEntryPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+    public DeveloperOptionsEntryPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mCarUserManagerHelper)
-                ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
+                mCarUserManagerHelper) ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 }

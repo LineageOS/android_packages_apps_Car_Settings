@@ -23,7 +23,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
 
 import java.util.List;
 
@@ -36,23 +35,16 @@ public class Utils {
     public static final int UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY = 1;
 
     /**
-     * Finds a matching activity for a preference's intent. If no matching activity is found, the
-     * preference is removed from the parent group.
+     * Finds a matching activity for a preference's intent. If found, the preference's intent is
+     * updated to that activity. Only activities in the system image are considered.
      *
-     * @param context the context
-     * @param parentPreferenceGroup the preference group that contains the preference whose
-     *         intent is being resolved
-     * @param preferenceKey the key of the preference whose intent is being resolved
-     * @param flags 0 or one or more of
-     *         {@link #UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY}
-     * @return {@code true} if an activity was found. If {@code false}, the preference was removed.
+     * @param context the context to use.
+     * @param preference the preference whose intent is being resolved.
+     * @param flags 0 or {@link #UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY}.
+     * @return {@code true} if an activity was found and the preference was updated.
      */
-    public static boolean updatePreferenceToSpecificActivityOrRemove(Context context,
-            PreferenceGroup parentPreferenceGroup, String preferenceKey, int flags) {
-        Preference preference = parentPreferenceGroup.findPreference(preferenceKey);
-        if (preference == null) {
-            return false;
-        }
+    public static boolean updatePreferenceToSpecificActivity(Context context, Preference preference,
+            int flags) {
         Intent intent = preference.getIntent();
         if (intent != null) {
             // Find the activity that is in the system image.
@@ -75,8 +67,6 @@ public class Utils {
                 }
             }
         }
-        // Did not find a matching activity, so remove the preference
-        parentPreferenceGroup.removePreference(preference);
         return false;
     }
 }

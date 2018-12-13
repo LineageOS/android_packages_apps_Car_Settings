@@ -16,23 +16,32 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.Build;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /** Updates the about settings entry summary with the build version. */
-public class AboutSettingsEntryPreferenceController extends NoSetupPreferenceController {
+public class AboutSettingsEntryPreferenceController extends PreferenceController<Preference> {
 
     public AboutSettingsEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public CharSequence getSummary() {
-        return mContext.getString(R.string.about_summary, Build.VERSION.RELEASE);
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setSummary(
+                getContext().getString(R.string.about_summary, Build.VERSION.RELEASE));
     }
 }
