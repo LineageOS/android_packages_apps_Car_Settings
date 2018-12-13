@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /** Manges the audio played by the Sound Settings Preference Controller. */
-public class SoundSettingsRingtoneManager {
+public class VolumeSettingsRingtoneManager {
 
     private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;
 
@@ -42,7 +42,7 @@ public class SoundSettingsRingtoneManager {
     @Nullable
     private Ringtone mCurrentRingtone;
 
-    public SoundSettingsRingtoneManager(Context context) {
+    public VolumeSettingsRingtoneManager(Context context) {
         mContext = context;
         mUiHandler = new Handler(Looper.getMainLooper());
     }

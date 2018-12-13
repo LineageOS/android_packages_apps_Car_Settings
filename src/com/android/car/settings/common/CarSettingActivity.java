@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.annotation.Nullable;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
@@ -30,6 +29,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
