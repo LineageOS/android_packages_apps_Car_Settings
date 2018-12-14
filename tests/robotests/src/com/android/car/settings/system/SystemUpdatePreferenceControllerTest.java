@@ -28,7 +28,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.PersistableBundle;
 import android.telephony.CarrierConfigManager;
@@ -112,12 +111,8 @@ public class SystemUpdatePreferenceControllerTest {
         activityInfo.name = "SomeActivity";
 
         String label = "Activity Label";
-        ResolveInfo resolveInfo = new ResolveInfo() {
-            @Override
-            public CharSequence loadLabel(PackageManager pm) {
-                return label;
-            }
-        };
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.nonLocalizedLabel = label;
         resolveInfo.activityInfo = activityInfo;
 
         Intent intent = new Intent();

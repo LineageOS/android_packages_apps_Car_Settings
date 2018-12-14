@@ -101,8 +101,8 @@ ifeq (,$(TARGET_BUILD_APPS))
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
-      $(LOCAL_PATH)/res \
-      $(LOCAL_PATH)/tests/robotests/res
+      $(LOCAL_PATH)/tests/robotests/res \
+      $(LOCAL_PATH)/res
 
   LOCAL_CERTIFICATE := platform
 
