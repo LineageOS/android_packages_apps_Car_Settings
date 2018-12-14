@@ -76,6 +76,10 @@
     <string name="wifi_ip_address">IP address</string>
     <!-- Text for show password ListItem -->
     <string name="show_password">Show password</string>
+    <!-- Summary for wifi network name. [CHAR LIMIT=40] -->
+    <string name="default_network_name_summary">Enter network name</string>
+    <!-- Summary for wifi password dialog. [CHAR LIMIT=40] -->
+    <string name="default_password_summary">Enter password</string>
     <!-- Key for the tag to store UI info for access point -->
     <string name="access_point_tag_key">access_point_tag_key</string>
     <!-- Match this with drawable.wifi_signal. --><skip/>
