@@ -17,4 +17,14 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/developer_options_settings"/>
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/developer_options_settings">
+    <PreferenceCategory
+        android:title="@string/debug_debugging_category">
+        <SwitchPreference
+            android:key="@string/pk_usb_debugging_toggle"
+            android:title="@string/enable_adb"
+            android:summary="@string/enable_adb_summary"
+            settings:controller="com.android.car.settings.development.debugging.EnableAdbPreferenceController"/>
+    </PreferenceCategory>
+</PreferenceScreen>
