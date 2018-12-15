@@ -30,7 +30,7 @@ import androidx.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
-/** Manges the audio played by the Sound Settings Preference Controller. */
+/** Manges the audio played by the {@link VolumeSettingsPreferenceController}. */
 public class VolumeSettingsRingtoneManager {
 
     private static final int AUDIO_FEEDBACK_DURATION_MS = 1000;

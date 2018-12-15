@@ -202,6 +202,12 @@
     <string name="media_volume_summary">Set volume for music and videos</string>
     <!-- Sound settings screen, alarm volume slider title -->
     <string name="alarm_volume_title">Alarm</string>
+    <!-- Sound settings screen, title for the option defining the phone ringtone. [CHAR LIMIT=30] -->
+    <string name="ringtone_title">Phone ringtone</string>
+    <!-- Sound settings screen, title for the option defining the default notification sound. [CHAR LIMIT=30] -->
+    <string name="notification_ringtone_title">Default notification sound</string>
+    <!-- Sound settings screen, title for the option defining the default alarm sound. [CHAR LIMIT=30] -->
+    <string name="alarm_ringtone_title">Default alarm sound</string>
 
     <!-- applications --><skip/>
     <!-- Applications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of application settings-->
