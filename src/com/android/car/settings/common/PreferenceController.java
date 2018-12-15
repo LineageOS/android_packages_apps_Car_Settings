@@ -75,7 +75,7 @@ import java.lang.annotation.RetentionPolicy;
  * </ul>
  *
  * @param <V> the upper bound on the type of {@link Preference} on which the controller
- *         expects to operate.
+ *            expects to operate.
  */
 public abstract class PreferenceController<V extends Preference> implements LifecycleObserver,
         OnUxRestrictionsChangedListener {
@@ -174,9 +174,9 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * screen is created. This is guaranteed to be called before {@link #onCreateInternal()}.
      *
      * @throws IllegalArgumentException if the given preference does not match the type
-     *         returned by {@link #getPreferenceType()}
-     * @throws IllegalStateException if subclass defined initialization is not
-     *         complete.
+     *                                  returned by {@link #getPreferenceType()}
+     * @throws IllegalStateException    if subclass defined initialization is not
+     *                                  complete.
      */
     final void setPreference(Preference preference) {
         PreferenceUtil.requirePreferenceType(preference, getPreferenceType());
@@ -389,9 +389,9 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * of the preference is updated and before the state is persisted.
      *
      * @param preference the changed preference.
-     * @param newValue the new value of the preference.
+     * @param newValue   the new value of the preference.
      * @return {@code true} to update the state of the preference with the new value. Defaults to
-     *         {@code true}.
+     * {@code true}.
      */
     protected boolean handlePreferenceChanged(V preference, Object newValue) {
         return true;
@@ -403,7 +403,7 @@ public abstract class PreferenceController<V extends Preference> implements Life
      *
      * @param preference the clicked preference.
      * @return {@code true} if click is handled and further propagation should cease. Defaults to
-     *         {@code false}.
+     * {@code false}.
      */
     protected boolean handlePreferenceClicked(V preference) {
         return false;

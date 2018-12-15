@@ -19,8 +19,10 @@ package com.android.car.settings.common;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.ArrayMap;
+import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import android.widget.FrameLayout;
@@ -59,11 +61,17 @@ import java.util.Map;
 public abstract class SettingsFragment extends PreferenceFragmentCompat implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
 
+    private static final int MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS = 0xff - 1;
+
     private final Map<Class, List<PreferenceController>> mPreferenceControllersLookup =
             new ArrayMap<>();
     private final List<PreferenceController> mPreferenceControllers = new ArrayList<>();
+    private final SparseArray<ActivityResultCallback> mActivityResultCallbackMap =
+            new SparseArray<>();
 
     private CarUxRestrictions mUxRestrictions;
+    private int mCurrentRequestIndex = 0;
+
 
     /**
      * Returns the resource id for the preference XML of this fragment.
@@ -185,6 +193,7 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         super.onDetach();
         Lifecycle lifecycle = getLifecycle();
         mPreferenceControllers.forEach(lifecycle::removeObserver);
+        mActivityResultCallbackMap.clear();
     }
 
     /**
@@ -228,5 +237,55 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
             return (DialogFragment) fragment;
         }
         return null;
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode,
+            ActivityResultCallback callback) {
+        validateRequestCodeForPreferenceController(requestCode);
+        int requestIndex = allocateRequestIndex(callback);
+        super.startActivityForResult(intent, ((requestIndex + 1) << 8) + (requestCode & 0xff));
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        int requestIndex = (requestCode >> 8) & 0xff;
+        if (requestIndex != 0) {
+            requestIndex--;
+            ActivityResultCallback callback = mActivityResultCallbackMap.get(requestIndex);
+            mActivityResultCallbackMap.remove(requestIndex);
+            if (callback != null) {
+                callback.processActivityResult(requestCode & 0xff, resultCode, data);
+            }
+        }
+    }
+
+    // Allocates the next available startActivityForResult request index.
+    private int allocateRequestIndex(ActivityResultCallback callback) {
+        // Sanity check that we haven't exhausted the request index space.
+        if (mActivityResultCallbackMap.size() >= MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS) {
+            throw new IllegalStateException(
+                    "Too many pending activity result callbacks.");
+        }
+
+        // Find an unallocated request index in the mPendingFragmentActivityResults map.
+        while (mActivityResultCallbackMap.indexOfKey(mCurrentRequestIndex) >= 0) {
+            mCurrentRequestIndex =
+                    (mCurrentRequestIndex + 1) % MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS;
+        }
+
+        mActivityResultCallbackMap.put(mCurrentRequestIndex, callback);
+        return mCurrentRequestIndex;
+    }
+
+    /**
+     * Checks whether the given request code is a valid code by masking it with 0xff00. Throws an
+     * {@link IllegalArgumentException} if the code is not valid.
+     */
+    private static void validateRequestCodeForPreferenceController(int requestCode) {
+        if ((requestCode & 0xff00) != 0) {
+            throw new IllegalArgumentException("Can only use lower 8 bits for requestCode");
+        }
     }
 }

@@ -18,11 +18,16 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Intent;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -52,7 +57,6 @@ public class SettingsFragmentTest {
     @Test
     public void use_returnsController() {
         mFragmentController.setup();
-
         assertThat(mFragment.use(FakePreferenceController.class,
                 R.string.tpk_fake_controller)).isNotNull();
     }
@@ -62,11 +66,8 @@ public class SettingsFragmentTest {
         mFragmentController.create();
         FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
                 R.string.tpk_fake_controller);
-
         assertThat(controller.getOnCreateInternalCallCount()).isEqualTo(1);
-
         mFragmentController.destroy();
-
         assertThat(controller.getOnDestroyInternalCallCount()).isEqualTo(1);
     }
 
@@ -77,9 +78,7 @@ public class SettingsFragmentTest {
                 R.string.tpk_fake_controller);
         CarUxRestrictions uxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD, /* timestamp= */ 0).build();
-
         mFragment.onUxRestrictionsChanged(uxRestrictions);
-
         assertThat(controller.getUxRestrictions()).isEqualTo(uxRestrictions);
     }
 
@@ -88,7 +87,6 @@ public class SettingsFragmentTest {
         mFragmentController.setup();
         TestSettingsFragment otherFragment = new TestSettingsFragment();
         mFragment.launchFragment(otherFragment);
-
         assertThat(
                 mFragment.getFragmentManager().findFragmentById(R.id.fragment_container)).isEqualTo(
                 otherFragment);
@@ -98,7 +96,6 @@ public class SettingsFragmentTest {
     public void launchFragment_dialogFragment_throwsError() {
         mFragmentController.setup();
         DialogFragment dialogFragment = new DialogFragment();
-
         assertThrows(IllegalArgumentException.class,
                 () -> mFragment.launchFragment(dialogFragment));
     }
@@ -139,6 +136,52 @@ public class SettingsFragmentTest {
     public void findDialogByTag_noSuchFragment_returnsNull() {
         mFragmentController.setup();
         assertThat(mFragment.findDialogByTag(TEST_TAG)).isNull();
+    }
+
+    @Test
+    public void startActivityForResult_largeRequestCode_throwsError() {
+        mFragmentController.setup();
+        assertThrows(() -> mFragment.startActivityForResult(new Intent(), 0xffff,
+                mock(ActivityResultCallback.class)));
+    }
+
+    @Test
+    public void startActivityForResult_tooManyRequests_throwsError() {
+        mFragmentController.setup();
+        assertThrows(() -> {
+            for (int i = 0; i < 0xff; i++) {
+                mFragment.startActivityForResult(new Intent(), i,
+                        mock(ActivityResultCallback.class));
+            }
+        });
+    }
+
+    @Test
+    public void onActivityResult_hasValidRequestCode_triggersOnActivityResult() {
+        mFragmentController.setup();
+        ActivityResultCallback callback = mock(ActivityResultCallback.class);
+
+        int reqCode = 100;
+        int resCode = -1;
+        mFragment.startActivityForResult(new Intent(), reqCode, callback);
+        int fragmentReqCode = (1 << 8) + reqCode;
+        mFragment.onActivityResult(fragmentReqCode, resCode, new Intent());
+        verify(callback).processActivityResult(eq(reqCode), eq(resCode), any(Intent.class));
+    }
+
+    @Test
+    public void onActivityResult_wrongRequestCode_doesntTriggerOnActivityResult() {
+        mFragmentController.setup();
+        ActivityResultCallback callback = mock(ActivityResultCallback.class);
+
+        int reqCode = 100;
+        int resCode = -1;
+        mFragment.startActivityForResult(new Intent(), reqCode,
+                callback);
+        int fragmentReqCode = (2 << 8) + reqCode;
+        mFragment.onActivityResult(fragmentReqCode, resCode, new Intent());
+        verify(callback, never()).processActivityResult(anyInt(), anyInt(),
+                any(Intent.class));
     }
 
     /** Concrete {@link SettingsFragment} for testing. */

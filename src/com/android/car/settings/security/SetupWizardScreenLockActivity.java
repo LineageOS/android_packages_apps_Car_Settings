@@ -23,19 +23,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.UxRestrictionsProvider;
 import com.android.car.settingslib.util.ResultCodes;
 import com.android.internal.widget.LockPatternUtils;
-
-import javax.annotation.Nullable;
 
 /**
  * Entry point Activity for Setup Wizard to set screen lock.
@@ -105,6 +105,13 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
             return (DialogFragment) fragment;
         }
         return null;
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode,
+            ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
     }
 
     @Override

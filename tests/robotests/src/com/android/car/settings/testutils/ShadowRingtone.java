@@ -18,7 +18,6 @@ package com.android.car.settings.testutils;
 
 import android.content.Context;
 import android.media.Ringtone;
-import android.media.RingtoneManager;
 import android.net.Uri;
 
 import org.robolectric.annotation.Implementation;
@@ -28,33 +27,23 @@ import org.robolectric.annotation.Resetter;
 import java.util.HashMap;
 import java.util.Map;
 
-@Implements(RingtoneManager.class)
-public class ShadowRingtoneManager {
-    private static Ringtone sRingtone;
-    private static Map<Integer, Uri> sSetDefaultRingtoneCalled = new HashMap<>();
+@Implements(Ringtone.class)
+public class ShadowRingtone {
 
-    public static void setRingtone(Ringtone ringtone) {
-        sRingtone = ringtone;
+    private static Map<Uri, String> sTitleForGivenUri = new HashMap<>();
+
+    public static void setExpectedTitleForUri(Uri uri, String title) {
+        sTitleForGivenUri.put(uri, title);
     }
 
     @Implementation
-    protected static Ringtone getRingtone(final Context context, Uri ringtoneUri) {
-        return sRingtone;
-    }
-
-    @Implementation
-    public static void setActualDefaultRingtoneUri(Context context, int type, Uri ringtoneUri) {
-        sSetDefaultRingtoneCalled.put(type, ringtoneUri);
-    }
-
-    @Implementation
-    public static Uri getActualDefaultRingtoneUri(Context context, int type) {
-        return sSetDefaultRingtoneCalled.getOrDefault(type, null);
+    protected static String getTitle(
+            Context context, Uri uri, boolean followSettingsUri, boolean allowRemote) {
+        return sTitleForGivenUri.getOrDefault(uri, null);
     }
 
     @Resetter
     public static void reset() {
-        sRingtone = null;
-        sSetDefaultRingtoneCalled.clear();
+        sTitleForGivenUri.clear();
     }
 }
