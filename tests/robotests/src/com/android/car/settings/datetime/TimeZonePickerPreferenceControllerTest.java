@@ -18,18 +18,16 @@ package com.android.car.settings.datetime;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,65 +36,49 @@ import org.robolectric.RuntimeEnvironment;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class TimeZonePickerPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "timezone_picker_entry";
 
     private Context mContext;
     private Preference mPreference;
-    private PreferenceScreen mPreferenceScreen;
+    private PreferenceControllerTestHelper<TimeZonePickerPreferenceController>
+            mPreferenceControllerHelper;
     private TimeZonePickerPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mController = new TimeZonePickerPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreference = new Preference(mContext);
-        mPreference.setKey(mController.getPreferenceKey());
+        mPreference = new SwitchPreference(mContext);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                TimeZonePickerPreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
     }
 
     @Test
-    public void testUpdateState_disabled() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 1);
-        mController.updateState(mPreference);
+    public void testRefreshUi_disabled() {
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 1);
+        mController.refreshUi();
         assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
-    public void testUpdateState_enabled() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 0);
-        mController.updateState(mPreference);
+    public void testRefreshUi_enabled() {
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0);
+        mController.refreshUi();
         assertThat(mPreference.isEnabled()).isTrue();
     }
 
     @Test
-    public void testUpdateState_fromBroadcastReceiver_disabled() {
-        // This setup is necessary for the BroadcastReceiver to have a reference to the appropriate
-        // preference.
-        mPreferenceScreen.addPreference(mPreference);
-        mController.displayPreference(mPreferenceScreen);
-        mPreference.setEnabled(true);
-        mController.onStart();
-
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 1);
+    public void testRefreshUi_fromBroadcastReceiver_disabled() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.STARTED);
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 1);
         mContext.sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
         assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
-    public void testUpdateState_fromBroadcastReceiver_enabled() {
-        // This setup is necessary for the BroadcastReceiver to have a reference to the appropriate
-        // preference.
-        mPreferenceScreen.addPreference(mPreference);
-        mController.displayPreference(mPreferenceScreen);
-        mPreference.setEnabled(false);
-        mController.onStart();
-
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 0);
+    public void testRefreshUi_fromBroadcastReceiver_enabled() {
+        mPreferenceControllerHelper.markState(Lifecycle.State.STARTED);
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0);
         mContext.sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
         assertThat(mPreference.isEnabled()).isTrue();
     }

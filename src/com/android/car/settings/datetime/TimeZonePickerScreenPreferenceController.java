@@ -17,16 +17,16 @@
 package com.android.car.settings.datetime;
 
 import android.app.AlarmManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.lifecycle.LifecycleObserver;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.ArrayList;
@@ -38,27 +38,31 @@ import java.util.Map;
 /**
  * Business logic which will populate the timezone options.
  */
-public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public class TimeZonePickerScreenPreferenceController extends
+        PreferenceController<PreferenceGroup> {
 
     private List<Preference> mZonesList;
     @VisibleForTesting
     AlarmManager mAlarmManager;
 
     public TimeZonePickerScreenPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mAlarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
         if (mZonesList == null) {
             constructTimeZoneList();
         }
         for (Preference zonePreference : mZonesList) {
-            screen.addPreference(zonePreference);
+            preferenceGroup.addPreference(zonePreference);
         }
     }
 
@@ -66,7 +70,7 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
         // We load all of the time zones on the UI thread. However it shouldn't be very expensive
         // and also shouldn't take a long time. We can revisit this to setup background work and
         // paging, if it becomes an issue.
-        List<Map<String, Object>> zones = ZoneGetter.getZonesList(mContext);
+        List<Map<String, Object>> zones = ZoneGetter.getZonesList(getContext());
         setZonesList(zones);
     }
 
@@ -81,7 +85,7 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
 
     /** Construct a time zone preference based on the Map object given by {@link ZoneGetter}. */
     private Preference createTimeZonePreference(Map<String, Object> timeZone) {
-        Preference preference = new Preference(mContext);
+        Preference preference = new Preference(getContext());
         preference.setKey(timeZone.get(ZoneGetter.KEY_ID).toString());
         preference.setTitle(timeZone.get(ZoneGetter.KEY_DISPLAY_LABEL).toString());
         preference.setSummary(timeZone.get(ZoneGetter.KEY_OFFSET_LABEL).toString());
@@ -93,7 +97,7 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
             // Timezone change is handled by the alarm manager. This broadcast message is used
             // to update the clock and other time related displays that the time has changed due
             // to a change in the timezone.
-            mContext.sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+            getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
             return true;
         });
         return preference;
@@ -103,7 +107,8 @@ public class TimeZonePickerScreenPreferenceController extends NoSetupPreferenceC
     private static final class TimeZonesComparator implements Comparator<Map<String, Object>> {
 
         /** Compares timezones based on 1. offset, 2. display label/name. */
-        TimeZonesComparator() {}
+        TimeZonesComparator() {
+        }
 
         @Override
         public int compare(Map<String, Object> map1, Map<String, Object> map2) {

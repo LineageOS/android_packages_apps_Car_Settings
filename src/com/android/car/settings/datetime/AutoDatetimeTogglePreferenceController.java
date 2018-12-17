@@ -16,49 +16,49 @@
 
 package com.android.car.settings.datetime;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
-import com.android.car.settings.common.PreferenceUtil;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Business logic which controls the auto datetime toggle.
  */
-public class AutoDatetimeTogglePreferenceController extends NoSetupPreferenceController
-        implements Preference.OnPreferenceChangeListener {
+public class AutoDatetimeTogglePreferenceController extends
+        PreferenceController<TwoStatePreference> {
 
     public AutoDatetimeTogglePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void updateState(Preference preference) {
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
-        ((TwoStatePreference) preference).setChecked(isEnabled());
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
+    protected void updateState(TwoStatePreference preference) {
+        preference.setChecked(isEnabled());
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
         boolean isAutoDatetimeEnabled = (boolean) newValue;
-        Settings.Global.putInt(
-                mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME,
+        Settings.Global.putInt(getContext().getContentResolver(), Settings.Global.AUTO_TIME,
                 isAutoDatetimeEnabled ? 1 : 0);
 
-        mContext.sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
+        getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
         return true;
     }
 
     private boolean isEnabled() {
-        return Settings.Global.getInt(
-                mContext.getContentResolver(), Settings.Global.AUTO_TIME, 0) > 0;
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.AUTO_TIME, 0) > 0;
     }
 }
