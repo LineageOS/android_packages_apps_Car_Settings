@@ -16,6 +16,7 @@
 
 package com.android.car.settings.datetime;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,39 +24,29 @@ import android.content.IntentFilter;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.Calendar;
 
 /**
  * Business logic for the preference which allows for picking the date.
  */
-public class DatePickerPreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public class DatePickerPreferenceController extends PreferenceController<Preference> {
 
     private final IntentFilter mIntentFilter;
     private final BroadcastReceiver mTimeChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (mPreference == null) {
-                throw new IllegalStateException("Preference cannot be null");
-            }
-            updateState(mPreference);
+            refreshUi();
         }
     };
-    private Preference mPreference;
 
     public DatePickerPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         // Listens to all three actions because they can all affect the date shown on the
         // screen.
         mIntentFilter = new IntentFilter();
@@ -64,37 +55,33 @@ public class DatePickerPreferenceController extends NoSetupPreferenceController 
         mIntentFilter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
     }
 
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
     /** Starts the broadcast receiver which listens for time changes */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
-        mContext.registerReceiver(mTimeChangeReceiver, mIntentFilter);
+    @Override
+    protected void onStartInternal() {
+        getContext().registerReceiver(mTimeChangeReceiver, mIntentFilter);
     }
 
     /** Stops the broadcast receiver which listens for time changes */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
-        mContext.unregisterReceiver(mTimeChangeReceiver);
-    }
-
     @Override
-    public CharSequence getSummary() {
-        return DateFormat.getLongDateFormat(mContext).format(Calendar.getInstance().getTime());
+    protected void onStopInternal() {
+        getContext().unregisterReceiver(mTimeChangeReceiver);
     }
 
     @Override
     public void updateState(Preference preference) {
-        super.updateState(preference);
+        preference.setSummary(DateFormat.getLongDateFormat(getContext()).format(
+                Calendar.getInstance().getTime()));
         preference.setEnabled(!autoDatetimeIsEnabled());
     }
 
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference = screen.findPreference(getPreferenceKey());
-    }
-
     private boolean autoDatetimeIsEnabled() {
-        return Settings.Global.getInt(
-                mContext.getContentResolver(), Settings.Global.AUTO_TIME, 0) > 0;
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.AUTO_TIME, 0) > 0;
     }
 }
+

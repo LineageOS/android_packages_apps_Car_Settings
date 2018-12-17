@@ -18,18 +18,15 @@ package com.android.car.settings.datetime;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-import static org.testng.Assert.assertThrows;
-
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -42,51 +39,42 @@ import java.util.List;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class AutoTimeZoneTogglePreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "auto_timezone_switch_entry";
-
-    private ShadowApplication mApplication;
     private Context mContext;
     private SwitchPreference mPreference;
+    private PreferenceControllerTestHelper<AutoTimeZoneTogglePreferenceController>
+            mPreferenceControllerHelper;
     private AutoTimeZoneTogglePreferenceController mController;
 
     @Before
     public void setUp() {
-        mApplication = ShadowApplication.getInstance();
         mContext = RuntimeEnvironment.application;
-        mController = new AutoTimeZoneTogglePreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
         mPreference = new SwitchPreference(mContext);
-        mPreference.setKey(mController.getPreferenceKey());
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                AutoTimeZoneTogglePreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
     }
 
     @Test
-    public void testUpdateState_unchecked() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 0);
-        mController.updateState(mPreference);
+    public void testRefreshUi_unchecked() {
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
-    public void testUpdateState_checked() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.AUTO_TIME_ZONE, 1);
-        mController.updateState(mPreference);
+    public void testRefreshUi_checked() {
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 1);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isTrue();
-    }
-
-    @Test
-    public void testUpdateState_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.updateState(new Preference(mContext)));
     }
 
     @Test
     public void testOnPreferenceChange_autoTimeZoneSet_shouldSendIntent() {
         mPreference.setChecked(true);
-        mController.onPreferenceChange(mPreference, true);
+        mController.handlePreferenceChanged(mPreference, true);
 
-        List<Intent> intentsFired = mApplication.getBroadcastIntents();
+        List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
@@ -95,17 +83,11 @@ public class AutoTimeZoneTogglePreferenceControllerTest {
     @Test
     public void testOnPreferenceChange_autoTimeZoneUnset_shouldSendIntent() {
         mPreference.setChecked(false);
-        mController.onPreferenceChange(mPreference, false);
+        mController.handlePreferenceChanged(mPreference, false);
 
-        List<Intent> intentsFired = mApplication.getBroadcastIntents();
+        List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
-    }
-
-    @Test
-    public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }
