@@ -19,10 +19,10 @@ package com.android.car.settings.language;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /** Groups together settings related to languages and input. */
-public class LanguagesAndInputFragment extends BasePreferenceFragment {
+public class LanguagesAndInputFragment extends SettingsFragment {
 
     @Override
     @XmlRes

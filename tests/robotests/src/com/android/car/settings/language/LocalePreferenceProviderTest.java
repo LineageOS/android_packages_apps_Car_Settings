@@ -18,10 +18,13 @@ package com.android.car.settings.language;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
+import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -91,7 +94,8 @@ public class LocalePreferenceProviderTest {
                 LocaleStore.getLocaleInfo(Locale.CANADA)));
         prepareSuggestedLocaleAdapterMock();
 
-        mLocalePreferenceProvider.populateBasePreference(mPreferenceGroup);
+        mLocalePreferenceProvider.populateBasePreference(mPreferenceGroup, mock(
+                Preference.OnPreferenceClickListener.class));
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(3);
     }
 
@@ -115,7 +119,8 @@ public class LocalePreferenceProviderTest {
                 LocaleStore.getLocaleInfo(Locale.CHINA)));
         prepareSuggestedLocaleAdapterMock();
 
-        mLocalePreferenceProvider.populateBasePreference(mPreferenceGroup);
+        mLocalePreferenceProvider.populateBasePreference(mPreferenceGroup, mock(
+                Preference.OnPreferenceClickListener.class));
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
 
         PreferenceCategory firstCategory = (PreferenceCategory) mPreferenceGroup.getPreference(0);
@@ -127,6 +132,28 @@ public class LocalePreferenceProviderTest {
         assertThat(secondCategory.getTitle()).isEqualTo(
                 mContext.getString(R.string.language_picker_list_all_header));
         assertThat(secondCategory.getPreferenceCount()).isEqualTo(4);
+    }
+
+    @Test
+    public void testClickListenerTriggered() {
+        mLocaleAdapterExpectedValues.add(new Pair(LocalePreferenceProvider.TYPE_LOCALE,
+                LocaleStore.getLocaleInfo(Locale.US)));
+        mLocaleAdapterExpectedValues.add(new Pair(LocalePreferenceProvider.TYPE_LOCALE,
+                LocaleStore.getLocaleInfo(Locale.UK)));
+        mLocaleAdapterExpectedValues.add(new Pair(LocalePreferenceProvider.TYPE_LOCALE,
+                LocaleStore.getLocaleInfo(Locale.CANADA)));
+        prepareSuggestedLocaleAdapterMock();
+
+        Preference.OnPreferenceClickListener listener = mock(
+                Preference.OnPreferenceClickListener.class);
+        mLocalePreferenceProvider.populateBasePreference(mPreferenceGroup, listener);
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(listener).onPreferenceClick(mPreferenceGroup.getPreference(0));
+        mPreferenceGroup.getPreference(1).performClick();
+        verify(listener).onPreferenceClick(mPreferenceGroup.getPreference(1));
+        mPreferenceGroup.getPreference(2).performClick();
+        verify(listener).onPreferenceClick(mPreferenceGroup.getPreference(2));
     }
 
     private void prepareSuggestedLocaleAdapterMock() {

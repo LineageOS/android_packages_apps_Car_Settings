@@ -19,10 +19,10 @@ package com.android.car.settings.language;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /** Fragment for showing the list of languages. */
-public class LanguagePickerFragment extends BasePreferenceFragment {
+public class LanguagePickerFragment extends SettingsFragment {
 
     @Override
     @XmlRes

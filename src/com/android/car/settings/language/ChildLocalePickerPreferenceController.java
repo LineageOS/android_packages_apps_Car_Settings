@@ -16,6 +16,7 @@
 
 package com.android.car.settings.language;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import com.android.car.settings.common.FragmentController;
@@ -28,10 +29,9 @@ public class ChildLocalePickerPreferenceController extends LanguageBasePreferenc
 
     private LocaleStore.LocaleInfo mParentLocaleInfo;
 
-    public ChildLocalePickerPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public ChildLocalePickerPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     /** Set the parent locale info which should be used to provide options in this second screen. */
@@ -40,21 +40,14 @@ public class ChildLocalePickerPreferenceController extends LanguageBasePreferenc
     }
 
     @Override
-    protected String getScreenTitle() {
-        if (mParentLocaleInfo == null) {
-            return super.getScreenTitle();
-        }
-        return mParentLocaleInfo.getFullNameNative();
-    }
-
-    @Override
     protected LocalePreferenceProvider defineLocaleProvider() {
         Set<LocaleStore.LocaleInfo> mLocaleInfoSet = LocaleStore.getLevelLocales(
-                mContext,
+                getContext(),
                 getExclusionSet(),
                 mParentLocaleInfo,
                 /* translatedOnly= */ true);
 
-        return LocalePreferenceProvider.newInstance(mContext, mLocaleInfoSet, mParentLocaleInfo);
+        return LocalePreferenceProvider.newInstance(getContext(), mLocaleInfoSet,
+                mParentLocaleInfo);
     }
 }

@@ -22,15 +22,17 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocalePicker;
 import com.android.car.settings.testutils.ShadowLocaleStore;
 import com.android.internal.app.LocaleStore;
@@ -51,7 +53,6 @@ import java.util.Locale;
 @Config(shadows = {ShadowLocalePicker.class, ShadowLocaleStore.class})
 public class LanguageBasePreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "test_preference_key";
     private static final LocaleStore.LocaleInfo TEST_LOCALE_INFO = LocaleStore.getLocaleInfo(
             Locale.FRENCH);
     private static final Locale HAS_MULTIPLE_CHILD_LOCALE = Locale.ENGLISH;
@@ -61,24 +62,26 @@ public class LanguageBasePreferenceControllerTest {
     private static class TestLanguageBasePreferenceController extends
             LanguageBasePreferenceController {
 
-        private final SuggestedLocaleAdapter mAdapter;
+        private SuggestedLocaleAdapter mAdapter;
 
-        TestLanguageBasePreferenceController(Context context,
-                String preferenceKey, FragmentController fragmentController,
-                SuggestedLocaleAdapter adapter) {
-            super(context, preferenceKey, fragmentController);
+        TestLanguageBasePreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
+        }
+
+        public void setAdapter(SuggestedLocaleAdapter adapter) {
             mAdapter = adapter;
         }
 
         @Override
         protected LocalePreferenceProvider defineLocaleProvider() {
-            return new LocalePreferenceProvider(mContext, mAdapter);
+            return new LocalePreferenceProvider(getContext(), mAdapter);
         }
     }
 
     private TestLanguageBasePreferenceController mController;
     private Context mContext;
-    @Mock
+    private PreferenceGroup mPreferenceGroup;
     private FragmentController mFragmentController;
     @Mock
     private SuggestedLocaleAdapter mSuggestedLocaleAdapter;
@@ -87,8 +90,14 @@ public class LanguageBasePreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mController = new TestLanguageBasePreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController, mSuggestedLocaleAdapter);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        PreferenceControllerTestHelper<TestLanguageBasePreferenceController>
+                preferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                TestLanguageBasePreferenceController.class, mPreferenceGroup);
+        mController = preferenceControllerHelper.getController();
+        mController.setAdapter(mSuggestedLocaleAdapter);
+        mFragmentController = preferenceControllerHelper.getMockFragmentController();
+        preferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         // Note that ENGLISH has 2 child locales.
         ShadowLocaleStore.addLocaleRelationship(Locale.ENGLISH, Locale.CANADA);
@@ -105,118 +114,95 @@ public class LanguageBasePreferenceControllerTest {
     }
 
     @Test
-    public void testDisplayPreference_screenConstructed() {
+    public void testRefreshUi_groupConstructed() {
         when(mSuggestedLocaleAdapter.getCount()).thenReturn(1);
         when(mSuggestedLocaleAdapter.getItemViewType(0)).thenReturn(
                 LocalePreferenceProvider.TYPE_LOCALE);
         when(mSuggestedLocaleAdapter.getItem(0)).thenReturn(TEST_LOCALE_INFO);
-        PreferenceScreen screen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        LogicalPreferenceGroup group = new LogicalPreferenceGroup(mContext);
-        group.setKey(PREFERENCE_KEY);
-        screen.addPreference(group);
-
-        mController.displayPreference(screen);
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
     }
 
     @Test
-    public void testDisplayPreference_screenConstructed_onlyOnce() {
-        when(mSuggestedLocaleAdapter.getCount()).thenReturn(1);
-        when(mSuggestedLocaleAdapter.getItemViewType(0)).thenReturn(
-                LocalePreferenceProvider.TYPE_LOCALE);
-        when(mSuggestedLocaleAdapter.getItem(0)).thenReturn(TEST_LOCALE_INFO);
-        PreferenceScreen screen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        LogicalPreferenceGroup group = new LogicalPreferenceGroup(mContext);
-        group.setKey(PREFERENCE_KEY);
-        screen.addPreference(group);
-        mController.displayPreference(screen);
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
-
-        // Calling displayPreference again shouldn't reconstruct the screen.
-        mController.displayPreference(screen);
-        assertThat(group.getPreferenceCount()).isEqualTo(1);
+    public void testOnPreferenceClick_noLocale_returnsFalse() {
+        assertThat(mController.onPreferenceClick(new Preference(mContext))).isFalse();
     }
 
     @Test
-    public void testHandlePreferenceClick_wrongPreference_returnsFalse() {
-        assertThat(mController.handlePreferenceTreeClick(new Preference(mContext))).isFalse();
-    }
-
-    @Test
-    public void testHandlePreferenceClick_hasMultipleChildLocales_returnsTrue() {
+    public void testOnPreferenceClick_hasMultipleChildLocales_returnsTrue() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_MULTIPLE_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
+        assertThat(mController.onPreferenceClick(preference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceClick_hasMultipleChildLocales_localeNotUpdated() {
+    public void testOnPreferenceClick_hasMultipleChildLocales_localeNotUpdated() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_MULTIPLE_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         assertThat(ShadowLocalePicker.localeWasUpdated()).isFalse();
     }
 
     @Test
-    public void testHandlePreferenceClick_hasMultipleChildLocales_neverCallsGoBack() {
+    public void testOnPreferenceClick_hasMultipleChildLocales_neverCallsGoBack() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_MULTIPLE_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         verify(mFragmentController, never()).goBack();
     }
 
     @Test
-    public void testHandlePreferenceClick_hasSingleChildLocale_returnsTrue() {
+    public void testOnPreferenceClick_hasSingleChildLocale_returnsTrue() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
+        assertThat(mController.onPreferenceClick(preference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceClick_hasSingleChildLocale_localeUpdated() {
+    public void testOnPreferenceClick_hasSingleChildLocale_localeUpdated() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         assertThat(ShadowLocalePicker.localeWasUpdated()).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceClick_hasSingleChildLocale_callsGoBack() {
+    public void testOnPreferenceClick_hasSingleChildLocale_callsGoBack() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(HAS_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         verify(mFragmentController).goBack();
     }
 
     @Test
-    public void testHandlePreferenceClick_noChildLocale_returnsTrue() {
+    public void testOnPreferenceClick_noChildLocale_returnsTrue() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(NO_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
+        assertThat(mController.onPreferenceClick(preference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceClick_noChildLocale_localeUpdated() {
+    public void testOnPreferenceClick_noChildLocale_localeUpdated() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(NO_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         assertThat(ShadowLocalePicker.localeWasUpdated()).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceClick_noChildLocale_callsGoBack() {
+    public void testOnPreferenceClick_noChildLocale_callsGoBack() {
         LocaleStore.LocaleInfo localeInfo = LocaleStore.getLocaleInfo(NO_CHILD_LOCALE);
         Preference preference = new Preference(mContext);
         LocaleUtil.setLocaleArgument(preference, localeInfo);
-        mController.handlePreferenceTreeClick(preference);
+        mController.onPreferenceClick(preference);
         verify(mFragmentController).goBack();
     }
 }

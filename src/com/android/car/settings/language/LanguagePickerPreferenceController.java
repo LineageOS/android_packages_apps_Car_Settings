@@ -16,6 +16,7 @@
 
 package com.android.car.settings.language;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.Build;
 
@@ -29,20 +30,20 @@ import java.util.Set;
 public class LanguagePickerPreferenceController extends LanguageBasePreferenceController {
 
     public LanguagePickerPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
     protected LocalePreferenceProvider defineLocaleProvider() {
         Set<LocaleStore.LocaleInfo> localeInfoSet = LocaleStore.getLevelLocales(
-                mContext,
+                getContext(),
                 getExclusionSet(),
                 /* parent= */ null,
                 /* translatedOnly= */ true);
         maybeAddPseudoLocale(localeInfoSet);
 
-        return LocalePreferenceProvider.newInstance(mContext, localeInfoSet,
+        return LocalePreferenceProvider.newInstance(getContext(), localeInfoSet,
                 /* parentLocale= */ null);
     }
 

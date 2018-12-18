@@ -16,17 +16,14 @@
 
 package com.android.car.settings.language;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
-import com.android.car.settings.common.PreferenceUtil;
+import com.android.car.settings.common.PreferenceController;
 import com.android.internal.app.LocalePicker;
 import com.android.internal.app.LocaleStore;
 
@@ -36,9 +33,8 @@ import java.util.Set;
 /**
  * Common business logic shared between the primary and secondary screens for language selection.
  */
-public abstract class LanguageBasePreferenceController extends NoSetupPreferenceController {
-
-    private static final Logger LOG = new Logger(LanguageBasePreferenceController.class);
+public abstract class LanguageBasePreferenceController extends
+        PreferenceController<PreferenceGroup> implements Preference.OnPreferenceClickListener {
 
     /** Actions that should be taken on selection of the preference. */
     public interface LocaleSelectedListener {
@@ -50,8 +46,13 @@ public abstract class LanguageBasePreferenceController extends NoSetupPreference
     private LocaleSelectedListener mLocaleSelectedListener;
 
     public LanguageBasePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     /** Register a listener for when a locale is selected. */
@@ -64,25 +65,14 @@ public abstract class LanguageBasePreferenceController extends NoSetupPreference
         return mExclusionSet;
     }
 
-    /** Defines the title of the preference screen. */
-    protected String getScreenTitle() {
-        return mContext.getString(R.string.language_settings);
-    }
-
     /** Defines the locale provider that should be used by the given preference controller. */
     protected abstract LocalePreferenceProvider defineLocaleProvider();
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        screen.setTitle(getScreenTitle());
-        Preference preference = screen.findPreference(getPreferenceKey());
-        PreferenceUtil.requirePreferenceType(preference, PreferenceGroup.class);
-        PreferenceGroup baseGroup = (PreferenceGroup) preference;
-
+    protected void updateState(PreferenceGroup preferenceGroup) {
         // Only populate if the preference group is empty.
-        if (baseGroup.getPreferenceCount() == 0) {
-            defineLocaleProvider().populateBasePreference(baseGroup);
+        if (preferenceGroup.getPreferenceCount() == 0) {
+            defineLocaleProvider().populateBasePreference(preferenceGroup, this);
         }
     }
 
@@ -94,7 +84,7 @@ public abstract class LanguageBasePreferenceController extends NoSetupPreference
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
+    public boolean onPreferenceClick(Preference preference) {
         LocaleStore.LocaleInfo localeInfo = LocaleUtil.getLocaleArgument(preference);
 
         // Preferences without a associated locale should not be acted on.
@@ -106,7 +96,7 @@ public abstract class LanguageBasePreferenceController extends NoSetupPreference
             // The locale only has the language info. Need to look up the sub-level
             // locale to get the country/region info as well.
             Set<LocaleStore.LocaleInfo> subLocales = LocaleStore.getLevelLocales(
-                    mContext,
+                    getContext(),
                     getExclusionSet(),
                     /* parent */ localeInfo,
                     /* translatedOnly */ true);
