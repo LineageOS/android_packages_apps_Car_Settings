@@ -20,57 +20,51 @@ import static com.android.settingslib.display.BrightnessUtils.GAMMA_SPACE_MAX;
 import static com.android.settingslib.display.BrightnessUtils.convertGammaToLinear;
 import static com.android.settingslib.display.BrightnessUtils.convertLinearToGamma;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.PowerManager;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
-
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
-import com.android.car.settings.common.PreferenceUtil;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
 
 /** Business logic for changing the brightness of the display. */
-public class BrightnessLevelPreferenceController extends NoSetupPreferenceController implements
-        Preference.OnPreferenceChangeListener {
+public class BrightnessLevelPreferenceController extends PreferenceController<SeekBarPreference> {
 
     private static final Logger LOG = new Logger(BrightnessLevelPreferenceController.class);
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final int mMaximumBacklight;
     private final int mMinimumBacklight;
-    private SeekBarPreference mPreference;
 
     public BrightnessLevelPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
         PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         mMaximumBacklight = powerManager.getMaximumScreenBrightnessSetting();
         mMinimumBacklight = powerManager.getMinimumScreenBrightnessSetting();
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        Preference preference = screen.findPreference(getPreferenceKey());
-        PreferenceUtil.requirePreferenceType(preference, SeekBarPreference.class);
-
-        mPreference = (SeekBarPreference) preference;
-        mPreference.setMax(GAMMA_SPACE_MAX);
-        mPreference.setValue(getSeekbarValue());
-        mPreference.setContinuousUpdate(true);
+    protected Class<SeekBarPreference> getPreferenceType() {
+        return SeekBarPreference.class;
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        PreferenceUtil.requirePreferenceType(preference, SeekBarPreference.class);
+    protected void updateState(SeekBarPreference preference) {
+        preference.setMax(GAMMA_SPACE_MAX);
+        preference.setValue(getSeekbarValue());
+        preference.setContinuousUpdate(true);
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(SeekBarPreference preference, Object newValue) {
         int gamma = (Integer) newValue;
         int linear = convertGammaToLinear(gamma, mMinimumBacklight, mMaximumBacklight);
-        Settings.System.putIntForUser(mContext.getContentResolver(),
+        Settings.System.putIntForUser(getContext().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, linear,
                 mCarUserManagerHelper.getCurrentProcessUserId());
         return true;
@@ -79,7 +73,7 @@ public class BrightnessLevelPreferenceController extends NoSetupPreferenceContro
     private int getSeekbarValue() {
         int gamma = GAMMA_SPACE_MAX;
         try {
-            int linear = Settings.System.getIntForUser(mContext.getContentResolver(),
+            int linear = Settings.System.getIntForUser(getContext().getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS,
                     mCarUserManagerHelper.getCurrentProcessUserId());
             gamma = convertLinearToGamma(linear, mMinimumBacklight, mMaximumBacklight);

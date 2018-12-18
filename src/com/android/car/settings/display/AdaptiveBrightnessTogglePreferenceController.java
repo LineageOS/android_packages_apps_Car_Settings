@@ -16,31 +16,33 @@
 
 package com.android.car.settings.display;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
-import com.android.car.settings.common.PreferenceUtil;
+import com.android.car.settings.common.PreferenceController;
 
 /** Business logic for controlling the adaptive brightness setting. */
 public class AdaptiveBrightnessTogglePreferenceController extends
-        NoSetupPreferenceController implements
-        Preference.OnPreferenceChangeListener {
+        PreferenceController<TwoStatePreference> {
 
     public AdaptiveBrightnessTogglePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
-        ((TwoStatePreference) preference).setChecked(isAdaptiveBrightnessChecked());
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
+    }
+
+    @Override
+    protected void updateState(TwoStatePreference preference) {
+        preference.setChecked(isAdaptiveBrightnessChecked());
     }
 
     @Override
@@ -49,10 +51,9 @@ public class AdaptiveBrightnessTogglePreferenceController extends
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
+    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
         boolean enableAdaptiveBrightness = (boolean) newValue;
-        Settings.System.putInt(mContext.getContentResolver(),
+        Settings.System.putInt(getContext().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 enableAdaptiveBrightness ? Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
                         : Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
@@ -60,14 +61,13 @@ public class AdaptiveBrightnessTogglePreferenceController extends
     }
 
     private boolean isAdaptiveBrightnessChecked() {
-        int brightnessMode = Settings.System.getInt(mContext.getContentResolver(),
+        int brightnessMode = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         return brightnessMode != Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
     }
 
     private boolean supportsAdaptiveBrightness() {
-        return mContext.getResources().getBoolean(
-                com.android.internal.R.bool.config_automatic_brightness_available);
+        return getContext().getResources().getBoolean(R.bool.config_automatic_brightness_available);
     }
 }
