@@ -16,21 +16,29 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.common.RestrictedPreference;
 
 /** Controller which determines if network reset should be displayed based on user status. */
-public class ResetNetworkEntryPreferenceController extends NoSetupPreferenceController {
+public class ResetNetworkEntryPreferenceController extends
+        PreferenceController<RestrictedPreference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
     public ResetNetworkEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+    }
+
+    @Override
+    protected Class<RestrictedPreference> getPreferenceType() {
+        return RestrictedPreference.class;
     }
 
     @Override

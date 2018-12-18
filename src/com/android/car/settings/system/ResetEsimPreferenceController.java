@@ -16,23 +16,31 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.provider.Settings;
 import android.telephony.euicc.EuiccManager;
 
+import androidx.preference.TwoStatePreference;
+
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if a checkbox to reset the device's eSIMs is shown. Not all
  * devices support eSIMs.
  */
-public class ResetEsimPreferenceController extends NoSetupPreferenceController {
+public class ResetEsimPreferenceController extends PreferenceController<TwoStatePreference> {
 
     public ResetEsimPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
     }
 
     @Override
@@ -41,11 +49,12 @@ public class ResetEsimPreferenceController extends NoSetupPreferenceController {
     }
 
     private boolean showEuiccSettings() {
-        EuiccManager euiccManager = (EuiccManager) mContext.getSystemService(Context.EUICC_SERVICE);
+        EuiccManager euiccManager = (EuiccManager) getContext().getSystemService(
+                Context.EUICC_SERVICE);
         if (!euiccManager.isEnabled()) {
             return false;
         }
-        ContentResolver resolver = mContext.getContentResolver();
+        ContentResolver resolver = getContext().getContentResolver();
         return Settings.Global.getInt(resolver, Settings.Global.EUICC_PROVISIONED, 0) != 0
                 || Settings.Global.getInt(resolver, Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0)
                 != 0;

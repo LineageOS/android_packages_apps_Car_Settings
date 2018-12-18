@@ -21,13 +21,14 @@ import static com.android.car.settings.common.BasePreferenceController.DISABLED_
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.RestrictedPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -44,8 +45,6 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class ResetNetworkEntryPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     private ResetNetworkEntryPreferenceController mController;
@@ -54,9 +53,11 @@ public class ResetNetworkEntryPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        Context context = RuntimeEnvironment.application;
 
-        mController = new ResetNetworkEntryPreferenceController(RuntimeEnvironment.application,
-                PREFERENCE_KEY, mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(context,
+                ResetNetworkEntryPreferenceController.class,
+                new RestrictedPreference(context)).getController();
     }
 
     @After

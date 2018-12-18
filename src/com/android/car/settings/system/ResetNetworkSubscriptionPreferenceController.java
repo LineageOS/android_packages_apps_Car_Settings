@@ -16,6 +16,7 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.telephony.SubscriptionInfo;
@@ -23,12 +24,10 @@ import android.telephony.SubscriptionManager;
 import android.text.TextUtils;
 
 import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,40 +37,41 @@ import java.util.List;
  * network subscriptions, a user may select the network to reset.
  */
 public class ResetNetworkSubscriptionPreferenceController extends
-        NoSetupPreferenceController implements Preference.OnPreferenceChangeListener {
+        PreferenceController<ListPreference> {
 
     private final SubscriptionManager mSubscriptionManager;
-    private ListPreference mListPreference;
 
     public ResetNetworkSubscriptionPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mSubscriptionManager = (SubscriptionManager) context.getSystemService(
                 Context.TELEPHONY_SUBSCRIPTION_SERVICE);
     }
 
     @Override
+    protected Class<ListPreference> getPreferenceType() {
+        return ListPreference.class;
+    }
+
+    @Override
     public int getAvailabilityStatus() {
-        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
+        return getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
                 ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mListPreference = (ListPreference) screen.findPreference(getPreferenceKey());
-
+    protected void updateState(ListPreference preference) {
         List<SubscriptionInfo> subscriptions = mSubscriptionManager.getActiveSubscriptionInfoList();
         if (subscriptions == null || subscriptions.isEmpty()) {
             // No subscriptions to reset.
-            mListPreference.setValue(String.valueOf(SubscriptionManager.INVALID_SUBSCRIPTION_ID));
-            mListPreference.setVisible(false);
+            preference.setValue(String.valueOf(SubscriptionManager.INVALID_SUBSCRIPTION_ID));
+            preference.setVisible(false);
             return;
         }
         if (subscriptions.size() == 1) {
             // Only one subscription, so nothing else to select. Use it and hide the preference.
-            mListPreference.setValue(String.valueOf(subscriptions.get(0).getSubscriptionId()));
-            mListPreference.setVisible(false);
+            preference.setValue(String.valueOf(subscriptions.get(0).getSubscriptionId()));
+            preference.setVisible(false);
             return;
         }
 
@@ -91,10 +91,19 @@ public class ResetNetworkSubscriptionPreferenceController extends
             subscriptionIds.add(String.valueOf(subscriptionId));
         }
 
-        mListPreference.setEntries(toCharSequenceArray(subscriptionNames));
-        mListPreference.setEntryValues(toCharSequenceArray(subscriptionIds));
-        mListPreference.setTitle(subscriptionNames.get(selectedIndex));
-        mListPreference.setValueIndex(selectedIndex);
+        preference.setEntries(toCharSequenceArray(subscriptionNames));
+        preference.setEntryValues(toCharSequenceArray(subscriptionIds));
+        preference.setTitle(subscriptionNames.get(selectedIndex));
+        preference.setValueIndex(selectedIndex);
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(ListPreference preference, Object newValue) {
+        String subscriptionIdStr = (String) newValue;
+        int index = preference.findIndexOfValue(subscriptionIdStr);
+        CharSequence subscriptionName = preference.getEntries()[index];
+        preference.setTitle(subscriptionName);
+        return true;
     }
 
     /**
@@ -127,7 +136,7 @@ public class ResetNetworkSubscriptionPreferenceController extends
             name = subscription.getCarrierName().toString();
         }
         if (TextUtils.isEmpty(name)) {
-            name = mContext.getString(R.string.reset_network_fallback_subscription_name,
+            name = getContext().getString(R.string.reset_network_fallback_subscription_name,
                     subscription.getMcc(), subscription.getMnc(), subscription.getSimSlotIndex(),
                     subscription.getSubscriptionId());
         }
@@ -138,14 +147,5 @@ public class ResetNetworkSubscriptionPreferenceController extends
         CharSequence[] array = new CharSequence[list.size()];
         list.toArray(array);
         return array;
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        String subscriptionIdStr = (String) newValue;
-        int index = mListPreference.findIndexOfValue(subscriptionIdStr);
-        CharSequence subscriptionName = mListPreference.getEntries()[index];
-        mListPreference.setTitle(subscriptionName);
-        return true;
     }
 }

@@ -16,39 +16,51 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.StringJoiner;
 
 /** Controller to determine which items appear as resetable within the reset network description. */
-public class ResetNetworkItemsPreferenceController extends NoSetupPreferenceController {
+public class ResetNetworkItemsPreferenceController extends PreferenceController<Preference> {
 
     public ResetNetworkItemsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public CharSequence getSummary() {
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setSummary(getSummary());
+    }
+
+    private CharSequence getSummary() {
         StringJoiner joiner = new StringJoiner(System.lineSeparator());
         if (hasFeature(PackageManager.FEATURE_WIFI)) {
-            joiner.add(mContext.getString(R.string.reset_network_item_wifi));
+            joiner.add(getContext().getString(R.string.reset_network_item_wifi));
         }
         if (hasFeature(PackageManager.FEATURE_TELEPHONY)) {
-            joiner.add(mContext.getString(R.string.reset_network_item_mobile));
+            joiner.add(getContext().getString(R.string.reset_network_item_mobile));
         }
         if (hasFeature(PackageManager.FEATURE_BLUETOOTH)) {
-            joiner.add(mContext.getString(R.string.reset_network_item_bluetooth));
+            joiner.add(getContext().getString(R.string.reset_network_item_bluetooth));
         }
         return joiner.toString();
     }
 
     private boolean hasFeature(String feature) {
-        return mContext.getPackageManager().hasSystemFeature(feature);
+        return getContext().getPackageManager().hasSystemFeature(feature);
     }
 }

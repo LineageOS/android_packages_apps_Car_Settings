@@ -20,7 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
@@ -29,11 +28,12 @@ import android.content.pm.UserInfo;
 import android.os.UserManager;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
@@ -51,9 +51,9 @@ import org.robolectric.shadows.ShadowToast;
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class BuildNumberPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private Context mContext;
+    private PreferenceControllerTestHelper<BuildNumberPreferenceController>
+            mPreferenceControllerHelper;
     private BuildNumberPreferenceController mController;
     private Preference mPreference;
     @Mock
@@ -64,10 +64,10 @@ public class BuildNumberPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        mController = new BuildNumberPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
         mPreference = new Preference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                BuildNumberPreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
 
         // By default, user is an admin user.
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
@@ -79,13 +79,13 @@ public class BuildNumberPreferenceControllerTest {
                 any(UserInfo.class))).thenReturn(false);
 
         // By default device is provisioned.
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
-                1);
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVICE_PROVISIONED, 1);
 
         // By default development settings is disabled.
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
-        mController.onResume();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_RESUME);
     }
 
     @After
@@ -94,48 +94,43 @@ public class BuildNumberPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_wrongPreference_returnFalse() {
-        assertThat(mController.handlePreferenceTreeClick(new Preference(mContext))).isFalse();
+    public void testHandlePreferenceClicked_notProvisioned_returnFalse() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVICE_PROVISIONED, 0);
+        assertThat(mController.handlePreferenceClicked(mPreference)).isFalse();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_notProvisioned_returnFalse() {
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
-                0);
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isFalse();
-    }
-
-    @Test
-    public void testHandlePreferenceTreeClick_nonAdmin_returnFalse() {
+    public void testHandlePreferenceClicked_nonAdmin_returnFalse() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
 
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isFalse();
+        assertThat(mController.handlePreferenceClicked(mPreference)).isFalse();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_demoUser_returnsTrue() {
+    public void testHandlePreferenceClicked_demoUser_returnsTrue() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isTrue();
+        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_adminUser_returnsTrue() {
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isTrue();
+    public void testHandlePreferenceClicked_adminUser_returnsTrue() {
+        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsDisabled_firstClick_noToast() {
-        mController.handlePreferenceTreeClick(mPreference);
+    public void testHandlePreferenceClicked_devSettingsDisabled_firstClick_noToast() {
+        mPreference.performClick();
         assertThat(ShadowToast.shownToastCount()).isEqualTo(0);
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsDisabled_someClicks_showToast() {
+    public void testHandlePreferenceClicked_devSettingsDisabled_someClicks_showToast() {
         for (int i = 0; i < getTapsToShowToast(); i++) {
-            mController.handlePreferenceTreeClick(mPreference);
+            mPreference.performClick();
         }
 
         int remainingClicks = getTapsToBecomeDeveloper() - getTapsToShowToast();
@@ -145,39 +140,40 @@ public class BuildNumberPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsDisabled_allClicks_showDevEnabledToast() {
+    public void testHandlePreferenceClicked_devSettingsDisabled_allClicks_showDevEnabledToast() {
         for (int i = 0; i < getTapsToBecomeDeveloper(); i++) {
-            mController.handlePreferenceTreeClick(mPreference);
+            mPreference.performClick();
         }
         assertThat(ShadowToast.getTextOfLatestToast()).isEqualTo(
                 mContext.getString(R.string.show_dev_on));
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsDisabled_allClicks_devSettingsEnabled() {
+    public void testHandlePreferenceClicked_devSettingsDisabled_allClicks_devSettingsEnabled() {
         for (int i = 0; i < getTapsToBecomeDeveloper(); i++) {
-            mController.handlePreferenceTreeClick(mPreference);
+            mPreference.performClick();
         }
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsDisabled_extraClicks_noAlreadyDevToast() {
+    public void testHandlePreferenceClicked_devSettingsDisabled_extraClicks_noAlreadyDevToast() {
         int extraClicks = 100;
         for (int i = 0; i < getTapsToBecomeDeveloper() + extraClicks; i++) {
-            mController.handlePreferenceTreeClick(mPreference);
+            mPreference.performClick();
         }
         assertThat(
                 ShadowToast.showedToast(mContext.getString(R.string.show_dev_already))).isFalse();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_devSettingsEnabled_click_showAlreadyDevToast() {
+    public void testHandlePreferenceClicked_devSettingsEnabled_click_showAlreadyDevToast() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        mController.onResume();
-        mController.handlePreferenceTreeClick(mPreference);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_PAUSE);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_RESUME);
+        mPreference.performClick();
         assertThat(ShadowToast.showedToast(mContext.getString(R.string.show_dev_already))).isTrue();
     }
 

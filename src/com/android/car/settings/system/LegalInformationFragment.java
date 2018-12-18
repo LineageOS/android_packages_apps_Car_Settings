@@ -19,12 +19,12 @@ package com.android.car.settings.system;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Fragment showing legal information.
  */
-public class LegalInformationFragment extends BasePreferenceFragment {
+public class LegalInformationFragment extends SettingsFragment {
 
     @Override
     @XmlRes
