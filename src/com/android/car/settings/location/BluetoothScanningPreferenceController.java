@@ -16,48 +16,49 @@
 
 package com.android.car.settings.location;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Handles Bluetooth location scanning settings.
  */
-public class BluetoothScanningPreferenceController extends NoSetupPreferenceController {
+public class BluetoothScanningPreferenceController extends
+        PreferenceController<TwoStatePreference> {
 
     public BluetoothScanningPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)
-                ? AVAILABLE
-                : UNSUPPORTED_ON_DEVICE;
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
     }
 
     @Override
-    public void updateState(Preference preference) {
-        ((TwoStatePreference) preference).setChecked(
-                Settings.Global.getInt(mContext.getContentResolver(),
-                        Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE, 0) == 1);
+    protected int getAvailabilityStatus() {
+        return getContext().getPackageManager().hasSystemFeature(
+                PackageManager.FEATURE_BLUETOOTH_LE) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (getPreferenceKey().equals(preference.getKey())) {
-            Settings.Global.putInt(mContext.getContentResolver(),
-                    Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE,
-                    ((TwoStatePreference) preference).isChecked() ? 1 : 0);
-            return true;
-        }
-        return false;
+    protected void updateState(TwoStatePreference preference) {
+        preference.setChecked(Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE, 0) == 1);
+    }
+
+    @Override
+    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
+        boolean isBluetoothScanningEnabled = (boolean) newValue;
+        Settings.Global.putInt(getContext().getContentResolver(),
+                Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE, isBluetoothScanningEnabled ? 1 : 0);
+        return true;
     }
 }

@@ -31,13 +31,13 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.Utils;
 
 /**
  * Main page that hosts Location related preferences.
  */
-public class LocationSettingsFragment extends BasePreferenceFragment {
+public class LocationSettingsFragment extends SettingsFragment {
     private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
 

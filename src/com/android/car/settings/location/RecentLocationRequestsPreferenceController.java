@@ -16,6 +16,7 @@
 
 package com.android.car.settings.location;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -23,12 +24,12 @@ import android.content.pm.ResolveInfo;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.location.RecentLocationApps;
 import com.android.settingslib.location.RecentLocationApps.Request;
 
@@ -37,26 +38,30 @@ import java.util.List;
 /**
  * Displays all apps that have requested location recently.
  */
-public class RecentLocationRequestsPreferenceController extends NoSetupPreferenceController {
-    private final RecentLocationApps mRecentLocationApps;
+public class RecentLocationRequestsPreferenceController extends
+        PreferenceController<PreferenceGroup> {
+    private RecentLocationApps mRecentLocationApps;
     // This list will always be sorted by most recent first.
     private List<Request> mRecentLocationRequests;
 
     public RecentLocationRequestsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        this(context, preferenceKey, fragmentController, new RecentLocationApps(context));
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mRecentLocationApps = new RecentLocationApps(context);
     }
 
     @VisibleForTesting
-    RecentLocationRequestsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, RecentLocationApps recentLocationApps) {
-        super(context, preferenceKey, fragmentController);
-        mRecentLocationApps = recentLocationApps;
+    void setRecentLocationApps(RecentLocationApps apps) {
+        mRecentLocationApps = apps;
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup group) {
         if (mRecentLocationRequests == null) {
             // First time displaying a list.
             mRecentLocationRequests = mRecentLocationApps.getAppListSorted();
@@ -72,26 +77,26 @@ public class RecentLocationRequestsPreferenceController extends NoSetupPreferenc
             mRecentLocationRequests = newRequests;
         }
         if (mRecentLocationRequests.isEmpty()) {
-            Preference emptyMessagePref = new Preference(mContext);
+            Preference emptyMessagePref = new Preference(getContext());
             emptyMessagePref.setTitle(R.string.location_settings_recent_requests_empty_message);
-            screen.addPreference(emptyMessagePref);
+            group.addPreference(emptyMessagePref);
         } else {
-            screen.removeAll();
+            group.removeAll();
             for (Request request : mRecentLocationRequests) {
                 Preference appPref = createPreference(request);
-                screen.addPreference(appPref);
+                group.addPreference(appPref);
             }
         }
     }
 
     private Preference createPreference(Request request) {
-        Preference pref = new Preference(mContext);
+        Preference pref = new Preference(getContext());
         pref.setSummary(request.contentDescription);
         pref.setIcon(request.icon);
         pref.setTitle(request.label);
         Intent intent = new Intent();
         intent.setPackage(request.packageName);
-        ResolveInfo resolveInfo = mContext.getPackageManager().resolveActivity(intent,
+        ResolveInfo resolveInfo = getContext().getPackageManager().resolveActivity(intent,
                 PackageManager.MATCH_DEFAULT_ONLY);
         pref.setOnPreferenceClickListener(p -> {
             getFragmentController().launchFragment(
