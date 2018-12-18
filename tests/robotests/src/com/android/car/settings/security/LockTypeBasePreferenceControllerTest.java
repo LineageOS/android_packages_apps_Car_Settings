@@ -26,17 +26,18 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.admin.DevicePolicyManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -59,8 +60,8 @@ public class LockTypeBasePreferenceControllerTest {
     private static class TestLockPreferenceController extends LockTypeBasePreferenceController {
 
         TestLockPreferenceController(Context context, String preferenceKey,
-                FragmentController fragmentController) {
-            super(context, preferenceKey, fragmentController);
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
         }
 
         @Override
@@ -74,17 +75,16 @@ public class LockTypeBasePreferenceControllerTest {
         }
     }
 
-    private static final String PREFERENCE_KEY = "test_lock";
     private static final int MATCHING_PASSWORD_QUALITY =
             DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
     private static final int NON_MATCHING_PASSWORD_QUALITY =
             DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
 
     private Context mContext;
+    private PreferenceControllerTestHelper<TestLockPreferenceController>
+            mPreferenceControllerHelper;
     private TestLockPreferenceController mController;
     private Preference mPreference;
-    @Mock
-    private FragmentController mFragmentController;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -93,14 +93,11 @@ public class LockTypeBasePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        mController = new TestLockPreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController);
-        PreferenceScreen preferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(
-                mContext);
         mPreference = new Preference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        preferenceScreen.addPreference(mPreference);
-        mController.displayPreference(preferenceScreen);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                TestLockPreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @After
@@ -109,28 +106,29 @@ public class LockTypeBasePreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_wrongPreference() {
-        assertThat(mController.handlePreferenceTreeClick(new Preference(mContext))).isFalse();
+    public void testHandlePreferenceClicked_returnsTrue() {
+        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_nextFragment() {
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isTrue();
-        verify(mFragmentController).launchFragment(any(TestFragment.class));
+    public void testHandlePreferenceClicked_goesToNextFragment() {
+        mPreference.performClick();
+        verify(mPreferenceControllerHelper.getMockFragmentController()).launchFragment(
+                any(TestFragment.class));
     }
 
     @Test
-    public void testUpdateState_isCurrentLock() {
+    public void testRefreshUi_isCurrentLock() {
         mController.setCurrentPasswordQuality(MATCHING_PASSWORD_QUALITY);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.getSummary()).isEqualTo(
                 mContext.getString(R.string.current_screen_lock));
     }
 
     @Test
-    public void testUpdateState_isNotCurrentLock() {
+    public void testRefreshUi_isNotCurrentLock() {
         mController.setCurrentPasswordQuality(NON_MATCHING_PASSWORD_QUALITY);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.getSummary()).isNotEqualTo(
                 mContext.getString(R.string.current_screen_lock));
     }

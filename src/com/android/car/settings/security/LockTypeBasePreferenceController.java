@@ -16,6 +16,7 @@
 
 package com.android.car.settings.security;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
@@ -23,27 +24,31 @@ import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Business Logic for security lock preferences. It can be extended to change which fragment should
  * be opened when clicked.
  */
-public abstract class LockTypeBasePreferenceController extends NoSetupPreferenceController {
+public abstract class LockTypeBasePreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
     private String mCurrentPassword;
     private int mCurrentPasswordQuality;
-    private Preference mPreference;
 
     public LockTypeBasePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+    }
+
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     /**
@@ -84,28 +89,13 @@ public abstract class LockTypeBasePreferenceController extends NoSetupPreference
         return mCurrentPassword;
     }
 
-    /** Gets the preference controlled by this controller. */
-    protected Preference getCurrentPreference() {
-        return mPreference;
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setSummary(getSummary());
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreference = screen.findPreference(getPreferenceKey());
-    }
-
-    @Override
-    public CharSequence getSummary() {
-        return isCurrentLock() ? mContext.getString(R.string.current_screen_lock) : "";
-    }
-
-    @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (mPreference != preference) {
-            return false;
-        }
-
+    protected boolean handlePreferenceClicked(Preference preference) {
         Fragment fragment = fragmentToOpen();
         if (fragment != null) {
             if (!TextUtils.isEmpty(mCurrentPassword)) {
@@ -125,5 +115,9 @@ public abstract class LockTypeBasePreferenceController extends NoSetupPreference
     @Override
     public int getAvailabilityStatus() {
         return mCarUserManagerHelper.isCurrentProcessGuestUser() ? DISABLED_FOR_USER : AVAILABLE;
+    }
+
+    private CharSequence getSummary() {
+        return isCurrentLock() ? getContext().getString(R.string.current_screen_lock) : "";
     }
 }
