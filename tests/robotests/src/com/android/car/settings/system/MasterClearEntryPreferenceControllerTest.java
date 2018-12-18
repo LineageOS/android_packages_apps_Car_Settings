@@ -21,14 +21,15 @@ import static com.android.car.settings.common.BasePreferenceController.DISABLED_
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.provider.Settings;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.RestrictedPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -45,24 +46,25 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class MasterClearEntryPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
+    private Context mContext;
+    private MasterClearEntryPreferenceController mController;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    private MasterClearEntryPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        mContext = RuntimeEnvironment.application;
 
-        mController = new MasterClearEntryPreferenceController(RuntimeEnvironment.application,
-                PREFERENCE_KEY, mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(mContext,
+                MasterClearEntryPreferenceController.class,
+                new RestrictedPreference(mContext)).getController();
     }
 
     @After
     public void tearDown() {
-        Settings.Global.putInt(RuntimeEnvironment.application.getContentResolver(),
+        Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 0);
         ShadowCarUserManagerHelper.reset();
     }
@@ -85,7 +87,7 @@ public class MasterClearEntryPreferenceControllerTest {
     public void getAvailabilityStatus_demoMode_demoUser_available() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
-        Settings.Global.putInt(RuntimeEnvironment.application.getContentResolver(),
+        Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);

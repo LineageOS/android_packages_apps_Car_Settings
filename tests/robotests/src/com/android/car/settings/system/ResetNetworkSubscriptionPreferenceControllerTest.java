@@ -31,12 +31,11 @@ import android.content.pm.PackageManager;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.ListPreference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -54,8 +53,6 @@ import java.util.Collections;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ResetNetworkSubscriptionPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private static final int SUBID_1 = MIN_SUBSCRIPTION_ID_VALUE;
     private static final int SUBID_2 = SUBID_1 + 1;
     private static final int SUBID_3 = SUBID_2 + 1;
@@ -63,8 +60,9 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
 
     private Context mContext;
     private ShadowSubscriptionManager mShadowSubscriptionManager;
-    private PreferenceScreen mScreen;
     private ListPreference mListPreference;
+    private PreferenceControllerTestHelper<ResetNetworkSubscriptionPreferenceController>
+            mPreferenceControllerHelper;
     private ResetNetworkSubscriptionPreferenceController mController;
 
     @Before
@@ -73,17 +71,16 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         mShadowSubscriptionManager = Shadow.extract(
                 mContext.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE));
 
-        mScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mListPreference = new ListPreference(mContext);
-        mListPreference.setKey(PREFERENCE_KEY);
-        mScreen.addPreference(mListPreference);
-        mController = new ResetNetworkSubscriptionPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                ResetNetworkSubscriptionPreferenceController.class, mListPreference);
+        mController = mPreferenceControllerHelper.getController();
 
         // Default to AVAILABLE status. Tests for this behavior will do their own setup.
         ShadowPackageManager shadowPackageManager = Shadows.shadowOf(mContext.getPackageManager());
         shadowPackageManager.setSystemFeature(PackageManager.FEATURE_TELEPHONY, /* supported= */
                 true);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
@@ -105,78 +102,78 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_nullSubscriptions_hidesPreference() {
-        mController.displayPreference(mScreen);
+    public void refreshUi_nullSubscriptions_hidesPreference() {
+        mController.refreshUi();
 
         assertThat(mListPreference.isVisible()).isFalse();
     }
 
     @Test
-    public void displayPreference_nullSubscriptions_setsValue() {
-        mController.displayPreference(mScreen);
+    public void refreshUi_nullSubscriptions_setsValue() {
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(
                 String.valueOf(SubscriptionManager.INVALID_SUBSCRIPTION_ID));
     }
 
     @Test
-    public void displayPreference_noSubscriptions_hidesPreference() {
+    public void refreshUi_noSubscriptions_hidesPreference() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(Collections.emptyList());
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.isVisible()).isFalse();
     }
 
     @Test
-    public void displayPreference_noSubscriptions_setsValue() {
+    public void refreshUi_noSubscriptions_setsValue() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(Collections.emptyList());
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(
                 String.valueOf(SubscriptionManager.INVALID_SUBSCRIPTION_ID));
     }
 
     @Test
-    public void displayPreference_oneSubscription_hidesPreference() {
+    public void refreshUi_oneSubscription_hidesPreference() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Collections.singletonList(createSubInfo(SUBID_1, "sub1")));
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.isVisible()).isFalse();
     }
 
     @Test
-    public void displayPreference_oneSubscription_setsValue() {
+    public void refreshUi_oneSubscription_setsValue() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Collections.singletonList(createSubInfo(SUBID_1, "sub1")));
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_1));
     }
 
     @Test
-    public void displayPreference_multipleSubscriptions_showsPreference() {
+    public void refreshUi_multipleSubscriptions_showsPreference() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2")));
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.isVisible()).isTrue();
     }
 
     @Test
-    public void displayPreference_multipleSubscriptions_populatesEntries() {
+    public void refreshUi_multipleSubscriptions_populatesEntries() {
         String displayName1 = "sub1";
         String displayName2 = "sub2";
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, displayName1),
                         createSubInfo(SUBID_2, displayName2)));
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(Arrays.asList(mListPreference.getEntries())).containsExactly(displayName1,
                 displayName2);
@@ -186,32 +183,32 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_defaultSelection_fourthPriority_system() {
+    public void refreshUi_defaultSelection_fourthPriority_system() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
         ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_4));
     }
 
     @Test
-    public void displayPreference_defaultSelection_thirdPriority_sms() {
+    public void refreshUi_defaultSelection_thirdPriority_sms() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
         ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_3));
     }
 
     @Test
-    public void displayPreference_defaultSelection_secondPriority_voice() {
+    public void refreshUi_defaultSelection_secondPriority_voice() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
@@ -219,13 +216,13 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
         ShadowSubscriptionManager.setDefaultVoiceSubscriptionId(SUBID_2);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_2));
     }
 
     @Test
-    public void displayPreference_defaultSelection_firstPriority_data() {
+    public void refreshUi_defaultSelection_firstPriority_data() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
@@ -234,13 +231,13 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
         ShadowSubscriptionManager.setDefaultSmsSubscriptionId(SUBID_3);
         ShadowSubscriptionManager.setDefaultVoiceSubscriptionId(SUBID_2);
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_1));
     }
 
     @Test
-    public void displayPreference_title_fourthPriority_subscriptionNetworkIds() {
+    public void refreshUi_title_fourthPriority_subscriptionNetworkIds() {
         SubscriptionInfo subInfo = createSubInfo(
                 SUBID_1,
                 /* displayName= */ "",
@@ -251,7 +248,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         String title = mListPreference.getTitle().toString();
         assertThat(title).contains(String.valueOf(subInfo.getMcc()));
@@ -261,7 +258,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_title_thirdPriority_subscriptionCarrierName() {
+    public void refreshUi_title_thirdPriority_subscriptionCarrierName() {
         SubscriptionInfo subInfo = createSubInfo(
                 SUBID_1,
                 /* displayName= */ "",
@@ -272,13 +269,13 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getTitle()).isEqualTo(subInfo.getCarrierName());
     }
 
     @Test
-    public void displayPreference_title_secondPriority_subscriptionNumber() {
+    public void refreshUi_title_secondPriority_subscriptionNumber() {
         SubscriptionInfo subInfo = createSubInfo(
                 SUBID_1,
                 /* displayName= */ "",
@@ -289,13 +286,13 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getTitle()).isEqualTo(subInfo.getNumber());
     }
 
     @Test
-    public void displayPreference_title_firstPriority_subscriptionDisplayName() {
+    public void refreshUi_title_firstPriority_subscriptionDisplayName() {
         SubscriptionInfo subInfo = createSubInfo(
                 SUBID_1,
                 "displayName",
@@ -306,32 +303,32 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(subInfo, createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mListPreference.getTitle()).isEqualTo(subInfo.getDisplayName());
     }
 
     @Test
-    public void onPreferenceChange_updatesTitle() {
+    public void handlePreferenceChanged_updatesTitle() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
-        mController.onPreferenceChange(mListPreference, String.valueOf(SUBID_2));
+        mListPreference.callChangeListener(String.valueOf(SUBID_2));
 
         assertThat(mListPreference.getTitle()).isEqualTo("sub2");
     }
 
     @Test
-    public void onPreferenceChange_returnsTrue() {
+    public void handlePreferenceChanged_returnsTrue() {
         mShadowSubscriptionManager.setActiveSubscriptionInfoList(
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2")));
         ShadowSubscriptionManager.setDefaultDataSubscriptionId(SUBID_1);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
-        assertThat(
-                mController.onPreferenceChange(mListPreference, String.valueOf(SUBID_2))).isTrue();
+        assertThat(mController.handlePreferenceChanged(mListPreference,
+                String.valueOf(SUBID_2))).isTrue();
     }
 
     /** Reduce SubscriptionInfo constructor args to the ones we care about here. */

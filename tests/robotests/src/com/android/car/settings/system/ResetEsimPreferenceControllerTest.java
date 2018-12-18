@@ -21,13 +21,13 @@ import static com.android.car.settings.common.BasePreferenceController.UNSUPPORT
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-
 import android.content.Context;
 import android.provider.Settings;
 
+import androidx.preference.SwitchPreference;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.After;
 import org.junit.Before;
@@ -41,8 +41,6 @@ import org.robolectric.shadows.ShadowEuiccManager;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ResetEsimPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private Context mContext;
     private ShadowEuiccManager mShadowEuiccManager;
     private ResetEsimPreferenceController mController;
@@ -51,8 +49,9 @@ public class ResetEsimPreferenceControllerTest {
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         mShadowEuiccManager = Shadow.extract(mContext.getSystemService(Context.EUICC_SERVICE));
-        mController = new ResetEsimPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mController = new PreferenceControllerTestHelper<>(mContext,
+                ResetEsimPreferenceController.class,
+                new SwitchPreference(mContext)).getController();
     }
 
     @After

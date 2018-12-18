@@ -16,24 +16,31 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.Build;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.DeviceInfoUtils;
 
 /** Updates the model info entry summary with the model info. */
-public class ModelInfoPreferenceController extends NoSetupPreferenceController {
+public class ModelInfoPreferenceController extends PreferenceController<Preference> {
 
-    public ModelInfoPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public ModelInfoPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public CharSequence getSummary() {
-        return Build.MODEL + DeviceInfoUtils.getMsvSuffix();
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
+    }
+
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
     }
 }

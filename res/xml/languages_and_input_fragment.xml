@@ -22,5 +22,5 @@
         android:icon="@drawable/ic_translate"
         android:key="@string/pk_language_settings_entry"
         android:title="@string/language_settings"
-        settings:controller="com.android.car.settings.system.LanguageSettingsEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.language.LanguageSettingsEntryPreferenceController"/>
 </PreferenceScreen>
