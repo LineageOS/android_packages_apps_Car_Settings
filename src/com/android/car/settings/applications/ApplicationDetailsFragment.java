@@ -36,8 +36,8 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.Utils;
 
 import java.text.MessageFormat;
@@ -46,7 +46,7 @@ import java.text.MessageFormat;
  * Shows details about an application and action associated with that application,
  * like uninstall, forceStop.
  */
-public class ApplicationDetailsFragment extends BasePreferenceFragment {
+public class ApplicationDetailsFragment extends SettingsFragment {
     private static final Logger LOG = new Logger(ApplicationDetailsFragment.class);
     public static final String EXTRA_RESOLVE_INFO = "extra_resolve_info";
 
