@@ -17,35 +17,29 @@
 package com.android.car.settings.development.debugging;
 
 import android.app.ActivityManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.annotation.VisibleForTesting;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceUtil;
 import com.android.car.settings.development.DeveloperOptionsBasePreferenceController;
 
 /** Business logic for enabling adb debugging. */
 public class EnableAdbPreferenceController extends
-        DeveloperOptionsBasePreferenceController implements
-        Preference.OnPreferenceChangeListener, LifecycleObserver {
+        DeveloperOptionsBasePreferenceController<TwoStatePreference> {
 
     /** Local broadcast to signify the change in ADB state. */
     public static final String ACTION_ENABLE_ADB_STATE_CHANGED =
             "com.android.car.settings.development.debugging.EnableAdbPreferenceController."
                     + "ENABLE_ADB_STATE_CHANGED";
 
-    private TwoStatePreference mTwoStatePreference;
-
-    private final EnableAdbWarningDialog.AdbToggleListener mListener =
+    @VisibleForTesting
+    final EnableAdbWarningDialog.AdbToggleListener mListener =
             new EnableAdbWarningDialog.AdbToggleListener() {
                 @Override
                 public void onAdbEnableConfirmed() {
@@ -54,19 +48,25 @@ public class EnableAdbPreferenceController extends
 
                 @Override
                 public void onAdbEnableRejected() {
-                    updateState(mTwoStatePreference);
+                    refreshUi();
                 }
             };
 
-    public EnableAdbPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public EnableAdbPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<TwoStatePreference> getPreferenceType() {
+        return TwoStatePreference.class;
     }
 
     /** Reattaches the listener to the confirmation dialog if fragment was recreated. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
+    @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+
         EnableAdbWarningDialog dialog =
                 (EnableAdbWarningDialog) getFragmentController().findDialogByTag(
                         EnableAdbWarningDialog.TAG);
@@ -76,25 +76,15 @@ public class EnableAdbPreferenceController extends
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        Preference preference = screen.findPreference(getPreferenceKey());
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
-        mTwoStatePreference = (TwoStatePreference) preference;
+    protected void updateState(TwoStatePreference preference) {
+        preference.setChecked(isAdbEnabled());
     }
 
     @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
-        mTwoStatePreference.setChecked(isAdbEnabled());
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+    protected boolean handlePreferenceChanged(TwoStatePreference preference, Object newValue) {
         if (ActivityManager.isUserAMonkey()) {
             return false;
         }
-        PreferenceUtil.requirePreferenceType(preference, TwoStatePreference.class);
         boolean adbEnabled = (Boolean) newValue;
         if (adbEnabled) {
             EnableAdbWarningDialog dialog = new EnableAdbWarningDialog();
@@ -113,15 +103,15 @@ public class EnableAdbPreferenceController extends
 
     private void enableAdbSetting(boolean enabled) {
         if (isAdbEnabled() != enabled) {
-            Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED,
+            Settings.Global.putInt(getContext().getContentResolver(), Settings.Global.ADB_ENABLED,
                     enabled ? 1 : 0);
-            LocalBroadcastManager.getInstance(mContext).sendBroadcast(
+            LocalBroadcastManager.getInstance(getContext()).sendBroadcast(
                     new Intent(ACTION_ENABLE_ADB_STATE_CHANGED));
         }
     }
 
     private boolean isAdbEnabled() {
-        return Settings.Global.getInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0)
-                == 1;
+        return Settings.Global.getInt(getContext().getContentResolver(),
+                Settings.Global.ADB_ENABLED, 0) == 1;
     }
 }

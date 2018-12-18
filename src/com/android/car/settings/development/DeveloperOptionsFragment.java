@@ -24,13 +24,13 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Fragment which displays all of the developer options. It also has a switch to disable developer
  * options, if desired.
  */
-public class DeveloperOptionsFragment extends BasePreferenceFragment {
+public class DeveloperOptionsFragment extends SettingsFragment {
 
     private Switch mOnOffSwitch;
 
@@ -63,7 +63,7 @@ public class DeveloperOptionsFragment extends BasePreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EnableDeveloperSettingsWarningDialog dialog =
-                (EnableDeveloperSettingsWarningDialog) getFragmentController().findDialogByTag(
+                (EnableDeveloperSettingsWarningDialog) findDialogByTag(
                         EnableDeveloperSettingsWarningDialog.TAG);
         if (dialog != null) {
             dialog.setEnableDeveloperSettingsWarningListener(mListener);
@@ -84,7 +84,7 @@ public class DeveloperOptionsFragment extends BasePreferenceFragment {
                         EnableDeveloperSettingsWarningDialog dialog =
                                 new EnableDeveloperSettingsWarningDialog();
                         dialog.setEnableDeveloperSettingsWarningListener(mListener);
-                        DeveloperOptionsFragment.this.getFragmentController().showDialog(dialog,
+                        DeveloperOptionsFragment.this.showDialog(dialog,
                                 EnableDeveloperSettingsWarningDialog.TAG);
                     } else {
                         DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), false);

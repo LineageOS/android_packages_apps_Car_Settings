@@ -20,9 +20,9 @@ import static com.android.car.settings.development.DevelopmentSettingsUtil.DEVEL
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
@@ -30,10 +30,13 @@ import android.content.pm.UserInfo;
 import android.os.UserManager;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 
@@ -51,17 +54,21 @@ import org.robolectric.annotation.Config;
 public class DeveloperOptionsBasePreferenceControllerTest {
 
     private static class TestDeveloperOptionsPreferenceController extends
-            DeveloperOptionsBasePreferenceController {
+            DeveloperOptionsBasePreferenceController<Preference> {
 
         private boolean mOnEnabledCalled;
         private boolean mOnDisabledCalled;
 
-        TestDeveloperOptionsPreferenceController(Context context,
-                String preferenceKey,
-                FragmentController fragmentController) {
-            super(context, preferenceKey, fragmentController);
+        TestDeveloperOptionsPreferenceController(Context context, String preferenceKey,
+                FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+            super(context, preferenceKey, fragmentController, uxRestrictions);
             mOnEnabledCalled = false;
             mOnDisabledCalled = false;
+        }
+
+        @Override
+        protected Class<Preference> getPreferenceType() {
+            return Preference.class;
         }
 
         @Override
@@ -83,9 +90,9 @@ public class DeveloperOptionsBasePreferenceControllerTest {
         }
     }
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private Context mContext;
+    private PreferenceControllerTestHelper<TestDeveloperOptionsPreferenceController>
+            mPreferenceControllerHelper;
     private TestDeveloperOptionsPreferenceController mController;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -95,8 +102,9 @@ public class DeveloperOptionsBasePreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        mController = new TestDeveloperOptionsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                TestDeveloperOptionsPreferenceController.class, new Preference(mContext));
+        mController = mPreferenceControllerHelper.getController();
 
         // Setup admin user who is able to enable developer settings.
         UserInfo userInfo = new UserInfo();
@@ -116,20 +124,20 @@ public class DeveloperOptionsBasePreferenceControllerTest {
     @Test
     public void testOnCreate_receiverRegistered() {
         assertThat(ShadowLocalBroadcastManager.getRegisteredBroadcastReceivers()).isEmpty();
-        mController.onCreate();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         assertThat(ShadowLocalBroadcastManager.getRegisteredBroadcastReceivers()).isNotEmpty();
     }
 
     @Test
     public void testOnDestroy_receiverUnregistered() {
-        mController.onCreate();
-        mController.onDestroy();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
         assertThat(ShadowLocalBroadcastManager.getRegisteredBroadcastReceivers()).isEmpty();
     }
 
     @Test
     public void testReceiveBroadcast_receiverRegistered_onEnabledCalled() {
-        mController.onCreate();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
         LocalBroadcastManager.getInstance(mContext).sendBroadcast(
@@ -139,7 +147,7 @@ public class DeveloperOptionsBasePreferenceControllerTest {
 
     @Test
     public void testReceiveBroadcast_receiverRegistered_onDisabledCalled() {
-        mController.onCreate();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         LocalBroadcastManager.getInstance(mContext).sendBroadcast(
@@ -149,8 +157,8 @@ public class DeveloperOptionsBasePreferenceControllerTest {
 
     @Test
     public void testReceiveBroadcast_receiverUnregistered_onEnabledNotCalled() {
-        mController.onCreate();
-        mController.onDestroy();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceControllerHelper.markState(Lifecycle.State.DESTROYED);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
         LocalBroadcastManager.getInstance(mContext).sendBroadcast(
@@ -160,8 +168,8 @@ public class DeveloperOptionsBasePreferenceControllerTest {
 
     @Test
     public void testReceiveBroadcast_receiverUnregistered_onDisabledNotCalled() {
-        mController.onCreate();
-        mController.onDestroy();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
+        mPreferenceControllerHelper.markState(Lifecycle.State.DESTROYED);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         LocalBroadcastManager.getInstance(mContext).sendBroadcast(
