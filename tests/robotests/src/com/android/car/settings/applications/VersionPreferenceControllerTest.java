@@ -18,19 +18,17 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -39,41 +37,40 @@ import org.robolectric.RuntimeEnvironment;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class VersionPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "application_details_version";
     private static final String TEST_VERSION_NAME = "9";
 
+    private Context mContext;
     private Preference mPreference;
-    private PreferenceScreen mPreferenceScreen;
+    private PreferenceControllerTestHelper<VersionPreferenceController> mPreferenceControllerHelper;
     private VersionPreferenceController mController;
     private PackageInfo mPackageInfo;
 
     @Before
     public void setUp() {
-        Context context = RuntimeEnvironment.application;
+        mContext = RuntimeEnvironment.application;
 
-        mController = new VersionPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreferenceScreen = new PreferenceManager(context).createPreferenceScreen(context);
-        mPreference = new Preference(context);
-        mPreference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mPreference);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                VersionPreferenceController.class);
+        mController = mPreferenceControllerHelper.getController();
+        mPreference = new Preference(mContext);
 
         mPackageInfo = new PackageInfo();
         mPackageInfo.versionName = TEST_VERSION_NAME;
     }
 
     @Test
-    public void testDisplayPreference_noPackageInfo_throwException() {
+    public void testCheckInitialized_noPackageInfo_throwException() {
         assertThrows(IllegalStateException.class,
-                () -> mController.displayPreference(mPreferenceScreen));
+                () -> mPreferenceControllerHelper.setPreference(mPreference));
     }
 
     @Test
-    public void testDisplayPreference_hasPackageInfo_setTitle() {
+    public void testRefreshUi_hasPackageInfo_setTitle() {
         mController.setPackageInfo(mPackageInfo);
-        mController.displayPreference(mPreferenceScreen);
+        mPreferenceControllerHelper.setPreference(mPreference);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
         assertThat(mPreference.getTitle()).isEqualTo(
-                RuntimeEnvironment.application.getString(R.string.application_version_label,
-                        TEST_VERSION_NAME));
+                mContext.getString(R.string.application_version_label, TEST_VERSION_NAME));
     }
 }

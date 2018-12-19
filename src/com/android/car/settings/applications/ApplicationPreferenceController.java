@@ -16,26 +16,31 @@
 
 package com.android.car.settings.applications;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /** Business logic for the Application field in the application details page. */
-public class ApplicationPreferenceController extends NoSetupPreferenceController {
+public class ApplicationPreferenceController extends PreferenceController<Preference> {
 
     private PackageManager mPackageManager;
     private ResolveInfo mResolveInfo;
 
     public ApplicationPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mPackageManager = mContext.getPackageManager();
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mPackageManager = context.getPackageManager();
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     /** Sets the resolve info which is used to load the app name and icon. */
@@ -44,18 +49,16 @@ public class ApplicationPreferenceController extends NoSetupPreferenceController
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        verifyResolveInfo();
-        Preference preference = screen.findPreference(getPreferenceKey());
-        preference.setTitle(mResolveInfo.loadLabel(mPackageManager));
-        preference.setIcon(mResolveInfo.loadIcon(mPackageManager));
-    }
-
-    private void verifyResolveInfo() {
+    protected void checkInitialized() {
         if (mResolveInfo == null) {
             throw new IllegalStateException(
                     "ResolveInfo should be set before calling this function");
         }
+    }
+
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setTitle(mResolveInfo.loadLabel(mPackageManager));
+        preference.setIcon(mResolveInfo.loadIcon(mPackageManager));
     }
 }

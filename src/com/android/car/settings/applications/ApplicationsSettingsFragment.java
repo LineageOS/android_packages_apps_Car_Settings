@@ -17,12 +17,12 @@
 package com.android.car.settings.applications;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Lists all installed applications and their summary.
  */
-public class ApplicationsSettingsFragment extends BasePreferenceFragment {
+public class ApplicationsSettingsFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {

@@ -16,42 +16,47 @@
 
 package com.android.car.settings.applications;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /** Business logic which populates the applications in this setting. */
-public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceController {
+public class ApplicationsSettingsPreferenceController extends
+        PreferenceController<PreferenceGroup> {
 
     private final PackageManager mPackageManager;
     private List<Preference> mApplications;
 
-    public ApplicationsSettingsPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mPackageManager = mContext.getPackageManager();
+    public ApplicationsSettingsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mPackageManager = context.getPackageManager();
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
         if (mApplications == null) {
             populateApplicationList();
         }
         for (Preference application : mApplications) {
-            screen.addPreference(application);
+            preferenceGroup.addPreference(application);
         }
     }
 
@@ -74,7 +79,7 @@ public class ApplicationsSettingsPreferenceController extends NoSetupPreferenceC
     }
 
     private Preference createApplicationPreference(ResolveInfo resolveInfo) {
-        Preference preference = new Preference(mContext);
+        Preference preference = new Preference(getContext());
         preference.setTitle(resolveInfo.loadLabel(mPackageManager));
         preference.setIcon(resolveInfo.loadIcon(mPackageManager));
         preference.setOnPreferenceClickListener((p) -> {
