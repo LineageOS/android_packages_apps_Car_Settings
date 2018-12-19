@@ -18,7 +18,6 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
@@ -26,12 +25,11 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ResolveInfo;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,12 +39,13 @@ import org.robolectric.shadows.ShadowApplication;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class PermissionsPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "application_details_permissions";
+
     private static final String PACKAGE_NAME = "Test Package Name";
 
     private Context mContext;
     private Preference mPreference;
-    private PreferenceScreen mPreferenceScreen;
+    private PreferenceControllerTestHelper<PermissionsPreferenceController>
+            mPreferenceControllerHelper;
     private PermissionsPreferenceController mController;
     private ResolveInfo mResolveInfo;
 
@@ -54,12 +53,10 @@ public class PermissionsPreferenceControllerTest {
     public void setUp() {
         mContext = RuntimeEnvironment.application;
 
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                PermissionsPreferenceController.class);
+        mController = mPreferenceControllerHelper.getController();
         mPreference = new Preference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mPreference);
-        mController = new PermissionsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
 
         mResolveInfo = new ResolveInfo();
         mResolveInfo.resolvePackageName = PACKAGE_NAME;
@@ -68,27 +65,18 @@ public class PermissionsPreferenceControllerTest {
     }
 
     @Test
-    public void testOnCreate_noResolveInfo_throwException() {
-        assertThrows(IllegalStateException.class, () -> mController.onCreate());
+    public void testCheckInitialized_noResolveInfo_throwException() {
+        assertThrows(IllegalStateException.class,
+                () -> mPreferenceControllerHelper.setPreference(mPreference));
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_wrongPreference_noAction() {
-        // Setup so the controller knows about the preference. Otherwise handlePreferenceTreeClick
-        // doesn't know which preference to compare the input against.
-        mController.setResolveInfo(mResolveInfo);
-        mController.displayPreference(mPreferenceScreen);
-
-        assertThat(mController.handlePreferenceTreeClick(new Preference(mContext))).isFalse();
-    }
-
-    @Test
-    public void testHandlePreferenceTreeClick_navigateToNextActivity() {
+    public void testHandlePreferenceClicked_navigateToNextActivity() {
         // Setup so the controller knows about the preference.
         mController.setResolveInfo(mResolveInfo);
-        mController.displayPreference(mPreferenceScreen);
-
-        assertThat(mController.handlePreferenceTreeClick(mPreference)).isTrue();
+        mPreferenceControllerHelper.setPreference(mPreference);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
 
         Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(actual.getAction()).isEqualTo(Intent.ACTION_MANAGE_APP_PERMISSIONS);

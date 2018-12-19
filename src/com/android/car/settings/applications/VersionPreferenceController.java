@@ -16,24 +16,29 @@
 
 package com.android.car.settings.applications;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /** Business logic for the Version field in the application details page. */
-public class VersionPreferenceController extends NoSetupPreferenceController {
+public class VersionPreferenceController extends PreferenceController<Preference> {
 
     private PackageInfo mPackageInfo;
 
     public VersionPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     /** Set the package info which is used to get the version name. */
@@ -42,18 +47,16 @@ public class VersionPreferenceController extends NoSetupPreferenceController {
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        verifyPackageInfo();
-        Preference preference = screen.findPreference(getPreferenceKey());
-        preference.setTitle(mContext.getString(
-                R.string.application_version_label, mPackageInfo.versionName));
-    }
-
-    private void verifyPackageInfo() {
+    protected void checkInitialized() {
         if (mPackageInfo == null) {
             throw new IllegalStateException(
                     "PackageInfo should be set before calling this function");
         }
+    }
+
+    @Override
+    protected void updateState(Preference preference) {
+        preference.setTitle(getContext().getString(
+                R.string.application_version_label, mPackageInfo.versionName));
     }
 }
