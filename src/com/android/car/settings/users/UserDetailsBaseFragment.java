@@ -28,20 +28,19 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.ErrorDialog;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.users.ConfirmRemoveUserDialog.UserType;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
-public abstract class UserDetailsBaseFragment extends BasePreferenceFragment {
+public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserInfo mUserInfo;
 
     private final ConfirmRemoveUserDialog.ConfirmRemoveUserListener mListener = userType -> {
         if (userType == UserType.LAST_ADMIN) {
-            getFragmentController().launchFragment(
-                    ChooseNewAdminFragment.newInstance(mUserInfo));
+            launchFragment(ChooseNewAdminFragment.newInstance(mUserInfo));
         } else {
             if (mCarUserManagerHelper.removeUser(
                     mUserInfo, getContext().getString(R.string.user_guest))) {
@@ -81,8 +80,7 @@ public abstract class UserDetailsBaseFragment extends BasePreferenceFragment {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             ConfirmRemoveUserDialog confirmRemoveLastAdminDialog =
-                    (ConfirmRemoveUserDialog) getFragmentController().findDialogByTag(
-                            ConfirmRemoveUserDialog.TAG);
+                    (ConfirmRemoveUserDialog) findDialogByTag(ConfirmRemoveUserDialog.TAG);
             if (confirmRemoveLastAdminDialog != null) {
                 confirmRemoveLastAdminDialog.setConfirmRemoveUserListener(mListener);
             }

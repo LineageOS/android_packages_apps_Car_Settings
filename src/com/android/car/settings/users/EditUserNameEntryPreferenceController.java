@@ -16,14 +16,9 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ButtonPreference;
@@ -31,63 +26,45 @@ import com.android.car.settings.common.FragmentController;
 
 /** Business logic for the preference which opens the EditUserNameFragment. */
 public class EditUserNameEntryPreferenceController extends
-        BaseUserDetailsPreferenceController implements LifecycleObserver {
-
-    private PreferenceScreen mPreferenceScreen;
+        UserDetailsBasePreferenceController<ButtonPreference> {
 
     public EditUserNameEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-    }
-
-    private final CarUserManagerHelper.OnUsersUpdateListener mOnUsersUpdateListener = () -> {
-        refreshUserInfo();
-        displayPreference(mPreferenceScreen);
-    };
-
-    /** Registers a listener which updates the displayed user name when a user is modified. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
-        getCarUserManagerHelper().registerOnUsersUpdateListener(mOnUsersUpdateListener);
-    }
-
-    /** Unregisters a listener which updates the displayed user name when a user is modified. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public void onDestroy() {
-        getCarUserManagerHelper().unregisterOnUsersUpdateListener(mOnUsersUpdateListener);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreferenceScreen = screen;
+    protected Class<ButtonPreference> getPreferenceType() {
+        return ButtonPreference.class;
+    }
 
-        ButtonPreference preference = (ButtonPreference) screen.findPreference(getPreferenceKey());
+    @Override
+    protected void updateState(ButtonPreference preference) {
         preference.setOnButtonClickListener(pref -> {
             getFragmentController().launchFragment(EditUsernameFragment.newInstance(getUserInfo()));
         });
 
         Drawable icon = new UserIconProvider(getCarUserManagerHelper()).getUserIcon(getUserInfo(),
-                mContext);
+                getContext());
         preference.setIcon(icon);
-        preference.setTitle(
-                UserUtils.getUserDisplayName(mContext, getCarUserManagerHelper(), getUserInfo()));
+        preference.setTitle(UserUtils.getUserDisplayName(getContext(), getCarUserManagerHelper(),
+                getUserInfo()));
 
         if (!getCarUserManagerHelper().isCurrentProcessUser(getUserInfo())) {
             preference.showButton(false);
         }
+        preference.setSummary(getSummary());
     }
 
-    @Override
-    public CharSequence getSummary() {
+    private CharSequence getSummary() {
         if (!getUserInfo().isInitialized()) {
-            return mContext.getString(R.string.user_summary_not_set_up);
+            return getContext().getString(R.string.user_summary_not_set_up);
         }
         if (getUserInfo().isAdmin()) {
             return getCarUserManagerHelper().isCurrentProcessUser(getUserInfo())
-                    ? mContext.getString(R.string.signed_in_admin_user)
-                    : mContext.getString(R.string.user_admin);
+                    ? getContext().getString(R.string.signed_in_admin_user)
+                    : getContext().getString(R.string.user_admin);
         }
-        return super.getSummary();
+        return null;
     }
 }
