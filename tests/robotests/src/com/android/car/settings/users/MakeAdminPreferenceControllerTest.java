@@ -18,7 +18,6 @@ package com.android.car.settings.users;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.matches;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -27,12 +26,11 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.ButtonPreference;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
@@ -49,24 +47,30 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
 public class MakeAdminPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "permissions_make_admin";
     private static final UserInfo TEST_USER = new UserInfo(/* id= */ 10,
             "Test Username", /* flags= */0);
 
-    private Context mContext;
+    private PreferenceControllerTestHelper<MakeAdminPreferenceController>
+            mPreferenceControllerHelper;
     private MakeAdminPreferenceController mController;
-    @Mock
-    private FragmentController mFragmentController;
+    private ButtonPreference mButtonPreference;
     @Mock
     private ConfirmGrantAdminPermissionsDialog mDialog;
+    @Mock
+    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mock(CarUserManagerHelper.class));
-        mController = new MakeAdminPreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController);
+        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        Context context = RuntimeEnvironment.application;
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
+                MakeAdminPreferenceController.class);
+        mController = mPreferenceControllerHelper.getController();
+        mController.setUserInfo(TEST_USER);
+        mButtonPreference = new ButtonPreference(context);
+        mButtonPreference.setSelectable(false);
+        mPreferenceControllerHelper.setPreference(mButtonPreference);
     }
 
     @After
@@ -76,35 +80,40 @@ public class MakeAdminPreferenceControllerTest {
 
     @Test
     public void testOnCreate_noPreviousDialog_dialogListenerNotSet() {
-        when(mFragmentController.findDialogByTag(
+        when(mPreferenceControllerHelper.getMockFragmentController().findDialogByTag(
                 ConfirmGrantAdminPermissionsDialog.TAG)).thenReturn(null);
-        mController.onCreate();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         verify(mDialog, never()).setConfirmGrantAdminListener(
                 any(ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener.class));
     }
 
     @Test
     public void testOnCreate_hasPreviousDialog_dialogListenerSet() {
-        when(mFragmentController.findDialogByTag(
+        when(mPreferenceControllerHelper.getMockFragmentController().findDialogByTag(
                 ConfirmGrantAdminPermissionsDialog.TAG)).thenReturn(mDialog);
-        mController.onCreate();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         verify(mDialog).setConfirmGrantAdminListener(
                 any(ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener.class));
     }
 
     @Test
     public void testOnButtonClick_showsDialog() {
-        PreferenceScreen preferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(
-                mContext);
-        ButtonPreference buttonPreference = new ButtonPreference(mContext);
-        buttonPreference.setSelectable(false);
-        buttonPreference.setKey(PREFERENCE_KEY);
-        preferenceScreen.addPreference(buttonPreference);
-        mController.setUserInfo(TEST_USER);
-        mController.displayPreference(preferenceScreen);
-        buttonPreference.performButtonClick();
-        verify(mFragmentController).showDialog(any(ConfirmGrantAdminPermissionsDialog.class),
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mButtonPreference.performButtonClick();
+        verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
+                any(ConfirmGrantAdminPermissionsDialog.class),
                 matches(ConfirmGrantAdminPermissionsDialog.TAG));
     }
 
+    @Test
+    public void testListener_makeUserAdmin() {
+        mController.mListener.onGrantAdminPermissionsConfirmed(TEST_USER);
+        verify(mCarUserManagerHelper).grantAdminPermissions(TEST_USER);
+    }
+
+    @Test
+    public void testListener_goBack() {
+        mController.mListener.onGrantAdminPermissionsConfirmed(TEST_USER);
+        verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
+    }
 }

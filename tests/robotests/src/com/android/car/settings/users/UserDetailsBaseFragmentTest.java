@@ -63,7 +63,7 @@ public class UserDetailsBaseFragmentTest {
 
         @Override
         protected int getPreferenceScreenResId() {
-            return R.xml.base_preference_fragment;
+            return R.xml.test_user_details_base_fragment;
         }
     }
 
@@ -141,8 +141,8 @@ public class UserDetailsBaseFragmentTest {
         createUserDetailsBaseFragment();
         mRemoveUserButton.performClick();
 
-        assertThat(mUserDetailsBaseFragment.getFragmentController().findDialogByTag(
-                ConfirmRemoveUserDialog.TAG)).isNotNull();
+        assertThat(
+                mUserDetailsBaseFragment.findDialogByTag(ConfirmRemoveUserDialog.TAG)).isNotNull();
     }
 
     private void createUserDetailsBaseFragment() {
@@ -152,7 +152,6 @@ public class UserDetailsBaseFragmentTest {
                 new TestUserDetailsBaseFragment(), testUser.id);
         when(mUserManager.getUserInfo(testUser.id)).thenReturn(testUser);
         mTestActivity.launchFragment(mUserDetailsBaseFragment);
-
         mRemoveUserButton = (Button) mTestActivity.findViewById(R.id.action_button1);
     }
 }

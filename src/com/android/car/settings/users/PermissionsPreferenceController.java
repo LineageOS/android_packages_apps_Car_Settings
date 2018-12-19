@@ -16,26 +16,24 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserManager;
 
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
-import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /** Constructs and populates the permissions toggles for non admin users. */
-public class PermissionsPreferenceController extends BaseUserDetailsPreferenceController {
+public class PermissionsPreferenceController extends
+        UserDetailsBasePreferenceController<PreferenceGroup> {
 
     private static class UserPermission {
         private final String mPermissionKey;
@@ -76,13 +74,12 @@ public class PermissionsPreferenceController extends BaseUserDetailsPreferenceCo
 
     private final List<SwitchPreference> mPermissionPreferences = new ArrayList<>();
 
-    public PermissionsPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public PermissionsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
 
         for (UserPermission permission : PERMISSIONS_LIST) {
-            SwitchPreference preference = new SwitchPreference(mContext);
+            SwitchPreference preference = new SwitchPreference(context);
             preference.setTitle(permission.getPermissionTitle());
             preference.getExtras().putString(PERMISSION_TYPE_KEY, permission.getPermissionKey());
             preference.setOnPreferenceChangeListener((pref, newValue) -> {
@@ -96,20 +93,20 @@ public class PermissionsPreferenceController extends BaseUserDetailsPreferenceCo
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        Preference preference = screen.findPreference(getPreferenceKey());
-        PreferenceUtil.requirePreferenceType(preference, PreferenceGroup.class);
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
 
+    @Override
+    protected void onCreateInternal() {
         for (SwitchPreference switchPreference : mPermissionPreferences) {
-            ((PreferenceGroup) preference).addPreference(switchPreference);
+            getPreference().addPreference(switchPreference);
         }
     }
 
     @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
-        for (TwoStatePreference switchPreference : mPermissionPreferences) {
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        for (SwitchPreference switchPreference : mPermissionPreferences) {
             switchPreference.setChecked(!getCarUserManagerHelper().hasUserRestriction(
                     switchPreference.getExtras().getString(PERMISSION_TYPE_KEY), getUserInfo()));
         }

@@ -16,35 +16,40 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
-import androidx.preference.PreferenceScreen;
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.FragmentController;
 
 /** Business Logic for preference which promotes a regular user to an admin user. */
-public class MakeAdminPreferenceController extends BaseUserDetailsPreferenceController implements
-        LifecycleObserver {
+public class MakeAdminPreferenceController extends
+        UserDetailsBasePreferenceController<ButtonPreference> {
 
-    private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mListener =
+    @VisibleForTesting
+    final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mListener =
             userToMakeAdmin -> {
                 getCarUserManagerHelper().grantAdminPermissions(userToMakeAdmin);
                 getFragmentController().goBack();
             };
 
     public MakeAdminPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
+    @Override
+    protected Class<ButtonPreference> getPreferenceType() {
+        return ButtonPreference.class;
+    }
+
+
     /** Ensure that the listener is reset if the dialog was open during a configuration change. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
+    @Override
+    protected void onCreateInternal() {
         ConfirmGrantAdminPermissionsDialog dialog =
                 (ConfirmGrantAdminPermissionsDialog) getFragmentController().findDialogByTag(
                         ConfirmGrantAdminPermissionsDialog.TAG);
@@ -54,10 +59,7 @@ public class MakeAdminPreferenceController extends BaseUserDetailsPreferenceCont
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
-        ButtonPreference preference = (ButtonPreference) screen.findPreference(getPreferenceKey());
+    protected void updateState(ButtonPreference preference) {
         preference.setOnButtonClickListener(pref -> {
             ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
             dialog.setUserToMakeAdmin(getUserInfo());
@@ -66,8 +68,7 @@ public class MakeAdminPreferenceController extends BaseUserDetailsPreferenceCont
         });
 
         Drawable icon = new UserIconProvider(getCarUserManagerHelper()).getUserIcon(getUserInfo(),
-                mContext);
+                getContext());
         preference.setIcon(icon);
     }
-
 }
