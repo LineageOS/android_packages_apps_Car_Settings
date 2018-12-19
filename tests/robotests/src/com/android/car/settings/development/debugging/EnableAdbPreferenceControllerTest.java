@@ -28,25 +28,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import androidx.fragment.app.DialogFragment;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.testutils.BaseTestActivity;
-import com.android.car.settings.testutils.DialogTestUtils;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -56,25 +49,20 @@ import java.util.List;
 @Config(shadows = {ShadowLocalBroadcastManager.class})
 public class EnableAdbPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private Context mContext;
+    private PreferenceControllerTestHelper<EnableAdbPreferenceController>
+            mPreferenceControllerHelper;
     private EnableAdbPreferenceController mController;
     private TwoStatePreference mPreference;
-    @Mock
-    private FragmentController mFragmentController;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mController = new EnableAdbPreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController);
-        PreferenceScreen screen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mPreference = new SwitchPreference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        screen.addPreference(mPreference);
-        mController.displayPreference(screen);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                EnableAdbPreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
     }
 
     @After
@@ -83,32 +71,32 @@ public class EnableAdbPreferenceControllerTest {
     }
 
     @Test
-    public void testUpdateState_adbEnabled_setTrue() {
+    public void testRefreshUi_adbEnabled_setTrue() {
         mPreference.setChecked(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isTrue();
     }
 
     @Test
-    public void testUpdateState_adbDisabled_setFalse() {
+    public void testRefreshUi_adbDisabled_setFalse() {
         mPreference.setChecked(true);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
-        mController.updateState(mPreference);
+        mController.refreshUi();
         assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
     public void testOnPreferenceChange_changeToTrue_openDialog() {
-        mController.onPreferenceChange(mPreference, true);
-        verify(mFragmentController).showDialog(any(EnableAdbWarningDialog.class),
-                eq(EnableAdbWarningDialog.TAG));
+        mPreference.callChangeListener(true);
+        verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
+                any(EnableAdbWarningDialog.class), eq(EnableAdbWarningDialog.TAG));
     }
 
     @Test
     public void testOnPreferenceChange_changeToFalse_disableAdb() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
-        mController.onPreferenceChange(mPreference, false);
+        mPreference.callChangeListener(false);
         assertThat(
                 Settings.Global.getInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED,
                         1)).isEqualTo(0);
@@ -117,7 +105,7 @@ public class EnableAdbPreferenceControllerTest {
     @Test
     public void testOnPreferenceChange_changeToFalse_sendBroadcast() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
-        mController.onPreferenceChange(mPreference, false);
+        mPreference.callChangeListener(false);
 
         List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
@@ -137,15 +125,15 @@ public class EnableAdbPreferenceControllerTest {
     public void testOnDeveloperOptionsDisabled_wasDisabled_noChange() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
         mController.onDeveloperOptionsDisabled();
-        assertThat(
-                Settings.Global.getInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED,
-                        1)).isEqualTo(0);
+        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
+                Settings.Global.ADB_ENABLED, 1)).isEqualTo(0);
     }
 
     @Test
     public void testOnDeveloperOptionsDisabled_wasEnabled_sendBroadcast() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
         mController.onDeveloperOptionsDisabled();
+
         List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
         Intent intentFired = intentsFired.get(0);
@@ -156,42 +144,31 @@ public class EnableAdbPreferenceControllerTest {
     public void testOnDeveloperOptionsDisabled_wasEnabled_settingDisabled() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
         mController.onDeveloperOptionsDisabled();
-        assertThat(
-                Settings.Global.getInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED,
-                        1)).isEqualTo(0);
+        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
+                Settings.Global.ADB_ENABLED, 1)).isEqualTo(0);
     }
 
     @Test
     public void testOnDeveloperOptionsDisabled_wasDisabled_sendBroadcast() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
         mController.onDeveloperOptionsDisabled();
+
         List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intentsFired).isEmpty();
     }
 
     @Test
     public void testDialogConfirm_enableAdb() {
-        FragmentController fragmentController =
-                setupPreferenceControllerWithRealFragmentController();
-
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
-        mController.onPreferenceChange(mPreference, true);
-        DialogFragment dialog = fragmentController.findDialogByTag(EnableAdbWarningDialog.TAG);
-        DialogTestUtils.clickPositiveButton(dialog);
-        assertThat(
-                Settings.Global.getInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED,
-                        0)).isEqualTo(1);
+        mController.mListener.onAdbEnableConfirmed();
+        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
+                Settings.Global.ADB_ENABLED, 0)).isEqualTo(1);
     }
 
     @Test
     public void testDialogConfirm_falseBefore_sendBroadcast() {
-        FragmentController fragmentController =
-                setupPreferenceControllerWithRealFragmentController();
-
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
-        mController.onPreferenceChange(mPreference, true);
-        DialogFragment dialog = fragmentController.findDialogByTag(EnableAdbWarningDialog.TAG);
-        DialogTestUtils.clickPositiveButton(dialog);
+        mController.mListener.onAdbEnableConfirmed();
 
         List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intentsFired.size()).isEqualTo(1);
@@ -200,14 +177,9 @@ public class EnableAdbPreferenceControllerTest {
     }
 
     @Test
-    public void testDialogConfirm_trueBefore_sendBroadcast() {
-        FragmentController fragmentController =
-                setupPreferenceControllerWithRealFragmentController();
-
+    public void testDialogConfirm_trueBefore_dontSendBroadcast() {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 1);
-        mController.onPreferenceChange(mPreference, true);
-        DialogFragment dialog = fragmentController.findDialogByTag(EnableAdbWarningDialog.TAG);
-        DialogTestUtils.clickPositiveButton(dialog);
+        mController.mListener.onAdbEnableConfirmed();
 
         List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intentsFired).isEmpty();
@@ -215,26 +187,9 @@ public class EnableAdbPreferenceControllerTest {
 
     @Test
     public void testDialogReject_toggleOff() {
-        FragmentController fragmentController =
-                setupPreferenceControllerWithRealFragmentController();
-
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.ADB_ENABLED, 0);
         mPreference.setChecked(true);
-        mController.onPreferenceChange(mPreference, true);
-        DialogFragment dialog = fragmentController.findDialogByTag(EnableAdbWarningDialog.TAG);
-        DialogTestUtils.clickNegativeButton(dialog);
+        mController.mListener.onAdbEnableRejected();
         assertThat(mPreference.isChecked()).isFalse();
-    }
-
-    /** Returns the BaseTestActivity, which is the real fragment controller. */
-    private FragmentController setupPreferenceControllerWithRealFragmentController() {
-        BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
-        mController = new EnableAdbPreferenceController(mContext, PREFERENCE_KEY, activity);
-        PreferenceScreen screen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mPreference = new SwitchPreference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        screen.addPreference(mPreference);
-        mController.displayPreference(screen);
-
-        return activity;
     }
 }
