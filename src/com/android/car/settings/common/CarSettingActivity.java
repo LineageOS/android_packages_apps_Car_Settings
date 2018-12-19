@@ -20,11 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
@@ -52,7 +48,6 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     public static final String META_DATA_KEY_FRAGMENT_CLASS =
             "com.android.car.settings.FRAGMENT_CLASS";
 
-    private String mFragmentClass;
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
     // Default to minimum restriction.
@@ -65,7 +60,6 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getMetaData();
 
         setContentView(R.layout.car_setting_activity);
         if (mUxRestrictionsHelper == null) {
@@ -77,30 +71,15 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         mRestrictedMessage = findViewById(R.id.restricted_message);
     }
 
-    private void getMetaData() {
-        try {
-            ActivityInfo ai = getPackageManager().getActivityInfo(getComponentName(),
-                    PackageManager.GET_META_DATA);
-            if (ai == null || ai.metaData == null) return;
-            mFragmentClass = ai.metaData.getString(META_DATA_KEY_FRAGMENT_CLASS);
-        } catch (NameNotFoundException nnfe) {
-            // No recovery
-            LOG.d("Cannot get Metadata for: " + getComponentName().toString());
-        }
-    }
-
     @Override
     public void onStart() {
         super.onStart();
-        if (!TextUtils.isEmpty(mFragmentClass)) {
-            launchFragment(Fragment.instantiate(this, mFragmentClass));
-            return;
+        Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
+        if (fragment == null) {
+            fragment = Fragment.instantiate(this,
+                    getString(R.string.config_settings_hierarchy_root_fragment));
         }
-
-        if (getCurrentFragment() == null) {
-            launchFragment(Fragment.instantiate(this,
-                    getString(R.string.config_settings_hierarchy_root_fragment)));
-        }
+        launchFragment(fragment);
     }
 
     @Override
