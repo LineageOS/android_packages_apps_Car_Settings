@@ -16,6 +16,8 @@
 
 package com.android.car.settings.testutils;
 
+import static android.bluetooth.BluetoothAdapter.STATE_ON;
+
 import android.bluetooth.BluetoothAdapter;
 import android.os.ParcelUuid;
 
@@ -31,6 +33,7 @@ import java.util.List;
 public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBluetoothAdapter {
 
     private static int sResetCalledCount = 0;
+    private String mName;
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
@@ -50,6 +53,20 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
     @Implementation
     public ParcelUuid[] getUuids() {
         return null;
+    }
+
+    @Implementation
+    public String getName() {
+        return mName;
+    }
+
+    @Implementation
+    public boolean setName(String name) {
+        if (getState() != STATE_ON) {
+            return false;
+        }
+        mName = name;
+        return true;
     }
 
     @Implementation
