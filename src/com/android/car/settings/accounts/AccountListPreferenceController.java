@@ -18,6 +18,7 @@ package com.android.car.settings.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
@@ -25,45 +26,42 @@ import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
 import androidx.collection.ArrayMap;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
 /**
  * Controller for listing accounts.
  *
  * <p>Largely derived from {@link com.android.settings.accounts.AccountPreferenceController}
  */
-public class AccountListPreferenceController extends NoSetupPreferenceController implements
+public class AccountListPreferenceController extends
+        PreferenceController<PreferenceCategory> implements
         AuthenticatorHelper.OnAccountsUpdateListener,
-        CarUserManagerHelper.OnUsersUpdateListener, LifecycleObserver {
+        CarUserManagerHelper.OnUsersUpdateListener {
     private static final String NO_ACCOUNT_PREF_KEY = "no_accounts_added";
 
     private final UserInfo mUserInfo;
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final ArrayMap<String, Preference> mPreferences = new ArrayMap<>();
     private AuthenticatorHelper mAuthenticatorHelper;
-    private PreferenceCategory mAccountsCategory;
     private String[] mAuthorities;
 
     public AccountListPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
         mUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
         mAuthenticatorHelper = new AuthenticatorHelper(context,
@@ -76,30 +74,17 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
-        // Add preferences for each account if the controller should be available
-        if (isAvailable()) {
-            mAccountsCategory = (PreferenceCategory) screen.findPreference(getPreferenceKey());
-            forceUpdateAccountsCategory();
-        }
+    protected Class<PreferenceCategory> getPreferenceType() {
+        return PreferenceCategory.class;
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        // Show the account's details when an account is clicked on.
-        if (preference instanceof AccountPreference) {
-            AccountPreference accountPreference = (AccountPreference) preference;
-            getFragmentController().launchFragment(AccountDetailsFragment.newInstance(
-                    accountPreference.getAccount(), accountPreference.getLabel(), mUserInfo));
-            return true;
-        }
-        return false;
+    protected void updateState(PreferenceCategory preference) {
+        forceUpdateAccountsCategory();
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    protected int getAvailabilityStatus() {
         return mCarUserManagerHelper.canCurrentProcessModifyAccounts() ? AVAILABLE
                 : DISABLED_FOR_USER;
     }
@@ -107,8 +92,8 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     /**
      * Registers the account update and user update callbacks.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
+    @Override
+    protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
         mCarUserManagerHelper.registerOnUsersUpdateListener(this);
     }
@@ -116,8 +101,8 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     /**
      * Unregisters the account update and user update callbacks.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
+    @Override
+    protected void onStopInternal() {
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
     }
@@ -134,33 +119,36 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
         forceUpdateAccountsCategory();
     }
 
+    private boolean onAccountPreferenceClicked(AccountPreference preference) {
+        // Show the account's details when an account is clicked on.
+        getFragmentController().launchFragment(AccountDetailsFragment.newInstance(
+                preference.getAccount(), preference.getLabel(), mUserInfo));
+        return true;
+    }
+
     /** Forces a refresh of the account preferences. */
     private void forceUpdateAccountsCategory() {
         // Set the category title and include the user's name
-        mAccountsCategory.setTitle(mContext.getString(R.string.account_list_title, mUserInfo.name));
+        getPreference().setTitle(
+                getContext().getString(R.string.account_list_title, mUserInfo.name));
 
         // Recreate the authentication helper to refresh the list of enabled accounts
-        mAuthenticatorHelper = new AuthenticatorHelper(mContext, mUserInfo.getUserHandle(), this);
+        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserInfo.getUserHandle(),
+                this);
 
-        Map<String, Preference> preferencesToRemove = new ArrayMap<>(mPreferences);
+        Set<String> preferencesToRemove = new HashSet<>(mPreferences.keySet());
         List<? extends Preference> preferences = getAccountPreferences(preferencesToRemove);
         // Add all preferences that aren't already shown. Manually set the order so that existing
         // preferences are reordered correctly.
         for (int i = 0; i < preferences.size(); i++) {
-            Preference preference = preferences.get(i);
-            String key = preference.getKey();
-            if (!mPreferences.containsKey(key)) {
-                preference.setOrder(i);
-                mAccountsCategory.addPreference(preference);
-                mPreferences.put(key, preference);
-            } else {
-                mPreferences.get(key).setOrder(i);
-            }
+            Preference pref = preferences.get(i);
+            pref.setOrder(i);
+            mPreferences.put(pref.getKey(), pref);
+            getPreference().addPreference(pref);
         }
 
-        // Remove all preferences that should no longer be shown
-        for (String key : preferencesToRemove.keySet()) {
-            mAccountsCategory.removePreference(mPreferences.get(key));
+        for (String key : preferencesToRemove) {
+            getPreference().removePreference(mPreferences.get(key));
             mPreferences.remove(key);
         }
     }
@@ -175,7 +163,7 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
      *                            remain after method execution
      */
     private List<? extends Preference> getAccountPreferences(
-            Map<String, Preference> preferencesToRemove) {
+            Set<String> preferencesToRemove) {
         String[] accountTypes = mAuthenticatorHelper.getEnabledAccountTypes();
         ArrayList<AccountPreference> accountPreferences =
                 new ArrayList<>(accountTypes.length);
@@ -186,34 +174,34 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
             if (!accountTypeHasAnyRequestedAuthorities(accountType)) {
                 continue;
             }
-            CharSequence label = mAuthenticatorHelper.getLabelForType(mContext, accountType);
+            CharSequence label = mAuthenticatorHelper.getLabelForType(getContext(), accountType);
             if (label == null) {
                 continue;
             }
 
-            Account[] accounts = AccountManager.get(mContext)
+            Account[] accounts = AccountManager.get(getContext())
                     .getAccountsByTypeAsUser(accountType, mUserInfo.getUserHandle());
-            Drawable icon = mAuthenticatorHelper.getDrawableForType(mContext, accountType);
+            Drawable icon = mAuthenticatorHelper.getDrawableForType(getContext(), accountType);
 
             // Add a preference row for each individual account
             for (Account account : accounts) {
-                AccountPreference preference =
-                        (AccountPreference) preferencesToRemove.remove(
-                                AccountPreference.buildKey(account));
-                if (preference != null) {
-                    accountPreferences.add(preference);
-                    continue;
-                }
-                accountPreferences.add(new AccountPreference(
-                        mContext, account, label, icon));
+                String key = AccountPreference.buildKey(account);
+                AccountPreference preference = (AccountPreference) mPreferences.getOrDefault(key,
+                        new AccountPreference(getContext(), account, label, icon));
+                preference.setOnPreferenceClickListener(
+                        (Preference pref) -> onAccountPreferenceClicked((AccountPreference) pref));
+
+                accountPreferences.add(preference);
+                preferencesToRemove.remove(key);
             }
-            mAuthenticatorHelper.preloadDrawableForType(mContext, accountType);
+            mAuthenticatorHelper.preloadDrawableForType(getContext(), accountType);
         }
 
         // If there are no accounts, return the "no account added" preference.
         if (accountPreferences.isEmpty()) {
             preferencesToRemove.remove(NO_ACCOUNT_PREF_KEY);
-            return Arrays.asList(createNoAccountsAddedPreference());
+            return Arrays.asList(mPreferences.getOrDefault(NO_ACCOUNT_PREF_KEY,
+                    createNoAccountsAddedPreference()));
         }
 
         Collections.sort(accountPreferences, Comparator.comparing(
@@ -224,7 +212,7 @@ public class AccountListPreferenceController extends NoSetupPreferenceController
     }
 
     private Preference createNoAccountsAddedPreference() {
-        Preference emptyPreference = new Preference(mContext);
+        Preference emptyPreference = new Preference(getContext());
         emptyPreference.setTitle(R.string.no_accounts_added);
         emptyPreference.setKey(NO_ACCOUNT_PREF_KEY);
         emptyPreference.setSelectable(false);

@@ -18,7 +18,9 @@ package com.android.car.settings.accounts;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
@@ -28,14 +30,14 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
@@ -54,20 +56,17 @@ import org.robolectric.shadow.api.Shadow;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowContentResolver.class,
         ShadowAccountManager.class})
 public class AccountListPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "test_key";
     private static final int USER_ID = 0;
     private static final String USER_NAME = "name";
     private static final int NOT_THIS_USER_ID = 1;
-
-    private PreferenceScreen mPreferenceScreen;
+    private PreferenceControllerTestHelper<AccountListPreferenceController> mHelper;
+    private AccountManager mAccountManager = AccountManager.get(application);
     private PreferenceCategory mPreferenceCategory;
     private AccountListPreferenceController mController;
-    @Mock
     private FragmentController mFragmentController;
+
     @Mock
     private CarUserManagerHelper mMockCarUserManagerHelper;
-
-    private AccountManager mAccountManager = AccountManager.get(application);
 
     @Before
     public void setUp() {
@@ -84,14 +83,12 @@ public class AccountListPreferenceControllerTest {
         addAuthenticator(/* type= */ "com.acct1", /* labelRes= */ R.string.account_type1_label);
         addAuthenticator(/* type= */ "com.acct2", /* labelRes= */ R.string.account_type2_label);
 
-        // Add the category for the preference controller
         mPreferenceCategory = new PreferenceCategory(application);
-        mPreferenceCategory.setKey(PREFERENCE_KEY);
-        mPreferenceScreen = new PreferenceManager(application).createPreferenceScreen(application);
-        mPreferenceScreen.addPreference(mPreferenceCategory);
-
-        mController = new AccountListPreferenceController(application, PREFERENCE_KEY,
-                mFragmentController);
+        mHelper = new PreferenceControllerTestHelper<>(application,
+                AccountListPreferenceController.class, mPreferenceCategory);
+        mHelper.markState(Lifecycle.State.CREATED);
+        mController = mHelper.getController();
+        mFragmentController = mHelper.getMockFragmentController();
     }
 
     @After
@@ -101,16 +98,14 @@ public class AccountListPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_preferenceCategoryTitleShouldBeSet() {
-        mController.displayPreference(mPreferenceScreen);
-
+    public void onCreate_preferenceCategoryTitleShouldBeSet() {
         String expectedTitle = application.getString(R.string.account_list_title, "name");
         assertThat(mPreferenceCategory.getTitle()).isEqualTo(expectedTitle);
     }
 
     @Test
-    public void displayPreference_hasNoAccounts_shouldDisplayNoAccountPref() {
-        mController.displayPreference(mPreferenceScreen);
+    public void refreshUi_hasNoAccounts_shouldDisplayNoAccountPref() {
+        mController.refreshUi();
 
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(1);
         Preference noAccountPref = mPreferenceCategory.getPreference(0);
@@ -120,11 +115,11 @@ public class AccountListPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_hasAccounts_shouldDisplayAccounts() {
+    public void refreshUi_hasAccounts_shouldDisplayAccounts() {
         addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
         addAccount(/* name= */ "Account2", /* type= */ "com.acct2");
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(2);
 
@@ -138,14 +133,14 @@ public class AccountListPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_hasUnauthenticatedAccount_shouldNotDisplayAccount() {
+    public void refreshUi_hasUnauthenticatedAccount_shouldNotDisplayAccount() {
         addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
         addAccount(/* name= */ "Account2", /* type= */ "com.acct2");
         // There is not authenticator for account type "com.acct3" so this account should not
         // appear in the list of displayed accounts.
         addAccount(/* name= */ "Account3", /* type= */ "com.acct3");
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(2);
 
@@ -163,7 +158,7 @@ public class AccountListPreferenceControllerTest {
         addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
         addAccount(/* name= */ "Account2", /* type= */ "com.acct2");
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(2);
 
         getShadowAccountManager().removeAllAccounts();
@@ -182,7 +177,7 @@ public class AccountListPreferenceControllerTest {
         addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
         addAccount(/* name= */ "Account2", /* type= */ "com.acct2");
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(2);
 
         getShadowAccountManager().removeAllAccounts();
@@ -198,7 +193,7 @@ public class AccountListPreferenceControllerTest {
         addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
         addAccount(/* name= */ "Account2", /* type= */ "com.acct2");
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mPreferenceCategory.getPreferenceCount()).isEqualTo(2);
 
         getShadowAccountManager().removeAllAccounts();
@@ -210,6 +205,17 @@ public class AccountListPreferenceControllerTest {
         Preference firstPref = mPreferenceCategory.getPreference(0);
         assertThat(firstPref.getTitle()).isEqualTo("Account3");
         assertThat(firstPref.getSummary()).isEqualTo("Type 1");
+    }
+
+    @Test
+    public void onAccountPreferenceClicked_shouldLaunchAccountDetailsFragment() {
+        addAccount(/* name= */ "Account1", /* type= */ "com.acct1");
+        mController.refreshUi();
+
+        Preference firstPref = mPreferenceCategory.getPreference(0);
+        firstPref.performClick();
+
+        verify(mFragmentController).launchFragment(any(AccountDetailsFragment.class));
     }
 
     private void addAccount(String name, String type) {
