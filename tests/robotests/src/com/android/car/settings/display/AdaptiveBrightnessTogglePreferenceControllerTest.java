@@ -18,17 +18,15 @@ package com.android.car.settings.display;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-import static org.testng.Assert.assertThrows;
-
 import android.content.Context;
 import android.provider.Settings;
 
-import androidx.preference.Preference;
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
+import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,49 +36,44 @@ import org.robolectric.RuntimeEnvironment;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class AdaptiveBrightnessTogglePreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "adaptive_brightness_switch";
     private Context mContext;
     private AdaptiveBrightnessTogglePreferenceController mController;
-    private SwitchPreference mSwitchPreference;
+    private TwoStatePreference mTwoStatePreference;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mController = new AdaptiveBrightnessTogglePreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mSwitchPreference = new SwitchPreference(mContext);
-        mSwitchPreference.setKey(mController.getPreferenceKey());
+        mTwoStatePreference = new SwitchPreference(mContext);
+        PreferenceControllerTestHelper<AdaptiveBrightnessTogglePreferenceController>
+                preferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                AdaptiveBrightnessTogglePreferenceController.class, mTwoStatePreference);
+        mController = preferenceControllerHelper.getController();
+        preferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
-    public void testUpdateState_manualMode_isNotChecked() {
+    public void testRefreshUi_manualMode_isNotChecked() {
         Settings.System.putInt(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
 
-        mController.updateState(mSwitchPreference);
-        assertThat(mSwitchPreference.isChecked()).isFalse();
+        mController.refreshUi();
+        assertThat(mTwoStatePreference.isChecked()).isFalse();
     }
 
     @Test
-    public void testUpdateState_automaticMode_isChecked() {
+    public void testRefreshUi_automaticMode_isChecked() {
         Settings.System.putInt(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
 
-        mController.updateState(mSwitchPreference);
-        assertThat(mSwitchPreference.isChecked()).isTrue();
+        mController.refreshUi();
+        assertThat(mTwoStatePreference.isChecked()).isTrue();
     }
 
     @Test
-    public void testUpdateState_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.updateState(new Preference(mContext)));
-    }
-
-    @Test
-    public void testOnPreferenceChanged_setFalse() {
-        mController.onPreferenceChange(mSwitchPreference, false);
+    public void testHandlePreferenceChanged_setFalse() {
+        mTwoStatePreference.callChangeListener(false);
         int brightnessMode = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
@@ -88,17 +81,11 @@ public class AdaptiveBrightnessTogglePreferenceControllerTest {
     }
 
     @Test
-    public void testOnPreferenceChanged_setTrue() {
-        mController.onPreferenceChange(mSwitchPreference, true);
+    public void testHandlePreferenceChanged_setTrue() {
+        mTwoStatePreference.callChangeListener(true);
         int brightnessMode = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS_MODE,
                 Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
         assertThat(brightnessMode).isEqualTo(Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
-    }
-
-    @Test
-    public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.onPreferenceChange(new Preference(mContext), true));
     }
 }

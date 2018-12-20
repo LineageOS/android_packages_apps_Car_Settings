@@ -18,18 +18,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:orderingFromXml="false"
     android:title="@string/display_settings">
     <SwitchPreference
-        android:defaultValue="true"
         android:key="@string/pk_adaptive_brightness_switch"
-        android:order="0"
         android:summary="@string/auto_brightness_summary"
         android:title="@string/auto_brightness_title"
         settings:controller="com.android.car.settings.display.AdaptiveBrightnessTogglePreferenceController"/>
     <com.android.car.settings.common.SeekBarPreference
         android:key="@string/pk_brightness_level"
-        android:order="100"
         android:title="@string/brightness"
         settings:controller="com.android.car.settings.display.BrightnessLevelPreferenceController"
         settings:showSeekBarValue="false"/>
