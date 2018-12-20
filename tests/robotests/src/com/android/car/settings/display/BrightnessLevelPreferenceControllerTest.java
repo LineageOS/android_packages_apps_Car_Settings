@@ -21,20 +21,17 @@ import static com.android.settingslib.display.BrightnessUtils.convertLinearToGam
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.testng.Assert.assertThrows;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.PowerManager;
 import android.provider.Settings;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.SeekBarPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowPowerManager;
@@ -52,11 +49,9 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowPowerManager.class})
 public class BrightnessLevelPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "brightness_level";
     private static final int CURRENT_USER = 10;
     private Context mContext;
     private BrightnessLevelPreferenceController mController;
-    private PreferenceScreen mPreferenceScreen;
     private SeekBarPreference mSeekBarPreference;
     private int mMin;
     private int mMax;
@@ -83,11 +78,12 @@ public class BrightnessLevelPreferenceControllerTest {
         when(mPowerManager.getMinimumScreenBrightnessSetting()).thenReturn(mMin);
         when(mPowerManager.getMaximumScreenBrightnessSetting()).thenReturn(mMax);
 
-        mController = new BrightnessLevelPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mSeekBarPreference = new SeekBarPreference(mContext);
-        mSeekBarPreference.setKey(mController.getPreferenceKey());
+        PreferenceControllerTestHelper<BrightnessLevelPreferenceController>
+                preferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                BrightnessLevelPreferenceController.class, mSeekBarPreference);
+        mController = preferenceControllerHelper.getController();
+        preferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @After
@@ -97,60 +93,46 @@ public class BrightnessLevelPreferenceControllerTest {
     }
 
     @Test
-    public void testDisplayPreferences_maxSet() {
-        mPreferenceScreen.addPreference(mSeekBarPreference);
-        mController.displayPreference(mPreferenceScreen);
+    public void testRefreshUi_maxSet() {
+        mController.refreshUi();
         assertThat(mSeekBarPreference.getMax()).isEqualTo(GAMMA_SPACE_MAX);
     }
 
     @Test
-    public void testDisplayPreferences_minValue() {
-        mPreferenceScreen.addPreference(mSeekBarPreference);
+    public void testRefreshUi_minValue() {
         Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, mMin,
                 mCarUserManagerHelper.getCurrentProcessUserId());
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mSeekBarPreference.getValue()).isEqualTo(0);
     }
 
     @Test
-    public void testDisplayPreferences_maxValue() {
-        mPreferenceScreen.addPreference(mSeekBarPreference);
+    public void testRefreshUi_maxValue() {
         Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, mMax,
                 mCarUserManagerHelper.getCurrentProcessUserId());
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mSeekBarPreference.getValue()).isEqualTo(GAMMA_SPACE_MAX);
     }
 
     @Test
-    public void testDisplayPreferences_midValue() {
-        mPreferenceScreen.addPreference(mSeekBarPreference);
+    public void testRefreshUi_midValue() {
         Settings.System.putIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS, mMid,
                 mCarUserManagerHelper.getCurrentProcessUserId());
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
         assertThat(mSeekBarPreference.getValue()).isEqualTo(
                 convertLinearToGamma(mMid,
                         mMin, mMax));
     }
 
     @Test
-    public void testDisplayPreferences_wrongPreferenceType() {
-        androidx.preference.SeekBarPreference preference =
-                new androidx.preference.SeekBarPreference(mContext);
-        preference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(preference);
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.displayPreference(mPreferenceScreen));
-    }
-
-    @Test
-    public void testOnPreferenceChange_minValue() throws Settings.SettingNotFoundException {
-        mController.onPreferenceChange(mSeekBarPreference, 0);
+    public void testHandlePreferenceChanged_minValue() throws Settings.SettingNotFoundException {
+        mSeekBarPreference.callChangeListener(0);
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS,
                 mCarUserManagerHelper.getCurrentProcessUserId());
@@ -158,8 +140,8 @@ public class BrightnessLevelPreferenceControllerTest {
     }
 
     @Test
-    public void testOnPreferenceChange_maxValue() throws Settings.SettingNotFoundException {
-        mController.onPreferenceChange(mSeekBarPreference, GAMMA_SPACE_MAX);
+    public void testHandlePreferenceChanged_maxValue() throws Settings.SettingNotFoundException {
+        mSeekBarPreference.callChangeListener(GAMMA_SPACE_MAX);
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS,
                 mCarUserManagerHelper.getCurrentProcessUserId());
@@ -167,18 +149,11 @@ public class BrightnessLevelPreferenceControllerTest {
     }
 
     @Test
-    public void testOnPreferenceChange_midValue() throws Settings.SettingNotFoundException {
-        mController.onPreferenceChange(mSeekBarPreference, convertLinearToGamma(mMid, mMin, mMax));
+    public void testHandlePreferenceChanged_midValue() throws Settings.SettingNotFoundException {
+        mSeekBarPreference.callChangeListener(convertLinearToGamma(mMid, mMin, mMax));
         int currentSettingsVal = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.SCREEN_BRIGHTNESS,
                 mCarUserManagerHelper.getCurrentProcessUserId());
         assertThat(currentSettingsVal).isEqualTo(mMid);
-    }
-
-    @Test
-    public void testOnPreferenceChange_wrongPreferenceType() {
-        assertThrows(IllegalArgumentException.class,
-                () -> mController.onPreferenceChange(
-                        new androidx.preference.SeekBarPreference(mContext), true));
     }
 }

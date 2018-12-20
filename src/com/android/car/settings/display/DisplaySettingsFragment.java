@@ -18,12 +18,12 @@ package com.android.car.settings.display;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Preference fragment to host Display related preferences.
  */
-public class DisplaySettingsFragment extends BasePreferenceFragment {
+public class DisplaySettingsFragment extends SettingsFragment {
 
     @Override
     @XmlRes
