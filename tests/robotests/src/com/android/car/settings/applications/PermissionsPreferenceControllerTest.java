@@ -30,14 +30,17 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.testutils.ShadowRuntimePermissionPresenter;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowRuntimePermissionPresenter.class})
 public class PermissionsPreferenceControllerTest {
 
     private static final String PACKAGE_NAME = "Test Package Name";
