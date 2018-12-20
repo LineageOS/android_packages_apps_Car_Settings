@@ -25,6 +25,7 @@ import android.content.SyncStatusInfo;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -109,6 +110,7 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
         sSyncStatus.put(authority, status);
     }
 
+    @Resetter
     public static void reset() {
         org.robolectric.shadows.ShadowContentResolver.reset();
         sSyncable.clear();
