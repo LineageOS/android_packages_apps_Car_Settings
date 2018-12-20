@@ -18,6 +18,7 @@ package com.android.car.settings.bluetooth;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
@@ -25,7 +26,6 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
-import androidx.appcompat.app.AlertDialog;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
