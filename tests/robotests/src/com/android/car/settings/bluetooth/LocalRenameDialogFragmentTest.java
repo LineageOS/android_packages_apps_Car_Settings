@@ -21,12 +21,11 @@ import static android.bluetooth.BluetoothAdapter.STATE_ON;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.widget.EditText;
-
-import androidx.appcompat.app.AlertDialog;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
