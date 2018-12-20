@@ -19,29 +19,45 @@ package com.android.car.settings.wifi;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
-import androidx.preference.Preference;
-
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.MasterSwitchPreference;
 import com.android.car.settings.common.PreferenceController;
 
 /**
  * Controller which determines if the top level entry into Wi-Fi settings should be displayed
  * based on device capabilities.
  */
-public class WifiEntryPreferenceController extends PreferenceController<Preference> {
+public class WifiEntryPreferenceController extends PreferenceController<MasterSwitchPreference> {
+
+    private CarWifiManager mCarWifiManager;
 
     public WifiEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCarWifiManager = new CarWifiManager(context);
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<MasterSwitchPreference> getPreferenceType() {
+        return MasterSwitchPreference.class;
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    protected void onCreateInternal() {
+        getPreference().setSwitchToggleListener((preference, isChecked) -> {
+            if (isChecked != mCarWifiManager.isWifiEnabled()) {
+                mCarWifiManager.setWifiEnabled(isChecked);
+            }
+        });
+    }
+
+    @Override
+    protected int getAvailabilityStatus() {
         return WifiUtil.isWifiAvailable(getContext()) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    }
+
+    @Override
+    protected void updateState(MasterSwitchPreference preference) {
+        preference.setSwitchChecked(mCarWifiManager.isWifiEnabled());
     }
 }
