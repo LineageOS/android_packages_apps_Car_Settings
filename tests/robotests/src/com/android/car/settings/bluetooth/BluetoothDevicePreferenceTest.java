@@ -58,6 +58,11 @@ public class BluetoothDevicePreferenceTest {
     }
 
     @Test
+    public void actionIsHiddenByDefault() {
+        assertThat(mPreference.isActionShown()).isFalse();
+    }
+
+    @Test
     public void onAttached_registersDeviceCallback() {
         mPreference.onAttached();
 
