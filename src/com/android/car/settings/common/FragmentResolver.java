@@ -40,7 +40,10 @@ public class FragmentResolver {
      * Returns a {@link Fragment} that can handle the given action, returns {@code null} if no
      * {@link Fragment} that can handle this action can be found.
      */
-    static @Nullable Fragment getFragmentForAction(String action) {
+    static @Nullable Fragment getFragmentForAction(@Nullable String action) {
+        if (action == null) {
+            return null;
+        }
         switch (action) {
             case Settings.ACTION_LOCATION_SOURCE_SETTINGS:
                 return new LocationSettingsFragment();
