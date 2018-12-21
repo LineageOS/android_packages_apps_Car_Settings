@@ -21,19 +21,15 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
-
-import com.android.car.settings.R;
 
 /**
  * {@link Preference} with a secondary clickable button on the side.
  * {@link #setLayoutResource(int)} or the {@code widgetLayout} resource may be used to specify
- * the icon to display in the button. The button is shown by default.
- * {@link #showButton(boolean)} may be used to manually set the visibility of the button.
+ * the icon to display in the button.
  *
  * <p>Note: the button is enabled even when {@link #isEnabled()} is {@code false}.
  */
-public class ButtonPreference extends Preference {
+public class ButtonPreference extends TwoActionPreference {
 
     /**
      * Interface definition for a callback to be invoked when the button is clicked.
@@ -47,41 +43,23 @@ public class ButtonPreference extends Preference {
         void onButtonClick(ButtonPreference preference);
     }
 
-    private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (mOnButtonClickListener != null) {
-                mOnButtonClickListener.onButtonClick(ButtonPreference.this);
-            }
-        }
-    };
-
     private OnButtonClickListener mOnButtonClickListener;
-    private boolean mIsButtonShown = true;
 
-    public ButtonPreference(Context context, AttributeSet attrs,
-            int defStyleAttr, int defStyleRes) {
+    public ButtonPreference(Context context, AttributeSet attrs, int defStyleAttr,
+            int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
     }
 
     public ButtonPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
     }
 
     public ButtonPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
     }
 
     public ButtonPreference(Context context) {
         super(context);
-        init();
-    }
-
-    private void init() {
-        setLayoutResource(R.layout.button_preference);
     }
 
     /**
@@ -91,34 +69,17 @@ public class ButtonPreference extends Preference {
         mOnButtonClickListener = listener;
     }
 
-    /**
-     * Sets whether the secondary button is visible in the preference.
-     *
-     * @param isShown {@code true} if the button should be shown.
-     */
-    public void showButton(boolean isShown) {
-        mIsButtonShown = isShown;
-        notifyChanged();
-    }
-
     /** Virtually clicks the button contained inside this preference. */
     public void performButtonClick() {
-        if (mIsButtonShown && mOnButtonClickListener != null) {
-            mOnButtonClickListener.onButtonClick(this);
+        if (isActionShown()) {
+            if (mOnButtonClickListener != null) {
+                mOnButtonClickListener.onButtonClick(this);
+            }
         }
     }
 
     @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-        View button = holder.findViewById(R.id.button_preference_button);
-        if (mIsButtonShown) {
-            button.setVisibility(View.VISIBLE);
-            button.setOnClickListener(mOnClickListener);
-            button.setEnabled(true);  // Available even if the preference is disabled.
-        } else {
-            button.setVisibility(View.GONE);
-            button.setOnClickListener(null);
-        }
+    protected void onBindWidgetFrame(View widgetFrame) {
+        widgetFrame.setOnClickListener(v -> performButtonClick());
     }
 }

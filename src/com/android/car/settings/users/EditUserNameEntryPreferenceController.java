@@ -51,7 +51,7 @@ public class EditUserNameEntryPreferenceController extends
                 getUserInfo()));
 
         if (!getCarUserManagerHelper().isCurrentProcessUser(getUserInfo())) {
-            preference.showButton(false);
+            preference.showAction(false);
         }
         preference.setSummary(getSummary());
     }
