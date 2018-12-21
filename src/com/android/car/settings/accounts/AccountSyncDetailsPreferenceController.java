@@ -17,34 +17,34 @@
 package com.android.car.settings.accounts;
 
 import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.app.Activity;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentSender;
 import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.SyncStatusObserver;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
+import android.os.Bundle;
 import android.os.UserHandle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
-import android.view.View;
-import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.PreferenceViewHolder;
-import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 import com.android.settingslib.utils.ThreadUtils;
 
@@ -62,8 +62,9 @@ import java.util.Set;
  *
  * <p>Largely derived from {@link com.android.settings.accounts.AccountSyncSettings}.
  */
-public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceController implements
-        AuthenticatorHelper.OnAccountsUpdateListener, LifecycleObserver {
+public class AccountSyncDetailsPreferenceController extends
+        PreferenceController<PreferenceGroup> implements
+        AuthenticatorHelper.OnAccountsUpdateListener {
     private static final Logger LOG = new Logger(AccountSyncDetailsPreferenceController.class);
     /**
      * Preferences are keyed by authority so that existing SyncPreferences can be reused on account
@@ -74,7 +75,6 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
     private boolean mIsStarted = false;
     private Account mAccount;
     private UserHandle mUserHandle;
-    private PreferenceGroup mSyncGroup;
     private AuthenticatorHelper mAuthenticatorHelper;
     private Object mStatusChangeListenerHandle;
     private SyncStatusObserver mSyncStatusObserver =
@@ -86,10 +86,9 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
                 }
             });
 
-
     public AccountSyncDetailsPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     /** Sets the account that the sync preferences are being shown for. */
@@ -102,14 +101,9 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
         mUserHandle = userHandle;
     }
 
-
-    /**
-     * Checks if the controller was initialized properly and initializes the authenticator helper.
-     */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
-        checkInitialized();
-        mAuthenticatorHelper = new AuthenticatorHelper(mContext, mUserHandle, /* listener= */ this);
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     /**
@@ -118,7 +112,8 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      *
      * @throws IllegalStateException if the account or user handle is {@code null}
      */
-    private void checkInitialized() {
+    @Override
+    protected void checkInitialized() {
         LOG.v("checkInitialized");
         if (mAccount == null) {
             throw new IllegalStateException(
@@ -133,10 +128,19 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
     }
 
     /**
+     * Initializes the authenticator helper.
+     */
+    @Override
+    protected void onCreateInternal() {
+        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserHandle, /* listener= */
+                this);
+    }
+
+    /**
      * Registers the account update and sync status change callbacks.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
+    @Override
+    protected void onStartInternal() {
         mIsStarted = true;
         mAuthenticatorHelper.listenToAccountUpdates();
 
@@ -149,8 +153,8 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
     /**
      * Unregisters the account update and sync status change callbacks.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
+    @Override
+    protected void onStopInternal() {
         mIsStarted = false;
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         if (mStatusChangeListenerHandle != null) {
@@ -167,13 +171,121 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
+    public void updateState(PreferenceGroup preferenceGroup) {
         // Add preferences for each account if the controller should be available
-        if (isAvailable()) {
-            mSyncGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
-            forceUpdateSyncCategory();
+        forceUpdateSyncCategory();
+    }
+
+    /**
+     * Handles toggling/syncing when a sync preference is clicked on.
+     *
+     * <p>Largely derived from
+     * {@link com.android.settings.accounts.AccountSyncSettings#onPreferenceTreeClick}.
+     */
+    private boolean onSyncPreferenceClicked(SyncPreference preference) {
+        String authority = preference.getKey();
+        String packageName = preference.getPackageName();
+        int uid = preference.getUid();
+        if (preference.isOneTimeSyncMode()) {
+            // If the sync adapter doesn't have access to the account we either
+            // request access by starting an activity if possible or kick off the
+            // sync which will end up posting an access request notification.
+            if (requestAccountAccessIfNeeded(packageName, uid)) {
+                return true;
+            }
+            requestSync(authority);
+        } else {
+            boolean syncOn = preference.isChecked();
+            int userId = mUserHandle.getIdentifier();
+            boolean oldSyncState = ContentResolver.getSyncAutomaticallyAsUser(mAccount,
+                    authority, userId);
+            if (syncOn != oldSyncState) {
+                // Toggling this switch triggers sync but we may need a user approval.
+                // If the sync adapter doesn't have access to the account we either
+                // request access by starting an activity if possible or kick off the
+                // sync which will end up posting an access request notification.
+                if (syncOn && requestAccountAccessIfNeeded(packageName, uid)) {
+                    return true;
+                }
+                // if we're enabling sync, this will request a sync as well
+                ContentResolver.setSyncAutomaticallyAsUser(mAccount, authority, syncOn, userId);
+                // if the master sync switch is off, the request above will
+                // get dropped.  when the user clicks on this toggle,
+                // we want to force the sync, however.
+                if (!ContentResolver.getMasterSyncAutomaticallyAsUser(userId) || !syncOn) {
+                    if (syncOn) {
+                        requestSync(authority);
+                    } else {
+                        cancelSync(authority);
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Requests a sync.
+     *
+     * <p>Derived from
+     * {@link com.android.settings.accounts.AccountSyncSettings#requestOrCancelSync}.
+     */
+    private void requestSync(String authority) {
+        Bundle extras = new Bundle();
+        extras.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
+        ContentResolver.requestSyncAsUser(mAccount, authority, mUserHandle.getIdentifier(),
+                extras);
+    }
+
+    /**
+     * Cancels a sync.
+     *
+     * <p>Derived from
+     * {@link com.android.settings.accounts.AccountSyncSettings#requestOrCancelSync}.
+     */
+    private void cancelSync(String authority) {
+        ContentResolver.cancelSyncAsUser(mAccount, authority, mUserHandle.getIdentifier());
+    }
+
+    /**
+     * Requests account access if needed.
+     *
+     * <p>Copied from
+     * {@link com.android.settings.accounts.AccountSyncSettings#requestAccountAccessIfNeeded}.
+     */
+    private boolean requestAccountAccessIfNeeded(String packageName, int uid) {
+        if (packageName == null) {
+            return false;
+        }
+
+        AccountManager accountManager = getContext().getSystemService(AccountManager.class);
+        if (!accountManager.hasAccountAccess(mAccount, packageName, mUserHandle)) {
+            IntentSender intent = accountManager.createRequestAccountAccessIntentSenderAsUser(
+                    mAccount, packageName, mUserHandle);
+            if (intent != null) {
+                try {
+                    getFragmentController().startIntentSenderForResult(intent,
+                            uid, /* fillInIntent= */ null, /* flagsMask= */0,
+                            /* flagsValues= */0, /* options= */null,
+                            this::onAccountRequestApproved);
+                    return true;
+                } catch (IntentSender.SendIntentException e) {
+                    LOG.e("Error requesting account access", e);
+                }
+            }
+        }
+        return false;
+    }
+
+    /** Handles a sync adapter refresh when an account request was approved. */
+    public void onAccountRequestApproved(int uid, int resultCode, @Nullable Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            for (SyncPreference pref : mSyncPreferences.values()) {
+                if (pref.getUid() == uid) {
+                    onSyncPreferenceClicked(pref);
+                    return;
+                }
+            }
         }
     }
 
@@ -193,11 +305,11 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
             SyncPreference pref = preferences.get(i);
             pref.setOrder(i);
             mSyncPreferences.put(pref.getKey(), pref);
-            mSyncGroup.addPreference(pref);
+            getPreference().addPreference(pref);
         }
 
         for (String key : preferencesToRemove) {
-            mSyncGroup.removePreference(mSyncPreferences.get(key));
+            getPreference().removePreference(mSyncPreferences.get(key));
             mSyncPreferences.remove(key);
         }
     }
@@ -214,7 +326,7 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      */
     private List<SyncPreference> getSyncPreferences(Set<String> preferencesToRemove) {
         int userId = mUserHandle.getIdentifier();
-        PackageManager packageManager = mContext.getPackageManager();
+        PackageManager packageManager = getContext().getPackageManager();
         SyncAdapterType[] syncAdapters = ContentResolver.getSyncAdapterTypesAsUser(
                 mUserHandle.getIdentifier());
         List<SyncInfo> currentSyncs = ContentResolver.getCurrentSyncsAsUser(userId);
@@ -267,9 +379,12 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
             // the sync adapter already exists, update its state. Otherwise, create a new
             // preference.
             SyncPreference pref = mSyncPreferences.getOrDefault(authority,
-                    new SyncPreference(mContext, authority));
+                    new SyncPreference(getContext(), authority));
             pref.setUid(uid);
+            pref.setPackageName(syncAdapter.getPackageName());
             pref.setTitle(title);
+            pref.setOnPreferenceClickListener(
+                    (Preference p) -> onSyncPreferenceClicked((SyncPreference) p));
 
             // Keep track of preferences that need to be added and removed
             syncPreferences.add(pref);
@@ -311,7 +426,7 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
      * @return the title if available, and an empty CharSequence otherwise
      */
     private CharSequence getTitle(String authority) {
-        PackageManager packageManager = mContext.getPackageManager();
+        PackageManager packageManager = getContext().getPackageManager();
         ProviderInfo providerInfo = packageManager.resolveContentProviderAsUser(
                 authority, /* flags= */ 0, mUserHandle.getIdentifier());
         if (providerInfo == null) {
@@ -325,14 +440,14 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
         long successEndTime = (status == null) ? 0 : status.lastSuccessTime;
         // Set the summary based on the current syncing state
         if (!syncEnabled) {
-            return mContext.getString(R.string.sync_disabled);
+            return getContext().getString(R.string.sync_disabled);
         } else if (activelySyncing) {
-            return mContext.getString(R.string.sync_in_progress);
+            return getContext().getString(R.string.sync_in_progress);
         } else if (successEndTime != 0) {
             Date date = new Date();
             date.setTime(successEndTime);
             String timeString = formatSyncDate(date);
-            return mContext.getString(R.string.last_synced, timeString);
+            return getContext().getString(R.string.last_synced, timeString);
         }
         return "";
     }
@@ -366,94 +481,7 @@ public class AccountSyncDetailsPreferenceController extends NoSetupPreferenceCon
 
     @VisibleForTesting
     String formatSyncDate(Date date) {
-        return DateFormat.getDateFormat(mContext).format(date) + " " + DateFormat.getTimeFormat(
-                mContext).format(date);
-    }
-
-    /**
-     * A preference that represents the state of a sync adapter.
-     *
-     * <p>Largely derived from {@link com.android.settings.accounts.SyncStateSwitchPreference}.
-     */
-    private static class SyncPreference extends SwitchPreference {
-        // TODO: Use uid to launch permission check for syncing
-        private int mUid;
-        private SYNC_STATE mSyncState = SYNC_STATE.NONE;
-        /**
-         * A mode for this preference where clicking does a one-time sync instead of
-         * toggling whether the provider will do autosync.
-         */
-        private boolean mOneTimeSyncMode = false;
-
-        private SyncPreference(Context context, String authority) {
-            super(context);
-            setKey(authority);
-            setPersistent(false);
-            updateIcon();
-
-            /* Disabled for now. TODO: Enable toggling */
-            setEnabled(false);
-        }
-
-        @Override
-        public void onBindViewHolder(PreferenceViewHolder view) {
-            super.onBindViewHolder(view);
-
-            // TODO: handle animation of syncing icon
-
-            View switchView = view.findViewById(com.android.internal.R.id.switch_widget);
-            if (mOneTimeSyncMode) {
-                switchView.setVisibility(View.GONE);
-
-                /*
-                 * Override the summary. Fill in the %1$s with the existing summary
-                 * (what ends up happening is the old summary is shown on the next
-                 * line).
-                 */
-                TextView summary = (TextView) view.findViewById(android.R.id.summary);
-                summary.setText(getContext().getString(R.string.sync_one_time_sync, getSummary()));
-            } else {
-                switchView.setVisibility(View.VISIBLE);
-            }
-        }
-
-        public void setUid(int uid) {
-            mUid = uid;
-        }
-
-        /** Updates the preference icon based on the current syncing state. */
-        private void updateIcon() {
-            switch (mSyncState) {
-                case ACTIVE:
-                case PENDING:
-                    setIcon(R.drawable.ic_list_sync_anim);
-                    break;
-                case FAILED:
-                    setIcon(R.drawable.ic_sync_problem);
-                    break;
-                default:
-                    setIcon(null);
-                    setIconSpaceReserved(true);
-                    break;
-            }
-        }
-
-        public void setSyncState(SYNC_STATE state) {
-            mSyncState = state;
-            updateIcon();
-        }
-
-        public void setOneTimeSyncMode(boolean oneTimeSyncMode) {
-            mOneTimeSyncMode = oneTimeSyncMode;
-            // Force a refresh so that onBindViewHolder is called
-            notifyChanged();
-        }
-
-        private enum SYNC_STATE {
-            ACTIVE,
-            PENDING,
-            FAILED,
-            NONE
-        }
+        return DateFormat.getDateFormat(getContext()).format(date) + " " + DateFormat.getTimeFormat(
+                getContext()).format(date);
     }
 }

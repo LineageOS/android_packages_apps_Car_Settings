@@ -32,6 +32,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.VisibleForTesting;
@@ -40,9 +41,9 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.io.IOException;
@@ -51,7 +52,7 @@ import java.util.Arrays;
 /**
  * Shows account details, and delete account option.
  */
-public class AccountDetailsFragment extends BasePreferenceFragment implements
+public class AccountDetailsFragment extends SettingsFragment implements
         AuthenticatorHelper.OnAccountsUpdateListener {
     public static final String EXTRA_ACCOUNT = "extra_account";
     public static final String EXTRA_ACCOUNT_LABEL = "extra_account_label";
@@ -97,9 +98,6 @@ public class AccountDetailsFragment extends BasePreferenceFragment implements
         mAccount = getArguments().getParcelable(EXTRA_ACCOUNT);
         mUserInfo = getArguments().getParcelable(EXTRA_USER_INFO);
 
-        use(AccountDetailsTitlePreferenceController.class, R.string.pk_account_details_title)
-                .setTitle(getArguments().getCharSequence(EXTRA_ACCOUNT_LABEL));
-
         use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
                 .setAccount(mAccount);
         use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
@@ -114,6 +112,10 @@ public class AccountDetailsFragment extends BasePreferenceFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        // Set the fragment's title
+        TextView titleView = requireActivity().findViewById(R.id.title);
+        titleView.setText(getArguments().getCharSequence(EXTRA_ACCOUNT_LABEL));
 
         // Enable the remove account button if the user is allowed to modify accounts.
         Button removeAccountButton = requireActivity().findViewById(R.id.action_button1);
@@ -144,7 +146,7 @@ public class AccountDetailsFragment extends BasePreferenceFragment implements
     public void onAccountsUpdate(UserHandle userHandle) {
         if (!accountExists()) {
             // The account was deleted. Pop back.
-            getFragmentController().goBack();
+            goBack();
         }
     }
 

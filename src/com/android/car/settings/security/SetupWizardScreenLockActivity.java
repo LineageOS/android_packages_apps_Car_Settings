@@ -20,6 +20,7 @@ import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.text.TextUtils;
 
@@ -110,6 +111,15 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
     @Override
     public void startActivityForResult(Intent intent, int requestCode,
             ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
+    }
+
+    @Override
+    public void startIntentSenderForResult(IntentSender intent, int requestCode,
+            @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
+            ActivityResultCallback callback)
+            throws IntentSender.SendIntentException {
         throw new UnsupportedOperationException(
                 "Unimplemented for activities that implement FragmentController");
     }

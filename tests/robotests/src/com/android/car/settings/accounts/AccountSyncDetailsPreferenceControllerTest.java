@@ -19,28 +19,32 @@ package com.android.car.settings.accounts;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
+import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.LogicalPreferenceGroup;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 
@@ -48,6 +52,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
@@ -61,10 +66,9 @@ import java.util.List;
  * Unit test for {@link AccountSyncDetailsPreferenceController}.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowContentResolver.class, ShadowApplicationPackageManager.class})
+@Config(shadows = {ShadowContentResolver.class, ShadowApplicationPackageManager.class,
+        ShadowAccountManager.class})
 public class AccountSyncDetailsPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "preference_key";
-
     private static final int SYNCABLE = 1;
     private static final int NOT_SYNCABLE = 0;
 
@@ -77,20 +81,29 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
     private final Account mAccount = new Account("acct1", ACCOUNT_TYPE);
     private final UserHandle mUserHandle = new UserHandle(USER_ID);
-
+    @Mock
+    ShadowContentResolver.SyncListener mMockSyncListener;
+    private Context mContext;
     private AccountSyncDetailsPreferenceController mController;
-    private PreferenceScreen mPreferenceScreen;
+    private LogicalPreferenceGroup mPreferenceGroup;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mPreferenceScreen = new PreferenceManager(application).createPreferenceScreen(application);
-        mPreferenceScreen.setKey(PREFERENCE_KEY);
+        mContext = application;
+        ShadowContentResolver.setSyncListener(mMockSyncListener);
 
-        mController = new AccountSyncDetailsPreferenceController(application, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        PreferenceControllerTestHelper<AccountSyncDetailsPreferenceController> helper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        AccountSyncDetailsPreferenceController.class);
+        mController = helper.getController();
         mController.setAccount(mAccount);
         mController.setUserHandle(mUserHandle);
+
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        helper.setPreference(mPreferenceGroup);
+
+        helper.markState(Lifecycle.State.STARTED);
     }
 
     @After
@@ -99,33 +112,33 @@ public class AccountSyncDetailsPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_syncAdapterDoesNotHaveSameAccountType_shouldNotBeShown() {
+    public void refreshUi_syncAdapterDoesNotHaveSameAccountType_shouldNotBeShown() {
         // Adds a sync adapter type that is visible but does not have the right account type.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 DIFFERENT_ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void displayPreference_syncAdapterIsNotVisible_shouldNotBeShown() {
+    public void refreshUi_syncAdapterIsNotVisible_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type but is not visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 ACCOUNT_TYPE, /* userVisible */ false, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void displayPreference_syncAdapterIsNotSyncable_shouldNotBeShown() {
+    public void refreshUi_syncAdapterIsNotSyncable_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
@@ -134,13 +147,13 @@ public class AccountSyncDetailsPreferenceControllerTest {
         // Sets that the sync adapter to not syncable.
         ShadowContentResolver.setIsSyncable(mAccount, AUTHORITY, /* syncable= */ NOT_SYNCABLE);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void displayPreference_syncAdapterDoesNotHaveProviderInfo_shouldNotBeShown() {
+    public void refreshUi_syncAdapterDoesNotHaveProviderInfo_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
@@ -151,13 +164,13 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
         // However, no provider info is set for the sync adapter, so it shouldn't be visible.
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void displayPreference_providerInfoDoesNotHaveLabel_shouldNotBeShown() {
+    public void refreshUi_providerInfoDoesNotHaveLabel_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
@@ -176,13 +189,13 @@ public class AccountSyncDetailsPreferenceControllerTest {
         packageInfo.providers = providers;
         getShadowApplicationManager().addPackage(packageInfo);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
-    public void displayPreference_providerLabelShouldBeSet() {
+    public void refreshUi_providerLabelShouldBeSet() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
                 ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
@@ -201,74 +214,74 @@ public class AccountSyncDetailsPreferenceControllerTest {
         packageInfo.providers = providers;
         getShadowApplicationManager().addPackage(packageInfo);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
         assertThat(pref.getTitle()).isEqualTo("label");
     }
 
     @Test
-    public void displayPreference_masterSyncOff_syncDisabled_shouldNotBeChecked() {
+    public void refreshUi_masterSyncOff_syncDisabled_shouldNotBeChecked() {
         setUpVisibleSyncAdapter();
         // Turns off master sync and automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
                 USER_ID);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        SwitchPreference pref = (SwitchPreference) mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
         assertThat(pref.isChecked()).isFalse();
     }
 
     @Test
-    public void displayPreference_masterSyncOn_syncDisabled_shouldBeChecked() {
+    public void refreshUi_masterSyncOn_syncDisabled_shouldBeChecked() {
         setUpVisibleSyncAdapter();
         // Turns on master sync and turns off automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
                 USER_ID);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        SwitchPreference pref = (SwitchPreference) mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
         assertThat(pref.isChecked()).isTrue();
     }
 
     @Test
-    public void displayPreference_masterSyncOff_syncEnabled_shouldBeChecked() {
+    public void refreshUi_masterSyncOff_syncEnabled_shouldBeChecked() {
         setUpVisibleSyncAdapter();
         // Turns off master sync and turns on automatic sync for the adapter.
         ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
                 USER_ID);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        SwitchPreference pref = (SwitchPreference) mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
         assertThat(pref.isChecked()).isTrue();
     }
 
     @Test
-    public void displayPreference_syncDisabled_summaryShouldBeSet() {
+    public void refreshUi_syncDisabled_summaryShouldBeSet() {
         setUpVisibleSyncAdapter();
         // Turns off automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
                 mUserHandle.getIdentifier());
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
-        assertThat(pref.getSummary()).isEqualTo(application.getString(R.string.sync_disabled));
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
+        assertThat(pref.getSummary()).isEqualTo(mContext.getString(R.string.sync_disabled));
     }
 
     @Test
-    public void displayPreference_syncEnabled_activelySyncing_summaryShouldBeSet() {
+    public void refreshUi_syncEnabled_activelySyncing_summaryShouldBeSet() {
         setUpVisibleSyncAdapter();
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
@@ -280,15 +293,15 @@ public class AccountSyncDetailsPreferenceControllerTest {
         syncs.add(syncInfo);
         ShadowContentResolver.setCurrentSyncs(syncs);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
-        assertThat(pref.getSummary()).isEqualTo(application.getString(R.string.sync_in_progress));
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
+        assertThat(pref.getSummary()).isEqualTo(mContext.getString(R.string.sync_in_progress));
     }
 
     @Test
-    public void displayPreference_syncEnabled_syncHasHappened_summaryShouldBeSet() {
+    public void refreshUi_syncEnabled_syncHasHappened_summaryShouldBeSet() {
         setUpVisibleSyncAdapter();
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
@@ -298,18 +311,18 @@ public class AccountSyncDetailsPreferenceControllerTest {
         status.setLastSuccess(0, 83091);
         ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
 
         String expectedTimeString = mController.formatSyncDate(new Date(83091));
         assertThat(pref.getSummary()).isEqualTo(
-                application.getString(R.string.last_synced, expectedTimeString));
+                mContext.getString(R.string.last_synced, expectedTimeString));
     }
 
     @Test
-    public void displayPreference_activelySyncing_notInitialSync_shouldHaveActiveSyncIcon() {
+    public void refreshUi_activelySyncing_notInitialSync_shouldHaveActiveSyncIcon() {
         setUpVisibleSyncAdapter();
         // Adds the sync adapter to the list of currently syncing adapters.
         SyncInfo syncInfo = new SyncInfo(/* authorityId= */ 0, mAccount, AUTHORITY, /* startTime= */
@@ -323,17 +336,17 @@ public class AccountSyncDetailsPreferenceControllerTest {
         status.initialize = false;
         ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(Shadows.shadowOf(pref.getIcon()).getCreatedFromResId()).isEqualTo(
                 R.drawable.ic_list_sync_anim);
     }
 
     @Test
-    public void displayPreference_syncPending_notInitialSync_shouldHaveActiveSyncIcon() {
+    public void refreshUi_syncPending_notInitialSync_shouldHaveActiveSyncIcon() {
         setUpVisibleSyncAdapter();
         // Sets the sync adapter's initializing state to false (i.e. it's not performing an
         // initial sync).
@@ -343,17 +356,17 @@ public class AccountSyncDetailsPreferenceControllerTest {
         status.pending = true;
         ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(Shadows.shadowOf(pref.getIcon()).getCreatedFromResId()).isEqualTo(
                 R.drawable.ic_list_sync_anim);
     }
 
     @Test
-    public void displayPreference_syncFailed_shouldHaveProblemSyncIcon() {
+    public void refreshUi_syncFailed_shouldHaveProblemSyncIcon() {
         setUpVisibleSyncAdapter();
         // Turns on automatic sync for the the sync adapter.
         ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
@@ -365,23 +378,23 @@ public class AccountSyncDetailsPreferenceControllerTest {
         status.lastFailureMesg = "too-many-deletions";
         ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(Shadows.shadowOf(pref.getIcon()).getCreatedFromResId()).isEqualTo(
                 R.drawable.ic_sync_problem);
     }
 
     @Test
-    public void displayPreference_noSyncStatus_shouldHaveNoIcon() {
+    public void refreshUi_noSyncStatus_shouldHaveNoIcon() {
         setUpVisibleSyncAdapter();
 
-        mController.displayPreference(mPreferenceScreen);
+        mController.refreshUi();
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
-        Preference pref = mPreferenceScreen.getPreference(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(pref.getIcon()).isNull();
         assertThat(pref.isIconSpaceReserved()).isTrue();
@@ -391,26 +404,114 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void onAccountsUpdate_correctUserId_shouldForceUpdatePreferences() {
         setUpVisibleSyncAdapter();
 
-        mController.displayPreference(mPreferenceScreen);
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
 
         ShadowContentResolver.reset();
         mController.onAccountsUpdate(mUserHandle);
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(0);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
     public void onAccountsUpdate_incorrectUserId_shouldNotForceUpdatePreferences() {
         setUpVisibleSyncAdapter();
 
-        mController.displayPreference(mPreferenceScreen);
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
 
         ShadowContentResolver.reset();
         mController.onAccountsUpdate(new UserHandle(NOT_USER_ID));
 
-        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void onSyncPreferenceClicked_preferenceUnchecked_shouldSetSyncAutomaticallyOff() {
+        setUpVisibleSyncAdapter();
+
+        // Turns off one time sync and turns on automatic sync for the adapter so the preference is
+        // checked.
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
+                USER_ID);
+
+        mController.refreshUi();
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
+        pref.performClick();
+
+        assertThat(ContentResolver.getSyncAutomaticallyAsUser(mAccount, AUTHORITY,
+                USER_ID)).isFalse();
+    }
+
+    @Test
+    public void onSyncPreferenceClicked_preferenceUnchecked_shouldCancelSync() {
+        setUpVisibleSyncAdapter();
+
+        // Turns off one time sync and turns on automatic sync for the adapter so the preference is
+        // checked.
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
+                USER_ID);
+
+        mController.refreshUi();
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
+        pref.performClick();
+
+        verify(mMockSyncListener).onSyncCanceled(eq(mAccount), eq(AUTHORITY), eq(USER_ID));
+    }
+
+    @Test
+    public void onSyncPreferenceClicked_preferenceChecked_shouldSetSyncAutomaticallyOn() {
+        setUpVisibleSyncAdapter();
+
+        // Turns off one time sync and automatic sync for the adapter so the preference is
+        // unchecked.
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ true, USER_ID);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
+                USER_ID);
+
+        mController.refreshUi();
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
+        pref.performClick();
+
+        assertThat(ContentResolver.getSyncAutomaticallyAsUser(mAccount, AUTHORITY,
+                USER_ID)).isTrue();
+    }
+
+    @Test
+    public void onSyncPreferenceClicked_preferenceChecked_masterSyncOff_shouldRequestSync() {
+        setUpVisibleSyncAdapter();
+
+        // Turns off master sync and automatic sync for the adapter so the preference is unchecked.
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ false,
+                USER_ID);
+
+        mController.refreshUi();
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
+
+        // Sets master sync off
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
+        pref.performClick();
+
+        verify(mMockSyncListener).onSyncRequested(eq(mAccount), eq(AUTHORITY), eq(USER_ID),
+                any(Bundle.class));
+    }
+
+    @Test
+    public void onSyncPreferenceClicked_oneTimeSyncOn_shouldRequestSync() {
+        setUpVisibleSyncAdapter();
+
+        // Turns on one time sync mode
+        ContentResolver.setMasterSyncAutomaticallyAsUser(/* sync= */ false, USER_ID);
+
+        mController.refreshUi();
+        SyncPreference pref = (SyncPreference) mPreferenceGroup.getPreference(0);
+        pref.performClick();
+
+        verify(mMockSyncListener).onSyncRequested(eq(mAccount), eq(AUTHORITY), eq(USER_ID),
+                any(Bundle.class));
     }
 
     private void setUpVisibleSyncAdapter() {
@@ -434,6 +535,6 @@ public class AccountSyncDetailsPreferenceControllerTest {
     }
 
     private ShadowApplicationPackageManager getShadowApplicationManager() {
-        return Shadow.extract(application.getPackageManager());
+        return Shadow.extract(mContext.getPackageManager());
     }
 }

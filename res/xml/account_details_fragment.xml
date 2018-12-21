@@ -15,9 +15,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:key="@string/pk_account_details_title"
-                  settings:controller="com.android.car.settings.accounts.AccountDetailsTitlePreferenceController">
+                  xmlns:settings="http://schemas.android.com/apk/res-auto">
     <Preference
         android:key="@string/pk_account_details"
         android:selectable="false"
