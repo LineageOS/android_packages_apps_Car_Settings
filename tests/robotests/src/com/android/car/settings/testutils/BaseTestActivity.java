@@ -18,6 +18,7 @@ package com.android.car.settings.testutils;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -86,6 +87,14 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
 
     @Override
     public void startActivityForResult(Intent intent, int requestCode,
+            ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
+    }
+
+    @Override
+    public void startIntentSenderForResult(IntentSender intent, int requestCode,
+            @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
             ActivityResultCallback callback) {
         throw new UnsupportedOperationException(
                 "Unimplemented for activities that implement FragmentController");

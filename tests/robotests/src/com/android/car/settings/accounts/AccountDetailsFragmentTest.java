@@ -24,9 +24,11 @@ import static org.robolectric.RuntimeEnvironment.application;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -59,6 +61,8 @@ public class AccountDetailsFragmentTest {
     private final UserInfo mUserInfo = new UserInfo(/* id= */ 0, /* name= */ "name", /* flags= */
             0);
     private final CharSequence mAccountLabel = "Type 1";
+
+    private Context mContext;
     private BaseTestActivity mActivity;
     private AccountDetailsFragment mFragment;
     @Mock
@@ -69,6 +73,7 @@ public class AccountDetailsFragmentTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
 
+        mContext = application;
         // Add the account to the official list of accounts
         getShadowAccountManager().addAccount(mAccount);
 
@@ -78,6 +83,16 @@ public class AccountDetailsFragmentTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
+        ShadowContentResolver.reset();
+        mActivity.clearOnBackPressedFlag();
+    }
+
+    @Test
+    public void onActivityCreated_titleShouldBeSet() {
+        initFragment();
+
+        TextView title = mFragment.requireActivity().findViewById(R.id.title);
+        assertThat(title.getText()).isEqualTo(mAccountLabel);
     }
 
     @Test
@@ -140,7 +155,7 @@ public class AccountDetailsFragmentTest {
         getShadowAccountManager().removeAllAccounts();
         mFragment.onAccountsUpdate(null);
 
-        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(0);
+        assertThat(mActivity.getOnBackPressedFlag()).isTrue();
     }
 
     private void initFragment() {
@@ -149,6 +164,6 @@ public class AccountDetailsFragmentTest {
     }
 
     private ShadowAccountManager getShadowAccountManager() {
-        return Shadow.extract(AccountManager.get(application));
+        return Shadow.extract(AccountManager.get(mContext));
     }
 }

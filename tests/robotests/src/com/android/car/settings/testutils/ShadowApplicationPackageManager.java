@@ -19,6 +19,8 @@ import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
+import android.graphics.drawable.Drawable;
+import android.os.UserHandle;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -27,6 +29,11 @@ import org.robolectric.annotation.Implements;
 @Implements(value = ApplicationPackageManager.class)
 public class ShadowApplicationPackageManager extends
         org.robolectric.shadows.ShadowApplicationPackageManager {
+
+    @Implementation
+    public Drawable getUserBadgedIcon(Drawable icon, UserHandle user) {
+        return icon;
+    }
 
     @Override
     @Implementation

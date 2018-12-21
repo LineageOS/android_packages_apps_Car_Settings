@@ -24,12 +24,12 @@ import android.os.UserHandle;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Shows details for syncing an account.
  */
-public class AccountSyncDetailsFragment extends BasePreferenceFragment {
+public class AccountSyncDetailsFragment extends SettingsFragment {
     private static final String EXTRA_ACCOUNT = "extra_account";
     private static final String EXTRA_USER_HANDLE = "extra_user_handle";
 

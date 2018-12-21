@@ -28,6 +28,7 @@ import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Intent;
+import android.content.IntentSender;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -151,6 +152,31 @@ public class SettingsFragmentTest {
         assertThrows(() -> {
             for (int i = 0; i < 0xff; i++) {
                 mFragment.startActivityForResult(new Intent(), i,
+                        mock(ActivityResultCallback.class));
+            }
+        });
+    }
+
+    @Test
+    public void startIntentSenderForResult_largeRequestCode_throwsError() {
+        mFragmentController.setup();
+        assertThrows(
+                () -> mFragment.startIntentSenderForResult(
+                        mock(IntentSender.class), /* requestCode= */ 0xffff,
+                        /* fillInIntent= */null, /* flagsMask= */ 0,
+                        /* flagsValues= */0, /* options= */ null,
+                        mock(ActivityResultCallback.class)));
+    }
+
+    @Test
+    public void startIntentSenderForResult_tooManyRequests_throwsError() {
+        mFragmentController.setup();
+        assertThrows(() -> {
+            for (int i = 0; i < 0xff; i++) {
+                mFragment.startIntentSenderForResult(
+                        mock(IntentSender.class), /* requestCode= */ 0xffff,
+                        /* fillInIntent= */null, /* flagsMask= */ 0,
+                        /* flagsValues= */0, /* options= */ null,
                         mock(ActivityResultCallback.class));
             }
         });

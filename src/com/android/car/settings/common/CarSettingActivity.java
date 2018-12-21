@@ -20,6 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChangedListener;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -155,6 +156,15 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     @Override
     public void startActivityForResult(Intent intent, int requestCode,
             ActivityResultCallback callback) {
+        throw new UnsupportedOperationException(
+                "Unimplemented for activities that implement FragmentController");
+    }
+
+    @Override
+    public void startIntentSenderForResult(IntentSender intent, int requestCode,
+            @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
+            ActivityResultCallback callback)
+            throws IntentSender.SendIntentException {
         throw new UnsupportedOperationException(
                 "Unimplemented for activities that implement FragmentController");
     }

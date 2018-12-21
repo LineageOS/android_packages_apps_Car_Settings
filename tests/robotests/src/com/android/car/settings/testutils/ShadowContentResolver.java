@@ -22,6 +22,8 @@ import android.content.ContentResolver;
 import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
+import android.content.SyncStatusObserver;
+import android.os.Bundle;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -49,6 +51,8 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
     private static Map<Integer, Boolean> sMasterSyncAutomatically = new HashMap<>();
     private static Map<String, SyncStatusInfo> sSyncStatus = new HashMap<>();
     private static List<SyncInfo> sSyncs = new ArrayList<>();
+    private static SyncListener sSyncListener;
+    private static SyncStatusObserver sStatusObserver;
 
     @Implementation
     protected static SyncAdapterType[] getSyncAdapterTypesAsUser(int userId) {
@@ -110,6 +114,36 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
         sSyncStatus.put(authority, status);
     }
 
+    @Implementation
+    public static void cancelSyncAsUser(Account account, String authority, @UserIdInt int userId) {
+        if (sSyncListener != null) {
+            sSyncListener.onSyncCanceled(account, authority, userId);
+        }
+    }
+
+    @Implementation
+    public static void requestSyncAsUser(Account account, String authority, @UserIdInt int userId,
+            Bundle extras) {
+        if (sSyncListener != null) {
+            sSyncListener.onSyncRequested(account, authority, userId, extras);
+        }
+    }
+
+    public static void setSyncListener(SyncListener syncListener) {
+        sSyncListener = syncListener;
+    }
+
+    @Implementation
+    protected static Object addStatusChangeListener(int mask, final SyncStatusObserver callback) {
+        sStatusObserver = callback;
+        return null;
+    }
+
+    @Implementation
+    protected static void removeStatusChangeListener(Object handle) {
+        sStatusObserver = null;
+    }
+
     @Resetter
     public static void reset() {
         org.robolectric.shadows.ShadowContentResolver.reset();
@@ -119,5 +153,18 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
         sSyncAdapterTypes = new SyncAdapterType[0];
         sSyncStatus.clear();
         sSyncs = new ArrayList<>();
+        sSyncListener = null;
+        sStatusObserver = null;
+    }
+
+    /**
+     * A listener interface that can be used to verify calls to {@link #cancelSyncAsUser} and {@link
+     * #requestSyncAsUser}
+     */
+    public interface SyncListener {
+        void onSyncCanceled(Account account, String authority, @UserIdInt int userId);
+
+        void onSyncRequested(Account account, String authority, @UserIdInt int userId,
+                Bundle extras);
     }
 }
