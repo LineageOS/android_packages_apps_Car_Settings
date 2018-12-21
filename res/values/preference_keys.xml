@@ -59,6 +59,13 @@
     <string name="pk_add_wifi_security" translatable="false">add_wifi_security</string>
     <string name="pk_add_wifi_password" translatable="false">add_wifi_password</string>
 
+    <!-- Bluetooth -->
+    <string name="pk_bluetooth_device_name" translatable="false">bluetooth_device_name</string>
+    <string name="pk_bluetooth_device_profiles" translatable="false">bluetooth_device_profiles
+    </string>
+    <string name="pk_bluetooth_device_address" translatable="false">bluetooth_device_address
+    </string>
+
     <!-- Applications Settings -->
     <string name="pk_applications_settings_screen" translatable="false">
         applications_settings_screen
@@ -94,8 +101,7 @@
     <string name="pk_account_sync_details" translatable="false">account_sync_details</string>
 
     <!-- Display Settings -->
-    <string name="pk_adaptive_brightness_switch" translatable="false">
-        adaptive_brightness_switch
+    <string name="pk_adaptive_brightness_switch" translatable="false">adaptive_brightness_switch
     </string>
     <string name="pk_brightness_level" translatable="false">brightness_level</string>
 
@@ -135,7 +141,9 @@
     <string name="pk_pin_lock" translatable="false">pin_lock</string>
 
     <!-- System Settings -->
-    <string name="pk_languages_and_input_settings" translatable="false">languages_and_input_settings</string>
+    <string name="pk_languages_and_input_settings" translatable="false">
+        languages_and_input_settings
+    </string>
     <string name="pk_system_update_settings" translatable="false">system_update_settings</string>
     <string name="pk_system_extra_settings" translatable="false">system_extra_settings</string>
     <string name="pk_about_settings_entry" translatable="false">about_settings_entry</string>
