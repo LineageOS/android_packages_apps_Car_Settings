@@ -28,8 +28,8 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.security.CheckLockActivity;
 
 /**
@@ -37,7 +37,7 @@ import com.android.car.settings.security.CheckLockActivity;
  * values. If a user confirms, they will first be required to authenticate then presented with a
  * secondary confirmation: {@link ResetNetworkConfirmFragment}.
  */
-public class ResetNetworkFragment extends BasePreferenceFragment {
+public class ResetNetworkFragment extends SettingsFragment {
 
     // Arbitrary request code for starting CheckLockActivity when the reset button is clicked.
     private static final int REQUEST_CODE = 123;

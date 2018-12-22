@@ -16,10 +16,10 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Build;
-import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.lifecycle.Lifecycle;
@@ -29,22 +29,26 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 /** Updates the build number entry summary with the build number. */
-public class BuildNumberPreferenceController extends NoSetupPreferenceController implements
+public class BuildNumberPreferenceController extends PreferenceController<Preference> implements
         LifecycleObserver {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
     private Toast mDevHitToast;
     private int mDevHitCountdown;
 
-    public BuildNumberPreferenceController(Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+    public BuildNumberPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     /**
@@ -54,41 +58,38 @@ public class BuildNumberPreferenceController extends NoSetupPreferenceController
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     public void onResume() {
         mDevHitToast = null;
-        mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
+        mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
                 mCarUserManagerHelper) ? -1 : getTapsToBecomeDeveloper();
     }
 
     @Override
-    public CharSequence getSummary() {
-        return Build.DISPLAY;
+    protected void updateState(Preference preference) {
+        preference.setSummary(Build.DISPLAY);
     }
 
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (!TextUtils.equals(preference.getKey(), getPreferenceKey())) {
-            return false;
-        }
-
+    protected boolean handlePreferenceClicked(Preference preference) {
         if (!mCarUserManagerHelper.isCurrentProcessAdminUser()
                 && !mCarUserManagerHelper.isCurrentProcessDemoUser()) {
             return false;
         }
 
-        if (!DevelopmentSettingsUtil.isDeviceProvisioned(mContext)) {
+        if (!DevelopmentSettingsUtil.isDeviceProvisioned(getContext())) {
             return false;
         }
 
         if (mDevHitCountdown > 0) {
             mDevHitCountdown--;
             if (mDevHitCountdown == 0) {
-                DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(mContext, true);
-                showToast(mContext.getString(R.string.show_dev_on), Toast.LENGTH_LONG);
+                DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), true);
+                showToast(getContext().getString(R.string.show_dev_on), Toast.LENGTH_LONG);
             } else if (mDevHitCountdown <= getTapsToBecomeDeveloper() - getTapsToShowToast()) {
-                showToast(mContext.getResources().getQuantityString(R.plurals.show_dev_countdown,
-                        mDevHitCountdown, mDevHitCountdown), Toast.LENGTH_SHORT);
+                showToast(getContext().getResources().getQuantityString(
+                        R.plurals.show_dev_countdown, mDevHitCountdown, mDevHitCountdown),
+                        Toast.LENGTH_SHORT);
             }
         } else if (mDevHitCountdown < 0) {
-            showToast(mContext.getString(R.string.show_dev_already), Toast.LENGTH_LONG);
+            showToast(getContext().getString(R.string.show_dev_already), Toast.LENGTH_LONG);
         }
         return true;
     }
@@ -97,16 +98,17 @@ public class BuildNumberPreferenceController extends NoSetupPreferenceController
         if (mDevHitToast != null) {
             mDevHitToast.cancel();
         }
-        mDevHitToast = Toast.makeText(mContext, text, duration);
+        mDevHitToast = Toast.makeText(getContext(), text, duration);
         mDevHitToast.show();
     }
 
     private int getTapsToBecomeDeveloper() {
-        return mContext.getResources().getInteger(R.integer.enable_developer_settings_click_count);
+        return getContext().getResources().getInteger(
+                R.integer.enable_developer_settings_click_count);
     }
 
     private int getTapsToShowToast() {
-        return mContext.getResources().getInteger(
+        return getContext().getResources().getInteger(
                 R.integer.enable_developer_settings_clicks_to_show_toast_count);
     }
 }

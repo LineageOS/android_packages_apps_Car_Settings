@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.system;
+package com.android.car.settings.language;
 
 import android.content.Context;
 

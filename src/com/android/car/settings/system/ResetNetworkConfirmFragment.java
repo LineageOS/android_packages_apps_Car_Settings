@@ -45,14 +45,14 @@ import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.ErrorDialog;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Final warning presented to user to confirm restoring network settings to the factory default.
  * If a user confirms, all settings are reset for connectivity, Wi-Fi, and Bluetooth.
  */
-public class ResetNetworkConfirmFragment extends BasePreferenceFragment {
+public class ResetNetworkConfirmFragment extends SettingsFragment {
 
     // Copied from com.android.settings.network.ApnSettings.
     @VisibleForTesting

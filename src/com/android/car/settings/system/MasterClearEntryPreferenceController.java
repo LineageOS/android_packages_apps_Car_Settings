@@ -16,25 +16,33 @@
 
 package com.android.car.settings.system;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.common.RestrictedPreference;
 
 /**
  * Controller which determines if master clear (aka "factory reset") should be displayed based on
  * user status.
  */
-public class MasterClearEntryPreferenceController extends NoSetupPreferenceController {
+public class MasterClearEntryPreferenceController extends
+        PreferenceController<RestrictedPreference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
     public MasterClearEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+    }
+
+    @Override
+    protected Class<RestrictedPreference> getPreferenceType() {
+        return RestrictedPreference.class;
     }
 
     @Override
@@ -44,7 +52,7 @@ public class MasterClearEntryPreferenceController extends NoSetupPreferenceContr
     }
 
     private boolean isDemoUser() {
-        return UserManager.isDeviceInDemoMode(mContext)
+        return UserManager.isDeviceInDemoMode(getContext())
                 && mCarUserManagerHelper.isCurrentProcessDemoUser();
     }
 }

@@ -17,12 +17,12 @@
 package com.android.car.settings.system;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Shows options to reset network settings, reset app preferences, and factory reset the device.
  */
-public class ResetOptionsFragment extends BasePreferenceFragment {
+public class ResetOptionsFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
