@@ -137,6 +137,8 @@ public class DeveloperOptionsFragmentTest {
 
     @Test
     public void testDialogListener_negativeClick_switchOff() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         mTestActivity.launchFragment(mDeveloperOptionsFragment);
         Switch onOffSwitch = mTestActivity.findViewById(R.id.toggle_switch);
         onOffSwitch.setChecked(true);

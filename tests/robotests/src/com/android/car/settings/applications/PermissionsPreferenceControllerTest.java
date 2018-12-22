@@ -48,7 +48,7 @@ public class PermissionsPreferenceControllerTest {
     private Context mContext;
     private Preference mPreference;
     private PreferenceControllerTestHelper<PermissionsPreferenceController>
-            mPreferenceControllerHelper;
+        mPreferenceControllerHelper;
     private PermissionsPreferenceController mController;
     private ResolveInfo mResolveInfo;
 
@@ -57,7 +57,7 @@ public class PermissionsPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
 
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                PermissionsPreferenceController.class);
+            PermissionsPreferenceController.class);
         mController = mPreferenceControllerHelper.getController();
         mPreference = new Preference(mContext);
 
@@ -70,7 +70,7 @@ public class PermissionsPreferenceControllerTest {
     @Test
     public void testCheckInitialized_noResolveInfo_throwException() {
         assertThrows(IllegalStateException.class,
-                () -> mPreferenceControllerHelper.setPreference(mPreference));
+            () -> mPreferenceControllerHelper.setPreference(mPreference));
     }
 
     @Test

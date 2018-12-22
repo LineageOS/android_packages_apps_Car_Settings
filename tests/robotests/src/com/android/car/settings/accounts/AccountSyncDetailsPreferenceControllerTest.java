@@ -198,15 +198,15 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_providerLabelShouldBeSet() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+            ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
         ShadowContentResolver.setIsSyncable(mAccount, AUTHORITY, /* syncable= */ SYNCABLE);
         // Sets provider info for the sync adapter with a label.
-        ProviderInfo info = mock(ProviderInfo.class);
+        ProviderInfo info = new ProviderInfo();
         info.authority = AUTHORITY;
-        doReturn("label").when(info).loadLabel(any(PackageManager.class));
+        info.name = "label";
 
         ProviderInfo[] providers = {info};
         PackageInfo packageInfo = new PackageInfo();
@@ -517,15 +517,15 @@ public class AccountSyncDetailsPreferenceControllerTest {
     private void setUpVisibleSyncAdapter() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+            ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
         ShadowContentResolver.setIsSyncable(mAccount, AUTHORITY, /* syncable= */ SYNCABLE);
         // Sets provider info for the sync adapter with a label.
-        ProviderInfo info = mock(ProviderInfo.class);
+        ProviderInfo info = new ProviderInfo();
         info.authority = AUTHORITY;
-        doReturn("label").when(info).loadLabel(any(PackageManager.class));
+        info.name = "label";
 
         ProviderInfo[] providers = {info};
         PackageInfo packageInfo = new PackageInfo();
