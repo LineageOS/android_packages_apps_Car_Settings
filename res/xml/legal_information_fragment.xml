@@ -18,20 +18,17 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:orderingFromXml="false"
     android:title="@string/legal_information">
     <Preference
         android:key="@string/pk_system_license_entry"
-        android:order="0"
         android:title="@string/webview_license_title"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController">
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
         <intent android:action="android.settings.WEBVIEW_LICENSE"/>
     </Preference>
     <Preference
         android:key="@string/pk_third_party_license_entry"
-        android:order="100"
         android:title="@string/settings_license_activity_title"
-        settings:controller="com.android.car.settings.common.NoSetupPreferenceController">
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
         <intent
             android:targetClass="com.android.car.settings.system.ThirdPartyLicensesActivity"
             android:targetPackage="com.android.car.settings"/>

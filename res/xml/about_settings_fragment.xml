@@ -18,31 +18,25 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:orderingFromXml="false"
     android:title="@string/about_settings">
     <Preference
         android:key="@string/pk_model_info"
-        android:order="0"
         android:title="@string/model_info"
         settings:controller="com.android.car.settings.system.ModelInfoPreferenceController"/>
     <Preference
         android:key="@string/pk_firmware_version"
-        android:order="100"
         android:title="@string/firmware_version"
         settings:controller="com.android.car.settings.system.FirmwareVersionPreferenceController"/>
     <Preference
         android:key="@string/pk_security_patch"
-        android:order="200"
         android:title="@string/security_patch"
         settings:controller="com.android.car.settings.system.SecurityPatchPreferenceController"/>
     <Preference
         android:key="@string/pk_kernel_version"
-        android:order="300"
         android:title="@string/kernel_version"
         settings:controller="com.android.car.settings.system.KernelVersionPreferenceController"/>
     <Preference
         android:key="@string/pk_build_number"
-        android:order="400"
         android:title="@string/build_number"
         settings:controller="com.android.car.settings.system.BuildNumberPreferenceController"/>
 </PreferenceScreen>

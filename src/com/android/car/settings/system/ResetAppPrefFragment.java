@@ -38,8 +38,8 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -47,7 +47,7 @@ import java.util.List;
 /**
  * Presents the user with information about resetting app preferences.
  */
-public class ResetAppPrefFragment extends BasePreferenceFragment {
+public class ResetAppPrefFragment extends SettingsFragment {
 
     private static final Logger LOG = new Logger(ResetAppPrefFragment.class);
 
