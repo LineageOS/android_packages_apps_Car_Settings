@@ -60,11 +60,11 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/button_preference_button"
+        android:id="@+id/action_widget_container"
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
         <View
-            android:layout_width="@dimen/button_preference_divider_width"
+            android:layout_width="@dimen/two_action_preference_divider_width"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/car_padding_2"
             android:layout_marginTop="@dimen/car_padding_2"
