@@ -18,27 +18,28 @@ package com.android.car.settings.accounts;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -46,22 +47,21 @@ import java.util.Set;
  *
  * <p>Largely derived from {@link com.android.settings.accounts.ChooseAccountActivity}
  */
-public class ChooseAccountPreferenceController extends NoSetupPreferenceController implements
+public class ChooseAccountPreferenceController extends
+        PreferenceController<PreferenceGroup> implements
         AuthenticatorHelper.OnAccountsUpdateListener {
+    private static final int ADD_ACCOUNT_REQUEST_CODE = 1;
+
     private final UserHandle mUserHandle;
-    private final AuthenticatorHelper mAuthenticatorHelper;
+    private AuthenticatorHelper mAuthenticatorHelper;
     private List<String> mAuthorities;
     private Set<String> mAccountTypesFilter;
-    private AddAccountListener mListener;
-    private PreferenceScreen mPreferenceScreen;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
 
     public ChooseAccountPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHandle = new CarUserManagerHelper(context).getCurrentProcessUserInfo().getUserHandle();
-
-        mAuthenticatorHelper = new AuthenticatorHelper(context, mUserHandle, this);
     }
 
     /** Sets the authorities that the user has. */
@@ -74,43 +74,35 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
         mAccountTypesFilter = accountTypesFilter;
     }
 
-    /** Sets the AddAccountListener. */
-    public void setListener(AddAccountListener listener) {
-        mListener = listener;
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
-        mPreferenceScreen = screen;
-        forceUpdateAccountsCategory(mPreferenceScreen);
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        forceUpdateAccountsCategory();
     }
 
+    /** Initializes the authenticator helper. */
     @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        // When a preference is clicked, start up the flow for adding an account
-        if (preference instanceof AuthenticatorDescriptionPreference) {
-            AuthenticatorDescriptionPreference pref =
-                    (AuthenticatorDescriptionPreference) preference;
-            return onAddAccount(pref.getAccountType());
-        }
-        return false;
+    protected void onCreateInternal() {
+        mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserHandle, this);
     }
 
     /**
      * Registers the account update callback.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
+    @Override
+    protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
     }
 
     /**
      * Unregisters the account update callback.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
+    @Override
+    protected void onStopInternal() {
         mAuthenticatorHelper.stopListeningToAccountUpdates();
     }
 
@@ -118,18 +110,13 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
     public void onAccountsUpdate(UserHandle userHandle) {
         // Only force a refresh if accounts have changed for the current user.
         if (userHandle.equals(mUserHandle)) {
-            forceUpdateAccountsCategory(mPreferenceScreen);
+            forceUpdateAccountsCategory();
         }
     }
 
     /** Forces a refresh of the authenticator description preferences. */
-    @VisibleForTesting
-    void forceUpdateAccountsCategory(PreferenceScreen screen) {
-        // Fake an account update so that the account types are updated
-        mAuthenticatorHelper.onReceive(mContext, /* intent= */ null);
-
-        Map<String, AuthenticatorDescriptionPreference> preferencesToRemove =
-                new ArrayMap<>(mPreferences);
+    private void forceUpdateAccountsCategory() {
+        Set<String> preferencesToRemove = new HashSet<>(mPreferences.keySet());
         List<AuthenticatorDescriptionPreference> preferences =
                 getAuthenticatorDescriptionPreferences(preferencesToRemove);
         // Add all preferences that aren't already shown
@@ -137,15 +124,13 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
             AuthenticatorDescriptionPreference preference = preferences.get(i);
             preference.setOrder(i);
             String key = preference.getKey();
-            if (!mPreferences.containsKey(key)) {
-                screen.addPreference(preference);
-                mPreferences.put(key, preference);
-            }
+            getPreference().addPreference(preference);
+            mPreferences.put(key, preference);
         }
 
         // Remove all preferences that should no longer be shown
-        for (String key : preferencesToRemove.keySet()) {
-            screen.removePreference(mPreferences.get(key));
+        for (String key : preferencesToRemove) {
+            getPreference().removePreference(mPreferences.get(key));
             mPreferences.remove(key);
         }
     }
@@ -160,9 +145,9 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
      *                            need to be removed from the screen after method execution
      */
     private List<AuthenticatorDescriptionPreference> getAuthenticatorDescriptionPreferences(
-            Map<String, AuthenticatorDescriptionPreference> preferencesToRemove) {
+            Set<String> preferencesToRemove) {
         AuthenticatorDescription[] authenticatorDescriptions = AccountManager.get(
-                mContext).getAuthenticatorTypesAsUser(
+                getContext()).getAuthenticatorTypesAsUser(
                 mUserHandle.getIdentifier());
 
         ArrayList<AuthenticatorDescriptionPreference> authenticatorDescriptionPreferences =
@@ -170,8 +155,8 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
         // Create list of account providers to show on page.
         for (AuthenticatorDescription authenticatorDescription : authenticatorDescriptions) {
             String accountType = authenticatorDescription.type;
-            CharSequence label = mAuthenticatorHelper.getLabelForType(mContext, accountType);
-            Drawable icon = mAuthenticatorHelper.getDrawableForType(mContext, accountType);
+            CharSequence label = mAuthenticatorHelper.getLabelForType(getContext(), accountType);
+            Drawable icon = mAuthenticatorHelper.getDrawableForType(getContext(), accountType);
 
             List<String> accountAuthorities =
                     mAuthenticatorHelper.getAuthoritiesForAccountType(accountType);
@@ -189,14 +174,14 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
             // If authorized, add a preference for the provider to the list and remove it from
             // preferencesToRemove.
             if (authorized) {
-                AuthenticatorDescriptionPreference preference = preferencesToRemove.remove(
-                        accountType);
-                if (preference != null) {
-                    authenticatorDescriptionPreferences.add(preference);
-                    continue;
-                }
-                authenticatorDescriptionPreferences.add(
-                        new AuthenticatorDescriptionPreference(mContext, accountType, label, icon));
+                AuthenticatorDescriptionPreference preference = mPreferences.getOrDefault(
+                        accountType,
+                        new AuthenticatorDescriptionPreference(getContext(), accountType, label,
+                                icon));
+                preference.setOnPreferenceClickListener(
+                        pref -> onAddAccount(preference.getAccountType()));
+                authenticatorDescriptionPreferences.add(preference);
+                preferencesToRemove.remove(accountType);
             }
         }
 
@@ -206,13 +191,25 @@ public class ChooseAccountPreferenceController extends NoSetupPreferenceControll
         return authenticatorDescriptionPreferences;
     }
 
-    /** Defers to the listener to handle adding the account. */
+    /** Starts the {@link AddAccountActivity} to add an account for the given account type. */
     private boolean onAddAccount(String accountType) {
-        if (mListener != null) {
-            mListener.addAccount(accountType);
-            return true;
+        Intent intent = new Intent(getContext(), AddAccountActivity.class);
+        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
+        getFragmentController().startActivityForResult(intent, ADD_ACCOUNT_REQUEST_CODE,
+                this::onAccountAdded);
+        return true;
+    }
+
+    private void onAccountAdded(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == ADD_ACCOUNT_REQUEST_CODE) {
+            getFragmentController().goBack();
         }
-        return false;
+    }
+
+    /** Used for testing to trigger an account update. */
+    @VisibleForTesting
+    AuthenticatorHelper getAuthenticatorHelper() {
+        return mAuthenticatorHelper;
     }
 
     /** Handles adding accounts. */
