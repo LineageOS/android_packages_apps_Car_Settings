@@ -43,16 +43,16 @@ import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 /**
- * Tests for AccountSettingsFragment class.
+ * Tests for {@link ChooseAccountFragment} class.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
         ShadowContentResolver.class})
-public class AddAccountFragmentTest {
+public class ChooseAccountFragmentTest {
     private static final int ADD_ACCOUNT_REQUEST_CODE = 1001;
 
     private BaseTestActivity mActivity;
-    private AddAccountFragment mFragment;
+    private ChooseAccountFragment mFragment;
 
     @Mock
     private CarUserManagerHelper mMockCarUserManagerHelper;
@@ -67,7 +67,7 @@ public class AddAccountFragmentTest {
                 mMockCarUserManagerHelper).getCurrentProcessUserInfo();
 
         mActivity = Robolectric.setupActivity(BaseTestActivity.class);
-        mFragment = new AddAccountFragment();
+        mFragment = new ChooseAccountFragment();
         mActivity.launchFragment(mFragment);
     }
 

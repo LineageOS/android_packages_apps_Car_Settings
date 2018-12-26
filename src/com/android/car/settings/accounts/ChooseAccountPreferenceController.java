@@ -46,7 +46,7 @@ import java.util.Set;
  *
  * <p>Largely derived from {@link com.android.settings.accounts.ChooseAccountActivity}
  */
-public class AddAccountPreferenceController extends NoSetupPreferenceController implements
+public class ChooseAccountPreferenceController extends NoSetupPreferenceController implements
         AuthenticatorHelper.OnAccountsUpdateListener {
     private final UserHandle mUserHandle;
     private final AuthenticatorHelper mAuthenticatorHelper;
@@ -56,7 +56,7 @@ public class AddAccountPreferenceController extends NoSetupPreferenceController 
     private PreferenceScreen mPreferenceScreen;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
 
-    public AddAccountPreferenceController(Context context, String preferenceKey,
+    public ChooseAccountPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController) {
         super(context, preferenceKey, fragmentController);
         mUserHandle = new CarUserManagerHelper(context).getCurrentProcessUserInfo().getUserHandle();

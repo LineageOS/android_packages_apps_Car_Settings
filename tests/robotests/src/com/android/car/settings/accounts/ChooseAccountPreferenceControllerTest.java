@@ -52,17 +52,17 @@ import org.robolectric.shadow.api.Shadow;
 import java.util.Collections;
 import java.util.HashSet;
 
-/** Unit tests for {@link AddAccountPreferenceController}. */
+/** Unit tests for {@link ChooseAccountPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowContentResolver.class,
         ShadowAccountManager.class})
-public class AddAccountPreferenceControllerTest {
+public class ChooseAccountPreferenceControllerTest {
     private static final String PREFERENCE_KEY = "test_key";
     private static final int USER_ID = 0;
     private static final int NOT_THIS_USER_ID = 1;
 
     private PreferenceScreen mPreferenceScreen;
-    private AddAccountPreferenceController mController;
+    private ChooseAccountPreferenceController mController;
     @Mock
     private FragmentController mFragmentController;
     @Mock
@@ -84,7 +84,7 @@ public class AddAccountPreferenceControllerTest {
         addAuthenticator(/* type= */ "com.acct2", /* label= */ R.string.account_type2_label);
 
         mPreferenceScreen = new PreferenceManager(application).createPreferenceScreen(application);
-        mController = new AddAccountPreferenceController(application, PREFERENCE_KEY,
+        mController = new ChooseAccountPreferenceController(application, PREFERENCE_KEY,
                 mFragmentController);
     }
 
@@ -189,8 +189,8 @@ public class AddAccountPreferenceControllerTest {
 
     @Test
     public void onPreferenceClick_shouldCallListenerOnAddAccount() {
-        AddAccountPreferenceController.AddAccountListener mockListener = mock(
-                AddAccountPreferenceController.AddAccountListener.class);
+        ChooseAccountPreferenceController.AddAccountListener mockListener = mock(
+                ChooseAccountPreferenceController.AddAccountListener.class);
         mController.setListener(mockListener);
         mController.displayPreference(mPreferenceScreen);
 

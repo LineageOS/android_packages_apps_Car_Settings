@@ -33,15 +33,15 @@ import java.util.HashSet;
 /**
  * Lists accounts the user can add.
  */
-public class AddAccountFragment extends BasePreferenceFragment implements
-        AddAccountPreferenceController.AddAccountListener {
+public class ChooseAccountFragment extends BasePreferenceFragment implements
+        ChooseAccountPreferenceController.AddAccountListener {
     private static final int ADD_ACCOUNT_REQUEST_CODE = 1001;
-    private static final Logger LOG = new Logger(AddAccountFragment.class);
+    private static final Logger LOG = new Logger(ChooseAccountFragment.class);
 
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.add_account_fragment;
+        return R.xml.choose_account_fragment;
     }
 
     @Override
@@ -51,18 +51,18 @@ public class AddAccountFragment extends BasePreferenceFragment implements
         String[] authorities = requireActivity().getIntent().getStringArrayExtra(
                 Settings.EXTRA_AUTHORITIES);
         if (authorities != null) {
-            use(AddAccountPreferenceController.class, R.string.pk_add_account)
+            use(ChooseAccountPreferenceController.class, R.string.pk_add_account)
                     .setAuthorities(new ArrayList<>(Arrays.asList(authorities)));
         }
 
         String[] accountTypesForFilter = requireActivity().getIntent().getStringArrayExtra(
                 Settings.EXTRA_ACCOUNT_TYPES);
         if (accountTypesForFilter != null) {
-            use(AddAccountPreferenceController.class, R.string.pk_add_account)
+            use(ChooseAccountPreferenceController.class, R.string.pk_add_account)
                     .setAccountTypesFilter(new HashSet<>(Arrays.asList(accountTypesForFilter)));
         }
 
-        use(AddAccountPreferenceController.class, R.string.pk_add_account)
+        use(ChooseAccountPreferenceController.class, R.string.pk_add_account)
                 .setListener(this);
     }
 
