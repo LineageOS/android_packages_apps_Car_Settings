@@ -26,6 +26,7 @@ import static org.robolectric.RuntimeEnvironment.application;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.SyncAdapterType;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 
@@ -47,6 +48,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
+
+import java.util.Collections;
+import java.util.HashSet;
 
 /** Unit tests for {@link AddAccountPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -87,6 +91,66 @@ public class AddAccountPreferenceControllerTest {
     @Test
     public void displayPreference_authenticatorPreferencesShouldBeSet() {
         mController.displayPreference(mPreferenceScreen);
+
+        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(2);
+
+        Preference acct1Pref = mPreferenceScreen.getPreference(0);
+        assertThat(acct1Pref.getTitle()).isEqualTo("Type 1");
+
+        Preference acct2Pref = mPreferenceScreen.getPreference(1);
+        assertThat(acct2Pref.getTitle()).isEqualTo("Type 2");
+    }
+
+    @Test
+    public void displayPreference_hasAccountTypeFilter_shouldFilterAccounts() {
+        // Add a filter that should filter out the second account type (com.acct2)
+        HashSet<String> accountTypesFilter = new HashSet<>();
+        accountTypesFilter.add("com.acct1");
+        mController.setAccountTypesFilter(accountTypesFilter);
+
+        mController.displayPreference(mPreferenceScreen);
+
+        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+
+        Preference acct1Pref = mPreferenceScreen.getPreference(0);
+        assertThat(acct1Pref.getTitle()).isEqualTo("Type 1");
+    }
+
+    @Test
+    public void onAccountsUpdate_doesNotHaveAuthoritiesInFilter_shouldNotBeShown() {
+        mController.displayPreference(mPreferenceScreen);
+        // Adds a sync adapter type for the com.acct1 account type that does not have the same
+        // authority as the one passed to someAuthority
+        SyncAdapterType syncAdapterType = new SyncAdapterType("someAuthority",
+                "com.acct1", /* userVisible */ true, /* supportsUploading */ true);
+        SyncAdapterType[] syncAdapters = {syncAdapterType};
+        ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
+
+        mController.setAuthorities(Collections.singletonList("someOtherAuthority"));
+
+        // Force an authenticator refresh so the authorities are refreshed
+        mController.onAccountsUpdate(new UserHandle(USER_ID));
+
+        assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(1);
+
+        Preference acct2Pref = mPreferenceScreen.getPreference(0);
+        assertThat(acct2Pref.getTitle()).isEqualTo("Type 2");
+    }
+
+    @Test
+    public void onAccountsUpdate_hasAuthoritiesInFilter_shouldBeShown() {
+        mController.displayPreference(mPreferenceScreen);
+        // Adds a sync adapter type for the com.acct1 account type that has the same authority as
+        // the one passed to someAuthority
+        SyncAdapterType syncAdapterType = new SyncAdapterType("someAuthority",
+                "com.acct1", /* userVisible */ true, /* supportsUploading */ true);
+        SyncAdapterType[] syncAdapters = {syncAdapterType};
+        ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
+
+        mController.setAuthorities(Collections.singletonList("someAuthority"));
+
+        // Force an authenticator refresh so the authorities are refreshed
+        mController.onAccountsUpdate(new UserHandle(USER_ID));
 
         assertThat(mPreferenceScreen.getPreferenceCount()).isEqualTo(2);
 

@@ -37,9 +37,9 @@ import com.android.settingslib.accounts.AuthenticatorHelper;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Controller for showing the user the list of accounts they can add.
@@ -50,8 +50,8 @@ public class AddAccountPreferenceController extends NoSetupPreferenceController 
         AuthenticatorHelper.OnAccountsUpdateListener {
     private final UserHandle mUserHandle;
     private final AuthenticatorHelper mAuthenticatorHelper;
-    private ArrayList<String> mAuthorities;
-    private HashSet<String> mAccountTypesFilter;
+    private List<String> mAuthorities;
+    private Set<String> mAccountTypesFilter;
     private AddAccountListener mListener;
     private PreferenceScreen mPreferenceScreen;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
@@ -65,12 +65,12 @@ public class AddAccountPreferenceController extends NoSetupPreferenceController 
     }
 
     /** Sets the authorities that the user has. */
-    public void setAuthorities(ArrayList<String> authorities) {
+    public void setAuthorities(List<String> authorities) {
         mAuthorities = authorities;
     }
 
     /** Sets the filter for accounts that should be shown. */
-    public void setAccountTypesFilter(HashSet<String> accountTypesFilter) {
+    public void setAccountTypesFilter(Set<String> accountTypesFilter) {
         mAccountTypesFilter = accountTypesFilter;
     }
 
@@ -184,7 +184,7 @@ public class AddAccountPreferenceController extends NoSetupPreferenceController 
 
             // If there is an account type filter, make sure this account type is included.
             authorized = authorized && (mAccountTypesFilter == null
-                    || !mAccountTypesFilter.contains(accountType));
+                    || mAccountTypesFilter.contains(accountType));
 
             // If authorized, add a preference for the provider to the list and remove it from
             // preferencesToRemove.
