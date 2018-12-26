@@ -16,50 +16,79 @@
 
 package com.android.car.settings.bluetooth;
 
+import static android.content.pm.PackageManager.FEATURE_BLUETOOTH;
+import static android.os.UserManager.DISALLOW_BLUETOOTH;
+
 import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
+import static com.android.car.settings.common.BasePreferenceController.DISABLED_FOR_USER;
 import static com.android.car.settings.common.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+import android.car.userlib.CarUserManagerHelper;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowApplication;
-
-import java.lang.reflect.Field;
+import org.robolectric.Shadows;
+import org.robolectric.annotation.Config;
 
 /** Unit test for {@link BluetoothEntryPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class BluetoothEntryPreferenceControllerTest {
 
+    @Mock
+    private CarUserManagerHelper mCarUserManagerHelper;
     private BluetoothEntryPreferenceController mController;
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
+        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mController = new PreferenceControllerTestHelper<>(RuntimeEnvironment.application,
                 BluetoothEntryPreferenceController.class).getController();
     }
 
+    @After
+    public void tearDown() {
+        ShadowCarUserManagerHelper.reset();
+    }
+
     @Test
-    public void getAvailabilityStatus_defaultAdapterAvailable_available() {
-        // Bluetooth adapter is always available in Robolectric.
+    public void getAvailabilityStatus_bluetoothAvailable_available() {
+        Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
+                FEATURE_BLUETOOTH, /* supported= */ true);
+        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(any())).thenReturn(false);
+
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
-    public void getAvailabilityStatus_defaultAdapterNull_unsupportedOnDevice()
-            throws NoSuchFieldException, IllegalAccessException {
-        // Since Robolectric doesn't allow setting the adapter availability, we null it here.
-        // See BluetoothAdapter.getDefaultAdapter Javadoc for API behavior.
-        ShadowApplication shadowApplication = ShadowApplication.getInstance();
-        Field defaultAdapterField = shadowApplication.getClass().getDeclaredField(
-                "bluetoothAdapter");
-        defaultAdapterField.setAccessible(true);
-        defaultAdapterField.set(shadowApplication, null);
+    public void getAvailabilityStatus_bluetoothAvailable_disallowBluetooth_disabledForUser() {
+        Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
+                FEATURE_BLUETOOTH, /* supported= */ true);
+        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                DISALLOW_BLUETOOTH)).thenReturn(true);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+    }
+
+    @Test
+    public void getAvailabilityStatus_bluetoothNotAvailable_unsupportedOnDevice() {
+        Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
+                FEATURE_BLUETOOTH, /* supported= */ false);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
