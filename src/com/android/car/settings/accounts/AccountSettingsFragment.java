@@ -27,7 +27,6 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.SettingsFragment;
 
 /**
@@ -73,6 +72,6 @@ public class AccountSettingsFragment extends SettingsFragment {
     }
 
     private void onAddAccountClicked() {
-        ((FragmentController) requireActivity()).launchFragment(new AddAccountFragment());
+        launchFragment(new ChooseAccountFragment());
     }
 }

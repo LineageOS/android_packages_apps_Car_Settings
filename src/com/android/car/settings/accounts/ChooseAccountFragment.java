@@ -17,31 +17,24 @@
 package com.android.car.settings.accounts;
 
 import android.content.Context;
-import android.content.Intent;
 import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
-import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
 /**
  * Lists accounts the user can add.
  */
-public class AddAccountFragment extends BasePreferenceFragment implements
-        AddAccountPreferenceController.AddAccountListener {
-    private static final int ADD_ACCOUNT_REQUEST_CODE = 1001;
-    private static final Logger LOG = new Logger(AddAccountFragment.class);
-
+public class ChooseAccountFragment extends SettingsFragment {
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.add_account_fragment;
+        return R.xml.choose_account_fragment;
     }
 
     @Override
@@ -51,35 +44,15 @@ public class AddAccountFragment extends BasePreferenceFragment implements
         String[] authorities = requireActivity().getIntent().getStringArrayExtra(
                 Settings.EXTRA_AUTHORITIES);
         if (authorities != null) {
-            use(AddAccountPreferenceController.class, R.string.pk_add_account)
-                    .setAuthorities(new ArrayList<>(Arrays.asList(authorities)));
+            use(ChooseAccountPreferenceController.class, R.string.pk_add_account)
+                    .setAuthorities(Arrays.asList(authorities));
         }
 
         String[] accountTypesForFilter = requireActivity().getIntent().getStringArrayExtra(
                 Settings.EXTRA_ACCOUNT_TYPES);
         if (accountTypesForFilter != null) {
-            use(AddAccountPreferenceController.class, R.string.pk_add_account)
+            use(ChooseAccountPreferenceController.class, R.string.pk_add_account)
                     .setAccountTypesFilter(new HashSet<>(Arrays.asList(accountTypesForFilter)));
         }
-
-        use(AddAccountPreferenceController.class, R.string.pk_add_account)
-                .setListener(this);
-    }
-
-    @Override
-    public void addAccount(String accountType) {
-        Intent intent = new Intent(getContext(), AddAccountActivity.class);
-        intent.putExtra(AddAccountActivity.EXTRA_SELECTED_ACCOUNT, accountType);
-        startActivityForResult(intent, ADD_ACCOUNT_REQUEST_CODE);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode != ADD_ACCOUNT_REQUEST_CODE) {
-            LOG.d("Unidentified activity returned a result! Ignoring the result.");
-            return;
-        }
-        // Done with adding the account, so go back.
-        getFragmentController().goBack();
     }
 }
