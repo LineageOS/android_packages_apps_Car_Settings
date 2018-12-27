@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/network_and_internet">
-    <com.android.car.settings.wifi.MasterSwitchPreference
+    <com.android.car.settings.common.MasterSwitchPreference
         android:fragment="com.android.car.settings.wifi.WifiSettingsFragment"
         android:icon="@drawable/ic_settings_wifi"
         android:key="@string/pk_wifi_settings_entry"
