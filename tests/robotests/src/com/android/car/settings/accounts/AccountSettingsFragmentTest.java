@@ -90,15 +90,15 @@ public class AccountSettingsFragmentTest {
     }
 
     @Test
-    public void clickAddAccountButton_shouldOpenAddAccountFragment() {
+    public void clickAddAccountButton_shouldOpenChooseAccountFragment() {
         doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
         initFragment();
 
         Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
         addAccountButton.performClick();
 
-        assertThat(mActivity.getSupportFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(AddAccountFragment.class);
+        assertThat(mFragment.getFragmentManager().findFragmentById(
+                R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
     }
 
     private void initFragment() {

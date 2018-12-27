@@ -128,6 +128,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.SYNC_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
@@ -154,13 +164,7 @@
 
         <activity android:name=".accounts.AddAccountActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                  android:configChanges="orientation|keyboardHidden|screenSize">
-            <intent-filter>
-                <action android:name="android.car.settings.ADD_ACCOUNT_SETTINGS" />
-                <action android:name="android.settings.ADD_ACCOUNT_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+                  android:configChanges="orientation|keyboardHidden|screenSize"/>
 
         <activity android:name=".security.SettingsScreenLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"

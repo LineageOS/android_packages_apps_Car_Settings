@@ -20,6 +20,8 @@ import android.provider.Settings;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.car.settings.accounts.AccountSettingsFragment;
+import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -34,13 +36,15 @@ import com.android.car.settings.wifi.WifiSettingsFragment;
  * Maps an Action string to a {@link Fragment} that can handle this Action.
  */
 public class FragmentResolver {
-    private FragmentResolver() {}
+    private FragmentResolver() {
+    }
 
     /**
      * Returns a {@link Fragment} that can handle the given action, returns {@code null} if no
      * {@link Fragment} that can handle this action can be found.
      */
-    static @Nullable Fragment getFragmentForAction(@Nullable String action) {
+    @Nullable
+    static Fragment getFragmentForAction(@Nullable String action) {
         if (action == null) {
             return null;
         }
@@ -74,6 +78,13 @@ public class FragmentResolver {
             case Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS:
             case Settings.ACTION_MANAGE_ALL_APPLICATIONS_SETTINGS:
                 return new ApplicationsSettingsFragment();
+
+            case Settings.ACTION_SYNC_SETTINGS:
+                return new AccountSettingsFragment();
+
+            case Settings.ACTION_ADD_ACCOUNT:
+                return new ChooseAccountFragment();
+
             default:
                 return null;
         }
