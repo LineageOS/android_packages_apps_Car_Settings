@@ -33,11 +33,11 @@
         android:key="@string/pk_sound_settings_entry"
         android:title="@string/sound_settings"/>
     <Preference
-        android:fragment="com.android.car.settings.wifi.WifiSettingsFragment"
+        android:fragment="com.android.car.settings.network.NetworkAndInternetFragment"
         android:icon="@drawable/ic_settings_wifi"
-        android:key="@string/pk_wifi_settings_entry"
-        android:title="@string/wifi_settings"
-        settings:controller="com.android.car.settings.wifi.WifiEntryPreferenceController"/>
+        android:key="@string/pk_network_and_internet_entry"
+        android:title="@string/network_and_internet"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_wireless_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
