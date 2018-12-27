@@ -81,6 +81,11 @@ public class MasterSwitchPreference extends TwoActionPreference {
         mToggleListener = listener;
     }
 
+    /** Gets the listener that handles the change in switch state. */
+    public OnSwitchToggleListener getSwitchToggleListener() {
+        return mToggleListener;
+    }
+
     @Override
     protected void onBindWidgetFrame(View widgetFrame) {
         mSwitch = widgetFrame.findViewById(R.id.master_switch);

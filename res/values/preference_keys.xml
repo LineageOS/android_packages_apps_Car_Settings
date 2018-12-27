@@ -24,7 +24,7 @@
     <string name="pk_suggestions" translatable="false">suggestions</string>
     <string name="pk_display_settings_entry" translatable="false">display_settings_entry</string>
     <string name="pk_sound_settings_entry" translatable="false">sound_settings_entry</string>
-    <string name="pk_wifi_settings_entry" translatable="false">wifi_settings_entry</string>
+    <string name="pk_network_and_internet_entry" translatable="false">network_and_internet_entry</string>
     <string name="pk_wireless_extra_settings" translatable="false">wireless_extra_settings</string>
     <string name="pk_bluetooth_settings_entry" translatable="false">bluetooth_settings_entry
     </string>
@@ -41,6 +41,7 @@
     <string name="pk_personal_extra_settings" translatable="false">personal_extra_settings</string>
 
     <!-- WIFI -->
+    <string name="pk_wifi_settings_entry" translatable="false">wifi_settings_entry</string>
     <string name="pk_wifi_frequency" translatable="false">wifi_frequency</string>
     <string name="pk_wifi_signal_strength" translatable="false">wifi_signal_strength</string>
     <string name="pk_wifi_security" translatable="false">wifi_security</string>
