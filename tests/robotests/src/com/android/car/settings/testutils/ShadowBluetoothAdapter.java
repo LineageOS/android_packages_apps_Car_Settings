@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import static android.bluetooth.BluetoothAdapter.SCAN_MODE_NONE;
 import static android.bluetooth.BluetoothAdapter.STATE_ON;
 
 import android.bluetooth.BluetoothAdapter;
@@ -34,6 +35,7 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
 
     private static int sResetCalledCount = 0;
     private String mName;
+    private int mScanMode;
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
@@ -66,6 +68,23 @@ public class ShadowBluetoothAdapter extends org.robolectric.shadows.ShadowBlueto
             return false;
         }
         mName = name;
+        return true;
+    }
+
+    @Implementation
+    public int getScanMode() {
+        if (getState() != STATE_ON) {
+            return SCAN_MODE_NONE;
+        }
+        return mScanMode;
+    }
+
+    @Implementation
+    public boolean setScanMode(int scanMode) {
+        if (getState() != STATE_ON) {
+            return false;
+        }
+        mScanMode = scanMode;
         return true;
     }
 

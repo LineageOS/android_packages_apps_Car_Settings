@@ -48,6 +48,8 @@ public class BluetoothDevicePreference extends ButtonPreference {
         mCachedDevice = cachedDevice;
         mShowDevicesWithoutNames = SystemProperties.getBoolean(
                 BLUETOOTH_SHOW_DEVICES_WITHOUT_NAMES_PROPERTY, false);
+        // Hide action by default.
+        showAction(false);
     }
 
     /**
