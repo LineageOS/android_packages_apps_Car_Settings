@@ -16,48 +16,50 @@
 
 package com.android.car.settings.bluetooth;
 
-import static java.util.Objects.requireNonNull;
+import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
 import android.bluetooth.BluetoothAdapter;
-import android.car.drivingstate.CarUxRestrictions;
+import android.car.userlib.CarUserManagerHelper;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.ViewSwitcher;
 
 import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.car.widget.PagedListView;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
-import com.android.car.settings.common.CarUxRestrictionsHelper;
-import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
- * Hosts Bluetooth related preferences.
+ * Main page for Bluetooth settings. It manages the power switch for the Bluetooth adapter. It also
+ * displays paired devices and the entry point for device pairing.
  */
-public class BluetoothSettingsFragment extends BaseFragment {
+public class BluetoothSettingsFragment extends SettingsFragment {
 
-    private static final Logger LOG = new Logger(BluetoothSettingsFragment.class);
+    private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+    private final IntentFilter mIntentFilter = new IntentFilter(
+            BluetoothAdapter.ACTION_STATE_CHANGED);
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+            handleStateChanged(state);
+        }
+    };
 
-    private SwipeRefreshLayout mSwipeRefreshLayout;
+    private CarUserManagerHelper mCarUserManagerHelper;
+    private LocalBluetoothManager mLocalBluetoothManager;
     private Switch mBluetoothSwitch;
-    private ProgressBar mProgressBar;
-    private PagedListView mDeviceListView;
-    private ViewSwitcher mViewSwitcher;
-    private TextView mMessageView;
-    private BluetoothDeviceListAdapter mDeviceAdapter;
-    private BluetoothAdapter mBluetoothAdapter;
-    private LocalBluetoothManager mLocalManager;
-    private boolean mShowPairedDeviceOnly;
+
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.bluetooth_settings_fragment;
+    }
 
     @Override
     @LayoutRes
@@ -66,35 +68,13 @@ public class BluetoothSettingsFragment extends BaseFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getLayoutId() {
-        return R.layout.bluetooth_list;
-    }
-
-    @Override
-    @StringRes
-    protected int getTitleId() {
-        return R.string.bluetooth_settings_title;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mLocalManager =
-                LocalBluetoothManager.getInstance(getContext(), /* onInitCallback= */ null);
-        if (mLocalManager == null) {
-            LOG.w("Bluetooth is not supported on this device");
-            getFragmentController().goBack();
-            return;
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mLocalBluetoothManager = BluetoothUtils.getLocalBtManager(context);
+        if (mLocalBluetoothManager == null) {
+            goBack();
         }
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-        BluetoothViewModel viewModel = ViewModelProviders.of(requireActivity()).get(
-                BluetoothViewModel.class);
-
-        requireNonNull(viewModel.getBluetoothState()).observe(this, this::onBluetoothStateChanged);
-        requireNonNull(viewModel.getBluetoothDiscoveryState()).observe(this,
-                this::onBluetoothDiscoveryStateChanged);
     }
 
     @Override
@@ -103,121 +83,52 @@ public class BluetoothSettingsFragment extends BaseFragment {
         mBluetoothSwitch = requireActivity().findViewById(R.id.toggle_switch);
         mBluetoothSwitch.setOnCheckedChangeListener(
                 (buttonView, isChecked) -> {
-                    // If enable/disable succeeds, show states immediately to give user feedback
-                    // rather than waiting for state change callbacks which have a noticeable delay.
+                    mBluetoothSwitch.setEnabled(false);
                     if (isChecked) {
-                        if (mBluetoothAdapter.enable()) {
-                            showOnState();
-                        }
+                        mBluetoothAdapter.enable();
                     } else {
-                        if (mBluetoothAdapter.disable()) {
-                            showOffState();
-                        }
+                        mBluetoothAdapter.disable();
                     }
                 });
-
-        mSwipeRefreshLayout = requireActivity().findViewById(R.id.swiperefresh);
-        mSwipeRefreshLayout.setSize(SwipeRefreshLayout.LARGE);
-        mSwipeRefreshLayout.setOnRefreshListener(
-                () -> {
-                    mSwipeRefreshLayout.setRefreshing(false);
-                    mBluetoothAdapter.cancelDiscovery();
-                    mDeviceAdapter.reset();
-                }
-        );
-
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-        View rootView = requireNonNull(getView());
-        mDeviceListView = rootView.findViewById(R.id.list);
-        mViewSwitcher = rootView.findViewById(R.id.view_switcher);
-        mMessageView = rootView.findViewById(R.id.bt_message);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        mLocalManager.setForegroundActivity(getActivity());
-        int state = mBluetoothAdapter.getState();
-        mBluetoothSwitch.setChecked(
-                state == BluetoothAdapter.STATE_TURNING_ON || state == BluetoothAdapter.STATE_ON);
-        mDeviceAdapter = new BluetoothDeviceListAdapter(requireContext(), mLocalManager,
-                getFragmentController());
-        mDeviceListView.setAdapter(mDeviceAdapter);
-        mDeviceAdapter.start();
-        mDeviceAdapter.showPairedDeviceOnlyAndFresh(mShowPairedDeviceOnly);
+        requireContext().registerReceiver(mReceiver, mIntentFilter);
+        mLocalBluetoothManager.setForegroundActivity(requireActivity());
+        handleStateChanged(mBluetoothAdapter.getState());
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        mDeviceAdapter.stop();
-        mBluetoothAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-        mBluetoothAdapter.cancelDiscovery();
-        mLocalManager.setForegroundActivity(null);
-        mProgressBar.setVisibility(View.GONE);
+        requireContext().unregisterReceiver(mReceiver);
+        mLocalBluetoothManager.setForegroundActivity(null);
     }
 
-    /**
-     * This fragment will adapt to restriction, so can always be shown.
-     */
-    @Override
-    public boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
-        return true;
+    private boolean isUserRestricted() {
+        return mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_BLUETOOTH);
     }
 
-    @Override
-    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-        mShowPairedDeviceOnly = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
-        if (mDeviceAdapter != null) {
-            mDeviceAdapter.showPairedDeviceOnlyAndFresh(mShowPairedDeviceOnly);
-        }
-    }
-
-    private void onBluetoothStateChanged(@Nullable Integer state) {
-        if (state == null) {
-            showOffState();
-            return;
-        }
+    private void handleStateChanged(int state) {
         switch (state) {
-            case BluetoothAdapter.STATE_ON:
-                mBluetoothAdapter.setScanMode(
-                        BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
-                mBluetoothAdapter.startDiscovery();
-                // Fall through.
             case BluetoothAdapter.STATE_TURNING_ON:
-                if (!mBluetoothSwitch.isChecked()) {
-                    // There is an edge case where the adapter may be turning on (BLE) but
-                    // returns the off state when this fragment starts. Disable the adapter so
-                    // that we don't show a state that is inconsistent with the switch or toggle
-                    // the switch state without user input.
-                    mBluetoothAdapter.disable();
-                    return;
-                }
-                showOnState();
+                mBluetoothSwitch.setChecked(true);
+                mBluetoothSwitch.setEnabled(false);
                 break;
+            case BluetoothAdapter.STATE_ON:
+                mBluetoothSwitch.setChecked(true);
+                mBluetoothSwitch.setEnabled(!isUserRestricted());
+                break;
+            case BluetoothAdapter.STATE_TURNING_OFF:
+                mBluetoothSwitch.setChecked(false);
+                mBluetoothSwitch.setEnabled(false);
+                break;
+            case BluetoothAdapter.STATE_OFF:
             default:
-                showOffState();
-                mBluetoothAdapter.cancelDiscovery();
-        }
-    }
-
-    private void onBluetoothDiscoveryStateChanged(@Nullable Boolean isDiscovering) {
-        if (isDiscovering != null) {
-            mProgressBar.setVisibility(isDiscovering ? View.VISIBLE : View.GONE);
-        }
-    }
-
-    private void showOffState() {
-        mProgressBar.setVisibility(View.GONE);
-        if (mViewSwitcher.getCurrentView() != mMessageView) {
-            mViewSwitcher.showNext();
-        }
-    }
-
-    private void showOnState() {
-        mProgressBar.setVisibility(View.VISIBLE);
-        if (mViewSwitcher.getCurrentView() != mSwipeRefreshLayout) {
-            mViewSwitcher.showPrevious();
+                mBluetoothSwitch.setChecked(false);
+                mBluetoothSwitch.setEnabled(!isUserRestricted());
         }
     }
 }
