@@ -71,9 +71,11 @@ public class SyncPreference extends SwitchPreference {
             case ACTIVE:
             case PENDING:
                 setIcon(R.drawable.ic_list_sync_anim);
+                getIcon().setTint(getContext().getColor(R.color.car_tint));
                 break;
             case FAILED:
                 setIcon(R.drawable.ic_sync_problem);
+                getIcon().setTint(getContext().getColor(R.color.car_tint));
                 break;
             default:
                 setIcon(null);
