@@ -47,8 +47,6 @@ public class SyncPreference extends SwitchPreference {
     public void onBindViewHolder(PreferenceViewHolder view) {
         super.onBindViewHolder(view);
 
-        // TODO: handle animation of syncing icon
-
         View switchView = view.findViewById(com.android.internal.R.id.switch_widget);
         if (mOneTimeSyncMode) {
             switchView.setVisibility(View.GONE);
@@ -69,8 +67,11 @@ public class SyncPreference extends SwitchPreference {
     private void updateIcon() {
         switch (mSyncState) {
             case ACTIVE:
+                setIcon(R.drawable.ic_sync_anim);
+                getIcon().setTint(getContext().getColor(R.color.car_tint));
+                break;
             case PENDING:
-                setIcon(R.drawable.ic_list_sync_anim);
+                setIcon(R.drawable.ic_sync);
                 getIcon().setTint(getContext().getColor(R.color.car_tint));
                 break;
             case FAILED:
