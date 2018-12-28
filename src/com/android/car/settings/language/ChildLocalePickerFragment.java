@@ -18,17 +18,18 @@ package com.android.car.settings.language;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.internal.app.LocaleStore;
 
 import java.util.Locale;
 
 /** Secondary screen for language selection, when a language has multiple locales. */
-public class ChildLocalePickerFragment extends BasePreferenceFragment {
+public class ChildLocalePickerFragment extends SettingsFragment {
 
     /**
      * Creates a ChildLocalePickerFragment with the parent locale info included in the arguments.
@@ -42,6 +43,7 @@ public class ChildLocalePickerFragment extends BasePreferenceFragment {
     }
 
     private LanguageBasePreferenceController.LocaleSelectedListener mLocaleSelectedListener;
+    private LocaleStore.LocaleInfo mParentLocaleInfo;
 
     /**
      * Allows the creator of ChildLocalePickerFragment to include a listener for when the child
@@ -56,12 +58,20 @@ public class ChildLocalePickerFragment extends BasePreferenceFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         Locale locale = (Locale) getArguments().getSerializable(LocaleUtil.LOCALE_BUNDLE_KEY);
-        LocaleStore.LocaleInfo parentLocaleInfo = LocaleStore.getLocaleInfo(locale);
+        mParentLocaleInfo = LocaleStore.getLocaleInfo(locale);
         use(ChildLocalePickerPreferenceController.class,
-                R.string.pk_child_locale_picker).setParentLocaleInfo(parentLocaleInfo);
+                R.string.pk_child_locale_picker).setParentLocaleInfo(mParentLocaleInfo);
         use(ChildLocalePickerPreferenceController.class,
                 R.string.pk_child_locale_picker).setLocaleSelectedListener(
                 mLocaleSelectedListener);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        TextView titleView = getActivity().findViewById(R.id.title);
+        titleView.setText(mParentLocaleInfo.getFullNameNative());
     }
 
     @Override
