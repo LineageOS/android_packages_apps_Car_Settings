@@ -22,12 +22,13 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.location.RecentLocationApps;
 
 import org.junit.Before;
@@ -44,7 +45,6 @@ import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class RecentLocationRequestsPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "location_recent_requests_screen";
 
     @Mock
     private RecentLocationApps mRecentLocationApps;
@@ -57,34 +57,38 @@ public class RecentLocationRequestsPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mController = new RecentLocationRequestsPreferenceController(mContext, PREFERENCE_KEY,
-                mock(FragmentController.class), mRecentLocationApps);
         mScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
+        PreferenceControllerTestHelper<RecentLocationRequestsPreferenceController>
+                controllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                RecentLocationRequestsPreferenceController.class, mScreen);
+        mController = controllerHelper.getController();
+        mController.setRecentLocationApps(mRecentLocationApps);
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
-    public void displayPreference_noRecentRequests_messageDisplayed() {
+    public void refreshUi_noRecentRequests_messageDisplayed() {
         when(mRecentLocationApps.getAppListSorted()).thenReturn(Collections.emptyList());
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mScreen.getPreference(0).getTitle()).isEqualTo(
                 mContext.getString(R.string.location_settings_recent_requests_empty_message));
     }
 
     @Test
-    public void displayPreference_someRecentRequests_preferencesAddedToScreen() {
+    public void refreshUi_someRecentRequests_preferencesAddedToScreen() {
         List<RecentLocationApps.Request> list = Arrays.asList(
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class));
         when(mRecentLocationApps.getAppListSorted()).thenReturn(list);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list.size());
     }
 
     @Test
-    public void displayPreference_newRecentRequests_listIsUpdated() {
+    public void refreshUi_newRecentRequests_listIsUpdated() {
         List<RecentLocationApps.Request> list1 = Arrays.asList(
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class),
@@ -94,11 +98,11 @@ public class RecentLocationRequestsPreferenceControllerTest {
         List<RecentLocationApps.Request> list2 = new ArrayList<>(list1);
         list2.add(mock(RecentLocationApps.Request.class));
 
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list1.size());
 
         when(mRecentLocationApps.getAppListSorted()).thenReturn(list2);
-        mController.displayPreference(mScreen);
+        mController.refreshUi();
 
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list2.size());
     }

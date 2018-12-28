@@ -15,77 +15,94 @@
  */
 package com.android.car.settings.location;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-
-import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiScanningPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "location_scanning_wifi";
 
+    private Context mContext;
     private SwitchPreference mPreference;
-    private ContentResolver mContentResolver;
     private WifiScanningPreferenceController mController;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        Context context = RuntimeEnvironment.application;
-        mContentResolver = context.getContentResolver();
-        mController = new WifiScanningPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class));
-        mPreference = new SwitchPreference(context);
-        mPreference.setKey(PREFERENCE_KEY);
+        mContext = RuntimeEnvironment.application;
+        mPreference = new SwitchPreference(mContext);
+        PreferenceControllerTestHelper<WifiScanningPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        WifiScanningPreferenceController.class, mPreference);
+        mController = controllerHelper.getController();
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ true);
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
-    public void updateState_wifiScanningEnabled_shouldCheckPreference() {
+    public void getAvailabilityStatus_hasWifiFeature_available() {
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ true);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_noWifiFeature_unsupported() {
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+                PackageManager.FEATURE_WIFI, /* supported= */ false);
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
+    }
+
+    @Test
+    public void refreshUi_wifiScanningEnabled_shouldCheckPreference() {
         mPreference.setChecked(false);
-        Settings.Global.putInt(mContentResolver, Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
-        mController.updateState(mPreference);
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        mController.refreshUi();
 
         assertThat(mPreference.isChecked()).isTrue();
     }
 
     @Test
-    public void updateState_wifiScanningDisabled_shouldUncheckPreference() {
+    public void refreshUi_wifiScanningDisabled_shouldUncheckPreference() {
         mPreference.setChecked(true);
-        Settings.Global.putInt(mContentResolver, Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
-        mController.updateState(mPreference);
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        mController.refreshUi();
 
         assertThat(mPreference.isChecked()).isFalse();
     }
 
     @Test
-    public void handlePreferenceTreeClick_preferenceChecked_shouldEnableWifiScanning() {
-        mPreference.setChecked(true);
-        mController.handlePreferenceTreeClick(mPreference);
+    public void handlePreferenceChanged_preferenceChecked_shouldEnableWifiScanning() {
+        mPreference.callChangeListener(true);
 
-        assertThat(Settings.Global.getInt(mContentResolver,
+        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0)).isEqualTo(1);
     }
 
     @Test
-    public void handlePreferenceTreeClick_preferenceUnchecked_shouldDisableWifiScanning() {
-        mPreference.setChecked(false);
-        mController.handlePreferenceTreeClick(mPreference);
+    public void handlePreferenceChanged_preferenceUnchecked_shouldDisableWifiScanning() {
+        mPreference.callChangeListener(false);
 
-        assertThat(Settings.Global.getInt(mContentResolver,
+        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1)).isEqualTo(0);
     }
 }

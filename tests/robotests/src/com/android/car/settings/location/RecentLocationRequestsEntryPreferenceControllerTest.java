@@ -17,18 +17,15 @@ package com.android.car.settings.location;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-
 import android.content.Context;
 import android.os.UserHandle;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.settingslib.Utils;
@@ -42,7 +39,6 @@ import org.robolectric.annotation.Config;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowSecureSettings.class, ShadowLocationManager.class})
 public class RecentLocationRequestsEntryPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "location_recent_requests_entry";
 
     private RecentLocationRequestsEntryPreferenceController mController;
     private Preference mPreference;
@@ -50,26 +46,26 @@ public class RecentLocationRequestsEntryPreferenceControllerTest {
     @Before
     public void setUp() {
         Context context = RuntimeEnvironment.application;
-        mController = new RecentLocationRequestsEntryPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class));
         mPreference = new Preference(context);
-        mPreference.setKey(PREFERENCE_KEY);
-        PreferenceScreen screen = new PreferenceManager(context).createPreferenceScreen(context);
-        screen.addPreference(mPreference);
+        PreferenceControllerTestHelper<RecentLocationRequestsEntryPreferenceController>
+                controllerHelper = new PreferenceControllerTestHelper<>(context,
+                RecentLocationRequestsEntryPreferenceController.class, mPreference);
+        mController = controllerHelper.getController();
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
     @Test
-    public void updateState_locationOn_preferenceIsEnabled() {
+    public void refreshUi_locationOn_preferenceIsEnabled() {
         setLocationEnabled(true);
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.isEnabled()).isTrue();
     }
 
     @Test
-    public void updateState_locationOff_preferenceIsDisabled() {
+    public void refreshUi_locationOff_preferenceIsDisabled() {
         setLocationEnabled(false);
-        mController.updateState(mPreference);
+        mController.refreshUi();
 
         assertThat(mPreference.isEnabled()).isFalse();
     }
@@ -77,8 +73,7 @@ public class RecentLocationRequestsEntryPreferenceControllerTest {
     @Test
     public void locationModeChangedBroadcastSent_locationOff_preferenceIsDisabled() {
         setLocationEnabled(true);
-        mController.updateState(mPreference);
-        mController.onStart();
+        mController.refreshUi();
         setLocationEnabled(false);
 
         assertThat(mPreference.isEnabled()).isFalse();
@@ -87,8 +82,7 @@ public class RecentLocationRequestsEntryPreferenceControllerTest {
     @Test
     public void locationModeChangedBroadcastSent_locationOn_preferenceIsEnabled() {
         setLocationEnabled(false);
-        mController.updateState(mPreference);
-        mController.onStart();
+        mController.refreshUi();
         setLocationEnabled(true);
 
         assertThat(mPreference.isEnabled()).isTrue();

@@ -19,12 +19,12 @@ package com.android.car.settings.location;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Fragment that hosts Location Scanning settings.
  */
-public class LocationScanningFragment extends BasePreferenceFragment {
+public class LocationScanningFragment extends SettingsFragment {
 
     @Override
     @XmlRes

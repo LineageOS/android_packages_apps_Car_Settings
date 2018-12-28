@@ -16,9 +16,7 @@
 
 package com.android.car.settings.location;
 
-import static androidx.lifecycle.Lifecycle.Event.ON_START;
-import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
-
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,15 +25,12 @@ import android.location.SettingInjectorService;
 import android.os.UserHandle;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.location.SettingsInjector;
 
 import java.util.ArrayList;
@@ -45,13 +40,11 @@ import java.util.List;
 /**
  * Injects Location Services into a {@link PreferenceGroup} with a matching key.
  */
-public class LocationServicesPreferenceController extends NoSetupPreferenceController
-        implements LifecycleObserver {
+public class LocationServicesPreferenceController extends PreferenceController<PreferenceGroup> {
     private static final Logger LOG = new Logger(LocationServicesPreferenceController.class);
     private static final IntentFilter INTENT_FILTER_INJECTED_SETTING_CHANGED = new IntentFilter(
             SettingInjectorService.ACTION_INJECTED_SETTING_CHANGED);
-    private boolean mIsInjected;
-    private final SettingsInjector mSettingsInjector;
+    private SettingsInjector mSettingsInjector;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -61,51 +54,58 @@ public class LocationServicesPreferenceController extends NoSetupPreferenceContr
     };
 
     public LocationServicesPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        this(context, preferenceKey, fragmentController, new SettingsInjector(context));
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mSettingsInjector = new SettingsInjector(context);
     }
 
     @VisibleForTesting
-    LocationServicesPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, SettingsInjector settingsInjector) {
-        super(context, preferenceKey, fragmentController);
-        mSettingsInjector = settingsInjector;
+    void setSettingsInjector(SettingsInjector injector) {
+        mSettingsInjector = injector;
+    }
+
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        int profileId = UserHandle.USER_CURRENT;
+        if (mSettingsInjector.hasInjectedSettings(profileId)) {
+            // If there are injected settings, get and inject them.
+            List<Preference> injectedSettings = getSortedInjectedPreferences(profileId);
+            for (Preference preference : injectedSettings) {
+                getPreference().addPreference(preference);
+            }
+        }
     }
 
     /**
      * Called when the controller is started.
      */
-    @OnLifecycleEvent(ON_START)
-    public void onStart() {
-        mContext.registerReceiver(mReceiver, INTENT_FILTER_INJECTED_SETTING_CHANGED);
+    @Override
+    protected void onStartInternal() {
+        getContext().registerReceiver(mReceiver, INTENT_FILTER_INJECTED_SETTING_CHANGED);
     }
 
     /**
      * Called when the controller is stopped.
      */
-    @OnLifecycleEvent(ON_STOP)
-    public void onStop() {
-        mContext.unregisterReceiver(mReceiver);
+    @Override
+    protected void onStopInternal() {
+        getContext().unregisterReceiver(mReceiver);
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        int profileId = UserHandle.USER_CURRENT;
-        PreferenceGroup servicesGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
-        if (!mIsInjected && mSettingsInjector.hasInjectedSettings(profileId)) {
-            // If there are injected settings, get and inject them.
-            List<Preference> injectedSettings = getSortedInjectedPreferences(profileId);
-            for (Preference preference : injectedSettings) {
-                servicesGroup.addPreference(preference);
-            }
-            mIsInjected = true;
-        }
-        servicesGroup.setVisible(isAvailable() && servicesGroup.getPreferenceCount() > 0);
+    protected void updateState(PreferenceGroup preferenceGroup) {
+
+        preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
     }
 
     private List<Preference> getSortedInjectedPreferences(int profileId) {
         List<Preference> sortedInjections = new ArrayList<>(
-                mSettingsInjector.getInjectedSettings(mContext, profileId));
+                mSettingsInjector.getInjectedSettings(getContext(), profileId));
         Collections.sort(sortedInjections);
         return sortedInjections;
     }

@@ -19,12 +19,12 @@ package com.android.car.settings.location;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Shows a list of applications that have requested location recently.
  */
-public class RecentLocationRequestsFragment extends BasePreferenceFragment {
+public class RecentLocationRequestsFragment extends SettingsFragment {
 
     @Override
     @XmlRes
