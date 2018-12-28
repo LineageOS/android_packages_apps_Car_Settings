@@ -16,16 +16,6 @@
 -->
 
 <resources>
-    <style name="ListItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/car_double_line_list_item_height</item>
-        <item name="android:foreground">@drawable/car_list_item_background</item>
-    </style>
-
-    <style name="ListItem.SingleLine" parent="ListItem">
-        <item name="android:layout_height">@dimen/car_single_line_list_item_height</item>
-    </style>
-
     <style name="TextAppearance.Car.Body1.SingleLine" parent="TextAppearance.Car.Body1">
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">marquee</item>
@@ -102,10 +92,6 @@
 
     <style name="ListIcon.ActionBar.SetupWizard" parent="ListIcon.ActionBar">
         <item name="android:tint">@color/car_tint_light</item>
-    </style>
-
-    <style name="SettingsListHeader" parent="TextAppearance.Car.Body2">
-        <item name="android:textColor">@color/car_accent</item>
     </style>
 
     <style name="SetupWizardButton.Negative" parent="@style/SuwGlifButton.Secondary">

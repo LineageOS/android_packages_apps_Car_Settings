@@ -20,10 +20,11 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
 
+import androidx.fragment.app.Fragment;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
-import com.android.car.settings.testutils.TestBaseFragment;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +39,7 @@ import org.robolectric.Robolectric;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class ConfirmExitRetailModeDialogTest {
     private BaseTestActivity mTestActivity;
-    private TestBaseFragment mTestFragment;
+    private Fragment mTestFragment;
     private ConfirmExitRetailModeDialog mDialog;
 
     @Before
@@ -46,7 +47,8 @@ public class ConfirmExitRetailModeDialogTest {
         MockitoAnnotations.initMocks(this);
 
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-        mTestFragment = new TestBaseFragment();
+
+        mTestFragment = new Fragment();
         mTestActivity.launchFragment(mTestFragment);
 
         mDialog = new ConfirmExitRetailModeDialog();

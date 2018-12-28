@@ -20,11 +20,12 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.robolectric.RuntimeEnvironment.application;
 
+import androidx.fragment.app.Fragment;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
-import com.android.car.settings.testutils.TestBaseFragment;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -39,14 +40,15 @@ import org.robolectric.Robolectric;
 public class ErrorDialogTest {
     private static final String ERROR_DIALOG_TAG = "ErrorDialogTag";
     private BaseTestActivity mTestActivity;
-    private TestBaseFragment mTestFragment;
+    private Fragment mTestFragment;
 
     @Before
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
 
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-        mTestFragment = new TestBaseFragment();
+
+        mTestFragment = new Fragment();
         mTestActivity.launchFragment(mTestFragment);
     }
 
