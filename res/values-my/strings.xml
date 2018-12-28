@@ -74,22 +74,22 @@
     <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"မည်သည့် စက်ပစ္စည်းမျှ မရှိပါ"</string>
     <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"တွဲချိတ်ထားသည့် စက်ပစ္စည်း"</string>
     <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"အမည်"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"အတွက် သုံးရန်"</string>
+    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"အောက်ပါအတွက် သုံးရန်"</string>
     <string name="wifi_ssid_hint" msgid="4155050863239489553">"\'ဘလူးတုသ်\' စက် အမည်ကို ပြောင်းပါ"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ရန်နှင့် ချိတ်ဆက်ရန်"</string>
     <string name="bluetooth" msgid="5235115159234688629">"ဘလူးတုသ်"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
-    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ပင်နံပါတ်တွင် စကားလုံးနှင့် သင်္ကေတများပါဝင်သည်"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ရန်ကုဒ်ကို ထည့်ပြီး \'Return\' သို့မဟုတ် \'Enter\' ကို နှိပ်ပါ"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>နှင့် တွဲချိတ်လိုပါသလား။"</string>
+    <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ပင်နံပါတ်တွင် စာလုံး သို့မဟုတ် သင်္ကေတများပါဝင်သည်"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ရန်ကုဒ်ကို ထည့်ပြီး Return သို့မဟုတ် Enter ကို နှိပ်ပါ"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်လိုပါသလား။"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"သင်၏ အဆက်အသွယ်များနှင့် ခေါ်ဆိုမှုမှတ်တမ်းကို <xliff:g id="DEVICE_NAME">%1$s</xliff:g> အား အသုံးပြုခွင့်ပေးပါ"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"ဤပင်နံပါတ်ကို အခြား စက်ပစ္စည်းတွင်လည်း ထည့်သွင်းရန် လိုအပ်နိုင်သည်။"</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"ဤလျှို့ဝှက်ကုဒ်ကို အခြား စက်ပစ္စည်းတွင်လည်း ထည့်သွင်းရန် လိုအပ်နိုင်သည်။"</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"ဂဏန်း ၁၆ လုံး ရှိရမည်"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ပုံမှန် ၀၀၀၀ (သို့) ၁၂၃၄"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>နှင့် တွဲချိတ်ရန် တို့ပါ။"</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်ရန် တို့ပါ။"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ဘာသာစကားများ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"အသံ"</string>
@@ -123,7 +123,7 @@
     <string name="model_info" msgid="4966408071657934452">"မော်ဒယ်"</string>
     <string name="baseband_version" msgid="2370088062235041897">"baseband ဗားရှင်း"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel ဗားရှင်း"</string>
-    <string name="build_number" msgid="3997326631001009102">"တည်ဆောင်မှုနံပါတ်"</string>
+    <string name="build_number" msgid="3997326631001009102">"တည်ဆောက်မှုနံပါတ်"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"မရနိုင်ပါ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"အခြေအနေ"</string>
     <string name="device_status" msgid="267298179806290920">"အခြေအနေ"</string>
@@ -131,7 +131,7 @@
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"ဖုန်းနံပါတ်၊ လိုင်းဆွဲအား စသည်။"</string>
     <string name="about_settings" msgid="4329457966672592345">"အကြောင်း"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
-    <string name="about_settings_summary" msgid="7975072809083281401">"ဥပဒေဆိုင်ရာအချက်အလက်၊ အခြေအနေ၊ ဆော့ဝဲလ်ဗားရှင်ကို ကြည့်ရှုရန်"</string>
+    <string name="about_settings_summary" msgid="7975072809083281401">"ဥပဒေဆိုင်ရာအချက်အလက်၊ အခြေအနေ၊ ဆော့ဝဲလ်ဗားရှင်းကို ကြည့်ရှုရန်"</string>
     <string name="legal_information" msgid="1838443759229784762">"ဥပဒေဆိုင်ရာ အချက်အလက်များ"</string>
     <string name="contributors_title" msgid="7698463793409916113">"ပံ့ပိုးသူများ"</string>
     <string name="manual" msgid="4819839169843240804">"ကိုယ်တိုင်ထည့်သွင်းရန်"</string>
@@ -139,10 +139,10 @@
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"လုံခြုံရေးနှင့် ထိန်းသိမ်းမှုလမ်းညွှန်"</string>
     <string name="copyright_title" msgid="4220237202917417876">"မူပိုင်ခွင့်"</string>
     <string name="license_title" msgid="936705938435249965">"လိုင်စင်"</string>
-    <string name="terms_title" msgid="5201471373602628765">"စည်းမျဉ်းများနှင့် အခြေအနေများ"</string>
+    <string name="terms_title" msgid="5201471373602628765">"ဝန်ဆောင်မှုစည်းမျဉ်းများ"</string>
     <string name="webview_license_title" msgid="2531829466541104826">"စနစ် WebView လိုင်စင်"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"နောက်ခံပုံများ"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ဂြိုလ်တုဓာတ်ပုံ ဝန်ဆောင်မှုပေးသူများ−\n©2014 CNES / Astrium၊ DigitalGlobe၊ Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ဂြိုဟ်တုဓာတ်ပုံ ဝန်ဆောင်မှုပေးသူများ−\n©2014 CNES / Astrium၊ DigitalGlobe၊ Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ပြင်ပကုမ္ပဏီလိုင်စင်များ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"လိုင်စင်များကို ဖွင့်ရာတွင် ပြသနာရှိနေသည်။"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ဖွင့်နေသည်…"</string>
@@ -167,7 +167,7 @@
     <string name="time_picker_title" msgid="7436045944320504639">"အချိန်"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"အသုံးပြုသူ ထည့်ရန်"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"အကောင့်ထည့်ရန်"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"သုံးစွဲသူကို ဖျက်ရန်"</string>
+    <string name="user_delete_user_description" msgid="2300280525351142435">"အသုံးပြုသူကို ဖျက်ရန်"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"အသုံးပြုသူ အသစ်"</string>
     <string name="user_guest" msgid="3465399481257448601">"ဧည့်သည်"</string>
     <string name="user_admin" msgid="1535484812908584809">"စီမံခန့်ခွဲသူ"</string>
@@ -205,7 +205,7 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"ပုံစံ"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"ပင်နံပါတ်"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"စကားဝှက်"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"လော့ခ်အမျိုးအစား ရွေးပါ"</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"လော့ခ်ဖွင့်နည်း ရွေးပါ"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"မျက်နှာပြင်လော့ခ်ချရန် ရွေးချယ်စရာများ"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"သင့်လော့ခ်ဖွင့်ပုံစံ ထည့်ခြင်း"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"အတည်ပြုရန်"</string>
@@ -228,7 +228,7 @@
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ပုံစံကိုထပ်ဆွဲပြီး အတည်ပြုရန်"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"အနည်းဆုံးအမှတ် ၄ မှတ်ချိတ်ပါ။ ထပ်လုပ်ပါ။"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ပုံစံ မှားနေသည်"</string>
-    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"လော့ခ်ဖွင့်ရန်ပုံစံ ဆွဲရန်နည်းလမ်း"</string>
+    <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"လော့ခ်ဖွင့်ရန်ပုံစံ ဆွဲနည်း"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ပုံစံကို သိမ်းရာတွင် အမှားရှိနေသည်"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"မျက်နှာပြင်လော့ခ် ဖယ်လိုသလား။"</string>
@@ -260,8 +260,8 @@
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"၎င်းတွင် မမှန်ကန်သည့် အက္ခရာများ ပါဝင်၍မရပါ။"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"စကားဝှက် မမှန်ပါ၊ အနည်းဆုံး အက္ခရာ ၄ လုံး ရှိရမည်။"</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="other">အနည်းဆုံး စကားလုံး <xliff:g id="COUNT">%d</xliff:g> လုံးပါဝင်ရမည်</item>
-      <item quantity="one">အနည်းဆုံး စကားလုံး ၁ လုံးပါဝင်ရမည်</item>
+      <item quantity="other">အနည်းဆုံး စာလုံး <xliff:g id="COUNT">%d</xliff:g> လုံးပါဝင်ရမည်</item>
+      <item quantity="one">အနည်းဆုံး စာလုံး ၁ လုံးပါဝင်ရမည်</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
       <item quantity="other">အနည်းဆုံး စာလုံးငယ် <xliff:g id="COUNT">%d</xliff:g> လုံးပါဝင်ရမည်</item>

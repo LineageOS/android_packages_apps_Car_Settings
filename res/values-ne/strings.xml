@@ -81,7 +81,7 @@
     <string name="bluetooth" msgid="5235115159234688629">"ब्लुटुथ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN मा अक्षर वा प्रतीकहरू समाविष्ट हुन्छन्"</string>
-    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्ट गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
+    <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"जोडा मिलाउने कोड टाइप गर्नुहोस् त्यसपछि फिर्ता गर्नुहोस् वा प्रविष्टि गर्नुहोस् नामक बटन थिच्नुहोस्"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> सँग जोडा बनाउने हो?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>लाई तपाईंका सम्पर्क ठेगानाहरू र फोन सम्पर्कको इतिहासमाथि पहुँच गर्न अनुमति दिनुहोस्"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"तपाईंले अर्को यन्त्रमा पनि यो PIN टाइप गर्नु पर्ने हुन सक्छ।"</string>
@@ -207,7 +207,7 @@
     <string name="security_lock_password" msgid="4420203740048322494">"पासवर्ड"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"लकको प्रकार चयन गर्ने"</string>
     <string name="screen_lock_options" msgid="7023338635352915768">"स्क्रिन लकका विकल्पहरू"</string>
-    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"आफ्नो ढाँचा प्रविष्ट गर्नुहोस्"</string>
+    <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"आफ्नो ढाँचा प्रविष्टि गर्नुहोस्"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"पुष्टि गर्नुहोस्"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"पुनः चित्रण गर्नुहोस्"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"जारी राख्नुहोस्"</string>
@@ -233,10 +233,10 @@
     <string name="okay" msgid="4589873324439764349">"ठिक छ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"स्क्रिन लक हटाउने हो?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"यस कार्यले जुनसुकै व्यक्तिलाई तपाईंको खातामाथि पहुँच राख्न दिने छ"</string>
-    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN प्रविष्ट गर्नुहोस्"</string>
-    <string name="lock_settings_enter_password" msgid="2636669926649496367">"आफ्नो पासवर्ड प्रविष्ट गर्नुहोस्"</string>
+    <string name="lock_settings_enter_pin" msgid="1669172111244633904">"आफ्नो PIN प्रविष्टि गर्नुहोस्"</string>
+    <string name="lock_settings_enter_password" msgid="2636669926649496367">"आफ्नो पासवर्ड प्रविष्टि गर्नुहोस्"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"सुरक्षाका ला‍गि एउटा PIN सेट गर्नुहोस्"</string>
-    <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्ट गर्नुहोस्"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"आफ्नो PIN पुन: प्रविष्टि गर्नुहोस्"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN कम्तीमा ४ अङ्कको हुनै पर्ने"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin अमान्य छ, यसमा अनिवार्य रूपमा कम्तीमा ४ अङ्क हुनु पर्छ।"</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN हरू मेल खाँदैनन्"</string>
@@ -244,7 +244,7 @@
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"गलत PIN"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"गलत पासवर्ड"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"सुरक्षाका लागि पासवर्ड सेट गर्नुहोस्"</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"आफ्नो पासवर्ड पुन: प्रविष्ट गर्नुहोस्"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"आफ्नो पासवर्ड पुन: प्रविष्टि गर्नुहोस्"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"पासवर्डहरू मेल खाँदैनन्"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"खाली गर्नुहोस्"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"रद्द गर्नुहोस्"</string>
