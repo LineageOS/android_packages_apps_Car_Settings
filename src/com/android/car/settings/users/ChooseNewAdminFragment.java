@@ -29,7 +29,7 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * This screen appears after the last admin on the device tries to delete themselves. (but only if
@@ -40,7 +40,7 @@ import com.android.car.settings.common.BasePreferenceFragment;
  *
  * <p> After new admin has been selected and upgraded, the old Admin is removed.
  */
-public class ChooseNewAdminFragment extends BasePreferenceFragment {
+public class ChooseNewAdminFragment extends SettingsFragment {
 
     /**
      * Creates a new instance of {@link ChooseNewAdminFragment} that enables the last remaining

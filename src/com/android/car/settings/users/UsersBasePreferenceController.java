@@ -16,97 +16,74 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.annotation.CallSuper;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 /** Shared business logic between {@link UsersListFragment} and {@link ChooseNewAdminFragment}. */
-public abstract class UsersBasePreferenceController extends NoSetupPreferenceController implements
-        LifecycleObserver {
+public abstract class UsersBasePreferenceController extends PreferenceController<PreferenceGroup> {
 
     /** Update screen when users list is updated. */
     private final CarUserManagerHelper.OnUsersUpdateListener mOnUsersUpdateListener =
-            () -> refreshUsers();
-
-    /** Click listener to open the User Detail Fragment for given preference. */
-    private final UsersPreferenceProvider.UserClickListener mUserClickListener =
-            userInfo -> userClicked(userInfo);
+            this::refreshUi;
 
     private UsersPreferenceProvider mPreferenceProvider;
     private CarUserManagerHelper mCarUserManagerHelper;
-    private List<Preference> mUsersToDisplay;
-    private PreferenceScreen mPreferenceScreen;
-    private boolean mShouldRefreshUsers = false;
+    private List<Preference> mUsersToDisplay = new ArrayList<>();
 
     public UsersBasePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mUsersToDisplay = new ArrayList<>();
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
-        mPreferenceProvider = new UsersPreferenceProvider(mContext, mCarUserManagerHelper,
-                mUserClickListener);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        UsersPreferenceProvider.UserClickListener userClickListener = this::userClicked;
+        mPreferenceProvider = new UsersPreferenceProvider(context, mCarUserManagerHelper,
+                userClickListener);
+    }
+
+    @Override
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     /**
      * Ensure that helper is set by the time onCreate is called. Register a listener to refresh
      * screen on updates.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public void onCreate() {
+    @Override
+    @CallSuper
+    protected void onCreateInternal() {
         mCarUserManagerHelper.registerOnUsersUpdateListener(mOnUsersUpdateListener);
     }
 
     /** Unregister listener to refresh screen on updates. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public void onDestroy() {
+    @Override
+    @CallSuper
+    protected void onDestroyInternal() {
         mCarUserManagerHelper.unregisterOnUsersUpdateListener(mOnUsersUpdateListener);
     }
 
-    /**
-     * Refresh the screen on start (updateState is called onStart()). This is required since
-     * granting admin permissions does not trigger an update to the car user manager helper
-     * listener.
-     */
     @Override
-    public void updateState(Preference preference) {
-        super.updateState(preference);
-        refreshUsers();
-    }
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        List<Preference> newUsers = mPreferenceProvider.createUserList();
+        if (userListsAreDifferent(mUsersToDisplay, newUsers)) {
+            mUsersToDisplay = newUsers;
+            preferenceGroup.removeAll();
 
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-        mPreferenceScreen = screen;
-
-        // Having a bit that checks for whether the users is invalidated is helpful to prevent us
-        // from redrawing the screen more than necessary.
-        if (mUsersToDisplay.isEmpty() || mShouldRefreshUsers) {
-            List<Preference> newUsers = mPreferenceProvider.createUserList();
-
-            // Even after invalidation, only refresh if the set of preferences is different.
-            if (userListsAreDifferent(mUsersToDisplay, newUsers)) {
-                mUsersToDisplay = newUsers;
-                mPreferenceScreen.removeAll();
-
-                for (Preference preference : mUsersToDisplay) {
-                    mPreferenceScreen.addPreference(preference);
-                }
+            for (Preference preference : mUsersToDisplay) {
+                preferenceGroup.addPreference(preference);
             }
-
-            mShouldRefreshUsers = false;
         }
     }
 
@@ -122,11 +99,6 @@ public abstract class UsersBasePreferenceController extends NoSetupPreferenceCon
     /** Gets the preference provider to set additional arguments if necessary. */
     protected UsersPreferenceProvider getPreferenceProvider() {
         return mPreferenceProvider;
-    }
-
-    private void refreshUsers() {
-        mShouldRefreshUsers = true;
-        displayPreference(mPreferenceScreen);
     }
 
     private boolean userListsAreDifferent(List<Preference> currentList,
