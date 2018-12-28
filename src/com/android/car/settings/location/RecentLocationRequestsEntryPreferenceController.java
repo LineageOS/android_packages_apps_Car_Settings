@@ -16,61 +16,61 @@
 
 package com.android.car.settings.location;
 
-import static androidx.lifecycle.Lifecycle.Event.ON_START;
-import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
-
 import android.app.Service;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.location.LocationManager;
 
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 /**
  * Disables Recent Location Requests entry when location is off.
  */
-public class RecentLocationRequestsEntryPreferenceController extends NoSetupPreferenceController
-        implements LifecycleObserver {
+public class RecentLocationRequestsEntryPreferenceController extends
+        PreferenceController<Preference> {
+
     private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
 
-    private Preference mPreference;
     private final LocationManager mLocationManager;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            updateState(mPreference);
+            refreshUi();
         }
     };
 
     public RecentLocationRequestsEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
-        mLocationManager = (LocationManager) context.getSystemService(Service.LOCATION_SERVICE);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mLocationManager = (LocationManager) getContext().getSystemService(
+                Service.LOCATION_SERVICE);
+    }
+
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
-    public void updateState(Preference preference) {
-        if (mPreference == null) {
-            mPreference = preference;
-        }
-        mPreference.setEnabled(mLocationManager.isLocationEnabled());
+    protected void updateState(Preference preference) {
+        preference.setEnabled(mLocationManager.isLocationEnabled());
     }
 
-    @OnLifecycleEvent(ON_START)
-    void onStart() {
-        mContext.registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
+    @Override
+    protected void onStartInternal() {
+        getContext().registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
     }
 
-    @OnLifecycleEvent(ON_STOP)
-    void onStop() {
-        mContext.unregisterReceiver(mReceiver);
+    @Override
+    protected void onStopInternal() {
+        getContext().unregisterReceiver(mReceiver);
     }
 }

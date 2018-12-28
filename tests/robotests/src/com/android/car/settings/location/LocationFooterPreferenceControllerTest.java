@@ -19,7 +19,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
@@ -32,13 +31,12 @@ import android.content.res.Resources;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,7 +51,6 @@ import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class LocationFooterPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "location_footer";
     private static final String TEST_TEXT = "sample text";
     private static final int TEST_RES_ID = 1024;
 
@@ -62,8 +59,8 @@ public class LocationFooterPreferenceControllerTest {
     @Mock
     private Resources mResources;
 
+    private PreferenceControllerTestHelper<LocationFooterPreferenceController> mControllerHelper;
     private LocationFooterPreferenceController mController;
-    private PreferenceScreen mScreen;
     private PreferenceGroup mGroup;
     private List<ResolveInfo> mResolveInfos;
 
@@ -71,14 +68,13 @@ public class LocationFooterPreferenceControllerTest {
     public void setUp() throws PackageManager.NameNotFoundException {
         MockitoAnnotations.initMocks(this);
         Context context = RuntimeEnvironment.application;
-        mController = new LocationFooterPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class), mPackageManager);
-        mResolveInfos = new ArrayList<>();
         mGroup = new LogicalPreferenceGroup(context);
-        mGroup.setKey(PREFERENCE_KEY);
-        mScreen = new PreferenceManager(context).createPreferenceScreen(context);
-        mScreen.addPreference(mGroup);
+        mControllerHelper = new PreferenceControllerTestHelper<>(context,
+                LocationFooterPreferenceController.class, mGroup);
+        mController = mControllerHelper.getController();
+        mController.setPackageManager(mPackageManager);
 
+        mResolveInfos = new ArrayList<>();
         when(mPackageManager.queryBroadcastReceivers(any(Intent.class), anyInt()))
                 .thenReturn(mResolveInfos);
         when(mPackageManager.getResourcesForApplication(any(ApplicationInfo.class)))
@@ -91,58 +87,58 @@ public class LocationFooterPreferenceControllerTest {
     public void footer_isVisibleWhenThereAreValidInjections() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true));
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mGroup.isVisible()).isTrue();
     }
 
     @Test
-    public void footer_isHiddenWhenThereAreNoValidInjections_NotSystemApp() {
+    public void footer_isHiddenWhenThereAreNoValidInjections_notSystemApp() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ false, /* hasRequiredMetadata= */ true));
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mGroup.isVisible()).isFalse();
     }
 
     @Test
-    public void footer_isHiddenWhenThereAreNoValidInjections_NoMetaData() {
+    public void footer_isHiddenWhenThereAreNoValidInjections_noMetaData() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ false));
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mGroup.isVisible()).isFalse();
     }
 
     // Correctness Tests.
     @Test
-    public void displayPreference_addsInjectedFooterToGroup() {
+    public void onCreate_addsInjectedFooterToGroup() {
         int numFooters = 3;
         for (int i = 0; i < numFooters; i++) {
             mResolveInfos.add(
                     getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true));
         }
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mGroup.getPreferenceCount()).isEqualTo(numFooters);
     }
 
     @Test
-    public void displayPreference_injectedFooterHasCorrectText() {
+    public void onCreate_injectedFooterHasCorrectText() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true));
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(mGroup.getPreference(0).getSummary()).isEqualTo(TEST_TEXT);
     }
 
     // Broadcast Tests.
     @Test
-    public void displayPreference_broadcastsFooterDisplayedIntentForValidInjections() {
+    public void onCreate_broadcastsFooterDisplayedIntentForValidInjections() {
         ResolveInfo testResolveInfo =
                 getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true);
         mResolveInfos.add(testResolveInfo);
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired).hasSize(1);
@@ -154,10 +150,10 @@ public class LocationFooterPreferenceControllerTest {
     }
 
     @Test
-    public void displayPreference_doesNotBroadcastFooterDisplayedIntentIfNoValidInjections() {
+    public void onCreate_doesNotBroadcastFooterDisplayedIntentIfNoValidInjections() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ false, /* hasRequiredMetadata= */ true));
-        mController.displayPreference(mScreen);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired).isEmpty();
@@ -167,8 +163,8 @@ public class LocationFooterPreferenceControllerTest {
     public void onStop_broadcastsFooterRemovedIntent() {
         mResolveInfos.add(
                 getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true));
-        mController.displayPreference(mScreen);
-        mController.onStop();
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
 
         List<Intent> intentsFired = ShadowApplication.getInstance().getBroadcastIntents();
         assertThat(intentsFired).hasSize(2);

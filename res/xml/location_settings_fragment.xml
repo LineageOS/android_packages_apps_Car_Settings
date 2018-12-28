@@ -26,7 +26,8 @@
         settings:controller="com.android.car.settings.location.RecentLocationRequestsEntryPreferenceController"/>
     <Preference
         android:key="@string/pk_location_app_permissions"
-        android:title="@string/location_settings_app_permissions_title">
+        android:title="@string/location_settings_app_permissions_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
         <intent android:action="android.intent.action.MANAGE_PERMISSION_APPS">
             <extra android:name="android.intent.extra.PERMISSION_NAME"
                    android:value="android.permission-group.LOCATION"/>

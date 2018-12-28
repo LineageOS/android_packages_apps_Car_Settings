@@ -16,8 +16,7 @@
 
 package com.android.car.settings.location;
 
-import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
-
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -29,16 +28,13 @@ import android.location.LocationManager;
 
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,65 +43,84 @@ import java.util.List;
 /**
  * Injects Location Footers into a {@link PreferenceGroup} with a matching key.
  */
-public class LocationFooterPreferenceController extends NoSetupPreferenceController
-        implements LifecycleObserver {
+public class LocationFooterPreferenceController extends PreferenceController<PreferenceGroup> {
     private static final Logger LOG = new Logger(LocationFooterPreferenceController.class);
     private static final Intent INJECT_INTENT =
             new Intent(LocationManager.SETTINGS_FOOTER_DISPLAYED_ACTION);
 
-    private final Context mContext;
-    private final PackageManager mPackageManager;
     private List<LocationFooter> mLocationFooters;
     // List of Location Footer Injectors that will be used to broadcast a
     // LocationManager.SETTINGS_FOOTER_REMOVED_ACTION intent on controller stop.
     private final List<ComponentName> mFooterInjectors = new ArrayList<>();
+    private PackageManager mPackageManager;
 
     public LocationFooterPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        this(context, preferenceKey, fragmentController, context.getPackageManager());
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
+        mPackageManager = context.getPackageManager();
     }
 
     @VisibleForTesting
-    LocationFooterPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, PackageManager packageManager) {
-        super(context, preferenceKey, fragmentController);
-        mContext = context;
+    void setPackageManager(PackageManager packageManager) {
         mPackageManager = packageManager;
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        PreferenceGroup footersGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
-        if (mLocationFooters == null) {
-            mLocationFooters = getInjectedLocationFooters();
-            for (LocationFooter footer : mLocationFooters) {
-                String footerString;
-                try {
-                    footerString = mPackageManager
-                            .getResourcesForApplication(footer.mApplicationInfo)
-                            .getString(footer.mFooterStringRes);
-                } catch (PackageManager.NameNotFoundException exception) {
-                    LOG.w("Resources not found for application "
-                            + footer.mApplicationInfo.packageName);
-                    continue;
-                }
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
+    }
 
-                // For each injected footer: Create a new preference, set the summary
-                // and icon, then inject under the footer preference group.
-                Preference newPreference = new Preference(mContext);
-                newPreference.setSummary(footerString);
-                newPreference.setIcon(R.drawable.ic_settings_about);
-                footersGroup.addPreference(newPreference);
-
-                // Send broadcast to the injector announcing a footer has been injected
-                sendBroadcast(footer.mComponentName,
-                        LocationManager.SETTINGS_FOOTER_DISPLAYED_ACTION);
-                // Add the component to the list of injectors so that
-                // it receives a broadcast when the footer is removed.
-                mFooterInjectors.add(footer.mComponentName);
+    @Override
+    protected void onCreateInternal() {
+        mLocationFooters = getInjectedLocationFooters();
+        for (LocationFooter footer : mLocationFooters) {
+            String footerString;
+            try {
+                footerString = mPackageManager
+                        .getResourcesForApplication(footer.mApplicationInfo)
+                        .getString(footer.mFooterStringRes);
+            } catch (PackageManager.NameNotFoundException exception) {
+                LOG.w("Resources not found for application "
+                        + footer.mApplicationInfo.packageName);
+                continue;
             }
+
+            // For each injected footer: Create a new preference, set the summary
+            // and icon, then inject under the footer preference group.
+            Preference newPreference = new Preference(getContext());
+            newPreference.setSummary(footerString);
+            newPreference.setIcon(R.drawable.ic_settings_about);
+            getPreference().addPreference(newPreference);
+
+            // Send broadcast to the injector announcing a footer has been injected
+            sendBroadcast(footer.mComponentName,
+                    LocationManager.SETTINGS_FOOTER_DISPLAYED_ACTION);
+            // Add the component to the list of injectors so that
+            // it receives a broadcast when the footer is removed.
+            mFooterInjectors.add(footer.mComponentName);
         }
-        footersGroup.setVisible(isAvailable() && footersGroup.getPreferenceCount() > 0);
+    }
+
+    /**
+     * Send a {@link LocationManager#SETTINGS_FOOTER_REMOVED_ACTION} broadcast to footer injectors
+     * when LocationSettingsFragment is stopped.
+     */
+    @Override
+    protected void onStopInternal() {
+        // Send broadcast to the footer injectors. Notify them the footer is not visible.
+        for (ComponentName componentName : mFooterInjectors) {
+            sendBroadcast(componentName, LocationManager.SETTINGS_FOOTER_REMOVED_ACTION);
+        }
+    }
+
+    @Override
+    protected void onDestroyInternal() {
+        mLocationFooters = null;
+    }
+
+    @Override
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
     }
 
     /**
@@ -153,22 +168,10 @@ public class LocationFooterPreferenceController extends NoSetupPreferenceControl
         return locationFooters;
     }
 
-    /**
-     * Send a {@link LocationManager#SETTINGS_FOOTER_REMOVED_ACTION} broadcast to footer injectors
-     * when LocationSettingsFragment is stopped.
-     */
-    @OnLifecycleEvent(ON_STOP)
-    void onStop() {
-        // Send broadcast to the footer injectors. Notify them the footer is not visible.
-        for (ComponentName componentName : mFooterInjectors) {
-            sendBroadcast(componentName, LocationManager.SETTINGS_FOOTER_REMOVED_ACTION);
-        }
-    }
-
     private void sendBroadcast(ComponentName componentName, String action) {
         Intent intent = new Intent(action);
         intent.setComponent(componentName);
-        mContext.sendBroadcast(intent);
+        getContext().sendBroadcast(intent);
     }
 
     /**

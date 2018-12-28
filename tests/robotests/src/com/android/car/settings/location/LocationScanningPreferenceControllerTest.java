@@ -16,18 +16,19 @@
 
 package com.android.car.settings.location;
 
-import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
-import static com.android.car.settings.common.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
-
-import static org.mockito.Mockito.mock;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
 
+import androidx.lifecycle.Lifecycle;
+import androidx.preference.Preference;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +39,6 @@ import org.robolectric.shadows.ShadowPackageManager;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class LocationScanningPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "location_scanning";
 
     private ShadowPackageManager mShadowPackageManager;
     private LocationScanningPreferenceController mController;
@@ -46,8 +46,11 @@ public class LocationScanningPreferenceControllerTest {
     @Before
     public void setUp() {
         Context context = RuntimeEnvironment.application;
-        mController = new LocationScanningPreferenceController(context, PREFERENCE_KEY,
-                mock(FragmentController.class));
+        PreferenceControllerTestHelper<LocationScanningPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(context,
+                        LocationScanningPreferenceController.class, new Preference(context));
+        mController = controllerHelper.getController();
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mShadowPackageManager = Shadows.shadowOf(context.getPackageManager());
     }
 
