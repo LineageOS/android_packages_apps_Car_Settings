@@ -16,6 +16,9 @@
 
 package com.android.car.settings.testutils;
 
+import static android.telephony.PhoneStateListener.LISTEN_NONE;
+
+import android.telephony.PhoneStateListener;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
@@ -23,18 +26,42 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-@Implements(TelephonyManager.class)
+@Implements(value = TelephonyManager.class, inheritImplementationMethods = true)
 public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTelephonyManager {
 
     public static final String SUBSCRIBER_ID = "test_id";
     private static Map<Integer, Integer> sSubIdsWithResetCalledCount = new HashMap<>();
+    private final Map<PhoneStateListener, Integer> mPhoneStateRegistrations = new HashMap<>();
 
     public static boolean verifyFactoryResetCalled(int subId, int numTimes) {
         if (!sSubIdsWithResetCalledCount.containsKey(subId)) return false;
         return sSubIdsWithResetCalledCount.get(subId) == numTimes;
+    }
+
+    @Implementation
+    public void listen(PhoneStateListener listener, int flags) {
+        super.listen(listener, flags);
+
+        if (flags == LISTEN_NONE) {
+            mPhoneStateRegistrations.remove(listener);
+        } else {
+            mPhoneStateRegistrations.put(listener, flags);
+        }
+    }
+
+    public List<PhoneStateListener> getListenersForFlags(int flags) {
+        List<PhoneStateListener> listeners = new ArrayList<>();
+        for (PhoneStateListener listener : mPhoneStateRegistrations.keySet()) {
+            if ((mPhoneStateRegistrations.get(listener) & flags) != 0) {
+                listeners.add(listener);
+            }
+        }
+        return listeners;
     }
 
     @Implementation
