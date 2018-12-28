@@ -609,6 +609,10 @@
     <string name="sync_in_progress">Syncing now\u2026</string>
     <!-- Data synchronization settings screen, summary of a sync provider (for example, Gmail) when autosync is off and the user wants to do a one-time sync. The last synced time will be shown on a new line. [CHAR LIMIT=none] -->
     <string name="sync_one_time_sync">Tap to sync now<xliff:g id="last_sync_time" example="\nLast synced 12/05/18, 12:30 PM">\n%1$s</xliff:g></string>
+    <!-- Data synchronization settings screen, text for button that allows the user to immediately start sync [CHAR LIMIT=30]-->
+    <string name="sync_button_sync_now">Sync now</string>
+    <!-- Data synchronization settings screen, text for button that allows the user to cancel sync [CHAR LIMIT=30]-->
+    <string name="sync_button_sync_cancel">Cancel sync</string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
