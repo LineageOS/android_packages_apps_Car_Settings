@@ -16,13 +16,11 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ErrorDialog;
@@ -32,8 +30,7 @@ import com.android.car.settings.common.FragmentController;
  * Business logic for when the last admin is about to be removed from the device and a new
  * administrator needs to be chosen.
  */
-public class ChooseNewAdminPreferenceController extends UsersBasePreferenceController implements
-        LifecycleObserver {
+public class ChooseNewAdminPreferenceController extends UsersBasePreferenceController {
 
     private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mGrantAdminListener =
             userToMakeAdmin -> {
@@ -44,8 +41,8 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
     private UserInfo mAdminInfo;
 
     public ChooseNewAdminPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         getPreferenceProvider().setIncludeCurrentUser(false);
         getPreferenceProvider().setIncludeGuest(false);
     }
@@ -55,13 +52,16 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
         mAdminInfo = adminInfo;
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     @Override
-    public void onCreate() {
-        super.onCreate();
+    protected void checkInitialized() {
         if (mAdminInfo == null) {
             throw new IllegalStateException("Admin info should be set by this point");
         }
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
         ConfirmGrantAdminPermissionsDialog dialog =
                 (ConfirmGrantAdminPermissionsDialog) getFragmentController().findDialogByTag(
                         ConfirmGrantAdminPermissionsDialog.TAG);
@@ -86,7 +86,7 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
 
     private void removeOldAdmin() {
         if (!getCarUserManagerHelper().removeUser(mAdminInfo,
-                mContext.getString(R.string.user_guest))) {
+                getContext().getString(R.string.user_guest))) {
             // If failed, need to show error dialog for users.
             getFragmentController().showDialog(
                     ErrorDialog.newInstance(R.string.delete_user_error_title), /* tag= */ null);

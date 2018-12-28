@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
@@ -25,8 +26,8 @@ import com.android.car.settings.common.FragmentController;
 public class UsersListPreferenceController extends UsersBasePreferenceController {
 
     public UsersListPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override

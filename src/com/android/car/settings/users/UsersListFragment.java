@@ -30,14 +30,14 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.ErrorDialog;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Lists all Users available on this device.
  */
-public class UsersListFragment extends BasePreferenceFragment implements
+public class UsersListFragment extends SettingsFragment implements
         ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener,
         ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener,
         AddNewUserTask.AddNewUserListener {
@@ -85,7 +85,7 @@ public class UsersListFragment extends BasePreferenceFragment implements
         mAddUserButton = getActivity().findViewById(R.id.action_button1);
         mAddUserButton.setOnClickListener(v -> {
             if (mRestricted) {
-                getFragmentController().showBlockingMessage();
+                showBlockingMessage();
             } else {
                 handleAddUserClicked();
             }
