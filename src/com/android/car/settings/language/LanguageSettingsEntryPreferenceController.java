@@ -16,26 +16,35 @@
 
 package com.android.car.settings.language;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.NoSetupPreferenceController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settingslib.language.LanguagePickerUtils;
 import com.android.internal.app.LocaleHelper;
 
 import java.util.Locale;
 
 /** Updates the language settings entry summary with the currently configured locale. */
-public class LanguageSettingsEntryPreferenceController extends NoSetupPreferenceController {
+public class LanguageSettingsEntryPreferenceController extends PreferenceController<Preference> {
 
     public LanguageSettingsEntryPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public CharSequence getSummary() {
+    protected void updateState(Preference preference) {
         Locale locale = LanguagePickerUtils.getConfiguredLocale();
-        return LocaleHelper.getDisplayName(locale, locale, /* sentenceCase= */ true);
+        preference.setSummary(
+                LocaleHelper.getDisplayName(locale, locale, /* sentenceCase= */ true));
+    }
+
+    @Override
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 }

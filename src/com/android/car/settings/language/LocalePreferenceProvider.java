@@ -70,8 +70,16 @@ public class LocalePreferenceProvider {
         mSuggestedLocaleAdapter = localeAdapter;
     }
 
-    /** Populates the base preference group based on the hierarchy provided by this provider. */
-    public void populateBasePreference(PreferenceGroup base) {
+    /**
+     * Populates the base preference group based on the hierarchy provided by this provider.
+     *
+     * @param base     the preference container which will hold the language preferences created by
+     *                 this provider
+     * @param listener the click listener registered to the language/locale preferences contained in
+     *                 the base preference group
+     */
+    public void populateBasePreference(PreferenceGroup base,
+            Preference.OnPreferenceClickListener listener) {
         /*
          * LocalePreferenceProvider can give elements to be represented in 2 ways. In the first
          * way, it simply provides the LocalePreferences which lists the available options. In the
@@ -90,6 +98,7 @@ public class LocalePreferenceProvider {
                 category = (PreferenceCategory) preference;
                 base.addPreference(category);
             } else {
+                preference.setOnPreferenceClickListener(listener);
                 if (category == null) {
                     base.addPreference(preference);
                 } else {
