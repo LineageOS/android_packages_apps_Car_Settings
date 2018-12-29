@@ -176,16 +176,6 @@
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_message">Tap to pair with <xliff:g id="device_name">%1$s</xliff:g>.</string>
 
-    <!-- Bluetooth strings to remove post preference migration --><skip/>
-    <!--Bluetooth was disabled. -->
-    <string name="bluetooth_disabled">Bluetooth disabled</string>
-    <!-- Bluetooth settings: Name label [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_paired_dialog_name_label">Name</string>
-    <!-- Bluetooth settings: The sub heading for no bluetooth device has been paired with this device. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_no_paired_devices">No paired devices</string>
-    <!-- Bluetooth settings: The sub heading for no available bluetooth devices during and after scanning. [CHAR LIMIT=40] -->
-    <string name="bluetooth_preference_no_found_devices">No available devices</string>
-
     <!-- Language settings screen heading. [CHAR LIMIT=30] -->
     <string name="language_settings">Languages</string>
     <!-- Title of Languages & input settings screen. [CHAR LIMIT=30] -->
