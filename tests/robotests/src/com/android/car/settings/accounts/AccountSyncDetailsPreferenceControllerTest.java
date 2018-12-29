@@ -339,7 +339,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
         Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(Shadows.shadowOf(pref.getIcon()).getCreatedFromResId()).isEqualTo(
-                R.drawable.ic_list_sync_anim);
+                R.drawable.ic_sync_anim);
     }
 
     @Test
@@ -359,7 +359,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
         Preference pref = mPreferenceGroup.getPreference(0);
 
         assertThat(Shadows.shadowOf(pref.getIcon()).getCreatedFromResId()).isEqualTo(
-                R.drawable.ic_list_sync_anim);
+                R.drawable.ic_sync);
     }
 
     @Test
