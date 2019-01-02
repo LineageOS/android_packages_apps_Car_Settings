@@ -16,19 +16,38 @@
 
 package com.android.car.settings.testutils;
 
+import static org.mockito.Mockito.mock;
+
 import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.net.NetworkInfo;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
-@Implements(ConnectivityManager.class)
+import java.util.HashMap;
+import java.util.Map;
+
+@Implements(value = ConnectivityManager.class, inheritImplementationMethods = true)
 public class ShadowConnectivityManager extends org.robolectric.shadows.ShadowConnectivityManager {
 
     private static int sResetCalledCount = 0;
+    private final Map<Network, NetworkCapabilities> mCapabilitiesMap = new HashMap<>();
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
+    }
+
+    public void addNetworkCapabilities(Network network, NetworkCapabilities capabilities) {
+        super.addNetwork(network, mock(NetworkInfo.class));
+        mCapabilitiesMap.put(network, capabilities);
+    }
+
+    @Implementation
+    public NetworkCapabilities getNetworkCapabilities(Network network) {
+        return mCapabilitiesMap.get(network);
     }
 
     @Implementation
