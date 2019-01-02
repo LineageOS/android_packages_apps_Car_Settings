@@ -17,4 +17,11 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/mobile_network_settings"/>
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/mobile_network_settings">
+    <SwitchPreference
+        android:key="@string/pk_mobile_data_toggle"
+        android:summary="@string/mobile_network_toggle_summary"
+        android:title="@string/mobile_network_toggle_title"
+        settings:controller="com.android.car.settings.network.MobileDataTogglePreferenceController"/>
+</PreferenceScreen>
