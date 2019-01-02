@@ -20,8 +20,8 @@ import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 
-import com.android.car.settings.R;
-import com.android.car.settings.common.BaseFragment;
+import androidx.fragment.app.Fragment;
+
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
@@ -35,13 +35,8 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
     private static final Logger LOG = new Logger(CheckLockActivity.class);
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (savedInstanceState != null) {
-            return;
-        }
-        BaseFragment fragment;
+    public Fragment getFragment() {
+        Fragment fragment;
         int passwordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
         switch (passwordQuality) {
@@ -49,7 +44,7 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
                 // User has not set a password.
                 setResult(RESULT_OK);
                 finish();
-                return;
+                return null;
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                 fragment = ConfirmLockPatternFragment.newInstance(
                         /* isInSetupWizard= */ false);
@@ -76,12 +71,7 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
         }
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, passwordQuality);
         fragment.setArguments(bundle);
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.fragment_container, fragment)
-                .addToBackStack(null)
-                .commit();
+        return fragment;
     }
 
     @Override

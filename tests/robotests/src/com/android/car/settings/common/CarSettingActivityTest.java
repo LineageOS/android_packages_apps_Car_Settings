@@ -20,11 +20,14 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
 import android.car.Car;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
+import android.content.Intent;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -32,11 +35,16 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.datetime.DatetimeSettingsFragment;
+import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.ShadowCar;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 
@@ -50,14 +58,41 @@ public class CarSettingActivityTest {
     private ActivityController<CarSettingActivity> mActivityController;
     private CarSettingActivity mActivity;
 
+    @Mock
+    private CarUxRestrictionsManager mMockCarUxRestrictionsManager;
+
     @Before
-    public void setUp() {
-        ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE,
-                mock(CarUxRestrictionsManager.class));
+    public void setUp() throws Exception {
+        MockitoAnnotations.initMocks(this);
+        ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mMockCarUxRestrictionsManager);
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
         mActivityController.create();
+
+        CarUxRestrictions noSetupRestrictions = new CarUxRestrictions.Builder(
+                true, CarUxRestrictions.UX_RESTRICTIONS_BASELINE, 0).build();
+
+        when(mMockCarUxRestrictionsManager.getCurrentCarUxRestrictions())
+                .thenReturn(noSetupRestrictions);
+    }
+
+    @Test
+    public void launchWithIntent_resolveToFragment() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent("android.settings.DATE_SETTINGS");
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
+                .isInstanceOf(DatetimeSettingsFragment.class);
+    }
+
+    @Test
+    public void launchWithEmptyIntent_resolveToDefaultFragment() {
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class).setup().get();
+        assertThat(activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
+                .isInstanceOf(DummyFragment.class);
     }
 
     @Test
