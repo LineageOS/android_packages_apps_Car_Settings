@@ -39,6 +39,12 @@
     <string name="network_and_internet">Network &amp; internet</string>
     <!-- Mobile network settings [CHAR LIMIT=30] -->
     <string name="mobile_network_settings">Mobile network</string>
+    <!-- Mobile network screen, toggle mobile data title [CHAR LIMIT=30] -->
+    <string name="mobile_network_toggle_title">Mobile data</string>
+    <!-- Mobile network screen, toggle mobile data summary [CHAR LIMIT=50] -->
+    <string name="mobile_network_toggle_summary">Access data using mobile network</string>
+    <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
+    <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- Data usage settings [CHAR LIMIT=30] -->
     <string name="data_usage_settings">Data usage</string>
 
