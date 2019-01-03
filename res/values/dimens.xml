@@ -26,6 +26,19 @@
     <dimen name="action_bar_end_widget_margin_end">46dp</dimen>
     <dimen name="optical_center_offset">1dp</dimen>
 
+    <!-- Suggestions -->
+    <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
+    <dimen name="suggestions_corner_radius">@*android:dimen/car_radius_3</dimen>
+    <!-- Padding between the top of the card and the text -->
+    <dimen name="suggestions_text_padding_top">@*android:dimen/car_padding_2</dimen>
+    <!-- Padding between the bottom of the text and the action bar -->
+    <dimen name="suggestions_text_padding_bottom">@*android:dimen/car_padding_2</dimen>
+    <!-- The margin between the main suggestion text and the subtext -->
+    <dimen name="suggestions_subtext_margin_top">@*android:dimen/car_padding_1</dimen>
+    <dimen name="suggestions_padding_start">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="suggestions_padding_end">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="suggestions_action_bar_height">@*android:dimen/car_card_action_bar_height</dimen>
+
     <dimen name="tile_top_bottom_padding">15dp</dimen>
     <dimen name="list_item_top_margin">25dp</dimen>
 
