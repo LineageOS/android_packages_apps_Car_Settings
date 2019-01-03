@@ -25,6 +25,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SyncAdapterType;
 import android.content.SyncStatusInfo;
+import android.content.SyncStatusObserver;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.ProviderInfo;
@@ -107,6 +108,31 @@ public class AccountDetailsWithSyncStatusPreferenceControllerTest {
         ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
 
         mController.refreshUi();
+
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.sync_is_failing));
+    }
+
+    @Test
+    public void onSyncStatusChanged_summaryShouldUpdated() {
+        setUpVisibleSyncAdapters(AUTHORITY);
+
+        // Make sure the summary is blank first
+        mController.refreshUi();
+        assertThat(mPreference.getSummary()).isEqualTo("");
+
+        // Turns on automatic sync for the the sync adapter.
+        ContentResolver.setSyncAutomaticallyAsUser(mAccount, AUTHORITY, /* sync= */ true,
+                mUserHandle.getIdentifier());
+        // Sets the sync adapter's last failure time and message so it appears to have failed
+        // previously.
+        SyncStatusInfo status = new SyncStatusInfo(0);
+        status.lastFailureTime = 10;
+        status.lastFailureMesg = "too-many-deletions";
+        ShadowContentResolver.setSyncStatus(mAccount, AUTHORITY, status);
+
+        SyncStatusObserver listener = ShadowContentResolver.getStatusChangeListener();
+        listener.onStatusChanged(/* which= */ 0);
 
         assertThat(mPreference.getSummary()).isEqualTo(
                 mContext.getString(R.string.sync_is_failing));

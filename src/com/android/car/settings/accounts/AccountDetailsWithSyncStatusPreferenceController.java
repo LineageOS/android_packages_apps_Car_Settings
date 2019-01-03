@@ -22,11 +22,13 @@ import android.content.Context;
 import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
+import android.content.SyncStatusObserver;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.List;
 import java.util.Set;
@@ -37,10 +39,44 @@ import java.util.Set;
  */
 public class AccountDetailsWithSyncStatusPreferenceController extends
         AccountDetailsPreferenceController {
+    private boolean mIsStarted = false;
+    private Object mStatusChangeListenerHandle;
+    private SyncStatusObserver mSyncStatusObserver =
+            which -> ThreadUtils.postOnMainThread(() -> {
+                // The observer call may occur even if the fragment hasn't been started, so
+                // only force an update if the fragment hasn't been stopped.
+                if (mIsStarted) {
+                    refreshUi();
+                }
+            });
 
     public AccountDetailsWithSyncStatusPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
+    }
+
+
+    /**
+     * Registers the account update and sync status change callbacks.
+     */
+    @Override
+    protected void onStartInternal() {
+        mIsStarted = true;
+        mStatusChangeListenerHandle = ContentResolver.addStatusChangeListener(
+                ContentResolver.SYNC_OBSERVER_TYPE_ACTIVE
+                        | ContentResolver.SYNC_OBSERVER_TYPE_STATUS
+                        | ContentResolver.SYNC_OBSERVER_TYPE_SETTINGS, mSyncStatusObserver);
+    }
+
+    /**
+     * Unregisters the account update and sync status change callbacks.
+     */
+    @Override
+    protected void onStopInternal() {
+        mIsStarted = false;
+        if (mStatusChangeListenerHandle != null) {
+            ContentResolver.removeStatusChangeListener(mStatusChangeListenerHandle);
+        }
     }
 
     @Override
