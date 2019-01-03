@@ -28,12 +28,10 @@
 
     <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings"/>
 
-    <attr name="WifiSignalColor" format="reference"/>
-
     <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
         <item name="preferenceTheme">@style/PreferenceThemeOverlayCar</item>
         <item name="wifi_signal">@drawable/wifi_signal</item>
-        <item name="WifiSignalColor">?android:attr/colorAccent</item>
+        <item name="wifiSignalColor">?android:attr/colorAccent</item>
         <item name="iconColor">@color/car_tint</item>
         <item name="android:windowBackground">@color/car_card</item>
         <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
