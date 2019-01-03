@@ -224,7 +224,6 @@ public class UserGridRecyclerView extends PagedListView implements
 
         /**
          * Refreshes the User Grid with the new List of users.
-         * @param users
          */
         public void updateUsers(List<UserRecord> users) {
             mUsers = users;
@@ -233,7 +232,7 @@ public class UserGridRecyclerView extends PagedListView implements
         @Override
         public UserAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(mContext)
-                    .inflate(R.layout.car_user_switcher_pod, parent, false);
+                    .inflate(R.layout.user_switcher_pod, parent, false);
             view.setAlpha(mOpacityEnabled);
             view.bringToFront();
             return new UserAdapterViewHolder(view);
@@ -255,7 +254,7 @@ public class UserGridRecyclerView extends PagedListView implements
             // Foreground user record.
             if (userRecord.mIsForeground) {
                 // Add a circle around the icon.
-                holder.mFrame.setBackgroundResource(R.drawable.car_user_avatar_bg_circle);
+                holder.mFrame.setBackgroundResource(R.drawable.user_avatar_bg_circle);
                 // Go back to quick settings if user selected is already the foreground user.
                 holder.mView.setOnClickListener(v -> mBaseFragment.getActivity().onBackPressed());
                 return;
@@ -288,7 +287,6 @@ public class UserGridRecyclerView extends PagedListView implements
          * Specify if adding a user should be restricted.
          *
          * @param isAddUserRestricted should adding a user be restricted
-         *
          */
         public void setAddUserRestricted(boolean isAddUserRestricted) {
             mIsAddUserRestricted = isAddUserRestricted;
@@ -342,8 +340,7 @@ public class UserGridRecyclerView extends PagedListView implements
             }
 
             if (userRecord.mIsAddUser) {
-                return UserIcons.convertToBitmap(mContext
-                    .getDrawable(R.drawable.car_add_circle_round));
+                return UserIcons.convertToBitmap(mContext.getDrawable(R.drawable.user_add_circle));
             }
 
             return mCarUserManagerHelper.getUserIcon(userRecord.mInfo);
