@@ -94,35 +94,35 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 R.string.choose_lock_pin_hints,
                 R.string.continue_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_arrow_forward_on_disc),
+                R.drawable.ic_arrow_forward),
 
         PasswordInvalid(
                 R.string.lockpassword_invalid_password,
                 R.string.lockpin_invalid_pin,
                 R.string.continue_button_text,
                 R.string.lockpassword_clear_label,
-                R.drawable.ic_arrow_forward_on_disc),
+                R.drawable.ic_arrow_forward),
 
         NeedToConfirm(
                 R.string.confirm_your_password_header,
                 R.string.confirm_your_pin_header,
                 R.string.lockpassword_confirm_label,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check_on_disc),
+                R.drawable.ic_check),
 
         ConfirmWrong(
                 R.string.confirm_passwords_dont_match,
                 R.string.confirm_pins_dont_match,
                 R.string.continue_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check_on_disc),
+                R.drawable.ic_check),
 
         SaveFailure(
                 R.string.error_saving_password,
                 R.string.error_saving_lockpin,
                 R.string.lockscreen_retry_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check_on_disc);
+                R.drawable.ic_check);
 
         public final int alphaHint;
         public final int numericHint;
