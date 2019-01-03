@@ -24,6 +24,7 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
 
 import com.android.car.settings.R;
+import com.android.car.theme.Themes;
 
 /**
  * A preference that represents the state of a sync adapter.
@@ -68,15 +69,15 @@ public class SyncPreference extends SwitchPreference {
         switch (mSyncState) {
             case ACTIVE:
                 setIcon(R.drawable.ic_sync_anim);
-                getIcon().setTint(getContext().getColor(R.color.car_tint));
+                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
                 break;
             case PENDING:
                 setIcon(R.drawable.ic_sync);
-                getIcon().setTint(getContext().getColor(R.color.car_tint));
+                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
                 break;
             case FAILED:
                 setIcon(R.drawable.ic_sync_problem);
-                getIcon().setTint(getContext().getColor(R.color.car_tint));
+                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
                 break;
             default:
                 setIcon(null);

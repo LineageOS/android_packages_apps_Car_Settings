@@ -55,4 +55,6 @@
         <!-- Classname of a PreferenceController corresponding to the preference -->
         <attr name="controller" format="string"/>
     </declare-styleable>
+
+    <attr name="iconColor" format="color"/>
 </resources>

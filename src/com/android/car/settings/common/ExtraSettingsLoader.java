@@ -34,6 +34,7 @@ import android.text.TextUtils;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.theme.Themes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -139,7 +140,7 @@ public class ExtraSettingsLoader {
             preference.setSummary(summary);
             if (icon != null) {
                 preference.setIcon(icon.loadDrawable(mContext));
-                // TODO: handle icon tint
+                preference.getIcon().setTint(Themes.getAttrColor(mContext, R.attr.iconColor));
             }
             preference.setIntent(extraSettingIntent);
             preferences.add(preference);
