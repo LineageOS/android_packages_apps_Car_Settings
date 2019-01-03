@@ -26,6 +26,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.theme.Themes;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 import java.util.StringJoiner;
@@ -74,7 +75,7 @@ public class BluetoothDeviceNamePreferenceController extends
         }
         preference.setTitle(cachedDevice.getName());
         preference.setIcon(pair.first);
-        // TODO: handle icon tint.
+        preference.getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
         preference.setSummary(summaryJoiner.toString());
     }
 
