@@ -43,7 +43,7 @@ public class UserSwitcherFragment extends BaseFragment {
     @Override
     @LayoutRes
     protected int getLayoutId() {
-        return R.layout.car_user_switcher;
+        return R.layout.user_switcher;
     }
 
     @Override

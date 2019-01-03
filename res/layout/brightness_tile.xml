@@ -21,6 +21,6 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/car_single_line_list_item_height"
     android:layout_marginBottom="@dimen/car_padding_4"
-    android:progressDrawable="@drawable/ic_seekbar_track"
+    android:progressDrawable="@drawable/brightness_seekbar_track"
     android:splitTrack="true"
     android:thumb="@drawable/ic_brightness_knob_stretched"/>
