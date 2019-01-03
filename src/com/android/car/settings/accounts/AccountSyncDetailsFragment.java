@@ -84,9 +84,11 @@ public class AccountSyncDetailsFragment extends SettingsFragment {
         Account account = getArguments().getParcelable(EXTRA_ACCOUNT);
         UserHandle userHandle = getArguments().getParcelable(EXTRA_USER_HANDLE);
 
-        use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
+        use(AccountDetailsWithSyncStatusPreferenceController.class,
+                R.string.pk_account_details_with_sync)
                 .setAccount(account);
-        use(AccountDetailsPreferenceController.class, R.string.pk_account_details)
+        use(AccountDetailsWithSyncStatusPreferenceController.class,
+                R.string.pk_account_details_with_sync)
                 .setUserHandle(userHandle);
 
         use(AccountSyncDetailsPreferenceController.class, R.string.pk_account_sync_details)

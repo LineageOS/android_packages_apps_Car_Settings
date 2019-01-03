@@ -525,7 +525,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
             // Sets provider info with a label for the sync adapter.
             ProviderInfo info = new ProviderInfo();
-            info.authority = AUTHORITY;
+            info.authority = authority;
             info.name = "label";
             ProviderInfo[] providers = {info};
 
