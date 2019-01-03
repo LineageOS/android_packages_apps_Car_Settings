@@ -17,13 +17,12 @@
 
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="@dimen/primary_icon_size"
-    android:height="@dimen/primary_icon_size"
+    android:width="@dimen/icon_size"
+    android:height="@dimen/icon_size"
     android:viewportHeight="24"
     android:viewportWidth="24">
+    <path android:pathData="M0 0h24v24H0z"/>
     <path
-        android:pathData="M0 0h24v24H0z"/>
-    <path
-        android:fillColor="#FFFFFF"
+        android:fillColor="?attr/iconColor"
         android:pathData="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
 </vector>

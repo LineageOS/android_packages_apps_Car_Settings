@@ -24,7 +24,9 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.ButtonPreference;
+import com.android.car.theme.Themes;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 /**
@@ -80,7 +82,7 @@ public class BluetoothDevicePreference extends ButtonPreference {
                 .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
         if (pair.first != null) {
             setIcon(pair.first);
-            // TODO: handle icon tint.
+            getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
         }
 
         setEnabled(!mCachedDevice.isBusy());

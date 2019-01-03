@@ -40,6 +40,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
+import com.android.car.theme.Themes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -141,6 +142,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         SeekBarPreference preference = new SeekBarPreference(getContext());
         preference.setTitle(getContext().getString(titleId));
         preference.setIcon(getContext().getDrawable(iconResId));
+        preference.getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
         try {
             preference.setValue(mCarAudioManager.getGroupVolume(volumeGroupId));
             preference.setMin(mCarAudioManager.getGroupMinVolume(volumeGroupId));
