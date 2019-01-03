@@ -21,6 +21,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.UserHandle;
 
+import androidx.annotation.CallSuper;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
@@ -45,9 +46,19 @@ public class AccountDetailsPreferenceController extends PreferenceController<Pre
         mAccount = account;
     }
 
+    /** Returns the account the details are shown for. */
+    public Account getAccount() {
+        return mAccount;
+    }
+
     /** Sets the UserHandle used by the controller. */
     public void setUserHandle(UserHandle userHandle) {
         mUserHandle = userHandle;
+    }
+
+    /** Returns the UserHandle used by the controller. */
+    public UserHandle getUserHandle() {
+        return mUserHandle;
     }
 
     @Override
@@ -62,6 +73,7 @@ public class AccountDetailsPreferenceController extends PreferenceController<Pre
      * @throws IllegalStateException if the account or user handle are {@code null}
      */
     @Override
+    @CallSuper
     protected void checkInitialized() {
         LOG.v("checkInitialized");
         if (mAccount == null) {
@@ -77,11 +89,11 @@ public class AccountDetailsPreferenceController extends PreferenceController<Pre
     }
 
     @Override
+    @CallSuper
     protected void updateState(Preference preference) {
         preference.setTitle(mAccount.name);
         // Get the icon corresponding to the account's type and set it.
         AuthenticatorHelper helper = new AuthenticatorHelper(getContext(), mUserHandle, null);
         preference.setIcon(helper.getDrawableForType(getContext(), mAccount.type));
-
     }
 }

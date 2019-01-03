@@ -29,9 +29,7 @@ import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.SyncStatusObserver;
 import android.content.pm.PackageManager;
-import android.content.pm.ProviderInfo;
 import android.os.UserHandle;
-import android.text.TextUtils;
 import android.text.format.DateFormat;
 
 import androidx.annotation.Nullable;
@@ -308,20 +306,13 @@ public class AccountSyncDetailsPreferenceController extends
         List<SyncInfo> currentSyncs = ContentResolver.getCurrentSyncsAsUser(userId);
         // Whether one time sync is enabled rather than automtic sync
         boolean oneTimeSyncMode = !ContentResolver.getMasterSyncAutomaticallyAsUser(userId);
-        boolean syncIsFailing = false;
 
         List<SyncPreference> syncPreferences = new ArrayList<>();
 
-        Set<SyncAdapterType> syncAdapters = AccountSyncHelper.getSyncableSyncAdaptersForAccount(
-                mAccount,
-                mUserHandle);
+        Set<SyncAdapterType> syncAdapters = AccountSyncHelper.getVisibleSyncAdaptersForAccount(
+                getContext(), mAccount, mUserHandle);
         for (SyncAdapterType syncAdapter : syncAdapters) {
             String authority = syncAdapter.authority;
-
-            if (!syncAdapter.isUserVisible()) {
-                // If the sync adapter is not visible, don't show it
-                continue;
-            }
 
             int uid;
             try {
@@ -332,11 +323,6 @@ public class AccountSyncDetailsPreferenceController extends
                 continue;
             }
 
-            CharSequence title = getTitle(authority);
-            if (TextUtils.isEmpty(title)) {
-                continue;
-            }
-
             // If we've reached this point, the sync adapter should be shown. If a preference for
             // the sync adapter already exists, update its state. Otherwise, create a new
             // preference.
@@ -344,9 +330,11 @@ public class AccountSyncDetailsPreferenceController extends
                     new SyncPreference(getContext(), authority));
             pref.setUid(uid);
             pref.setPackageName(syncAdapter.getPackageName());
-            pref.setTitle(title);
             pref.setOnPreferenceClickListener(
                     (Preference p) -> onSyncPreferenceClicked((SyncPreference) p));
+
+            CharSequence title = AccountSyncHelper.getTitle(getContext(), authority, mUserHandle);
+            pref.setTitle(title);
 
             // Keep track of preferences that need to be added and removed
             syncPreferences.add(pref);
@@ -356,7 +344,8 @@ public class AccountSyncDetailsPreferenceController extends
                     userId);
             boolean syncEnabled = ContentResolver.getSyncAutomaticallyAsUser(mAccount, authority,
                     userId);
-            boolean activelySyncing = isSyncing(currentSyncs, authority);
+            boolean activelySyncing = AccountSyncHelper.isSyncing(mAccount, currentSyncs,
+                    authority);
 
             // The preference should be checked if one one-time sync or regular sync is enabled
             boolean checked = oneTimeSyncMode || syncEnabled;
@@ -366,36 +355,13 @@ public class AccountSyncDetailsPreferenceController extends
             pref.setSummary(summary);
 
             // Update the sync state so the icon is updated
-            SyncPreference.SYNC_STATE syncState = getSyncState(status, syncEnabled,
-                    activelySyncing);
+            AccountSyncHelper.SyncState syncState = AccountSyncHelper.getSyncState(status,
+                    syncEnabled, activelySyncing);
             pref.setSyncState(syncState);
             pref.setOneTimeSyncMode(oneTimeSyncMode);
-
-            // TODO: handle when sync is failing
-            boolean syncIsPending = status != null && status.pending;
-            if (syncState == SyncPreference.SYNC_STATE.FAILED && !activelySyncing
-                    && !syncIsPending) {
-                syncIsFailing = true;
-            }
         }
 
         return syncPreferences;
-    }
-
-    /**
-     * Returns the label for a given sync authority.
-     *
-     * @return the title if available, and an empty CharSequence otherwise
-     */
-    private CharSequence getTitle(String authority) {
-        PackageManager packageManager = getContext().getPackageManager();
-        ProviderInfo providerInfo = packageManager.resolveContentProviderAsUser(
-                authority, /* flags= */ 0, mUserHandle.getIdentifier());
-        if (providerInfo == null) {
-            return "";
-        }
-
-        return providerInfo.loadLabel(packageManager);
     }
 
     private String getSummary(SyncStatusInfo status, boolean syncEnabled, boolean activelySyncing) {
@@ -412,33 +378,6 @@ public class AccountSyncDetailsPreferenceController extends
             return getContext().getString(R.string.last_synced, timeString);
         }
         return "";
-    }
-
-    private SyncPreference.SYNC_STATE getSyncState(SyncStatusInfo status, boolean syncEnabled,
-            boolean activelySyncing) {
-        boolean initialSync = status != null && status.initialize;
-        boolean syncIsPending = status != null && status.pending;
-        boolean lastSyncFailed = syncEnabled && status != null && status.lastFailureTime != 0
-                && status.getLastFailureMesgAsInt(0)
-                != ContentResolver.SYNC_ERROR_SYNC_ALREADY_IN_PROGRESS;
-        if (activelySyncing && !initialSync) {
-            return SyncPreference.SYNC_STATE.ACTIVE;
-        } else if (syncIsPending && !initialSync) {
-            return SyncPreference.SYNC_STATE.PENDING;
-        } else if (lastSyncFailed) {
-            return SyncPreference.SYNC_STATE.FAILED;
-        }
-        return SyncPreference.SYNC_STATE.NONE;
-    }
-
-    /** Returns whether a sync adapter is currently syncing for the account being shown. */
-    private boolean isSyncing(List<SyncInfo> currentSyncs, String authority) {
-        for (SyncInfo syncInfo : currentSyncs) {
-            if (syncInfo.account.equals(mAccount) && syncInfo.authority.equals(authority)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     @VisibleForTesting
