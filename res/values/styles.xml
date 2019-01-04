@@ -26,43 +26,6 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="Theme.SettingsBase" parent="@android:style/Theme.Material.Settings"/>
-
-    <style name="CarSettingTheme" parent="Theme.Car.Light.NoActionBar">
-        <item name="preferenceTheme">@style/PreferenceThemeOverlayCar</item>
-        <item name="wifi_signal">@drawable/wifi_signal</item>
-        <item name="wifiSignalColor">?android:attr/colorAccent</item>
-        <item name="iconColor">@color/car_tint</item>
-        <item name="userSwitcherBackground">?android:attr/colorPrimary</item>
-        <item name="userSwitcherCurrentUserColor">?android:attr/colorAccent</item>
-        <item name="userSwitcherAddIconColor">@color/car_tint</item>
-        <item name="userSwitcherAddIconBackgroundColor">?android:attr/colorPrimaryDark</item>
-        <item name="userSwitcherNameTextAppearance">?android:attr/textAppearanceLarge</item>
-        <item name="suggestionsPrimaryColor">?android:attr/colorPrimaryDark</item>
-        <item name="suggestionsSecondaryColor">@android:color/black</item>
-        <item name="android:windowBackground">@color/car_card</item>
-        <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
-        <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
-        <item name="android:fragmentOpenEnterAnimation">@animator/trans_right_in</item>
-        <item name="android:fragmentOpenExitAnimation">@animator/trans_left_out</item>
-        <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
-        <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
-        <item name="android:borderlessButtonStyle">@style/Widget.Car.Button.Borderless.Colored
-        </item>
-    </style>
-
-    <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowTranslucentStatus">false</item>
-        <item name="android:windowTranslucentNavigation">false</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">#00000000</item>
-        <item name="android:navigationBarColor">#00000000</item>
-    </style>
-
     <style name="PreferenceButtonTextAppearance"
            parent="@*android:style/TextAppearance.DeviceDefault.Widget.Button.Borderless.Colored">
         <item name="android:fadingEdgeLength">@dimen/button_fading_edge_length</item>
@@ -127,16 +90,6 @@
     </style>
 
     <!-- Styles for Setup Wizard -->
-
-    <style name="FallbackHome.SetupWizard"
-           parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@android:color/black</item>
-        <item name="android:colorBackgroundCacheHint">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">#00000000</item>
-        <item name="android:navigationBarColor">#00000000</item>
-    </style>
 
     <style name="SetupWizardButton.Negative" parent="@style/SuwGlifButton.Secondary">
         <!-- Negative margin to offset for padding of the button itself. We want the label to be
