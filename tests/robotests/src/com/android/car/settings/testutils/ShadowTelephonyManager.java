@@ -37,6 +37,7 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
     public static final String SUBSCRIBER_ID = "test_id";
     private static Map<Integer, Integer> sSubIdsWithResetCalledCount = new HashMap<>();
     private final Map<PhoneStateListener, Integer> mPhoneStateRegistrations = new HashMap<>();
+    private boolean mIsDataEnabled = false;
 
     public static boolean verifyFactoryResetCalled(int subId, int numTimes) {
         if (!sSubIdsWithResetCalledCount.containsKey(subId)) return false;
@@ -62,6 +63,16 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
             }
         }
         return listeners;
+    }
+
+    @Implementation
+    protected void setDataEnabled(boolean enable) {
+        mIsDataEnabled = enable;
+    }
+
+    @Implementation
+    protected boolean isDataEnabled() {
+        return mIsDataEnabled;
     }
 
     @Implementation
