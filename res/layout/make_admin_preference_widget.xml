@@ -17,12 +17,9 @@
 
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:maxEms="@integer/car_button_max_ems"
-    android:paddingEnd="@dimen/car_button_horizontal_padding"
-    android:paddingStart="@dimen/car_button_horizontal_padding"
+    android:maxEms="@integer/button_max_ems"
     android:text="@string/grant_admin_permissions_button_text"
-    android:textColor="?android:attr/colorButtonNormal"
-    android:textSize="@dimen/car_body3_size"/>
+    android:textAppearance="@style/PreferenceButtonTextAppearance"/>

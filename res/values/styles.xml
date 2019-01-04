@@ -66,6 +66,15 @@
         <item name="android:navigationBarColor">#00000000</item>
     </style>
 
+    <style name="PreferenceButtonTextAppearance"
+           parent="@*android:style/TextAppearance.DeviceDefault.Widget.Button.Borderless.Colored">
+        <item name="android:fadingEdgeLength">@dimen/button_fading_edge_length</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
     <style name="TrimmedHorizontalProgressBar"
            parent="android:Widget.Material.ProgressBar.Horizontal">
         <item name="android:indeterminateDrawable">
