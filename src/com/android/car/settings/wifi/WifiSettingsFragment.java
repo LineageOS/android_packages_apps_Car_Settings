@@ -25,12 +25,12 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Main page to host Wifi related preferences.
  */
-public class WifiSettingsFragment extends BasePreferenceFragment
+public class WifiSettingsFragment extends SettingsFragment
         implements CarWifiManager.Listener {
     private CarWifiManager mCarWifiManager;
     private ProgressBar mProgressBar;
@@ -97,7 +97,7 @@ public class WifiSettingsFragment extends BasePreferenceFragment
     }
 
     private void setupWifiSwitch() {
-        mWifiSwitch = (Switch) getActivity().findViewById(R.id.toggle_switch);
+        mWifiSwitch = getActivity().findViewById(R.id.toggle_switch);
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         mWifiSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked != mCarWifiManager.isWifiEnabled()) {
