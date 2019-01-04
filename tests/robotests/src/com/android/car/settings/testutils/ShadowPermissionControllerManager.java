@@ -18,7 +18,7 @@ package com.android.car.settings.testutils;
 
 import android.content.Context;
 import android.os.Handler;
-import android.permission.RuntimePermissionPresenter;
+import android.permission.PermissionControllerManager;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -28,8 +28,8 @@ import java.util.List;
 /**
  * A RuntimePermissionPresenter that changes nothing and <u>never returns callbacks</u>.
  */
-@Implements(RuntimePermissionPresenter.class)
-public class ShadowRuntimePermissionPresenter {
+@Implements(PermissionControllerManager.class)
+public class ShadowPermissionControllerManager {
     @Implementation
     protected void __constructor__(Context context) {
         // no nothing, everything is shadowed
@@ -37,8 +37,7 @@ public class ShadowRuntimePermissionPresenter {
 
     @Implementation
     protected void getAppPermissions(String packageName,
-            RuntimePermissionPresenter.OnGetAppPermissionResultCallback callback,
-            Handler handler) {
+            PermissionControllerManager.OnGetAppPermissionResultCallback callback, Handler handler) {
     }
 
     @Implementation
@@ -48,7 +47,7 @@ public class ShadowRuntimePermissionPresenter {
     @Implementation
     protected void countPermissionApps(List<String> permissionNames, boolean countOnlyGranted,
             boolean countSystem,
-            RuntimePermissionPresenter.OnCountPermissionAppsResultCallback callback,
+            PermissionControllerManager.OnCountPermissionAppsResultCallback callback,
             Handler handler) {
     }
 }
