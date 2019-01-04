@@ -18,9 +18,9 @@ package com.android.car.settings.wifi.details;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.nullable;
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
@@ -28,7 +28,6 @@ import static org.mockito.Mockito.when;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.ConnectivityManager.NetworkCallback;
 import android.net.LinkProperties;
@@ -88,8 +87,6 @@ public class WifiInfoProviderImplTest {
     private NetworkCapabilities mMockChangedNetworkCapabilities;
     @Mock
     private WifiManager mMockWifiManager;
-    @Mock
-    private PackageManager mMockPackageManager;
     @Mock
     private Listener mMockListener;
 

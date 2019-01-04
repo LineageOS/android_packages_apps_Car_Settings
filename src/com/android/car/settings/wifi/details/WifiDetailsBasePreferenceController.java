@@ -16,6 +16,7 @@
 
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.LinkProperties;
 import android.net.Network;
@@ -24,62 +25,74 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.preference.Preference;
 
-import com.android.car.settings.common.BasePreferenceController;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.wifi.WifiUtil;
 import com.android.settingslib.wifi.AccessPoint;
 
 /**
- * Controller for logic pertaining to displaying Wifi information.
+ * Controller for logic pertaining to displaying Wifi information. Only available when wifi is
+ * active.
+ *
+ * <p>Subclasses should use
+ * {@link com.android.car.settings.common.PreferenceController#updateState(Preference)} to render UI
+ * with latest info if desired.
+ *
+ * @param <V> the upper bound on the type of {@link Preference} on which the controller
+ *            expects to operate.
  */
-public abstract class WifiControllerBase extends BasePreferenceController
-        implements WifiInfoProvider.Listener, LifecycleObserver {
+public abstract class WifiDetailsBasePreferenceController<V extends Preference> extends
+        PreferenceController<V> implements WifiInfoProvider.Listener {
 
-    protected AccessPoint mAccessPoint;
-    protected WifiInfoProvider mWifiInfoProvider;
+    private AccessPoint mAccessPoint;
+    private WifiInfoProvider mWifiInfoProvider;
 
-    public WifiControllerBase(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiDetailsBasePreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     /**
      * Sets all parameters for the controller to run, need to get called as early as possible.
      */
-    public WifiControllerBase init(
+    public WifiDetailsBasePreferenceController init(
             AccessPoint accessPoint, WifiInfoProvider wifiInfoProvider) {
         mAccessPoint = accessPoint;
         mWifiInfoProvider = wifiInfoProvider;
         return this;
     }
 
-    /**
-     * Start listening for wifi updates.
-     */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public void onStart() {
+    /** Gets the access poing that this controller was initialized with. */
+    protected AccessPoint getAccessPoint() {
+        return mAccessPoint;
+    }
+
+    /** Gets the wifi info provider that this controller was initialized with. */
+    protected WifiInfoProvider getWifiInfoProvider() {
+        return mWifiInfoProvider;
+    }
+
+    @Override
+    protected void onStartInternal() {
         mWifiInfoProvider.addListener(this);
     }
 
-    /**
-     * Stop listening for wifi updates.
-     */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public void onStop() {
+    @Override
+    protected void onStopInternal() {
         mWifiInfoProvider.removeListener(this);
     }
 
     @Override
     public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
             NetworkInfo networkInfo, WifiInfo wifiInfo) {
+        refreshUi();
     }
 
     @Override
     public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
+        refreshUi();
     }
 
     @Override
@@ -88,14 +101,21 @@ public abstract class WifiControllerBase extends BasePreferenceController
 
     @Override
     public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
+        getPreference().setEnabled(true);
+        refreshUi();
     }
 
     @Override
     public void onLost(Network network) {
+        getPreference().setEnabled(false);
+        refreshUi();
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return WifiUtil.isWifiAvailable(mContext) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    protected int getAvailabilityStatus() {
+        if (!WifiUtil.isWifiAvailable(getContext())) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
+        return getAccessPoint().isActive() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 }

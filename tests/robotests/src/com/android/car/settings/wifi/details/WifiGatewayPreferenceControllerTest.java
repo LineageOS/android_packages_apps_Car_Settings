@@ -27,11 +27,10 @@ import android.net.LinkProperties;
 import android.net.Network;
 import android.net.RouteInfo;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.Before;
@@ -40,7 +39,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowPackageManager;
 
 import java.net.InetAddress;
 import java.util.Arrays;
@@ -48,11 +46,7 @@ import java.util.Arrays;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiGatewayPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "somePreferenceKey";
     private static final String GATE_WAY = "gateway";
-
-    private PreferenceScreen mPreferenceScreen;
-    private WifiDetailPreference mPreference;
 
     @Mock
     private AccessPoint mMockAccessPoint;
@@ -66,10 +60,9 @@ public class WifiGatewayPreferenceControllerTest {
     private RouteInfo mMockRouteInfo;
     @Mock
     private InetAddress mMockInetAddress;
-    @Mock
-    private FragmentController mMockFragmentController;
 
     private Context mContext;
+    private WifiDetailsPreference mPreference;
     private WifiGatewayPreferenceController mController;
 
     @Before
@@ -77,43 +70,36 @@ public class WifiGatewayPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
-        ShadowPackageManager pm = shadowOf(mContext.getPackageManager());
-        pm.setSystemFeature(PackageManager.FEATURE_WIFI, true);
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mPreference = new WifiDetailPreference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mPreference);
+        shadowOf(mContext.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI, true);
+        mPreference = new WifiDetailsPreference(mContext);
         when(mMockWifiInfoProvider.getLinkProperties()).thenReturn(mMockLinkProperties);
+
+        PreferenceControllerTestHelper<WifiGatewayPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        WifiGatewayPreferenceController.class, mPreference);
+        mController = (WifiGatewayPreferenceController) controllerHelper.getController().init(
+                mMockAccessPoint, mMockWifiInfoProvider);
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
         when(mMockAccessPoint.isActive()).thenReturn(true);
-        mController = (WifiGatewayPreferenceController) new WifiGatewayPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                mMockAccessPoint, mMockWifiInfoProvider);
-
-        mController.displayPreference(mPreferenceScreen);
         when(mMockLinkProperties.getRoutes()).thenReturn(Arrays.asList(mMockRouteInfo));
         when(mMockRouteInfo.isIPv4Default()).thenReturn(true);
         when(mMockRouteInfo.hasGateway()).thenReturn(true);
         when(mMockRouteInfo.getGateway()).thenReturn(mMockInetAddress);
         when(mMockInetAddress.getHostAddress()).thenReturn(GATE_WAY);
-        mController.onLinkPropertiesChanged(mMockNetwork, mMockLinkProperties);
 
+        mController.onLinkPropertiesChanged(mMockNetwork, mMockLinkProperties);
         assertThat(mPreference.getDetailText()).isEqualTo(GATE_WAY);
     }
 
     @Test
     public void onWifiChanged_isNotActive_noUpdate() {
         when(mMockAccessPoint.isActive()).thenReturn(false);
-        mController = (WifiGatewayPreferenceController) new WifiGatewayPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                mMockAccessPoint, mMockWifiInfoProvider);
 
-        mController.displayPreference(mPreferenceScreen);
         mController.onLinkPropertiesChanged(mMockNetwork, mMockLinkProperties);
-
         assertThat(mPreference.getDetailText()).isNull();
     }
 }

@@ -15,9 +15,8 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.LinkProperties;
-import android.net.Network;
 
 import com.android.car.settings.common.FragmentController;
 
@@ -27,30 +26,30 @@ import java.util.stream.Collectors;
 /**
  * Shows info about Wifi DNS info.
  */
-public class WifiDnsPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
+public class WifiDnsPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
-    public WifiDnsPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiDnsPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
-        super.onLinkPropertiesChanged(network, lp);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    protected void updateInfo() {
-        String dnsServers = mWifiInfoProvider.getLinkProperties().getDnsServers().stream()
+    protected void updateState(WifiDetailsPreference preference) {
+        String dnsServers = getWifiInfoProvider().getLinkProperties().getDnsServers().stream()
                 .map(InetAddress::getHostAddress)
                 .collect(Collectors.joining(System.lineSeparator()));
 
         if (dnsServers == null) {
-            mWifiDetailPreference.setVisible(false);
+            preference.setVisible(false);
         } else {
-            mWifiDetailPreference.setDetailText(dnsServers);
-            mWifiDetailPreference.setVisible(true);
+            preference.setDetailText(dnsServers);
+            preference.setVisible(true);
         }
     }
 }
