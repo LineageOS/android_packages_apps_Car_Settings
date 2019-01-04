@@ -23,6 +23,8 @@
     <dimen name="switch_end_padding">5dp</dimen>
     <dimen name="double_icon_size">112dp</dimen>
 
+    <dimen name="button_fading_edge_length">40dp</dimen>
+
     <dimen name="action_bar_end_widget_margin_end">46dp</dimen>
     <dimen name="optical_center_offset">1dp</dimen>
 
@@ -51,4 +53,7 @@
     <dimen name="car_user_switcher_margin_top">@dimen/car_padding_4</dimen>
     <dimen name="car_user_switcher_current_user_circle_width">126dp</dimen>
     <dimen name="car_user_switcher_current_user_circle_stroke_width">7dp</dimen>
+
+    <dimen name="preference_padding_top">@dimen/car_padding_2</dimen>
+    <dimen name="preference_padding_bottom">@dimen/car_padding_2</dimen>
 </resources>

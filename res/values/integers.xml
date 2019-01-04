@@ -36,4 +36,7 @@
 
     <!-- Number of times to select build number before toast appears -->
     <integer name="enable_developer_settings_clicks_to_show_toast_count">3</integer>
+
+    <!-- Maximum ems value for all settings buttons -->
+    <integer name="button_max_ems">9</integer>
 </resources>
