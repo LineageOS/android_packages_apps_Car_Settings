@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:columnCount="3"
-            app:keyTextColor="@color/car_body3_light"/>
+            app:layout="@layout/suw_pin_pad_view"/>
     </FrameLayout>
 
     <!-- End side: pin entry field and messages -->

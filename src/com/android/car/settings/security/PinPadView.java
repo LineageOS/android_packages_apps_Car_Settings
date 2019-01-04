@@ -19,7 +19,6 @@ package com.android.car.settings.security;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -28,7 +27,6 @@ import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
@@ -47,25 +45,27 @@ public class PinPadView extends GridLayout {
     static final int NUM_KEYS = 12;
 
     @VisibleForTesting
-    static final int[] PIN_PAD_DIGIT_KEYS = { R.id.key0, R.id.key1, R.id.key2, R.id.key3,
-            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9 };
+    static final int[] PIN_PAD_DIGIT_KEYS = {R.id.key0, R.id.key1, R.id.key2, R.id.key3,
+            R.id.key4, R.id.key5, R.id.key6, R.id.key7, R.id.key8, R.id.key9};
 
     /**
      * The delay in milliseconds between character deletion when the user continuously holds the
      * backspace key.
      */
     private static final int LONG_CLICK_DELAY_MILLS = 100;
-    private static final int NO_COLOR_SET = -1;
 
     private final List<View> mPinKeys = new ArrayList<>(NUM_KEYS);
-    private PinPadClickListener mOnClickListener;
-    private ImageButton mEnterKey;
-    private Runnable mOnBackspaceLongClick = new Runnable() {
+    private final Runnable mOnBackspaceLongClick = new Runnable() {
         public void run() {
-            mOnClickListener.onBackspaceClick();
-            getHandler().postDelayed(this, LONG_CLICK_DELAY_MILLS);
+            if (mOnClickListener != null) {
+                mOnClickListener.onBackspaceClick();
+                getHandler().postDelayed(this, LONG_CLICK_DELAY_MILLS);
+            }
         }
     };
+
+    private PinPadClickListener mOnClickListener;
+    private ImageButton mEnterKey;
 
     public PinPadView(Context context) {
         super(context);
@@ -134,25 +134,19 @@ public class PinPadView extends GridLayout {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         TypedArray typedArray = getContext().obtainStyledAttributes(
                 attrs, R.styleable.PinPadView, defStyleAttr, defStyleRes);
-        @ColorInt int keyTextColor = typedArray.getColor(R.styleable.PinPadView_keyTextColor,
-                NO_COLOR_SET);
-        boolean useDefaultKeyColor = keyTextColor == NO_COLOR_SET;
-        inflater.inflate(R.layout.pin_pad_view, this, true);
+        inflater.inflate(
+                typedArray.getResourceId(R.styleable.PinPadView_layout, R.layout.pin_pad_view),
+                this, true);
+        typedArray.recycle();
 
         for (int keyId : PIN_PAD_DIGIT_KEYS) {
-            TextView key = (TextView) findViewById(keyId);
+            TextView key = findViewById(keyId);
             String digit = key.getTag().toString();
             key.setOnClickListener(v -> mOnClickListener.onDigitKeyClick(digit));
-            if (!useDefaultKeyColor) {
-                key.setTextColor(keyTextColor);
-            }
             mPinKeys.add(key);
         }
 
-        ImageButton backspace = (ImageButton) findViewById(R.id.key_backspace);
-        if (!useDefaultKeyColor) {
-            backspace.setImageTintList(ColorStateList.valueOf(keyTextColor));
-        }
+        ImageButton backspace = findViewById(R.id.key_backspace);
         backspace.setOnTouchListener((v, event) -> {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
@@ -169,17 +163,9 @@ public class PinPadView extends GridLayout {
         });
         mPinKeys.add(backspace);
 
-        mEnterKey = (ImageButton) findViewById(R.id.key_enter);
-        if (!useDefaultKeyColor) {
-            mEnterKey.setImageTintList(ColorStateList.valueOf(keyTextColor));
-        }
-        Drawable enterKeyDrawable = typedArray.getDrawable(R.styleable.PinPadView_enterKeyDrawable);
-        typedArray.recycle();
-        if (enterKeyDrawable != null) {
-            mEnterKey.setImageDrawable(enterKeyDrawable);
-        }
-
+        mEnterKey = findViewById(R.id.key_enter);
         mEnterKey.setOnClickListener(v -> mOnClickListener.onEnterKeyClick());
+
         mPinKeys.add(mEnterKey);
     }
 
