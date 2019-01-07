@@ -31,6 +31,7 @@ import android.graphics.drawable.ShapeDrawable;
 import android.service.settings.suggestions.Suggestion;
 import android.view.View;
 
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -61,7 +62,8 @@ public class SuggestionPreferenceTest {
         Context context = RuntimeEnvironment.application;
 
         mSuggestion = new Suggestion.Builder(SUGGESTION_ID).build();
-        View rootView = View.inflate(context, R.layout.suggestion_preference, null);
+        Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+        View rootView = View.inflate(themedContext, R.layout.suggestion_preference, null);
         mHolder = PreferenceViewHolder.createInstanceForTests(rootView);
         mPref = new SuggestionPreference(context, mSuggestion, mCallback);
     }
