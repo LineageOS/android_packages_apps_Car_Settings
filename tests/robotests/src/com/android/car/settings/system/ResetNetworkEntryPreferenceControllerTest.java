@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static android.os.UserManager.DISALLOW_NETWORK_RESET;
+
 import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
 import static com.android.car.settings.common.BasePreferenceController.DISABLED_FOR_USER;
 
@@ -26,9 +28,10 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.common.RestrictedPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -57,7 +60,7 @@ public class ResetNetworkEntryPreferenceControllerTest {
 
         mController = new PreferenceControllerTestHelper<>(context,
                 ResetNetworkEntryPreferenceController.class,
-                new RestrictedPreference(context)).getController();
+                new Preference(context)).getController();
     }
 
     @After
@@ -77,5 +80,14 @@ public class ResetNetworkEntryPreferenceControllerTest {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_adminUser_restricted_disabledForUser() {
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                DISALLOW_NETWORK_RESET)).thenReturn(true);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 }

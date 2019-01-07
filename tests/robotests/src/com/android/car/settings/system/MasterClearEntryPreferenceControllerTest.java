@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static android.os.UserManager.DISALLOW_FACTORY_RESET;
+
 import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
 import static com.android.car.settings.common.BasePreferenceController.DISABLED_FOR_USER;
 
@@ -27,9 +29,10 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.provider.Settings;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.common.RestrictedPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
@@ -59,7 +62,7 @@ public class MasterClearEntryPreferenceControllerTest {
 
         mController = new PreferenceControllerTestHelper<>(mContext,
                 MasterClearEntryPreferenceController.class,
-                new RestrictedPreference(mContext)).getController();
+                new Preference(mContext)).getController();
     }
 
     @After
@@ -84,6 +87,15 @@ public class MasterClearEntryPreferenceControllerTest {
     }
 
     @Test
+    public void getAvailabilityStatus_adminUser_restricted_disabledForUser() {
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                DISALLOW_FACTORY_RESET)).thenReturn(true);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+    }
+
+    @Test
     public void getAvailabilityStatus_demoMode_demoUser_available() {
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
@@ -91,5 +103,17 @@ public class MasterClearEntryPreferenceControllerTest {
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_demoMode_demoUser_restricted_disabledForUser() {
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                DISALLOW_FACTORY_RESET)).thenReturn(true);
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVICE_DEMO_MODE, 1);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 }
