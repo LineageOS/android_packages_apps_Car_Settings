@@ -246,6 +246,17 @@
     <string name="pk_reset_network_subscription" translatable="false">reset_network_subscription
     </string>
 
+    <!-- Master Clear -->
+    <string name="pk_master_clear_desc" translatable="false">master_clear_desc</string>
+    <string name="pk_master_clear_account_list" translatable="false">master_clear_account_list
+    </string>
+    <string name="pk_master_clear_other_users_present" translatable="false">
+        master_clear_other_users_present
+    </string>
+    <string name="pk_master_clear_reset_esim" translatable="false">master_clear_reset_esim</string>
+    <string name="pk_master_clear_confirm_desc" translatable="false">master_clear_confirm_desc
+    </string>
+
     <!-- Developer Options -->
     <string name="pk_usb_debugging_toggle" translatable="false">usb_debugging_toggle</string>
 </resources>
