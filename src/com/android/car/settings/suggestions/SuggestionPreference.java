@@ -86,6 +86,8 @@ public class SuggestionPreference extends Preference {
     @Override
     public void onBindViewHolder(final PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        holder.setDividerAllowedAbove(false);
+        holder.setDividerAllowedBelow(false);
 
         holder.itemView.setOnClickListener(v -> mCallback.launchSuggestion(this));
 
