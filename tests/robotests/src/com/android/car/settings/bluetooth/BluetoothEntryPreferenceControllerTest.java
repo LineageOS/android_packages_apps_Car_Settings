@@ -19,9 +19,9 @@ package com.android.car.settings.bluetooth;
 import static android.content.pm.PackageManager.FEATURE_BLUETOOTH;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
-import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
-import static com.android.car.settings.common.BasePreferenceController.DISABLED_FOR_USER;
-import static com.android.car.settings.common.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
