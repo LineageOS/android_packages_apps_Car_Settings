@@ -22,9 +22,9 @@
     <Preference
         android:key="@string/pk_reset_network_items"
         android:selectable="false"
-        android:singleLineTitle="false"
         android:title="@string/reset_network_desc"
-        settings:controller="com.android.car.settings.system.ResetNetworkItemsPreferenceController"/>
+        settings:controller="com.android.car.settings.system.ResetNetworkItemsPreferenceController"
+        settings:singleLineTitle="false"/>
     <CheckBoxPreference
         android:key="@string/pk_reset_esim"
         android:summary="@string/reset_esim_desc"

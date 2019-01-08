@@ -401,14 +401,7 @@
     <!-- Button title to reset all of user's app preferences. [CHAR LIMIT=40] -->
     <string name="reset_app_pref_title">Reset app preferences</string>
     <!-- Message on screen after user selects reset app preferences. [CHAR LIMIT=NONE] -->
-    <string name="reset_app_pref_desc">
-        This will reset all preferences for:\n\n\n
-        Disabled apps\n
-        Disabled app notifications\n
-        Default applications for actions\n
-        Background data restrictions for apps\n
-        Any permission restrictions\n\n\n
-        You will not lose any app data.
+    <string name="reset_app_pref_desc">This will reset all preferences for:\n\n<li>Disabled apps</li>\n<li>Disabled app notifications</li>\n<li>Default applications for actions</li>\n<li>Background data restrictions for apps</li>\n<li>Any permission restrictions</li>\n\nYou will not lose any app data.
     </string>
     <!-- Button on screen after user selects reset app preferences. [CHAR LIMIT=30] -->
     <string name="reset_app_pref_button_text">Reset apps</string>
