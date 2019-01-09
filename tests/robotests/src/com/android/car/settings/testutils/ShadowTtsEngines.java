@@ -26,7 +26,7 @@ import org.robolectric.annotation.Resetter;
 
 import java.util.List;
 
-@Implements(TtsEngines.class)
+@Implements(value = TtsEngines.class, inheritImplementationMethods = true)
 public class ShadowTtsEngines {
     private static TtsEngines sInstance;
 
