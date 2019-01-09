@@ -21,9 +21,9 @@ import android.car.drivingstate.CarUxRestrictionsManager.OnUxRestrictionsChanged
 import android.content.Context;
 
 import androidx.annotation.IntDef;
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
+import androidx.annotation.NonNull;
+import androidx.lifecycle.DefaultLifecycleObserver;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 
 import java.lang.annotation.Retention;
@@ -67,6 +67,8 @@ import java.lang.annotation.RetentionPolicy;
  * <li>{@link #getAvailabilityStatus()}
  * <li>{@link #canBeShownWithRestrictions(CarUxRestrictions)}
  * <li>{@link #onStartInternal()}
+ * <li>{@link #onResumeInternal()}
+ * <li>{@link #onPauseInternal()}
  * <li>{@link #onStopInternal()}
  * <li>{@link #onDestroyInternal()}
  * <li>{@link #updateState(Preference)}
@@ -77,7 +79,8 @@ import java.lang.annotation.RetentionPolicy;
  * @param <V> the upper bound on the type of {@link Preference} on which the controller
  *            expects to operate.
  */
-public abstract class PreferenceController<V extends Preference> implements LifecycleObserver,
+public abstract class PreferenceController<V extends Preference> implements
+        DefaultLifecycleObserver,
         OnUxRestrictionsChangedListener {
 
     /**
@@ -239,8 +242,8 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * controllers to setup initial state before a preference is visible. If the controller is
      * {@link #UNSUPPORTED_ON_DEVICE}, the preference is hidden and no further action is taken.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    public final void onCreate() {
+    @Override
+    public final void onCreate(@NonNull LifecycleOwner owner) {
         if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
             mPreference.setVisible(false);
             return;
@@ -255,8 +258,8 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * state changes that may have occurred while the controller was stopped. Returns immediately
      * if the controller is {@link #UNSUPPORTED_ON_DEVICE}.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    public final void onStart() {
+    @Override
+    public final void onStart(@NonNull LifecycleOwner owner) {
         if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
             return;
         }
@@ -265,11 +268,35 @@ public abstract class PreferenceController<V extends Preference> implements Life
     }
 
     /**
+     * Notifies that the controller is resumed by dispatching a call to {@link #onResumeInternal()}.
+     * Returns immediately if the controller is {@link #UNSUPPORTED_ON_DEVICE}.
+     */
+    @Override
+    public final void onResume(@NonNull LifecycleOwner owner) {
+        if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
+            return;
+        }
+        onResumeInternal();
+    }
+
+    /**
+     * Notifies that the controller is paused by dispatching a call to {@link #onPauseInternal()}.
+     * Returns immediately if the controller is {@link #UNSUPPORTED_ON_DEVICE}.
+     */
+    @Override
+    public final void onPause(@NonNull LifecycleOwner owner) {
+        if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
+            return;
+        }
+        onPauseInternal();
+    }
+
+    /**
      * Notifies that the controller is stopped by dispatching a call to {@link #onStopInternal()}.
      * Returns immediately if the controller is {@link #UNSUPPORTED_ON_DEVICE}.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    public final void onStop() {
+    @Override
+    public final void onStop(@NonNull LifecycleOwner owner) {
         if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
             return;
         }
@@ -281,8 +308,8 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * #onDestroyInternal()}. Returns immediately if the controller is
      * {@link #UNSUPPORTED_ON_DEVICE}.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    public final void onDestroy() {
+    @Override
+    public final void onDestroy(@NonNull LifecycleOwner owner) {
         if (getAvailabilityStatus() == UNSUPPORTED_ON_DEVICE) {
             return;
         }
@@ -348,6 +375,26 @@ public abstract class PreferenceController<V extends Preference> implements Life
      * <p>Note: this will not be called on {@link #UNSUPPORTED_ON_DEVICE} controllers.
      */
     protected void onStartInternal() {
+    }
+
+    /**
+     * Subclasses may override this method to complete any operations needed each time the
+     * controller is resumed. Prefer to use {@link #onStartInternal()} unless absolutely necessary
+     * as controllers may not be resumed in a multi-display scenario.
+     *
+     * <p>Note: this will not be called on {@link #UNSUPPORTED_ON_DEVICE} controllers.
+     */
+    protected void onResumeInternal() {
+    }
+
+    /**
+     * Subclasses may override this method to complete any operations needed each time the
+     * controller is paused. Prefer to use {@link #onStartInternal()} unless absolutely necessary
+     * as controllers may not be resumed in a multi-display scenario.
+     *
+     * <p>Note: this will not be called on {@link #UNSUPPORTED_ON_DEVICE} controllers.
+     */
+    protected void onPauseInternal() {
     }
 
     /**

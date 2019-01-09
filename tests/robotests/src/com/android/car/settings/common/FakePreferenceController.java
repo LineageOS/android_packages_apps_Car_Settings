@@ -31,6 +31,8 @@ public class FakePreferenceController extends PreferenceController<Preference> {
     private int mCheckInitializedCallCount;
     private int mOnCreateInternalCallCount;
     private int mOnStartInternalCallCount;
+    private int mOnResumeInternalCallCount;
+    private int mOnPauseInternalCallCount;
     private int mOnStopInternalCallCount;
     private int mOnDestroyInternalCallCount;
     private int mUpdateStateCallCount;
@@ -87,6 +89,24 @@ public class FakePreferenceController extends PreferenceController<Preference> {
 
     int getOnStartInternalCallCount() {
         return mOnStartInternalCallCount;
+    }
+
+    @Override
+    protected void onResumeInternal() {
+        mOnResumeInternalCallCount++;
+    }
+
+    int getOnResumeInternalCallCount() {
+        return mOnResumeInternalCallCount;
+    }
+
+    @Override
+    protected void onPauseInternal() {
+        mOnPauseInternalCallCount++;
+    }
+
+    int getOnPauseInternalCallCount() {
+        return mOnPauseInternalCallCount;
     }
 
     @Override
