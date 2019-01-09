@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 
@@ -46,5 +47,15 @@ public class ShadowTtsEngines {
     @Implementation
     public TextToSpeech.EngineInfo getEngineInfo(String packageName) {
         return sInstance.getEngineInfo(packageName);
+    }
+
+    @Implementation
+    public String getDefaultEngine() {
+        return sInstance.getDefaultEngine();
+    }
+
+    @Implementation
+    public Intent getSettingsIntent(String engine) {
+        return sInstance.getSettingsIntent(engine);
     }
 }
