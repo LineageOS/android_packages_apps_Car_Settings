@@ -61,7 +61,7 @@ public class PreferredEngineOptionsPreferenceControllerTest {
     }
 
     private Context mContext;
-    PreferenceControllerTestHelper<PreferredEngineOptionsPreferenceController>
+    private PreferenceControllerTestHelper<PreferredEngineOptionsPreferenceController>
             mControllerHelper;
     private PreferredEngineOptionsPreferenceController mController;
     private PreferenceGroup mPreferenceGroup;
