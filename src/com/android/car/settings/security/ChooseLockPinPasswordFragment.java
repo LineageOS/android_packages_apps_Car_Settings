@@ -94,52 +94,60 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                 R.string.choose_lock_pin_hints,
                 R.string.continue_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_arrow_forward),
+                R.drawable.ic_arrow_forward,
+                R.drawable.suw_ic_arrow_forward),
 
         PasswordInvalid(
                 R.string.lockpassword_invalid_password,
                 R.string.lockpin_invalid_pin,
                 R.string.continue_button_text,
                 R.string.lockpassword_clear_label,
-                R.drawable.ic_arrow_forward),
+                R.drawable.ic_arrow_forward,
+                R.drawable.suw_ic_arrow_forward),
 
         NeedToConfirm(
                 R.string.confirm_your_password_header,
                 R.string.confirm_your_pin_header,
                 R.string.lockpassword_confirm_label,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check),
+                R.drawable.ic_check,
+                R.drawable.suw_ic_check),
 
         ConfirmWrong(
                 R.string.confirm_passwords_dont_match,
                 R.string.confirm_pins_dont_match,
                 R.string.continue_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check),
+                R.drawable.ic_check,
+                R.drawable.suw_ic_check),
 
         SaveFailure(
                 R.string.error_saving_password,
                 R.string.error_saving_lockpin,
                 R.string.lockscreen_retry_button_text,
                 R.string.lockpassword_cancel_label,
-                R.drawable.ic_check);
+                R.drawable.ic_check,
+                R.drawable.suw_ic_check);
 
         public final int alphaHint;
         public final int numericHint;
         public final int primaryButtonText;
         public final int secondaryButtonText;
         public final int enterKeyIcon;
+        public final int suwEnterKeyIcon;
 
         Stage(@StringRes int hintInAlpha,
                 @StringRes int hintInNumeric,
                 @StringRes int primaryButtonText,
                 @StringRes int secondaryButtonText,
-                @DrawableRes int enterKeyIcon) {
+                @DrawableRes int enterKeyIcon,
+                @DrawableRes int suwEnterKeyIcon) {
             this.alphaHint = hintInAlpha;
             this.numericHint = hintInNumeric;
             this.primaryButtonText = primaryButtonText;
             this.secondaryButtonText = secondaryButtonText;
             this.enterKeyIcon = enterKeyIcon;
+            this.suwEnterKeyIcon = suwEnterKeyIcon;
         }
 
         @StringRes
@@ -358,9 +366,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private void initPinView(View view) {
-        mPinPad = (PinPadView) view.findViewById(R.id.pin_pad);
-        // ChooseLockPin fragment sets the icon dynamically and doesn't use the default tint.
-        mPinPad.setEnterKeyImageTint(null);
+        mPinPad = view.findViewById(R.id.pin_pad);
 
         PinPadView.PinPadClickListener pinPadClickListener = new PinPadView.PinPadClickListener() {
             @Override
@@ -523,7 +529,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         if (mIsPin) {
-            mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
+            mPinPad.setEnterKeyIcon(
+                    mIsInSetupWizard ? mUiStage.suwEnterKeyIcon : mUiStage.enterKeyIcon);
         }
 
         switch (mUiStage) {

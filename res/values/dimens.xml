@@ -70,4 +70,8 @@
 
     <dimen name="preference_padding_top">@dimen/car_padding_2</dimen>
     <dimen name="preference_padding_bottom">@dimen/car_padding_2</dimen>
+
+    <!-- Dimens for Setup Wizard -->
+
+    <dimen name="suw_icon_size">44dp</dimen>
 </resources>
