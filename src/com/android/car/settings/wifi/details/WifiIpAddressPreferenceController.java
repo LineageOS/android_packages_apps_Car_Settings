@@ -15,10 +15,9 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.LinkAddress;
-import android.net.LinkProperties;
-import android.net.Network;
 
 import com.android.car.settings.common.FragmentController;
 
@@ -27,34 +26,34 @@ import java.net.Inet4Address;
 /**
  * Shows info about Wifi IP address.
  */
-public class WifiIpAddressPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
+public class WifiIpAddressPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
-    public WifiIpAddressPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiIpAddressPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
-        super.onLinkPropertiesChanged(network, lp);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    protected void updateInfo() {
+    protected void updateState(WifiDetailsPreference preference) {
         String ipv4Address = null;
 
-        for (LinkAddress addr : mWifiInfoProvider.getLinkProperties().getLinkAddresses()) {
+        for (LinkAddress addr : getWifiInfoProvider().getLinkProperties().getLinkAddresses()) {
             if (addr.getAddress() instanceof Inet4Address) {
                 ipv4Address = addr.getAddress().getHostAddress();
             }
         }
 
         if (ipv4Address == null) {
-            mWifiDetailPreference.setVisible(false);
+            preference.setVisible(false);
         } else {
-            mWifiDetailPreference.setDetailText(ipv4Address);
-            mWifiDetailPreference.setVisible(true);
+            preference.setDetailText(ipv4Address);
+            preference.setVisible(true);
         }
     }
 }

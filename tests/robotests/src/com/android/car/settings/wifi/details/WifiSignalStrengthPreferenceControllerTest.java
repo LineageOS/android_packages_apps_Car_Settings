@@ -16,10 +16,8 @@
 
 package com.android.car.settings.wifi.details;
 
-import static org.mockito.Mockito.any;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.Mockito.when;
 import static org.robolectric.Shadows.shadowOf;
 
@@ -28,12 +26,11 @@ import android.content.pm.PackageManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.Before;
@@ -42,15 +39,11 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowPackageManager;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiSignalStrengthPreferenceControllerTest {
 
     private static final int LEVEL = 1;
-    private static final String PREFERENCE_KEY = "somePreferenceKey";
-
-    private PreferenceScreen mPreferenceScreen;
 
     @Mock
     private AccessPoint mMockAccessPoint;
@@ -60,11 +53,8 @@ public class WifiSignalStrengthPreferenceControllerTest {
     private NetworkInfo mMockNetworkInfo;
     @Mock
     private WifiInfo mMockWifiInfo;
-    @Mock
-    private WifiDetailPreference mMockPreference;
-    @Mock
-    private FragmentController mMockFragmentController;
 
+    private WifiDetailsPreference mWifiDetailPreference;
     private Context mContext;
     private WifiSignalStrengthPreferenceController mController;
 
@@ -73,42 +63,35 @@ public class WifiSignalStrengthPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
-        ShadowPackageManager pm = shadowOf(mContext.getPackageManager());
-        pm.setSystemFeature(PackageManager.FEATURE_WIFI, true);
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        when(mMockPreference.getKey()).thenReturn(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mMockPreference);
-        when(mMockAccessPoint.getLevel()).thenReturn(LEVEL);
-    }
+        shadowOf(mContext.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI, true);
 
-    private WifiSignalStrengthPreferenceController newController(AccessPoint accessPoint) {
-        return (WifiSignalStrengthPreferenceController) new WifiSignalStrengthPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                accessPoint, mMockWifiInfoProvider);
+        mWifiDetailPreference = new WifiDetailsPreference(mContext);
+        when(mMockAccessPoint.getLevel()).thenReturn(LEVEL);
+
+        PreferenceControllerTestHelper<WifiSignalStrengthPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        WifiSignalStrengthPreferenceController.class, mWifiDetailPreference);
+        mController =
+                (WifiSignalStrengthPreferenceController) controllerHelper.getController().init(
+                        mMockAccessPoint, mMockWifiInfoProvider);
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
         when(mMockAccessPoint.isActive()).thenReturn(true);
-        mController = newController(mMockAccessPoint);
         String expectedStrength =
                 mContext.getResources().getStringArray(R.array.wifi_signals)[LEVEL];
 
-        mController.displayPreference(mPreferenceScreen);
         mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
-
-        // wifiInfoProvider will do call back twice, once on start once onWifiChanged
-        verify(mMockPreference, times(2)).setDetailText(expectedStrength);
+        assertThat(mWifiDetailPreference.getDetailText()).isEqualTo(expectedStrength);
     }
 
     @Test
     public void onWifiChanged_isNotActive_noUpdate() {
         when(mMockAccessPoint.isActive()).thenReturn(false);
-        mController = newController(mMockAccessPoint);
 
-        mController.displayPreference(mPreferenceScreen);
         mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
-
-        verify(mMockPreference, never()).setDetailText(any());
+        assertThat(mWifiDetailPreference.getDetailText()).isNull();
     }
 }

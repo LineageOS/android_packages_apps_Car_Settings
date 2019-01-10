@@ -26,11 +26,10 @@ import android.content.pm.PackageManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
+import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.Before;
@@ -39,16 +38,11 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowPackageManager;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiMacAddressPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "somePreferenceKey";
     private static final String MAC_ADDRESS = "mac address";
-
-    private PreferenceScreen mPreferenceScreen;
-    private WifiDetailPreference mPreference;
 
     @Mock
     private AccessPoint mMockAccessPoint;
@@ -58,10 +52,9 @@ public class WifiMacAddressPreferenceControllerTest {
     private NetworkInfo mMockNetworkInfo;
     @Mock
     private WifiInfo mMockWifiInfo;
-    @Mock
-    private FragmentController mMockFragmentController;
 
     private Context mContext;
+    private WifiDetailsPreference mPreference;
     private WifiMacAddressPreferenceController mController;
 
     @Before
@@ -69,37 +62,32 @@ public class WifiMacAddressPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         mContext = RuntimeEnvironment.application;
-        ShadowPackageManager pm = shadowOf(mContext.getPackageManager());
-        pm.setSystemFeature(PackageManager.FEATURE_WIFI, true);
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
-        mPreference = new WifiDetailPreference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mPreference);
+        shadowOf(mContext.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI, true);
+        mPreference = new WifiDetailsPreference(mContext);
         when(mMockWifiInfoProvider.getWifiInfo()).thenReturn(mMockWifiInfo);
+
+        PreferenceControllerTestHelper<WifiMacAddressPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        WifiMacAddressPreferenceController.class, mPreference);
+        mController = (WifiMacAddressPreferenceController) controllerHelper.getController().init(
+                mMockAccessPoint, mMockWifiInfoProvider);
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test
     public void onWifiChanged_shouldHaveDetailTextSet() {
         when(mMockAccessPoint.isActive()).thenReturn(true);
-        mController = (WifiMacAddressPreferenceController) new WifiMacAddressPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                mMockAccessPoint, mMockWifiInfoProvider);
-        mController.displayPreference(mPreferenceScreen);
         when(mMockWifiInfo.getMacAddress()).thenReturn(MAC_ADDRESS);
-        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
 
+        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
         assertThat(mPreference.getDetailText()).isEqualTo(MAC_ADDRESS);
     }
 
     @Test
     public void onWifiChanged_isNotActive_noUpdate() {
         when(mMockAccessPoint.isActive()).thenReturn(false);
-        mController = (WifiMacAddressPreferenceController) new WifiMacAddressPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController).init(
-                mMockAccessPoint, mMockWifiInfoProvider);
-        mController.displayPreference(mPreferenceScreen);
-        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
 
+        mController.onWifiChanged(mMockNetworkInfo, mMockWifiInfo);
         assertThat(mPreference.getDetailText()).isNull();
     }
 }

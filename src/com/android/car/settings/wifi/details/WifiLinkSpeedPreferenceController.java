@@ -15,10 +15,8 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkInfo;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiInfo;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -26,32 +24,24 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi link speed info.
  */
-public class WifiLinkSpeedPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
+public class WifiLinkSpeedPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
-    public WifiLinkSpeedPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiLinkSpeedPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiChanged(networkInfo, wifiInfo);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
-            NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateIfAvailable();
-    }
-
-    @Override
-    protected void updateInfo() {
-        int linkSpeedMbps = mWifiInfoProvider.getWifiInfo().getLinkSpeed();
-        mWifiDetailPreference.setVisible(linkSpeedMbps >= 0);
-        mWifiDetailPreference.setDetailText(mContext.getString(
-                R.string.link_speed, mWifiInfoProvider.getWifiInfo().getLinkSpeed()));
-
+    protected void updateState(WifiDetailsPreference preference) {
+        int linkSpeedMbps = getWifiInfoProvider().getWifiInfo().getLinkSpeed();
+        preference.setVisible(linkSpeedMbps >= 0);
+        preference.setDetailText(getContext().getString(
+                R.string.link_speed, getWifiInfoProvider().getWifiInfo().getLinkSpeed()));
     }
 }

@@ -31,7 +31,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.wifi.details.WifiDetailFragment;
+import com.android.car.settings.wifi.details.WifiDetailsFragment;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.ArrayList;
@@ -109,7 +109,8 @@ public class AccessPointListPreferenceController extends WifiPreferenceControlle
                     && !accessPoint.isSaved() && !accessPoint.isActive()) {
                 getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
             } else if (accessPoint.isSaved()) {
-                getFragmentController().launchFragment(WifiDetailFragment.getInstance(accessPoint));
+                getFragmentController().launchFragment(
+                        WifiDetailsFragment.getInstance(accessPoint));
             } else {
                 getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
             }
@@ -126,8 +127,8 @@ public class AccessPointListPreferenceController extends WifiPreferenceControlle
             return;
         }
         mAccessPoints = mShowSavedApOnly
-            ? getCarWifiManager().getSavedAccessPoints()
-            : getCarWifiManager().getAllAccessPoints();
+                ? getCarWifiManager().getSavedAccessPoints()
+                : getCarWifiManager().getAllAccessPoints();
         LOG.d("showing accessPoints: " + mAccessPoints.size());
         updatePreferenceList();
     }
