@@ -620,6 +620,8 @@
     <string name="sync_button_sync_now">Sync now</string>
     <!-- Data synchronization settings screen, text for button that allows the user to cancel sync [CHAR LIMIT=30]-->
     <string name="sync_button_sync_cancel">Cancel sync</string>
+    <!-- Message when sync is currently failing [CHAR LIMIT=100] -->
+    <string name="sync_is_failing">Sync is currently experiencing problems. It will be back shortly.</string>
 
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->

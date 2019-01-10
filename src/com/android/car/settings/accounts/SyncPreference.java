@@ -34,7 +34,7 @@ import com.android.car.theme.Themes;
 public class SyncPreference extends SwitchPreference {
     private int mUid;
     private String mPackageName;
-    private SYNC_STATE mSyncState = SYNC_STATE.NONE;
+    private AccountSyncHelper.SyncState mSyncState = AccountSyncHelper.SyncState.NONE;
     private boolean mOneTimeSyncMode = false;
 
     public SyncPreference(Context context, String authority) {
@@ -87,7 +87,7 @@ public class SyncPreference extends SwitchPreference {
     }
 
     /** Sets the sync state for this preference. */
-    public void setSyncState(SYNC_STATE state) {
+    public void setSyncState(AccountSyncHelper.SyncState state) {
         mSyncState = state;
         // Force a manual update of the icon since the sync state affects what is shown.
         updateIcon();
@@ -131,17 +131,5 @@ public class SyncPreference extends SwitchPreference {
 
     public void setPackageName(String packageName) {
         mPackageName = packageName;
-    }
-
-    /** Denotes a sync adapter state. */
-    public enum SYNC_STATE {
-        /** The sync adapter is actively syncing. */
-        ACTIVE,
-        /** The sync adapter is waiting to start syncing. */
-        PENDING,
-        /** The sync adapter's last attempt to sync failed. */
-        FAILED,
-        /** Nothing to note about the sync adapter's sync state. */
-        NONE
     }
 }

@@ -530,7 +530,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
 
             // Sets provider info with a label for the sync adapter.
             ProviderInfo info = new ProviderInfo();
-            info.authority = AUTHORITY;
+            info.authority = authority;
             info.name = authority;
             // Set an application info to avoid an NPE
             info.applicationInfo = new ApplicationInfo();
