@@ -17,12 +17,16 @@
 package com.android.car.settings.testutils;
 
 import android.content.Context;
+import android.net.wifi.WifiManager;
 
 import com.android.car.settings.wifi.CarWifiManager;
+import com.android.settingslib.wifi.AccessPoint;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
+
+import java.util.List;
 
 @Implements(CarWifiManager.class)
 public class ShadowCarWifiManager {
@@ -50,5 +54,20 @@ public class ShadowCarWifiManager {
     @Implementation
     public boolean isWifiEnabled() {
         return sInstance.isWifiEnabled();
+    }
+
+    @Implementation
+    public List<AccessPoint> getAllAccessPoints() {
+        return sInstance.getAllAccessPoints();
+    }
+
+    @Implementation
+    public List<AccessPoint> getSavedAccessPoints() {
+        return sInstance.getSavedAccessPoints();
+    }
+
+    @Implementation
+    public void connectToPublicWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
+        sInstance.connectToPublicWifi(accessPoint, listener);
     }
 }

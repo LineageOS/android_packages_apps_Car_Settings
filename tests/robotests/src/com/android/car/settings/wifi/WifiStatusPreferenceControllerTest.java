@@ -21,19 +21,16 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.Arrays;
@@ -41,7 +38,6 @@ import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class WifiStatusPreferenceControllerTest {
-    private static final String PREFERENCE_KEY = "somePreferenceKey";
     private static final List<Integer> VISIBLE_STATES = Arrays.asList(
             WifiManager.WIFI_STATE_DISABLED,
             WifiManager.WIFI_STATE_ENABLING);
@@ -50,25 +46,19 @@ public class WifiStatusPreferenceControllerTest {
             WifiManager.WIFI_STATE_DISABLING,
             WifiManager.WIFI_STATE_UNKNOWN);
 
-    @Mock
-    private FragmentController mMockFragmentController;
-
-    private PreferenceScreen mPreferenceScreen;
-    private Preference mPreference;
     private Context mContext;
+    private Preference mPreference;
     private WifiStatusPreferenceController mController;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mPreferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(mContext);
         mPreference = new Preference(mContext);
-        mPreference.setKey(PREFERENCE_KEY);
-        mPreferenceScreen.addPreference(mPreference);
-        mController = new WifiStatusPreferenceController(
-                mContext, PREFERENCE_KEY, mMockFragmentController);
-        mController.displayPreference(mPreferenceScreen);
+        PreferenceControllerTestHelper<WifiStatusPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        WifiStatusPreferenceController.class, mPreference);
+        mController = controllerHelper.getController();
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @Test

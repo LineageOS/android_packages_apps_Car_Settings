@@ -21,17 +21,17 @@
     android:title="@string/wifi_settings">
     <!-- General Details Category -->
     <PreferenceCategory>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_signal_strength"
             android:selectable="false"
             android:title="@string/wifi_signal_strength"
             settings:controller="com.android.car.settings.wifi.details.WifiSignalStrengthPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_frequency"
             android:selectable="false"
             android:title="@string/wifi_frequency"
             settings:controller="com.android.car.settings.wifi.details.WifiFrequencyPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_security"
             android:selectable="false"
             android:title="@string/wifi_security"
@@ -41,32 +41,32 @@
     <!-- Ip Details Category -->
     <PreferenceCategory
         android:title="@string/wifi_network_detail">
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_mac_address"
             android:selectable="false"
             android:title="@string/wifi_mac_address"
             settings:controller="com.android.car.settings.wifi.details.WifiMacAddressPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_ip"
             android:selectable="false"
             android:title="@string/wifi_ip_address"
             settings:controller="com.android.car.settings.wifi.details.WifiIpAddressPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_gateway"
             android:selectable="false"
             android:title="@string/wifi_gateway"
             settings:controller="com.android.car.settings.wifi.details.WifiGatewayPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_subnet_mask"
             android:selectable="false"
             android:title="@string/wifi_subnet_mask"
             settings:controller="com.android.car.settings.wifi.details.WifiSubnetPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_dns"
             android:selectable="false"
             android:title="@string/wifi_dns"
             settings:controller="com.android.car.settings.wifi.details.WifiDnsPreferenceController"/>
-        <com.android.car.settings.wifi.details.WifiDetailPreference
+        <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_link_speed"
             android:selectable="false"
             android:title="@string/wifi_speed"

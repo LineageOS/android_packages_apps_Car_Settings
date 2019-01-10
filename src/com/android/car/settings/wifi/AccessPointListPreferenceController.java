@@ -17,15 +17,14 @@
 package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
@@ -40,11 +39,12 @@ import java.util.List;
 /**
  * Renders a list of {@link AccessPoint} as a list of preference.
  */
-public class AccessPointListPreferenceController extends WifiPreferenceControllerBase {
+public class AccessPointListPreferenceController extends
+        WifiBasePreferenceController<PreferenceGroup> implements
+        Preference.OnPreferenceClickListener,
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
     private static final Logger LOG = new Logger(AccessPointListPreferenceController.class);
-    private PreferenceGroup mPreferenceGroup;
     private List<AccessPoint> mAccessPoints = new ArrayList<>();
-    private boolean mShowSavedApOnly;
 
     private final WifiManager.ActionListener mConnectionListener =
             new WifiManager.ActionListener() {
@@ -54,32 +54,53 @@ public class AccessPointListPreferenceController extends WifiPreferenceControlle
 
                 @Override
                 public void onFailure(int reason) {
-                    Toast.makeText(mContext,
+                    Toast.makeText(getContext(),
                             R.string.wifi_failed_connect_message,
                             Toast.LENGTH_SHORT).show();
                 }
             };
 
-    public AccessPointListPreferenceController(
-            @NonNull Context context,
-            String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public AccessPointListPreferenceController(@NonNull Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void updateState(Preference preference) {
-        refreshData();
+    protected Class<PreferenceGroup> getPreferenceType() {
+        return PreferenceGroup.class;
     }
 
     @Override
-    public int getAvailabilityStatus() {
-        return WifiUtil.isWifiAvailable(mContext) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
+    protected void updateState(PreferenceGroup preferenceGroup) {
+        if (getCarWifiManager() == null) {
+            return;
+        }
+        mAccessPoints = CarUxRestrictionsHelper.isNoSetup(getUxRestrictions())
+                ? getCarWifiManager().getSavedAccessPoints()
+                : getCarWifiManager().getAllAccessPoints();
+        LOG.d("showing accessPoints: " + mAccessPoints.size());
+
+        preferenceGroup.setVisible(!mAccessPoints.isEmpty());
+        preferenceGroup.removeAll();
+        for (AccessPoint accessPoint : mAccessPoints) {
+            LOG.d("Adding preference for " + WifiUtil.getKey(accessPoint));
+            AccessPointPreference accessPointPreference = new AccessPointPreference(
+                    getContext(), accessPoint);
+            accessPointPreference.setOnPreferenceClickListener(this);
+            preferenceGroup.addPreference(accessPointPreference);
+        }
+    }
+
+    @Override
+    protected boolean canBeShownWithRestrictions(CarUxRestrictions uxRestrictions) {
+        // Since the list dynamically changes based on the ux restrictions, we shown this
+        // fragment regardless of the restriction.
+        return true;
     }
 
     @Override
     public void onAccessPointsChanged() {
-        refreshData();
+        refreshUi();
     }
 
     @Override
@@ -88,59 +109,17 @@ public class AccessPointListPreferenceController extends WifiPreferenceControlle
     }
 
     @Override
-    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-        super.onUxRestrictionsChanged(restrictionInfo);
-        mShowSavedApOnly = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
-        refreshData();
-    }
-
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        mPreferenceGroup = (PreferenceGroup) screen.findPreference(getPreferenceKey());
-        updatePreferenceList();
-    }
-
-    @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (preference instanceof AccessPointPreference) {
-            AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
-            // for new open unsecuried wifi network, connect to it right away
-            if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
-                    && !accessPoint.isSaved() && !accessPoint.isActive()) {
-                getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
-            } else if (accessPoint.isSaved()) {
-                getFragmentController().launchFragment(
-                        WifiDetailsFragment.getInstance(accessPoint));
-            } else {
-                getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
-            }
+    public boolean onPreferenceClick(Preference preference) {
+        AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
+        // for new open unsecuried wifi network, connect to it right away
+        if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
+                && !accessPoint.isSaved() && !accessPoint.isActive()) {
+            getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
+        } else if (accessPoint.isSaved()) {
+            getFragmentController().launchFragment(WifiDetailsFragment.getInstance(accessPoint));
         } else {
-            getFragmentController().launchFragment(AddWifiFragment.getInstance(null));
+            getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
         }
-
         return true;
-    }
-
-    @VisibleForTesting
-    void refreshData() {
-        if (mCarWifiManager == null) {
-            return;
-        }
-        mAccessPoints = mShowSavedApOnly
-                ? getCarWifiManager().getSavedAccessPoints()
-                : getCarWifiManager().getAllAccessPoints();
-        LOG.d("showing accessPoints: " + mAccessPoints.size());
-        updatePreferenceList();
-    }
-
-    private void updatePreferenceList() {
-        mPreferenceGroup.setVisible(!mAccessPoints.isEmpty());
-        mPreferenceGroup.removeAll();
-        for (AccessPoint accessPoint : mAccessPoints) {
-            LOG.d("Adding preference for " + WifiUtil.getKey(accessPoint));
-            AccessPointPreference accessPointPreference = new AccessPointPreference(
-                    mContext, accessPoint);
-            mPreferenceGroup.addPreference(accessPointPreference);
-        }
     }
 }
