@@ -33,6 +33,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.car_car \
+      androidx.lifecycle_lifecycle-common-java8 \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
       androidx-constraintlayout_constraintlayout \
@@ -91,6 +92,7 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.car_car \
+      androidx.lifecycle_lifecycle-common-java8 \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
       androidx-constraintlayout_constraintlayout \

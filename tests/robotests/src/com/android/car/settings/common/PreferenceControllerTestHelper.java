@@ -16,6 +16,18 @@
 
 package com.android.car.settings.common;
 
+import static androidx.lifecycle.Lifecycle.Event.ON_CREATE;
+import static androidx.lifecycle.Lifecycle.Event.ON_DESTROY;
+import static androidx.lifecycle.Lifecycle.Event.ON_PAUSE;
+import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
+import static androidx.lifecycle.Lifecycle.Event.ON_START;
+import static androidx.lifecycle.Lifecycle.Event.ON_STOP;
+import static androidx.lifecycle.Lifecycle.State.CREATED;
+import static androidx.lifecycle.Lifecycle.State.DESTROYED;
+import static androidx.lifecycle.Lifecycle.State.INITIALIZED;
+import static androidx.lifecycle.Lifecycle.State.RESUMED;
+import static androidx.lifecycle.Lifecycle.State.STARTED;
+
 import static org.mockito.Mockito.mock;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -23,10 +35,6 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.LifecycleRegistry;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
@@ -46,14 +54,8 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-    private final LifecycleRegistry mLifecycleRegistry = new LifecycleRegistry(
-            new LifecycleOwner() {
-                @NonNull
-                @Override
-                public Lifecycle getLifecycle() {
-                    return mLifecycleRegistry;
-                }
-            });
+    private Lifecycle.State mState = INITIALIZED;
+
     private final FragmentController mMockFragmentController;
     private final T mPreferenceController;
     private final PreferenceScreen mScreen;
@@ -63,7 +65,8 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
      * Constructs a new helper. Call {@link #setPreference(Preference)} once initialization on the
      * controller is complete to associate the controller with a preference.
      *
-     * @param context the {@link Context} to use to instantiate the preference controller.
+     * @param context                  the {@link Context} to use to instantiate the preference
+     *                                 controller.
      * @param preferenceControllerType the class type under test.
      */
     public PreferenceControllerTestHelper(Context context, Class<T> preferenceControllerType) {
@@ -74,18 +77,6 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
                 ClassParameter.from(FragmentController.class, mMockFragmentController),
                 ClassParameter.from(CarUxRestrictions.class, UX_RESTRICTIONS));
         mScreen = new PreferenceManager(context).createPreferenceScreen(context);
-        mLifecycleRegistry.addObserver(mPreferenceController);
-        mLifecycleRegistry.addObserver(new LifecycleObserver() {
-            @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-            public void onCreate() {
-                mScreen.onAttached();
-            }
-
-            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-            public void onDestroy() {
-                mScreen.onDetached();
-            }
-        });
     }
 
     /**
@@ -138,7 +129,7 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
      * controller to the {@link Lifecycle.State#STARTED} state.
      */
     public void sendLifecycleEvent(Lifecycle.Event event) {
-        mLifecycleRegistry.handleLifecycleEvent(event);
+        markState(getStateAfter(event));
     }
 
     /**
@@ -149,6 +140,103 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
      * {@link Lifecycle.Event#ON_CREATE} and {@link Lifecycle.Event#ON_START} events.
      */
     public void markState(Lifecycle.State state) {
-        mLifecycleRegistry.markState(state);
+        while (mState != state) {
+            while (mState.compareTo(state) > 0) {
+                dispatchEvent(downEvent(mState));
+            }
+            while (mState.compareTo(state) < 0) {
+                dispatchEvent(upEvent(mState));
+            }
+        }
+    }
+
+    /*
+     * Ideally we would use androidx.lifecycle.LifecycleRegistry to drive the lifecycle changes.
+     * However, doing so led to test flakiness with an unknown root cause. We dispatch state
+     * changes manually for now, borrowing from LifecycleRegistry's implementation, pending
+     * further investigation.
+     */
+
+    @NonNull
+    private Lifecycle getLifecycle() {
+        throw new UnsupportedOperationException();
+    }
+
+    private void dispatchEvent(Lifecycle.Event event) {
+        switch (event) {
+            case ON_CREATE:
+                mScreen.onAttached();
+                mPreferenceController.onCreate(this::getLifecycle);
+                break;
+            case ON_START:
+                mPreferenceController.onStart(this::getLifecycle);
+                break;
+            case ON_RESUME:
+                mPreferenceController.onResume(this::getLifecycle);
+                break;
+            case ON_PAUSE:
+                mPreferenceController.onPause(this::getLifecycle);
+                break;
+            case ON_STOP:
+                mPreferenceController.onStop(this::getLifecycle);
+                break;
+            case ON_DESTROY:
+                mScreen.onDetached();
+                mPreferenceController.onDestroy(this::getLifecycle);
+                break;
+            case ON_ANY:
+                throw new IllegalArgumentException();
+        }
+
+        mState = getStateAfter(event);
+    }
+
+    private static Lifecycle.State getStateAfter(Lifecycle.Event event) {
+        switch (event) {
+            case ON_CREATE:
+            case ON_STOP:
+                return CREATED;
+            case ON_START:
+            case ON_PAUSE:
+                return STARTED;
+            case ON_RESUME:
+                return RESUMED;
+            case ON_DESTROY:
+                return DESTROYED;
+            case ON_ANY:
+                break;
+        }
+        throw new IllegalArgumentException("Unexpected event value " + event);
+    }
+
+    private static Lifecycle.Event downEvent(Lifecycle.State state) {
+        switch (state) {
+            case INITIALIZED:
+                throw new IllegalArgumentException();
+            case CREATED:
+                return ON_DESTROY;
+            case STARTED:
+                return ON_STOP;
+            case RESUMED:
+                return ON_PAUSE;
+            case DESTROYED:
+                throw new IllegalArgumentException();
+        }
+        throw new IllegalArgumentException("Unexpected state value " + state);
+    }
+
+    private static Lifecycle.Event upEvent(Lifecycle.State state) {
+        switch (state) {
+            case INITIALIZED:
+            case DESTROYED:
+                return ON_CREATE;
+            case CREATED:
+                return ON_START;
+            case STARTED:
+                return ON_RESUME;
+            case RESUMED:
+                throw new IllegalArgumentException();
+        }
+        throw new IllegalArgumentException("Unexpected state value " + state);
     }
 }

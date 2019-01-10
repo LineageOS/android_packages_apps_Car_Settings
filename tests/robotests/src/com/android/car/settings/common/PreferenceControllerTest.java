@@ -257,6 +257,8 @@ public class PreferenceControllerTest {
 
         assertThat(mController.getOnCreateInternalCallCount()).isEqualTo(0);
         assertThat(mController.getOnStartInternalCallCount()).isEqualTo(0);
+        assertThat(mController.getOnResumeInternalCallCount()).isEqualTo(0);
+        assertThat(mController.getOnPauseInternalCallCount()).isEqualTo(0);
         assertThat(mController.getOnStopInternalCallCount()).isEqualTo(0);
         assertThat(mController.getOnDestroyInternalCallCount()).isEqualTo(0);
     }
@@ -296,6 +298,21 @@ public class PreferenceControllerTest {
 
         // onCreate, onStart.
         assertThat(mController.getUpdateStateCallCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void onResume_callsSubclassHook() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_RESUME);
+
+        assertThat(mController.getOnResumeInternalCallCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void onPause_callsSubclassHook() {
+        mControllerHelper.markState(Lifecycle.State.RESUMED);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_PAUSE);
+
+        assertThat(mController.getOnPauseInternalCallCount()).isEqualTo(1);
     }
 
     @Test

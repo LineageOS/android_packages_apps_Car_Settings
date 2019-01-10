@@ -22,9 +22,6 @@ import android.content.Context;
 import android.os.Build;
 import android.widget.Toast;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
@@ -33,8 +30,7 @@ import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 /** Updates the build number entry summary with the build number. */
-public class BuildNumberPreferenceController extends PreferenceController<Preference> implements
-        LifecycleObserver {
+public class BuildNumberPreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
     private Toast mDevHitToast;
@@ -55,8 +51,8 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
      * Reset the toast and counter which tracks how many more clicks until development settings is
      * enabled.
      */
-    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
-    public void onResume() {
+    @Override
+    protected void onResumeInternal() {
         mDevHitToast = null;
         mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
                 mCarUserManagerHelper) ? -1 : getTapsToBecomeDeveloper();
