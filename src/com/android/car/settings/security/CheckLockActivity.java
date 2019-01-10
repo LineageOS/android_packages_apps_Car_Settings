@@ -20,6 +20,7 @@ import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.common.CarSettingActivity;
@@ -35,7 +36,8 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
     private static final Logger LOG = new Logger(CheckLockActivity.class);
 
     @Override
-    public Fragment getFragment() {
+    @Nullable
+    protected Fragment getFragment() {
         Fragment fragment;
         int passwordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());

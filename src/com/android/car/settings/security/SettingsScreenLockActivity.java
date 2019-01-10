@@ -20,8 +20,10 @@ import android.app.admin.DevicePolicyManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
@@ -36,16 +38,11 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
     private int mPasswordQuality;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        LOG.d("onCreate");
-        super.onCreate(savedInstanceState);
-
+    @Nullable
+    protected Fragment getFragment() {
         mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
-    }
 
-    @Override
-    public Fragment getFragment() {
         Fragment fragment;
         switch (mPasswordQuality) {
             case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
@@ -70,6 +67,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
                 fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
                         /* isInSetupWizard= */ false);
         }
+
         Bundle bundle = fragment.getArguments();
         if (bundle == null) {
             bundle = new Bundle();
@@ -90,6 +88,10 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
 
-        launchFragment(fragment);
+        // Intentionally not using launchFragment(), since we do not want to add to the back stack.
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 }
