@@ -16,21 +16,23 @@
 
 package com.android.car.settings.system;
 
+import static android.os.UserManager.DISALLOW_FACTORY_RESET;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
+import androidx.preference.Preference;
+
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.common.RestrictedPreference;
 
 /**
  * Controller which determines if master clear (aka "factory reset") should be displayed based on
  * user status.
  */
-public class MasterClearEntryPreferenceController extends
-        PreferenceController<RestrictedPreference> {
+public class MasterClearEntryPreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
 
@@ -41,14 +43,18 @@ public class MasterClearEntryPreferenceController extends
     }
 
     @Override
-    protected Class<RestrictedPreference> getPreferenceType() {
-        return RestrictedPreference.class;
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     public int getAvailabilityStatus() {
-        return (mCarUserManagerHelper.isCurrentProcessAdminUser() || isDemoUser()) ? AVAILABLE
-                : DISABLED_FOR_USER;
+        return isUserRestricted() ? DISABLED_FOR_USER : AVAILABLE;
+    }
+
+    private boolean isUserRestricted() {
+        return !(mCarUserManagerHelper.isCurrentProcessAdminUser() || isDemoUser())
+                || mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_FACTORY_RESET);
     }
 
     private boolean isDemoUser() {
