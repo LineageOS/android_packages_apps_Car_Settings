@@ -15,6 +15,7 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import com.android.car.settings.common.FragmentController;
@@ -22,14 +23,20 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows security info about the Wifi connection.
  */
-public class WifiSecurityPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
-    public WifiSecurityPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+public class WifiSecurityPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
+    public WifiSecurityPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected void updateInfo() {
-        mWifiDetailPreference.setDetailText(mAccessPoint.getSecurityString(false /* concise */));
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
+    }
+
+    @Override
+    protected void updateState(WifiDetailsPreference preference) {
+        preference.setDetailText(getAccessPoint().getSecurityString(false /* concise */));
     }
 }

@@ -36,8 +36,8 @@ import androidx.annotation.StringRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.wifi.WifiUtil;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -49,16 +49,16 @@ import java.util.List;
  * e.g. ignore, disconnect, etc. The intent should include information about
  * access point, use that to render UI, e.g. show SSID etc.
  */
-public class WifiDetailFragment extends BasePreferenceFragment
+public class WifiDetailsFragment extends SettingsFragment
         implements WifiInfoProvider.Listener {
     private static final String EXTRA_AP_STATE = "extra_ap_state";
-    private static final Logger LOG = new Logger(WifiDetailFragment.class);
+    private static final Logger LOG = new Logger(WifiDetailsFragment.class);
 
     private WifiManager mWifiManager;
     private AccessPoint mAccessPoint;
     private Button mForgetButton;
     private Button mConnectButton;
-    private List<WifiControllerBase> mControllers = new ArrayList<>();
+    private List<WifiDetailsBasePreferenceController> mControllers = new ArrayList<>();
 
     private WifiInfoProvider mWifiInfoProvider;
 
@@ -83,14 +83,14 @@ public class WifiDetailFragment extends BasePreferenceFragment
     /**
      * Gets an instance of this class.
      */
-    public static WifiDetailFragment getInstance(AccessPoint accessPoint) {
-        WifiDetailFragment wifiDetailFragment = new WifiDetailFragment();
+    public static WifiDetailsFragment getInstance(AccessPoint accessPoint) {
+        WifiDetailsFragment wifiDetailsFragment = new WifiDetailsFragment();
         Bundle bundle = new Bundle();
         Bundle accessPointState = new Bundle();
         accessPoint.saveWifiState(accessPointState);
         bundle.putBundle(EXTRA_AP_STATE, accessPointState);
-        wifiDetailFragment.setArguments(bundle);
-        return wifiDetailFragment;
+        wifiDetailsFragment.setArguments(bundle);
+        return wifiDetailsFragment;
     }
 
     @Override
@@ -146,19 +146,19 @@ public class WifiDetailFragment extends BasePreferenceFragment
         super.onActivityCreated(savedInstanceState);
         ((TextView) getActivity().findViewById(R.id.title)).setText(mAccessPoint.getSsid());
 
-        mConnectButton = (Button) getActivity().findViewById(R.id.action_button2);
+        mConnectButton = getActivity().findViewById(R.id.action_button2);
         mConnectButton.setVisibility(View.VISIBLE);
         mConnectButton.setText(R.string.wifi_setup_connect);
         mConnectButton.setOnClickListener(v -> {
             mWifiManager.connect(mAccessPoint.getConfig(),
                     new ActionFailListener(R.string.wifi_failed_connect_message));
-            getFragmentController().goBack();
+            goBack();
         });
-        mForgetButton = (Button) getActivity().findViewById(R.id.action_button1);
+        mForgetButton = getActivity().findViewById(R.id.action_button1);
         mForgetButton.setText(R.string.forget);
         mForgetButton.setOnClickListener(v -> {
             forget();
-            getFragmentController().goBack();
+            goBack();
         });
     }
 

@@ -31,16 +31,16 @@ import com.android.car.settings.R;
  * A Preference to be used with the Wifi Network Detail Fragment that allows a summary text to be
  * set inside the widget resource
  */
-public class WifiDetailPreference extends Preference {
+public class WifiDetailsPreference extends Preference {
     private String mDetailText;
 
-    public WifiDetailPreference(Context context, AttributeSet attributeSet) {
+    public WifiDetailsPreference(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         setWidgetLayoutResource(R.layout.summary_preference_widget);
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    WifiDetailPreference(Context context) {
+    WifiDetailsPreference(Context context) {
         super(context);
     }
 

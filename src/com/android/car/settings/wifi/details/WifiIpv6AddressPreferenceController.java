@@ -15,19 +15,14 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.LinkAddress;
-import android.net.Network;
-import android.net.NetworkInfo;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiInfo;
 
 import androidx.core.text.BidiFormatter;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.wifi.WifiUtil;
 
 import java.net.Inet6Address;
 import java.util.StringJoiner;
@@ -35,70 +30,36 @@ import java.util.StringJoiner;
 /**
  * Shows info about Wifi IPv6 address.
  */
-public class WifiIpv6AddressPreferenceController extends WifiControllerBase {
-    private Preference mPreference;
+public class WifiIpv6AddressPreferenceController extends
+        WifiDetailsBasePreferenceController<Preference> {
 
-    public WifiIpv6AddressPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiIpv6AddressPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiChanged(networkInfo, wifiInfo);
-        mPreference.setEnabled(true);
-        updateIfAvailable();
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
-    public void onLost(Network network) {
-        mPreference.setEnabled(false);
-    }
-
-    @Override
-    public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
-            NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateIfAvailable();
-    }
-
-    @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
-        mPreference = screen.findPreference(getPreferenceKey());
-        updateIfAvailable();
-    }
-
-    @Override
-    public int getAvailabilityStatus() {
-        if (!WifiUtil.isWifiAvailable(mContext)) {
-            return UNSUPPORTED_ON_DEVICE;
-        }
-        return mAccessPoint.isActive() ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
-    }
-
-    protected final void updateIfAvailable() {
-        if (isAvailable()) {
-            updateInfo();
-        }
-    }
-
-    private void updateInfo() {
+    protected void updateState(Preference preference) {
         StringJoiner ipv6Addresses = new StringJoiner(System.lineSeparator());
 
-        for (LinkAddress addr : mWifiInfoProvider.getLinkProperties().getLinkAddresses()) {
+        for (LinkAddress addr : getWifiInfoProvider().getLinkProperties().getLinkAddresses()) {
             if (addr.getAddress() instanceof Inet6Address) {
                 ipv6Addresses.add(addr.getAddress().getHostAddress());
             }
         }
 
         if (ipv6Addresses.length() > 0) {
-            mPreference.setSummary(
+            preference.setSummary(
                     BidiFormatter.getInstance().unicodeWrap(ipv6Addresses.toString()));
-            mPreference.setVisible(true);
+            preference.setVisible(true);
         } else {
-            mPreference.setVisible(false);
+            preference.setVisible(false);
         }
     }
 }
+

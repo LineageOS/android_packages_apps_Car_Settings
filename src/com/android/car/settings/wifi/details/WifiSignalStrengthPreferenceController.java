@@ -15,10 +15,8 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkInfo;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiInfo;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -27,33 +25,25 @@ import com.android.car.settings.common.FragmentController;
  * Shows info about Wifi signal strength.
  */
 public class WifiSignalStrengthPreferenceController
-        extends ActiveWifiDetailPreferenceControllerBase {
+        extends WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
     private int mRssiSignalLevel = -1;
     private String[] mSignalStr;
 
-    public WifiSignalStrengthPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiSignalStrengthPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
         mSignalStr = context.getResources().getStringArray(R.array.wifi_signals);
     }
 
     @Override
-    public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiChanged(networkInfo, wifiInfo);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
-            NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateIfAvailable();
-    }
-
-    @Override
-    protected void updateInfo() {
-        mRssiSignalLevel = mAccessPoint.getLevel();
-        mWifiDetailPreference.setDetailText(mSignalStr[mRssiSignalLevel]);
+    protected void updateState(WifiDetailsPreference preference) {
+        mRssiSignalLevel = getAccessPoint().getLevel();
+        preference.setDetailText(mSignalStr[mRssiSignalLevel]);
     }
 }

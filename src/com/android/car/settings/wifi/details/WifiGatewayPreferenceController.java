@@ -15,9 +15,8 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.LinkProperties;
-import android.net.Network;
 import android.net.RouteInfo;
 
 import com.android.car.settings.common.FragmentController;
@@ -25,23 +24,23 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Shows info about Wifi Gateway info.
  */
-public class WifiGatewayPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
+public class WifiGatewayPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
-    public WifiGatewayPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiGatewayPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onLinkPropertiesChanged(Network network, LinkProperties lp) {
-        super.onLinkPropertiesChanged(network, lp);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    protected void updateInfo() {
+    protected void updateState(WifiDetailsPreference preference) {
         String gateway = null;
-        for (RouteInfo routeInfo : mWifiInfoProvider.getLinkProperties().getRoutes()) {
+        for (RouteInfo routeInfo : getWifiInfoProvider().getLinkProperties().getRoutes()) {
             if (routeInfo.isIPv4Default() && routeInfo.hasGateway()) {
                 gateway = routeInfo.getGateway().getHostAddress();
                 break;
@@ -49,10 +48,10 @@ public class WifiGatewayPreferenceController extends ActiveWifiDetailPreferenceC
         }
 
         if (gateway == null) {
-            mWifiDetailPreference.setVisible(false);
+            preference.setVisible(false);
         } else {
-            mWifiDetailPreference.setDetailText(gateway);
-            mWifiDetailPreference.setVisible(true);
+            preference.setDetailText(gateway);
+            preference.setVisible(true);
         }
     }
 }

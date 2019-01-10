@@ -15,38 +15,29 @@
  */
 package com.android.car.settings.wifi.details;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkInfo;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiInfo;
 
 import com.android.car.settings.common.FragmentController;
 
 /**
  * Shows info about Wifi MAC address.
  */
-public class WifiMacAddressPreferenceController extends ActiveWifiDetailPreferenceControllerBase {
+public class WifiMacAddressPreferenceController extends
+        WifiDetailsBasePreferenceController<WifiDetailsPreference> {
 
-    public WifiMacAddressPreferenceController(
-            Context context, String preferenceKey, FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+    public WifiMacAddressPreferenceController(Context context, String preferenceKey,
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void onWifiChanged(NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiChanged(networkInfo, wifiInfo);
-        updateIfAvailable();
+    protected Class<WifiDetailsPreference> getPreferenceType() {
+        return WifiDetailsPreference.class;
     }
 
     @Override
-    public void onWifiConfigurationChanged(WifiConfiguration wifiConfiguration,
-            NetworkInfo networkInfo, WifiInfo wifiInfo) {
-        super.onWifiConfigurationChanged(wifiConfiguration, networkInfo, wifiInfo);
-        updateIfAvailable();
-    }
-
-    @Override
-    protected void updateInfo() {
-        mWifiDetailPreference.setDetailText(mWifiInfoProvider.getWifiInfo().getMacAddress());
+    protected void updateState(WifiDetailsPreference preference) {
+        preference.setDetailText(getWifiInfoProvider().getWifiInfo().getMacAddress());
     }
 }
