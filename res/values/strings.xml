@@ -806,11 +806,11 @@
     <string name="build_info_fmt"><xliff:g example="google/gcar_emu_x86/..." id="fingerprint">%1$s</xliff:g>\n<xliff:g example="Thu Aug 30" id="date">%2$s</xliff:g> : <xliff:g example="4" id="num_days">%3$s</xliff:g> days ago</string>
 
     <!-- security trusted device --><skip/>
-    <!-- Label for button to add a trusted device [CHAR LIMIT=30] -->
+    <!-- Label for button to add a trusted device [CHAR LIMIT=50] -->
     <string name="add_device_title">Add trusted device</string>
-    <!-- Screen title and label for button of trusted device [CHAR LIMIT=20]> -->
+    <!-- Screen title and label for button of trusted device [CHAR LIMIT=30]> -->
     <string name="trusted_device">Trusted devices</string>
-    <!-- Subtitle of trusted device button in security page [CHAR LIMIT=20]-->
+    <!-- Subtitle of trusted device button in security page [CHAR LIMIT=30]-->
     <string name="trusted_device_subtitle">Device security</string>
 
     <!-- generic --><skip/>
