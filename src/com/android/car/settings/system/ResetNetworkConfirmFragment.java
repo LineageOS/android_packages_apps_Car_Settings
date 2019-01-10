@@ -16,8 +16,6 @@
 
 package com.android.car.settings.system;
 
-import static java.util.Objects.requireNonNull;
-
 import android.app.ActivityManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
@@ -73,10 +71,9 @@ public class ResetNetworkConfirmFragment extends SettingsFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button resetSettingsButton = requireNonNull(getActivity()).findViewById(
-                R.id.action_button1);
+        Button resetSettingsButton = requireActivity().findViewById(R.id.action_button1);
         resetSettingsButton.setText(
-                getContext().getString(R.string.reset_network_confirm_button_text));
+                requireContext().getString(R.string.reset_network_confirm_button_text));
         resetSettingsButton.setOnClickListener(v -> resetNetwork());
     }
 
@@ -85,7 +82,7 @@ public class ResetNetworkConfirmFragment extends SettingsFragment {
             return;
         }
 
-        Context context = requireNonNull(getActivity()).getApplicationContext();
+        Context context = requireActivity().getApplicationContext();
 
         ConnectivityManager connectivityManager = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -122,16 +119,16 @@ public class ResetNetworkConfirmFragment extends SettingsFragment {
             policyManager.factoryReset(subscriberId);
         }
 
-        restoreDefaultApn(getContext(), networkSubscriptionId);
+        restoreDefaultApn(context, networkSubscriptionId);
 
         // There has been issues when Sms raw table somehow stores orphan
         // fragments. They lead to garbled message when new fragments come
         // in and combined with those stale ones. In case this happens again,
         // user can reset all network settings which will clean up this table.
-        cleanUpSmsRawTable(getContext());
+        cleanUpSmsRawTable(context);
 
         if (shouldResetEsim()) {
-            new EraseEsimAsyncTask(getContext(), getContext().getPackageName(), this).execute();
+            new EraseEsimAsyncTask(getContext(), context.getPackageName(), this).execute();
         } else {
             showCompletionToast(getContext());
         }
@@ -139,15 +136,16 @@ public class ResetNetworkConfirmFragment extends SettingsFragment {
 
     private boolean shouldResetEsim() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(
-                getContext());
-        return sharedPreferences.getBoolean(getContext().getString(R.string.pk_reset_esim), false);
+                requireContext());
+        return sharedPreferences.getBoolean(requireContext().getString(R.string.pk_reset_esim),
+                false);
     }
 
     private int getNetworkSubscriptionId() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(
-                getContext());
+                requireContext());
         String stringId = sharedPreferences.getString(
-                getContext().getString(R.string.pk_reset_network_subscription), null);
+                requireContext().getString(R.string.pk_reset_network_subscription), null);
         if (TextUtils.isEmpty(stringId)) {
             return SubscriptionManager.INVALID_SUBSCRIPTION_ID;
         }

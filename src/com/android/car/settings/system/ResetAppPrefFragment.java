@@ -16,8 +16,6 @@
 
 package com.android.car.settings.system;
 
-import static java.util.Objects.requireNonNull;
-
 import android.app.AppOpsManager;
 import android.app.INotificationManager;
 import android.car.userlib.CarUserManagerHelper;
@@ -66,7 +64,7 @@ public class ResetAppPrefFragment extends SettingsFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button resetAppsButton = requireNonNull(getActivity()).findViewById(R.id.action_button1);
+        Button resetAppsButton = requireActivity().findViewById(R.id.action_button1);
         resetAppsButton.setText(requireContext().getString(R.string.reset_app_pref_button_text));
         resetAppsButton.setOnClickListener(v -> resetAppPreferences());
     }
