@@ -26,12 +26,11 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceManager;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
 import com.android.internal.widget.LockPatternUtils;
@@ -49,14 +48,13 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLockPatternUtils.class})
 public class NoLockPreferenceControllerTest {
 
-    private static final String PREFERENCE_KEY = "no_lock";
     private static final String TEST_CURRENT_PASSWORD = "test_password";
     private static final int TEST_USER = 10;
 
     private Context mContext;
+    private PreferenceControllerTestHelper<NoLockPreferenceController> mPreferenceControllerHelper;
     private NoLockPreferenceController mController;
-    @Mock
-    private FragmentController mFragmentController;
+    private Preference mPreference;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
@@ -68,8 +66,11 @@ public class NoLockPreferenceControllerTest {
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         mContext = RuntimeEnvironment.application;
-        mController = new NoLockPreferenceController(mContext, PREFERENCE_KEY,
-                mFragmentController);
+        mPreference = new Preference(mContext);
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                NoLockPreferenceController.class, mPreference);
+        mController = mPreferenceControllerHelper.getController();
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @After
@@ -79,34 +80,19 @@ public class NoLockPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_wrongPreference() {
-        // Do setup, so controller has a reference to compare the incoming preference.
-        PreferenceScreen preferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(
-                mContext);
-        Preference preference = new Preference(mContext);
-        preference.setKey(PREFERENCE_KEY);
-        preferenceScreen.addPreference(preference);
-        mController.displayPreference(preferenceScreen);
-
-        assertThat(mController.handlePreferenceTreeClick(new Preference(mContext))).isFalse();
+    public void testHandlePreferenceClicked_returnsTrue() {
+        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
     @Test
-    public void testHandlePreferenceTreeClick_nextFragment() {
-        PreferenceScreen preferenceScreen = new PreferenceManager(mContext).createPreferenceScreen(
-                mContext);
-        Preference preference = new Preference(mContext);
-        preference.setKey(PREFERENCE_KEY);
-        preferenceScreen.addPreference(preference);
-        mController.displayPreference(preferenceScreen);
-
-        assertThat(mController.handlePreferenceTreeClick(preference)).isTrue();
-        verify(mFragmentController).showDialog(any(ConfirmRemoveScreenLockDialog.class),
-                anyString());
+    public void testHandlePreferenceClicked_goesToNextFragment() {
+        mPreference.performClick();
+        verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
+                any(ConfirmRemoveScreenLockDialog.class), anyString());
     }
 
     @Test
-    public void testConfirmRemoveScreenLockListener_removeLock() {
+    public void testConfirmRemoveScreenLockListener_removesLock() {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
@@ -114,10 +100,10 @@ public class NoLockPreferenceControllerTest {
     }
 
     @Test
-    public void testConfirmRemoveScreenLockListener_goBack() {
+    public void testConfirmRemoveScreenLockListener_goesBack() {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
-        verify(mFragmentController).goBack();
+        verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 }

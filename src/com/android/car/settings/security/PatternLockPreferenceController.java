@@ -17,6 +17,7 @@
 package com.android.car.settings.security;
 
 import android.app.admin.DevicePolicyManager;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
@@ -30,8 +31,8 @@ public class PatternLockPreferenceController extends LockTypeBasePreferenceContr
             new int[]{DevicePolicyManager.PASSWORD_QUALITY_SOMETHING};
 
     public PatternLockPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
