@@ -17,6 +17,7 @@
 
 <resources>
     <dimen name="icon_size">44dp</dimen>
+    <dimen name="touch_target_size">@*android:dimen/car_touch_target_size</dimen>
     <dimen name="seekbar_track_height">6dp</dimen>
     <dimen name="seekbar_track_corner">3dp</dimen>
     <dimen name="seekbar_padding_top">10dp</dimen>
@@ -57,15 +58,15 @@
 
     <dimen name="two_action_preference_divider_width">1dp</dimen>
 
-    <!-- dimensions for the car user switcher -->
-    <dimen name="car_user_switcher_name_text_size">@dimen/car_body1_size</dimen>
-    <dimen name="car_user_switcher_image_avatar_size">@dimen/car_large_avatar_size</dimen>
-    <dimen name="car_user_switcher_vertical_spacing_between_users">@dimen/car_padding_5</dimen>
-    <dimen name="car_user_switcher_vertical_spacing_between_name_and_avatar">@dimen/car_padding_4
+    <!-- User Switcher -->
+    <dimen name="user_switcher_image_avatar_size">96dp</dimen>
+    <dimen name="user_switcher_vertical_spacing_between_users">@*android:dimen/car_padding_5
     </dimen>
-    <dimen name="car_user_switcher_margin_top">@dimen/car_padding_4</dimen>
-    <dimen name="car_user_switcher_current_user_circle_width">126dp</dimen>
-    <dimen name="car_user_switcher_current_user_circle_stroke_width">7dp</dimen>
+    <dimen name="user_switcher_vertical_spacing_between_name_and_avatar">
+        @*android:dimen/car_padding_4
+    </dimen>
+    <dimen name="user_switcher_current_user_circle_width">126dp</dimen>
+    <dimen name="user_switcher_current_user_circle_stroke_width">7dp</dimen>
 
     <dimen name="preference_padding_top">@dimen/car_padding_2</dimen>
     <dimen name="preference_padding_bottom">@dimen/car_padding_2</dimen>

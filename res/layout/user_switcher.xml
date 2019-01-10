@@ -15,20 +15,14 @@
     limitations under the License.
 -->
 
-<LinearLayout
+<com.android.car.settings.users.UserGridRecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_grid"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/car_user_switcher_background_color"
-    android:orientation="vertical">
-    <com.android.car.settings.users.UserGridRecyclerView
-        android:id="@+id/user_grid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/car_user_switcher_margin_top"
-        app:gutter="both"
-        app:itemSpacing="@dimen/car_user_switcher_vertical_spacing_between_users"
-        app:showPagedListViewDivider="false"
-        app:verticallyCenterListContent="true"/>
-</LinearLayout>
+    android:background="?attr/userSwitcherBackground"
+    app:gutter="both"
+    app:itemSpacing="@dimen/user_switcher_vertical_spacing_between_users"
+    app:showPagedListViewDivider="false"
+    app:verticallyCenterListContent="true"/>
