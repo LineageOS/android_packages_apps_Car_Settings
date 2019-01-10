@@ -134,7 +134,7 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
     }
 
     @Implementation
-    protected static Object addStatusChangeListener(int mask, final SyncStatusObserver callback) {
+    protected static Object addStatusChangeListener(int mask, SyncStatusObserver callback) {
         sStatusObserver = callback;
         return null;
     }
@@ -142,6 +142,10 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
     @Implementation
     protected static void removeStatusChangeListener(Object handle) {
         sStatusObserver = null;
+    }
+
+    public static SyncStatusObserver getStatusChangeListener() {
+        return sStatusObserver;
     }
 
     @Resetter
