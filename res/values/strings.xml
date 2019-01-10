@@ -191,6 +191,12 @@
     <string name="language_settings">Languages</string>
     <!-- Title of Languages & input settings screen. [CHAR LIMIT=30] -->
     <string name="languages_and_input_settings">Languages &amp; input</string>
+    <!-- Title of the main TTS settings screen. [CHAR LIMIT=30] -->
+    <string name="text_to_speech_settings">Text-to-speech output</string>
+    <!-- Title of preferred TTS settings screen. [CHAR LIMIT=30] -->
+    <string name="text_to_speech_preferred_engine_settings">Preferred engine</string>
+    <!-- Summay which identifies the currently selected preferred engine. [CHAR LIMIT=30] -->
+    <string name="text_to_speech_current_engine">Current engine</string>
 
     <!-- sound settings --><skip/>
     <!-- Sound settings screen heading -->
