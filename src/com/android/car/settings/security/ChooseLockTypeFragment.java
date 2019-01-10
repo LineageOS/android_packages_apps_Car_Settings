@@ -22,7 +22,7 @@ import android.os.Bundle;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.BasePreferenceFragment;
+import com.android.car.settings.common.SettingsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * Give user choices of lock screen type: Pin/Pattern/Password or None.
  */
-public class ChooseLockTypeFragment extends BasePreferenceFragment {
+public class ChooseLockTypeFragment extends SettingsFragment {
 
     public static final String EXTRA_CURRENT_PASSWORD_QUALITY = "extra_current_password_quality";
 
