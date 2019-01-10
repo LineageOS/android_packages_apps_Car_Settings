@@ -22,7 +22,6 @@ import android.os.UserHandle;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.CarSettingActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
@@ -38,50 +37,47 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        LOG.d("onCreate");
         super.onCreate(savedInstanceState);
 
         mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
+    }
 
-        if (savedInstanceState == null) {
-            Fragment fragment;
-            switch (mPasswordQuality) {
-                case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
-                    fragment = new ChooseLockTypeFragment();
-                    break;
-                case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
-                    fragment = ConfirmLockPatternFragment.newInstance(
-                            /* isInSetupWizard= */ false);
-                    break;
-                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
-                case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
-                    fragment = ConfirmLockPinPasswordFragment.newPinInstance(
-                            /* isInSetupWizard= */ false);
-                    break;
-                case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
-                case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
-                    fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
-                            /* isInSetupWizard= */ false);
-                    break;
-                default:
-                    LOG.e("Unexpected password quality: " + String.valueOf(mPasswordQuality));
-                    fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
-                            /* isInSetupWizard= */ false);
-            }
-
-            Bundle bundle = fragment.getArguments();
-            if (bundle == null) {
-                bundle = new Bundle();
-            }
-            bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
-            fragment.setArguments(bundle);
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.fragment_container, fragment)
-                    .addToBackStack(null)
-                    .commit();
+    @Override
+    public Fragment getFragment() {
+        Fragment fragment;
+        switch (mPasswordQuality) {
+            case DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED:
+                fragment = new ChooseLockTypeFragment();
+                break;
+            case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
+                fragment = ConfirmLockPatternFragment.newInstance(
+                        /* isInSetupWizard= */ false);
+                break;
+            case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
+            case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
+                fragment = ConfirmLockPinPasswordFragment.newPinInstance(
+                        /* isInSetupWizard= */ false);
+                break;
+            case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
+            case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
+                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
+                        /* isInSetupWizard= */ false);
+                break;
+            default:
+                LOG.e("Unexpected password quality: " + String.valueOf(mPasswordQuality));
+                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
+                        /* isInSetupWizard= */ false);
         }
+
+        Bundle bundle = fragment.getArguments();
+        if (bundle == null) {
+            bundle = new Bundle();
+        }
+        bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     @Override
@@ -95,9 +91,6 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.fragment_container, fragment)
-                .commit();
+        launchFragment(fragment);
     }
 }
