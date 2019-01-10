@@ -30,21 +30,20 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/user_avatar"
-            android:layout_width="@dimen/car_user_switcher_image_avatar_size"
-            android:layout_height="@dimen/car_user_switcher_image_avatar_size"
+            android:layout_width="@dimen/user_switcher_image_avatar_size"
+            android:layout_height="@dimen/user_switcher_image_avatar_size"
             android:layout_gravity="center"
-            android:background="@drawable/car_button_ripple_background"/>
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
     </FrameLayout>
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/car_user_switcher_vertical_spacing_between_name_and_avatar"
+        android:layout_marginTop="@dimen/user_switcher_vertical_spacing_between_name_and_avatar"
         android:ellipsize="end"
         android:gravity="center"
         android:singleLine="true"
-        android:textColor="@color/car_user_switcher_name_text_color"
-        android:textSize="@dimen/car_user_switcher_name_text_size"/>
+        android:textAppearance="?attr/userSwitcherNameTextAppearance"/>
 
 </LinearLayout>
