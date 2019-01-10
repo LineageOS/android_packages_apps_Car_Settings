@@ -47,8 +47,7 @@
     </declare-styleable>
 
     <declare-styleable name="PinPadView">
-        <attr name="enterKeyDrawable" format="reference"/>
-        <attr name="keyTextColor" format="color"/>
+        <attr name="layout" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="Preference">
