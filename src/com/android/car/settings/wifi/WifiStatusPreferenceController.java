@@ -16,11 +16,11 @@
 
 package com.android.car.settings.wifi;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
@@ -28,34 +28,31 @@ import com.android.car.settings.common.FragmentController;
 /**
  * Controls preference when Wifi is in disabled or enabling state
  */
-public class WifiStatusPreferenceController extends WifiPreferenceControllerBase {
-    private Preference mPreference;
+public class WifiStatusPreferenceController extends WifiBasePreferenceController<Preference> {
 
     public WifiStatusPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController) {
-        super(context, preferenceKey, fragmentController);
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+        super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    public void displayPreference(PreferenceScreen screen) {
-        super.displayPreference(screen);
-
-        mPreference = screen.findPreference(getPreferenceKey());
+    protected Class<Preference> getPreferenceType() {
+        return Preference.class;
     }
 
     @Override
     public void onWifiStateChanged(int state) {
         switch (state) {
             case WifiManager.WIFI_STATE_DISABLED:
-                mPreference.setVisible(true);
-                mPreference.setTitle(R.string.wifi_disabled);
+                getPreference().setVisible(true);
+                getPreference().setTitle(R.string.wifi_disabled);
                 break;
             case WifiManager.WIFI_STATE_ENABLING:
-                mPreference.setVisible(true);
-                mPreference.setTitle(R.string.loading_wifi_list);
+                getPreference().setVisible(true);
+                getPreference().setTitle(R.string.loading_wifi_list);
                 break;
             default:
-                mPreference.setVisible(false);
+                getPreference().setVisible(false);
         }
     }
 }
