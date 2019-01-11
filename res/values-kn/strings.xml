@@ -29,11 +29,16 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ಡಿಮ್‌‌ ಪರದೆ, ಟಚ್‌ಸ್ಕ್ರೀನ್, ಬ್ಯಾಟರಿ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ಮಂದ ಪರದೆ, ರಾತ್ರಿ ,ಟಿಂಟ್"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ರಾತ್ರಿ ಮೋಡ್"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು ಇಂಟರ್ನೆಟ್"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"ಮೊಬೈಲ್‌ ನೆಟ್‌ವರ್ಕ್‌"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ವೈ‑ಫೈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ವೈ-ಫೈ ಆನ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ವೈ-ಫೈ ಆಫ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
-    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
-    <skip />
+    <string name="loading_wifi_list" msgid="8584901433195876465">"ವೈ-ಫೈ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"ವೈ-ಫೈ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆಯಲು ವಿಫಲವಾಗಿದೆ"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ನೆಟ್‌ವರ್ಕ್‌ ಸಂಪರ್ಕಿಸಲು ವಿಫಲವಾಗಿದೆ"</string>
@@ -42,6 +47,7 @@
     <string name="wifi_password" msgid="5565632142720292397">"ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ನೆಟ್‌ವರ್ಕ್‌ ಹೆಸರು"</string>
+    <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ನಮೂದಿಸಿ"</string>
     <string name="wifi_security" msgid="158358046038876532">"ಭದ್ರತೆ"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯ"</string>
     <string name="wifi_status" msgid="5688013206066543952">"ಸ್ಥಿತಿ"</string>
@@ -49,6 +55,8 @@
     <string name="wifi_frequency" msgid="8951455949682864922">"ತರಂಗಾಂತರ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ವಿಳಾಸ"</string>
     <string name="show_password" msgid="2074628020371139240">"ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"ನೆಟ್‌ವರ್ಕ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"</string>
+    <string name="default_password_summary" msgid="8789594645836902982">"ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ಕಳಪೆ"</item>
@@ -67,29 +75,24 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ವಿಳಾಸಗಳು"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"ಗೇಟ್‌ವೇ"</string>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"ಬ್ಲೂಟೂತ್ ಆನ್ ಮಾಡಿ"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"ಬ್ಲೂಟೂತ್‌ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"ಕಂಪ್ಯೂಟರ್‌"</string>
-    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ಹೆಡ್‌ಸೆಟ್"</string>
-    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ಫೋನ್"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"ಇಮೇಜಿಂಗ್"</string>
-    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"ಹೆಡ್‌ಫೋನ್"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"ಪೆರಿಪೆರಲ್ ಇನ್‌ಪುಟ್‌‌"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
-    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"ಲಭ್ಯವಿರುವ ಸಾಧನಗಳು"</string>
-    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"ಯಾವುದೇ ಜೋಡಿಸಲಾದ ಸಾಧನಗಳಿಲ್ಲ"</string>
-    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"ಲಭ್ಯವಿರುವ ಯಾವುದೇ ಸಾಧನಗಳಿಲ್ಲ"</string>
-    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"ಜೋಡಿ ಮಾಡಲಾಗಿರುವ ಸಾಧನ"</string>
-    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"ಹೆಸರು"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"ಇದಕ್ಕೆ ಬಳಸಿ"</string>
-    <string name="wifi_ssid_hint" msgid="4155050863239489553">"ಬ್ಲೂಟೂತ್ ಸಾಧನದ ಹೆಸರನ್ನು ಬದಲಾಯಿಸಿ"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ಹೊಸ ಸಾಧನವನ್ನು ಜೋಡಿಸಿ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ಜೋಡಿಸಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ಸಾಧನದ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸುವುದೇ?"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನದಿಂದ ನಿಮ್ಮ ವಾಹನದ ಸಂಪರ್ಕವನ್ನು ಕಡಿತಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ವಾಹನದ ಬ್ಲೂಟೂತ್‌ ವಿಳಾಸ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"ಸಾಧನದ ಬ್ಲೂಟೂತ್ ವಿಳಾಸ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"ವಾಹನದ ಹೆಸರು"</string>
+    <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ಈ ವಾಹನವನ್ನು ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_rename_device" msgid="8406868875363878712">"ಸಾಧನವನ್ನು ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"ಲಭ್ಯವಿರುವ ಸಾಧನಗಳು"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"ಪ್ರೊಫೈಲ್‌ಗಳು"</string>
+    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ಬ್ಲೂಟೂತ್‌‌ ಜೋಡಣೆ ವಿನಂತಿ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ಜೋಡಿಸಿ ಮತ್ತು ಸಂಪರ್ಕಪಡಿಸಿ"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ಬ್ಲೂಟೂತ್ ಜೋಡಣೆ ಕೋಡ್"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ಅಕ್ಷರಗಳು ಅಥವಾ ಚಿಹ್ನೆಗಳನ್ನು ಪಿನ್‌ ಹೊಂದಿದೆ"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"ಜೋಡಣೆ ಕೋಡ್‌ ಟೈಪ್‌ ಮಾಡಿ ತದನಂತರ ರಿಟರ್ನ್‌ ಅಥವಾ ಎಂಟರ್‌ ಒತ್ತಿ."</string>
@@ -101,9 +104,13 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ಸಾಮಾನ್ಯವಾಗಿ 0000 ರಿಂದ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ಜೋಡಣೆ ವಿನಂತಿ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಜೊತೆಗೆ ಜೋಡಿ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ."</string>
-    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ಭಾಷೆಗಳು"</string>
-    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"ಭಾಷೆಗಳು &amp; ಇನ್‌ಪುಟ್"</string>
+    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
+    <skip />
+    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
+    <skip />
+    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
     <skip />
     <string name="sound_settings" msgid="3072423952331872246">"ಶಬ್ದ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ರಿಂಗ್ ವಾಲ್ಯೂಮ್"</string>
@@ -113,6 +120,9 @@
     <string name="media_volume_title" msgid="6697416686272606865">"ಮಾಧ್ಯಮ"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"ಸಂಗೀತ ಮತ್ತು ವೀಡಿಯೊಗಳಿಗೆ ವಾಲ್ಯೂಮ್‌ ಅನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"ಅಲಾರಮ್"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"ಫೋನ್ ರಿಂಗ್‌ಟೋನ್"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"ಡಿಫಾಲ್ಟ್ ಅಧಿಸೂಚನೆ ಧ್ವನಿ"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"ಡಿಫಾಲ್ಟ್ ಅಲಾರಮ್ ಧ್ವನಿ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ಅಪ್ಲಿಕೇಶನ್ ಮಾಹಿತಿ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="enable_text" msgid="1794971777861881238">"ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
@@ -168,6 +178,13 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ಮೂರನೇ-ವ್ಯಕ್ತಿ ಪರವಾನಗಿಗಳು"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ಪರವಾನಗಿಗಳನ್ನು ಲೋಡ್‌ ಮಾಡುವಲ್ಲಿ ಸಮಸ್ಯೆ ಇದೆ."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ಲೋಡ್ ಆಗುತ್ತಿದೆ..."</string>
+    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
+      <item quantity="one">ನೀವು ಇದೀಗ ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹಂತಗಳ ದೂರದಲ್ಲಿರುವಿರಿ.</item>
+      <item quantity="other">ನೀವು ಇದೀಗ ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹಂತಗಳ ದೂರದಲ್ಲಿರುವಿರಿ.</item>
+    </plurals>
+    <string name="show_dev_on" msgid="5339077400040834808">"ಇದೀಗ ನೀವು ಡೆವಲಪರ್‌!"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"ಅಗತ್ಯವಿಲ್ಲ, ನೀವು ಈಗಾಗಲೇ ಡೆವಲಪರ್‌ ಆಗಿರುವಿರಿ."</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ಮರುಹೊಂದಿಸುವ ಆಯ್ಕೆಗಳು"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ನೆಟ್‌ವರ್ಕ್, ಆ್ಯಪ್‌ಗಳು ಅಥವಾ ಸಾಧನಗಳ ಮರುಹೊಂದಿಸುವಿಕೆ"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"ನೆಟ್‌ವರ್ಕ್‌ ಮರುಹೊಂದಿಸಿ"</string>
@@ -185,7 +202,8 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
-    <string name="reset_app_pref_desc" msgid="3410882662142097726">"ಇದು ಎಲ್ಲಾ ಆದ್ಯತೆಗಳನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ:\n\n\n ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ಗಳು\n ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ ಸೂಚನೆಗಳು\n ಕ್ರಿಯೆಗಳಿಗಾಗಿ ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು\n ಆ್ಯಪ್‌ ಹಿನ್ನೆಲೆ ಡೇಟಾ ನಿರ್ಬಂಧಗಳು\n ಯಾವುದೇ ಅನುಮತಿ ನಿರ್ಬಂಧಗಳು\n\n\n ಯಾವುದೇ ಆ್ಯಪ್‌ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುವುದಿಲ್ಲ."</string>
+    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
+    <skip />
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆಪ್‌‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
@@ -255,6 +273,12 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ಯಾವುದೇ ಖಾತೆಗಳನ್ನು ಸೇರಿಸಿಲ್ಲ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ಅವರಿಗಾಗಿ ಖಾತೆಗಳು"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"ಡೇಟಾವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಿಂಕ್ ಮಾಡಿ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ಆ್ಯಪ್‌ಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಡೇಟಾವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಿ"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆನ್‌‌ಮಾಡುವುದೇ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ವೆಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಗಳಿಗೆ ಮಾಡಲಾದ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಮ್ಮ ಸಾಧನಕ್ಕೆ ನಕಲಿಸಲಾಗುತ್ತದೆ. \n\nಫೋನ್‌ನಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಕೆಲವು ಖಾತೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವೆಬ್‌ಗೆ ನಕಲಿಸುತ್ತವೆ. Google ಖಾತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ರೀತಿ ಇದು."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆಫ್‌ ಮಾಡುವುದೇ?"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ಇದು ಡೇಟಾ ಪೋಲಾಗದಂತೆ ತಡೆಯುತ್ತದೆ, ಆದರೆ ಇತ್ತೀಚಿನ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ನೀವು ಪ್ರತಿ ಖಾತೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಿಂಕ್‌ ಮಾಡಬೇಕಾಗುತ್ತದೆ. ಮತ್ತು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ಖಾತೆಯ ಮಾಹಿತಿ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="add_an_account" msgid="1072285034300995091">"ಖಾತೆಯನ್ನು ಸೇರಿಸಿ"</string>
@@ -267,6 +291,16 @@
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> ಐಟಂಗಳಲ್ಲಿ <xliff:g id="ID_1">%1$d</xliff:g> ಕ್ಕಾಗಿ ಸಿಂಕ್ ಆನ್ ಇದೆ"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"ಎಲ್ಲಾ ಐಟಂಗಳಿಗಾಗಿ ಸಿಂಕ್ ಆನ್ ಇದೆ"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"ಎಲ್ಲಾ ಐಟಂಗಳಿಗಾಗಿ ಸಿಂಕ್ ಆಫ್ ಇದೆ"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"ಸಿಂಕ್‌ ಆಫ್ ಆಗಿದೆ"</string>
+    <string name="sync_error" msgid="6698021343089247914">"ಸಿಂಕ್ ದೋಷ"</string>
+    <string name="last_synced" msgid="4745124489150101529">"ಕೊನೆಯದಾಗಿ ಸಿಂಕ್ ಮಾಡಿರುವುದು <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="sync_in_progress" msgid="1237573373537382416">"ಇದೀಗ ಸಿಂಕ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"ಈಗ ಸಿಂಕ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ <xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"ಈಗ ಸಿಂಕ್ ಮಾಡಿ"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ಸಿಂಕ್ ರದ್ದುಗೊಳಿಸಿ"</string>
+    <!-- no translation found for sync_is_failing (5766255460901806206) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"ಭದ್ರತೆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ಪರದೆ ಲಾಕ್"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ಯಾವುದೂ ಅಲ್ಲ"</string>
@@ -274,8 +308,7 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"ಪಿನ್"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ಲಾಕ್ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ"</string>
-    <!-- no translation found for screen_lock_options (8531177937577168185) -->
-    <skip />
+    <string name="screen_lock_options" msgid="8531177937577168185">"ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್ ನಮೂದಿಸಿ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ದೃಢೀಕರಿಸಿ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ಮರುರಚಿಸಿ"</string>
@@ -358,7 +391,12 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ಅಂಕಿಗಳ ಆರೋಹಣ, ಅವರೋಹಣ ಅಥವಾ ಪುನರಾವರ್ತಿತ ಅನುಕ್ರಮವನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ದಿನಗಳ ಹಿಂದೆ"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಿ"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಗಳು"</string>
+    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ಸಾಧನ ಭದ್ರತೆ"</string>
     <string name="forget" msgid="3971143908183848527">"ಮರೆಯಿರಿ"</string>
+    <string name="connect" msgid="5861699594602380150">"ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="disconnect" msgid="6140789953324820336">"ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಿ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ಅಳಿಸಿ"</string>
     <string name="remove_button" msgid="6664656962868194178">"ತೆಗೆದುಹಾಕಿ"</string>
     <string name="cancel" msgid="750286395700355455">"ರದ್ದುಮಾಡಿ"</string>
