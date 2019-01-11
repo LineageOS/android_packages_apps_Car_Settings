@@ -18,17 +18,20 @@ package com.android.car.settings.tts;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 
-import androidx.preference.Preference;
-
+import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 
 /** Business logic to set the summary for the preferred engine entry setting. */
-public class PreferredEngineEntryPreferenceController extends PreferenceController<Preference> {
+public class PreferredEngineEntryPreferenceController extends
+        PreferenceController<ButtonPreference> {
 
+    private static final Logger LOG = new Logger(PreferredEngineEntryPreferenceController.class);
     private TtsEngines mEnginesHelper;
 
     public PreferredEngineEntryPreferenceController(Context context, String preferenceKey,
@@ -38,12 +41,26 @@ public class PreferredEngineEntryPreferenceController extends PreferenceControll
     }
 
     @Override
-    protected Class<Preference> getPreferenceType() {
-        return Preference.class;
+    protected Class<ButtonPreference> getPreferenceType() {
+        return ButtonPreference.class;
     }
 
     @Override
-    protected void updateState(Preference preference) {
+    protected void onCreateInternal() {
+        getPreference().setOnButtonClickListener(preference -> {
+            TextToSpeech.EngineInfo info = mEnginesHelper.getEngineInfo(
+                    mEnginesHelper.getDefaultEngine());
+            Intent subSettingsIntent = mEnginesHelper.getSettingsIntent(info.name);
+            if (subSettingsIntent != null) {
+                getContext().startActivity(subSettingsIntent);
+            } else {
+                LOG.e("subSettingsIntent is null");
+            }
+        });
+    }
+
+    @Override
+    protected void updateState(ButtonPreference preference) {
         TextToSpeech.EngineInfo info = mEnginesHelper.getEngineInfo(
                 mEnginesHelper.getDefaultEngine());
         preference.setSummary(info.label);
