@@ -17,6 +17,7 @@
 package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
@@ -31,7 +32,13 @@ import com.android.car.settings.common.FragmentController;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Constructs and populates the permissions toggles for non admin users. */
+/**
+ * Constructs and populates the permissions toggles for non admin users.
+ *
+ * <p>In order to add a new permission, it needs to be added to {@link
+ * CarUserManagerHelper#OPTIONAL_NON_ADMIN_RESTRICTIONS} and the appropriate label needs to be added
+ * to {@link #PERMISSIONS_LIST}.
+ */
 public class PermissionsPreferenceController extends
         UserDetailsBasePreferenceController<PreferenceGroup> {
 
