@@ -16,8 +16,8 @@
 
 package com.android.car.settings.system;
 
-import static com.android.car.settings.common.BasePreferenceController.AVAILABLE;
-import static com.android.car.settings.common.BasePreferenceController.UNSUPPORTED_ON_DEVICE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 

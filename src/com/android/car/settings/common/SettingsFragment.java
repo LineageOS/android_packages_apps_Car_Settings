@@ -143,7 +143,7 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         mUxRestrictions = ((UxRestrictionsProvider) requireActivity()).getCarUxRestrictions();
         mPreferenceControllers.clear();
         mPreferenceControllers.addAll(
-                PreferenceControllerListHelper2.getPreferenceControllersFromXml(styledContext,
+                PreferenceControllerListHelper.getPreferenceControllersFromXml(styledContext,
                         getPreferenceScreenResId(), /* fragmentController= */ this,
                         mUxRestrictions));
 
