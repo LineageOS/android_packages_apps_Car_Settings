@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import static com.android.car.settings.common.PreferenceXmlParser.METADATA_KEY;
 
 import android.annotation.NonNull;
 import android.annotation.XmlRes;
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -28,59 +29,77 @@ import android.text.TextUtils;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Helper to load {@link BasePreferenceController} instances from XML. Based on com.android
+ * Helper to load {@link PreferenceController} instances from XML. Based on com.android
  * .settings.core.PreferenceControllerListHelper.
- *
- * @deprecated Use {@link PreferenceControllerListHelper2}.
  */
-@Deprecated
 class PreferenceControllerListHelper {
-
-    private static final Logger LOG = new Logger(PreferenceControllerListHelper.class);
+    private PreferenceControllerListHelper() {
+    }
 
     /**
-     * Creates a list of {@link BasePreferenceController} instances from the XML defined by
-     * {@param xmlResId}.
+     * Creates a list of {@link PreferenceController}.
+     *
+     * @param context the {@link Context} used to instantiate the controllers.
+     * @param xmlResId the XML resource containing the metadata of the controllers to
+     *         create.
+     * @param fragmentController a valid {@link FragmentController} the preference
+     *         controllers can use to navigate.
+     * @param uxRestrictions the current {@link CarUxRestrictions}.
+     * @throws IllegalArgumentException if the XML resource cannot be parsed, if the XML
+     *         resource contains elements which declare controllers without preference keys, if the
+     *         XML resource contains controllers which cannot be instantiated successfully.
      */
     @NonNull
-    static List<BasePreferenceController> getPreferenceControllersFromXml(Context context,
-            @XmlRes int xmlResId, FragmentController fragmentController) {
-        List<BasePreferenceController> controllers = new ArrayList<>();
+    static List<PreferenceController> getPreferenceControllersFromXml(Context context,
+            @XmlRes int xmlResId, FragmentController fragmentController,
+            CarUxRestrictions uxRestrictions) {
+        List<PreferenceController> controllers = new ArrayList<>();
         List<Bundle> preferenceMetadata;
         try {
             preferenceMetadata = PreferenceXmlParser.extractMetadata(context, xmlResId,
                     PreferenceXmlParser.MetadataFlag.FLAG_NEED_KEY
                             | PreferenceXmlParser.MetadataFlag.FLAG_NEED_PREF_CONTROLLER);
         } catch (IOException | XmlPullParserException e) {
-            LOG.e("Failed to parse preference XML for getting controllers", e);
-            return controllers;
+            throw new IllegalArgumentException(
+                    "Failed to parse preference XML for getting controllers", e);
         }
 
         for (Bundle metadata : preferenceMetadata) {
             String controllerName = metadata.getString(METADATA_CONTROLLER);
             if (TextUtils.isEmpty(controllerName)) {
-                continue;
+                continue; // Preference does not require a controller.
             }
             String key = metadata.getString(METADATA_KEY);
             if (TextUtils.isEmpty(key)) {
-                LOG.w("Controller requires key but it's not defined in XML: " + controllerName);
-                continue;
+                throw new IllegalArgumentException("Missing key for controller: " + controllerName);
             }
-            BasePreferenceController controller;
-            try {
-                controller = BasePreferenceController.createInstance(context, controllerName, key,
-                        fragmentController);
-            } catch (IllegalStateException e2) {
-                LOG.e("Cannot instantiate controller from reflection: " + controllerName, e2);
-                continue;
-            }
-            controllers.add(controller);
+            controllers.add(createInstance(controllerName, context, key, fragmentController,
+                    uxRestrictions));
         }
 
         return controllers;
     }
+
+    private static PreferenceController createInstance(String controllerName,
+            Context context, String key, FragmentController fragmentController,
+            CarUxRestrictions restrictionInfo) {
+        try {
+            Class<?> clazz = Class.forName(controllerName);
+            Constructor<?> preferenceConstructor = clazz.getConstructor(Context.class, String.class,
+                    FragmentController.class, CarUxRestrictions.class);
+            Object[] params = new Object[]{context, key, fragmentController, restrictionInfo};
+            return (PreferenceController) preferenceConstructor.newInstance(params);
+        } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException
+                | InvocationTargetException | IllegalAccessException e) {
+            throw new IllegalArgumentException(
+                    "Invalid preference controller: " + controllerName, e);
+        }
+    }
 }
+
