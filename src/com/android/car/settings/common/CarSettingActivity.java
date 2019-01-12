@@ -49,6 +49,7 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     public static final String META_DATA_KEY_FRAGMENT_CLASS =
             "com.android.car.settings.FRAGMENT_CLASS";
 
+    private boolean mShowFragmentForIntent;
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
     // Default to minimum restriction.
@@ -70,17 +71,13 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         mUxRestrictionsHelper.start();
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         mRestrictedMessage = findViewById(R.id.restricted_message);
+        mShowFragmentForIntent = true;
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
-        if (fragment == null) {
-            fragment = Fragment.instantiate(this,
-                    getString(R.string.config_settings_hierarchy_root_fragment));
-        }
-        launchFragment(fragment);
+    public void onResume() {
+        super.onResume();
+        launchFragmentFromIntent();
     }
 
     @Override
@@ -92,7 +89,9 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
 
     @Override
     public void onNewIntent(Intent intent) {
+        LOG.d("onNewIntent" + intent);
         setIntent(intent);
+        mShowFragmentForIntent = true;
     }
 
     @Override
@@ -103,6 +102,18 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             finish();
         }
+    }
+
+    /**
+     * Gets the fragment to launch into main window of the activity.
+     */
+    public Fragment getFragment() {
+        Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
+        if (fragment == null) {
+            fragment = Fragment.instantiate(this,
+                    getString(R.string.config_settings_hierarchy_root_fragment));
+        }
+        return fragment;
     }
 
     @Override
@@ -199,6 +210,27 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
             return true;
         }
         return false;
+    }
+
+    private void launchFragmentFromIntent() {
+        if (!mShowFragmentForIntent) {
+            LOG.d("new intent already processed.");
+            return;
+        }
+        Fragment fragment = getFragment();
+        Fragment currentFragment = getCurrentFragment();
+        if (differentFragment(fragment, currentFragment)) {
+            launchFragment(fragment);
+        }
+        mShowFragmentForIntent = false;
+    }
+
+    /**
+     * Returns {code true} if newFragment is different from current fragment.
+     */
+    private boolean differentFragment(Fragment newFragment, Fragment currentFragment) {
+        return (currentFragment == null)
+                || (!currentFragment.getClass().equals(newFragment.getClass()));
     }
 
     private Fragment getCurrentFragment() {
