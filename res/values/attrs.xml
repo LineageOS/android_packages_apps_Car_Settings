@@ -62,6 +62,10 @@
     <attr name="userSwitcherAddIconColor" format="color"/>
     <attr name="userSwitcherNameTextAppearance" format="reference"/>
     <attr name="userSwitcherAddIconBackgroundColor" format="color"/>
+    <attr name="quickSettingsEnabledColor" format="color"/>
+    <attr name="quickSettingsDisabledColor" format="color"/>
+    <attr name="quickSettingsIconEnabledColor" format="color"/>
+    <attr name="quickSettingsIconDisabledColor" format="color"/>
     <attr name="suggestionsPrimaryColor" format="color"/>
     <attr name="suggestionsSecondaryColor" format="color"/>
 </resources>
