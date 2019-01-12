@@ -29,17 +29,27 @@ import org.robolectric.util.ReflectionHelpers;
 public class ShadowSecureSettings extends ShadowSettings.ShadowSecure {
 
     @Implementation
+    protected static int getInt(ContentResolver resolver, String name) {
+        return Shadow.directlyOn(
+                Settings.Secure.class,
+                "getInt",
+                ReflectionHelpers.ClassParameter.from(ContentResolver.class, resolver),
+                ReflectionHelpers.ClassParameter.from(String.class, name));
+    }
+
+    @Implementation
+    protected static int getInt(ContentResolver resolver, String name, int def) {
+        return Shadow.directlyOn(
+                Settings.Secure.class,
+                "getInt",
+                ReflectionHelpers.ClassParameter.from(ContentResolver.class, resolver),
+                ReflectionHelpers.ClassParameter.from(String.class, name),
+                ReflectionHelpers.ClassParameter.from(int.class, def));
+    }
+
+    @Implementation
     protected static int getIntForUser(ContentResolver resolver, String name, int def,
             int userHandle) {
-        if (Settings.Secure.LOCATION_MODE.equals(name)) {
-            // Map from to underlying location provider storage API to location mode
-            return Shadow.directlyOn(
-                    Settings.Secure.class,
-                    "getLocationModeForUser",
-                    ReflectionHelpers.ClassParameter.from(ContentResolver.class, resolver),
-                    ReflectionHelpers.ClassParameter.from(int.class, userHandle));
-        }
-
         return Shadow.directlyOn(
                 Settings.Secure.class,
                 "getIntForUser",
@@ -50,17 +60,18 @@ public class ShadowSecureSettings extends ShadowSettings.ShadowSecure {
     }
 
     @Implementation
+    protected static boolean putInt(ContentResolver resolver, String name, int value) {
+        return Shadow.directlyOn(
+                Settings.Secure.class,
+                "putInt",
+                ReflectionHelpers.ClassParameter.from(ContentResolver.class, resolver),
+                ReflectionHelpers.ClassParameter.from(String.class, name),
+                ReflectionHelpers.ClassParameter.from(int.class, value));
+    }
+
+    @Implementation
     protected static boolean putIntForUser(ContentResolver resolver, String name, int value,
             int userHandle) {
-        if (Settings.Secure.LOCATION_MODE.equals(name)) {
-            // Map LOCATION_MODE to underlying location provider storage API
-            return Shadow.directlyOn(
-                    Settings.Secure.class,
-                    "setLocationModeForUser",
-                    ReflectionHelpers.ClassParameter.from(ContentResolver.class, resolver),
-                    ReflectionHelpers.ClassParameter.from(int.class, value),
-                    ReflectionHelpers.ClassParameter.from(int.class, userHandle));
-        }
         return Shadow.directlyOn(
                 Settings.Secure.class,
                 "putIntForUser",
