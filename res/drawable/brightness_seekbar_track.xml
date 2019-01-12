@@ -19,18 +19,14 @@
     <!-- Use android provided id, as seekbar is expecting that -->
     <item android:id="@android:id/background">
         <shape android:shape="line">
-            <corners android:radius="@dimen/seekbar_track_corner"/>
-            <stroke
-                android:width="@dimen/seekbar_track_height"
-                android:color="@color/seekbar_track"/>
+            <corners android:radius="@dimen/brightness_seekbar_track_corner"/>
+            <stroke android:width="@dimen/brightness_seekbar_track_height"/>
         </shape>
     </item>
     <item android:id="@android:id/progress">
         <clip>
             <shape android:shape="line">
-                <stroke
-                    android:width="@dimen/seekbar_track_height"
-                    android:color="@color/car_accent"/>
+                <stroke android:width="@dimen/brightness_seekbar_track_height"/>
             </shape>
         </clip>
     </item>

@@ -19,8 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/seekbar"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/car_single_line_list_item_height"
-    android:layout_marginBottom="@dimen/car_padding_4"
+    android:layout_height="@dimen/brightness_seekbar_height"
+    android:layout_marginBottom="@dimen/brightness_seekbar_margin_bottom"
+    android:progressBackgroundTint="?attr/quickSettingsDisabledColor"
     android:progressDrawable="@drawable/brightness_seekbar_track"
+    android:progressTint="?attr/quickSettingsEnabledColor"
     android:splitTrack="true"
     android:thumb="@drawable/ic_brightness_knob_stretched"/>

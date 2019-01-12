@@ -21,6 +21,6 @@
     <solid
         android:color="@color/toggle_bg"/>
     <size
-        android:width="@dimen/car_touch_target_size"
-        android:height="@dimen/car_touch_target_size"/>
+        android:width="@dimen/touch_target_size"
+        android:height="@dimen/touch_target_size"/>
 </shape>
