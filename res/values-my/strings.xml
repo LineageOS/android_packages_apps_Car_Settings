@@ -29,11 +29,16 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"မျက်နှာပြင် မှိန်ရန်၊ ထိတွေ့မှုမျက်နှာပြင်၊ ဘက်ထရီ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"မျက်နှာပြင်ကို မှိန်ရန်၊ ည၊ အရောင်သန်းခြင်း"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ညသုံးမုဒ်"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"ကွန်ရက်နှင့် အင်တာနက်"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"မိုဘိုင်းကွန်ရက်"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"မိုဘိုင်းဒေတာ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"မိုဘိုင်းကွန်ရက်သုံးပြီး ဒေတာကို ဝင်သုံးခွင့်ပေးပါ"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"မိုဘိုင်းဒေတာ ပိတ်လိုသလား။"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"ဒေတာသုံးစွဲမှု"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi ကို ဖွင့်နေသည်…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi ကို ပိတ်နေသည်…"</string>
-    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
-    <skip />
+    <string name="loading_wifi_list" msgid="8584901433195876465">"Wi‑Fi စာရင်း ဖွင့်နေသည်"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi‑Fi ကို ပိတ်ထားသည်"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ကွန်ရက်ကို မေ့ပစ်၍ မရပါ"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ကွန်ရက်သို့ ချိတ်ဆက်၍ မရပါ"</string>
@@ -42,6 +47,7 @@
     <string name="wifi_password" msgid="5565632142720292397">"စကားဝှက်"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"စကားဝှက်ကို ပြရန်"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ကွန်ရက် အမည်"</string>
+    <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ထည့်သွင်းရန်"</string>
     <string name="wifi_security" msgid="158358046038876532">"လုံခြုံရေး"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"လိုင်းဆွဲအား"</string>
     <string name="wifi_status" msgid="5688013206066543952">"အခြေအနေ"</string>
@@ -49,6 +55,8 @@
     <string name="wifi_frequency" msgid="8951455949682864922">"ကြိမ်နှုန်း"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP လိပ်စာ"</string>
     <string name="show_password" msgid="2074628020371139240">"စကားဝှက် ပြရန်"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"ကွန်ရက်အမည် ထည့်ပါ"</string>
+    <string name="default_password_summary" msgid="8789594645836902982">"စကားဝှက် ထည့်ပါ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ညံ့သည်"</item>
@@ -67,29 +75,24 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 လိပ်စာများ"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"ဂိတ်ဝ"</string>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"ဘလူးတုသ်"</string>
-    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"ဘလူးတုသ်ကို ဖွင့်ရန်"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"ဘလူးတုသ်"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"ဘလူးတုသ် ပိတ်ထားသည်"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ဘလူးတုသ်"</string>
-    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"ကွန်ပျူတာ"</string>
-    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"မိုက်ခွက်ပါနားကြပ်"</string>
-    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ဖုန်း"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"ဓာတ်ပုံဆိုင်ရာ"</string>
-    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"နားကြပ်"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"ချိတ်ဆက်အသုံးပြုရသည့် စက်ပစ္စည်းများ"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"ဘလူးတုသ်"</string>
-    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"တွဲချိတ်ထားသည့် စက်ပစ္စည်းများ"</string>
-    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"ရနိုင်သည့် စက်ပစ္စည်းများ"</string>
-    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"တွဲချိတ်ထားသည့် စက်ပစ္စည်းမရှိပါ"</string>
-    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"မည်သည့် စက်ပစ္စည်းမျှ မရှိပါ"</string>
-    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"တွဲချိတ်ထားသည့် စက်ပစ္စည်း"</string>
-    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"အမည်"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"အောက်ပါအတွက် သုံးရန်"</string>
-    <string name="wifi_ssid_hint" msgid="4155050863239489553">"\'ဘလူးတုသ်\' စက် အမည်ကို ပြောင်းပါ"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"အမည်ပေးမထားသော စက်"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"တွဲချိတ်ထားသည့် စက်များ"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"စက်အသစ် တွဲချိတ်ပါ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"တွဲချိတ်ရန် ဘလူးတုသ်ကို ဖွင့်ပါမည်"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"စက်ကို ချိတ်ဆက်မှုရပ်လိုသလား။"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"သင့်ယာဉ်ကို <xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် ချိတ်ဆက်မှုရပ်လိုက်ပါမည်။"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ယာဉ်၏ ဘလူးတုသ်လိပ်စာ- <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"စက်၏ ဘလူးတုသ်လိပ်စာ- <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"ယာဉ်အမည်"</string>
+    <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ဤယာဉ်ကို အမည်ပြောင်းပါ"</string>
+    <string name="bluetooth_rename_device" msgid="8406868875363878712">"စက် အမည်ပြောင်းပါ"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"အမည်ပြောင်းရန်"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"ရနိုင်သည့် စက်များ"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"ပရိုဖိုင်များ"</string>
+    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ရန်နှင့် ချိတ်ဆက်ရန်"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"ဘလူးတုသ်"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ပင်နံပါတ်တွင် စာလုံး သို့မဟုတ် သင်္ကေတများပါဝင်သည်"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"တွဲချိတ်ရန်ကုဒ်ကို ထည့်ပြီး Return သို့မဟုတ် Enter ကို နှိပ်ပါ"</string>
@@ -101,9 +104,13 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ပုံမှန် ၀၀၀၀ (သို့) ၁၂၃၄"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> နှင့် တွဲချိတ်ရန် တို့ပါ။"</string>
-    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ဘာသာစကားများ"</string>
-    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"ဘာသာစကားနှင့် ထည့်သွင်းမှုစနစ်"</string>
+    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
+    <skip />
+    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
+    <skip />
+    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
     <skip />
     <string name="sound_settings" msgid="3072423952331872246">"အသံ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ဖုန်းမြည်သံ အတိုးအကျယ်"</string>
@@ -113,6 +120,9 @@
     <string name="media_volume_title" msgid="6697416686272606865">"မီဒီယာ"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"တေးဂီတနှင့် ဗီဒီယိုအတွက် အသံချိန်ရန်"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"နှိုးစက်"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"ဖုန်းမြည်သံ"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"အကြောင်းကြားချက် မူရင်းအသံ"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"မူရင်းနှိုးစက်သံ"</string>
     <string name="applications_settings" msgid="794261395191035632">"အက်ပ်အချက်အလက်များ"</string>
     <string name="disable_text" msgid="4358165448648990820">"ပိတ်ရန်"</string>
     <string name="enable_text" msgid="1794971777861881238">"ဖွင့်ရန်"</string>
@@ -168,6 +178,13 @@
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ပြင်ပကုမ္ပဏီလိုင်စင်များ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"လိုင်စင်များကို ဖွင့်ရာတွင် ပြသနာရှိနေသည်။"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ဖွင့်နေသည်…"</string>
+    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
+      <item quantity="other">သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်ရန် အဆင့် <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ဆင့် လိုပါသေးသည်။</item>
+      <item quantity="one">သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်ရန် အဆင့် <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> ဆင့် လိုပါသေးသည်။</item>
+    </plurals>
+    <string name="show_dev_on" msgid="5339077400040834808">"သင် ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်သွားပါပြီ။"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"မလိုပါ၊ သင်က ဆော့ဖ်ဝဲအင်ဂျင်နီယာ ဖြစ်ပြီးသားပါ။"</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"တီထွင်သူများရွေးစရာ"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"ပြင်ဆင်သတ်မှတ်ရန် ရွေးစရာများ"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"ကွန်ရက်၊ အက်ပ်များ (သို့) စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ခြင်း"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"ကွန်ရက် ပြင်ဆင်သတ်မှတ်ရန်"</string>
@@ -185,7 +202,8 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ဆက်တင်ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"ကွန်ရက်ဆက်တင်များကို ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"အက်ပ်သတ်မှတ်ချက်များ ပြင်ဆင်သတ်မှတ်ရန်"</string>
-    <string name="reset_app_pref_desc" msgid="3410882662142097726">"၎င်းက အောက်ပါတို့အားလုံးကို ပြင်ဆင်သတ်မှတ်ပါမည်-\n\n\n အက်ပ်များ ပိတ်ခြင်း\n အက်ပ်အကြောင်းကြားချက်များ ပိတ်ခြင်း\n လုပ်ဆောင်ချက်အတွက် မူရင်းအက်ပ် သတ်မှတ်ခြင်း\n အက်ပ်များအတွက် နောက်ခံဒေတာအသုံးပြုမှု ကန့်သတ်ခြင်း\n ခွင့်ပြုမှု ကန့်သတ်ချက်အားလုံး\n\n\n သင်၏အက်ပ်ဒေတာများကို ဆုံးရှုံးမည်မဟုတ်ပါ။"</string>
+    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
+    <skip />
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"အက်ပ်များ ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"အက်ပ်သတ်မှတ်ချက်များ ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ဒေတာအားလုံး ဖျက်ပါ (စက်ရုံထုတ်သတ်မှတ်ပါ)"</string>
@@ -255,6 +273,12 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"အကောင့်ထည့်ရန်"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"အကောင့်များ ထည့်မထားပါ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> အတွက် အကောင့်များ"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"ဒေတာ အော်တိုစင့်ခ်လုပ်ရန်"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ဒေတာများကို အလိုအလျောက်ပြန်လည်စတင်ရန် အက်ပ်များကိုခွင့်ပြုပါ"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ဒေတာ အော်တိုစင့်ခ်ကို ဖွင့်မလား။"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ဝဘ်ပေါ်တွင် သင်၏ အကောင့်အတွက်လုပ်သည့် အပြောင်းအလဲအားလုံးကို သင့်စက်ပစ္စည်းသို့ အလိုအလျောက် ကူးပေးမည်။ \n\nအချို့အကောင့်များသည် သင့်ဖုန်းအတွင်းပြုလုပ်ထားသည့် အပြောင်းအလဲများကို ဝဘ်ဆီသို့ အလိုအလျောက် ကူးပေးနိုင်ပါသည်။ Google အကောင့်၏ အလုပ်လုပ်ပုံ ဖြစ်ပါသည်။"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ဒေတာ အော်တိုစင့်ခ်ကို ပိတ်မလား။"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"၎င်းသည် ဒေတာများကို ကာကွယ်ထားမည်ဖြစ်သော်လည်း မကြာသေးခင်က အချက်အလက်များကို စုဆောင်းရန် အကောင့်တစ်ခုစီကို ကိုယ်တိုင်စင့်ခ်လုပ်ရပါမည်။ အပ်ဒိတ်ပြုလုပ်နေစဉ် အကြောင်းကြားချက်များ လက်ခံ၍မရပါ။"</string>
     <string name="account_details_title" msgid="7529571432258448573">"အကောင့်အချက်အလက်"</string>
     <string name="add_account_title" msgid="5988746086885210040">"အကောင့်ထည့်ရန်"</string>
     <string name="add_an_account" msgid="1072285034300995091">"အကောင့်တစ်ခု ထည့်ရန်"</string>
@@ -267,6 +291,16 @@
     <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> ခုအနက်မှ <xliff:g id="ID_1">%1$d</xliff:g> ခုအတွက် စင့်ခ်ဖွင့်ထားသည်"</string>
     <string name="account_sync_summary_all_on" msgid="3652264471870312725">"အရာအားလုံးအတွက် စင့်ခ်ဖွင့်ထားသည်"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"အရာအားလုံးအတွက် စင့်ခ်ပိတ်ထားသည်"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"စင့်ခ်လုပ်ခြင်းပိတ်ထားသည်"</string>
+    <string name="sync_error" msgid="6698021343089247914">"စင့်ခ်လုပ်ခြင်း အမှား"</string>
+    <string name="last_synced" msgid="4745124489150101529">"<xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g> တွင် နောက်ဆုံး စင့်ခ်လုပ်ထားသည်"</string>
+    <string name="sync_in_progress" msgid="1237573373537382416">"ယခု စင့်ခ်လုပ်နေသည်…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"ယခုစင့်ခ်လုပ်ရန် တို့ပါ<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"ယခု စင့်ခ်လုပ်ရန်"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"စင့်ခ် ပယ်ဖျက်ရန်"</string>
+    <!-- no translation found for sync_is_failing (5766255460901806206) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"မျက်နှာပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>
@@ -274,8 +308,7 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"ပင်နံပါတ်"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"စကားဝှက်"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"လော့ခ်ဖွင့်နည်း ရွေးပါ"</string>
-    <!-- no translation found for screen_lock_options (8531177937577168185) -->
-    <skip />
+    <string name="screen_lock_options" msgid="8531177937577168185">"လော့ခ်ရွေးစရာများ"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"သင့်လော့ခ်ဖွင့်ပုံစံ ထည့်ခြင်း"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"အတည်ပြုရန်"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ပြန်ဆွဲပါ"</string>
@@ -358,7 +391,12 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"အစဉ်လိုက်ဖြစ်နေသော ဂဏန်း အငယ်မှအကြီး၊ အကြီးမှအငယ် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ။"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"ယုံကြည်ရသည့် စက်ကိုထည့်ရန်"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"ယုံကြည်ရသည့် စက်များ"</string>
+    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ကိရိယာ လုံခြုံရေး"</string>
     <string name="forget" msgid="3971143908183848527">"မေ့ပစ်ရန်"</string>
+    <string name="connect" msgid="5861699594602380150">"ချိတ်ရန်"</string>
+    <string name="disconnect" msgid="6140789953324820336">"ချိတ်ဆက်မှု ဖြုတ်ရန်"</string>
     <string name="delete_button" msgid="5840500432614610850">"ဖျက်ရန်"</string>
     <string name="remove_button" msgid="6664656962868194178">"ဖယ်ရှားရန်"</string>
     <string name="cancel" msgid="750286395700355455">"မလုပ်တော့"</string>
