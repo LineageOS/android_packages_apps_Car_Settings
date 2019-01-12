@@ -17,4 +17,5 @@
 
 <resources>
     <bool name="config_automatic_brightness_available">@*android:bool/config_automatic_brightness_available</bool>
+    <integer name="config_networkAvoidBadWifi">@*android:integer/config_networkAvoidBadWifi</integer>
 </resources>

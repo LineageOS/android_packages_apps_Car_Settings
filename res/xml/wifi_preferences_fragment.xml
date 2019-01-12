@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2018 The Android Open Source Project
+    Copyright 2019 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,13 @@
     limitations under the License.
 -->
 
-<resources>
-    <bool name="config_automatic_brightness_available">true</bool>
-    <integer name="config_networkAvoidBadWifi">0</integer>
-</resources>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/wifi_preferences_title">
+    <SwitchPreference
+        android:key="@string/pk_wifi_cellular_fallback"
+        android:summary="@string/wifi_cellular_fallback_summary"
+        android:title="@string/wifi_cellular_fallback_title"
+        settings:controller="com.android.car.settings.wifi.preferences.CellularFallbackTogglePreferenceController"/>
+</PreferenceScreen>
