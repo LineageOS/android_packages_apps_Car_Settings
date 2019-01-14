@@ -49,7 +49,7 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     public static final String META_DATA_KEY_FRAGMENT_CLASS =
             "com.android.car.settings.FRAGMENT_CLASS";
 
-    private boolean mShowFragmentForIntent;
+    private boolean mHasNewIntent = true;
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
     private View mRestrictedMessage;
     // Default to minimum restriction.
@@ -62,7 +62,6 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.car_setting_activity);
         if (mUxRestrictionsHelper == null) {
             mUxRestrictionsHelper = new CarUxRestrictionsHelper(/* context= */ this, /* listener= */
@@ -71,13 +70,25 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         mUxRestrictionsHelper.start();
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         mRestrictedMessage = findViewById(R.id.restricted_message);
-        mShowFragmentForIntent = true;
+
+        launchIfDifferent(getFragment());
     }
 
     @Override
-    public void onResume() {
+    public void onNewIntent(Intent intent) {
+        LOG.d("onNewIntent" + intent);
+        setIntent(intent);
+        mHasNewIntent = true;
+    }
+
+    @Override
+    protected void onResume() {
         super.onResume();
-        launchFragmentFromIntent();
+        if (mHasNewIntent) {
+            Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
+            launchIfDifferent(fragment);
+            mHasNewIntent = false;
+        }
     }
 
     @Override
@@ -88,13 +99,6 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     }
 
     @Override
-    public void onNewIntent(Intent intent) {
-        LOG.d("onNewIntent" + intent);
-        setIntent(intent);
-        mShowFragmentForIntent = true;
-    }
-
-    @Override
     public void onBackPressed() {
         super.onBackPressed();
         hideKeyboard();
@@ -102,18 +106,6 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         if (getSupportFragmentManager().getBackStackEntryCount() == 0) {
             finish();
         }
-    }
-
-    /**
-     * Gets the fragment to launch into main window of the activity.
-     */
-    public Fragment getFragment() {
-        Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
-        if (fragment == null) {
-            fragment = Fragment.instantiate(this,
-                    getString(R.string.config_settings_hierarchy_root_fragment));
-        }
-        return fragment;
     }
 
     @Override
@@ -212,17 +204,23 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         return false;
     }
 
-    private void launchFragmentFromIntent() {
-        if (!mShowFragmentForIntent) {
-            LOG.d("new intent already processed.");
-            return;
+    /**
+     * Gets the fragment to show onCreate. This will only be launched if it is different from the
+     * current fragment shown.
+     */
+    @Nullable
+    protected Fragment getFragment() {
+        if (getCurrentFragment() != null) {
+            return getCurrentFragment();
         }
-        Fragment fragment = getFragment();
-        Fragment currentFragment = getCurrentFragment();
-        if (differentFragment(fragment, currentFragment)) {
-            launchFragment(fragment);
+        return Fragment.instantiate(this,
+                getString(R.string.config_settings_hierarchy_root_fragment));
+    }
+
+    private void launchIfDifferent(Fragment newFragment) {
+        if ((newFragment != null) && differentFragment(newFragment, getCurrentFragment())) {
+            launchFragment(newFragment);
         }
-        mShowFragmentForIntent = false;
     }
 
     /**
