@@ -52,6 +52,13 @@
     <dimen name="tile_icon_margin_bottom">@*android:dimen/car_padding_4</dimen>
     <dimen name="circle_ripple_bg_radius">90dp</dimen>
 
+    <!-- Edit Username -->
+    <dimen name="edit_username_padding_start">@*android:dimen/car_margin</dimen>
+    <dimen name="edit_username_padding_end">@*android:dimen/car_margin</dimen>
+    <dimen name="edit_username_text_padding_start">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="edit_username_text_padding_end">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="edit_username_text_padding_top">@*android:dimen/car_padding_3</dimen>
+
     <!-- Security -->
     <dimen name="pin_pad_key_width">120dp</dimen>
     <dimen name="pin_pad_key_height">80dp</dimen>
