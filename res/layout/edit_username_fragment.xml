@@ -20,17 +20,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingEnd="@dimen/car_margin"
-    android:paddingStart="@dimen/car_margin">
+    android:paddingEnd="@dimen/edit_username_padding_end"
+    android:paddingStart="@dimen/edit_username_padding_start">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/user_name_label"
-        android:paddingEnd="@dimen/car_keyline_1"
-        android:paddingStart="@dimen/car_keyline_1"
-        android:paddingTop="@dimen/car_padding_3"
+        android:paddingEnd="@dimen/edit_username_text_padding_end"
+        android:paddingStart="@dimen/edit_username_text_padding_start"
+        android:paddingTop="@dimen/edit_username_text_padding_top"
         app:hintTextAppearance="@style/TextAppearance.Car.Hint">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -41,6 +41,6 @@
             android:imeOptions="actionDone|flagNoExtractUi"
             android:inputType="text"
             android:maxLines="1"
-            android:textAppearance="@style/TextAppearance.Car.Body1"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
     </com.google.android.material.textfield.TextInputLayout>
 </FrameLayout>
