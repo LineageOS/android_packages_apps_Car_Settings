@@ -304,11 +304,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-
-        // Don't show toolbar title in Setup Wizard
         if (mIsInSetupWizard) {
+            mProgressBar = requireActivity().findViewById(R.id.suw_progress_bar);
+            // Don't show toolbar title in Setup Wizard
             ((TextView) requireActivity().findViewById(R.id.title)).setText("");
+        } else {
+            mProgressBar = requireActivity().findViewById(R.id.progress_bar);
         }
 
         mPrimaryButton = requireActivity().findViewById(R.id.action_button1);

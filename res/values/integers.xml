@@ -39,4 +39,12 @@
 
     <!-- Maximum ems value for all settings buttons -->
     <integer name="button_max_ems">9</integer>
+
+    <!-- Integers for Setup Wizard -->
+
+    <!-- Weight of the main content in the illustration_layout -->
+    <integer name="suw_content_weight">7</integer>
+
+    <!-- Weight of the illustration logo/video in the illustration_layout -->
+    <integer name="suw_illustration_weight">5</integer>
 </resources>

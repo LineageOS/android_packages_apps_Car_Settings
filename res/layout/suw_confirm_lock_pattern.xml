@@ -46,7 +46,7 @@
 
     <com.android.internal.widget.LockPatternView
         android:id="@+id/lockPattern"
-        style="@style/LockPattern.SetupWizard"
-        android:layout_width="@dimen/confirm_pattern_dimension"
-        android:layout_height="@dimen/confirm_pattern_dimension"/>
+        style="@style/SetupWizardLockPattern"
+        android:layout_width="@dimen/suw_confirm_pattern_dimension"
+        android:layout_height="@dimen/suw_confirm_pattern_dimension"/>
 </LinearLayout>

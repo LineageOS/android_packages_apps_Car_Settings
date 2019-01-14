@@ -33,7 +33,7 @@
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="@integer/content_weight"
+        android:layout_weight="@integer/suw_content_weight"
         android:gravity="center">
 
         <com.android.car.settings.security.PinPadView
@@ -50,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_weight="@integer/illustration_weight"
+        android:layout_weight="@integer/suw_illustration_weight"
         android:orientation="vertical">
 
         <EditText

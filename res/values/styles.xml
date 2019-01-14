@@ -65,9 +65,6 @@
     </style>
 
     <style name="PinPadKey">
-        <item name="android:layout_width">@dimen/pin_pad_key_width</item>
-        <item name="android:layout_height">@dimen/pin_pad_key_height</item>
-        <item name="android:layout_margin">@dimen/pin_pad_key_margin</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/car_body1_size</item>
@@ -99,24 +96,18 @@
 
     <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary"/>
 
-    <style name="ListIcon.ActionBar.SetupWizard" parent="ListIcon.ActionBar">
-        <item name="android:tint">@color/car_tint_light</item>
-    </style>
-
-    <style name="LockPattern.SetupWizard">
-        <item name="*android:regularColor">@color/lock_pattern_regular_light</item>
-        <item name="*android:successColor">@color/lock_pattern_success_light</item>
+    <style name="SetupWizardLockPattern">
+        <item name="*android:regularColor">@color/car_body1_light</item>
+        <item name="*android:successColor">@color/car_blue_500</item>
         <item name="*android:errorColor">?android:attr/colorError</item>
     </style>
 
-    <style name="PinPadKey.SetupWizard">
-        <item name="android:layout_width">@dimen/pin_pad_key_width</item>
-        <item name="android:layout_height">@dimen/pin_pad_key_height</item>
-        <item name="android:layout_margin">@dimen/pin_pad_key_margin</item>
+    <style name="SetupWizardPinPadKey">
         <item name="android:gravity">center</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/car_body1_size</item>
         <item name="android:textColor">@color/car_body3_light</item>
+        <item name="android:tint">@color/car_body3_light</item>
         <item name="android:clickable">true</item>
         <item name="android:background">@drawable/car_button_ripple_background</item>
     </style>
