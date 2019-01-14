@@ -81,12 +81,15 @@
         android:key="@string/pk_accounts_settings_entry"
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
-    <Preference
-        android:fragment="com.android.car.settings.security.SecuritySettingsFragment"
+   <Preference
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_security_settings_entry"
         android:title="@string/security_settings_title"
-        settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.security.SecurityEntryPreferenceController">
+        <intent
+            android:targetClass="com.android.car.settings.security.SettingsScreenLockActivity"
+            android:targetPackage="com.android.car.settings"/>
+    </Preference>
     <Preference
         android:fragment="com.android.car.settings.system.SystemSettingsFragment"
         android:icon="@drawable/ic_settings_about"
