@@ -153,10 +153,10 @@ public class ChooseLockPatternFragment extends BaseFragment {
         final boolean mPatternEnabled;
 
         /**
-         * @param messageId The message displayed as instruction.
+         * @param messageId            The message displayed as instruction.
          * @param secondaryButtonState The state of the secondary button.
-         * @param primaryButtonState The state of the primary button.
-         * @param patternEnabled Whether the pattern widget is mEnabled.
+         * @param primaryButtonState   The state of the primary button.
+         * @param patternEnabled       Whether the pattern widget is mEnabled.
          */
         Stage(@StringRes int messageId,
                 SecondaryButtonState secondaryButtonState,
@@ -181,7 +181,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Ok(R.string.okay, true);
 
         /**
-         * @param text The displayed mText for this mode.
+         * @param text    The displayed mText for this mode.
          * @param enabled Whether the button should be mEnabled.
          */
         PrimaryButtonState(@StringRes int text, boolean enabled) {
@@ -204,7 +204,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Gone(ID_EMPTY_MESSAGE, false);
 
         /**
-         * @param textId The displayed mText for this mode.
+         * @param textId  The displayed mText for this mode.
          * @param enabled Whether the button should be mEnabled.
          */
         SecondaryButtonState(@StringRes int textId, boolean enabled) {
@@ -297,11 +297,12 @@ public class ChooseLockPatternFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-
-        // Don't show toolbar title in Setup Wizard
         if (mIsInSetupWizard) {
+            mProgressBar = requireActivity().findViewById(R.id.suw_progress_bar);
+            // Don't show toolbar title in Setup Wizard
             ((TextView) requireActivity().findViewById(R.id.title)).setText("");
+        } else {
+            mProgressBar = requireActivity().findViewById(R.id.progress_bar);
         }
 
         mPrimaryButton = requireActivity().findViewById(R.id.action_button1);
