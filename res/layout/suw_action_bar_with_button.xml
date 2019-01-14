@@ -28,8 +28,13 @@
 
         <ImageView
             android:id="@+id/back_button"
-            style="@style/ListIcon.ActionBar.SetupWizard"
-            android:background="@drawable/suw_button_ripple_bg"/>
+            android:layout_width="@dimen/car_primary_icon_size"
+            android:layout_height="@dimen/car_primary_icon_size"
+            android:layout_gravity="center"
+            android:background="@drawable/suw_button_ripple_bg"
+            android:scaleType="fitCenter"
+            android:src="@drawable/suw_ic_arrow_back"
+            android:tint="@color/car_tint_light"/>
     </FrameLayout>
 
     <TextView
@@ -64,7 +69,7 @@
         android:maxLines="1"/>
 
     <ProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/suw_progress_bar"
         style="@style/Widget.Car.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
