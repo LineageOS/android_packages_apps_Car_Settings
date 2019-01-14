@@ -24,6 +24,7 @@
         android:key="@string/pk_wifi_list"
         settings:controller="com.android.car.settings.wifi.AccessPointListPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.wifi.AddWifiFragment"
         android:key="@string/pk_add_wifi"
         android:title="@string/wifi_setup_add_network"
         settings:controller="com.android.car.settings.wifi.AddWifiPreferenceController"/>
