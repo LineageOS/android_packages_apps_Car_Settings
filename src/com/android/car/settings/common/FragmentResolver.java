@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.common;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.provider.Settings;
 
 import androidx.annotation.Nullable;
@@ -22,12 +24,15 @@ import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
+import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.location.LocationSettingsFragment;
+import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
+import com.android.car.settings.system.AboutSettingsFragment;
 import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 
@@ -36,15 +41,22 @@ import com.android.car.settings.wifi.WifiSettingsFragment;
  * Maps an Action string to a {@link Fragment} that can handle this Action.
  */
 public class FragmentResolver {
+
+    private static final Logger LOG = new Logger(FragmentResolver.class);
+
     private FragmentResolver() {
     }
 
     /**
      * Returns a {@link Fragment} that can handle the given action, returns {@code null} if no
-     * {@link Fragment} that can handle this action can be found.
+     * {@link Fragment} that can handle this {@link Intent} can be found.
      */
     @Nullable
-    static Fragment getFragmentForAction(@Nullable String action) {
+    static Fragment getFragmentForIntent(@Nullable Intent intent) {
+        if (intent == null) {
+            return null;
+        }
+        String action = intent.getAction();
         if (action == null) {
             return null;
         }
@@ -57,8 +69,10 @@ public class FragmentResolver {
             case Settings.ACTION_WIRELESS_SETTINGS:
                 return new WifiSettingsFragment();
 
+            case Settings.ACTION_NIGHT_DISPLAY_SETTINGS:
+                return new QuickSettingFragment();
+
             case Settings.ACTION_USER_SETTINGS:
-            case Settings.ACTION_SECURITY_SETTINGS:
                 return new UsersListFragment();
 
             case Settings.ACTION_BLUETOOTH_SETTINGS:
@@ -71,7 +85,6 @@ public class FragmentResolver {
                 return new SoundSettingsFragment();
 
             case Settings.ACTION_DISPLAY_SETTINGS:
-            case Settings.ACTION_NIGHT_DISPLAY_SETTINGS:
                 return new DisplaySettingsFragment();
 
             case Settings.ACTION_APPLICATION_SETTINGS:
@@ -79,11 +92,22 @@ public class FragmentResolver {
             case Settings.ACTION_MANAGE_ALL_APPLICATIONS_SETTINGS:
                 return new ApplicationsSettingsFragment();
 
+            case Settings.ACTION_APPLICATION_DETAILS_SETTINGS:
+                Uri uri = intent.getData();
+                if (uri == null) {
+                    LOG.w("No uri provided for application detailed intent");
+                    return null;
+                }
+                return ApplicationDetailsFragment.getInstance(uri.getSchemeSpecificPart());
+
             case Settings.ACTION_SYNC_SETTINGS:
                 return new AccountSettingsFragment();
 
             case Settings.ACTION_ADD_ACCOUNT:
                 return new ChooseAccountFragment();
+
+            case Settings.ACTION_DEVICE_INFO_SETTINGS:
+                return new AboutSettingsFragment();
 
             default:
                 return null;
