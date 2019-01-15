@@ -23,20 +23,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="@dimen/car_keyline_1"
-        android:layout_marginStart="@dimen/car_keyline_1"
+        android:layout_marginEnd="@dimen/bluetooth_pin_dialog_margin_end"
+        android:layout_marginStart="@dimen/bluetooth_pin_dialog_margin_start"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/message_below_pin"
-            style="@style/TextAppearance.Car.Body2"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/car_single_line_list_item_height"
-            android:gravity="center_vertical"/>
+            android:layout_height="@dimen/bluetooth_pin_dialog_section_height"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/car_double_line_list_item_height">
+            android:layout_height="@dimen/bluetooth_pin_dialog_section_height">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,63 +44,69 @@
                 android:orientation="vertical">
                 <EditText
                     android:id="@+id/text"
-                    style="@style/TextAppearance.Car.Body1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:maxLines="1"/>
+                    android:maxLines="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
                 <TextView
                     android:id="@+id/pin_values_hint"
-                    style="@style/TextAppearance.Car.Body2.SingleLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/car_padding_2"
-                    android:text="@string/bluetooth_pin_values_hint"/>
+                    android:layout_marginTop="@dimen/bluetooth_pin_dialog_subtext_margin_top"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/bluetooth_pin_values_hint"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
             </LinearLayout>
         </FrameLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/car_double_line_list_item_height">
+            android:layout_height="@dimen/bluetooth_pin_dialog_section_height">
             <CheckBox
                 android:id="@+id/alphanumeric_pin"
-                android:layout_width="@dimen/car_primary_icon_size"
-                android:layout_height="@dimen/car_primary_icon_size"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:button="@drawable/ic_check_box"/>
             <TextView
-                style="@style/TextAppearance.Car.Body2.SingleLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/car_keyline_3"
-                android:layout_marginStart="@dimen/car_keyline_3"
+                android:layout_marginEnd="@dimen/bluetooth_pin_dialog_text_margin_end"
+                android:layout_marginStart="@dimen/bluetooth_pin_dialog_text_margin_start"
+                android:ellipsize="end"
                 android:gravity="center_vertical"
-                android:text="@string/bluetooth_enable_alphanumeric_pin"/>
+                android:maxLines="1"
+                android:text="@string/bluetooth_enable_alphanumeric_pin"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/car_double_line_list_item_height">
+            android:layout_height="@dimen/bluetooth_pin_dialog_section_height">
             <CheckBox
                 android:id="@+id/phonebook_sharing_message_entry_pin"
-                android:layout_width="@dimen/car_primary_icon_size"
-                android:layout_height="@dimen/car_primary_icon_size"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:button="@drawable/ic_check_box"/>
             <TextView
-                style="@style/TextAppearance.Car.Body2.SingleLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/car_keyline_3"
-                android:layout_marginStart="@dimen/car_keyline_3"
+                android:layout_marginEnd="@dimen/bluetooth_pin_dialog_text_margin_end"
+                android:layout_marginStart="@dimen/bluetooth_pin_dialog_text_margin_start"
+                android:ellipsize="end"
                 android:gravity="center_vertical"
-                android:text="@string/bluetooth_pairing_shares_phonebook"/>
+                android:maxLines="1"
+                android:text="@string/bluetooth_pairing_shares_phonebook"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
         </RelativeLayout>
     </LinearLayout>
 
