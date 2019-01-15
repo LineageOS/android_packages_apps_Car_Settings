@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/wifi_preferences_title">
     <SwitchPreference
+        android:key="@string/pk_enable_wifi_wakeup"
+        android:title="@string/wifi_wakeup"
+        android:icon="@drawable/ic_settings_auto_wifi"
+        android:summary="@string/wifi_wakeup_summary"
+        settings:controller="com.android.car.settings.wifi.preferences.WifiWakeupTogglePreferenceController"/>
+    <SwitchPreference
         android:key="@string/pk_wifi_cellular_fallback"
         android:summary="@string/wifi_cellular_fallback_summary"
         android:title="@string/wifi_cellular_fallback_title"
