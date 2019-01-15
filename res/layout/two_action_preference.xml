@@ -50,13 +50,13 @@
                 android:ellipsize="end"
                 android:hyphenationFrequency="none"
                 android:singleLine="true"
-                android:textAppearance="?attr/listItemTitleTextAppearance"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
             <TextView
                 android:id="@android:id/summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hyphenationFrequency="none"
-                android:textAppearance="?attr/listItemBodyTextAppearance"/>
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -68,7 +68,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/preference_padding_bottom"
             android:layout_marginTop="@dimen/preference_padding_top"
-            android:background="?attr/listItemActionDividerColor"/>
+            android:background="?attr/dividerColor"/>
         <!-- Preference should place its actual preference widget here. -->
         <FrameLayout
             android:id="@android:id/widget_frame"
