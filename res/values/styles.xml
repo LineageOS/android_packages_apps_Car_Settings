@@ -16,14 +16,29 @@
 -->
 
 <resources>
-    <style name="TextAppearance.Car.Body1.SingleLine" parent="TextAppearance.Car.Body1">
-        <item name="android:maxLines">1</item>
-        <item name="android:ellipsize">marquee</item>
+    <style name="ActionBarButton" parent="@android:style/Widget.DeviceDefault.Button.Borderless">
+        <item name="android:textAppearance">@style/ActionBarButtonTextAppearance</item>
+        <item name="android:maxEms">@integer/button_max_ems</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:background">@drawable/button_ripple_bg</item>
     </style>
 
-    <style name="TextAppearance.Car.Body2.SingleLine" parent="TextAppearance.Car.Body2">
-        <item name="android:maxLines">1</item>
-        <item name="android:ellipsize">end</item>
+    <style name="ActionBarIconButton" parent="ActionBarButton">
+        <item name="android:textAppearance">@style/ActionBarIconButtonTextAppearance</item>
+        <item name="android:drawableTint">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="ActionBarButtonTextAppearance"
+           parent="@*android:style/TextAppearance.DeviceDefault.Widget.Button.Borderless.Colored">
+        <item name="android:fadingEdgeLength">@dimen/button_fading_edge_length</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:requiresFadingEdge">horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ActionBarIconButtonTextAppearance" parent="ActionBarButtonTextAppearance">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
     <style name="PreferenceButtonTextAppearance"
