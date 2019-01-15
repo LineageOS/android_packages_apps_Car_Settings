@@ -125,6 +125,6 @@
         android:layout_height="@dimen/suw_pin_pad_key_height"
         android:layout_margin="@dimen/suw_pin_pad_key_margin"
         android:contentDescription="@string/enter_key"
-        android:src="@drawable/ic_done"
+        android:src="@drawable/suw_ic_check"
         android:tint="@color/car_body3_light"/>
 </merge>
