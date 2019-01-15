@@ -21,12 +21,13 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
@@ -53,7 +54,7 @@ public class QuickSettingFragment extends BaseFragment {
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private PagedListView mListView;
-    private View mFullSettingBtn;
+    private View mFullSettingsBtn;
     private View mUserSwitcherBtn;
     private HomeFragmentLauncher mHomeFragmentLauncher;
     private float mOpacityDisabled;
@@ -88,15 +89,15 @@ public class QuickSettingFragment extends BaseFragment {
         mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
 
-        mFullSettingBtn = activity.findViewById(R.id.full_setting_btn);
-        mFullSettingBtn.setOnClickListener(mHomeFragmentLauncher);
+        mFullSettingsBtn = activity.findViewById(R.id.full_settings_btn);
+        mFullSettingsBtn.setOnClickListener(mHomeFragmentLauncher);
         mUserSwitcherBtn = activity.findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
             getFragmentController().launchFragment(new UserSwitcherFragment());
         });
         setupUserButton(activity);
 
-        View exitBtn = activity.findViewById(R.id.exit_button);
+        View exitBtn = activity.findViewById(R.id.action_bar_icon_container);
         exitBtn.setOnClickListener(v -> getFragmentController().goBack());
 
         mGridAdapter
@@ -156,13 +157,12 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     private void setupUserButton(Context context) {
-        ImageView userIcon = requireActivity().findViewById(R.id.user_icon);
+        Button userButton = requireActivity().findViewById(R.id.user_switcher_btn);
         UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
-        userIcon.setImageDrawable(mUserIconProvider.getUserIcon(currentUserInfo, context));
-        userIcon.clearColorFilter();
-
-        TextView userSwitcherText = requireActivity().findViewById(R.id.user_switcher_text);
-        userSwitcherText.setText(currentUserInfo.name);
+        Drawable userIcon = mUserIconProvider.getUserIcon(currentUserInfo, context);
+        userButton.setCompoundDrawablesRelativeWithIntrinsicBounds(userIcon, /* top= */
+                null, /* end= */ null, /* bottom= */ null);
+        userButton.setText(currentUserInfo.name);
     }
 
     /**
@@ -181,7 +181,7 @@ public class QuickSettingFragment extends BaseFragment {
 
     private void applyRestriction(boolean restricted) {
         mHomeFragmentLauncher.showBlockingMessage(restricted);
-        mFullSettingBtn.setAlpha(restricted ? mOpacityDisabled : mOpacityEnabled);
+        mFullSettingsBtn.setAlpha(restricted ? mOpacityDisabled : mOpacityEnabled);
     }
 
     private class HomeFragmentLauncher implements OnClickListener {

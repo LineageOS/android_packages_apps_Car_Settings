@@ -15,57 +15,76 @@
     limitations under the License.
 -->
 
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/car_app_bar_height">
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/action_bar_with_buttons_padding_end">
 
     <FrameLayout
         android:id="@+id/action_bar_icon_container"
-        android:layout_width="@dimen/car_margin"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/button_ripple_bg">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/button_ripple_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/start_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
         <ImageView
             android:id="@+id/back_button"
-            style="@style/ListIcon.ActionBar"/>
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_arrow_back"/>
     </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/action_bar_margin"/>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="@dimen/car_keyline_1"
-        android:layout_toLeftOf="@id/button_container"
-        android:layout_toRightOf="@id/action_bar_icon_container"
+        android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:gravity="center_vertical"
         android:maxLines="1"
-        android:textAppearance="@style/TextAppearance.Car.Body1.Medium"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_margin"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <LinearLayout
-        android:id="@+id/button_container"
+    <Button
+        android:id="@+id/action_button2"
+        style="@style/ActionBarButton"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/car_keyline_1"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/action_bar_button_margin_start"
+        android:paddingEnd="@dimen/action_bar_button_padding_end"
+        android:paddingStart="@dimen/action_bar_button_padding_start"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/action_button1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:id="@+id/action_button2"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="@dimen/car_padding_3"
-            android:visibility="gone"/>
+    <Button
+        android:id="@+id/action_button1"
+        style="@style/ActionBarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/action_bar_button_margin_start"
+        android:paddingEnd="@dimen/action_bar_button_padding_end"
+        android:paddingStart="@dimen/action_bar_button_padding_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/action_button2"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:id="@+id/action_button1"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="@dimen/action_bar_end_widget_margin_end"/>
-    </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

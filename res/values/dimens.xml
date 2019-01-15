@@ -19,12 +19,20 @@
     <dimen name="icon_size">44dp</dimen>
     <dimen name="touch_target_size">@*android:dimen/car_touch_target_size</dimen>
 
+    <dimen name="button_min_width">@*android:dimen/car_button_min_width</dimen>
     <dimen name="button_fading_edge_length">40dp</dimen>
+    <dimen name="button_ripple_radius">@*android:dimen/car_radius_1</dimen>
 
-    <dimen name="two_action_preference_divider_width">1dp</dimen>
-
-    <dimen name="action_bar_end_widget_margin_end">46dp</dimen>
-    <dimen name="optical_center_offset">1dp</dimen>
+    <!-- Action Bar -->
+    <dimen name="action_bar_height">@*android:dimen/car_app_bar_height</dimen>
+    <dimen name="action_bar_margin">@*android:dimen/car_margin</dimen>
+    <dimen name="action_bar_with_buttons_padding_end">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="action_bar_button_margin_start">@*android:dimen/car_padding_4</dimen>
+    <dimen name="action_bar_button_padding_start">@*android:dimen/car_padding_3</dimen>
+    <dimen name="action_bar_button_padding_end">@*android:dimen/car_padding_3</dimen>
+    <dimen name="action_bar_icon_button_padding_start">@*android:dimen/car_padding_2</dimen>
+    <dimen name="action_bar_icon_button_padding_end">@*android:dimen/car_padding_2</dimen>
+    <dimen name="action_bar_icon_button_drawable_padding">@*android:dimen/car_padding_2</dimen>
 
     <!-- Suggestions -->
     <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
@@ -85,8 +93,10 @@
     <dimen name="user_switcher_current_user_circle_width">126dp</dimen>
     <dimen name="user_switcher_current_user_circle_stroke_width">7dp</dimen>
 
+    <!-- Preferences -->
     <dimen name="preference_padding_top">@dimen/car_padding_2</dimen>
     <dimen name="preference_padding_bottom">@dimen/car_padding_2</dimen>
+    <dimen name="two_action_preference_divider_width">1dp</dimen>
 
     <!-- Dimens for Setup Wizard -->
 
