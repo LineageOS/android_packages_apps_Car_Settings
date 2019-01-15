@@ -52,6 +52,16 @@
     <dimen name="tile_icon_margin_bottom">@*android:dimen/car_padding_4</dimen>
     <dimen name="circle_ripple_bg_radius">90dp</dimen>
 
+    <!-- Bluetooth -->
+    <dimen name="bluetooth_pin_dialog_margin_start">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="bluetooth_pin_dialog_margin_end">@*android:dimen/car_keyline_1</dimen>
+    <dimen name="bluetooth_pin_dialog_section_height">
+        @*android:dimen/car_single_line_list_item_height
+    </dimen>
+    <dimen name="bluetooth_pin_dialog_text_margin_start">@*android:dimen/car_keyline_3</dimen>
+    <dimen name="bluetooth_pin_dialog_text_margin_end">@*android:dimen/car_keyline_3</dimen>
+    <dimen name="bluetooth_pin_dialog_subtext_margin_top">@*android:dimen/car_padding_1</dimen>
+
     <!-- Edit Username -->
     <dimen name="edit_username_padding_start">@*android:dimen/car_margin</dimen>
     <dimen name="edit_username_padding_end">@*android:dimen/car_margin</dimen>
