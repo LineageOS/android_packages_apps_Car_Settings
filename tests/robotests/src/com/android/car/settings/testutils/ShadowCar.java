@@ -70,6 +70,23 @@ public class ShadowCar {
     }
 
     /**
+     * Returns a mocked version of a {@link Car} object.
+     */
+    @Implementation
+    protected static Car createCar(Context context) {
+        doReturn(sIsConnected).when(sMockCar).isConnected();
+        if (sServiceName != null) {
+            try {
+                doReturn(sCarManager).when(sMockCar).getCarManager(sServiceName);
+            } catch (CarNotConnectedException e) {
+                // do nothing, have to do this because compiler doesn't understand mock can't throw
+                // exception.
+            }
+        }
+        return sMockCar;
+    }
+
+    /**
      * Sets the manager returned by {@link Car#getCarManager(String)}.
      *
      * @param serviceName the name for the service request that should return this car manager.
