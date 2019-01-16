@@ -74,18 +74,19 @@
     </style>
 
     <style name="LockPattern">
-        <item name="*android:regularColor">@color/lock_pattern_regular</item>
-        <item name="*android:successColor">@color/lock_pattern_success</item>
+        <item name="*android:regularColor">@*android:color/car_body1</item>
+        <item name="*android:successColor">@*android:color/car_blue_500</item>
         <item name="*android:errorColor">?android:attr/colorError</item>
     </style>
 
     <style name="PinPadKey">
         <item name="android:gravity">center</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/car_body1_size</item>
-        <item name="android:textColor">@color/car_body3</item>
+        <item name="android:textSize">@*android:dimen/car_body1_size</item>
+        <item name="android:textColor">@*android:color/car_body3</item>
+        <item name="android:tint">@*android:color/car_body3</item>
         <item name="android:clickable">true</item>
-        <item name="android:background">@drawable/car_button_ripple_background</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <style name="ListSwitch">
