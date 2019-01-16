@@ -102,8 +102,7 @@
         android:layout_height="@dimen/pin_pad_key_height"
         android:layout_margin="@dimen/pin_pad_key_margin"
         android:contentDescription="@string/backspace_key"
-        android:src="@drawable/ic_backspace"
-        android:tint="@color/car_body3"/>
+        android:src="@drawable/ic_backspace"/>
     <Button
         android:id="@+id/key0"
         style="@style/PinPadKey"
@@ -119,6 +118,5 @@
         android:layout_height="@dimen/pin_pad_key_height"
         android:layout_margin="@dimen/pin_pad_key_margin"
         android:contentDescription="@string/enter_key"
-        android:src="@drawable/ic_check"
-        android:tint="@color/car_body3"/>
+        android:src="@drawable/ic_check"/>
 </merge>
