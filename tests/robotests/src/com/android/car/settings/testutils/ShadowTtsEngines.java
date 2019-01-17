@@ -40,22 +40,22 @@ public class ShadowTtsEngines {
     }
 
     @Implementation
-    public List<TextToSpeech.EngineInfo> getEngines() {
+    protected List<TextToSpeech.EngineInfo> getEngines() {
         return sInstance.getEngines();
     }
 
     @Implementation
-    public TextToSpeech.EngineInfo getEngineInfo(String packageName) {
+    protected TextToSpeech.EngineInfo getEngineInfo(String packageName) {
         return sInstance.getEngineInfo(packageName);
     }
 
     @Implementation
-    public String getDefaultEngine() {
+    protected String getDefaultEngine() {
         return sInstance.getDefaultEngine();
     }
 
     @Implementation
-    public Intent getSettingsIntent(String engine) {
+    protected Intent getSettingsIntent(String engine) {
         return sInstance.getSettingsIntent(engine);
     }
 }
