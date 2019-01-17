@@ -59,6 +59,36 @@ public class ShadowSecureSettings {
         }
     }
 
+    @Implementation
+    protected static String getString(ContentResolver resolver, String name) {
+        return getStringForUser(resolver, name, resolver.getUserId());
+    }
+
+    @Implementation
+    protected static String getStringForUser(ContentResolver resolver, String name,
+            int userHandle) {
+        final Table<Integer, String, Object> userTable = getUserTable(resolver);
+        synchronized (userTable) {
+            final Object object = userTable.get(userHandle, name);
+            return object instanceof String ? (String) object : null;
+        }
+    }
+
+    @Implementation
+    protected static boolean putString(ContentResolver resolver, String name, String value) {
+        return putStringForUser(resolver, name, value, resolver.getUserId());
+    }
+
+    @Implementation
+    protected static boolean putStringForUser(ContentResolver resolver, String name, String value,
+            int userHandle) {
+        final Table<Integer, String, Object> userTable = getUserTable(resolver);
+        synchronized (userTable) {
+            userTable.put(userHandle, name, value);
+            return true;
+        }
+    }
+
     /**
      * Clears the UserDataMap for Robotests.
      */

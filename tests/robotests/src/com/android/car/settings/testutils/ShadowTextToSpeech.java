@@ -23,6 +23,8 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.Locale;
+
 @Implements(TextToSpeech.class)
 public class ShadowTextToSpeech {
 
@@ -57,6 +59,11 @@ public class ShadowTextToSpeech {
     @Implementation
     protected String getCurrentEngine() {
         return sInstance.getCurrentEngine();
+    }
+
+    @Implementation
+    public int setLanguage(final Locale loc) {
+        return sInstance.setLanguage(loc);
     }
 
     @Implementation
