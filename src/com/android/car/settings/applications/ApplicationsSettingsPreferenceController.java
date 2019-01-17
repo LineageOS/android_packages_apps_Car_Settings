@@ -84,7 +84,7 @@ public class ApplicationsSettingsPreferenceController extends
         preference.setIcon(resolveInfo.loadIcon(mPackageManager));
         preference.setOnPreferenceClickListener((p) -> {
             getFragmentController().launchFragment(
-                    ApplicationDetailsFragment.getInstance(resolveInfo));
+                    ApplicationDetailsFragment.getInstance(resolveInfo.activityInfo.packageName));
             return true;
         });
         return preference;

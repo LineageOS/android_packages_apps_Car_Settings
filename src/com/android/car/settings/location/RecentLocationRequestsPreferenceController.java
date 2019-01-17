@@ -100,7 +100,7 @@ public class RecentLocationRequestsPreferenceController extends
                 PackageManager.MATCH_DEFAULT_ONLY);
         pref.setOnPreferenceClickListener(p -> {
             getFragmentController().launchFragment(
-                    ApplicationDetailsFragment.getInstance(resolveInfo));
+                    ApplicationDetailsFragment.getInstance(resolveInfo.activityInfo.packageName));
             return true;
         });
         return pref;

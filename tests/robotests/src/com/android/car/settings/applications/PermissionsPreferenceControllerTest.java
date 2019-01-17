@@ -22,8 +22,6 @@ import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.ResolveInfo;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -50,7 +48,6 @@ public class PermissionsPreferenceControllerTest {
     private PreferenceControllerTestHelper<PermissionsPreferenceController>
         mPreferenceControllerHelper;
     private PermissionsPreferenceController mController;
-    private ResolveInfo mResolveInfo;
 
     @Before
     public void setUp() {
@@ -60,11 +57,6 @@ public class PermissionsPreferenceControllerTest {
             PermissionsPreferenceController.class);
         mController = mPreferenceControllerHelper.getController();
         mPreference = new Preference(mContext);
-
-        mResolveInfo = new ResolveInfo();
-        mResolveInfo.resolvePackageName = PACKAGE_NAME;
-        mResolveInfo.activityInfo = new ActivityInfo();
-        mResolveInfo.activityInfo.packageName = PACKAGE_NAME;
     }
 
     @Test
@@ -76,7 +68,7 @@ public class PermissionsPreferenceControllerTest {
     @Test
     public void testHandlePreferenceClicked_navigateToNextActivity() {
         // Setup so the controller knows about the preference.
-        mController.setResolveInfo(mResolveInfo);
+        mController.setPackageName(PACKAGE_NAME);
         mPreferenceControllerHelper.setPreference(mPreference);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();

@@ -19,18 +19,16 @@ package com.android.car.settings.applications;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.settingslib.applications.ApplicationsState;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,16 +46,15 @@ public class ApplicationPreferenceControllerTest {
             mPreferenceControllerHelper;
     private ApplicationPreferenceController mController;
     @Mock
-    private ResolveInfo mResolveInfo;
+    private ApplicationsState mMockAppState;
     @Mock
-    private PackageManager mPackageManager;
+    private ApplicationsState.AppEntry mMockAppEntry;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         Context context = spy(RuntimeEnvironment.application);
-        when(context.getPackageManager()).thenReturn(mPackageManager);
-        when(mResolveInfo.loadLabel(mPackageManager)).thenReturn(PACKAGE_NAME);
+        mMockAppEntry.label = PACKAGE_NAME;
 
         mPreference = new Preference(context);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
@@ -66,14 +63,23 @@ public class ApplicationPreferenceControllerTest {
     }
 
     @Test
-    public void testCheckInitialized_noResolveInfo_throwException() {
+    public void testCheckInitialized_noAppState_throwException() {
+        mController.setAppEntry(mMockAppEntry);
+        assertThrows(IllegalStateException.class,
+                () -> mPreferenceControllerHelper.setPreference(mPreference));
+    }
+
+    @Test
+    public void testCheckInitialized_noAppEntry_throwException() {
+        mController.setAppState(mMockAppState);
         assertThrows(IllegalStateException.class,
                 () -> mPreferenceControllerHelper.setPreference(mPreference));
     }
 
     @Test
     public void testRefreshUi_hasResolveInfo_setTitle() {
-        mController.setResolveInfo(mResolveInfo);
+        mController.setAppEntry(mMockAppEntry);
+        mController.setAppState(mMockAppState);
         mPreferenceControllerHelper.setPreference(mPreference);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
