@@ -20,7 +20,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.icu.text.ListFormatter;
 import android.text.TextUtils;
@@ -41,7 +40,7 @@ public class PermissionsPreferenceController extends PreferenceController<Prefer
 
     private static final Logger LOG = new Logger(PermissionsPreferenceController.class);
 
-    private ResolveInfo mResolveInfo;
+    private String mPackageName;
     private String mSummary;
 
     public PermissionsPreferenceController(Context context, String preferenceKey,
@@ -55,18 +54,18 @@ public class PermissionsPreferenceController extends PreferenceController<Prefer
     }
 
     /**
-     * Set the resolve info, which is used to find the package name to open the permissions
+     * Set the packageName, which is used on the intent to open the permissions
      * selection screen.
      */
-    public void setResolveInfo(ResolveInfo resolveInfo) {
-        mResolveInfo = resolveInfo;
+    public void setPackageName(String packageName) {
+        mPackageName = packageName;
     }
 
     @Override
     protected void checkInitialized() {
-        if (mResolveInfo == null) {
+        if (mPackageName == null) {
             throw new IllegalStateException(
-                    "ResolveInfo should be set before calling this function");
+                    "PackageName should be set before calling this function");
         }
     }
 
@@ -74,15 +73,15 @@ public class PermissionsPreferenceController extends PreferenceController<Prefer
     protected void updateState(Preference preference) {
         // This call needs to be here, not onCreate, so that the summary is updated every time
         // the preference is displayed.
-        PermissionsSummaryHelper.getPermissionSummary(getContext(),
-                mResolveInfo.activityInfo.packageName, mPermissionCallback);
+        PermissionsSummaryHelper.getPermissionSummary(
+                getContext(), mPackageName, mPermissionCallback);
         preference.setSummary(getSummary());
     }
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
         Intent intent = new Intent(Intent.ACTION_MANAGE_APP_PERMISSIONS);
-        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mResolveInfo.activityInfo.packageName);
+        intent.putExtra(Intent.EXTRA_PACKAGE_NAME, mPackageName);
         try {
             getContext().startActivity(intent);
         } catch (ActivityNotFoundException e) {

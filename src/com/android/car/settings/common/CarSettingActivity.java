@@ -85,7 +85,7 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     protected void onResume() {
         super.onResume();
         if (mHasNewIntent) {
-            Fragment fragment = FragmentResolver.getFragmentForAction(getIntent().getAction());
+            Fragment fragment = FragmentResolver.getFragmentForIntent(getIntent());
             launchIfDifferent(fragment);
             mHasNewIntent = false;
         }
