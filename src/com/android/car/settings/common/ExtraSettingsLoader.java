@@ -36,8 +36,9 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.theme.Themes;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Loads Activity with TileUtils.EXTRA_SETTINGS_ACTION.
@@ -50,27 +51,27 @@ public class ExtraSettingsLoader {
     public static final String DEVICE_CATEGORY = "com.android.settings.category.device";
     public static final String SYSTEM_CATEGORY = "com.android.settings.category.system";
     public static final String PERSONAL_CATEGORY = "com.android.settings.category.personal";
+    private Map<Preference, Bundle> mPreferenceBundleMap;
     private final Context mContext;
 
     public ExtraSettingsLoader(Context context) {
         mContext = context;
+        mPreferenceBundleMap = new HashMap<>();
     }
 
     /**
-     * Returns a list of {@link Preference} instances representing settings injected from system
-     * apps. The given intent must specify the action to use for resolving activities and a
-     * category with the key "com.android.settings.category" and one of
+     * Returns a map of {@link Preference} and {@link Bundle} representing settings injected from
+     * system apps and their metadata. The given intent must specify the action to use for resolving
+     * activities and a category with the key "com.android.settings.category" and one of
      * {@link #WIRELESS_CATEGORY}, {@link #DEVICE_CATEGORY}, {@link #SYSTEM_CATEGORY},
      * {@link #PERSONAL_CATEGORY} as the value.
      *
      * @param intent intent specifying the extra settings category to load
      */
-    public List<Preference> loadPreferences(Intent intent) {
+    public Map<Preference, Bundle> loadPreferences(Intent intent) {
         PackageManager pm = mContext.getPackageManager();
-
         List<ResolveInfo> results = pm.queryIntentActivitiesAsUser(intent,
                 PackageManager.GET_META_DATA, ActivityManager.getCurrentUser());
-        List<Preference> preferences = new ArrayList<>();
 
         String extraCategory = intent.getStringExtra(META_DATA_PREFERENCE_CATEGORY);
         for (ResolveInfo resolved : results) {
@@ -143,8 +144,8 @@ public class ExtraSettingsLoader {
                 preference.getIcon().setTint(Themes.getAttrColor(mContext, R.attr.iconColor));
             }
             preference.setIntent(extraSettingIntent);
-            preferences.add(preference);
+            mPreferenceBundleMap.put(preference, metaData);
         }
-        return preferences;
+        return mPreferenceBundleMap;
     }
 }
