@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Direcciones IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Puerta de enlace"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Preferencias de Wi-Fi"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Activar Wi-Fi automáticamente"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi se reactivará automáticamente cerca de redes guardadas"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"No disponible; la ubicación está desactivada. "<annotation id="link">"Actívala"</annotation>"."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"¿Quieres activar la búsqueda de redes Wi‑Fi?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Activar"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Se activó la búsqueda de redes Wi‑Fi"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Cambiar a datos móviles automáticamente"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Si la conexión Wi-Fi no puede acceder a Internet, usa los datos móviles. Es posible que se apliquen cargos por el uso de datos."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Más información"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos sincronizados"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Presiona para sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas y entradas"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Salida de texto a voz"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Sonido"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volumen de tono"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volumen de navegación"</string>
@@ -202,8 +209,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Restablecer configuración"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Se restableció la configuración de red"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Restablecer preferencias de apps"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Se restablecerán todas las preferencias de lo sigueinte:\n\n"<li>"Apps inhabilitadas"</li>\n<li>"Notificaciones de apps inhabilitadas"</li>\n<li>"Apps predeterminadas para realizar acciones"</li>\n<li>"Restricciones de datos en segundo plano para apps"</li>\n<li>"Restricciones de permisos"</li>\n\n"No perderás los datos de las apps."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Se restablecieron las preferencias de las apps"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos los datos (restablecer)"</string>
@@ -299,8 +305,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizar ahora"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Cancelar sincronización"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"En este momento la sincronización experimenta problemas. Volverá en breve."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>

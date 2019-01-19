@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"Adrese IPv6"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Preferințe Wi-Fi"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Activați automat Wi-Fi"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi se va reactiva lângă rețelele calitate înaltă salvate, cum ar fi cea de domiciliu"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Indisponibil, deoarece locația este dezactivată. Activați "<annotation id="link">"Locația"</annotation>"."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Activați căutarea de rețele Wi-Fi?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Activați"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Căutarea de rețele Wi-Fi este activată"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Comutați automat la date mobile"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Folosiți datele mobile atunci când rețeaua Wi-Fi nu are acces la internet. Este posibil să se aplice taxe pentru utilizarea datelor."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Aflați mai multe"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispozitiv nedenumit"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispozitive asociate"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Atingeți pentru a asocia cu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="language_settings" msgid="2079258598337245546">"Limbi"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Limbi și introducere de text"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Rezultatul redării vocale a textului"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferat"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Sunet"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volumul soneriei"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volum navigare"</string>
@@ -204,8 +211,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Resetați setările"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Setările pentru rețea au fost resetate"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Resetați preferințele pentru aplicații"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Astfel vor fi resetate toate preferințele pentru:\n\n"<li>"aplicații dezactivate,"</li>\n<li>"notificări de aplicații dezactivate,"</li>\n<li>"aplicații prestabilite pentru acțiuni,"</li>\n<li>"restricții privind datele de fundal pentru aplicații,"</li>\n<li>"orice restricții de permisiuni."</li>\n\n"Nu veți pierde datele aplicațiilor."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetați aplicațiile"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ștergeți datele (reveniți la setările din fabrică)"</string>
@@ -302,8 +308,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizați acum"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Anulați sincronizarea"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"Sincronizarea se confruntă cu probleme. Aceasta va fi funcțională în curând."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Securitate"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blocarea ecranului"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Fără"</string>

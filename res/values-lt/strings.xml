@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"„IPv6“ adresai"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Tinklų sietuvas"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"„Wi‑Fi“ nuostatos"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Automatiškai įjungti „Wi‑Fi“"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"„Wi‑Fi“ bus vėl įj., esant šalia išs. aukštos kok. tinklų, pvz., namų tinklo"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Nepasiekiama, nes vietovės parinktis išj. Įjunkite "<annotation id="link">"vietovę"</annotation>"."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Įjungti „Wi‑Fi“ nuskaitymą?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Įjungti"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"„Wi‑Fi“ nuskaitymas įjungtas"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatiškai perjungti į mobiliojo ryšio duomenis"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Naudoti mobiliojo ryšio duomenis, kai „Wi-Fi“ tinkle nėra interneto ryšio. Galite būti apmokestinti už naudojamus duomenis."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Sužinoti daugiau"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Įrenginys be pavadinimo"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Susieti įrenginiai"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Palieskite, kad susietumėte su „<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“."</string>
     <string name="language_settings" msgid="2079258598337245546">"Kalbos"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Kalbos ir įvestis"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Teksto į kalbą išvestis"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Pageidaujamas variklis"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Dabartinis variklis"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Garsas"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Skambučio garsumas"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigacijos garsumas"</string>
@@ -206,8 +213,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Nustatyti iš naujo"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Tinklo nustatymai nustatyti iš naujo"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Iš naujo nustatyti programų nuostatas"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Bus iš naujo nustatytos visos nurodytų elementų nuostatos:\n\n"<li>"išjungtos programos;"</li>\n<li>"išjungti programų pranešimai;"</li>\n<li>"numatytosios veiksmų programos;"</li>\n<li>"programų foninių duomenų apribojimai;"</li>\n<li>"visi leidimų apribojimai."</li>\n\n"Neprarasite jokių programų duomenų."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Iš naujo nustatyti programas"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Programų nuostatos nustatytos iš naujo"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ištr. visus duom. (atk. gamykl. duom.)"</string>
@@ -305,8 +311,7 @@
 %1$s</xliff:g>)"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sinchronizuoti dabar"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Atšaukti sinchronizavimą"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"Šiuo metu iškilo sinchronizavimo problemų. Greitai jis vėl veiks."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sauga"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekrano užraktas"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nėra"</string>

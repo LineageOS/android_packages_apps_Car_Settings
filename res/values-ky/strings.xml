@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 даректери"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Шлюз"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi жеке жөндөөлөрү"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi автоматтык түрдө күйсүн"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Байланыш сигналы күчтүү тармактарга (мисалы, үйдө) жакындаганда, Wi‑Fi автоматтык түрдө күйөт"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Жайгашкан жерди аныктоо өчүрүлгөндүктөн, жеткиликсиз. "<annotation id="link">"Жайгашкан жерди"</annotation>" күйгүзүңүз."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi тармактарын издөөнү күйгүзөсүзбү?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Күйгүзүү"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi\'ды издөө күйгүзүлдү"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобилдик Интернетке автоматтык түрдө которулсун"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi аркылуу Интернетке туташуу мүмкүнчүлүгү жок болгондо, мобилдик Интернет колдонулсун. Трафиктин колдонулгандыгы үчүн акы алынышы мүмкүн."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Кеңири маалымат"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Аты жок түзмөк"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Жупташтырылган түзмөктөр"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> менен жупташуу үчүн таптап коюңуз."</string>
     <string name="language_settings" msgid="2079258598337245546">"Тилдер"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Тилдер жана киргизүү ыкмасы"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Кеп синтезатору"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Тандалган каражат"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Учурдагы каражат"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Үн"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Шыңгырдын үнү"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Чабыттоонун үнү"</string>
@@ -202,8 +209,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Жөндөөлөрдү кайра коюу"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен төмөнкүлөр үчүн бардык жөндөөлөр баштапкы абалына келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Бардык дайындарды тазалоо"</string>
@@ -299,8 +305,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Азыр шайкештирүү"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Шайкештирүүнү жокко чыгаруу"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"Учурда шайкештирүү көйгөйгө дуушар болууда. Ал бир аздан кийин калыбына келет."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Коопсуздук"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Экран кулпусу"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Жок"</string>

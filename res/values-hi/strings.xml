@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"डीएनएस"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 पते"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"वाई-फ़ाई से जुड़ी पसंद"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"वाई-फ़ाई अपने आप चालू करें"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"वाई-फ़ाई, सेव किए गए अच्छी क्वालिटी के नेटवर्क पास होने पर अपने आप चालू हो जाएगा, जैसे कि आपके घर का नेटवर्क"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"\'जगह की जानकारी\' बंद होने से यह सुविधा उपलब्ध नहीं है. "<annotation id="link">"जगह की जानकारी"</annotation>" चालू करेें."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाई-फ़ाई नेटवर्क ढूंंढने की सुविधा चालू करें?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"चालू करें"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाई-फ़ाई स्कैन करने की सुविधा चालू हो गई है"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटा पर अपने आप जाएं"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"जब वाई-फ़ाई के ज़रिए इंटरनेट की सुविधा न हो, तो मोबाइल डेटा इस्तेमाल करें. डेटा के लिए पैसे चुकाने पड़ सकते हैं."</string>
+    <string name="learn_more" msgid="8214605928933358604">"ज़्यादा जानें"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जुड़े हुए डिवाइस"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ने के लिए टैप करें."</string>
     <string name="language_settings" msgid="2079258598337245546">"भाषाएं"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"भाषाएं और इनपुट"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"\'लिख को बोली में बदलना\' आउटपुट"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"पसंदीदा इंजन"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"मौजूदा इंजन"</string>
     <string name="sound_settings" msgid="3072423952331872246">"आवाज़"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"घंटी बजने की आवाज़"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"नेविगेशन की आवाज़"</string>
@@ -202,8 +209,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिंग रीसेट करें"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्क सेटिंग रीसेट कर दी गई हैं"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"ऐप्लिकेशन की सेटिंग रीसेट करें"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"इससे इन सबके लिए प्राथमिकताएं रीसेट हो जाएंगी:\n\n"<li>"बंद किए गए ऐप्लिकेशन"</li>\n<li>"बंद की गई ऐप्लिकेशन सूचनाएं"</li>\n<li>"कार्रवाइयों के लिए डिफ़ॉल्ट ऐप्लिकेशन"</li>\n<li>"ऐप्लिकेशन के लिए बैकग्राउंड डेटा पाबंदियां"</li>\n<li>"अनुमति से जुड़ी सभी पाबंदियां"</li>\n\n"आपका सारा ऐप्लिकेशन डेटा बना रहेगा."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ऐप्लिकेशन रीसेट करें"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ऐप्लिकेशन की सेटिंग रीसेट कर दी गई हैं"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"पूरा डेटा हमेशा के लिए मिटाएं (फ़ैक्ट्री रीसेट)"</string>
@@ -299,8 +305,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"अभी सिंक करें"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"सिंक करना रद्द करें"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"सिंक करने में फ़िलहाल समस्याएं आ रही हैं. यह जल्द ही वापस काम करने लगेगा."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>

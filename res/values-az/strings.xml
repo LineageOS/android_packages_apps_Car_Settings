@@ -75,6 +75,16 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ünvanları"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Şlüz"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi tərcihləri"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi\'ı avtomatik olaraq aktiv edin"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi daxili şəbəkə kimi saxlanmış keyfiyyətli şəbəkə yanında aktiv ediləcək"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Əlçatan deyil çünki məkan deaktivdir. "<annotation id="link">"Məkanı"</annotation>" aktiv edin."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi skanı aktiv edilsin?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktiv edin"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi skanı aktiv edildi"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mobil dataya avtomatik keçin"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi internetə qoşulmayanda mobil datadan istifadə edin. Xidmət haqqı tutula bilər."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Ətraflı məlumat"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Adsız cihaz"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Birləşdirilmiş cihazlar"</string>
@@ -106,12 +116,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ilə birləşdirmək üçün toxunun"</string>
     <string name="language_settings" msgid="2079258598337245546">"Dillər"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Dillər və daxiletmə"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Mətndən-nitqə daxiletmə"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Tərcih edilən mühərrik"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Cari mühərrik"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Səs"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Zəngin səs səviyyəsi"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Naviqasiyanın səs səviyyəsi"</string>
@@ -202,8 +209,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ayarları sıfırlayın"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Şəbəkə ayarları sıfırlandı"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Tətbiq seçimlərini sıfırlayın"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Bu, aşağıdakılar üçün bütün tərcihləri sıfırlayacaq:\n\n"<li>" Deaktiv edilmiş tətbiqlər"</li>\n<li>"Deaktiv edilmiş tətbiq bildirişləri"</li>\n<li>"Əməliyyatlar üçün defolt tətbiqlər"</li>\n<li>"Tətbiqlər üçün arxa fon məlumatlarının məhdudlaşdırılması"</li>\n<li>"İstənilən icazə məhdudiyyətləri"</li>\n\n"Hər hansı tətbiq məlumatını itirməyəcəksiniz."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tətbiqləri sıfırla"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Tətbiq seçimləri sıfırlanıb"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Bütün datanı silin (fabrika sıfırlaması)"</string>
@@ -299,8 +305,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"İndi sinxronizə edin"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Sinxronizasiyanı ləğv edin"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"Hazırda sinxronizasiyada problemlər var. Bir azdan düzələcək."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Təhlükəsizlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yoxdur"</string>

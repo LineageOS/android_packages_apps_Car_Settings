@@ -75,6 +75,23 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ঠিকনা"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"গে’টৱে’"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"ৱাই-ফাইৰ অগ্ৰাধিকাৰ"</string>
+    <!-- no translation found for wifi_wakeup (7451825226044542000) -->
+    <skip />
+    <!-- no translation found for wifi_wakeup_summary (7237521683331291414) -->
+    <skip />
+    <!-- no translation found for wifi_wakeup_summary_no_location (2821576525488435259) -->
+    <skip />
+    <!-- no translation found for wifi_settings_scanning_required_title (2726782203331704928) -->
+    <skip />
+    <!-- no translation found for wifi_settings_scanning_required_turn_on (4464931023377210050) -->
+    <skip />
+    <!-- no translation found for wifi_settings_scanning_required_enabled (5457372118991438313) -->
+    <skip />
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"স্বয়ংক্ৰিয়ভাৱে ম’বাইল ডেটালৈ সলনি কৰক"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ৱাই-ফাইত ইণ্টাৰনেট নাথাকিলে ম’বাইল ডেটা ব্যৱহাৰ কৰক। ডেটাৰ খৰচ বহন কৰিবলগীয়া হ’ব পাৰে।"</string>
+    <!-- no translation found for learn_more (8214605928933358604) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নাম নথকা ডিভাইচ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"যোৰা লগোৱা ডিভাইচসমূহ"</string>
@@ -106,12 +123,9 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ৰ লগত যোৰা লগাবলৈ টিপক"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষা আৰু ইনপুট"</string>
-    <!-- no translation found for text_to_speech_settings (811985746199507343) -->
-    <skip />
-    <!-- no translation found for text_to_speech_preferred_engine_settings (2766782925699132256) -->
-    <skip />
-    <!-- no translation found for text_to_speech_current_engine (8133107484909612597) -->
-    <skip />
+    <string name="text_to_speech_settings" msgid="811985746199507343">"পাঠৰ পৰা কথনৰ আউটপুট"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"অগ্ৰাধিকাৰপ্ৰাপ্ত ইঞ্জিন"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"বৰ্তমানৰ ইঞ্জিন"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ধ্বনি"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ৰিঙৰ ভলিউম"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"নেভিগেশ্বনৰ ভলিউম"</string>
@@ -202,8 +216,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ছেটিংসমূহ ৰিছেট কৰক"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"নেটৱৰ্কৰ ছেটিংসমূহ ৰিছেট কৰা হৈছে"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰক"</string>
-    <!-- no translation found for reset_app_pref_desc (579392665146962149) -->
-    <skip />
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"ইয়ে:\n\n"<li>"অক্ষম কৰি থোৱা এপ্"</li>\n<li>"অক্ষম কৰি থোৱা এপ্ জাননী"</li>\n<li>"কাৰ্যৰ ডিফ’ল্ট এপ্লিকেশ্বন"</li>\n<li>"এপৰ নেপথ্য ডেটা সীমাবদ্ধকৰণ"</li>\n<li>"যিকোনো অনুমতিৰ সীমাবদ্ধকৰণ"</li>"ৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰিব\n\nআপুনি কোনো এপৰ ডেটা নেহেৰুৱায়।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"এপসমূহ ৰিছেট কৰক"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰা হৈছে"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট কৰক)"</string>
@@ -299,8 +312,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"এতিয়া ছিংক কৰক"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ছিংক বাতিল কৰক"</string>
-    <!-- no translation found for sync_is_failing (5766255460901806206) -->
-    <skip />
+    <string name="sync_is_failing" msgid="5766255460901806206">"ছিংকে সমস্যাৰ সন্মুখীন হৈছে। ই অলপ পিছতে ঠিক হ’ব।"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"সুৰক্ষা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্ৰীণ লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"নাই"</string>
