@@ -219,6 +219,12 @@
     <string name="text_to_speech_preferred_engine_settings">Preferred engine</string>
     <!-- Summay which identifies the currently selected preferred engine. [CHAR LIMIT=30] -->
     <string name="text_to_speech_current_engine">Current engine</string>
+    <!-- Title for the seek bar which controls the TTS speech rate. [CHAR LIMIT=40] -->
+    <string name="tts_speech_rate">Speech Rate</string>
+    <!-- Title for the seek bar which controls the TTS pitch. [CHAR LIMIT=30] -->
+    <string name="tts_pitch">Pitch</string>
+    <!-- Name for button that resets speech rate and pitch for synthesized voice to default values in the text to speech settings. [CHAR LIMIT=30] -->
+    <string name="tts_reset">Reset</string>
 
     <!-- sound settings --><skip/>
     <!-- Sound settings screen heading -->

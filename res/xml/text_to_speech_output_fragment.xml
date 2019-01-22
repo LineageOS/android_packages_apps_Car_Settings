@@ -23,10 +23,22 @@
         android:title="@string/text_to_speech_preferred_engine_settings"
         android:widgetLayout="@layout/details_preference_widget"
         settings:controller="com.android.car.settings.tts.PreferredEngineEntryPreferenceController"/>
-    <ListPreference
-        android:key="@string/pk_tts_default_language"
-        android:persistent="false"
-        android:summary="@string/tts_default_lang_summary"
-        android:title="@string/tts_default_lang_title"
-        settings:controller="com.android.car.settings.tts.DefaultLanguagePreferenceController"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_tts_playback_group"
+        settings:controller="com.android.car.settings.tts.TtsPlaybackPreferenceController">
+        <ListPreference
+            android:key="@string/pk_tts_default_language"
+            android:persistent="false"
+            android:summary="@string/tts_default_lang_summary"
+            android:title="@string/tts_default_lang_title"/>
+        <com.android.car.settings.common.SeekBarPreference
+            android:key="@string/pk_tts_speech_rate"
+            android:title="@string/tts_speech_rate"/>
+        <com.android.car.settings.common.SeekBarPreference
+            android:key="@string/pk_tts_pitch"
+            android:title="@string/tts_pitch"/>
+        <Preference
+            android:key="@string/pk_tts_reset"
+            android:title="@string/tts_reset"/>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>
