@@ -51,26 +51,12 @@
     </style>
 
     <style name="TrimmedHorizontalProgressBar"
-           parent="android:Widget.Material.ProgressBar.Horizontal">
+           parent="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal">
         <item name="android:indeterminateDrawable">
             @drawable/progress_indeterminate_horizontal_material_trimmed
         </item>
         <item name="android:minHeight">3dp</item>
         <item name="android:maxHeight">3dp</item>
-    </style>
-
-    <style name="ListIcon">
-        <item name="android:layout_width">@dimen/car_primary_icon_size</item>
-        <item name="android:layout_height">@dimen/car_primary_icon_size</item>
-        <item name="android:layout_centerVertical">true</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:scaleType">fitCenter</item>
-        <item name="android:tint">@color/car_tint</item>
-    </style>
-
-    <style name="ListIcon.ActionBar" parent="ListIcon">
-        <item name="android:layout_gravity">center</item>
-        <item name="android:src">@drawable/ic_arrow_back</item>
     </style>
 
     <style name="LockPattern">
@@ -87,15 +73,6 @@
         <item name="android:tint">@*android:color/car_body3</item>
         <item name="android:clickable">true</item>
         <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
-    </style>
-
-    <style name="ListSwitch">
-        <item name="android:layout_width">@dimen/car_primary_icon_size</item>
-        <item name="android:layout_height">@dimen/car_primary_icon_size</item>
-        <item name="android:scaleX">1.5</item>
-        <item name="android:scaleY">1.5</item>
-        <item name="android:thumbTint">@color/car_accent</item>
-        <item name="android:trackTint">@color/car_accent</item>
     </style>
 
     <style name="SettingList">

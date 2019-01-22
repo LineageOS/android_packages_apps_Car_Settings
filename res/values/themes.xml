@@ -21,6 +21,7 @@
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="wifiSignalColor">?android:attr/colorAccent</item>
         <item name="iconColor">@color/car_tint</item>
+        <item name="dividerColor">@*android:color/car_list_divider</item>
         <item name="userSwitcherBackground">?android:attr/colorPrimary</item>
         <item name="userSwitcherCurrentUserColor">?android:attr/colorAccent</item>
         <item name="userSwitcherAddIconColor">@color/car_tint</item>
@@ -40,6 +41,13 @@
         <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
         <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
         <item name="android:borderlessButtonStyle">@style/Widget.Car.Button.Borderless.Colored
+        </item>
+        <item name="android:textAppearanceLarge">@android:style/TextAppearance.DeviceDefault.Large
+        </item>
+        <item name="android:textAppearanceMedium">
+            @android:style/TextAppearance.DeviceDefault.Medium
+        </item>
+        <item name="android:textAppearanceSmall">@android:style/TextAppearance.DeviceDefault.Small
         </item>
     </style>
 
