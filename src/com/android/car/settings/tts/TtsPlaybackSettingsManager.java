@@ -24,7 +24,6 @@ import android.speech.tts.TtsEngines;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
@@ -56,8 +55,11 @@ class TtsPlaybackSettingsManager {
      */
     public static final int MIN_VOICE_PITCH = 25;
 
-    @VisibleForTesting
-    static final float SCALING_FACTOR = 100.0f;
+    /**
+     * Scaling factor used to convert speech rate and pitch values between {@link Settings.Secure}
+     * and {@link TextToSpeech}.
+     */
+    public static final float SCALING_FACTOR = 100.0f;
     private static final String UTTERANCE_ID = "Sample";
 
     private final Context mContext;
@@ -117,10 +119,15 @@ class TtsPlaybackSettingsManager {
     }
 
     /**
-     * Similar to {@link #getStoredTtsLocale()}, but returns the actual default locale when it is
-     * configured to do so.
+     * Similar to {@link #getStoredTtsLocale()}, but returns the language of the voice registered
+     * to the actual TTS object. It is possible for the TTS voice to be {@code null} if TTS is not
+     * yet initialized.
      */
+    @Nullable
     Locale getEffectiveTtsLocale() {
+        if (mTts.getVoice() == null) {
+            return null;
+        }
         return mEnginesHelper.parseLocaleString(mTts.getVoice().getLocale().toString());
     }
 
