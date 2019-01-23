@@ -17,7 +17,9 @@
 package com.android.car.settings.testutils;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.Voice;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -69,6 +71,34 @@ public class ShadowTextToSpeech {
     @Implementation
     protected void shutdown() {
         sInstance.shutdown();
+    }
+
+    @Implementation
+    protected int setSpeechRate(float speechRate) {
+        return sInstance.setSpeechRate(speechRate);
+    }
+
+    @Implementation
+    protected int setPitch(float pitch) {
+        return sInstance.setPitch(pitch);
+    }
+
+    @Implementation
+    protected Voice getVoice() {
+        return sInstance.getVoice();
+    }
+
+    @Implementation
+    protected int isLanguageAvailable(final Locale loc) {
+        return sInstance.isLanguageAvailable(loc);
+    }
+
+    @Implementation
+    protected int speak(final CharSequence text,
+            final int queueMode,
+            final Bundle params,
+            final String utteranceId) {
+        return sInstance.speak(text, queueMode, params, utteranceId);
     }
 
     @Resetter

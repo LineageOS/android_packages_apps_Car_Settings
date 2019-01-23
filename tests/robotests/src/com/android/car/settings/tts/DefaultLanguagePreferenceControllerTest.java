@@ -36,7 +36,7 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.car.settings.testutils.ShadowTextToSpeech;
-import com.android.car.settings.testutils.ShadowTtsEngines;
+import com.android.car.settings.testutils.ShadowTtsEnginesOld;
 
 import com.google.android.collect.Lists;
 
@@ -53,7 +53,7 @@ import org.robolectric.annotation.Config;
 import java.util.Locale;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowTtsEngines.class, ShadowTextToSpeech.class, ShadowSecureSettings.class})
+@Config(shadows = {ShadowTtsEnginesOld.class, ShadowTextToSpeech.class, ShadowSecureSettings.class})
 public class DefaultLanguagePreferenceControllerTest {
 
     private static final String DEFAULT_ENGINE_NAME = "com.android.car.settings.tts.test.default";
@@ -86,7 +86,7 @@ public class DefaultLanguagePreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowTtsEngines.reset();
+        ShadowTtsEnginesOld.reset();
         ShadowTextToSpeech.reset();
     }
 
