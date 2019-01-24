@@ -25,10 +25,11 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
 import java.util.List;
-import java.util.Locale;
 
-@Implements(TtsEngines.class)
-public class ShadowTtsEngines {
+// TODO: Remove this shadow class once DefaultLanguagePreferenceController is repurposed to
+// handle Pitch and Speech Rate as well.
+@Implements(value = TtsEngines.class, inheritImplementationMethods = true)
+public class ShadowTtsEnginesOld {
     private static TtsEngines sInstance;
 
     public static void setInstance(TtsEngines ttsEngines) {
@@ -58,25 +59,5 @@ public class ShadowTtsEngines {
     @Implementation
     protected Intent getSettingsIntent(String engine) {
         return sInstance.getSettingsIntent(engine);
-    }
-
-    @Implementation
-    protected boolean isLocaleSetToDefaultForEngine(String engineName) {
-        return sInstance.isLocaleSetToDefaultForEngine(engineName);
-    }
-
-    @Implementation
-    protected Locale getLocalePrefForEngine(String engineName) {
-        return sInstance.getLocalePrefForEngine(engineName);
-    }
-
-    @Implementation
-    protected synchronized void updateLocalePrefForEngine(String engineName, Locale newLocale) {
-        sInstance.updateLocalePrefForEngine(engineName, newLocale);
-    }
-
-    @Implementation
-    protected Locale parseLocaleString(String localeString) {
-        return sInstance.parseLocaleString(localeString);
     }
 }
