@@ -59,10 +59,10 @@
         android:title="@string/location_settings_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
+        android:fragment="com.android.car.settings.applications.AppsAndNotificationsFragment"
         android:icon="@drawable/ic_settings_applications"
-        android:key="@string/pk_applications_settings_entry"
-        android:title="@string/applications_settings"
+        android:key="@string/pk_apps_and_notifications_settings_entry"
+        android:title="@string/apps_and_notifications_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.datetime.DatetimeSettingsFragment"

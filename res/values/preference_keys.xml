@@ -30,7 +30,8 @@
     <string name="pk_bluetooth_settings_entry" translatable="false">bluetooth_settings_entry
     </string>
     <string name="pk_location_settings_entry" translatable="false">location_settings_entry</string>
-    <string name="pk_applications_settings_entry" translatable="false">applications_settings_entry
+    <string name="pk_apps_and_notifications_settings_entry" translatable="false">
+        apps_and_notifications_settings_entry
     </string>
     <string name="pk_date_time_settings_entry" translatable="false">date_time_settings_entry
     </string>
@@ -85,6 +86,11 @@
     </string>
 
     <!-- Applications Settings -->
+    <string name="pk_applications_settings_screen_entry" translatable="false">
+        applications_settings_screen_entry
+    </string>
+    <string name="pk_default_applications_entry" translatable="false">default_applications_entry
+    </string>
     <string name="pk_applications_settings_screen" translatable="false">
         applications_settings_screen
     </string>
