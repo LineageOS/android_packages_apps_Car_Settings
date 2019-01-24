@@ -18,15 +18,9 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/apps_and_notifications_settings">
+    android:title="@string/default_applications">
     <Preference
-        android:fragment="com.android.car.settings.applications.ApplicationsSettingsFragment"
-        android:key="@string/pk_applications_settings_screen_entry"
-        android:title="@string/all_applications"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
-    <Preference
-        android:fragment="com.android.car.settings.applications.DefaultApplicationsSettingsFragment"
-        android:key="@string/pk_default_applications_settings_entry"
-        android:title="@string/default_applications"
+        android:key="@string/pk_default_assist_and_voice"
+        android:title="@string/assist_and_voice_input_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
 </PreferenceScreen>

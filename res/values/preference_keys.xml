@@ -85,12 +85,15 @@
     <string name="pk_bluetooth_device_address" translatable="false">bluetooth_device_address
     </string>
 
-    <!-- Applications Settings -->
+    <!-- Applications and Notifications Settings -->
     <string name="pk_applications_settings_screen_entry" translatable="false">
         applications_settings_screen_entry
     </string>
-    <string name="pk_default_applications_entry" translatable="false">default_applications_entry
+    <string name="pk_default_applications_settings_entry" translatable="false">
+        default_applications_entry
     </string>
+
+    <!-- Applications Settings -->
     <string name="pk_applications_settings_screen" translatable="false">
         applications_settings_screen
     </string>
@@ -102,6 +105,10 @@
     </string>
     <string name="pk_application_details_version" translatable="false">
         application_details_version
+    </string>
+
+    <!-- Default apps Settings -->
+    <string name="pk_default_assist_and_voice" translatable="false">default_assist_and_voice
     </string>
 
     <!-- DateTime Settings -->
