@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Copyright 2019 The Android Open Source Project
+<!-- Copyright (C) 2019 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,17 +13,19 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/trusted_device">
-    <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_trusted_device_list"
-        settings:controller="com.android.car.settings.security.TrustedDeviceListPreferenceController"/>
+                  android:title="@string/add_device_title">
     <Preference
-        android:fragment="com.android.car.settings.security.AddTrustedDeviceProgressFragment"
-        android:icon="@drawable/ic_add"
-        android:key="@string/pk_add_trusted_device"
-        android:title="@string/add_device_title"
-        settings:controller="com.android.car.settings.security.AddTrustedDevicePreferenceController"/>
+        android:key="@string/pk_add_device_instruction"
+        android:summary="@string/add_trusted_device_instruction"/>
+    <Preference
+        android:key="@string/pk_companion_app_download"
+        android:title="@string/trusted_device_download_app"/>
+    <Preference
+        android:key="@string/pk_car_ble_name"
+        settings:controller="com.android.car.settings.security.ChooseDeviceInstructionPreferenceController"/>
+    <Preference
+        android:key="@string/pk_trusted_device_safety_alert"
+        android:summary="@string/trusted_device_safety_alert"/>
 </PreferenceScreen>
