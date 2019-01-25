@@ -293,6 +293,8 @@
     <string name="app_list_preference_none">None</string>
     <!-- Label to show which application is chosen as the default application. [CHAR LIMIT=30] -->
     <string name="default_app_selected_app">Selected</string>
+    <!-- Warning message about security implications of setting an assistant, displayed as a dialog message when the user selects an assistant. [CHAR_LIMIT=NONE]  -->
+    <string name="assistant_security_warning">The assistant will be able to read information about apps in use on your system, including information visible on your screen or accessible within the apps.</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
