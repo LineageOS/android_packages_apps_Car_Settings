@@ -27,6 +27,7 @@ import android.content.SharedPreferences;
 import android.os.UserHandle;
 import android.preference.PreferenceManager;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
@@ -34,6 +35,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,8 +43,7 @@ import java.util.List;
 /**
  * Business logic of trusted device list page
  */
-public class TrustedDeviceListPreferenceController extends
-        PreferenceController<PreferenceGroup> {
+public class TrustedDeviceListPreferenceController extends PreferenceController<PreferenceGroup> {
     private static final Logger LOG = new Logger(TrustedDeviceListPreferenceController.class);
     private final SharedPreferences mPrefs;
     private final Car mCar;
@@ -67,6 +68,8 @@ public class TrustedDeviceListPreferenceController extends
                 @Override
                 public void onTrustRevoked(long handle, boolean success) {
                     if (success) {
+                        ThreadUtils.postOnMainThread(
+                                () -> mPrefs.edit().remove(String.valueOf(handle)).commit());
                         refreshUi();
                     }
                 }
@@ -75,6 +78,18 @@ public class TrustedDeviceListPreferenceController extends
                 public void onEscrowTokenActiveStateChanged(long handle, boolean active) {
                     if (active) {
                         refreshUi();
+                    }
+                }
+            };
+
+    @VisibleForTesting
+    final ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener mConfirmRemoveDeviceListener =
+            new ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener() {
+                public void onConfirmRemoveDevice(long handle) {
+                    try {
+                        mCarTrustAgentEnrollmentManager.revokeTrust(handle);
+                    } catch (CarNotConnectedException e) {
+                        LOG.e(e.getMessage(), e);
                     }
                 }
             };
@@ -88,7 +103,7 @@ public class TrustedDeviceListPreferenceController extends
             mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
                     Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
         } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
+            LOG.e("failed to get car manager", e);
         }
     }
 
@@ -122,7 +137,7 @@ public class TrustedDeviceListPreferenceController extends
         try {
             mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
         } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
+            LOG.e("failed to set enrollment callback", e);
         }
     }
 
@@ -131,7 +146,7 @@ public class TrustedDeviceListPreferenceController extends
         try {
             mCarTrustAgentEnrollmentManager.setEnrollmentCallback(null);
         } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
+            LOG.e("failed to reset enrollment callback", e);
         }
     }
 
@@ -142,8 +157,7 @@ public class TrustedDeviceListPreferenceController extends
      * @param trustedDeviceList updated preference list
      * @return {@code true} when two lists are the same
      */
-    private boolean isEqual(PreferenceGroup preferenceGroup,
-            List<Preference> trustedDeviceList) {
+    private boolean isEqual(PreferenceGroup preferenceGroup, List<Preference> trustedDeviceList) {
         if (preferenceGroup.getPreferenceCount() != trustedDeviceList.size()) {
             return false;
         }
@@ -167,8 +181,7 @@ public class TrustedDeviceListPreferenceController extends
         for (Integer handle : handles) {
             String res = mPrefs.getString(String.valueOf(handle), null);
             if (res != null) {
-                trustedDevicesList.add(
-                        createTrustedDevicePreference(res, String.valueOf(handle)));
+                trustedDevicesList.add(createTrustedDevicePreference(res, handle));
             } else {
                 LOG.e("Can not find device name for handle: " + handle);
             }
@@ -176,11 +189,18 @@ public class TrustedDeviceListPreferenceController extends
         return trustedDevicesList;
     }
 
-    private Preference createTrustedDevicePreference(String deviceName, String deviceId) {
+    private Preference createTrustedDevicePreference(String deviceName, long deviceId) {
         Preference preference = new Preference(getContext());
         preference.setIcon(R.drawable.ic_settings_bluetooth);
         preference.setTitle(deviceName);
-        preference.setKey(deviceId);
+        preference.setKey(String.valueOf(deviceId));
+        preference.setOnPreferenceClickListener((Preference pref) -> {
+            ConfirmRemoveDeviceDialog dialog = ConfirmRemoveDeviceDialog.newInstance(deviceName,
+                    deviceId);
+            dialog.setConfirmRemoveDeviceListener(mConfirmRemoveDeviceListener);
+            getFragmentController().showDialog(dialog, ConfirmRemoveDeviceDialog.TAG);
+            return true;
+        });
         return preference;
     }
 }

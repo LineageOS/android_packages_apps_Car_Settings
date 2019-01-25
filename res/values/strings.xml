@@ -847,8 +847,14 @@
     <string name="trusted_device">Trusted devices</string>
     <!-- Subtitle of trusted device button in security page [CHAR LIMIT=30]-->
     <string name="trusted_device_subtitle">Device security</string>
+    <!-- Message in dialog which will remind the user what a trusted device can do. [CHAR LIMIT=NONE]-->
+    <string name="remove_device_message">Your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g>, they may be able to access this device</string>
     <!-- Confirm button label of confirm pairing code dialog [CHAR LIMIT=30]-->
     <string name="trusted_device_confirm_button">Confirm</string>
+    <!-- Confirm button label of confirm remove device dialog [CHAR LIMIT=40]-->
+    <string name="trusted_device_remove_button">Remove trusted device</string>
+    <!-- Cancel button label of confirm remove device dialog [CHAR LIMIT=20]-->
+    <string name="trusted_device_done_button">Done</string>
     <!-- Message shown on the add trusted device page [CHAR LIMIT=NONE]-->
     <string name="add_trusted_device_instruction">Use the companion app to set up a trusted device. Once set up, you will be able to unlock your user profile when your phone is detected by the vehicle</string>
     <!-- Step one of adding a trusted device [CHAR LIMIT=NONE]-->
