@@ -245,7 +245,13 @@
     <string name="alarm_ringtone_title">Default alarm sound</string>
 
     <!-- applications --><skip/>
-    <!-- Applications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of application settings-->
+    <!-- Apps and notifications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of apps and notifications settings [CHAR LIMIT=40] -->
+    <string name="apps_and_notifications_settings">Apps &amp; notifications</string>
+    <!-- Preference which opens application settings when clicked [CHAR LIMIT=40] -->
+    <string name="all_applications">Show all apps</string>
+    <!-- Default app settings title, which allows user to select defaults for certain application types. [CHAR LIMIT=40] -->
+    <string name="default_applications">Default apps</string>
+    <!-- Applications settings title. If clicked, the user is taken to a settings screen full of application settings. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
     <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
     <string name="disable_text">Disable</string>
