@@ -17,13 +17,18 @@ package com.android.car.settings.testutils;
 
 import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
+import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /** Shadow of ApplicationPackageManager that allows the getting of content providers per user. */
 @Implements(value = ApplicationPackageManager.class)
@@ -46,5 +51,11 @@ public class ShadowApplicationPackageManager extends
     public int getPackageUidAsUser(String packageName, int flags, int userId)
             throws PackageManager.NameNotFoundException {
         return 0;
+    }
+
+    @Implementation
+    public List<ResolveInfo> queryIntentActivitiesAsUser(Intent intent,
+            @PackageManager.ResolveInfoFlags int flags, @UserIdInt int userId) {
+        return new ArrayList<ResolveInfo>();
     }
 }
