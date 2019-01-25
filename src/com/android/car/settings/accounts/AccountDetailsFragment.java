@@ -105,6 +105,8 @@ public class AccountDetailsFragment extends SettingsFragment implements
 
         use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
                 .setAccount(mAccount);
+        use(AccountDetailsSettingController.class, R.string.pk_account_settings)
+                .setAccount(mAccount);
         use(AccountSyncPreferenceController.class, R.string.pk_account_sync)
                 .setUserHandle(mUserInfo.getUserHandle());
     }
