@@ -251,7 +251,7 @@
     <string name="all_applications">Show all apps</string>
     <!-- Default app settings title, which allows user to select defaults for certain application types. [CHAR LIMIT=40] -->
     <string name="default_applications">Default apps</string>
-    <!-- Applications settings title. If clicked, the user is taken to a settings screen full of application settings. [CHAR LIMIT=40] -->
+    <!-- Applications settings title. If clicked, the user is taken to the list of installed applications. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
     <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
     <string name="disable_text">Disable</string>
@@ -277,6 +277,8 @@
         <item quantity="one"><xliff:g example="1" id="count">%d</xliff:g> additional permission</item>
         <item quantity="other"><xliff:g example="10" id="count">%d</xliff:g> additional permissions</item>
     </plurals>
+    <!-- Assistant and voice input settings title. This setting allows users to select the default assistant for the device. [CHAR LIMIT=40] -->
+    <string name="assist_and_voice_input_settings">Assist &amp; voice input</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
