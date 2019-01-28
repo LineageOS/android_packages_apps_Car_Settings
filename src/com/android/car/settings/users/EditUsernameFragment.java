@@ -25,6 +25,7 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.StringRes;
@@ -33,15 +34,13 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settingslib.util.SettingsConstants;
 
-import com.google.android.material.textfield.TextInputEditText;
-
 /**
  * Enables user to edit their username.
  */
 public class EditUsernameFragment extends BaseFragment {
     private UserInfo mUserInfo;
 
-    private TextInputEditText mUserNameEditText;
+    private EditText mUserNameEditText;
     private Button mOkButton;
     private Button mCancelButton;
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -84,7 +83,7 @@ public class EditUsernameFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        mUserNameEditText = (TextInputEditText) view.findViewById(R.id.user_name_text_edit);
+        mUserNameEditText = view.findViewById(R.id.user_name_text_edit);
     }
 
     @Override
@@ -129,7 +128,7 @@ public class EditUsernameFragment extends BaseFragment {
 
     private void showOkButton() {
         // Configure OK button.
-        mOkButton = (Button) getActivity().findViewById(R.id.action_button2);
+        mOkButton = getActivity().findViewById(R.id.action_button2);
         mOkButton.setVisibility(View.VISIBLE);
         mOkButton.setText(android.R.string.ok);
         mOkButton.setOnClickListener(view -> {
@@ -143,7 +142,7 @@ public class EditUsernameFragment extends BaseFragment {
 
     private void showCancelButton() {
         // Configure Cancel button.
-        mCancelButton = (Button) getActivity().findViewById(R.id.action_button1);
+        mCancelButton = getActivity().findViewById(R.id.action_button1);
         mCancelButton.setVisibility(View.VISIBLE);
         mCancelButton.setText(android.R.string.cancel);
         mCancelButton.setOnClickListener(view -> {
