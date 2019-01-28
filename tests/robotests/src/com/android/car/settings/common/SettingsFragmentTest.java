@@ -27,10 +27,12 @@ import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertThrows;
 
 import android.car.drivingstate.CarUxRestrictions;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 
 import androidx.fragment.app.DialogFragment;
+import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -39,6 +41,7 @@ import com.android.car.settings.testutils.FragmentController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RuntimeEnvironment;
 
 /** Unit test for {@link SettingsFragment}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -46,11 +49,13 @@ public class SettingsFragmentTest {
 
     private static final String TEST_TAG = "test_tag";
 
+    private Context mContext;
     private FragmentController<TestSettingsFragment> mFragmentController;
     private SettingsFragment mFragment;
 
     @Before
     public void setUp() {
+        mContext = RuntimeEnvironment.application;
         mFragmentController = FragmentController.of(new TestSettingsFragment());
         mFragment = mFragmentController.get();
     }
@@ -81,6 +86,59 @@ public class SettingsFragmentTest {
                 CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD, /* timestamp= */ 0).build();
         mFragment.onUxRestrictionsChanged(uxRestrictions);
         assertThat(controller.getUxRestrictions()).isEqualTo(uxRestrictions);
+    }
+
+    @Test
+    public void onDisplayPreferenceDialog_editTextPreference_showsDialog() {
+        mFragmentController.setup();
+
+        mFragment.getPreferenceScreen().findPreference(
+                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
+
+        assertThat(mFragment.getFragmentManager().findFragmentByTag(
+                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
+                SettingsEditTextPreferenceDialogFragment.class);
+    }
+
+    @Test
+    public void onDisplayPreferenceDialog_listPreference_showsDialog() {
+        mFragmentController.setup();
+
+        mFragment.getPreferenceScreen().findPreference(
+                mContext.getString(R.string.tpk_list_preference)).performClick();
+
+        assertThat(mFragment.getFragmentManager().findFragmentByTag(
+                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
+                SettingsListPreferenceDialogFragment.class);
+    }
+
+    @Test
+    public void onDisplayPreferenceDialog_unknownPreferenceType_throwsIllegalArgumentException() {
+        mFragmentController.setup();
+
+        assertThrows(IllegalArgumentException.class,
+                () -> mFragment.onDisplayPreferenceDialog(new Preference(mContext)));
+    }
+
+    @Test
+    public void onDisplayPreferenceDialog_alreadyShowing_doesNothing() {
+        mFragmentController.setup();
+
+        // Show a dialog.
+        mFragment.getPreferenceScreen().findPreference(
+                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
+        assertThat(mFragment.getFragmentManager().findFragmentByTag(
+                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
+                SettingsEditTextPreferenceDialogFragment.class);
+
+        // Attempt to show another.
+        mFragment.getPreferenceScreen().findPreference(
+                mContext.getString(R.string.tpk_list_preference)).performClick();
+
+        // Assert only one shown at a time.
+        assertThat(mFragment.getFragmentManager().findFragmentByTag(
+                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
+                SettingsEditTextPreferenceDialogFragment.class);
     }
 
     @Test
