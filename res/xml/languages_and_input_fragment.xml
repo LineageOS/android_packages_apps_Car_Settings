@@ -24,9 +24,15 @@
         android:title="@string/language_settings"
         settings:controller="com.android.car.settings.language.LanguageSettingsEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.inputmethod.KeyboardFragment"
+        android:key="@string/pk_keyboard_entry"
+        android:title="@string/keyboard_settings"
+        settings:controller="com.android.car.settings.inputmethod.KeyboardPreferenceController"
+        settings:iconSpaceReserved="true"/>
+    <Preference
         android:fragment="com.android.car.settings.tts.TextToSpeechOutputFragment"
-        android:title="@string/text_to_speech_settings"
         android:key="@string/pk_tts_settings_entry"
-        settings:iconSpaceReserved="true"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        android:title="@string/text_to_speech_settings"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
+        settings:iconSpaceReserved="true"/>
 </PreferenceScreen>
