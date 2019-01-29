@@ -17,30 +17,20 @@
 
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingEnd="@dimen/edit_username_padding_end"
-    android:paddingStart="@dimen/edit_username_padding_start">
+    android:paddingStart="@dimen/edit_username_padding_start"
+    android:paddingTop="@dimen/edit_username_text_padding_top">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/user_name"
+    <EditText
+        android:id="@+id/user_name_text_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
         android:hint="@string/user_name_label"
-        android:paddingEnd="@dimen/edit_username_text_padding_end"
-        android:paddingStart="@dimen/edit_username_text_padding_start"
-        android:paddingTop="@dimen/edit_username_text_padding_top"
-        app:hintTextAppearance="@style/TextAppearance.Car.Hint">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/user_name_text_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:imeOptions="actionDone|flagNoExtractUi"
-            android:inputType="text"
-            android:maxLines="1"
-            android:textAppearance="?android:attr/textAppearanceLarge"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 </FrameLayout>

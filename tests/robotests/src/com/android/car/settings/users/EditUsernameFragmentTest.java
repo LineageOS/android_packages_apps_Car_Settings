@@ -25,13 +25,12 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-
-import com.google.android.material.textfield.TextInputEditText;
 
 import org.junit.After;
 import org.junit.Before;
@@ -46,7 +45,7 @@ import org.robolectric.annotation.Config;
  * Tests for EditUsernameFragment.
  */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class })
+@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class EditUsernameFragmentTest {
     private BaseTestActivity mTestActivity;
 
@@ -76,8 +75,7 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(/* id= */ 10, testUserName, /* flags= */ 0);
         createEditUsernameFragment(testUser);
 
-        TextInputEditText userNameEditText =
-                (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
         assertThat(userNameEditText.getText().toString()).isEqualTo(testUserName);
     }
 
@@ -88,8 +86,7 @@ public class EditUsernameFragmentTest {
     public void testClickingOkSavesNewUserName() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        TextInputEditText userNameEditText =
-                (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
         Button okButton = (Button) mTestActivity.findViewById(R.id.action_button2);
 
         String newUserName = "new_user_name";
@@ -109,8 +106,7 @@ public class EditUsernameFragmentTest {
         int userId = 10;
         UserInfo testUser = new UserInfo(userId, /* name= */ "test_user", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        TextInputEditText userNameEditText =
-                (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
         Button cancelButton = (Button) mTestActivity.findViewById(R.id.action_button1);
 
         String newUserName = "new_user_name";
@@ -131,8 +127,7 @@ public class EditUsernameFragmentTest {
     public void testEmptyUsernameCannotBeSaved() {
         UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
-        TextInputEditText userNameEditText =
-                (TextInputEditText) mTestActivity.findViewById(R.id.user_name_text_edit);
+        EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
         Button okButton = (Button) mTestActivity.findViewById(R.id.action_button2);
 
         userNameEditText.requestFocus();
