@@ -19,6 +19,6 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/manage_keyboard">
     <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_available_keyboards"
+        android:key="@string/pk_keyboard_management"
         settings:controller="com.android.car.settings.inputmethod.KeyboardManagementPreferenceController"/>
 </PreferenceScreen>
