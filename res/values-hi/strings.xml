@@ -77,11 +77,11 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"गेटवे"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"वाई-फ़ाई से जुड़ी पसंद"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"वाई-फ़ाई अपने आप चालू करें"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"वाई-फ़ाई, सेव किए गए अच्छी क्वालिटी के नेटवर्क पास होने पर अपने आप चालू हो जाएगा, जैसे कि आपके घर का नेटवर्क"</string>
-    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"\'जगह की जानकारी\' बंद होने से यह सुविधा उपलब्ध नहीं है. "<annotation id="link">"जगह की जानकारी"</annotation>" चालू करेें."</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"सेव किए गए अच्छी क्वालिटी के नेटवर्क पास होने पर वाई-फ़ाई अपने आप चालू हो जाएगा, जैसे कि आपके घर का नेटवर्क"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"\'जगह की जानकारी\' बंद होने से यह सुविधा उपलब्ध नहीं है. "<annotation id="link">"जगह की जानकारी"</annotation>" चालू करें."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाई-फ़ाई नेटवर्क ढूंंढने की सुविधा चालू करें?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"चालू करें"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाई-फ़ाई स्कैन करने की सुविधा चालू हो गई है"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाई-फ़ाई नेटवर्क ढूंढने की सुविधा चालू हो गई है"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटा पर अपने आप जाएं"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"जब वाई-फ़ाई के ज़रिए इंटरनेट की सुविधा न हो, तो मोबाइल डेटा इस्तेमाल करें. डेटा के लिए पैसे चुकाने पड़ सकते हैं."</string>
     <string name="learn_more" msgid="8214605928933358604">"ज़्यादा जानें"</string>
@@ -116,9 +116,19 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> से जोड़ने के लिए टैप करें."</string>
     <string name="language_settings" msgid="2079258598337245546">"भाषाएं"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"भाषाएं और इनपुट"</string>
+    <!-- no translation found for keyboard_settings (1959697870618278081) -->
+    <skip />
+    <!-- no translation found for manage_keyboard (4045394766282200132) -->
+    <skip />
     <string name="text_to_speech_settings" msgid="811985746199507343">"\'लिख को बोली में बदलना\' आउटपुट"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"पसंदीदा इंजन"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"मौजूदा इंजन"</string>
+    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
+    <skip />
+    <!-- no translation found for tts_pitch (2389171233852604923) -->
+    <skip />
+    <!-- no translation found for tts_reset (6289481549801844709) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"आवाज़"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"घंटी बजने की आवाज़"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"नेविगेशन की आवाज़"</string>
@@ -130,6 +140,12 @@
     <string name="ringtone_title" msgid="8370531086214517972">"फ़ोन की रिंगटोन"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"सूचना की डिफ़ॉल्ट आवाज़"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"अलार्म की डिफ़ॉल्ट आवाज़"</string>
+    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
+    <skip />
+    <!-- no translation found for all_applications (7798210477486822168) -->
+    <skip />
+    <!-- no translation found for default_applications (1558183275638697087) -->
+    <skip />
     <string name="applications_settings" msgid="794261395191035632">"ऐप्लिकेशन की जानकारी"</string>
     <string name="disable_text" msgid="4358165448648990820">"बंद करें"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करें"</string>
@@ -145,6 +161,8 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
     </plurals>
+    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>

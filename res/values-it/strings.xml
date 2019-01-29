@@ -77,7 +77,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Gateway"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Preferenze Wi‑Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Attiva Wi‑Fi automaticamente"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"La connessione Wi-Fi si riattiverà vicino a reti salvate di alta qualità, ad esempio la connessione di casa"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"La connessione Wi-Fi si riattiverà vicino a reti salvate di alta qualità, ad esempio la rete di casa"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Non disponibile perché geolocalizzazione non attiva. "<annotation id="link">"Attiva"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vuoi attivare la ricerca di reti Wi-Fi?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Attiva"</string>
@@ -116,9 +116,19 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tocca per l\'accoppiamento con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="language_settings" msgid="2079258598337245546">"Lingue"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Lingue e immissione"</string>
+    <!-- no translation found for keyboard_settings (1959697870618278081) -->
+    <skip />
+    <!-- no translation found for manage_keyboard (4045394766282200132) -->
+    <skip />
     <string name="text_to_speech_settings" msgid="811985746199507343">"Output sintesi vocale"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motore preferito"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motore attuale"</string>
+    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
+    <skip />
+    <!-- no translation found for tts_pitch (2389171233852604923) -->
+    <skip />
+    <!-- no translation found for tts_reset (6289481549801844709) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Audio"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume suoneria"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume per la navigazione"</string>
@@ -130,6 +140,12 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Suoneria telefono"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Suono di notifica predefinito"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Suono sveglia predefinito"</string>
+    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
+    <skip />
+    <!-- no translation found for all_applications (7798210477486822168) -->
+    <skip />
+    <!-- no translation found for default_applications (1558183275638697087) -->
+    <skip />
     <string name="applications_settings" msgid="794261395191035632">"Informazioni sull\'app"</string>
     <string name="disable_text" msgid="4358165448648990820">"Disattiva"</string>
     <string name="enable_text" msgid="1794971777861881238">"Attiva"</string>
@@ -145,6 +161,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> autorizzazioni aggiuntive</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> autorizzazione aggiuntiva</item>
     </plurals>
+    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Luogo"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Richieste di posizione recenti"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nessuna richiesta di posizione recente"</string>

@@ -118,9 +118,19 @@
     <string name="language_settings" msgid="2079258598337245546">"语言"</string>
     <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
     <skip />
+    <!-- no translation found for keyboard_settings (1959697870618278081) -->
+    <skip />
+    <!-- no translation found for manage_keyboard (4045394766282200132) -->
+    <skip />
     <string name="text_to_speech_settings" msgid="811985746199507343">"文字转语音 (TTS) 输出"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"首选引擎"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"当前引擎"</string>
+    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
+    <skip />
+    <!-- no translation found for tts_pitch (2389171233852604923) -->
+    <skip />
+    <!-- no translation found for tts_reset (6289481549801844709) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"提示音"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"铃声音量"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"导航音量"</string>
@@ -132,6 +142,12 @@
     <string name="ringtone_title" msgid="8370531086214517972">"手机铃声"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"默认通知提示音"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"默认闹钟提示音"</string>
+    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
+    <skip />
+    <!-- no translation found for all_applications (7798210477486822168) -->
+    <skip />
+    <!-- no translation found for default_applications (1558183275638697087) -->
+    <skip />
     <string name="applications_settings" msgid="794261395191035632">"应用信息"</string>
     <string name="disable_text" msgid="4358165448648990820">"停用"</string>
     <string name="enable_text" msgid="1794971777861881238">"启用"</string>
@@ -147,6 +163,8 @@
       <item quantity="other">另外 <xliff:g id="COUNT_1">%d</xliff:g> 项权限</item>
       <item quantity="one">另外 <xliff:g id="COUNT_0">%d</xliff:g> 项权限</item>
     </plurals>
+    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>

@@ -51,7 +51,7 @@
     <string name="wifi_security" msgid="158358046038876532">"Segurtasuna"</string>
     <string name="wifi_signal_strength" msgid="8507318230553042817">"Seinalearen indarra"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Egoera"</string>
-    <string name="wifi_speed" msgid="1650692446731850781">"Esteken abiadura"</string>
+    <string name="wifi_speed" msgid="1650692446731850781">"Lotura-abiadura"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Maiztasuna"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP helbidea"</string>
     <string name="show_password" msgid="2074628020371139240">"Erakutsi pasahitza"</string>
@@ -116,9 +116,19 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Sakatu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatzeko."</string>
     <string name="language_settings" msgid="2079258598337245546">"Hizkuntzak"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Hizkuntzak eta idazketa"</string>
+    <!-- no translation found for keyboard_settings (1959697870618278081) -->
+    <skip />
+    <!-- no translation found for manage_keyboard (4045394766282200132) -->
+    <skip />
     <string name="text_to_speech_settings" msgid="811985746199507343">"Testua ahots bihurtzeko eginbidearen emaitza"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor hobetsia"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Uneko motorra"</string>
+    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
+    <skip />
+    <!-- no translation found for tts_pitch (2389171233852604923) -->
+    <skip />
+    <!-- no translation found for tts_reset (6289481549801844709) -->
+    <skip />
     <string name="sound_settings" msgid="3072423952331872246">"Soinua"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Tonuaren bolumena"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Nabigazio-bolumena"</string>
@@ -130,6 +140,12 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Telefonoaren tonua"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Jakinarazpenen soinu lehenetsia"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Alarmen soinu lehenetsia"</string>
+    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
+    <skip />
+    <!-- no translation found for all_applications (7798210477486822168) -->
+    <skip />
+    <!-- no translation found for default_applications (1558183275638697087) -->
+    <skip />
     <string name="applications_settings" msgid="794261395191035632">"Aplikazioaren informazioa"</string>
     <string name="disable_text" msgid="4358165448648990820">"Desgaitu"</string>
     <string name="enable_text" msgid="1794971777861881238">"Gaitu"</string>
@@ -145,6 +161,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> baimen gehigarri</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> baimen gehigarri</item>
     </plurals>
+    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Kokapena"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Azken kokapen-eskaerak"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ez da egin kokapen-eskaerarik azkenaldian"</string>
