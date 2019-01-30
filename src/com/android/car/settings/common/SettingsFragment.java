@@ -33,10 +33,14 @@ import android.widget.Toast;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
+import androidx.preference.EditTextPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
@@ -61,6 +65,10 @@ import java.util.Map;
  */
 public abstract class SettingsFragment extends PreferenceFragmentCompat implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
+
+    @VisibleForTesting
+    static final String DIALOG_FRAGMENT_TAG =
+            "com.android.car.settings.common.SettingsFragment.DIALOG";
 
     private static final int MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS = 0xff - 1;
 
@@ -207,6 +215,35 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
                 controller.onUxRestrictionsChanged(uxRestrictions);
             }
         }
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * <p>Settings needs to launch custom dialog types in order to extend the Device Default theme.
+     *
+     * @param preference The Preference object requesting the dialog.
+     */
+    @Override
+    public void onDisplayPreferenceDialog(Preference preference) {
+        // check if dialog is already showing
+        if (findDialogByTag(DIALOG_FRAGMENT_TAG) != null) {
+            return;
+        }
+
+        DialogFragment dialogFragment;
+        if (preference instanceof EditTextPreference) {
+            dialogFragment = SettingsEditTextPreferenceDialogFragment.newInstance(
+                    preference.getKey());
+        } else if (preference instanceof ListPreference) {
+            dialogFragment = SettingsListPreferenceDialogFragment.newInstance(preference.getKey());
+        } else {
+            throw new IllegalArgumentException(
+                    "Tried to display dialog for unknown preference type. Did you forget to "
+                            + "override onDisplayPreferenceDialog()?");
+        }
+        dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
+        showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
     }
 
     @Override
