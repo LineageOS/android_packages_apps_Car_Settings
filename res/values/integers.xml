@@ -47,4 +47,7 @@
 
     <!-- Weight of the illustration logo/video in the illustration_layout -->
     <integer name="suw_illustration_weight">5</integer>
+
+    <!-- Maximum size in pixels of default app icons -->
+    <integer name="default_app_safe_icon_size">500</integer>
 </resources>
