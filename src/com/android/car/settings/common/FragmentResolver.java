@@ -15,6 +15,7 @@
  */
 package com.android.car.settings.common;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
@@ -22,6 +23,7 @@ import android.provider.Settings;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.car.settings.R;
 import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
@@ -52,7 +54,7 @@ public class FragmentResolver {
      * {@link Fragment} that can handle this {@link Intent} can be found.
      */
     @Nullable
-    static Fragment getFragmentForIntent(@Nullable Intent intent) {
+    static Fragment getFragmentForIntent(Context context, @Nullable Intent intent) {
         if (intent == null) {
             return null;
         }
@@ -110,7 +112,8 @@ public class FragmentResolver {
                 return new AboutSettingsFragment();
 
             default:
-                return null;
+                return Fragment.instantiate(context,
+                    context.getString(R.string.config_settings_hierarchy_root_fragment));
         }
     }
 }
