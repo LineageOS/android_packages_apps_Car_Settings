@@ -22,4 +22,10 @@
     <Preference
         android:key="@string/tpk_fake_controller"
         settings:controller="com.android.car.settings.common.FakePreferenceController"/>
+    <EditTextPreference
+        android:key="@string/tpk_edit_text_preference"/>
+    <ListPreference
+        android:entries="@array/entries"
+        android:entryValues="@array/entry_values"
+        android:key="@string/tpk_list_preference"/>
 </PreferenceScreen>
