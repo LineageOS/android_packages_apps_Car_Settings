@@ -23,8 +23,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.net.Network;
-import android.net.NetworkCapabilities;
 import android.os.UserManager;
 import android.provider.Settings;
 import android.telephony.PhoneStateListener;
@@ -84,7 +82,7 @@ public class MobileNetworkEntryPreferenceController extends PreferenceController
 
     @Override
     protected int getAvailabilityStatus() {
-        if (!hasMobileNetwork()) {
+        if (!NetworkUtils.hasMobileNetwork(mConnectivityManager)) {
             return UNSUPPORTED_ON_DEVICE;
         }
 
@@ -106,16 +104,5 @@ public class MobileNetworkEntryPreferenceController extends PreferenceController
     private boolean isAirplaneModeOff() {
         return Settings.Global.getInt(getContext().getContentResolver(),
                 Settings.Global.AIRPLANE_MODE_ON, 0) == 0;
-    }
-
-    private boolean hasMobileNetwork() {
-        Network[] networks = mConnectivityManager.getAllNetworks();
-        for (Network network : networks) {
-            NetworkCapabilities capabilities = mConnectivityManager.getNetworkCapabilities(network);
-            if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
-                return true;
-            }
-        }
-        return false;
     }
 }

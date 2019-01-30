@@ -18,8 +18,10 @@ package com.android.car.settings.testutils;
 
 import static android.telephony.SubscriptionManager.INVALID_SUBSCRIPTION_ID;
 
+import android.annotation.NonNull;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
+import android.telephony.SubscriptionPlan;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -35,6 +37,7 @@ public class ShadowSubscriptionManager {
     private static int sDefaultSubscriptionId = INVALID_SUBSCRIPTION_ID;
 
     private List<SubscriptionInfo> mSubscriptionInfoList;
+    private List<SubscriptionPlan> mSubscriptionPlanList;
 
     @Implementation
     public List<SubscriptionInfo> getActiveSubscriptionInfoList() {
@@ -43,6 +46,15 @@ public class ShadowSubscriptionManager {
 
     public void setActiveSubscriptionInfoList(List<SubscriptionInfo> subscriptionInfoList) {
         mSubscriptionInfoList = subscriptionInfoList;
+    }
+
+    @Implementation
+    protected @NonNull List<SubscriptionPlan> getSubscriptionPlans(int subId) {
+        return mSubscriptionPlanList;
+    }
+
+    public void setSubscriptionPlans(List<SubscriptionPlan> subscriptionPlanList) {
+        mSubscriptionPlanList = subscriptionPlanList;
     }
 
     @Implementation
@@ -80,7 +92,7 @@ public class ShadowSubscriptionManager {
         return sDefaultSubscriptionId;
     }
 
-    public static void setDefaultSubId(int subId) {
+    public static void setDefaultSubscriptionId(int subId) {
         sDefaultSubscriptionId = subId;
     }
 

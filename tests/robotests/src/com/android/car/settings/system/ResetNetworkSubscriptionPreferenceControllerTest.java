@@ -204,7 +204,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         mController.refreshUi();
 
         assertThat(mListPreference.getValue()).isEqualTo(String.valueOf(SUBID_4));
@@ -216,7 +216,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
         mController.refreshUi();
 
@@ -229,7 +229,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
         ShadowSubscriptionManager.setDefaultVoiceSubId(SUBID_2);
         mController.refreshUi();
@@ -243,7 +243,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
                 Arrays.asList(createSubInfo(SUBID_1, "sub1"), createSubInfo(SUBID_2, "sub2"),
                         createSubInfo(SUBID_3, "sub3"), createSubInfo(SUBID_4, "sub4")));
 
-        ShadowSubscriptionManager.setDefaultSubId(SUBID_4);
+        ShadowSubscriptionManager.setDefaultSubscriptionId(SUBID_4);
         ShadowSubscriptionManager.setDefaultSmsSubId(SUBID_3);
         ShadowSubscriptionManager.setDefaultVoiceSubId(SUBID_2);
         ShadowSubscriptionManager.setDefaultDataSubId(SUBID_1);
