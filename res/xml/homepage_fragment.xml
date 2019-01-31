@@ -81,7 +81,7 @@
         android:key="@string/pk_accounts_settings_entry"
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
-   <Preference
+    <Preference
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_security_settings_entry"
         android:title="@string/security_settings_title"
