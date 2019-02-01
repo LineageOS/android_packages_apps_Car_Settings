@@ -24,12 +24,13 @@
         android:title="@string/language_settings"
         settings:controller="com.android.car.settings.language.LanguageSettingsEntryPreferenceController"/>
     <com.android.car.settings.common.ButtonPreference
+        android:fragment="com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment"
         android:key="@string/pk_autofill_picker_entry"
         android:summary="@string/app_list_preference_none"
         android:title="@string/autofill_settings_title"
         android:widgetLayout="@layout/details_preference_widget"
-        settings:iconSpaceReserved="true"
-        settings:controller="com.android.car.settings.applications.defaultapps.AutofillPickerEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.applications.defaultapps.DefaultAutofillPickerEntryPreferenceController"
+        settings:iconSpaceReserved="true"/>
     <Preference
         android:fragment="com.android.car.settings.inputmethod.KeyboardFragment"
         android:key="@string/pk_keyboard_entry"
