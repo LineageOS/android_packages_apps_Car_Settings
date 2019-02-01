@@ -39,14 +39,15 @@ import com.android.settingslib.wrapper.PackageManagerWrapper;
 import java.util.List;
 
 /** Business logic for displaying the currently selected autofill app. */
-public class AutofillPickerEntryPreferenceController extends
+public class DefaultAutofillPickerEntryPreferenceController extends
         DefaultAppsPickerEntryBasePreferenceController {
 
-    private static final Logger LOG = new Logger(AutofillPickerEntryPreferenceController.class);
+    private static final Logger LOG = new Logger(
+            DefaultAutofillPickerEntryPreferenceController.class);
     private final AutofillManager mAutofillManager;
     private final PackageManagerWrapper mPm;
 
-    public AutofillPickerEntryPreferenceController(Context context, String preferenceKey,
+    public DefaultAutofillPickerEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mAutofillManager = context.getSystemService(AutofillManager.class);
