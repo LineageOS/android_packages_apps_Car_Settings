@@ -44,6 +44,7 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
 
     private static final Logger LOG = new Logger(DefaultAppsPickerBasePreferenceController.class);
     private static final String DIALOG_KEY_ARG = "key_arg";
+    protected static final String NONE_PREFERENCE_KEY = "";
 
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final Map<String, DefaultAppInfo> mDefaultAppInfoMap = new HashMap<>();
@@ -99,8 +100,7 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
             Preference preference = preferenceGroup.getPreference(i);
             String newPreferenceSummary = TextUtils.equals(preference.getKey(),
                     getCurrentDefaultKey()) ? getContext().getString(
-                    R.string.default_app_selected_app)
-                    : "";
+                    R.string.default_app_selected_app) : "";
             preference.setSummary(newPreferenceSummary);
         }
     }
@@ -168,7 +168,7 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
 
     private Preference createNonePreference() {
         Preference nonePreference = new Preference(getContext());
-        nonePreference.setKey("");
+        nonePreference.setKey(NONE_PREFERENCE_KEY);
         nonePreference.setTitle(R.string.app_list_preference_none);
         nonePreference.setOnPreferenceClickListener(this);
         nonePreference.setIcon(R.drawable.ic_remove_circle);
