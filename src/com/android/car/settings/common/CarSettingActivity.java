@@ -85,7 +85,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     protected void onResume() {
         super.onResume();
         if (mHasNewIntent) {
-            Fragment fragment = FragmentResolver.getFragmentForIntent(getIntent());
+            Fragment fragment = FragmentResolver.getFragmentForIntent(/* context= */ this,
+                    getIntent());
             launchIfDifferent(fragment);
             mHasNewIntent = false;
         }
@@ -114,6 +115,14 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
             throw new IllegalArgumentException(
                     "cannot launch dialogs with launchFragment() - use showDialog() instead");
         }
+
+        if (fragment.getClass().getName().equals(
+                getString(R.string.config_settings_hierarchy_root_fragment))
+                && getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStackImmediate(null,
+                    getSupportFragmentManager().POP_BACK_STACK_INCLUSIVE);
+        }
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
