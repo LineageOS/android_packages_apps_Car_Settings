@@ -63,6 +63,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     private PreferenceGroup mPreferenceGroup;
     private SharedPreferences mPrefs;
     private TrustedDeviceListPreferenceController mController;
+    private CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback mEnrollmentCallBack;
 
     @Before
     public void setUp() {
@@ -143,4 +144,5 @@ public class TrustedDeviceListPreferenceControllerTest {
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mPreferenceGroup.isVisible()).isTrue();
     }
+
 }
