@@ -25,8 +25,8 @@ import static org.mockito.Mockito.when;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.trust.CarTrustAgentEnrollmentManager;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -49,6 +49,7 @@ import java.util.Arrays;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCar.class})
 public class TrustedDeviceEntryPreferenceControllerTest {
+
     private Context mContext;
     private PreferenceControllerTestHelper<TrustedDeviceEntryPreferenceController>
             mPreferenceControllerHelper;
@@ -56,6 +57,7 @@ public class TrustedDeviceEntryPreferenceControllerTest {
     @Mock
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
     private TrustedDeviceEntryPreferenceController mController;
+    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
@@ -67,6 +69,7 @@ public class TrustedDeviceEntryPreferenceControllerTest {
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceEntryPreferenceController.class, mTrustedDevicePreference);
         mController = mPreferenceControllerHelper.getController();
+        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
@@ -80,7 +83,8 @@ public class TrustedDeviceEntryPreferenceControllerTest {
     @Test
     public void testUpdateState() throws CarNotConnectedException {
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                UserHandle.myUserId())).thenReturn(new ArrayList<>(Arrays.asList(1, 2)));
+                mCarUserManagerHelper.getCurrentProcessUserId()))
+                .thenReturn(new ArrayList<>(Arrays.asList(1, 2)));
         mController.refreshUi();
         assertThat(mTrustedDevicePreference.getSummary()).isEqualTo("2 devices");
     }

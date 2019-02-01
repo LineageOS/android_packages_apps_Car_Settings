@@ -17,15 +17,15 @@
 package com.android.car.settings.security;
 
 import android.annotation.Nullable;
+import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothDevice;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.trust.CarTrustAgentEnrollmentManager;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.UserHandle;
-import android.preference.PreferenceManager;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -35,6 +35,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.internal.widget.LockPatternUtils;
 import com.android.settingslib.utils.ThreadUtils;
 
 import java.util.ArrayList;
@@ -46,6 +47,8 @@ import java.util.List;
 public class TrustedDeviceListPreferenceController extends PreferenceController<PreferenceGroup> {
     private static final Logger LOG = new Logger(TrustedDeviceListPreferenceController.class);
     private final SharedPreferences mPrefs;
+    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final LockPatternUtils mLockPatternUtils;
     private final Car mCar;
     @Nullable
     private CarTrustAgentEnrollmentManager mCarTrustAgentEnrollmentManager;
@@ -97,7 +100,11 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     public TrustedDeviceListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mLockPatternUtils = new LockPatternUtils(context);
+        mPrefs = context.getSharedPreferences(
+                context.getString(R.string.trusted_device_preference_file_key),
+                Context.MODE_PRIVATE);
         mCar = Car.createCar(context);
         try {
             mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
@@ -122,6 +129,11 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
 
     @Override
     protected void updateState(PreferenceGroup preferenceGroup) {
+        if (!hasPassword()) {
+            preferenceGroup.removeAll();
+            preferenceGroup.addPreference(createAuthenticationReminderPreference());
+            return;
+        }
         List<Preference> updatedList = createTrustDevicePreferenceList();
         if (!isEqual(preferenceGroup, updatedList)) {
             preferenceGroup.removeAll();
@@ -130,6 +142,12 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
             }
         }
         preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
+    }
+
+    private boolean hasPassword() {
+        return mLockPatternUtils.getKeyguardStoredPasswordQuality(
+                mCarUserManagerHelper.getCurrentProcessUserId())
+                != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
     }
 
     @Override
@@ -174,7 +192,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
         List<Integer> handles = new ArrayList<>();
         try {
             handles = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                    UserHandle.myUserId());
+                    mCarUserManagerHelper.getCurrentProcessUserId());
         } catch (CarNotConnectedException e) {
             LOG.e(e.getMessage(), e);
         }
@@ -201,6 +219,12 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
             getFragmentController().showDialog(dialog, ConfirmRemoveDeviceDialog.TAG);
             return true;
         });
+        return preference;
+    }
+
+    private Preference createAuthenticationReminderPreference() {
+        Preference preference = new Preference(getContext());
+        preference.setSummary(R.string.trusted_device_set_authentication_reminder);
         return preference;
     }
 }
