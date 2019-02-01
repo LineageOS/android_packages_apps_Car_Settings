@@ -36,4 +36,12 @@
         android:key="@string/pk_data_usage_settings_entry"
         android:title="@string/data_usage_settings"
         settings:controller="com.android.car.settings.network.DataUsageEntryPreferenceController"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_network_and_internet_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.wireless"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>

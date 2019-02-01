@@ -28,4 +28,12 @@
         android:title="@string/account_auto_sync_title"
         android:summary="@string/account_auto_sync_summary"
         settings:controller="com.android.car.settings.accounts.AccountAutoSyncPreferenceController"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_accounts_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.accounts"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>

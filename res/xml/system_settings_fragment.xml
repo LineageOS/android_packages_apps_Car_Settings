@@ -65,4 +65,12 @@
         android:key="@string/pk_developer_options_entry"
         android:title="@string/developer_options_settings"
         settings:controller="com.android.car.settings.system.DeveloperOptionsEntryPreferenceController"/>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_system_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.system"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>
