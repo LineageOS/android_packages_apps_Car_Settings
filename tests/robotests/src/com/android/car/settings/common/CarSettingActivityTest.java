@@ -96,6 +96,25 @@ public class CarSettingActivityTest {
     }
 
     @Test
+    public void launchFragment_rootFragment_clearsBackStack() {
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Add fragment 2
+        TestFragment testFragment2 = new TestFragment();
+        mActivity.launchFragment(testFragment2);
+
+        // Add root fragment
+        Fragment root = Fragment.instantiate(mContext,
+                mContext.getString(R.string.config_settings_hierarchy_root_fragment));
+        mActivity.launchFragment(root);
+
+        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
+            .isEqualTo(1);
+    }
+
+    @Test
     public void onPreferenceStartFragment_launchesFragment() {
         Preference pref = new Preference(mContext);
         pref.setFragment(TestFragment.class.getName());
