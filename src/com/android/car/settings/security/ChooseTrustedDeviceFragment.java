@@ -24,6 +24,7 @@ import com.android.car.settings.common.SettingsFragment;
  * Fragment which contains trusted device list and add trusted device button.
  */
 public class ChooseTrustedDeviceFragment extends SettingsFragment {
+
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
