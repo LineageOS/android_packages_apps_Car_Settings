@@ -116,19 +116,14 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Toca para sincronizar con <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introdución de texto"</string>
-    <!-- no translation found for keyboard_settings (1959697870618278081) -->
-    <skip />
-    <!-- no translation found for manage_keyboard (4045394766282200132) -->
-    <skip />
+    <string name="keyboard_settings" msgid="1959697870618278081">"Teclado"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Xestionar teclados"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Saída da síntese de voz"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor actual"</string>
-    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
-    <skip />
-    <!-- no translation found for tts_pitch (2389171233852604923) -->
-    <skip />
-    <!-- no translation found for tts_reset (6289481549801844709) -->
-    <skip />
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Velocidade da fala"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"Ton"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"Restablecer"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Son"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume do timbre"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Volume de navegación"</string>
@@ -140,12 +135,9 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Ton de chamada do teléfono"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Son de notificación predeterm."</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Son de alarma predeterminado"</string>
-    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
-    <skip />
-    <!-- no translation found for all_applications (7798210477486822168) -->
-    <skip />
-    <!-- no translation found for default_applications (1558183275638697087) -->
-    <skip />
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplicacións e notificacións"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Mostrar todas as aplicacións"</string>
+    <string name="default_applications" msgid="1558183275638697087">"Aplicacións predeterminadas"</string>
     <string name="applications_settings" msgid="794261395191035632">"Información da aplicación"</string>
     <string name="disable_text" msgid="4358165448648990820">"Desactivar"</string>
     <string name="enable_text" msgid="1794971777861881238">"Activar"</string>
@@ -161,7 +153,12 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> permisos adicionais</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permiso adicional</item>
     </plurals>
-    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistente e entrada de voz"</string>
+    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <skip />
+    <string name="app_list_preference_none" msgid="7753357799926715901">"Ningunha aplicación"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"Aplicación seleccionada"</string>
+    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
@@ -417,6 +414,22 @@
     <string name="add_device_title" msgid="8452168024017866232">"Eng. dispositivo de confianza"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Disposit. confianza"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Seguran. dispositivo"</string>
+    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <skip />
+    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <skip />
+    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <skip />
+    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
+    <skip />
+    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
+    <skip />
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
+    <skip />
+    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
+    <skip />
+    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Borrar"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>

@@ -116,19 +116,14 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> உடன் இணைக்க, தட்டவும்."</string>
     <string name="language_settings" msgid="2079258598337245546">"மொழிகள்"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"மொழிகள் &amp; உள்ளீடு"</string>
-    <!-- no translation found for keyboard_settings (1959697870618278081) -->
-    <skip />
-    <!-- no translation found for manage_keyboard (4045394766282200132) -->
-    <skip />
+    <string name="keyboard_settings" msgid="1959697870618278081">"கீபோர்டு"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"கீபோர்டுகளை நிர்வகித்தல்"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"உரையிலிருந்து பேச்சுக்கு"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"இன்ஜின் விருப்பத்தேர்வு"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"தற்போதைய இன்ஜின்"</string>
-    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
-    <skip />
-    <!-- no translation found for tts_pitch (2389171233852604923) -->
-    <skip />
-    <!-- no translation found for tts_reset (6289481549801844709) -->
-    <skip />
+    <string name="tts_speech_rate" msgid="4512944877291943133">"பேச்சு வீதம்"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"குரல் அழுத்தம்"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"மீட்டமை"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ஒலி"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ரிங் ஒலியளவு"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"வழிசெலுத்தலுக்கான ஒலியளவு"</string>
@@ -140,12 +135,9 @@
     <string name="ringtone_title" msgid="8370531086214517972">"மொபைலுக்கான ரிங்டோன்"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"இயல்புநிலை அறிவிப்பிற்கான ஒலி"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"இயல்புநிலை அலாரத்திற்கான ஒலி"</string>
-    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
-    <skip />
-    <!-- no translation found for all_applications (7798210477486822168) -->
-    <skip />
-    <!-- no translation found for default_applications (1558183275638697087) -->
-    <skip />
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ஆப்ஸ் &amp; அறிவிப்புகள்"</string>
+    <string name="all_applications" msgid="7798210477486822168">"அனைத்து ஆப்ஸையும் காட்டு"</string>
+    <string name="default_applications" msgid="1558183275638697087">"இயல்புநிலை ஆப்ஸ்"</string>
     <string name="applications_settings" msgid="794261395191035632">"பயன்பாட்டுத் தகவல்"</string>
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
@@ -161,7 +153,14 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
     </plurals>
-    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"அசிஸ்டண்ட் &amp; குரல் உள்ளீடு"</string>
+    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <skip />
+    <!-- no translation found for app_list_preference_none (7753357799926715901) -->
+    <skip />
+    <!-- no translation found for default_app_selected_app (5289396663745484773) -->
+    <skip />
+    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
@@ -417,6 +416,22 @@
     <string name="add_device_title" msgid="8452168024017866232">"நம்பகமான சாதனத்தைச் சேர்"</string>
     <string name="trusted_device" msgid="5637378361866787603">"நம்பகமான சாதனங்கள்"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"சாதனப் பாதுகாப்பு"</string>
+    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <skip />
+    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <skip />
+    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <skip />
+    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
+    <skip />
+    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
+    <skip />
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
+    <skip />
+    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
+    <skip />
+    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"அகற்று"</string>
     <string name="connect" msgid="5861699594602380150">"இணை"</string>
     <string name="disconnect" msgid="6140789953324820336">"துண்டி"</string>

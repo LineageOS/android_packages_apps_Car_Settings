@@ -116,19 +116,14 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>에 페어링하려면 탭하세요."</string>
     <string name="language_settings" msgid="2079258598337245546">"언어"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"언어 및 입력"</string>
-    <!-- no translation found for keyboard_settings (1959697870618278081) -->
-    <skip />
-    <!-- no translation found for manage_keyboard (4045394766282200132) -->
-    <skip />
+    <string name="keyboard_settings" msgid="1959697870618278081">"키보드"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"키보드 관리"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"TTS(텍스트 음성 변환) 출력"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"기본 엔진"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"현재 엔진"</string>
-    <!-- no translation found for tts_speech_rate (4512944877291943133) -->
-    <skip />
-    <!-- no translation found for tts_pitch (2389171233852604923) -->
-    <skip />
-    <!-- no translation found for tts_reset (6289481549801844709) -->
-    <skip />
+    <string name="tts_speech_rate" msgid="4512944877291943133">"말하는 속도"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"높낮이"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"재설정"</string>
     <string name="sound_settings" msgid="3072423952331872246">"소리"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"벨소리 볼륨"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"내비게이션 볼륨"</string>
@@ -140,12 +135,9 @@
     <string name="ringtone_title" msgid="8370531086214517972">"전화 벨소리"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"기본 알림 소리"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"기본 알람 소리"</string>
-    <!-- no translation found for apps_and_notifications_settings (8704585874333781975) -->
-    <skip />
-    <!-- no translation found for all_applications (7798210477486822168) -->
-    <skip />
-    <!-- no translation found for default_applications (1558183275638697087) -->
-    <skip />
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"앱 및 알림"</string>
+    <string name="all_applications" msgid="7798210477486822168">"모든 앱 표시"</string>
+    <string name="default_applications" msgid="1558183275638697087">"기본 앱"</string>
     <string name="applications_settings" msgid="794261395191035632">"앱 정보"</string>
     <string name="disable_text" msgid="4358165448648990820">"사용 중지"</string>
     <string name="enable_text" msgid="1794971777861881238">"사용"</string>
@@ -161,7 +153,12 @@
       <item quantity="other">추가 권한 <xliff:g id="COUNT_1">%d</xliff:g>개</item>
       <item quantity="one">추가 권한 <xliff:g id="COUNT_0">%d</xliff:g>개</item>
     </plurals>
-    <!-- no translation found for assist_and_voice_input_settings (8813195157136637132) -->
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"어시스트 및 음성 입력"</string>
+    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <skip />
+    <string name="app_list_preference_none" msgid="7753357799926715901">"없음"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"선택됨"</string>
+    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
@@ -417,6 +414,22 @@
     <string name="add_device_title" msgid="8452168024017866232">"신뢰할 수 있는 기기 추가"</string>
     <string name="trusted_device" msgid="5637378361866787603">"신뢰할 수 있는 기기"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"기기 보안"</string>
+    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <skip />
+    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <skip />
+    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <skip />
+    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
+    <skip />
+    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
+    <skip />
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
+    <skip />
+    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
+    <skip />
+    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"삭제"</string>
     <string name="connect" msgid="5861699594602380150">"연결"</string>
     <string name="disconnect" msgid="6140789953324820336">"연결 해제"</string>
