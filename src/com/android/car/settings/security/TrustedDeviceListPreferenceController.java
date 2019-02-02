@@ -85,12 +85,17 @@ public class TrustedDeviceListPreferenceController extends
         mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         mCar = Car.createCar(context);
         try {
-            mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar
-                    .getCarManager(
-                            Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
-            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
+            mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
+                    Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
         } catch (CarNotConnectedException e) {
             LOG.e(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    protected void checkInitialized() {
+        if (mCarTrustAgentEnrollmentManager == null) {
+            throw new IllegalStateException("mCarTrustAgentEnrollmentManager is null.");
         }
     }
 
@@ -110,6 +115,24 @@ public class TrustedDeviceListPreferenceController extends
             }
         }
         preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
+    }
+
+    @Override
+    protected void onStartInternal() {
+        try {
+            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
+        } catch (CarNotConnectedException e) {
+            LOG.e(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    protected void onStopInternal() {
+        try {
+            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(null);
+        } catch (CarNotConnectedException e) {
+            LOG.e(e.getMessage(), e);
+        }
     }
 
     /**
