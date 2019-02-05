@@ -297,6 +297,18 @@
     <string name="default_app_selected_app">Selected</string>
     <!-- Warning message about security implications of setting an assistant, displayed as a dialog message when the user selects an assistant. [CHAR_LIMIT=NONE]  -->
     <string name="assistant_security_warning">The assistant will be able to read information about apps in use on your system, including information visible on your screen or accessible within the apps.</string>
+    <!-- Message of the warning dialog for setting the auto-fill app. [CHAR_LIMIT=NONE] -->
+    <string name="autofill_confirmation_message">
+        <![CDATA[
+        <b>Make sure you trust this app</b>
+        <br/>
+        <br/>
+        <xliff:g id="app_name" example="Google Autofill">%1$s</xliff:g> uses what\'s on
+        your screen to determine what can be autofilled.
+        ]]>
+    </string>
+    <!-- Title of preference to add new autofill services. [CHAR_LIMIT=30] -->
+    <string name="autofill_add_service">Add service</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->

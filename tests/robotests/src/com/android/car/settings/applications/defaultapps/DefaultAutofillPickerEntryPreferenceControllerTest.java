@@ -56,7 +56,7 @@ import java.util.Collections;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowSecureSettings.class, ShadowAutofillServiceInfo.class})
-public class AutofillPickerEntryPreferenceControllerTest {
+public class DefaultAutofillPickerEntryPreferenceControllerTest {
 
     private static final String TEST_PACKAGE = "com.android.car.settings.testutils";
     private static final String TEST_CLASS = "BaseTestActivity";
@@ -67,8 +67,8 @@ public class AutofillPickerEntryPreferenceControllerTest {
 
     private Context mContext;
     private ButtonPreference mButtonPreference;
-    private AutofillPickerEntryPreferenceController mController;
-    private PreferenceControllerTestHelper<AutofillPickerEntryPreferenceController>
+    private DefaultAutofillPickerEntryPreferenceController mController;
+    private PreferenceControllerTestHelper<DefaultAutofillPickerEntryPreferenceController>
             mControllerHelper;
     @Mock
     private AutofillManager mAutofillManager;
@@ -81,7 +81,7 @@ public class AutofillPickerEntryPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         mButtonPreference = new ButtonPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                AutofillPickerEntryPreferenceController.class, mButtonPreference);
+                DefaultAutofillPickerEntryPreferenceController.class, mButtonPreference);
         mController = mControllerHelper.getController();
 
         Settings.Secure.putString(mContext.getContentResolver(), Settings.Secure.AUTOFILL_SERVICE,
@@ -100,10 +100,10 @@ public class AutofillPickerEntryPreferenceControllerTest {
 
         // Reinitialize so that it uses the system service set in this test.
         ButtonPreference preference = new ButtonPreference(mContext);
-        PreferenceControllerTestHelper<AutofillPickerEntryPreferenceController> helper =
+        PreferenceControllerTestHelper<DefaultAutofillPickerEntryPreferenceController> helper =
                 new PreferenceControllerTestHelper<>(mContext,
-                        AutofillPickerEntryPreferenceController.class, preference);
-        AutofillPickerEntryPreferenceController controller = helper.getController();
+                        DefaultAutofillPickerEntryPreferenceController.class, preference);
+        DefaultAutofillPickerEntryPreferenceController controller = helper.getController();
 
         assertThat(controller.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
