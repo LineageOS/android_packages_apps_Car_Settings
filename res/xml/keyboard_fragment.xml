@@ -20,7 +20,6 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_enabled_keyboards"
         settings:controller="com.android.car.settings.inputmethod.EnabledKeyboardPreferenceController"/>
-
     <Preference
         android:fragment="com.android.car.settings.inputmethod.KeyboardManagementFragment"
         android:icon="@drawable/ic_add"
