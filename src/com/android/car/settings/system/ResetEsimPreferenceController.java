@@ -44,7 +44,7 @@ public class ResetEsimPreferenceController extends PreferenceController<TwoState
     }
 
     @Override
-    public int getAvailabilityStatus() {
+    protected int getAvailabilityStatus() {
         return showEuiccSettings() ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 

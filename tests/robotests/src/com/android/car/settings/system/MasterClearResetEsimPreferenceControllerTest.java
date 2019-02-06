@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 package com.android.car.settings.system;
 
-
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.telephony.euicc.EuiccManager;
 
@@ -44,66 +44,48 @@ import org.robolectric.util.ReflectionHelpers;
 
 import java.util.Map;
 
-/** Unit test for {@link ResetEsimPreferenceController}. */
+/** Unit test for {@link MasterClearResetEsimPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowEuiccManager.class})
-public class ResetEsimPreferenceControllerTest {
+public class MasterClearResetEsimPreferenceControllerTest {
 
     private Context mContext;
-    private ResetEsimPreferenceController mController;
+    private MasterClearResetEsimPreferenceController mController;
 
     @Before
     public void setUp() {
         // Robolectric doesn't know about the euicc manager, so we must add it ourselves.
         getSystemServiceMap().put(Context.EUICC_SERVICE, EuiccManager.class.getName());
-
         mContext = RuntimeEnvironment.application;
+        ((ShadowEuiccManager) Shadow.extract(
+                mContext.getSystemService(Context.EUICC_SERVICE))).setIsEnabled(true);
+        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.EUICC_PROVISIONED, 1);
+
         mController = new PreferenceControllerTestHelper<>(mContext,
-                ResetEsimPreferenceController.class,
+                MasterClearResetEsimPreferenceController.class,
                 new SwitchPreference(mContext)).getController();
     }
 
     @After
     public void tearDown() {
         getSystemServiceMap().remove(Context.CARRIER_CONFIG_SERVICE);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.EUICC_PROVISIONED, 0);
     }
 
     @Test
-    public void getAvailabilityStatus_disabledEuiccManager_unsupportedOnDevice() {
-        getShadowEuiccManager().setIsEnabled(false);
-
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
-    }
-
-    @Test
-    public void getAvailabilityStatus_euiccNotProvisioned_unsupportedOnDevice() {
-        getShadowEuiccManager().setIsEnabled(true);
-
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
-    }
-
-    @Test
-    public void getAvailabilityStatus_euiccNotProvisioned_developer_available() {
-        getShadowEuiccManager().setIsEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+    public void getAvailabilityStatus_showEsimPropertyTrue_available() {
+        SystemProperties.set(MasterClearResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
+                Boolean.TRUE.toString());
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
-    public void getAvailabilityStatus_euiccProvisioned_available() {
-        getShadowEuiccManager().setIsEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.EUICC_PROVISIONED, 1);
+    public void getAvailabilityStatus_showEsimPropertyFalse_unsupportedOnDevice() {
+        SystemProperties.set(MasterClearResetEsimPreferenceController.KEY_SHOW_ESIM_RESET_CHECKBOX,
+                Boolean.FALSE.toString());
 
-        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
-    }
-
-    private ShadowEuiccManager getShadowEuiccManager() {
-        return Shadow.extract(mContext.getSystemService(Context.EUICC_SERVICE));
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
 
     private Map<String, String> getSystemServiceMap() {
