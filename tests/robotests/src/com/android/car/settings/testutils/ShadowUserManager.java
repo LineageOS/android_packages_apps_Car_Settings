@@ -19,14 +19,22 @@ package com.android.car.settings.testutils;
 import android.annotation.UserIdInt;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
+import android.util.ArrayMap;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
 @Implements(UserManager.class)
 public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
     private static UserManager sInstance;
+
+    private Map<Integer, List<UserInfo>> mProfiles = new ArrayMap<>();
 
     public static void setInstance(UserManager manager) {
         sInstance = manager;
@@ -35,6 +43,21 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     @Implementation
     protected UserInfo getUserInfo(@UserIdInt int userHandle) {
         return sInstance.getUserInfo(userHandle);
+    }
+
+    @Implementation
+    protected List<UserInfo> getProfiles(int userHandle) {
+        if (mProfiles.containsKey(userHandle)) {
+            return new ArrayList<>(mProfiles.get(userHandle));
+        }
+        return Collections.emptyList();
+    }
+
+    /** Adds a profile to be returned by {@link #getProfiles(int)}. **/
+    public void addProfile(
+            int userHandle, int profileUserHandle, String profileName, int profileFlags) {
+        mProfiles.putIfAbsent(userHandle, new ArrayList<>());
+        mProfiles.get(userHandle).add(new UserInfo(profileUserHandle, profileName, profileFlags));
     }
 
     @Resetter
