@@ -20,12 +20,35 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.os.UserHandle;
+import android.util.ArrayMap;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 @Implements(AccountManager.class)
 public class ShadowAccountManager extends org.robolectric.shadows.ShadowAccountManager {
+
+    private final Map<Integer, List<Account>> mAccountsAsUserMap = new ArrayMap<>();
+    private final Map<Integer, List<AuthenticatorDescription>> mAuthenticatorAsUserMap =
+            new ArrayMap<>();
+
+    @Implementation
+    protected Account[] getAccountsAsUser(int userId) {
+        if (mAccountsAsUserMap.containsKey(userId)) {
+            return mAccountsAsUserMap.get(userId).toArray(new Account[]{});
+        }
+        return getAccounts();
+    }
+
+    public void addAccountAsUser(int userId, Account account) {
+        mAccountsAsUserMap.putIfAbsent(userId, new ArrayList<>());
+        mAccountsAsUserMap.get(userId).add(account);
+    }
+
     @Implementation
     protected Account[] getAccountsByTypeAsUser(String type, UserHandle userHandle) {
         return getAccountsByType(type);
@@ -33,11 +56,21 @@ public class ShadowAccountManager extends org.robolectric.shadows.ShadowAccountM
 
     @Implementation
     protected AuthenticatorDescription[] getAuthenticatorTypesAsUser(int userId) {
+        if (mAuthenticatorAsUserMap.containsKey(userId)) {
+            return mAuthenticatorAsUserMap.get(userId).toArray(new AuthenticatorDescription[]{});
+        }
         return getAuthenticatorTypes();
     }
 
-    @Implementation
-    protected Account[] getAccountsAsUser(int userId) {
-        return getAccounts();
+    public void addAuthenticatorAsUser(int userId, AuthenticatorDescription authenticator) {
+        mAuthenticatorAsUserMap.putIfAbsent(userId, new ArrayList<>());
+        mAuthenticatorAsUserMap.get(userId).add(authenticator);
+    }
+
+    @Override
+    public void removeAllAccounts() {
+        super.removeAllAccounts();
+        mAccountsAsUserMap.clear();
+        mAuthenticatorAsUserMap.clear();
     }
 }
