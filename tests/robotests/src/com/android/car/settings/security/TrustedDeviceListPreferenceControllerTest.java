@@ -18,6 +18,8 @@ package com.android.car.settings.security;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -29,6 +31,7 @@ import android.content.SharedPreferences;
 import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceManager;
 
@@ -93,16 +96,18 @@ public class TrustedDeviceListPreferenceControllerTest {
         List<Integer> handle = new ArrayList<>(Arrays.asList(1, 2, 3));
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 UserHandle.myUserId())).thenReturn(handle);
+
         mController.refreshUi();
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(3);
-        List<Integer> updatedHandle = new ArrayList<>(Arrays.asList(1, 2));
+
         ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                UserHandle.myUserId())).thenReturn(updatedHandle);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
-        callBack.getValue().onTrustRevoked(updatedHandle.get(0), true);
+
+        callBack.getValue().onTrustRevoked(handle.get(0), true);
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
     }
 
@@ -111,8 +116,11 @@ public class TrustedDeviceListPreferenceControllerTest {
         List<Integer> handle = new ArrayList<>(Arrays.asList(1, 2));
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 UserHandle.myUserId())).thenReturn(handle);
+
         mController.refreshUi();
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
+
         List<Integer> updatedHandle = new ArrayList<>(Arrays.asList(1, 2, 3));
         ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
                 ArgumentCaptor.forClass(
@@ -120,7 +128,9 @@ public class TrustedDeviceListPreferenceControllerTest {
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 UserHandle.myUserId())).thenReturn(updatedHandle);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
+
         callBack.getValue().onEscrowTokenActiveStateChanged(updatedHandle.get(0), true);
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(3);
     }
 
@@ -129,7 +139,9 @@ public class TrustedDeviceListPreferenceControllerTest {
         List<Integer> updatedHandle = new ArrayList<>();
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 UserHandle.myUserId())).thenReturn(updatedHandle);
+
         mController.refreshUi();
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
         assertThat(mPreferenceGroup.isVisible()).isFalse();
     }
@@ -139,8 +151,43 @@ public class TrustedDeviceListPreferenceControllerTest {
         List<Integer> updatedHandle = new ArrayList<>(Arrays.asList(1));
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 UserHandle.myUserId())).thenReturn(updatedHandle);
+
         mController.refreshUi();
+
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mPreferenceGroup.isVisible()).isTrue();
+    }
+
+    @Test
+    public void onPreferenceClicked_showDialog() throws CarNotConnectedException {
+        List<Integer> handle = new ArrayList<>(Arrays.asList(1, 2));
+        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+                UserHandle.myUserId())).thenReturn(handle);
+        mController.refreshUi();
+        Preference p = mPreferenceGroup.getPreference(0);
+
+        p.performClick();
+
+        verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
+                any(ConfirmRemoveDeviceDialog.class), anyString());
+    }
+
+    @Test
+    public void onRemoveDeviceDialogConfirmed_revokeTrust() throws CarNotConnectedException {
+        mController.mConfirmRemoveDeviceListener.onConfirmRemoveDevice(1);
+
+        verify(mMockCarTrustAgentEnrollmentManager).revokeTrust(1);
+    }
+
+    @Test
+    public void onTrustRevoked_removeHandleFromSharedPreference() throws CarNotConnectedException {
+        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
+                ArgumentCaptor.forClass(
+                        CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
+        verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
+
+        callBack.getValue().onTrustRevoked(1, true);
+
+        assertThat(mPrefs.getString("1", null)).isNull();
     }
 }
