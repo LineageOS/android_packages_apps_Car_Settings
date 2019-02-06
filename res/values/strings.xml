@@ -279,10 +279,22 @@
     <string name="default_applications">Default apps</string>
     <!-- Applications settings title. If clicked, the user is taken to the list of installed applications. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
-    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to disable an existing application. -->
+    <!-- Manage applications, text label for button to kill / force stop an application. [CHAR LIMIT=30] -->
+    <string name="force_stop">Force stop</string>
+    <!-- Manage applications, title for dialog when killing persistent apps. [CHAR LIMIT=40] -->
+    <string name="force_stop_dialog_title">Force stop?</string>
+    <!-- Manage applications, text for dialog when killing persistent apps. [CHAR LIMIT=200] -->
+    <string name="force_stop_dialog_text">If you force stop an app, it may misbehave.</string>
+    <!-- Manage applications, individual application info screen. Button to disable an existing application. [CHAR LIMIT=25] -->
     <string name="disable_text">Disable</string>
-    <!-- [CHAR LIMIT=25] Manage applications, individual application info screen, button label under Storage heading. Button to re-enable an existing application. -->
+    <!-- Manage applications, individual application info screen. Button to re-enable an existing application. [CHAR LIMIT=25] -->
     <string name="enable_text">Enable</string>
+    <!-- Manage applications, individual application info screen. Button to remove the application from the system. [CHAR LIMIT=25] -->
+    <string name="uninstall_text">Uninstall</string>
+    <!-- Manage applications, text for dialog when disabling apps. [CHAR LIMIT=200] -->
+    <string name="app_disable_dialog_text">If you disable this app, Android and other apps may no longer function as intended.</string>
+    <!-- Manage applications, label for option to disable app. [CHAR LIMIT=30] -->
+    <string name="app_disable_dialog_positive">Disable app</string>
     <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
     <string name="permissions_label">Permissions</string>
     <!-- Label for displaying application version. -->
@@ -295,8 +307,6 @@
     <string name="data_usage_summary_title">Data usage</string>
     <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_app_summary_title">App data usage</string>
-    <!-- Manage applications, text label for button to kill / force stop an application -->
-    <string name="force_stop">Force stop</string>
     <string name="computing_size">Computing\u2026</string>
     <!-- Runtime permissions preference summary.  Number of additional permissions granted. [CHAR LIMIT=40] -->
     <plurals name="runtime_permissions_additional_count">
