@@ -39,4 +39,8 @@
         android:key="@string/pk_build_number"
         android:title="@string/build_number"
         settings:controller="com.android.car.settings.system.BuildNumberPreferenceController"/>
+    <Preference
+        android:key="@string/pk_about_bluetooth_mac_address"
+        android:title="@string/bluetooth_mac_address"
+        settings:controller="com.android.car.settings.system.BluetoothMacAddressPreferenceController"/>
 </PreferenceScreen>
