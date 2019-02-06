@@ -79,6 +79,11 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
+    protected List<UserInfo> getAllUsers() {
+        return sMockInstance.getAllUsers();
+    }
+
+    @Implementation
     public List<UserInfo> getAllPersistentUsers() {
         return sMockInstance.getAllPersistentUsers();
     }
