@@ -32,14 +32,6 @@
         settings:controller="com.android.car.settings.system.SystemUpdatePreferenceController">
         <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS"/>
     </Preference>
-    <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_system_extra_settings"
-        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
-        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
-            <extra android:name="com.android.settings.category"
-                   android:value="com.android.settings.category.system"/>
-        </intent>
-    </com.android.car.settings.common.LogicalPreferenceGroup>
     <Preference
         android:fragment="com.android.car.settings.system.AboutSettingsFragment"
         android:icon="@drawable/ic_settings_about"
