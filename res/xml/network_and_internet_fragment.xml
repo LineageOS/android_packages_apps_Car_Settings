@@ -32,6 +32,7 @@
         android:title="@string/mobile_network_settings"
         settings:controller="com.android.car.settings.network.MobileNetworkEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.datausage.DataUsageFragment"
         android:icon="@drawable/ic_settings_data_usage"
         android:key="@string/pk_data_usage_settings_entry"
         android:title="@string/data_usage_settings"
