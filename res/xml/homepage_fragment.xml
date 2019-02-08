@@ -101,7 +101,7 @@
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
         <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
             <extra android:name="com.android.settings.category"
-                   android:value="com.android.settings.category.ia.device"/>
+                   android:value="com.android.settings.category.device"/>
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
     <com.android.car.settings.common.LogicalPreferenceGroup
