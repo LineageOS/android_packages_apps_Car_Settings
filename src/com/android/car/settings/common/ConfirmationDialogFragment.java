@@ -206,7 +206,7 @@ public class ConfirmationDialogFragment extends DialogFragment implements
     public void onClick(DialogInterface dialog, int which) {
         if (which == DialogInterface.BUTTON_POSITIVE) {
             if (mConfirmListener != null) {
-                mConfirmListener.onConfrim(getArguments().getBundle(ARGUMENTS_KEY));
+                mConfirmListener.onConfirm(getArguments().getBundle(ARGUMENTS_KEY));
             }
         } else if (which == DialogInterface.BUTTON_NEGATIVE) {
             if (mRejectListener != null) {
@@ -221,7 +221,7 @@ public class ConfirmationDialogFragment extends DialogFragment implements
          * Defines the action to take on confirm. The bundle will contain the arguments added when
          * constructing the dialog through with {@link Builder#addArgumentString(String, String)}.
          */
-        void onConfrim(@Nullable Bundle arguments);
+        void onConfirm(@Nullable Bundle arguments);
     }
 
     /** Listens to the rejection action. */
