@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.network;
+package com.android.car.settings.datausage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
@@ -26,6 +26,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.settings.network.NetworkUtils;
 
 /** Preference controller which shows how much data has been used so far. */
 public class DataUsageEntryPreferenceController extends PreferenceController<Preference> {
@@ -61,13 +62,13 @@ public class DataUsageEntryPreferenceController extends PreferenceController<Pre
         if (defaultSubId == SubscriptionManager.INVALID_SUBSCRIPTION_ID) {
             return null;
         }
-        SubscriptionPlan defaultPlan = NetworkUtils.getPrimaryPlan(subscriptionManager,
+        SubscriptionPlan defaultPlan = DataUsageUtils.getPrimaryPlan(subscriptionManager,
                 defaultSubId);
         if (defaultPlan == null) {
             return null;
         }
 
-        return NetworkUtils.bytesToIecUnits(getContext(), defaultPlan.getDataUsageBytes());
+        return DataUsageUtils.bytesToIecUnits(getContext(), defaultPlan.getDataUsageBytes());
     }
 
 }

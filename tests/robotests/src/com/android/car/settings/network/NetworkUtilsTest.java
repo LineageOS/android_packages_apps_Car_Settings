@@ -24,21 +24,14 @@ import static org.mockito.Mockito.when;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
-import android.telephony.SubscriptionManager;
-import android.telephony.SubscriptionPlan;
-import android.util.RecurrenceRule;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-
-import com.google.android.collect.Lists;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class NetworkUtilsTest {
-
-    private static final int SUBSCRIPTION_ID = 1;
 
     @Test
     public void hasMobileNetwork_hasCellularCapabilities_returnsTrue() {
@@ -64,67 +57,5 @@ public class NetworkUtilsTest {
         when(capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(false);
 
         assertThat(NetworkUtils.hasMobileNetwork(connectivityManager)).isFalse();
-    }
-
-    @Test
-    public void getPrimaryPlan_noSubscriptions_returnsNull() {
-        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
-        when(subscriptionManager.getSubscriptionPlans(SUBSCRIPTION_ID)).thenReturn(
-                Lists.newArrayList());
-
-        assertThat(NetworkUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isNull();
-
-    }
-
-    @Test
-    public void getPrimaryPlan_dataLimitBytesIsZero_returnsNull() {
-        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
-        SubscriptionPlan subscriptionPlan = mock(SubscriptionPlan.class);
-        when(subscriptionManager.getSubscriptionPlans(SUBSCRIPTION_ID)).thenReturn(
-                Lists.newArrayList(subscriptionPlan));
-        when(subscriptionPlan.getDataLimitBytes()).thenReturn(0L);
-
-        assertThat(NetworkUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isNull();
-
-    }
-
-    @Test
-    public void getPrimaryPlan_dataUsageBytesIsHuge_returnsNull() {
-        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
-        SubscriptionPlan subscriptionPlan = mock(SubscriptionPlan.class);
-        when(subscriptionManager.getSubscriptionPlans(SUBSCRIPTION_ID)).thenReturn(
-                Lists.newArrayList(subscriptionPlan));
-        when(subscriptionPlan.getDataLimitBytes()).thenReturn(100L);
-        when(subscriptionPlan.getDataUsageBytes()).thenReturn(2 * NetworkUtils.PETA);
-
-        assertThat(NetworkUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isNull();
-    }
-
-    @Test
-    public void getPrimaryPlan_cycleRuleIsNull_returnsNull() {
-        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
-        SubscriptionPlan subscriptionPlan = mock(SubscriptionPlan.class);
-        when(subscriptionManager.getSubscriptionPlans(SUBSCRIPTION_ID)).thenReturn(
-                Lists.newArrayList(subscriptionPlan));
-        when(subscriptionPlan.getDataLimitBytes()).thenReturn(100L);
-        when(subscriptionPlan.getDataUsageBytes()).thenReturn(10L);
-        when(subscriptionPlan.getCycleRule()).thenReturn(null);
-
-        assertThat(NetworkUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isNull();
-    }
-
-    @Test
-    public void getPrimaryPlan_cycleRuleIsValid_returnsSubscriptionPlan() {
-        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
-        SubscriptionPlan subscriptionPlan = mock(SubscriptionPlan.class);
-        RecurrenceRule recurrenceRule = mock(RecurrenceRule.class);
-        when(subscriptionManager.getSubscriptionPlans(SUBSCRIPTION_ID)).thenReturn(
-                Lists.newArrayList(subscriptionPlan));
-        when(subscriptionPlan.getDataLimitBytes()).thenReturn(100L);
-        when(subscriptionPlan.getDataUsageBytes()).thenReturn(10L);
-        when(subscriptionPlan.getCycleRule()).thenReturn(recurrenceRule);
-
-        assertThat(NetworkUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isEqualTo(
-                subscriptionPlan);
     }
 }

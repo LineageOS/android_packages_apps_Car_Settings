@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.network;
+package com.android.car.settings.datausage;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
