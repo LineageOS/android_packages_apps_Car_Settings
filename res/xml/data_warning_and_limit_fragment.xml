@@ -29,4 +29,14 @@
             android:key="@string/pk_data_warning"
             android:title="@string/data_warning"/>
     </com.android.car.settings.common.LogicalPreferenceGroup>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_data_limit_group"
+        settings:controller="com.android.car.settings.datausage.DataLimitPreferenceController">
+        <SwitchPreference
+            android:key="@string/pk_data_set_limit"
+            android:title="@string/set_data_limit"/>
+        <Preference
+            android:key="@string/pk_data_limit"
+            android:title="@string/data_limit"/>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>

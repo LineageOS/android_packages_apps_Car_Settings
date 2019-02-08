@@ -53,6 +53,14 @@
     <string name="set_data_warning">Set data warning</string>
     <!-- Label for button to set the amount of data before user is warned about usage [CHAR LIMIT=30] -->
     <string name="data_warning">Data warning</string>
+    <!-- Label for switch about whether to limit how much data can be used [CHAR LIMIT=30] -->
+    <string name="set_data_limit">Set data limit</string>
+    <!-- Label for button to set the amount of data before user is limited [CHAR LIMIT=30] -->
+    <string name="data_limit">Data limit</string>
+    <!-- Title of dialog shown before user limits data usage. [CHAR LIMIT=48] -->
+    <string name="data_usage_limit_dialog_title">Limiting data usage</string>
+    <!-- Body of dialog shown before user limits mobile data usage. [CHAR LIMIT=NONE] -->
+    <string name="data_usage_limit_dialog_mobile" >Your vehicle\u2019s head unit will turn off mobile data once it reaches the limit you set.\n\nSince data usage is measured by the head unit, and your carrier may account for usage differently, consider setting a conservative limit.</string>
 
     <!-- wifi settings--><skip/>
     <!-- Used in the 1st-level settings screen to go to the 2nd-level settings screen  [CHAR LIMIT=20]-->

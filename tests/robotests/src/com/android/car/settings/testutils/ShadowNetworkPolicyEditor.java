@@ -16,9 +16,14 @@
 
 package com.android.car.settings.testutils;
 
+import static android.net.NetworkPolicy.LIMIT_DISABLED;
 import static android.net.NetworkPolicy.WARNING_DISABLED;
 
+import static org.mockito.Mockito.mock;
+
+import android.net.NetworkPolicy;
 import android.net.NetworkTemplate;
+import android.util.RecurrenceRule;
 
 import com.android.settingslib.NetworkPolicyEditor;
 
@@ -33,6 +38,7 @@ import java.util.Map;
 public class ShadowNetworkPolicyEditor {
 
     private static final Map<String, Long> sWarningBytesMap = new HashMap<>();
+    private static final Map<String, Long> sLimitBytesMap = new HashMap<>();
 
     @Implementation
     protected long getPolicyWarningBytes(NetworkTemplate template) {
@@ -44,8 +50,31 @@ public class ShadowNetworkPolicyEditor {
         sWarningBytesMap.put(template.getSubscriberId(), warningBytes);
     }
 
+    @Implementation
+    protected long getPolicyLimitBytes(NetworkTemplate template) {
+        return sLimitBytesMap.getOrDefault(template.getSubscriberId(), LIMIT_DISABLED);
+    }
+
+    @Implementation
+    protected void setPolicyLimitBytes(NetworkTemplate template, long limitBytes) {
+        sLimitBytesMap.put(template.getSubscriberId(), limitBytes);
+    }
+
+    @Implementation
+    protected NetworkPolicy getPolicy(NetworkTemplate template) {
+        NetworkPolicy policy = new NetworkPolicy(template, mock(RecurrenceRule.class),
+                getPolicyWarningBytes(template), getPolicyLimitBytes(template), 0, 0, 0, false,
+                false);
+        if (sWarningBytesMap.containsKey(template.getSubscriberId()) || sLimitBytesMap.containsKey(
+                template.getSubscriberId())) {
+            return policy;
+        }
+        return null;
+    }
+
     @Resetter
     public static void reset() {
         sWarningBytesMap.clear();
+        sLimitBytesMap.clear();
     }
 }
