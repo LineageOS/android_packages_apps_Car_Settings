@@ -35,7 +35,7 @@
         android:icon="@drawable/ic_settings_data_usage"
         android:key="@string/pk_data_usage_settings_entry"
         android:title="@string/data_usage_settings"
-        settings:controller="com.android.car.settings.network.DataUsageEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.datausage.DataUsageEntryPreferenceController"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_network_and_internet_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
