@@ -119,7 +119,7 @@ public class ConfirmationDialogFragmentTest {
         AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
-        verify(mConfirmListener).onConfrim(bundle.capture());
+        verify(mConfirmListener).onConfirm(bundle.capture());
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
     }
 
