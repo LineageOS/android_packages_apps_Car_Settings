@@ -35,6 +35,7 @@ public class ShadowSubscriptionManager {
     private static int sDefaultVoiceSubscriptionId = INVALID_SUBSCRIPTION_ID;
     private static int sDefaultSmsSubscriptionId = INVALID_SUBSCRIPTION_ID;
     private static int sDefaultSubscriptionId = INVALID_SUBSCRIPTION_ID;
+    private static SubscriptionInfo sDefaultDataSubscriptionInfo = null;
 
     private List<SubscriptionInfo> mSubscriptionInfoList;
     private List<SubscriptionPlan> mSubscriptionPlanList;
@@ -96,11 +97,21 @@ public class ShadowSubscriptionManager {
         sDefaultSubscriptionId = subId;
     }
 
+    @Implementation
+    public SubscriptionInfo getDefaultDataSubscriptionInfo() {
+        return sDefaultDataSubscriptionInfo;
+    }
+
+    public static void setDefaultDataSubscriptionInfo(SubscriptionInfo subscriptionInfo) {
+        sDefaultDataSubscriptionInfo = subscriptionInfo;
+    }
+
     /** Resets this shadow to its initial state for static values. */
     public static void resetStaticState() {
         sDefaultDataSubscriptionId = INVALID_SUBSCRIPTION_ID;
         sDefaultVoiceSubscriptionId = INVALID_SUBSCRIPTION_ID;
         sDefaultSmsSubscriptionId = INVALID_SUBSCRIPTION_ID;
         sDefaultSubscriptionId = INVALID_SUBSCRIPTION_ID;
+        sDefaultDataSubscriptionInfo = null;
     }
 }
