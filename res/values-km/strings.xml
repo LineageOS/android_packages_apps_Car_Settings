@@ -154,11 +154,13 @@
       <item quantity="one">ការអនុញ្ញាតបន្ថែម <xliff:g id="COUNT_0">%d</xliff:g></item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ជំនួយ និងការបញ្ចូលសំឡេង"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"សេវាកម្មបំពេញដោយស្វ័យប្រវត្តិ"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"គ្មាន"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"បានជ្រើសរើស"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​នោះផងដែរ​។"</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
@@ -228,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"កំណត់​កម្មវិធី​ឡើងវិញ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"បាន​កំណត់​ចំណូល​ចិត្ត​កម្មវិធីឡើង​វិញ​ហើយ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"លុប​ទិន្នន័យ​ទាំងអស់ (កំណត់ដូច​ដើម​ឡើងវិញ)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"កំណត់​កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"កំណត់​កាលបរិច្ឆេទ ម៉ោង ល្វែងម៉ោង និង​ទម្រង់"</string>
@@ -414,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"បញ្ចូល​ឧបករណ៍​ដែលទុកចិត្ត"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"សុវត្ថិភាពឧបករណ៍"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"បញ្ជាក់"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ប្រើ​កម្មវិធី​ដៃគូ ដើម្បី​រៀបចំឧបករណ៍​ដែល​ទុក​ចិត្ត។ បន្ទាប់ពីរៀបចំរួចហើយ អ្នក​នឹង​អាច​ដោះ​សោ​កម្រង​ព័ត៌មាន​អ្នក​ប្រើប្រាស់​របស់អ្នក នៅពេលយានជំនិះ​រកឃើញ​ទូរសព្ទ​របស់អ្នក"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ទាញយក​កម្មវិធី​ដៃគូ​នៅលើទូរសព្ទរបស់អ្នក"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ជ្រើសរើស​ <xliff:g id="CAR_NAME">%1$s</xliff:g> នៅលើ​ទូរសព្ទ​របស់អ្នក ដើម្បីផ្គូផ្គង​ឧបករណ៍"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock រក​មិនឃើញ​មុខងារ​សុវត្ថិភាព​នៅលើ​ឧបករណ៍​នេះ​ទេ។ ដើម្បី​ជួយ​ការពារ​រថយន្ត​​របស់​អ្នក  ឧបករណ៍​ដែល​ទុកចិត្តនឹង​អាច​រក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ បន្ទាប់​ពីអ្នក​បាន​ដោះ​សោ​រថយន្ត​ហើយ​ប៉ុណ្ណោះ។ ឧបករណ៍​ដែល​ទុកចិត្តរបស់អ្នក​អាចរក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ នៅពេល​វា​ស្ថិតនៅ​ជិត ទោះបី​ជា​អ្នក​ផ្សេងទៀត​កំពុង​កាន់ឧបករណ៍​នោះ​ក៏​ដោយ។"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជា​ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"បាន​បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជាឧបករណ៍ដែលទុកចិត្ត​ដោយជោគជ័យ​ហើយ"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"មិន​អាច​ចុះឈ្មោះ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> បាន​ទេ​"</string>
     <string name="forget" msgid="3971143908183848527">"បំភ្លេច"</string>
     <string name="connect" msgid="5861699594602380150">"ភ្ជាប់"</string>
     <string name="disconnect" msgid="6140789953324820336">"ផ្ដាច់"</string>

@@ -154,13 +154,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টা অতিৰিক্ত অনুমতি</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"সহায় আৰু ধ্বনি ইনপুট"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <string name="autofill_settings_title" msgid="1188754272680049972">"স্বয়ংপূৰ্তি সেৱা"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"নাই"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"বাছনিকৃত"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"এই সহায়কটোৱে আপোনাৰ ছিষ্টেমত ব্যৱহৃত হৈ থকা এপসমূহৰ বিষয়ে তথ্য পঢ়িব পাৰিব। সেই তথ্যসমূহৰ ভিতৰত আপোনাৰ স্ক্ৰীণত দেখা পোৱা বা এপে চাব পৰা তথ্যসমূহ অন্তৰ্ভুক্ত।"</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
     <skip />
-    <!-- no translation found for app_list_preference_none (7753357799926715901) -->
-    <skip />
-    <!-- no translation found for default_app_selected_app (5289396663745484773) -->
-    <skip />
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"শেহতীয়া অৱস্থানৰ অনুৰোধ"</string>
@@ -230,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"এপসমূহ ৰিছেট কৰক"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"এপৰ অগ্ৰাধিকাৰসমূহ ৰিছেট কৰা হৈছে"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"সকলো ডেটা মচক (ফেক্টৰী ৰিছেট কৰক)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"তাৰিখ আৰু সময়"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"তাৰিখ আৰু সময় ছেট কৰক"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"তাৰিখ, সময়, সময় মণ্ডল আৰু ফৰমেটসমূহ ছেট কৰক"</string>
@@ -416,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"বিশ্বাসী ডিভাইচ যোগ কৰক"</string>
     <string name="trusted_device" msgid="5637378361866787603">"বিশ্বাসী ডিভাইচ"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"ডিভাইচৰ সুৰক্ষা"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"নিশ্চিত কৰক"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"এটা বিশ্বাসী ডিভাইচ ছেট আপ কৰিবলৈ সহযোগী এপ্‌টো ব্যৱহাৰ কৰক। ছেট আপ কৰাৰ পিছত যেতিয়া গাড়ীখনে আপোনাৰ ফ’নটো চিনাক্ত কৰিব তেতিয়া আপুনি নিজৰ ব্যৱহাৰকাৰীৰ প্ৰ’ফাইলটো আনলক কৰিব পাৰিব"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপোনাৰ ফ’নটোত সহযোগী এপ্‌টো ডাউনল’ড কৰক"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইচকেইটা যোৰা লগাবলৈ আপোনাৰ ফ’নটোত <xliff:g id="CAR_NAME">%1$s</xliff:g> বাছনি কৰক"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"স্মাৰ্ট লকে এই ডিভাইচটোত থকা সুৰক্ষা সুবিধা চিনাক্ত কৰিব পৰা নাই। আপোনাৰ গাড়ীখন নিৰাপদে ৰাখিবৰ কাৰণে আপুনি গাড়ীখন আনলক কৰাৰ পিছতহে বিশ্বাসী ডিভাইচটোৱে গাড়ীখন আনলক কৰি ৰাখিব পাৰিব। আপোনাৰ বিশ্বাসী ডিভাইচটো যেতিয়া আপোনাৰ গাড়ীখনৰ ওচৰত থাকে তেতিয়া সেইটোৱে গাড়ীখন আনলক কৰিব ৰাখিব পাৰিব, আনকি যেতিয়া ডিভাইচটো আনে লৈ থাকে তেতিয়াও।"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ডিভাইচটো বিশ্বাসী ডিভাইচ হিচাপে যোগ কৰক"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"বিশ্বাসী ডিভাইচ হিচাপে <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ক সফলতাৰে যোগ কৰা হ’ল"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> যোৰা লগাব পৰা নগ’ল"</string>
     <string name="forget" msgid="3971143908183848527">"পাহৰক"</string>
     <string name="connect" msgid="5861699594602380150">"সংযোগ কৰক"</string>
     <string name="disconnect" msgid="6140789953324820336">"সংযোগ বিচ্ছিন্ন কৰক"</string>

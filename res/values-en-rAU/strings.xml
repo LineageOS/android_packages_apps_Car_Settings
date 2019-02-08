@@ -154,11 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> additional permission</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assist &amp; voice input"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Auto-fill service"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"None"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Selected"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"The assistant will be able to read information about apps that are in use on your system, including information visible on your screen or accessible within the apps."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Location"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recent Location Requests"</string>
@@ -228,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reset apps"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App preferences have been reset"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Erase all data (factory reset)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date &amp; time"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Set date and time"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Set date, time, time zone, &amp; formats"</string>
@@ -414,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Add trusted device"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Trusted devices"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Device Security"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirm"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Use the companion app to set up a trusted device. Once set up, you will be able to unlock your user profile when your phone is detected by the vehicle"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download the companion app on your phone"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Select <xliff:g id="CAR_NAME">%1$s</xliff:g> on your phone to pair the devices"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock can\'t detect security features of this device. To help protect your car, trusted device will only be able to keep your car unlocked once it\'s already unlocked by you. Your trusted device can keep your car unlocked when it\'s nearby, even if someone else is holding it."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Add <xliff:g id="DEVICE_NAME">%1$s</xliff:g> as a trusted device"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> successfully added as a trusted device"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> enrolment failed"</string>
     <string name="forget" msgid="3971143908183848527">"Forget"</string>
     <string name="connect" msgid="5861699594602380150">"Connect"</string>
     <string name="disconnect" msgid="6140789953324820336">"Disconnect"</string>

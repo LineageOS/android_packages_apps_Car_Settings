@@ -154,11 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> autorizzazione aggiuntiva</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistenza e input vocale"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Compilazione automatica"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nessuna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Selezionata"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"L\'assistente potrà leggere informazioni sulle app utilizzate dal sistema, incluse quelle visibili su schermo o accessibili all\'interno delle app."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Luogo"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Richieste di posizione recenti"</string>
@@ -228,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Reimposta app"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Le preferenze dell\'app sono state reimpostate"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Cancella tutti i dati"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data e ora"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Imposta data e ora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Imposta data, ora, fuso orario e formati"</string>
@@ -414,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Aggiungi dispos. attendibile"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Dispos. attendibili"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Sicurezza disposit."</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Conferma"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utilizza l\'app companion per configurare un dispositivo attendibile. Terminata la configurazione, potrai sbloccare il tuo profilo utente quando il veicolo rileva il telefono"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Scarica l\'app companion sul tuo telefono"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Seleziona <xliff:g id="CAR_NAME">%1$s</xliff:g> sul tuo telefono per accoppiare i dispositivi"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock non può rilevare le funzionalità di sicurezza di questo dispositivo. Per contribuire alla protezione del veicolo, il dispositivo attendibile potrà tenere sbloccato il veicolo solo se prima lo sblocchi tu. Il tuo dispositivo attendibile può tenere sbloccato il veicolo quando si trova nelle vicinanze, anche se viene utilizzato da qualcun altro."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Aggiungi <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ai dispositivi attendibili"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Il dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> è stato aggiunto correttamente come dispositivo attendibile"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registrazione del dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> non riuscita"</string>
     <string name="forget" msgid="3971143908183848527">"Elimina"</string>
     <string name="connect" msgid="5861699594602380150">"Collega"</string>
     <string name="disconnect" msgid="6140789953324820336">"Scollega"</string>

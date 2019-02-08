@@ -155,11 +155,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> papildu atļaujas</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistents un balss ievade"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Automātiskā aizpilde"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nav"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Atlasīta"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Asistents varēs lasīt informāciju par jūsu sistēmā izmantotajām lietotnēm, tostarp jūsu ekrānā redzamo informāciju vai lietotnēs pieejamo informāciju."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Atrašanās vieta"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Neseni atrašanās vietu pieprasījumi"</string>
@@ -230,6 +232,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Atiestatīt lietotnes"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Lietotņu preferences ir atiestatītas"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Notīrīt visus datus (atiestatīt ierīci)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datums un laiks"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Datuma un laika iestatīšana"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Iestatīt datumu, laiku, laika joslu un formātus"</string>
@@ -423,22 +427,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Pievienot uzticamu ierīci"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Uzticamas ierīces"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Ierīces drošība"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Apstiprināt"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Izmantojiet palīglietotni, lai iestatītu uzticamu ierīci. Pēc iestatīšanas varēsiet atbloķēt savu lietotāja profilu, kad transportlīdzeklī tiks konstatēts jūsu tālrunis."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lejupielādējiet palīglietotni savā tālrunī."</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tālrunī atlasiet automašīnas nosaukumu (<xliff:g id="CAR_NAME">%1$s</xliff:g>), lai ierīces savienotu pārī."</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Sistēma Smart Lock nevar noteikt šīs ierīces drošības funkcijas. Lai palīdzētu aizsargāt jūsu automašīnu, uzticamā ierīce varēs neļaut bloķēt automašīnu tikai tad, kad to jau būsiet atbloķējis. Jūsu uzticamā ierīce var neļaut bloķēt automašīnu, kad tā atrodas tuvumā, pat ja ierīci tur cita persona."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Uzticamas ierīces (<xliff:g id="DEVICE_NAME">%1$s</xliff:g>) pievienošana"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Ierīce <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ir sekmīgi pievienota kā uzticama ierīce."</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Neizdevās reģistrēt ierīci <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="forget" msgid="3971143908183848527">"Aizmirst"</string>
     <string name="connect" msgid="5861699594602380150">"Izveidot savienojumu"</string>
     <string name="disconnect" msgid="6140789953324820336">"Atvienot"</string>
