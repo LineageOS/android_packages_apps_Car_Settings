@@ -21,19 +21,31 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /** Shadow of ApplicationPackageManager that allows the getting of content providers per user. */
 @Implements(value = ApplicationPackageManager.class)
 public class ShadowApplicationPackageManager extends
         org.robolectric.shadows.ShadowApplicationPackageManager {
+
+    private static List<ResolveInfo> sResolveInfos = null;
+    private static Resources sResources = null;
+
+    @Resetter
+    public static void reset() {
+        sResolveInfos = null;
+        sResources = null;
+    }
 
     @Implementation
     public Drawable getUserBadgedIcon(Drawable icon, UserHandle user) {
@@ -54,8 +66,27 @@ public class ShadowApplicationPackageManager extends
     }
 
     @Implementation
+    public Resources getResourcesForApplication(String appPackageName)
+            throws PackageManager.NameNotFoundException {
+        return sResources;
+    }
+
+    @Implementation
     public List<ResolveInfo> queryIntentActivitiesAsUser(Intent intent,
             @PackageManager.ResolveInfoFlags int flags, @UserIdInt int userId) {
-        return new ArrayList<ResolveInfo>();
+        return sResolveInfos == null ? Collections.emptyList() : sResolveInfos;
+    }
+
+    /**
+     * If resolveInfos are set by this method then
+     * {@link ShadowApplicationPackageManager#queryIntentActivitiesAsUser}
+     * method will return the same list.
+     */
+    public static void setListOfActivities(ArrayList<ResolveInfo> resolveInfos) {
+        sResolveInfos = resolveInfos;
+    }
+
+    public static void setResources(Resources resources) {
+        sResources = resources;
     }
 }
