@@ -16,70 +16,72 @@
 
 package com.android.car.settings.security;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.verify;
+import static com.google.common.truth.Truth.assertThat;
 
-import android.app.Activity;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import android.car.Car;
+import android.car.CarNotConnectedException;
+import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.content.Context;
-import android.content.Intent;
+import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.testutils.ShadowCar;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
+@Config(shadows = {ShadowCar.class})
 public class TrustedDeviceEntryPreferenceControllerTest {
     private Context mContext;
     private PreferenceControllerTestHelper<TrustedDeviceEntryPreferenceController>
             mPreferenceControllerHelper;
     private Preference mTrustedDevicePreference;
+    @Mock
+    private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
     private TrustedDeviceEntryPreferenceController mController;
 
     @Before
     public void setUp() {
+        MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
         mTrustedDevicePreference = new Preference(mContext);
+        ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
+                mMockCarTrustAgentEnrollmentManager);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceEntryPreferenceController.class, mTrustedDevicePreference);
         mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
     @Test
     public void testHandlePreferenceClicked_listenerTriggered() {
-        ArgumentCaptor<Intent> intent = ArgumentCaptor.forClass(Intent.class);
         mTrustedDevicePreference.performClick();
-        verify(mPreferenceControllerHelper.getMockFragmentController()).startActivityForResult(
-                intent.capture(), anyInt(), any(ActivityResultCallback.class));
-        Assert.assertEquals(intent.getValue().getComponent().getClassName(),
-                CheckLockActivity.class.getName());
-    }
-
-    @Test
-    public void testProcessActivityResult_resultOk() {
-        mController.processActivityResult(TrustedDeviceEntryPreferenceController.REQUEST_CODE,
-                Activity.RESULT_OK, null);
         verify(mPreferenceControllerHelper.getMockFragmentController()).launchFragment(
                 any(ChooseTrustedDeviceFragment.class));
     }
 
     @Test
-    public void testProcessActivityResult_resultCanceled() {
-        mController.processActivityResult(TrustedDeviceEntryPreferenceController.REQUEST_CODE,
-                Activity.RESULT_CANCELED, null);
-        verify(mPreferenceControllerHelper.getMockFragmentController(), never()).launchFragment(
-                any(ChooseTrustedDeviceFragment.class));
+    public void testUpdateState() throws CarNotConnectedException {
+        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+                UserHandle.myUserId())).thenReturn(new ArrayList<>(Arrays.asList(1, 2)));
+        mController.refreshUi();
+        assertThat(mTrustedDevicePreference.getSummary()).isEqualTo("2 devices");
     }
 }

@@ -882,8 +882,11 @@
     <string name="add_device_title">Add trusted device</string>
     <!-- Screen title and label for button of trusted device [CHAR LIMIT=30]> -->
     <string name="trusted_device">Trusted devices</string>
-    <!-- Subtitle of trusted device button in security page [CHAR LIMIT=30]-->
-    <string name="trusted_device_subtitle">Device security</string>
+    <!-- Subtitle of trusted device button in security page which displays the number of devices that are considered trusted[CHAR LIMIT=30]-->
+    <plurals name="trusted_device_subtitle">
+        <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> device</item>
+        <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> devices</item>
+    </plurals>
     <!-- Message in dialog which will remind the user what a trusted device can do. [CHAR LIMIT=NONE]-->
     <string name="remove_device_message">Your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g>, they may be able to access this device</string>
     <!-- Confirm button label of confirm pairing code dialog [CHAR LIMIT=30]-->
