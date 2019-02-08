@@ -156,11 +156,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додаткового дозволу</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Асистент і голосовий ввід"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Автозаповнення"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Немає"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Вибрано"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Асистент матиме доступ до інформації про додатки у вашій системі, зокрема до даних на екрані та в додатках."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Місце"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Останні запити на геодані"</string>
@@ -232,6 +234,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Скинути налаштування додатків"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налаштування додатків скинуто"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Стерти всі дані (скинути налаштування)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата й час"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Установити дату й час"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Установити дату, час, часовий пояс і формати"</string>
@@ -432,22 +436,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Додати надійний пристрій"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Надійні пристрої"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Безпека пристрою"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Підтвердити"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Налаштуйте надійний пристрій у супутньому додатку. Тоді ви зможете розблокувати профіль користувача, коли телефон підключиться до автомобіля."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Завантажте супутній додаток на телефон"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. На телефоні виберіть <xliff:g id="CAR_NAME">%1$s</xliff:g>, щоб підключити пристрої"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може виявляти функцій безпеки цього пристрою. Щоб покращити захист, надійний пристрій може лише не дати автомобілю заблокуватись, якщо ви його розблокували. Ця функція працює, якщо пристрій поруч, навіть в іншої людини."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Додати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g> як надійний"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g> додано як надійний"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не вдалося зареєструвати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="forget" msgid="3971143908183848527">"Забути"</string>
     <string name="connect" msgid="5861699594602380150">"Підключити"</string>
     <string name="disconnect" msgid="6140789953324820336">"Від’єднати"</string>

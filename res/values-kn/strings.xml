@@ -154,13 +154,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ಅಸಿಸ್ಟೆಂಟ್ ಮತ್ತು ಧ್ವನಿ ಇನ್‌ಪುಟ್"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ಸ್ವಯಂ ಭರ್ತಿ ಸೇವೆ"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"ಯಾವುದೂ ಬೇಡ"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಗೋಚರಿಸುವ ಅಥವಾ ಆ್ಯಪ್‌ಗಳಲ್ಲಿಯೇ ಪ್ರವೇಶಿಸಬಹುದಾದಂತಹ ಮಾಹಿತಿ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ಸಿಸ್ಟಂನಲ್ಲಿ ಬಳಕೆಯಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಕುರಿತು ಮಾಹಿತಿಯನ್ನು ಓದಲು ಅಸಿಸ್ಟೆಂಟ್‌ಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
     <skip />
-    <!-- no translation found for app_list_preference_none (7753357799926715901) -->
-    <skip />
-    <!-- no translation found for default_app_selected_app (5289396663745484773) -->
-    <skip />
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
@@ -230,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆಪ್‌‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಬದಲಾಯಿಸಿ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ದಿನಾಂಕ, ಸಮಯ, ಸಮಯದ ವಲಯದ, ಮತ್ತು ಫರ್ಮ್ಯಾಟ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ"</string>
@@ -416,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಿ"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಗಳು"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"ಸಾಧನ ಭದ್ರತೆ"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ದೃಢೀಕರಿಸಿ"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಬಳಸಿ. ಸೆಟಪ್ ನಂತರ, ವಾಹನವು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಪತ್ತೆಹಚ್ಚಿದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ಗೆ ಈ ಸಾಧನದ ಭದ್ರತೆ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಪತ್ತೆಹೆಚ್ಚಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಕಾರ್ ಸಂರಕ್ಷಿಸುವುದಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು, ನೀವು ಈಗಾಗಲೇ ನಿಮ್ಮ ಕಾರ್ ಅನ್‌ಲಾಕ್ ಮಾಡಿದ್ದರೆ ಅದನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿಯೇ ಇರಿಸಲು ಮಾತ್ರವೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಕ್ಕೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಬೇರೆ ಯಾರಾದರೂ ನಿಮ್ಮ ಕಾರ್ ಇರಿಸಿಕೊಂಡಿದ್ದರೂ, ಅದು ಹತ್ತಿರದಲ್ಲಿರುವಾಗ ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿ ಇರಿಸಬಹುದು."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಿ"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಲಾಗಿದೆ"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ನೋಂದಣಿ ವಿಫಲವಾಗಿದೆ"</string>
     <string name="forget" msgid="3971143908183848527">"ಮರೆಯಿರಿ"</string>
     <string name="connect" msgid="5861699594602380150">"ಸಂಪರ್ಕಿಸಿ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಿ"</string>

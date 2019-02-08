@@ -154,11 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> täiendav luba</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Abirakendus ja häälsisend"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Automaattäite teenus"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Puudub"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valitud"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Assistent saab teie süsteemis kasutatavate rakenduste kohta teavet (sh teie ekraanil kuvatud või rakendustes juurdepääsetavat teavet) lugeda."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Asukoht"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Hiljutised asukohapäringud"</string>
@@ -228,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Lähtesta rakendused"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Kustuta kõik andmed (tehases. lähtest.)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Kuupäev ja kellaaeg"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Kuupäeva ja kellaaja määramine"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Määra kuupäev, kellaaeg, ajavöönd ja vormingud"</string>
@@ -414,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Lisa usaldusväärne seade"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Usaldusv. seadmed"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Seadme turvalisus"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kinnita"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Kasutage usaldusväärse seadme seadistamiseks kaasrakendust. Kui see on seadistatud, on teil võimalik avada oma kasutajaprofiil, kui sõiduk tuvastab teie telefoni"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Laadige oma telefonis alla kaasrakendus."</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tehke seadmete sidumiseks oma telefonis valik <xliff:g id="CAR_NAME">%1$s</xliff:g>."</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ei suuda tuvastada selle seadme turvafunktsioone. Teie auto kaitsmiseks saab usaldusväärne seade teie auto avatuna hoida vaid siis, kui olete ise lukustuse tühistanud. Teie usaldusväärne seade võib hoida teie auto avatuna, kui see on läheduses, isegi kui see on kellegi teise käes."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Seadme <xliff:g id="DEVICE_NAME">%1$s</xliff:g> lisamine usaldusväärse seadmena"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Seadme <xliff:g id="DEVICE_NAME">%1$s</xliff:g> lisamine usaldusväärse seadmena õnnestus"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Seadme <xliff:g id="DEVICE_NAME">%1$s</xliff:g> registreerimine ebaõnnestus"</string>
     <string name="forget" msgid="3971143908183848527">"Unusta"</string>
     <string name="connect" msgid="5861699594602380150">"Ühenda"</string>
     <string name="disconnect" msgid="6140789953324820336">"Katkesta  ühendus"</string>

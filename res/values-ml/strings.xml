@@ -154,13 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> അധിക അനുമതി</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"അസിസ്‌റ്റും വോയ്‌സ് ഇൻപുട്ടും"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <string name="autofill_settings_title" msgid="1188754272680049972">"സ്വയമേവ പൂരിപ്പിക്കൽ സേവനം"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"ഒന്നുമില്ല"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"തിരഞ്ഞെടുത്തു"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"നിങ്ങളുടെ സ്ക്രീനിൽ ദൃശ്യമാകുന്നതോ ആപ്പുകൾക്കുള്ളിൽ ആക്‌സസ് ചെയ്യാവുന്നതോ ആയ വിവരങ്ങൾ ഉൾപ്പെടെ, നിങ്ങളുടെ സിസ്‌റ്റത്തിൽ ഉപയോഗത്തിലുള്ള ആപ്പുകളെ കുറിച്ചുള്ള വിവരങ്ങൾ വായിക്കാൻ അസിസ്‌റ്റൻന്റിനാവും."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
     <skip />
-    <!-- no translation found for app_list_preference_none (7753357799926715901) -->
-    <skip />
-    <!-- no translation found for default_app_selected_app (5289396663745484773) -->
-    <skip />
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
@@ -230,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ആപ്പുകൾ പുനഃസജ്ജീകരിക്കുക"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ആപ്പ് മുൻഗണനകൾ പുനഃസജ്ജീകരിച്ചു"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"എല്ലാ ഡാറ്റയും മായ്‌ക്കുക (ഫാക്‌ടറി റീസെറ്റ്)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"തീയതിയും സമയവും"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"തീയതിയും സമയവും സജ്ജമാക്കുക"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"തീയതി, സമയം, സമയ മേഖല, ഫോർമാറ്റുകൾ എന്നിവ സജ്ജീകരിക്കുക"</string>
@@ -416,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"വിശ്വസ്‌ത ഉപകരണം ചേർക്കുക"</string>
     <string name="trusted_device" msgid="5637378361866787603">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"ഉപകരണ സുരക്ഷ"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"സ്ഥിരീകരിക്കുക"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ഒരു വിശ്വസ്‌ത ഉപകരണം സജ്ജീകരിക്കാൻ, സഹകാരി ആപ്പ് ഉപയോഗിക്കുക. ഒരിക്കൽ സജ്ജീകരിച്ചാൽ, വാഹനം നിങ്ങളുടെ ഫോണിനെ കണ്ടെത്തിയാൽ നിങ്ങളുടെ ഉപയോക്തൃ പ്രൊഫൈൽ അൺലോക്ക് ചെയ്യാനാവും."</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. നിങ്ങളുടെ ഫോണിൽ സഹകാരി ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-ന് ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ ഫീച്ചറുകൾ തിരിച്ചറിയാനാവുന്നില്ല. നിങ്ങളുടെ കാർ പരിരക്ഷിക്കാൻ സഹായിക്കുന്നതിന്, നിങ്ങൾ മുമ്പേ തന്നെ അൺലോക്ക് ചെയ്‌തെങ്കിൽ മാത്രമേ ഉപകരണത്തിന് കാർ അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകൂ. നിങ്ങളുടെ കാർ മറ്റാരുടെയെങ്കിലും പക്കൽ ആണെങ്കിൽ പോലും, അത് സമീപത്തുണ്ടെങ്കിൽ നിങ്ങളുടെ വിശ്വസ്‌ത ഉപകരണത്തിന് അത് അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകും."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ ഒരു വിശ്വസ്‌ത ഉപകരണമായി ചേർക്കുക"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ വിശ്വസ്‌ത ഉപകരണമായി ചേർത്തു"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
     <string name="forget" msgid="3971143908183848527">"മറക്കുക"</string>
     <string name="connect" msgid="5861699594602380150">"കണക്റ്റ് ചെയ്യുക"</string>
     <string name="disconnect" msgid="6140789953324820336">"വിച്ഛേദിക്കുക"</string>

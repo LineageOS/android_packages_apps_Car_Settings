@@ -154,13 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त अनुमति</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"सहायक र आवाज संलग्न इनपुट"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
+    <string name="autofill_settings_title" msgid="1188754272680049972">"स्वतः भरण सेवा"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका अनुप्रयोगहरूबारे जानकारी पढ्न सक्ने छ।"</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
     <skip />
-    <!-- no translation found for app_list_preference_none (7753357799926715901) -->
-    <skip />
-    <!-- no translation found for default_app_selected_app (5289396663745484773) -->
-    <skip />
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
@@ -230,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अनुप्रयोगहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"मिति र समय सेट गर्नुहोस्"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, समय क्षेत्र र प्रारूपहरू सेट गर्नुहोस्"</string>
@@ -416,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय यन्त्र थप्नुहोस्"</string>
     <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय यन्त्रहरू"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"यन्त्रको सुरक्षा"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"पुष्टि गर्नुहोस्"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"कुनै विश्वसनीय यन्त्र सेटअप गर्न सहयोगी अनुप्रयोग प्रयोग गर्नुहोस्। सेटअप भएपछि, सवारी साधनले तपाईंको फोन पत्ता लागाएपछि तपाईं आफ्नो प्रयोगकर्ता प्रोफाइल अनलक गर्न सक्नु हुने छ"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"१. आफ्नो फोनमा सहयोगी अनुप्रयोग डाउनलोड गर्नुहोस्"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"२. यन्त्रहरूको जोडा बनाउन आफ्नो फोनमा <xliff:g id="CAR_NAME">%1$s</xliff:g> चयन गर्नुहोस्"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ले यस यन्त्रका सुरक्षासम्बन्धी सुविधाहरू पत्ता लगाउन सक्दैन। तपाईंको कारलाई सुरक्षित राख्न मद्दत गर्नका लागि विश्वसनीय यन्त्रले तपाईंले अनलक गरेपछि मात्र तपाईंको कार अनलक अवस्थामा राख्न सक्ने छ। तपाईंको विश्वसनीय यन्त्र जोसुकैका हातमा भए तापनि त्यसले तपाईंको कार वरपर हुँदा त्यसलाई अनलक अवस्थामा राख्न सक्छ।"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> लाई विश्वसनीय यन्त्रका रूपमा थप्नुहोस्"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> लाई सफलतापूर्वक कुनै विश्वसनीय यन्त्रका रूपमा थपियो"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> दर्ता गर्न सकिएन"</string>
     <string name="forget" msgid="3971143908183848527">"बिर्सनुहोस्"</string>
     <string name="connect" msgid="5861699594602380150">"जडान गर्नुहोस्"</string>
     <string name="disconnect" msgid="6140789953324820336">"विच्छेद गर्नुहोस्"</string>

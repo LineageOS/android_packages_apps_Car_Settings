@@ -156,11 +156,13 @@
       <item quantity="one">另外 <xliff:g id="COUNT_0">%d</xliff:g> 项权限</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"自动填充服务"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"无"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"已选择"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"辅助应用将可读取您系统中使用的应用的相关信息，其中包括您屏幕上显示的信息或应用中可使用的信息。"</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
@@ -230,6 +232,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"清空所有数据（恢复出厂设置）"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和时间"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"设置日期和时间"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"设置日期、时间、时区和格式"</string>
@@ -417,22 +421,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"添加可信设备"</string>
     <string name="trusted_device" msgid="5637378361866787603">"可信设备"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"设备安全性"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"确认"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"请使用配套应用来设置可信设备。设置成功后，您将可以在车辆检测到您的手机时解锁您的用户个人资料"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手机上下载配套应用"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 未能检测到此设备的安全功能。为了保护您的汽车，只有当您将汽车解锁后，可信设备才会让汽车保持解锁状态。当您的可信设备在汽车附近时，就会让汽车保持解锁状态（即使是其他人拿着此设备也是如此）。"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"将 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 添加为可信设备"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 已成功添加为可信设备"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
     <string name="forget" msgid="3971143908183848527">"忽略"</string>
     <string name="connect" msgid="5861699594602380150">"连接"</string>
     <string name="disconnect" msgid="6140789953324820336">"断开连接"</string>

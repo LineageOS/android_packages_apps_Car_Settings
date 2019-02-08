@@ -154,11 +154,13 @@
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permiso adicional</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistente e entrada de voz"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Servizo de autocompletar"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ningunha aplicación"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Aplicación seleccionada"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"O asistente poderá ler información sobre as aplicacións en uso no teu sistema, incluídos os datos visibles na túa pantalla ou aos que se pode acceder desde as aplicacións."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Localización"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
@@ -228,6 +230,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Restablecer aplicacións"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Restablecéronse as preferencias das aplicacións"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Borrar todos os datos"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data e hora"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Definir data e hora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Define a data, a hora, o fuso horario e os formatos"</string>
@@ -414,22 +418,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Eng. dispositivo de confianza"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Disposit. confianza"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Seguran. dispositivo"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utiliza a aplicación complementaria para configurar un dispositivo de confianza. Unha vez configurado, poderás desbloquear o perfil de usuario cando o vehículo detecte o teléfono"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descarga a aplicación complementaria no teléfono"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> no teléfono para vincular os dispositivos"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock non pode detectar as funcións de seguranza deste dispositivo. Para axudar a protexer o teu coche, o dispositivo de confianza só poderá manter o coche desbloqueado despois de que o desbloquees ti. O teu dispositivo de confianza pode manter o coche desbloqueado cando está cerca, aínda que o estea sostendo outra persoa."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Engadir <xliff:g id="DEVICE_NAME">%1$s</xliff:g> como dispositivo de confianza"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> engadiuse correctamente como un dispositivo de confianza"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Produciuse un erro durante a inscrición de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="forget" msgid="3971143908183848527">"Borrar"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>

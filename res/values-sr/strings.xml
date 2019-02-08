@@ -155,11 +155,13 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> додатних дозвола</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Помоћник и гласовни унос"</string>
-    <!-- no translation found for autofill_settings_title (1188754272680049972) -->
-    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Услуга аутоматског попуњавања"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ништа"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Изабрано"</string>
-    <!-- no translation found for assistant_security_warning (1844807956967428012) -->
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Помоћник ће моћи да чита информације о апликацијама које се користе у систему, укључујући информације видљиве на екрану или којима може да се приступа у оквиру апликација."</string>
+    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
+    <skip />
+    <!-- no translation found for autofill_add_service (6413893366443609951) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
@@ -230,6 +232,8 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
+    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
+    <skip />
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Подесите датум и време"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Подесите датум, време, временску зону и формате"</string>
@@ -423,22 +427,20 @@
     <string name="add_device_title" msgid="8452168024017866232">"Додај поуздани уређај"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Поуздани уређаји"</string>
     <string name="trusted_device_subtitle" msgid="5823125918668125714">"Безбедност уређаја"</string>
-    <!-- no translation found for trusted_device_confirm_button (102354635014627996) -->
+    <!-- no translation found for remove_device_message (6447820559674148349) -->
     <skip />
-    <!-- no translation found for add_trusted_device_instruction (109228038968439923) -->
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
+    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
     <skip />
-    <!-- no translation found for trusted_device_download_app (6971096140154499983) -->
+    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
     <skip />
-    <!-- no translation found for trusted_device_select_device (198902765179270739) -->
-    <skip />
-    <!-- no translation found for trusted_device_safety_alert (8937542424166378247) -->
-    <skip />
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (6551880047490332731) -->
-    <skip />
-    <!-- no translation found for trusted_device_success_enrollment_toast (3275482710090416690) -->
-    <skip />
-    <!-- no translation found for trusted_device_fail_enrollment_toast (6801324174861209092) -->
-    <skip />
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Поуздани уређај подесите помоћу пратеће апликације. Када га подесите, моћи ћете да откључавате кориснички профил када возило открије телефон"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преузмите пратећу апликацију на телефону"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изаберите <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефону да бисте упарили уређаје"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може да открије безбедносне функције овог уређаја. Да би аутомобил био заштићен, поуздани уређај ће омогућити да аутомобил остане откључан само када га ви претходно откључате. Поуздани уређај може да омогући да аутомобил остане откључан када се налази у близини, чак и када га неко други држи."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Додајте уређај <xliff:g id="DEVICE_NAME">%1$s</xliff:g> као поуздани"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Додали сте уређај <xliff:g id="DEVICE_NAME">%1$s</xliff:g> као поуздани"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрација уређаја <xliff:g id="DEVICE_NAME">%1$s</xliff:g> није успела"</string>
     <string name="forget" msgid="3971143908183848527">"Заборави"</string>
     <string name="connect" msgid="5861699594602380150">"Повежи"</string>
     <string name="disconnect" msgid="6140789953324820336">"Прекини везу"</string>
