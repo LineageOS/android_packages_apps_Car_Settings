@@ -16,16 +16,21 @@
 
 package com.android.car.settings.testutils;
 
+import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.SubscriptionPlan;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.util.List;
 
 @Implements(SubscriptionManager.class)
 public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSubscriptionManager {
+
+    private static SubscriptionInfo sDefaultDataSubscriptionInfo = null;
+
     private List<SubscriptionPlan> mSubscriptionPlanList;
 
     @Implementation
@@ -35,5 +40,20 @@ public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSub
 
     public void setSubscriptionPlans(List<SubscriptionPlan> subscriptionPlanList) {
         mSubscriptionPlanList = subscriptionPlanList;
+    }
+
+    @Implementation
+    protected SubscriptionInfo getDefaultDataSubscriptionInfo() {
+        return sDefaultDataSubscriptionInfo;
+    }
+
+    public static void setDefaultDataSubscriptionInfo(SubscriptionInfo subscriptionInfo) {
+        sDefaultDataSubscriptionInfo = subscriptionInfo;
+    }
+
+    @Resetter
+    public static void reset() {
+        org.robolectric.shadows.ShadowSubscriptionManager.reset();
+        sDefaultDataSubscriptionInfo = null;
     }
 }
