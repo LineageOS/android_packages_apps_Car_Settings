@@ -31,6 +31,9 @@ import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
+import com.android.car.settings.inputmethod.KeyboardFragment;
+import com.android.car.settings.language.LanguagePickerFragment;
+import com.android.car.settings.location.LocationScanningFragment;
 import com.android.car.settings.location.LocationSettingsFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
@@ -66,6 +69,9 @@ public class FragmentResolver {
             case Settings.ACTION_LOCATION_SOURCE_SETTINGS:
                 return new LocationSettingsFragment();
 
+            case Settings.ACTION_LOCATION_SCANNING_SETTINGS:
+                return new LocationScanningFragment();
+
             case android.net.wifi.WifiManager.ACTION_PICK_WIFI_NETWORK:
             case Settings.ACTION_WIFI_SETTINGS:
             case Settings.ACTION_WIRELESS_SETTINGS:
@@ -80,6 +86,7 @@ public class FragmentResolver {
             case Settings.ACTION_BLUETOOTH_SETTINGS:
                 return new BluetoothSettingsFragment();
 
+            case Intent.ACTION_QUICK_CLOCK:
             case Settings.ACTION_DATE_SETTINGS:
                 return new DatetimeSettingsFragment();
 
@@ -88,6 +95,12 @@ public class FragmentResolver {
 
             case Settings.ACTION_DISPLAY_SETTINGS:
                 return new DisplaySettingsFragment();
+
+            case Settings.ACTION_LOCALE_SETTINGS:
+                return new LanguagePickerFragment();
+
+            case Settings.ACTION_INPUT_METHOD_SETTINGS:
+                return new KeyboardFragment();
 
             case Settings.ACTION_APPLICATION_SETTINGS:
             case Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS:
@@ -109,11 +122,12 @@ public class FragmentResolver {
                 return new ChooseAccountFragment();
 
             case Settings.ACTION_DEVICE_INFO_SETTINGS:
+            case Settings.DEVICE_NAME_SETTINGS:
                 return new AboutSettingsFragment();
 
             default:
                 return Fragment.instantiate(context,
-                    context.getString(R.string.config_settings_hierarchy_root_fragment));
+                        context.getString(R.string.config_settings_hierarchy_root_fragment));
         }
     }
 }

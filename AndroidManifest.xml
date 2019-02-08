@@ -106,9 +106,20 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <intent-filter android:priority="1">
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.DEVICE_INFO_SETTINGS" />
+                <action android:name="android.settings.DEVICE_NAME" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.LOCALE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.INPUT_METHOD_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
 
             <intent-filter android:priority="1">
@@ -119,6 +130,7 @@
 
             <intent-filter android:priority="1">
                 <action android:name="android.settings.DATE_SETTINGS" />
+                <action android:name="android.intent.action.QUICK_CLOCK" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -143,6 +155,11 @@
             <intent-filter android:priority="100">
                 <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
 
             <intent-filter android:priority="100">
