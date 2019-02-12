@@ -48,7 +48,7 @@ public class ExtraSettingsLoader {
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
     public static final String WIRELESS_CATEGORY = "com.android.settings.category.wireless";
-    public static final String DEVICE_CATEGORY = "com.android.settings.category.device";
+    public static final String DEVICE_CATEGORY = "com.android.settings.category.ia.device";
     public static final String SYSTEM_CATEGORY = "com.android.settings.category.system";
     public static final String PERSONAL_CATEGORY = "com.android.settings.category.personal";
     private Map<Preference, Bundle> mPreferenceBundleMap;
