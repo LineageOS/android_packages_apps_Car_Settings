@@ -17,8 +17,11 @@
 package com.android.car.settings.datausage;
 
 import android.content.Context;
+import android.net.NetworkTemplate;
+import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.SubscriptionPlan;
+import android.telephony.TelephonyManager;
 import android.text.BidiFormatter;
 import android.text.format.Formatter;
 
@@ -36,6 +39,35 @@ public final class DataUsageUtils {
     static final long PETA = 1000000000000000L;
 
     private DataUsageUtils() {
+    }
+
+    /**
+     * Returns the mobile network template given the subscription id.
+     */
+    public static NetworkTemplate getMobileNetworkTemplate(TelephonyManager telephonyManager,
+            int subscriptionId) {
+        NetworkTemplate mobileAll = NetworkTemplate.buildTemplateMobileAll(
+                telephonyManager.getSubscriberId(subscriptionId));
+        return NetworkTemplate.normalize(mobileAll, telephonyManager.getMergedSubscriberIds());
+    }
+
+    /**
+     * Returns the default subscription if available else returns
+     * {@link SubscriptionManager#INVALID_SUBSCRIPTION_ID}.
+     */
+    public static int getDefaultSubscriptionId(SubscriptionManager subscriptionManager) {
+        if (subscriptionManager == null) {
+            return SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+        }
+        SubscriptionInfo subscriptionInfo = subscriptionManager.getDefaultDataSubscriptionInfo();
+        if (subscriptionInfo == null) {
+            List<SubscriptionInfo> list = subscriptionManager.getAllSubscriptionInfoList();
+            if (list.size() == 0) {
+                return SubscriptionManager.INVALID_SUBSCRIPTION_ID;
+            }
+            subscriptionInfo = list.get(0);
+        }
+        return subscriptionInfo.getSubscriptionId();
     }
 
     /**
