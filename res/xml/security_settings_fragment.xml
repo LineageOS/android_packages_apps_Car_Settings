@@ -33,6 +33,5 @@
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_trusted_device"
         android:title="@string/trusted_device"
-        android:summary="@string/trusted_device_subtitle"
         settings:controller="com.android.car.settings.security.TrustedDeviceEntryPreferenceController"/>
 </PreferenceScreen>
