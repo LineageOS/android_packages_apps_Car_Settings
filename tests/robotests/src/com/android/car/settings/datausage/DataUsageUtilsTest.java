@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.SubscriptionPlan;
 import android.util.RecurrenceRule;
@@ -32,10 +33,53 @@ import com.google.android.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.Collections;
+
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class DataUsageUtilsTest {
 
     private static final int SUBSCRIPTION_ID = 1;
+
+    @Test
+    public void getDefaultSubscriptionId_nullSubscriptionManager_returnsInvalidId() {
+        assertThat(DataUsageUtils.getDefaultSubscriptionId(null)).isEqualTo(
+                SubscriptionManager.INVALID_SUBSCRIPTION_ID);
+    }
+
+    @Test
+    public void getDefaultSubscriptionId_noSubscriptions_returnsInvalidId() {
+        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
+        when(subscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(null);
+        when(subscriptionManager.getAllSubscriptionInfoList()).thenReturn(Collections.emptyList());
+
+        assertThat(DataUsageUtils.getDefaultSubscriptionId(subscriptionManager)).isEqualTo(
+                SubscriptionManager.INVALID_SUBSCRIPTION_ID);
+    }
+
+    @Test
+    public void getDefaultSubscriptionId_noDefaultSubscription_returnsFirstSubscription() {
+        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
+        when(subscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(null);
+
+        SubscriptionInfo info1 = mock(SubscriptionInfo.class);
+        SubscriptionInfo info2 = mock(SubscriptionInfo.class);
+        when(info1.getSubscriptionId()).thenReturn(1);
+        when(info2.getSubscriptionId()).thenReturn(2);
+        when(subscriptionManager.getAllSubscriptionInfoList()).thenReturn(
+                Lists.newArrayList(info1, info2));
+
+        assertThat(DataUsageUtils.getDefaultSubscriptionId(subscriptionManager)).isEqualTo(1);
+    }
+
+    @Test
+    public void getDefaultSubscriptionId_hasDefaultSubscription_returnsDefaultSubscription() {
+        SubscriptionManager subscriptionManager = mock(SubscriptionManager.class);
+        SubscriptionInfo info = mock(SubscriptionInfo.class);
+        when(info.getSubscriptionId()).thenReturn(1);
+        when(subscriptionManager.getDefaultDataSubscriptionInfo()).thenReturn(info);
+
+        assertThat(DataUsageUtils.getDefaultSubscriptionId(subscriptionManager)).isEqualTo(1);
+    }
 
     @Test
     public void getPrimaryPlan_noSubscriptions_returnsNull() {
@@ -44,7 +88,6 @@ public class DataUsageUtilsTest {
                 Lists.newArrayList());
 
         assertThat(DataUsageUtils.getPrimaryPlan(subscriptionManager, SUBSCRIPTION_ID)).isNull();
-
     }
 
     @Test
