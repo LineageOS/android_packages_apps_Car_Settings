@@ -19,13 +19,16 @@ package com.android.car.settings.common;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
+import androidx.annotation.XmlRes;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.FragmentController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,17 +50,18 @@ public class TwoActionPreferenceTest {
         }
     }
 
+    private Context mContext;
     private PreferenceViewHolder mViewHolder;
     private TestTwoActionPreference mTestTwoActionPreference;
 
     @Before
     public void setUp() {
-        Context context = RuntimeEnvironment.application;
-        Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+        mContext = RuntimeEnvironment.application;
+        Context themedContext = new ContextThemeWrapper(mContext, R.style.CarSettingTheme);
         View rootView = View.inflate(themedContext, R.layout.two_action_preference,
                 null);
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
-        mTestTwoActionPreference = new TestTwoActionPreference(context);
+        mTestTwoActionPreference = new TestTwoActionPreference(mContext);
     }
 
     @Test
@@ -88,5 +92,76 @@ public class TwoActionPreferenceTest {
     public void isActionShown_false() {
         mTestTwoActionPreference.showAction(false);
         assertThat(mTestTwoActionPreference.isActionShown()).isFalse();
+    }
+
+    @Test
+    public void preferenceConstructed_attrDefined_actionShown() {
+        TestSettingsFragment fragment = TestSettingsFragment.newInstance(
+                R.xml.two_action_preference_shown);
+        FragmentController.of(fragment).setup();
+
+        TwoActionPreference preference =
+                (TwoActionPreference) fragment.getPreferenceScreen().findPreference(
+                        mContext.getString(R.string.tpk_two_action_preference));
+
+        assertThat(preference.isActionShown()).isTrue();
+    }
+
+    @Test
+    public void preferenceConstructed_defaultValue_actionShown() {
+        TestSettingsFragment fragment = TestSettingsFragment.newInstance(
+                R.xml.two_action_preference_action_shown_not_specified);
+        FragmentController.of(fragment).setup();
+
+        TwoActionPreference preference =
+                (TwoActionPreference) fragment.getPreferenceScreen().findPreference(
+                        mContext.getString(R.string.tpk_two_action_preference));
+
+        assertThat(preference.isActionShown()).isTrue();
+    }
+
+    @Test
+    public void preferenceConstructed_attrDefined_actionHidden() {
+        TestSettingsFragment fragment = TestSettingsFragment.newInstance(
+                R.xml.two_action_preference_hidden);
+        FragmentController.of(fragment).setup();
+
+        TwoActionPreference preference =
+                (TwoActionPreference) fragment.getPreferenceScreen().findPreference(
+                        mContext.getString(R.string.tpk_two_action_preference));
+
+        assertThat(preference.isActionShown()).isFalse();
+    }
+
+    /**
+     * Test settings fragment which creates the xml screen provided via {@link #newInstance(int)}.
+     */
+    public static class TestSettingsFragment extends SettingsFragment {
+
+        private static final String ARG_SCREEN_RES = "arg_screen_res";
+
+        @XmlRes
+        private int mScreenResId;
+
+        public static TestSettingsFragment newInstance(@XmlRes int screenResId) {
+            Bundle arguments = new Bundle();
+            arguments.putInt(ARG_SCREEN_RES, screenResId);
+
+            TestSettingsFragment fragment = new TestSettingsFragment();
+            fragment.setArguments(arguments);
+            return fragment;
+        }
+
+        @Override
+        public void onAttach(Context context) {
+            super.onAttach(context);
+            mScreenResId = getArguments().getInt(ARG_SCREEN_RES);
+        }
+
+        @Override
+        @XmlRes
+        protected int getPreferenceScreenResId() {
+            return mScreenResId;
+        }
     }
 }

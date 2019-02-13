@@ -55,6 +55,11 @@
         <attr name="controller" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="TwoActionPreference">
+        <!-- Determines if the secondary action is initially shown -->
+        <attr name="actionShown" format="boolean"/>
+    </declare-styleable>
+
     <attr name="wifiSignalColor" format="color"/>
     <attr name="iconColor" format="color"/>
     <attr name="dividerColor" format="color"/>
