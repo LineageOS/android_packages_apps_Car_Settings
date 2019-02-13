@@ -19,17 +19,17 @@ package com.android.car.settings.applications.defaultapps;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
-import android.provider.Settings;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Lifecycle;
+import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
-import com.android.car.settings.common.ButtonPreference;
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.applications.DefaultAppInfo;
@@ -38,34 +38,25 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowApplication;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class DefaultAppsPickerEntryBasePreferenceControllerTest {
+public class DefaultAppEntryBasePreferenceControllerTest {
+    private static final CharSequence TEST_LABEL = "Test Label";
 
-    private static final Intent TEST_INTENT = new Intent(Settings.ACTION_SETTINGS);
+    private static class TestDefaultAppEntryBasePreferenceController extends
+            DefaultAppEntryBasePreferenceController<Preference> {
 
-    private static class TestDefaultAppsPickerEntryBasePreferenceController extends
-            DefaultAppsPickerEntryBasePreferenceController {
+        private DefaultAppInfo mDefaultAppInfo;
 
-        private final DefaultAppInfo mDefaultAppInfo;
-        private Intent mSettingIntent;
-
-        TestDefaultAppsPickerEntryBasePreferenceController(Context context,
+        TestDefaultAppEntryBasePreferenceController(Context context,
                 String preferenceKey, FragmentController fragmentController,
                 CarUxRestrictions uxRestrictions) {
             super(context, preferenceKey, fragmentController, uxRestrictions);
-            mDefaultAppInfo = mock(DefaultAppInfo.class);
         }
 
-        @Nullable
         @Override
-        protected Intent getSettingIntent(@Nullable DefaultAppInfo info) {
-            return mSettingIntent;
-        }
-
-        protected void setSettingIntent(Intent settingIntent) {
-            mSettingIntent = settingIntent;
+        protected Class<Preference> getPreferenceType() {
+            return Preference.class;
         }
 
         @Nullable
@@ -73,48 +64,63 @@ public class DefaultAppsPickerEntryBasePreferenceControllerTest {
         protected DefaultAppInfo getCurrentDefaultAppInfo() {
             return mDefaultAppInfo;
         }
+
+        protected void setCurrentDefaultAppInfo(DefaultAppInfo defaultAppInfo) {
+            mDefaultAppInfo = defaultAppInfo;
+        }
     }
 
     private Context mContext;
-    private ButtonPreference mButtonPreference;
-    private PreferenceControllerTestHelper<TestDefaultAppsPickerEntryBasePreferenceController>
+    private Preference mPreference;
+    private PreferenceControllerTestHelper<TestDefaultAppEntryBasePreferenceController>
             mControllerHelper;
-    private TestDefaultAppsPickerEntryBasePreferenceController mController;
+    private TestDefaultAppEntryBasePreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mButtonPreference = new ButtonPreference(mContext);
+        mPreference = new Preference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                TestDefaultAppsPickerEntryBasePreferenceController.class, mButtonPreference);
+                TestDefaultAppEntryBasePreferenceController.class,
+                mPreference);
         mController = mControllerHelper.getController();
     }
 
     @Test
-    public void refreshUi_hasSettingIntent_actionButtonIsVisible() {
-        mController.setSettingIntent(TEST_INTENT);
+    public void refreshUi_hasDefaultAppWithLabel_summaryAndIconAreSet() {
+        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
+        when(defaultAppInfo.loadLabel()).thenReturn(TEST_LABEL);
+        when(defaultAppInfo.loadIcon()).thenReturn(mContext.getDrawable(R.drawable.test_icon));
+        mController.setCurrentDefaultAppInfo(defaultAppInfo);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mButtonPreference.isActionShown()).isTrue();
+        assertThat(mPreference.getSummary()).isEqualTo(TEST_LABEL);
+        assertThat(mPreference.getIcon()).isNotNull();
     }
 
     @Test
-    public void refreshUi_hasNoSettingIntent_actionButtonIsNotVisible() {
-        mController.setSettingIntent(null);
+    public void refreshUi_hasDefaultAppWithoutLabel_summaryAndIconAreNotSet() {
+        DefaultAppInfo defaultAppInfo = mock(DefaultAppInfo.class);
+        when(defaultAppInfo.loadLabel()).thenReturn(null);
+        when(defaultAppInfo.loadIcon()).thenReturn(null);
+        mController.setCurrentDefaultAppInfo(defaultAppInfo);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mButtonPreference.isActionShown()).isFalse();
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.app_list_preference_none));
+        assertThat(mPreference.getIcon()).isNull();
     }
 
     @Test
-    public void performButtonClick_launchesIntent() {
-        mController.setSettingIntent(TEST_INTENT);
+    public void refreshUi_hasNoDefaultApp_summaryAndIconAreNotSet() {
+        mController.setCurrentDefaultAppInfo(null);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mButtonPreference.performButtonClick();
+        mController.refreshUi();
 
-        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
-        assertThat(actual.getAction()).isEqualTo(TEST_INTENT.getAction());
+        assertThat(mPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.app_list_preference_none));
+        assertThat(mPreference.getIcon()).isNull();
     }
 }

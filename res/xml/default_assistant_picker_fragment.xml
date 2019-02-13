@@ -18,7 +18,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/assist_and_voice_input_settings">
+    android:title="@string/assist_app_settings">
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_default_assist_and_voice_options"
         settings:controller="com.android.car.settings.applications.defaultapps.DefaultAssistantPickerPreferenceController"/>
