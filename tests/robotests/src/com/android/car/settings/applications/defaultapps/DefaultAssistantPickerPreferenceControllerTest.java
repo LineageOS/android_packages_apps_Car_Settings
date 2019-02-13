@@ -85,7 +85,7 @@ public class DefaultAssistantPickerPreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
         ShadowCarUserManagerHelper.reset();
         ShadowVoiceInteractionServiceInfo.reset();
     }

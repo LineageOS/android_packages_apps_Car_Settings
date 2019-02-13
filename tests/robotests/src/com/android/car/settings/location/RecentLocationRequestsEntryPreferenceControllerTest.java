@@ -57,7 +57,7 @@ public class RecentLocationRequestsEntryPreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
     }
 
     @Test

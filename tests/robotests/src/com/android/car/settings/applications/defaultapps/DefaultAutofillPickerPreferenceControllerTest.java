@@ -67,7 +67,7 @@ public class DefaultAutofillPickerPreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
     }
 
     @Test

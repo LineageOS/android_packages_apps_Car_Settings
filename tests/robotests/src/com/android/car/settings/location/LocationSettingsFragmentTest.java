@@ -56,7 +56,7 @@ public class LocationSettingsFragmentTest {
 
     @After
     public void tearDown() {
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
     }
 
     @Test

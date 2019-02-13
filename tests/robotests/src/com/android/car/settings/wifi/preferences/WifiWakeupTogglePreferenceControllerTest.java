@@ -74,7 +74,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
     }
 
     @Test

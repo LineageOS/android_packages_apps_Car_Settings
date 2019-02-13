@@ -24,6 +24,7 @@ import com.google.common.collect.Table;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -92,7 +93,8 @@ public class ShadowSecureSettings {
     /**
      * Clears the UserDataMap for Robotests.
      */
-    public static void clear() {
+    @Resetter
+    public static void reset() {
         synchronized (sUserDataMap) {
             sUserDataMap.clear();
         }
