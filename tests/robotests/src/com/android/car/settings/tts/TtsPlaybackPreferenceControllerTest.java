@@ -135,6 +135,7 @@ public class TtsPlaybackPreferenceControllerTest {
     public void tearDown() {
         ShadowTtsEngines.reset();
         ShadowTextToSpeech.reset();
+        ShadowSecureSettings.reset();
     }
 
     @Test

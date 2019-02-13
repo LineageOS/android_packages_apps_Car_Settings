@@ -28,6 +28,7 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,6 +52,11 @@ public class LocationSettingsFragmentTest {
                 .getSystemService(Service.LOCATION_SERVICE);
 
         mActivity = Robolectric.setupActivity(BaseTestActivity.class);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowSecureSettings.reset();
     }
 
     @Test

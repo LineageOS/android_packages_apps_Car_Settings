@@ -81,6 +81,7 @@ public class TtsPlaybackSettingsManagerTest {
         ShadowTextToSpeech.reset();
         ShadowTtsEngines.reset();
         ShadowAlertDialog.reset();
+        ShadowSecureSettings.reset();
     }
 
     @Test

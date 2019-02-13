@@ -39,6 +39,7 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -69,6 +70,11 @@ public class WifiWakeupTogglePreferenceControllerTest {
         mController = mControllerHelper.getController();
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowSecureSettings.reset();
     }
 
     @Test

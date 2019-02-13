@@ -34,6 +34,7 @@ import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -62,6 +63,11 @@ public class DefaultAutofillPickerPreferenceControllerTest {
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 DefaultAutofillPickerPreferenceController.class, mPreferenceGroup);
         mController = mControllerHelper.getController();
+    }
+
+    @After
+    public void tearDown() {
+        ShadowSecureSettings.reset();
     }
 
     @Test
