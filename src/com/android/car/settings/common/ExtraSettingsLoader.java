@@ -16,6 +16,7 @@
 
 package com.android.car.settings.common;
 
+import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
@@ -47,10 +48,6 @@ import java.util.Map;
 public class ExtraSettingsLoader {
     private static final Logger LOG = new Logger(ExtraSettingsLoader.class);
     private static final String META_DATA_PREFERENCE_CATEGORY = "com.android.settings.category";
-    public static final String WIRELESS_CATEGORY = "com.android.settings.category.wireless";
-    public static final String DEVICE_CATEGORY = "com.android.settings.category.ia.device";
-    public static final String SYSTEM_CATEGORY = "com.android.settings.category.system";
-    public static final String PERSONAL_CATEGORY = "com.android.settings.category.personal";
     private Map<Preference, Bundle> mPreferenceBundleMap;
     private final Context mContext;
 
@@ -61,10 +58,9 @@ public class ExtraSettingsLoader {
 
     /**
      * Returns a map of {@link Preference} and {@link Bundle} representing settings injected from
-     * system apps and their metadata. The given intent must specify the action to use for resolving
-     * activities and a category with the key "com.android.settings.category" and one of
-     * {@link #WIRELESS_CATEGORY}, {@link #DEVICE_CATEGORY}, {@link #SYSTEM_CATEGORY},
-     * {@link #PERSONAL_CATEGORY} as the value.
+     * system apps and their metadata. The given intent must specify the action to use for
+     * resolving activities and a category with the key "com.android.settings.category" and one of
+     * the values in {@link com.android.settingslib.drawer.CategoryKey}.
      *
      * @param intent intent specifying the extra settings category to load
      */
@@ -130,7 +126,7 @@ public class ExtraSettingsLoader {
                     new Intent().setClassName(activityInfo.packageName, activityInfo.name);
             if (category == null) {
                 // If category is not specified or not supported, default to device.
-                category = DEVICE_CATEGORY;
+                category = CATEGORY_DEVICE;
             }
 
             if (!TextUtils.equals(extraCategory, category)) {

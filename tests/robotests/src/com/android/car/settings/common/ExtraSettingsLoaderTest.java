@@ -16,7 +16,7 @@
 
 package com.android.car.settings.common;
 
-import static com.android.car.settings.common.ExtraSettingsLoader.DEVICE_CATEGORY;
+import static com.android.settingslib.drawer.CategoryKey.CATEGORY_DEVICE;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_ICON;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_SUMMARY;
 import static com.android.settingslib.drawer.TileUtils.META_DATA_PREFERENCE_TITLE;
@@ -209,7 +209,7 @@ public class ExtraSettingsLoaderTest {
     @Test
     public void testLoadPreference_noCategory_shouldSetToDeviceCategory() {
         Intent intent = new Intent();
-        intent.putExtra(META_DATA_PREFERENCE_CATEGORY, DEVICE_CATEGORY);
+        intent.putExtra(META_DATA_PREFERENCE_CATEGORY, CATEGORY_DEVICE);
         Bundle bundle = new Bundle();
         bundle.putString(META_DATA_PREFERENCE_TITLE, FAKE_TITLE);
         bundle.putString(META_DATA_PREFERENCE_SUMMARY, FAKE_SUMMARY);
