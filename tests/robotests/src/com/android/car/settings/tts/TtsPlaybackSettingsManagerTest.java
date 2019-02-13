@@ -80,7 +80,7 @@ public class TtsPlaybackSettingsManagerTest {
     public void tearDown() {
         ShadowTextToSpeech.reset();
         ShadowTtsEngines.reset();
-        ShadowSecureSettings.clear();
+        ShadowSecureSettings.reset();
         ShadowAlertDialog.reset();
     }
 
