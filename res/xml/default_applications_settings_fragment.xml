@@ -20,8 +20,9 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/default_applications">
     <Preference
-        android:fragment="com.android.car.settings.applications.defaultapps.DefaultAssistantPickerFragment"
+        android:fragment="com.android.car.settings.applications.assist.ManageAssistFragment"
         android:key="@string/pk_default_assist_and_voice"
         android:title="@string/assist_and_voice_input_settings"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        settings:controller="com.android.car.settings.applications.assist.ManageAssistEntryPreferenceController"
+        settings:iconSpaceReserved="true"/>
 </PreferenceScreen>
