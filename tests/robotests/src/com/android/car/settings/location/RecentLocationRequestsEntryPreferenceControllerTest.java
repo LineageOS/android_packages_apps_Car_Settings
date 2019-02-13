@@ -30,6 +30,7 @@ import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.settingslib.Utils;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -52,6 +53,11 @@ public class RecentLocationRequestsEntryPreferenceControllerTest {
                 RecentLocationRequestsEntryPreferenceController.class, mPreference);
         mController = controllerHelper.getController();
         controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowSecureSettings.reset();
     }
 
     @Test
