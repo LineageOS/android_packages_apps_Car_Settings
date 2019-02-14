@@ -30,6 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -46,8 +47,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
     private static final Logger LOG = new Logger(CarSettingActivity.class);
 
-    public static final String META_DATA_KEY_FRAGMENT_CLASS =
-            "com.android.car.settings.FRAGMENT_CLASS";
+    private static final String KEY_HAS_NEW_INTENT =
+            "com.android.car.settings.common.CarSettingActivity.KEY_HAS_NEW_INTENT";
 
     private boolean mHasNewIntent = true;
     private CarUxRestrictionsHelper mUxRestrictionsHelper;
@@ -71,6 +72,9 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         mRestrictedMessage = findViewById(R.id.restricted_message);
 
+        if (savedInstanceState != null) {
+            mHasNewIntent = savedInstanceState.getBoolean(KEY_HAS_NEW_INTENT, mHasNewIntent);
+        }
         launchIfDifferent(getFragment());
     }
 
@@ -100,6 +104,12 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(KEY_HAS_NEW_INTENT, mHasNewIntent);
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         hideKeyboard();
@@ -119,8 +129,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
         if (fragment.getClass().getName().equals(
                 getString(R.string.config_settings_hierarchy_root_fragment))
                 && getSupportFragmentManager().getBackStackEntryCount() > 1) {
-            getSupportFragmentManager().popBackStackImmediate(null,
-                    getSupportFragmentManager().POP_BACK_STACK_INCLUSIVE);
+            getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
 
         getSupportFragmentManager()
@@ -175,8 +185,7 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     @Override
     public void startIntentSenderForResult(IntentSender intent, int requestCode,
             @Nullable Intent fillInIntent, int flagsMask, int flagsValues, Bundle options,
-            ActivityResultCallback callback)
-            throws IntentSender.SendIntentException {
+            ActivityResultCallback callback) {
         throw new UnsupportedOperationException(
                 "Unimplemented for activities that implement FragmentController");
     }
@@ -227,7 +236,9 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
     }
 
     private void launchIfDifferent(Fragment newFragment) {
-        if ((newFragment != null) && differentFragment(newFragment, getCurrentFragment())) {
+        Fragment currentFragment = getCurrentFragment();
+        if ((newFragment != null) && differentFragment(newFragment, currentFragment)) {
+            LOG.d("launchIfDifferent: " + newFragment + " replacing " + currentFragment);
             launchFragment(newFragment);
         }
     }

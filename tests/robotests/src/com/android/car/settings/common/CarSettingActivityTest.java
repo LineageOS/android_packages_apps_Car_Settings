@@ -28,6 +28,8 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
@@ -96,6 +98,49 @@ public class CarSettingActivityTest {
     }
 
     @Test
+    public void onResume_newIntent_launchesNewFragment() {
+        mActivityController.start().postCreate(null).resume();
+        TestFragment testFragment = new TestFragment();
+        mActivity.launchFragment(testFragment);
+        assertThat(mActivity.getFragment()).isEqualTo(testFragment);
+
+        mActivity.onNewIntent(new Intent(Settings.ACTION_SETTINGS));
+        mActivity.onResume(); // Should launch default.
+
+        assertThat(mActivity.getFragment()).isNotEqualTo(testFragment);
+    }
+
+    @Test
+    public void onResume_savedInstanceState_doesNotLaunchFragmentFromOldIntent() {
+        mActivityController.start().postCreate(null).resume();
+        Intent intent = new Intent(Settings.ACTION_SETTINGS);
+        mActivity.onNewIntent(intent);
+        assertThat(mActivity.getFragment()).isNotInstanceOf(TestFragment.class);
+        mActivity.onResume(); // Should launch default. (old intent)
+        mActivity.launchFragment(new TestFragment()); // Replace with test fragment.
+
+        // Recreate with saved state (e.g. during config change).
+        Bundle outState = new Bundle();
+        mActivityController.pause().saveInstanceState(outState);
+        mActivityController = ActivityController.of(new CarSettingActivity(), intent);
+        mActivityController.setup(outState);
+
+        // Should still display most recently launched fragment.
+        assertThat(mActivityController.get().getFragment()).isInstanceOf(TestFragment.class);
+    }
+
+    @Test
+    public void onPreferenceStartFragment_launchesFragment() {
+        Preference pref = new Preference(mContext);
+        pref.setFragment(TestFragment.class.getName());
+
+        mActivity.onPreferenceStartFragment(/* caller= */ null, pref);
+
+        assertThat(mActivity.getSupportFragmentManager().findFragmentById(
+                R.id.fragment_container)).isInstanceOf(TestFragment.class);
+    }
+
+    @Test
     public void launchFragment_rootFragment_clearsBackStack() {
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
@@ -111,22 +156,11 @@ public class CarSettingActivityTest {
         mActivity.launchFragment(root);
 
         assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
-            .isEqualTo(1);
+                .isEqualTo(1);
     }
 
     @Test
-    public void onPreferenceStartFragment_launchesFragment() {
-        Preference pref = new Preference(mContext);
-        pref.setFragment(TestFragment.class.getName());
-
-        mActivity.onPreferenceStartFragment(/* caller= */ null, pref);
-
-        assertThat(mActivity.getSupportFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(TestFragment.class);
-    }
-
-    @Test
-    public void testLaunchFragment_dialogFragment_throwsError() {
+    public void launchFragment_dialogFragment_throwsError() {
         DialogFragment dialogFragment = new DialogFragment();
 
         assertThrows(IllegalArgumentException.class,
@@ -134,28 +168,28 @@ public class CarSettingActivityTest {
     }
 
     @Test
-    public void testShowDialog_launchDialogFragment_noTag() {
+    public void showDialog_launchDialogFragment_noTag() {
         DialogFragment dialogFragment = mock(DialogFragment.class);
         mActivity.showDialog(dialogFragment, /* tag */ null);
         verify(dialogFragment).show(mActivity.getSupportFragmentManager(), null);
     }
 
     @Test
-    public void testShowDialog_launchDialogFragment_withTag() {
+    public void showDialog_launchDialogFragment_withTag() {
         DialogFragment dialogFragment = mock(DialogFragment.class);
         mActivity.showDialog(dialogFragment, TEST_TAG);
         verify(dialogFragment).show(mActivity.getSupportFragmentManager(), TEST_TAG);
     }
 
     @Test
-    public void testFindDialogByTag_retrieveOriginalDialog() {
+    public void findDialogByTag_retrieveOriginalDialog() {
         DialogFragment dialogFragment = new DialogFragment();
         mActivity.showDialog(dialogFragment, TEST_TAG);
         assertThat(mActivity.findDialogByTag(TEST_TAG)).isEqualTo(dialogFragment);
     }
 
     @Test
-    public void testFindDialogByTag_notDialogFragment() {
+    public void findDialogByTag_notDialogFragment() {
         TestFragment fragment = new TestFragment();
         mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 fragment, TEST_TAG).commit();
@@ -163,7 +197,7 @@ public class CarSettingActivityTest {
     }
 
     @Test
-    public void testFindDialogByTag_noSuchFragment() {
+    public void findDialogByTag_noSuchFragment() {
         assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
     }
 
