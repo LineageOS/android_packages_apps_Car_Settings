@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -31,31 +32,35 @@ import com.android.car.settings.R;
  */
 public abstract class TwoActionPreference extends Preference {
 
-    private boolean mIsActionShown = true;
+    private boolean mIsActionShown;
 
     public TwoActionPreference(Context context, AttributeSet attrs,
             int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(attrs);
     }
 
     public TwoActionPreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(attrs);
     }
 
     public TwoActionPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(attrs);
     }
 
     public TwoActionPreference(Context context) {
         super(context);
-        init();
+        init(/* attrs= */ null);
     }
 
-    private void init() {
+    private void init(AttributeSet attrs) {
         setLayoutResource(R.layout.two_action_preference);
+        TypedArray preferenceAttributes = getContext().obtainStyledAttributes(attrs,
+                R.styleable.TwoActionPreference);
+        mIsActionShown = preferenceAttributes.getBoolean(
+                R.styleable.TwoActionPreference_actionShown, true);
     }
 
     /**
