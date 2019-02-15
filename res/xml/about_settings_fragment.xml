@@ -43,4 +43,8 @@
         android:key="@string/pk_about_bluetooth_mac_address"
         android:title="@string/bluetooth_mac_address"
         settings:controller="com.android.car.settings.system.BluetoothMacAddressPreferenceController"/>
+    <Preference
+        android:key="@string/pk_about_wifi_mac_address"
+        android:title="@string/about_wifi_mac_address"
+        settings:controller="com.android.car.settings.system.WifiMacAddressPreferenceController"/>
 </PreferenceScreen>
