@@ -130,6 +130,21 @@ public class ChooseAccountPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_hasAccountExclusionFilter_shouldFilterAccounts() {
+        // Add a filter that should filter out the first account type (com.acct1)
+        Set<String> accountExclusionTypesFilter = new HashSet<>();
+        accountExclusionTypesFilter.add("com.acct1");
+        mController.setAccountTypesExclusionFilter(accountExclusionTypesFilter);
+
+        mController.refreshUi();
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+
+        Preference acct1Pref = mPreferenceGroup.getPreference(0);
+        assertThat(acct1Pref.getTitle()).isEqualTo("Type 2");
+    }
+
+    @Test
     public void refreshUi_doesNotHaveAuthoritiesInFilter_shouldNotBeShown() {
         // Adds a sync adapter type for the com.acct1 account type that does not have the same
         // authority as the one passed to someAuthority
