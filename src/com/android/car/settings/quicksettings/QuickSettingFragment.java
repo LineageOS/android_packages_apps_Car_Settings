@@ -25,6 +25,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.os.UserManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -120,6 +121,7 @@ public class QuickSettingFragment extends BaseFragment {
     public void onStart() {
         super.onStart();
 
+        mUserSwitcherBtn.setVisibility(showUserSwitcher() ? View.VISIBLE : View.INVISIBLE);
         // In non-user builds (that is, user-debug, eng, etc), display some version information.
         if (!Build.IS_USER) {
             refreshBuildInfo();
@@ -163,6 +165,12 @@ public class QuickSettingFragment extends BaseFragment {
         userButton.setCompoundDrawablesRelativeWithIntrinsicBounds(userIcon, /* top= */
                 null, /* end= */ null, /* bottom= */ null);
         userButton.setText(currentUserInfo.name);
+    }
+
+    private boolean showUserSwitcher() {
+        return !UserManager.isDeviceInDemoMode(getContext())
+            && UserManager.supportsMultipleUsers()
+            && !UserManager.get(getContext()).hasUserRestriction(UserManager.DISALLOW_USER_SWITCH);
     }
 
     /**
