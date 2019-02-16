@@ -56,12 +56,19 @@ public class ChooseAccountPreferenceController extends
     private AuthenticatorHelper mAuthenticatorHelper;
     private List<String> mAuthorities;
     private Set<String> mAccountTypesFilter;
+    private Set<String> mAccountTypesExclusionFilter;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
 
     public ChooseAccountPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUserHandle = new CarUserManagerHelper(context).getCurrentProcessUserInfo().getUserHandle();
+
+        HashSet<String> accountTypeExclusionFilter = new HashSet<>();
+
+        // Hardcoding bluetooth account type
+        accountTypeExclusionFilter.add("com.android.bluetooth.pbapsink");
+        setAccountTypesExclusionFilter(accountTypeExclusionFilter);
     }
 
     /** Sets the authorities that the user has. */
@@ -72,6 +79,11 @@ public class ChooseAccountPreferenceController extends
     /** Sets the filter for accounts that should be shown. */
     public void setAccountTypesFilter(Set<String> accountTypesFilter) {
         mAccountTypesFilter = accountTypesFilter;
+    }
+
+    /** Sets the filter for accounts that should NOT be shown. */
+    protected void setAccountTypesExclusionFilter(Set<String> accountTypesExclusionFilterFilter) {
+        mAccountTypesExclusionFilter = accountTypesExclusionFilterFilter;
     }
 
     @Override
@@ -170,6 +182,10 @@ public class ChooseAccountPreferenceController extends
             // If there is an account type filter, make sure this account type is included.
             authorized = authorized && (mAccountTypesFilter == null
                     || mAccountTypesFilter.contains(accountType));
+
+            // Check if the account type is in the exclusion list.
+            authorized = authorized && (mAccountTypesExclusionFilter == null
+                    || !mAccountTypesExclusionFilter.contains(accountType));
 
             // If authorized, add a preference for the provider to the list and remove it from
             // preferencesToRemove.
