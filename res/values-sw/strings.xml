@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Tumia data ya mtandao wa simu"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Ungependa kuzima data ya mtandao wa simu?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Matumizi ya data"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Kikomo na onyo kuhusu matumizi ya data"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Awamu ya matumizi ya data ya programu"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Weka onyo la matumizi ya data"</string>
+    <string name="data_warning" msgid="116776633806885370">"Onyo kuhusu matumizi ya data"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
+    <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data, na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Inawasha Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Inazima Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Hakuna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Umechagua"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Programu ya Mratibu itaweza kusoma maelezo kuhusu programu unazotumia katika mfumo wako, ikiwa ni pamoja na maelezo yanayoonekana kwenye skrini yako au yanayoweza kufikiwa ndani ya programu."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Hakikisha kuwa unaamini programu hii&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; hutumia kilicho kwenye skrini yako kubaini kinachoweza kujazwa kiotomatiki."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Ongeza huduma"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Maombi ya Hivi Karibuni ya Kutambua Eneo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Hamna maombi ya hivi karibuni ya kutambua eneo"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Toleo la mitambo ya redio"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Toleo la kiini"</string>
     <string name="build_number" msgid="3997326631001009102">"Nambari ya muundo"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Anwani ya Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Haipatikani"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Hali"</string>
     <string name="device_status" msgid="267298179806290920">"Hali"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Weka programu upya"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Mapendeleo ya programu yamewekwa upya"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Futa data yote (rejesha mipangilio ya kiwandani)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Hatua hii itafuta data yote kwenye sehemu ya mbele ya gari lako ikiwa ni pamoja na:\n\n"<li>" Akaunti yako ya Google"</li>\n<li>"Data na mipangilio ya mfumo na programu"</li>\n<li>"Programu ulizopakua"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Kwa sasa umeingia katika akaunti zifuatazo:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Watu wengine katika gari hili.wanatumia kifaa."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Badilisha mipangilio ya gari"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Ungependa kubadilisha?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Ungependa kufuta taarifa yako yote ya binafsi na programu ulizopakua? Huwezi kutendua hatua hii!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Futa kila kitu"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Inafuta"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Tafadhali subiri..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarehe na saa"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Weka tarehe na saa"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Weka tarehe, saa, saa za eneo na mfumo"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Siku <xliff:g id="NUM_DAYS">%3$s</xliff:g> zilizopita"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Ongeza kifaa unachokiamini"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Vifaa unavyoviamini"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Usalama wa kifaa"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other">Vifaa <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">Kifaa <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> yako itafungua gari hili itakapounganishwa. Mtu akichukua <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> yako, huenda ataweza kufikia kifaa hiki."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Thibitisha"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ondoa kifaa unachokiamini"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Nimemaliza"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Tumia programu saidizi kuweka mipangilio ya kifaa unachoamini Ukishakamilisha kuweka mipangilio, utaweza kufungua wasifu wako wa mtumiaji wakati simu yako itatambuliwa na gari"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Pakua programu saidizi kwenye simu yako"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Chagua <xliff:g id="CAR_NAME">%1$s</xliff:g> kwenye simu yako ili uoanishe vifaa"</string>

@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accesați datele folosind rețeaua mobilă"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Dezactivați datele mobile?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilizarea datelor"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Avertisment și limită de date"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclu de utilizare a datelor aplicației"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Setați avertisment pentru date"</string>
+    <string name="data_warning" msgid="116776633806885370">"Avertisment pentru date"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Setați o limită date"</string>
+    <string name="data_limit" msgid="227338836292511425">"Limită de date"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitarea utilizării datelor"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Unitatea principală a vehiculului va dezactiva datele mobile când se atinge limita specificată.\n\nDeoarece utilizarea datelor este măsurată de unitatea principală, iar operatorul poate contoriza în mod diferit utilizarea, vă recomandăm să stabiliți o limită prudentă."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Se activează Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Se dezactivează Wi-Fi…"</string>
@@ -159,10 +167,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Niciuna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Bifată"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Aplicația asistent va putea să citească informații despre aplicațiile în uz de pe sistem, inclusiv informațiile vizibile pe ecran sau accesibile în aplicații."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asigurați-vă că aveți încredere în această aplicație&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Completarea automată Google&gt;%1$s&lt;/xliff:g&gt; folosește conținutul de pe ecran pentru a stabili ce se poate completa automat."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Adăugați un serviciu"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitări recente privind locația"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nu există solicitări recente privind locația"</string>
@@ -181,6 +187,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Versiunea benzii de bază"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versiune nucleu"</string>
     <string name="build_number" msgid="3997326631001009102">"Numărul versiunii"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adresă Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Indisponibil"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stare"</string>
     <string name="device_status" msgid="267298179806290920">"Stare"</string>
@@ -232,8 +239,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Resetați aplicațiile"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferințele pentru aplicații au fost resetate"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Ștergeți datele (reveniți la setările din fabrică)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Astfel, vor fi șterse toate datele de pe unitatea principală a vehiculului, între care:\n\n"<li>"contul dvs. Google;"</li>\n<li>"datele și setările de sistem și de aplicație;"</li>\n<li>"aplicațiile descărcate"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Sunteți conectat(ă) la următoarele conturi:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Există și alți utilizatori în acest vehicul."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Resetați vehiculul"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Resetați?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Ștergeți toate informațiile cu caracter personal și aplicațiile descărcate? Nu puteți anula această acțiune!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Ștergeți tot"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Se șterge"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Așteptați..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data și ora"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Setați data și ora"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Setați data, ora, fusul orar și formatele"</string>
@@ -426,14 +440,15 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: acum <xliff:g id="NUM_DAYS">%3$s</xliff:g> zile"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Adăugați un dispozitiv de încredere"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Dispozitive de încredere"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Securitatea dispozitivului"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dispozitive</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de dispozitive</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispozitiv</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> va debloca această mașină când este conectat. Dacă cineva vă ia <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, este posibil să poată accesa acest dispozitiv"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmați"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eliminați dispozitivul de încredere"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Gata"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Folosiți aplicația parteneră pentru a configura un dispozitiv de încredere. După configurare veți putea să vă deblocați profilul de utilizator atunci când mașina vă detectează telefonul."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descărcați aplicația parteneră pe telefon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selectați <xliff:g id="CAR_NAME">%1$s</xliff:g> de pe telefon pentru a asocia dispozitivele"</string>

@@ -35,6 +35,22 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ಡೇಟಾ ಬಳಕೆ"</string>
+    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
+    <skip />
+    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
+    <skip />
+    <!-- no translation found for set_data_warning (6628236612886588097) -->
+    <skip />
+    <!-- no translation found for data_warning (116776633806885370) -->
+    <skip />
+    <!-- no translation found for set_data_limit (7136539812414500084) -->
+    <skip />
+    <!-- no translation found for data_limit (227338836292511425) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"ವೈ‑ಫೈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ವೈ-ಫೈ ಆನ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ವೈ-ಫೈ ಆಫ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
@@ -158,10 +174,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"ಯಾವುದೂ ಬೇಡ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಗೋಚರಿಸುವ ಅಥವಾ ಆ್ಯಪ್‌ಗಳಲ್ಲಿಯೇ ಪ್ರವೇಶಿಸಬಹುದಾದಂತಹ ಮಾಹಿತಿ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ಸಿಸ್ಟಂನಲ್ಲಿ ಬಳಕೆಯಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಕುರಿತು ಮಾಹಿತಿಯನ್ನು ಓದಲು ಅಸಿಸ್ಟೆಂಟ್‌ಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ನಿಮಗೆ ಈ ಅಪ್ಲಿಕೇಶನ್ ಮೇಲೆ ವಿಶ್ವಾಸವಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ &lt;/b&gt; &lt;br/&gt; &lt;br/&gt; ಯಾವ ಕ್ಷೇತ್ರಗಳನ್ನು ಸ್ವಯಂ-ಭರ್ತಿ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸಲು &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ನಿಮ್ಮ ಪರದೆಯಲ್ಲಿರುವ ಮಾಹಿತಿಯನ್ನು ಬಳಸಿಕೊಳ್ಳುತ್ತದೆ."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"ಸೇವೆಯನ್ನು ಸೇರಿಸಿ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ಯಾವುದೇ ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು ಇಲ್ಲ"</string>
@@ -180,6 +194,8 @@
     <string name="baseband_version" msgid="2370088062235041897">"ಬೇಸ್‌ಬ್ಯಾಂಡ್ ಆವೃತ್ತಿ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"ಕೆರ್ನಲ್ ಆವೃತ್ತಿ"</string>
     <string name="build_number" msgid="3997326631001009102">"ಬಿಲ್ಡ್ ಸಂಖ್ಯೆ"</string>
+    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
+    <skip />
     <string name="device_info_not_available" msgid="2095601973977376655">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ಸ್ಥಿತಿ"</string>
     <string name="device_status" msgid="267298179806290920">"ಸ್ಥಿತಿ"</string>
@@ -230,8 +246,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆಪ್‌‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ಇವುಗಳು ಸೇರಿದಂತೆ ಇದು ನಿಮ್ಮ ವಾಹನದ ಹೆಡ್ ಯೂನಿಟ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸುತ್ತದೆ:\n\n"<li>"ನಿಮ್ಮ Google ಖಾತೆ"</li>\n<li>"ಸಿಸ್ಟಂ ಮತ್ತು ಆ್ಯಪ್‌ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</li>\n<li>"ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳು"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"ನೀವು ಪ್ರಸ್ತುತವಾಗಿ ಕೆಳಗಿನ ಖಾತೆಗಳಿಗೆ ಸೈನ್ ಇನ್ ಆಗಿರುವಿರಿ:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ಈ ವಾಹನದಲ್ಲಿ ಇತರ ಬಳಕೆದಾರರಿದ್ದಾರೆ."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"ವಾಹನವನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ಮರುಹೊಂದಿಸುವುದೇ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ನಿಮ್ಮ ಎಲ್ಲ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳನ್ನು ಅಳಿಸಬೇಕೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ಅಳಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ನಿರೀಕ್ಷಿಸಿ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಬದಲಾಯಿಸಿ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ದಿನಾಂಕ, ಸಮಯ, ಸಮಯದ ವಲಯದ, ಮತ್ತು ಫರ್ಮ್ಯಾಟ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ"</string>
@@ -417,14 +440,11 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ದಿನಗಳ ಹಿಂದೆ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಿ"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಗಳು"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ಸಾಧನ ಭದ್ರತೆ"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <string name="remove_device_message" msgid="6447820559674148349">"ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ಸಂಪರ್ಕಿತಗೊಂಡಾಗ ಈ ಕಾರ್‌ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ಒಂದು ವೇಳೆ ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ಅನ್ನು ಯಾರಾದರೂ ತೆಗೆದುಕೊಂಡರೆ, ಅವರಿಗೆ ಈ ಸಾಧನವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ದೃಢೀಕರಿಸಿ"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ಮುಗಿದಿದೆ"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಬಳಸಿ. ಸೆಟಪ್ ನಂತರ, ವಾಹನವು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಪತ್ತೆಹಚ್ಚಿದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>

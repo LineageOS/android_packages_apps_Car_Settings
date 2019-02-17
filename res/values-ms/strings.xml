@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan rangkaian mudah alih"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Matikan data mudah alih?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Penggunaan data"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Amaran data &amp; had"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Kitaran penggunaan data apl"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Tetapkan amaran data"</string>
+    <string name="data_warning" msgid="116776633806885370">"Amaran data"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Tetapkan had data"</string>
+    <string name="data_limit" msgid="227338836292511425">"Had data"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Mengehadkan penggunaan data"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Unit kepala kenderaan anda akan mematikan data mudah alih setelah mencapai had yang anda tetapkan.\n\nMemandangkan penggunaan data diukur oleh unit kepala dan pembawa anda mungkin mengira penggunaan secara berbeza, anda disyorkan supaya menetapkan had yang konservatif."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Menghidupkan Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Mematikan Wi‑Fi…"</string>
@@ -157,11 +165,9 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"Perkhidmatan autolengkap"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Tiada"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Dipilih"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"Pembantu akan dapat membaca maklumat tentang apl yang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin anda atau yang dapat diakses dalam apl."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Pembantu akan dapat membaca maklumat tentang apl yang sedang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin atau yang dapat diakses dalam apl."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Pastikan anda mempercayai apl ini&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; menggunakan item yang terdapat pada skrin anda untuk menentukan perkara yang boleh dilengkapkan secara automatik."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Tambahkan perkhidmatan"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaharu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tiada permintaan lokasi terbaharu"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Versi jalur dasar"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versi inti"</string>
     <string name="build_number" msgid="3997326631001009102">"Nombor binaan"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Alamat Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Tidak tersedia"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tetapkan semula apl"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Pilihan apl telah ditetapkan semula"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Padamkan semua data (ttpn semula kilang)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Tindakan ini akan memadamkan semua data daripada unit kepala kenderaan anda, termasuk:\n\n"<li>"Akaun Google anda"</li>\n<li>"Data dan tetapan sistem dan apl"</li>\n<li>"Apl yang dimuat turun"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Pada masa ini, anda telah dilog masuk ke akaun berikut:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Terdapat pengguna lain pada kenderaan ini."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Tetapkan semula kenderaan"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Tetapkan semula?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Padamkan semua maklumat peribadi anda dan aplikasi yang dimuat turun? Anda tidak boleh membuat asal tindakan ini!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Padamkan semua"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Memadam"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Sila tunggu..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarikh &amp; masa"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Tetapkan tarikh dan masa"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Tetapkan tarikh, masa, zon waktu &amp; format"</string>
@@ -417,18 +431,18 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari lalu"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Tambah peranti dipercayai"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Peranti dipercayai"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Keselamatan peranti"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> peranti</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> peranti</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> anda akan membuka kunci kereta ini apabila disambungkan. Jika seseorang mengambil <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> anda, orang itu mungkin dapat mengakses peranti ini"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Sahkan"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Gunakan apl rakan untuk menyediakan peranti yang dipercayai. Setelah disediakan, anda akan dapat membuka kunci profil pengguna anda apabila telefon anda dikesan oleh kenderaan"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Alih keluar peranti yang dipercayai"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Gunakan apl rakan untuk menyediakan peranti yang dipercayai. Setelah peranti disediakan, anda akan dapat membuka kunci profil pengguna anda apabila telefon anda dikesan oleh kenderaan"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Muat turun apl rakan pada telefon anda"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> pada telefon anda untuk menggandingkan peranti tersebut"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock tidak dapat mengesan ciri keselamatan peranti ini. Untuk melindungi kereta anda, peranti yang dipercayai hanya dapat memastikan kereta anda kekal tidak berkunci setelah anda membuka kunci kereta anda itu. Peranti yang dipercayai boleh memastikan kereta anda kekal tidak berkunci apabila berada berdekatan, walaupun semasa orang lain berada di dalam kereta itu."</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock tidak dapat mengesan ciri keselamatan peranti ini. Untuk melindungi kereta anda, peranti yang dipercayai hanya dapat memastikan kereta anda kekal tidak berkunci setelah anda membuka kunci kereta anda itu. Peranti yang dipercayai boleh memastikan kereta anda kekal tidak berkunci apabila berada berdekatan, walaupun orang lain yang memegang peranti itu."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Tambahkan <xliff:g id="DEVICE_NAME">%1$s</xliff:g> sebagai peranti yang dipercayai"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> berjaya ditambah sebagai peranti yang dipercayai"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>

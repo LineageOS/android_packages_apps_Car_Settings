@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงข้อมูลโดยใช้เครือข่ายมือถือ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ปิดเน็ตมือถือใช่ไหม"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"คำเตือนและขีดจำกัดอินเทอร์เน็ต"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"รอบปริมาณที่แอปใช้อินเทอร์เน็ต"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ตั้งค่าเตือนการใช้อินเทอร์เน็ต"</string>
+    <string name="data_warning" msgid="116776633806885370">"คำเตือนปริมาณอินเทอร์เน็ต"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ตั้งขีดจำกัดอินเทอร์เน็ต"</string>
+    <string name="data_limit" msgid="227338836292511425">"ขีดจำกัดอินเทอร์เน็ต"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"จำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"กำลังเปิด Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"กำลังปิด Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"ไม่มี"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"เลือกไว้"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant จะอ่านข้อมูลเกี่ยวกับแอปที่ใช้งานอยู่ในระบบของคุณได้ รวมถึงข้อมูลที่ปรากฏบนหน้าจอหรือที่เข้าถึงได้ภายในแอป"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ตรวจดูว่าคุณเชื่อถือแอปนี้ได้&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ป้อนอัตโนมัติ&gt;%1$s&lt;/xliff:g&gt; ดูรายการบนหน้าจอว่าข้อมูลอะไรบ้างที่ป้อนอัตโนมัติได้"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"เพิ่มบริการ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"เวอร์ชันเบสแบนด์"</string>
     <string name="kernel_version" msgid="7327212934187011508">"เวอร์ชันเคอร์เนล"</string>
     <string name="build_number" msgid="3997326631001009102">"หมายเลขบิวด์"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ที่อยู่บลูทูธ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ไม่พร้อมให้บริการ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"สถานะ"</string>
     <string name="device_status" msgid="267298179806290920">"สถานะ"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"รีเซ็ตแอป"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"รีเซ็ตค่ากำหนดของแอปแล้ว"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ลบข้อมูล (รีเซ็ตเป็นค่าเริ่มต้น)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"การดำเนินการนี้จะลบข้อมูลทั้งหมดออกจากระบบเครื่องเสียงในยานพาหนะ โดยรวมถึงสิ่งต่อไปนี้\n\n"<li>"บัญชี Google ของคุณ"</li>\n<li>"ข้อมูลและการตั้งค่าของระบบและแอป"</li>\n<li>"แอปที่ดาวน์โหลด"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"คุณลงชื่อเข้าใช้บัญชีต่อไปนี้อยู่ในขณะนี้"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"มีผู้ใช้รายอื่นอยู่บนยานพาหนะคันนี้"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"รีเซ็ตยานพาหนะ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"รีเซ็ตไหม"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ลบข้อมูลส่วนบุคคลและแอปที่ดาวน์โหลดทั้งหมดไหม คุณจะเลิกทำการดำเนินการนี้ไม่ได้"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ลบทุกอย่าง"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"กำลังลบ"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"โปรดรอสักครู่..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"วันที่และเวลา"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ตั้งวันที่และเวลา"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ตั้งวันที่ เวลา เขตเวลาและรูปแบบ"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> วันที่ผ่านมา"</string>
     <string name="add_device_title" msgid="8452168024017866232">"เพิ่มอุปกรณ์ที่เชื่อถือได้"</string>
     <string name="trusted_device" msgid="5637378361866787603">"อุปกรณ์ที่เชื่อถือได้"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ความปลอดภัยของอุปกรณ์"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other">อุปกรณ์ <xliff:g id="COUNT_1">%d</xliff:g> เครื่อง</item>
+      <item quantity="one">อุปกรณ์ <xliff:g id="COUNT_0">%d</xliff:g> เครื่อง</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> จะปลดล็อกรถคันนี้เมื่อมีการเชื่อมต่อ หากมีคนเอา <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ของคุณไป เขาก็อาจใช้งานอุปกรณ์นี้ได้"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ยืนยัน"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"นำอุปกรณ์ที่เชื่อถือได้ออก"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"เสร็จ"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"ใช้แอปที่ใช้ร่วมกันเพื่อตั้งค่าอุปกรณ์ที่เชื่อถือได้ เมื่อตั้งค่าแล้ว คุณจะปลดล็อกโปรไฟล์ผู้ใช้ได้เมื่อรถยนต์ตรวจพบโทรศัพท์"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ดาวน์โหลดแอปที่ใช้ร่วมกันในโทรศัพท์"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>

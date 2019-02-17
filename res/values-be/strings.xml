@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ да даных па мабільнай сетцы"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Адключыць мабільную перадачу даных?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Выкарыстанне трафіка"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Папярэджанне і ліміт трафіка"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Цыкл выкарыстання трафіка праграм"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Папярэджваць пра ліміт трафіка"</string>
+    <string name="data_warning" msgid="116776633806885370">"Папярэджанне пра ліміт трафіка"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Задаць ліміт трафіка"</string>
+    <string name="data_limit" msgid="227338836292511425">"Ліміт трафіка"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Абмежаванне выкарыстання даных"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Пасля дасягнення вызначанага ліміту трафіка галаўная прылада аўтамабіля выключыць мабільную перадачу даных.\n\nПаколькі метады разліку выкарыстання трафіка галаўной прыладай і аператарам могуць адрознівацца, мы рэкамендуем устанавіць заніжаны ліміт."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Уключэнне Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Адключэнне Wi-Fi…"</string>
@@ -160,10 +168,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Няма"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Выбрана"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Памочнік атрымае доступ да інфармацыі пра праграмы, якія выкарыстоўваюцца ў вашай сістэме, у тым ліку да інфармацыі, бачнай на вашым экране ці даступнай у праграмах."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Упэўніцеся, што давяраеце гэтай праграме&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Аўтазапаўненне Google&gt;%1$s&lt;/xliff:g&gt; выкарыстоўвае тое, што знаходзіцца на вашым экране, каб вызначыць, што можна запоўніць аўтаматычна."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Дадаць службу"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Месцазнаходжанне"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Нядаўнія запыты геаданых"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма нядаўніх запытаў геаданых"</string>
@@ -182,6 +188,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Версія дыяпазону"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Версія ядра"</string>
     <string name="build_number" msgid="3997326631001009102">"Нумар зборкі"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Адрас Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Недаступнае"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Стан"</string>
     <string name="device_status" msgid="267298179806290920">"Стан"</string>
@@ -234,8 +241,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Скінуць налады праграм"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Налады праграм скінуты"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Сцерці даныя (скід да заводскіх налад)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Гэта дзеянне сатрэ ўсе даныя з галаўной прылады аўтамабіля, у тым ліку:\n\n"<li>"ваш уліковы запіс Google;"</li>\n<li>"сістэмныя даныя і налады праграм;"</li>\n<li>"спампаваныя праграмы"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Цяпер вы ўвайшлі ў наступныя ўліковыя запісы:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"У гэтага аўтамабіля ёсць іншыя карыстальнікі."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Скінуць налады аўтамабіля"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Скінуць?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Сцерці ўсю вашу асабістую інфармацыю і спампаваныя праграмы? Гэта дзеянне нельга адрабіць!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Сцерці ўсе даныя"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Ідзе сціранне"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Пачакайце..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата і час"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Задаць дату і час"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Задаць дату, час, часавы пояс і фарматы"</string>
@@ -435,14 +449,16 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> сут. таму назад"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Дадаць давераную прыладу"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Давераныя прылады"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Бяспека прылады"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> прылада</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> прылады</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> прылад</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> прылады</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Калі падключана, <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> зможа разблакіраваць гэты аўтамабіль. Калі <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> трапіць у рукі іншаму карыстальніку, той атрымае доступ да прылады"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Пацвердзіць"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Выдаліць давераную прыладу"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Гатова"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Для наладкі даверанай прылады выкарыстоўвайце спадарожную праграму. Калі пасля наладкі аўтамабіль выявіць тэлефон, вы зможаце разблакіраваць профіль карыстальніка"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Спампуйце спадарожную праграму на тэлефон"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Каб спалучыць прылады, выберыце на тэлефоне назву \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\""</string>

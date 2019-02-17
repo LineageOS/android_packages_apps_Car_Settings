@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क प्रयोग गरी डेटामाथि पहुँच राख्नु…"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा निष्क्रिय पार्ने हो?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटाको प्रयोग"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटासम्बन्धी चेतावनी तथा सीमा"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"अनुप्रयोगको डेटा प्रयोगको चक्र"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"डेटासम्बन्धी चेतावनी सेट गर्नु"</string>
+    <string name="data_warning" msgid="116776633806885370">"डेटासम्बन्धी चेतावनी"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"डेटाको सीमा सेट गर्नुहोस्"</string>
+    <string name="data_limit" msgid="227338836292511425">"डेटाको सीमा"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटाको प्रयोग सीमित गर्दै"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"तपाईंले सेट गर्नुभएको अधिकतम डेटा प्रयोगको सीमामा पुगेपछि तपाईंको सवारी साधनको मुख्य भागले मोबाइल डेटालाई निष्क्रिय पार्ने छ।\n\nतपाईंको सवारी साधनको मुख्य भागले र तपाईंको सेवा प्रदायकले फरक तरिकाले डेटा प्रयोगको मापन गर्ने हुनाले विवेकपूर्ण तरिकाले यसको सीमा सेट गर्ने कुराबारे विचार गर्नुहोस्।"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi सक्रिय गरिँदै…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi निष्क्रिय पारिँदै…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चयन गरिएको"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"सहायकले तपाईंको स्क्रिनमा देख्न सकिने वा अनुप्रयोगहरूभित्र पहुँच राख्न सकिने जानकारीलगायत तपाईंको प्रणालीमा प्रयोगमा रहेका अनुप्रयोगहरूबारे जानकारी पढ्न सक्ने छ।"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो अनुप्रयोगमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस अनुप्रयोगले स्वतः भर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"बेसब्यान्ड संस्करण"</string>
     <string name="kernel_version" msgid="7327212934187011508">"कर्नेल संस्करण"</string>
     <string name="build_number" msgid="3997326631001009102">"बिल्डको नम्बर"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लुटुथ ठेगाना"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध छैन"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिति"</string>
     <string name="device_status" msgid="267298179806290920">"स्थिति"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अनुप्रयोगहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र अनुप्रयोगका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका अनुप्रयोगहरू"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"तपाईं अहिले निम्न खाताहरूमा साइन इन हुनुहुन्छ:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"यस सवारी साधनमा अन्य प्रयोगकर्ताहरू छन्।"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"सवारी साधन रिसेट गर्नुहोस्"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"रिसेट गर्ने हो?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"तपाईंका सबै व्यक्तिगत जानकारी र डाउनलोड गरिएका अनुप्रयोगहरू मेट्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"सबै कुरा मेटाउनुहोस्"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"मेटाउँदै"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया प्रतीक्षा गर्नुहोला..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"मिति र समय"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"मिति र समय सेट गर्नुहोस्"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"मिति, समय, समय क्षेत्र र प्रारूपहरू सेट गर्नुहोस्"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिनअघि"</string>
     <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय यन्त्र थप्नुहोस्"</string>
     <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय यन्त्रहरू"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"यन्त्रको सुरक्षा"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> यन्त्रहरू</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> यन्त्र</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"तपाईंको <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> जडान भएका बेला यसले यो कार अनलक गर्ने छ कुनै व्यक्तिले तपाईंको <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> लैजानुभयो भने उहाँले यो यन्त्रमाथि पहुँच राख्न सक्ने सम्भावना छ।"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"पुष्टि गर्नुहोस्"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय यन्त्रलाई हटाउनुहोस्"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"सम्पन्न भयो"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"कुनै विश्वसनीय यन्त्र सेटअप गर्न सहयोगी अनुप्रयोग प्रयोग गर्नुहोस्। सेटअप भएपछि, सवारी साधनले तपाईंको फोन पत्ता लागाएपछि तपाईं आफ्नो प्रयोगकर्ता प्रोफाइल अनलक गर्न सक्नु हुने छ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"१. आफ्नो फोनमा सहयोगी अनुप्रयोग डाउनलोड गर्नुहोस्"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"२. यन्त्रहरूको जोडा बनाउन आफ्नो फोनमा <xliff:g id="CAR_NAME">%1$s</xliff:g> चयन गर्नुहोस्"</string>

@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"모바일 네트워크를 사용하여 데이터 액세스"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"모바일 데이터를 사용 중지하시겠습니까?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"데이터 사용량"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"데이터 경고 및 한도"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"앱 데이터 사용량 주기"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"데이터 경고 설정"</string>
+    <string name="data_warning" msgid="116776633806885370">"데이터 경고"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"데이터 한도 설정"</string>
+    <string name="data_limit" msgid="227338836292511425">"데이터 한도"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"데이터 사용량 제한"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"설정한 모바일 데이터 한도에 도달하면 차량에서 모바일 데이터를 사용 중지합니다.\n\n데이터 사용량은 헤드 유닛에서 측정되며 이동통신사에서 사용량을 다르게 계산할 수 있으므로 한도를 낮게 설정해 보세요."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi 사용 설정 중..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi 사용 중지 중..."</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"없음"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"선택됨"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"어시스턴트가 시스템에서 사용 중인 앱에 관한 정보를 읽을 수 있게 됩니다. 여기에는 화면에 표시된 정보 또는 앱 내에서 액세스할 수 있는 정보가 포함됩니다."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;이 앱을 신뢰할 수 있는지 확인하세요.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google 자동 완성&gt;%1$s&lt;/xliff:g&gt;에서는 자동 완성할 수 있는 항목을 결정하기 위해 화면의 내용을 사용합니다."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"서비스 추가"</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"최근 위치 요청 없음"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"베이스밴드 버전"</string>
     <string name="kernel_version" msgid="7327212934187011508">"커널 버전"</string>
     <string name="build_number" msgid="3997326631001009102">"빌드 번호"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"블루투스 주소"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"사용할 수 없음"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"상태"</string>
     <string name="device_status" msgid="267298179806290920">"상태"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"앱 초기화"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"앱 환경설정이 초기화되었습니다."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"모든 데이터 삭제(초기화)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"초기화하면 다음을 포함한 차량 헤드 유닛의 모든 데이터가 삭제됩니다. \n\n"<li>"Google 계정"</li>\n<li>"시스템과 앱 데이터 및 설정"</li>\n<li>"다운로드한 앱"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"현재 다음 계정에 로그인함:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"이 차량에 다른 사용자가 있습니다."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"차량 초기화"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"초기화하시겠습니까?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"모든 개인정보와 다운로드한 앱을 삭제하시겠습니까? 삭제한 후에는 작업을 취소할 수 없습니다."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"모두 삭제"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"삭제 중"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"잠시 기다려 주세요..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"날짜 및 시간"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"날짜 및 시간 설정"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"날짜, 시간, 표준시간대 및 형식 설정"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>
     <string name="add_device_title" msgid="8452168024017866232">"신뢰할 수 있는 기기 추가"</string>
     <string name="trusted_device" msgid="5637378361866787603">"신뢰할 수 있는 기기"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"기기 보안"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other">기기 <xliff:g id="COUNT_1">%d</xliff:g>대</item>
+      <item quantity="one">기기 <xliff:g id="COUNT_0">%d</xliff:g>대</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g>이(가) 연결되면 차량을 잠금 해제합니다. 누군가 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>을(를) 가져가면 이 차량에 액세스할 수도 있습니다."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"확인"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"신뢰할 수 있는 기기 삭제"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"완료"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"호환 앱을 사용해 신뢰할 수 있는 기기를 설정하세요. 설정이 완료되면 차량에서 휴대전화가 감지된 경우 사용자 프로필을 잠금 해제할 수 있습니다."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. 휴대전화에 호환 앱을 다운로드합니다."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. 휴대전화에서 <xliff:g id="CAR_NAME">%1$s</xliff:g>을(를) 선택하여 기기를 페어링합니다."</string>

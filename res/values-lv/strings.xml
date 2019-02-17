@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Piekļuve datiem, izmantojot mobilo tīklu"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vai izslēgt mobilos datus?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datu lietojums"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Datu brīdinājums un ierobežojums"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Lietotnes datu lietojuma cikls"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Iestatīt datu brīdinājumu"</string>
+    <string name="data_warning" msgid="116776633806885370">"Datu brīdinājums"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Iestatīt datu ierobežojumu"</string>
+    <string name="data_limit" msgid="227338836292511425">"Datu ierobežojums"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datu lietojuma ierobežošana"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Kad transportlīdzekļa sistēmas panelī būs sasniegts jūsu iestatītais ierobežojums, mobilie dati tiks izslēgti.\n\nTā kā datu lietojums tiek noteikts sistēmas panelī un jūsu mobilo sakaru operators var citādi uzskaitīt datu lietojumu, ieteicams iestatīt pārdomātu ierobežojumu."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Notiek Wi-Fi ieslēgšana…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Notiek Wi-Fi izslēgšana…"</string>
@@ -159,10 +167,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nav"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Atlasīta"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistents varēs lasīt informāciju par jūsu sistēmā izmantotajām lietotnēm, tostarp jūsu ekrānā redzamo informāciju vai lietotnēs pieejamo informāciju."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Pārliecinieties, ka šī lietotne ir uzticama&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google automātiskā aizpilde&gt;%1$s&lt;/xliff:g&gt; izmanto ekrānā redzamo saturu, lai noteiktu, kādu informāciju aizpildīt automātiski."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Pievienot pakalpojumu"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Atrašanās vieta"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Neseni atrašanās vietu pieprasījumi"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nav nesenu atrašanās vietu pieprasījumu"</string>
@@ -181,6 +187,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Pamatjoslas versija"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kodola versija"</string>
     <string name="build_number" msgid="3997326631001009102">"Būvējuma numurs"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth adrese"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nav pieejams"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Statuss"</string>
     <string name="device_status" msgid="267298179806290920">"Statuss"</string>
@@ -232,8 +239,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Atiestatīt lietotnes"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Lietotņu preferences ir atiestatītas"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Notīrīt visus datus (atiestatīt ierīci)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Tādējādi tiks izdzēsti visi transportlīdzekļa sistēmas panelī esošie dati, tostarp:\n\n"<li>"jūsu Google konts;"</li>\n<li>"sistēmas un lietotņu dati un iestatījumi;"</li>\n<li>"lejupielādētās lietotnes."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Jūs pašlaik esat pierakstījies šādos kontos:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Šo transportlīdzekli izmanto vēl citi lietotāji."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Atiestatīt transportlīdzekli"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vai atiestatīt?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vai dzēst visu jūsu personisko informāciju un lejupielādētās lietotnes? Šo darbību nevarēs atsaukt."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Dzēst visu"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Notiek dzēšana"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Lūdzu, uzgaidiet…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datums un laiks"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Datuma un laika iestatīšana"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Iestatīt datumu, laiku, laika joslu un formātus"</string>
@@ -426,14 +440,15 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: pirms <xliff:g id="NUM_DAYS">%3$s</xliff:g> dienām"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Pievienot uzticamu ierīci"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Uzticamas ierīces"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Ierīces drošība"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> ierīču</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ierīce</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ierīces</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Jūsu ierīce <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> atbloķēs šo automašīnu, ja ierīcei būs izveidots savienojums ar to. Ja kāda persona paņem jūsu ierīci <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, šī persona var piekļūt jūsu ierīcei."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Apstiprināt"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Noņemt uzticamo ierīci"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Gatavs"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Izmantojiet palīglietotni, lai iestatītu uzticamu ierīci. Pēc iestatīšanas varēsiet atbloķēt savu lietotāja profilu, kad transportlīdzeklī tiks konstatēts jūsu tālrunis."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lejupielādējiet palīglietotni savā tālrunī."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tālrunī atlasiet automašīnas nosaukumu (<xliff:g id="CAR_NAME">%1$s</xliff:g>), lai ierīces savienotu pārī."</string>

@@ -35,6 +35,22 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"మొబైల్ నెట్‌వర్క్‌ను ఉపయోగించి డేటాను యాక్సెస్ చేయండి"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"మొబైల్ డేటాని ఆఫ్ చేయాలా?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"డేటా వినియోగం"</string>
+    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
+    <skip />
+    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
+    <skip />
+    <!-- no translation found for set_data_warning (6628236612886588097) -->
+    <skip />
+    <!-- no translation found for data_warning (116776633806885370) -->
+    <skip />
+    <!-- no translation found for set_data_limit (7136539812414500084) -->
+    <skip />
+    <!-- no translation found for data_limit (227338836292511425) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fiని ఆన్ చేస్తోంది…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fiని ఆఫ్ చేస్తోంది…"</string>
@@ -158,10 +174,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"ఏదీ కాదు"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ఎంచుకోబడింది"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"అసిస్టెంట్ మీ సిస్టమ్‌లో వినియోగంలో ఉన్న యాప్‌ల గురించిన సమాచారం, అలాగే మీ స్క్రీన్‌పై కనిపించే లేదా యాప్‌లలో యాక్సెస్ చేసే సమాచారాన్ని చదవగలుగుతుంది."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ఈ యాప్‌ను మీరు విశ్వసిస్తున్నట్లు నిర్ధారించండి&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; మీ స్క్రీన్‌పై ఉన్నవాటిని పరిగణనలోకి తీసుకొని వేటిని ఆటోమేటిక్‌గా పూరించాలో నిశ్చయిస్తుంది."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"సేవను జోడించు"</string>
     <string name="location_settings_title" msgid="901334356682423679">"స్థానం"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన అభ్యర్థనలు"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన అభ్యర్థనలు లేవు"</string>
@@ -180,6 +194,8 @@
     <string name="baseband_version" msgid="2370088062235041897">"బేస్‌బ్యాండ్ వెర్షన్"</string>
     <string name="kernel_version" msgid="7327212934187011508">"కెర్నెల్ వెర్షన్"</string>
     <string name="build_number" msgid="3997326631001009102">"బిల్డ్ సంఖ్య"</string>
+    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
+    <skip />
     <string name="device_info_not_available" msgid="2095601973977376655">"అందుబాటులో లేదు"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"స్థితి"</string>
     <string name="device_status" msgid="267298179806290920">"స్థితి"</string>
@@ -230,8 +246,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"యాప్‌లను రీసెట్ చేయి"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"యాప్ ప్రాధాన్యతలు రీసెట్ చేయబడ్డాయి"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"మొత్తం డేటాను తొలగించు (ఫ్యాక్టరీ రీసెట్)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ఇది మీ వాహన ప్రధాన విభాగం నుండి మొత్తం డేటాను తొలగిస్తుంది, వీటితో సహా:\n\n"<li>"మీ Google ఖాతా"</li>\n<li>"సిస్టమ్ మరియు యాప్ డేటా మరియు సెట్టింగ్‌లు"</li>\n<li>"డౌన్‌లోడ్ చేసిన యాప్‌‍లు"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"మీరు ప్రస్తుతం క్రింది ఖాతాలకు సైన్ ఇన్ చేసారు:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ఈ వాహనంలో ఇతర వినియోగదారులు ఉన్నారు."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"వాహనాన్ని రీసెట్ చేయి"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"రీసెట్ చేయాలా?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"మీ వ్యక్తిగత సమాచారం మరియు డౌన్‌లోడ్ చేసిన యాప్‌లు అన్నింటినీ తొలగించాలా? మీరు ఈ చర్యను తిరిగి రద్దు చేయలేరు!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ప్రతి దాన్ని తొలగించండి"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"తొలగిస్తోంది"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"దయచేసి వేచి ఉండండి..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"తేదీ &amp; సమయం"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"తేదీ మరియు సమయాన్ని సెట్ చేయండి"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"తేదీ, సమయం, సమయ మండలి &amp; ఫార్మాట్‌లను సెట్ చేయండి"</string>
@@ -417,14 +440,11 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
     <string name="add_device_title" msgid="8452168024017866232">"విశ్వసనీయ పరికరాన్ని జోడించండి"</string>
     <string name="trusted_device" msgid="5637378361866787603">"విశ్వసనీయ పరికరాలు"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"పరికర భద్రత"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <string name="remove_device_message" msgid="6447820559674148349">"కనెక్ట్ అయి ఉన్నప్పుడు మీ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> మీ కారును అన్‌లాక్ చేస్తుంది. ఎవరైనా మీ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>ను తీసుకున్నట్లయితే, వారు ఈ పరికరాన్ని యాక్సెస్ చేయగలరు"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"నిర్ధారించు"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"విశ్వసనీయ పరికరాన్ని తీసివేయి"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"పూర్తయింది"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"విశ్వసనీయ పరికరాన్ని సెటప్ చేయడానికి సహచర యాప్‌ను ఉపయోగించండి. ఒకసారి సెటప్ చేసిన తర్వాత, వాహనం మీ ఫోన్‌ను గుర్తించినపుడు మీరు మీ వినియోగదారు ప్రొఫైల్‌ను అన్‌లాక్ చేయగలుగుతారు"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. మీ ఫోన్‌లో సహచర యాప్‌ను డౌన్‌లోడ్ చేయండి"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. పరికరాలను జత చేయడానికి మీ ఫోన్‌లో <xliff:g id="CAR_NAME">%1$s</xliff:g>ను ఎంచుకోండి"</string>

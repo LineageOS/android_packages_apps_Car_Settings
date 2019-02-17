@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ເຂົ້າເຖິງອິນເຕີເນັດໂດຍໃຊ້ເຄືອຂ່າຍມືຖື"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ປິດອິນເຕີເນັດມືຖືບໍ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ການໃຊ້ຂໍ້ມູນ"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ຄຳເຕືອນ ແລະ ຂີດຈຳກັດອິນເຕີເນັດ"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"ຮອບການນຳໃຊ້ຂໍ້ມູນແອັບ"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ຕັ້ງຄ່າການເຕືອນອິນເຕີເນັດ"</string>
+    <string name="data_warning" msgid="116776633806885370">"ຄຳເຕືອນອິນເຕີເນັດ"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ຕັ້ງຄ່າຂີດຈຳກັດອິນເຕີເນັດ"</string>
+    <string name="data_limit" msgid="227338836292511425">"ຂີດຈຳກັດອິນເຕີເນັດ"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ການຈຳກັດການໃຊ້ອິນເຕີເນັດ"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ລະບົບເຄື່ອງສຽງຂອງລົດທ່ານຈະປິດອິນເຕີເນັດມືຖື ເມື່ອມັນຮອດຂີດຈຳກັດທີ່ທ່ານຕັ້ງໄວ້.\n\nເພາະວ່າການໃຊ້ອິນເຕີເນັດຖືກວັດແທກໂດຍລະບົບເຄື່ອງສຽງ ແລະ ຜູ້ໃຫ້ບໍລິການອາດວັດແທກການໃຊ້ອິນເຕີເນັດແຕກຕ່າງກັນ, ສະນັ້ນ ກະລຸນາພິຈາລະນາກຳນົດຂີດຈຳກັດໂດຍເຜື່ອຈຳນວນໄວ້ນຳ."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ກຳລັງເປີດ Wi-Fi..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ກຳລັງປິດ Wi-Fi..."</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"ບໍ່ມີ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ເລືອກແລ້ວ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ຜູ້ຊ່ວຍຈະສາມາດອ່ານຂໍ້ມູນກ່ຽວກັບແອັບທີ່ໃຊ້ໃນລະບົບຂອງທ່ານ ຮວມທັງຂໍ້ມູນທີ່ເບິ່ງເຫັນໄດ້ໃນໜ້າຈໍຂອງທ່ານ ຫຼື ເຂົ້າເຖິງໄດ້ພາຍໃນແອັບນັ້ນ."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ກວດໃຫ້ແນ່ໃຈວ່າທ່ານເຊື່ອຖືແອັບນີ້&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ຈະໃຊ້ສິ່ງທີ່ຢູ່ໃນໜ້າຈໍຂອງທ່ານເພື່ອກຳນົດວ່າຈະຕື່ມຂໍ້ມູນຫຍັງແດ່ໂດຍອັດຕະໂນມັດ."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"ເພີ່ມການບໍລິການ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ສະຖານທີ່"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ບໍ່ມີຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"ເວີຊັນເບສແບນ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"ເວີຊັນ Kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"ເລກທີລຸ້ນ"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ທີ່ຢູ່ Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ບໍ່ສາມາດໃຊ້ໄດ້"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ສະຖານະ"</string>
     <string name="device_status" msgid="267298179806290920">"ສະຖານະ"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ຣີເຊັດແອັບ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ຣີເຊັດການຕັ້ງຄ່າແອັບແລ້ວ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ລຶບຂໍ້ມູນທັງໝົດ (ຣີເຊັດເປັນຄ່າຈາກໂຮງງານ)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ນີ້ຈະລຶບຂໍ້ມູນທັງໝົດອອກຈາກລະບົບເຄື່ອງສຽງໃນພາຫານະຂອງທ່ານ, ຮວມທັງ:\n\n"<li>"ບັນຊີ Google ຂອງທ່ານ"</li>\n<li>"ຂໍ້ມູນ ແລະ ການຕັ້ງຄ່າຂອງລະບົບ ແລະ ແອັບ"</li>\n<li>"ແອັບທີ່ດາວໂຫຼດ"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"ປັດຈຸບັນທ່ານຢູ່ໃນລະບົບບັນຊີຕໍ່ໄປນີ້:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ມີຜູ້ໃຊ້ອື່ນປາກົດໃນພາຫານະນີ້."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"ຣີເຊັດພາຫານະ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ຣີເຊັດບໍ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ລຶບຂໍ້ມູນສ່ວນຕົວ ແລະ ແອັບທີ່ດາວໂຫຼດມາທັງໝົດຂອງທ່ານບໍ? ທ່ານບໍ່ສາມາດຍົກເລີກຄຳສັ່ງນີ້ໄດ້!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ລຶບທຸກຢ່າງ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ກຳລັງລຶບ"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ກະລຸນາລໍຖ້າ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ວັນທີ ແລະ ເວລາ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ຕັ້ງວັນທີ ແລະ ເວລາ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ຕັ້ງວັນທີ, ເວລາ, ເຂດ ແລະ ຮູບແບບເວລາ"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ມື້ກ່ອນ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ເພີ່ມອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ຄວາມປອດໄພຂອງອຸປະກອນ"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ອຸປະກອນ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ອຸປະກອນ</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ຂອງທ່ານຈະປົດລັອກລົດນີ້ ເມື່ອມັນເຊື່ອມຕໍ່. ຖ້າຄົນອື່ນເອົາ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ຂອງທ່ານ, ພວກເຂົາຈະສາມາດເຂົ້າເຖິງອຸປະກອນນີ້ໄດ້"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ຢືນຢັນ"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ລຶບອຸປະກອນທີ່ເຊື່ອຖືໄດ້ອອກ"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ແລ້ວໆ"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"ໃຊ້ແອັບຊ່ວຍເຫຼືອເພື່ອຕັ້ງຄ່າອຸປະກອນທີ່ເຊື່ອຖືໄດ້. ເມື່ອຕັ້ງຄ່າແລ້ວ, ທ່ານຈະສາມາດປົດລັອກໂປຣໄຟລ໌ຜູ້ໃຊ້ຂອງທ່ານ ເມື່ອພາຫາລະກວດພົບໂທລະສັບຂອງທ່ານ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ດາວໂຫຼດແອັບຊ່ວຍເຫຼືອໃນໂທລະສັບຂອງທ່ານ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ເລືອກ <xliff:g id="CAR_NAME">%1$s</xliff:g> ໃນໂທລະສັບຂອງທ່ານເພື່ອຈັບຄູ່ອຸປະກອນ"</string>

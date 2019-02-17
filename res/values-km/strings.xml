@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ការ​ប្រើ​ទិន្នន័យ"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ការកម្រិត និង​ការព្រមាន​ពីការប្រើទិន្នន័យ"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"វដ្ត​នៃការ​ប្រើ​ទិន្នន័យ​កម្មវិធី"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"កំណត់ការព្រមានពីការប្រើទិន្នន័យ"</string>
+    <string name="data_warning" msgid="116776633806885370">"ការព្រមានពីការប្រើទិន្នន័យ"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"កំណត់កម្រិត​ទិន្នន័យ"</string>
+    <string name="data_limit" msgid="227338836292511425">"កម្រិត​កំណត់​ទិន្នន័យ"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ការ​កម្រិត​លើ​ការ​ប្រើ​ទិន្នន័យ"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​អ្នក​នឹង​បិទ​ទិន្នន័យ​ទូរសព្ទចល័ត ​នៅ​ពេល​ដែល​វា​ប្រើប្រាស់​ទិន្នន័យ​​ដល់កម្រិតដែល​អ្នក​បាន​កំណត់។\n\nដោយសារ​​ការ​ប្រើ​ប្រាស់​ទិន្នន័យ​ត្រូវ​បាន​វាស់​ស្ទង់ដោយឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​ ​ហើយក្រុមហ៊ុនបម្រើសេវាទូរសព្ទ​របស់​អ្នកអាចគណនាលើការប្រើប្រាស់​ខុសពីនោះ សូមពិចារណា​កំណត់កម្រិតប្រើប្រាស់​ទិន្នន័យ​ទាប។"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"កំពុង​បើក Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"កំពុង​បិទ Wi‑Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"គ្មាន"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"បានជ្រើសរើស"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​នោះផងដែរ​។"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;សូម​ប្រាកដថា​អ្នក​ទុក​ចិត្ត​លើ​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"បញ្ចូល​សេវាកម្ម"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"កំណែ​មូលដ្ឋាន"</string>
     <string name="kernel_version" msgid="7327212934187011508">"កំណែ​ខឺណែល"</string>
     <string name="build_number" msgid="3997326631001009102">"លេខ​កំណែបង្កើត"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"អាសយដ្ឋាន​ប៊្លូធូស"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"មិនមានទេ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ស្ថានភាព"</string>
     <string name="device_status" msgid="267298179806290920">"ស្ថានភាព"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"កំណត់​កម្មវិធី​ឡើងវិញ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"បាន​កំណត់​ចំណូល​ចិត្ត​កម្មវិធីឡើង​វិញ​ហើយ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"លុប​ទិន្នន័យ​ទាំងអស់ (កំណត់ដូច​ដើម​ឡើងវិញ)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ការធ្វើបែបនេះ​នឹងលុប​ទិន្នន័យ​ទាំងអស់​ពីឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​អ្នក រួមទាំង៖\n\n"<li>"កម្មវិធី​ដែលបាន​ទាញយក"</li>\n<li>"ទិន្នន័យ​កម្មវិធី និង​ប្រព័ន្ធ ព្រមទាំង​ការកំណត់"</li>\n<li>"គណនី Google របស់អ្នក"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"បច្ចុប្បន្ន​ អ្នក​បាន​ចូល​គណនី​ដូច​ខាង​ក្រោម៖"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"មាន​វត្តមានរបស់​អ្នកប្រើប្រាស់​ផ្សេងទៀត​នៅលើ​យានជំនិះនេះ។"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"កំណត់​យានជំនិះ​ឡើងវិញ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"កំណត់ឡើងវិញ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"លុប​ព័ត៌មាន​ផ្ទាល់ខ្លួន និង​កម្មវិធី​ដែលបាន​ទាញយក​ទាំងអស់​របស់អ្នក? អ្នក​មិនអាច​ត្រឡប់​សកម្មភាពនេះ​វិញបានទេ!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"លុប​អ្វីគ្រប់យ៉ាង"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"កំពុងលុប"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"សូម​រង់ចាំ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"កំណត់​កាលបរិច្ឆេទ និង​ម៉ោង"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"កំណត់​កាលបរិច្ឆេទ ម៉ោង ល្វែងម៉ោង និង​ទម្រង់"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\nថ្ងៃ <xliff:g id="DATE">%2$s</xliff:g>៖ <xliff:g id="NUM_DAYS">%3$s</xliff:g> ថ្ងៃមុន"</string>
     <string name="add_device_title" msgid="8452168024017866232">"បញ្ចូល​ឧបករណ៍​ដែលទុកចិត្ត"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"សុវត្ថិភាពឧបករណ៍"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other">ឧបករណ៍ <xliff:g id="COUNT_1">%d</xliff:g></item>
+      <item quantity="one">ឧបករណ៍ <xliff:g id="COUNT_0">%d</xliff:g></item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> របស់​អ្នក​នឹង​ដោះសោរថយន្ត​នេះ នៅពេល​ភ្ជាប់។ ប្រសិនបើ​នរណាម្នាក់យក​ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> របស់អ្នក បុគ្គល​នោះ​អាច​នឹងចូលប្រើ​ឧបករណ៍​នេះ​បាន"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"បញ្ជាក់"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"លុបឧបករណ៍ដែលទុកចិត្ត"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"រួចរាល់"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"ប្រើ​កម្មវិធី​ដៃគូ ដើម្បី​រៀបចំឧបករណ៍​ដែល​ទុក​ចិត្ត។ បន្ទាប់ពីរៀបចំរួចហើយ អ្នក​នឹង​អាច​ដោះ​សោ​កម្រង​ព័ត៌មាន​អ្នក​ប្រើប្រាស់​របស់អ្នក នៅពេលយានជំនិះ​រកឃើញ​ទូរសព្ទ​របស់អ្នក"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ទាញយក​កម្មវិធី​ដៃគូ​នៅលើទូរសព្ទរបស់អ្នក"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ជ្រើសរើស​ <xliff:g id="CAR_NAME">%1$s</xliff:g> នៅលើ​ទូរសព្ទ​របស់អ្នក ដើម្បីផ្គូផ្គង​ឧបករណ៍"</string>

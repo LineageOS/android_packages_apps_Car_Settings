@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"I-access ang data gamit ang mobile network"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"I-off ang mobile data?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Paggamit ng data"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Babala at limitasyon sa data"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Cycle ng paggamit ng data ng app"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Magtakda ng babala sa data"</string>
+    <string name="data_warning" msgid="116776633806885370">"Babala sa data"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Itakda ang limitasyon sa data"</string>
+    <string name="data_limit" msgid="227338836292511425">"Limitasyon sa data"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Paglimita sa paggamit ng data"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Io-off ng head unit ng iyong sasakyan ang mobile data sa oras na maabot nito ang itinakda mong limitasyon.\n\nDahil sinusukat ng head unit ang paggamit ng data, at maaaring mag-iba ang pagkalkula ng carrier mo sa paggamit, pag-isipang magtakda ng mababang limitasyon."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Ino-on ang Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Ino-off ang Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Wala"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Napili"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Makakabasa ang assistant ng impormasyon tungkol sa mga app na ginagamit sa iyong system, kabilang ang impormasyong nakikita sa screen mo o naa-access sa loob ng mga app."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Tiyaking pinagkakatiwalaan mo ang app na ito&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; Ginagamit ng &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; kung ano ang nasa iyong screen para matukoy kung ano ang maaaring i-autofill."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Magdagdag ng serbisyo"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Mga Kamakailang Kahilingan sa Lokasyon"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Walang kamakailang kahilingan sa lokasyon"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Bersyon ng baseband"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
     <string name="build_number" msgid="3997326631001009102">"Numero ng build"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Address ng bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Hindi available"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"I-reset ang mga app"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Na-reset na ang mga kagustuhan sa app"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Burahin lahat ng data (factory reset)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Buburahin nito ang lahat ng data mula sa head unit ng iyong sasakyan, kasama ang:\n\n"<li>"Iyong Google account"</li>\n<li>"Data ng system at app at mga setting"</li>\n<li>"Mga na-download na app"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Kasalukuyan kang naka-sign in sa mga sumusunod na account:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"May iba pang user sa sasakyang ito."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"I-reset ang sasakyan"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"I-reset?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Burahin ang lahat ng iyong personal na impormasyon at na-download na app? Hindi mo maaaring i-undo ang pagkilos na ito!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Burahin lahat"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Binubura"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Mangyaring maghintay..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Petsa at oras"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Itakda ang petsa at oras"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Itakda ang petsa, oras, time zone, at mga format"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> (na) araw ang nakalipas"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Magdagdag ng trusted na device"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Trusted na device"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Seguridad ng device"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> device</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> na device</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Maa-unlock ng iyong <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ang kotseng ito kapag nakakonekta ito. Kung may kumuha ng iyong <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, maaari niyang ma-access ang device na ito"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kumpirmahin"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Mag-alis ng pinagkakatiwalaang device"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Tapos na"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Buksan ang kasamang app para mag-set up ng pinagkakatiwalaang device. Kapag na-set up ito, maa-unlock mo ang iyong profile ng user kapag na-detect ng sasakyan ang telepono mo"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. I-download ang kasamang app sa iyong telepono"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Piliin ang <xliff:g id="CAR_NAME">%1$s</xliff:g> sa iyong telepono para ipares ang mga device"</string>

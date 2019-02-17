@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Të çaktivizohen të dhënat celulare?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Përdorimi i të dhënave"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Paralajmërimi dhe kufiri i të dhënave"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Cikli i përd. të të dhënave të apl."</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Cakto paralajm. për të dhënat"</string>
+    <string name="data_warning" msgid="116776633806885370">"Paralajmërim për të dhënat"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Cakto kufirin e të dhënave"</string>
+    <string name="data_limit" msgid="227338836292511425">"Kufiri i të dhënave"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kufizimi i përdorimit të të dhënave"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Njësia kryesore e automjetit tënd do t\'i çaktivizojë të dhënat celulare kur të arrihet kufiri që cakton ti.\n\nMeqenëse përdorimi i të dhënave matet nga njësia kryesore dhe operatori celular mund ta llogarisë ndryshe përdorimin, ki parasysh të vendosësh një kufi të menduar mirë."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Po aktivizon Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Po çaktivizon Wi‑Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Asnjë"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"I zgjedhur"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistenti do të jetë në gjendje të lexojë informacion rreth aplikacioneve në përdorim në sistemin tënd, duke përfshirë informacionin e dukshëm në ekran ose të qasshëm brenda aplikacioneve."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sigurohu që ke besim te ky aplikacion&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=\"Plotësimi automatik i Google\"&gt;%1$s&lt;/xliff:g&gt; përdor atë që ndodhet në ekranin tënd për të përcaktuar se çfarë mund të plotësohet automatikisht."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Shto shërbim"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Versioni i brezit të bazës"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Versioni i bërthamës"</string>
     <string name="build_number" msgid="3997326631001009102">"Numri i ndërtimit"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adresa e Bluetooth-it"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nuk ofrohet"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Statusi"</string>
     <string name="device_status" msgid="267298179806290920">"Statusi"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Rivendos aplikacionet"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Preferencat e aplikacioneve janë rivendosur"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Spastro të gjitha të dhënat (rivendosja e fabrikës)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Kjo do të spastrojë të gjitha të dhënat nga njësia kryesore e automjetit tënd, duke përfshirë:\n\n"<li>"Llogarinë tënde të Google"</li>\n<li>"Të dhënat dhe cilësimet e sistemit dhe të aplikacioneve"</li>\n<li>"Aplikacionet e shkarkuara"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Je i identifikuar aktualisht në llogaritë e mëposhtme:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Ka përdorues të tjerë të pranishëm në këtë automjet."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Rivendose automjetin"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Të rivendoset?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Të spastrohen të gjitha informacionet e tua personale dhe aplikacionet e shkarkuara? Ky veprim nuk mund të zhbëhet!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Spastroji të gjitha"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Po spastrohen"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Qëndro në pritje..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Data dhe ora"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Vendos datën dhe orën"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Cakto datën, orën, brezin orar dhe formatet"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Shto një pajisje të besuar"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Pajisjet e besuara"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Siguria e pajisjes"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pajisje</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> pajisje</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Pajisja jote <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> do ta shkyçë këtë makinë kur është e lidhur. Nëse dikush merr pajisjen tënde <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, mund të jetë në gjendje të ketë qasje te kjo pajisje"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmo"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hiq pajisjen e besuar"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"U krye"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Përdor aplikacionin shoqërues për të konfiguruar një pajisje të besuar. Pasi të konfigurohet, do të jesh në gjendje të shkyçësh profilin tënd të përdoruesit kur telefoni yt të zbulohet nga automjeti"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Shkarko aplikacionin shoqërues në telefonin tënd"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>

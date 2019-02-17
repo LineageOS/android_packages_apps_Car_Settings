@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"更多"</string>
     <string name="display_settings" msgid="5325515247739279185">"顯示"</string>
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"自動調校亮度"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"自動調校光暗"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"按環境光線優化亮度"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"已開啟「夜燈模式」"</string>
     <string name="keywords_display" msgid="3978416985146943922">"螢幕, 觸控螢幕"</string>
@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"使用流動網絡存取數據"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要關閉流動數據嗎？"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"數據用量"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"數據用量警告和上限"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"應用程式數據用量週期"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"設定數據用量警告"</string>
+    <string name="data_warning" msgid="116776633806885370">"數據用量警告"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"設定數據上限"</string>
+    <string name="data_limit" msgid="227338836292511425">"數據上限"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"正在限制數據用量"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"汽車音響主機在數據用量到達設定的上限後，便會關閉流動數據。\n\n由於數據用量由汽車音響主機計算，而流動網絡供應商的用量計算方式可能不同，因此建議您設定較保守的上限。"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在開啟 Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在關閉 Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"無"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"已選取"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"這個小幫手將能讀取系統目前使用的應用程式資料，包括螢幕顯示的資料或可在應用程式中存取的資料。"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;請確定您信任此應用程式&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; 應用程式會根據您畫面上的內容判斷可自動填入的資料。"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"新增服務"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置資訊要求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近沒有位置資訊要求"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"基頻版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"核心版本"</string>
     <string name="build_number" msgid="3997326631001009102">"版本號碼"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"藍牙位址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未有資料"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"狀態"</string>
     <string name="device_status" msgid="267298179806290920">"狀態"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重設應用程式"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重設應用程式偏好設定"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"清除所有資料 (回復原廠設定)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"此操作將清除汽車音響主機的所有資料，包括：\n\n"<li>"您的 Google 帳戶"</li>\n<li>"系統和應用程式資料及設定"</li>\n<li>"已下載的應用程式"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登入以下帳戶："</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"此汽車上還有其他使用者。"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"重設汽車"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"要重設嗎？"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"您要清除所有個人資訊和已下載的應用程式嗎？您無法復原這項操作！"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"全部清除"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"正在清除"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"請稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和時間"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"設定日期及時間"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"設定日期、時間、時區和格式"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
     <string name="add_device_title" msgid="8452168024017866232">"加入信任的裝置"</string>
     <string name="trusted_device" msgid="5637378361866787603">"信任的裝置"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"裝置安全"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 部裝置</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 部裝置</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"您的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 將在連接後為此汽車解鎖。如果有人取得您的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，他們或許能存取此裝置。"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"確認"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除信任的裝置"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"使用隨附應用程式設定信任的裝置。完成設定後，將可以在汽車偵測到手機時解鎖您的使用者設定檔"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手機下載隨附應用程式"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手機選取「<xliff:g id="CAR_NAME">%1$s</xliff:g>」以配對裝置"</string>

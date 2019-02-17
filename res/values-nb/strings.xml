@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Bruk data via mobilnettverket"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vil du slå av mobildata?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Databruk"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Datavarsel og -grense"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Syklus for appdatabruk"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Angi varsel om databruk"</string>
+    <string name="data_warning" msgid="116776633806885370">"Varsel om databruk"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Angi datagrense"</string>
+    <string name="data_limit" msgid="227338836292511425">"Datagrense"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Begrensning av databruk"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Kjøretøyets hovedenhet slår av mobildata når den når grensen du angir.\n\nSiden databruken måles av hovedenheten og operatøren din kan beregne bruken annerledes, kan det være lurt å angi en lav grense."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Slår på Wi-Fi …"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Slår av Wi-Fi …"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valgt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistenten kan lese informasjon om appene du bruker i systemet ditt, inkludert informasjon som er synlig på skjermen eller tilgjengelig i appene."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sørg for at appen er pålitelig&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google autofyll&gt;%1$s&lt;/xliff:g&gt; bruker det som er på skjermen, til å fastslå hva som kan fylles ut automatisk."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Legg til tjeneste"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Posisjon"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nylige posisjonsforespørsler"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ingen nylige posisjonsforespørsler"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Basisbåndversjon"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kjerneversjon"</string>
     <string name="build_number" msgid="3997326631001009102">"Delversjonsnummer"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth-adresse"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Ikke tilgjengelig"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Tilbakestill apper"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Appinnstillingene er tilbakestilt"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Slett alle data (tilbakestill)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Dette sletter alle dataene fra kjøretøyets hovedenhet, inkludert\n\n"<li>"Google-kontoen din"</li>\n<li>"system- og appdata samt innstillinger"</li>\n<li>"nedlastede apper"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Du er for øyeblikket pålogget følgende kontoer:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Andre brukere er til stede i dette kjøretøyet."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Tilbakestill kjøretøyet"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vil du tilbakestille?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vil du slette den personlige informasjonen din og nedlastede apper? Du kan ikke angre denne handlingen."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tøm alt"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Tømmer"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent litt."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslett"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Angi dato og klokkeslett"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angi dato, klokkeslett, tidssone og formater"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : for <xliff:g id="NUM_DAYS">%3$s</xliff:g> dager siden"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Legg til en pålitelig enhet"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Pålitelige enheter"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Enhetssikkerhet"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> enheter</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> enhet</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> låser opp denne bilen når den er tilkoblet. Hvis noen tar <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, får vedkommende tilgang til denne enheten."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bekreft"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Fjern pålitelig enhet"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Ferdig"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Bruk følgeappen for å konfigurere en pålitelig enhet. Når den er konfigurert, kan du låse opp brukerprofilen din når telefonen din oppdages av kjøretøyet."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Last ned følgeappen på telefonen din"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Velg <xliff:g id="CAR_NAME">%1$s</xliff:g> på telefonen for å koble til enhetene"</string>

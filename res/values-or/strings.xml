@@ -35,6 +35,22 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ମୋବାଇଲ୍ ନେଟ୍‌ୱର୍କକୁ ବ୍ୟବହାରକରି ଡାଟା ଆକ୍ସେସ୍ କରନ୍ତୁ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ମୋବାଇଲ୍‌ ଡାଟା ବନ୍ଦ କରିବେ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ଡାଟାର ବ୍ୟବହାର"</string>
+    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
+    <skip />
+    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
+    <skip />
+    <!-- no translation found for set_data_warning (6628236612886588097) -->
+    <skip />
+    <!-- no translation found for data_warning (116776633806885370) -->
+    <skip />
+    <!-- no translation found for set_data_limit (7136539812414500084) -->
+    <skip />
+    <!-- no translation found for data_limit (227338836292511425) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"ୱାଇ-ଫାଇ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ୱାଇ-ଫାଇ ଅନ୍‌ କରୁଛି…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ୱାଇ-ଫାଇ ବନ୍ଦ‌ ହେଉଛି…"</string>
@@ -158,10 +174,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ଚୟନିତ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ଏହି ସହାୟକ, ସ୍କ୍ରିନ୍‌ରେ ଦେଖାଦେଉଥିବା କିମ୍ୱା ଆପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ଆକ୍ସେସ୍ ହୋଇପାରିବା ଭଳି ସୂଚନା ସମେତ ଆପଣଙ୍କ ସିଷ୍ଟମ୍‌ରେ ଥିବା ଆପ୍‌ଗୁଡ଼ିକ ବିଷୟରେ ସୂଚନା ପଢ଼ିପାରିବ।"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ଆପଣ ଏହି ଆପ୍‌କୁ ବିଶ୍ୱାସ କରୁଥିବା ନିଶ୍ଚିତ କରନ୍ତୁ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ଅଟୋଫିଲ୍‌&gt;%1$s&lt;/xliff:g&gt; କଣ ଅଟୋଫିଲ୍‌ କରାଯାଇ ପାରିବ ନିର୍ଦ୍ଧାରଣ କରିବାକୁ ଆପଣଙ୍କ ସ୍କ୍ରିନ୍‌ରେ ଯାହା ଥାଏ ତାହା ବ୍ୟବହାର କରେ।"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"ସେବା ଯୋଗ କରନ୍ତୁ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ୍‌"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ସାମ୍ପ୍ରତିକ ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
@@ -180,6 +194,8 @@
     <string name="baseband_version" msgid="2370088062235041897">"ବେସ୍‌ବ୍ୟାଣ୍ଡ ଭର୍ସନ୍‌"</string>
     <string name="kernel_version" msgid="7327212934187011508">"କର୍ନେଲ୍‌ ଭର୍ସନ୍‌"</string>
     <string name="build_number" msgid="3997326631001009102">"ନମ୍ୱ‍ର୍‌ ଗଠନ କରନ୍ତୁ"</string>
+    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
+    <skip />
     <string name="device_info_not_available" msgid="2095601973977376655">"ଉପଲବ୍ଧ ନାହିଁ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ସ୍ଥିତି"</string>
     <string name="device_status" msgid="267298179806290920">"ସ୍ଥିତି"</string>
@@ -230,8 +246,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ଆପ୍ସ ରିସେଟ୍‌ କରନ୍ତୁ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ଆପ୍‍ ଅଗ୍ରାଧିକାର ରିସେଟ୍‍ ହୋଇଛି"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ସମସ୍ତ ଡାଟା ଲିଭାନ୍ତୁ (ଫ୍ୟାକ୍ଟୋରୀ ରିସେଟ୍‌)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ଏହା ଆପଣଙ୍କ ବାହାନର ମୁଖ୍ୟ ଭାଗରୁ ସମସ୍ତ ଡାଟା ଖାଲି କରିଦେବ, ଯେପରିକି:\n\n"<li>"ଆପଣଙ୍କର Google ଆକାଉଣ୍ଟ"</li>\n<li>"ସିିିିଷ୍ଟମ୍‍ ଏବଂ ଆପ୍‍ ଡାଟା ଏବଂ ସେଟିଂସ୍‍"</li>\n<li>"ଡାଉନ୍‍‍ଲୋଡ୍‍ କରାଯାଇଥିବା ଆପ୍ସ"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"ଆପଣଙ୍କ ବର୍ତ୍ତମାନ ନିମ୍ନୋକ୍ତ ଆକାଉଣ୍ଟକୁ ସାଇନ୍ ଇନ୍ ହୋଇଛନ୍ତି:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ଏହି ବାହନରେ ଅନ୍ୟ ଉପଯୋଗକର୍ତ୍ତାମାନେ ଅଛନ୍ତି।"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"ବାହାନ ରିସେଟ୍‍ କରନ୍ତୁ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ରିସେଟ୍‌ କରିବେ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ନିଜର ସମସ୍ତ ବ୍ୟକ୍ତିଗତ ସୂଚନା ଏବଂ ଡାଉନ୍‌ଲୋଡ୍‌ କରିଥିବା ଆପ୍‌ଗୁଡ଼ିକୁ ଲିଭାଇ ଦେବେ? ଏହି କାମକୁ ଆପଣ ପୂର୍ବାବସ୍ଥାକୁ ଫେରାଇ ଆଣିପାରିବେ ନାହିଁ!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ସବୁକିଛି ଖାଲି କରିଦିଅନ୍ତୁ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ଲିଭାଉଛି"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ଦୟାକରି ଅପେକ୍ଷା କରନ୍ତୁ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ତାରିଖ ଓ ସମୟ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ତାରିଖ ଓ ସମୟ ସେଟ କରନ୍ତୁ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ତାରିଖ, ସମୟ, ସମୟ ଅଞ୍ଚଳ, ଓ ଫର୍ମାଟ୍‌ ସେଟ୍‌ କରନ୍ତୁ"</string>
@@ -417,14 +440,11 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‍‍‍ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ଡିଭାଇସ୍‌ ସୁରକ୍ଷା"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <string name="remove_device_message" msgid="6447820559674148349">"ଏହା ସଂଯୋଗ ହେଲେ ଆପଣଙ୍କର <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ଏହି କାର୍‍ ଅନ୍‍ଲକ‍ କରିବ। ଯଦି କେହିଜଣେ ଆପଣଙ୍କର <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ନିଏ, ସେମାନେ ହୁଏତ ଏହି ଡିଭାଇସ୍‍ ଆକ୍ସେସ୍‍ କରିବାକୁ ସକ୍ଷମ ହୋଇପାରନ୍ତି"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ନିଶ୍ଚିତ କରନ୍ତୁ"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍ କାଢ଼ିଦିଅନ୍ତୁ"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ହୋଇଗଲା"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"ଏକ ବିଶ୍ବସ୍ତ ଡିଭାଇସ୍ ସେଟ୍‍ ଅପ୍ କରିବାକୁ ସହଯୋଗୀ ଆପ୍ ବ୍ୟବହାର କରନ୍ତୁ। ଥରେ ସେଟ୍‍ ଅପ୍ ହେଲେ, ଗାଡ଼ି ଆପଣଙ୍କର ଫୋନ୍‍କୁ ଚିହ୍ନଟ କଲେ ଆପଣ ଆପଣଙ୍କର ଉପଯୋଗକର୍ତ୍ତା ପ୍ରୋଫାଇଲ୍ ଅନ୍‍ଲକ୍ କରିବାକୁ ସକ୍ଷମ ହେବେ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ଆପଣଙ୍କର ଫୋନ୍‍‍ରେ ସହଯୋଗୀ ଆପ୍ ଡାଉନ୍‍ଲୋଡ୍ କରନ୍ତୁ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ଡିଭାଇସ୍ ପେୟାର୍ କରିବାକୁ ଆପଣଙ୍କ ଫୋନ୍‍‍ରୁ <xliff:g id="CAR_NAME">%1$s</xliff:g> ବାଛନ୍ତୁ"</string>
