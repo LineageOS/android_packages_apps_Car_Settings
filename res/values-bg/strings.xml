@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Достъп до данните през мобилната мрежа"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Да се изключат ли мобилните данни?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Пренос на данни"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Предупреждение и лимит за данните"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Цикъл на използване на данни от прилож."</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Предупр. за данните: Задаване"</string>
+    <string name="data_warning" msgid="116776633806885370">"Предупреждение за данните"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Задаване на лимит за данните"</string>
+    <string name="data_limit" msgid="227338836292511425">"Лимит за данните"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ограничаване на преноса на данни"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Основното устройство на автомобила ви ще изключи мобилните данни, след като достигне зададения от вас лимит.\n\nТъй като преносът им се измерва от основното устройство, а операторът ви може да го отчита по различен начин, добре е да използвате умерен лимит."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi се включва…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi се изключва…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Без"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Избрано"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Асистентът ще може да чете информацията за използваните в системата приложения, включително данните, видими на екрана или достъпни в тях."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Уверете се, че имате доверие на това приложение&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Функцията на Google за автоматично попълване&gt;%1$s&lt;/xliff:g&gt; използва това, което е на екрана ви, за да определи какво може да се попълни автоматично."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Добавяне на услуга"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Скорошни заявки за местоположението"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Версия на базовия диапазон"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Версия на ядрото"</string>
     <string name="build_number" msgid="3997326631001009102">"Номер на версията"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Адрес на Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Не е налице"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Състояние"</string>
     <string name="device_status" msgid="267298179806290920">"Състояние"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Нулиране на приложенията"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Предпочитанията за приложенията са нулирани"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Изтрив. на данните (възст. на фабр. настр.)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Това ще изтрие всички данни от основното устройство на автомобила ви, включително:\n\n"<li>"профила ви в Google;"</li>\n<li>"данни и настройки от системата и приложенията;"</li>\n<li>"изтеглените приложения."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Понастоящем сте влезли в следните профили:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"В този автомобил има други потребители."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Нулиране на автомобила"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Да се извърши ли нулиране?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Да се изтрият ли цялата ви лична информация и всички изтеглени приложения? Не можете да отмените това действие!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Изтриване на всичко"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Изтрива се"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Моля, изчакайте..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Дата и час"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Задаване на дата и час"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Задаване на дата, час, часова зона и формати"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Преди <xliff:g id="NUM_DAYS">%3$s</xliff:g> дни"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Добав. на надеждно устройство"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Надеждни устройства"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Сигурност на у-вото"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> устройства</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> устройство</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Устройството ви <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ще отключи този автомобил, когато е свързано. Ако някой вземе устройството ви <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, е възможно да осъществи достъп до него."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потвърждаване"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Премахване на надеждното устройство"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Използвайте придружаващото приложение, за да настроите надеждно устройство. След настройването ще можете да отключвате потребителския си профил, когато телефонът ви бъде разпознат от автомобила."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Изтеглете придружаващото приложение на телефона си."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ на телефона си, за да сдвоите устройствата."</string>

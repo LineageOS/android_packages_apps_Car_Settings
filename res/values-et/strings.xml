@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Andmesideühendus mobiilsidevõrgu abil"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kas lülitada mobiilne andmeside välja?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Andmekasutus"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Andmekasutuse hoiatus ja piirang"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Rakenduse andmekasutuse tsükkel"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Määra andmekasutuse hoiatus"</string>
+    <string name="data_warning" msgid="116776633806885370">"Andmekasutuse hoiatus"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Määra andmekasutuse piirang"</string>
+    <string name="data_limit" msgid="227338836292511425">"Andmekasutuse piirang"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Andmekasutuse piiramine"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Kui määratud limiit on täis, lülitab sõiduki keskseade mobiilse andmeside välja.\n\nKuna andmekasutust mõõdab keskseade ja teie operaator võib kasutust teisiti arvestada, võiksite määrata konservatiivse limiidi."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WiFi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"WiFi sisselülitamine …"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"WiFi väljalülitamine …"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Puudub"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Valitud"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistent saab teie süsteemis kasutatavate rakenduste kohta teavet (sh teie ekraanil kuvatud või rakendustes juurdepääsetavat teavet) lugeda."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Veenduge, et rakendus oleks usaldusväärne&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google\'i automaatne täitmine&gt;%1$s&lt;/xliff:g&gt; kasutab automaatse täitmise sisestuse määramiseks ekraanil kuvatut."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Lisa teenus"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Asukoht"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Hiljutised asukohapäringud"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ühtegi hiljutist asukohapäringut pole"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Põhiribaversioon"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Tuuma versioon"</string>
     <string name="build_number" msgid="3997326631001009102">"Järgunumber"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetoothi aadress"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Pole saadaval"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Olek"</string>
     <string name="device_status" msgid="267298179806290920">"Olek"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Lähtesta rakendused"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Rakenduse eelistused on lähtestatud"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Kustuta kõik andmed (tehases. lähtest.)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"See kustutab teie sõiduki keskseadmest kõik andmed, sh:\n\n"<li>"teie Google\'i konto;"</li>\n<li>"süsteemi ja rakenduste andmed ning seaded;"</li>\n<li>"allalaaditud rakendused."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Olete praegu sisse logitud järgmistele kontodele:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Selles sõidukis on teisi kasutajaid."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Lähtesta seade"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Kas soovite lähtestada?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Kas kustutada kõik teie isiklikud andmed ja allalaaditud rakendused? Seda toimingut ei saa tagasi võtta."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Kustuta kõik"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Kustutamine"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Oodake …"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Kuupäev ja kellaaeg"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Kuupäeva ja kellaaja määramine"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Määra kuupäev, kellaaeg, ajavöönd ja vormingud"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> päeva tagasi"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Lisa usaldusväärne seade"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Usaldusv. seadmed"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Seadme turvalisus"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> seadet</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> seade</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Teie <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> avab selle auto, kui need on omavahel ühendatud. Kui keegi võtab teie telefoni <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, on tal võimalik sellele seadmele juurde pääseda"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kinnita"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eemalda usaldusväärne seade"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Valmis"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Kasutage usaldusväärse seadme seadistamiseks kaasrakendust. Kui see on seadistatud, on teil võimalik avada oma kasutajaprofiil, kui sõiduk tuvastab teie telefoni"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Laadige oma telefonis alla kaasrakendus."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tehke seadmete sidumiseks oma telefonis valik <xliff:g id="CAR_NAME">%1$s</xliff:g>."</string>

@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Dostop do podatkov prek mobilnega omrežja"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Želite izklopiti prenos pod. v mobilnih omrežjih?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Prenesena količina podatkov"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Opozorilo in omejitev za prenos podatk."</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Cikel porabe podatkov aplikacije"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Nastavi opoz. za prenos podat."</string>
+    <string name="data_warning" msgid="116776633806885370">"Opozorilo o prenosu podatkov"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Nastavi omejitev prenosa pod."</string>
+    <string name="data_limit" msgid="227338836292511425">"Omejitev prenosa podatkov"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Omejitev prenesene količine podatkov"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna enota vozila bo izklopila prenos podatkov v mobilnih omrežjih, ko bo dosežena nastavljena omejitev.\n\nKer količino prenesenih podatkov meri glavna enota, operater pa jo morda drugače, priporočamo, da nastavite nekoliko manjšo omejitev."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Vklapljanje povezave Wi‑Fi …"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Izklapljanje povezave Wi‑Fi …"</string>
@@ -160,10 +168,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Brez"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Izbrano"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Pomočnik bo lahko bral podatke o aplikacijah, ki se uporabljajo v vašem sistemu, vključno s podatki, ki so vidni na zaslonu ali do katerih je mogoče dostopati v aplikacijah."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Prepričajte se, ali zaupate tej aplikaciji&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Samodejno izpolnjevanje&gt;%1$s&lt;/xliff:g&gt; iz elementov na zaslonu ugotovi, kaj je mogoče samodejno izpolniti."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Dodaj storitev"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavne zahteve za lokacijo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ni nedavnih zahtev za lokacijo"</string>
@@ -182,6 +188,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Različica radijske programske opreme"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Različica jedra"</string>
     <string name="build_number" msgid="3997326631001009102">"Delovna različica"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Naslov vmesnika Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Ni na voljo"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stanje"</string>
     <string name="device_status" msgid="267298179806290920">"Stanje"</string>
@@ -234,8 +241,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ponastavi aplikacije"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Nastavitve aplikacij so ponastavljene"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Izbriši vse podatke (pon. na tov. nast.)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"S tem boste iz glavne enote vozila izbrisali vse podatke, med drugim:\n\n"<li>"Račun za Google"</li>\n<li>"Podatke in nastavitve sistema in aplikacij"</li>\n<li>"Prenesene aplikacije"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Trenutno ste prijavljeni v te račune:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"V tem vozilu so drugi uporabniki."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Ponastavi vozilo"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Želite ponastaviti?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Želite izbrisati vse osebne podatke in prenesene aplikacije? Tega dejanja ni mogoče razveljaviti."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Izbriši vse"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Brisanje"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Počakajte ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum in ura"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Nastavitev datuma in ure"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Nastavi datum, uro, časovni pas in oblike"</string>
@@ -435,14 +449,16 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: pred toliko dnevi: <xliff:g id="NUM_DAYS">%3$s</xliff:g>"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Dodaj zaupanja vredno napravo"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Zaup. vredne naprave"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Varnost naprave"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> naprava</item>
+      <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> napravi</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> naprave</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> naprav</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Naprava <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> bo odklenila ta avtomobil, ko je povezana. Če vam kdo vzame napravo <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, lahko ta oseba morda dostopa do nje."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potrdi"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Odstrani zaupanja vredno napravo"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Končano"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"S spremljevalno aplikacijo nastavite zaupanja vredno napravo. Ko je nastavljena, lahko profil uporabnika odklenete, ko vozilo zazna vaš telefon."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. V telefon prenesite spremljevalno aplikacijo"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Če želite seznaniti napravi, v telefonu izberite avtomobil <xliff:g id="CAR_NAME">%1$s</xliff:g>"</string>

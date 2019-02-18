@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ਮੋਬਾਈਲ ਨੈੱਟਵਰਕ ਵਰਤ ਕੇ ਡਾਟੇ ਤੱਕ ਪਹੁੰਚ ਪ੍ਰਾਪਤ ਕਰੋ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ਕੀ ਮੋਬਾਈਲ ਡਾਟਾ ਬੰਦ ਕਰਨਾ ਹੈ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ਡਾਟਾ ਵਰਤੋਂ"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ਡਾਟਾ ਚਿਤਾਵਨੀ ਅਤੇ ਸੀਮਾ"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"ਐਪ ਦੀ ਡਾਟਾ ਵਰਤੋਂ ਦਾ ਚੱਕਰ"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ਡਾਟਾ ਚਿਤਾਵਨੀ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="data_warning" msgid="116776633806885370">"ਡਾਟਾ ਚਿਤਾਵਨੀ"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ਡਾਟਾ ਸੀਮਾ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="data_limit" msgid="227338836292511425">"ਡਾਟਾ ਸੀਮਾ"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ਡਾਟਾ ਵਰਤੋਂ ਸੀਮਤ ਕਰਨਾ"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ਤੁਹਾਡੇ ਵਾਹਨ ਦੀ ਸਕ੍ਰੀਨ ਤੋਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਸੈੱਟ ਕੀਤੀ ਮੋਬਾਈਲ ਡਾਟੇ ਦੀ ਸੀਮਾ ਉੱਤੇ ਪਹੁੰਚਣ \'ਤੇ ਮੋਬਾਈਲ ਡਾਟਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।\n\nਕਿਉਂਕਿ ਡਾਟਾ ਵਰਤੋਂ ਤੁਹਾਡੇ ਸਕ੍ਰੀਨ ਵੱਲੋਂ ਮਾਪੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਤੁਹਾਡਾ ਕੈਰੀਅਰ ਵਰਤੋਂ ਦਾ ਹਿਸਾਬ ਵੱਖਰੇ ਢੰਗ ਨਾਲ ਲਗਾਵੇ, ਇਸ ਕਰਕੇ ਕੋਈ ਕੰਜੂਸੀਕਾਰੀ ਸੀਮਾ ਸੈੱਟ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ।"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ਵਾਈ-ਫਾਈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ਵਾਈ‑ਫਾਈ ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ਵਾਈ‑ਫਾਈ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"ਕੋਈ ਨਹੀਂ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ਚੁਣੀ ਗਈ"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"\'ਅਸਿਸਟੈਂਟ\' ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਦਿਸਣਯੋਗ ਜਾਂ ਐਪਾਂ ਵਿੱਚ ਪਹੁੰਚਯੋਗ ਜਾਣਕਾਰੀ ਸਮੇਤ ਤੁਹਾਡੇ ਸਿਸਟਮ \'ਤੇ ਵਰਤੋਂ ਵਿੱਚ ਐਪਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹ ਸਕੇਗੀ।"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ ਇਸ ਐਪ \'ਤੇ ਭਰੋਸਾ ਕਰਦੇ ਹੋ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ਐਪ ਤੁਹਾਡੀ ਸਕ੍ਰੀਨ \'ਤੇ ਮੌਜੂਦ ਆਪਣੇ-ਆਪ ਭਰੀਆਂ ਜਾ ਸਕਣ ਵਾਲੀਆਂ ਥਾਂਵਾਂ ਦਾ ਪਤਾ ਲਗਾਉਂਦੀ ਹੈ।"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"ਸੇਵਾ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ਕੋਈ ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ ਨਹੀਂ"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"ਬੇਸਬੈਂਡ ਵਰਜਨ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"ਕਰਨਲ ਵਰਜਨ"</string>
     <string name="build_number" msgid="3997326631001009102">"ਬਿਲਡ ਨੰਬਰ"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ਬਲੂਟੁੱਥ ਪਤਾ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ਸਥਿਤੀ"</string>
     <string name="device_status" msgid="267298179806290920">"ਸਥਿਤੀ"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ਐਪਾਂ ਰੀਸੈੱਟ ਕਰੋ"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ਐਪ ਤਰਜੀਹਾਂ ਰੀਸੈੱਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ਸਭ ਡਾਟਾ ਮਿਟਾਓ (ਫੈਕਟਰੀ ਰੀਸੈੱਟ)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ਇਹ ਤੁਹਾਡੇ ਵਾਹਨ ਦੀ ਸਕ੍ਰੀਨ ਤੋਂ ਸਾਰਾ ਡਾਟਾ ਮਿਟਾ ਦੇਵੇਗਾ, ਇਹਨਾਂ ਸਮੇਤ:\n\n"<li>"ਤੁਹਾਡਾ Google ਖਾਤਾ"</li>\n<li>"ਸਿਸਟਮ ਅਤੇ ਐਪ ਡਾਟਾ ਅਤੇ ਸੈਟਿੰਗਾਂ"</li>\n<li>"ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"ਤੁਸੀਂ ਇਸ ਵੇਲੇ ਇਹਨਾਂ ਖਾਤਿਆਂ \'ਤੇ ਸਾਈਨ-ਇਨ ਹੋ:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ਇਸ ਵਾਹਨ \'ਤੇ ਹੋਰ ਵਰਤੋਂਕਾਰ ਮੌਜੂਦ ਨਹੀਂ ਹਨ।"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"ਵਾਹਨ ਰੀਸੈੱਟ ਕਰੋ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ਕੀ ਰੀਸੈੱਟ ਕਰਨਾ ਹੈ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ਕੀ ਆਪਣੀ ਸਾਰੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਅਤੇ ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਐਪਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ? ਤੁਸੀਂ ਇਸ ਕਾਰਵਾਈ ਨੂੰ ਅਣਕੀਤਾ ਨਹੀਂ ਕਰ ਸਕਦੇ!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ਸਭ ਕੁਝ ਮਿਟਾਓ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਸੈੱਟ ਕਰੋ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ਤਾਰੀਖ, ਸਮਾਂ, ਸਮਾਂ ਖੇਤਰ ਅਤੇ ਵੰਨਗੀ ਸੈੱਟ ਕਰੋ"</string>
@@ -417,21 +431,21 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ਦਿਨ ਪਹਿਲਾਂ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸਾਂ"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ਡੀਵਾਈਸ ਸੁਰੱਖਿਆ"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਡੀਵਾਈਸ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਡੀਵਾਈਸਾਂ</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"ਤੁਹਾਡਾ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ਇਸ ਕਾਰ ਨੂੰ ਅਣਲਾਕ ਕਰ ਦੇਵੇਗਾ, ਜਦੋਂ ਇਹ ਕਨੈਕਟ ਕੀਤਾ ਹੋਇਆ ਹੋਵੇਗਾ। ਜੇਕਰ ਕੋਈ ਤੁਹਾਡਾ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ਲੈ ਲੈਂਦਾ ਹੈ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਉਹ ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਪਹੁੰਚ ਕਰਨ ਦੇ ਯੋਗ ਹੋ ਜਾਵੇ।"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ਪੁਸ਼ਟੀ ਕਰੋ"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ਕਿਸੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸੈੱਟਅੱਪ ਕਰਨ ਲਈ ਸੰਬੰਧੀ ਐਪ ਵਰਤੋ। ਸੈੱਟਅੱਪ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਵਾਹਨ ਵੱਲੋਂ ਤੁਹਾਡੇ ਫ਼ੋਨ ਦਾ ਪਤਾ ਲਗਾਉਣ \'ਤੇ ਤੁਸੀਂ ਆਪਣੀ ਵਰਤੋਕਾਰ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਅਣਲਾਕ ਕਰ ਸਕੋਗੇ"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਹਟਾਓ"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ਹੋ ਗਿਆ"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ਕਿਸੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸੈੱਟਅੱਪ ਕਰਨ ਲਈ ਸੰਬੰਧੀ ਐਪ ਵਰਤੋ। ਸੈੱਟਅੱਪ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਵਾਹਨ ਵੱਲੋਂ ਤੁਹਾਡੇ ਫ਼ੋਨ ਦਾ ਪਤਾ ਲਗਾਉਣ \'ਤੇ ਤੁਸੀਂ ਆਪਣੇ ਵਰਤੋਂਕਾਰ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਅਣਲਾਕ ਕਰ ਸਕੋਗੇ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ ਸੰਬੰਧੀ ਐਪ ਡਾਊਨਲੋਡ ਕਰੋ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ਡੀਵਾਈਸਾਂ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ <xliff:g id="CAR_NAME">%1$s</xliff:g> ਚੁਣੋ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ਸਮਾਰਟ ਲਾਕ ਇਸ ਡੀਵਾਈਸ ਦੀਆਂ ਸੁਰੱਖਿਆ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ। ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਲਈ, ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸਿਰਫ਼ ਤਾਂ ਹੀ ਅਣਲਾਕ ਰੱਖ ਸਕੇਗਾ, ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਕਾਰ ਨੂੰ ਅਣਲਾਕ ਕੀਤਾ ਹੋਵੇ। ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨਜ਼ਦੀਕ ਹੋਣ \'ਤੇ ਉਸਨੂੰ ਅਣਲਾਕ ਰੱਖ ਸਕਦਾ ਹੈ, ਭਾਵੇਂ ਡੀਵਾਈਸ ਨੂੰ ਕਿਸੇ ਹੋਰ ਨੇ ਫੜ੍ਹਿਆ ਹੋਵੇ।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਵਜੋਂ ਸਫਲਤਾਪੂਰਵਕ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਦੀ ਦਰਜਾਬੰਦੀ ਅਸਫਲ ਰਹੀ"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਦਰਜ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
     <string name="forget" msgid="3971143908183848527">"ਛੱਡੋ"</string>
     <string name="connect" msgid="5861699594602380150">"ਕਨੈਕਟ ਕਰੋ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ਡਿਸਕਨੈਕਟ ਕਰੋ"</string>

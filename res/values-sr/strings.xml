@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Користи податке преко мобилне мреже"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Желите ли да искључите мобилне податке?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Потрошња података"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Упозорење и ограничења за податке"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Циклус потрошње података апликације"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Подесите упозорења о подацима"</string>
+    <string name="data_warning" msgid="116776633806885370">"Упозорење на потрошњу података"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Подесите ограничења за податке"</string>
+    <string name="data_limit" msgid="227338836292511425">"Ограничење потрошње података"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ограничавање потрошње података"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Главна јединица у возилу ће искључити мобилне податке чим достигне ограничење које сте подесили.\n\nПошто потрошњу података мери главна јединица, а мобилни оператер може другачије да рачуна потрошњу, размислите о томе да подесите неко уобичајено ограничење."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi се укључује..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi се искључује..."</string>
@@ -159,10 +167,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ништа"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Изабрано"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Помоћник ће моћи да чита информације о апликацијама које се користе у систему, укључујући информације видљиве на екрану или којима може да се приступа у оквиру апликација."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Уверите се да је ова апликација поуздана&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google аутоматско попуњавање&gt;%1$s&lt;/xliff:g&gt; користи садржај екрана за утврђивање података који могу аутоматски да се попуне."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Додајте услугу"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>
@@ -181,6 +187,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Верзија основног пропусног опсега"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Верзија језгра"</string>
     <string name="build_number" msgid="3997326631001009102">"Број верзије"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth адреса"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Није доступно"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Статус"</string>
     <string name="device_status" msgid="267298179806290920">"Статус"</string>
@@ -232,8 +239,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Ресетуј апликације"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Подешавања апликација су ресетована"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Обриши све податке"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Овим бришете све податке из интерне меморије возила, укључујући:\n\n"<li>"Google налог"</li>\n<li>"податке и подешавања система и апликација"</li>\n<li>"преузете апликације"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Тренутно сте пријављени на следеће налоге:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"У овом возилу су присутни и други корисници."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Ресетуј возило"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Желите ли да ресетујете?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Желите ли да обришете све личне податке и преузете апликације? Не можете да опозовете ову радњу!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Избриши све"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Брише се"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Сачекајте..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Датум и време"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Подесите датум и време"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Подесите датум, време, временску зону и формате"</string>
@@ -426,14 +440,15 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Додај поуздани уређај"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Поуздани уређаји"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Безбедност уређаја"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уређај</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> уређаја</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> уређаја</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ће откључати овај аутомобил када се повеже. Ако вам неко узме <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, можда ће моћи да приступа овом уређају"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Уклони поуздани уређај"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Поуздани уређај подесите помоћу пратеће апликације. Када га подесите, моћи ћете да откључавате кориснички профил када возило открије телефон"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преузмите пратећу апликацију на телефону"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изаберите <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефону да бисте упарили уређаје"</string>

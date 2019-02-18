@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Prístup k dátam pomocou mobilnej siete"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vypnúť mobilné dáta?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Využitie dát"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Upozornenie o dátach a limit"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Cyklus spotreby dát aplikáciami"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Nastaviť dátové upozornenie"</string>
+    <string name="data_warning" msgid="116776633806885370">"Dátové upozornenie"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Nastaviť dátový limit"</string>
+    <string name="data_limit" msgid="227338836292511425">"Dátový limit"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Obmedzenie spotreby dát"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Autorádio vozidla vypne po dosiahnutí nastaveného limitu mobilné dátové pripojenie.\n\nKeďže spotrebu dát meria autorádio, ale váš operátor môže spotrebu vyčísliť inak, je vhodné nastaviť si nižší limit."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Zapína sa Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Vypína sa Wi‑Fi…"</string>
@@ -160,10 +168,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Žiadna"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Vybraná"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Pomocník bude môcť čítať informácie o aplikáciách používaných vo vašom systéme vrátane údajov viditeľných na obrazovke alebo prístupných v aplikáciách."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Skontrolujte, či ide o dôveryhodnú aplikáciu&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Automatické dopĺňanie Google&gt;%1$s&lt;/xliff:g&gt; určuje na základe obsahu obrazovky, čo je možné automaticky vyplniť."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Pridať službu"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedávne žiadosti o polohu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Žiadne nedávne žiadosti o polohu"</string>
@@ -182,6 +188,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Verzia základného pásma"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Verzia jadra"</string>
     <string name="build_number" msgid="3997326631001009102">"Číslo zostavy"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adresa Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nie je k dispozícii"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stav"</string>
     <string name="device_status" msgid="267298179806290920">"Stav"</string>
@@ -234,8 +241,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Obnoviť aplikácie"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Predvoľby aplikácií boli obnovené"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Vymazať dáta (obnova výr. nastavení)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Týmto vymažete všetky údaje z autorádia vozidla, napríklad:\n\n"<li>"svoj účet Google,"</li>\n<li>"údaje aj nastavenia systému a aplikácií,"</li>\n<li>"stiahnuté aplikácie."</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Aktuálne ste prihlásený/-á do nasledujúcich účtov:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"V tomto vozidle sú ďalší používatelia."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Resetovať vozidlo"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Chcete resetovať?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Chcete vymazať všetky osobné údaje a stiahnuté aplikácie? Túto akciu nebude možné vrátiť späť."</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Vymazať všetko"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Prebieha vymazávanie"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Čakajte…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dátum a čas"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Nastavenie dátumu a času"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Nastaviť dátum, čas, časové pásmo a formáty"</string>
@@ -435,14 +449,16 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : pred <xliff:g id="NUM_DAYS">%3$s</xliff:g> dňami"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Pridanie dôveryhodného zar."</string>
     <string name="trusted_device" msgid="5637378361866787603">"Dôveryhodné zar."</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Zabezpečenie"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> zariadenia</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> devices</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> zariadení</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> zariadenie</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Vaše zariadenie <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> po pripojení odomkne toto auto. Ak vám niekto zariadenie <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> vezme, pravdepodobne bude mať prístup do tohto zariadenia"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potvrdiť"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Odstrániť dôveryhodné zariadenie"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Hotovo"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Nastavte dôveryhodné zariadenie pomocou sprievodnej aplikácie. Po nastavení budete môcť odomknúť profil používateľa, keď vozidlo rozpozná váš telefón"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Stiahnite v telefóne sprievodnú aplikáciu"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Vyberte v telefóne auto <xliff:g id="CAR_NAME">%1$s</xliff:g> a spárujte tak zariadenia"</string>

@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Πρόσβαση σε δεδομένα μέσω δικτύου κινητής τηλεφ."</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Απενεργοποίηση δεδομένων κινητής τηλεφωνίας;"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Χρήση δεδομένων"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Προειδοποίηση και όριο δεδομένων"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Κύκλος χρήσης δεδομένων εφαρμογής"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Ορισμός προειδοπ. δεδομένων"</string>
+    <string name="data_warning" msgid="116776633806885370">"Προειδοποίηση δεδομένων"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Ορισμός ορίου δεδομένων"</string>
+    <string name="data_limit" msgid="227338836292511425">"Όριο δεδομένων"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Περιορισμός χρήσης δεδομένων"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Η κεντρική μονάδα του οχήματός σας θα απενεργοποιήσει τα δεδομένα κινητής τηλεφωνίας μόλις συμπληρωθεί το καθορισμένο όριο.\n\nΕπειδή η χρήση δεδομένων μετράται από την κεντρική μονάδα σας και ενδέχεται η εταιρεία κινητής τηλεφωνίας να την υπολογίζει με διαφορετικό τρόπο, σκεφτείτε το ενδεχόμενο να ορίσετε ένα συντηρητικό όριο."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Ενεργοποίηση Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Απενεργοποίηση Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Καμία"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Επιλέχτηκε"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Ο Βοηθός θα μπορεί να διαβάσει πληροφορίες σχετικά με τις εφαρμογές που χρησιμοποιούνται στο σύστημά σας, συμπεριλαμβανομένων πληροφοριών που είναι ορατές στην οθόνη σας ή διαθέσιμες εντός των εφαρμογών."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Βεβαιωθείτε ότι εμπιστεύεστε αυτήν την εφαρμογή&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; χρησιμοποιεί το περιεχόμενο της οθόνης σας για να διαπιστώσει τι μπορεί να συμπληρωθεί αυτόματα."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Προσθήκη υπηρεσίας"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Δεν υπάρχουν πρόσφατα αιτήματα τοποθεσίας"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Έκδοση βασικού φάσματος"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Έκδοση Kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Αριθμός έκδοσης"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Διεύθυνση Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Μη διαθέσιμο"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Κατάσταση"</string>
     <string name="device_status" msgid="267298179806290920">"Κατάσταση"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Επαναφορά εφαρμογών"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Έγινε επαναφορά των προτιμήσεων των εφαρμογών"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Διαγραφή δεδομένων (Επαν. εργοστ. ρυθμ.)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Αυτή η ενέργεια θα διαγράψει όλα τα δεδομένα από την κεντρική μονάδα του οχήματος, συμπεριλαμβανομένων:\n\n"<li>"Του Λογαριασμού σας Google"</li>\n<li>"Των δεδομένων και των ρυθμίσεων του συστήματος και των εφαρμογών"</li>\n<li>"Των εφαρμογών που έχετε κατεβάσει"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Υπάρχουν άλλοι χρήστες σε αυτό το όχημα."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Επαναφορά οχήματος"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Να γίνει επαναφορά;"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Να διαγραφούν όλα τα προσωπικά σας στοιχεία και οι εφαρμογές που έχετε κατεβάσει; Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Διαγραφή όλων"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Διαγραφή"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Περιμένετε…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ημερομηνία και ώρα"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Ορισμός ημερομηνίας και ώρας"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Ορισμός ημερομηνίας, ώρας, ζώνης ώρας και μορφές"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ημέρες πριν"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Προσθήκη αξιόπιστης συσκευής"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Αξιόπιστες συσκευές"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Ασφάλεια συσκευής"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> συσκευές</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> συσκευή</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Το <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> θα ξεκλειδώσει αυτό το αυτοκίνητο όταν συνδεθεί. Εάν κάποιος αποκτήσει το <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> σας, θα μπορεί να αποκτήσει πρόσβαση σε αυτήν τη συσκευή"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Επιβεβαίωση"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Κατάργηση αξιόπιστης συσκευής"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Τέλος"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Χρησιμοποιήστε τη συνοδευτική εφαρμογή για να ρυθμίσετε μια αξιόπιστη συσκευή. Μετά τη ρύθμιση, θα μπορείτε να ξεκλειδώνετε το προφίλ χρήστη σας όταν το τηλέφωνό σας εντοπίζεται από το όχημα"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Κατεβάστε τη συνοδευτική εφαρμογή στο τηλέφωνό σας"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Επιλέξτε το αυτοκίνητο <xliff:g id="CAR_NAME">%1$s</xliff:g> στο τηλέφωνό σας για να κάνετε σύζευξη των συσκευών"</string>

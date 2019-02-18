@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accéder aux données sur réseau cellulaire"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Désactiver les données mobiles?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilisation de données"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Avertissement et limites de données"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Cycle d\'util. données d\'appli."</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Définir avertiss. de données"</string>
+    <string name="data_warning" msgid="116776633806885370">"Avertiss. utilisation données"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Définir. lim. d\'util. données"</string>
+    <string name="data_limit" msgid="227338836292511425">"Limite de données"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitation de l\'util. de données mobiles"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"L\'unité principale de votre véhicule désactivera les données mobiles lorsque la limite que vous définissez sera atteinte.\n\nComme c\'est l\'unité principale qui mesure l\'utilisation de données, et que votre fournisseur de services peut utiliser un système de mesure différent, nous vous conseillons de faire preuve de prudence en définissant votre limite."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activation du Wi-Fi en cours…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Désactivation du Wi-Fi en cours…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Aucun"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Sélectionnée"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"L\'Assistant Google pourra accéder aux données des applications en cours d\'utilisation sur votre système, y compris les données visibles à l\'écran ou accessibles au sein des applications."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous de faire confiance à cette application&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Le remplissage automatique de Google&gt;%1$s&lt;/xliff:g&gt; utilise les éléments affichés à l\'écran pour déterminer les champs qui peuvent bénéficier de l\'entrée automatique."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Ajouter un service"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Version de bande de base"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Version du noyau"</string>
     <string name="build_number" msgid="3997326631001009102">"Numéro de version"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adresse Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Indisponible"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"État"</string>
     <string name="device_status" msgid="267298179806290920">"État"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Effacer toutes les données (réinitial.)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Cette action effacera toutes les données de l\'unité principale de votre véhicule, y compris :\n\n"<li>"Votre compte Google"</li>\n<li>"Les données et les paramètres du système et de l\'application"</li>\n<li>"Les applications téléchargées"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Vous êtes actuellement connecté aux comptes suivants :"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"D\'autres personnes utilisent ce véhicule."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Réinitialiser le véhicule"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Effectuez la réinitialisation?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Voulez-vous effacer toutes vos données personnelles et les applications que vous avez téléchargées? Cette action est irréversible!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tout effacer"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Suppression en cours…"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Veuillez patienter…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Date et heure"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Régler la date et l\'heure"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Configurer la date, l\'heure, le fuseau horaire et les formats"</string>
@@ -415,22 +429,22 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Les suites croissantes, décroissantes ou répétitives de chiffres ne sont pas autorisées."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil fiable"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil de confiance"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Appareils fiables"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Sécurité de l\'appareil"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appareil</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> appareils</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"Votre <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> déverrouillera votre voiture lorsqu\'il sera connecté. Si une personne prend votre <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, elle pourrait être en mesure d\'accéder à cet appareil."</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmer"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utilisez l\'application compagnon pour configurer un appareil fiable. Une fois la configuration terminée et que votre téléphone est détecté par le véhicule, vous pourrez déverrouiller votre profil utilisateur"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Supprimer l\'appareil de confiance"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utilisez l\'application compagnon pour configurer un appareil de confiance. Une fois la configuration terminée et que votre téléphone est détecté par le véhicule, vous pourrez déverrouiller votre profil utilisateur"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Téléchargez l\'application compagnon sur votre téléphone"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Sélectionnez <xliff:g id="CAR_NAME">%1$s</xliff:g> sur votre téléphone pour associer les appareils"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ne peut détecter aucune fonctionnalité de sécurité sur cet appareil. Dans le but de protéger votre voiture, l\'appareil fiable ne pourra la garder déverrouillée que lorsque vous l\'aurez déverrouillé vous-même au préalable. Votre appareil fiable peut garder votre voiture déverrouillée lorsqu\'elle se trouve à proximité, même si une autre personne le tient dans sa main."</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ne peut détecter aucune fonctionnalité de sécurité sur cet appareil. Dans le but de protéger votre voiture, l\'appareil de confiance ne pourra la garder déverrouillée que lorsque vous l\'aurez déverrouillé vous-même au préalable. Votre appareil de confiance peut garder votre voiture déverrouillée lorsqu\'elle se trouve à proximité, même si une autre personne le tient dans sa main."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Ajouter <xliff:g id="DEVICE_NAME">%1$s</xliff:g>comme appareil de confiance"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"L\'appareil <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a bien été ajouté comme appareil fiable"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"L\'appareil <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a bien été ajouté comme appareil de confiance"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de l\'appareil <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="forget" msgid="3971143908183848527">"Oublier"</string>
     <string name="connect" msgid="5861699594602380150">"Connexion"</string>

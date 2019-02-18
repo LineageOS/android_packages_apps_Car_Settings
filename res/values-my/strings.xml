@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"မိုဘိုင်းကွန်ရက်သုံးပြီး ဒေတာကို ဝင်သုံးခွင့်ပေးပါ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"မိုဘိုင်းဒေတာ ပိတ်လိုသလား။"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ဒေတာသုံးစွဲမှု"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ဒေတာ သတိပေးချက်နှင့် ကန့်သတ်ချက်"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"အက်ပ်ဒေတာ အသုံးပြုမှု စက်ဝန်း"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ဒေတာသတိပေးချက် သတ်မှတ်ရန်"</string>
+    <string name="data_warning" msgid="116776633806885370">"ဒေတာသတိပေးချက်"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ဒေတာကန့်သတ်ရန်"</string>
+    <string name="data_limit" msgid="227338836292511425">"ဒေတာ အကန့်အသတ်"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ဒေတာအသုံးပြုမှု ကန့်သတ်ခြင်း"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"သင်သတ်မှတ်ထားသည့် ကန့်သတ်ချက်ရောက်သည်နှင့် သင့်ယာဉ်၏ ဦးပိုင်းယူနစ်သည် မိုဘိုင်းဒေတာကို ပိတ်သွားပါမည်။\n\nဒေတာသုံးစွဲမှုကို ဦးပိုင်းယူနစ်က တိုင်းတာခြင်းဖြစ်ပြီး ဖုန်းလိုင်းဝန်ဆောင်မှုပေးသူ၏ တွက်ချက်မှုနှင့် ကွာခြားနိုင်သောကြောင့် ကန့်သတ်ချက်မကျော်လွန်အောင် သတ်မှတ်ပါ။"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi ကို ဖွင့်နေသည်…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi ကို ပိတ်နေသည်…"</string>
@@ -158,10 +166,9 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"မရှိ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ရွေးထားသည်"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ကူညီပေးသူသည် သင်၏ မျက်နှာပြင်ပေါ်တွင် မြင်ရသည့် သို့မဟုတ် အက်ပ်များအထဲတွင် ရယူသုံးနိုင်သည့် အချက်အလက်များအပါအဝင် သင်၏ စနစ်ထဲတွင် သုံးနေသည့် အက်ပ်များအကြောင်း အချက်အလက်များကို ဖတ်ရှုနိုင်မည်။"</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <!-- syntax error in translation for autofill_confirmation_message (1832984461556991378) org.xmlpull.v1.XmlPullParserException: expected: /string read: xliff:g (position:END_TAG </xliff:g>@1:230 in     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;သင်သည် ဤအက်ပ်ကို ယုံကြည်ခြင်း ရှိမရှိ စစ်ဆေးပါ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill>%1$s</xliff:g> သည် သင်၏မျက်နှာပြင်ပေါ်ရှိ အရာများကို အသုံးပြု၍ မည်သည့်အရာများကို အော်တိုဖြည့်နိုင်ကြောင်း သတ်မှတ်သည်။"</string>
+)  -->
+    <string name="autofill_add_service" msgid="6413893366443609951">"ဝန်ဆောင်မှုထည့်ပါ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"တည်နေရာ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
@@ -180,6 +187,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"baseband ဗားရှင်း"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel ဗားရှင်း"</string>
     <string name="build_number" msgid="3997326631001009102">"တည်ဆောက်မှုနံပါတ်"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ဘလူးတုသ်လိပ်စာ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"မရနိုင်ပါ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"အခြေအနေ"</string>
     <string name="device_status" msgid="267298179806290920">"အခြေအနေ"</string>
@@ -230,8 +238,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"အက်ပ်များ ပြင်ဆင်သတ်မှတ်ရန်"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"အက်ပ်သတ်မှတ်ချက်များ ပြင်ဆင်သတ်မှတ်ပြီးပါပြီ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"ဒေတာအားလုံး ဖျက်ပါ (စက်ရုံထုတ်သတ်မှတ်ပါ)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"ဤသို့ပြုလုပ်ခြင်းကြောင့် သင့်စက်ပစ္စည်း၏ ဦးခန်းပိုင်းယူနစ်အတွင်းရှိ- \n\n"<li>"သင့် Google အကောင့်"</li>\n<li>"\'စနစ်\' နှင့် အက်ပ်ဒေတာများနှင့် ဆက်တင်များ"</li>\n<li>"ဒေါင်းလုဒ်လုပ်ထားသော အက်ပ်များ"</li>" အပါအဝင် ဒေတာအားလုံးကို ဖျက်ပါမည်။"</string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"သင်သည် လက်ရှိတွင် အောက်ပါအကောင့်များကို ဝင်ရောက်ထားပါသည်-"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ဤစက်ပစ္စည်းပေါ်တွင် အခြားအသုံးပြုသူများလည်း ရှိသည်။"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"စက်ပစ္စည်း ပြင်ဆင်သတ်မှတ်ရန်"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ပြင်ဆင်သတ်မှတ်လိုပါသလား။"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"သင့်ကိုယ်ရေးကိုယ်တာအချက်လက်များနှင့် ဒေါင်းလုဒ်ချထားသောအက်ပ်များ အားလုံးကို ဖျက်မည်လား။ ဤလုပ်ဆောင်ချက်ကို တစ်ဆင့် နောက်ပြန်၍ မရပါ။"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"အားလုံးကိုဖျက်ရန်"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ဖျက်နေသည်"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ခဏစောင့်ပါ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ရက်စွဲနှင့် အချိန်"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ရက်စွဲနှင့် အချိန် သတ်မှတ်ခြင်း"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ရက်စွဲ၊ အချိန်၊ စံတော်ချိန်နှင့် စနစ်များကို သတ်မှတ်ပါ"</string>
@@ -417,14 +432,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ယုံကြည်ရသည့် စက်ကိုထည့်ရန်"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ယုံကြည်ရသည့် စက်များ"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"ကိရိယာ လုံခြုံရေး"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other">စက်ပစ္စည်း <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
+      <item quantity="one">စက်ပစ္စည်း <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"ချိတ်ဆက်သည့်အခါ သင့် <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> က ဤကားကို လော့ခ်ဖွင့်ပါမည်။ တစ်စုံတစ်ယောက်က သင့် <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ကိုယူသွားလျှင် သူသည် ဤကိရိယာကို အသုံးပြုခွင့်ရရှိနိုင်ပါသည်"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"အတည်ပြုရန်"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ယုံကြည်ရသော ကိရိယာ ဖယ်ရှားရန်"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ပြီးပြီ"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"စိတ်ချရသည့် စက်ပစ္စည်းကို စတင်သတ်မှတ်ရန် တွဲဖက်အက်ပ်ကို သုံးပါ။ သတ်မှတ်ပြီးသည်နှင့် စက်က သင့်ဖုန်းကို တွေ့သည့်အခါ သင့်အသုံးပြုသူ ပရိုဖိုင်ကို ဖွင့်နိုင်ပါမည်"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"၁။ တွဲဖက် အက်ပ်ကို သင့်ဖုန်းတွင် ဒေါင်းလုဒ်လုပ်ပါ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"၂။ စက်ပစ္စည်းနှင့်အတူ တွဲချိတ်ရန် သင့်ဖုန်းတွင် <xliff:g id="CAR_NAME">%1$s</xliff:g> ကို ရွေးပေးပါ"</string>

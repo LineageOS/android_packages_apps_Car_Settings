@@ -35,6 +35,22 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क वापरून डेटा अॅक्सेस करा"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करायचा आहे का?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा वापर"</string>
+    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
+    <skip />
+    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
+    <skip />
+    <!-- no translation found for set_data_warning (6628236612886588097) -->
+    <skip />
+    <!-- no translation found for data_warning (116776633806885370) -->
+    <skip />
+    <!-- no translation found for set_data_limit (7136539812414500084) -->
+    <skip />
+    <!-- no translation found for data_limit (227338836292511425) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
+    <skip />
+    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
+    <skip />
     <string name="wifi_settings" msgid="7701477685273103841">"वाय-फाय"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय चालू करत आहे…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाय-फाय बंद करत आहे…"</string>
@@ -158,10 +174,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"काहीही नाही"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"निवडले"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"तुमच्या स्क्रीनवर दृश्‍यमान असलेल्या माहितीच्या किंवा अ‍ॅप्समध्ये अ‍ॅक्सेस करता येणाऱ्या माहितीच्या समावेशासह असिस्टंट तुमच्या सिस्टिमध्ये वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तुम्हाला अ‍ॅपवर विश्वास असल्याची खात्री करा&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ऑटोफिल काय होऊ शकते हे ठरवण्यासाठी तुमच्या स्क्रीनवर काय आहे याचा वापर करते."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"सेवा जोडा"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>
@@ -180,6 +194,8 @@
     <string name="baseband_version" msgid="2370088062235041897">"बेसबँड आवृत्ती"</string>
     <string name="kernel_version" msgid="7327212934187011508">"कर्नेल आवृत्ती"</string>
     <string name="build_number" msgid="3997326631001009102">"बिल्ड नंबर"</string>
+    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
+    <skip />
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध नाही"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिती"</string>
     <string name="device_status" msgid="267298179806290920">"स्थिती"</string>
@@ -230,8 +246,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अॅप्स रीसेट करा"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ॲप प्राधान्ये रीसेट केली गेली आहेत"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सर्व डेटा मिटवा (फॅक्टरी रीसेट)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"हे तुमच्या डिव्‍हाइसच्या मुख्य युनिटसह पुढील सर्व डेटा मिटवेल:\n\n"<li>"तुमचे Google खाते"</li>\n<li>"सिस्टम आणि अ‍ॅप डेटा आणि सेटिंग्ज"</li>\n<li>"डाउनलोड केलेली अ‍ॅप्स"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"तुम्ही खालील खात्यांवर सध्या साइन इन केले आहे:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"या डिव्‍हाइसवर इतर वापरकर्ते उपस्‍थित आहेत."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"डिव्हाइस रीसेट करा"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"रीसेट करायचे?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"तुमची सर्व वैयक्तिक माहिती आणि डाउनलोड केलेली अ‍ॅप्स मिटवायची का? तुम्ही ही क्रिया पूर्ववत करू शकत नाही!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"प्रत्येक गोष्ट मिटवा"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"मिटवत आहे"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया वाट पाहा…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"तारीख आणि वेळ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"तारीख आणि वेळ सेट करा"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"तारीख, वेळ, टाइम झोन आणि फॉरमॅट सेट करा"</string>
@@ -417,14 +440,11 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिवसांपूर्वी"</string>
     <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय डिव्हाइस जोडा"</string>
     <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय डिव्हाइस"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"डिव्हाइस सुरक्षितता"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <string name="remove_device_message" msgid="6447820559674148349">"ते कनेक्ट केलेले असते तेव्‍हा <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> तुमची कार अनलॉक करेल. एखाद्याने तुमचे <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> घेतल्यास, tकदाचित ते डिव्हाइस अ‍ॅक्सेस करू शकतील"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"खात्री करा"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय डिव्हाइस काढून टाका"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"पूर्ण झाले"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"विश्वसनीय डिव्हाइस सेट करण्यासाठी सहयोगी अ‍ॅप वापरा. एकदा सेट केल्यानंतर, वाहनाने तुमचा फोन शोधल्यावर तुम्ही तुमची वापरकर्ता प्रोफाईल अनलॉक करू शकाल"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"१. तुमच्या फोनवर सहयोगी अ‍ॅप डाउनलोड करा"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"२. डिव्हाइस पेअर करण्यासाठी तुमच्या फोनवर <xliff:g id="CAR_NAME">%1$s</xliff:g> निवडा"</string>

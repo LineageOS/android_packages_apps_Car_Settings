@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datenzugriff über Mobilfunknetz"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobile Daten deaktivieren?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datennutzung"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Datenwarnung &amp; Datenlimit"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Datennutzungszyklus der App"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Datenwarnung festlegen"</string>
+    <string name="data_warning" msgid="116776633806885370">"Datenwarnung"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Datenlimit festlegen"</string>
+    <string name="data_limit" msgid="227338836292511425">"Datenlimit"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datennutzung begrenzen"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Die Haupteinheit deines Fahrzeugs deaktiviert mobile Daten, sobald das von dir festgelegte Limit erreicht wurde.\n\nDa die Datennutzung von der Haupteinheit gemessen wird und dein Mobilfunkanbieter sie möglicherweise anders berechnet, solltest du von einem eher etwas niedrigeren Limit ausgehen."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
     <string name="wifi_starting" msgid="473253087503153167">"WLAN wird aktiviert…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"WLAN wird deaktiviert…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Keine"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Ausgewählt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Der Assistent kann Informationen zu Apps abrufen, die du auf deinem System verwendest, einschließlich Informationen, die auf deinem Bildschirm angezeigt werden oder die in Apps zugänglich sind."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sorge dafür, dass dieser App vertraut wird.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google AutoFill&gt;%1$s&lt;/xliff:g&gt; entscheidet dann anhand der Inhalte auf dem Display, welche Informationen automatisch ausgefüllt werden können."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Dienst hinzufügen"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Standort"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Keine letzten Standortanfragen"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Baseband-Version"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel-Version"</string>
     <string name="build_number" msgid="3997326631001009102">"Build-Nummer"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth-Adresse"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nicht verfügbar"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Apps zurücksetzen"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-Einstellungen wurden zurückgesetzt"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Alle Daten löschen (Werkseinstellungen)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Hierdurch werden alle Daten von der Haupteinheit deines Fahrzeugs gelöscht, u. a.:\n\n"<li>"Dein Google-Konto"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Du bist derzeit in folgenden Konten angemeldet:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Auf der Haupteinheit dieses Fahrzeugs sind andere Nutzer vorhanden."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Fahrzeug zurücksetzen"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Zurücksetzen?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Alle personenbezogenen Daten und heruntergeladenen Apps löschen? Diese Aktion kann nicht rückgängig gemacht werden!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Alles löschen"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Wird gelöscht"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Bitte warten…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum &amp; Uhrzeit"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Datum und Uhrzeit festlegen"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Datum, Uhrzeit, Zeitzone &amp; Formate festlegen"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: vor <xliff:g id="NUM_DAYS">%3$s</xliff:g> Tagen"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Vertrauenswürdiges Gerät hinzufügen"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Vertrauenswürdige Geräte"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Gerätesicherheit"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> Geräte</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> Gerät</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> entsperrt dieses Auto, wenn eine Verbindung besteht. Wenn dein <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> in die Hände einer anderen Person gelangt, kann diese möglicherweise auf das Gerät zugreifen"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bestätigen"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Vertrauenswürdiges Gerät entfernen"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Fertig"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Verwende die Companion App, um ein vertrauenswürdiges Gerät einzurichten. Danach kannst du dein Nutzerprofil entsperren, wenn dein Smartphone vom Fahrzeug erkannt wird"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lade die Companion App auf dein Smartphone herunter"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2 Wähle auf deinem Smartphone \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\" aus, um die Geräte zu koppeln"</string>

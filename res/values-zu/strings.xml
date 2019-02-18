@@ -35,6 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Finyelela kudatha usebenzisa inethiwekhi yeselula"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vala idatha yeselula?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Ukusebenzisa idatha"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Isexwayiso sedatha nomkhawulo"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Umjikelezo wokusetshenziswa kwedatha yohlelo lokusebenza"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Setha isexwayiso sedatha"</string>
+    <string name="data_warning" msgid="116776633806885370">"Isexwayiso sedatha"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Setha umkhawulo wedatha"</string>
+    <string name="data_limit" msgid="227338836292511425">"Umkhawulo wedatha"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ilinganisela ukusebenza kwedatha"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Iyunithi enkulu yemoto yakho izovala idatha yeselula uma isifike kumkhawulo owusethile.\n\nNjengoba ukusetshenziswa kwedatha kulinganiselwa iyunithi eyinhloko, futhi inkampani yakho yenethiwekhi ingakhulumela ukusetshenziswa ngokuhlukile, cabanga ukusetha umkhawulo wakho wokugcinwa."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"I-Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Ivula i-Wi-Fi..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Ivala i-Wi-Fi…"</string>
@@ -158,10 +166,8 @@
     <string name="app_list_preference_none" msgid="7753357799926715901">"Lutho"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Ekhethiwe"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Isilekeleli sizokwazi ukufunda ulwazi mayelana nezinhlelo zokusebenza ezisetshenziswayo kusistimu yakho, ezifaka ulwazi olubonakala kusikrini sakho noma ezifinyeleleka ngaphakathi kwezinhlelo zokusebenza."</string>
-    <!-- no translation found for autofill_confirmation_message (1832984461556991378) -->
-    <skip />
-    <!-- no translation found for autofill_add_service (6413893366443609951) -->
-    <skip />
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Qiniseka ukuthi wethemba lolu hlelo lokusebenza&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; isebenzisa okusesikrinini sakho ukunquma okungagcwaliswa ngokuzenzakalela."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Engeza isevisi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Indawo"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Izicelo zakamuva zendawo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Azikho izicelo zakamuva zendawo"</string>
@@ -180,6 +186,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Inguqulo ye-Baseband"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Inguqulo ye-Kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Yakha inombolo"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Ikheli le-Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Ayitholakali"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Isimo"</string>
     <string name="device_status" msgid="267298179806290920">"Isimo"</string>
@@ -230,8 +237,15 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Setha kabusha izinhlelo zokusebenza"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Izintandokazi zohlelo lokusebenza zisethwe kabusha"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Sula yonke idatha (ukusethwa kabusha kwasekuqaleni)"</string>
-    <!-- no translation found for master_clear_accounts (7797522012993567494) -->
-    <skip />
+    <string name="master_clear_desc" msgid="9058719802779893535">"Lokhu kuzosusa yonke idatha kusukela kuyunithi eyinhloko yemoto yakho, efaka:\n\n"<li>"I-akhawunti yakho ye-Google"</li>\n<li>"Isistimu nedatha yohlelo lokusebenza nezilungiselelo"</li>\n<li>"Izinhlelo zokusebenza ezilandiwe"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Manje ungene ngemvume kuma-akhawunti alandelayo:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Kukhona abanye abasebenzisi abakhona kule moto."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Setha kabusha imoto"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Setha kabusha?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Sula lonke ulwazi lakho lomuntu siqu kanye nezinhlelo zokusebenza ezilandiwe? Awukwazi ukuhlehlisa lesi senzo!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Sula yonke into"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Iyasula"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Sicela ulinde..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Idethi nesikhathi"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Setha idethi nesikhathi"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Setha idethi, isikhathi, umkhwawulo wesikhathi namafomethi"</string>
@@ -417,14 +431,14 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> izinsuku ezedlule"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Engeza idivayisi ethenjiwe"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Amadivayisi athenjwa"</string>
-    <string name="trusted_device_subtitle" msgid="5823125918668125714">"Ukuphepha kwedivaysi"</string>
-    <!-- no translation found for remove_device_message (6447820559674148349) -->
-    <skip />
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> amadivayisi</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> amadivayisi</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"I-<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> yakho izovula le moto uma ixhunyiwe. Uma omunye umuntu athatha i-<xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, angakwazi ukufinyelela le divayisi"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Qinisekisa"</string>
-    <!-- no translation found for trusted_device_remove_button (6140476996063415420) -->
-    <skip />
-    <!-- no translation found for trusted_device_done_button (8481956533222625296) -->
-    <skip />
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Susa idivayisi ethenjiwe"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Kwenziwe"</string>
     <string name="add_trusted_device_instruction" msgid="109228038968439923">"Sebenzisa uhlelo lokusebenza elingumngane ukuze usethe idivayisi ethembekile. Uma ususethile, uzokwazi ukuvula iphrofayela yakho yomsebenszisi uma ifoni yakho itholwe imoto"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Landa uhlelo lokusebenza elingumngane efonini yakho"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Khetha u-<xliff:g id="CAR_NAME">%1$s</xliff:g> efonini yakho ukuze ubhanqe amadivayisi"</string>
