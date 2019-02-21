@@ -303,8 +303,18 @@
         <item quantity="one"><xliff:g example="1" id="count">%d</xliff:g> additional permission</item>
         <item quantity="other"><xliff:g example="10" id="count">%d</xliff:g> additional permissions</item>
     </plurals>
-    <!-- Assistant and voice input settings title. This setting allows users to select the default assistant for the device. [CHAR LIMIT=40] -->
+    <!-- Assistant and voice input settings title. This setting goes into the manage assistant settings page. [CHAR LIMIT=40] -->
     <string name="assist_and_voice_input_settings">Assist &amp; voice input</string>
+    <!-- Default assistant settings title. This setting allows users to select the default assistant for the device. [CHAR LIMIT=40] -->
+    <string name="assist_app_settings">Assist app</string>
+    <!-- Title for the text context preference to determine whether assist can access the data currently displayed on-screen [CHAR LIMIT=40] -->
+    <string name="assist_access_context_title">Use text from screen</string>
+    <!-- Summary for the text context preference to determine whether assist can access the data currently displayed on-screen [CHAR LIMIT=NONE] -->
+    <string name="assist_access_context_summary">Allow the assist app to access the screen contents as text</string>
+    <!-- Title for the screenshot context preference to determine whether assist can access the screenshot of your screen [CHAR LIMIT=40] -->
+    <string name="assist_access_screenshot_title">Use screenshot</string>
+    <!-- Summary for the screenshot context preference to determine whether assist can access the screenshot of your screen [CHAR LIMIT=NONE] -->
+    <string name="assist_access_screenshot_summary">Allow the assist app to access an image of the screen</string>
     <!-- Title of the autofill service settings screen. [CHAR LIMIT=40] -->
     <string name="autofill_settings_title">Autofill service</string>
     <!-- Title of the option to remove the default application. [CHAR LIMIT=30] -->
