@@ -140,7 +140,8 @@ public class SetupWizardScreenLockActivity extends CarSettingActivity implements
         switch(position) {
             case LockTypeDialogFragment.POSITION_NONE:
                 if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
-                    new LockPatternUtils(this).clearLock(mCurrLock, UserHandle.myUserId());
+                    byte[] currLockBytes = mCurrLock != null ? mCurrLock.getBytes() : null;
+                    new LockPatternUtils(this).clearLock(currLockBytes, UserHandle.myUserId());
                 }
                 setResult(ResultCodes.RESULT_NONE);
                 finish();
