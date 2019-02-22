@@ -60,6 +60,14 @@
         <attr name="actionShown" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="ProgressBarPreference">
+        <attr name="min" format="integer"/>
+        <attr name="max" format="integer"/>
+        <attr name="progress" format="integer"/>
+        <attr name="minLabel" format="string"/>
+        <attr name="maxLabel" format="string"/>
+    </declare-styleable>
+
     <attr name="wifiSignalColor" format="color"/>
     <attr name="iconColor" format="color"/>
     <attr name="dividerColor" format="color"/>
