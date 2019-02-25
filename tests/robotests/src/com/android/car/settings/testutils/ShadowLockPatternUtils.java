@@ -40,4 +40,9 @@ public class ShadowLockPatternUtils {
     protected void clearLock(String savedCredential, int userHandle) {
         sInstance.clearLock(savedCredential, userHandle);
     }
+
+    @Implementation
+    protected int getKeyguardStoredPasswordQuality(int userHandle) {
+        return sInstance.getKeyguardStoredPasswordQuality(userHandle);
+    }
 }

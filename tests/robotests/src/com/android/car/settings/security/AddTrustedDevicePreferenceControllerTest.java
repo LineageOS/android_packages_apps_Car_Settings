@@ -16,15 +16,21 @@
 
 package com.android.car.settings.security;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.trust.CarTrustAgentEnrollmentManager;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
 import androidx.lifecycle.Lifecycle;
@@ -33,6 +39,8 @@ import androidx.preference.Preference;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCar;
+import com.android.car.settings.testutils.ShadowLockPatternUtils;
+import com.android.internal.widget.LockPatternUtils;
 
 import org.junit.After;
 import org.junit.Before;
@@ -45,18 +53,24 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 
-/** Unit tests for {@link AddTrustedDevicePreferenceController}. */
+/**
+ * Unit tests for {@link AddTrustedDevicePreferenceController}.
+ */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowCar.class})
+@Config(shadows = {ShadowCar.class, ShadowLockPatternUtils.class})
 public class AddTrustedDevicePreferenceControllerTest {
+
     private static final String ADDRESS = "00:11:22:33:AA:BB";
     private Context mContext;
     private PreferenceControllerTestHelper<AddTrustedDevicePreferenceController>
             mPreferenceControllerHelper;
     @Mock
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
+    @Mock
+    private LockPatternUtils mLockPatternUtils;
     private Preference mPreference;
     private AddTrustedDevicePreferenceController mController;
+    private CarUserManagerHelper mCarUserManagerHelper;
     private BluetoothDevice mBluetoothDevice;
 
     @Before
@@ -65,22 +79,31 @@ public class AddTrustedDevicePreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
                 mMockCarTrustAgentEnrollmentManager);
+        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 AddTrustedDevicePreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
-        mPreferenceControllerHelper.markState(Lifecycle.State.STARTED);
+        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mBluetoothDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(ADDRESS);
     }
 
     @After
     public void tearDown() {
         ShadowCar.reset();
+        ShadowLockPatternUtils.reset();
     }
 
     @Test
-    public void onPreferenceClicked_startAdvertising() throws CarNotConnectedException {
+    public void onPreferenceClicked_hasPassword_startAdvertising() throws CarNotConnectedException {
+        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
+                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        mController.refreshUi();
+
         mPreference.performClick();
+
         verify(mMockCarTrustAgentEnrollmentManager).startEnrollmentAdvertising();
     }
 
@@ -92,8 +115,7 @@ public class AddTrustedDevicePreferenceControllerTest {
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(
                 enrollmentCallBack.capture());
-        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback>
-                bleCallBack =
+        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback> bleCallBack =
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setBleCallback(bleCallBack.capture());
@@ -162,5 +184,15 @@ public class AddTrustedDevicePreferenceControllerTest {
     public void onPairingCodeDialogCancelled_returnToListFragment() {
         mController.mConfirmParingCodeListener.onDialogCancelled();
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
+    }
+
+    @Test
+    public void refreshUi_noPassword_preferenceDisabled() {
+        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(anyInt())).thenReturn(
+                DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+
+        mController.refreshUi();
+
+        assertThat(mPreference.isEnabled()).isFalse();
     }
 }
