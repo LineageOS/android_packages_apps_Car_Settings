@@ -110,8 +110,9 @@
     <dimen name="suw_icon_size">44dp</dimen>
 
     <!-- Security -->
-    <dimen name="suw_pin_pad_key_width">120dp</dimen>
-    <dimen name="suw_pin_pad_key_height">80dp</dimen>
-    <dimen name="suw_pin_pad_key_margin">12dp</dimen>
+    <dimen name="suw_pin_pad_key_width">@dimen/car_touch_target_size</dimen>
+    <dimen name="suw_pin_pad_key_height">@dimen/car_touch_target_size</dimen>
+    <dimen name="suw_pin_pad_key_margin">32dp</dimen>
     <dimen name="suw_confirm_pattern_dimension">350dp</dimen>
+    <dimen name="suw_lock_screen_margin">80dp</dimen>
 </resources>
