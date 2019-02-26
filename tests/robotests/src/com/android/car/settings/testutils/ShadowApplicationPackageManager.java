@@ -17,6 +17,7 @@ package com.android.car.settings.testutils;
 
 import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
@@ -29,17 +30,19 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /** Shadow of ApplicationPackageManager that allows the getting of content providers per user. */
-@Implements(value = ApplicationPackageManager.class)
+@Implements(value = ApplicationPackageManager.class, inheritImplementationMethods = true)
 public class ShadowApplicationPackageManager extends
         org.robolectric.shadows.ShadowApplicationPackageManager {
 
     private static List<ResolveInfo> sResolveInfos = null;
     private static Resources sResources = null;
+
+    private List<ResolveInfo> mHomeActivities = Collections.emptyList();
+    private ComponentName mDefaultHomeActivity;
 
     @Resetter
     public static void reset() {
@@ -77,12 +80,26 @@ public class ShadowApplicationPackageManager extends
         return sResolveInfos == null ? Collections.emptyList() : sResolveInfos;
     }
 
+    @Implementation
+    public ComponentName getHomeActivities(List<ResolveInfo> outActivities) {
+        outActivities.addAll(mHomeActivities);
+        return mDefaultHomeActivity;
+    }
+
+    public void setHomeActivities(List<ResolveInfo> homeActivities) {
+        mHomeActivities = homeActivities;
+    }
+
+    public void setDefaultHomeActivity(ComponentName defaultHomeActivity) {
+        mDefaultHomeActivity = defaultHomeActivity;
+    }
+
     /**
      * If resolveInfos are set by this method then
      * {@link ShadowApplicationPackageManager#queryIntentActivitiesAsUser}
      * method will return the same list.
      */
-    public static void setListOfActivities(ArrayList<ResolveInfo> resolveInfos) {
+    public static void setListOfActivities(List<ResolveInfo> resolveInfos) {
         sResolveInfos = resolveInfos;
     }
 

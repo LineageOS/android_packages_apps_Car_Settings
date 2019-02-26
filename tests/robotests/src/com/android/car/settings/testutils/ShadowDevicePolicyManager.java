@@ -18,16 +18,20 @@ package com.android.car.settings.testutils;
 
 import android.annotation.Nullable;
 import android.app.admin.DevicePolicyManager;
+import android.util.ArraySet;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 
 import java.util.List;
+import java.util.Set;
 
-@Implements(value = DevicePolicyManager.class)
+@Implements(value = DevicePolicyManager.class, inheritImplementationMethods = true)
 public class ShadowDevicePolicyManager extends org.robolectric.shadows.ShadowDevicePolicyManager {
     @Nullable
     private List<String> mPermittedInputMethods;
+    private Set<String> mActiveAdminsPackages = new ArraySet<>();
+    private boolean mIsInstallInQueue;
 
     @Implementation
     @Nullable
@@ -37,5 +41,27 @@ public class ShadowDevicePolicyManager extends org.robolectric.shadows.ShadowDev
 
     public void setPermittedInputMethodsForCurrentUser(@Nullable List<String> inputMethods) {
         mPermittedInputMethods = inputMethods;
+    }
+
+    @Implementation
+    protected boolean packageHasActiveAdmins(String packageName) {
+        return mActiveAdminsPackages.contains(packageName);
+    }
+
+    public void setPackageHasActiveAdmins(String packageName, boolean hasActiveAdmins) {
+        if (hasActiveAdmins) {
+            mActiveAdminsPackages.add(packageName);
+        } else {
+            mActiveAdminsPackages.remove(packageName);
+        }
+    }
+
+    @Implementation
+    protected boolean isUninstallInQueue(String packageName) {
+        return mIsInstallInQueue;
+    }
+
+    public void setIsUninstallInQueue(boolean isUninstallInQueue) {
+        mIsInstallInQueue = isUninstallInQueue;
     }
 }
