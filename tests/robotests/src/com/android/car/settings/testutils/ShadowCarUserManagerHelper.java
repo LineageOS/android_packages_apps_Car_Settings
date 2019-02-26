@@ -79,12 +79,17 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    public List<UserInfo> getAllPersistentUsers() {
+    protected List<UserInfo> getAllUsers() {
+        return sMockInstance.getAllUsers();
+    }
+
+    @Implementation
+    protected List<UserInfo> getAllPersistentUsers() {
         return sMockInstance.getAllPersistentUsers();
     }
 
     @Implementation
-    public UserInfo createNewNonAdminUser(String userName) {
+    protected UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
     }
 
@@ -159,7 +164,7 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    public void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
+    protected void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
         Map<String, Boolean> permissionsMap = sUserRestrictionMap.getOrDefault(userInfo.id,
                 new HashMap<>());
         permissionsMap.put(restriction, enable);
@@ -167,7 +172,7 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    public boolean hasUserRestriction(String restriction, UserInfo userInfo) {
+    protected boolean hasUserRestriction(String restriction, UserInfo userInfo) {
         // False by default, if nothing was added to our map,
         if (!sUserRestrictionMap.containsKey(userInfo.id)) {
             return false;

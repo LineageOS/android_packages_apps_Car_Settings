@@ -46,6 +46,14 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     }
 
     @Implementation
+    protected int[] getProfileIdsWithDisabled(int userId) {
+        if (mProfiles.containsKey(userId)) {
+            return mProfiles.get(userId).stream().mapToInt(userInfo -> userInfo.id).toArray();
+        }
+        return new int[]{};
+    }
+
+    @Implementation
     protected List<UserInfo> getProfiles(int userHandle) {
         if (mProfiles.containsKey(userHandle)) {
             return new ArrayList<>(mProfiles.get(userHandle));
