@@ -51,6 +51,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowApplication;
 
 
 /**
@@ -157,6 +158,20 @@ public class AddTrustedDevicePreferenceControllerTest {
         callBack.getValue().onEnrollmentAdvertisingFailed(12);
 
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
+    }
+
+    @Test
+    public void onEscrowTokenAdded_startCheckLockActivity()
+            throws CarNotConnectedException {
+        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
+                ArgumentCaptor.forClass(
+                        CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
+        verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
+
+        callBack.getValue().onEscrowTokenAdded(1);
+
+        assertThat(ShadowApplication.getInstance().getNextStartedActivity().getComponent()
+                .getClassName()).isEqualTo(CheckLockActivity.class.getName());
     }
 
     @Test
