@@ -31,6 +31,7 @@ import java.util.Map;
 public class ShadowVoiceInteractionServiceInfo {
     private static Map<ServiceInfo, Boolean> sSupportsAssistMap = new HashMap<>();
     private static Map<ServiceInfo, String> sRecognitionServiceMap = new HashMap<>();
+    private static Map<ServiceInfo, String> sSettingsActivityMap = new HashMap<>();
 
     private ServiceInfo mServiceInfo;
 
@@ -46,6 +47,10 @@ public class ShadowVoiceInteractionServiceInfo {
         sRecognitionServiceMap.put(si, recognitionService);
     }
 
+    public static void setSettingsActivity(ServiceInfo si, String settingsActivity) {
+        sSettingsActivityMap.put(si, settingsActivity);
+    }
+
     @Implementation
     protected boolean getSupportsAssist() {
         return sSupportsAssistMap.get(mServiceInfo);
@@ -54,6 +59,16 @@ public class ShadowVoiceInteractionServiceInfo {
     @Implementation
     protected String getRecognitionService() {
         return sRecognitionServiceMap.get(mServiceInfo);
+    }
+
+    @Implementation
+    protected String getSettingsActivity() {
+        return sSettingsActivityMap.get(mServiceInfo);
+    }
+
+    @Implementation
+    protected ServiceInfo getServiceInfo() {
+        return mServiceInfo;
     }
 
     @Resetter
