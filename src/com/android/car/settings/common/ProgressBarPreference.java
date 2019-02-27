@@ -117,6 +117,11 @@ public class ProgressBarPreference extends Preference {
         }
     }
 
+    /** Returns the current progress value of the progress bar. */
+    public int getProgress() {
+        return mProgress;
+    }
+
     @Override
     public void onBindViewHolder(PreferenceViewHolder view) {
         super.onBindViewHolder(view);
