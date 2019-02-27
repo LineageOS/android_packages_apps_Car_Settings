@@ -25,9 +25,8 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.RemoteException;
-import android.view.WindowManagerGlobal;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
@@ -75,13 +74,9 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
 
                 @Override
                 public void onEscrowTokenAdded(long handle) {
-                    try {
-                        // User need to enter the correct authentication of the car to activate the
-                        // added token.
-                        WindowManagerGlobal.getWindowManagerService().lockNow(/* options= */ null);
-                    } catch (RemoteException e) {
-                        LOG.e(e.getMessage(), e);
-                    }
+                    // User need to enter the correct authentication of the car to activate the
+                    // added token.
+                    getContext().startActivity(new Intent(getContext(), CheckLockActivity.class));
                 }
 
                 @Override
