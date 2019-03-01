@@ -45,6 +45,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
 
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     private final AlwaysDiscoverable mAlwaysDiscoverable;
+    private boolean mIsScanningEnabled;
 
     public BluetoothUnbondedDevicesPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -114,6 +115,7 @@ public class BluetoothUnbondedDevicesPreferenceController extends
      * Calls are idempotent.
      */
     private void enableScanning() {
+        mIsScanningEnabled = true;
         if (!mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.startDiscovery();
         }
@@ -123,10 +125,18 @@ public class BluetoothUnbondedDevicesPreferenceController extends
 
     /** Stops scanning for devices and disables interaction. Calls are idempotent. */
     private void disableScanning() {
+        mIsScanningEnabled = false;
         getPreference().setEnabled(false);
         mAlwaysDiscoverable.stop();
         if (mBluetoothAdapter.isDiscovering()) {
             mBluetoothAdapter.cancelDiscovery();
+        }
+    }
+
+    @Override
+    public void onScanningStateChanged(boolean started) {
+        if (!started && mIsScanningEnabled) {
+            enableScanning();
         }
     }
 

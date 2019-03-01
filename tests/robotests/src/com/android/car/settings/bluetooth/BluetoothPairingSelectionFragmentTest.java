@@ -97,6 +97,17 @@ public class BluetoothPairingSelectionFragmentTest {
     }
 
     @Test
+    public void onStart_showsProgressBar() {
+        mFragmentController.create();
+        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
+        progressBar.setVisibility(View.GONE);
+
+        mFragmentController.start();
+
+        assertThat(progressBar.getVisibility()).isEqualTo(View.VISIBLE);
+    }
+
+    @Test
     public void onStop_clearsBluetoothManagerForegroundActivity() {
         mFragmentController.create().start().resume().pause().stop();
 
@@ -120,34 +131,6 @@ public class BluetoothPairingSelectionFragmentTest {
         progressBar.setVisibility(View.VISIBLE);
 
         mFragmentController.stop();
-
-        assertThat(progressBar.getVisibility()).isEqualTo(View.GONE);
-    }
-
-    @Test
-    public void onScanningStateChanged_scanningStarted_showsProgressBar() {
-        ArgumentCaptor<BluetoothCallback> callbackCaptor = ArgumentCaptor.forClass(
-                BluetoothCallback.class);
-        mFragmentController.setup();
-        verify(mEventManager).registerCallback(callbackCaptor.capture());
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.GONE);
-
-        callbackCaptor.getValue().onScanningStateChanged(/* started= */ true);
-
-        assertThat(progressBar.getVisibility()).isEqualTo(View.VISIBLE);
-    }
-
-    @Test
-    public void onScanningStateChanged_scanningStopped_hidesProgressBar() {
-        ArgumentCaptor<BluetoothCallback> callbackCaptor = ArgumentCaptor.forClass(
-                BluetoothCallback.class);
-        mFragmentController.setup();
-        verify(mEventManager).registerCallback(callbackCaptor.capture());
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.VISIBLE);
-
-        callbackCaptor.getValue().onScanningStateChanged(/* started= */ false);
 
         assertThat(progressBar.getVisibility()).isEqualTo(View.GONE);
     }
