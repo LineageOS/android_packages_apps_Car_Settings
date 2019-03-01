@@ -118,4 +118,9 @@ public class DefaultVoiceInputPickerPreferenceController extends
                     Settings.Secure.VOICE_RECOGNITION_SERVICE, key);
         }
     }
+
+    @Override
+    protected boolean includeNonePreference() {
+        return false;
+    }
 }

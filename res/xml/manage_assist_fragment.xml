@@ -38,4 +38,11 @@
         android:title="@string/assist_access_screenshot_title"
         settings:controller="com.android.car.settings.applications.assist.ScreenshotContextPreferenceController"
         settings:iconSpaceReserved="true"/>
+    <com.android.car.settings.common.ButtonPreference
+        android:fragment="com.android.car.settings.applications.assist.DefaultVoiceInputPickerFragment"
+        android:key="@string/pk_default_voice_input"
+        android:title="@string/voice_input_settings_title"
+        android:widgetLayout="@layout/details_preference_widget"
+        settings:controller="com.android.car.settings.applications.assist.DefaultVoiceInputPickerEntryPreferenceController"
+        settings:iconSpaceReserved="true"/>
 </PreferenceScreen>
