@@ -64,24 +64,18 @@ public class DefaultVoiceInputPickerPreferenceController extends
     @Override
     protected List<DefaultAppInfo> getCandidates() {
         List<DefaultAppInfo> candidates = new ArrayList<>();
-        // If one of the voice interaction services have the same component name as the
-        // assistant, the current assistant is a service.
-        boolean assistantIsService = false;
         for (VoiceInputInfoProvider.VoiceInteractionInfo info :
                 mVoiceInputInfoProvider.getVoiceInteractionInfoList()) {
             boolean enabled = TextUtils.equals(info.getComponentName().flattenToString(),
                     mAssistComponentName);
-            assistantIsService |= enabled;
             candidates.add(new DefaultVoiceInputServiceInfo(getContext(), mPm,
                     getCurrentProcessUserId(), info, enabled));
         }
 
         for (VoiceInputInfoProvider.VoiceRecognitionInfo info :
                 mVoiceInputInfoProvider.getVoiceRecognitionInfoList()) {
-            // Disable recognition services if the current assistant is a service.
-            boolean enabled = !assistantIsService;
             candidates.add(new DefaultVoiceInputServiceInfo(getContext(), mPm,
-                    getCurrentProcessUserId(), info, enabled));
+                    getCurrentProcessUserId(), info, /* enabled= */ true));
         }
         return candidates;
     }

@@ -60,7 +60,6 @@ public class VoiceInputInfoProviderTest {
         resolveInfo.serviceInfo = new ServiceInfo();
         resolveInfo.serviceInfo.packageName = TEST_PACKAGE;
         resolveInfo.serviceInfo.name = TEST_CLASS;
-
         ShadowVoiceInteractionServiceInfo.setRecognitionService(resolveInfo.serviceInfo,
                 TEST_RECOGNITION_SERVICE);
 
@@ -72,40 +71,7 @@ public class VoiceInputInfoProviderTest {
     }
 
     @Test
-    public void getRecognitionInfoList_includedByInteractionService_noElement() {
-        ResolveInfo resolveInfo = new ResolveInfo();
-        resolveInfo.serviceInfo = new ServiceInfo();
-        resolveInfo.serviceInfo.packageName = TEST_PACKAGE;
-        resolveInfo.serviceInfo.name = TEST_CLASS;
-
-        ShadowVoiceInteractionServiceInfo.setRecognitionService(resolveInfo.serviceInfo,
-                TEST_RECOGNITION_SERVICE);
-
-        getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, resolveInfo);
-
-        ResolveInfo otherInfo = new ResolveInfo();
-        otherInfo.serviceInfo = new ServiceInfo();
-        otherInfo.serviceInfo.packageName = TEST_PACKAGE;
-        otherInfo.serviceInfo.name = TEST_RECOGNITION_SERVICE;
-
-        getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_RECOGNITION_SERVICE_TAG, otherInfo);
-
-        VoiceInputInfoProvider provider = new VoiceInputInfoProvider(mContext);
-        assertThat(provider.getVoiceRecognitionInfoList()).isEmpty();
-    }
-
-    @Test
-    public void getRecognitionInfoList_notIncludedByInteractionService_hasElement() {
-        ResolveInfo resolveInfo = new ResolveInfo();
-        resolveInfo.serviceInfo = new ServiceInfo();
-        resolveInfo.serviceInfo.packageName = TEST_PACKAGE;
-        resolveInfo.serviceInfo.name = TEST_CLASS;
-
-        getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, resolveInfo);
-
+    public void getRecognitionInfoList_hasElement() {
         ResolveInfo otherInfo = new ResolveInfo();
         otherInfo.serviceInfo = new ServiceInfo();
         otherInfo.serviceInfo.packageName = TEST_PACKAGE;
