@@ -37,7 +37,6 @@ public class BluetoothPairingSelectionFragment extends SettingsFragment {
     private final BluetoothCallback mCallback = new BluetoothCallback() {
         @Override
         public void onScanningStateChanged(boolean started) {
-            mProgressBar.setVisibility(started ? View.VISIBLE : View.GONE);
         }
 
         @Override
@@ -81,6 +80,7 @@ public class BluetoothPairingSelectionFragment extends SettingsFragment {
         super.onStart();
         mManager.setForegroundActivity(requireActivity());
         mManager.getEventManager().registerCallback(mCallback);
+        mProgressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
