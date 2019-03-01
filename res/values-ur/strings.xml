@@ -147,21 +147,36 @@
     <string name="all_applications" msgid="7798210477486822168">"سبھی ایپس دکھائیں"</string>
     <string name="default_applications" msgid="1558183275638697087">"ڈیفالٹ ایپس"</string>
     <string name="applications_settings" msgid="794261395191035632">"ایپ کی معلومات"</string>
+    <string name="force_stop" msgid="2153183697014720520">"زبردستی روکیں"</string>
+    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"غیر فعال کریں"</string>
     <string name="enable_text" msgid="1794971777861881238">"فعال کریں"</string>
+    <!-- no translation found for uninstall_text (277907956072833012) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"اجازتیں"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ورژن: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"کوئی اجازت نہیں دی گئی"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"کسی اجازت کی درخواست نہیں کی گئی"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ڈیٹا کا استعمال"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ایپ ڈیٹا کا استعمال"</string>
-    <string name="force_stop" msgid="2153183697014720520">"زبردستی روکیں"</string>
     <string name="computing_size" msgid="5791407621793083965">"حساب کتاب کیا جا رہا ہے…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> اضافی اجازتیں</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> اضافی اجازت</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"معاون اور صوتی ان پٹ"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"معاون ایپ"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"سکرین سے متن استعمال کریں"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"معاون ایپ کو سکرین مشمولات تک بطور متن رسائی کرنے کی اجازت دیں"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"اسکرین شاٹ استعمال کریں"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"معاون ایپ کو اسکرین کی ایک تصویر تک رسائی کرنے کی اجازت دیں"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"آٹو فل سروس"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"کوئی نہیں"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"منتخب کردہ"</string>
@@ -446,6 +461,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"بطور بھروسہ مند آلہ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> کو شامل کریں"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کو بھروسہ مند آلہ کے طور پر کامیابی کے ساتھ شامل کر لیا گیا"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> اندراج ناکام ہوگیا"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"بھروسہ مند آلہ شامل کرنے کے لیے آپ کو آگے ایک تصدیقی طریقہ سیٹ کرنا ہوگا۔ اگر آپ کے پاس بھروسہ مند آلہ نہیں ہے تو آپ کے پروفائل تک رسائی حاصل کرنے کے لیے تصدیق درکار ہوگی۔"</string>
     <string name="forget" msgid="3971143908183848527">"بھول جائیں"</string>
     <string name="connect" msgid="5861699594602380150">"منسلک کریں"</string>
     <string name="disconnect" msgid="6140789953324820336">"غیر منسلک کریں"</string>

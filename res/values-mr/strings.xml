@@ -35,22 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क वापरून डेटा अॅक्सेस करा"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करायचा आहे का?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा वापर"</string>
-    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
-    <skip />
-    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
-    <skip />
-    <!-- no translation found for set_data_warning (6628236612886588097) -->
-    <skip />
-    <!-- no translation found for data_warning (116776633806885370) -->
-    <skip />
-    <!-- no translation found for set_data_limit (7136539812414500084) -->
-    <skip />
-    <!-- no translation found for data_limit (227338836292511425) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
-    <skip />
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटा चेतावणी आणि मर्यादा"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"अ‍ॅप डेटा वापर सायकल"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"डेटा चेतावणी सेट करा"</string>
+    <string name="data_warning" msgid="116776633806885370">"डेटा चेतावणी"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"डेटा मर्यादा सेट करा"</string>
+    <string name="data_limit" msgid="227338836292511425">"डेटा मर्यादा"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटा वापर मर्यादित करत आहे"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"मोबाइल डेटाने तुम्ही सेट केलेली मर्यादा गाठल्यानंतर तुमच्या वाहनाचे मुख्य युनिट मोबाइल डेटा बंद करेल.\n\n मोबाइल डेटाचा वापर मुख्य युनिटमध्ये मोजला जात असल्यामुळे आणि तुमचा वाहक भिन्नपणे वापर लक्षात घेत असल्यामुळे, संवर्धन मर्यादा सेटिंग वापरण्याचा विचार करा."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाय-फाय"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाय-फाय चालू करत आहे…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाय-फाय बंद करत आहे…"</string>
@@ -155,21 +147,36 @@
     <string name="all_applications" msgid="7798210477486822168">"सर्व अ‍ॅप्स दाखवा"</string>
     <string name="default_applications" msgid="1558183275638697087">"डीफॉल्ट अ‍ॅप्स"</string>
     <string name="applications_settings" msgid="794261395191035632">"ॲप माहिती"</string>
+    <string name="force_stop" msgid="2153183697014720520">"सक्तीने थांबवा"</string>
+    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"बंद करा"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करा"</string>
+    <!-- no translation found for uninstall_text (277907956072833012) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"परवानग्या"</string>
     <string name="application_version_label" msgid="8556889839783311649">"आवृत्त्या: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोणत्याही परवानग्यांना मंजूरी दिली नाही"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"कोणत्याही परवानग्यांची विनंती केली नाही"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटा वापर"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ॲप डेटा वापर"</string>
-    <string name="force_stop" msgid="2153183697014720520">"सक्तीने थांबवा"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना करत आहे…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानगी</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानग्या</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"साहाय्य आणि व्हॉइस इनपुट"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"साहाय्य अ‍ॅप"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रीनवरील मजकूर वापरा"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"साहाय्यक अ‍ॅपला स्क्रीन आशय मजकूर म्हणून अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट वापरा"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"साहाय्यक अ‍ॅपला स्क्रीनची इमेज अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोफिल सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"काहीही नाही"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"निवडले"</string>
@@ -194,8 +201,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"बेसबँड आवृत्ती"</string>
     <string name="kernel_version" msgid="7327212934187011508">"कर्नेल आवृत्ती"</string>
     <string name="build_number" msgid="3997326631001009102">"बिल्ड नंबर"</string>
-    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
-    <skip />
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लूटूथ पत्ता"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध नाही"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिती"</string>
     <string name="device_status" msgid="267298179806290920">"स्थिती"</string>
@@ -440,7 +446,10 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिवसांपूर्वी"</string>
     <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय डिव्हाइस जोडा"</string>
     <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय डिव्हाइस"</string>
-    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> डिव्हाइस</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> डिव्हाइस</item>
+    </plurals>
     <string name="remove_device_message" msgid="6447820559674148349">"ते कनेक्ट केलेले असते तेव्‍हा <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> तुमची कार अनलॉक करेल. एखाद्याने तुमचे <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> घेतल्यास, tकदाचित ते डिव्हाइस अ‍ॅक्सेस करू शकतील"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"खात्री करा"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय डिव्हाइस काढून टाका"</string>
@@ -452,6 +461,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> हे विश्वसनीय डिव्हाइस म्हणून जोडा"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> हे विश्वसनीय डिव्हाइस म्हणून यशस्वीरित्या जोडले आहे"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ची नोंदणी करता आली नाही"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"विश्वासू डिव्हाइस जोडण्यााठी तुम्हाला यापुढे ऑथेंटिकेशन सेट करण्याची आवश्यकता आहे. तुमच्याजवळ तुमचे विश्वासू डिव्हाइस नसल्यास, ऑथेंटिकेशनला तुमची प्रोफाइल अॅक्सेस करण्याची आवश्यकता असेल."</string>
     <string name="forget" msgid="3971143908183848527">"विसरा"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्ट करा"</string>
     <string name="disconnect" msgid="6140789953324820336">"डिस्कनेक्ट करा"</string>
