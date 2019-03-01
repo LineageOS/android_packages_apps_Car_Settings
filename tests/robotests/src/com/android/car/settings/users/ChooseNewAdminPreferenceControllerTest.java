@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
@@ -32,6 +34,7 @@ import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -59,6 +62,7 @@ public class ChooseNewAdminPreferenceControllerTest {
     private Context mContext;
     private PreferenceControllerTestHelper<ChooseNewAdminPreferenceController> mControllerHelper;
     private ChooseNewAdminPreferenceController mController;
+    private ConfirmationDialogFragment mDialog;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -72,12 +76,21 @@ public class ChooseNewAdminPreferenceControllerTest {
         mController = mControllerHelper.getController();
         mController.setAdminInfo(TEST_ADMIN_USER);
         mControllerHelper.setPreference(new LogicalPreferenceGroup(mContext));
-        mControllerHelper.markState(Lifecycle.State.STARTED);
+        mDialog = new ConfirmationDialogFragment.Builder(mContext).build();
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
+    }
+
+    @Test
+    public void testOnCreate_hasPreviousDialog_dialogListenerSet() {
+        when(mControllerHelper.getMockFragmentController().findDialogByTag(
+                ConfirmationDialogFragment.TAG)).thenReturn(mDialog);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        assertThat(mDialog.getConfirmListener()).isNotNull();
     }
 
     @Test
@@ -93,8 +106,8 @@ public class ChooseNewAdminPreferenceControllerTest {
         mController.userClicked(/* userToMakeAdmin= */ TEST_OTHER_USER);
 
         verify(mControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmGrantAdminPermissionsDialog.class),
-                eq(ConfirmGrantAdminPermissionsDialog.TAG));
+                any(ConfirmationDialogFragment.class),
+                eq(ConfirmationDialogFragment.TAG));
     }
 
     @Test

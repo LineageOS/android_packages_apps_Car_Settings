@@ -23,6 +23,7 @@ import android.content.pm.UserInfo;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.FragmentController;
 
@@ -32,11 +33,12 @@ import com.android.car.settings.common.FragmentController;
  */
 public class ChooseNewAdminPreferenceController extends UsersBasePreferenceController {
 
-    private final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mGrantAdminListener =
-            userToMakeAdmin -> {
-                assignNewAdminAndRemoveOldAdmin(userToMakeAdmin);
-                getFragmentController().goBack();
-            };
+    private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        UserInfo userToMakeAdmin = (UserInfo) arguments.get(
+                UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN);
+        assignNewAdminAndRemoveOldAdmin(userToMakeAdmin);
+        getFragmentController().goBack();
+    };
 
     private UserInfo mAdminInfo;
 
@@ -62,20 +64,22 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
     @Override
     protected void onCreateInternal() {
         super.onCreateInternal();
-        ConfirmGrantAdminPermissionsDialog dialog =
-                (ConfirmGrantAdminPermissionsDialog) getFragmentController().findDialogByTag(
-                        ConfirmGrantAdminPermissionsDialog.TAG);
-        if (dialog != null) {
-            dialog.setConfirmGrantAdminListener(mGrantAdminListener);
-        }
+        ConfirmationDialogFragment dialogFragment =
+                (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
+                        ConfirmationDialogFragment.TAG);
+
+        ConfirmationDialogFragment.resetListeners(dialogFragment,
+                mConfirmListener, /* rejectListener= */ null);
     }
 
     @Override
     protected void userClicked(UserInfo userToMakeAdmin) {
-        ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
-        dialog.setUserToMakeAdmin(userToMakeAdmin);
-        dialog.setConfirmGrantAdminListener(mGrantAdminListener);
-        getFragmentController().showDialog(dialog, ConfirmGrantAdminPermissionsDialog.TAG);
+
+        ConfirmationDialogFragment dialogFragment =
+                UsersDialogProvider.getConfirmGrantAdminDialogFragment(getContext(),
+                        mConfirmListener, /* rejectListener= */ null, userToMakeAdmin);
+
+        getFragmentController().showDialog(dialogFragment, ConfirmationDialogFragment.TAG);
     }
 
     @VisibleForTesting
