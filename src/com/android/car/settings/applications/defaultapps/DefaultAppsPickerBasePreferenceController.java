@@ -80,7 +80,9 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
         if (!equalToCurrentCandidates(defaultAppInfos)) {
             mCurrentCandidates = defaultAppInfos;
             preferenceGroup.removeAll();
-            preferenceGroup.addPreference(createNonePreference());
+            if (includeNonePreference()) {
+                preferenceGroup.addPreference(createNonePreference());
+            }
             if (mCurrentCandidates != null) {
                 for (DefaultAppInfo info : mCurrentCandidates) {
                     mDefaultAppInfoMap.put(info.getKey(), info);
@@ -164,6 +166,14 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
     /** Gets the current process user id. */
     protected int getCurrentProcessUserId() {
         return mCarUserManagerHelper.getCurrentProcessUserId();
+    }
+
+    /**
+     * Determines whether the list of default apps should include "none". Implementation classes can
+     * override this value to {@code false} in order to remove the "none" preference.
+     */
+    protected boolean includeNonePreference() {
+        return true;
     }
 
     private Preference createNonePreference() {

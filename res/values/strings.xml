@@ -325,6 +325,8 @@
     <string name="assist_access_screenshot_title">Use screenshot</string>
     <!-- Summary for the screenshot context preference to determine whether assist can access the screenshot of your screen [CHAR LIMIT=NONE] -->
     <string name="assist_access_screenshot_summary">Allow the assist app to access an image of the screen</string>
+    <!-- Title of the screen of the voice input settings [CHAR_LIMIT=40]-->
+    <string name="voice_input_settings_title">Voice input</string>
     <!-- Title of the autofill service settings screen. [CHAR LIMIT=40] -->
     <string name="autofill_settings_title">Autofill service</string>
     <!-- Title of the option to remove the default application. [CHAR LIMIT=30] -->

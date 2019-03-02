@@ -58,6 +58,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         private List<DefaultAppInfo> mCandidates;
         private String mKey;
         private CharSequence mMessage;
+        private boolean mIncludeNone = true;
 
         TestDefaultAppsPickerBasePreferenceController(Context context, String preferenceKey,
                 FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -70,6 +71,10 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
 
         public void setTestMessage(String s) {
             mMessage = s;
+        }
+
+        public void setIncludeNonePreference(boolean include) {
+            mIncludeNone = include;
         }
 
         @Override
@@ -90,6 +95,11 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         @Override
         protected CharSequence getConfirmationMessage(DefaultAppInfo info) {
             return mMessage;
+        }
+
+        @Override
+        protected boolean includeNonePreference() {
+            return mIncludeNone;
         }
     }
 
@@ -123,6 +133,17 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         assertThat(preference.getIcon()).isNotNull();
         assertThat(preference.getSummary()).isEqualTo(
                 mContext.getString(R.string.default_app_selected_app));
+    }
+
+    @Test
+    public void refreshUi_noCandidates_noNoneElement() {
+        mController.setCurrentDefault("");
+        mController.setIncludeNonePreference(false);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        // None element removed.
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
     }
 
     @Test
