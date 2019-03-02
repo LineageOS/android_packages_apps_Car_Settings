@@ -36,13 +36,13 @@
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करना चाहते हैं?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा खर्च"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटा खर्च की चेतावनी और तय सीमा"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"ऐप्लिकेशन के डेटा खर्च का साइकल"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"ऐप्लिकेशन के डेटा खर्च की साइकिल"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"डेटा चेतावनी सेट करें"</string>
     <string name="data_warning" msgid="116776633806885370">"डेटा खर्च की चेतावनी"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"डेटा सीमा सेट करें"</string>
     <string name="data_limit" msgid="227338836292511425">"डेटा सीमा"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटा खर्च को सीमित करना"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"आपकी तय की हुई सीमा तक पहुंचते ही आपकी गाड़ी की हेड यूनिट मोबाइल डेटा को बंद कर देगी.\n\nडेटा के इस्तेमाल का हिसाब हेड यूनिट लगाती है, वहीं आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी इस्तेमाल का हिसाब अलग तरह से लगा सकती है, इसलिए इस फ़र्क को ध्यान में रखते हुए सीमा तय करें."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"आपकी तय की हुई सीमा तक पहुंचते ही आपकी गाड़ी की हेड यूनिट मोबाइल डेटा को बंद कर देगी.\n\nडेटा इस्तेमाल का हिसाब हेड यूनिट लगाती है. ऐसा हो सकता है कि आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी अलग तरह से डेटा खर्च का हिसाब लगाए. इसलिए, इस फ़र्क को ध्यान में रखते हुए सीमा तय करें."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाई-फ़ाई"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाई-फ़ाई चालू हो रहा है…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाई-फ़ाई बंद हो रहा है…"</string>
@@ -147,21 +147,36 @@
     <string name="all_applications" msgid="7798210477486822168">"सभी ऐप्लिकेशन दिखाएं"</string>
     <string name="default_applications" msgid="1558183275638697087">"डिफ़ॉल्ट ऐप्लिकेशन"</string>
     <string name="applications_settings" msgid="794261395191035632">"ऐप्लिकेशन की जानकारी"</string>
+    <string name="force_stop" msgid="2153183697014720520">"ज़बरदस्ती रोकें"</string>
+    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"बंद करें"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करें"</string>
+    <!-- no translation found for uninstall_text (277907956072833012) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
     <string name="application_version_label" msgid="8556889839783311649">"वर्शन: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोई अनुमति नहीं दी गई"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"किसी अनुमति का अनुरोध नहीं किया गया"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटा खर्च"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ऐप्लिकेशन का डेटा खर्च"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ज़बरदस्ती रोकें"</string>
     <string name="computing_size" msgid="5791407621793083965">"गिनती की जा रही है…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"असिस्ट और बोलकर फ़ोन को निर्देश"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"सहायक ऐप्लिकेशन"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रीन के टेक्स्ट का इस्तेमाल करना"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"सहायक ऐप्लिकेशन को टेक्स्ट के रूप में स्क्रीन की सामग्री एक्सेस करने दें"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट का इस्तेमाल करना"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक ऐप्लिकेशन को स्क्रीन की इमेज एक्सेस करने दें"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोमैटिक भरने की सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कोई नहीं"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चुना हुआ ऐप्लिकेशन"</string>
@@ -446,6 +461,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ें"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ लिया गया है"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको प्रमाणीकरण का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए प्रमाणीकरण ज़रूरी होगा."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
     <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>

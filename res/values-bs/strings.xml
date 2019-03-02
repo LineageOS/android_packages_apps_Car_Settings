@@ -147,15 +147,25 @@
     <string name="all_applications" msgid="7798210477486822168">"Prikaži sve aplikacije"</string>
     <string name="default_applications" msgid="1558183275638697087">"Zadane aplikacije"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informacije o aplikaciji"</string>
+    <string name="force_stop" msgid="2153183697014720520">"Prisilno zaustavi"</string>
+    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"Onemogući"</string>
     <string name="enable_text" msgid="1794971777861881238">"Omogući"</string>
+    <!-- no translation found for uninstall_text (277907956072833012) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Odobrenja"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Verzija: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nema dodijeljenih odobrenja"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nema zatraženih odobrenja"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Prijenos podataka"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Prijenos podataka za apl."</string>
-    <string name="force_stop" msgid="2153183697014720520">"Prisilno zaustavi"</string>
     <string name="computing_size" msgid="5791407621793083965">"Računanje…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> dodatno odobrenje</item>
@@ -163,6 +173,11 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatnih odobrenja</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Pomoć i glasovni unos"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"Aplikacija za pomoć"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Korištenje teksta s ekrana"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Omogućava aplikaciji za pomoć da pristupa sadržaju na ekranu kao tekstu"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Korištenje snimke ekrana"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Omogućava aplikaciji za pomoć da pristupa slici ekrana"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Usluga automatskog popunjavanja"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nema"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Odabrano"</string>
@@ -456,6 +471,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Dodajte <xliff:g id="DEVICE_NAME">%1$s</xliff:g> kao pouzdani uređaj"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Uređaj <xliff:g id="DEVICE_NAME">%1$s</xliff:g> je uspješno dodan kao pouzdani uređaj"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Prijava uređaja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> nije uspjela"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Nakon što dodate pouzdani uređaj, morate postaviti metodu autentifikacije. Autentifikacija će biti potrebna za pristup profilu u slučaju da kod sebe nemate pouzdani uređaj."</string>
     <string name="forget" msgid="3971143908183848527">"Zaboravi"</string>
     <string name="connect" msgid="5861699594602380150">"Poveži"</string>
     <string name="disconnect" msgid="6140789953324820336">"Prekini vezu"</string>

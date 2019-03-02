@@ -35,22 +35,14 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിച്ച് ഡാറ്റ ആക്‌സസ് ചെയ്യുക"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"മൊബൈൽ ഡാറ്റ ഓഫാക്കണോ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ഡാറ്റ ഉപയോഗം"</string>
-    <!-- no translation found for data_warning_limit_title (4950868241810828601) -->
-    <skip />
-    <!-- no translation found for app_usage_cycle (8445927080245880296) -->
-    <skip />
-    <!-- no translation found for set_data_warning (6628236612886588097) -->
-    <skip />
-    <!-- no translation found for data_warning (116776633806885370) -->
-    <skip />
-    <!-- no translation found for set_data_limit (7136539812414500084) -->
-    <skip />
-    <!-- no translation found for data_limit (227338836292511425) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_dialog_title (1864716658371721883) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_dialog_mobile (3633960011913085089) -->
-    <skip />
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ഡാറ്റാ മുന്നറിയിപ്പും പരിധിയും"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"ആപ്പ് ഡാറ്റാ ഉപയോഗ സൈക്കിൾ"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ഡാറ്റാ മുന്നറിയിപ്പ് സജ്ജീകരിക്കുക"</string>
+    <string name="data_warning" msgid="116776633806885370">"ഡാറ്റാ മുന്നറിയിപ്പ്"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ഡാറ്റാ പരിധി സജ്ജീകരിക്കുക"</string>
+    <string name="data_limit" msgid="227338836292511425">"ഡാറ്റാ പരിധി"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ഡാറ്റാ ഉപയോഗം നിയന്ത്രിക്കുന്നു"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"നിങ്ങൾ സജ്ജീകരിച്ചിരിക്കുന്ന പരിധി എത്തുമ്പോൾ നിങ്ങളുടെ വാഹനത്തിൻ്റെ ഹെഡ് യൂണിറ്റ്, മൊബൈൽ ഡാറ്റാ ഓഫാക്കും.\n\nഡാറ്റാ ഉപയോഗം ഹെഡ് യൂണിറ്റിൽ അളക്കുന്നതിനാലും, നിങ്ങളുടെ കാരിയർ വ്യത്യസ്‌ത രീതിയിൽ ഉപയോഗം കണക്കാക്കിയേക്കാം എന്നതിനാലും മിതമായ ഡാറ്റാ പരിധി സജ്ജീകരിക്കാൻ നോക്കുക."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"വൈഫൈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"വൈഫൈ ഓണാക്കുന്നു…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"വൈഫൈ ഓഫാക്കുന്നു…"</string>
@@ -155,21 +147,36 @@
     <string name="all_applications" msgid="7798210477486822168">"എല്ലാ ആപ്പുകളും കാണിക്കൂ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ഡിഫോൾട്ട് ആപ്പുകൾ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ആപ്പ് വിവരം"</string>
+    <string name="force_stop" msgid="2153183697014720520">"നിർബന്ധിതമായി നിർത്തുക"</string>
+    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
+    <skip />
+    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
+    <skip />
     <string name="disable_text" msgid="4358165448648990820">"പ്രവർത്തനരഹിതമാക്കുക"</string>
     <string name="enable_text" msgid="1794971777861881238">"പ്രവർത്തനക്ഷമമാക്കുക"</string>
+    <!-- no translation found for uninstall_text (277907956072833012) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
+    <skip />
+    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"അനുമതികൾ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"പതിപ്പ്: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"അനുമതികളൊന്നും അനുവദിച്ചില്ല"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"അനുമതികളൊന്നും അഭ്യർത്ഥിച്ചില്ല"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ഡാറ്റ ഉപയോഗം"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ആപ്പ് ഡാറ്റ ഉപയോഗം"</string>
-    <string name="force_stop" msgid="2153183697014720520">"നിർബന്ധിതമായി നിർത്തുക"</string>
     <string name="computing_size" msgid="5791407621793083965">"കണക്കാക്കുന്നു…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> അധിക അനുമതികൾ</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> അധിക അനുമതി</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"അസിസ്‌റ്റും വോയ്‌സ് ഇൻപുട്ടും"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"സഹായ ആപ്പ്"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"സ്ക്രീനിലെ ടെക്‌സ്‌റ്റ് ഉപയോഗിക്കുക"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"ടെക്‌സ്‌റ്റ് ആയി സ്ക്രീൻ ഉള്ളടക്കങ്ങൾ ആക്‌സസ് ചെയ്യാൻ, സഹായ ആപ്പിനെ അനുവദിക്കുക"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"സ്ക്രീൻഷോട്ട് ഉപയോഗിക്കുക"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"സ്ക്രീനിലെ ഒരു ചിത്രം ആക്‌സസ് ചെയ്യാൻ, സഹായ ആപ്പിനെ അനുവദിക്കുക"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"സ്വയമേവ പൂരിപ്പിക്കൽ സേവനം"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ഒന്നുമില്ല"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"തിരഞ്ഞെടുത്തു"</string>
@@ -194,8 +201,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"ബെയ്‌സ്‌ബാൻഡ് പതിപ്പ്"</string>
     <string name="kernel_version" msgid="7327212934187011508">"പ്രധാന പതിപ്പ്"</string>
     <string name="build_number" msgid="3997326631001009102">"ബിൽഡ് നമ്പർ"</string>
-    <!-- no translation found for bluetooth_mac_address (7641425947941688072) -->
-    <skip />
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth വിലാസം"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ലഭ്യമല്ല"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"സ്റ്റാറ്റസ്"</string>
     <string name="device_status" msgid="267298179806290920">"സ്റ്റാറ്റസ്"</string>
@@ -440,7 +446,10 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ദിവസം മുമ്പ്"</string>
     <string name="add_device_title" msgid="8452168024017866232">"വിശ്വസ്‌ത ഉപകരണം ചേർക്കുക"</string>
     <string name="trusted_device" msgid="5637378361866787603">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ"</string>
-    <!-- no translation found for trusted_device_subtitle (462041049834264945) -->
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ഉപകരണങ്ങൾ</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ഉപകരണം</item>
+    </plurals>
     <string name="remove_device_message" msgid="6447820559674148349">"നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> കണക്റ്റ് ചെയ്‌തിരിക്കുമ്പോൾ അത് ഈ കാർ അൺലോക്ക് ചെയ്യും. ആരെങ്കിലും നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> എടുക്കുകയാണെങ്കിൽ അവർക്ക് ഈ ഉപകരണം ആക്‌സസ് ചെയ്യാനായേക്കും"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"സ്ഥിരീകരിക്കുക"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"വിശ്വസ്‌ത ഉപകരണം നീക്കം ചെയ്യുക"</string>
@@ -452,6 +461,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ ഒരു വിശ്വസ്‌ത ഉപകരണമായി ചേർക്കുക"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ വിശ്വസ്‌ത ഉപകരണമായി ചേർത്തു"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>
     <string name="forget" msgid="3971143908183848527">"മറക്കുക"</string>
     <string name="connect" msgid="5861699594602380150">"കണക്റ്റ് ചെയ്യുക"</string>
     <string name="disconnect" msgid="6140789953324820336">"വിച്ഛേദിക്കുക"</string>
