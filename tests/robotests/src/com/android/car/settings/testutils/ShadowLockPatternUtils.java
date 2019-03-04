@@ -37,10 +37,8 @@ public class ShadowLockPatternUtils {
     }
 
     @Implementation
-    protected void clearLock(String savedCredential, int userHandle) {
-        byte[] savedCredentialBytes = savedCredential != null
-                ? savedCredential.getBytes() : null;
-        sInstance.clearLock(savedCredentialBytes, userHandle);
+    protected void clearLock(byte[] savedCredential, int userHandle) {
+        sInstance.clearLock(savedCredential, userHandle);
     }
 
     @Implementation
