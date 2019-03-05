@@ -137,11 +137,6 @@ public class VoiceInputInfoProvider {
             ComponentName componentName = new ComponentName(resolveInfo.serviceInfo.packageName,
                     resolveInfo.serviceInfo.name);
 
-            // Exclude recognition services already included by voice interaction services.
-            if (mRecognitionServiceNames.contains(componentName)) {
-                continue;
-            }
-
             VoiceRecognitionInfo voiceRecognitionInfo = new VoiceRecognitionInfo(mContext,
                     resolveInfo.serviceInfo);
             mVoiceRecognitionInfoList.add(voiceRecognitionInfo);

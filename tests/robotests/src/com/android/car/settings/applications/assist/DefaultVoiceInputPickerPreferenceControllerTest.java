@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ResolveInfo;
 import android.content.pm.ServiceInfo;
 import android.provider.Settings;
@@ -33,6 +34,7 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.car.settings.testutils.ShadowVoiceInteractionServiceInfo;
+import com.android.settingslib.applications.DefaultAppInfo;
 
 import org.junit.After;
 import org.junit.Before;
@@ -52,6 +54,7 @@ public class DefaultVoiceInputPickerPreferenceControllerTest {
 
     private static final String TEST_PACKAGE_NAME = "com.test.package";
     private static final String TEST_SERVICE = "TestService";
+    private static final String TEST_OTHER_SERVICE = "TestOtherService";
     private static final String TEST_RECOGNIZER = "TestRecognizer";
     private static final int TEST_USER_ID = 10;
 
@@ -107,20 +110,24 @@ public class DefaultVoiceInputPickerPreferenceControllerTest {
     }
 
     @Test
-    public void getCandidates_assistIsSameAsInteraction_hasTwoElements() {
+    public void getCandidates_oneIsSameAsAssistant_hasTwoElements() {
         ResolveInfo interactionInfo = new ResolveInfo();
         interactionInfo.serviceInfo = new ServiceInfo();
         interactionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
         interactionInfo.serviceInfo.name = TEST_SERVICE;
+        interactionInfo.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo.serviceInfo.applicationInfo.nonLocalizedLabel = "1";
         getShadowPackageManager().addResolveInfoForIntent(
                 VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo);
 
-        ResolveInfo recognitionInfo = new ResolveInfo();
-        recognitionInfo.serviceInfo = new ServiceInfo();
-        recognitionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
-        recognitionInfo.serviceInfo.name = TEST_RECOGNIZER;
+        ResolveInfo interactionInfo2 = new ResolveInfo();
+        interactionInfo2.serviceInfo = new ServiceInfo();
+        interactionInfo2.serviceInfo.packageName = TEST_PACKAGE_NAME;
+        interactionInfo2.serviceInfo.name = TEST_OTHER_SERVICE;
+        interactionInfo2.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo2.serviceInfo.applicationInfo.nonLocalizedLabel = "2";
         getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_RECOGNITION_SERVICE_TAG, recognitionInfo);
+                VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo2);
 
         ComponentName voiceInteraction = new ComponentName(TEST_PACKAGE_NAME, TEST_SERVICE);
         setCurrentAssistant(voiceInteraction);
@@ -132,20 +139,24 @@ public class DefaultVoiceInputPickerPreferenceControllerTest {
     }
 
     @Test
-    public void getCandidates_assistIsSameAsInteraction_interactionEnabled() {
+    public void getCandidates_oneIsSameAsAssistant_sameOneIsEnabled() {
         ResolveInfo interactionInfo = new ResolveInfo();
         interactionInfo.serviceInfo = new ServiceInfo();
         interactionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
         interactionInfo.serviceInfo.name = TEST_SERVICE;
+        interactionInfo.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo.serviceInfo.applicationInfo.nonLocalizedLabel = "1";
         getShadowPackageManager().addResolveInfoForIntent(
                 VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo);
 
-        ResolveInfo recognitionInfo = new ResolveInfo();
-        recognitionInfo.serviceInfo = new ServiceInfo();
-        recognitionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
-        recognitionInfo.serviceInfo.name = TEST_RECOGNIZER;
+        ResolveInfo interactionInfo2 = new ResolveInfo();
+        interactionInfo2.serviceInfo = new ServiceInfo();
+        interactionInfo2.serviceInfo.packageName = TEST_PACKAGE_NAME;
+        interactionInfo2.serviceInfo.name = TEST_OTHER_SERVICE;
+        interactionInfo2.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo2.serviceInfo.applicationInfo.nonLocalizedLabel = "2";
         getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_RECOGNITION_SERVICE_TAG, recognitionInfo);
+                VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo2);
 
         ComponentName voiceInteraction = new ComponentName(TEST_PACKAGE_NAME, TEST_SERVICE);
         setCurrentAssistant(voiceInteraction);
@@ -153,24 +164,35 @@ public class DefaultVoiceInputPickerPreferenceControllerTest {
 
         setupController();
 
-        assertThat(mController.getCandidates().get(0).enabled).isTrue();
+        DefaultAppInfo defaultAppInfo = null;
+        for (DefaultAppInfo info : mController.getCandidates()) {
+            if (info.componentName.equals(new ComponentName(TEST_PACKAGE_NAME, TEST_SERVICE))) {
+                defaultAppInfo = info;
+            }
+        }
+        assertThat(defaultAppInfo).isNotNull();
+        assertThat(defaultAppInfo.enabled).isTrue();
     }
 
     @Test
-    public void getCandidates_assistIsSameAsInteraction_recognitionDisabled() {
+    public void getCandidates_oneIsSameAsAssistant_differentOneIsDisabled() {
         ResolveInfo interactionInfo = new ResolveInfo();
         interactionInfo.serviceInfo = new ServiceInfo();
         interactionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
         interactionInfo.serviceInfo.name = TEST_SERVICE;
+        interactionInfo.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo.serviceInfo.applicationInfo.nonLocalizedLabel = "1";
         getShadowPackageManager().addResolveInfoForIntent(
                 VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo);
 
-        ResolveInfo recognitionInfo = new ResolveInfo();
-        recognitionInfo.serviceInfo = new ServiceInfo();
-        recognitionInfo.serviceInfo.packageName = TEST_PACKAGE_NAME;
-        recognitionInfo.serviceInfo.name = TEST_RECOGNIZER;
+        ResolveInfo interactionInfo2 = new ResolveInfo();
+        interactionInfo2.serviceInfo = new ServiceInfo();
+        interactionInfo2.serviceInfo.packageName = TEST_PACKAGE_NAME;
+        interactionInfo2.serviceInfo.name = TEST_OTHER_SERVICE;
+        interactionInfo2.serviceInfo.applicationInfo = new ApplicationInfo();
+        interactionInfo2.serviceInfo.applicationInfo.nonLocalizedLabel = "2";
         getShadowPackageManager().addResolveInfoForIntent(
-                VoiceInputInfoProvider.VOICE_RECOGNITION_SERVICE_TAG, recognitionInfo);
+                VoiceInputInfoProvider.VOICE_INTERACTION_SERVICE_TAG, interactionInfo2);
 
         ComponentName voiceInteraction = new ComponentName(TEST_PACKAGE_NAME, TEST_SERVICE);
         setCurrentAssistant(voiceInteraction);
@@ -178,7 +200,15 @@ public class DefaultVoiceInputPickerPreferenceControllerTest {
 
         setupController();
 
-        assertThat(mController.getCandidates().get(1).enabled).isFalse();
+        DefaultAppInfo defaultAppInfo = null;
+        for (DefaultAppInfo info : mController.getCandidates()) {
+            if (info.componentName.equals(
+                    new ComponentName(TEST_PACKAGE_NAME, TEST_OTHER_SERVICE))) {
+                defaultAppInfo = info;
+            }
+        }
+        assertThat(defaultAppInfo).isNotNull();
+        assertThat(defaultAppInfo.enabled).isFalse();
     }
 
     @Test
