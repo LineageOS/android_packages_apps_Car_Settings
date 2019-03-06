@@ -69,8 +69,12 @@ public class DataWarningPreferenceController extends
         mEnableDataWarningPreference.setOnPreferenceChangeListener(this);
         mSetDataWarningPreference = getPreference().findPreference(
                 getContext().getString(R.string.pk_data_warning));
+
         mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
                 DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
+
+        // Loads the current policies to the policy editor cache.
+        mPolicyEditor.read();
     }
 
     @Override

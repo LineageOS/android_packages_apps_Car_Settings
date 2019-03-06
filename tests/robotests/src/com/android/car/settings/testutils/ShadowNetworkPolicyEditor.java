@@ -72,6 +72,10 @@ public class ShadowNetworkPolicyEditor {
         return null;
     }
 
+    @Implementation
+    protected void read() {
+    }
+
     @Resetter
     public static void reset() {
         sWarningBytesMap.clear();
