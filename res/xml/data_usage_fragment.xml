@@ -19,6 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/data_usage_settings">
+    <com.android.car.settings.common.ProgressBarPreference
+        android:layout="@layout/usage_indicator_preference"
+        android:key="@string/pk_data_usage_summary"
+        settings:controller="com.android.car.settings.datausage.DataUsageSummaryPreferenceController"
+        settings:singleLineTitle="false"/>
     <Preference
         android:fragment="com.android.car.settings.datausage.DataWarningAndLimitFragment"
         android:key="@string/pk_data_warning_and_limit"

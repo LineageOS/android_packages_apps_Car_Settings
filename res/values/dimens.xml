@@ -115,6 +115,9 @@
     <dimen name="progress_bar_preference_padding_top">@*android:dimen/car_padding_1</dimen>
     <dimen name="progress_bar_preference_padding_bottom">@*android:dimen/car_padding_1</dimen>
 
+    <!-- Data usage -->
+    <dimen name="usage_number_text_size">36sp</dimen>
+
     <!-- Dimens for Setup Wizard -->
 
     <dimen name="suw_icon_size">44dp</dimen>

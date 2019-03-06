@@ -24,6 +24,7 @@ import static org.mockito.Mockito.when;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
+import android.telephony.TelephonyManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 
@@ -57,5 +58,29 @@ public class NetworkUtilsTest {
         when(capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(false);
 
         assertThat(NetworkUtils.hasMobileNetwork(connectivityManager)).isFalse();
+    }
+
+    @Test
+    public void hasSim_simAbsent_returnsFalse() {
+        TelephonyManager telephonyManager = mock(TelephonyManager.class);
+        when(telephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_ABSENT);
+
+        assertThat(NetworkUtils.hasSim(telephonyManager)).isFalse();
+    }
+
+    @Test
+    public void hasSim_simUnknown_returnsFalse() {
+        TelephonyManager telephonyManager = mock(TelephonyManager.class);
+        when(telephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_UNKNOWN);
+
+        assertThat(NetworkUtils.hasSim(telephonyManager)).isFalse();
+    }
+
+    @Test
+    public void hasSim_otherStatus_returnsTrue() {
+        TelephonyManager telephonyManager = mock(TelephonyManager.class);
+        when(telephonyManager.getSimState()).thenReturn(TelephonyManager.SIM_STATE_LOADED);
+
+        assertThat(NetworkUtils.hasSim(telephonyManager)).isTrue();
     }
 }
