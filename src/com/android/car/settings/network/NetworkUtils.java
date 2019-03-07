@@ -19,6 +19,7 @@ package com.android.car.settings.network;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
+import android.telephony.TelephonyManager;
 
 /** Provides helpful utilities surrounding network related tasks. */
 public final class NetworkUtils {
@@ -36,5 +37,14 @@ public final class NetworkUtils {
             }
         }
         return false;
+    }
+
+    /** Returns {@code true} if device has a sim card. */
+    public static boolean hasSim(TelephonyManager telephonyManager) {
+        int simState = telephonyManager.getSimState();
+
+        // Note that pulling out the SIM card returns UNKNOWN, not ABSENT.
+        return simState != TelephonyManager.SIM_STATE_ABSENT
+                && simState != TelephonyManager.SIM_STATE_UNKNOWN;
     }
 }
