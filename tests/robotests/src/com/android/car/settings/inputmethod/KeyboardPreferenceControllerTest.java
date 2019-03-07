@@ -36,6 +36,7 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowDevicePolicyManager;
 import com.android.car.settings.testutils.ShadowInputMethodManager;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -75,6 +76,12 @@ public class KeyboardPreferenceControllerTest {
         mPermittedList.add(DUMMY_PACKAGE_NAME);
         mPermittedList.add(ALLOWED_PACKAGE_NAME);
         mControllerHelper.markState(Lifecycle.State.CREATED);
+    }
+
+    @After
+    public void tearDown() {
+        ShadowInputMethodManager.reset();
+        ShadowDevicePolicyManager.reset();
     }
 
     @Test
