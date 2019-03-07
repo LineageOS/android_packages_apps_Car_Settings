@@ -20,6 +20,7 @@ import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.ModuleInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
@@ -80,6 +81,11 @@ public class ShadowApplicationPackageManager extends
     protected Resources getResourcesForApplication(String appPackageName)
             throws PackageManager.NameNotFoundException {
         return sResources;
+    }
+
+    @Implementation
+    protected List<ApplicationInfo> getInstalledApplicationsAsUser(int flags, int userId) {
+        return getInstalledApplications(flags);
     }
 
     @Implementation
