@@ -47,6 +47,26 @@
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- Data usage settings [CHAR LIMIT=30] -->
     <string name="data_usage_settings">Data usage</string>
+    <!-- Data usage title text [CHAR LIMIT=30] -->
+    <string name="data_usage_title">Primary data</string>
+    <!-- Data usage, amount used [CHAR LIMIT=30] -->
+    <string name="data_used_formatted"><xliff:g name="value" example="500">^1</xliff:g> <xliff:g name="units" example="GB">^2</xliff:g> used</string>
+    <!-- Format for a summary describing the amount of data before the user is warned [CHAR LIMIT=40] -->
+    <string name="cell_data_warning"><xliff:g name="amount" example="1 GB">^1</xliff:g> data warning</string>
+    <!-- Format for a summary describing the amount of data the limit is set to [CHAR LIMIT=40] -->
+    <string name="cell_data_limit"><xliff:g name="amount" example="1 GB">^1</xliff:g> data limit</string>
+    <!-- Format for a summary describing the amount of data before the user is warned or limited [CHAR LIMIT=80] -->
+    <string name="cell_data_warning_and_limit"><xliff:g name="amount" example="1 GB">^1</xliff:g> data warning / <xliff:g name="amount" example="2 GB">^2</xliff:g> data limit</string>
+    <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
+    <plurals name="billing_cycle_days_left">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
+    <string name="billing_cycle_none_left">No time remaining</string>
+    <!-- Informational text about time left in billing cycle [CHAR LIMIT=40] -->
+    <string name="billing_cycle_less_than_one_day_left">Less than 1 day left</string>
+
     <!-- Title of button and screen for billing cycle preferences [CHAR LIMIT=40] -->
     <string name="data_warning_limit_title">Data warning &amp; limit</string>
     <!-- Title of button for application usage cycle preferences [CHAR LIMIT=40] -->
