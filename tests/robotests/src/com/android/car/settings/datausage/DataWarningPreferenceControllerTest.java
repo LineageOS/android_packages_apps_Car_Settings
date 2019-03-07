@@ -102,7 +102,7 @@ public class DataWarningPreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowTelephonyManager.reset();
-        ShadowSubscriptionManager.resetStaticState();
+        ShadowSubscriptionManager.reset();
         ShadowNetworkPolicyEditor.reset();
     }
 

@@ -107,7 +107,7 @@ public class ShadowSubscriptionManager {
     }
 
     /** Resets this shadow to its initial state for static values. */
-    public static void resetStaticState() {
+    public static void reset() {
         sDefaultDataSubscriptionId = INVALID_SUBSCRIPTION_ID;
         sDefaultVoiceSubscriptionId = INVALID_SUBSCRIPTION_ID;
         sDefaultSmsSubscriptionId = INVALID_SUBSCRIPTION_ID;

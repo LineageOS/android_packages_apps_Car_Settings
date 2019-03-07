@@ -90,7 +90,7 @@ public class DataUsageEntryPreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowConnectivityManager.reset();
-        ShadowSubscriptionManager.resetStaticState();
+        ShadowSubscriptionManager.reset();
     }
 
     @Test

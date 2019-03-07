@@ -96,7 +96,7 @@ public class ResetNetworkSubscriptionPreferenceControllerTest {
     @After
     public void tearDown() {
         getSystemServiceMap().remove(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
-        ShadowSubscriptionManager.resetStaticState();
+        ShadowSubscriptionManager.reset();
     }
 
     @Test
