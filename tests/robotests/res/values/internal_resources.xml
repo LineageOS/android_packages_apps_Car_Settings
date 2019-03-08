@@ -18,4 +18,8 @@
 <resources>
     <bool name="config_automatic_brightness_available">true</bool>
     <integer name="config_networkAvoidBadWifi">0</integer>
+
+    <!-- Progress bar preference resources -->
+    <color name="config_progress_background_tint">@android:color/white</color>
+    <color name="white_disabled_material">@android:color/white</color>
 </resources>
