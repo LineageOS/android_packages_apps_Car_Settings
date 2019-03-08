@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"Default apps"</string>
     <string name="applications_settings" msgid="794261395191035632">"App info"</string>
     <string name="force_stop" msgid="2153183697014720520">"Force stop"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Force stop?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"If you force-stop an app, it may misbehave."</string>
     <string name="disable_text" msgid="4358165448648990820">"Disable"</string>
     <string name="enable_text" msgid="1794971777861881238">"Enable"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"Uninstall"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"If you disable this app, Android and other apps may no longer function as intended."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Disable app"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permission"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"No permissions granted"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Allow the assist app to access the screen contents as text"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Use screenshot"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Allow the assist app to access an image of the screen"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"Auto-fill service"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"None"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Selected"</string>

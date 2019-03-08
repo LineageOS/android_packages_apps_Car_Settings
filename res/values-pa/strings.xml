@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਐਪਾਂ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ਐਪ ਜਾਣਕਾਰੀ"</string>
     <string name="force_stop" msgid="2153183697014720520">"ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰੋ"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ਕੀ ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰਨਾ ਹੈ?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਐਪ ਨੂੰ ਜ਼ਬਰਦਸਤੀ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਇਹ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਨਾ ਕਰੇ।"</string>
     <string name="disable_text" msgid="4358165448648990820">"ਬੰਦ ਕਰੋ"</string>
     <string name="enable_text" msgid="1794971777861881238">"ਚਾਲੂ ਕਰੋ"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"ਅਣਸਥਾਪਤ ਕਰੋ"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"ਜੇ ਤੁਸੀਂ ਇਸ ਐਪ ਨੂੰ ਬੰਦ ਕਰਦੇ ਹੋ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਕਿ Android ਅਤੇ ਹੋਰ ਐਪਾਂ ਉਸ ਤਰ੍ਹਾਂ ਕੰਮ ਨਾ ਕਰਨ ਜਿਵੇਂ ਇਹਨਾਂ ਤੋਂ ਉਮੀਦ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ਐਪ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ਵਰਜਨ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ਕੋਈ ਇਜਾਜ਼ਤਾਂ ਨਹੀਂ ਦਿੱਤੀਆਂ ਗਈਆਂ"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"ਸਹਾਇਕ ਐਪ ਨੂੰ ਲਿਖਤ ਵਜੋਂ ਸਕ੍ਰੀਨ ਸਮੱਗਰੀਆਂ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ਸਕ੍ਰੀਨਸ਼ਾਟ ਵਰਤੋ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ਸਹਾਇਕ ਐਪ ਨੂੰ ਸਕ੍ਰੀਨ ਦੇ ਚਿੱਤਰ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦਿਓ"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"ਆਟੋਫਿਲ ਸੇਵਾ"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ਕੋਈ ਨਹੀਂ"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ਚੁਣੀ ਗਈ"</string>

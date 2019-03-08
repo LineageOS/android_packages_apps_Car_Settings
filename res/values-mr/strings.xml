@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"डीफॉल्ट अ‍ॅप्स"</string>
     <string name="applications_settings" msgid="794261395191035632">"ॲप माहिती"</string>
     <string name="force_stop" msgid="2153183697014720520">"सक्तीने थांबवा"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"सक्तीने थांबवायचे आहे का?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"तुम्ही सक्तीने अ‍ॅप थांबवल्यास, ते गैरवर्तन करू शकते."</string>
     <string name="disable_text" msgid="4358165448648990820">"बंद करा"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करा"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करा"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"तुम्ही हे अ‍ॅप बंद केल्यास, Android आणि इतर अ‍ॅप्स कदाचित यापुढे अपेक्षेप्रमाणे कार्य करू शकणार नाहीत."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"अ‍ॅप बंद करा"</string>
     <string name="permissions_label" msgid="2701446753515612685">"परवानग्या"</string>
     <string name="application_version_label" msgid="8556889839783311649">"आवृत्त्या: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोणत्याही परवानग्यांना मंजूरी दिली नाही"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"साहाय्यक अ‍ॅपला स्क्रीन आशय मजकूर म्हणून अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट वापरा"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"साहाय्यक अ‍ॅपला स्क्रीनची इमेज अ‍ॅक्सेस करण्याची अनुमती द्या"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोफिल सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"काहीही नाही"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"निवडले"</string>

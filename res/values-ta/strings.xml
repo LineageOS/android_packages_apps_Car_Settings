@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"இயல்புநிலை ஆப்ஸ்"</string>
     <string name="applications_settings" msgid="794261395191035632">"பயன்பாட்டுத் தகவல்"</string>
     <string name="force_stop" msgid="2153183697014720520">"உடனே நிறுத்து"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"உடனே நிறுத்தவா?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"ஆப்ஸை உடனே நிறுத்தினால் சரியாக இயங்காமல் போகக்கூடும்."</string>
     <string name="disable_text" msgid="4358165448648990820">"முடக்கு"</string>
     <string name="enable_text" msgid="1794971777861881238">"இயக்கு"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"இந்த ஆப்ஸை முடக்கினால் Androidடும் பிற ஆப்ஸும் எதிர்பார்த்தவாறு செயல்படாமல் போகக்கூடும்."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ஆப்ஸை முடக்கு"</string>
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"திரையில் உள்ள உள்ளடக்கத்தை உரையாக அணுகுவதற்கு அசிஸ்ட் ஆப்ஸை அனுமதிக்கும்"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ஸ்கிரீன்ஷாட்டைப் பயன்படுத்துதல்"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"திரையில் உள்ள படத்தை அணுகுவதற்கு அசிஸ்ட் ஆப்ஸை அனுமதிக்கும்"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"தன்னிரப்பிச் சேவை"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ஏதுமில்லை"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"தேர்ந்தெடுக்கப்பட்டது"</string>
