@@ -75,8 +75,12 @@ public class DataLimitPreferenceController extends PreferenceController<Preferen
         mEnableDataLimitPreference.setOnPreferenceChangeListener(this);
         mSetDataLimitPreference = getPreference().findPreference(
                 getContext().getString(R.string.pk_data_limit));
+
         mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
                 DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
+
+        // Loads the current policies to the policy editor cache.
+        mPolicyEditor.read();
 
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
