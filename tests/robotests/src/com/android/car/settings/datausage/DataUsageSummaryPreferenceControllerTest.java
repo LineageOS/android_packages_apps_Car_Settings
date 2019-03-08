@@ -29,6 +29,7 @@ import android.content.Context;
 import android.net.NetworkTemplate;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
+import android.telephony.SubscriptionPlan;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.Formatter;
@@ -38,11 +39,12 @@ import androidx.lifecycle.Lifecycle;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.common.ProgressBarPreference;
 import com.android.car.settings.testutils.ShadowDataUsageController;
 import com.android.car.settings.testutils.ShadowSubscriptionManager;
 import com.android.car.settings.testutils.ShadowTelephonyManager;
 import com.android.settingslib.net.DataUsageController;
+
+import com.google.android.collect.Lists;
 
 import org.junit.After;
 import org.junit.Before;
@@ -52,7 +54,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
+import java.time.Period;
+import java.time.ZonedDateTime;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -60,8 +65,10 @@ import java.util.concurrent.TimeUnit;
         ShadowDataUsageController.class})
 public class DataUsageSummaryPreferenceControllerTest {
 
+    private static final CharSequence TEST_CARRIER_NAME = "TEST_CARRIER_NAME";
+
     private Context mContext;
-    private ProgressBarPreference mProgressBarPreference;
+    private DataUsageSummaryPreference mDataUsageSummaryPreference;
     private DataUsageSummaryPreferenceController mController;
     private PreferenceControllerTestHelper<DataUsageSummaryPreferenceController> mControllerHelper;
     private NetworkTemplate mNetworkTemplate;
@@ -78,9 +85,9 @@ public class DataUsageSummaryPreferenceControllerTest {
         ShadowDataUsageController.setInstance(mDataUsageController);
 
         mContext = RuntimeEnvironment.application;
-        mProgressBarPreference = new ProgressBarPreference(mContext);
+        mDataUsageSummaryPreference = new DataUsageSummaryPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                DataUsageSummaryPreferenceController.class, mProgressBarPreference);
+                DataUsageSummaryPreferenceController.class, mDataUsageSummaryPreference);
         mController = mControllerHelper.getController();
 
         mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(
@@ -119,11 +126,11 @@ public class DataUsageSummaryPreferenceControllerTest {
 
         String usedValueString = Formatter.formatBytes(mContext.getResources(), info.usageLevel,
                 Formatter.FLAG_CALCULATE_ROUNDED | Formatter.FLAG_IEC_UNITS).value;
-        assertThat(mProgressBarPreference.getTitle().toString()).contains(usedValueString);
+        assertThat(mDataUsageSummaryPreference.getTitle().toString()).contains(usedValueString);
     }
 
     @Test
-    public void refreshUi_noLimits_summarySetWithOnlyOneLine() {
+    public void refreshUi_noLimits_doesntSetDataLimitText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
         info.limitLevel = -1;
@@ -133,11 +140,11 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).doesNotContain("\n");
+        assertThat(mDataUsageSummaryPreference.getDataLimitText()).isNull();
     }
 
     @Test
-    public void refreshUi_hasLimit_summarySet() {
+    public void refreshUi_hasLimit_setsDataLimitText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
         info.limitLevel = 100000;
@@ -147,13 +154,13 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
+        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_limit),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)));
+                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)).toString());
     }
 
     @Test
-    public void refreshUi_hasWarning_summarySet() {
+    public void refreshUi_hasWarning_setsDataLimitText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
         info.limitLevel = -1;
@@ -163,13 +170,13 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
+        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.warningLevel)));
+                        DataUsageUtils.bytesToIecUnits(mContext, info.warningLevel)).toString());
     }
 
     @Test
-    public void refreshUi_hasWarningAndLimit_summarySet() {
+    public void refreshUi_hasWarningAndLimit_setsDataLimitText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.usageLevel = 10000;
         info.limitLevel = 100000;
@@ -179,14 +186,14 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
+        assertThat(mDataUsageSummaryPreference.getDataLimitText().toString()).isEqualTo(
                 TextUtils.expandTemplate(mContext.getText(R.string.cell_data_warning_and_limit),
                         DataUsageUtils.bytesToIecUnits(mContext, info.warningLevel),
-                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)));
+                        DataUsageUtils.bytesToIecUnits(mContext, info.limitLevel)).toString());
     }
 
     @Test
-    public void refreshUi_endTimeIsGreaterThanOneDay_summarySetWithValue() {
+    public void refreshUi_endTimeIsGreaterThanOneDay_setsBillingCycleText() {
         int numDays = 20;
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         // Add an extra hour to account for the difference in time when the test calls
@@ -198,13 +205,14 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
-                mContext.getResources().getQuantityString(R.plurals.billing_cycle_days_left,
-                        numDays, numDays));
+        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
+                .isEqualTo(
+                        mContext.getResources().getQuantityString(R.plurals.billing_cycle_days_left,
+                                numDays, numDays));
     }
 
     @Test
-    public void refreshUi_endTimeIsLessThanOneDay_summarySet() {
+    public void refreshUi_endTimeIsLessThanOneDay_setsBillingCycleText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.cycleEnd = System.currentTimeMillis() + TimeUnit.HOURS.toMillis(22);
         when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
@@ -212,12 +220,13 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
-                mContext.getString(R.string.billing_cycle_less_than_one_day_left));
+        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
+                .isEqualTo(
+                        mContext.getString(R.string.billing_cycle_less_than_one_day_left));
     }
 
     @Test
-    public void refreshUi_endTimeIsNow_summarySet() {
+    public void refreshUi_endTimeIsNow_setsBillingCycleText() {
         DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
         info.cycleEnd = System.currentTimeMillis();
         when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
@@ -225,12 +234,145 @@ public class DataUsageSummaryPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mProgressBarPreference.getSummary().toString()).contains(
-                mContext.getString(R.string.billing_cycle_none_left));
+        assertThat(mDataUsageSummaryPreference.getRemainingBillingCycleText().toString())
+                .isEqualTo(
+                        mContext.getString(R.string.billing_cycle_none_left));
+    }
+
+    @Test
+    public void refreshUi_hasCarrierName_hasRecentUpdate_setsCarrierInfoText() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+        setCarrierName(TEST_CARRIER_NAME);
+        setSubscriptionPlan(/* usageBytes= */ 1000L, System.currentTimeMillis());
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
+                TextUtils.expandTemplate(mContext.getText(R.string.carrier_and_update_now_text),
+                        TEST_CARRIER_NAME));
+    }
+
+    @Test
+    public void refreshUi_hasCarrierName_hasOldUpdate_setsCarrierInfoText() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+        int numDays = 15;
+        setCarrierName(TEST_CARRIER_NAME);
+        setSubscriptionPlan(/* usageBytes= */ 1000L,
+                System.currentTimeMillis() - TimeUnit.DAYS.toMillis(numDays));
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
+                TextUtils.expandTemplate(mContext.getText(R.string.carrier_and_update_text),
+                        TEST_CARRIER_NAME, numDays + " days"));
+    }
+
+    @Test
+    public void refreshUi_noCarrierName_hasRecentUpdate_setsCarrierInfoText() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+        setSubscriptionPlan(/* usageBytes= */ 1000L, System.currentTimeMillis());
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoText().toString()).isEqualTo(
+                mContext.getString(R.string.no_carrier_update_now_text));
+    }
+
+    @Test
+    public void refreshUi_noCarrierName_hasOldUpdate_setsCarrierInfoText() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+        int numDays = 15;
+        setSubscriptionPlan(/* usageBytes= */ 1000L,
+                System.currentTimeMillis() - TimeUnit.DAYS.toMillis(numDays));
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoText()).isEqualTo(
+                TextUtils.expandTemplate(mContext.getText(R.string.no_carrier_update_text),
+                        null, numDays + " days"));
+    }
+
+    @Test
+    public void refreshUi_hasUpdateTimeOlderThanWarning_setsCarrierInfoStyle() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+
+        // Subtract an extra hour to account fo the difference in calls to
+        // System.currentTimeMillis().
+        setSubscriptionPlan(/* usageBytes= */ 1000L,
+                System.currentTimeMillis() - DataUsageSummaryPreferenceController.WARNING_AGE
+                        - TimeUnit.HOURS.toMillis(1));
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoTextStyle()).isEqualTo(
+                R.style.DataUsageSummaryCarrierInfoWarningTextAppearance);
+    }
+
+    @Test
+    public void refreshUi_hasUpdateTimeYoungerThanWarning_setsCarrierInfoStyle() {
+        DataUsageController.DataUsageInfo info = new DataUsageController.DataUsageInfo();
+        info.usageLevel = 10000;
+        when(mDataUsageController.getDataUsageInfo(mNetworkTemplate)).thenReturn(info);
+
+        // Subtract an extra hour to account fo the difference in calls to
+        // System.currentTimeMillis().
+        setSubscriptionPlan(/* usageBytes= */ 1000L,
+                System.currentTimeMillis() - DataUsageSummaryPreferenceController.WARNING_AGE
+                        + TimeUnit.HOURS.toMillis(1));
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mDataUsageSummaryPreference.getCarrierInfoTextStyle()).isEqualTo(
+                R.style.DataUsageSummaryCarrierInfoTextAppearance);
     }
 
     private ShadowTelephonyManager getShadowTelephonyManager() {
         return (ShadowTelephonyManager) extract(
                 mContext.getSystemService(TelephonyManager.class));
+    }
+
+    private ShadowSubscriptionManager getShadowSubscriptionManager() {
+        return Shadow.extract(mContext.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE));
+    }
+
+    private void setCarrierName(CharSequence name) {
+        SubscriptionInfo subInfo = new SubscriptionInfo(/* id= */ 0, /* iccId= */ "",
+                /* simSlotIndex= */ 0, /* displayName= */ "", name,
+                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
+                /* roaming= */ 0, /* icon= */ null, /* mcc= */ 0, /* mnc= */ 0,
+                /* countryIso= */ "");
+        ShadowSubscriptionManager.setDefaultDataSubscriptionInfo(subInfo);
+    }
+
+    private void setSubscriptionPlan(long usageBytes, long snapshotMillis) {
+        ZonedDateTime start = ZonedDateTime.now();
+        ZonedDateTime end = ZonedDateTime.now().plusDays(30);
+        SubscriptionPlan plan = new SubscriptionPlan.Builder(start, end, Period.ofMonths(1))
+                .setDataLimit(/* dataLimitBytes= */ 5000000000L,
+                        SubscriptionPlan.LIMIT_BEHAVIOR_DISABLED)
+                .setDataUsage(usageBytes, snapshotMillis)
+                .build();
+        getShadowSubscriptionManager().setSubscriptionPlans(Lists.newArrayList(plan));
     }
 }

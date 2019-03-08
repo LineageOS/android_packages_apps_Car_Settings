@@ -18,6 +18,7 @@ package com.android.car.settings.datausage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.Intent;
 import android.net.NetworkTemplate;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
@@ -30,31 +31,47 @@ import android.text.format.Formatter;
 import android.text.style.AbsoluteSizeSpan;
 import android.util.RecurrenceRule;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.car.settings.common.ProgressBarPreference;
 import com.android.car.settings.network.NetworkUtils;
 import com.android.settingslib.net.DataUsageController;
+import com.android.settingslib.utils.StringUtil;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Business logic for setting the {@link ProgressBarPreference} with the current data usage and the
- * appropriate summary text.
+ * Business logic for setting the {@link DataUsageSummaryPreference} with the current data usage and
+ * the appropriate summary text.
  */
 public class DataUsageSummaryPreferenceController extends
-        PreferenceController<ProgressBarPreference> {
+        PreferenceController<DataUsageSummaryPreference> {
 
     private static final long MILLIS_IN_A_DAY = TimeUnit.DAYS.toMillis(1);
+    private static final long MILLIS_IN_AN_HOUR = TimeUnit.HOURS.toMillis(1);
+    private static final long MILLIS_IN_A_MINUTE = TimeUnit.MINUTES.toMillis(1);
     private static final long MILLIS_IN_A_SECOND = TimeUnit.SECONDS.toMillis(1);
     private static final int MAX_PROGRESS_BAR_VALUE = 1000;
+
+    @VisibleForTesting
+    static final long WARNING_AGE = TimeUnit.HOURS.toMillis(6L);
 
     private final SubscriptionManager mSubscriptionManager;
     private final TelephonyManager mTelephonyManager;
     private final DataUsageController mDataUsageController;
     private final NetworkTemplate mDefaultTemplate;
 
+    /** Name of the carrier, or null if not available */
+    @Nullable
+    private CharSequence mCarrierName;
+    /** The number of registered plans, [0,N] */
+    private int mDataplanCount;
+    /** The time of the last update in milliseconds since the epoch, or -1 if unknown */
+    private long mSnapshotTime;
     /** The size of the first registered plan if one exists. -1 if no information is available. */
     private long mDataplanSize = -1;
     /**
@@ -66,6 +83,7 @@ public class DataUsageSummaryPreferenceController extends
     private long mDataplanUse;
     /** The ending time of the billing cycle in ms since the epoch */
     private long mCycleEnd;
+    private Intent mManageSubscriptionIntent;
 
     public DataUsageSummaryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -79,8 +97,8 @@ public class DataUsageSummaryPreferenceController extends
     }
 
     @Override
-    protected Class<ProgressBarPreference> getPreferenceType() {
-        return ProgressBarPreference.class;
+    protected Class<DataUsageSummaryPreference> getPreferenceType() {
+        return DataUsageSummaryPreference.class;
     }
 
     @Override
@@ -95,7 +113,7 @@ public class DataUsageSummaryPreferenceController extends
     }
 
     @Override
-    protected void updateState(ProgressBarPreference preference) {
+    protected void updateState(DataUsageSummaryPreference preference) {
         DataUsageController.DataUsageInfo info = mDataUsageController.getDataUsageInfo(
                 mDefaultTemplate);
 
@@ -104,12 +122,22 @@ public class DataUsageSummaryPreferenceController extends
         }
 
         preference.setTitle(getUsageText());
-        preference.setSummary(getSummary(getLimitText(info), getRemainingBillingCycleTimeText()));
+        preference.setManageSubscriptionIntent(mManageSubscriptionIntent);
 
-        if (mDataplanTrackingThreshold <= 0) {
-            return;
+        preference.setDataLimitText(getLimitText(info));
+        preference.setRemainingBillingCycleText(getRemainingBillingCycleTimeText());
+
+        // Carrier Info has special styling based on when it was last updated.
+        preference.setCarrierInfoText(getCarrierInfoText());
+        long updateAgeMillis = calculateTruncatedUpdateAge(mSnapshotTime);
+        if (updateAgeMillis <= WARNING_AGE) {
+            preference.setCarrierInfoTextStyle(R.style.DataUsageSummaryCarrierInfoTextAppearance);
+        } else {
+            preference.setCarrierInfoTextStyle(
+                    R.style.DataUsageSummaryCarrierInfoWarningTextAppearance);
         }
 
+        // Set the progress bar values.
         preference.setMinLabel(DataUsageUtils.bytesToIecUnits(getContext(), /* byteValue= */ 0));
         preference.setMaxLabel(
                 DataUsageUtils.bytesToIecUnits(getContext(), mDataplanTrackingThreshold));
@@ -164,27 +192,39 @@ public class DataUsageSummaryPreferenceController extends
         }
     }
 
-    private CharSequence getSummary(CharSequence dataLimitText, CharSequence cycleTimeText) {
-        StringBuilder builder = new StringBuilder();
+    private CharSequence getCarrierInfoText() {
+        if (mDataplanCount > 0 && mSnapshotTime >= 0L) {
+            long updateAgeMillis = calculateTruncatedUpdateAge(mSnapshotTime);
 
-        boolean hasPrev = false;
-        if (!TextUtils.isEmpty(dataLimitText)) {
-            builder.append(dataLimitText);
-            hasPrev = true;
-        }
-
-        if (!TextUtils.isEmpty(cycleTimeText)) {
-            if (hasPrev) {
-                builder.append("\n");
+            int textResourceId;
+            CharSequence updateTime = null;
+            if (updateAgeMillis == 0) {
+                if (mCarrierName != null) {
+                    textResourceId = R.string.carrier_and_update_now_text;
+                } else {
+                    textResourceId = R.string.no_carrier_update_now_text;
+                }
+            } else {
+                if (mCarrierName != null) {
+                    textResourceId = R.string.carrier_and_update_text;
+                } else {
+                    textResourceId = R.string.no_carrier_update_text;
+                }
+                updateTime = StringUtil.formatElapsedTime(getContext(),
+                        updateAgeMillis, /* withSeconds= */ false);
             }
-            builder.append(cycleTimeText);
+            return TextUtils.expandTemplate(getContext().getText(textResourceId), mCarrierName,
+                    updateTime);
         }
 
-        return builder.toString();
+        return null;
     }
 
     private void refreshDataplanInfo(DataUsageController.DataUsageInfo info) {
         // Reset data before overwriting.
+        mCarrierName = null;
+        mDataplanCount = 0;
+        mSnapshotTime = -1L;
         mDataplanSize = -1L;
         mDataplanTrackingThreshold = getSummaryLimit(info);
         mDataplanUse = info.usageLevel;
@@ -193,9 +233,12 @@ public class DataUsageSummaryPreferenceController extends
         int defaultSubId = SubscriptionManager.getDefaultSubscriptionId();
         SubscriptionInfo subInfo = mSubscriptionManager.getDefaultDataSubscriptionInfo();
         if (subInfo != null) {
+            mCarrierName = subInfo.getCarrierName();
+            List<SubscriptionPlan> plans = mSubscriptionManager.getSubscriptionPlans(defaultSubId);
             SubscriptionPlan primaryPlan = DataUsageUtils.getPrimaryPlan(mSubscriptionManager,
                     defaultSubId);
             if (primaryPlan != null) {
+                mDataplanCount = plans.size();
                 mDataplanSize = primaryPlan.getDataLimitBytes();
                 if (mDataplanSize == SubscriptionPlan.BYTES_UNLIMITED) {
                     mDataplanSize = -1L;
@@ -207,12 +250,18 @@ public class DataUsageSummaryPreferenceController extends
                 if (rule != null && rule.start != null && rule.end != null) {
                     mCycleEnd = rule.end.toEpochSecond() * MILLIS_IN_A_SECOND;
                 }
+                mSnapshotTime = primaryPlan.getDataUsageTime();
             }
         }
+        mManageSubscriptionIntent = mSubscriptionManager.createManageSubscriptionIntent(
+                defaultSubId);
     }
 
     /** Scales the current usage to be an integer between 0 and {@link #MAX_PROGRESS_BAR_VALUE}. */
     private int scaleUsage(long usage, long maxUsage) {
+        if (maxUsage == 0) {
+            return 0;
+        }
         return (int) ((usage / (float) maxUsage) * MAX_PROGRESS_BAR_VALUE);
     }
 
@@ -232,5 +281,24 @@ public class DataUsageSummaryPreferenceController extends
             limit = info.usageLevel;
         }
         return limit;
+    }
+
+    /**
+     * Returns the time since the last carrier update, as defined by {@link #mSnapshotTime},
+     * truncated to the nearest day / hour / minute in milliseconds, or 0 if less than 1 min.
+     */
+    private long calculateTruncatedUpdateAge(long snapshotTime) {
+        long updateAgeMillis = System.currentTimeMillis() - snapshotTime;
+
+        // Round to nearest whole unit
+        if (updateAgeMillis >= MILLIS_IN_A_DAY) {
+            return (updateAgeMillis / MILLIS_IN_A_DAY) * MILLIS_IN_A_DAY;
+        } else if (updateAgeMillis >= MILLIS_IN_AN_HOUR) {
+            return (updateAgeMillis / MILLIS_IN_AN_HOUR) * MILLIS_IN_AN_HOUR;
+        } else if (updateAgeMillis >= MILLIS_IN_A_MINUTE) {
+            return (updateAgeMillis / MILLIS_IN_A_MINUTE) * MILLIS_IN_A_MINUTE;
+        } else {
+            return 0;
+        }
     }
 }
