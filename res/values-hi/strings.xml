@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"डिफ़ॉल्ट ऐप्लिकेशन"</string>
     <string name="applications_settings" msgid="794261395191035632">"ऐप्लिकेशन की जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"ज़बरदस्ती रोकें"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ज़बरदस्ती रोकें?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"अगर आप किसी ऐप्लिकेशन को ज़बरदस्ती रोकते हैं, तो हो सकता है वह ठीक से काम न करे."</string>
     <string name="disable_text" msgid="4358165448648990820">"बंद करें"</string>
     <string name="enable_text" msgid="1794971777861881238">"चालू करें"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करें"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"अगर आप इस ऐप्लिकेशन को बंद कर देते हैं, तो हो सकता है कि अब Android और दूसरे ऐप्लिकेशन मनमुताबिक काम न कर पाएं."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ऐप्लिकेशन बंद करें"</string>
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
     <string name="application_version_label" msgid="8556889839783311649">"वर्शन: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोई अनुमति नहीं दी गई"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"सहायक ऐप्लिकेशन को टेक्स्ट के रूप में स्क्रीन की सामग्री एक्सेस करने दें"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट का इस्तेमाल करना"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक ऐप्लिकेशन को स्क्रीन की इमेज एक्सेस करने दें"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोमैटिक भरने की सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कोई नहीं"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चुना हुआ ऐप्लिकेशन"</string>
@@ -461,7 +458,7 @@
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ें"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ लिया गया है"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको प्रमाणीकरण का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए प्रमाणीकरण ज़रूरी होगा."</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको पुष्टि करने का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए पुष्टि करना ज़रूरी होगा."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
     <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>

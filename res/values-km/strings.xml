@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"កម្មវិធី​លំនាំដើម"</string>
     <string name="applications_settings" msgid="794261395191035632">"ព័ត៌មាន​អំពី​កម្មវិធី"</string>
     <string name="force_stop" msgid="2153183697014720520">"បង្ខំ​ឱ្យ​បញ្ឈប់"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"បង្ខំ​ឱ្យ​បញ្ឈប់?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"ប្រសិនបើ​អ្នក​បង្ខំ​ឱ្យបញ្ឈប់​កម្មវិធី នោះ​កម្មវិធីអាចនឹង​ដំណើរការ​មិន​ត្រឹមត្រូវ។"</string>
     <string name="disable_text" msgid="4358165448648990820">"បិទ"</string>
     <string name="enable_text" msgid="1794971777861881238">"បើក"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"លុប"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"ប្រសិន​បើ​អ្នក​បិទ​កម្មវិធីនេះ Android និង​កម្មវិធី​ផ្សេង​ទៀត​ប្រហែលជា​មិនដំណើរការ​ដូចការគ្រោង​ទុកតទៅ​ទៀតទេ។"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"បិទកម្មវិធី"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ការអនុញ្ញាត"</string>
     <string name="application_version_label" msgid="8556889839783311649">"កំណែ៖ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"មិន​បាន​ផ្តល់សិទ្ធិអនុញ្ញាតទេ"</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"អនុញ្ញាតឱ្យ​កម្មវិធីជំនួយ​ចូលប្រើ​ខ្លឹមសារ​ជា​អត្ថបទ​លើអេក្រង់"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ប្រើ​រូបថតអេក្រង់"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"អនុញ្ញាតឱ្យ​កម្មវិធីជំនួយ​ចូលប្រើ​រូបភាព​អេក្រង់"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"សេវាកម្មបំពេញដោយស្វ័យប្រវត្តិ"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"គ្មាន"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"បានជ្រើសរើស"</string>

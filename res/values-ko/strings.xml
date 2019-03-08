@@ -148,18 +148,13 @@
     <string name="default_applications" msgid="1558183275638697087">"기본 앱"</string>
     <string name="applications_settings" msgid="794261395191035632">"앱 정보"</string>
     <string name="force_stop" msgid="2153183697014720520">"강제 종료"</string>
-    <!-- no translation found for force_stop_dialog_title (3342850939200388694) -->
-    <skip />
-    <!-- no translation found for force_stop_dialog_text (4354954014318432599) -->
-    <skip />
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"강제 종료하시겠습니까?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"앱을 강제 종료하면 예기치 않은 오류가 발생할 수 있습니다."</string>
     <string name="disable_text" msgid="4358165448648990820">"사용 중지"</string>
     <string name="enable_text" msgid="1794971777861881238">"사용"</string>
-    <!-- no translation found for uninstall_text (277907956072833012) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_text (7731155411006654025) -->
-    <skip />
-    <!-- no translation found for app_disable_dialog_positive (4448684722791563349) -->
-    <skip />
+    <string name="uninstall_text" msgid="277907956072833012">"제거"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"이 앱을 사용 중지하면 Android와 다른 앱이 제대로 작동하지 않을 수도 있습니다."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"앱 사용 중지"</string>
     <string name="permissions_label" msgid="2701446753515612685">"권한"</string>
     <string name="application_version_label" msgid="8556889839783311649">"버전: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"부여된 권한이 없습니다."</string>
@@ -177,6 +172,8 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"지원 앱이 화면의 텍스트 콘텐츠에 액세스하도록 허용합니다."</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"스크린샷 사용"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"지원 앱이 화면의 이미지에 액세스하도록 허용합니다."</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
     <string name="autofill_settings_title" msgid="1188754272680049972">"자동완성 서비스"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"없음"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"선택됨"</string>
