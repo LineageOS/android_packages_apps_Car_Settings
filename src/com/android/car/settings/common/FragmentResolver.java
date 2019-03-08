@@ -31,7 +31,6 @@ import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.display.DisplaySettingsFragment;
-import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
 import com.android.car.settings.location.LocationScanningFragment;
@@ -67,9 +66,6 @@ public class FragmentResolver {
             return null;
         }
         switch (action) {
-            case Settings.ACTION_SETTINGS:
-                return new HomepageFragment();
-
             case Settings.ACTION_LOCATION_SOURCE_SETTINGS:
                 return new LocationSettingsFragment();
 
