@@ -35,8 +35,8 @@ import androidx.fragment.app.FragmentManager.OnBackStackChangedListener;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
+import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
-import com.android.car.theme.Themes;
 
 /**
  * Base activity class for car settings, provides a action bar with a back button that goes to

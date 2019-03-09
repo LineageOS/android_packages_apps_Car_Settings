@@ -34,8 +34,8 @@ import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
+import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
-import com.android.car.theme.Themes;
 
 import java.util.HashMap;
 import java.util.List;

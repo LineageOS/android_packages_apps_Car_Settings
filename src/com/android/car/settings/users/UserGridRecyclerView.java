@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,9 +30,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.car.widget.PagedListView;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
@@ -47,7 +48,7 @@ import java.util.List;
  * Displays a GridLayout with icons for the users in the system to allow switching between users.
  * One of the uses of this is for the lock screen in auto.
  */
-public class UserGridRecyclerView extends PagedListView implements
+public class UserGridRecyclerView extends RecyclerView implements
         CarUserManagerHelper.OnUsersUpdateListener {
 
     private UserAdapter mAdapter;
@@ -62,6 +63,9 @@ public class UserGridRecyclerView extends PagedListView implements
         mContext = context;
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mEnableAddUserButton = true;
+
+        addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
+                R.dimen.user_switcher_vertical_spacing_between_users)));
     }
 
     /**
@@ -422,6 +426,33 @@ public class UserGridRecyclerView extends PagedListView implements
             mIsStartGuestSession = isStartGuestSession;
             mIsAddUser = isAddUser;
             mIsForeground = isForeground;
+        }
+    }
+
+    /**
+     * A {@link RecyclerView.ItemDecoration} that will add spacing between each item in the
+     * RecyclerView that it is added to.
+     */
+    private static class ItemSpacingDecoration extends RecyclerView.ItemDecoration {
+        private int mItemSpacing;
+
+        private ItemSpacingDecoration(int itemSpacing) {
+            mItemSpacing = itemSpacing;
+        }
+
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
+                RecyclerView.State state) {
+            super.getItemOffsets(outRect, view, parent, state);
+            int position = parent.getChildAdapterPosition(view);
+
+            // Skip offset for last item except for GridLayoutManager.
+            if (position == state.getItemCount() - 1
+                    && !(parent.getLayoutManager() instanceof GridLayoutManager)) {
+                return;
+            }
+
+            outRect.bottom = mItemSpacing;
         }
     }
 }

@@ -33,7 +33,7 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
-import androidx.car.widget.PagedListView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
@@ -54,7 +54,7 @@ public class QuickSettingFragment extends BaseFragment {
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
-    private PagedListView mListView;
+    private RecyclerView mListView;
     private View mFullSettingsBtn;
     private View mUserSwitcherBtn;
     private HomeFragmentLauncher mHomeFragmentLauncher;
@@ -88,7 +88,7 @@ public class QuickSettingFragment extends BaseFragment {
         mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
         mListView = activity.findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
-        mListView.getRecyclerView().setLayoutManager(mGridAdapter.getGridLayoutManager());
+        mListView.setLayoutManager(mGridAdapter.getGridLayoutManager());
 
         mFullSettingsBtn = activity.findViewById(R.id.full_settings_btn);
         mFullSettingsBtn.setOnClickListener(mHomeFragmentLauncher);
@@ -169,8 +169,9 @@ public class QuickSettingFragment extends BaseFragment {
 
     private boolean showUserSwitcher() {
         return !UserManager.isDeviceInDemoMode(getContext())
-            && UserManager.supportsMultipleUsers()
-            && !UserManager.get(getContext()).hasUserRestriction(UserManager.DISALLOW_USER_SWITCH);
+                && UserManager.supportsMultipleUsers()
+                && !UserManager.get(getContext()).hasUserRestriction(
+                UserManager.DISALLOW_USER_SWITCH);
     }
 
     /**
