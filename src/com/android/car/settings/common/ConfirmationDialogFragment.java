@@ -99,6 +99,15 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             return this;
         }
 
+        /** Adds an argument boolean to the argument bundle. */
+        public Builder addArgumentBoolean(String argumentKey, boolean argument) {
+            if (mArgs == null) {
+                mArgs = new Bundle();
+            }
+            mArgs.putBoolean(argumentKey, argument);
+            return this;
+        }
+
         /** Adds an argument Parcelable to the argument bundle. */
         public Builder addArgumentParcelable(String argumentKey, Parcelable argument) {
             if (mArgs == null) {
