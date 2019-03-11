@@ -18,11 +18,13 @@ package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.common.ButtonPreference;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 
 /** Business Logic for preference which promotes a regular user to an admin user. */
@@ -30,8 +32,10 @@ public class MakeAdminPreferenceController extends
         UserDetailsBasePreferenceController<ButtonPreference> {
 
     @VisibleForTesting
-    final ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener mListener =
-            userToMakeAdmin -> {
+    final ConfirmationDialogFragment.ConfirmListener mConfirmListener =
+            arguments -> {
+                UserInfo userToMakeAdmin = (UserInfo) arguments.get(
+                        UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN);
                 getCarUserManagerHelper().grantAdminPermissions(userToMakeAdmin);
                 getFragmentController().goBack();
             };
@@ -50,21 +54,23 @@ public class MakeAdminPreferenceController extends
     /** Ensure that the listener is reset if the dialog was open during a configuration change. */
     @Override
     protected void onCreateInternal() {
-        ConfirmGrantAdminPermissionsDialog dialog =
-                (ConfirmGrantAdminPermissionsDialog) getFragmentController().findDialogByTag(
-                        ConfirmGrantAdminPermissionsDialog.TAG);
-        if (dialog != null) {
-            dialog.setConfirmGrantAdminListener(mListener);
-        }
+        ConfirmationDialogFragment dialog =
+                (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
+                        ConfirmationDialogFragment.TAG);
+
+        ConfirmationDialogFragment.resetListeners(dialog, mConfirmListener, /* rejectListener= */
+                null);
     }
 
     @Override
     protected void updateState(ButtonPreference preference) {
         preference.setOnButtonClickListener(pref -> {
-            ConfirmGrantAdminPermissionsDialog dialog = new ConfirmGrantAdminPermissionsDialog();
-            dialog.setUserToMakeAdmin(getUserInfo());
-            dialog.setConfirmGrantAdminListener(mListener);
-            getFragmentController().showDialog(dialog, ConfirmGrantAdminPermissionsDialog.TAG);
+
+            ConfirmationDialogFragment dialogFragment =
+                    UsersDialogProvider.getConfirmGrantAdminDialogFragment(getContext(),
+                            mConfirmListener, /* rejectListener= */ null, getUserInfo());
+
+            getFragmentController().showDialog(dialogFragment, ConfirmationDialogFragment.TAG);
         });
 
         Drawable icon = new UserIconProvider(getCarUserManagerHelper()).getUserIcon(getUserInfo(),

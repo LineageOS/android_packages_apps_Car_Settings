@@ -16,20 +16,23 @@
 
 package com.android.car.settings.users;
 
+import static com.google.common.truth.Truth.assertThat;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.matches;
-import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.Bundle;
 
 import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.ButtonPreference;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
@@ -54,8 +57,8 @@ public class MakeAdminPreferenceControllerTest {
             mPreferenceControllerHelper;
     private MakeAdminPreferenceController mController;
     private ButtonPreference mButtonPreference;
-    @Mock
-    private ConfirmGrantAdminPermissionsDialog mDialog;
+    private ConfirmationDialogFragment mDialog;
+
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -71,6 +74,7 @@ public class MakeAdminPreferenceControllerTest {
         mButtonPreference = new ButtonPreference(context);
         mButtonPreference.setSelectable(false);
         mPreferenceControllerHelper.setPreference(mButtonPreference);
+        mDialog = new ConfirmationDialogFragment.Builder(context).build();
     }
 
     @After
@@ -79,21 +83,12 @@ public class MakeAdminPreferenceControllerTest {
     }
 
     @Test
-    public void testOnCreate_noPreviousDialog_dialogListenerNotSet() {
-        when(mPreferenceControllerHelper.getMockFragmentController().findDialogByTag(
-                ConfirmGrantAdminPermissionsDialog.TAG)).thenReturn(null);
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        verify(mDialog, never()).setConfirmGrantAdminListener(
-                any(ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener.class));
-    }
-
-    @Test
     public void testOnCreate_hasPreviousDialog_dialogListenerSet() {
         when(mPreferenceControllerHelper.getMockFragmentController().findDialogByTag(
-                ConfirmGrantAdminPermissionsDialog.TAG)).thenReturn(mDialog);
+                ConfirmationDialogFragment.TAG)).thenReturn(mDialog);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        verify(mDialog).setConfirmGrantAdminListener(
-                any(ConfirmGrantAdminPermissionsDialog.ConfirmGrantAdminListener.class));
+
+        assertThat(mDialog.getConfirmListener()).isNotNull();
     }
 
     @Test
@@ -101,19 +96,23 @@ public class MakeAdminPreferenceControllerTest {
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mButtonPreference.performButtonClick();
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmGrantAdminPermissionsDialog.class),
-                matches(ConfirmGrantAdminPermissionsDialog.TAG));
+                any(ConfirmationDialogFragment.class),
+                matches(ConfirmationDialogFragment.TAG));
     }
 
     @Test
     public void testListener_makeUserAdmin() {
-        mController.mListener.onGrantAdminPermissionsConfirmed(TEST_USER);
+        Bundle arguments = new Bundle();
+        arguments.putParcelable(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN, TEST_USER);
+        mController.mConfirmListener.onConfirm(arguments);
         verify(mCarUserManagerHelper).grantAdminPermissions(TEST_USER);
     }
 
     @Test
     public void testListener_goBack() {
-        mController.mListener.onGrantAdminPermissionsConfirmed(TEST_USER);
+        Bundle arguments = new Bundle();
+        arguments.putParcelable(UsersDialogProvider.KEY_USER_TO_MAKE_ADMIN, TEST_USER);
+        mController.mConfirmListener.onConfirm(arguments);
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 }

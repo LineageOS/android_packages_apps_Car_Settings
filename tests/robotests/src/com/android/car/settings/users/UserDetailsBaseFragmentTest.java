@@ -29,6 +29,7 @@ import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
@@ -141,8 +142,8 @@ public class UserDetailsBaseFragmentTest {
         createUserDetailsBaseFragment();
         mRemoveUserButton.performClick();
 
-        assertThat(
-                mUserDetailsBaseFragment.findDialogByTag(ConfirmRemoveUserDialog.TAG)).isNotNull();
+        assertThat(mUserDetailsBaseFragment.findDialogByTag(
+                ConfirmationDialogFragment.TAG)).isNotNull();
     }
 
     private void createUserDetailsBaseFragment() {

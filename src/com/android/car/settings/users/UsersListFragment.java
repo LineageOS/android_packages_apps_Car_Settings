@@ -31,14 +31,15 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.CarUxRestrictionsHelper;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Lists all Users available on this device.
  */
 public class UsersListFragment extends SettingsFragment implements
-        ConfirmCreateNewUserDialog.ConfirmCreateNewUserListener,
         ConfirmExitRetailModeDialog.ConfirmExitRetailModeListener,
         AddNewUserTask.AddNewUserListener {
     private static final String FACTORY_RESET_PACKAGE_NAME = "android";
@@ -55,6 +56,14 @@ public class UsersListFragment extends SettingsFragment implements
     private float mOpacityDisabled;
     private float mOpacityEnabled;
     private boolean mRestricted;
+
+    @VisibleForTesting
+    final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */
+                this).execute(getContext().getString(R.string.user_new_user_name));
+        mIsBusy = true;
+        updateUi();
+    };
 
     @Override
     @XmlRes
@@ -101,15 +110,6 @@ public class UsersListFragment extends SettingsFragment implements
     public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
         mRestricted = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
         mAddUserButton.setAlpha(mRestricted ? mOpacityDisabled : mOpacityEnabled);
-    }
-
-    @Override
-    public void onCreateNewUserConfirmed() {
-        mAddNewUserTask =
-                new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */ this)
-                        .execute(getContext().getString(R.string.user_new_user_name));
-        mIsBusy = true;
-        updateUi();
     }
 
     /**
@@ -188,9 +188,11 @@ public class UsersListFragment extends SettingsFragment implements
 
         // Only add the add user button if the current user is allowed to add a user.
         if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
-            ConfirmCreateNewUserDialog dialog = new ConfirmCreateNewUserDialog();
-            dialog.setConfirmCreateNewUserListener(this);
-            dialog.show(this);
+            ConfirmationDialogFragment dialogFragment =
+                    UsersDialogProvider.getConfirmCreateNewUserDialogFragment(getContext(),
+                            mConfirmListener, null);
+
+            dialogFragment.show(getFragmentManager(), ConfirmationDialogFragment.TAG);
         }
     }
 }

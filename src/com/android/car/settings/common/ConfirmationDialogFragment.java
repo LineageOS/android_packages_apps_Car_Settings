@@ -21,6 +21,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
@@ -98,6 +99,15 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             return this;
         }
 
+        /** Adds an argument Parcelable to the argument bundle. */
+        public Builder addArgumentParcelable(String argumentKey, Parcelable argument) {
+            if (mArgs == null) {
+                mArgs = new Bundle();
+            }
+            mArgs.putParcelable(argumentKey, argument);
+            return this;
+        }
+
         /** Constructs the {@link ConfirmationDialogFragment}. */
         public ConfirmationDialogFragment build() {
             return ConfirmationDialogFragment.init(this);
@@ -155,9 +165,21 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         mConfirmListener = confirmListener;
     }
 
+    /** Gets the listener which listens to a click on the positive button */
+    @Nullable
+    public ConfirmListener getConfirmListener() {
+        return mConfirmListener;
+    }
+
     /** Sets the listener which listens to a click on the negative button. */
     private void setRejectListener(RejectListener rejectListener) {
         mRejectListener = rejectListener;
+    }
+
+    /** Gets the listener which listens to a click on the negative button. */
+    @Nullable
+    public RejectListener getRejectListener() {
+        return mRejectListener;
     }
 
     @Override

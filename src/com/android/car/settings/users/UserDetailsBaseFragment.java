@@ -28,9 +28,9 @@ import android.widget.TextView;
 import androidx.annotation.LayoutRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.settings.users.ConfirmRemoveUserDialog.UserType;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
@@ -38,8 +38,9 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserInfo mUserInfo;
 
-    private final ConfirmRemoveUserDialog.ConfirmRemoveUserListener mListener = userType -> {
-        if (userType == UserType.LAST_ADMIN) {
+    private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
+        if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
             launchFragment(ChooseNewAdminFragment.newInstance(mUserInfo));
         } else {
             if (mCarUserManagerHelper.removeUser(
@@ -78,13 +79,11 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            ConfirmRemoveUserDialog confirmRemoveLastAdminDialog =
-                    (ConfirmRemoveUserDialog) findDialogByTag(ConfirmRemoveUserDialog.TAG);
-            if (confirmRemoveLastAdminDialog != null) {
-                confirmRemoveLastAdminDialog.setConfirmRemoveUserListener(mListener);
-            }
-        }
+
+        ConfirmationDialogFragment dialogFragment =
+                (ConfirmationDialogFragment) findDialogByTag(ConfirmationDialogFragment.TAG);
+        ConfirmationDialogFragment.resetListeners(dialogFragment,
+                mConfirmListener, /* rejectListener= */ null);
     }
 
     @Override
@@ -134,16 +133,19 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         boolean isLastAdmin = mUserInfo.isAdmin()
                 && mCarUserManagerHelper.getAllAdminUsers().size() == 1;
 
-        UserType type;
+        ConfirmationDialogFragment dialogFragment;
+
         if (isLastUser) {
-            type = UserType.LAST_USER;
+            dialogFragment = UsersDialogProvider.getConfirmRemoveLastUserDialogFragment(
+                    getContext(), mConfirmListener, /* rejectListener= */ null);
         } else if (isLastAdmin) {
-            type = UserType.LAST_ADMIN;
+            dialogFragment = UsersDialogProvider.getConfirmRemoveLastAdminDialogFragment(
+                    getContext(), mConfirmListener, /* rejectListener= */ null);
         } else {
-            type = UserType.ANY_USER;
+            dialogFragment = UsersDialogProvider.getConfirmRemoveUserDialogFragment(getContext(),
+                    mConfirmListener, /* rejectListener= */ null);
         }
 
-        ConfirmRemoveUserDialog dialog = ConfirmRemoveUserDialog.newInstance(type, mListener);
-        dialog.show(getFragmentManager(), ConfirmRemoveUserDialog.TAG);
+        dialogFragment.show(getFragmentManager(), ConfirmationDialogFragment.TAG);
     }
 }

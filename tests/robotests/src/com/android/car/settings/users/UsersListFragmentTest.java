@@ -31,6 +31,7 @@ import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
@@ -58,6 +59,7 @@ public class UsersListFragmentTest {
     private BaseTestActivity mTestActivity;
     private UsersListFragment mFragment;
     private Button mActionButton;
+    private ConfirmationDialogFragment mDialog;
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -82,8 +84,7 @@ public class UsersListFragmentTest {
     @Test
     public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
         createUsersListFragment();
-        mFragment.onCreateNewUserConfirmed();
-
+        mFragment.mConfirmListener.onConfirm(/* arguments= */ null);
         Robolectric.flushBackgroundThreadScheduler();
         verify(mCarUserManagerHelper)
                 .createNewNonAdminUser(mContext.getString(R.string.user_new_user_name));
@@ -116,7 +117,7 @@ public class UsersListFragmentTest {
         createUsersListFragment();
 
         mActionButton.callOnClick();
-        assertThat(isDialogShown(ConfirmCreateNewUserDialog.DIALOG_TAG)).isTrue();
+        assertThat(isDialogShown(ConfirmationDialogFragment.TAG)).isTrue();
     }
 
     private void createUsersListFragment() {
