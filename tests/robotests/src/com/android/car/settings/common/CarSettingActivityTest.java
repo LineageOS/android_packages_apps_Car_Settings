@@ -66,23 +66,23 @@ public class CarSettingActivityTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
+        CarUxRestrictions noSetupRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* time= */ 0).build();
+        when(mMockCarUxRestrictionsManager.getCurrentCarUxRestrictions())
+                .thenReturn(noSetupRestrictions);
         ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mMockCarUxRestrictionsManager);
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
         mActivityController.create();
 
-        CarUxRestrictions noSetupRestrictions = new CarUxRestrictions.Builder(
-                true, CarUxRestrictions.UX_RESTRICTIONS_BASELINE, 0).build();
 
-        when(mMockCarUxRestrictionsManager.getCurrentCarUxRestrictions())
-                .thenReturn(noSetupRestrictions);
     }
 
     @Test
     public void launchWithIntent_resolveToFragment() {
         MockitoAnnotations.initMocks(this);
-        Intent intent = new Intent("android.settings.DATE_SETTINGS");
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
         CarSettingActivity activity =
                 Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
         assertThat(activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
@@ -104,8 +104,8 @@ public class CarSettingActivityTest {
         mActivity.launchFragment(testFragment);
         assertThat(mActivity.getFragment()).isEqualTo(testFragment);
 
-        mActivity.onNewIntent(new Intent(Settings.ACTION_SETTINGS));
-        mActivity.onResume(); // Should launch default.
+        mActivity.onNewIntent(new Intent(Settings.ACTION_DATE_SETTINGS));
+        mActivity.onResume();
 
         assertThat(mActivity.getFragment()).isNotEqualTo(testFragment);
     }
@@ -113,10 +113,10 @@ public class CarSettingActivityTest {
     @Test
     public void onResume_savedInstanceState_doesNotLaunchFragmentFromOldIntent() {
         mActivityController.start().postCreate(null).resume();
-        Intent intent = new Intent(Settings.ACTION_SETTINGS);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
         mActivity.onNewIntent(intent);
         assertThat(mActivity.getFragment()).isNotInstanceOf(TestFragment.class);
-        mActivity.onResume(); // Should launch default. (old intent)
+        mActivity.onResume(); // Showing date time settings (old intent)
         mActivity.launchFragment(new TestFragment()); // Replace with test fragment.
 
         // Recreate with saved state (e.g. during config change).
