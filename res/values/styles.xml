@@ -75,6 +75,20 @@
         <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="DataUsageSummaryCarrierInfoTextAppearance"
+           parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DataUsageSummaryCarrierInfoWarningTextAppearance"
+           parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">?android:attr/colorError</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
     <!-- Styles for Setup Wizard -->
 
     <style name="SetupWizardButton.Negative" parent="@style/SuwGlifButton.Secondary">

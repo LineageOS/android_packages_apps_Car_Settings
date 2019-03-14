@@ -19,8 +19,8 @@
     <item android:id="@android:id/background"
           android:gravity="center_vertical|fill_horizontal">
         <shape android:shape="rectangle"
-               android:tint="@*android:color/config_progress_background_tint">
-            <solid android:color="@*android:color/white_disabled_material"/>
+               android:tint="@color/config_progress_background_tint">
+            <solid android:color="@color/white_disabled_material"/>
         </shape>
     </item>
     <item android:id="@android:id/progress"
