@@ -70,11 +70,13 @@ public class PermissionsPreferenceController extends PreferenceController<Prefer
     }
 
     @Override
+    protected void onStartInternal() {
+        PermissionsSummaryHelper.getPermissionSummary(getContext(), mPackageName,
+                mPermissionCallback);
+    }
+
+    @Override
     protected void updateState(Preference preference) {
-        // This call needs to be here, not onCreate, so that the summary is updated every time
-        // the preference is displayed.
-        PermissionsSummaryHelper.getPermissionSummary(
-                getContext(), mPackageName, mPermissionCallback);
         preference.setSummary(getSummary());
     }
 
