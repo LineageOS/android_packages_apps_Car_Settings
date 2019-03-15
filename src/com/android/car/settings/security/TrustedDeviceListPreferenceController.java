@@ -20,7 +20,6 @@ import android.annotation.Nullable;
 import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothDevice;
 import android.car.Car;
-import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.userlib.CarUserManagerHelper;
@@ -89,11 +88,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     final ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener mConfirmRemoveDeviceListener =
             new ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener() {
                 public void onConfirmRemoveDevice(long handle) {
-                    try {
-                        mCarTrustAgentEnrollmentManager.revokeTrust(handle);
-                    } catch (CarNotConnectedException e) {
-                        LOG.e(e.getMessage(), e);
-                    }
+                    mCarTrustAgentEnrollmentManager.revokeTrust(handle);
                 }
             };
 
@@ -106,12 +101,9 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
                 context.getString(R.string.trusted_device_preference_file_key),
                 Context.MODE_PRIVATE);
         mCar = Car.createCar(context);
-        try {
-            mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
-                    Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
-        } catch (CarNotConnectedException e) {
-            LOG.e("failed to get car manager", e);
-        }
+        mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
+                Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
+
     }
 
     @Override
@@ -152,20 +144,13 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
 
     @Override
     protected void onStartInternal() {
-        try {
-            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
-        } catch (CarNotConnectedException e) {
-            LOG.e("failed to set enrollment callback", e);
-        }
+        mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
+
     }
 
     @Override
     protected void onStopInternal() {
-        try {
-            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(null);
-        } catch (CarNotConnectedException e) {
-            LOG.e("failed to reset enrollment callback", e);
-        }
+        mCarTrustAgentEnrollmentManager.setEnrollmentCallback(null);
     }
 
     /**
@@ -189,14 +174,10 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
 
     private List<Preference> createTrustDevicePreferenceList() {
         List<Preference> trustedDevicesList = new ArrayList<>();
-        List<Integer> handles = new ArrayList<>();
-        try {
-            handles = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                    mCarUserManagerHelper.getCurrentProcessUserId());
-        } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
-        }
-        for (Integer handle : handles) {
+        List<Long> handles = new ArrayList<>();
+        handles = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId());
+        for (Long handle : handles) {
             String res = mPrefs.getString(String.valueOf(handle), null);
             if (res != null) {
                 trustedDevicesList.add(createTrustedDevicePreference(res, handle));

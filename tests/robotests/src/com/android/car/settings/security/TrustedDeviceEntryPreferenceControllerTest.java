@@ -84,7 +84,7 @@ public class TrustedDeviceEntryPreferenceControllerTest {
     public void testUpdateState() throws CarNotConnectedException {
         when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId()))
-                .thenReturn(new ArrayList<>(Arrays.asList(1, 2)));
+                .thenReturn(new ArrayList<>(Arrays.asList(1L, 2L)));
         mController.refreshUi();
         assertThat(mTrustedDevicePreference.getSummary()).isEqualTo("2 devices");
     }
