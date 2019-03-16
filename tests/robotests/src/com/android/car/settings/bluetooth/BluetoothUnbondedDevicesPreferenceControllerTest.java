@@ -182,6 +182,32 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     }
 
     @Test
+    public void onDeviceClicked_pairingStarted_cancelsScanning() {
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+        when(mUnbondedCachedDevice.startPairing()).thenReturn(true);
+        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
+
+        devicePreference.performClick();
+
+        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
+    }
+
+    @Test
+    public void onDeviceClicked_pairingStartFails_resumeScanning() {
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+        when(mUnbondedCachedDevice.startPairing()).thenReturn(false);
+        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
+
+        devicePreference.performClick();
+
+        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
+    }
+
+    @Test
     public void onDeviceClicked_requestsPhonebookAccess() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
         when(mUnbondedCachedDevice.startPairing()).thenReturn(true);
