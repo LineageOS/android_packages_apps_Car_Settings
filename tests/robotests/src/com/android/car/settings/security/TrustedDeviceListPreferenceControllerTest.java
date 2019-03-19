@@ -53,6 +53,7 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -72,6 +73,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     private CarUserManagerHelper mCarUserManagerHelper;
     private PreferenceGroup mPreferenceGroup;
     private TrustedDeviceListPreferenceController mController;
+
     private TrustedDeviceInfo mTestDevice1 = new TrustedDeviceInfo(1, "", "");
     private TrustedDeviceInfo mTestDevice2 = new TrustedDeviceInfo(2, "", "");
     private TrustedDeviceInfo mTestDevice3 = new TrustedDeviceInfo(3, "", "");
@@ -158,7 +160,8 @@ public class TrustedDeviceListPreferenceControllerTest {
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(new ArrayList<>());
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
+                Collections.emptyList());
 
         mController.refreshUi();
 

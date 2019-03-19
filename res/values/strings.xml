@@ -1034,6 +1034,8 @@
     <string name="trusted_device_fail_enrollment_toast"><xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> enrollment failed</string>
     <!-- Message shown when user have not set authentication [CHAR LIMIT=NONE]-->
     <string name="trusted_device_set_authentication_reminder">Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile.</string>
+    <!-- Toast shown when phone is disconnected [CHAR LIMIT=50]-->
+    <string name="trusted_device_disconnected_toast">Device disconnected.</string>
 
     <!-- generic --><skip/>
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
