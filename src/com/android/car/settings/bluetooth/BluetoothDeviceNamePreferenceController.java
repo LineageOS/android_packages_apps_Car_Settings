@@ -55,10 +55,7 @@ public class BluetoothDeviceNamePreferenceController extends
         Pair<Drawable, String> pair =
                 com.android.settingslib.bluetooth.BluetoothUtils.getBtClassDrawableWithDescription(
                         getContext(),
-                        cachedDevice,
-                        getContext().getResources().getFraction(
-                                R.fraction.bt_battery_scale_fraction, /* base= */1, /* pbase= */
-                                1));
+                        cachedDevice);
         StringJoiner summaryJoiner = new StringJoiner(System.lineSeparator());
         summaryJoiner.setEmptyValue("");
 
