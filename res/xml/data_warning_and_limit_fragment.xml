@@ -22,7 +22,7 @@
     <Preference
         android:key="@string/pk_data_usage_cycle"
         android:title="@string/app_usage_cycle"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        settings:controller="com.android.car.settings.datausage.CycleResetDayOfMonthPickerPreferenceController"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_data_warning_group"
         settings:controller="com.android.car.settings.datausage.DataWarningPreferenceController">
