@@ -18,15 +18,27 @@
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/storage_settings_title">
     <com.android.car.settings.common.ProgressBarPreference
-        android:icon="@drawable/ic_photo_library"
-        android:key="@string/pk_storage_photos_videos"
-        android:layout="@layout/progress_bar_preference"
-        android:title="@string/storage_photos_videos"
-        settings:controller="com.android.car.settings.storage.StoragePhotoCategoryPreferenceController"/>
-    <com.android.car.settings.common.ProgressBarPreference
         android:icon="@drawable/ic_media_stream"
         android:key="@string/pk_storage_music_audio"
         android:layout="@layout/progress_bar_preference"
         android:title="@string/storage_music_audio"
         settings:controller="com.android.car.settings.storage.StorageMediaCategoryPreferenceController"/>
+    <com.android.car.settings.common.ProgressBarPreference
+        android:icon="@drawable/ic_storage_apps"
+        android:key="@string/pk_storage_other_apps"
+        android:layout="@layout/progress_bar_preference"
+        android:title="@string/storage_other_apps"
+        settings:controller="com.android.car.settings.storage.StorageOtherCategoryPreferenceController"/>
+    <com.android.car.settings.common.ProgressBarPreference
+        android:icon="@drawable/ic_folder"
+        android:key="@string/pk_storage_files"
+        android:layout="@layout/progress_bar_preference"
+        android:title="@string/storage_files"
+        settings:controller="com.android.car.settings.storage.StorageFileCategoryPreferenceController"/>
+    <com.android.car.settings.common.ProgressBarPreference
+        android:icon="@drawable/ic_system_update"
+        android:key="@string/pk_storage_system"
+        android:layout="@layout/progress_bar_preference"
+        android:title="@string/storage_system"
+        settings:controller="com.android.car.settings.storage.StorageSystemCategoryPreferenceController"/>
 </PreferenceScreen>

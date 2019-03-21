@@ -58,7 +58,8 @@ public class StorageUsageBasePreferenceControllerTest {
         }
 
         @Override
-        public long calculateCategoryUsage(StorageAsyncLoader.AppsStorageResult data) {
+        public long calculateCategoryUsage(
+                SparseArray<StorageAsyncLoader.AppsStorageResult> result, long usedSizeBytes) {
             return 1_000_000_000;
         }
     }
