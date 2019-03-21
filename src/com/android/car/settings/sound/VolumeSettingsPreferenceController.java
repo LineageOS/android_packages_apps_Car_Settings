@@ -35,12 +35,12 @@ import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.SeekBarPreference;
-import com.android.car.theme.Themes;
 
 import java.util.ArrayList;
 import java.util.List;

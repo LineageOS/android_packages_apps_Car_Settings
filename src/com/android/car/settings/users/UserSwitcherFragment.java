@@ -60,7 +60,7 @@ public class UserSwitcherFragment extends BaseFragment {
         GridLayoutManager layoutManager = new GridLayoutManager(getContext(),
                 getContext().getResources().getInteger(R.integer.user_switcher_num_col));
         mUserGridView.setFragment(this);
-        mUserGridView.getRecyclerView().setLayoutManager(layoutManager);
+        mUserGridView.setLayoutManager(layoutManager);
         mUserGridView.buildAdapter();
     }
 

@@ -24,9 +24,9 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 
+import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ButtonPreference;
-import com.android.car.theme.Themes;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 
 /**
