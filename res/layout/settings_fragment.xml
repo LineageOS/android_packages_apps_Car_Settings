@@ -18,22 +18,21 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:ignore="NewApi"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent" >
+    android:layout_marginEnd="@dimen/action_bar_margin"
+    android:layout_marginStart="@dimen/action_bar_margin"
+    tools:ignore="NewApi">
 
-    <androidx.car.widget.PagedListView
+    <FrameLayout
         android:id="@android:id/list_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:showPagedListViewDivider="false" />
-
+        android:layout_height="match_parent"/>
     <TextView
         android:id="@android:id/empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
 </FrameLayout>

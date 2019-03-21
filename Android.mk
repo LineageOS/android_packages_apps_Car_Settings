@@ -37,9 +37,9 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
       androidx-constraintlayout_constraintlayout \
+      car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
-      car-theme-lib \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
@@ -96,9 +96,9 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
       androidx-constraintlayout_constraintlayout \
+      car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
-      car-theme-lib \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
