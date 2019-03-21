@@ -22,6 +22,10 @@
     <Preference
         android:key="@string/pk_application_details_app"
         settings:controller="com.android.car.settings.applications.ApplicationPreferenceController"/>
+    <SwitchPreference
+        android:key="@string/pk_application_details_notifications"
+        android:title="@string/notifications_label"
+        settings:controller="com.android.car.settings.applications.NotificationsPreferenceController"/>
     <Preference
         android:key="@string/pk_application_details_permissions"
         android:title="@string/permissions_label"
