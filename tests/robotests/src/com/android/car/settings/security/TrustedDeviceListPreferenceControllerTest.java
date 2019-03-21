@@ -122,7 +122,7 @@ public class TrustedDeviceListPreferenceControllerTest {
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
 
-        callBack.getValue().onTrustRevoked(handles.get(0), true);
+        callBack.getValue().onEscrowTokenRemoved(handles.get(0));
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
     }
@@ -213,20 +213,21 @@ public class TrustedDeviceListPreferenceControllerTest {
     }
 
     @Test
-    public void onRemoveDeviceDialogConfirmed_revokeTrust() {
+    public void onRemoveDeviceDialogConfirmed_remoeEscrwoToken() {
         mController.mConfirmRemoveDeviceListener.onConfirmRemoveDevice(1);
 
-        verify(mMockCarTrustAgentEnrollmentManager).revokeTrust(1);
+        verify(mMockCarTrustAgentEnrollmentManager).removeEscrowToken(1,
+                mCarUserManagerHelper.getCurrentProcessUserId());
     }
 
     @Test
-    public void onTrustRevoked_removeHandleFromSharedPreference() {
+    public void onEscrowTokenRemoved_removeHandleFromSharedPreference() {
         ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
 
-        callBack.getValue().onTrustRevoked(1, true);
+        callBack.getValue().onEscrowTokenRemoved(1);
 
         assertThat(mPrefs.getString("1", null)).isNull();
     }
