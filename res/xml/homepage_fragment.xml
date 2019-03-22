@@ -82,6 +82,11 @@
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.storage.StorageSettingsFragment"
+        android:icon="@drawable/ic_storage"
+        android:key="@string/pk_storage_settings_entry"
+        android:title="@string/storage_settings_title"/>
+    <Preference
         android:fragment="com.android.car.settings.security.SecuritySettingsFragment"
         android:icon="@drawable/ic_lock"
         android:key="@string/pk_security_settings_entry"
