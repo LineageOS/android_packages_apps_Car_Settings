@@ -68,12 +68,10 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
                 }
 
                 @Override
-                public void onTrustRevoked(long handle, boolean success) {
-                    if (success) {
-                        ThreadUtils.postOnMainThread(
-                                () -> mPrefs.edit().remove(String.valueOf(handle)).commit());
-                        refreshUi();
-                    }
+                public void onEscrowTokenRemoved(long handle) {
+                    ThreadUtils.postOnMainThread(
+                            () -> mPrefs.edit().remove(String.valueOf(handle)).commit());
+                    refreshUi();
                 }
 
                 @Override
@@ -88,7 +86,8 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     final ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener mConfirmRemoveDeviceListener =
             new ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener() {
                 public void onConfirmRemoveDevice(long handle) {
-                    mCarTrustAgentEnrollmentManager.revokeTrust(handle);
+                    mCarTrustAgentEnrollmentManager.removeEscrowToken(handle,
+                            mCarUserManagerHelper.getCurrentProcessUserId());
                 }
             };
 
@@ -174,8 +173,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
 
     private List<Preference> createTrustDevicePreferenceList() {
         List<Preference> trustedDevicesList = new ArrayList<>();
-        List<Long> handles = new ArrayList<>();
-        handles = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+        List<Long> handles = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId());
         for (Long handle : handles) {
             String res = mPrefs.getString(String.valueOf(handle), null);

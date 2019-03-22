@@ -80,7 +80,7 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 }
 
                 @Override
-                public void onTrustRevoked(long handle, boolean success) {
+                public void onEscrowTokenRemoved(long handle) {
                 }
 
                 @Override
