@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 
 import androidx.annotation.LayoutRes;
@@ -50,6 +51,18 @@ public class BluetoothSettingsFragment extends SettingsFragment {
             handleStateChanged(state);
         }
     };
+    private final CompoundButton.OnCheckedChangeListener mBluetoothSwitchListener =
+            new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    mBluetoothSwitch.setEnabled(false);
+                    if (isChecked) {
+                        mBluetoothAdapter.enable();
+                    } else {
+                        mBluetoothAdapter.disable();
+                    }
+                }
+            };
 
     private CarUserManagerHelper mCarUserManagerHelper;
     private LocalBluetoothManager mLocalBluetoothManager;
@@ -81,15 +94,7 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mBluetoothSwitch = requireActivity().findViewById(R.id.toggle_switch);
-        mBluetoothSwitch.setOnCheckedChangeListener(
-                (buttonView, isChecked) -> {
-                    mBluetoothSwitch.setEnabled(false);
-                    if (isChecked) {
-                        mBluetoothAdapter.enable();
-                    } else {
-                        mBluetoothAdapter.disable();
-                    }
-                });
+        mBluetoothSwitch.setOnCheckedChangeListener(mBluetoothSwitchListener);
     }
 
     @Override
@@ -112,23 +117,27 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     }
 
     private void handleStateChanged(int state) {
+        // Momentarily clear the listener so that we don't update the adapter while trying to
+        // reflect the adapter state.
+        mBluetoothSwitch.setOnCheckedChangeListener(null);
         switch (state) {
             case BluetoothAdapter.STATE_TURNING_ON:
-                mBluetoothSwitch.setChecked(true);
                 mBluetoothSwitch.setEnabled(false);
+                mBluetoothSwitch.setChecked(true);
                 break;
             case BluetoothAdapter.STATE_ON:
-                mBluetoothSwitch.setChecked(true);
                 mBluetoothSwitch.setEnabled(!isUserRestricted());
+                mBluetoothSwitch.setChecked(true);
                 break;
             case BluetoothAdapter.STATE_TURNING_OFF:
-                mBluetoothSwitch.setChecked(false);
                 mBluetoothSwitch.setEnabled(false);
+                mBluetoothSwitch.setChecked(false);
                 break;
             case BluetoothAdapter.STATE_OFF:
             default:
-                mBluetoothSwitch.setChecked(false);
                 mBluetoothSwitch.setEnabled(!isUserRestricted());
+                mBluetoothSwitch.setChecked(false);
         }
+        mBluetoothSwitch.setOnCheckedChangeListener(mBluetoothSwitchListener);
     }
 }
