@@ -17,6 +17,7 @@
 package com.android.car.settings.bluetooth;
 
 import android.annotation.CallSuper;
+import android.bluetooth.BluetoothAdapter;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
@@ -118,6 +119,17 @@ public abstract class BluetoothDevicesGroupPreferenceController extends
         }
 
         preferenceGroup.setVisible(preferenceGroup.getPreferenceCount() > 0);
+    }
+
+    @Override
+    public final void onBluetoothStateChanged(int bluetoothState) {
+        super.onBluetoothStateChanged(bluetoothState);
+        if (bluetoothState == BluetoothAdapter.STATE_TURNING_OFF) {
+            // Cleanup the UI so that we don't have stale representations when the adapter turns
+            // on again. This can happen if Bluetooth crashes and restarts.
+            getPreference().removeAll();
+            mPreferenceMap.clear();
+        }
     }
 
     @Override
