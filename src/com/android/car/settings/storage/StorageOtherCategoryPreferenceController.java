@@ -18,23 +18,27 @@ package com.android.car.settings.storage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.util.SparseArray;
 
 import com.android.car.settings.common.FragmentController;
 
 /**
- * Controller which determines the storage for photo category in the storage preference screen.
+ * Controller which determines the storage for the applications not assigned to one of the other
+ * categories in the storage preference screen.
  */
-public class StoragePhotoCategoryPreferenceController extends StorageUsageBasePreferenceController {
+public class StorageOtherCategoryPreferenceController extends StorageUsageBasePreferenceController {
 
-    public StoragePhotoCategoryPreferenceController(Context context,
+    public StorageOtherCategoryPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
     @Override
-    protected long calculateCategoryUsage(StorageAsyncLoader.AppsStorageResult data) {
-        return data.getPhotosAppsSize() + data.getExternalStats().imageBytes
-                + data.getExternalStats().videoBytes;
+    protected long calculateCategoryUsage(SparseArray<StorageAsyncLoader.AppsStorageResult> result,
+            long usedSizeBytes) {
+        StorageAsyncLoader.AppsStorageResult data = result.get(
+                getCarUserManagerHelper().getCurrentProcessUserId());
+        return data.getOtherAppsSize();
     }
 }
