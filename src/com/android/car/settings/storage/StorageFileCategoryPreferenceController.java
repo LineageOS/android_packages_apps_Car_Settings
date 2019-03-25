@@ -23,11 +23,11 @@ import android.util.SparseArray;
 import com.android.car.settings.common.FragmentController;
 
 /**
- * Controller which determines the storage for media category in the storage preference screen.
+ * Controller which determines the storage for file category in the storage preference screen.
  */
-public class StorageMediaCategoryPreferenceController extends StorageUsageBasePreferenceController {
+public class StorageFileCategoryPreferenceController extends StorageUsageBasePreferenceController {
 
-    public StorageMediaCategoryPreferenceController(Context context,
+    public StorageFileCategoryPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
@@ -38,6 +38,8 @@ public class StorageMediaCategoryPreferenceController extends StorageUsageBasePr
             long usedSizeBytes) {
         StorageAsyncLoader.AppsStorageResult data = result.get(
                 getCarUserManagerHelper().getCurrentProcessUserId());
-        return data.getMusicAppsSize() + data.getExternalStats().audioBytes;
+        return data.getExternalStats().totalBytes - data.getExternalStats().audioBytes
+                - data.getExternalStats().videoBytes - data.getExternalStats().imageBytes
+                - data.getExternalStats().appBytes;
     }
 }

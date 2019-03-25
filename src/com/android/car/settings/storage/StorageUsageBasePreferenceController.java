@@ -56,7 +56,8 @@ public abstract class StorageUsageBasePreferenceController extends
      *
      * @return usage value in bytes.
      */
-    protected abstract long calculateCategoryUsage(StorageAsyncLoader.AppsStorageResult data);
+    protected abstract long calculateCategoryUsage(
+            SparseArray<StorageAsyncLoader.AppsStorageResult> result, long usedSizeBytes);
 
     @Override
     protected void onCreateInternal() {
@@ -67,16 +68,18 @@ public abstract class StorageUsageBasePreferenceController extends
     @Override
     public void onDataLoaded(SparseArray<StorageAsyncLoader.AppsStorageResult> result,
             long usedSizeBytes, long totalSizeBytes) {
-        StorageAsyncLoader.AppsStorageResult data = result.get(
-                mCarUserManagerHelper.getCurrentForegroundUserId());
-        setStorageSize(calculateCategoryUsage(data), totalSizeBytes, usedSizeBytes);
+        setStorageSize(calculateCategoryUsage(result, usedSizeBytes), totalSizeBytes);
+    }
+
+    CarUserManagerHelper getCarUserManagerHelper() {
+        return mCarUserManagerHelper;
     }
 
     /**
      * Sets the storage size for this preference that will be displayed as a summary. It will also
      * update the progress bar accordingly.
      */
-    private void setStorageSize(long size, long total, long used) {
+    private void setStorageSize(long size, long total) {
         getPreference().setSummary(
                 FileSizeFormatter.formatFileSize(
                         getContext(),

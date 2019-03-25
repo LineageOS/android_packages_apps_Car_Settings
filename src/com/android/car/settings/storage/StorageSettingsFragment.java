@@ -28,6 +28,9 @@ import androidx.loader.app.LoaderManager;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 
+import java.util.Arrays;
+import java.util.List;
+
 /** Fragment which shows the settings for storage. */
 public class StorageSettingsFragment extends SettingsFragment {
 
@@ -45,10 +48,20 @@ public class StorageSettingsFragment extends SettingsFragment {
         StorageManager sm = context.getSystemService(StorageManager.class);
         VolumeInfo volume = maybeInitializeVolume(sm, getArguments());
         mStorageSettingsManager = new StorageSettingsManager(getContext(), volume);
-        mStorageSettingsManager.registerListener(use(StoragePhotoCategoryPreferenceController.class,
-                R.string.pk_storage_photos_videos));
-        mStorageSettingsManager.registerListener(use(StorageMediaCategoryPreferenceController.class,
-                R.string.pk_storage_music_audio));
+        List<StorageUsageBasePreferenceController> usagePreferenceControllers =
+                Arrays.asList(
+                        use(StorageMediaCategoryPreferenceController.class,
+                                R.string.pk_storage_music_audio),
+                        use(StorageOtherCategoryPreferenceController.class,
+                                R.string.pk_storage_other_apps),
+                        use(StorageFileCategoryPreferenceController.class,
+                                R.string.pk_storage_files),
+                        use(StorageSystemCategoryPreferenceController.class,
+                                R.string.pk_storage_system));
+
+        for (StorageUsageBasePreferenceController pc : usagePreferenceControllers) {
+            mStorageSettingsManager.registerListener(pc);
+        }
     }
 
     @Override
