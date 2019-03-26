@@ -121,6 +121,8 @@
 
     <!-- Data usage -->
     <dimen name="usage_number_text_size">36sp</dimen>
+    <dimen name="usage_cycler_reset_day_of_month_picker_margin_vertical">@*android:dimen/car_padding_2</dimen>
+    <dimen name="usage_cycler_reset_day_of_month_picker_text_margin_end">@*android:dimen/car_padding_5</dimen>
 
     <!-- Dimens for Setup Wizard -->
 

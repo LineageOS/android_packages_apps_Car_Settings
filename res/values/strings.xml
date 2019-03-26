@@ -77,6 +77,12 @@
     <!-- Button to launch external data plan app [CHAR LIMIT=30] -->
     <string name="launch_manage_plan_text">View plan</string>
 
+    <!-- Title of dialog for editing data usage cycle reset date. [CHAR LIMIT=48] -->
+    <string name="cycle_reset_day_of_month_picker_title">Usage cycle reset date</string>
+    <!-- Subtitle of dialog for editing data usage cycle reset date. [CHAR LIMIT=32] -->
+    <string name="cycle_reset_day_of_month_picker_subtitle">Date of each month:</string>
+    <!-- Positive button title for data usage cycle reset date picker, confirming that changes should be saved. [CHAR LIMIT=32] -->
+    <string name="cycle_reset_day_of_month_picker_positive_button">Set</string>
     <!-- Title of button and screen for billing cycle preferences [CHAR LIMIT=40] -->
     <string name="data_warning_limit_title">Data warning &amp; limit</string>
     <!-- Title of button for application usage cycle preferences [CHAR LIMIT=40] -->

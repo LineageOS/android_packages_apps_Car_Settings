@@ -16,12 +16,14 @@
 
 package com.android.car.settings.testutils;
 
+import static android.net.NetworkPolicy.CYCLE_NONE;
 import static android.net.NetworkPolicy.LIMIT_DISABLED;
 import static android.net.NetworkPolicy.WARNING_DISABLED;
 
 import static org.mockito.Mockito.mock;
 
 import android.net.NetworkPolicy;
+import android.net.NetworkPolicyManager;
 import android.net.NetworkTemplate;
 import android.util.RecurrenceRule;
 
@@ -39,6 +41,11 @@ public class ShadowNetworkPolicyEditor {
 
     private static final Map<String, Long> sWarningBytesMap = new HashMap<>();
     private static final Map<String, Long> sLimitBytesMap = new HashMap<>();
+    private static final Map<String, Integer> sCycleDateMap = new HashMap<>();
+
+    public void __constructor__(NetworkPolicyManager policyManager) {
+        // Empty constructor to allow for null policy manager.
+    }
 
     @Implementation
     protected long getPolicyWarningBytes(NetworkTemplate template) {
@@ -73,6 +80,16 @@ public class ShadowNetworkPolicyEditor {
     }
 
     @Implementation
+    protected int getPolicyCycleDay(NetworkTemplate template) {
+        return sCycleDateMap.getOrDefault(template.getSubscriberId(), CYCLE_NONE);
+    }
+
+    @Implementation
+    protected void setPolicyCycleDay(NetworkTemplate template, int cycleDay, String cycleTimezone) {
+        sCycleDateMap.put(template.getSubscriberId(), cycleDay);
+    }
+
+    @Implementation
     protected void read() {
     }
 
@@ -80,5 +97,6 @@ public class ShadowNetworkPolicyEditor {
     public static void reset() {
         sWarningBytesMap.clear();
         sLimitBytesMap.clear();
+        sCycleDateMap.clear();
     }
 }
