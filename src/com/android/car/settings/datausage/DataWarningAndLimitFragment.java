@@ -16,17 +16,59 @@
 
 package com.android.car.settings.datausage;
 
+import android.content.Context;
+import android.net.NetworkPolicyManager;
+import android.net.NetworkTemplate;
+import android.telephony.SubscriptionManager;
+import android.telephony.TelephonyManager;
+
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.settingslib.NetworkPolicyEditor;
+
+import java.util.Arrays;
+import java.util.List;
 
 /** Screen to set data warning and limit thresholds. */
 public class DataWarningAndLimitFragment extends SettingsFragment {
+
+    private TelephonyManager mTelephonyManager;
+    private SubscriptionManager mSubscriptionManager;
+    private NetworkPolicyEditor mPolicyEditor;
+    private NetworkTemplate mNetworkTemplate;
 
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.data_warning_and_limit_fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        mPolicyEditor = new NetworkPolicyEditor(NetworkPolicyManager.from(context));
+        mTelephonyManager = context.getSystemService(TelephonyManager.class);
+        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
+        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
+                DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
+
+        // Loads the current policies to the policy editor cache.
+        mPolicyEditor.read();
+
+        List<DataWarningAndLimitBasePreferenceController> preferenceControllers =
+                Arrays.asList(
+                        use(CycleResetDayOfMonthPickerPreferenceController.class,
+                                R.string.pk_data_usage_cycle),
+                        use(DataWarningPreferenceController.class, R.string.pk_data_warning_group),
+                        use(DataLimitPreferenceController.class, R.string.pk_data_limit_group));
+
+        for (DataWarningAndLimitBasePreferenceController preferenceController :
+                preferenceControllers) {
+            preferenceController.setNetworkPolicyEditor(mPolicyEditor);
+            preferenceController.setNetworkTemplate(mNetworkTemplate);
+        }
     }
 }

@@ -20,10 +20,6 @@ import static android.net.NetworkPolicy.WARNING_DISABLED;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkPolicyManager;
-import android.net.NetworkTemplate;
-import android.telephony.SubscriptionManager;
-import android.telephony.TelephonyManager;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
@@ -31,29 +27,21 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
-import com.android.settingslib.NetworkPolicyEditor;
 import com.android.settingslib.net.DataUsageController;
 
 /** Controls setting the data warning threshold. */
 public class DataWarningPreferenceController extends
-        PreferenceController<PreferenceGroup> implements Preference.OnPreferenceChangeListener {
+        DataWarningAndLimitBasePreferenceController<PreferenceGroup> implements
+        Preference.OnPreferenceChangeListener {
 
-    private final NetworkPolicyEditor mPolicyEditor;
-    private final TelephonyManager mTelephonyManager;
     private final DataUsageController mDataUsageController;
-    private final SubscriptionManager mSubscriptionManager;
 
     private TwoStatePreference mEnableDataWarningPreference;
     private Preference mSetDataWarningPreference;
-    private NetworkTemplate mNetworkTemplate;
 
     public DataWarningPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPolicyEditor = new NetworkPolicyEditor(NetworkPolicyManager.from(context));
-        mTelephonyManager = context.getSystemService(TelephonyManager.class);
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
         mDataUsageController = new DataUsageController(getContext());
     }
 
@@ -69,17 +57,11 @@ public class DataWarningPreferenceController extends
         mEnableDataWarningPreference.setOnPreferenceChangeListener(this);
         mSetDataWarningPreference = getPreference().findPreference(
                 getContext().getString(R.string.pk_data_warning));
-
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
-                DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
-
-        // Loads the current policies to the policy editor cache.
-        mPolicyEditor.read();
     }
 
     @Override
     protected void updateState(PreferenceGroup preference) {
-        long warningBytes = mPolicyEditor.getPolicyWarningBytes(mNetworkTemplate);
+        long warningBytes = getNetworkPolicyEditor().getPolicyWarningBytes(getNetworkTemplate());
         if (warningBytes == WARNING_DISABLED) {
             mSetDataWarningPreference.setSummary(null);
             mEnableDataWarningPreference.setChecked(false);
@@ -95,7 +77,7 @@ public class DataWarningPreferenceController extends
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean enabled = (Boolean) newValue;
-        mPolicyEditor.setPolicyWarningBytes(mNetworkTemplate,
+        getNetworkPolicyEditor().setPolicyWarningBytes(getNetworkTemplate(),
                 enabled ? mDataUsageController.getDefaultWarningLevel() : WARNING_DISABLED);
         refreshUi();
         return true;
