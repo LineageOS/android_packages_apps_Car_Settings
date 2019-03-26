@@ -22,6 +22,7 @@ import android.graphics.drawable.StateListDrawable;
 import android.text.TextUtils;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
@@ -39,7 +40,6 @@ public class AccessPointPreference extends Preference {
     private static int[] sWifiSignalAttributes = {com.android.settingslib.R.attr.wifi_signal};
 
     private final StateListDrawable mWifiSld;
-
     private final AccessPoint mAccessPoint;
 
     public AccessPointPreference(
@@ -69,6 +69,12 @@ public class AccessPointPreference extends Preference {
         return mAccessPoint;
     }
 
+    @Override
+    public void onBindViewHolder(PreferenceViewHolder holder) {
+        super.onBindViewHolder(holder);
+        setIcon(getAccessPointIcon());
+    }
+
     private Drawable getAccessPointIcon() {
         if (mWifiSld == null) {
             LOG.w("wifiSld is null.");
@@ -76,12 +82,10 @@ public class AccessPointPreference extends Preference {
         }
         mWifiSld.setState(
                 (mAccessPoint.getSecurity() != AccessPoint.SECURITY_NONE)
-                ? STATE_SECURED
-                : STATE_NONE);
+                        ? STATE_SECURED
+                        : STATE_NONE);
         Drawable drawable = mWifiSld.getCurrent();
-        LOG.d("Getting icon for ap level: " + mAccessPoint.getLevel());
         drawable.setLevel(mAccessPoint.getLevel());
-        drawable.invalidateSelf();
         return drawable;
     }
 }
