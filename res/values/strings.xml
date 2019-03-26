@@ -313,6 +313,10 @@
     <string name="all_applications">Show all apps</string>
     <!-- Default app settings title, which allows user to select defaults for certain application types. [CHAR LIMIT=40] -->
     <string name="default_applications">Default apps</string>
+    <!-- Label for list that shows all permissions [CHAR LIMIT=40] -->
+    <string name="app_permissions">App permissions</string>
+    <!-- Summary of permissions currently granted to apps [CHAR LIMIT=60] -->
+    <string name="app_permissions_summary">Apps using <xliff:g id="apps" example="location">%1$s</xliff:g></string>
     <!-- Applications settings title. If clicked, the user is taken to the list of installed applications. [CHAR LIMIT=40] -->
     <string name="applications_settings">App info</string>
     <!-- Manage applications, text label for button to kill / force stop an application. [CHAR LIMIT=30] -->

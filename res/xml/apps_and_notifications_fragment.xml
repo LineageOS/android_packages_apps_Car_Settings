@@ -29,4 +29,10 @@
         android:key="@string/pk_default_applications_settings_entry"
         android:title="@string/default_applications"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
+        android:key="@string/pk_app_permissions_entry"
+        android:title="@string/app_permissions"
+        settings:controller="com.android.car.settings.applications.AppPermissionsEntryPreferenceController">
+        <intent android:action="android.intent.action.MANAGE_PERMISSIONS"/>
+    </Preference>
 </PreferenceScreen>
