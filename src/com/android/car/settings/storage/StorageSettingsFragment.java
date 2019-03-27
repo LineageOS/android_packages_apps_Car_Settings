@@ -76,9 +76,13 @@ public class StorageSettingsFragment extends SettingsFragment {
      * {@link VolumeInfo}, it is returned. If it is not valid, null is returned.
      */
     @Nullable
-    private static VolumeInfo maybeInitializeVolume(StorageManager sm, Bundle bundle) {
-        String volumeId = bundle.getString(VolumeInfo.EXTRA_VOLUME_ID,
-                VolumeInfo.ID_PRIVATE_INTERNAL);
+    private static VolumeInfo maybeInitializeVolume(StorageManager sm, @Nullable Bundle bundle) {
+        String volumeId = VolumeInfo.ID_PRIVATE_INTERNAL;
+        if (bundle != null) {
+            volumeId = bundle.getString(VolumeInfo.EXTRA_VOLUME_ID,
+                    VolumeInfo.ID_PRIVATE_INTERNAL);
+        }
+
         VolumeInfo volume = sm.findVolumeById(volumeId);
         return isVolumeValid(volume) ? volume : null;
     }
