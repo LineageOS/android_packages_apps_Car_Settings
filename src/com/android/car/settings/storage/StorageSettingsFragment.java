@@ -61,6 +61,7 @@ public class StorageSettingsFragment extends SettingsFragment {
 
         for (StorageUsageBasePreferenceController pc : usagePreferenceControllers) {
             mStorageSettingsManager.registerListener(pc);
+            pc.setVolumeInfo(volume);
         }
     }
 

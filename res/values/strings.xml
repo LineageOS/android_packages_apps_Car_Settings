@@ -727,6 +727,8 @@
     <string name="storage_files">Files</string>
     <!-- Preference label for the System storage section. [CHAR LIMIT=50] -->
     <string name="storage_system">System</string>
+    <!-- Body of dialog informing user about the storage used by the Android System [CHAR LIMIT=NONE]-->
+    <string name="storage_detail_dialog_system">System includes files used to run Android version <xliff:g id="version" example="8.0">%s</xliff:g></string>
     <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
 

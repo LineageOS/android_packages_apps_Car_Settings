@@ -16,12 +16,16 @@
 
 package com.android.car.settings.storage;
 
+import android.app.AlertDialog;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.net.TrafficStats;
+import android.os.Build;
 import android.util.SparseArray;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.ProgressBarPreference;
 
 /**
  * Controller which determines the storage for system category in the storage preference screen.
@@ -52,5 +56,16 @@ public class StorageSystemCategoryPreferenceController extends
                     - otherData.getExternalStats().appBytes;
         }
         return Math.max(TrafficStats.GB_IN_BYTES, usedSizeBytes - attributedSize);
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
+        AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                .setMessage(getContext().getString(R.string.storage_detail_dialog_system,
+                        Build.VERSION.RELEASE))
+                .setPositiveButton(android.R.string.ok, null)
+                .create();
+        alertDialog.show();
+        return true;
     }
 }

@@ -20,6 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.storage.VolumeInfo;
 import android.util.SparseArray;
 
 import com.android.car.settings.R;
@@ -37,6 +38,7 @@ public abstract class StorageUsageBasePreferenceController extends
 
     private static final int PROGRESS_MAX = 100;
 
+    private VolumeInfo mVolumeInfo;
     private CarUserManagerHelper mCarUserManagerHelper;
 
     public StorageUsageBasePreferenceController(Context context, String preferenceKey,
@@ -73,6 +75,14 @@ public abstract class StorageUsageBasePreferenceController extends
 
     CarUserManagerHelper getCarUserManagerHelper() {
         return mCarUserManagerHelper;
+    }
+
+    public VolumeInfo getVolumeInfo() {
+        return mVolumeInfo;
+    }
+
+    public void setVolumeInfo(VolumeInfo volumeInfo) {
+        mVolumeInfo = volumeInfo;
     }
 
     /**
