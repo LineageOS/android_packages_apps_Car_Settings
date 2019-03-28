@@ -142,7 +142,8 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
             new ConfirmPairingCodeDialog.ConfirmPairingCodeListener() {
                 public void onConfirmPairingCode() {
                     try {
-                        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted();
+                        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted(
+                                mBluetoothDevice);
                     } catch (CarNotConnectedException e) {
                         LOG.e(e.getMessage(), e);
                     }
