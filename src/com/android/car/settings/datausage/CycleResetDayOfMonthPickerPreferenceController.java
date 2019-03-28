@@ -18,41 +18,25 @@ package com.android.car.settings.datausage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.net.NetworkPolicyManager;
-import android.net.NetworkTemplate;
-import android.telephony.SubscriptionManager;
-import android.telephony.TelephonyManager;
 import android.text.format.Time;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.PreferenceController;
-import com.android.settingslib.NetworkPolicyEditor;
 
 /**
  * Preference which opens a {@link UsageCycleResetDayOfMonthPickerDialog} in order to pick the date
  * on which the data warning/limit cycle should end.
  */
 public class CycleResetDayOfMonthPickerPreferenceController extends
-        PreferenceController<Preference> implements
+        DataWarningAndLimitBasePreferenceController<Preference> implements
         UsageCycleResetDayOfMonthPickerDialog.ResetDayOfMonthPickedListener {
 
     private static final String CYCLE_PICKER_DIALOG_TAG = "cycle_picker_dialog_tag";
 
-    private final NetworkPolicyEditor mPolicyEditor;
-    private final TelephonyManager mTelephonyManager;
-    private final SubscriptionManager mSubscriptionManager;
-    private NetworkTemplate mNetworkTemplate;
-
     public CycleResetDayOfMonthPickerPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPolicyEditor = new NetworkPolicyEditor(NetworkPolicyManager.from(context));
-        mTelephonyManager = context.getSystemService(TelephonyManager.class);
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
-                DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
     }
 
     @Override
@@ -68,9 +52,6 @@ public class CycleResetDayOfMonthPickerPreferenceController extends
         if (dialog != null) {
             dialog.setResetDayOfMonthPickedListener(/* listener= */ this);
         }
-
-        // Loads the current policies to the policy editor cache.
-        mPolicyEditor.read();
     }
 
     @Override
@@ -78,7 +59,7 @@ public class CycleResetDayOfMonthPickerPreferenceController extends
 
         UsageCycleResetDayOfMonthPickerDialog dialog =
                 UsageCycleResetDayOfMonthPickerDialog.newInstance(
-                        mPolicyEditor.getPolicyCycleDay(mNetworkTemplate));
+                        getNetworkPolicyEditor().getPolicyCycleDay(getNetworkTemplate()));
         dialog.setResetDayOfMonthPickedListener(/* listener= */ this);
         getFragmentController().showDialog(dialog, CYCLE_PICKER_DIALOG_TAG);
         return true;
@@ -86,6 +67,7 @@ public class CycleResetDayOfMonthPickerPreferenceController extends
 
     @Override
     public void onDayOfMonthPicked(int dayOfMonth) {
-        mPolicyEditor.setPolicyCycleDay(mNetworkTemplate, dayOfMonth, new Time().timezone);
+        getNetworkPolicyEditor().setPolicyCycleDay(getNetworkTemplate(), dayOfMonth,
+                new Time().timezone);
     }
 }
