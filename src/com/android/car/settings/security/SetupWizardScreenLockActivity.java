@@ -205,7 +205,8 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
         switch (position) {
             case LockTypeDialogFragment.POSITION_NONE:
                 if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
-                    mLockPatternUtils.clearLock(mCurrLock, mUserId);
+                    byte[] currLockBytes = mCurrLock != null ? mCurrLock.getBytes() : null;
+                    mLockPatternUtils.clearLock(currLockBytes, mUserId);
                 }
                 setResult(ResultCodes.RESULT_NONE);
                 finish();

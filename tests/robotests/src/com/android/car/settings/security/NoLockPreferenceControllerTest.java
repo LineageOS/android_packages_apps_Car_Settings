@@ -96,7 +96,7 @@ public class NoLockPreferenceControllerTest {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
-        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD, TEST_USER);
+        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD.getBytes(), TEST_USER);
     }
 
     @Test
