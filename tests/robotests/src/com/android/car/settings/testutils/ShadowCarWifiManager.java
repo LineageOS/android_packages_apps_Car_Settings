@@ -47,6 +47,11 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
+    public void start() {
+        sInstance.start();
+    }
+
+    @Implementation
     public boolean setWifiEnabled(boolean enabled) {
         return sInstance.setWifiEnabled(enabled);
     }
@@ -54,6 +59,11 @@ public class ShadowCarWifiManager {
     @Implementation
     public boolean isWifiEnabled() {
         return sInstance.isWifiEnabled();
+    }
+
+    @Implementation
+    public boolean isWifiApEnabled() {
+        return sInstance.isWifiApEnabled();
     }
 
     @Implementation
