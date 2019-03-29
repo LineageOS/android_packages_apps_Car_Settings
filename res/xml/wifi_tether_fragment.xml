@@ -16,4 +16,10 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/tether_settings_title_all" />
+                  android:title="@string/tether_settings_title_all" >
+    <SwitchPreference
+        android:key="@string/pk_wifi_tether_auto_off"
+        android:title="@string/wifi_hotspot_auto_off_title"
+        android:summary="@string/wifi_hotspot_auto_off_summary"
+        settings:controller="com.android.car.settings.wifi.WifiTetherAutoOffPreferenceController"/>
+</PreferenceScreen>
