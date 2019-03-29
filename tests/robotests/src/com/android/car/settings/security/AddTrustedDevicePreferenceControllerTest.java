@@ -188,10 +188,17 @@ public class AddTrustedDevicePreferenceControllerTest {
     }
 
     @Test
-    public void onPairingCodeDialogConfirmed_initiateHandshake()
+    public void onPairingCodeDialogConfirmed_handShakeAccepted()
             throws CarNotConnectedException {
+        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback>
+                bleCallBack = ArgumentCaptor.forClass(
+                CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback.class);
+        verify(mMockCarTrustAgentEnrollmentManager).setBleCallback(bleCallBack.capture());
+
+        bleCallBack.getValue().onBleEnrollmentDeviceConnected(mBluetoothDevice);
         mController.mConfirmParingCodeListener.onConfirmPairingCode();
-        verify(mMockCarTrustAgentEnrollmentManager).enrollmentHandshakeAccepted();
+
+        verify(mMockCarTrustAgentEnrollmentManager).enrollmentHandshakeAccepted(mBluetoothDevice);
 
     }
 
