@@ -22,7 +22,6 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -52,7 +51,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
 
     private int mUserId;
     private LockPatternUtils mLockPatternUtils;
-    private String mCurrLock;
+    private byte[] mCurrLock;
     private int mPasswordQuality;
 
     private CarUxRestrictions mCarUxRestrictions = new CarUxRestrictions.Builder(
@@ -72,8 +71,8 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
             args = new Bundle();
         }
         args.putBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD, true);
-        if (!TextUtils.isEmpty(mCurrLock)) {
-            args.putString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrLock);
+        if (mCurrLock != null) {
+            args.putByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrLock);
         }
         fragment.setArguments(args);
 
@@ -190,7 +189,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
     }
 
     @Override
-    public void onLockVerified(String lock) {
+    public void onLockVerified(byte[] lock) {
         mCurrLock = lock;
         // In Setup Wizard, the landing page is always the Pin screen
         BaseFragment fragment = ChooseLockPinPasswordFragment.newPinInstance(
@@ -205,8 +204,7 @@ public class SetupWizardScreenLockActivity extends FragmentActivity implements
         switch (position) {
             case LockTypeDialogFragment.POSITION_NONE:
                 if (mPasswordQuality != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED) {
-                    byte[] currLockBytes = mCurrLock != null ? mCurrLock.getBytes() : null;
-                    mLockPatternUtils.clearLock(currLockBytes, mUserId);
+                    mLockPatternUtils.clearLock(mCurrLock, mUserId);
                 }
                 setResult(ResultCodes.RESULT_NONE);
                 finish();
