@@ -38,9 +38,7 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
     final ConfirmRemoveScreenLockDialog.ConfirmRemoveScreenLockListener mRemoveLockListener =
             () -> {
                 int userId = new CarUserManagerHelper(getContext()).getCurrentProcessUserId();
-                String currentPassword = getCurrentPassword();
-                byte[] passwordBytes = currentPassword != null ? currentPassword.getBytes() : null;
-                new LockPatternUtils(getContext()).clearLock(passwordBytes, userId);
+                new LockPatternUtils(getContext()).clearLock(getCurrentPassword(), userId);
                 getFragmentController().goBack();
             };
 

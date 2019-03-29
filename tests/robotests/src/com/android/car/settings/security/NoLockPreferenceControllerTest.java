@@ -48,7 +48,7 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLockPatternUtils.class})
 public class NoLockPreferenceControllerTest {
 
-    private static final String TEST_CURRENT_PASSWORD = "test_password";
+    private static final byte[] TEST_CURRENT_PASSWORD = "test_password".getBytes();
     private static final int TEST_USER = 10;
 
     private Context mContext;
@@ -96,7 +96,7 @@ public class NoLockPreferenceControllerTest {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
-        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD.getBytes(), TEST_USER);
+        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD, TEST_USER);
     }
 
     @Test

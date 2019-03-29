@@ -34,7 +34,7 @@ public class ChooseLockTypeFragment extends SettingsFragment {
 
     public static final String EXTRA_CURRENT_PASSWORD_QUALITY = "extra_current_password_quality";
 
-    private String mCurrPassword;
+    private byte[] mCurrPassword;
     private int mPasswordQuality;
 
     @Override
@@ -48,7 +48,7 @@ public class ChooseLockTypeFragment extends SettingsFragment {
         super.onAttach(context);
         Bundle args = getArguments();
         if (args != null) {
-            mCurrPassword = args.getString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrPassword = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
             mPasswordQuality = args.getInt(EXTRA_CURRENT_PASSWORD_QUALITY);
         }
 
