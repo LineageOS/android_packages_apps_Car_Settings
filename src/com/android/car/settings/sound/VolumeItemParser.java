@@ -78,7 +78,7 @@ public class VolumeItemParser {
                     if (usage >= 0) {
                         volumeItems.put(usage, new VolumeItemParser.VolumeItem(
                                 usage, rank,
-                                item.getResourceId(R.styleable.carVolumeItems_item_title, 0),
+                                item.getResourceId(R.styleable.carVolumeItems_item_titleText, 0),
                                 item.getResourceId(R.styleable.carVolumeItems_item_icon, 0)));
                         rank++;
                     }
