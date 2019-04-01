@@ -18,7 +18,6 @@ package com.android.car.settings.applications;
 
 import static android.app.Activity.RESULT_OK;
 
-import static com.android.car.settings.applications.ApplicationsUtils.isFallbackPackage;
 import static com.android.car.settings.applications.ApplicationsUtils.isKeepEnabledPackage;
 import static com.android.car.settings.applications.ApplicationsUtils.isProfileOrDeviceOwner;
 
@@ -316,11 +315,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 UserManager.DISALLOW_UNINSTALL_APPS)) {
             LOG.d("Uninstall disabled because user has DISALLOW_UNINSTALL_APPS restriction");
-            return true;
-        }
-
-        if (isFallbackPackage(mPackageName)) {
-            LOG.d("Uninstall disabled because package is a fallback package");
             return true;
         }
 

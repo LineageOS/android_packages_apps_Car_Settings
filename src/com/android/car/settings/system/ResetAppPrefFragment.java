@@ -28,7 +28,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
-import android.webkit.IWebViewUpdateService;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -97,13 +96,6 @@ public class ResetAppPrefFragment extends SettingsFragment {
             }
             INotificationManager notificationManagerService =
                     INotificationManager.Stub.asInterface(notificationManagerServiceBinder);
-            IBinder webViewUpdateServiceBinder = ServiceManager.getService("webviewupdate");
-            if (webViewUpdateServiceBinder == null) {
-                LOG.w("Unable to reset app preferences. Null web view update service");
-                return null;
-            }
-            IWebViewUpdateService webViewUpdateService = IWebViewUpdateService.Stub.asInterface(
-                    webViewUpdateServiceBinder);
 
             // Reset app notifications.
             // Reset disabled apps.
@@ -119,9 +111,7 @@ public class ResetAppPrefFragment extends SettingsFragment {
                 }
                 if (!app.enabled) {
                     if (packageManager.getApplicationEnabledSetting(app.packageName)
-                            == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER
-                            && !isNonEnableableFallback(webViewUpdateService,
-                            app.packageName)) {
+                            == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER) {
                         packageManager.setApplicationEnabledSetting(app.packageName,
                                 PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,
                                 PackageManager.DONT_KILL_APP);
@@ -149,14 +139,6 @@ public class ResetAppPrefFragment extends SettingsFragment {
             ((AppOpsManager) context.getSystemService(Context.APP_OPS_SERVICE)).resetAllModes();
 
             return null;
-        }
-
-        private boolean isNonEnableableFallback(IWebViewUpdateService mWvus, String packageName) {
-            try {
-                return mWvus.isFallbackPackage(packageName);
-            } catch (RemoteException e) {
-                throw new RuntimeException(e);
-            }
         }
 
         @Override
