@@ -20,7 +20,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
-import android.text.TextUtils;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -36,7 +35,7 @@ import com.android.car.settings.common.PreferenceController;
 public abstract class LockTypeBasePreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
-    private String mCurrentPassword;
+    private byte[] mCurrentPassword;
     private int mCurrentPasswordQuality;
 
     public LockTypeBasePreferenceController(Context context, String preferenceKey,
@@ -80,12 +79,12 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
     }
 
     /** Sets the current password so it can be provided in the bundle in the fragment. */
-    public void setCurrentPassword(String currentPassword) {
+    public void setCurrentPassword(byte[] currentPassword) {
         mCurrentPassword = currentPassword;
     }
 
     /** Gets the current password. */
-    protected String getCurrentPassword() {
+    protected byte[] getCurrentPassword() {
         return mCurrentPassword;
     }
 
@@ -98,12 +97,12 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
     protected boolean handlePreferenceClicked(Preference preference) {
         Fragment fragment = fragmentToOpen();
         if (fragment != null) {
-            if (!TextUtils.isEmpty(mCurrentPassword)) {
+            if (mCurrentPassword != null) {
                 Bundle args = fragment.getArguments();
                 if (args == null) {
                     args = new Bundle();
                 }
-                args.putString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrentPassword);
+                args.putByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrentPassword);
                 fragment.setArguments(args);
             }
             getFragmentController().launchFragment(fragment);

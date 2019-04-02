@@ -38,6 +38,7 @@ import com.android.internal.widget.LockPatternView.DisplayMode;
 import com.google.android.collect.Lists;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -66,7 +67,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     private ProgressBar mProgressBar;
     private List<LockPatternView.Cell> mChosenPattern;
     // Existing pattern that user previously set
-    private String mCurrentPattern;
+    private byte[] mCurrentPattern;
     private SavePatternWorker mSavePatternWorker;
 
     /**
@@ -255,13 +256,13 @@ public class ChooseLockPatternFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
-            mCurrentPattern = args.getString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrentPattern = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
 
         if (savedInstanceState != null) {
             mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
-            mChosenPattern = LockPatternUtils.stringToPattern(
-                    savedInstanceState.getString(STATE_CHOSEN_PATTERN));
+            mChosenPattern = LockPatternUtils.byteArrayToPattern(
+                    savedInstanceState.getByteArray(STATE_CHOSEN_PATTERN));
         }
     }
 
@@ -327,7 +328,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(STATE_UI_STAGE, mUiStage.ordinal());
-        outState.putString(STATE_CHOSEN_PATTERN, LockPatternUtils.patternToString(mChosenPattern));
+        outState.putByteArray(STATE_CHOSEN_PATTERN,
+                LockPatternUtils.patternToByteArray(mChosenPattern));
     }
 
     @Override
@@ -610,6 +612,10 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
     @VisibleForTesting
     void onComplete() {
+        if (mCurrentPattern != null) {
+            Arrays.fill(mCurrentPattern, (byte) 0);
+        }
+
         if (mIsInSetupWizard) {
             ((SetupWizardScreenLockActivity) getActivity()).onComplete();
         } else {

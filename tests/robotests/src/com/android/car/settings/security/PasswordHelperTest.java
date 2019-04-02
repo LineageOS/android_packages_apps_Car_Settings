@@ -45,7 +45,7 @@ public class PasswordHelperTest {
      */
     @Test
     public void testValidatePasswordTooShort() {
-        String password = "lov";
+        byte[] password = "lov".getBytes();
         assertThat(mPasswordHelper.validate(password))
                 .isEqualTo(PasswordHelper.TOO_SHORT);
     }
@@ -55,7 +55,7 @@ public class PasswordHelperTest {
      */
     @Test
     public void testValidatePasswordWhiteSpace() {
-        String password = "pass wd";
+        byte[] password = "pass wd".getBytes();
         assertThat(mPasswordHelper.validate(password))
                 .isEqualTo(PasswordHelper.NO_ERROR);
     }
@@ -66,7 +66,7 @@ public class PasswordHelperTest {
      */
     @Test
     public void testValidatePasswordNonAscii() {
-        String password = "1passwýd";
+        byte[] password = "1passwýd".getBytes();
         assertThat(mPasswordHelper.validate(password))
                 .isEqualTo(PasswordHelper.CONTAINS_INVALID_CHARACTERS);
     }
@@ -76,7 +76,7 @@ public class PasswordHelperTest {
      */
     @Test
     public void testValidatePinContainingNonDigits() {
-        String password = "1a34";
+        byte[] password = "1a34".getBytes();
         assertThat(mPinPresenter.validate(password))
                 .isEqualTo(PasswordHelper.CONTAINS_NON_DIGITS);
     }
@@ -86,7 +86,7 @@ public class PasswordHelperTest {
      */
     @Test
     public void testValidatePinWithTooFewDigits() {
-        String password = "12";
+        byte[] password = "12".getBytes();
         assertThat(mPinPresenter.validate(password))
                 .isEqualTo(PasswordHelper.TOO_SHORT);
     }

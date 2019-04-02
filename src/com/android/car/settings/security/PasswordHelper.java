@@ -32,11 +32,6 @@ public class PasswordHelper {
     public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
 
     /**
-     * Allow non-control Latin-1 characters only.
-     */
-    private static final String VALID_CHAR_PATTERN = "^[\\x20-\\x7F ]*$";
-
-    /**
      * Required minimum length of PIN or password.
      */
     static final int MIN_LENGTH = 4;
@@ -66,11 +61,11 @@ public class PasswordHelper {
     /**
      * Validates PIN/Password and returns the validation result.
      *
-     * @param password the raw password the user typed in
+     * @param password the raw bytes for the password the user typed in
      * @return the error code which should be non-zero where there is error. Otherwise
      * {@link #NO_ERROR} should be returned.
      */
-    public int validate(String password) {
+    public int validate(byte[] password) {
         return mIsPin ? validatePin(password) : validatePassword(password);
     }
 
@@ -78,31 +73,35 @@ public class PasswordHelper {
      * Converts error code from validatePassword to an array of messages describing the errors with
      * important message comes first.  The messages are concatenated with a space in between.
      * Please make sure each message ends with a period.
-     * @param errorCode the code returned by {@link #validatePassword(String) validatePassword}
+     * @param errorCode the code returned by {@link #validatePassword(byte[]) validatePassword}
      */
     public List<String> convertErrorCodeToMessages(Context context, int errorCode) {
         return mIsPin ? convertPinErrorCodeToMessages(context, errorCode) :
                 convertPasswordErrorCodeToMessages(context, errorCode);
     }
 
-    private int validatePassword(String password) {
+    private int validatePassword(byte[] password) {
         int errorCode = NO_ERROR;
 
-        if (password.length() < MIN_LENGTH) {
+        if (password.length < MIN_LENGTH) {
             errorCode |= TOO_SHORT;
         }
 
-        if (!password.matches(VALID_CHAR_PATTERN)) {
-            errorCode |= CONTAINS_INVALID_CHARACTERS;
+        // Allow non-control Latin-1 characters only.
+        for (int i = 0; i < password.length; i++) {
+            char c = (char) password[i];
+            if (c < 32 || c > 127) {
+                errorCode |= CONTAINS_INVALID_CHARACTERS;
+                break;
+            }
         }
 
         return errorCode;
     }
 
-    private int validatePin(String pin) {
+    private int validatePin(byte[] pin) {
         int errorCode = NO_ERROR;
-        byte[] pinBytes = pin != null ? pin.getBytes() : null;
-        PasswordMetrics metrics = PasswordMetrics.computeForPassword(pinBytes);
+        PasswordMetrics metrics = PasswordMetrics.computeForPassword(pin);
         int passwordQuality = getPasswordQuality();
 
         if (metrics.length < MIN_LENGTH) {
@@ -115,7 +114,7 @@ public class PasswordHelper {
 
         if (passwordQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX) {
             // Check for repeated characters or sequences (e.g. '1234', '0000', '2468')
-            int sequence = PasswordMetrics.maxLengthSequence(pinBytes);
+            int sequence = PasswordMetrics.maxLengthSequence(pin);
             if (sequence > PasswordMetrics.MAX_ALLOWED_SEQUENCE) {
                 errorCode |= CONTAINS_SEQUENTIAL_DIGITS;
             }
