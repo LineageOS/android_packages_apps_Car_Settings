@@ -67,7 +67,7 @@ public class ConfirmLockPinPasswordFragmentTest {
             CheckLockListener, FragmentController {
 
         @Override
-        public void onLockVerified(String lock) {
+        public void onLockVerified(byte[] lock) {
         }
 
         @Override

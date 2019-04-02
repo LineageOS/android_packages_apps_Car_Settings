@@ -197,7 +197,7 @@ public class ConfirmLockPatternFragment extends BaseFragment {
 
     private void onCheckCompleted(boolean lockMatched) {
         if (lockMatched) {
-            mCheckLockListener.onLockVerified(LockPatternUtils.patternToString(mPattern));
+            mCheckLockListener.onLockVerified(LockPatternUtils.patternToByteArray(mPattern));
         } else {
             mLockPatternView.setEnabled(true);
             mMsgView.setText(R.string.lockpattern_pattern_wrong);

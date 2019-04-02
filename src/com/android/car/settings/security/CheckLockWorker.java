@@ -94,7 +94,7 @@ public class CheckLockWorker extends Fragment implements LockPatternChecker.OnCh
      * Checks lock PIN/password asynchronously.  To receive callback when check is completed,
      * implement {@link Listener} and call {@link #setListener(Listener)}.
      */
-    public final void checkPinPassword(int userId, String password) {
+    public final void checkPinPassword(int userId, byte[] password) {
         if (mCheckInProgress) {
             LOG.w("Check pin/password request issued while one is still running");
             return;

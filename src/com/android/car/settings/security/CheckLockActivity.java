@@ -77,7 +77,7 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
     }
 
     @Override
-    public void onLockVerified(String lock) {
+    public void onLockVerified(byte[] lock) {
         setResult(RESULT_OK);
         finish();
     }
