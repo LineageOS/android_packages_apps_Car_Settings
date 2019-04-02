@@ -30,6 +30,7 @@ import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.DefaultApplicationsSettingsFragment;
 import com.android.car.settings.applications.assist.ManageAssistFragment;
+import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -37,7 +38,6 @@ import com.android.car.settings.display.DisplaySettingsFragment;
 import com.android.car.settings.home.HomepageFragment;
 import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
-import com.android.car.settings.language.LanguagesAndInputFragment;
 import com.android.car.settings.location.LocationScanningFragment;
 import com.android.car.settings.location.LocationSettingsFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
@@ -90,7 +90,7 @@ public class FragmentResolver {
                 return new DataUsageFragment();
 
             case Settings.ACTION_REQUEST_SET_AUTOFILL_SERVICE:
-                return new LanguagesAndInputFragment();
+                return new DefaultAutofillPickerFragment();
 
             case Settings.ACTION_DATA_ROAMING_SETTINGS:
             case Settings.ACTION_NETWORK_OPERATOR_SETTINGS:

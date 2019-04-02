@@ -198,6 +198,7 @@
             <intent-filter android:priority="100">
                 <action android:name="android.settings.REQUEST_SET_AUTOFILL_SERVICE" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="package" />
             </intent-filter>
 
             <intent-filter android:priority="100">
