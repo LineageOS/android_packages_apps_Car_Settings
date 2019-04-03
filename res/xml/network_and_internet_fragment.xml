@@ -26,6 +26,12 @@
         android:title="@string/wifi_settings"
         settings:controller="com.android.car.settings.wifi.WifiEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.wifi.WifiTetherFragment"
+        android:key="@string/pk_wifi_tether_settings_entry"
+        android:title="@string/tether_settings_title_all"
+        android:icon="@drawable/ic_wifi_tethering"
+        settings:controller="com.android.car.settings.wifi.WifiTetherPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.network.MobileNetworkFragment"
         android:icon="@drawable/ic_settings_cellular"
         android:key="@string/pk_mobile_network_settings_entry"
