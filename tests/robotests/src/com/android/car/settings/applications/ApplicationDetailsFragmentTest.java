@@ -46,7 +46,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowActivityManager;
-import com.android.car.settings.testutils.ShadowActivityThread;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowDevicePolicyManager;
@@ -79,7 +78,6 @@ import java.util.Collections;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {
         ShadowActivityManager.class,
-        ShadowActivityThread.class,
         ShadowApplicationPackageManager.class,
         ShadowCarUserManagerHelper.class,
         ShadowDevicePolicyManager.class,
