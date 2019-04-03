@@ -91,4 +91,3 @@ public class AutoDatetimeTogglePreferenceControllerTest {
         assertThat(intentFired.getAction()).isEqualTo(Intent.ACTION_TIME_CHANGED);
     }
 }
-
