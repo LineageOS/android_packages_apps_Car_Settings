@@ -155,8 +155,18 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         return null;
     }
 
+    /**
+     * Returns {@code true} if Wifi is enabled
+     */
     public boolean isWifiEnabled() {
         return mWifiManager.isWifiEnabled();
+    }
+
+    /**
+     * Returns {@code true} if Wifi tethering is enabled
+     */
+    public boolean isWifiApEnabled() {
+        return mWifiManager.isWifiApEnabled();
     }
 
     public int getWifiState() {

@@ -80,7 +80,7 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 }
 
                 @Override
-                public void onTrustRevoked(long handle, boolean success) {
+                public void onEscrowTokenRemoved(long handle) {
                 }
 
                 @Override
@@ -142,7 +142,8 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
             new ConfirmPairingCodeDialog.ConfirmPairingCodeListener() {
                 public void onConfirmPairingCode() {
                     try {
-                        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted();
+                        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted(
+                                mBluetoothDevice);
                     } catch (CarNotConnectedException e) {
                         LOG.e(e.getMessage(), e);
                     }

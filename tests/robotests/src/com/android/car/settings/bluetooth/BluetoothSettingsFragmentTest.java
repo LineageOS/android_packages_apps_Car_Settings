@@ -119,6 +119,7 @@ public class BluetoothSettingsFragmentTest {
     @Test
     public void switchCheckedOff_disablesAdapter() {
         getShadowBluetoothAdapter().setState(STATE_ON);
+        BluetoothAdapter.getDefaultAdapter().enable();
         mFragmentController.setup();
         assertThat(BluetoothAdapter.getDefaultAdapter().isEnabled()).isTrue();
 
@@ -242,6 +243,6 @@ public class BluetoothSettingsFragmentTest {
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
-        return (ShadowBluetoothAdapter) Shadow.extract(BluetoothAdapter.getDefaultAdapter());
+        return Shadow.extract(BluetoothAdapter.getDefaultAdapter());
     }
 }

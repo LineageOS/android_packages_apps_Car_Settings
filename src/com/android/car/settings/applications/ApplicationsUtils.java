@@ -21,12 +21,9 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.UserInfo;
-import android.os.RemoteException;
-import android.os.ServiceManager;
 import android.telecom.DefaultDialerManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
-import android.webkit.IWebViewUpdateService;
 
 import com.android.internal.telephony.SmsApplication;
 
@@ -74,24 +71,6 @@ public class ApplicationsUtils {
             if (cn != null && cn.getPackageName().equals(packageName)) {
                 return true;
             }
-        }
-        return false;
-    }
-
-    /**
-     * Returns {@code true} if the given {@code packageName} is a fallback package as defined by
-     * {@link IWebViewUpdateService}.
-     */
-    public static boolean isFallbackPackage(String packageName) {
-        try {
-            IWebViewUpdateService webviewUpdateService = IWebViewUpdateService.Stub.asInterface(
-                    ServiceManager.getService("webviewupdate"));
-            if (webviewUpdateService != null && webviewUpdateService.isFallbackPackage(
-                    packageName)) {
-                return true;
-            }
-        } catch (RemoteException e) {
-            throw new RuntimeException(e);
         }
         return false;
     }

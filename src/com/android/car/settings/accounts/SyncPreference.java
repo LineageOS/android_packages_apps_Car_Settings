@@ -23,8 +23,8 @@ import android.widget.TextView;
 import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
 
+import com.android.car.apps.common.util.Themes;
 import com.android.car.settings.R;
-import com.android.car.theme.Themes;
 
 /**
  * A preference that represents the state of a sync adapter.

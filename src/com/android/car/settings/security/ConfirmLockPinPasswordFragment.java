@@ -35,6 +35,9 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.internal.widget.LockPatternUtils;
+
+import java.util.Arrays;
 
 /**
  * Fragment for confirming existing lock PIN or password.  The containing activity must implement
@@ -55,7 +58,7 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
     private int mUserId;
     private boolean mIsPin;
     private boolean mIsInSetupWizard;
-    private String mEnteredPassword;
+    private byte[] mEnteredPassword;
 
     /**
      * Factory method for creating fragment in PIN mode.
@@ -204,16 +207,21 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
             @Override
             public void onBackspaceClick() {
                 clearError();
-                String pin = mPasswordField.getText().toString();
-                if (pin.length() > 0) {
-                    mPasswordField.setText(pin.substring(0, pin.length() - 1));
+                byte[] pin = LockPatternUtils.charSequenceToByteArray(mPasswordField.getText());
+                if (pin != null && pin.length > 0) {
+                    mPasswordField.getText().delete(mPasswordField.getSelectionEnd() - 1,
+                            mPasswordField.getSelectionEnd());
+                }
+                if (pin != null) {
+                    Arrays.fill(pin, (byte) 0);
                 }
             }
 
             @Override
             public void onEnterKeyClick() {
-                mEnteredPassword = mPasswordField.getText().toString();
-                if (!TextUtils.isEmpty(mEnteredPassword)) {
+                mEnteredPassword = LockPatternUtils.charSequenceToByteArray(
+                        mPasswordField.getText());
+                if (mEnteredPassword != null) {
                     initCheckLockWorker();
                     mPinPad.setEnabled(false);
                     mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
@@ -233,7 +241,8 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
 
                 initCheckLockWorker();
                 if (!mCheckLockWorker.isCheckInProgress()) {
-                    mEnteredPassword = mPasswordField.getText().toString();
+                    mEnteredPassword = LockPatternUtils.charSequenceToByteArray(
+                            mPasswordField.getText());
                     mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
                 }
                 return true;

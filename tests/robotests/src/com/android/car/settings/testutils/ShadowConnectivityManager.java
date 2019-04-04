@@ -22,6 +22,7 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
+import android.os.Handler;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -34,10 +35,27 @@ import java.util.Map;
 public class ShadowConnectivityManager extends org.robolectric.shadows.ShadowConnectivityManager {
 
     private static int sResetCalledCount = 0;
+
     private final Map<Network, NetworkCapabilities> mCapabilitiesMap = new HashMap<>();
+
+    private int mStartTetheringCalledCount = 0;
+    private int mStopTetheringCalledCount = 0;
+    private int mTetheringType;
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
+    }
+
+    public boolean verifyStartTetheringCalled(int numTimes) {
+        return mStartTetheringCalledCount == numTimes;
+    }
+
+    public boolean verifyStopTetheringCalled(int numTimes) {
+        return mStopTetheringCalledCount == numTimes;
+    }
+
+    public int getTetheringType() {
+        return mTetheringType;
     }
 
     public void addNetworkCapabilities(Network network, NetworkCapabilities capabilities) {
@@ -48,6 +66,19 @@ public class ShadowConnectivityManager extends org.robolectric.shadows.ShadowCon
     @Implementation
     protected NetworkCapabilities getNetworkCapabilities(Network network) {
         return mCapabilitiesMap.get(network);
+    }
+
+    @Implementation
+    public void startTethering(int type, boolean showProvisioningUi,
+            final ConnectivityManager.OnStartTetheringCallback callback, Handler handler) {
+        mTetheringType = type;
+        mStartTetheringCalledCount++;
+    }
+
+    @Implementation
+    public void stopTethering(int type) {
+        mTetheringType = type;
+        mStopTetheringCalledCount++;
     }
 
     @Implementation

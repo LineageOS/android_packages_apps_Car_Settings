@@ -131,6 +131,20 @@ public class BluetoothDevicesGroupPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_filterMatch_addsToPreferenceMap() {
+        when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(
+                Collections.singletonList(mCachedDevice1));
+        when(mFilter.matches(mDevice1)).thenReturn(true);
+
+        mController.refreshUi();
+
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+        assertThat(mController.getPreferenceMap()).containsEntry(devicePreference.getCachedDevice(),
+                devicePreference);
+    }
+
+    @Test
     public void refreshUi_filterMismatch_removesFromGroup() {
         when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(
                 Collections.singletonList(mCachedDevice1));
@@ -145,6 +159,23 @@ public class BluetoothDevicesGroupPreferenceControllerTest {
         mController.refreshUi();
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void refreshUi_filterMismatch_removesFromPreferenceMap() {
+        when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(
+                Collections.singletonList(mCachedDevice1));
+        when(mFilter.matches(mDevice1)).thenReturn(true);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+        assertThat(devicePreference.getCachedDevice()).isEqualTo(mCachedDevice1);
+
+        when(mFilter.matches(mDevice1)).thenReturn(false);
+        mController.refreshUi();
+
+        assertThat(mController.getPreferenceMap()).doesNotContainKey(mCachedDevice1);
     }
 
     @Test
@@ -163,6 +194,20 @@ public class BluetoothDevicesGroupPreferenceControllerTest {
         mController.refreshUi();
 
         assertThat(mPreferenceGroup.isVisible()).isTrue();
+    }
+
+    @Test
+    public void onBluetoothStateChanged_turningOff_clearsPreferences() {
+        when(mCachedDeviceManager.getCachedDevicesCopy()).thenReturn(
+                Collections.singletonList(mCachedDevice1));
+        when(mFilter.matches(mDevice1)).thenReturn(true);
+        mController.refreshUi();
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+
+        mController.onBluetoothStateChanged(BluetoothAdapter.STATE_TURNING_OFF);
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+        assertThat(mController.getPreferenceMap()).isEmpty();
     }
 
     @Test

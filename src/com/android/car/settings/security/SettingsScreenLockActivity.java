@@ -78,13 +78,13 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
     }
 
     @Override
-    public void onLockVerified(String lock) {
+    public void onLockVerified(byte[] lock) {
         Fragment fragment = new ChooseLockTypeFragment();
         Bundle bundle = fragment.getArguments();
         if (bundle == null) {
             bundle = new Bundle();
         }
-        bundle.putString(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
+        bundle.putByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
 
