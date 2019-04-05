@@ -18,14 +18,20 @@ package com.android.car.settings.storage;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.os.Bundle;
 import android.util.SparseArray;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.ProgressBarPreference;
 
 /**
  * Controller which determines the storage for media category in the storage preference screen.
  */
 public class StorageMediaCategoryPreferenceController extends StorageUsageBasePreferenceController {
+
+    public static final String EXTRA_AUDIO_BYTES = "extra_audio_bytes";
+
+    private long mExternalAudioBytes;
 
     public StorageMediaCategoryPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
@@ -38,6 +44,18 @@ public class StorageMediaCategoryPreferenceController extends StorageUsageBasePr
             long usedSizeBytes) {
         StorageAsyncLoader.AppsStorageResult data = result.get(
                 getCarUserManagerHelper().getCurrentProcessUserId());
-        return data.getMusicAppsSize() + data.getExternalStats().audioBytes;
+        mExternalAudioBytes = data.getExternalStats().audioBytes;
+        return data.getMusicAppsSize() + mExternalAudioBytes;
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
+        Bundle bundle = new Bundle();
+        bundle.putLong(EXTRA_AUDIO_BYTES, mExternalAudioBytes);
+        StorageMediaCategoryDetailFragment storageMediaCategoryDetailFragment =
+                StorageMediaCategoryDetailFragment.getInstance();
+        storageMediaCategoryDetailFragment.setArguments(bundle);
+        getFragmentController().launchFragment(storageMediaCategoryDetailFragment);
+        return true;
     }
 }
