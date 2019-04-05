@@ -36,6 +36,7 @@ import com.android.settingslib.location.SettingsInjector;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Injects Location Services into a {@link PreferenceGroup} with a matching key.
@@ -72,12 +73,9 @@ public class LocationServicesPreferenceController extends PreferenceController<P
     @Override
     protected void onCreateInternal() {
         int profileId = UserHandle.USER_CURRENT;
-        if (mSettingsInjector.hasInjectedSettings(profileId)) {
-            // If there are injected settings, get and inject them.
-            List<Preference> injectedSettings = getSortedInjectedPreferences(profileId);
-            for (Preference preference : injectedSettings) {
-                getPreference().addPreference(preference);
-            }
+        List<Preference> injectedSettings = getSortedInjectedPreferences(profileId);
+        for (Preference preference : injectedSettings) {
+            getPreference().addPreference(preference);
         }
     }
 
@@ -104,8 +102,12 @@ public class LocationServicesPreferenceController extends PreferenceController<P
     }
 
     private List<Preference> getSortedInjectedPreferences(int profileId) {
-        List<Preference> sortedInjections = new ArrayList<>(
-                mSettingsInjector.getInjectedSettings(getContext(), profileId));
+        List<Preference> sortedInjections = new ArrayList<>();
+        Map<Integer, List<Preference>> injections =
+                mSettingsInjector.getInjectedSettings(getContext(), profileId);
+        for (Map.Entry<Integer, List<Preference>> entry : injections.entrySet()) {
+            sortedInjections.addAll(entry.getValue());
+        }
         Collections.sort(sortedInjections);
         return sortedInjections;
     }
