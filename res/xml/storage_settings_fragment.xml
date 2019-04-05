@@ -24,6 +24,7 @@
         android:title="@string/storage_music_audio"
         settings:controller="com.android.car.settings.storage.StorageMediaCategoryPreferenceController"/>
     <com.android.car.settings.common.ProgressBarPreference
+        android:fragment="com.android.car.settings.storage.StorageOtherCategoryDetailFragment"
         android:icon="@drawable/ic_storage_apps"
         android:key="@string/pk_storage_other_apps"
         android:layout="@layout/progress_bar_preference"
