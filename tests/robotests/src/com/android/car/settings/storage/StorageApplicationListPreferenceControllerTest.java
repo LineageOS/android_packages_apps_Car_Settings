@@ -83,8 +83,6 @@ public class StorageApplicationListPreferenceControllerTest {
         mController.onDataLoaded(apps);
 
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
-        assertThat(mLogicalPreferenceGroup.getPreference(0).getIcon()).isEqualTo(
-                mContext.getDrawable(R.drawable.test_icon));
         assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getSummary()).isEqualTo(SIZE_STR);
     }
