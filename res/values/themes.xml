@@ -33,7 +33,6 @@
         <item name="quickSettingsIconDisabledColor">?android:attr/colorPrimaryDark</item>
         <item name="suggestionsPrimaryColor">?android:attr/colorPrimaryDark</item>
         <item name="suggestionsSecondaryColor">@android:color/black</item>
-        <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="android:windowEnterAnimation">@anim/trans_fade_in</item>
         <item name="android:windowExitAnimation">@anim/trans_fade_out</item>
         <item name="android:fragmentOpenEnterAnimation">@animator/trans_right_in</item>
