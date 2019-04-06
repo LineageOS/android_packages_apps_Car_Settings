@@ -16,7 +16,8 @@
 
 package com.android.car.settings.storage;
 
-import android.annotation.Nullable;
+import static com.android.car.settings.storage.StorageUtils.maybeInitializeVolume;
+
 import android.annotation.XmlRes;
 import android.content.Context;
 import android.os.Bundle;
@@ -70,26 +71,5 @@ public class StorageSettingsFragment extends SettingsFragment {
         super.onCreate(savedInstanceState);
         LoaderManager loaderManager = LoaderManager.getInstance(this);
         mStorageSettingsManager.startLoading(loaderManager);
-    }
-
-    /**
-     * Tries to initialize a volume with the given bundle. If it is a valid, private, and readable
-     * {@link VolumeInfo}, it is returned. If it is not valid, null is returned.
-     */
-    @Nullable
-    private static VolumeInfo maybeInitializeVolume(StorageManager sm, @Nullable Bundle bundle) {
-        String volumeId = VolumeInfo.ID_PRIVATE_INTERNAL;
-        if (bundle != null) {
-            volumeId = bundle.getString(VolumeInfo.EXTRA_VOLUME_ID,
-                    VolumeInfo.ID_PRIVATE_INTERNAL);
-        }
-
-        VolumeInfo volume = sm.findVolumeById(volumeId);
-        return isVolumeValid(volume) ? volume : null;
-    }
-
-    private static boolean isVolumeValid(VolumeInfo volume) {
-        return (volume != null) && (volume.getType() == VolumeInfo.TYPE_PRIVATE)
-                && volume.isMountedReadable();
     }
 }
