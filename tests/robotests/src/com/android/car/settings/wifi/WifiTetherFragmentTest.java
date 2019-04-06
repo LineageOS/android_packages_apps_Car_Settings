@@ -94,8 +94,6 @@ public class WifiTetherFragmentTest {
         when(mCarWifiManager.isWifiApEnabled()).thenReturn(false);
         ShadowCarWifiManager.setInstance(mCarWifiManager);
 
-        ShadowConnectivityManager mShadowConnectivityManager = getShadowConnectivityManager();
-
         mFragmentController.setup();
         findSwitch(mFragment.requireActivity()).performClick();
 

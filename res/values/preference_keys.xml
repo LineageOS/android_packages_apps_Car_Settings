@@ -62,7 +62,9 @@
     <string name="pk_data_limit_group" translatable="false">data_limit_group</string>
     <string name="pk_data_set_limit" translatable="false">data_set_limit</string>
     <string name="pk_data_limit" translatable="false">data_limit</string>
-    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry</string>
+    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry
+    </string>
+    <string name="pk_wifi_tether_auto_off" translatable="false">wifi_tether_auto_off</string>
 
     <!-- WIFI -->
     <string name="pk_wifi_settings_entry" translatable="false">wifi_settings_entry</string>
@@ -110,6 +112,7 @@
         default_applications_entry
     </string>
     <string name="pk_app_permissions_entry" translatable="false">app_permissions_entry</string>
+    <string name="pk_special_access_entry" translatable="false">special_access_entry</string>
 
     <!-- Applications Settings -->
     <string name="pk_applications_settings_screen" translatable="false">
@@ -171,7 +174,11 @@
 
     <!-- Storage -->
     <string name="pk_storage_music_audio" translatable="false">storage_music_audio</string>
+    <string name="pk_storage_music_audio_details" translatable="false">storage_music_audio_details
+    </string>
     <string name="pk_storage_other_apps" translatable="false">storage_other_apps</string>
+    <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details
+    </string>
     <string name="pk_storage_files" translatable="false">storage_files</string>
     <string name="pk_storage_system" translatable="false">storage_system</string>
 

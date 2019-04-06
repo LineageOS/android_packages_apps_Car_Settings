@@ -200,6 +200,10 @@
     <string name="learn_more">Learn more</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
+    <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
+    <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
+    <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
+    <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
 
     <!-- Bluetooth settings --><skip/>
     <!-- Title of Bluetooth settings pages. [CHAR LIMIT=30] -->
@@ -391,6 +395,8 @@
     </string>
     <!-- Title of preference to add new autofill services. [CHAR_LIMIT=30] -->
     <string name="autofill_add_service">Add service</string>
+    <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
+    <string name="special_access">Special app access</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
@@ -727,6 +733,9 @@
     <!-- Body of dialog informing user about the storage used by the Android System [CHAR LIMIT=NONE]-->
     <string name="storage_detail_dialog_system">System includes files used to run Android version <xliff:g id="version" example="8.0">%s</xliff:g></string>
     <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->
+    <!-- Title for preference on storage usage page that opens audio file browsing. [CHAR LIMIT=50] -->
+    <string name="storage_audio_files_title">Audio files</string>
+   <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
 
     <!-- Account management --><skip/>
