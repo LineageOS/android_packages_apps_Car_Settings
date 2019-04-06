@@ -200,6 +200,10 @@
     <string name="learn_more">Learn more</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
+    <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
+    <string name="wifi_hotspot_auto_off_title">Turn off hotspot automatically</string>
+    <!-- Summary for the toggle to turn off hotspot automatically [CHAR LIMIT=100]-->
+    <string name="wifi_hotspot_auto_off_summary">Wi\u2011Fi hotspot will turn off if no devices are connected</string>
 
     <!-- Bluetooth settings --><skip/>
     <!-- Title of Bluetooth settings pages. [CHAR LIMIT=30] -->
