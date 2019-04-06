@@ -70,12 +70,12 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
         preference.setIcon(getAppIcon());
     }
 
-    private String getAppName() {
+    protected String getAppName() {
         mAppEntry.ensureLabel(getContext());
         return mAppEntry.label;
     }
 
-    private Drawable getAppIcon() {
+    protected Drawable getAppIcon() {
         mApplicationsState.ensureIcon(mAppEntry);
         return mAppEntry.icon;
     }
