@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"የተንቀሳቃሽ ስልክ አውታረ መረብን በመጠቀም ውሂብን ይድረሱበት"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"የተንቀሳቃሽ ስልክ ውሂብ ይጥፋ?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"የውሂብ አጠቃቀም"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"ዋና ውሂብ"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ጥቅም ላይ ውሏል"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ማስጠንቀቂያ"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ገደብ"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ማስጠንቀቂያ / የ<xliff:g id="ID_2">^2</xliff:g> ውሂብ ገደብ"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d ቀናት ቀርተዋል</item>
+      <item quantity="other">%d ቀናት ቀርተዋል</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"ምንም ጊዜ አይቀርም"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"ከ1 ቀን በታች ቀርቷል"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"ከ<xliff:g id="ID_2">^2</xliff:g> በፊት በ<xliff:g id="ID_1">^1</xliff:g> ተዘምኗል"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"ከ<xliff:g id="ID_1">^2</xliff:g> በፊት ተዘምኗል"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"አሁን በ<xliff:g id="ID_1">^1</xliff:g> ተዘምኗል"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"ልክ አሁን ተዘምኗል"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"ዕቅድን ይመልከቱ"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"የአጠቃቀም ዑደት ቀን ዳግም ያስጀምራል"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"የእያንዳንዱ ወር ቀን፦"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"አዘጋጅ"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"የውሂብ ማስጠንቀቂያ እና ገደብ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"የመተግበሪያ ውሂብ አጠቃቀም ዑደት"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"የውሂብ ማስጠንቀቂያ አዘጋጅ"</string>
@@ -93,6 +112,12 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"በራስ-ሰር ወደ የተንቀሳቃሽ ስልክ ውሂብ ቀይር"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"የWi-Fi በይነመረብ መዳረሻ በማይኖርበት ጊዜ የተንቀሳቃሽ ስልክ ውሂብ ይጠቀሙ። የውሂብ ክፍያዎች ሊከፈልባቸው ይችላል።"</string>
     <string name="learn_more" msgid="8214605928933358604">"የበለጠ ለመረዳት"</string>
+    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ብሉቱዝ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ያልተሰየመ መሳሪያ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"የተጣመሩ መሣሪያዎች"</string>
@@ -146,6 +171,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"መተግበሪያዎች እና ማሳወቂያዎች"</string>
     <string name="all_applications" msgid="7798210477486822168">"ሁሉንም መተግበሪያዎች አሳይ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ነባሪ መተግበሪያዎች"</string>
+    <string name="app_permissions" msgid="32799922508313948">"የመተግበሪያ ፈቃዶች"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g>ን የሚጠቀሙ መተግበሪያዎች"</string>
     <string name="applications_settings" msgid="794261395191035632">"የመተግበሪያ መረጃ"</string>
     <string name="force_stop" msgid="2153183697014720520">"በኃይል አቁም"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"በኃይል አቁም?"</string>
@@ -156,6 +183,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"ይህን መተግበሪያ ካሰናከሉት ከዚህ በኋላ Android እና ሌሎች መተግበሪያዎች እንደተፈለገው ላይሠሩ ይችላሉ።"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"መተግበሪያን አሰናክል"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ፈቃዶች"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"ማሳወቂያዎች"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ስሪት፦ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ምንም ፈቃዶች አልተሰጡም"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ምንም ፈቃዶች አልተጠየቁም"</string>
@@ -172,14 +200,15 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"ረዳት መተግበሪያው የማያ ገጹን ይዘቶች እንደ ጽሑፍ እንዲደርሳባቸው ይፍቀዱ"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ቅጽበታዊ ገጽ እይታ ይጠቀሙ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ረዳት መተግበሪያው የማያ ገጹን ምስል እንዲደርስበት ይፍቀዱ"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"የድምፅ ግቤት"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"የራስ-ሙላ አገልግሎት"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ምንም"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ተመርጧል"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ረዳቱ በእርስዎ ስርዓት ላይ በአገልግሎት ላይ ስለሚውሉ መተግበሪያዎች መረጃን ማንበብ ይችላል፣ ይህም በእርስዎ ማያ ገጽ ላይ የሚታይ ወይም በመተግበሪያዎች ውስጥ የሚደረስበት መረጃን ይጨምራል።"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ይህን መተግበሪያ የሚያምኑት መሆንዎን ያረጋግጡ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ራስ-ሙላ&gt;%1$s&lt;/xliff:g&gt; ምን በራስ መሞላት እንደሚችል ለማወቅ በማያ ገጽዎ ላይ ያለውን ነገር ይጠቀማል።"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"አገልግሎት አክል"</string>
+    <!-- no translation found for special_access (5730278220917123811) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"አካባቢ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"የቅርብ ጊዜ የአካባቢ ጥያቄዎች"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ምንም የቅርብ ጊዜ የአካባቢ ጥያቄዎች የሉም"</string>
@@ -320,6 +349,15 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"የተጠቃሚ ስም አርትዕ ያድርጉ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ተጠቃሚዎች"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"ፈቃዶች ለ%1$s ተሰጥቷል"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"ማከማቻ"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"ሙዚቃ እና ኦዲዮ"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"ሌሎች መተግበሪያዎች"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ፋይሎች"</string>
+    <string name="storage_system" msgid="1271345630248014010">"ሥርዓት"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ስርዓት የAndroid ስሪት <xliff:g id="VERSION">%s</xliff:g>ን ለማሄድ ስራ ላይ የዋሉ ፋይሎችን ያካትታል"</string>
+    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
+    <skip />
+    <string name="memory_calculating_size" msgid="1672238502950390033">"በማስላት ላይ…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"መለያዎች"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"መለያ አክል"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ምንም መለያዎች አልታከሉም"</string>
