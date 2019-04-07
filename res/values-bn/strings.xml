@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"মোবাইল নেটওয়ার্ক ব্যবহার করে ডেটা অ্যাক্সেস করুন"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"মোবাইল ডেটা বন্ধ করবেন?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ডেটার ব্যবহার"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"প্রাথমিক ডেটা"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ব্যবহার করা হয়েছে"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> ডেটার বিষয়ে সতর্কতা"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> ডেটার সীমা"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> ডেটার বিষয়ে সতর্কতা / <xliff:g id="ID_2">^2</xliff:g> ডেটার সীমা"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d দিন বাকি আছে</item>
+      <item quantity="other">%d দিন বাকি আছে</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"আর সময় নেই"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"১ দিনের থেকে কম সময় বাকি"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> আগে আপডেট করেছে"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"<xliff:g id="ID_1">^2</xliff:g> আগে আপডেট করা হয়েছে"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> এইমাত্র আপডেট করেছে"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"এইমাত্র আপডেট করা হয়েছে"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"প্ল্যান দেখুন"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"ব্যবহার চক্র আবার সেট করার তারিখ"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"প্রতি মাসের তারিখ:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"সেট করুন"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ডেটা সম্পর্কিত সতর্কতা ও সীমা"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"অ্যাপের ডেটা ব্যবহারের চক্র"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ডেটা সতর্কতা সেট করুন"</string>
@@ -93,6 +112,12 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"নিজে থেকে মোবাইল ডেটাতে চলে যান"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ওয়াই-ফাই-এ ইন্টারনেট অ্যাক্সেস না থাকলে মোবাইল ডেটা ব্যবহার করুন৷ ডেটা ব্যবহারের চার্জ প্রযোজ্য।"</string>
     <string name="learn_more" msgid="8214605928933358604">"আরও জানুন"</string>
+    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নামবিহীন ডিভাইস"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"পেয়ার করা ডিভাইসগুলি"</string>
@@ -146,6 +171,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"অ্যাপ ও বিজ্ঞপ্তি"</string>
     <string name="all_applications" msgid="7798210477486822168">"সব অ্যাপ দেখুন"</string>
     <string name="default_applications" msgid="1558183275638697087">"ডিফল্ট অ্যাপ"</string>
+    <string name="app_permissions" msgid="32799922508313948">"অ্যাপের অনুমতি"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"অ্যাপ <xliff:g id="APPS">%1$s</xliff:g> ব্যবহার করছে"</string>
     <string name="applications_settings" msgid="794261395191035632">"অ্যাপের তথ্য"</string>
     <string name="force_stop" msgid="2153183697014720520">"জোর করে বন্ধ করুন"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"জোর করে বন্ধ করবেন?"</string>
@@ -156,6 +183,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"আপনি এই অ্যাপটি বন্ধ করলে, Android এবং অন্যান্য অ্যাপকে যে কাজের উদ্দেশ্যে তৈরি করা হয়েছিল সেগুলি আর কাজ নাও করতে পারে।"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"অ্যাপ বন্ধ করুন"</string>
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতিগুলি"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"বিজ্ঞপ্তি"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ভার্সন: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"কোনও অনুমতি দেওয়া হয় নি"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"কোনও অনুমতির অনুরোধ জানানো হয়নি"</string>
@@ -172,14 +200,15 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"সহায়তা অ্যাপটিকে স্ক্রিনের কন্টেন্টকে টেক্সট হিসেবে অ্যাক্সেস করার অনুমতি দিন"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"স্ক্রিনশট ব্যবহার করুন"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"সহায়তা অ্যাপটিকে স্ক্রিনের একটি ছবি অ্যাক্সেস করার অনুমতি দিন"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"ভয়েস ইনপুট"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"আপনাআপনি পূরণ করার পরিষেবা"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"কোনওটিই নয়"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"বেছে নেওয়া হয়েছে"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"অ্যাসিস্ট্যান্ট আপনার স্ক্রিনে দেখা যাচ্ছে বা অ্যাপের মধ্যে থাকা অ্যাক্সেসযোগ্য তথ্য সহ, আপনার সিস্টেমে ব্যবহার হওয়া অ্যাপ সম্পর্কিত তথ্য পড়তে পারবে।"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;দেখে নিন এই অ্যাপটি বিশ্বাসযোগ্য কিনা&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google অটোফিল&gt;%1$s&lt;/xliff:g&gt; আপনার স্ক্রিনে দেখানো তথ্য ব্যবহার করে কোনও তথ্য নিজে থেকে পূরণ করা যাবে কিনা তা নির্ণয় করে।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"পরিষেবা যোগ করুন"</string>
+    <!-- no translation found for special_access (5730278220917123811) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
@@ -320,6 +349,16 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"ব্যবহারকারীর নাম এডিট করুন"</string>
     <string name="users_list_title" msgid="770764290290240909">"ব্যবহারকারী"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s কে অনুমতি দেওয়া হয়েছে"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"স্টোরেজ"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"মিউজিক ও অডিও"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"অন্যান্য অ্যাপ"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ফাইল"</string>
+    <string name="storage_system" msgid="1271345630248014010">"সিস্টেম"</string>
+    <!-- no translation found for storage_detail_dialog_system (796365720531622361) -->
+    <skip />
+    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
+    <skip />
+    <string name="memory_calculating_size" msgid="1672238502950390033">"হিসেব করা হচ্ছে…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"অ্যাকাউন্ট"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"অ্যাকাউন্ট যোগ করুন"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"কোনও অ্যাকাউন্ট যোগ করা হয়নি"</string>

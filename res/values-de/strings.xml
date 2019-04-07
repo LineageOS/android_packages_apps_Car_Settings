@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datenzugriff über Mobilfunknetz"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobile Daten deaktivieren?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datennutzung"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Primärdaten"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> verbraucht"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Warnlimit für mobile Datennutzung: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Datenlimit: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Warnlimit für mobile Datennutzung: <xliff:g id="ID_1">^1</xliff:g>/Datenlimit: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="other">Noch %d Tage</item>
+      <item quantity="one">Noch %d Tag</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"Keine Zeit übrig"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Noch weniger als 1 Tag"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"Vor <xliff:g id="ID_2">^2</xliff:g> von <xliff:g id="ID_1">^1</xliff:g> aktualisiert"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"Vor <xliff:g id="ID_1">^2</xliff:g> aktualisiert"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Gerade von <xliff:g id="ID_1">^1</xliff:g> aktualisiert"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Gerade aktualisiert"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"Tarif anzeigen"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Datum für Zurücksetzung des Nutzungszyklus"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum (monatlich):"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Festlegen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datenwarnung &amp; Datenlimit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Datennutzungszyklus der App"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Datenwarnung festlegen"</string>
@@ -93,6 +112,12 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch zur mobilen Datennutzung wechseln"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wenn Internetzugriff über WLAN nicht möglich ist, mobile Daten verwenden. Es können Gebühren für die Datennutzung anfallen."</string>
     <string name="learn_more" msgid="8214605928933358604">"Weitere Informationen"</string>
+    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Unbenanntes Gerät"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Gekoppelte Geräte"</string>
@@ -146,6 +171,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps &amp; Benachrichtigungen"</string>
     <string name="all_applications" msgid="7798210477486822168">"Alle Apps anzeigen"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standard-Apps"</string>
+    <string name="app_permissions" msgid="32799922508313948">"App-Berechtigungen"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Apps, die die Berechtigung \"<xliff:g id="APPS">%1$s</xliff:g>\" verwenden"</string>
     <string name="applications_settings" msgid="794261395191035632">"App-Info"</string>
     <string name="force_stop" msgid="2153183697014720520">"Beenden erzwingen"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Beenden erzwingen?"</string>
@@ -156,6 +183,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Bei Deaktivierung dieser App funktionieren Android und andere Apps möglicherweise nicht mehr ordnungsgemäß."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App deaktivieren"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Berechtigungen"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"Benachrichtigungen"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Keine Berechtigungen gewährt"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Keine Berechtigungen angefordert"</string>
@@ -172,14 +200,15 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Der Assistent-App den Zugriff auf den Bildschirminhalt als Text gestatten"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Screenshot verwenden"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Der Assistent-App den Zugriff auf eine Momentaufnahme deines Bildschirminhalts (Screenshot) gestatten"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Spracheingabe"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"AutoFill-Dienst"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Keine"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Ausgewählt"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Der Assistent kann Informationen zu Apps abrufen, die du auf deinem System verwendest, einschließlich Informationen, die auf deinem Bildschirm angezeigt werden oder die in Apps zugänglich sind."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sorge dafür, dass dieser App vertraut wird.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google AutoFill&gt;%1$s&lt;/xliff:g&gt; entscheidet dann anhand der Inhalte auf dem Display, welche Informationen automatisch ausgefüllt werden können."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Dienst hinzufügen"</string>
+    <!-- no translation found for special_access (5730278220917123811) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Standort"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Keine letzten Standortanfragen"</string>
@@ -320,6 +349,15 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"Nutzername bearbeiten"</string>
     <string name="users_list_title" msgid="770764290290240909">"Nutzer"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Berechtigungen für %1$s"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"Speicher"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Musik &amp; Audio"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"Weitere Apps"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Files"</string>
+    <string name="storage_system" msgid="1271345630248014010">"System"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"System enthält Dateien für die Ausführung der Android-Version <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
+    <skip />
+    <string name="memory_calculating_size" msgid="1672238502950390033">"Wird berechnet…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konten"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Konto hinzufügen"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Keine Konten hinzugefügt"</string>
@@ -382,7 +420,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Falsches Muster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Zeichnen eines Entsperrungsmusters"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Fehler beim Speichern des Musters"</string>
-    <string name="okay" msgid="4589873324439764349">"OK"</string>
+    <string name="okay" msgid="4589873324439764349">"Ok"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Displaysperre entfernen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Dadurch können andere auf dein Konto zugreifen"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN eingeben"</string>

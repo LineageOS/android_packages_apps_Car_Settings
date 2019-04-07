@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan rangkaian mudah alih"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Matikan data mudah alih?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Penggunaan data"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Data utama"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> digunakan"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Amaran data <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Had data <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Amaran data <xliff:g id="ID_1">^1</xliff:g>/Had data <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="other">%d hari lagi</item>
+      <item quantity="one">%d hari lagi</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"Tiada baki masa"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Kurang daripada 1 hari lagi"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"Dikemas kini oleh <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> yang lalu"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"Dikemas kini <xliff:g id="ID_1">^2</xliff:g> yang lalu"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Dikemas kini oleh <xliff:g id="ID_1">^1</xliff:g> sebentar td"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Dikemas kini sebentar tadi"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"Lihat pelan"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tarikh tetapan semula kitaran penggunaan"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Tarikh setiap bulan:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Tetapkan"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Amaran data &amp; had"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Kitaran penggunaan data apl"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Tetapkan amaran data"</string>
@@ -93,6 +112,12 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Beralih kepada data mudah alih secara automatik"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gunakan data mudah alih apabila Wi-Fi tiada akses Internet. Caj penggunaan data mungkin dikenakan."</string>
     <string name="learn_more" msgid="8214605928933358604">"Ketahui lebih lanjut"</string>
+    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Peranti tidak bernama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Peranti gandingan"</string>
@@ -146,6 +171,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apl &amp; pemberitahuan"</string>
     <string name="all_applications" msgid="7798210477486822168">"Tunjukkan semua apl"</string>
     <string name="default_applications" msgid="1558183275638697087">"Apl lalai"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Kebenaran apl"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Apl menggunakan <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Maklumat apl"</string>
     <string name="force_stop" msgid="2153183697014720520">"Henti paksa"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Henti paksa?"</string>
@@ -156,6 +183,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jika anda melumpuhkan apl ini, Android dan apl lain mungkin tidak berfungsi seperti yang dimaksudkan lagi."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Lumpuhkan apl"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Kebenaran"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"Pemberitahuan"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versi: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Tiada kebenaran diberikan"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Tiada kebenaran diminta"</string>
@@ -172,14 +200,15 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Benarkan apl bantu mengakses kandungan skrin sebagai teks"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Gunakan tangkapan skrin"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Benarkan apl bantu mengakses imej skrin"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Input suara"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Perkhidmatan autolengkap"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Tiada"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Dipilih"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Pembantu akan dapat membaca maklumat tentang apl yang sedang digunakan pada sistem anda, termasuk maklumat yang kelihatan pada skrin atau yang dapat diakses dalam apl."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Pastikan anda mempercayai apl ini&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; menggunakan item yang terdapat pada skrin anda untuk menentukan perkara yang boleh dilengkapkan secara automatik."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Tambahkan perkhidmatan"</string>
+    <!-- no translation found for special_access (5730278220917123811) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaharu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tiada permintaan lokasi terbaharu"</string>
@@ -320,6 +349,15 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"Edit nama pengguna"</string>
     <string name="users_list_title" msgid="770764290290240909">"Pengguna"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Kebenaran diberikan kpd %1$s"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"Storan"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Muzik &amp; audio"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"Apl lain"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Fail"</string>
+    <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem termasuk fail yang digunakan untuk menjalankan Android versi <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
+    <skip />
+    <string name="memory_calculating_size" msgid="1672238502950390033">"Mengira…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Akaun"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Tambah akaun"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Tiada akaun yang ditambahkan"</string>
