@@ -16,14 +16,18 @@
 
 package com.android.car.settings.development;
 
+import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import com.android.car.settings.R;
+import com.android.settingslib.development.DevelopmentSettingsEnabler;
 
 /**
  * A utility to set/check development settings mode.
@@ -32,13 +36,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
  * modifications to use CarUserManagerHelper instead of UserManager.
  */
 public class DevelopmentSettingsUtil {
-
-    /**
-     * Local broadcast action that can be used to know when the development settings have been
-     * enabled or disabled.
-     */
-    public static final String DEVELOPMENT_SETTINGS_CHANGED_ACTION =
-            "com.android.car.settings.development.DevelopmentSettingsUtil.SETTINGS_CHANGED";
 
     private DevelopmentSettingsUtil() {
     }
@@ -50,8 +47,11 @@ public class DevelopmentSettingsUtil {
     public static void setDevelopmentSettingsEnabled(Context context, boolean enable) {
         Settings.Global.putInt(context.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enable ? 1 : 0);
-        LocalBroadcastManager.getInstance(context)
-                .sendBroadcast(new Intent(DEVELOPMENT_SETTINGS_CHANGED_ACTION));
+
+        // Used to enable developer options module.
+        ComponentName targetName = ComponentName.unflattenFromString(
+                context.getString(R.string.config_dev_options_module));
+        setDeveloperOptionsEnabledState(context, targetName, showDeveloperOptions(context));
     }
 
     /**
@@ -74,5 +74,35 @@ public class DevelopmentSettingsUtil {
     public static boolean isDeviceProvisioned(Context context) {
         return Settings.Global.getInt(context.getContentResolver(),
                 Settings.Global.DEVICE_PROVISIONED, 0) != 0;
+    }
+
+    private static boolean showDeveloperOptions(Context context) {
+        CarUserManagerHelper carUserManagerHelper = new CarUserManagerHelper(context);
+        boolean showDev = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context)
+                && !isMonkeyRunning();
+        boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
+                || carUserManagerHelper.isCurrentProcessDemoUser();
+        if (UserHandle.MU_ENABLED && !isAdminOrDemo) {
+            showDev = false;
+        }
+
+        return showDev;
+    }
+
+    private static void setDeveloperOptionsEnabledState(Context context, ComponentName component,
+            boolean enabled) {
+        PackageManager pm = context.getPackageManager();
+        int state = pm.getComponentEnabledSetting(component);
+        boolean isEnabled = state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+        if (isEnabled != enabled || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT) {
+            pm.setComponentEnabledSetting(component, enabled
+                            ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                            : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                    PackageManager.DONT_KILL_APP);
+        }
+    }
+
+    private static boolean isMonkeyRunning() {
+        return ActivityManager.isUserAMonkey();
     }
 }

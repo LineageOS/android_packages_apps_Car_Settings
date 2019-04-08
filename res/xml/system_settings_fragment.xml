@@ -52,11 +52,12 @@
         android:title="@string/reset_options_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.development.DeveloperOptionsFragment"
         android:icon="@drawable/ic_settings_development"
         android:key="@string/pk_developer_options_entry"
         android:title="@string/developer_options_settings"
-        settings:controller="com.android.car.settings.system.DeveloperOptionsEntryPreferenceController"/>
+        settings:controller="com.android.car.settings.system.DeveloperOptionsEntryPreferenceController">
+        <intent android:action="android.settings.APPLICATION_DEVELOPMENT_SETTINGS"/>
+    </Preference>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_system_extra_settings"
         settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
