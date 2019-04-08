@@ -22,6 +22,7 @@ import android.graphics.drawable.Drawable;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.applications.ApplicationListItemManager;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.applications.ApplicationsState;
