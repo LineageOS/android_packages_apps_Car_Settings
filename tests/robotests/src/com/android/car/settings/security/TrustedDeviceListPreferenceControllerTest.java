@@ -26,9 +26,9 @@ import static org.mockito.Mockito.when;
 import android.app.admin.DevicePolicyManager;
 import android.car.Car;
 import android.car.trust.CarTrustAgentEnrollmentManager;
+import android.car.trust.TrustedDeviceInfo;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.SharedPreferences;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -53,7 +53,6 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -72,8 +71,12 @@ public class TrustedDeviceListPreferenceControllerTest {
     private LockPatternUtils mLockPatternUtils;
     private CarUserManagerHelper mCarUserManagerHelper;
     private PreferenceGroup mPreferenceGroup;
-    private SharedPreferences mPrefs;
     private TrustedDeviceListPreferenceController mController;
+    private TrustedDeviceInfo mTestDevice1 = new TrustedDeviceInfo(1, "", "");
+    private TrustedDeviceInfo mTestDevice2 = new TrustedDeviceInfo(2, "", "");
+    private TrustedDeviceInfo mTestDevice3 = new TrustedDeviceInfo(3, "", "");
+    List<TrustedDeviceInfo> mUpdatedDevices = new ArrayList<>();
+    List<TrustedDeviceInfo> mDevices = new ArrayList<>();
 
     @Before
     public void setUp() {
@@ -82,19 +85,16 @@ public class TrustedDeviceListPreferenceControllerTest {
         ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
                 mMockCarTrustAgentEnrollmentManager);
         ShadowLockPatternUtils.setInstance(mLockPatternUtils);
-        mPrefs = mContext.getSharedPreferences(
-                mContext.getString(R.string.trusted_device_preference_file_key),
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor preferencesEditor = mPrefs.edit();
-        preferencesEditor.putString("1", "device1");
-        preferencesEditor.putString("2", "device2");
-        preferencesEditor.putString("3", "device3");
-        preferencesEditor.apply();
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceListPreferenceController.class, mPreferenceGroup);
         mController = mPreferenceControllerHelper.getController();
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+        mDevices.add(mTestDevice1);
+        mDevices.add(mTestDevice2);
+        mUpdatedDevices.add(mTestDevice1);
+        mUpdatedDevices.add(mTestDevice2);
+        mUpdatedDevices.add(mTestDevice3);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
@@ -106,12 +106,11 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void onDeviceRemoved_refreshUi() {
-        List<Long> handles = new ArrayList<>(Arrays.asList(1L, 2L, 3L));
         when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(handles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
 
         mController.refreshUi();
 
@@ -121,17 +120,18 @@ public class TrustedDeviceListPreferenceControllerTest {
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
-
-        callBack.getValue().onEscrowTokenRemoved(handles.get(0));
+        mUpdatedDevices.remove(0);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
+        callBack.getValue().onEscrowTokenRemoved(mUpdatedDevices.get(0).getHandle());
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
     }
 
     @Test
     public void onDeviceAdded_refreshUi() {
-        List<Long> handles = new ArrayList<>(Arrays.asList(1L, 2L));
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(handles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
         when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
@@ -139,15 +139,15 @@ public class TrustedDeviceListPreferenceControllerTest {
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
 
-        List<Long> updatedHandles = new ArrayList<>(Arrays.asList(1L, 2L, 3L));
         ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(updatedHandles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
 
-        callBack.getValue().onEscrowTokenActiveStateChanged(updatedHandles.get(0), true);
+        callBack.getValue().onEscrowTokenActiveStateChanged(mUpdatedDevices.get(0).getHandle(),
+                true);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(3);
     }
@@ -157,9 +157,8 @@ public class TrustedDeviceListPreferenceControllerTest {
         when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        List<Long> updatedHandles = new ArrayList<>();
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(updatedHandles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(new ArrayList<>());
 
         mController.refreshUi();
 
@@ -172,9 +171,8 @@ public class TrustedDeviceListPreferenceControllerTest {
         when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        List<Long> updatedHandles = new ArrayList<>(Arrays.asList(1L, 2L, 3L));
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(updatedHandles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
 
         mController.refreshUi();
 
@@ -200,9 +198,8 @@ public class TrustedDeviceListPreferenceControllerTest {
         when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        List<Long> handles = new ArrayList<>(Arrays.asList(1L, 2L));
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(handles);
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
+                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
         mController.refreshUi();
         Preference p = mPreferenceGroup.getPreference(0);
 
@@ -218,17 +215,5 @@ public class TrustedDeviceListPreferenceControllerTest {
 
         verify(mMockCarTrustAgentEnrollmentManager).removeEscrowToken(1,
                 mCarUserManagerHelper.getCurrentProcessUserId());
-    }
-
-    @Test
-    public void onEscrowTokenRemoved_removeHandleFromSharedPreference() {
-        ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
-                ArgumentCaptor.forClass(
-                        CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
-        verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
-
-        callBack.getValue().onEscrowTokenRemoved(1);
-
-        assertThat(mPrefs.getString("1", null)).isNull();
     }
 }
