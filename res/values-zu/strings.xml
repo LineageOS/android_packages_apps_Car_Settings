@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Finyelela kudatha usebenzisa inethiwekhi yeselula"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vala idatha yeselula?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Ukusebenzisa idatha"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Idatha eyinhloko"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> esetshenzisiwe"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"<xliff:g id="ID_1">^1</xliff:g> isexwayiso sedatha"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> umkhawulo wedatha"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> isexwayiso sedatha / <xliff:g id="ID_2">^2</xliff:g> umkhawulo wedatha"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d izinsuku ezisele</item>
+      <item quantity="other">%d izinsuku ezisele</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"Asikho isikhathi esisele"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Kusele ngaphansi kosuku olungu-1"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"Kubuyekezwe i-<xliff:g id="ID_1">^1</xliff:g> nge-<xliff:g id="ID_2">^2</xliff:g> edlule"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"Kubuyekezwe nge-<xliff:g id="ID_1">^2</xliff:g> edlule"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Kubuyekezwe i-<xliff:g id="ID_1">^1</xliff:g> khona manje"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Kubuyekezwe khona manje"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"Buka uhlelo"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Idethi yokuhlela kabusha umjikelezo wokusebenza"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Idethi yenyanga ngayinye:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Setha"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Isexwayiso sedatha nomkhawulo"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Umjikelezo wokusetshenziswa kwedatha yohlelo lokusebenza"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Setha isexwayiso sedatha"</string>
@@ -93,6 +112,12 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Shintshela kudatha yeselula ngokuzenzakalela"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Sebenzisa idatha yeselula uma i-Wi-Fi ingenakho ukufinyelela kwe-inthanethi. Ukusetshenziswa kwedatha kungasebenza."</string>
     <string name="learn_more" msgid="8214605928933358604">"Funda kabanzi"</string>
+    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"I-Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Idivayisi engenalo igama"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Amadivaysi abhanqene"</string>
@@ -146,6 +171,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Izinhlelo zokusebenza nezaziso"</string>
     <string name="all_applications" msgid="7798210477486822168">"Bonisa zonke izinhlelo zokusebenza"</string>
     <string name="default_applications" msgid="1558183275638697087">"Izinhlelo zokusebenza ezizenzakalelayo"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Izimvume zohlelo lokusebenza"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Izinhlelo zokusebenza ezisebenzisa ama-<xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Ulwazi lohlelo lokusebenza"</string>
     <string name="force_stop" msgid="2153183697014720520">"Phoqelela ukuma"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Phoqelela ukumisa?"</string>
@@ -156,6 +183,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Uma ukhubaza lolu hlelo lokusebenza, i-Android nezinye izinhlelo zokusebenza kungenzeka zingasasebenzi njengoba zihlosiwe."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Khubaza uhlelo lokusebenza"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Izimvume"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"Izaziso"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Inguqulo: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Azikho izimvume ezinikiwe"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Azikho izimvume eziceliwe"</string>
@@ -172,14 +200,15 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Vumela uhlelo lokusebenza lokusiza ukuthi lufinyelele kokuqukethwe kwesikrini njengombhalo"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Sebenzisa isithombe-skrini"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Vumela uhlelo lokusebenza lokusiza ukuthi lufinyelele kusithombe sesikrini"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Ukuthayipha ngezwi"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Isevisi yokugcwalisa ngokuzenzakalela"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Lutho"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Ekhethiwe"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Isilekeleli sizokwazi ukufunda ulwazi mayelana nezinhlelo zokusebenza ezisetshenziswayo kusistimu yakho, ezifaka ulwazi olubonakala kusikrini sakho noma ezifinyeleleka ngaphakathi kwezinhlelo zokusebenza."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Qiniseka ukuthi wethemba lolu hlelo lokusebenza&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; isebenzisa okusesikrinini sakho ukunquma okungagcwaliswa ngokuzenzakalela."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Engeza isevisi"</string>
+    <!-- no translation found for special_access (5730278220917123811) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Indawo"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Izicelo zakamuva zendawo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Azikho izicelo zakamuva zendawo"</string>
@@ -320,6 +349,15 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"Hlela igama lomsebenzisi"</string>
     <string name="users_list_title" msgid="770764290290240909">"Abasebenzisi"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Izimvume zinikwe ku-%1$s"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"Isitoreji"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Umculo nomsindo"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"Ezinye izinhlelo zokusebenza"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Amafayela"</string>
+    <string name="storage_system" msgid="1271345630248014010">"Isistimu"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Isistimu ibandakanya amafayela asetshenziswe ukusebenzisa inguqulo ye-Android <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
+    <skip />
+    <string name="memory_calculating_size" msgid="1672238502950390033">"Iyabala…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Ama-akhawunti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Engeza i-akhawunti"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Awekho ama-akhawunti angeziwe"</string>
