@@ -86,13 +86,9 @@ public class StorageMediaCategoryDetailPreferenceControllerTest {
 
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(2);
 
-        assertThat(mLogicalPreferenceGroup.getPreference(0).getIcon()).isEqualTo(
-                mContext.getDrawable(R.drawable.test_icon));
         assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getSummary()).isEqualTo(SIZE_STR);
 
-        assertThat(mLogicalPreferenceGroup.getPreference(1).getIcon()).isEqualTo(
-                mContext.getDrawable(R.drawable.ic_headset));
         assertThat(mLogicalPreferenceGroup.getPreference(1).getTitle()).isEqualTo(
                 mContext.getString(R.string.storage_audio_files_title));
         assertThat(mLogicalPreferenceGroup.getPreference(1).getSummary()).isEqualTo(
