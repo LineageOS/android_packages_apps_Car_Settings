@@ -48,18 +48,29 @@ public class StorageApplicationListPreferenceController extends
 
     @Override
     public void onDataLoaded(ArrayList<ApplicationsState.AppEntry> apps) {
-        getPreference().removeAll();
         for (ApplicationsState.AppEntry appEntry : apps) {
-            getPreference().addPreference(
-                    createPreference(appEntry.label, appEntry.sizeStr, appEntry.icon));
+            addOrUpdatePreference(appEntry);
         }
     }
 
-    protected Preference createPreference(String title, String summary, Drawable icon) {
+    private void addOrUpdatePreference(ApplicationsState.AppEntry appEntry) {
+        Preference preference = getPreference().findPreference(appEntry.info.packageName);
+        if (preference != null) {
+            preference.setSummary(appEntry.sizeStr);
+            return;
+        }
+        getPreference().addPreference(
+                createPreference(appEntry.label, appEntry.sizeStr, appEntry.icon,
+                        appEntry.info.packageName));
+    }
+
+    protected Preference createPreference(String title, String summary, Drawable icon,
+            String key) {
         Preference preference = new Preference(getContext());
         preference.setTitle(title);
         preference.setSummary(summary);
         preference.setIcon(icon);
+        preference.setKey(key);
         return preference;
     }
 }

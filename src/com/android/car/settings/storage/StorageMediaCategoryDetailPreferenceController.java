@@ -33,6 +33,7 @@ public class StorageMediaCategoryDetailPreferenceController extends
         StorageApplicationListPreferenceController {
 
     private long mExternalAudioBytes;
+    private boolean mIsStorageAudioPreferenceAdded;
 
     public StorageMediaCategoryDetailPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
@@ -43,10 +44,14 @@ public class StorageMediaCategoryDetailPreferenceController extends
     @Override
     public void onDataLoaded(ArrayList<ApplicationsState.AppEntry> apps) {
         super.onDataLoaded(apps);
+        if (mIsStorageAudioPreferenceAdded) {
+            return;
+        }
         getPreference().addPreference(
                 createPreference(getContext().getString(R.string.storage_audio_files_title),
                         Long.toString(mExternalAudioBytes),
-                        getContext().getDrawable(R.drawable.ic_headset)));
+                        getContext().getDrawable(R.drawable.ic_headset), /* key= */ null));
+        mIsStorageAudioPreferenceAdded = true;
     }
 
     public void setExternalAudioBytes(long externalAudioBytes) {
