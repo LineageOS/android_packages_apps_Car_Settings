@@ -35,6 +35,25 @@
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Достъп до данните през мобилната мрежа"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Да се изключат ли мобилните данни?"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Пренос на данни"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"Основни данни"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"Използвани данни: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Предупреждение за данните: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Ограничение за данните: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Предупреждение за данните: <xliff:g id="ID_1">^1</xliff:g>/ограничение за данните: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="other">Остават %d дни</item>
+      <item quantity="one">Остава %d ден</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"Няма оставащо време"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"Остава по-малко от 1 ден"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"Актуализирано преди <xliff:g id="ID_2">^2</xliff:g> от <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"Актуализирано преди <xliff:g id="ID_1">^2</xliff:g>"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Актуализирано току-що от <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Актуализирано току-що"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"Преглед на плана"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата на възстановяване на цикъла за използване"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Дата от всеки месец:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Задаване"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Предупреждение и лимит за данните"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Цикъл на използване на данни от прилож."</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Предупр. за данните: Задаване"</string>
@@ -93,6 +112,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматично превключване към мобилни данни"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Използване на мобилни данни, когато Wi‑Fi мрежата няма достъп до интернет. Може да бъдете таксувани за пренос на данни."</string>
     <string name="learn_more" msgid="8214605928933358604">"Научете повече"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка за достъп и тетъринг"</string>
+    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без име"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Сдвоени устройства"</string>
@@ -146,6 +170,8 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Приложения и известия"</string>
     <string name="all_applications" msgid="7798210477486822168">"Показване на всички приложения"</string>
     <string name="default_applications" msgid="1558183275638697087">"Приложения по подразбиране"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Разрешения за приложенията"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"Приложения, използващи <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Информация за приложенията"</string>
     <string name="force_stop" msgid="2153183697014720520">"Принудително спиране"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"Да се спре ли принудително?"</string>
@@ -156,6 +182,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако деактивирате това приложение, Android и други приложения може да спрат да работят както трябва."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране на приложението"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Няма предоставени разрешения"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Няма заявени разрешения"</string>
@@ -172,14 +199,14 @@
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Разрешаване на помощното приложение да осъществява достъп до текстовото съдържание на екрана"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Използване на екранна снимка"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Разрешаване на помощното приложение да осъществява достъп до екранно изображение"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"Гласово въвеждане"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Услуга за автоматично попълване"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Без"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Избрано"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Асистентът ще може да чете информацията за използваните в системата приложения, включително данните, видими на екрана или достъпни в тях."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Уверете се, че имате доверие на това приложение&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Функцията на Google за автоматично попълване&gt;%1$s&lt;/xliff:g&gt; използва това, което е на екрана ви, за да определи какво може да се попълни автоматично."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Добавяне на услуга"</string>
+    <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Скорошни заявки за местоположението"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>
@@ -320,6 +347,14 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"Редактиране на потребит. име"</string>
     <string name="users_list_title" msgid="770764290290240909">"Потребители"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Разрешенията са дадени на %1$s"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"Хранилище"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"Музика и аудио"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"Други приложения"</string>
+    <string name="storage_files" msgid="6382081694781340364">"Файлове"</string>
+    <string name="storage_system" msgid="1271345630248014010">"Система"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Категорията „Система Android“ включва файлове, използвани за изпълняването на версия <xliff:g id="VERSION">%s</xliff:g> на Android"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиофайлове"</string>
+    <string name="memory_calculating_size" msgid="1672238502950390033">"Изчислява се…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Профили"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавяне на профил"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Няма добавени профили"</string>

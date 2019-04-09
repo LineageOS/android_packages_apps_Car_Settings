@@ -25,6 +25,7 @@ import static org.mockito.Mockito.when;
 import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.trust.CarTrustAgentEnrollmentManager;
+import android.car.trust.TrustedDeviceInfo;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
@@ -44,7 +45,7 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCar.class})
@@ -82,9 +83,12 @@ public class TrustedDeviceEntryPreferenceControllerTest {
 
     @Test
     public void testUpdateState() throws CarNotConnectedException {
-        when(mMockCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+        List<TrustedDeviceInfo> devices = new ArrayList<>();
+        devices.add(new TrustedDeviceInfo(1, "", ""));
+        devices.add(new TrustedDeviceInfo(2, "", ""));
+        when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId()))
-                .thenReturn(new ArrayList<>(Arrays.asList(1L, 2L)));
+                .thenReturn(devices);
         mController.refreshUi();
         assertThat(mTrustedDevicePreference.getSummary()).isEqualTo("2 devices");
     }

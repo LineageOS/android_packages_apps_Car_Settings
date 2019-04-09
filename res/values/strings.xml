@@ -996,8 +996,6 @@
         <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> device</item>
         <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> devices</item>
     </plurals>
-    <!-- Preference file key for trusted device -->
-    <string name="trusted_device_preference_file_key" translatable="false">trusted_device_shared_preference</string>
     <!-- Message in dialog which will remind the user what a trusted device can do. [CHAR LIMIT=NONE]-->
     <string name="remove_device_message">Your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g>, they may be able to access this device</string>
     <!-- Confirm button label of confirm pairing code dialog [CHAR LIMIT=30]-->
