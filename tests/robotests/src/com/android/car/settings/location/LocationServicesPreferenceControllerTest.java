@@ -23,11 +23,12 @@ import static org.mockito.Mockito.clearInvocations;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import android.content.Context;
 import android.content.Intent;
 import android.location.SettingInjectorService;
+import android.os.UserHandle;
+import android.util.ArrayMap;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -45,12 +46,15 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class LocationServicesPreferenceControllerTest {
+
+    private static final int PROFILE_ID = UserHandle.USER_CURRENT;
+
     @Mock
     private SettingsInjector mSettingsInjector;
     private Context mContext;
@@ -71,13 +75,12 @@ public class LocationServicesPreferenceControllerTest {
 
     @Test
     public void onCreate_addsInjectedSettingsToPreferenceCategory() {
-        List<Preference> samplePrefs = getSamplePreferences();
-        when(mSettingsInjector.hasInjectedSettings(anyInt())).thenReturn(true);
+        Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
         doReturn(samplePrefs).when(mSettingsInjector)
                 .getInjectedSettings(any(Context.class), anyInt());
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
-        assertThat(mCategory.getPreferenceCount()).isEqualTo(samplePrefs.size());
+        assertThat(mCategory.getPreferenceCount()).isEqualTo(samplePrefs.get(PROFILE_ID).size());
     }
 
     @Test
@@ -101,7 +104,6 @@ public class LocationServicesPreferenceControllerTest {
 
     @Test
     public void preferenceCategory_isVisibleIfThereAreInjectedSettings() {
-        doReturn(true).when(mSettingsInjector).hasInjectedSettings(anyInt());
         doReturn(getSamplePreferences()).when(mSettingsInjector)
                 .getInjectedSettings(any(Context.class), anyInt());
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
@@ -112,15 +114,17 @@ public class LocationServicesPreferenceControllerTest {
 
     @Test
     public void preferenceCategory_isHiddenIfThereAreNoInjectedSettings() {
-        doReturn(false).when(mSettingsInjector).hasInjectedSettings(anyInt());
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
         assertThat(mCategory.isVisible()).isFalse();
     }
 
-    private List<Preference> getSamplePreferences() {
-        return new ArrayList<>(Arrays.asList(
-                new Preference(mContext), new Preference(mContext), new Preference(mContext)));
+    private Map<Integer, List<Preference>> getSamplePreferences() {
+        Map<Integer, List<Preference>> preferences = new ArrayMap<>();
+        preferences.put(PROFILE_ID,
+                Arrays.asList(new Preference(mContext), new Preference(mContext),
+                        new Preference(mContext)));
+        return preferences;
     }
 }
