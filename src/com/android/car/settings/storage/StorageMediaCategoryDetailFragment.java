@@ -26,6 +26,7 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.ApplicationListItemManager;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -69,7 +70,8 @@ public class StorageMediaCategoryDetailFragment extends SettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAppListItemManager.startLoading(ApplicationsState.FILTER_AUDIO);
+        mAppListItemManager.startLoading(ApplicationsState.FILTER_AUDIO,
+                ApplicationsState.SIZE_COMPARATOR);
     }
 
     @Override

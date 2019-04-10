@@ -16,16 +16,59 @@
 
 package com.android.car.settings.applications;
 
+import static com.android.car.settings.storage.StorageUtils.maybeInitializeVolume;
+
+import android.app.Application;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.storage.StorageManager;
+import android.os.storage.VolumeInfo;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.settingslib.applications.ApplicationsState;
 
 /**
  * Lists all installed applications and their summary.
  */
 public class ApplicationsSettingsFragment extends SettingsFragment {
 
+    private ApplicationListItemManager mAppListItemManager;
+
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.applications_settings_fragment;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        Application application = requireActivity().getApplication();
+        StorageManager sm = context.getSystemService(StorageManager.class);
+        VolumeInfo volume = maybeInitializeVolume(sm, getArguments());
+        mAppListItemManager = new ApplicationListItemManager(volume, getLifecycle(),
+                ApplicationsState.getInstance(application));
+        mAppListItemManager.registerListener(
+                use(ApplicationsSettingsPreferenceController.class,
+                        R.string.pk_all_applications_settings_list));
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mAppListItemManager.startLoading(/* AppFilter= */ null, ApplicationsState.ALPHA_COMPARATOR);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAppListItemManager.onFragmentStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mAppListItemManager.onFragmentStop();
     }
 }
