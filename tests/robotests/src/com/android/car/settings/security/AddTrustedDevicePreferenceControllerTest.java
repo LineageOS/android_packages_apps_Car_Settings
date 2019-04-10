@@ -42,7 +42,6 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
-import com.android.internal.widget.LockPatternUtils;
 
 import org.junit.After;
 import org.junit.Before;
@@ -67,8 +66,6 @@ public class AddTrustedDevicePreferenceControllerTest {
     private PreferenceControllerTestHelper<AddTrustedDevicePreferenceController>
             mPreferenceControllerHelper;
     @Mock
-    private LockPatternUtils mLockPatternUtils;
-    @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     private Preference mPreference;
     private AddTrustedDevicePreferenceController mController;
@@ -77,7 +74,6 @@ public class AddTrustedDevicePreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
@@ -97,9 +93,7 @@ public class AddTrustedDevicePreferenceControllerTest {
 
     @Test
     public void refreshUi_hasPassword_preferenceEnabled() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 DISALLOW_BLUETOOTH)).thenReturn(false);
 
@@ -110,9 +104,7 @@ public class AddTrustedDevicePreferenceControllerTest {
 
     @Test
     public void refreshUi_noPassword_preferenceDisabled() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
         when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 DISALLOW_BLUETOOTH)).thenReturn(false);
 
@@ -123,9 +115,7 @@ public class AddTrustedDevicePreferenceControllerTest {
 
     @Test
     public void refreshUi_bluetoothAdapterEnabled_setsEmptySummary() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 DISALLOW_BLUETOOTH)).thenReturn(false);
         BluetoothAdapter.getDefaultAdapter().enable();
@@ -148,9 +138,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     @Test
     public void onPreferenceClicked_hasPassword_enableBluetooth() {
         BluetoothAdapter.getDefaultAdapter().disable();
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         mController.refreshUi();
 
         mPreference.performClick();

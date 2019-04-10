@@ -40,7 +40,6 @@ import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
-import com.android.internal.widget.LockPatternUtils;
 
 import org.junit.After;
 import org.junit.Before;
@@ -63,22 +62,19 @@ import java.util.List;
 @Config(shadows = {ShadowCar.class, ShadowLockPatternUtils.class})
 public class TrustedDeviceListPreferenceControllerTest {
 
+    List<TrustedDeviceInfo> mUpdatedDevices = new ArrayList<>();
+    List<TrustedDeviceInfo> mDevices = new ArrayList<>();
     private Context mContext;
     private PreferenceControllerTestHelper<TrustedDeviceListPreferenceController>
             mPreferenceControllerHelper;
     @Mock
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
-    @Mock
-    private LockPatternUtils mLockPatternUtils;
     private CarUserManagerHelper mCarUserManagerHelper;
     private PreferenceGroup mPreferenceGroup;
     private TrustedDeviceListPreferenceController mController;
-
     private TrustedDeviceInfo mTestDevice1 = new TrustedDeviceInfo(1, "", "");
     private TrustedDeviceInfo mTestDevice2 = new TrustedDeviceInfo(2, "", "");
     private TrustedDeviceInfo mTestDevice3 = new TrustedDeviceInfo(3, "", "");
-    List<TrustedDeviceInfo> mUpdatedDevices = new ArrayList<>();
-    List<TrustedDeviceInfo> mDevices = new ArrayList<>();
 
     @Before
     public void setUp() {
@@ -86,7 +82,6 @@ public class TrustedDeviceListPreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
                 mMockCarTrustAgentEnrollmentManager);
-        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceListPreferenceController.class, mPreferenceGroup);
@@ -108,9 +103,7 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void onDeviceRemoved_refreshUi() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
 
@@ -134,9 +127,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     public void onDeviceAdded_refreshUi() {
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         mController.refreshUi();
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
@@ -156,9 +147,7 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void refreshUi_noDevices_hasPassword_hidesGroup() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
                 Collections.emptyList());
@@ -171,9 +160,7 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void refreshUi_devices_hasPassword_showsGroup() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
 
@@ -185,9 +172,8 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void refreshUi_noPassword_showAuthenticationReminderPreference() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+
 
         mController.refreshUi();
 
@@ -198,9 +184,7 @@ public class TrustedDeviceListPreferenceControllerTest {
 
     @Test
     public void onPreferenceClicked_hasPassword_showDialog() {
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                 mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
         mController.refreshUi();

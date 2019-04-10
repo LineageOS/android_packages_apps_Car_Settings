@@ -16,33 +16,99 @@
 
 package com.android.car.settings.testutils;
 
+import android.app.admin.DevicePolicyManager;
+
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockPatternView;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Shadow for LockPatternUtils.
+ */
 @Implements(LockPatternUtils.class)
 public class ShadowLockPatternUtils {
 
-    private static LockPatternUtils sInstance;
+    public static final int NO_USER = -1;
 
-    public static void setInstance(LockPatternUtils lockPatternUtils) {
-        sInstance = lockPatternUtils;
-    }
+    private static int sPasswordQuality = DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+    private static byte[] sSavedPassword;
+    private static List<LockPatternView.Cell> sSavedPattern;
+    private static byte[] sClearLockCredential;
+    private static int sClearLockUser = NO_USER;
+
 
     @Resetter
     public static void reset() {
-        sInstance = null;
+        sPasswordQuality = DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+        sSavedPassword = null;
+        sSavedPattern = null;
+        sClearLockCredential = null;
+        sClearLockUser = NO_USER;
+    }
+
+    /**
+     * Sets the current password quality that is returned by
+     * {@link LockPatternUtils#getKeyguardStoredPasswordQuality}.
+     */
+    public static void setPasswordQuality(int passwordQuality) {
+        sPasswordQuality = passwordQuality;
+    }
+
+    /**
+     * Returns the password saved by a call to {@link LockPatternUtils#saveLockPassword}.
+     */
+    public static byte[] getSavedPassword() {
+        return sSavedPassword;
+    }
+
+    /**
+     * Returns the saved credential passed in to clear the lock, null if it has not been cleared.
+     */
+    public static byte[] getClearLockCredential() {
+        return sClearLockCredential;
+    }
+
+    /**
+     * Returns the user passed in to clear the lock, {@link #NO_USER} if it has not been cleared.
+     */
+    public static int getClearLockUser() {
+        return sClearLockUser;
+    }
+
+
+    /**
+     * Returns the pattern saved by a call to {@link LockPatternUtils#saveLockPattern}.
+     */
+    public static List<LockPatternView.Cell> getSavedPattern() {
+        return sSavedPattern;
     }
 
     @Implementation
     protected void clearLock(byte[] savedCredential, int userHandle) {
-        sInstance.clearLock(savedCredential, userHandle);
+        sClearLockCredential = savedCredential;
+        sClearLockUser = userHandle;
     }
 
     @Implementation
     protected int getKeyguardStoredPasswordQuality(int userHandle) {
-        return sInstance.getKeyguardStoredPasswordQuality(userHandle);
+        return sPasswordQuality;
+    }
+
+    @Implementation
+    public void saveLockPassword(byte[] password, byte[] savedPassword, int requestedQuality,
+            int userHandler) {
+        sSavedPassword = password;
+    }
+
+    @Implementation
+    public void saveLockPattern(List<LockPatternView.Cell> pattern, byte[] savedPassword,
+            int userId, boolean allowUntrustedChanges) {
+        sSavedPattern = new ArrayList<>(pattern);
     }
 }

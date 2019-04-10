@@ -37,7 +37,6 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
-import com.android.internal.widget.LockPatternUtils;
 
 import org.junit.After;
 import org.junit.Before;
@@ -57,6 +56,8 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCar.class, ShadowLockPatternUtils.class})
 public class AddTrustedDeviceActivityTest {
     private static final String ADDRESS = "00:11:22:33:AA:BB";
+    private static final String BLUETOOTH_DEVICE_KEY = "bluetoothDevice";
+    private static final String CURRENT_HANDLE_KEY = "currentHandle";
     private Context mContext;
     private ActivityController<AddTrustedDeviceActivity> mActivityController;
     private AddTrustedDeviceActivity mActivity;
@@ -64,12 +65,8 @@ public class AddTrustedDeviceActivityTest {
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
     @Mock
     private CarUxRestrictionsManager mMockCarUxRestrictionsManager;
-    @Mock
-    private LockPatternUtils mLockPatternUtils;
     private CarUserManagerHelper mCarUserManagerHelper;
     private BluetoothDevice mBluetoothDevice;
-    private static final String BLUETOOTH_DEVICE_KEY = "bluetoothDevice";
-    private static final String CURRENT_HANDLE_KEY = "currentHandle";
 
     @Before
     public void setUp() {
@@ -79,7 +76,6 @@ public class AddTrustedDeviceActivityTest {
         when(mMockCarUxRestrictionsManager.getCurrentCarUxRestrictions())
                 .thenReturn(noSetupRestrictions);
         ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mMockCarUxRestrictionsManager);
-        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         mContext = RuntimeEnvironment.application;
         ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
                 mMockCarTrustAgentEnrollmentManager);
@@ -87,9 +83,7 @@ public class AddTrustedDeviceActivityTest {
         mBluetoothDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(ADDRESS);
         mActivityController = ActivityController.of(new AddTrustedDeviceActivity());
         mActivity = mActivityController.get();
-        when(mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
+        ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
         mActivityController.create();
     }
 
