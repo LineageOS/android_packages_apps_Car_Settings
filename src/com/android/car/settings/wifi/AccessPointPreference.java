@@ -50,7 +50,7 @@ public class AccessPointPreference extends Preference {
                 .obtainStyledAttributes(sWifiSignalAttributes).getDrawable(0);
         mAccessPoint = accessPoint;
         LOG.d("creating preference for ap: " + mAccessPoint);
-        setKey(WifiUtil.getKey(accessPoint));
+        setKey(accessPoint.getKey());
         setIcon(getAccessPointIcon());
         setTitle(accessPoint.getConfigName());
         String summary = accessPoint.getSummary();
