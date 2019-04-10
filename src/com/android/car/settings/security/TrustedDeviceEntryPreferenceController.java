@@ -65,7 +65,7 @@ public class TrustedDeviceEntryPreferenceController extends PreferenceController
     protected void updateState(Preference preference) {
         int listSize = 0;
         try {
-            listSize = mCarTrustAgentEnrollmentManager.getEnrollmentHandlesForUser(
+            listSize = mCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
                     mCarUserManagerHelper.getCurrentProcessUserId()).size();
         } catch (CarNotConnectedException e) {
             LOG.e(e.getMessage(), e);

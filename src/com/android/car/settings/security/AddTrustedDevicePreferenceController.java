@@ -26,7 +26,6 @@ import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import androidx.annotation.VisibleForTesting;
@@ -37,7 +36,6 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.widget.LockPatternUtils;
-import com.android.settingslib.utils.ThreadUtils;
 
 /**
  * Business logic when user click on add trusted device, a new screen will be shown and user can add
@@ -47,7 +45,6 @@ import com.android.settingslib.utils.ThreadUtils;
 public class AddTrustedDevicePreferenceController extends PreferenceController<Preference> {
 
     private static final Logger LOG = new Logger(AddTrustedDevicePreferenceController.class);
-    private final SharedPreferences mPrefs;
     private final Car mCar;
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final LockPatternUtils mLockPatternUtils;
@@ -86,12 +83,10 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 @Override
                 public void onEscrowTokenActiveStateChanged(long handle, boolean active) {
                     if (active) {
-                        ThreadUtils.postOnMainThread(
-                                () -> mPrefs.edit().putString(String.valueOf(handle),
-                                        mBluetoothDevice.getName()).apply());
+                        // TODO(b/124052887) to show the local device name of the device
                         Toast.makeText(getContext(), getContext().getString(
                                 R.string.trusted_device_success_enrollment_toast,
-                                mBluetoothDevice.getName()), Toast.LENGTH_LONG).show();
+                                mBluetoothDevice.getAddress()), Toast.LENGTH_LONG).show();
                     } else {
                         LOG.d(handle + " has been deactivated");
                     }
@@ -160,9 +155,6 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
         mCar = Car.createCar(context);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
         mLockPatternUtils = new LockPatternUtils(context);
-        mPrefs = context.getSharedPreferences(
-                context.getString(R.string.trusted_device_preference_file_key),
-                Context.MODE_PRIVATE);
         try {
             mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
                     Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
