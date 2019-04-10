@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.annotation.NonNull;
 import android.content.Context;
 import android.os.Handler;
 import android.permission.PermissionControllerManager;
@@ -31,7 +32,7 @@ import java.util.List;
 @Implements(PermissionControllerManager.class)
 public class ShadowPermissionControllerManager {
     @Implementation
-    protected void __constructor__(Context context) {
+    protected void __constructor__(Context context, @NonNull Handler handler) {
         // no nothing, everything is shadowed
     }
 

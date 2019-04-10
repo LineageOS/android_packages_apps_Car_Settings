@@ -23,6 +23,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -119,6 +120,9 @@ public abstract class BluetoothRenameDialogFragment extends DialogFragment imple
         }
         mDeviceNameView.addTextChangedListener(this);
         mDeviceNameView.setOnEditorActionListener(this);
+        mDeviceNameView.setRawInputType(InputType.TYPE_CLASS_TEXT);
+        mDeviceNameView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
         return view;
     }
 
