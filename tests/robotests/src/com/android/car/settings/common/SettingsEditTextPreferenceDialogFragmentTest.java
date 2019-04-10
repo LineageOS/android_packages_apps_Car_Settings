@@ -22,6 +22,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.WindowManager;
 import android.widget.EditText;
 
@@ -65,7 +66,8 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
         mPreference.setKey("key");
         targetFragment.getPreferenceScreen().addPreference(mPreference);
 
-        mFragment = SettingsEditTextPreferenceDialogFragment.newInstance(mPreference.getKey());
+        mFragment = SettingsEditTextPreferenceDialogFragment.newInstance(mPreference.getKey(),
+                InputType.TYPE_CLASS_TEXT);
         mFragment.setTargetFragment(targetFragment, /* requestCode= */ 0);
     }
 
