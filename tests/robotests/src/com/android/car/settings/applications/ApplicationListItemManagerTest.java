@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.storage;
+package com.android.car.settings.applications;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -74,7 +74,7 @@ public class ApplicationListItemManagerTest {
 
     @Test
     public void startLoading_shouldStartNewSession() {
-        mApplicationListItemManager.startLoading(mAppFilter);
+        mApplicationListItemManager.startLoading(mAppFilter, /* param= */ null);
 
         verify(mAppState).newSession(any(), eq(mLifecycle));
     }

@@ -18,31 +18,25 @@ package com.android.car.settings.applications;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
+import android.graphics.drawable.Drawable;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 /** Business logic which populates the applications in this setting. */
 public class ApplicationsSettingsPreferenceController extends
-        PreferenceController<PreferenceGroup> {
-
-    private final PackageManager mPackageManager;
-    private List<Preference> mApplications;
+        PreferenceController<PreferenceGroup> implements
+        ApplicationListItemManager.AppListItemListener {
 
     public ApplicationsSettingsPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mPackageManager = context.getPackageManager();
     }
 
     @Override
@@ -51,40 +45,25 @@ public class ApplicationsSettingsPreferenceController extends
     }
 
     @Override
-    protected void updateState(PreferenceGroup preferenceGroup) {
-        if (mApplications == null) {
-            populateApplicationList();
-        }
-        for (Preference application : mApplications) {
-            preferenceGroup.addPreference(application);
-        }
-    }
-
-    private void populateApplicationList() {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        List<ResolveInfo> resolveInfos = mPackageManager.queryIntentActivities(intent,
-                PackageManager.MATCH_DISABLED_UNTIL_USED_COMPONENTS
-                        | PackageManager.MATCH_DISABLED_COMPONENTS);
-        Collections.sort(resolveInfos, (resolveInfo1, resolveInfo2) -> {
-            String appName1 = resolveInfo1.loadLabel(mPackageManager).toString();
-            String appName2 = resolveInfo2.loadLabel(mPackageManager).toString();
-            return appName1.compareTo(appName2);
-        });
-
-        mApplications = new ArrayList<>(resolveInfos.size());
-        for (ResolveInfo resolveInfo : resolveInfos) {
-            mApplications.add(createApplicationPreference(resolveInfo));
+    public void onDataLoaded(ArrayList<ApplicationsState.AppEntry> apps) {
+        getPreference().removeAll();
+        for (ApplicationsState.AppEntry appEntry : apps) {
+            getPreference().addPreference(
+                    createPreference(appEntry.label, appEntry.sizeStr, appEntry.icon,
+                            appEntry.info.packageName));
         }
     }
 
-    private Preference createApplicationPreference(ResolveInfo resolveInfo) {
+    private Preference createPreference(String title, String summary, Drawable icon,
+            String packageName) {
         Preference preference = new Preference(getContext());
-        preference.setTitle(resolveInfo.loadLabel(mPackageManager));
-        preference.setIcon(resolveInfo.loadIcon(mPackageManager));
-        preference.setOnPreferenceClickListener((p) -> {
+        preference.setTitle(title);
+        preference.setSummary(summary);
+        preference.setIcon(icon);
+        preference.setKey(packageName);
+        preference.setOnPreferenceClickListener(p -> {
             getFragmentController().launchFragment(
-                    ApplicationDetailsFragment.getInstance(resolveInfo.activityInfo.packageName));
+                    ApplicationDetailsFragment.getInstance(packageName));
             return true;
         });
         return preference;
