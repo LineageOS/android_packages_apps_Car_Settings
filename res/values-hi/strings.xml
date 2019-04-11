@@ -112,12 +112,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटा पर अपने आप जाएं"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"जब वाई-फ़ाई के ज़रिए इंटरनेट की सुविधा न हो, तो मोबाइल डेटा इस्तेमाल करें. डेटा के लिए पैसे चुकाने पड़ सकते हैं."</string>
     <string name="learn_more" msgid="8214605928933358604">"ज़्यादा जानें"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने आप बंद करें"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जुड़े हुए डिवाइस"</string>
@@ -201,14 +198,13 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट का इस्तेमाल करना"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक ऐप्लिकेशन को स्क्रीन की इमेज एक्सेस करने दें"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"बोलकर फ़ोन को दिए जाने वाले निर्देश"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोमैटिक भरने की सेवा"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"अपने आप भरने की सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कोई नहीं"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चुना हुआ ऐप्लिकेशन"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant आपके सिस्टम पर इस्तेमाल किए जा रहे ऐप्लिकेशन की जानकारी पढ़ सकेगी. इसमें आपकी स्क्रीन पर दिखाई देने वाली या ऐप्लिकेशन में से एक्सेस करने लायक जानकारी शामिल होगी."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;पक्का कर लें कि आप इस ऐप्लिकेशन पर भरोसा करते हैं&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; आपकी स्क्रीन पर मौजूद चीज़ों का इस्तेमाल करता है ताकि ऑटोमैटिक भरी जाने वाली जानकारी तय कर सके."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा जोड़ें"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन को खास अनुमति"</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>
@@ -226,7 +222,7 @@
     <string name="model_info" msgid="4966408071657934452">"मॉडल"</string>
     <string name="baseband_version" msgid="2370088062235041897">"मोबाइल रेडियो (बेसबैंड वर्शन)"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel का वर्शन"</string>
-    <string name="build_number" msgid="3997326631001009102">"बिल्‍ड नबंर"</string>
+    <string name="build_number" msgid="3997326631001009102">"बिल्‍ड नंबर"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लूटूथ का पता"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध नहीं है"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिति"</string>
@@ -355,8 +351,7 @@
     <string name="storage_files" msgid="6382081694781340364">"फ़ाइलें"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टम में ऐसी फ़ाइलें शामिल हैं जिनका इस्तेमाल Android वर्शन <xliff:g id="VERSION">%s</xliff:g> को चलाने के लिए किया जाता है"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडियो फ़ाइलें"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"गिनती की जा रही है…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>

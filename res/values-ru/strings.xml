@@ -114,12 +114,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматически подключаться к мобильному Интернету"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Использовать мобильный Интернет, когда нет подключения к Интернету по Wi-Fi. Может взиматься плата за передачу данных."</string>
     <string name="learn_more" msgid="8214605928933358604">"Подробнее…"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi автоматически, если к ней не подключено ни одного устройства."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Устройство без названия"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Подключенные устройства"</string>
@@ -211,8 +208,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Ассистент сможет получать данные о программах в вашей системе, в том числе сведения с экрана и из приложений."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Убедитесь, что это приложение безопасно&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; анализирует содержимое экрана и находит поля, которые можно заполнить автоматически."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Добавить службу"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Передача геоданных"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
@@ -363,8 +359,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Файлы"</string>
     <string name="storage_system" msgid="1271345630248014010">"Система"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"В разделе \"Система\" находятся файлы, используемые Android <xliff:g id="VERSION">%s</xliff:g>."</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиофайлы"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Подождите…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Аккаунты"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавить аккаунт"</string>
