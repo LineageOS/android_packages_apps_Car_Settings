@@ -16,9 +16,14 @@
 
 package com.android.car.settings.common;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.preference.EditTextPreference;
@@ -26,14 +31,14 @@ import androidx.preference.EditTextPreference;
 /**
  * Presents a dialog with an {@link EditText} associated with an {@link EditTextPreference}.
  *
- * <p>Note: this is borrowed as-is from androidx.preference.EditTextPreferenceDialogFragmentCompat
- * with updates to formatting to match the project style. CarSettings needs to use custom dialog
- * implementations in order to launch the platform {@link AlertDialog} instead of the one in the
- * support library.
+ * <p>Note: CarSettings needs to use custom dialog implementations in order to launch the platform
+ * {@link AlertDialog} instead of the one in the support library.
  */
-public class SettingsEditTextPreferenceDialogFragment extends SettingsPreferenceDialogFragment {
+public class SettingsEditTextPreferenceDialogFragment extends
+        SettingsPreferenceDialogFragment implements TextView.OnEditorActionListener {
 
     private static final String SAVE_STATE_TEXT = "SettingsEditTextPreferenceDialogFragment.text";
+    private static final String ARG_INPUT_TYPE = "ARG_INPUT_TYPE";
 
     private EditText mEditText;
 
@@ -41,13 +46,15 @@ public class SettingsEditTextPreferenceDialogFragment extends SettingsPreference
 
     /**
      * Returns a new instance of {@link SettingsEditTextPreferenceDialogFragment} for the {@link
-     * EditTextPreference} with the given {@code key}.
+     * EditTextPreference} with the given {@code key} and EditText {@link InputType} specified.
      */
-    public static SettingsEditTextPreferenceDialogFragment newInstance(String key) {
+    public static SettingsEditTextPreferenceDialogFragment newInstance(String key,
+            int inputType) {
         SettingsEditTextPreferenceDialogFragment fragment =
                 new SettingsEditTextPreferenceDialogFragment();
         Bundle b = new Bundle(/* capacity= */ 1);
         b.putString(ARG_KEY, key);
+        b.putInt(ARG_INPUT_TYPE, inputType);
         fragment.setArguments(b);
         return fragment;
     }
@@ -83,6 +90,17 @@ public class SettingsEditTextPreferenceDialogFragment extends SettingsPreference
         mEditText.setText(mText);
         // Place cursor at the end
         mEditText.setSelection(mEditText.getText().length());
+
+        int inputType = getArguments().getInt(ARG_INPUT_TYPE);
+        if (inputType == InputType.TYPE_CLASS_TEXT) {
+            mEditText.setRawInputType(InputType.TYPE_CLASS_TEXT);
+        } else {
+            mEditText.setInputType(InputType.TYPE_CLASS_TEXT
+                    | inputType);
+        }
+
+        mEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
+        mEditText.setOnEditorActionListener(this);
     }
 
     private EditTextPreference getEditTextPreference() {
@@ -104,4 +122,16 @@ public class SettingsEditTextPreferenceDialogFragment extends SettingsPreference
         }
     }
 
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        if (actionId == EditorInfo.IME_ACTION_DONE) {
+            CharSequence newValue = v.getText();
+
+            getEditTextPreference().callChangeListener(newValue);
+            dismiss();
+
+            return true;
+        }
+        return false;
+    }
 }
