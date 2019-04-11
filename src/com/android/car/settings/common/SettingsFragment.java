@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.util.TypedValue;
@@ -243,9 +244,12 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         }
 
         DialogFragment dialogFragment;
-        if (preference instanceof EditTextPreference) {
+        if (preference instanceof PasswordEditTextPreference) {
             dialogFragment = SettingsEditTextPreferenceDialogFragment.newInstance(
-                    preference.getKey());
+                    preference.getKey(), InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        } else if (preference instanceof EditTextPreference) {
+            dialogFragment = SettingsEditTextPreferenceDialogFragment.newInstance(
+                    preference.getKey(), InputType.TYPE_CLASS_TEXT);
         } else if (preference instanceof ListPreference) {
             dialogFragment = SettingsListPreferenceDialogFragment.newInstance(preference.getKey());
         } else {

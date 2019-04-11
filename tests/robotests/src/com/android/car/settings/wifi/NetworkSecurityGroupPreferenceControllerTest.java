@@ -145,26 +145,4 @@ public class NetworkSecurityGroupPreferenceControllerTest {
                         mContext.getString(R.string.pk_add_wifi_password));
         assertThat(passwordTextPreference.isVisible()).isTrue();
     }
-
-    @Test
-    public void testRefreshUi_passwordEmpty_showsDefaultText() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        EditTextPreference passwordTextPreference =
-                (EditTextPreference) mPreferenceGroup.findPreference(
-                        mContext.getString(R.string.pk_add_wifi_password));
-        passwordTextPreference.callChangeListener("");
-        assertThat(passwordTextPreference.getSummary()).isEqualTo(
-                mContext.getString(R.string.default_password_summary));
-    }
-
-    @Test
-    public void testRefreshUi_passwordSet_showsStars() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        EditTextPreference passwordTextPreference =
-                (EditTextPreference) mPreferenceGroup.findPreference(
-                        mContext.getString(R.string.pk_add_wifi_password));
-        passwordTextPreference.callChangeListener("test password");
-        // 13 stars for 13 characters of the password.
-        assertThat(passwordTextPreference.getSummary()).isEqualTo("*************");
-    }
 }

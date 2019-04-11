@@ -18,15 +18,13 @@ package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.text.InputType;
-import android.text.TextUtils;
 
-import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.Arrays;
@@ -56,7 +54,7 @@ public class NetworkSecurityGroupPreferenceController extends
     private final CharSequence[] mSecurityTypeNames;
     private final CharSequence[] mSecurityTypeIds;
     private ListPreference mSecurityTypePreference;
-    private EditTextPreference mPasswordTextPreference;
+    private PasswordEditTextPreference mPasswordTextPreference;
     private int mSelectedSecurityType;
 
     public NetworkSecurityGroupPreferenceController(Context context, String preferenceKey,
@@ -128,35 +126,12 @@ public class NetworkSecurityGroupPreferenceController extends
         return preference;
     }
 
-    private EditTextPreference createPasswordTextPreference() {
-        EditTextPreference preference = new EditTextPreference(getContext());
+    private PasswordEditTextPreference createPasswordTextPreference() {
+        PasswordEditTextPreference preference = new PasswordEditTextPreference(getContext());
         preference.setKey(getContext().getString(R.string.pk_add_wifi_password));
         preference.setTitle(R.string.wifi_password);
         preference.setDialogTitle(R.string.wifi_password);
-        preference.setSummary(R.string.default_password_summary);
-        preference.setPersistent(false);
-        preference.setOnBindEditTextListener((editText) -> {
-            editText.setInputType(InputType.TYPE_CLASS_TEXT
-                    | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        });
-
-        preference.setOnPreferenceChangeListener((pref, newValue) -> {
-            CharSequence value = convertToStars(newValue.toString());
-            if (TextUtils.isEmpty(value)) {
-                value = getContext().getString(R.string.default_password_summary);
-            }
-            pref.setSummary(value);
-            return true;
-        });
 
         return preference;
-    }
-
-    private CharSequence convertToStars(String password) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < password.length(); i++) {
-            builder.append("*");
-        }
-        return builder.toString();
     }
 }
