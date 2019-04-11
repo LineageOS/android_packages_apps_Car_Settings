@@ -99,6 +99,16 @@
     <string name="data_usage_limit_dialog_title">Limiting data usage</string>
     <!-- Body of dialog shown before user limits mobile data usage. [CHAR LIMIT=NONE] -->
     <string name="data_usage_limit_dialog_mobile" >Your vehicle\u2019s head unit will turn off mobile data once it reaches the limit you set.\n\nSince data usage is measured by the head unit, and your carrier may account for usage differently, consider setting a conservative limit.</string>
+    <!-- Title of dialog for editing data usage warning in bytes. [CHAR LIMIT=48] -->
+    <string name="data_usage_warning_editor_title">Set data usage warning</string>
+    <!-- Title of dialog for editing data usage limit in bytes. [CHAR LIMIT=48] -->
+    <string name="data_usage_limit_editor_title">Set data usage limit</string>
+    <!-- Positive button title for data usage bytes threshold picker, confirming that changes should be saved. [CHAR LIMIT=32] -->
+    <string name="usage_bytes_threshold_picker_positive_button">Set</string>
+    <string-array name="bytes_picker_sizes" translatable="false">
+        <item>@*android:string/megabyteShort</item>
+        <item>@*android:string/gigabyteShort</item>
+    </string-array>
 
     <!-- wifi settings--><skip/>
     <!-- Used in the 1st-level settings screen to go to the 2nd-level settings screen  [CHAR LIMIT=20]-->
