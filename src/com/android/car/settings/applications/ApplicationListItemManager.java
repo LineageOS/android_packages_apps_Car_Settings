@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.car.settings.storage;
+package com.android.car.settings.applications;
 
 import android.graphics.drawable.Drawable;
 import android.os.storage.VolumeInfo;
@@ -23,6 +23,7 @@ import androidx.lifecycle.Lifecycle;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -45,11 +46,11 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     private final ApplicationsState mAppState;
     private final List<AppListItemListener> mAppListItemListeners = new ArrayList<>();
 
-    private ApplicationsState.AppFilter mCompositeFilter;
     private ApplicationsState.Session mSession;
     private ApplicationsState.AppFilter mAppFilter;
+    private Comparator<ApplicationsState.AppEntry> mAppEntryComparator;
 
-    ApplicationListItemManager(VolumeInfo volumeInfo, Lifecycle lifecycle,
+    public ApplicationListItemManager(VolumeInfo volumeInfo, Lifecycle lifecycle,
             ApplicationsState appState) {
         mVolumeInfo = volumeInfo;
         mLifecycle = lifecycle;
@@ -72,12 +73,17 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
         mAppListItemListeners.remove(appListItemListener);
     }
 
-
-    void onFragmentStart() {
+    /**
+     * Resumes the session on fragment start.
+     */
+    public void onFragmentStart() {
         mSession.onResume();
     }
 
-    void onFragmentStop() {
+    /**
+     * Pause the session on fragment stop.
+     */
+    public void onFragmentStop() {
         mSession.onPause();
     }
 
@@ -87,9 +93,12 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
      * Once the list is ready {@link AppListItemListener#onDataLoaded} method will be called.
      *
      * @param appFilter based on which the list of applications will be filtered before returning.
+     * @param appEntryComparator comparator based on which the application list will be sorted.
      */
-    public void startLoading(ApplicationsState.AppFilter appFilter) {
+    public void startLoading(ApplicationsState.AppFilter appFilter,
+            Comparator<ApplicationsState.AppEntry> appEntryComparator) {
         mAppFilter = appFilter;
+        mAppEntryComparator = appEntryComparator;
         mSession = mAppState.newSession(this, mLifecycle);
     }
 
@@ -150,6 +159,9 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     }
 
     ApplicationsState.AppFilter getCompositeFilter(String volumeUuid) {
+        if (mAppFilter == null) {
+            return null;
+        }
         ApplicationsState.AppFilter filter = new ApplicationsState.VolumeFilter(volumeUuid);
         filter = new ApplicationsState.CompoundFilter(mAppFilter, filter);
         return filter;
@@ -160,12 +172,13 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
 
         filterObj = new ApplicationsState.CompoundFilter(filterObj,
                 ApplicationsState.FILTER_NOT_HIDE);
-        mCompositeFilter = getCompositeFilter(mVolumeInfo.getFsUuid());
-        filterObj = new ApplicationsState.CompoundFilter(filterObj, mCompositeFilter);
+        ApplicationsState.AppFilter compositeFilter = getCompositeFilter(mVolumeInfo.getFsUuid());
+        if (compositeFilter != null) {
+            filterObj = new ApplicationsState.CompoundFilter(filterObj, compositeFilter);
+        }
         filterObj = new ApplicationsState.CompoundFilter(filterObj,
                 ApplicationsState.FILTER_DOWNLOADED_AND_LAUNCHER_AND_INSTANT);
         ApplicationsState.AppFilter finalFilterObj = filterObj;
-        mSession.rebuild(finalFilterObj, ApplicationsState.SIZE_COMPARATOR, /* foreground = */
-                false);
+        mSession.rebuild(finalFilterObj, mAppEntryComparator, /* foreground= */ false);
     }
 }

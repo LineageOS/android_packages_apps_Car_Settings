@@ -69,7 +69,8 @@ public class AppsStorageStatsManagerTest {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
         mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
-        mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID);
+        mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, false,
+                false);
         verify(mLoaderManager).restartLoader(eq(1), eq(Bundle.EMPTY),
                 mCallbacksArgumentCaptor.capture());
     }
@@ -85,8 +86,8 @@ public class AppsStorageStatsManagerTest {
 
         mCallbacksArgumentCaptor.getValue().onLoadFinished(null, storageStats);
 
-        verify(mCallback1).onDataLoaded(storageStats);
-        verify(mCallback2).onDataLoaded(storageStats);
+        verify(mCallback1).onDataLoaded(storageStats, false, false);
+        verify(mCallback2).onDataLoaded(storageStats, false, false);
     }
 
     @Test
@@ -100,8 +101,8 @@ public class AppsStorageStatsManagerTest {
 
         mCallbacksArgumentCaptor.getValue().onLoadFinished(null, storageStats);
 
-        verify(mCallback1).onDataLoaded(storageStats);
-        verify(mCallback2, never()).onDataLoaded(storageStats);
+        verify(mCallback1).onDataLoaded(storageStats, false, false);
+        verify(mCallback2, never()).onDataLoaded(storageStats, false, false);
     }
 
     @Test
@@ -113,7 +114,41 @@ public class AppsStorageStatsManagerTest {
         StorageStatsSource.AppStorageStats storageStats =
                 new StorageStatsSource.AppStorageStatsImpl(stats);
 
-        verify(mCallback1, never()).onDataLoaded(storageStats);
-        verify(mCallback2, never()).onDataLoaded(storageStats);
+        verify(mCallback1, never()).onDataLoaded(storageStats, false, false);
+        verify(mCallback2, never()).onDataLoaded(storageStats, false, false);
+    }
+
+    @Test
+    public void callback_cachedCleared_listenerOnDataLoadedCalled() throws Exception {
+        mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
+        mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, true,
+                false);
+
+        mAppsStorageStatsManager.registerListener(mCallback1);
+        mAppsStorageStatsManager.registerListener(mCallback2);
+
+        StorageStats stats = new StorageStats();
+        StorageStatsSource.AppStorageStats storageStats =
+                new StorageStatsSource.AppStorageStatsImpl(stats);
+
+        verify(mCallback1, never()).onDataLoaded(storageStats, true, false);
+        verify(mCallback2, never()).onDataLoaded(storageStats, true, false);
+    }
+
+    @Test
+    public void callback_userDataCleared_listenerOnDataLoadedCalled() throws Exception {
+        mAppsStorageStatsManager = new AppsStorageStatsManager(mContext);
+        mAppsStorageStatsManager.startLoading(mLoaderManager, mApplicationInfo, USER_ID, false,
+                true);
+
+        mAppsStorageStatsManager.registerListener(mCallback1);
+        mAppsStorageStatsManager.registerListener(mCallback2);
+
+        StorageStats stats = new StorageStats();
+        StorageStatsSource.AppStorageStats storageStats =
+                new StorageStatsSource.AppStorageStatsImpl(stats);
+
+        verify(mCallback1, never()).onDataLoaded(storageStats, false, true);
+        verify(mCallback2, never()).onDataLoaded(storageStats, false, true);
     }
 }

@@ -44,6 +44,8 @@ public class StorageApplicationListPreferenceControllerTest {
     private static final int UID = 12;
     private static final String LABEL = "label";
     private static final String SIZE_STR = "12.34 MB";
+    private static final String UPDATED_SIZE_STR = "15.34 MB";
+    private static final String PACKAGE_NAME = "com.google.packageName";
 
     private Context mContext;
     private LogicalPreferenceGroup mLogicalPreferenceGroup;
@@ -78,6 +80,7 @@ public class StorageApplicationListPreferenceControllerTest {
         appEntry.label = LABEL;
         appEntry.sizeStr = SIZE_STR;
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        appEntry.info.packageName = PACKAGE_NAME;
         apps.add(appEntry);
 
         mController.onDataLoaded(apps);
@@ -85,5 +88,38 @@ public class StorageApplicationListPreferenceControllerTest {
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
         assertThat(mLogicalPreferenceGroup.getPreference(0).getSummary()).isEqualTo(SIZE_STR);
+    }
+
+    @Test
+    public void onDataLoaded_updatePreference_hasOnePreferenceWithUpdatedValues() {
+        ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
+        ApplicationInfo appInfo = new ApplicationInfo();
+        appInfo.uid = UID;
+        appInfo.sourceDir = SOURCE;
+
+        ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
+                1234L);
+        appEntry.label = LABEL;
+        appEntry.sizeStr = SIZE_STR;
+        appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        appEntry.info.packageName = PACKAGE_NAME;
+        apps.add(appEntry);
+
+        mController.onDataLoaded(apps);
+
+        apps.clear();
+        appEntry = new ApplicationsState.AppEntry(mContext, appInfo, 1234L);
+        appEntry.label = LABEL;
+        appEntry.sizeStr = UPDATED_SIZE_STR;
+        appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        appEntry.info.packageName = PACKAGE_NAME;
+        apps.add(appEntry);
+
+        mController.onDataLoaded(apps);
+
+        assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        assertThat(mLogicalPreferenceGroup.getPreference(0).getTitle()).isEqualTo(LABEL);
+        assertThat(mLogicalPreferenceGroup.getPreference(0).getSummary()).isEqualTo(
+                UPDATED_SIZE_STR);
     }
 }

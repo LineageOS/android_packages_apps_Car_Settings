@@ -42,14 +42,18 @@ public class AppsStorageStatsManager {
     public interface Callback {
         /**
          * Called when the data is successfully loaded from {@link AppsStorageStatsResult}. The
-         * result can be {@link null} if the package is removed during loading.
+         * result can be {@link null} if the package is removed during loading. Also notifies if
+         * this callback was initiated when cache or data is cleared or not.
          */
-        void onDataLoaded(StorageStatsSource.AppStorageStats data);
+        void onDataLoaded(StorageStatsSource.AppStorageStats data, boolean cacheCleared,
+                boolean dataCleared);
     }
 
     private final Context mContext;
     private ApplicationInfo mInfo;
     private int mUserId;
+    private boolean mCacheCleared;
+    private boolean mDataCleared;
     private List<Callback> mAppsStorageStatsListeners = new ArrayList<>();
 
     AppsStorageStatsManager(Context context) {
@@ -75,15 +79,18 @@ public class AppsStorageStatsManager {
     /**
      * Start calculating the storage stats.
      */
-    public void startLoading(LoaderManager loaderManager, ApplicationInfo info, int userId) {
+    public void startLoading(LoaderManager loaderManager, ApplicationInfo info, int userId,
+            boolean cacheCleared, boolean dataCleared) {
         mInfo = info;
         mUserId = userId;
+        mCacheCleared = cacheCleared;
+        mDataCleared = dataCleared;
         loaderManager.restartLoader(/* id= */ 1, Bundle.EMPTY, new AppsStorageStatsResult());
     }
 
     private void onAppsStorageStatsLoaded(StorageStatsSource.AppStorageStats data) {
         for (Callback listener : mAppsStorageStatsListeners) {
-            listener.onDataLoaded(data);
+            listener.onDataLoaded(data, mCacheCleared, mDataCleared);
         }
     }
 
