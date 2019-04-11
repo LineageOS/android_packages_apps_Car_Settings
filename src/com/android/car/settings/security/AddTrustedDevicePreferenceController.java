@@ -107,12 +107,6 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 @Override
                 public void onBleEnrollmentDeviceConnected(BluetoothDevice device) {
                     mBluetoothDevice = device;
-                    try {
-                        mCarTrustAgentEnrollmentManager.initiateEnrollmentHandshake(
-                                mBluetoothDevice);
-                    } catch (CarNotConnectedException e) {
-                        LOG.e(e.getMessage());
-                    }
                 }
 
                 @Override
