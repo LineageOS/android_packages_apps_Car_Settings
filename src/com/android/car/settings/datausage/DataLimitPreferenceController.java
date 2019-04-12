@@ -32,15 +32,22 @@ import androidx.preference.TwoStatePreference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.datausage.UsageBytesThresholdPickerDialog.BytesThresholdPickedListener;
 
 /** Controls setting the data limit threshold. */
 public class DataLimitPreferenceController extends
         DataWarningAndLimitBasePreferenceController<PreferenceGroup> implements
-        Preference.OnPreferenceChangeListener, ConfirmationDialogFragment.ConfirmListener {
+        Preference.OnPreferenceChangeListener, ConfirmationDialogFragment.ConfirmListener,
+        Preference.OnPreferenceClickListener {
 
     @VisibleForTesting
     static final float LIMIT_BYTES_MULTIPLIER = 1.2f;
     private static final long GIB_IN_BYTES = 1024 * 1024 * 1024;
+
+    private final BytesThresholdPickedListener mThresholdPickedListener = numBytes -> {
+        getNetworkPolicyEditor().setPolicyLimitBytes(getNetworkTemplate(), numBytes);
+        refreshUi();
+    };
 
     private TwoStatePreference mEnableDataLimitPreference;
     private Preference mSetDataLimitPreference;
@@ -62,12 +69,20 @@ public class DataLimitPreferenceController extends
         mEnableDataLimitPreference.setOnPreferenceChangeListener(this);
         mSetDataLimitPreference = getPreference().findPreference(
                 getContext().getString(R.string.pk_data_limit));
+        mSetDataLimitPreference.setOnPreferenceClickListener(this);
 
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         ConfirmationDialogFragment.TAG),
                 /* confirmListener= */ this,
                 /* rejectListener= */ null);
+
+        UsageBytesThresholdPickerDialog dialog =
+                (UsageBytesThresholdPickerDialog) getFragmentController().findDialogByTag(
+                        UsageBytesThresholdPickerDialog.TAG);
+        if (dialog != null) {
+            dialog.setBytesThresholdPickedListener(mThresholdPickedListener);
+        }
     }
 
     @Override
@@ -119,5 +134,15 @@ public class DataLimitPreferenceController extends
 
         getNetworkPolicyEditor().setPolicyLimitBytes(getNetworkTemplate(), limitBytes);
         refreshUi();
+    }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        UsageBytesThresholdPickerDialog dialog = UsageBytesThresholdPickerDialog.newInstance(
+                R.string.data_usage_limit_editor_title,
+                getNetworkPolicyEditor().getPolicyLimitBytes(getNetworkTemplate()));
+        dialog.setBytesThresholdPickedListener(mThresholdPickedListener);
+        getFragmentController().showDialog(dialog, UsageBytesThresholdPickerDialog.TAG);
+        return true;
     }
 }
