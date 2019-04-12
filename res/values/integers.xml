@@ -40,6 +40,9 @@
     <!-- Maximum ems value for all settings buttons -->
     <integer name="button_max_ems">9</integer>
 
+    <!-- Ems value for data usage bytes threshold picker -->
+    <integer name="data_usage_bytes_threshold_ems">15</integer>
+
     <!-- Integers for Setup Wizard -->
 
     <!-- Weight of the main content in the illustration_layout -->

@@ -121,8 +121,10 @@
 
     <!-- Data usage -->
     <dimen name="usage_number_text_size">36sp</dimen>
-    <dimen name="usage_cycler_reset_day_of_month_picker_margin_vertical">@*android:dimen/car_padding_2</dimen>
-    <dimen name="usage_cycler_reset_day_of_month_picker_text_margin_end">@*android:dimen/car_padding_5</dimen>
+    <dimen name="usage_pickers_margin_vertical">@*android:dimen/car_padding_2</dimen>
+    <dimen name="usage_pickers_text_margin_end">@*android:dimen/car_padding_5</dimen>
+    <dimen name="usage_bytes_picker_margin_horizontal">@*android:dimen/car_padding_5</dimen>
+    <dimen name="usage_bytes_picker_edit_text_min_width">360dp</dimen>
 
     <!-- Dimens for Setup Wizard -->
 

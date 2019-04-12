@@ -27,14 +27,19 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.datausage.UsageBytesThresholdPickerDialog.BytesThresholdPickedListener;
 import com.android.settingslib.net.DataUsageController;
 
 /** Controls setting the data warning threshold. */
 public class DataWarningPreferenceController extends
         DataWarningAndLimitBasePreferenceController<PreferenceGroup> implements
-        Preference.OnPreferenceChangeListener {
+        Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private final DataUsageController mDataUsageController;
+    private final BytesThresholdPickedListener mThresholdPickedListener = numBytes -> {
+        getNetworkPolicyEditor().setPolicyWarningBytes(getNetworkTemplate(), numBytes);
+        refreshUi();
+    };
 
     private TwoStatePreference mEnableDataWarningPreference;
     private Preference mSetDataWarningPreference;
@@ -57,6 +62,14 @@ public class DataWarningPreferenceController extends
         mEnableDataWarningPreference.setOnPreferenceChangeListener(this);
         mSetDataWarningPreference = getPreference().findPreference(
                 getContext().getString(R.string.pk_data_warning));
+        mSetDataWarningPreference.setOnPreferenceClickListener(this);
+
+        UsageBytesThresholdPickerDialog dialog =
+                (UsageBytesThresholdPickerDialog) getFragmentController().findDialogByTag(
+                        UsageBytesThresholdPickerDialog.TAG);
+        if (dialog != null) {
+            dialog.setBytesThresholdPickedListener(mThresholdPickedListener);
+        }
     }
 
     @Override
@@ -80,6 +93,16 @@ public class DataWarningPreferenceController extends
         getNetworkPolicyEditor().setPolicyWarningBytes(getNetworkTemplate(),
                 enabled ? mDataUsageController.getDefaultWarningLevel() : WARNING_DISABLED);
         refreshUi();
+        return true;
+    }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        UsageBytesThresholdPickerDialog dialog = UsageBytesThresholdPickerDialog.newInstance(
+                R.string.data_usage_warning_editor_title,
+                getNetworkPolicyEditor().getPolicyWarningBytes(getNetworkTemplate()));
+        dialog.setBytesThresholdPickedListener(mThresholdPickedListener);
+        getFragmentController().showDialog(dialog, UsageBytesThresholdPickerDialog.TAG);
         return true;
     }
 }

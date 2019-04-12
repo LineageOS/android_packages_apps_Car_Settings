@@ -27,26 +27,42 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="@dimen/usage_pickers_margin_vertical"/>
 
-    <TextView
-        android:id="@+id/subtitle_text"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/usage_bytes_picker_margin_horizontal"/>
+
+    <FrameLayout
+        android:id="@+id/bytes_threshold_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/usage_pickers_text_margin_end"
-        android:text="@string/cycle_reset_day_of_month_picker_subtitle"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
-        app:layout_constraintEnd_toStartOf="@+id/cycle_reset_day_of_month"
+        app:layout_constraintEnd_toStartOf="@+id/bytes_units"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_top"/>
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_top">
+        <EditText
+            android:id="@+id/bytes_threshold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="@integer/data_usage_bytes_threshold_ems"
+            android:inputType="numberDecimal"
+            android:minWidth="@dimen/usage_bytes_picker_edit_text_min_width"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </FrameLayout>
 
     <FrameLayout
         android:id="@+id/up_arrow_container"
         android:layout_width="@dimen/touch_target_size"
         android:layout_height="@dimen/touch_target_size"
         android:background="?android:attr/selectableItemBackground"
-        app:layout_constraintEnd_toEndOf="@+id/cycle_reset_day_of_month"
-        app:layout_constraintStart_toStartOf="@+id/cycle_reset_day_of_month"
+        app:layout_constraintEnd_toEndOf="@+id/bytes_units"
+        app:layout_constraintStart_toStartOf="@+id/bytes_units"
         app:layout_constraintTop_toBottomOf="@+id/guideline_top">
         <ImageView
             android:layout_width="wrap_content"
@@ -56,12 +72,12 @@
     </FrameLayout>
 
     <NumberPicker
-        android:id="@+id/cycle_reset_day_of_month"
+        android:id="@+id/bytes_units"
         android:layout_width="@dimen/touch_target_size"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/down_arrow_container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/subtitle_text"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_end"
+        app:layout_constraintStart_toEndOf="@+id/bytes_threshold_container"
         app:layout_constraintTop_toBottomOf="@+id/up_arrow_container"/>
 
     <FrameLayout
@@ -70,14 +86,21 @@
         android:layout_height="@dimen/touch_target_size"
         android:background="?android:attr/selectableItemBackground"
         app:layout_constraintBottom_toTopOf="@+id/guideline_bottom"
-        app:layout_constraintEnd_toEndOf="@+id/cycle_reset_day_of_month"
-        app:layout_constraintStart_toStartOf="@+id/cycle_reset_day_of_month">
+        app:layout_constraintEnd_toEndOf="@+id/bytes_units"
+        app:layout_constraintStart_toStartOf="@+id/bytes_units">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/ic_keyboard_arrow_down"/>
     </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/usage_bytes_picker_margin_horizontal"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
