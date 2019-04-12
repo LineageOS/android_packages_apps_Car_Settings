@@ -16,15 +16,12 @@
 
 package com.android.car.settings.development;
 
-import static com.android.car.settings.development.DevelopmentSettingsUtil.DEVELOPMENT_SETTINGS_CHANGED_ACTION;
-
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
 import android.provider.Settings;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -39,8 +36,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-
-import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class})
@@ -136,26 +131,6 @@ public class DevelopmentSettingsUtilTest {
 
         assertThat(Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1)).isEqualTo(0);
-    }
-
-    @Test
-    public void setDevelopmentSettingsEnabled_setTrue_sendBroadcast() {
-        DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(mContext, true);
-
-        List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
-        assertThat(intentsFired.size()).isEqualTo(1);
-        Intent intentFired = intentsFired.get(0);
-        assertThat(intentFired.getAction()).isEqualTo(DEVELOPMENT_SETTINGS_CHANGED_ACTION);
-    }
-
-    @Test
-    public void setDevelopmentSettingsEnabled_setFalse_sendBroadcast() {
-        DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(mContext, false);
-
-        List<Intent> intentsFired = ShadowLocalBroadcastManager.getSentBroadcastIntents();
-        assertThat(intentsFired.size()).isEqualTo(1);
-        Intent intentFired = intentsFired.get(0);
-        assertThat(intentFired.getAction()).isEqualTo(DEVELOPMENT_SETTINGS_CHANGED_ACTION);
     }
 
     @Test
