@@ -134,4 +134,16 @@
     <dimen name="suw_pin_pad_key_margin">32dp</dimen>
     <dimen name="suw_confirm_pattern_dimension">350dp</dimen>
     <dimen name="suw_lock_screen_margin">80dp</dimen>
+
+    <!-- Alert Dialog -->
+    <dimen name="alert_dialog_margin_top">@*android:dimen/car_padding_4</dimen>
+    <dimen name="alert_dialog_margin_bottom">@*android:dimen/car_padding_4</dimen>
+    <dimen name="alert_dialog_title_margin_bottom">@*android:dimen/car_padding_4</dimen>
+    <dimen name="alert_dialog_title_margin_start">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_title_margin_end">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_edit_text_margin_start">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_edit_text_margin_end">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_password_checkbox_margin_end">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_password_checkbox_margin_start">@*android:dimen/car_padding_3</dimen>
+    <dimen name="alert_dialog_password_checkbox_margin_top">@*android:dimen/car_padding_1</dimen>
 </resources>
