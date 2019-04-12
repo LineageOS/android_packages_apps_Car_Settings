@@ -113,12 +113,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自动切换到移动数据网络"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"在 WLAN 网络无法连接到互联网时切换到移动数据网络（可能会消耗移动数据流量）。"</string>
     <string name="learn_more" msgid="8214605928933358604">"了解详情"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"热点和网络共享"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自动关闭热点"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未连接任何设备，WLAN 热点将关闭"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"蓝牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的设备"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配对的设备"</string>
@@ -209,8 +206,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"辅助应用将可读取您系统中使用的应用的相关信息，其中包括您屏幕上显示的信息或应用中可使用的信息。"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;请确认这是您信任的应用&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt;会根据您的屏幕内容判断可自动填充哪些内容。"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"添加服务"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"特殊应用权限"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
@@ -357,8 +353,7 @@
     <string name="storage_files" msgid="6382081694781340364">"文件"</string>
     <string name="storage_system" msgid="1271345630248014010">"系统"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"“系统”中包含用于运行 Android 版本 <xliff:g id="VERSION">%s</xliff:g> 的文件"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"音频文件"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"正在计算…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"帐号"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>

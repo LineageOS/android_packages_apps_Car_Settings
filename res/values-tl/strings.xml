@@ -112,12 +112,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Awtomatikong lumipat sa mobile data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gumamit ng mobile data kapag walang access sa internet ang Wi‑Fi. Maaaring may mga babayaran sa paggamit ng data."</string>
     <string name="learn_more" msgid="8214605928933358604">"Matuto pa"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot at pag-tether"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Awtomatikong i-off ang hotspot"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mao-off ang Wi‑Fi hotspot kung walang nakakonektang device"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Walang pangalang device"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Mga nakapares na device"</string>
@@ -207,8 +204,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Makakabasa ang assistant ng impormasyon tungkol sa mga app na ginagamit sa iyong system, kabilang ang impormasyong nakikita sa screen mo o naa-access sa loob ng mga app."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Tiyaking pinagkakatiwalaan mo ang app na ito&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; Ginagamit ng &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; kung ano ang nasa iyong screen para matukoy kung ano ang maaaring i-autofill."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Magdagdag ng serbisyo"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Espesyal na access ng app"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Mga Kamakailang Kahilingan sa Lokasyon"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Walang kamakailang kahilingan sa lokasyon"</string>
@@ -355,8 +351,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Mga File"</string>
     <string name="storage_system" msgid="1271345630248014010">"System"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"May mga file ang system na ginagamit para patakbuhin ang bersyon <xliff:g id="VERSION">%s</xliff:g> ng Android"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Mga audio file"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Kinakalkula…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Mga Account"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Magdagdag ng account"</string>

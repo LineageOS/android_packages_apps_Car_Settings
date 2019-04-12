@@ -112,12 +112,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Ավտոմատ կերպով անցնել բջջային ինտերնետի"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Օգտագործել բջջային ինտերնետը, եթե չի հաջողվում միանալ համացանցին Wi-Fi-ի միջոցով։ Կարող են կիրառվել գանձումներ։"</string>
     <string name="learn_more" msgid="8214605928933358604">"Մանրամասն"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Թեժ կետ և մոդեմի ռեժիմ"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Ավտոմատ անջատել թեժ կետը"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi թեժ կետը կանջատվի, եթե որևէ սարք միացած չլինի դրան"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Զուգակցված սարքեր"</string>
@@ -174,8 +171,8 @@
     <string name="app_permissions" msgid="32799922508313948">"Հավելվածների թույլտվություններ"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> օգտագործող հավելվածները"</string>
     <string name="applications_settings" msgid="794261395191035632">"Հավելվածի մասին"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Ստիպողաբար դադարեցնել"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Ստիպողաբար դադարեցնե՞լ"</string>
+    <string name="force_stop" msgid="2153183697014720520">"Կանգնեցնել"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Կանգնեցնե՞լ"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Հավելվածի ստիպողաբար դադարեցումը կարող է ազդել դրա աշխատանքի վրա։"</string>
     <string name="disable_text" msgid="4358165448648990820">"Անջատել"</string>
     <string name="enable_text" msgid="1794971777861881238">"Միացնել"</string>
@@ -207,8 +204,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները, այդ թվում՝ էկրանին ցուցադրվող կամ հավելվածներից ստացվող տեղեկությունները:"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Համոզվեք, որ այս հավելվածը վստահելի է&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google-ի ինքնալրացման ծառայությունը&gt;%1$s&lt;/xliff:g&gt; վերլուծում է էկրանի պարունակությունը և գտնում է դաշտերը, որոնք կարող են ինքնալրացվել:"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ավելացնել ծառայություն"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Հատուկ հասանելիություն հավելվածների համար"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
@@ -355,8 +351,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Ֆայլեր"</string>
     <string name="storage_system" msgid="1271345630248014010">"Համակարգ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Համակարգը ներառում է ֆայլեր, որոնք անհրաժեշտ են Android-ի <xliff:g id="VERSION">%s</xliff:g> տարբերակի աշխատանքի համար"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Աուդիո ֆայլեր"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Հաշվարկում…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Հաշիվներ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ավելացնել հաշիվ"</string>

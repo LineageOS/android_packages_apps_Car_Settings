@@ -112,12 +112,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Cambiar a datos móviles automáticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Si la conexión Wi-Fi no puede acceder a Internet, usa los datos móviles. Es posible que se apliquen cargos por el uso de datos."</string>
     <string name="learn_more" msgid="8214605928933358604">"Más información"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot y conexión mediante dispositivo portátil"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar hotspot automáticamente"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Se desactivará el hotspot de Wi‑Fi si no hay dispositivos conectados"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos sincronizados"</string>
@@ -207,8 +204,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"El Asistente podrá leer información sobre las apps en uso en el sistema, incluida la información visible en la pantalla o accesible en las apps."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asegúrate de que esta app sea confiable&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; y de que use el contenido de la pantalla para determinar qué se puede autocompletar."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Agregar servicio"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Acceso especial a apps"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>
@@ -355,8 +351,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Archivos"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"El sistema incluye archivos que se usan para ejecutar la versión <xliff:g id="VERSION">%s</xliff:g> de Android"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Archivos de audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calculando…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Cuentas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Agregar cuenta"</string>

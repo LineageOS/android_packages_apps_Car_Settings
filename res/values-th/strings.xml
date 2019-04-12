@@ -112,12 +112,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"สลับไปใช้เน็ตมือถือโดยอัตโนมัติ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ใช้เน็ตมือถือเมื่อ Wi‑Fi เชื่อมต่ออินเทอร์เน็ตไม่ได้ อาจมีค่าบริการจากปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="learn_more" msgid="8214605928933358604">"ดูข้อมูลเพิ่มเติม"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ฮอตสปอตและการเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ปิดฮอตสปอตโดยอัตโนมัติ"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ฮอตสปอต Wi‑Fi จะปิดถ้าไม่มีอุปกรณ์ที่เชื่อมต่อ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"บลูทูธ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"อุปกรณ์ไม่มีชื่อ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"อุปกรณ์ที่จับคู่"</string>
@@ -207,8 +204,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant จะอ่านข้อมูลเกี่ยวกับแอปที่ใช้งานอยู่ในระบบของคุณได้ รวมถึงข้อมูลที่ปรากฏบนหน้าจอหรือที่เข้าถึงได้ภายในแอป"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ตรวจดูว่าคุณเชื่อถือแอปนี้ได้&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ป้อนอัตโนมัติ&gt;%1$s&lt;/xliff:g&gt; ดูรายการบนหน้าจอว่าข้อมูลอะไรบ้างที่ป้อนอัตโนมัติได้"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"เพิ่มบริการ"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
@@ -354,9 +350,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"แอปอื่นๆ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ไฟล์"</string>
     <string name="storage_system" msgid="1271345630248014010">"ระบบ"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ระบบมีไฟล์ที่ใช้เพื่อเรียกใช้ Android เวอร์ชัน <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ระบบรวมไฟล์สำหรับเรียกใช้ Android เวอร์ชัน <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ไฟล์เสียง"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"กำลังคำนวณ…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"บัญชี"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"เพิ่มบัญชี"</string>
@@ -412,7 +407,7 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ล้าง"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ยกเลิก"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"รูปแบบการปลดล็อกใหม่ของคุณ"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"วาดรูปแบบการปลดล็อก"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ลากรูปแบบการปลดล็อก"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ปล่อยนิ้วเมื่อเสร็จแล้ว"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"บันทึกรูปแบบแล้ว"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"วาดรูปแบบอีกครั้งเพื่อยืนยัน"</string>
