@@ -72,6 +72,11 @@ public class StorageApplicationListPreferenceController extends
         preference.setSummary(summary);
         preference.setIcon(icon);
         preference.setKey(key);
+        preference.setOnPreferenceClickListener(p -> {
+            getFragmentController().launchFragment(
+                    AppStorageSettingsDetailsFragment.getInstance(key));
+            return true;
+        });
         return preference;
     }
 }

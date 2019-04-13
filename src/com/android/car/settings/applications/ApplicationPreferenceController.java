@@ -79,4 +79,8 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
         mApplicationsState.ensureIcon(mAppEntry);
         return mAppEntry.icon;
     }
+
+    protected String getAppVersion() {
+        return mAppEntry.getVersion(getContext());
+    }
 }
