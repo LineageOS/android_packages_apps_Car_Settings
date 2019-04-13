@@ -20,6 +20,7 @@ import static android.net.NetworkPolicy.WARNING_DISABLED;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -35,6 +36,7 @@ import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.NetworkPolicyEditor;
@@ -55,6 +57,7 @@ public class DataWarningPreferenceControllerTest {
     private TwoStatePreference mEnablePreference;
     private Preference mWarningPreference;
     private DataWarningPreferenceController mController;
+    private FragmentController mFragmentController;
     @Mock
     private NetworkPolicyEditor mPolicyEditor;
     @Mock
@@ -70,6 +73,7 @@ public class DataWarningPreferenceControllerTest {
                 new PreferenceControllerTestHelper<>(context,
                         DataWarningPreferenceController.class, preferenceGroup);
         mController = controllerHelper.getController();
+        mFragmentController = controllerHelper.getMockFragmentController();
 
         mEnablePreference = new SwitchPreference(context);
         mEnablePreference.setKey(context.getString(R.string.pk_data_set_warning));
@@ -147,5 +151,13 @@ public class DataWarningPreferenceControllerTest {
         ArgumentCaptor<Long> setWarning = ArgumentCaptor.forClass(Long.class);
         verify(mPolicyEditor).setPolicyWarningBytes(eq(mNetworkTemplate), setWarning.capture());
         assertThat(setWarning.getValue()).isNotEqualTo(WARNING_DISABLED);
+    }
+
+    @Test
+    public void onPreferenceClicked_showsPickerDialog() {
+        mWarningPreference.performClick();
+
+        verify(mFragmentController).showDialog(any(UsageBytesThresholdPickerDialog.class),
+                eq(UsageBytesThresholdPickerDialog.TAG));
     }
 }

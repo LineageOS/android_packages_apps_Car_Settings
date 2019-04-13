@@ -175,4 +175,12 @@ public class DataLimitPreferenceControllerTest {
                 (long) (5 * GIB_IN_BYTES * DataLimitPreferenceController.LIMIT_BYTES_MULTIPLIER)
                         + EPSILON);
     }
+
+    @Test
+    public void onPreferenceClicked_showsPickerDialog() {
+        mLimitPreference.performClick();
+
+        verify(mFragmentController).showDialog(any(UsageBytesThresholdPickerDialog.class),
+                eq(UsageBytesThresholdPickerDialog.TAG));
+    }
 }
