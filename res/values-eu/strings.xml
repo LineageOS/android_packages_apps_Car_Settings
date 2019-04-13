@@ -30,7 +30,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ilundu pantaila, ukipen-pantaila, bateria"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"pantaila iluna, gaua, tonalitatea"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Gau modua"</string>
-    <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
+    <string name="wifi_settings" msgid="7701477685273103841">"Wifia"</string>
     <string name="wifi_settings_summary" msgid="6095898149997291025">"Konfiguratu eta kudeatu hari gabeko sarbide-puntuak"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi konexioa aktibatzen…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi konexioa desaktibatzen…"</string>
@@ -45,7 +45,7 @@
     <string name="wifi_security" msgid="158358046038876532">"Segurtasuna"</string>
     <string name="wifi_signal" msgid="1817579728350364549">"Seinalearen indarra"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Egoera"</string>
-    <string name="wifi_speed" msgid="1650692446731850781">"Esteken abiadura"</string>
+    <string name="wifi_speed" msgid="1650692446731850781">"Lotura-abiadura"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Maiztasuna"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP helbidea"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
@@ -55,11 +55,11 @@
     <item msgid="3859756017461098953">"Ona"</item>
     <item msgid="1521103743353335724">"Bikaina"</item>
   </string-array>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth konexioa"</string>
+    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth-a"</string>
     <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Aktibatu Bluetooth konexioa"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth konexioa"</string>
+    <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth-a"</string>
     <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth konexioa desgaituta dago"</string>
-    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth konexioa"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth-a"</string>
     <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Kudeatu konexioak, eta ezarri gailuaren izena eta ikusgaitasuna"</string>
     <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Ordenagailua"</string>
     <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Entzungailua"</string>
@@ -67,7 +67,7 @@
     <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"Irudietarako gailua"</string>
     <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"Aurikularra"</string>
     <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"Idazteko gailua"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"Bluetooth konexioa"</string>
+    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"Bluetooth-a"</string>
     <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"Parekatutako gailuak"</string>
     <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"Gailu erabilgarriak"</string>
     <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"Ez dago parekatutako gailurik"</string>
@@ -78,12 +78,12 @@
     <string name="wifi_ssid_hint" msgid="4155050863239489553">"Aldatu Bluetooth gailuaren izena"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth bidez parekatzeko eskaera"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Parekatu eta konektatu"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"Bluetooth konexioa"</string>
+    <string name="bluetooth" msgid="5235115159234688629">"Bluetooth-a"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth parekatze-kodea"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN kodeak hizkiak edo ikurrak ditu"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Idatzi parekatze-kodea eta sakatu Itzuli edo Sartu"</string>
     <string name="bluetooth_pairing_request" msgid="4769675459526556801">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatu nahi duzu?"</string>
-    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Baimendu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuari zure kontaktuak eta deien historia atzitzea"</string>
+    <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Eman zure kontaktuak eta deien historia atzitzeko baimena <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuari"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Baliteke PIN hau beste gailuan ere idatzi behar izatea."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Baliteke pasahitz hau beste gailuan ere idatzi behar izatea."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"16 digitu izan behar ditu"</string>
@@ -108,7 +108,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ez du baimenik"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ez du eskatu baimenik"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datuen erabilera"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplikazioen datuen erabilera"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplik. datuen erabilera"</string>
     <string name="force_stop" msgid="2153183697014720520">"Behartu gelditzera"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kalkulatzen…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
@@ -142,7 +142,7 @@
     <string name="terms_title" msgid="5201471373602628765">"Zehaztapenak eta baldintzak"</string>
     <string name="webview_license_title" msgid="2531829466541104826">"Sistemaren WebView lizentzia"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Horma-paperak"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satelite-irudien hornitzaileak:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Sateliteko irudien hornitzaileak:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Hirugarrenen lizentziak"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Arazo bat gertatu da lizentziak kargatzean."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Kargatzen…"</string>
