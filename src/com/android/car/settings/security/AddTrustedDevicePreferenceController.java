@@ -83,10 +83,9 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 @Override
                 public void onEscrowTokenActiveStateChanged(long handle, boolean active) {
                     if (active) {
-                        // TODO(b/124052887) to show the local device name of the device
                         Toast.makeText(getContext(), getContext().getString(
-                                R.string.trusted_device_success_enrollment_toast,
-                                mBluetoothDevice.getAddress()), Toast.LENGTH_LONG).show();
+                            R.string.trusted_device_success_enrollment_toast),
+                            Toast.LENGTH_LONG).show();
                     } else {
                         LOG.d(handle + " has been deactivated");
                     }
