@@ -22,11 +22,15 @@ import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.preference.EditTextPreference;
+
+import com.android.car.settings.R;
 
 /**
  * Presents a dialog with an {@link EditText} associated with an {@link EditTextPreference}.
@@ -98,6 +102,9 @@ public class SettingsEditTextPreferenceDialogFragment extends
             mEditText.setInputType(InputType.TYPE_CLASS_TEXT
                     | inputType);
         }
+        if (inputType == InputType.TYPE_TEXT_VARIATION_PASSWORD) {
+            revealShowPasswordCheckBox(view);
+        }
 
         mEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
         mEditText.setOnEditorActionListener(this);
@@ -133,5 +140,23 @@ public class SettingsEditTextPreferenceDialogFragment extends
             return true;
         }
         return false;
+    }
+
+    private void revealShowPasswordCheckBox(View view) {
+        CheckBox cb = view.findViewById(R.id.checkbox);
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+                } else {
+                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT
+                            | getArguments().getInt(ARG_INPUT_TYPE));
+                }
+                // Place cursor at the end
+                mEditText.setSelection(mEditText.getText().length());
+            }
+        });
+        cb.setVisibility(View.VISIBLE);
     }
 }
