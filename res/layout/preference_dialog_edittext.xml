@@ -19,8 +19,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@*android:dimen/car_padding_4"
-    android:layout_marginTop="@*android:dimen/car_padding_4"
+    android:layout_marginBottom="@dimen/alert_dialog_margin_bottom"
+    android:layout_marginTop="@dimen/alert_dialog_margin_top"
     android:orientation="vertical">
 
     <TextView
@@ -28,9 +28,9 @@
         style="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@*android:dimen/car_padding_4"
-        android:layout_marginEnd="@*android:dimen/car_padding_3"
-        android:layout_marginStart="@*android:dimen/car_padding_3"
+        android:layout_marginBottom="@dimen/alert_dialog_title_margin_bottom"
+        android:layout_marginEnd="@dimen/alert_dialog_title_margin_end"
+        android:layout_marginStart="@dimen/alert_dialog_title_margin_start"
         android:textColor="?android:attr/textColorSecondary"
         android:visibility="gone"/>
 
@@ -38,7 +38,17 @@
         android:id="@android:id/edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@*android:dimen/car_padding_3"
-        android:layout_marginStart="@*android:dimen/car_padding_3"/>
+        android:layout_marginEnd="@dimen/alert_dialog_edit_text_margin_end"
+        android:layout_marginStart="@dimen/alert_dialog_edit_text_margin_start"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/alert_dialog_password_checkbox_margin_end"
+        android:layout_marginStart="@dimen/alert_dialog_password_checkbox_margin_start"
+        android:layout_marginTop="@dimen/alert_dialog_password_checkbox_margin_top"
+        android:text="@string/show_password"
+        android:visibility="gone"/>
 
 </LinearLayout>
