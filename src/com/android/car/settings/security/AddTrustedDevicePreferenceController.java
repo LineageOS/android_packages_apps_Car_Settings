@@ -121,7 +121,7 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
                 }
 
                 @Override
-                public void onEnrollmentAdvertisingFailed(int errorCode) {
+                public void onEnrollmentAdvertisingFailed() {
                     getFragmentController().goBack();
                 }
             };
