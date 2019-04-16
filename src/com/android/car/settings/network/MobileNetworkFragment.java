@@ -28,6 +28,10 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.internal.util.CollectionUtils;
 
+import com.google.android.collect.Lists;
+
+import java.util.List;
+
 /** Mobile network settings homepage. */
 public class MobileNetworkFragment extends SettingsFragment implements
         MobileNetworkUpdateManager.MobileNetworkUpdateListener {
@@ -67,9 +71,15 @@ public class MobileNetworkFragment extends SettingsFragment implements
         mMobileNetworkUpdateManager = new MobileNetworkUpdateManager(context, subId);
         getLifecycle().addObserver(mMobileNetworkUpdateManager);
 
-        mMobileNetworkUpdateManager.registerListener(this);
-        mMobileNetworkUpdateManager.registerListener(
-                use(RoamingPreferenceController.class, R.string.pk_mobile_roaming_toggle));
+        List<MobileNetworkUpdateManager.MobileNetworkUpdateListener> listeners =
+                Lists.newArrayList(
+                        this,
+                        use(MobileDataTogglePreferenceController.class,
+                                R.string.pk_mobile_data_toggle),
+                        use(RoamingPreferenceController.class, R.string.pk_mobile_roaming_toggle));
+        for (MobileNetworkUpdateManager.MobileNetworkUpdateListener listener : listeners) {
+            mMobileNetworkUpdateManager.registerListener(listener);
+        }
     }
 
     @Override

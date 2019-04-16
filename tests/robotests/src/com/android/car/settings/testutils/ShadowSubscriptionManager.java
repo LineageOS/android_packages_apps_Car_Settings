@@ -37,6 +37,7 @@ public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSub
     private List<SubscriptionInfo> mSelectableSubscriptionInfoList;
     private List<OnSubscriptionsChangedListener> mOnSubscriptionsChangedListeners =
             new ArrayList<>();
+    private int mCurrentActiveSubscriptionId;
 
     @Implementation
     protected List<SubscriptionPlan> getSubscriptionPlans(int subId) {
@@ -79,6 +80,16 @@ public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSub
 
     public List<OnSubscriptionsChangedListener> getOnSubscriptionChangedListeners() {
         return mOnSubscriptionsChangedListeners;
+
+    }
+
+    @Implementation
+    protected boolean isActiveSubscriptionId(int subscriptionId) {
+        return mCurrentActiveSubscriptionId == subscriptionId;
+    }
+
+    public void setCurrentActiveSubscriptionId(int subscriptionId) {
+        mCurrentActiveSubscriptionId = subscriptionId;
     }
 
     @Resetter
