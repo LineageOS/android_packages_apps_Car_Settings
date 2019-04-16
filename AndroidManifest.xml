@@ -175,11 +175,6 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
-                <action android:name="android.settings.MANAGE_DEFAULT_APPS_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter android:priority="100">
                 <action android:name="android.settings.INTERNAL_STORAGE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
