@@ -155,7 +155,7 @@ public class AddTrustedDevicePreferenceControllerTest {
                         CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback.class);
         verify(mMockCarTrustAgentEnrollmentManager).setBleCallback(callBack.capture());
 
-        callBack.getValue().onEnrollmentAdvertisingFailed(12);
+        callBack.getValue().onEnrollmentAdvertisingFailed();
 
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
