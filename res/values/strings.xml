@@ -45,6 +45,10 @@
     <string name="mobile_network_toggle_summary">Access data using mobile network</string>
     <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
+    <!-- Mobile network settings screen, dialog message title when user selects the Data roaming toggle [CHAR LIMIT=60] -->
+    <string name="roaming_alert_title">Allow data roaming?</string>
+    <!-- Mobile network settings screen, message in dialog box that appears when you select the Data roaming toggle [CHAR LIMIT=80] -->
+    <string name="roaming_warning">You may incur significant charges.</string>
     <!-- Data usage settings [CHAR LIMIT=30] -->
     <string name="data_usage_settings">Data usage</string>
     <!-- Data usage title text [CHAR LIMIT=30] -->
