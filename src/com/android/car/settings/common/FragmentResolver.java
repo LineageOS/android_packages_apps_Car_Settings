@@ -28,7 +28,6 @@ import com.android.car.settings.accounts.AccountSettingsFragment;
 import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
-import com.android.car.settings.applications.DefaultApplicationsSettingsFragment;
 import com.android.car.settings.applications.assist.ManageAssistFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
@@ -75,9 +74,6 @@ public class FragmentResolver {
         switch (action) {
             case Settings.ACTION_SETTINGS:
                 return new HomepageFragment();
-
-            case Settings.ACTION_MANAGE_DEFAULT_APPS_SETTINGS:
-                return new DefaultApplicationsSettingsFragment();
 
             case Settings.ACTION_INTERNAL_STORAGE_SETTINGS:
                 return new StorageSettingsFragment();
