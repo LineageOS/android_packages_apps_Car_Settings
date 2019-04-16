@@ -36,8 +36,10 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
 
     public static final String SUBSCRIBER_ID = "test_id";
     private static Map<Integer, Integer> sSubIdsWithResetCalledCount = new HashMap<>();
+    private static int sSimCount = 1;
     private final Map<PhoneStateListener, Integer> mPhoneStateRegistrations = new HashMap<>();
     private boolean mIsDataEnabled = false;
+    private boolean mIsRoamingEnabled = false;
 
     public static boolean verifyFactoryResetCalled(int subId, int numTimes) {
         if (!sSubIdsWithResetCalledCount.containsKey(subId)) return false;
@@ -86,8 +88,28 @@ public class ShadowTelephonyManager extends org.robolectric.shadows.ShadowTeleph
         return subId == SubscriptionManager.INVALID_SUBSCRIPTION_ID ? null : SUBSCRIBER_ID;
     }
 
+    @Implementation
+    protected int getSimCount() {
+        return sSimCount;
+    }
+
+    public static void setSimCount(int simCount) {
+        sSimCount = simCount;
+    }
+
+    @Implementation
+    protected void setDataRoamingEnabled(boolean isEnabled) {
+        mIsRoamingEnabled = isEnabled;
+    }
+
+    @Implementation
+    protected boolean isDataRoamingEnabled() {
+        return mIsRoamingEnabled;
+    }
+
     @Resetter
     public static void reset() {
         sSubIdsWithResetCalledCount.clear();
+        sSimCount = 1;
     }
 }
