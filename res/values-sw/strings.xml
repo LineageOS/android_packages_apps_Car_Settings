@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Data ya mtandao wa simu"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Tumia data ya mtandao wa simu"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Ungependa kuzima data ya mtandao wa simu?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Matumizi ya data"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Data ya msingi"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Umetumia <xliff:g id="ID_2">^2</xliff:g> <xliff:g id="ID_1">^1</xliff:g>"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data, na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Weka onyo kwa matumizi ya data"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Weka kikomo cha matumizi ya data"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Weka"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Inawasha Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Inazima Wi-Fi…"</string>
@@ -325,7 +332,7 @@
       <item quantity="one">Unaruhusiwa kuongeza mtumiaji mmoja pekee.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Imeshindwa kuongeza mtumiaji mpya"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Utafuta mtumiaji huyu?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumtafuta mtumiaji huyu?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Data na programu zote zitafutwa."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Imeshindwa kumfuta mtumiaji."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ondoa"</string>
@@ -358,7 +365,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizoongezwa"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaunti za <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sawazisha data kiotomatiki"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Ruhusu programu zionyeshe data upya kiotomatiki"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Ruhusu programu zipakie data upya kiotomatiki"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Utawasha usawazishaji wa data kiotomatiki?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Mabadiliko yoyote utakayofanya katika akaunti zako kwenye wavuti yatanakiliwa kiotomatiki kwenye kifaa chako.\n\nHuenda baadhi ya akaunti pia zikanakili kiotomatiki kwenye wavuti mabadiliko yoyote utakayofanya kwenye simu. Hivi ndivyo akaunti ya Google inavyofanya kazi."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Utazima usawazishaji wa data kiotomatiki?"</string>

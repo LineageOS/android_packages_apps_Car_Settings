@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"بيانات الجوّال"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"هل تريد إيقاف بيانات الجوّال؟"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"استخدام البيانات"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"البيانات الأساسية"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"تم استخدام <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>."</string>
@@ -66,6 +70,9 @@
     <string name="data_limit" msgid="227338836292511425">"الحد الأقصى للبيانات"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"وضع حد لاستخدام البيانات"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ستُوقف الوحدة الأساسية لمركبتك بيانات الجوّال بعد الوصول إلى الحد الأقصى الذي وضعته.\n\nولأنّ الوحدة الأساسية تقيس حجم استخدام البيانات بطريقة معيّنة وقد يحاسبك مشغّل شبكة الجوّال بطريقة مختلفة، ننصحك بوضع حدٍ معتدلٍ."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ضبط تحذيرات استخدام البيانات"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ضبط حد استخدام البيانات"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ضبط"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"جارٍ تفعيل Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"جارٍ إيقاف Wi-Fi…"</string>
@@ -265,7 +272,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"لقد أصبحت الآن مطوّر برامج."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"لا حاجة لذلك، فأنت مطوّر برامج فعلاً."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"خيارات المطوّرين"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"خيارات إعادة التعيين"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"خيارات إعادة الضبط"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"إعادة تعيين الشبكة أو التطبيقات أو الجهاز"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"إعادة ضبط الشبكة"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"سيؤدي هذا الإجراء إلى إعادة ضبط جميع إعدادات الشبكة، بما في ذلك:"</string>

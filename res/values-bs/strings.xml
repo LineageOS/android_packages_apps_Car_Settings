@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilni podaci"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima putem mobilne mreže"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti prijenos podataka na mobilnoj mreži?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Prijenos podataka"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Prim. plan prijenosa podataka"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Iskorišteno je <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -63,6 +67,9 @@
     <string name="data_limit" msgid="227338836292511425">"Ograničenje za podatke"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograničavanje prijenosa podataka"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna jedinica vozila će isključiti prijenos podataka na mobilnoj mreži nakon što dostigne ograničenje koje ste postavili.\n\nS obzirom na to da glavna jedinica vozila mjeri prijenos podataka te da obračun vašeg operatera može biti drugačiji, uzmite u obzir postavljanje umjerenog ograničenja."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavljanje upozorenja o prijenosu podataka"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavljanje ograničenja za prijenos podataka"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Postavi"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WiFi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Uključivanje WiFi-a…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Isključivanje WiFi-a…"</string>
@@ -87,11 +94,11 @@
     <string name="default_password_summary" msgid="8789594645836902982">"Unesite lozinku"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
-    <item msgid="4897376984576812606">"Loš"</item>
-    <item msgid="7683058295076342057">"Loš"</item>
-    <item msgid="1639222824821660744">"Slab"</item>
-    <item msgid="1838705897358163300">"Dobar"</item>
-    <item msgid="6067166649320533751">"Odličan"</item>
+    <item msgid="4897376984576812606">"Slaba"</item>
+    <item msgid="7683058295076342057">"Slaba"</item>
+    <item msgid="1639222824821660744">"Zadovoljavajuća"</item>
+    <item msgid="1838705897358163300">"Dobra"</item>
+    <item msgid="6067166649320533751">"Odlična"</item>
   </string-array>
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>

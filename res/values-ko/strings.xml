@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"모바일 데이터"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"모바일 네트워크를 사용하여 데이터 액세스"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"모바일 데이터를 사용 중지하시겠습니까?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"데이터 사용량"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"기본 데이터"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g><xliff:g id="ID_2">^2</xliff:g> 사용됨"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"데이터 한도"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"데이터 사용량 제한"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"설정한 모바일 데이터 한도에 도달하면 차량에서 모바일 데이터를 사용 중지합니다.\n\n데이터 사용량은 헤드 유닛에서 측정되며 이동통신사에서 사용량을 다르게 계산할 수 있으므로 한도를 낮게 설정해 보세요."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"데이터 사용 경고 설정"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"데이터 사용 한도"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"설정"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi 사용 설정 중..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi 사용 중지 중..."</string>
@@ -360,7 +367,7 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"자동으로 데이터 동기화"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"앱에서 데이터를 자동으로 새로고침하도록 허용"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"데이터 자동 동기화를 사용하시겠습니까?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"웹에서 변경한 계정 정보는 모두 기기에 자동으로 복사됩니다.\n\n또한 일부 계정은 휴대전화의 변경사항을 웹에 자동으로 복사할 수 있습니다. Google 계정은 이러한 자동 동기화를 지원합니다."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"웹에서 변경한 계정 정보가 모두 기기에 자동으로 복사됩니다.\n\n또한 일부 계정은 휴대전화의 변경사항을 웹에 자동으로 복사할 수 있습니다. Google 계정은 이러한 자동 동기화를 지원합니다."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"데이터 자동 동기화를 사용 중지하시겠습니까?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"이 경우 데이터 사용량이 절약되지만, 최근 정보를 수집하려면 각 계정을 직접 동기화해야 합니다. 또한 업데이트가 발생해도 알림을 받지 못합니다."</string>
     <string name="account_details_title" msgid="7529571432258448573">"계정 정보"</string>
