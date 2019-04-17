@@ -171,8 +171,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
                         mCarUserManagerHelper.getCurrentProcessUserId());
         for (TrustedDeviceInfo deviceInfo : devices) {
             trustedDevicesList.add(
-                    // TODO(b/124052887) it should be getName here
-                    createTrustedDevicePreference(deviceInfo.getAddress(), deviceInfo.getHandle()));
+                    createTrustedDevicePreference(deviceInfo.getName(), deviceInfo.getHandle()));
         }
         return trustedDevicesList;
     }

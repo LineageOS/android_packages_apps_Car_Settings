@@ -1029,7 +1029,7 @@
     <!-- Confirm pairing code dialog title [CHAR LIMIT=60]-->
     <string name="trusted_device_pairing_code_dialog_title">Add <xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> as a trusted device</string>
     <!-- Toast shown when user enrolls a device successfully [CHAR LIMIT=100]-->
-    <string name="trusted_device_success_enrollment_toast"><xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> successfully added as a trusted device</string>
+    <string name="trusted_device_success_enrollment_toast">Phone has been enrolled successfully</string>
     <!-- Toast shown when enrolling a device fails [CHAR LIMIT=50]-->
     <string name="trusted_device_fail_enrollment_toast"><xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> enrollment failed</string>
     <!-- Message shown when user have not set authentication [CHAR LIMIT=NONE]-->
