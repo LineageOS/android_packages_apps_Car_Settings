@@ -66,6 +66,11 @@ public class ShadowVoiceInteractionServiceInfo {
         return sSettingsActivityMap.get(mServiceInfo);
     }
 
+    @Implementation
+    protected ServiceInfo getServiceInfo() {
+        return mServiceInfo;
+    }
+
     @Resetter
     public static void reset() {
         sSupportsAssistMap.clear();
