@@ -22,15 +22,11 @@ import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.preference.EditTextPreference;
-
-import com.android.car.settings.R;
 
 /**
  * Presents a dialog with an {@link EditText} associated with an {@link EditTextPreference}.
@@ -38,27 +34,23 @@ import com.android.car.settings.R;
  * <p>Note: CarSettings needs to use custom dialog implementations in order to launch the platform
  * {@link AlertDialog} instead of the one in the support library.
  */
-public class SettingsEditTextPreferenceDialogFragment extends
+public class EditTextPreferenceDialogFragment extends
         SettingsPreferenceDialogFragment implements TextView.OnEditorActionListener {
 
-    private static final String SAVE_STATE_TEXT = "SettingsEditTextPreferenceDialogFragment.text";
-    private static final String ARG_INPUT_TYPE = "ARG_INPUT_TYPE";
+    private static final String SAVE_STATE_TEXT = "EditTextPreferenceDialogFragment.text";
 
     private EditText mEditText;
-
     private CharSequence mText;
+    private boolean mAllowEnterToSubmit = true;
 
     /**
-     * Returns a new instance of {@link SettingsEditTextPreferenceDialogFragment} for the {@link
-     * EditTextPreference} with the given {@code key} and EditText {@link InputType} specified.
+     * Returns a new instance of {@link EditTextPreferenceDialogFragment} for the {@link
+     * EditTextPreference} with the given {@code key}.
      */
-    public static SettingsEditTextPreferenceDialogFragment newInstance(String key,
-            int inputType) {
-        SettingsEditTextPreferenceDialogFragment fragment =
-                new SettingsEditTextPreferenceDialogFragment();
+    public static EditTextPreferenceDialogFragment newInstance(String key) {
+        EditTextPreferenceDialogFragment fragment = new EditTextPreferenceDialogFragment();
         Bundle b = new Bundle(/* capacity= */ 1);
         b.putString(ARG_KEY, key);
-        b.putInt(ARG_INPUT_TYPE, inputType);
         fragment.setArguments(b);
         return fragment;
     }
@@ -92,22 +84,11 @@ public class SettingsEditTextPreferenceDialogFragment extends
 
         mEditText.requestFocus();
         mEditText.setText(mText);
-        // Place cursor at the end
-        mEditText.setSelection(mEditText.getText().length());
-
-        int inputType = getArguments().getInt(ARG_INPUT_TYPE);
-        if (inputType == InputType.TYPE_CLASS_TEXT) {
-            mEditText.setRawInputType(InputType.TYPE_CLASS_TEXT);
-        } else {
-            mEditText.setInputType(InputType.TYPE_CLASS_TEXT
-                    | inputType);
-        }
-        if (inputType == InputType.TYPE_TEXT_VARIATION_PASSWORD) {
-            revealShowPasswordCheckBox(view);
-        }
-
+        mEditText.setInputType(InputType.TYPE_CLASS_TEXT);
         mEditText.setImeOptions(EditorInfo.IME_ACTION_DONE);
         mEditText.setOnEditorActionListener(this);
+        // Place cursor at the end
+        mEditText.setSelection(mEditText.getText().length());
     }
 
     private EditTextPreference getEditTextPreference() {
@@ -129,9 +110,19 @@ public class SettingsEditTextPreferenceDialogFragment extends
         }
     }
 
+    /** Allows enabling and disabling the ability to press enter to dismiss the dialog. */
+    public void setAllowEnterToSubmit(boolean isAllowed) {
+        mAllowEnterToSubmit = isAllowed;
+    }
+
+    /** Allows verifying if enter to submit is currently enabled. */
+    public boolean getAllowEnterToSubmit() {
+        return mAllowEnterToSubmit;
+    }
+
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        if (actionId == EditorInfo.IME_ACTION_DONE) {
+        if (actionId == EditorInfo.IME_ACTION_DONE && mAllowEnterToSubmit) {
             CharSequence newValue = v.getText();
 
             getEditTextPreference().callChangeListener(newValue);
@@ -140,23 +131,5 @@ public class SettingsEditTextPreferenceDialogFragment extends
             return true;
         }
         return false;
-    }
-
-    private void revealShowPasswordCheckBox(View view) {
-        CheckBox cb = view.findViewById(R.id.checkbox);
-        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT);
-                } else {
-                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT
-                            | getArguments().getInt(ARG_INPUT_TYPE));
-                }
-                // Place cursor at the end
-                mEditText.setSelection(mEditText.getText().length());
-            }
-        });
-        cb.setVisibility(View.VISIBLE);
     }
 }
