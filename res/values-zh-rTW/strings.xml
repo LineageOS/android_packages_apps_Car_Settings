@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"行動數據"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"使用行動網路存取數據"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要關閉行動數據嗎？"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"數據用量"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要數據"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"已使用 <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"數據用量上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"限制數據用量"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"當行動數據用量達到你設定的上限時，車輛資訊娛樂主機將關閉行動數據功能。\n\n由於數據用量是由資訊娛樂主機自動計算，而電信業者對用量的計算方式可能有所不同，因此建議你設定保守的上限值。"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"設定數據用量警告"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"設定數據用量上限"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"設定"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在開啟 Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在關閉 Wi-Fi…"</string>
@@ -240,7 +247,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"版權"</string>
     <string name="license_title" msgid="936705938435249965">"授權"</string>
     <string name="terms_title" msgid="5201471373602628765">"條款及細則"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"系統 WebView 授權"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"System WebView 授權"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"桌布"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"衛星影像提供者：\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"第三方授權"</string>
@@ -410,7 +417,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"畫出解鎖圖案"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"完成時請移開手指"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"已記錄圖案"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"請再畫一次，以確認圖案無誤"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"請再次畫出剛剛的圖案，以完成確認程序"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"圖案至少需連接 4 點，請再試一次。"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"圖案錯誤"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"如何畫出解鎖圖案"</string>

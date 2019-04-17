@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil internet"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Mobil internet trafik sarfi"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil internet faolsizlantirilsinmi?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Trafik sarfi"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Asosiy trafik"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> sarflandi"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Trafik limiti"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Trafik sarfini cheklash"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Siz belgilagan cheklovga yetib kelgach, avtomobilingizning bosh qurilmasidagi mobil internet oʻchadi.\n\nInternetdan foydalanish miqdori avtomobilingizning bosh qurilmasi tomonidan hisoblangani uchun aloqa operatoringizning hisob-kitoblari undan farq qilishi mumkin. Shuning uchun, cheklov kiritishda zaxira miqdorini ham inobatga oling."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Trafik sarfiga oid ogohlantirishni sozlash"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Trafik limitini sozlash"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Sozlash"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi yoqilmoqda…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi faolsizlantirilmoqda…"</string>
@@ -147,7 +154,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Tillar"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Tillar va matn kiritish"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klaviatura"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Klaviaturalarni boshqarish"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Klaviaturalar boshqaruvi"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Nutq sintezi"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Standart sintezator"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Joriy sintezator"</string>
@@ -198,7 +205,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Skrinshotdan foydalanish"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Yordamchi ilovaga skrinshotdan foydalanishga ruxsat bering"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Ovoz bilan yozish"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Avtomatik kiritish xizmati"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Avtomatik kiritish"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Hech qanday"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Tanlangan"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistent tizimda ishlatilayotgan ilovalar haqidagi axborotni, masalan, ekranga chiqib turgan yoki ilovalar orqali kiriladigan axborotlarni oʻqiy oladi."</string>
@@ -270,7 +277,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Asliga qaytarish"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Tarmoq sozlamalari qayta tiklandi"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Ilova parametrlarini tiklash"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Quyidagilar uchun barcha sozlamalar dastlabki holiga qaytariladi:\n\n"<li>"Nofaol ilovalar"</li>\n<li>"Nofaol ilova bildirishnomalari"</li>\n<li>"Standart ish ilovalari"</li>\n<li>"Ilovalar uchun fondagi trafik cheklovlari"</li>\n<li>"Har qanday ruxsat cheklovlari"</li>\n\n"Hech qanday maʼlumot tozalab tashlanmaydi."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Quyidagi sozlamalar asliga qaytariladi:\n\n "<li>"Faolsizlantirilgan ilovalar"</li>\n" "<li>"Faolsizlantirilgan ilovalarning bildirishnomalari"</li>\n" "<li>"Muayyan amallar uchun birlamchi ilovalar"</li>\n" "<li>"Fonda internetdan foydalanishga nisbatan cheklovlar"</li>\n" "<li>"Ruxsatlar uchun barcha cheklovlar"</li>\n\n"Ilovalarga tegishli ma’lumotlar saqlanib qoladi."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"OK"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Ilova parametrlari tiklandi"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Barcha ma’lumotlarni tozalash (zavod sozlamalarini tiklash)"</string>
@@ -365,7 +372,7 @@
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Trafik tejaladi, lekin oxirgi axborotlarni yigʻish uchun har bir hisobni oʻzingiz sinxronlashingiz kerak. Shuningdek, oʻzgarishlar yuz berganda sizga bildirishnomalar keladi."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"Yangi hisob qo‘shish"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"Yangi hisob kiritish"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Cheklangan profillar hisoblar qo‘sha olmaydilar"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Hisobni olib tashlash"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Hisob olib tashlansinmi?"</string>

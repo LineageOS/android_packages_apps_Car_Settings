@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dades mòbils"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accedeix a les dades amb la xarxa mòbil"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vols desactivar les dades mòbils?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Ús de dades"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dades principals"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Dades utilitzades: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -51,7 +55,7 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Actualitzat per <xliff:g id="ID_1">^1</xliff:g> ara mateix"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Actualitzat ara mateix"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Mostra el pla"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Data d\'inici del cicle d\'ús"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Data de restabliment del cicle d\'ús"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data de cada mes:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Defineix"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Advertiment i límit de dades"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Límit de dades"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitació de l\'ús de dades"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Es desactivaran les dades mòbils de la unitat principal del vehicle quan s\'arribi al límit que has establert.\n\nCom que la unitat principal mesura l\'ús de dades i és possible que l\'operador de telefonia mòbil en faci un recompte diferent, et recomanem que estableixis un límit prudent."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Estableix un advertiment d\'ús de dades"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Estableix un límit d\'ús de dades"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Estableix"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"S\'està activant la Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"S\'està desactivant la Wi-Fi…"</string>
@@ -104,7 +111,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Passarel·la"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Preferències de la Wi‑Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Activa la Wi‑Fi automàticament"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"La Wi‑Fi es tornarà a activar automàticament prop de xarxes desades d\'alta qualitat, com la de casa teva"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"La Wi-Fi es tornarà a activar automàticament prop de xarxes d\'alta qualitat desades, com la de casa teva"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"No disponible perquè la ubicació està desactivada. Activa la "<annotation id="link">"ubicació"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Vols activar la cerca de xarxes Wi‑Fi?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Activa"</string>
@@ -201,7 +208,7 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"Servei Emplenament automàtic"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Cap"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Seleccionada"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"L\'assistent podrà llegir informació sobre les aplicacions que s\'utilitzen al teu sistema; també podrà accedir a la informació que es veu a la teva pantalla o a què accedeixes des de les aplicacions."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"L\'assistent podrà llegir informació sobre les aplicacions en ús del sistema, com ara la informació visible a la pantalla o a què es pot accedir des de les aplicacions."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assegura\'t que confies en aquesta aplicació&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Emplenament automàtic de Google&gt;%1$s&lt;/xliff:g&gt; utilitza el contingut que es mostra a la pantalla per determinar què es pot emplenar automàticament."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Afegeix un servei"</string>
     <string name="special_access" msgid="5730278220917123811">"Accés especial d\'aplicacions"</string>
@@ -253,7 +260,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Ara ja ets desenvolupador!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"No és necessari, ja ets desenvolupador."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opcions per a desenvolupadors"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Opcions de recuperació"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Opcions de restabliment"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restabliment de la xarxa, de les aplicacions o del dispositiu"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Restableix la xarxa"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Es restablirà tota la configuració de la xarxa, com ara les opcions següents:"</string>

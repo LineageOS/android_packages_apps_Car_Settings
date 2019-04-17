@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"חבילת גלישה"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"שימוש בחבילת הגלישה דרך הרשת הסלולרית"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"לכבות את חבילת הגלישה?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"שימוש בחבילת הגלישה"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"נתונים עיקריים"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"נעשה שימוש ב-<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -64,6 +68,9 @@
     <string name="data_limit" msgid="227338836292511425">"מגבלת נתונים"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"הגבלת שימוש בחבילת הגלישה"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"כשיחידת הראש ברכב תגיע למגבלה שהגדרת, היא תשבית את חבילת הגלישה.\n\nמכיוון שעשויים להיות הבדלים בין השימוש בחבילת הגלישה שנמדד על ידי יחידת הראש לבין השימוש שנמדד על ידי הספק, מומלץ להגדיר מגבלה סבירה."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"הגדרת אזהרה לגבי שימוש בחבילת הגלישה"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"מגבלה לשימוש בחבילת הגלישה"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"הגדרה"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"מתבצעת הפעלת Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"מתבצע כיבוי של Wi-Fi..."</string>
@@ -115,7 +122,7 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"יש להשתמש בחבילת הגלישה כשאין גישה לאינטרנט ברשת Wi-Fi. ייתכנו חיובים על שימוש בחבילת הגלישה."</string>
     <string name="learn_more" msgid="8214605928933358604">"מידע נוסף"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"נקודה לשיתוף אינטרנט ושיתוף אינטרנט בין מכשירים"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של נקודה לשיתוף אינטרנט"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"מכשיר ללא שם"</string>

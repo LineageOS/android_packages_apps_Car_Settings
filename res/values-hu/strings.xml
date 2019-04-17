@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiladat"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kikapcsolja a mobiladatokat?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Adathasználat"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Elsődleges adatcsomag"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> felhasználva"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Adatforgalmi korlátozás"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Adatforgalom korlátozása"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"A jármű fejegysége kikapcsolja a mobiladat-kapcsolatot, amint eléri a beállított korlátot.\n\nMivel az adatforgalmat a fejegység méri, és a szolgáltató mérései ettől eltérhetnek, érdemes lehet szigorúbb korlátot megadnia."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Adathasználati figyelmeztetés beállítása"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Adathasználati korlát beállítása"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Beállítás"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"A Wi-Fi bekapcsolása…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"A Wi-Fi kikapcsolása…"</string>
@@ -411,7 +418,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Emelje fel az ujját, ha kész"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Minta rögzítve"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Rajzolja újra a mintát a megerősítéshez"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kapcsoljon össze legalább 4 pontot."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kössön össze legalább 4 pontot."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Helytelen minta"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Hogyan kell feloldási mintát rajzolni?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hiba történt a minta mentése során"</string>

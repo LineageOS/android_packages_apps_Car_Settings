@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"மொபைல் டேட்டா"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"முதன்மை டேட்டா"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> பயன்படுத்தப்பட்டது"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"டேட்டா வரம்பு"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"டேட்டா உபயோகத்தை வரம்பிடுதல்"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"நீங்கள் அமைத்துள்ள வரம்பை அடைந்ததும் மொபைல் டேட்டாவைக் கார் சாதனத்தின் முதன்மை யூனிட் மொபைல் டேட்டாவை முடக்கும்.\n\nடேட்டா உபயோகத்தை முதன்மை யூனிட் அளவிட்டாலும் உங்கள் மொபைல் நிறுவனம் வேறுவிதமாக அளவிடலாம். எனவே பாதுகாப்பான அளவில் வரம்பை அமைக்கவும்."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"டேட்டா உபயோக எச்சரிக்கையை அமைத்தல்"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"டேட்டா உபயோக வரம்பை அமைத்தல்"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"அமை"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"வைஃபை"</string>
     <string name="wifi_starting" msgid="473253087503153167">"வைஃபையை ஆன் செய்கிறது…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"வைஃபையை ஆஃப் செய்கிறது…"</string>
@@ -112,8 +119,7 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்தல்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
@@ -186,7 +192,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"பயன்பாட்டின் டேட்டா உபயோகம்"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>

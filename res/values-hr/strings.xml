@@ -34,12 +34,16 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilni podaci"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima pomoću mobilne mreže"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti mobilne podatke?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Potrošnja podataka"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primarni podaci"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Iskorišteno: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Upozorenje o podatkovnom prometu za <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Ograničenje podatkovnog prometa od <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Upozorenje o potrošnji podat. prometa za <xliff:g id="ID_1">^1</xliff:g>/ograničenje podatkovnog prometa od <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Upozori na <xliff:g id="ID_1">^1</xliff:g>/Ograniči na <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="one">Još %d dan</item>
       <item quantity="few">Još %d dana</item>
@@ -55,7 +59,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Datum poništavanja ciklusa potrošnje"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum u mjesecu:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Postavi"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Upozorenje o podacima i ograničenje"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Upozorenje o potrošnji"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Ciklus potrošnje podatkovnog prometa"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Postavi upozorenje o potrošnji"</string>
     <string name="data_warning" msgid="116776633806885370">"Upozorenje o podatkov. prometu"</string>
@@ -63,6 +67,9 @@
     <string name="data_limit" msgid="227338836292511425">"Ograničenje podatkov. prometa"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograničavanje potrošnje podatkovnog prometa"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna jedinica vozila isključit će mobilne podatke kad dosegne ograničenje koje ste postavili.\n\nBudući da potrošnju podatkovnog prometa mjeri glavna jedinica i da se obračun mobilnog operatera može razlikovati, možda biste trebali postaviti strože ograničenje."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavite upozorenje o potrošnji podataka"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavite ograničenje podatkovnog prometa"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Postavi"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Uključivanje Wi-Fija…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Isključivanje Wi-Fija…"</string>

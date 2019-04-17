@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilní data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Přistupovat k datům přes mobilní síť"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vypnout mobilní data?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Využití dat"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primární data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Využito <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -64,6 +68,9 @@
     <string name="data_limit" msgid="227338836292511425">"Limit dat"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Omezení spotřeby dat"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Jakmile dosáhnete stanoveného limitu dat, řídicí jednotka auta mobilní data vypne.\n\nVyužití dat je měřeno řídicí jednotkou, ale váš operátor ho může měřit jinak, doporučujeme proto nastavit konzervativní limit."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Nastavení upozornění na využití dat"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Nastavení limitu datových přenosů"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Nastavit"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Zapínání Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Vypínání Wi‑Fi…"</string>
@@ -202,7 +209,7 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Použití snímku obrazovky"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Asistenční aplikace bude mít přístup k obrazu na obrazovce"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Hlasový vstup"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Služba automatického vyplňování"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Služba autom. vyplňování"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Žádné"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Vybráno"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistent bude moci číst informace o aplikacích používaných v systému, včetně údajů viditelných na obrazovce a přístupných v rámci aplikací."</string>

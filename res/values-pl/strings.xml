@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilna transmisja danych"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Korzystaj z danych przy użyciu sieci komórkowej"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Wyłączyć mobilną transmisję danych?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Użycie danych"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dane podstawowe"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Wykorzystano <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -64,6 +68,9 @@
     <string name="data_limit" msgid="227338836292511425">"Limit danych"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograniczanie użycia danych"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Po osiągnięciu ustawionego przez Ciebie limitu serwer pojazdu wyłączy mobilną transmisję danych.\n\nPonieważ transmisję danych mierzy serwer i może to robić inaczej niż operator, dobrze jest ustawić mniejszy limit."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ustawianie ostrzeżenia o użyciu danych"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ustawianie limitu użycia danych"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ustaw"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Włączam Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wyłączam Wi-Fi…"</string>
@@ -149,7 +156,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Języki"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Języki i metody wprowadzania"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klawiatura"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Zarządzaj klawiaturami"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Zarządzanie klawiaturami"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Zamiana tekstu na mowę"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Preferowany mechanizm"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Używany mechanizm"</string>
@@ -295,7 +302,7 @@
     <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Użyj czasu podanego przez sieć"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatyczna strefa czasowa"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format 24-godzinny"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Format 24-godzinny"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Czas"</string>

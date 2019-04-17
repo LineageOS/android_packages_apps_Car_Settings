@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Բջջային ինտերնետ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Օգտվել բջջային ինտերնետից"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Անջատե՞լ բջջային ինտերնետը"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Թրաֆիկի օգտագործում"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Հիմնական փաթեթ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Օգտագործվել է <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Թրաֆիկի սահմանաչափը"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Տվյալների օգտագործման սահմանափակում"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Նշված սահմանաչափն անցնելու դեպքում մեքենայի գլխավոր վահանակը կանջատի բջջային ինտերնետը։\n\nՕպերատորի վիճակագրությունը կարող է տարբերվել գլխավոր վահանակի տվյալներից, ուստի խորհուրդ ենք տալիս նշել նախատեսվածից ցածր սահմանաչափ։"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Նախազգուշացման կարգավորում"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Թրաֆիկի օգտագործման սահմանաչափը"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Պահել"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi-ը միանում է…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi-ն անջատվում է…"</string>
@@ -398,7 +405,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Շարունակել"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Կրկնել"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Բաց թողնել"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպման կարգավորում"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպում"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Ընտրեք ձեր PIN-ը"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Ընտրեք ձեր նախշը"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Ընտրեք ձեր գաղտնաբառը"</string>

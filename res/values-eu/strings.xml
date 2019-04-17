@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datu-konexioa"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Datu-konexioa desaktibatu nahi duzu?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Datuen erabilera"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datu nagusiak"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> erabilita"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Datuen muga"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datuen erabilera mugatzea"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ibilgailua ezarri duzun datuen mugara heltzen denean, ibilgailuaren gailu nagusiak datu-konexioa desaktibatuko du.\n\nIbilgailuaren gailu nagusiak datuen erabilera neurtzen du, baina baliteke operadoreak erabilera hori beste era batera neurtzea. Horregatik, muga zuhurra ezartzea gomendatzen dugu."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ezarri datuen erabilera-abisua"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datuen erabilera-muga"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ezarri"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wifia"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi konexioa aktibatzen…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi konexioa desaktibatzen…"</string>
@@ -242,7 +249,7 @@
     <string name="terms_title" msgid="5201471373602628765">"Zehaztapenak eta baldintzak"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"Sistemaren WebView lizentziak"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Horma-paperak"</string>
-    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satelite-irudien hornitzaileak:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Sateliteko irudien hornitzaileak:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Hirugarrenen lizentziak"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Arazo bat gertatu da lizentziak kargatzean."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Kargatzen…"</string>
@@ -422,7 +429,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Idatzi pasahitza"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Babestuta egoteko, ezarri PIN bat"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Idatzi berriro PIN kodea"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"Gutxienez 4 digitu izan behar ditu PINak"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PINak lau digitu izan behar ditu gutxienez"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN kodeak ez du balio: gutxienez lau digitu izan behar ditu."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN kodeak ez datoz bat"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Errore bat gertatu da PINa gordetzean"</string>
@@ -436,7 +443,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Berretsi"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Gutxienez lau karaktere izan behar ditu"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> karaktere izan behar ditu"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Gutxienez <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu PIN kodeak"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN kodeak <xliff:g id="COUNT">%d</xliff:g> digitu izan behar ditu gutxienez"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> karaktere izan behar ditu"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Gehienez <xliff:g id="NUMBER">%d</xliff:g> digitu izan behar ditu"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"0 eta 9 arteko zenbakiak soilik izan ditzake."</string>
