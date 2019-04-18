@@ -16,11 +16,11 @@
 
 package com.android.car.settings.security;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 
-import androidx.car.app.CarListDialog;
 import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
@@ -62,7 +62,7 @@ public class LockTypeDialogFragment extends DialogFragment {
             items[i] = getResources().getString(LOCK_TYPES[i]);
         }
 
-        return new CarListDialog.Builder(getContext())
+        return new AlertDialog.Builder(getContext())
                 .setItems(items, (dialog, pos) -> mOnLockSelectListener.onLockTypeSelected(pos))
                 .create();
     }
