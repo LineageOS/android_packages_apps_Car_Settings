@@ -71,17 +71,16 @@ public class RoamingPreferenceControllerTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreference = new SwitchPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                RoamingPreferenceController.class, mPreference);
+                RoamingPreferenceController.class);
         mController = mControllerHelper.getController();
         mCarrierConfigManager = mContext.getSystemService(CarrierConfigManager.class);
         mTelephonyManager = mContext.getSystemService(TelephonyManager.class);
-        getShadowTelephonyManager().setTelephonyManagerForSubscriptionId(
-                SubscriptionManager.INVALID_SUBSCRIPTION_ID, mTelephonyManager);
         getShadowTelephonyManager().setTelephonyManagerForSubscriptionId(SUB_ID, mTelephonyManager);
-
         mController.setSubId(SUB_ID);
+
+        mPreference = new SwitchPreference(mContext);
+        mControllerHelper.setPreference(mPreference);
     }
 
     @After
@@ -117,6 +116,8 @@ public class RoamingPreferenceControllerTest {
 
     @Test
     public void refreshUi_invalidSubId_isDisabled() {
+        getShadowTelephonyManager().setTelephonyManagerForSubscriptionId(
+                SubscriptionManager.INVALID_SUBSCRIPTION_ID, mTelephonyManager);
         mController.setSubId(SubscriptionManager.INVALID_SUBSCRIPTION_ID);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
