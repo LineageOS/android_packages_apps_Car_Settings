@@ -264,8 +264,13 @@
         </activity>
 
         <activity android:name=".system.ThirdPartyLicensesActivity"
+                  android:label="@string/settings_license_activity_title"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.settings.THIRD_PARTY_LICENSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <!-- This logic is copied from phone.-->
