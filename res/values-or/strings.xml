@@ -66,12 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"ଡାଟା ସୀମା"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ଡାଟା ବ୍ୟବହାର ସୀମିତ କରିବା"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ଡାଟାର ବ୍ୟବହାର ଆପଣ ସେଟ୍ କରିଥିବା ସୀମାରେ ପହଞ୍ଚିଗଲେ, ଆପଣଙ୍କ ବାହାନର ହେଡ୍ ୟୁନିଟ୍ ମୋବାଇଲ୍ ଡାଟାକୁ ବନ୍ଦ କରିଦେବ।\n\nଯେହେତୁ ବାହାନର ହେଡ୍ ୟୁନିଟ୍ ଡାଟା ବ୍ୟବହାରର ହିସାବ ରଖିଥାଏ ଏବଂ ଆପଣଙ୍କ ବାହାକ ଦ୍ୱାରା ରଖାଯାଇଥିବା ହିସାବ ସାମାନ୍ୟ ଭିନ୍ନ ହୋଇପାରେ, ତେଣୁ ମୋବାଇଲ୍ ଡାଟାର ବ୍ୟବହାର କମ୍ ହେବ, ଏକ ରକ୍ଷଣଶୀଳ ସୀମା ସେଟିଂ କରନ୍ତୁ।"</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ଡାଟା ବ୍ୟବହାର ଚେତାବନୀ ସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ଡାଟା ବ୍ୟବହାରର ସୀମା ସେଟ୍ କରନ୍ତୁ"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ସେଟ୍ କରନ୍ତୁ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ୱାଇ-ଫାଇ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ୱାଇ-ଫାଇ ଅନ୍‌ କରୁଛି…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ୱାଇ-ଫାଇ ବନ୍ଦ‌ ହେଉଛି…"</string>
@@ -129,10 +126,10 @@
     <string name="bluetooth_device" msgid="3178478829314083240">"ନାମହୀନ ଡିଭାଇସ୍‍"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ପେୟାର୍‌ ହୋଇଥିବା ଡିଭାଇସ୍‌ଗୁଡ଼ିକ"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ନୂଆ ଡିଭାଇସ୍‌କୁ ପେୟାର୍‌ କରନ୍ତୁ"</string>
-    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ପେୟାର୍ କରିବାକୁ ବ୍ଲୁ-ଟୂଥ୍‍ ଚାଲୁ ହେବ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ପେୟାର୍ କରିବାକୁ ବ୍ଲୁଟୂଥ୍‍ ଚାଲୁ ହେବ"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ଡିଭାଇସ୍‌ ବିଚ୍ଛିନ୍ନ କରିବେ?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"ଆପଣଙ୍କ ଗାଡି <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ରୁ ବିଚ୍ଛିନ୍ନ ହେବ।"</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ଗାଡିର ବ୍ଲୁ-ଟୂଥ୍‍‌ ଠିକଣା : <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ଗାଡିର ବ୍ଲୁଟୂଥ୍‍‌ ଠିକଣା : <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"ଡିଭାଇସ୍‌ର ବ୍ଲୁଟୁଥ୍‌ ଠିକଣା: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"ଗାଡିର ନାମ"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ଏହି ଗାଡିକୁ ରିନେମ୍‌ କରନ୍ତୁ"</string>
@@ -499,7 +496,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ଡିଭାଇସ୍ ପେୟାର୍ କରିବାକୁ ଆପଣଙ୍କ ଫୋନ୍‍‍ରୁ <xliff:g id="CAR_NAME">%1$s</xliff:g> ବାଛନ୍ତୁ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ସ୍ମାର୍ଟ ଲକ୍ ଏହି ଡିଭାଇସ୍‍ର ସୁରକ୍ଷା ବୈଶିଷ୍ଟ୍ୟ କରିପାରିବ ନାହିଁ। ଆପଣଙ୍କର କାର୍‍‍ର ସୁରକ୍ଷାରେ ସାହାଯ୍ୟ କରିବାକୁ, ଚିହ୍ନା ଡିଭାଇସ୍ କେବଳ ଆପଣ ପୂର୍ବରୁ ଆପଣଙ୍କ କାର୍ ଥରେ ଅନ୍‍ଲକ୍ କରିଥିଲେ ହିଁ ଆପଣଙ୍କ କାର୍‍କୁ ଅନ୍‍ଲକ୍ କରି ରଖିବ। ଅନ୍ୟ କେହି ଜଣେ ମଧ୍ୟ ତାହା ବ୍ୟବହାର କରୁଥିଲେ ମଧ୍ୟ, ଆପଣଙ୍କର ଚିହ୍ନା ଡିଭାଇସ୍ ନିକଟସ୍ଥ ରହିଥିଲେ ଆପଣଙ୍କ କାର୍‍ ଅନ୍‍ଲକ୍ କରି ରଖିପାରିବ।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"ଏକ ଚିହ୍ନା ଡିଭାଇସ୍‌‍ଭାବରେ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ଯୋଗ କରନ୍ତୁ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ଏକ ବିଶ୍ବସ୍ତ ଡିଭାଇସ୍‍ଭାବରେ ସଫଳତାପୂର୍ବକ ଯୋଗ କରାଯାଇଛି"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ନାମାଙ୍କନ ହୋଇପାରିଲା ନାହିଁ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ଏହାପରେ ଏକ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ଯୋଗ କରିବାରେ ଆପଣଙ୍କୁ ପ୍ରମାଣିକରଣର ଉପାୟ ସେଟ୍‍ କରିବାକୁ ହେବ। ଯଦି ଆପଣଙ୍କ ପାଖରେ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ନାହିଁ, ତେବେ ଆପଣଙ୍କ ପ୍ରୋଫାଇଲ୍‌ ଆକ୍ସେସ୍‌ କରିବାକୁ ପ୍ରମାଣିକରଣ ଆବଶ୍ୟକ ହେବ।"</string>
     <string name="forget" msgid="3971143908183848527">"ଭୁଲିଗଲେ"</string>

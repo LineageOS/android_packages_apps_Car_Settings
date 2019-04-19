@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Δεδομένα κινητής τηλεφωνίας"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Πρόσβαση σε δεδομένα μέσω δικτύου κινητής τηλεφ."</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Απενεργοποίηση δεδομένων κινητής τηλεφωνίας;"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Να επιτρέπεται η περιαγωγή δεδομένων;"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Ενδέχεται να επιβαρυνθείτε με σημαντικές χρεώσεις."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Χρήση δεδομένων"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Κύρια δεδομένα"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Έχουν χρησιμοποιηθεί <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Επιλέξτε το αυτοκίνητο <xliff:g id="CAR_NAME">%1$s</xliff:g> στο τηλέφωνό σας για να κάνετε σύζευξη των συσκευών"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Το Smart Lock δεν μπορεί να εντοπίσει λειτουργίες ασφαλείας σε αυτήν τη συσκευή. Για την προστασία του αυτοκινήτου σας, η αξιόπιστη συσκευή θα μπορεί να κρατήσει ξεκλείδωτο το αυτοκίνητό σας μόνο όταν το έχετε ήδη ξεκλειδώσει εσείς. Η αξιόπιστη συσκευή σας μπορεί να κρατήσει ξεκλείδωτο το αυτοκίνητό σας όταν βρίσκεται σε κοντινή απόσταση από αυτό, ακόμη και αν την κρατάει κάποιο άλλο άτομο."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Προσθήκη της συσκευής <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ως αξιόπιστης συσκευής"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> προστέθηκε με επιτυχία ως έμπιστη συσκευή"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Η εγγραφή της συσκευής <xliff:g id="DEVICE_NAME">%1$s</xliff:g> απέτυχε"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Η προσθήκη αξιόπιστης συσκευής απαιτεί να ορίσετε στη συνέχεια μια μέθοδο ελέγχου ταυτότητας. Εάν δεν έχετε μαζί σας την αξιόπιστη συσκευή σας, θα ζητηθεί έλεγχος ταυτότητας για την πρόσβαση στο προφίλ σας."</string>
     <string name="forget" msgid="3971143908183848527">"Διαγραφή από μνήμη"</string>

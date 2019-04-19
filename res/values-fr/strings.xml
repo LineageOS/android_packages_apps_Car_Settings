@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Données mobiles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accéder aux données via le réseau mobile"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Désactiver les données mobiles ?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Autoriser l\'itinérance des données ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Des frais importants peuvent s\'appliquer."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Consommation des données"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Données principales"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> utilisés"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Sélectionnez <xliff:g id="CAR_NAME">%1$s</xliff:g> sur votre téléphone pour associer les appareils"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ne parvient pas à détecter les fonctionnalités de sécurité de cet appareil. Dans le but de protéger votre voiture, l\'appareil vérifié ne pourra la maintenir déverrouillée que lorsque vous l\'aurez déjà vous-même déverrouillée. Votre appareil vérifié peut maintenir la voiture déverrouillée lorsqu\'elle se trouve à proximité, même si une autre personne le tient dans sa main."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Ajouter <xliff:g id="DEVICE_NAME">%1$s</xliff:g> comme appareil vérifié"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"L\'appareil <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a bien été ajouté en tant qu\'appareil vérifié"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pour ajouter un appareil vérifié, vous devez définir une méthode d\'authentification à l\'étape suivante. Si vous n\'avez pas votre appareil vérifié avec vous, vous devrez obligatoirement passer par l\'étape d\'authentification pour accéder à votre profil."</string>
     <string name="forget" msgid="3971143908183848527">"Supprimer"</string>

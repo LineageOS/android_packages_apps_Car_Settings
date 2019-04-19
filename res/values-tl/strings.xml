@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobile data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"I-access ang data gamit ang mobile network"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"I-off ang mobile data?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Payagan ang data roaming?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Puwede kang magkaroon ng malaking bayarin."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Paggamit ng data"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Pangunahing data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ang nagamit"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Piliin ang <xliff:g id="CAR_NAME">%1$s</xliff:g> sa iyong telepono para ipares ang mga device"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Hindi ma-detect ng Smart Lock ang mga panseguridad na feature ng device na ito. Para makatulong na maprotektahan ang iyong kotse, magagawa lang ng pinagkakatiwalaang device na panatilihing naka-unlock ang kotse mo kapag na-unlock mo na ito. Mapapanatili ng iyong pinagkakatiwalaang device na naka-unlock ang kotse mo, kahit na ibang tao ang humahawak nito."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Idagdag ang <xliff:g id="DEVICE_NAME">%1$s</xliff:g> bilang pinagkakatiwalaang device"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Naidagdag ang <xliff:g id="DEVICE_NAME">%1$s</xliff:g> bilang pinagkakatiwalaang device"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Hindi na-enroll ang <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Kapag nagdagdag ng pinagkakatiwalaang device, kinakailangan mong magtakda ng paraan ng pag-authenticate. Kung wala sa iyo ang pinagkakatiwalaan mong device, kakailanganin ang pag-authenticate para ma-access ang iyong profile."</string>
     <string name="forget" msgid="3971143908183848527">"Kalimutan"</string>

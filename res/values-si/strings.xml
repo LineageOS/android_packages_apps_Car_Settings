@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ජංගම දත්ත"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ජංගම ජාලය භාවිතයෙන් දත්තවලට ප්‍රවේශය"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ජංගම දත්ත ක්‍රියාවිරහිත කරන්න ද?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"දත්ත සැරිසරණයට අවසර දෙන්නේද?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ඔබට සැලකිය යුතු ගාස්තු ඇති විය හැක."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"දත්ත භාවිතය"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ප්‍රාථමික දත්ත"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> භාවිතයි"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. උපාංග යුගල කිරීමට ඔබේ දුරකථනයේ <xliff:g id="CAR_NAME">%1$s</xliff:g> තෝරන්න"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"හපන් අඟුලට මෙම උපාංගයේ ආරක්‍ෂණ විශේෂාංග අනාවරණ කළ නොහැක ඔබේ කාර් රථය ආරක්‍ෂා කිරීමට උදවු කිරීමට, ඔබ ඔබේ කාර් රථය අඟුලු ඇරීමෙන් පසු පමණක් විශ්වසනීය උපාංගයට ඔබේ කාර් රථට අඟුලු ඇර තබා ගත හැක. වෙනත් කෙනෙක් ඔබේ විශ්වසනීය උපාංගය තබා සිටින්නේ වූවත්, එයට එය අවට තිබියදී ඔබේ කාර් රථය අඟුලු ඇර තබා ගත හැක."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> විශ්වසනීය උපාංගයක් ලෙස එක් කරන්න"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> විශ්වසනීය උපාංගයක් ලෙස සාර්ථකය එක් කළා"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ලියාපදිංචි වීම අසාර්ථකයි"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"විශ්වාසදායී උපාංගයක් එක් කිරීමට ඔබට මීළඟට සත්‍යාපන ක්‍රමයක් සැකසීමට අවශ්‍ය කරයි. ඔබට ඔබේ විශ්වාසදායී උපාංගය ළඟ නොමැති නම්, ඔබේ පැතිකඩට ප්‍රවේශයට සත්‍යාපනය අවශ්‍ය වනු ඇත."</string>
     <string name="forget" msgid="3971143908183848527">"අමතක කරන්න"</string>

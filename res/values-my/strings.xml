@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"မိုဘိုင်းဒေတာ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"မိုဘိုင်းကွန်ရက်သုံးပြီး ဒေတာကို ဝင်သုံးခွင့်ပေးပါ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"မိုဘိုင်းဒေတာ ပိတ်လိုသလား။"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ပြင်ပကွန်ရက် ဒေတာသုံးခွင့်ပြုမလား။"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ငွေကြေးအတန်အသင့် ကုန်ကျနိုင်ပါသည်။"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ဒေတာသုံးစွဲမှု"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"အဓိက ဒေတာ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> အသုံးပြုထားသည်"</string>
@@ -497,7 +495,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"၂။ စက်ပစ္စည်းနှင့်အတူ တွဲချိတ်ရန် သင့်ဖုန်းတွင် <xliff:g id="CAR_NAME">%1$s</xliff:g> ကို ရွေးပေးပါ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock က ဤစက်ပစ္စည်း၏ လုံခြုံရေးဝန်ဆောင်မှုများကို မတွေ့ပါ။ သင့်ကားကို ကာကွယ်ပေးရန် သင် လော့ခ်ဖွင့်ပြီးမှသာ စိတ်ချရသည့် စက်ပစ္စည်းက သင့်ဖုန်းကို လော့ခ်ဖွင့်နိုင်မည်ဖြစ်သည်။ အခြားသူတစ်ဦးက ကိုင်ဆောင်ထားစေကာမူ သင့် စိတ်ချရသည့်စက်ပစ္စည်းက အနီးတဝိုက်တွင် ရှိနေလျှင် သင့်ဖုန်းကို လော့ခ်ဖွင့်ပေးနိုင်ပါသည်။"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ကို ယုံကြည်သည့် စက်ပစ္စည်းအဖြစ် ထည့်ပါ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ကို စိတ်ချရသည့် စက်ပစ္စည်းအဖြစ် ထည့်ပြီးပါပြီ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ကို စာရင်းသွင်း၍ မရပါ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"စိတ်ချရသည့် ကိရိယာတစ်ခုကို ထည့်ပြီးပါက အထောက်အထားစိစစ်ခြင်း နည်းလမ်းတစ်ခုကို သတ်မှတ်ရပါမည်။ သင့်တွင် စိတ်ချရသည့် ကိရိယာ အတူပါမလာပါက သင့်ပရိုဖိုင်ကို ဝင်သုံးခွင့်ရရန် အထောက်အထားစိစစ်ခြင်း လိုအပ်ပါလိမ့်မည်။"</string>
     <string name="forget" msgid="3971143908183848527">"မေ့ပစ်ရန်"</string>

@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilie dati"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Piekļuve datiem, izmantojot mobilo tīklu"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vai izslēgt mobilos datus?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Vai atļaut datu viesabonēšanu?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Var rasties ievērojamas izmaksas."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datu lietojums"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Galvenie dati"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Patērētie dati: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -507,7 +505,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tālrunī atlasiet automašīnas nosaukumu (<xliff:g id="CAR_NAME">%1$s</xliff:g>), lai ierīces savienotu pārī."</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Sistēma Smart Lock nevar noteikt šīs ierīces drošības funkcijas. Lai palīdzētu aizsargāt jūsu automašīnu, uzticamā ierīce varēs neļaut bloķēt automašīnu tikai tad, kad to jau būsiet atbloķējis. Jūsu uzticamā ierīce var neļaut bloķēt automašīnu, kad tā atrodas tuvumā, pat ja ierīci tur cita persona."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Uzticamas ierīces (<xliff:g id="DEVICE_NAME">%1$s</xliff:g>) pievienošana"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Ierīce <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ir sekmīgi pievienota kā uzticama ierīce."</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Neizdevās reģistrēt ierīci <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pievienojot uzticamu ierīci, jums ir jāiestata arī autentifikācijas metode. Autentifikācija būs nepieciešama, lai jūs varētu piekļūt savam profilam, ja jums nebūs līdzi jūsu uzticamā ierīce."</string>
     <string name="forget" msgid="3971143908183848527">"Aizmirst"</string>

@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Kuota"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Akses data menggunakan jaringan seluler"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Nonaktifkan kuota?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Izinkan roaming data?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Anda dapat dikenai biaya yang cukup besar."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Penggunaan data"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Kuota utama"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> digunakan"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> di ponsel untuk menghubungkan perangkat"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock tidak dapat mendeteksi fitur keamanan perangkat ini. Untuk membantu melindungi mobil Anda, perangkat dipercaya hanya dapat membuka kunci mobil jika Anda sudah membuka kuncinya. Perangkat dipercaya dapat membuka kunci mobil Anda saat berada di sekitarnya, meski orang lain memegangnya."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Tambahkan <xliff:g id="DEVICE_NAME">%1$s</xliff:g> sebagai perangkat dipercaya"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> berhasil ditambahkan sebagai perangkat dipercaya"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Menambahkan perangkat dipercaya mewajibkan Anda menetapkan metode autentikasi setelahnya. Jika Anda tidak membawa perangkat dipercaya, autentikasi akan diperlukan untuk mengakses profil Anda."</string>
     <string name="forget" msgid="3971143908183848527">"Lupakan"</string>

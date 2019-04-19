@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"行動數據"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"使用行動網路存取數據"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要關閉行動數據嗎？"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"要允許漫遊服務嗎？"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"你可能需要支付可觀的費用。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"數據用量"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要數據"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"已使用 <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. 在手機上選取 [<xliff:g id="CAR_NAME">%1$s</xliff:g>] 以便將裝置配對"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 偵測不到這個裝置的安全性功能。為保護你的車輛，你必須先將信任的裝置解除鎖定，該裝置才能讓車輛保持解鎖狀態。只要信任的裝置位於車輛附近，就能讓車輛保持解鎖狀態，就算該裝置在其他人手中也一樣。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"將 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 新增為信任的裝置"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"已成功將 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 新增為信任的裝置"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"無法註冊 <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"你必須在新增信任的裝置後設定驗證方法。如果你手邊沒有信任的裝置，就必須通過驗證才能存取自己的個人資料。"</string>
     <string name="forget" msgid="3971143908183848527">"清除"</string>

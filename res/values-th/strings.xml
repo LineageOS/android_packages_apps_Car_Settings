@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"เน็ตมือถือ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงข้อมูลโดยใช้เครือข่ายมือถือ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ปิดเน็ตมือถือใช่ไหม"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"อนุญาตการโรมมิ่งข้อมูลไหม"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"คุณอาจต้องเสียค่าใช้จ่ายมาก"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ข้อมูลหลัก"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"ใช้ไป <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -66,12 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"ขีดจำกัดอินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"จำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ตั้งค่าขีดจำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ตั้งค่า"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"กำลังเปิด Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"กำลังปิด Wi-Fi…"</string>
@@ -499,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ไม่พบฟีเจอร์ความปลอดภัยของอุปกรณ์นี้ เพื่อช่วยปกป้องรถยนต์ของคุณ อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้ก็ต่อเมื่อคุณเป็นผู้ปลดล็อกไว้แล้วเท่านั้น อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้เมื่ออยู่ใกล้กันแม้ว่าผู้อื่นจะเป็นคนถืออุปกรณ์ก็ตาม"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"เพิ่ม <xliff:g id="DEVICE_NAME">%1$s</xliff:g> เป็นอุปกรณ์ที่เชื่อถือได้"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"เพิ่ม <xliff:g id="DEVICE_NAME">%1$s</xliff:g> เป็นอุปกรณ์ที่เชื่อถือได้เรียบร้อยแล้ว"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ในการเพิ่มอุปกรณ์ที่เชื่อถือได้ คุณจำเป็นต้องกำหนดวิธีการตรวจสอบสิทธิ์ในขั้นถัดไป หากไม่มีอุปกรณ์ที่เชื่อถือได้ ระบบจะขอให้มีการตรวจสอบสิทธิ์ในการเข้าถึงโปรไฟล์ของคุณ"</string>
     <string name="forget" msgid="3971143908183848527">"ลืม"</string>

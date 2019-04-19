@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Mobil şəbəkədən istifadə edərək dataya daxil olun"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil data söndürülsün?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Data rouminqinə icazə verilsin?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Sizə əhəmiyyətli xərclər tətbiq edilə bilər."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Data istifadəsi"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Əsas data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> istifadə edilib"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları birləşdirmək üçün telefonda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçin"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock bu cihazın təhlükəsizlik xüsusiyyətlərini aşkarlaya bilmir. Telefonunuzu qorumağa kömək etmək üçün etibarlı cihaz yalnızca avtomobilin kilidini açdığınız zaman kilidi açıq vəziyyətdə saxlaya biləcək. Etibarlı cihazınız hətta başqasının əlində olarkən belə, yaxınlıqda olduqda avtomobili kilidi açıq saxlaya bilər."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> cihazını etibarlı cihaz kimi əlavə edin"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> uğurla etibarlı cihaz kimi əlavə edildi"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qeydiyyatı alınmadı"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Etibarlı cihaz əlavə etdikdən sonra doğrulama metodu təyin edilməlidir. Etibarlı cihazınız üzərinizdə deyilsə, profilinizə giriş üçün doğrulama tələb olunacaq."</string>
     <string name="forget" msgid="3971143908183848527">"Unudun"</string>

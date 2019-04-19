@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क का इस्तेमाल करके डेटा एक्सेस करें"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करना चाहते हैं?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंग की अनुमति दें?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"आपको बहुत ज़्यादा शुल्क देना पड़ सकता है."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा खर्च"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"प्राइमरी डेटा"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> डेटा इस्तेमाल किया गया"</string>
@@ -66,7 +64,7 @@
     <string name="data_limit" msgid="227338836292511425">"डेटा सीमा"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटा खर्च को सीमित करना"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"आपकी तय की हुई सीमा तक पहुंचते ही आपकी गाड़ी की हेड यूनिट मोबाइल डेटा को बंद कर देगी.\n\nडेटा इस्तेमाल का हिसाब हेड यूनिट लगाती है. ऐसा हो सकता है कि आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी अलग तरह से डेटा खर्च का हिसाब लगाए. इसलिए, इस फ़र्क को ध्यान में रखते हुए सीमा तय करें."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"डेटा खर्च करने की चेतावनी सेट करें"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"डेटा खर्च की चेतावनी सेट करें"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा खर्च की सीमा सेट करें"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट करें"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाई-फ़ाई"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. डिवाइसों को जोड़ने के लिए अपने फ़ोन पर <xliff:g id="CAR_NAME">%1$s</xliff:g> चुनें"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock इस डिवाइस की सुरक्षा सुविधाओं को नहीं पहचान पा रहा है. आपकी कार की सुरक्षा के लिए, भरोसेमंद डिवाइस उसे तभी अनलॉक रख पाएगा जब आपने कार को पहले अनलॉक किया हो. कार आस-पास होने पर आपका भरोसेमंद डिवाइस उसे अनलॉक रख सकता है, भले ही वह डिवाइस किसी और व्यक्ति के पास हो."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ें"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ लिया गया है"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको पुष्टि करने का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए पुष्टि करना ज़रूरी होगा."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>

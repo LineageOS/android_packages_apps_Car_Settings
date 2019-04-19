@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datu-konexioa"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Atzitu datuak datu-konexioaren bidez"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Datu-konexioa desaktibatu nahi duzu?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Datu-ibiltaritza baimendu nahi duzu?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Baliteke kostu handiak ordaindu behar izatea."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datuen erabilera"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datu nagusiak"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> erabilita"</string>
@@ -66,7 +64,7 @@
     <string name="data_limit" msgid="227338836292511425">"Datuen muga"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Datuen erabilera mugatzea"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ibilgailua ezarri duzun datuen mugara heltzen denean, ibilgailuaren gailu nagusiak datu-konexioa desaktibatuko du.\n\nIbilgailuaren gailu nagusiak datuen erabilera neurtzen du, baina baliteke operadoreak erabilera hori beste era batera neurtzea. Horregatik, muga zuhurra ezartzea gomendatzen dugu."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ezarri datuen erabilera-abisua"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ezarri datuen erabileraren abisua"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datuen erabilera-muga"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ezarri"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wifia"</string>
@@ -109,13 +107,13 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 helbideak"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Atebidea"</string>
-    <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi hobespenak"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Aktibatu Wi-Fi konexioa automatikoki"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Gordetako kalitate handiko sare batetik (adibidez, etxeko saretik) gertu zaudenean aktibatuko da berriro Wi‑Fi konexioa"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Wifi-sarearen hobespenak"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Aktibatu wifi-konexioa automatikoki"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Gordetako kalitate handiko sare batetik (adibidez, etxeko saretik) gertu zaudenean aktibatuko da berriro wifi-konexioa"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ez dago erabilgarri kokapena desaktibatuta dagoelako. Aktibatu "<annotation id="link">"kokapena"</annotation>"."</string>
-    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi-Fi sareak bilatzeko aukera aktibatu nahi al duzu?"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wifi-sareak bilatzeko aukera aktibatu nahi al duzu?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktibatu"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wi‑Fi sareak bilatzeko aukera"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da wifi-sareak bilatzeko aukera"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Aldatu datu-konexiora automatikoki"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Agian datuen erabilera ordaindu beharko duzu."</string>
     <string name="learn_more" msgid="8214605928933358604">"Lortu informazio gehiago"</string>
@@ -218,10 +216,10 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Bilaketa"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi sareak bilatzea"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Baimendu aplikazioei eta zerbitzuei Wi-Fi sareak edozein unetan bilatzea, baita Wi‑Fi konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wifi-sareak bilatzea"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Eman wifi-sareak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita wifi-konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
     <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth gailuak bilatzea"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Baimendu aplikazioei eta zerbitzuei inguruko gailuak edozein unetan bilatzea, baita Bluetooth konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Eman inguruko gailuak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita Bluetooth konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android bertsioa"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Gailuak parekatzeko, hautatu <xliff:g id="CAR_NAME">%1$s</xliff:g> telefonoan"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock eginbideak ezin ditu hauteman gailu honen segurtasun-eginbideak. Autoa babesteko, zeuk desblokeatzen baduzu bakarrik mantendu ahal izango du gailu fidagarriak autoa desblokeatuta. Gailu fidagarria gai da autoa desblokeatuta mantentzeko elkarrengandik hurbil daudenean, baita gailua darabilena zeu ez bazara ere."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Gehitu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailu fidagarri gisa"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gehitu da gailu fidagarri gisa"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuaren harpidetzeak huts egin du"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Gailu fidagarri bat gehitzen baduzu, autentifikazio-metodo bat ezartzea izango da hurrengo urratsa. Ez badaukazu gailu fidagarririk gertu, sistemak autentifikatzeko eskatuko dizu profila atzitzen duzunean."</string>
     <string name="forget" msgid="3971143908183848527">"Ahaztu"</string>

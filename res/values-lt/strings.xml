@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiliojo ryšio duomenys"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Prieiga prie duomenų naud. mobiliojo ryšio tinklą"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Išjungti mobiliojo ryšio duomenis?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Leisti tarptinklinį duomenų ryšį?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Gali būti taikomi dideli mokesčiai."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Duomenų naudojimas"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Pirminiai duomenys"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Išnaudota: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -518,7 +516,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pasirinkite automobilį „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ telefone, kad susietumėte įrenginius"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"„Smart Lock“ negali aptikti šio įrenginio saugos funkcijų. Automobilio saugos sumetimais patikimas įrenginys galės laikyti atrakintą automobilį, tik kai jį jau būsite atrakinę. Patikimas įrenginys negali laikyti atrakinto automobilio, kai jis yra netoliese, net jei įrenginį laiko kažkas kitas."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Pridėti „<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“kaip patikimą įrenginį"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“ įrenginys sėkmingai pridėtas kaip patikimas"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“ įrenginio registracija nepavyko"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pridėję patikimą įrenginį, paskui turėsite nustatyti autentifikavimo metodą. Jei su savimi patikimo įrenginio neturite, autentifikavimas bus būtinas norint pasiekti profilį."</string>
     <string name="forget" msgid="3971143908183848527">"Pamiršti"</string>

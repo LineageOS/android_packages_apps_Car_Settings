@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"モバイルデータ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"モバイル ネットワーク経由でデータにアクセス"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"モバイルデータを OFF にしますか？"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"高額な通信料が発生することがあります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"メインデータ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> 使用"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. スマートフォンで、デバイスとペア設定する <xliff:g id="CAR_NAME">%1$s</xliff:g> を選択します"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ではこのデバイスのセキュリティ機能を検出できません。車を保護するため、信頼できるデバイスでは、あなたがすでにロック解除した車のロックを解除されたままにする以外のことはできません。第三者がそのデバイスを手に取っている場合でも、近くにある車のロックが解除されたままになることがあります。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"信頼できるデバイスとして <xliff:g id="DEVICE_NAME">%1$s</xliff:g> を追加"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> を信頼できるデバイスとして追加しました"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
     <string name="forget" msgid="3971143908183848527">"削除"</string>

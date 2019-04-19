@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"חבילת גלישה"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"שימוש בחבילת הגלישה דרך הרשת הסלולרית"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"לכבות את חבילת הגלישה?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"האם לאפשר נדידה?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ייתכנו שיעורי חיוב גבוהים."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"שימוש בחבילת הגלישה"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"נתונים עיקריים"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"נעשה שימוש ב-<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -518,7 +516,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. יש לבחור את <xliff:g id="CAR_NAME">%1$s</xliff:g> בטלפון כדי להתאים את המכשירים"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock לא מצליח לזהות את תכונות האבטחה של המכשיר הזה. כדי לעזור בהגנה על המכונית, מכשיר מהימן יוכל למנוע את נעילת המכונית רק לאחר שהנעילה תבוטל על ידך. המכשיר המהימן שלך יכול למנוע את נעילת המכונית כשהוא בקרבת מקום, גם אם הוא בידיו של מישהו אחר."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"הוספה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> כמכשיר מהימן"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> נוסף בהצלחה כמכשיר מהימן"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ההרשמה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> נכשלה"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"כדי להוסיף מכשיר מהימן, צריך להגדיר שיטת אימות בשלב הבא. אם המכשיר המהימן לא נמצא ברשותך, יידרש אימות כדי לקבל גישה לפרופיל שלך."</string>
     <string name="forget" msgid="3971143908183848527">"מחיקה"</string>

@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мабільная перадача даных"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ да даных па мабільнай сетцы"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Адключыць мабільную перадачу даных?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Дазволіць перадачу даных у роўмінгу?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Гэта можа прывесці да значных выдаткаў."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Выкарыстанне трафіка"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Асноўны трафік"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Выкарыстана <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -518,7 +516,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Каб спалучыць прылады, выберыце на тэлефоне назву \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\""</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"\"Разумная блакіроўка\" не можа вызначаць якасць бяспекі прылады. З мэтай абароны вашага аўтамабіля давераная прылада будзе трымаць ваш аўтамабіль разблакіраваным, толькі калі вы яго ўжо разблакіравалі. Давераная прылада можа трымаць аўтамабіль разблакіраваным, калі ён знаходзіцца паблізу, незалежна ад таго, хто ім кіруе."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Дадаць у якасці даверанай прыладу \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Прылада \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\" паспяхова дададзена ў якасці даверанай"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не ўдалося зарэгістраваць прыладу \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Для дадавання даверанай прылады неабходна задаць спосаб аўтэнтыфікацыі. Ён спатрэбіцца для атрымання доступу да вашага профілю, калі давераная прылада не з вамі."</string>
     <string name="forget" msgid="3971143908183848527">"Забыць"</string>

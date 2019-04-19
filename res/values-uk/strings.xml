@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобільне передавання даних"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Доступ до даних через мобільну мережу"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Вимкнути мобільне передавання даних?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Дозволити роумінг даних?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Може стягуватися значна плата."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Використання трафіку"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Основні дані"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Використано: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -60,7 +58,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата скидання циклу використання даних"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Дата кожного місяця:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Налаштувати"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Застереження про трафік і обмеження"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Застереження та ліміт"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Цикл використання трафіку додатків"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Увімкнути сповіщення про трафік"</string>
     <string name="data_warning" msgid="116776633806885370">"Застереження про трафік"</string>
@@ -518,7 +516,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. На телефоні виберіть <xliff:g id="CAR_NAME">%1$s</xliff:g>, щоб підключити пристрої"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може виявляти функцій безпеки цього пристрою. Щоб покращити захист, надійний пристрій може лише не дати автомобілю заблокуватись, якщо ви його розблокували. Ця функція працює, якщо пристрій поруч, навіть в іншої людини."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Додати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g> як надійний"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g> додано як надійний"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не вдалося зареєструвати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Додавши надійний пристрій, потрібно налаштувати спосіб автентифікації. Якщо пристрій не з вами, автентифікація знадобиться для доступу в профіль."</string>
     <string name="forget" msgid="3971143908183848527">"Забути"</string>

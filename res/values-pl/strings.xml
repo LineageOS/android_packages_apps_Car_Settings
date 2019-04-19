@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilna transmisja danych"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Korzystaj z danych przy użyciu sieci komórkowej"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Wyłączyć mobilną transmisję danych?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Zezwalać na roaming danych?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Mogą się z tym wiązać wysokie opłaty."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Użycie danych"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dane podstawowe"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Wykorzystano <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -518,7 +516,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Na telefonie wybierz <xliff:g id="CAR_NAME">%1$s</xliff:g>, by sparować urządzenia"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nie może wykryć funkcji zabezpieczeń na tym urządzeniu. Aby chronić Twój samochód, zaufane urządzenie będzie zapobiegać automatycznemu zamknięciu pojazdu tylko wtedy, gdy wcześniej samodzielnie go otworzysz. Zaufane urządzenie zapobiega automatycznemu zamknięciu, gdy znajduje się w pobliżu samochodu, nawet jeśli urządzenie trzyma ktoś inny."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Dodaj urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jako zaufane"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Dodano urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jako zaufane"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nie udało się zarejestrować urządzenia <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Po dodaniu zaufanego urządzenia musisz wybrać metodę uwierzytelniania. Dzięki niej uzyskasz dostęp do swojego profilu, gdy akurat nie będziesz mieć zaufanego urządzenia przy sobie."</string>
     <string name="forget" msgid="3971143908183848527">"Zapomnij"</string>

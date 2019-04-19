@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Të dhënat celulare"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Të çaktivizohen të dhënat celulare?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Të lejohet përdorimi i të dhënave kur je në roaming?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Mund të shkaktohen tarifa të larta."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Përdorimi i të dhënave"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Të dhënat kryesore"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> të përdorura"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nuk mund të zbulojë funksionet e sigurisë së kësaj pajisjeje. Për të ndihmuar në mbrojtjen e makinës sate, pajisja e besuar do të mund ta mbajë makinën tënde të shkyçur vetëm pasi të jetë shkyçur tashmë nga ti. Pajisja jote e besuar mund ta mbajë makinën tënde të shkyçur kur është në afërsi, edhe nëse e mban dikush tjetër."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Shtoje <xliff:g id="DEVICE_NAME">%1$s</xliff:g> si pajisje të besuar"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> u shtua me sukses si pajisje e besuar"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Shtimi i një pajisjeje të besuar kërkon që të caktosh më pas një metodë vërtetimi. Nëse nuk e ke pajisjen e besuar me vete, do të kërkohet vërtetim për të pasur qasje te profili yt."</string>
     <string name="forget" msgid="3971143908183848527">"Harro"</string>

@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ম’বাইল ডেটা"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ম’বাইল নেটৱৰ্ক ব্যৱহাৰ কৰি ডেটা এক্সেছ কৰক"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ম’বাইল ডেটা অফ কৰিবনে?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ডেটা ৰ’মিঙৰ অনুমতি দিবনে?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"আপুনি যথেষ্ট পৰিমাণৰ খৰচ বহন কৰিবলগীয়া হ’ব পাৰে।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ডেটা ব্যৱহাৰ"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"মুখ্য ডেটা"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ব্যৱহাৰ কৰা হৈছে"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইচকেইটা যোৰা লগাবলৈ আপোনাৰ ফ’নটোত <xliff:g id="CAR_NAME">%1$s</xliff:g> বাছনি কৰক"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"স্মাৰ্ট লকে এই ডিভাইচটোত থকা সুৰক্ষা সুবিধা চিনাক্ত কৰিব পৰা নাই। আপোনাৰ গাড়ীখন নিৰাপদে ৰাখিবৰ কাৰণে আপুনি গাড়ীখন আনলক কৰাৰ পিছতহে বিশ্বাসী ডিভাইচটোৱে গাড়ীখন আনলক কৰি ৰাখিব পাৰিব। আপোনাৰ বিশ্বাসী ডিভাইচটো যেতিয়া আপোনাৰ গাড়ীখনৰ ওচৰত থাকে তেতিয়া সেইটোৱে গাড়ীখন আনলক কৰিব ৰাখিব পাৰিব, আনকি যেতিয়া ডিভাইচটো আনে লৈ থাকে তেতিয়াও।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ডিভাইচটো বিশ্বাসী ডিভাইচ হিচাপে যোগ কৰক"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"বিশ্বাসী ডিভাইচ হিচাপে <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ক সফলতাৰে যোগ কৰা হ’ল"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> যোৰা লগাব পৰা নগ’ল"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"আপুনি কোনো বিশ্বাসী ডিভাইচ যোগ কৰিলে তাৰ পিছত এটা বিশ্বাসযোগ্যতা প্ৰমাণীকৰণ পদ্ধতি ছেট কৰাৰ প্ৰয়োজন হ’ব। যদি বিশ্বাসী ডিভাইচটো আপোনাৰ সৈতে নাই তেন্তে আপোনাৰ প্ৰ’ফাইলটো এক্সেছ কৰিবলৈ বিশ্বাসযোগ্যতা প্ৰমাণীকৰণৰ প্ৰয়োজন হ’ব।"</string>
     <string name="forget" msgid="3971143908183848527">"পাহৰক"</string>

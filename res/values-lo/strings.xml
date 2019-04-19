@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ອິນເຕີເນັດມືຖື"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ເຂົ້າເຖິງອິນເຕີເນັດໂດຍໃຊ້ເຄືອຂ່າຍມືຖື"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ປິດອິນເຕີເນັດມືຖືບໍ?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ອະນຸຍາດໃຫ້ໂຣມມິງຂໍ້ມູນບໍ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ທ່ານອາດຈະເສຍຄ່າໃຊ້ຈ່າຍຫຼາຍ."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ການໃຊ້ຂໍ້ມູນ"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ຂໍ້ມູນຫຼັກ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"ໃຊ້ໄປແລ້ວ <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ເລືອກ <xliff:g id="CAR_NAME">%1$s</xliff:g> ໃນໂທລະສັບຂອງທ່ານເພື່ອຈັບຄູ່ອຸປະກອນ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ບໍ່ສາມາດກວດພົບຄຸນສົມບັດຄວາມປອດໄພຂອງອຸປະກອນນີ້. ເພື່ອຊ່ວຍປົກປ້ອງລົດຂອງທ່ານ, ອຸປະກອນທີ່ເຊື່ອຖືໄດ້ຈະສາມາດຮັກສາໃຫ້ລົດຂອງທ່ານປົດລັອກຄ້າງໄວ້ ເມື່ອທ່ານປົດລັອກມັນແລ້ວເທົ່ານັ້ນ. ອຸປະກອນທີ່ເຊື່ອຖືໄດ້ສາມາດຮັກສາໃຫ້ລົດຂອງທ່ານປົດລັອກຄ້າງໄວ້ເມື່ອມັນຢູ່ໃກ້ຄຽງ, ເຖິງແມ່ນວ່າຄົນອື່ນກຳລັງຖືມັນໄວ້ຢູ່ກໍຕາມ."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"ເພີ່ມ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ເປັນອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"ເພີ່ມ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ເປັນອຸປະກອນທີ່ເຊື່ອຖືໄດ້ສຳເລັດແລ້ວ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ການລົງທະບຽນ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ບໍ່ສຳເລັດ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ການເພີ່ມອຸປະກອນທີ່ເຊື່ອຖືໄດ້ກຳນົດໃຫ້ທ່ານຕ້ອງຕັ້ງຄ່າວິທີການກວດຮັບຮອງຄວາມຖືກຕ້ອງເປັນຂັ້ນຕອນຕໍ່ໄປ. ຖ້າທ່ານບໍ່ມີອຸປະກອນທີ່ເຊື່ອຖືໄດ້ຢູ່ນຳທ່ານ, ຈໍາເປັນຕ້ອງມີການກວດຮັບຮອງຄວາມຖືກຕ້ອງເພື່ອເຂົ້າເຖິງໂປຣໄຟລ໌ຂອງທ່ານ."</string>
     <string name="forget" msgid="3971143908183848527">"ລືມ"</string>

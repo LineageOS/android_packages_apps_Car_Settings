@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"موبائل ڈیٹا"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"موبائل نیٹ ورک کے ذریعے ڈیٹا تک رسائی حاصل کریں"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"موبائل ڈیٹا آف کریں؟"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ڈیٹا رومنگ کی اجازت دیں؟"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"آپ پر خاطر خواہ چارجز لگ سکتے ہیں۔"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ڈیٹا کا استعمال"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"بنیادی ڈیٹا"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> استعمال شدہ"</string>
@@ -66,12 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"ڈیٹا کی حد"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ڈیٹا کا استعمال محدود کرنا"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"آپ کی گاڑی کی ہیڈ یونٹ آپ کی مقرر کردہ حد کو پہنچ جانے پر موبائل ڈیٹا کو آف کر دے گی۔\n\nچونکہ ڈیٹا کے استعمال کی پیمائش ہیڈ یونٹ کے ذریعے کی جاتی ہے اور آپ کا کیریئر استعمال کا حساب مختلف طریقے سے کر سکتا ہے لہذا ایک محتاط حد مقرر کرنے پر غور کریں۔"</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ڈیٹا کے استعمال کی وارننگ سیٹ کریں"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ڈیٹا کے استعمال کی حد سیٹ کریں"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"سیٹ کریں"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi آن ہو رہا ہے…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi آف ہو رہا ہے…"</string>
@@ -499,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2۔ آلات کو جوڑنے کے لیے فون پر <xliff:g id="CAR_NAME">%1$s</xliff:g> منتخب کریں"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock اس آلہ کی سیکیورٹی کی خصوصیات کا پتا نہیں لگا سکتا ہے۔ اپنی کار کی حفاظت کی مدد کے لیے، آپ کے ذریعے پہلے سے ہی غیر مقفل کر دئے جانے پر صرف بھروسہ مند آلہ ہی آپ کی کار کو غیر مقفل رکھنے کا اہل ہوگا۔ آپ کا بھروسہ مند آلہ قریب ہونے پر کار کو غیر مقفل رکھ پائے گا، اس وقت بھی جب کوئی اور اسے پکڑے ہوئے ہے۔"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"بطور بھروسہ مند آلہ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> کو شامل کریں"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> کو بھروسہ مند آلہ کے طور پر کامیابی کے ساتھ شامل کر لیا گیا"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> اندراج ناکام ہوگیا"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"بھروسہ مند آلہ شامل کرنے کے لیے آپ کو آگے ایک تصدیقی طریقہ سیٹ کرنا ہوگا۔ اگر آپ کے پاس بھروسہ مند آلہ نہیں ہے تو آپ کے پروفائل تک رسائی حاصل کرنے کے لیے تصدیق درکار ہوگی۔"</string>
     <string name="forget" msgid="3971143908183848527">"بھول جائیں"</string>

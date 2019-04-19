@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"移动数据"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"通过移动网络访问数据"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要关闭移动数据网络吗？"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"要允许数据网络漫游吗？"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"这可能会产生高额费用。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"流量消耗"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要数据"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"已使用 <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -66,12 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"数据流量上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"限制流量用量"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"当移动数据流量的用量达到您设置的上限时，您汽车的音响主机将关闭移动数据网络。\n\n由于流量用量是由音响主机计算的，而您的运营商对流量用量的计算方式可能有所不同，因此建议您设置一个保守的上限值。"</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"设置流量用量警告"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"设置流量使用上限"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"设置"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在开启 WLAN…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在关闭 WLAN…"</string>
@@ -502,7 +497,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 未能检测到此设备的安全功能。为了保护您的汽车，只有当您将汽车解锁后，可信设备才会让汽车保持解锁状态。当您的可信设备在汽车附近时，就会让汽车保持解锁状态（即使是其他人拿着此设备也是如此）。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"将 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 添加为可信设备"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 已成功添加为可信设备"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
     <string name="forget" msgid="3971143908183848527">"忽略"</string>

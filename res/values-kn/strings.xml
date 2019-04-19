@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ಡೇಟಾ ರೋಮಿಂಗ್ ಅನುಮತಿಸುವುದೇ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ನೀವು ಗಣನೀಯವಾಗಿ ಶುಲ್ಕಗಳನ್ನು ತೆರಬೇಕಾಗಬಹುದು."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ಪ್ರಾಥಮಿಕ ಡೇಟಾ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ಬಳಸಲಾಗಿದೆ"</string>
@@ -66,12 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"ಡೇಟಾ ಮಿತಿ"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ಡೇಟಾ ಬಳಕೆಯನ್ನು ಮಿತಿಗೊಳಿಸುವಿಕೆ"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ನೀವು ಹೊಂದಿಸಿರುವ ಮಿತಿಯನ್ನು ತಲುಪಿದಾಗ ನಿಮ್ಮ ವಾಹನದ ಹೆಡ್ ಯೂನಿಟ್ ಒಮ್ಮೆ ನಿಮ್ಮ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ.\n\n ಡೇಟಾ ಬಳಕೆಯನ್ನು ಹೆಡ್ ಯೂನಿಟ್ ಮೂಲಕ ಅಳೆಯಲಾಗುವ ಕಾರಣ ಮತ್ತು ನಿಮ್ಮ ವಾಹಕವು ಬಳಕೆಯನ್ನು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಪರಿಗಣಿಸಬಹುದಾದ ಕಾರಣ, ಸುರಕ್ಷಿತ ಮಿತಿಯನ್ನು ಹೊಂದಿಸುವುದು ಸೂಕ್ತ."</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ಡೇಟಾ ಬಳಕೆ ಎಚ್ಚರಿಕೆಯನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ಡೇಟಾ ಬಳಕೆ ಮಿತಿಯನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ಹೊಂದಿಸಿ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ವೈ‑ಫೈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ವೈ-ಫೈ ಆನ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ವೈ-ಫೈ ಆಫ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
@@ -499,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ಗೆ ಈ ಸಾಧನದ ಭದ್ರತೆ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಪತ್ತೆಹೆಚ್ಚಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಕಾರ್ ಸಂರಕ್ಷಿಸುವುದಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು, ನೀವು ಈಗಾಗಲೇ ನಿಮ್ಮ ಕಾರ್ ಅನ್‌ಲಾಕ್ ಮಾಡಿದ್ದರೆ ಅದನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿಯೇ ಇರಿಸಲು ಮಾತ್ರವೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಕ್ಕೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಬೇರೆ ಯಾರಾದರೂ ನಿಮ್ಮ ಕಾರ್ ಇರಿಸಿಕೊಂಡಿದ್ದರೂ, ಅದು ಹತ್ತಿರದಲ್ಲಿರುವಾಗ ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿ ಇರಿಸಬಹುದು."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಿ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಲಾಗಿದೆ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ನೋಂದಣಿ ವಿಫಲವಾಗಿದೆ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೇರಿಸುವುದು ನೀವು ಪ್ರಮಾಣೀಕರಣ ವಿಧಾನವನ್ನು ಹೊಂದಿಸುವ ಅಗತ್ಯವಿದೆ. ನೀವು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ನಿಮ್ಮೊಂದಿಗೆ ಹೊಂದಿಲ್ಲದೇ ಇದ್ದರೆ, ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಪ್ರಮಾಣೀಕರಣದ ಅಗತ್ಯವಿದೆ."</string>
     <string name="forget" msgid="3971143908183848527">"ಮರೆಯಿರಿ"</string>

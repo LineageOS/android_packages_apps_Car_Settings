@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"អនុញ្ញាតឱ្យ​ប្រើការ​រ៉ូមីង​ទិន្នន័យ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"អាច​នឹងមាន​ការគិតថ្លៃខ្ពស់​ពីអ្នក។"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ទិន្នន័យ​ចម្បង"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"បានប្រើ​អស់ <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -362,7 +360,7 @@
     <string name="memory_calculating_size" msgid="1672238502950390033">"កំពុង​គណនា…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"មិន​មាន​ការ​បញ្ចូល​គណនី​ទេ"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"គ្មាន​គណនីដែលបានបញ្ចូលទេ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ធ្វើ​សមកាលកម្ម​ទិន្នន័យ​ដោយស្វ័យប្រវត្តិ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"អនុញ្ញាតឱ្យ​កម្មវិធី​ផ្ទុកទិន្នន័យ​ឡើងវិញ​ដោយស្វ័យប្រវត្តិ"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ជ្រើសរើស​ <xliff:g id="CAR_NAME">%1$s</xliff:g> នៅលើ​ទូរសព្ទ​របស់អ្នក ដើម្បីផ្គូផ្គង​ឧបករណ៍"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock រក​មិនឃើញ​មុខងារ​សុវត្ថិភាព​នៅលើ​ឧបករណ៍​នេះ​ទេ។ ដើម្បី​ជួយ​ការពារ​រថយន្ត​​របស់​អ្នក  ឧបករណ៍​ដែល​ទុកចិត្តនឹង​អាច​រក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ បន្ទាប់​ពីអ្នក​បាន​ដោះ​សោ​រថយន្ត​ហើយ​ប៉ុណ្ណោះ។ ឧបករណ៍​ដែល​ទុកចិត្តរបស់អ្នក​អាចរក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ នៅពេល​វា​ស្ថិតនៅ​ជិត ទោះបី​ជា​អ្នក​ផ្សេងទៀត​កំពុង​កាន់ឧបករណ៍​នោះ​ក៏​ដោយ។"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជា​ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"បាន​បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជាឧបករណ៍ដែលទុកចិត្ត​ដោយជោគជ័យ​ហើយ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"មិន​អាច​ចុះឈ្មោះ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> បាន​ទេ​"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ការបញ្ចូល​ឧបករណ៍​ដែល​ទុកចិត្ត​តម្រូវឱ្យអ្នក​កំណត់​វិធីផ្ទៀងផ្ទាត់​បន្ទាប់។ ប្រសិនបើអ្នក​គ្មាន​ឧបករណ៍​ដែលទុកចិត្ត​ជាប់ខ្លួនអ្នក​ទេ នោះនឹង​តម្រូវឱ្យ​មានការផ្ទៀងផ្ទាត់ ដើម្បី​ចូលប្រើ​កម្រងព័ត៌មាន​របស់អ្នក។"</string>
     <string name="forget" msgid="3971143908183848527">"បំភ្លេច"</string>

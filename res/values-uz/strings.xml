@@ -33,11 +33,9 @@
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobil tarmoq"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil internet"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Mobil internet trafik sarfi"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil internet faolsizlantirilsinmi?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil internet uzilsinmi?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Internet-roumingga ruxsat berilsinmi?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Roumingda internet narxi ancha yuqori."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Trafik sarfi"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Asosiy trafik"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> sarflandi"</string>
@@ -198,7 +196,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta qo‘shimcha ruxsat</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta qo‘shimcha ruxsat</item>
     </plurals>
-    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent va ovoz bilan yozish"</string>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Yordamchi va ovoz bilan yozish"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Yordamchi ilova"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Ekrandagi matndan foydalanish"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Yordamchi ilovaga ekrandagi matndan foydalanishga ruxsat bering"</string>
@@ -218,10 +216,10 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Ilovalar uchun ruxsatlar"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Qidiruv"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Joylashuv axborotiga asoslangan xizmatlar"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi orqali aniqlash"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Istalgan vaqt ilova va xizmatlarga hatto Wi-Fi yonmasa ham Wi-Fi tarmoqlarni qidirish uchun ruxsat berish mumkin. Joylashuv axborotiga asoslangan funksiya va xizmatlarni yaxshilashda ishlatilishi mumkin."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth orqali aniqlash"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Istalgan vaqt ilova va xizmatlarga hatto Bluetooth yonmasa ham Wi-Fi tarmoqlarni qidirish uchun ruxsat berish mumkin. Joylashuv axborotiga asoslangan funksiya va xizmatlarni yaxshilashda ishlatilishi mumkin."</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi tarmoqlarni qidirish"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi-Fi yoniq emasligida ham ilovalar va xizmatlarga Wi-Fi tarmoqlarni qidirish uchun ruxsat. Shunda joylashuv axborotiga asoslangan funksiya va xizmatlarning ishlashi yanada yaxshilanadi."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth qurilmalarni qidirish"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bluetooth yoniq emasligida ham ilovalar va xizmatlarga yaqin-atrofdagi qurilmalarni qidirish uchun ruxsat. Shunda joylashuv axborotiga asoslangan funksiya va xizmatlarning ishlashi yanada yaxshilanadi."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Tizim"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Tizimni yangilash"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyasi"</string>
@@ -410,12 +408,12 @@
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Grafik kalit yarating"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Parol tanlang"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Joriy ekran qulfi"</string>
-    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit o‘rnating"</string>
+    <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Xavfsizlik uchun grafik kalit yarating"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Tozalash"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Bekor qilish"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Yangi grafik kalitingiz"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Grafik kalitni chizing"</string>
-    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Tayyor bo‘lgach, barmog‘ingizni oling"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Tugagach, barmoqni ekrandan oling"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Grafik kalit saqlandi"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Kalitni yana bir marta chizing"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kamida 4 ta nuqtani ulang. Qaytadan urining."</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Qurilmalarni bir-biriga ulash uchun telefoningizdan <xliff:g id="CAR_NAME">%1$s</xliff:g> nomini tanlang"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock bu qurilmaning xavfsizlik funksiyalarini aniqlay olmadi. Avtomobilingizning qulfini aynan siz ochganingizda, himoyalash maqsadida ishonchli qurilma uni shu holda saqlab turadi. Ishonchli qurilmangizni boshqa odam ushlab turgan holda ham, avtomobilingizga yaqinlashgan vaqtda uni qulfdan chiqara oladi."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qurilmasi ishonchli qurilma sifatida kiritilsin"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ishonchli qurilma sifatida kiritildi."</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qayd qilinmadi"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ishonchl qurilma kiritgandan keyin autentifikatsiya usulini sozlash talab qilinadi. Agar ishonchli qurilma yoningizda boʻlmasa, autentifikatsiya profilingizga kirishda talab etiladi."</string>
     <string name="forget" msgid="3971143908183848527">"Olib tashlash"</string>

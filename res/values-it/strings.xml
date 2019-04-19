@@ -34,10 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Dati mobili"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accedi ai dati tramite la rete mobile"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Disattivare i dati mobili?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Consentire il roaming dei dati?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"I costi potrebbero essere elevati."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilizzo dei dati"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dati principali"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Dati utilizzati: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -496,7 +494,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Seleziona <xliff:g id="CAR_NAME">%1$s</xliff:g> sul tuo telefono per accoppiare i dispositivi"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock non può rilevare le funzionalità di sicurezza di questo dispositivo. Per contribuire alla protezione del veicolo, il dispositivo attendibile potrà tenere sbloccato il veicolo solo se prima lo sblocchi tu. Il tuo dispositivo attendibile può tenere sbloccato il veicolo quando si trova nelle vicinanze, anche se viene utilizzato da qualcun altro."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Aggiungi <xliff:g id="DEVICE_NAME">%1$s</xliff:g>ai dispositivi attendibili"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Il dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> è stato aggiunto correttamente come dispositivo attendibile"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registrazione del dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> non riuscita"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"L\'aggiunta di un dispositivo attendibile comporta necessariamente la successiva impostazione di un metodo di autenticazione. Se non hai con te il dispositivo attendibile, l\'autenticazione dovrà necessariamente accedere al tuo profilo."</string>
     <string name="forget" msgid="3971143908183848527">"Elimina"</string>

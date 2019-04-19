@@ -66,12 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"ਡਾਟਾ ਸੀਮਾ"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ਡਾਟਾ ਵਰਤੋਂ ਸੀਮਤ ਕਰਨਾ"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ਤੁਹਾਡੇ ਵਾਹਨ ਦੀ ਸਕ੍ਰੀਨ ਤੋਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਸੈੱਟ ਕੀਤੀ ਮੋਬਾਈਲ ਡਾਟੇ ਦੀ ਸੀਮਾ ਉੱਤੇ ਪਹੁੰਚਣ \'ਤੇ ਮੋਬਾਈਲ ਡਾਟਾ ਬੰਦ ਕਰ ਦੇਵੇਗਾ।\n\nਕਿਉਂਕਿ ਡਾਟਾ ਵਰਤੋਂ ਤੁਹਾਡੇ ਸਕ੍ਰੀਨ ਵੱਲੋਂ ਮਾਪੀ ਜਾਂਦੀ ਹੈ ਅਤੇ ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਤੁਹਾਡਾ ਕੈਰੀਅਰ ਵਰਤੋਂ ਦਾ ਹਿਸਾਬ ਵੱਖਰੇ ਢੰਗ ਨਾਲ ਲਗਾਵੇ, ਇਸ ਕਰਕੇ ਕੋਈ ਕੰਜੂਸੀਕਾਰੀ ਸੀਮਾ ਸੈੱਟ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ।"</string>
-    <!-- no translation found for data_usage_warning_editor_title (2041517150169038813) -->
-    <skip />
-    <!-- no translation found for data_usage_limit_editor_title (133468242379286689) -->
-    <skip />
-    <!-- no translation found for usage_bytes_threshold_picker_positive_button (4625479840977965519) -->
-    <skip />
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ਡਾਟਾ ਵਰਤੋਂ ਚਿਤਾਵਨੀ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ਡਾਟਾ ਵਰਤੋਂ ਸੀਮਾ ਸੈੱਟ ਕਰੋ"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ਸੈੱਟ ਕਰੋ"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ਵਾਈ-ਫਾਈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ਵਾਈ‑ਫਾਈ ਚਾਲੂ ਹੋ ਰਿਹਾ ਹੈ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ਵਾਈ‑ਫਾਈ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ…"</string>
@@ -499,7 +496,8 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ਡੀਵਾਈਸਾਂ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ <xliff:g id="CAR_NAME">%1$s</xliff:g> ਚੁਣੋ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ਸਮਾਰਟ ਲਾਕ ਇਸ ਡੀਵਾਈਸ ਦੀਆਂ ਸੁਰੱਖਿਆ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ। ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਲਈ, ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸਿਰਫ਼ ਤਾਂ ਹੀ ਅਣਲਾਕ ਰੱਖ ਸਕੇਗਾ, ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਕਾਰ ਨੂੰ ਅਣਲਾਕ ਕੀਤਾ ਹੋਵੇ। ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨਜ਼ਦੀਕ ਹੋਣ \'ਤੇ ਉਸਨੂੰ ਅਣਲਾਕ ਰੱਖ ਸਕਦਾ ਹੈ, ਭਾਵੇਂ ਡੀਵਾਈਸ ਨੂੰ ਕਿਸੇ ਹੋਰ ਨੇ ਫੜ੍ਹਿਆ ਹੋਵੇ।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਵਜੋਂ ਸਫਲਤਾਪੂਰਵਕ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਦਰਜ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਅੱਗੇ ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣੀਕਰਨ ਵਿਧੀ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਫ਼ਾਈਲ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।"</string>
     <string name="forget" msgid="3971143908183848527">"ਛੱਡੋ"</string>
