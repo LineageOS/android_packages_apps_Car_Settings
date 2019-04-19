@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móviles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a los datos con la red móvil"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"¿Desactivar los datos móviles?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"Uso de datos"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datos principales"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Datos usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Límite de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitando uso de datos"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal de tu vehículo desactivará los datos móviles cuando se alcance el límite establecido.\n\nSe tiene en cuenta el uso de datos medido por la unidad principal, aunque tu operador podría registrarlo de forma diferente. Por tanto, debes ser prudente al establecer un límite."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establecer advertencia de uso de datos"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limitar uso de datos"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Definir"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Activando Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Desactivando Wi‑Fi…"</string>
@@ -113,10 +120,8 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utiliza la conexión de datos móviles cuando no haya acceso a Internet a través de la red Wi‑Fi. Podrían aplicarse cargos por el uso de datos."</string>
     <string name="learn_more" msgid="8214605928933358604">"Más información"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Punto de acceso y conexión compartida"</string>
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar el punto de acceso automáticamente"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punto de acceso Wi‑Fi se desactivará si no hay dispositivos conectados"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos vinculados"</string>
@@ -206,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"El asistente podrá consultar información sobre las aplicaciones en uso del sistema, como la que aparezca en pantalla o a la que se pueda acceder a través de las aplicaciones."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asegúrate de que confías en esta aplicación&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Autocompletar de Google&gt;%1$s&lt;/xliff:g&gt; utiliza el contenido que se muestra en la pantalla para determinar el texto que se puede autocompletar."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Añadir servicio"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Acceso especial de apps"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ninguna solicitud de ubicación reciente"</string>
@@ -354,8 +358,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Archivos"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"El sistema incluye los archivos necesarios para que la versión <xliff:g id="VERSION">%s</xliff:g> de Android funcione"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Archivos de audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calculando…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Cuentas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Añadir cuenta"</string>
@@ -493,9 +496,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para vincular los dispositivos"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock no puede detectar las funciones de seguridad de este dispositivo. Para proteger el coche, el dispositivo de confianza solo podrá mantenerlo desbloqueado una vez que lo hayas desbloqueado tú. El dispositivo de confianza puede mantener el coche desbloqueado si está cerca, aunque lo esté sujetado otra persona."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Añadir <xliff:g id="DEVICE_NAME">%1$s</xliff:g> como dispositivo de confianza"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> se ha añadido correctamente como dispositivo de confianza"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> no se ha podido registrar"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Para añadir un dispositivo de confianza, debes definir un método de autenticación. Si no tienes el dispositivo de confianza a mano, tendrás que realizar el proceso de autenticación para acceder a tu perfil."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Olvidar"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>

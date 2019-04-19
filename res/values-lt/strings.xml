@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiliojo ryšio duomenys"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Prieiga prie duomenų naud. mobiliojo ryšio tinklą"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Išjungti mobiliojo ryšio duomenis?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Leisti tarptinklinį duomenų ryšį?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Gali būti taikomi dideli mokesčiai."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Duomenų naudojimas"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Pirminiai duomenys"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Išnaudota: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -64,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Duomenų apribojimas"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Duomenų naudojimo ribojimas"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Pasiekus nustatytą apribojimą pagrindiniame transporto priemonės įtaise bus išjungti mobiliojo ryšio duomenys.\n\nKadangi sunaudoti duomenys skaičiuojami pagal pagrindinį transporto priemonės įtaisą ir operatorius gali apskaičiuoti kitaip, apsvarstykite galimybę nustatyti mažesnį apribojimą."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Nustatyti duomenų naudojimo įspėjimą"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Nustatyti duomenų naudojimo apribojimą"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Nustatyti"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"„Wi-Fi“ įjungiama…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"„Wi-Fi“ išjungiama…"</string>
@@ -114,12 +119,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatiškai perjungti į mobiliojo ryšio duomenis"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Naudoti mobiliojo ryšio duomenis, kai „Wi-Fi“ tinkle nėra interneto ryšio. Galite būti apmokestinti už naudojamus duomenis."</string>
     <string name="learn_more" msgid="8214605928933358604">"Sužinoti daugiau"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Vieš. intern. prieig. tašk. ir įreng. kaip modemo naud."</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Išjungti viešosios interneto prieigos tašką autom."</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"„Wi‑Fi“ viešosios interneto prieigos taškas bus išjungtas, jei nebus prijungta jokių įrenginių"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Įrenginys be pavadinimo"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Susieti įrenginiai"</string>
@@ -205,14 +207,13 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Naudoti ekrano kopiją"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Leisti pagalbinei programai pasiekti ekrano vaizdą"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Įvestis balsu"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"Automatinio pildymo paslauga"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Aut. pildymo paslauga"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nėra"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"Pasirinkta"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Pagalbinė programa galės skaityti informaciją apie sistemoje naudojamas programas, įskaitant ekrane matomą ar programose pasiekiamą informaciją."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Įsitikinkite, kad pasitikite šia programa&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=„Google“ automatinis pildymas&gt;%1$s&lt;/xliff:g&gt; naudodamas informaciją ekrane nustato, ką gali užpildyti automatiškai."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Pridėti paslaugą"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Speciali programų prieiga"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vietovė"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Pastarosios vietovės užklausos"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nėra jokių pastarųjų vietovių užklausų"</string>
@@ -363,8 +364,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Failai"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistema apima failus, naudojamus vykdant <xliff:g id="VERSION">%s</xliff:g> versijos „Android“"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Garso failai"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Skaičiuojama…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Paskyros"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Pridėti paskyrą"</string>
@@ -516,9 +516,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pasirinkite automobilį „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ telefone, kad susietumėte įrenginius"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"„Smart Lock“ negali aptikti šio įrenginio saugos funkcijų. Automobilio saugos sumetimais patikimas įrenginys galės laikyti atrakintą automobilį, tik kai jį jau būsite atrakinę. Patikimas įrenginys negali laikyti atrakinto automobilio, kai jis yra netoliese, net jei įrenginį laiko kažkas kitas."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Pridėti „<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“kaip patikimą įrenginį"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“ įrenginys sėkmingai pridėtas kaip patikimas"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“ įrenginio registracija nepavyko"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pridėję patikimą įrenginį, paskui turėsite nustatyti autentifikavimo metodą. Jei su savimi patikimo įrenginio neturite, autentifikavimas bus būtinas norint pasiekti profilį."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Pamiršti"</string>
     <string name="connect" msgid="5861699594602380150">"Prisijungti"</string>
     <string name="disconnect" msgid="6140789953324820336">"Atsijungti"</string>

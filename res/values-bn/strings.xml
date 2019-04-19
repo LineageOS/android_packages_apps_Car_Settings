@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"মোবাইল ডেটা"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"মোবাইল নেটওয়ার্ক ব্যবহার করে ডেটা অ্যাক্সেস করুন"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"মোবাইল ডেটা বন্ধ করবেন?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ডেটা রোমিংয়ের অনুমতি দেবেন?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"আপনার ব্যালেন্স খরচ হতে পারে।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ডেটার ব্যবহার"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"প্রাথমিক ডেটা"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ব্যবহার করা হয়েছে"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"ডেটার সীমা"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ডেটার ব্যবহার সীমিত করা"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ডেটার ব্যবহার আপনার সেট করা সীমায় পৌঁছলে আপনার গাড়ির হেড ইউনিট মোবাইল ডেটা বন্ধ করে দেবে।.\n\nযেহেতু আপনার গাড়ির হেড ইউনিট আপনার ডেটা ব্যবহারের হিসাব রাখে এবং আপনার পরিষেবা প্রদানকারীর রাখা হিসাব কিছুটা আলাদা হলেও হতে পারে, তাই যাতে কম মোবাইল ডেটা খরচ হোক এমনভাবে সীমা সেট করার কথা ভাবতে পারেন।"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ডেটা ব্যবহারের সতর্কতা সেট করুন"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ডেটা ব্যবহারের সীমা সেট করুন"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"সেট করুন"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ওয়াই-ফাই"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ওয়াই-ফাই চালু করা হচ্ছে..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ওয়াই-ফাই বন্ধ করা হচ্ছে..."</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"নিজে থেকে মোবাইল ডেটাতে চলে যান"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ওয়াই-ফাই-এ ইন্টারনেট অ্যাক্সেস না থাকলে মোবাইল ডেটা ব্যবহার করুন৷ ডেটা ব্যবহারের চার্জ প্রযোজ্য।"</string>
     <string name="learn_more" msgid="8214605928933358604">"আরও জানুন"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"হটস্পট ও টিথারিং"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"নিজে থেকে হটস্পট বন্ধ করুন"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"কোনও ডিভাইস কানেক্ট করা না থাকলে ওয়াই-ফাই হটস্পট বন্ধ হয়ে যাবে"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নামবিহীন ডিভাইস"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"পেয়ার করা ডিভাইসগুলি"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"অ্যাসিস্ট্যান্ট আপনার স্ক্রিনে দেখা যাচ্ছে বা অ্যাপের মধ্যে থাকা অ্যাক্সেসযোগ্য তথ্য সহ, আপনার সিস্টেমে ব্যবহার হওয়া অ্যাপ সম্পর্কিত তথ্য পড়তে পারবে।"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;দেখে নিন এই অ্যাপটি বিশ্বাসযোগ্য কিনা&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google অটোফিল&gt;%1$s&lt;/xliff:g&gt; আপনার স্ক্রিনে দেখানো তথ্য ব্যবহার করে কোনও তথ্য নিজে থেকে পূরণ করা যাবে কিনা তা নির্ণয় করে।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"পরিষেবা যোগ করুন"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"অ্যাপের বিশেষ অ্যাক্সেস"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
@@ -354,10 +355,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"অন্যান্য অ্যাপ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ফাইল"</string>
     <string name="storage_system" msgid="1271345630248014010">"সিস্টেম"</string>
-    <!-- no translation found for storage_detail_dialog_system (796365720531622361) -->
-    <skip />
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android ভার্সন <xliff:g id="VERSION">%s</xliff:g> চালানোর জন্য সিস্টেমের মধ্যে ফাইল থাকে"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"অডিও ফাইলগুলি"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"হিসেব করা হচ্ছে…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"অ্যাকাউন্ট"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"অ্যাকাউন্ট যোগ করুন"</string>
@@ -495,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock এই ডিভাইসের নিরাপত্তা বিষয়ক ফিচার শনাক্ত করতে পারে না। গাড়ি রক্ষায় সাহায্য করতে, আপনার গাড়ি আনলক করে রাখলেই বিশ্বস্ত ডিভাইস শুধুমাত্র আপনার গাড়িকে আনলক করতে পারবে। আপনার গাড়ি আশেপাশে থাকার সময় এমনকি যদি এটি অন্য কারও কাছে থাকে তাহলেও বিশ্বস্ত ডিভাইস আপনার গাড়িটি আনলক করতে পারবে।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-কে বিশ্বস্ত ডিভাইস হিসেবে যোগ করুন"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-কে বিশ্বস্ত ডিভাইস হিসেবে যোগ করা হয়েছে"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"একটি বিশ্বস্ত ডিভাইস যোগ করার পর যাচাইকরণ পদ্ধতি সেট করতে হবে। যদি আপনার বিশ্বস্ত ডিভাইস হাতের কাছে না থাকে তাহলে আপনার প্রোফাইল অ্যাক্সেস করার জন্য যাচাইকরণ করা প্রয়োজন।"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"ভুলে যান"</string>
     <string name="connect" msgid="5861699594602380150">"কানেক্ট করুন"</string>
     <string name="disconnect" msgid="6140789953324820336">"ডিসকানেক্ট করুন"</string>

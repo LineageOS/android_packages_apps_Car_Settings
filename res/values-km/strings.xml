@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"អនុញ្ញាតឱ្យ​ប្រើការ​រ៉ូមីង​ទិន្នន័យ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"អាច​នឹងមាន​ការគិតថ្លៃខ្ពស់​ពីអ្នក។"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ទិន្នន័យ​ចម្បង"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"បានប្រើ​អស់ <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"កម្រិត​កំណត់​ទិន្នន័យ"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ការ​កម្រិត​លើ​ការ​ប្រើ​ទិន្នន័យ"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​អ្នក​នឹង​បិទ​ទិន្នន័យ​ទូរសព្ទចល័ត ​នៅ​ពេល​ដែល​វា​ប្រើប្រាស់​ទិន្នន័យ​​ដល់កម្រិតដែល​អ្នក​បាន​កំណត់។\n\nដោយសារ​​ការ​ប្រើ​ប្រាស់​ទិន្នន័យ​ត្រូវ​បាន​វាស់​ស្ទង់ដោយឧបករណ៍​ចាក់សំឡេង​របស់​យានជំនិះ​​​ ​ហើយក្រុមហ៊ុនបម្រើសេវាទូរសព្ទ​របស់​អ្នកអាចគណនាលើការប្រើប្រាស់​ខុសពីនោះ សូមពិចារណា​កំណត់កម្រិតប្រើប្រាស់​ទិន្នន័យ​ទាប។"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"កំណត់​ការ​ព្រមានពី​ការ​ប្រើ​ទិន្នន័យ"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"កំណត់​ដែន​កំណត់​ប្រើទិន្នន័យ"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"កំណត់"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"កំពុង​បើក Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"កំពុង​បិទ Wi‑Fi…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ប្តូរទៅ​ទិន្នន័យទូរសព្ទ​ចល័តដោយស្វ័យ​ប្រវត្តិ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ប្រើទិន្នន័យ​ទូរសព្ទចល័ត​ នៅពេល​ដែល Wi‑Fi មិនមាន​ការភ្ជាប់អ៊ីនធឺណិត។ អាច​នឹង​គិតថ្លៃលើការ​ប្រើទិន្នន័យ។"</string>
     <string name="learn_more" msgid="8214605928933358604">"ស្វែងយល់បន្ថែម"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ហតស្ប៉ត និង​ការភ្ជាប់"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ប៊្លូធូស"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ឧបករណ៍​គ្មានឈ្មោះ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ឧបករណ៍​ដែល​បាន​ផ្គូផ្គង"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​នោះផងដែរ​។"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;សូម​ប្រាកដថា​អ្នក​ទុក​ចិត្ត​លើ​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"បញ្ចូល​សេវាកម្ម"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"ការចូលប្រើកម្មវិធីពិសេស"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
@@ -355,12 +356,11 @@
     <string name="storage_files" msgid="6382081694781340364">"ឯកសារ"</string>
     <string name="storage_system" msgid="1271345630248014010">"ប្រព័ន្ធ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"ប្រព័ន្ធរួមបញ្ចូលទាំងឯកសារ​ដែលប្រើ​សម្រាប់​ដំណើរការ​កំណែ Android <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ឯកសារ​សំឡេង"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"កំពុង​គណនា…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"មិន​មាន​ការ​បញ្ចូល​គណនី​ទេ"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"គ្មាន​គណនីដែលបានបញ្ចូលទេ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"គណនី​សម្រាប់ <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ធ្វើ​សមកាលកម្ម​ទិន្នន័យ​ដោយស្វ័យប្រវត្តិ"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"អនុញ្ញាតឱ្យ​កម្មវិធី​ផ្ទុកទិន្នន័យ​ឡើងវិញ​ដោយស្វ័យប្រវត្តិ"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ជ្រើសរើស​ <xliff:g id="CAR_NAME">%1$s</xliff:g> នៅលើ​ទូរសព្ទ​របស់អ្នក ដើម្បីផ្គូផ្គង​ឧបករណ៍"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock រក​មិនឃើញ​មុខងារ​សុវត្ថិភាព​នៅលើ​ឧបករណ៍​នេះ​ទេ។ ដើម្បី​ជួយ​ការពារ​រថយន្ត​​របស់​អ្នក  ឧបករណ៍​ដែល​ទុកចិត្តនឹង​អាច​រក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ បន្ទាប់​ពីអ្នក​បាន​ដោះ​សោ​រថយន្ត​ហើយ​ប៉ុណ្ណោះ។ ឧបករណ៍​ដែល​ទុកចិត្តរបស់អ្នក​អាចរក្សា​ឱ្យ​រថយន្ត​របស់អ្នកដោះសោ​ នៅពេល​វា​ស្ថិតនៅ​ជិត ទោះបី​ជា​អ្នក​ផ្សេងទៀត​កំពុង​កាន់ឧបករណ៍​នោះ​ក៏​ដោយ។"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជា​ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"បាន​បញ្ចូល <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ជាឧបករណ៍ដែលទុកចិត្ត​ដោយជោគជ័យ​ហើយ"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"មិន​អាច​ចុះឈ្មោះ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> បាន​ទេ​"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ការបញ្ចូល​ឧបករណ៍​ដែល​ទុកចិត្ត​តម្រូវឱ្យអ្នក​កំណត់​វិធីផ្ទៀងផ្ទាត់​បន្ទាប់។ ប្រសិនបើអ្នក​គ្មាន​ឧបករណ៍​ដែលទុកចិត្ត​ជាប់ខ្លួនអ្នក​ទេ នោះនឹង​តម្រូវឱ្យ​មានការផ្ទៀងផ្ទាត់ ដើម្បី​ចូលប្រើ​កម្រងព័ត៌មាន​របស់អ្នក។"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"បំភ្លេច"</string>
     <string name="connect" msgid="5861699594602380150">"ភ្ជាប់"</string>
     <string name="disconnect" msgid="6140789953324820336">"ផ្ដាច់"</string>

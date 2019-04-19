@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"เน็ตมือถือ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงข้อมูลโดยใช้เครือข่ายมือถือ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ปิดเน็ตมือถือใช่ไหม"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"อนุญาตการโรมมิ่งข้อมูลไหม"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"คุณอาจต้องเสียค่าใช้จ่ายมาก"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ข้อมูลหลัก"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"ใช้ไป <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"ขีดจำกัดอินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"จำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ระบบเครื่องเสียงของรถยนต์จะปิดอินเทอร์เน็ตมือถือเมื่อมีการใช้งานถึงขีดจำกัดที่คุณกำหนดไว้\n\nเนื่องจากนี่เป็นปริมาณการใช้อินเทอร์เน็ตที่วัดโดยระบบเครื่องเสียง ปริมาณการใช้งานที่ผู้ให้บริการวัดได้จึงอาจไม่เท่ากัน โปรดกำหนดขีดจำกัดอย่างระมัดระวัง"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ตั้งค่าเตือนปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ตั้งค่าขีดจำกัดปริมาณการใช้อินเทอร์เน็ต"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ตั้งค่า"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"กำลังเปิด Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"กำลังปิด Wi-Fi…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"สลับไปใช้เน็ตมือถือโดยอัตโนมัติ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ใช้เน็ตมือถือเมื่อ Wi‑Fi เชื่อมต่ออินเทอร์เน็ตไม่ได้ อาจมีค่าบริการจากปริมาณการใช้อินเทอร์เน็ต"</string>
     <string name="learn_more" msgid="8214605928933358604">"ดูข้อมูลเพิ่มเติม"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ฮอตสปอตและการเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ปิดฮอตสปอตโดยอัตโนมัติ"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ฮอตสปอต Wi‑Fi จะปิดถ้าไม่มีอุปกรณ์ที่เชื่อมต่อ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"บลูทูธ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"อุปกรณ์ไม่มีชื่อ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"อุปกรณ์ที่จับคู่"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant จะอ่านข้อมูลเกี่ยวกับแอปที่ใช้งานอยู่ในระบบของคุณได้ รวมถึงข้อมูลที่ปรากฏบนหน้าจอหรือที่เข้าถึงได้ภายในแอป"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ตรวจดูว่าคุณเชื่อถือแอปนี้ได้&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ป้อนอัตโนมัติ&gt;%1$s&lt;/xliff:g&gt; ดูรายการบนหน้าจอว่าข้อมูลอะไรบ้างที่ป้อนอัตโนมัติได้"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"เพิ่มบริการ"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"สิทธิ์เข้าถึงพิเศษของแอป"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
@@ -354,9 +355,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"แอปอื่นๆ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ไฟล์"</string>
     <string name="storage_system" msgid="1271345630248014010">"ระบบ"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ระบบมีไฟล์ที่ใช้เพื่อเรียกใช้ Android เวอร์ชัน <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ระบบรวมไฟล์สำหรับเรียกใช้ Android เวอร์ชัน <xliff:g id="VERSION">%s</xliff:g>"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ไฟล์เสียง"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"กำลังคำนวณ…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"บัญชี"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"เพิ่มบัญชี"</string>
@@ -412,7 +412,7 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ล้าง"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"ยกเลิก"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"รูปแบบการปลดล็อกใหม่ของคุณ"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"วาดรูปแบบการปลดล็อก"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ลากรูปแบบการปลดล็อก"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ปล่อยนิ้วเมื่อเสร็จแล้ว"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"บันทึกรูปแบบแล้ว"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"วาดรูปแบบอีกครั้งเพื่อยืนยัน"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ไม่พบฟีเจอร์ความปลอดภัยของอุปกรณ์นี้ เพื่อช่วยปกป้องรถยนต์ของคุณ อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้ก็ต่อเมื่อคุณเป็นผู้ปลดล็อกไว้แล้วเท่านั้น อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้เมื่ออยู่ใกล้กันแม้ว่าผู้อื่นจะเป็นคนถืออุปกรณ์ก็ตาม"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"เพิ่ม <xliff:g id="DEVICE_NAME">%1$s</xliff:g> เป็นอุปกรณ์ที่เชื่อถือได้"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"เพิ่ม <xliff:g id="DEVICE_NAME">%1$s</xliff:g> เป็นอุปกรณ์ที่เชื่อถือได้เรียบร้อยแล้ว"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ในการเพิ่มอุปกรณ์ที่เชื่อถือได้ คุณจำเป็นต้องกำหนดวิธีการตรวจสอบสิทธิ์ในขั้นถัดไป หากไม่มีอุปกรณ์ที่เชื่อถือได้ ระบบจะขอให้มีการตรวจสอบสิทธิ์ในการเข้าถึงโปรไฟล์ของคุณ"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"ลืม"</string>
     <string name="connect" msgid="5861699594602380150">"เชื่อมต่อ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ยกเลิกการเชื่อมต่อ"</string>

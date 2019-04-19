@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Të dhënat celulare"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Qasu te të dhënat duke përdorur rrjetin celular"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Të çaktivizohen të dhënat celulare?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Të lejohet përdorimi i të dhënave kur je në roaming?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Mund të shkaktohen tarifa të larta."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Përdorimi i të dhënave"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Të dhënat kryesore"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> të përdorura"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"Kufiri i të dhënave"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kufizimi i përdorimit të të dhënave"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Njësia kryesore e automjetit tënd do t\'i çaktivizojë të dhënat celulare kur të arrihet kufiri që cakton ti.\n\nMeqenëse përdorimi i të dhënave matet nga njësia kryesore dhe operatori celular mund ta llogarisë ndryshe përdorimin, ki parasysh të vendosësh një kufi të menduar mirë."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Cakto paralajmërimin për përdorimin e të dhënave"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Cakto kufirin e përdorimit të të dhënave"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Cakto"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Po aktivizon Wi‑Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Po çaktivizon Wi‑Fi…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Kalo automatikisht te të dhënat celulare"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Përdor të dhënat celulare kur Wi-Fi nuk ka qasje në internet. Mund të zbatohen tarifa për të dhënat."</string>
     <string name="learn_more" msgid="8214605928933358604">"Mëso më shumë"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona e qasjes dhe ndarja e internetit"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Çaktivizo automatikisht zonën e qasjes për internet"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Zona e qasjes për internet e Wi‑Fi do të çaktivizohet nëse nuk është lidhur asnjë pajisje"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Pajisje e paemërtuar"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Pajisjet e çiftuara"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistenti do të jetë në gjendje të lexojë informacion rreth aplikacioneve në përdorim në sistemin tënd, duke përfshirë informacionin e dukshëm në ekran ose të qasshëm brenda aplikacioneve."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sigurohu që ke besim te ky aplikacion&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=\"Plotësimi automatik i Google\"&gt;%1$s&lt;/xliff:g&gt; përdor atë që ndodhet në ekranin tënd për të përcaktuar se çfarë mund të plotësohet automatikisht."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Shto shërbim"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Qasja e veçantë e aplikacioneve"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vendndodhja"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Skedarët"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistemi"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemi përfshin skedarët e përdorur për ekzekutimin e versionit <xliff:g id="VERSION">%s</xliff:g> të Android"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Skedarët audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Po llogaritet…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Llogaritë"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Shto llogari"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nuk mund të zbulojë funksionet e sigurisë së kësaj pajisjeje. Për të ndihmuar në mbrojtjen e makinës sate, pajisja e besuar do të mund ta mbajë makinën tënde të shkyçur vetëm pasi të jetë shkyçur tashmë nga ti. Pajisja jote e besuar mund ta mbajë makinën tënde të shkyçur kur është në afërsi, edhe nëse e mban dikush tjetër."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Shtoje <xliff:g id="DEVICE_NAME">%1$s</xliff:g> si pajisje të besuar"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> u shtua me sukses si pajisje e besuar"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Shtimi i një pajisjeje të besuar kërkon që të caktosh më pas një metodë vërtetimi. Nëse nuk e ke pajisjen e besuar me vete, do të kërkohet vërtetim për të pasur qasje te profili yt."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Harro"</string>
     <string name="connect" msgid="5861699594602380150">"Lidh"</string>
     <string name="disconnect" msgid="6140789953324820336">"Shkëput"</string>

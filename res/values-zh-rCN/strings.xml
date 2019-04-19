@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"移动数据"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"通过移动网络访问数据"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要关闭移动数据网络吗？"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"要允许数据网络漫游吗？"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"这可能会产生高额费用。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"流量消耗"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要数据"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"已使用 <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"数据流量上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"限制流量用量"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"当移动数据流量的用量达到您设置的上限时，您汽车的音响主机将关闭移动数据网络。\n\n由于流量用量是由音响主机计算的，而您的运营商对流量用量的计算方式可能有所不同，因此建议您设置一个保守的上限值。"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"设置流量用量警告"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"设置流量使用上限"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"设置"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在开启 WLAN…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在关闭 WLAN…"</string>
@@ -113,12 +118,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自动切换到移动数据网络"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"在 WLAN 网络无法连接到互联网时切换到移动数据网络（可能会消耗移动数据流量）。"</string>
     <string name="learn_more" msgid="8214605928933358604">"了解详情"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"热点和网络共享"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自动关闭热点"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未连接任何设备，WLAN 热点将关闭"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"蓝牙"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"未命名的设备"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配对的设备"</string>
@@ -209,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"辅助应用将可读取您系统中使用的应用的相关信息，其中包括您屏幕上显示的信息或应用中可使用的信息。"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;请确认这是您信任的应用&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt;会根据您的屏幕内容判断可自动填充哪些内容。"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"添加服务"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"特殊应用权限"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
@@ -357,8 +358,7 @@
     <string name="storage_files" msgid="6382081694781340364">"文件"</string>
     <string name="storage_system" msgid="1271345630248014010">"系统"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"“系统”中包含用于运行 Android 版本 <xliff:g id="VERSION">%s</xliff:g> 的文件"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"音频文件"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"正在计算…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"帐号"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>
@@ -497,9 +497,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 未能检测到此设备的安全功能。为了保护您的汽车，只有当您将汽车解锁后，可信设备才会让汽车保持解锁状态。当您的可信设备在汽车附近时，就会让汽车保持解锁状态（即使是其他人拿着此设备也是如此）。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"将 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 添加为可信设备"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 已成功添加为可信设备"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"忽略"</string>
     <string name="connect" msgid="5861699594602380150">"连接"</string>
     <string name="disconnect" msgid="6140789953324820336">"断开连接"</string>

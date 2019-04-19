@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Date mobile"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accesați datele folosind rețeaua mobilă"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Dezactivați datele mobile?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Permiteți roamingul de date?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Se pot acumula costuri mari."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilizarea datelor"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Date principale"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> folosiți"</string>
@@ -63,6 +65,9 @@
     <string name="data_limit" msgid="227338836292511425">"Limită de date"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitarea utilizării datelor"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Unitatea principală a vehiculului va dezactiva datele mobile când se atinge limita specificată.\n\nDeoarece utilizarea datelor este măsurată de unitatea principală, iar operatorul poate contoriza în mod diferit utilizarea, vă recomandăm să stabiliți o limită prudentă."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Setați un avertisment privind utilizarea datelor"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Setați o limită de utilizare a datelor"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Setați"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Se activează Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Se dezactivează Wi-Fi…"</string>
@@ -113,12 +118,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Comutați automat la date mobile"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Folosiți datele mobile atunci când rețeaua Wi-Fi nu are acces la internet. Este posibil să se aplice taxe pentru utilizarea datelor."</string>
     <string name="learn_more" msgid="8214605928933358604">"Aflați mai multe"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot și tethering"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Dezactivați automat hotspotul"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspotul Wi-Fi se va dezactiva dacă nu se conectează niciun dispozitiv"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispozitiv nedenumit"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispozitive asociate"</string>
@@ -209,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Aplicația asistent va putea să citească informații despre aplicațiile în uz de pe sistem, inclusiv informațiile vizibile pe ecran sau accesibile în aplicații."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asigurați-vă că aveți încredere în această aplicație&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Completarea automată Google&gt;%1$s&lt;/xliff:g&gt; folosește conținutul de pe ecran pentru a stabili ce se poate completa automat."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Adăugați un serviciu"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Acces special pentru aplicații"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitări recente privind locația"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nu există solicitări recente privind locația"</string>
@@ -296,7 +297,7 @@
     <string name="date_time_auto" msgid="3570339569471779767">"Dată și oră automate"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Folosiți ora dată de rețea"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Fus orar automat"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"Folosește fusul orar din rețea"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Folosiți fusul orar din rețea"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format de 24 de ore"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Utilizați formatul de 24 de ore"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Ora"</string>
@@ -359,8 +360,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Fișiere"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemul include fișiere folosite pentru a rula versiunea de Android <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Fișiere audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Se calculează…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Conturi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adăugați un cont"</string>
@@ -505,9 +505,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selectați <xliff:g id="CAR_NAME">%1$s</xliff:g> de pe telefon pentru a asocia dispozitivele"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nu poate detecta funcțiile de securitate ale dispozitivului. Pentru a vă proteja mașina, dispozitivul de încredere va putea menține mașina deblocată numai după ce ați deblocat-o personal. Dispozitivul de încredere poate să mențină mașina deblocată când se află în apropiere, chiar dacă este folosită de o altă persoană."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Adăugați <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ca dispozitiv de încredere"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> a fost adăugat ca dispozitiv de încredere"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Înscrierea dispozitivului <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a eșuat"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Dacă adăugați un dispozitiv de încredere, trebuie să setați apoi o metodă de autentificare. Dacă nu aveți dispozitivul de încredere cu dvs., va fi necesar să vă autentificați pentru a vă accesa profilul."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Eliminați"</string>
     <string name="connect" msgid="5861699594602380150">"Conectați"</string>
     <string name="disconnect" msgid="6140789953324820336">"Deconectați"</string>
