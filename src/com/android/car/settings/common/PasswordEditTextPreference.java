@@ -19,27 +19,23 @@ package com.android.car.settings.common;
 import android.content.Context;
 import android.text.InputType;
 import android.text.TextUtils;
-import android.widget.TextView;
+import android.util.AttributeSet;
 
-import androidx.annotation.VisibleForTesting;
-import androidx.preference.EditTextPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
 
 /**
- * Extends {@link EditTextPreference} for entering password input. When {@link SettingsFragment}
+ * Extends {@link ValidatedEditTextPreference} for password input. When {@link SettingsFragment}
  * detects an instance of this class, it creates a new instance of {@link
- * SettingsEditTextPreferenceDialogFragment} with the inputType parameter set to
- * InputType.TYPE_TEXT_VARIATION_PASSWORD, so that the input is obscured on the dialog's TextEdit.
+ * PasswordEditTextPreferenceDialogFragment} so that the input is obscured on the dialog's TextEdit.
  * OnPreferenceChange, it either obscures the raw password input to display as the preference's
  * summary or displays the default password summary if the input is empty.
  */
-public class PasswordEditTextPreference extends EditTextPreference {
+public class PasswordEditTextPreference extends ValidatedEditTextPreference {
 
     private OnPreferenceChangeListener mUserProvidedListener;
-    private TextView mSummaryView;
     private final OnPreferenceChangeListener mCombinedListener = (preference, newValue) -> {
         if (mUserProvidedListener != null) {
             mUserProvidedListener.onPreferenceChange(preference, newValue);
@@ -50,9 +46,23 @@ public class PasswordEditTextPreference extends EditTextPreference {
 
     public PasswordEditTextPreference(Context context) {
         super(context);
-        super.setOnPreferenceChangeListener(mCombinedListener);
-        setSummary(R.string.default_password_summary);
-        setPersistent(false);
+        init();
+    }
+
+    public PasswordEditTextPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init();
+    }
+
+    public PasswordEditTextPreference(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init();
+    }
+
+    public PasswordEditTextPreference(Context context, AttributeSet attrs, int defStyleAttr,
+            int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init();
     }
 
     @Override
@@ -63,21 +73,22 @@ public class PasswordEditTextPreference extends EditTextPreference {
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        mSummaryView = (TextView) holder.findViewById(android.R.id.summary);
     }
 
-    @VisibleForTesting
-    int getSummaryInputType() {
-        return mSummaryView.getInputType();
+    private void init() {
+        super.setOnPreferenceChangeListener(mCombinedListener);
+        setDialogLayoutResource(R.layout.preference_dialog_password_edittext);
+        setSummary(R.string.default_password_summary);
+        setPersistent(false);
     }
 
     private void obscurePasswordForPreferenceSummary(Preference preference, Object password) {
         CharSequence value = password.toString();
         if (TextUtils.isEmpty(value)) {
             value = getContext().getString(R.string.default_password_summary);
-            mSummaryView.setInputType(InputType.TYPE_CLASS_TEXT);
+            setSummaryInputType(InputType.TYPE_CLASS_TEXT);
         } else {
-            mSummaryView.setInputType(InputType.TYPE_CLASS_TEXT
+            setSummaryInputType(InputType.TYPE_CLASS_TEXT
                     | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
         preference.setSummary(value);
