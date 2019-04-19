@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.text.InputType;
 import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.util.TypedValue;
@@ -244,12 +243,16 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         }
 
         DialogFragment dialogFragment;
-        if (preference instanceof PasswordEditTextPreference) {
-            dialogFragment = SettingsEditTextPreferenceDialogFragment.newInstance(
-                    preference.getKey(), InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        if (preference instanceof ValidatedEditTextPreference) {
+            if (preference instanceof PasswordEditTextPreference) {
+                dialogFragment = PasswordEditTextPreferenceDialogFragment.newInstance(
+                        preference.getKey());
+            } else {
+                dialogFragment = ValidatedEditTextPreferenceDialogFragment.newInstance(
+                        preference.getKey());
+            }
         } else if (preference instanceof EditTextPreference) {
-            dialogFragment = SettingsEditTextPreferenceDialogFragment.newInstance(
-                    preference.getKey(), InputType.TYPE_CLASS_TEXT);
+            dialogFragment = EditTextPreferenceDialogFragment.newInstance(preference.getKey());
         } else if (preference instanceof ListPreference) {
             dialogFragment = SettingsListPreferenceDialogFragment.newInstance(preference.getKey());
         } else {
@@ -257,6 +260,7 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
                     "Tried to display dialog for unknown preference type. Did you forget to "
                             + "override onDisplayPreferenceDialog()?");
         }
+
         dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
         showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
     }
@@ -325,7 +329,6 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
     }
 
     // Allocates the next available startActivityForResult request index.
-
     private int allocateRequestIndex(ActivityResultCallback callback) {
         // Sanity check that we haven't exhausted the request index space.
         if (mActivityResultCallbackMap.size() >= MAX_NUM_PENDING_ACTIVITY_RESULT_CALLBACKS) {
