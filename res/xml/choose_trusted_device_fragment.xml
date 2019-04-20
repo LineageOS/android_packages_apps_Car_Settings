@@ -21,9 +21,12 @@
         android:key="@string/pk_trusted_device_list"
         settings:controller="com.android.car.settings.security.TrustedDeviceListPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.security.AddTrustedDeviceProgressFragment"
         android:icon="@drawable/ic_add"
         android:key="@string/pk_add_trusted_device"
         android:title="@string/add_device_title"
-        settings:controller="com.android.car.settings.security.AddTrustedDevicePreferenceController"/>
+        settings:controller="com.android.car.settings.security.AddTrustedDevicePreferenceController">
+        <intent
+            android:targetClass="com.android.car.settings.security.AddTrustedDeviceActivity"
+            android:targetPackage="com.android.car.settings"/>
+    </Preference>
 </PreferenceScreen>
