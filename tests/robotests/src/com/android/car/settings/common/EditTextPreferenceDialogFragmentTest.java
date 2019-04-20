@@ -22,10 +22,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.CheckBox;
 import android.widget.EditText;
 
 import androidx.preference.EditTextPreference;
@@ -44,16 +41,15 @@ import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowAlertDialog;
 import org.robolectric.shadows.ShadowWindow;
 
-/** Unit test for {@link SettingsEditTextPreferenceDialogFragment}. */
+/** Unit test for {@link EditTextPreferenceDialogFragment}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-public class SettingsEditTextPreferenceDialogFragmentTest {
+public class EditTextPreferenceDialogFragmentTest {
 
     private Context mContext;
     private ActivityController<BaseTestActivity> mTestActivityController;
     private BaseTestActivity mTestActivity;
     private EditTextPreference mPreference;
-    private SettingsEditTextPreferenceDialogFragment mFragment;
-    private TestTargetFragment mTargetFragment;
+    private EditTextPreferenceDialogFragment mFragment;
 
     @Before
     public void setUp() {
@@ -61,11 +57,20 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
         mTestActivityController = ActivityController.of(new BaseTestActivity());
         mTestActivity = mTestActivityController.get();
         mTestActivityController.setup();
+        TestTargetFragment targetFragment = new TestTargetFragment();
+        mTestActivity.launchFragment(targetFragment);
+        mPreference = new EditTextPreference(mContext);
+        mPreference.setDialogLayoutResource(R.layout.preference_dialog_edittext);
+        mPreference.setKey("key");
+        targetFragment.getPreferenceScreen().addPreference(mPreference);
+        mFragment = EditTextPreferenceDialogFragment
+                .newInstance(mPreference.getKey());
+
+        mFragment.setTargetFragment(targetFragment, /* requestCode= */ 0);
     }
 
     @Test
     public void dialogPopulatedWithPreferenceText() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         mPreference.setText("text");
 
         mTestActivity.showDialog(mFragment, /* tag= */ null);
@@ -77,7 +82,6 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void softInputMethodSetOnWindow() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         mTestActivity.showDialog(mFragment, /* tag= */ null);
 
         assertThat(getShadowWindowFromDialog(
@@ -87,7 +91,6 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void editTextHasFocus() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         mTestActivity.showDialog(mFragment, /* tag= */ null);
         EditText editTextView = ShadowAlertDialog.getLatestAlertDialog().findViewById(
                 android.R.id.edit);
@@ -97,7 +100,6 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void onDialogClosed_positiveResult_updatesPreference() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         String text = "text";
         mTestActivity.showDialog(mFragment, /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
@@ -111,7 +113,6 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void onDialogClosed_negativeResult_doesNothing() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         mTestActivity.showDialog(mFragment, /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         EditText editTextView = dialog.findViewById(android.R.id.edit);
@@ -124,7 +125,6 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void instanceStateRetained() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
         String text = "text";
         mPreference.setText(text);
         mTestActivity.showDialog(mFragment, /* tag= */ null);
@@ -144,84 +144,9 @@ public class SettingsEditTextPreferenceDialogFragmentTest {
         assertThat(editTextView.getText().toString()).isEqualTo(text);
     }
 
-    @Test
-    public void onStart_inputTypeSetToPassword_shouldRevealShowPasswordCheckBoxUnchecked() {
-        finishSetupByInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
-        AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
-        CheckBox checkBox = dialog.findViewById(R.id.checkbox);
-
-        assertThat(checkBox.getVisibility()).isEqualTo(View.VISIBLE);
-        assertThat(!checkBox.isChecked()).isTrue();
-    }
-
-    @Test
-    public void onStart_inputTypeNotSetToPassword_shouldHideShowPasswordCheckBox() {
-        finishSetupByInputType(InputType.TYPE_CLASS_TEXT);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
-        AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
-        CheckBox checkBox = dialog.findViewById(R.id.checkbox);
-
-        assertThat(checkBox.getVisibility()).isEqualTo(View.GONE);
-    }
-
-    @Test
-    public void onCheckBoxChecked_shouldRevealRawPassword() {
-        finishSetupByInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        String testPassword = "TEST_PASSWORD";
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
-        AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
-        CheckBox checkBox = dialog.findViewById(R.id.checkbox);
-        EditText editText = dialog.findViewById(android.R.id.edit);
-        editText.setText(testPassword);
-        checkBox.performClick();
-
-        assertThat(editText.getInputType()).isEqualTo(InputType.TYPE_CLASS_TEXT);
-        assertThat(editText.getText().toString()).isEqualTo(testPassword);
-    }
-
-    @Test
-    public void onCheckBoxUnchecked_shouldObscureRawPassword() {
-        finishSetupByInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        String testPassword = "TEST_PASSWORD";
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
-        AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
-        CheckBox checkBox = dialog.findViewById(R.id.checkbox);
-        EditText editText = dialog.findViewById(android.R.id.edit);
-        editText.setText(testPassword);
-        // Performing click twice to simulate uncheck
-        checkBox.performClick();
-        checkBox.performClick();
-
-        assertThat(editText.getInputType()).isEqualTo((InputType.TYPE_CLASS_TEXT
-                | InputType.TYPE_TEXT_VARIATION_PASSWORD));
-        assertThat(editText.getText().toString()).isEqualTo(testPassword);
-    }
 
     private ShadowWindow getShadowWindowFromDialog(AlertDialog dialog) {
         return (ShadowWindow) Shadow.extract(dialog.getWindow());
-    }
-
-    /** Extract {@link InputType}-dependent part of the setup to be run in each test. */
-    private void finishSetupByInputType(int inputType) {
-        TestTargetFragment targetFragment = new TestTargetFragment();
-        mTestActivity.launchFragment(targetFragment);
-
-        switch (inputType) {
-            case InputType.TYPE_TEXT_VARIATION_PASSWORD:
-                mPreference = new PasswordEditTextPreference(mContext);
-                break;
-            default:
-                mPreference = new EditTextPreference(mContext);
-        }
-
-        mPreference.setDialogLayoutResource(R.layout.preference_dialog_edittext);
-        mPreference.setKey("key");
-        targetFragment.getPreferenceScreen().addPreference(mPreference);
-        mFragment = SettingsEditTextPreferenceDialogFragment
-                .newInstance(mPreference.getKey(), inputType);
-
-        mFragment.setTargetFragment(targetFragment, /* requestCode= */ 0);
     }
 
     /** Simple {@link PreferenceFragmentCompat} implementation to serve as the target fragment. */
