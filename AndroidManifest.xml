@@ -17,11 +17,11 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.car.settings"
-    coreApp="true"
-    android:sharedUserId="android.uid.system"
-    android:versionCode="1"
-    android:versionName="1.0">
+          package="com.android.car.settings"
+          coreApp="true"
+          android:sharedUserId="android.uid.system"
+          android:versionCode="1"
+          android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="24"
@@ -258,9 +258,19 @@
                   android:windowSoftInputMode="adjustResize">
         </activity>
 
-        <activity android:name=".system.ThirdPartyLicensesActivity"
+        <activity android:name=".security.AddTrustedDeviceActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".system.ThirdPartyLicensesActivity"
+                  android:label="@string/settings_license_activity_title"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.settings.THIRD_PARTY_LICENSE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <!-- This logic is copied from phone.-->

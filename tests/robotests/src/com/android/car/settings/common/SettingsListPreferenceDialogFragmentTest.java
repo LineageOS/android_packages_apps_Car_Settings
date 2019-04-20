@@ -54,9 +54,8 @@ public class SettingsListPreferenceDialogFragmentTest {
         mTestActivity = mTestActivityController.get();
         mTestActivityController.setup();
 
-        SettingsEditTextPreferenceDialogFragmentTest.TestTargetFragment
-                targetFragment =
-                new SettingsEditTextPreferenceDialogFragmentTest.TestTargetFragment();
+        EditTextPreferenceDialogFragmentTest.TestTargetFragment targetFragment =
+                new EditTextPreferenceDialogFragmentTest.TestTargetFragment();
         mTestActivity.launchFragment(targetFragment);
         mPreference = new ListPreference(context);
         mPreference.setDialogLayoutResource(R.layout.preference_dialog_edittext);

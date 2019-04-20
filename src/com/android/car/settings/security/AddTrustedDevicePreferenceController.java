@@ -16,151 +16,29 @@
 
 package com.android.car.settings.security;
 
-import android.annotation.Nullable;
 import android.app.admin.DevicePolicyManager;
-import android.bluetooth.BluetoothDevice;
-import android.car.Car;
-import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
-import android.widget.Toast;
 
-import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.widget.LockPatternUtils;
 
 /**
- * Business logic when user click on add trusted device, a new screen will be shown and user can add
- * a trusted device using CarTrustAgentEnrollmentManager, confirm pairing code dialog base on that.
- * TODO(wentingzhai): test the enrollment process when CarTrustAgentEnrollment Service is done.
+ * Business logic if the preference is clickable according to the password quality of current user.
  */
 public class AddTrustedDevicePreferenceController extends PreferenceController<Preference> {
-
-    private static final Logger LOG = new Logger(AddTrustedDevicePreferenceController.class);
-    private final Car mCar;
-    private final CarUserManagerHelper mCarUserManagerHelper;
-    private final LockPatternUtils mLockPatternUtils;
-    private BluetoothDevice mBluetoothDevice;
-    @Nullable
-    private CarTrustAgentEnrollmentManager mCarTrustAgentEnrollmentManager;
-
-    private final CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback
-            mCarTrustAgentEnrollmentCallback =
-            new CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback() {
-
-                @Override
-                public void onEnrollmentHandshakeFailure(BluetoothDevice device, int errorCode) {
-                    LOG.e("Trust agent service time out");
-                }
-
-                @Override
-                public void onAuthStringAvailable(BluetoothDevice device, String authString) {
-                    ConfirmPairingCodeDialog dialog = ConfirmPairingCodeDialog.newInstance(
-                            device.getName(), authString);
-                    dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
-                    getFragmentController().showDialog(dialog, ConfirmPairingCodeDialog.TAG);
-                }
-
-                @Override
-                public void onEscrowTokenAdded(long handle) {
-                    // User need to enter the correct authentication of the car to activate the
-                    // added token.
-                    getContext().startActivity(new Intent(getContext(), CheckLockActivity.class));
-                }
-
-                @Override
-                public void onEscrowTokenRemoved(long handle) {
-                }
-
-                @Override
-                public void onEscrowTokenActiveStateChanged(long handle, boolean active) {
-                    if (active) {
-                        Toast.makeText(getContext(), getContext().getString(
-                            R.string.trusted_device_success_enrollment_toast),
-                            Toast.LENGTH_LONG).show();
-                    } else {
-                        LOG.d(handle + " has been deactivated");
-                    }
-                    try {
-                        mCarTrustAgentEnrollmentManager.stopEnrollmentAdvertising();
-                        mCarTrustAgentEnrollmentManager.setBleCallback(null);
-                        mCarTrustAgentEnrollmentManager.setEnrollmentCallback(null);
-                    } catch (CarNotConnectedException e) {
-                        LOG.e(e.getMessage(), e);
-                    }
-                    getFragmentController().goBack();
-                }
-            };
-
-    private final CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback
-            mCarTrustAgentBleCallback =
-            new CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback() {
-                @Override
-                public void onBleEnrollmentDeviceConnected(BluetoothDevice device) {
-                    mBluetoothDevice = device;
-                }
-
-                @Override
-                public void onBleEnrollmentDeviceDisconnected(BluetoothDevice device) {
-                    LOG.d("Bluetooth device " + device.getName() + "has been disconnected");
-                    mBluetoothDevice = null;
-                }
-
-                @Override
-                public void onEnrollmentAdvertisingStarted() {
-                    LOG.d("Advertising started successfully");
-                }
-
-                @Override
-                public void onEnrollmentAdvertisingFailed() {
-                    getFragmentController().goBack();
-                }
-            };
-
-    @VisibleForTesting
-    final ConfirmPairingCodeDialog.ConfirmPairingCodeListener mConfirmParingCodeListener =
-            new ConfirmPairingCodeDialog.ConfirmPairingCodeListener() {
-                public void onConfirmPairingCode() {
-                    try {
-                        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted(
-                                mBluetoothDevice);
-                    } catch (CarNotConnectedException e) {
-                        LOG.e(e.getMessage(), e);
-                    }
-                }
-
-                public void onDialogCancelled() {
-                    getFragmentController().goBack();
-                }
-            };
+    private CarUserManagerHelper mCarUserManagerHelper;
+    private LockPatternUtils mLockPatternUtils;
 
     public AddTrustedDevicePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCar = Car.createCar(context);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
         mLockPatternUtils = new LockPatternUtils(context);
-        try {
-            mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
-                    Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
-        } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
-        }
-    }
-
-    @Override
-    protected void checkInitialized() {
-        if (mCarTrustAgentEnrollmentManager == null) {
-            throw new IllegalStateException("mCarTrustAgentEnrollmentManager is null.");
-        }
     }
 
     @Override
@@ -177,32 +55,5 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
     @Override
     protected Class<Preference> getPreferenceType() {
         return Preference.class;
-    }
-
-    @Override
-    public boolean handlePreferenceClicked(Preference preference) {
-        try {
-            mCarTrustAgentEnrollmentManager.startEnrollmentAdvertising();
-        } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
-        }
-        // return false to make sure AddTrustedDeviceProgressFragment will show up.
-        return false;
-    }
-
-    @Override
-    protected void onStartInternal() {
-        try {
-            mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
-            mCarTrustAgentEnrollmentManager.setBleCallback(mCarTrustAgentBleCallback);
-        } catch (CarNotConnectedException e) {
-            LOG.e(e.getMessage(), e);
-        }
-        ConfirmPairingCodeDialog pairingCodeDialog =
-                (ConfirmPairingCodeDialog) getFragmentController().findDialogByTag(
-                        ConfirmPairingCodeDialog.TAG);
-        if (pairingCodeDialog != null) {
-            pairingCodeDialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
-        }
     }
 }

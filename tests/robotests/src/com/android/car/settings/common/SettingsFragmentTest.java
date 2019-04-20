@@ -98,7 +98,7 @@ public class SettingsFragmentTest {
 
         assertThat(mFragment.getFragmentManager().findFragmentByTag(
                 SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                SettingsEditTextPreferenceDialogFragment.class);
+                EditTextPreferenceDialogFragment.class);
     }
 
     @Test
@@ -130,7 +130,7 @@ public class SettingsFragmentTest {
                 mContext.getString(R.string.tpk_edit_text_preference)).performClick();
         assertThat(mFragment.getFragmentManager().findFragmentByTag(
                 SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                SettingsEditTextPreferenceDialogFragment.class);
+                EditTextPreferenceDialogFragment.class);
 
         // Attempt to show another.
         mFragment.getPreferenceScreen().findPreference(
@@ -139,7 +139,7 @@ public class SettingsFragmentTest {
         // Assert only one shown at a time.
         assertThat(mFragment.getFragmentManager().findFragmentByTag(
                 SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                SettingsEditTextPreferenceDialogFragment.class);
+                EditTextPreferenceDialogFragment.class);
     }
 
     @Test
