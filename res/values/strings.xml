@@ -502,6 +502,9 @@
     <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
     <string name="wallpaper_attributions_values">Satellite imagery providers:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
 
+    <!-- Text to display in regulatory info screen (from device overlay). [CHAR LIMIT=NONE] -->
+    <string name="regulatory_info_text"></string>
+
     <!-- Title for actual Settings license activity. --><skip/>
     <!-- About phone settings, Legal information setting option name and title of dialog box holding license info -->
     <string name="settings_license_activity_title">Third-party licenses</string>
