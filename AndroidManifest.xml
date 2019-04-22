@@ -272,6 +272,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".system.RegulatoryInfoDisplayActivity"
+            android:label="@string/regulatory_labels"
+            android:enabled="@bool/config_show_regulatory_info">
+            <intent-filter>
+                <action android:name="android.settings.SHOW_REGULATORY_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- This logic is copied from phone.-->
         <!-- Ensures there's lightweight fallback activity when no other MAIN/HOME activity is present.-->
         <activity android:name=".FallbackHome"
