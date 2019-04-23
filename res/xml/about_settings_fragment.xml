@@ -40,6 +40,12 @@
         android:title="@string/build_number"
         settings:controller="com.android.car.settings.system.BuildNumberPreferenceController"/>
     <Preference
+        android:key="@string/pk_regulatory_labels"
+        android:title="@string/regulatory_labels"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
+        <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
+    </Preference>
+    <Preference
         android:key="@string/pk_about_bluetooth_mac_address"
         android:title="@string/bluetooth_mac_address"
         settings:controller="com.android.car.settings.system.BluetoothMacAddressPreferenceController"/>
