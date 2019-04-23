@@ -441,6 +441,16 @@
     </string>
     <!-- Title of preference to add new autofill services. [CHAR_LIMIT=30] -->
     <string name="autofill_add_service">Add service</string>
+    <!-- Title of setting to change the handled domain urls [CHAR LIMIT=60]-->
+    <string name="app_launch_domain_links_title">Opening links</string>
+    <!-- Section title for the Domain URL app preference list [CHAR LIMIT=60]-->
+    <string name="domain_url_section_title">Installed apps</string>
+    <!-- Summary for an app that doesn't open any domain URLs [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_none">Don\u2019t open supported links</string>
+    <!-- Summary of an app that can open URLs for exactly one domain [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_one">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g></string>
+    <!-- Summary of an app that can open several domain's URLs [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_some">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g> and other URLs</string>
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
 
