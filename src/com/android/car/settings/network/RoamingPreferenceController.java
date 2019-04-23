@@ -37,7 +37,8 @@ import com.android.car.settings.common.PreferenceController;
 
 /** Business logic for toggling the roaming state. */
 // TODO: This preference should be available but unsearchable if subscription id is invalid.
-public class RoamingPreferenceController extends PreferenceController<TwoStatePreference> {
+public class RoamingPreferenceController extends PreferenceController<TwoStatePreference> implements
+        MobileNetworkUpdateManager.MobileNetworkUpdateListener {
 
     private final CarrierConfigManager mCarrierConfigManager;
     private final RoamingStateChangeObserver mRoamingStateChangeObserver;
@@ -68,13 +69,6 @@ public class RoamingPreferenceController extends PreferenceController<TwoStatePr
     }
 
     @Override
-    protected void checkInitialized() {
-        if (mTelephonyManager == null) {
-            throw new IllegalStateException("TelephonyManager should be non-null by this point");
-        }
-    }
-
-    @Override
     protected void onStartInternal() {
         mRoamingStateChangeObserver.register(getContext(), mSubId);
 
@@ -93,7 +87,8 @@ public class RoamingPreferenceController extends PreferenceController<TwoStatePr
     @Override
     protected void updateState(TwoStatePreference preference) {
         preference.setEnabled(mSubId != SubscriptionManager.INVALID_SUBSCRIPTION_ID);
-        preference.setChecked(mTelephonyManager.isDataRoamingEnabled());
+        preference.setChecked(
+                mTelephonyManager != null ? mTelephonyManager.isDataRoamingEnabled() : false);
     }
 
     @Override
@@ -107,6 +102,12 @@ public class RoamingPreferenceController extends PreferenceController<TwoStatePr
 
         setRoamingEnabled(isEnabled);
         return true;
+    }
+
+    @Override
+    public void onMobileNetworkUpdated(int subId) {
+        setSubId(subId);
+        refreshUi();
     }
 
     private void setRoamingEnabled(boolean enabled) {
