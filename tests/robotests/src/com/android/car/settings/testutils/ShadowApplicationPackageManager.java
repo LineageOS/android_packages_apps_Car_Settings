@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.testutils;
 
+import static android.content.pm.PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED;
+
 import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
 import android.content.ComponentName;
@@ -27,6 +29,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
+import android.util.Pair;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -50,6 +53,8 @@ public class ShadowApplicationPackageManager extends
     private final Map<String, ComponentName> mPkgToDefaultActivityMap = new HashMap<>();
     private final Map<String, IntentFilter> mPkgToDefaultActivityIntentFilterMap = new HashMap<>();
     private final Map<IntentFilter, ComponentName> mPreferredActivities = new LinkedHashMap<>();
+    private final Map<Pair<String, Integer>, Integer> mPkgAndUserIdToIntentVerificationStatusMap =
+            new HashMap<>();
     private List<ResolveInfo> mHomeActivities = Collections.emptyList();
     private ComponentName mDefaultHomeActivity;
 
@@ -146,6 +151,23 @@ public class ShadowApplicationPackageManager extends
     @Override
     public boolean setDefaultBrowserPackageNameAsUser(String packageName, int userId) {
         mUserIdToDefaultBrowserMap.put(userId, packageName);
+        return true;
+    }
+
+    @Implementation
+    @Override
+    public int getIntentVerificationStatusAsUser(String packageName, int userId) {
+        Pair<String, Integer> key = new Pair<>(packageName, userId);
+        return mPkgAndUserIdToIntentVerificationStatusMap.getOrDefault(key,
+                INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_UNDEFINED);
+    }
+
+    @Implementation
+    @Override
+    public boolean updateIntentVerificationStatusAsUser(String packageName, int status,
+            int userId) {
+        Pair<String, Integer> key = new Pair<>(packageName, userId);
+        mPkgAndUserIdToIntentVerificationStatusMap.put(key, status);
         return true;
     }
 
