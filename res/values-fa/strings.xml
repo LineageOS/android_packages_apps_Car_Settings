@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"داده تلفن همراه"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"دسترسی به داده‌ها با استفاده از شبکه تلفن همراه"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"داده تلفن همراه خاموش شود؟"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"رومینگ داده مجاز است؟"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"شاید هزینه زیادی برای شما داشته باشد."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"مصرف داده"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"داده اصلی"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> مصرف شده است"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"محدودیت داده"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"محدود کردن مصرف داده"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"وقتی داده تلفن همراهتان به محدودیتی که تنظیم کرده‌اید برسد، سیستم صوتی خودروی شما خاموش خواهد شد.\n\nاز آنجایی‌که سیستم صوتی شما مصرف داد‌ه را محاسبه می‌کند و ممکن است شرکت مخابراتی‌تان مصرف داده را به روش دیگری محاسبه کند، سعی کنید محدودیت محافظه‌کارانه‌ای تنظیم کنید."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"تنظیم هشدار مصرف داده"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"تنظیم حد مصرف داده"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"تنظیم کردن"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"روشن کردن Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"خاموش کردن Wi-Fi…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"تغییر وضعیت خودکار به داده تلفن همراه"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"وقتی Wi-Fi به اینترنت دسترسی ندارد، از داده تلفن همراه استفاده شود. ممکن است هزینه مصرف داده اعمال شود."</string>
     <string name="learn_more" msgid="8214605928933358604">"بیشتر بدانید"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اتصال به اینترنت با تلفن همراه"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خاموش شدن خودکار نقطه اتصال"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"اگر دستگاهی متصل نباشد، نقطه اتصال Wi‑Fi خاموش خواهد شد"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"دستگاه بی‌نام"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"دستگاه‌های مرتبط‌شده"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"دستیار می‌تواند اطلاعات مربوط به برنامه‌های در حال استفاده در سیستم شما را بخواند، ازجمله اطلاعاتی که در صفحه‌نمایش شما قابل مشاهده است یا در برنامه‌ها قابل دسترسی است."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;مطمئن شوید به این برنامه اطمینان دارید&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=تکمیل خودکار Google‏&gt;%1$s&lt;/xliff:g&gt; برای تعیین مواردی که می‌توانند به‌طور خودکار تکمیل شوند، از آنچه روی صفحه‌نمایش شما است استفاده می‌کند."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"افزودن سرویس"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"دسترسی ویژه به برنامه"</string>
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
@@ -354,10 +355,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"سایر برنامه‌ها"</string>
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"سیستم"</string>
-    <!-- no translation found for storage_detail_dialog_system (796365720531622361) -->
-    <skip />
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"سیستم حاوی فایل‌هایی است که برای اجرای Android نسخه <xliff:g id="VERSION">%s</xliff:g> استفاده می‌شود"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"فایل‌های صوتی"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"در حال محاسبه…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"حساب‌ها"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"افزودن حساب"</string>
@@ -495,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"۲. برای مرتبط‌سازی دستگاه‌ها، <xliff:g id="CAR_NAME">%1$s</xliff:g> را در تلفنتان انتخاب کنید"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock نمی‌تواند ویژگی‌های امنیتی این دستگاه را شناسایی کند. برای کمک به محافظت از خودرو، دستگاه مطمئن تنها زمانی که از قبل قفل تلفنتان را باز کرده باشید می‌تواند قفل آن را باز نگه‌دارد. دستگاه مطمئن شما می‌تواند هنگامی‌که خودرویتان در اطراف است قفل آن را باز نگه‌دارد، حتی اگر تلفن در دست شخص دیگری باشد."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"افزودن <xliff:g id="DEVICE_NAME">%1$s</xliff:g> به‌عنوان دستگاه مطمئن"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> باموفقیت به‌عنوان دستگاه مطمئن اضافه شد"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ثبت‌نام <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ناموفق بود"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"افزودن دستگاه مطمئن مستلزم تنظیم روش احراز هویت در مرحله بعد است. اگر دستگاه مطمئن‌تان را با خود حمل نمی‌کنید، برای دسترسی به نمایه‌تان باید احراز هویت کنید."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"فراموش کردن"</string>
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>

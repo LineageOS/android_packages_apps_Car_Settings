@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ජංගම දත්ත"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ජංගම ජාලය භාවිතයෙන් දත්තවලට ප්‍රවේශය"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ජංගම දත්ත ක්‍රියාවිරහිත කරන්න ද?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"දත්ත සැරිසරණයට අවසර දෙන්නේද?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ඔබට සැලකිය යුතු ගාස්තු ඇති විය හැක."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"දත්ත භාවිතය"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ප්‍රාථමික දත්ත"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> භාවිතයි"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"දත්ත සීමාව"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"දත්ත භාවිතය සීමා කිරීම"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ජංගම දත්ත ඔබ සැකසූ සීමාවට ළඟා වූ විට ඔබගේ වාහනයේ ශීර්ෂ ඒකකය එය අක්‍රිය කරයි.\n\nඔබගේ ශීර්ෂ ඒකකයෙන් දත්ත භාවිතය ගණනය කරනු ලබන අතර භාවිතය වෙනස් වීම සඳහා ඔබගේ වාහකයා ගිණුම මධ්‍යස්ථ සීමාවකට සැකසිය හැකි බව සලකන්න."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"දත්ත භාවිතයේ අවවාද සකසන්න"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"දත්ත භාවිත සීමාවක් සකසන්න"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"සකසන්න"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi ක්‍රියාත්මක කරමින්…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi ක්‍රියා විරහිත කරමින්…"</string>
@@ -113,10 +118,8 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi හට අන්තර්ජාල ප්‍රවේශය නැති විට ජංගම දත්ත භාවිතා කරන්න. දත්ත භාවිතයේ ගාස්තු අදාළ විය හැකිය."</string>
     <string name="learn_more" msgid="8214605928933358604">"තව දැන ගන්න"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"හොට්ස්පොට් සහ ටෙදරින්"</string>
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"හොට්ස්පොට් ස්වයංක්‍රීයව ක්‍රියාවිරහිත කරන්න"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"උපාග සම්බන්ධ කර නැතිනම් Wi‑Fi හොට්ස්පොට් ක්‍රියාවිරහිත වනු ඇත"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"බ්ලූටූත්"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"නම් නොකළ උපාංගය"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"යුගල කළ උපාංග"</string>
@@ -491,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. උපාංග යුගල කිරීමට ඔබේ දුරකථනයේ <xliff:g id="CAR_NAME">%1$s</xliff:g> තෝරන්න"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"හපන් අඟුලට මෙම උපාංගයේ ආරක්‍ෂණ විශේෂාංග අනාවරණ කළ නොහැක ඔබේ කාර් රථය ආරක්‍ෂා කිරීමට උදවු කිරීමට, ඔබ ඔබේ කාර් රථය අඟුලු ඇරීමෙන් පසු පමණක් විශ්වසනීය උපාංගයට ඔබේ කාර් රථට අඟුලු ඇර තබා ගත හැක. වෙනත් කෙනෙක් ඔබේ විශ්වසනීය උපාංගය තබා සිටින්නේ වූවත්, එයට එය අවට තිබියදී ඔබේ කාර් රථය අඟුලු ඇර තබා ගත හැක."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> විශ්වසනීය උපාංගයක් ලෙස එක් කරන්න"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> විශ්වසනීය උපාංගයක් ලෙස සාර්ථකය එක් කළා"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ලියාපදිංචි වීම අසාර්ථකයි"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"විශ්වාසදායී උපාංගයක් එක් කිරීමට ඔබට මීළඟට සත්‍යාපන ක්‍රමයක් සැකසීමට අවශ්‍ය කරයි. ඔබට ඔබේ විශ්වාසදායී උපාංගය ළඟ නොමැති නම්, ඔබේ පැතිකඩට ප්‍රවේශයට සත්‍යාපනය අවශ්‍ය වනු ඇත."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"අමතක කරන්න"</string>
     <string name="connect" msgid="5861699594602380150">"සබඳින්න"</string>
     <string name="disconnect" msgid="6140789953324820336">"විසන්ධි කරන්න"</string>

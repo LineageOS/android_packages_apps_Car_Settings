@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilni podaci"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Pristupi podacima putem mobilne mreže"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Isključiti prijenos podataka na mobilnoj mreži?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Dozvoliti roming podataka?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Može doći do značajnih troškova."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Prijenos podataka"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Prim. plan prijenosa podataka"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Iskorišteno je <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -63,6 +65,9 @@
     <string name="data_limit" msgid="227338836292511425">"Ograničenje za podatke"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograničavanje prijenosa podataka"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Glavna jedinica vozila će isključiti prijenos podataka na mobilnoj mreži nakon što dostigne ograničenje koje ste postavili.\n\nS obzirom na to da glavna jedinica vozila mjeri prijenos podataka te da obračun vašeg operatera može biti drugačiji, uzmite u obzir postavljanje umjerenog ograničenja."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Postavljanje upozorenja o prijenosu podataka"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Postavljanje ograničenja za prijenos podataka"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Postavi"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WiFi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Uključivanje WiFi-a…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Isključivanje WiFi-a…"</string>
@@ -87,11 +92,11 @@
     <string name="default_password_summary" msgid="8789594645836902982">"Unesite lozinku"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
-    <item msgid="4897376984576812606">"Loš"</item>
-    <item msgid="7683058295076342057">"Loš"</item>
-    <item msgid="1639222824821660744">"Slab"</item>
-    <item msgid="1838705897358163300">"Dobar"</item>
-    <item msgid="6067166649320533751">"Odličan"</item>
+    <item msgid="4897376984576812606">"Slaba"</item>
+    <item msgid="7683058295076342057">"Slaba"</item>
+    <item msgid="1639222824821660744">"Zadovoljavajuća"</item>
+    <item msgid="1838705897358163300">"Dobra"</item>
+    <item msgid="6067166649320533751">"Odlična"</item>
   </string-array>
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/s"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
@@ -113,11 +118,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatsko prebacivanje na prijenos podataka na mobilnoj mreži"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Korištenje prijenosa podataka na mobilnoj mreži kada WiFi mreža nema pristup internetu. Mogu nastati troškovi prijenosa podataka."</string>
     <string name="learn_more" msgid="8214605928933358604">"Saznajte više"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Žarišna točka i modemsko povezivanje"</string>
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Pristupna tačka i dijeljenje mobilne veze"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatski isključi pristupnu tačku"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"WiFi pristupna tačka će se isključiti ako nijedan uređaj nije povezan"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Neimenovani uređaj"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Upareni uređaji"</string>
@@ -158,7 +161,7 @@
     <string name="tts_pitch" msgid="2389171233852604923">"Visina"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Vrati na zadano"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Zvuk"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"Jačina zvona"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"Jačina zvuka zvona"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Jačina zvuka navigacije"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Melodija zvona"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Obavještenje"</string>
@@ -208,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistent će imati mogućnost čitanja informacija o aplikacijama koje se koriste na vašem sistemu, uključujući informacije vidljive na ekranu ili dostupne unutar aplikacija."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Vodite računa da je to pouzdana aplikacija&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Automatsko popunjavanje&gt;%1$s&lt;/xliff:g&gt; koristi sadržaj na vašem ekranu da odredi šta se može automatski popuniti."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Dodaj uslugu"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Poseban pristup aplikacijama"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtjevi za lokaciju"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahtjeva za lokaciju"</string>
@@ -358,8 +360,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Fajlovi"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistem obuhvata fajlove koji se koriste za pokretanje verzije Androida <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio fajlovi"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Računanje…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Računi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj račun"</string>
@@ -504,9 +505,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Odaberite automobil <xliff:g id="CAR_NAME">%1$s</xliff:g> na telefonu da uparite uređaje"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Funkcija Smart Lock ne može prepoznati sigurnosne funkcije ovog uređaja. Kako bi zaštitio vaš automobil, pouzdani uređaj će moći održati vaš automobil otključanim samo nakon što ga vi otključate. Vaš pouzdani uređaj može zadržati vaš automobil otključanim kada je u blizini, čak i ako ga drži neko drugi."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Dodajte <xliff:g id="DEVICE_NAME">%1$s</xliff:g> kao pouzdani uređaj"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Uređaj <xliff:g id="DEVICE_NAME">%1$s</xliff:g> je uspješno dodan kao pouzdani uređaj"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Prijava uređaja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> nije uspjela"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Nakon što dodate pouzdani uređaj, morate postaviti metodu autentifikacije. Autentifikacija će biti potrebna za pristup profilu u slučaju da kod sebe nemate pouzdani uređaj."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Zaboravi"</string>
     <string name="connect" msgid="5861699594602380150">"Poveži"</string>
     <string name="disconnect" msgid="6140789953324820336">"Prekini vezu"</string>

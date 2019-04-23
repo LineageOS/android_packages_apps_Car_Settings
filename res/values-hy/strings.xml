@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Բջջային ինտերնետ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Օգտվել բջջային ինտերնետից"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Անջատե՞լ բջջային ինտերնետը"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Թույլատրե՞լ տվյալների ռոումինգը"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Դրա համար ձեզանից կարող են խոշոր վճարներ գանձվել:"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Թրաֆիկի օգտագործում"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Հիմնական փաթեթ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Օգտագործվել է <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -51,17 +53,20 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Թարմացվել է հենց նոր <xliff:g id="ID_1">^1</xliff:g>-ի կողմից"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Թարմացվել է հենց նոր"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Դիտել սակագնային պլանը"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Վիճակագրության վերակայում"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Վիճակագրության զրոյացում"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Ամսվա օրը`"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Պահել"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Զգուշացումներ և սահմանաչափ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Վիճակագրության ժամանակահատվածը"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Երբ զգուշացնել"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Նախազգուշացում դնել"</string>
     <string name="data_warning" msgid="116776633806885370">"Զգուշացում թրաֆիկի մասին"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Սահմանել թրաֆիկի սահմանաչափը"</string>
     <string name="data_limit" msgid="227338836292511425">"Թրաֆիկի սահմանաչափը"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Տվյալների օգտագործման սահմանափակում"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Նշված սահմանաչափն անցնելու դեպքում մեքենայի գլխավոր վահանակը կանջատի բջջային ինտերնետը։\n\nՕպերատորի վիճակագրությունը կարող է տարբերվել գլխավոր վահանակի տվյալներից, ուստի խորհուրդ ենք տալիս նշել նախատեսվածից ցածր սահմանաչափ։"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Նախազգուշացման կարգավորում"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Թրաֆիկի օգտագործման սահմանաչափը"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Պահել"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi‑Fi-ը միանում է…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi‑Fi-ն անջատվում է…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Ավտոմատ կերպով անցնել բջջային ինտերնետի"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Օգտագործել բջջային ինտերնետը, եթե չի հաջողվում միանալ համացանցին Wi-Fi-ի միջոցով։ Կարող են կիրառվել գանձումներ։"</string>
     <string name="learn_more" msgid="8214605928933358604">"Մանրամասն"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Թեժ կետ և մոդեմի ռեժիմ"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Ավտոմատ անջատել թեժ կետը"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi թեժ կետը կանջատվի, եթե որևէ սարք միացած չլինի դրան"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Անանուն սարք"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Զուգակցված սարքեր"</string>
@@ -174,8 +176,8 @@
     <string name="app_permissions" msgid="32799922508313948">"Հավելվածների թույլտվություններ"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> օգտագործող հավելվածները"</string>
     <string name="applications_settings" msgid="794261395191035632">"Հավելվածի մասին"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Ստիպողաբար դադարեցնել"</string>
-    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Ստիպողաբար դադարեցնե՞լ"</string>
+    <string name="force_stop" msgid="2153183697014720520">"Կանգնեցնել"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Կանգնեցնե՞լ"</string>
     <string name="force_stop_dialog_text" msgid="4354954014318432599">"Հավելվածի ստիպողաբար դադարեցումը կարող է ազդել դրա աշխատանքի վրա։"</string>
     <string name="disable_text" msgid="4358165448648990820">"Անջատել"</string>
     <string name="enable_text" msgid="1794971777861881238">"Միացնել"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները, այդ թվում՝ էկրանին ցուցադրվող կամ հավելվածներից ստացվող տեղեկությունները:"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Համոզվեք, որ այս հավելվածը վստահելի է&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google-ի ինքնալրացման ծառայությունը&gt;%1$s&lt;/xliff:g&gt; վերլուծում է էկրանի պարունակությունը և գտնում է դաշտերը, որոնք կարող են ինքնալրացվել:"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ավելացնել ծառայություն"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Հատուկ հասանելիություն հավելվածների համար"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Ֆայլեր"</string>
     <string name="storage_system" msgid="1271345630248014010">"Համակարգ"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Համակարգը ներառում է ֆայլեր, որոնք անհրաժեշտ են Android-ի <xliff:g id="VERSION">%s</xliff:g> տարբերակի աշխատանքի համար"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Աուդիո ֆայլեր"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Հաշվարկում…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Հաշիվներ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ավելացնել հաշիվ"</string>
@@ -403,7 +403,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"Շարունակել"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Կրկնել"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Բաց թողնել"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպման կարգավորում"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Էկրանի կողպում"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Ընտրեք ձեր PIN-ը"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Ընտրեք ձեր նախշը"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Ընտրեք ձեր գաղտնաբառը"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Սարքերը զուգակցելու համար ընտրեք «<xliff:g id="CAR_NAME">%1$s</xliff:g>» մեքենան հեռախոսում։"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-ը չի կարողանում հայտնաբերել այս սարքի անվտանգության գործառույթները: Մեքենայի պաշտպանության համար վստահելի սարքը կկարողանա ապակողպված պահել մեքենան, միայն երբ այն արդեն ապակողպվել է ձեր կողմից։ Մեքենան կարող է ապակողպված մնալ, երբ այն գտնվում է ձեր վստահելի սարքի մոտակայքում՝ նույնիսկ մեկ այլ անձի ձեռքում:"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Ավելացրեք <xliff:g id="DEVICE_NAME">%1$s</xliff:g> սարքը վստահելիների ցանկում"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> սարքն ավելացվեց վստահելիների ցանկում"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Չհաջողվեց գրանցել «<xliff:g id="DEVICE_NAME">%1$s</xliff:g>» սարքը"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Վստահելի սարք ավելացնելու համար ընտրեք նույնականացման եղանակ: Եթե վստահելի սարքը ձեզ մոտ չէ, պրոֆիլ մուտք գործելու համար կպահանջվի նույնականացում:"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Հեռացնել"</string>
     <string name="connect" msgid="5861699594602380150">"Միանալ"</string>
     <string name="disconnect" msgid="6140789953324820336">"Անջատել"</string>

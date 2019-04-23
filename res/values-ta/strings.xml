@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"மொபைல் டேட்டா"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"முதன்மை டேட்டா"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> பயன்படுத்தப்பட்டது"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"டேட்டா வரம்பு"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"டேட்டா உபயோகத்தை வரம்பிடுதல்"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"நீங்கள் அமைத்துள்ள வரம்பை அடைந்ததும் மொபைல் டேட்டாவைக் கார் சாதனத்தின் முதன்மை யூனிட் மொபைல் டேட்டாவை முடக்கும்.\n\nடேட்டா உபயோகத்தை முதன்மை யூனிட் அளவிட்டாலும் உங்கள் மொபைல் நிறுவனம் வேறுவிதமாக அளவிடலாம். எனவே பாதுகாப்பான அளவில் வரம்பை அமைக்கவும்."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"டேட்டா உபயோக எச்சரிக்கையை அமைத்தல்"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"டேட்டா உபயோக வரம்பை அமைத்தல்"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"அமை"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"வைஃபை"</string>
     <string name="wifi_starting" msgid="473253087503153167">"வைஃபையை ஆன் செய்கிறது…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"வைஃபையை ஆஃப் செய்கிறது…"</string>
@@ -112,12 +119,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்தல்"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"புளூடூத்"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"பெயரிடப்படாத சாதனம்"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"இணைக்கப்பட்ட சாதனங்கள்"</string>
@@ -150,9 +154,9 @@
     <string name="language_settings" msgid="2079258598337245546">"மொழிகள்"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"மொழிகள் &amp; உள்ளீடு"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"கீபோர்டு"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"கீபோர்டுகளை நிர்வகித்தல்"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"கீபோர்டு நிர்வகித்தல்"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"உரையிலிருந்து பேச்சுக்கு"</string>
-    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"இன்ஜின் விருப்பத்தேர்வு"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"விருப்பத்தேர்வு"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"தற்போதைய இன்ஜின்"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"பேச்சு வீதம்"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"குரல் அழுத்தம்"</string>
@@ -188,7 +192,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"பயன்பாட்டின் டேட்டா உபயோகம்"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
@@ -207,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"திரையில் தெரியும் தகவல் அல்லது ஆப்ஸுக்குள் அணுகத்தக்க தகவல் உட்பட உங்கள் சிஸ்டமில் செயலிலுள்ள ஆப்ஸ்கள் பற்றிய தகவல்களை அசிஸ்டண்ட்டால் படிக்க இயலும்."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;இந்த ஆப்ஸை நம்புகிறீர்கள் என்பதை உறுதிப்படுத்தவும்&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; உங்கள் திரையில் இருப்பதைப் பயன்படுத்தி எவற்றையெல்லாம் தானாக நிரப்ப இயலும் என்பதைத் தீர்மானிக்கும்."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"சேவையைச் சேர்த்தல்"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"ஆப்ஸிற்கான சிறப்பு அணுகல்"</string>
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
@@ -330,7 +333,7 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"புதிய பயனரைச் சேர்க்க முடியவில்லை"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"இந்தப் பயனரை நீக்கவா?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"அனைத்து ஆப்ஸ் மற்றும் தரவு நீக்கப்படும்."</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"அனைத்து ஆப்ஸும் டேட்டாவும் நீக்கப்படும்."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"பயனரை நீக்க இயலவில்லை."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"நிராகரி"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"மீண்டும் முயலவும்"</string>
@@ -350,14 +353,12 @@
     <string name="users_list_title" msgid="770764290290240909">"பயனர்கள்"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sக்கு இந்த அனுமதிகள் உள்ளன"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"சேமிப்பகம்"</string>
-    <string name="storage_music_audio" msgid="7827147379976134040">"இசையும் ஆடியோவும்"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"இசை &amp; ஆடியோ"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"பிற ஆப்ஸ்"</string>
     <string name="storage_files" msgid="6382081694781340364">"ஃபைல்கள்"</string>
     <string name="storage_system" msgid="1271345630248014010">"சிஸ்டம்"</string>
-    <!-- no translation found for storage_detail_dialog_system (796365720531622361) -->
-    <skip />
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android <xliff:g id="VERSION">%s</xliff:g> பதிப்பை இயக்குவதற்குப் பயன்படுத்தப்படும் ஃபைல்களும் சிஸ்டத்தில் அடங்கும்"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ஆடியோ ஃபைல்கள்"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"கணக்கிடுகிறது…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"கணக்குகள்"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
@@ -495,9 +496,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. சாதனங்களை இணைக்க உங்கள் மொபைலில் <xliff:g id="CAR_NAME">%1$s</xliff:g> என்பதைத் தேர்வுசெய்யவும்"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ஆப்ஸால் இந்தச் சாதனத்தின் பாதுகாப்பு அம்சங்களைக் கண்டறிய இயலாது. உங்கள் காரைப் பாதுகாக்க, நீங்கள் ஏற்கனவே அன்லாக் செய்திருந்தால் மட்டுமே, நம்பகமான சாதனங்களால் அதனை அன்லாக் செய்ய இயலும். வேறு யாராவது உங்கள் காரை வைத்திருந்தாலும்கூட, அருகில் இருக்கும்போது நம்பகமான சாதனங்களால் உங்கள் காரை அன்லாக் செய்ய இயலும்."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> என்ற சாதனத்தை நம்பகமான சாதனமாகச் சேர்த்தல்"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"நம்பகமான சாதனமாக <xliff:g id="DEVICE_NAME">%1$s</xliff:g> சேர்க்கப்பட்டது."</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> பதிவு செய்வதில் தோல்வி"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"நம்பகமான சாதனத்தைச் சேர்த்த பிறகு அடையாளச் சரிபார்ப்பு முறையை அமைக்க வேண்டும். உங்களிடம் நம்பகமான சாதனம் இல்லையெனில் அடையாளச் சரிபார்ப்பிற்காக உங்கள் சுயவிவரத்தை அணுக வேண்டிய அவசியம் ஏற்படும்."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"அகற்று"</string>
     <string name="connect" msgid="5861699594602380150">"இணை"</string>
     <string name="disconnect" msgid="6140789953324820336">"துண்டி"</string>

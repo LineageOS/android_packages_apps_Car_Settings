@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"モバイルデータ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"モバイル ネットワーク経由でデータにアクセス"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"モバイルデータを OFF にしますか？"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"高額な通信料が発生することがあります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"メインデータ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> 使用"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"データの上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"データ使用の上限の設定"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"車載ヘッドユニットで設定した上限に達するとモバイルデータが OFF になります。\n\nデータ使用量はヘッドユニットで測定された値ですが、携帯通信会社での使用量の計算はこれと異なることがあるため、余裕をもって上限を設定することをおすすめします。"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"データ使用の警告の設定"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"データ使用の上限の設定"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"設定"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi を ON にしています…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi を OFF にしています…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"モバイルデータへの自動切り替え"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi でインターネットにアクセスできない場合にモバイルデータを使用します。データ通信料が発生する可能性があります。"</string>
     <string name="learn_more" msgid="8214605928933358604">"詳細"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"アクセス ポイントとテザリング"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"アクセス ポイントを自動的にオフにする"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"デバイスが接続されていないと、Wi-Fi アクセス ポイントはオフになります"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"名前のないデバイス"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ペア設定済みのデバイス"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"アシスタントはシステムで使用中のアプリに関する情報（画面に表示される情報、アプリ内でアクセス可能な情報など）を読み取れるようになります。"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;このアプリが信頼できることを確認してください&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; は画面上の内容に基づいて、自動入力可能な情報を判別します。"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"サービスの追加"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"特別なアプリアクセス"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置情報"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"システム"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"システムには、Android バージョン <xliff:g id="VERSION">%s</xliff:g> の実行に使用されるファイルが含まれています"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"音声ファイル"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"計算しています…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"アカウント"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"アカウントを追加"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. スマートフォンで、デバイスとペア設定する <xliff:g id="CAR_NAME">%1$s</xliff:g> を選択します"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ではこのデバイスのセキュリティ機能を検出できません。車を保護するため、信頼できるデバイスでは、あなたがすでにロック解除した車のロックを解除されたままにする以外のことはできません。第三者がそのデバイスを手に取っている場合でも、近くにある車のロックが解除されたままになることがあります。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"信頼できるデバイスとして <xliff:g id="DEVICE_NAME">%1$s</xliff:g> を追加"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> を信頼できるデバイスとして追加しました"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"削除"</string>
     <string name="connect" msgid="5861699594602380150">"接続"</string>
     <string name="disconnect" msgid="6140789953324820336">"接続を解除"</string>

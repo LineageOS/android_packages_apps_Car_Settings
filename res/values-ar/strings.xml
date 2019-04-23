@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"بيانات الجوّال"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"هل تريد إيقاف بيانات الجوّال؟"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"هل تريد السماح بتجوال البيانات؟"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"قد يكلّف ذلك رسومًا مرتفعة."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"استخدام البيانات"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"البيانات الأساسية"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"تم استخدام <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>."</string>
@@ -66,6 +68,9 @@
     <string name="data_limit" msgid="227338836292511425">"الحد الأقصى للبيانات"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"وضع حد لاستخدام البيانات"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ستُوقف الوحدة الأساسية لمركبتك بيانات الجوّال بعد الوصول إلى الحد الأقصى الذي وضعته.\n\nولأنّ الوحدة الأساسية تقيس حجم استخدام البيانات بطريقة معيّنة وقد يحاسبك مشغّل شبكة الجوّال بطريقة مختلفة، ننصحك بوضع حدٍ معتدلٍ."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ضبط تحذيرات استخدام البيانات"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ضبط حد استخدام البيانات"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"ضبط"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"جارٍ تفعيل Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"جارٍ إيقاف Wi-Fi…"</string>
@@ -116,12 +121,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"التبديل إلى بيانات الجوال تلقائيًا"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"يمكنك استخدام بيانات الجوّال إذا تعذّر الدخول إلى الإنترنت عبر شبكة Wi‑Fi، وقد يتم فرض رسوم على استخدام البيانات."</string>
     <string name="learn_more" msgid="8214605928933358604">"مزيد من المعلومات"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطة الاتصال والتوصيل"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"إيقاف نقطة الاتصال تلقائيًا"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"سيتم إيقاف نقطة اتصال Wi‑Fi في حال عدم اتصال أي أجهزة."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"جهاز بدون اسم"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"الأجهزة المقترنة"</string>
@@ -171,7 +173,7 @@
     <string name="alarm_volume_title" msgid="840384014895796587">"المنبّه"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"نغمة رنين الهاتف"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"الصوت التلقائي للإشعارات"</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"الصوت التلقائي للتنبيهات"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"الصوت التلقائي للمنبّه"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"التطبيقات والإشعارات"</string>
     <string name="all_applications" msgid="7798210477486822168">"إظهار جميع التطبيقات"</string>
     <string name="default_applications" msgid="1558183275638697087">"التطبيقات التلقائية"</string>
@@ -215,8 +217,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"سيتمكن المساعد من قراءة المعلومات عن التطبيقات قيد الاستخدام على نظامك، بما في ذلك المعلومات المرئية على شاشتك أو التي يمكن الوصول إليها داخل التطبيقات."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;تأكّد من أنك تثق بهذا التطبيق.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; تستخدم البيانات المعروضة على الشاشة لتحديد ما يمكن ملؤه تلقائيًا."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"إضافة خدمة"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"أذونات خاصة للتطبيقات"</string>
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
@@ -269,7 +270,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"لقد أصبحت الآن مطوّر برامج."</string>
     <string name="show_dev_already" msgid="1678087328973865736">"لا حاجة لذلك، فأنت مطوّر برامج فعلاً."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"خيارات المطوّرين"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"خيارات إعادة التعيين"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"خيارات إعادة الضبط"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"إعادة تعيين الشبكة أو التطبيقات أو الجهاز"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"إعادة ضبط الشبكة"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"سيؤدي هذا الإجراء إلى إعادة ضبط جميع إعدادات الشبكة، بما في ذلك:"</string>
@@ -371,8 +372,7 @@
     <string name="storage_files" msgid="6382081694781340364">"الملفات"</string>
     <string name="storage_system" msgid="1271345630248014010">"النظام"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"يتضمّن النظام الملفات المستخدمة لتشغيل إصدار Android <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"الملفات الصوتية"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"جارٍ الحساب…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"الحسابات"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"إضافة حساب"</string>
@@ -538,9 +538,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. اختيار <xliff:g id="CAR_NAME">%1$s</xliff:g> على هاتفك لإقران الأجهزة"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"يتعذّر على Smart Lock رصد الميزات الأمنية لهذا الجهاز. للمساعدة في حماية سيارتك، لن يتمكّن الجهاز الموثوق به من أن يُبقي سيارتك مفتوحة إلا إذا سبقَ وتم فتحها بواسطتك. ويمكن للجهاز الموثوق به أن يُبقي سيارتك مفتوحة عندما يكون قريبًا منها، حتى لو كان يحمله شخص غيرك."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"إضافة <xliff:g id="DEVICE_NAME">%1$s</xliff:g> كجهاز موثوق به"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"تم إضافة <xliff:g id="DEVICE_NAME">%1$s</xliff:g> كجهاز موثوق به."</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"تعذّر تسجيل جهاز <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"سيتعيَّن عليك تحديد طريقة المصادقة بعد إضافة جهاز موثوق به. وإذا لم يكن بحوزتك جهازك الموثوق به، ستلزم المصادقة للوصول إلى ملفك الشخصي."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"حذف"</string>
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>

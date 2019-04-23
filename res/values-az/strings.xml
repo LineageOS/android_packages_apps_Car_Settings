@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Mobil şəbəkədən istifadə edərək dataya daxil olun"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil data söndürülsün?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Data rouminqinə icazə verilsin?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Sizə əhəmiyyətli xərclər tətbiq edilə bilər."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Data istifadəsi"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Əsas data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> istifadə edilib"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"Data limiti"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Data istifadəsinə limit qoyulması"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Ayarladığınız limitə çatdıqda, avtomobilinizin idarə paneli mobil datanı söndürəcək.\n\nData istifadəsi idarə paneli tərəfindən ölçüldüyü və operatorun hesablaması fərqli ola bildiyi üçün uyğun limit ayarlamağınız tövsiyə olunur."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Data istifadə xəbərdarlığı ayarlayın"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Data istifadə limiti ayarlayın"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ayarlayın"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi yandırılır…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi söndürülür…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mobil dataya avtomatik keçin"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi internetə qoşulmayanda mobil datadan istifadə edin. Xidmət haqqı tutula bilər."</string>
     <string name="learn_more" msgid="8214605928933358604">"Ətraflı məlumat"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot və qoşulma"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspotu avtomatik deaktiv edin"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Heç bir cihaz qoşulu olmazsa, Wi‑Fi hotspot\'u deaktiv ediləcək"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Adsız cihaz"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Birləşdirilmiş cihazlar"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asistent sisteminizdə istifadə olunan tətbiqlər haqqında məlumatı oxuya biləcək, bura ekranınızda görünən və ya tətbiqlər daxilində əlçatan olan məlumatlar da daxildir."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Bu tətbiqə etibar etdiyinizə əmin olun&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Avtodoldurma&gt;%1$s&lt;/xliff:g&gt; nəyin avtomatik doldurula biləcəyini müəyyən etmək üçün ekrandakılardan istifadə edir."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Xidmət əlavə edin"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Xüsusi tətbiq girişi"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Məkan"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Son Məkan Sorğuları"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Məkan sorğusu yoxdur"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Fayllar"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistem"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemə Android <xliff:g id="VERSION">%s</xliff:g> versiyasını işə salmaq üçün istifadə olunan fayllar daxildir"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio fayllar"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Hesablanır…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hesablar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hesab əlavə edin"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları birləşdirmək üçün telefonda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçin"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock bu cihazın təhlükəsizlik xüsusiyyətlərini aşkarlaya bilmir. Telefonunuzu qorumağa kömək etmək üçün etibarlı cihaz yalnızca avtomobilin kilidini açdığınız zaman kilidi açıq vəziyyətdə saxlaya biləcək. Etibarlı cihazınız hətta başqasının əlində olarkən belə, yaxınlıqda olduqda avtomobili kilidi açıq saxlaya bilər."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> cihazını etibarlı cihaz kimi əlavə edin"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> uğurla etibarlı cihaz kimi əlavə edildi"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qeydiyyatı alınmadı"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Etibarlı cihaz əlavə etdikdən sonra doğrulama metodu təyin edilməlidir. Etibarlı cihazınız üzərinizdə deyilsə, profilinizə giriş üçün doğrulama tələb olunacaq."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Unudun"</string>
     <string name="connect" msgid="5861699594602380150">"Qoşun"</string>
     <string name="disconnect" msgid="6140789953324820336">"Ayırın"</string>

@@ -34,6 +34,10 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"മൊബൈൽ ഡാറ്റ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"മൊബൈൽ നെറ്റ്‌വർക്ക് ഉപയോഗിച്ച് ഡാറ്റ ആക്‌സസ് ചെയ്യുക"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"മൊബൈൽ ഡാറ്റ ഓഫാക്കണോ?"</string>
+    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <skip />
+    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <skip />
     <string name="data_usage_settings" msgid="7877132994777987848">"ഡാറ്റ ഉപയോഗം"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"പ്രാഥമിക ഡാറ്റ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ഉപയോഗിച്ചു"</string>
@@ -62,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"ഡാറ്റാ പരിധി"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ഡാറ്റാ ഉപയോഗം നിയന്ത്രിക്കുന്നു"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"നിങ്ങൾ സജ്ജീകരിച്ചിരിക്കുന്ന പരിധി എത്തുമ്പോൾ നിങ്ങളുടെ വാഹനത്തിൻ്റെ ഹെഡ് യൂണിറ്റ്, മൊബൈൽ ഡാറ്റാ ഓഫാക്കും.\n\nഡാറ്റാ ഉപയോഗം ഹെഡ് യൂണിറ്റിൽ അളക്കുന്നതിനാലും, നിങ്ങളുടെ കാരിയർ വ്യത്യസ്‌ത രീതിയിൽ ഉപയോഗം കണക്കാക്കിയേക്കാം എന്നതിനാലും മിതമായ ഡാറ്റാ പരിധി സജ്ജീകരിക്കാൻ നോക്കുക."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ഡാറ്റാ ഉപയോഗ മുന്നറിയിപ്പ് സജ്ജീകരിക്കുക"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ഡാറ്റാ ഉപയോഗ പരിധി സജ്ജീകരിക്കുക"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"സജ്ജീകരിക്കുക"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"വൈഫൈ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"വൈഫൈ ഓണാക്കുന്നു…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"വൈഫൈ ഓഫാക്കുന്നു…"</string>
@@ -113,10 +120,8 @@
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"വൈഫൈയിൽ നിന്നുള്ള ഇന്‍റർനെറ്റ് ആക്‌സ‌സ് ഇല്ലാത്തപ്പോൾ മൊബൈൽ ഡാറ്റ ഉപയോഗിക്കുക. ഡാറ്റാ ഉപയോഗ നിരക്കുകൾ ബാധകമായേക്കാം."</string>
     <string name="learn_more" msgid="8214605928933358604">"കൂടുതലറിയുക"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ഹോട്ട്‌സ്പോട്ടും ‌ടെതറിംഗും"</string>
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ഹോട്ട്‌സ്‌പോട്ട് സ്വയമേവ ഓഫാക്കുക"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തില്ലെങ്കിൽ വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഓഫാകും"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"പേരിടാത്ത ഉപകരണം"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ജോടിയാക്കിയ ഉപകരണങ്ങൾ"</string>
@@ -206,8 +211,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"നിങ്ങളുടെ സ്ക്രീനിൽ ദൃശ്യമാകുന്നതോ ആപ്പുകൾക്കുള്ളിൽ ആക്‌സസ് ചെയ്യാവുന്നതോ ആയ വിവരങ്ങൾ ഉൾപ്പെടെ, നിങ്ങളുടെ സിസ്‌റ്റത്തിൽ ഉപയോഗത്തിലുള്ള ആപ്പുകളെ കുറിച്ചുള്ള വിവരങ്ങൾ വായിക്കാൻ അസിസ്‌റ്റൻന്റിനാവും."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;നിങ്ങൾ ഈ ആപ്പിനെ വിശ്വസിക്കുന്നുണ്ടെന്ന് ഉറപ്പുവരുത്തുക&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; സ്വയമേവ പൂരിപ്പിക്കേണ്ടത് എന്താണെന്ന് നിർണ്ണയിക്കുന്നതിന് നിങ്ങളുടെ സ്‌ക്രീനിൽ ഉള്ളത് ഉപയോഗിക്കുന്നു."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"സേവനം ചേർക്കുക"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"പ്രത്യേക ആപ്പ് ആക്‌സസ്"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകളൊന്നുമില്ല"</string>
@@ -353,10 +357,8 @@
     <string name="storage_other_apps" msgid="945509804756782640">"മറ്റ് ആപ്പുകൾ"</string>
     <string name="storage_files" msgid="6382081694781340364">"ഫയലുകൾ"</string>
     <string name="storage_system" msgid="1271345630248014010">"സിസ്‌റ്റം"</string>
-    <!-- no translation found for storage_detail_dialog_system (796365720531622361) -->
-    <skip />
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"സിസ്‌റ്റത്തിൽ Android പതിപ്പ് <xliff:g id="VERSION">%s</xliff:g> റൺ ചെയ്യാൻ ഉപയോഗിച്ച ഫയലുകളും ഉൾപ്പെടുന്നു"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ഓഡിയോ ഫയലുകൾ"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"കണക്കാക്കുന്നു…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"അക്കൗണ്ടുകൾ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"അക്കൗണ്ട് ചേർക്കുക"</string>
@@ -494,9 +496,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-ന് ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ ഫീച്ചറുകൾ തിരിച്ചറിയാനാവുന്നില്ല. നിങ്ങളുടെ കാർ പരിരക്ഷിക്കാൻ സഹായിക്കുന്നതിന്, നിങ്ങൾ മുമ്പേ തന്നെ അൺലോക്ക് ചെയ്‌തെങ്കിൽ മാത്രമേ ഉപകരണത്തിന് കാർ അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകൂ. നിങ്ങളുടെ കാർ മറ്റാരുടെയെങ്കിലും പക്കൽ ആണെങ്കിൽ പോലും, അത് സമീപത്തുണ്ടെങ്കിൽ നിങ്ങളുടെ വിശ്വസ്‌ത ഉപകരണത്തിന് അത് അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകും."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ ഒരു വിശ്വസ്‌ത ഉപകരണമായി ചേർക്കുക"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ വിശ്വസ്‌ത ഉപകരണമായി ചേർത്തു"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"മറക്കുക"</string>
     <string name="connect" msgid="5861699594602380150">"കണക്റ്റ് ചെയ്യുക"</string>
     <string name="disconnect" msgid="6140789953324820336">"വിച്ഛേദിക്കുക"</string>
