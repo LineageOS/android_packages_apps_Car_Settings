@@ -77,9 +77,23 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         }
 
         /** Sets the positive button label. */
+        public Builder setPositiveButton(String label, ConfirmListener confirmListener) {
+            mPosLabel = label;
+            mConfirmListener = confirmListener;
+            return this;
+        }
+
+        /** Sets the positive button label. */
         public Builder setPositiveButton(@StringRes int label, ConfirmListener confirmListener) {
             mPosLabel = mContext.getString(label);
             mConfirmListener = confirmListener;
+            return this;
+        }
+
+        /** Sets the negative button label. */
+        public Builder setNegativeButton(String label, RejectListener rejectListener) {
+            mNegLabel = label;
+            mRejectListener = rejectListener;
             return this;
         }
 

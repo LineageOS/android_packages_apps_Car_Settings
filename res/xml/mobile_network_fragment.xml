@@ -24,4 +24,9 @@
         android:summary="@string/mobile_network_toggle_summary"
         android:title="@string/mobile_network_toggle_title"
         settings:controller="com.android.car.settings.network.MobileDataTogglePreferenceController"/>
+    <SwitchPreference
+        android:key="@string/pk_mobile_roaming_toggle"
+        android:summary="@string/roaming_summary"
+        android:title="@string/roaming_title"
+        settings:controller="com.android.car.settings.network.RoamingPreferenceController"/>
 </PreferenceScreen>

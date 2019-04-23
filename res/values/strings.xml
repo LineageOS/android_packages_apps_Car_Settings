@@ -45,6 +45,27 @@
     <string name="mobile_network_toggle_summary">Access data using mobile network</string>
     <!-- Mobile network screen, confirmation dialog to turn off mobile data [CHAR LIMIT=50] -->
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
+    <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->
+    <string name="sim_selection_required_pref">Selection required</string>
+    <!-- Title asking user if they wish to change the default sim for cellular data. [CHAR LIMIT=30] -->
+    <string name="sim_change_data_title">
+        Use <xliff:g id="carrier" example="Google Fi">%1$s</xliff:g> for mobile data?
+    </string>
+    <!-- Message confirming that the user wishes to change the default data SIM from one to another.  [CHAR LIMIT=NONE] -->
+    <string name="sim_change_data_message">
+        You\u0027re using <xliff:g id="carrier2" example="Google Fi">%2$s</xliff:g> for mobile data.
+        If you switch to <xliff:g id="carrier1" example="Verizon">%1$s</xliff:g>,
+        <xliff:g id="carrier2" example="Google Fi">%2$s</xliff:g> will no longer be used for mobile
+        data.
+    </string>
+    <!-- Ok button label confirming the user wishes to change the default data SIM from one to another. [CHAR LIMIT=25] -->
+    <string name="sim_change_data_ok">
+        Use <xliff:g id="carrier" example="Verizon">%1$s</xliff:g>
+    </string>
+    <!-- Mobile network screen, preference title for toggle to enable roaming [CHAR LIMIT=30] -->
+    <string name="roaming_title">Roaming</string>
+    <!-- Mobile network screen, preference summary for toggle to enable roaming [CHAR LIMIT=60] -->
+    <string name="roaming_summary">Connect to data services when roaming</string>
     <!-- Mobile network settings screen, dialog message title when user selects the Data roaming toggle [CHAR LIMIT=60] -->
     <string name="roaming_alert_title">Allow data roaming?</string>
     <!-- Mobile network settings screen, message in dialog box that appears when you select the Data roaming toggle [CHAR LIMIT=80] -->
