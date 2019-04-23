@@ -20,6 +20,10 @@
     <string name="config_settings_hierarchy_root_fragment" translatable="false">com.android.car.settings.quicksettings.QuickSettingFragment</string>
     <!-- Whether system_update_settings should be shown or not. -->
     <bool name="config_show_system_update_settings">true</bool>
+    <!-- Whether Wi-Fi Mac address should be shown or not. -->
+    <bool name="config_show_wifi_mac_address">true</bool>
+    <!-- Whether to show regulatory info or not. -->
+    <bool name="config_show_regulatory_info">true</bool>
     <!-- The component which listens for the enabling of developer options. -->
     <string name="config_dev_options_module" translatable="false">com.android.car.developeroptions/.Settings$DevelopmentSettingsDashboardActivity</string>
 </resources>
