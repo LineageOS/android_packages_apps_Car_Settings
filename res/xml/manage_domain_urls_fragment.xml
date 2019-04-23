@@ -18,17 +18,9 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/default_applications">
-    <Preference
-        android:fragment="com.android.car.settings.applications.assist.ManageAssistFragment"
-        android:key="@string/pk_default_assist_and_voice"
-        android:title="@string/assist_and_voice_input_settings"
-        settings:controller="com.android.car.settings.applications.assist.ManageAssistEntryPreferenceController"
-        settings:iconSpaceReserved="true"/>
-    <Preference
-        android:fragment="com.android.car.settings.applications.managedomainurls.ManageDomainUrlsFragment"
-        android:key="@string/pk_opening_links_entry"
-        android:title="@string/app_launch_domain_links_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
-        settings:iconSpaceReserved="true"/>
+    android:title="@string/app_launch_domain_links_title">
+    <PreferenceCategory
+        android:key="@string/pk_opening_links_options"
+        android:title="@string/domain_url_section_title"
+        settings:controller="com.android.car.settings.applications.managedomainurls.DomainAppPreferenceController"/>
 </PreferenceScreen>
