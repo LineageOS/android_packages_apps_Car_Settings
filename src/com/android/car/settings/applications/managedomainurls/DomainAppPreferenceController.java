@@ -20,12 +20,8 @@ import android.app.Application;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.IntentFilterVerificationInfo;
 import android.content.pm.PackageManager;
 import android.util.ArrayMap;
-import android.util.ArraySet;
 import android.util.IconDrawableFactory;
 
 import androidx.annotation.VisibleForTesting;
@@ -33,13 +29,11 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /** Business logic to populate the list of apps that deal with domain urls. */
 public class DomainAppPreferenceController extends PreferenceController<PreferenceGroup> {
@@ -144,7 +138,10 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
         Preference preference = new Preference(getContext());
         preference.setKey(key);
         preference.setTitle(entry.label);
-        preference.setSummary(getDomainsSummary(entry.info.packageName));
+        preference.setSummary(
+                DomainUrlsUtils.getDomainsSummary(getContext(), entry.info.packageName,
+                        mCarUserManagerHelper.getCurrentProcessUserId(),
+                        DomainUrlsUtils.getHandledDomains(mPm, entry.info.packageName)));
         preference.setIcon(iconDrawableFactory.getBadgedIcon(entry.info));
         preference.setOnPreferenceClickListener(pref -> {
             getFragmentController().launchFragment(
@@ -152,49 +149,5 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
             return true;
         });
         return preference;
-    }
-
-    private CharSequence getDomainsSummary(String packageName) {
-        // If the user has explicitly said "no" for this package, that's the
-        // string we should show.
-        int domainStatus = mPm.getIntentVerificationStatusAsUser(packageName,
-                mCarUserManagerHelper.getCurrentProcessUserId());
-        if (domainStatus == PackageManager.INTENT_FILTER_DOMAIN_VERIFICATION_STATUS_NEVER) {
-            return getContext().getText(R.string.domain_urls_summary_none);
-        }
-        // Otherwise, ask package manager for the domains for this package,
-        // and show the first one (or none if there aren't any).
-        ArraySet<String> result = getHandledDomains(mPm, packageName);
-        if (result.isEmpty()) {
-            return getContext().getText(R.string.domain_urls_summary_none);
-        } else if (result.size() == 1) {
-            return getContext().getString(R.string.domain_urls_summary_one, result.valueAt(0));
-        } else {
-            return getContext().getString(R.string.domain_urls_summary_some, result.valueAt(0));
-        }
-    }
-
-    private ArraySet<String> getHandledDomains(PackageManager pm, String packageName) {
-        List<IntentFilterVerificationInfo> iviList = pm.getIntentFilterVerifications(packageName);
-        List<IntentFilter> filters = pm.getAllIntentFilters(packageName);
-
-        ArraySet<String> result = new ArraySet<>();
-        if (iviList != null && iviList.size() > 0) {
-            for (IntentFilterVerificationInfo ivi : iviList) {
-                for (String host : ivi.getDomains()) {
-                    result.add(host);
-                }
-            }
-        }
-        if (filters != null && filters.size() > 0) {
-            for (IntentFilter filter : filters) {
-                if (filter.hasCategory(Intent.CATEGORY_BROWSABLE)
-                        && (filter.hasDataScheme(IntentFilter.SCHEME_HTTP)
-                        || filter.hasDataScheme(IntentFilter.SCHEME_HTTPS))) {
-                    result.addAll(filter.getHostsList());
-                }
-            }
-        }
-        return result;
     }
 }
