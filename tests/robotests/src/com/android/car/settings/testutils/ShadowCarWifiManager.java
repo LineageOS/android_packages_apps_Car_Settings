@@ -17,6 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.content.Context;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 
 import com.android.car.settings.wifi.CarWifiManager;
@@ -28,10 +29,18 @@ import org.robolectric.annotation.Resetter;
 
 import java.util.List;
 
+/**TODO: Refactor all methods to run without relying on sInstance. */
 @Implements(CarWifiManager.class)
 public class ShadowCarWifiManager {
 
+    public static final int STATE_UNKNOWN = -1;
+    public static final int STATE_STARTED = 0;
+    public static final int STATE_STOPPED = 1;
+    public static final int STATE_DESTROYED = 2;
+
     private static CarWifiManager sInstance;
+    private static int sCurrentState = STATE_UNKNOWN;
+    private static WifiConfiguration sWifiConfiguration = new WifiConfiguration();
 
     public static void setInstance(CarWifiManager wifiManager) {
         sInstance = wifiManager;
@@ -40,6 +49,8 @@ public class ShadowCarWifiManager {
     @Resetter
     public static void reset() {
         sInstance = null;
+        sWifiConfiguration = new WifiConfiguration();
+        sCurrentState = STATE_UNKNOWN;
     }
 
     @Implementation
@@ -48,7 +59,36 @@ public class ShadowCarWifiManager {
 
     @Implementation
     public void start() {
-        sInstance.start();
+        if (sInstance != null) {
+            sInstance.start();
+        }
+        sCurrentState = STATE_STARTED;
+    }
+
+    @Implementation
+    public void stop() {
+        if (sInstance != null) {
+            sInstance.stop();
+        }
+        sCurrentState = STATE_STOPPED;
+    }
+
+    @Implementation
+    public void destroy() {
+        if (sInstance != null) {
+            sInstance.destroy();
+        }
+        sCurrentState = STATE_DESTROYED;
+    }
+
+    @Implementation
+    public void setWifiApConfig(WifiConfiguration config) {
+        sWifiConfiguration = config;
+    }
+
+    @Implementation
+    public WifiConfiguration getWifiApConfig() {
+        return sWifiConfiguration;
     }
 
     @Implementation
@@ -79,5 +119,9 @@ public class ShadowCarWifiManager {
     @Implementation
     public void connectToPublicWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
         sInstance.connectToPublicWifi(accessPoint, listener);
+    }
+
+    public static int getCurrentState() {
+        return sCurrentState;
     }
 }
