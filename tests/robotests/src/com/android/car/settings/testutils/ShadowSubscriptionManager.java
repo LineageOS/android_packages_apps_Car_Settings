@@ -18,12 +18,14 @@ package com.android.car.settings.testutils;
 
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
+import android.telephony.SubscriptionManager.OnSubscriptionsChangedListener;
 import android.telephony.SubscriptionPlan;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Implements(SubscriptionManager.class)
@@ -32,6 +34,10 @@ public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSub
     private static SubscriptionInfo sDefaultDataSubscriptionInfo = null;
 
     private List<SubscriptionPlan> mSubscriptionPlanList;
+    private List<SubscriptionInfo> mSelectableSubscriptionInfoList;
+    private List<OnSubscriptionsChangedListener> mOnSubscriptionsChangedListeners =
+            new ArrayList<>();
+    private int mCurrentActiveSubscriptionId;
 
     @Implementation
     protected List<SubscriptionPlan> getSubscriptionPlans(int subId) {
@@ -49,6 +55,41 @@ public class ShadowSubscriptionManager extends org.robolectric.shadows.ShadowSub
 
     public static void setDefaultDataSubscriptionInfo(SubscriptionInfo subscriptionInfo) {
         sDefaultDataSubscriptionInfo = subscriptionInfo;
+    }
+
+    @Implementation
+    protected List<SubscriptionInfo> getSelectableSubscriptionInfoList() {
+        return mSelectableSubscriptionInfoList;
+    }
+
+    public void setSelectableSubscriptionInfoList(List<SubscriptionInfo> infos) {
+        mSelectableSubscriptionInfoList = infos;
+    }
+
+    @Implementation
+    protected void addOnSubscriptionsChangedListener(OnSubscriptionsChangedListener listener) {
+        super.addOnSubscriptionsChangedListener(listener);
+        mOnSubscriptionsChangedListeners.add(listener);
+    }
+
+    @Implementation
+    protected void removeOnSubscriptionsChangedListener(OnSubscriptionsChangedListener listener) {
+        super.removeOnSubscriptionsChangedListener(listener);
+        mOnSubscriptionsChangedListeners.remove(listener);
+    }
+
+    public List<OnSubscriptionsChangedListener> getOnSubscriptionChangedListeners() {
+        return mOnSubscriptionsChangedListeners;
+
+    }
+
+    @Implementation
+    protected boolean isActiveSubscriptionId(int subscriptionId) {
+        return mCurrentActiveSubscriptionId == subscriptionId;
+    }
+
+    public void setCurrentActiveSubscriptionId(int subscriptionId) {
+        mCurrentActiveSubscriptionId = subscriptionId;
     }
 
     @Resetter
