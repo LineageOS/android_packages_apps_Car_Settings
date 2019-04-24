@@ -34,6 +34,18 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"חבילת גלישה"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"שימוש בחבילת הגלישה דרך הרשת הסלולרית"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"לכבות את חבילת הגלישה?"</string>
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
+    <skip />
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
+    <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
     <string name="roaming_alert_title" msgid="4433901635766775763">"האם לאפשר נדידה?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"ייתכנו שיעורי חיוב גבוהים."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"שימוש בחבילת הגלישה"</string>
@@ -119,6 +131,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"מעבר אוטומטי לחבילת גלישה"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"יש להשתמש בחבילת הגלישה כשאין גישה לאינטרנט ברשת Wi-Fi. ייתכנו חיובים על שימוש בחבילת הגלישה."</string>
     <string name="learn_more" msgid="8214605928933358604">"מידע נוסף"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"נקודה לשיתוף אינטרנט ושיתוף אינטרנט בין מכשירים"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
@@ -252,6 +274,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"רישיונות WebView של המערכת"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"טפטים"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ספקים של צילומי לוויין:\n‎©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"רישיונות צד שלישי"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"יש בעיה בטעינת הרישיון."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"בטעינה…"</string>
@@ -500,6 +523,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"אפשרויות נעילת מסך"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : לפני <xliff:g id="NUM_DAYS">%3$s</xliff:g> ימים"</string>
     <string name="add_device_title" msgid="8452168024017866232">"הוספת מכשיר מהימן"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"מכשירים מהימנים"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="two"><xliff:g id="COUNT_1">%d</xliff:g> מכשירים</item>
@@ -516,10 +541,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. יש לבחור את <xliff:g id="CAR_NAME">%1$s</xliff:g> בטלפון כדי להתאים את המכשירים"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock לא מצליח לזהות את תכונות האבטחה של המכשיר הזה. כדי לעזור בהגנה על המכונית, מכשיר מהימן יוכל למנוע את נעילת המכונית רק לאחר שהנעילה תבוטל על ידך. המכשיר המהימן שלך יכול למנוע את נעילת המכונית כשהוא בקרבת מקום, גם אם הוא בידיו של מישהו אחר."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"הוספה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> כמכשיר מהימן"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"רישום הטלפון הסתיים בהצלחה"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ההרשמה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> נכשלה"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"כדי להוסיף מכשיר מהימן, צריך להגדיר שיטת אימות בשלב הבא. אם המכשיר המהימן לא נמצא ברשותך, יידרש אימות כדי לקבל גישה לפרופיל שלך."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"המכשיר נותק."</string>
     <string name="forget" msgid="3971143908183848527">"מחיקה"</string>
     <string name="connect" msgid="5861699594602380150">"חיבור"</string>
     <string name="disconnect" msgid="6140789953324820336">"ניתוק"</string>

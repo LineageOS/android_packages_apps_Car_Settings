@@ -34,6 +34,18 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Datatoegang via mobiel netwerk"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobiele data uitschakelen?"</string>
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
+    <skip />
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
+    <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
     <string name="roaming_alert_title" msgid="4433901635766775763">"Dataroaming toestaan?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Er kunnen hoge kosten in rekening worden gebracht."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datagebruik"</string>
@@ -117,6 +129,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatisch overschakelen naar mobiele data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobiele data gebruiken wanneer er geen internettoegang via wifi is. Er kunnen kosten voor datagebruik in rekening worden gebracht."</string>
     <string name="learn_more" msgid="8214605928933358604">"Meer informatie"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot en tethering"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitschakelen"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
@@ -173,7 +195,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps en meldingen"</string>
     <string name="all_applications" msgid="7798210477486822168">"Alle apps weergeven"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standaard-apps"</string>
-    <string name="app_permissions" msgid="32799922508313948">"App-machtigingen"</string>
+    <string name="app_permissions" msgid="32799922508313948">"App-rechten"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Apps die <xliff:g id="APPS">%1$s</xliff:g> gebruiken"</string>
     <string name="applications_settings" msgid="794261395191035632">"App-info"</string>
     <string name="force_stop" msgid="2153183697014720520">"Gedwongen stoppen"</string>
@@ -184,11 +206,11 @@
     <string name="uninstall_text" msgid="277907956072833012">"Verwijderen"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Als je deze app uitschakelt, werken Android en andere apps mogelijk niet meer zoals bedoeld."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App uitschakelen"</string>
-    <string name="permissions_label" msgid="2701446753515612685">"Machtigingen"</string>
+    <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Meldingen"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versie: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen machtigingen verleend"</string>
-    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen machtigingen aangevraagd"</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen rechten verleend"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen rechten aangevraagd"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datagebruik"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Gegevensgebruik van app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Berekenen…"</string>
@@ -213,7 +235,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recente locatieverzoeken"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Geen recente locatieverzoeken"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Machtigingen op app-niveau"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Rechten op app-niveau"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Scannen"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Locatieservices"</string>
     <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wifi-scannen"</string>
@@ -248,6 +270,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Systeemlicenties voor WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Achtergronden"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Providers van satellietbeelden:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenties van derden"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Er is een probleem bij het laden van de licenties."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Laden…"</string>
@@ -275,7 +298,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Instellingen resetten"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Netwerkinstellingen zijn gereset"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"App-voorkeuren resetten"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hiermee worden alle voorkeuren gereset voor:\n\n"<li>"Uitgeschakelde apps"</li>\n<li>"Uitgeschakelde app-meldingen"</li>\n<li>"Standaardapps voor acties"</li>\n<li>"Beperkingen voor achtergrondgegevens voor apps"</li>\n<li>"Beperkingen voor machtigingen"</li>\n\n"Je verliest geen app-gegevens."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Hiermee worden alle voorkeuren gereset voor:\n\n"<li>"Uitgeschakelde apps"</li>\n<li>"Uitgeschakelde app-meldingen"</li>\n<li>"Standaardapps voor acties"</li>\n<li>"Beperkingen voor achtergrondgegevens voor apps"</li>\n<li>"Rechtenbeperkingen"</li>\n\n"Je verliest geen app-gegevens."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Apps resetten"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-voorkeuren zijn gereset"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Alle gegevens wissen (fabrieksreset)"</string>
@@ -480,6 +503,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Schermvergrendelingsopties"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> dagen geleden"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Vertrouwd apparaat toevoegen"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"Vertrouwde apparaten"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> apparaten</item>
@@ -494,10 +519,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecteer <xliff:g id="CAR_NAME">%1$s</xliff:g> op je telefoon om de apparaten te koppelen"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock kan de beveiligingsfuncties van dit apparaat niet detecteren. Ter beveiliging van je auto kan het vertrouwde apparaat je auto alleen ontgrendeld houden nadat je deze zelf al hebt ontgrendeld. Je vertrouwde apparaat kan je auto ontgrendeld houden wanneer het in de buurt is, ook als iemand anders het apparaat vasthoudt."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> toevoegen als vertrouwd apparaat"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"De telefoon is ingeschreven"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Inschrijving van <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislukt"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Als je een vertrouwd apparaat toevoegt, moet je daarna een verificatiemethode instellen. Als je je vertrouwde apparaat niet bij je hebt, is verificatie vereist voor toegang tot je profiel."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Verbinding met apparaat verbroken."</string>
     <string name="forget" msgid="3971143908183848527">"Vergeten"</string>
     <string name="connect" msgid="5861699594602380150">"Verbinden"</string>
     <string name="disconnect" msgid="6140789953324820336">"Verbinding verbreken"</string>

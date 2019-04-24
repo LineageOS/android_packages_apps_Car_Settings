@@ -34,6 +34,18 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ম’বাইল ডেটা"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ম’বাইল নেটৱৰ্ক ব্যৱহাৰ কৰি ডেটা এক্সেছ কৰক"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ম’বাইল ডেটা অফ কৰিবনে?"</string>
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
+    <skip />
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
+    <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
     <string name="roaming_alert_title" msgid="4433901635766775763">"ডেটা ৰ’মিঙৰ অনুমতি দিবনে?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"আপুনি যথেষ্ট পৰিমাণৰ খৰচ বহন কৰিবলগীয়া হ’ব পাৰে।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ডেটা ব্যৱহাৰ"</string>
@@ -117,6 +129,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"স্বয়ংক্ৰিয়ভাৱে ম’বাইল ডেটালৈ সলনি কৰক"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ৱাই-ফাইত ইণ্টাৰনেট নাথাকিলে ম’বাইল ডেটা ব্যৱহাৰ কৰক। ডেটাৰ খৰচ বহন কৰিবলগীয়া হ’ব পাৰে।"</string>
     <string name="learn_more" msgid="8214605928933358604">"অধিক জানক"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"হ’টস্পট আৰু টেডাৰিং"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
@@ -248,6 +270,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ছিষ্টেম ৱেবভিউ অনুজ্ঞাপত্ৰ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ৱালপেপাৰ"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"উপগ্ৰহ ছবি যোগানকাৰী:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষৰ অনুজ্ঞাপত্ৰ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"অনুজ্ঞাপত্ৰসমূহ ল\'ড কৰাত সমস্যা।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ল’ড হৈ আছে…"</string>
@@ -480,6 +503,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্ৰীণ লক সম্পৰ্কীয় বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগত"</string>
     <string name="add_device_title" msgid="8452168024017866232">"বিশ্বাসী ডিভাইচ যোগ কৰক"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"বিশ্বাসী ডিভাইচ"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টা ডিভাইচ</item>
@@ -494,10 +519,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইচকেইটা যোৰা লগাবলৈ আপোনাৰ ফ’নটোত <xliff:g id="CAR_NAME">%1$s</xliff:g> বাছনি কৰক"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"স্মাৰ্ট লকে এই ডিভাইচটোত থকা সুৰক্ষা সুবিধা চিনাক্ত কৰিব পৰা নাই। আপোনাৰ গাড়ীখন নিৰাপদে ৰাখিবৰ কাৰণে আপুনি গাড়ীখন আনলক কৰাৰ পিছতহে বিশ্বাসী ডিভাইচটোৱে গাড়ীখন আনলক কৰি ৰাখিব পাৰিব। আপোনাৰ বিশ্বাসী ডিভাইচটো যেতিয়া আপোনাৰ গাড়ীখনৰ ওচৰত থাকে তেতিয়া সেইটোৱে গাড়ীখন আনলক কৰিব ৰাখিব পাৰিব, আনকি যেতিয়া ডিভাইচটো আনে লৈ থাকে তেতিয়াও।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ডিভাইচটো বিশ্বাসী ডিভাইচ হিচাপে যোগ কৰক"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফ\'নটো পঞ্জীয়ন কৰা হ\'ল"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> যোৰা লগাব পৰা নগ’ল"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"আপুনি কোনো বিশ্বাসী ডিভাইচ যোগ কৰিলে তাৰ পিছত এটা বিশ্বাসযোগ্যতা প্ৰমাণীকৰণ পদ্ধতি ছেট কৰাৰ প্ৰয়োজন হ’ব। যদি বিশ্বাসী ডিভাইচটো আপোনাৰ সৈতে নাই তেন্তে আপোনাৰ প্ৰ’ফাইলটো এক্সেছ কৰিবলৈ বিশ্বাসযোগ্যতা প্ৰমাণীকৰণৰ প্ৰয়োজন হ’ব।"</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ডিভাইচৰ সংযোগ বিচ্ছিন্ন কৰা হ’ল।"</string>
     <string name="forget" msgid="3971143908183848527">"পাহৰক"</string>
     <string name="connect" msgid="5861699594602380150">"সংযোগ কৰক"</string>
     <string name="disconnect" msgid="6140789953324820336">"সংযোগ বিচ্ছিন্ন কৰক"</string>
