@@ -44,8 +44,6 @@ import com.android.car.settings.common.Logger;
  * <li> {@link CarTrustAgentEnrollmentManager#startEnrollmentAdvertising()}
  * <li> wait for {@link CarTrustAgentEnrollmentManager.CarTrustAgentBleCallback#
  * onBleEnrollmentDeviceDisconnected(BluetoothDevice)}
- * <li> if connected, call {@link CarTrustAgentEnrollmentManager#initiateEnrollmentHandshake(
- *BluetoothDevice)}
  * <li>  {@link CarTrustAgentEnrollmentManager#stopEnrollmentAdvertising()}
  * <li> wait for
  * {@link CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback#onAuthStringAvailable(
@@ -104,7 +102,7 @@ public class AddTrustedDeviceActivity extends CarSettingActivity implements Chec
                 @Override
                 public void onEscrowTokenActiveStateChanged(long handle, boolean active) {
                     if (active) {
-                        onDeviceAddedSuccessfully(handle);
+                        onDeviceAddedSuccessfully();
                     } else {
                         LOG.d(handle + " has not been activated");
                     }
@@ -181,7 +179,7 @@ public class AddTrustedDeviceActivity extends CarSettingActivity implements Chec
         if (mHandle != 0) {
             if (mCarTrustAgentEnrollmentManager.isEscrowTokenActive(mHandle,
                     mCarUserManagerHelper.getCurrentProcessUserId())) {
-                onDeviceAddedSuccessfully(mHandle);
+                onDeviceAddedSuccessfully();
                 finish();
             }
         }
@@ -231,7 +229,7 @@ public class AddTrustedDeviceActivity extends CarSettingActivity implements Chec
         finish();
     }
 
-    private void onDeviceAddedSuccessfully(long handle) {
+    private void onDeviceAddedSuccessfully() {
         Toast.makeText(this,
                 getResources().getString(R.string.trusted_device_success_enrollment_toast),
                 Toast.LENGTH_LONG).show();
