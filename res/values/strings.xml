@@ -428,6 +428,18 @@
     <string name="domain_urls_summary_some">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g> and other URLs</string>
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
+    <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->
+    <string name="notification_access_title">Notification access</string>
+    <!-- Title for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_security_warning_title">Allow notification access for <xliff:g id="service" example="NotificationReader">%1$s</xliff:g>?</string>
+    <!-- Summary for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_security_warning_summary"><xliff:g id="notification_listener_name">%1$s</xliff:g> will be able to read all notifications, including personal information such as contact names and the text of messages you receive. It will also be able to dismiss notifications or trigger action buttons they contain.\n\nThis will also give the app the ability to turn Do Not Disturb on or off and change related settings.</string>
+    <!-- Summary for a warning message about revoking notification listener access, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_revoke_warning_summary">If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Do Not Disturb access may also be turned off.</string>
+    <!-- Positive button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
+    <string name="notification_listener_revoke_warning_confirm">Turn off</string>
+    <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
+    <string name="notification_listener_revoke_warning_cancel">Cancel</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
@@ -1056,6 +1068,10 @@
     <string name="remove_button">Remove</string>
     <!-- Cancel button text [CHAR LIMIT=20] -->
     <string name="cancel">Cancel</string>
+    <!-- Generic dialog allow button. [CHAR_LIMIT=20] -->
+    <string name="allow">Allow</string>
+    <!-- Generic dialog deny button. [CHAR_LIMIT=20] -->
+    <string name="deny">Deny</string>
 
     <!-- Accessibility description for the backspace key in the PIN pad [CHAR LIMIT=NONE] -->
     <string name="backspace_key">Backspace key</string>

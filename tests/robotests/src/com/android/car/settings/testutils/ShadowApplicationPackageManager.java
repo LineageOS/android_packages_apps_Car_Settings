@@ -95,6 +95,12 @@ public class ShadowApplicationPackageManager extends
     }
 
     @Implementation
+    public ApplicationInfo getApplicationInfoAsUser(String packageName, int flags, int userId)
+            throws PackageManager.NameNotFoundException {
+        return getApplicationInfo(packageName, flags);
+    }
+
+    @Implementation
     public ComponentName getHomeActivities(List<ResolveInfo> outActivities) {
         outActivities.addAll(mHomeActivities);
         return mDefaultHomeActivity;
