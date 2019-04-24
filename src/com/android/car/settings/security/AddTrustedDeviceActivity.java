@@ -192,6 +192,15 @@ public class AddTrustedDeviceActivity extends CarSettingActivity implements Chec
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        // When activity is pausing not because of a configuration change
+        if (getChangingConfigurations() == 0) {
+            mCarTrustAgentEnrollmentManager.terminateEnrollmentHandshake();
+        }
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         mCarTrustAgentEnrollmentManager.setBleCallback(null);
