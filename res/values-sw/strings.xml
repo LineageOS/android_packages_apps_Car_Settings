@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Data ya mtandao wa simu"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Tumia data ya mtandao wa simu"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Ungependa kuzima data ya mtandao wa simu?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Ungependa kuruhusu matumizi ya mitandao ya ng\'ambo?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Huenda ukatozwa gharama kubwa."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Matumizi ya data"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Data ya msingi"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Umetumia <xliff:g id="ID_2">^2</xliff:g> <xliff:g id="ID_1">^1</xliff:g>"</string>
@@ -61,7 +63,10 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
     <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data, na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Weka onyo kwa matumizi ya data"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Weka kikomo cha matumizi ya data"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Weka"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Inawasha Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Inazima Wi-Fi…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Tumia data ya mtandao wa simu kiotomatiki"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Tumia data ya mtandao wa simu wakati Wi-Fi haina muunganisho wa intaneti. Huenda ukalipia data utakayotumia."</string>
     <string name="learn_more" msgid="8214605928933358604">"Pata maelezo zaidi"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Mtandaopepe na usambazaji wa mitandao"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Zima mtandaopepe kiotomatiki"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Mtandaopepe wa Wi-Fi utazimwa ikiwa hakuna vifaa vilivyounganishwa"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Kifaa kisichokuwa na jina"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Vifaa vilivyooanishwa"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Programu ya Mratibu itaweza kusoma maelezo kuhusu programu unazotumia katika mfumo wako, ikiwa ni pamoja na maelezo yanayoonekana kwenye skrini yako au yanayoweza kufikiwa ndani ya programu."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Hakikisha kuwa unaamini programu hii&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; hutumia kilicho kwenye skrini yako kubaini kinachoweza kujazwa kiotomatiki."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ongeza huduma"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Ufikiaji wa programu maalum"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Maombi ya Hivi Karibuni ya Kutambua Eneo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Hamna maombi ya hivi karibuni ya kutambua eneo"</string>
@@ -329,7 +330,7 @@
       <item quantity="one">Unaruhusiwa kuongeza mtumiaji mmoja pekee.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Imeshindwa kuongeza mtumiaji mpya"</string>
-    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Utafuta mtumiaji huyu?"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Ungependa kumtafuta mtumiaji huyu?"</string>
     <string name="delete_user_dialog_message" msgid="4346777604351785057">"Data na programu zote zitafutwa."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Imeshindwa kumfuta mtumiaji."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Ondoa"</string>
@@ -355,15 +356,14 @@
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"Mfumo"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Mfumo unajumuisha faili zinazotumika katika toleo la Android la <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Faili za sauti"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Inahesabu…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Akaunti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ongeza akaunti"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizoongezwa"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Akaunti za <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sawazisha data kiotomatiki"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Ruhusu programu zionyeshe data upya kiotomatiki"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Ruhusu programu zipakie data upya kiotomatiki"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Utawasha usawazishaji wa data kiotomatiki?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Mabadiliko yoyote utakayofanya katika akaunti zako kwenye wavuti yatanakiliwa kiotomatiki kwenye kifaa chako.\n\nHuenda baadhi ya akaunti pia zikanakili kiotomatiki kwenye wavuti mabadiliko yoyote utakayofanya kwenye simu. Hivi ndivyo akaunti ya Google inavyofanya kazi."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Utazima usawazishaji wa data kiotomatiki?"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Chagua <xliff:g id="CAR_NAME">%1$s</xliff:g> kwenye simu yako ili uoanishe vifaa"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock haiwezi kutambua vipengele vya usalama katika kifaa hiki. Ili kukusaidia ulinde gari lako, kifaa unachoamini kitaweza tu kuzuia gari lako lisijifunge ukishalifungua. Kifaa unachoamini kinaweza kuzuia gari lako lisijifunge likiwa karibu, hata kama kimebebwa na mtu mwingine."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Ongeza <xliff:g id="DEVICE_NAME">%1$s</xliff:g>kiwe kifaa unachoamini"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Umeongeza <xliff:g id="DEVICE_NAME">%1$s</xliff:g> kuwa kifaa unachoamini"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Imeshindwa kuandikisha <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Unatakiwa uweke njia ya kuthibitisha ili uongeze kifaa unachoamini katika hatua inayofuata. Kama huna kifaa unachoamini, uthibitishaji utataka idhini ya kufikia wasifu wako."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Sahau"</string>
     <string name="connect" msgid="5861699594602380150">"Unganisha"</string>
     <string name="disconnect" msgid="6140789953324820336">"Tenganisha"</string>

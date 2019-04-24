@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobilna transmisja danych"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Korzystaj z danych przy użyciu sieci komórkowej"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Wyłączyć mobilną transmisję danych?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Zezwalać na roaming danych?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Mogą się z tym wiązać wysokie opłaty."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Użycie danych"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dane podstawowe"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Wykorzystano <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -64,6 +66,9 @@
     <string name="data_limit" msgid="227338836292511425">"Limit danych"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograniczanie użycia danych"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Po osiągnięciu ustawionego przez Ciebie limitu serwer pojazdu wyłączy mobilną transmisję danych.\n\nPonieważ transmisję danych mierzy serwer i może to robić inaczej niż operator, dobrze jest ustawić mniejszy limit."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Ustawianie ostrzeżenia o użyciu danych"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ustawianie limitu użycia danych"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ustaw"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Włączam Wi-Fi…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wyłączam Wi-Fi…"</string>
@@ -114,12 +119,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatycznie przełączaj na mobilną transmisję danych"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Używaj mobilnej transmisji danych, gdy sieć Wi-Fi nie ma dostępu do internetu. Mogą obowiązywać opłaty za użycie danych."</string>
     <string name="learn_more" msgid="8214605928933358604">"Więcej informacji"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot i tethering"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatycznie wyłącz hotspot"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspot Wi‑Fi wyłączy się, jeśli nie ma z nim połączonych żadnych urządzeń"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Urządzenie bez nazwy"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Sparowane urządzenia"</string>
@@ -152,7 +154,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Języki"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Języki i metody wprowadzania"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klawiatura"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Zarządzaj klawiaturami"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Zarządzanie klawiaturami"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Zamiana tekstu na mowę"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Preferowany mechanizm"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Używany mechanizm"</string>
@@ -211,8 +213,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Asystent będzie mógł odczytywać informacje o aplikacjach używanych w systemie. Obejmuje to też informacje widoczne na ekranie i dostępne w aplikacjach."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Sprawdź, czy ta aplikacja jest zaufana&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Autouzupełnianie Google&gt;%1$s&lt;/xliff:g&gt; na podstawie zawartości ekranu określa, co można uzupełnić automatycznie."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Dodaj usługę"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Specjalny dostęp dla aplikacji"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokalizacja"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Ostatnie prośby o lokalizację"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Brak ostatnich próśb o lokalizację"</string>
@@ -299,7 +300,7 @@
     <string name="date_time_auto" msgid="3570339569471779767">"Automatyczna data i godzina"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Użyj czasu podanego przez sieć"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatyczna strefa czasowa"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Użyj strefy czasowej podanej przez sieć"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Format 24-godzinny"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Format 24-godzinny"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Czas"</string>
@@ -363,8 +364,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Pliki"</string>
     <string name="storage_system" msgid="1271345630248014010">"System"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"System uwzględnia pliki używane do uruchomienia Androida w wersji <xliff:g id="VERSION">%s</xliff:g>"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Pliki audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Obliczam…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konta"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj konto"</string>
@@ -516,9 +516,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Na telefonie wybierz <xliff:g id="CAR_NAME">%1$s</xliff:g>, by sparować urządzenia"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nie może wykryć funkcji zabezpieczeń na tym urządzeniu. Aby chronić Twój samochód, zaufane urządzenie będzie zapobiegać automatycznemu zamknięciu pojazdu tylko wtedy, gdy wcześniej samodzielnie go otworzysz. Zaufane urządzenie zapobiega automatycznemu zamknięciu, gdy znajduje się w pobliżu samochodu, nawet jeśli urządzenie trzyma ktoś inny."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Dodaj urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jako zaufane"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Dodano urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jako zaufane"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nie udało się zarejestrować urządzenia <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Po dodaniu zaufanego urządzenia musisz wybrać metodę uwierzytelniania. Dzięki niej uzyskasz dostęp do swojego profilu, gdy akurat nie będziesz mieć zaufanego urządzenia przy sobie."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Zapomnij"</string>
     <string name="connect" msgid="5861699594602380150">"Połącz"</string>
     <string name="disconnect" msgid="6140789953324820336">"Odłącz"</string>

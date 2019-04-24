@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क का इस्तेमाल करके डेटा एक्सेस करें"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करना चाहते हैं?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंग की अनुमति दें?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"आपको बहुत ज़्यादा शुल्क देना पड़ सकता है."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा खर्च"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"प्राइमरी डेटा"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> डेटा इस्तेमाल किया गया"</string>
@@ -54,7 +56,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"डेटा इस्तेमाल करने की अवधि रीसेट करने की तारीख"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"हर महीने की तारीख:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट करें"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटा खर्च की चेतावनी और तय सीमा"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटा खर्च की चेतावनी और सीमा"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ऐप्लिकेशन के डेटा खर्च की साइकिल"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"डेटा चेतावनी सेट करें"</string>
     <string name="data_warning" msgid="116776633806885370">"डेटा खर्च की चेतावनी"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"डेटा सीमा"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"डेटा खर्च को सीमित करना"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"आपकी तय की हुई सीमा तक पहुंचते ही आपकी गाड़ी की हेड यूनिट मोबाइल डेटा को बंद कर देगी.\n\nडेटा इस्तेमाल का हिसाब हेड यूनिट लगाती है. ऐसा हो सकता है कि आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी अलग तरह से डेटा खर्च का हिसाब लगाए. इसलिए, इस फ़र्क को ध्यान में रखते हुए सीमा तय करें."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"डेटा खर्च की चेतावनी सेट करें"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"डेटा खर्च की सीमा सेट करें"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"सेट करें"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"वाई-फ़ाई"</string>
     <string name="wifi_starting" msgid="473253087503153167">"वाई-फ़ाई चालू हो रहा है…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"वाई-फ़ाई बंद हो रहा है…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटा पर अपने आप जाएं"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"जब वाई-फ़ाई के ज़रिए इंटरनेट की सुविधा न हो, तो मोबाइल डेटा इस्तेमाल करें. डेटा के लिए पैसे चुकाने पड़ सकते हैं."</string>
     <string name="learn_more" msgid="8214605928933358604">"ज़्यादा जानें"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने आप बंद करें"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ब्लूटूथ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"बिना नाम वाला डिवाइस"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"जुड़े हुए डिवाइस"</string>
@@ -201,14 +203,13 @@
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रीनशॉट का इस्तेमाल करना"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक ऐप्लिकेशन को स्क्रीन की इमेज एक्सेस करने दें"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"बोलकर फ़ोन को दिए जाने वाले निर्देश"</string>
-    <string name="autofill_settings_title" msgid="1188754272680049972">"ऑटोमैटिक भरने की सेवा"</string>
+    <string name="autofill_settings_title" msgid="1188754272680049972">"अपने आप भरने की सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कोई नहीं"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"चुना हुआ ऐप्लिकेशन"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Assistant आपके सिस्टम पर इस्तेमाल किए जा रहे ऐप्लिकेशन की जानकारी पढ़ सकेगी. इसमें आपकी स्क्रीन पर दिखाई देने वाली या ऐप्लिकेशन में से एक्सेस करने लायक जानकारी शामिल होगी."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;पक्का कर लें कि आप इस ऐप्लिकेशन पर भरोसा करते हैं&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; आपकी स्क्रीन पर मौजूद चीज़ों का इस्तेमाल करता है ताकि ऑटोमैटिक भरी जाने वाली जानकारी तय कर सके."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा जोड़ें"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन को खास अनुमति"</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>
@@ -226,7 +227,7 @@
     <string name="model_info" msgid="4966408071657934452">"मॉडल"</string>
     <string name="baseband_version" msgid="2370088062235041897">"मोबाइल रेडियो (बेसबैंड वर्शन)"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel का वर्शन"</string>
-    <string name="build_number" msgid="3997326631001009102">"बिल्‍ड नबंर"</string>
+    <string name="build_number" msgid="3997326631001009102">"बिल्‍ड नंबर"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लूटूथ का पता"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध नहीं है"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिति"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"फ़ाइलें"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टम में ऐसी फ़ाइलें शामिल हैं जिनका इस्तेमाल Android वर्शन <xliff:g id="VERSION">%s</xliff:g> को चलाने के लिए किया जाता है"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडियो फ़ाइलें"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"गिनती की जा रही है…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. डिवाइसों को जोड़ने के लिए अपने फ़ोन पर <xliff:g id="CAR_NAME">%1$s</xliff:g> चुनें"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock इस डिवाइस की सुरक्षा सुविधाओं को नहीं पहचान पा रहा है. आपकी कार की सुरक्षा के लिए, भरोसेमंद डिवाइस उसे तभी अनलॉक रख पाएगा जब आपने कार को पहले अनलॉक किया हो. कार आस-पास होने पर आपका भरोसेमंद डिवाइस उसे अनलॉक रख सकता है, भले ही वह डिवाइस किसी और व्यक्ति के पास हो."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ें"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ लिया गया है"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको पुष्टि करने का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए पुष्टि करना ज़रूरी होगा."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
     <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>

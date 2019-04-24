@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"모바일 데이터"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"모바일 네트워크를 사용하여 데이터 액세스"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"모바일 데이터를 사용 중지하시겠습니까?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"데이터 로밍을 허용하시겠습니까?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"요금이 많이 부과될 수 있습니다."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"데이터 사용량"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"기본 데이터"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g><xliff:g id="ID_2">^2</xliff:g> 사용됨"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"데이터 한도"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"데이터 사용량 제한"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"설정한 모바일 데이터 한도에 도달하면 차량에서 모바일 데이터를 사용 중지합니다.\n\n데이터 사용량은 헤드 유닛에서 측정되며 이동통신사에서 사용량을 다르게 계산할 수 있으므로 한도를 낮게 설정해 보세요."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"데이터 사용 경고 설정"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"데이터 사용 한도"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"설정"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi 사용 설정 중..."</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi 사용 중지 중..."</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"모바일 데이터로 자동 전환"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fi 인터넷 액세스가 끊기면 모바일 데이터를 사용합니다. 데이터 사용 요금이 부과될 수 있습니다."</string>
     <string name="learn_more" msgid="8214605928933358604">"자세히 알아보기"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"핫스팟 및 테더링"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"자동으로 핫스팟 사용 중지"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"연결된 기기가 없으면 Wi‑Fi 핫스팟이 사용 중지됩니다."</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"블루투스"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"이름이 없는 기기"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"페어링된 기기"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"어시스턴트가 시스템에서 사용 중인 앱에 관한 정보를 읽을 수 있게 됩니다. 여기에는 화면에 표시된 정보 또는 앱 내에서 액세스할 수 있는 정보가 포함됩니다."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;이 앱을 신뢰할 수 있는지 확인하세요.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google 자동 완성&gt;%1$s&lt;/xliff:g&gt;에서는 자동 완성할 수 있는 항목을 결정하기 위해 화면의 내용을 사용합니다."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"서비스 추가"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"특수 앱 액세스"</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"최근 위치 요청"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"최근 위치 요청 없음"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"시스템"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"시스템에는 Android 버전 <xliff:g id="VERSION">%s</xliff:g> 실행에 사용되는 파일이 포함되어 있습니다."</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"오디오 파일"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"계산 중..."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
@@ -365,7 +365,7 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"자동으로 데이터 동기화"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"앱에서 데이터를 자동으로 새로고침하도록 허용"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"데이터 자동 동기화를 사용하시겠습니까?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"웹에서 변경한 계정 정보는 모두 기기에 자동으로 복사됩니다.\n\n또한 일부 계정은 휴대전화의 변경사항을 웹에 자동으로 복사할 수 있습니다. Google 계정은 이러한 자동 동기화를 지원합니다."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"웹에서 변경한 계정 정보가 모두 기기에 자동으로 복사됩니다.\n\n또한 일부 계정은 휴대전화의 변경사항을 웹에 자동으로 복사할 수 있습니다. Google 계정은 이러한 자동 동기화를 지원합니다."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"데이터 자동 동기화를 사용 중지하시겠습니까?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"이 경우 데이터 사용량이 절약되지만, 최근 정보를 수집하려면 각 계정을 직접 동기화해야 합니다. 또한 업데이트가 발생해도 알림을 받지 못합니다."</string>
     <string name="account_details_title" msgid="7529571432258448573">"계정 정보"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. 휴대전화에서 <xliff:g id="CAR_NAME">%1$s</xliff:g>을(를) 선택하여 기기를 페어링합니다."</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock에서 이 기기의 보안 기기를 감지할 수 없습니다. 차량 보호를 위해 신뢰할 수 있는 기기 기능을 사용하더라도 사용자가 이미 차량을 잠금 해제한 경우에만 잠금 해제된 상태를 유지할 수 있습니다. 가까이에 다른 사람이 신뢰할 수 있는 기기를 갖고 있더라도 차량을 잠금 해제된 상태로 유지할 수 있습니다."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>을(를) 신뢰할 수 있는 기기로 추가"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>이(가) 신뢰할 수 있는 기기로 추가되었습니다."</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>을(를) 등록하는 데 실패했습니다."</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"신뢰할 수 있는 기기를 추가하면 다음번에 인증 수단을 설정해야 합니다. 신뢰할 수 있는 기기가 없으면 인증 과정을 거쳐야 내 프로필에 액세스할 수 있습니다."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"삭제"</string>
     <string name="connect" msgid="5861699594602380150">"연결"</string>
     <string name="disconnect" msgid="6140789953324820336">"연결 해제"</string>

@@ -34,6 +34,8 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiladat"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Adathozzáférés a mobilhálózaton keresztül"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Kikapcsolja a mobiladatokat?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Engedélyezi az adatroamingot?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"Lehet, hogy jelentős összeget számítanak fel érte."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Adathasználat"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Elsődleges adatcsomag"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> felhasználva"</string>
@@ -62,6 +64,9 @@
     <string name="data_limit" msgid="227338836292511425">"Adatforgalmi korlátozás"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Adatforgalom korlátozása"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"A jármű fejegysége kikapcsolja a mobiladat-kapcsolatot, amint eléri a beállított korlátot.\n\nMivel az adatforgalmat a fejegység méri, és a szolgáltató mérései ettől eltérhetnek, érdemes lehet szigorúbb korlátot megadnia."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Adathasználati figyelmeztetés beállítása"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Adathasználati korlát beállítása"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Beállítás"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi-Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"A Wi-Fi bekapcsolása…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"A Wi-Fi kikapcsolása…"</string>
@@ -112,12 +117,9 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Automatikus váltás mobiladat-kapcsolatra"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Mobilhálózat használata, ha nincs Wi-Fi-kapcsolat. A szolgáltató adatforgalmi díjat számíthat fel."</string>
     <string name="learn_more" msgid="8214605928933358604">"További információ"</string>
-    <!-- no translation found for tether_settings_title_all (4663704772599383169) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_title (7871858619924599922) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_auto_off_summary (4830341947541735136) -->
-    <skip />
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot és internetmegosztás"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Wi-Fi-hotspot automatikus kikapcsolása"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A Wi-Fi-hotspot kikapcsol, ha nincsenek csatlakoztatott eszközök"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Név nélküli eszköz"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Párosított eszközök"</string>
@@ -207,8 +209,7 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"A segéd hozzáfér majd a rendszer éppen használatban lévő alkalmazásainak információihoz, beleértve a képernyőn megjelenő vagy az alkalmazásokban hozzáférhető információkat is."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Győződjön meg arról, hogy az alkalmazás megbízható.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; A(z) &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; az Ön képernyőjén szereplő információk alapján határozza meg, hogy mit lehet automatikusan kitölteni."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Szolgáltatás hozzáadása"</string>
-    <!-- no translation found for special_access (5730278220917123811) -->
-    <skip />
+    <string name="special_access" msgid="5730278220917123811">"Különleges alkalmazás-hozzáférés"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Hely"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
@@ -240,7 +241,7 @@
     <string name="contributors_title" msgid="7698463793409916113">"Közreműködők"</string>
     <string name="manual" msgid="4819839169843240804">"Kézi"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Szabályozási címkék"</string>
-    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Biztonsági és szabályozási útmutató"</string>
+    <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Biztonsági és az előírásokkal kapcsolatos útmutató"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Szerzői jog"</string>
     <string name="license_title" msgid="936705938435249965">"Licenc"</string>
     <string name="terms_title" msgid="5201471373602628765">"Általános Szerződési Feltételek"</string>
@@ -355,8 +356,7 @@
     <string name="storage_files" msgid="6382081694781340364">"Fájlok"</string>
     <string name="storage_system" msgid="1271345630248014010">"Rendszer"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"A rendszer tartalmaz <xliff:g id="VERSION">%s</xliff:g> verziójú Android futtatásához használt fájlokat"</string>
-    <!-- no translation found for storage_audio_files_title (5183170457027181700) -->
-    <skip />
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"Hangfájlok"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Számítás…"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Fiókok"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Fiók hozzáadása"</string>
@@ -416,7 +416,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Emelje fel az ujját, ha kész"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Minta rögzítve"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Rajzolja újra a mintát a megerősítéshez"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kapcsoljon össze legalább 4 pontot."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kössön össze legalább 4 pontot."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Helytelen minta"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Hogyan kell feloldási mintát rajzolni?"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Hiba történt a minta mentése során"</string>
@@ -494,9 +494,12 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Az eszközök párosításához válassza a(z) <xliff:g id="CAR_NAME">%1$s</xliff:g> elemet a telefonon."</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"A Smart Lock nem észleli az eszköz biztonsági funkcióit. Az autó védelme érdekében a megbízható eszköz csak akkor tarthatja feloldott állapotban az autót, ha Ön előtte elvégezte a feloldást. A megbízható eszköz feloldott állapotban tarthatja az autót, ha a közelében van, még akkor is, ha valaki más tartja az eszközt."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> hozzáadása megbízható eszközként"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"Sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> eszközt megbízhatóként hozzáadni"</string>
+    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
+    <skip />
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nem sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> regisztrációja"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ha megbízható eszközt szeretne hozzáadni, akkor a következő lépésben hitelesítési módot kell megadnia. Ha nincs Önnél megbízható eszköze, hitelesítésre lesz szükség a profiljához való hozzáféréshez."</string>
+    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
+    <skip />
     <string name="forget" msgid="3971143908183848527">"Elfelejtés"</string>
     <string name="connect" msgid="5861699594602380150">"Csatlakozás"</string>
     <string name="disconnect" msgid="6140789953324820336">"Leválasztás"</string>
