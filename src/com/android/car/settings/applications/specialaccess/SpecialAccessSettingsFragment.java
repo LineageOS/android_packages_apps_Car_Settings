@@ -23,10 +23,10 @@ import com.android.car.settings.common.SettingsFragment;
  * Top-level page which lists the types of special access the user can grant to applications.
  * Selecting an option will open a detailed page for granting access to individual apps.
  */
-public class SpecialAccessSettings extends SettingsFragment {
+public class SpecialAccessSettingsFragment extends SettingsFragment {
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.special_access;
+        return R.xml.special_access_fragment;
     }
 }
