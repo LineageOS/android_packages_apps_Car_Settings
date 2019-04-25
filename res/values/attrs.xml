@@ -42,7 +42,7 @@
         </attr>
 
         <!-- Title and icon resource ids to render on UI -->
-        <attr name="title" format="reference"/>
+        <attr name="titleText" format="reference"/>
         <attr name="icon" format="reference"/>
     </declare-styleable>
 
