@@ -16,19 +16,26 @@
 
 package com.android.car.settings.security;
 
+import static android.os.UserManager.DISALLOW_BLUETOOTH;
+import static android.os.UserManager.DISALLOW_CONFIG_BLUETOOTH;
+
 import android.app.admin.DevicePolicyManager;
+import android.bluetooth.BluetoothAdapter;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.pm.PackageManager;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.widget.LockPatternUtils;
 
 /**
- * Business logic if the preference is clickable according to the password quality of current user.
+ * Business logic which controls whether the preference is clickeble according to the password
+ * quality of current user.
  */
 public class AddTrustedDevicePreferenceController extends PreferenceController<Preference> {
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -42,7 +49,24 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
     }
 
     @Override
+    protected int getAvailabilityStatus() {
+        if (!getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
+        return isUserRestricted() ? DISABLED_FOR_USER : AVAILABLE;
+    }
+
+    private boolean isUserRestricted() {
+        return mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_BLUETOOTH)
+                || mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
+                DISALLOW_CONFIG_BLUETOOTH);
+    }
+
+    @Override
     protected void updateState(Preference preference) {
+        preference.setSummary(
+                BluetoothAdapter.getDefaultAdapter().isEnabled() ? "" : getContext().getString(
+                        R.string.add_device_summary));
         preference.setEnabled(hasPassword());
     }
 
@@ -55,5 +79,13 @@ public class AddTrustedDevicePreferenceController extends PreferenceController<P
     @Override
     protected Class<Preference> getPreferenceType() {
         return Preference.class;
+    }
+
+    @Override
+    public boolean handlePreferenceClicked(Preference preference) {
+        // Enable the adapter if it is not on (user is notified via summary message).
+        BluetoothAdapter.getDefaultAdapter().enable();
+        /** Need to start {@link AddTrustedDeviceActivity} after the click. */
+        return false;
     }
 }
