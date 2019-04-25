@@ -34,6 +34,18 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क का इस्तेमाल करके डेटा एक्सेस करें"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करना चाहते हैं?"</string>
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
+    <skip />
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
+    <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
     <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंग की अनुमति दें?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"आपको बहुत ज़्यादा शुल्क देना पड़ सकता है."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा खर्च"</string>
@@ -117,6 +129,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटा पर अपने आप जाएं"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"जब वाई-फ़ाई के ज़रिए इंटरनेट की सुविधा न हो, तो मोबाइल डेटा इस्तेमाल करें. डेटा के लिए पैसे चुकाने पड़ सकते हैं."</string>
     <string name="learn_more" msgid="8214605928933358604">"ज़्यादा जानें"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने आप बंद करें"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
@@ -248,6 +270,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"सिस्‍टम वेबव्यू लाइसेंस"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"वॉलपेपर"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"सैटेलाइट के ज़रिए इमेज उपलब्ध कराने वाली संस्थाएं:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"तीसरे पक्ष के लाइसेंस"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"लाइसेंस लोड करने में कोई समस्‍या है."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"लोड हो रहा है…"</string>
@@ -480,6 +503,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक विकल्प"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> days ago"</string>
     <string name="add_device_title" msgid="8452168024017866232">"भरोसेमंद डिवाइस जोड़ें"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"भरोसेमंद डिवाइस"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> डिवाइस</item>
@@ -494,10 +519,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. डिवाइसों को जोड़ने के लिए अपने फ़ोन पर <xliff:g id="CAR_NAME">%1$s</xliff:g> चुनें"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock इस डिवाइस की सुरक्षा सुविधाओं को नहीं पहचान पा रहा है. आपकी कार की सुरक्षा के लिए, भरोसेमंद डिवाइस उसे तभी अनलॉक रख पाएगा जब आपने कार को पहले अनलॉक किया हो. कार आस-पास होने पर आपका भरोसेमंद डिवाइस उसे अनलॉक रख सकता है, भले ही वह डिवाइस किसी और व्यक्ति के पास हो."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> को भरोसेमंद डिवाइस के रूप में जोड़ें"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"फ़ोन रजिस्टर हो गया है"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"इसके बाद एक भरोसेमंद डिवाइस जोड़ने के लिए आपको पुष्टि करने का तरीका सेट करना होगा. अगर भरोसेमंद डिवाइस आपके पास नहीं है, तो आपकी प्रोफ़ाइल एक्सेस करने के लिए पुष्टि करना ज़रूरी होगा."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"डिवाइस डिसकनेक्ट किया गया."</string>
     <string name="forget" msgid="3971143908183848527">"भूल जाएं"</string>
     <string name="connect" msgid="5861699594602380150">"कनेक्शन जोड़ें"</string>
     <string name="disconnect" msgid="6140789953324820336">"कनेक्शन हटाएं"</string>

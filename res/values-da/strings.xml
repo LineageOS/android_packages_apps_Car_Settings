@@ -34,6 +34,18 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobildata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Brug data via mobilnetværk"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Vil du deaktivere mobildata?"</string>
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
+    <skip />
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
+    <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
     <string name="roaming_alert_title" msgid="4433901635766775763">"Vil du tillade dataroaming?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Du kan risikere at skulle betale høje gebyrer."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Dataforbrug"</string>
@@ -117,6 +129,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Skift automatisk til mobildata"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Brug mobildata, når du ikke har internetadgang via Wi-Fi. Du skal muligvis betale for dataforbrug."</string>
     <string name="learn_more" msgid="8214605928933358604">"Få flere oplysninger"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot og netdeling"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Deaktiver hotspot automatisk"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi-hotspot deaktiveres, hvis der ikke er nogen forbundne enheder"</string>
@@ -248,6 +270,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"System WebView-licenser"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Baggrunde"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Leverandører af satellitbilleder:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Tredjepartslicenser"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Der er problemer med at indlæse licenserne."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Indlæser…"</string>
@@ -480,6 +503,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valgmuligheder for skærmlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : For <xliff:g id="NUM_DAYS">%3$s</xliff:g> dage siden"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Tilføj godkendt enhed"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"Godkendte enheder"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> enhed</item>
@@ -494,10 +519,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Vælg <xliff:g id="CAR_NAME">%1$s</xliff:g> på telefonen for at parre enhederne"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock kan ikke registrere sikkerhedsfunktionerne på enheden. Af hensyn til beskyttelsen af din bil kan en godkendt enhed kun holde din bil ulåst, hvis du allerede har låst den op. Din godkendte enhed kan holde din bil ulåst, når den er i nærheden, også selvom den holdes af en anden."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Tilføj <xliff:g id="DEVICE_NAME">%1$s</xliff:g> som godkendt enhed"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonen blev tilmeldt"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Tilmeldingen af <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislykkedes"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Hvis du vil tilføje en godkendt enhed, skal du først angive en godkendelsesmetode. Hvis du ikke har din godkendte enhed med dig, kræves der godkendelse, før du kan få adgang til din profil."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Forbindelsen til enheden blev afbrudt."</string>
     <string name="forget" msgid="3971143908183848527">"Glem"</string>
     <string name="connect" msgid="5861699594602380150">"Opret forbindelse"</string>
     <string name="disconnect" msgid="6140789953324820336">"Afbryd forbindelse"</string>

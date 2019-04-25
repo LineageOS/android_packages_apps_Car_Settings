@@ -34,10 +34,20 @@
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ମୋବାଇଲ୍ ଡାଟା"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ମୋବାଇଲ୍ ନେଟ୍‌ୱର୍କକୁ ବ୍ୟବହାରକରି ଡାଟା ଆକ୍ସେସ୍ କରନ୍ତୁ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ମୋବାଇଲ୍‌ ଡାଟା ବନ୍ଦ କରିବେ?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
+    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
     <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
+    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
     <skip />
+    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
+    <skip />
+    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
+    <skip />
+    <!-- no translation found for roaming_title (6218635014519017734) -->
+    <skip />
+    <!-- no translation found for roaming_summary (7476127740259728901) -->
+    <skip />
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ଡାଟା ରୋମିଂର ଅନୁମତି ଦେବେ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ଆପଣଙ୍କୁ ଅଧିକ ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ଡାଟାର ବ୍ୟବହାର"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ପ୍ରାଥମିକ ଡାଟା"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ବ୍ୟବହୃତ ହୋଇଛି"</string>
@@ -119,6 +129,16 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ସ୍ୱଚାଳିତ ଭାବେ ମୋବାଇଲ୍ ଡାଟାକୁ ସ୍ୱିଚ୍ କରନ୍ତୁ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fiର ଇଣ୍ଟର୍ନେଟ୍ ଆକ୍ସେସ୍ ନଥିବା ବେଳେ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ। ଡାଟା ବ୍ୟବହାର ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
     <string name="learn_more" msgid="8214605928933358604">"ଅଧିକ ଜାଣନ୍ତୁ"</string>
+    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ହଟ୍‌ସ୍ପଟ୍ ଏବଂ ଟିଥରିଂ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ସ୍ୱଚାଳିତ ଭାବେ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ଯଦି କୌଣସି ଡିଭାଇସ୍ ସଂଯୋଗ ନଥାଏ, ତେବେ ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ ହୋଇଯିବ"</string>
@@ -250,6 +270,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ସିଷ୍ଟମ୍‍ WebView ଲାଇସେନ୍ସ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ୱାଲପେପର୍‌"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସ୍ୟାଟେଲାଇଟ୍‌ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ତୃତୀୟ-ପକ୍ଷ ଲାଇସେନ୍ସ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ଲାଇସେନ୍ସ ଲୋଡ୍‌ କରିବାରେ ସମସ୍ୟା ହୋଇଛି।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ଲୋଡ୍ କରୁଛି…"</string>
@@ -482,6 +503,8 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପମାନ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‍‍‍ ଯୋଗ କରନ୍ତୁ"</string>
+    <!-- no translation found for add_device_summary (5368217520710573302) -->
+    <skip />
     <string name="trusted_device" msgid="5637378361866787603">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଡିଭାଇସ୍</item>
@@ -496,10 +519,10 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ଡିଭାଇସ୍ ପେୟାର୍ କରିବାକୁ ଆପଣଙ୍କ ଫୋନ୍‍‍ରୁ <xliff:g id="CAR_NAME">%1$s</xliff:g> ବାଛନ୍ତୁ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ସ୍ମାର୍ଟ ଲକ୍ ଏହି ଡିଭାଇସ୍‍ର ସୁରକ୍ଷା ବୈଶିଷ୍ଟ୍ୟ କରିପାରିବ ନାହିଁ। ଆପଣଙ୍କର କାର୍‍‍ର ସୁରକ୍ଷାରେ ସାହାଯ୍ୟ କରିବାକୁ, ଚିହ୍ନା ଡିଭାଇସ୍ କେବଳ ଆପଣ ପୂର୍ବରୁ ଆପଣଙ୍କ କାର୍ ଥରେ ଅନ୍‍ଲକ୍ କରିଥିଲେ ହିଁ ଆପଣଙ୍କ କାର୍‍କୁ ଅନ୍‍ଲକ୍ କରି ରଖିବ। ଅନ୍ୟ କେହି ଜଣେ ମଧ୍ୟ ତାହା ବ୍ୟବହାର କରୁଥିଲେ ମଧ୍ୟ, ଆପଣଙ୍କର ଚିହ୍ନା ଡିଭାଇସ୍ ନିକଟସ୍ଥ ରହିଥିଲେ ଆପଣଙ୍କ କାର୍‍ ଅନ୍‍ଲକ୍ କରି ରଖିପାରିବ।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"ଏକ ଚିହ୍ନା ଡିଭାଇସ୍‌‍ଭାବରେ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ଯୋଗ କରନ୍ତୁ"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ଫୋନ୍ ସଫଳତାର ସହ ପଞ୍ଜୀକୃତ ହୋଇଛି"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ନାମାଙ୍କନ ହୋଇପାରିଲା ନାହିଁ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ଏହାପରେ ଏକ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ଯୋଗ କରିବାରେ ଆପଣଙ୍କୁ ପ୍ରମାଣିକରଣର ଉପାୟ ସେଟ୍‍ କରିବାକୁ ହେବ। ଯଦି ଆପଣଙ୍କ ପାଖରେ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ନାହିଁ, ତେବେ ଆପଣଙ୍କ ପ୍ରୋଫାଇଲ୍‌ ଆକ୍ସେସ୍‌ କରିବାକୁ ପ୍ରମାଣିକରଣ ଆବଶ୍ୟକ ହେବ।"</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ଡିଭାଇସ୍ ବିଚ୍ଛିନ୍ନ ହୋଇଛି।"</string>
     <string name="forget" msgid="3971143908183848527">"ଭୁଲିଗଲେ"</string>
     <string name="connect" msgid="5861699594602380150">"ସଂଯୋଗ କରନ୍ତୁ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ବିଛିନ୍ନ କରନ୍ତୁ"</string>
