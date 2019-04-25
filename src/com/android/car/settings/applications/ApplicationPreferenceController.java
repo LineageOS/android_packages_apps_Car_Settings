@@ -55,7 +55,6 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
         return this;
     }
 
-
     @Override
     protected void checkInitialized() {
         if (mAppEntry == null || mApplicationsState == null) {
@@ -78,5 +77,9 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
     protected Drawable getAppIcon() {
         mApplicationsState.ensureIcon(mAppEntry);
         return mAppEntry.icon;
+    }
+
+    protected String getAppVersion() {
+        return mAppEntry.getVersion(getContext());
     }
 }
