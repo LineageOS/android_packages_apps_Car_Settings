@@ -17,6 +17,14 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/tether_settings_title_all" >
+    <com.android.car.settings.common.ValidatedEditTextPreference
+        android:key="@string/pk_wifi_tether_name"
+        android:title="@string/wifi_hotspot_name_title"
+        settings:controller="com.android.car.settings.wifi.WifiTetherNamePreferenceController"/>
+    <com.android.car.settings.common.ValidatedEditTextPreference
+        android:key="@string/pk_wifi_tether_password"
+        android:title="@string/wifi_hotspot_password_title"
+        settings:controller="com.android.car.settings.wifi.WifiTetherPasswordPreferenceController"/>
     <SwitchPreference
         android:key="@string/pk_wifi_tether_auto_off"
         android:title="@string/wifi_hotspot_auto_off_title"
