@@ -24,6 +24,10 @@
         settings:controller="com.android.car.settings.datausage.DataUsageSummaryPreferenceController"
         settings:singleLineTitle="false"/>
     <Preference
+        android:key="@string/pk_app_data_usage"
+        android:title="@string/app_data_usage"
+        settings:controller="com.android.car.settings.datausage.DataUsagePreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.datausage.DataWarningAndLimitFragment"
         android:key="@string/pk_data_warning_and_limit"
         android:title="@string/data_warning_limit_title"
