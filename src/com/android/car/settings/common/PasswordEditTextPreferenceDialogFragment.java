@@ -59,7 +59,8 @@ public class PasswordEditTextPreferenceDialogFragment extends
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT);
+                    mEditText.setInputType(InputType.TYPE_CLASS_TEXT
+                            | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 } else {
                     mEditText.setInputType(InputType.TYPE_CLASS_TEXT
                             | InputType.TYPE_TEXT_VARIATION_PASSWORD);
