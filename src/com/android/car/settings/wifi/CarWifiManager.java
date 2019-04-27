@@ -18,6 +18,7 @@ package com.android.car.settings.wifi;
 import android.annotation.Nullable;
 import android.content.Context;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 
 import androidx.annotation.UiThread;
@@ -38,6 +39,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
 
     private WifiTracker mWifiTracker;
     private WifiManager mWifiManager;
+
     public interface Listener {
         /**
          * Something about wifi setting changed.
@@ -62,7 +64,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
 
     public CarWifiManager(Context context) {
         mContext = context;
-        mWifiManager = (WifiManager) mContext.getSystemService(WifiManager.class);
+        mWifiManager = mContext.getSystemService(WifiManager.class);
         mWifiTracker = new WifiTracker(context, this, true, true);
     }
 
@@ -167,6 +169,20 @@ public class CarWifiManager implements WifiTracker.WifiListener {
      */
     public boolean isWifiApEnabled() {
         return mWifiManager.isWifiApEnabled();
+    }
+
+    /**
+     * Gets {@link WifiConfiguration} for tethering
+     */
+    public WifiConfiguration getWifiApConfig() {
+        return mWifiManager.getWifiApConfiguration();
+    }
+
+    /**
+     * Sets {@link WifiConfiguration} for tethering
+     */
+    public void setWifiApConfig(WifiConfiguration config) {
+        mWifiManager.setWifiApConfiguration(config);
     }
 
     public int getWifiState() {
