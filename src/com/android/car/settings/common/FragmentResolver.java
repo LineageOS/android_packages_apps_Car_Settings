@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -31,6 +32,7 @@ import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.DefaultApplicationsSettingsFragment;
 import com.android.car.settings.applications.assist.ManageAssistFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -138,12 +140,22 @@ public class FragmentResolver {
                 return new ApplicationsSettingsFragment();
 
             case Settings.ACTION_APPLICATION_DETAILS_SETTINGS:
-                Uri uri = intent.getData();
-                if (uri == null) {
-                    LOG.w("No uri provided for application detailed intent");
-                    return null;
+            case Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS:
+            case Settings.ACTION_APP_NOTIFICATION_SETTINGS:
+                String pkg = intent.getStringExtra(Settings.EXTRA_APP_PACKAGE);
+                if (TextUtils.isEmpty(pkg)) {
+                    LOG.w("No package provided for application detailed intent");
+                    Uri uri = intent.getData();
+                    if (uri == null) {
+                        LOG.w("No uri provided for application detailed intent");
+                        return null;
+                    }
+                    pkg = uri.getSchemeSpecificPart();
                 }
-                return ApplicationDetailsFragment.getInstance(uri.getSchemeSpecificPart());
+                return ApplicationDetailsFragment.getInstance(pkg);
+
+            case Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS:
+                return new NotificationAccessFragment();
 
             case Settings.ACTION_SYNC_SETTINGS:
                 return new AccountSettingsFragment();
