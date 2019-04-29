@@ -65,13 +65,13 @@ import java.lang.annotation.RetentionPolicy;
  * <li>{@link #checkInitialized()}
  * <li>{@link #onCreateInternal()}
  * <li>{@link #getAvailabilityStatus()}
- * <li>{@link #canBeShownWithRestrictions(CarUxRestrictions)}
  * <li>{@link #onStartInternal()}
  * <li>{@link #onResumeInternal()}
  * <li>{@link #onPauseInternal()}
  * <li>{@link #onStopInternal()}
  * <li>{@link #onDestroyInternal()}
  * <li>{@link #updateState(Preference)}
+ * <li>{@link #onApplyUxRestrictions(CarUxRestrictions)}
  * <li>{@link #handlePreferenceChanged(Preference, Object)}
  * <li>{@link #handlePreferenceClicked(Preference)}
  * </ul>
@@ -204,32 +204,21 @@ public abstract class PreferenceController<V extends Preference> implements
     }
 
     /**
-     * Returns {@code true} if the preference associated with the controller is available for
-     * display. Controllers with an {@link #AVAILABLE} availability status that can be shown with
-     * the current {@link CarUxRestrictions} are available.
-     *
-     * @see #getAvailabilityStatus()
-     * @see #canBeShownWithRestrictions(CarUxRestrictions)
-     */
-    public final boolean isAvailable() {
-        return (getAvailabilityStatus() == AVAILABLE) && canBeShownWithRestrictions(
-                mUxRestrictions);
-    }
-
-    /**
-     * Updates the preference presentation based on its {@link #isAvailable()} status. If the
-     * controller is available, the associated preference is shown and a call to {@link
-     * #updateState(Preference)} is dispatched to allow the controller to modify the presentation
-     * for the current state. If the controller is not available, the associated preference is
-     * hidden from the screen. This is a no-op if the controller is not yet created.
+     * Updates the preference presentation based on its {@link #getAvailabilityStatus()} status. If
+     * the controller is available, the associated preference is shown and a call to {@link
+     * #updateState(Preference)} and {@link #onApplyUxRestrictions(CarUxRestrictions)} are
+     * dispatched to allow the controller to modify the presentation for the current state. If the
+     * controller is not available, the associated preference is hidden from the screen. This is a
+     * no-op if the controller is not yet created.
      */
     public final void refreshUi() {
         if (!mIsCreated) {
             return;
         }
-        if (isAvailable()) {
+        if (getAvailabilityStatus() == AVAILABLE) {
             mPreference.setVisible(true);
             updateState(mPreference);
+            onApplyUxRestrictions(mUxRestrictions);
         } else {
             mPreference.setVisible(false);
         }
@@ -337,26 +326,10 @@ public abstract class PreferenceController<V extends Preference> implements
      * Returns the {@link AvailabilityStatus} for the setting. This status is used to determine
      * if the setting should be shown or hidden. Defaults to {@link #AVAILABLE}. This will be
      * called before the controller lifecycle begins and on refresh events.
-     *
-     * <p>Note: availability status is specific to properties of the setting and distinct from
-     * availability determined by driving restrictions. See
-     * {@link #canBeShownWithRestrictions(CarUxRestrictions)}
-     * to define behavior based on driving restrictions.
      */
     @AvailabilityStatus
     protected int getAvailabilityStatus() {
         return AVAILABLE;
-    }
-
-    /**
-     * Returns {@code true} if the preference for this controller can be shown given the {@code
-     * restrictionInfo}. This will be called before the controller lifecycle begins and on refresh
-     * events. Defaults to {@code true} when {@link CarUxRestrictions#UX_RESTRICTIONS_NO_SETUP}
-     * is not set in {@code uxRestrictions}. Subclasses may override this method to modify
-     * availability based on additional driving restrictions.
-     */
-    protected boolean canBeShownWithRestrictions(CarUxRestrictions uxRestrictions) {
-        return !CarUxRestrictionsHelper.isNoSetup(uxRestrictions);
     }
 
     /**
@@ -424,11 +397,24 @@ public abstract class PreferenceController<V extends Preference> implements
      *
      * <p>Note: this will only be called when the following are true:
      * <ul>
-     * <li>{@link #isAvailable()} returns {@code true}.
+     * <li>{@link #getAvailabilityStatus()} returns {@link #AVAILABLE}
      * <li>{@link #onCreateInternal()} has completed.
      * </ul>
      */
     protected void updateState(V preference) {
+    }
+
+    /**
+     * Updates the preference enabled status given the {@code restrictionInfo}. This will be called
+     * before the controller lifecycle begins and on refresh events. The preference is disabled by
+     * default when {@link CarUxRestrictions#UX_RESTRICTIONS_NO_SETUP} is set in {@code
+     * uxRestrictions}. Subclasses may override this method to modify enabled state based on
+     * additional driving restrictions.
+     */
+    protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
+        if (CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
+            mPreference.setEnabled(false);
+        }
     }
 
     /**
