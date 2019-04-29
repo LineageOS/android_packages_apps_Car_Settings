@@ -86,7 +86,8 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
         editText.setText(testPassword);
         checkBox.performClick();
 
-        assertThat(editText.getInputType()).isEqualTo(InputType.TYPE_CLASS_TEXT);
+        assertThat(editText.getInputType()).isEqualTo(InputType.TYPE_CLASS_TEXT
+                | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         assertThat(editText.getText().toString()).isEqualTo(testPassword);
     }
 
