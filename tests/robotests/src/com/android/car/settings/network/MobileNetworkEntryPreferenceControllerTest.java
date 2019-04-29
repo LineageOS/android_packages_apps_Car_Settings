@@ -22,43 +22,53 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.robolectric.shadow.api.Shadow.extract;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.os.UserManager;
-import android.provider.Settings;
-import android.telephony.PhoneStateListener;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowConnectivityManager;
+import com.android.car.settings.testutils.ShadowSubscriptionManager;
 import com.android.car.settings.testutils.ShadowTelephonyManager;
+
+import com.google.android.collect.Lists;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowApplication;
+import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowNetwork;
+
+import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowConnectivityManager.class,
-        ShadowTelephonyManager.class})
+        ShadowTelephonyManager.class, ShadowSubscriptionManager.class})
 public class MobileNetworkEntryPreferenceControllerTest {
 
     private static final String TEST_NETWORK_NAME = "test network name";
@@ -106,60 +116,6 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void onStart_phoneStateListenerSet() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        assertThat(getShadowTelephonyManager().getListenersForFlags(
-                PhoneStateListener.LISTEN_SERVICE_STATE).size()).isEqualTo(1);
-    }
-
-    @Test
-    public void onStop_phoneStateListenerUnset() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        assertThat(getShadowTelephonyManager().getListenersForFlags(
-                PhoneStateListener.LISTEN_SERVICE_STATE).size()).isEqualTo(1);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-        assertThat(getShadowTelephonyManager().getListenersForFlags(
-                PhoneStateListener.LISTEN_SERVICE_STATE).size()).isEqualTo(0);
-    }
-
-    @Test
-    public void onStart_airplaneModeChangedListenerSet() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        // One receiver (bluetooth pairing request) is always registered through the manifest.
-        assertThat(ShadowApplication.getInstance().getRegisteredReceivers().size()).isGreaterThan(
-                0);
-
-        boolean hasMatch = false;
-        for (ShadowApplication.Wrapper wrapper :
-                ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0) == Intent.ACTION_AIRPLANE_MODE_CHANGED) {
-                hasMatch = true;
-            }
-        }
-        assertThat(hasMatch).isTrue();
-    }
-
-    @Test
-    public void onStop_airplaneModeChangedListenerUnset() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        int prevSize = ShadowApplication.getInstance().getRegisteredReceivers().size();
-        assertThat(prevSize).isGreaterThan(0);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-        assertThat(ShadowApplication.getInstance().getRegisteredReceivers().size()).isLessThan(
-                prevSize);
-
-        boolean hasMatch = false;
-        for (ShadowApplication.Wrapper wrapper :
-                ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0) == Intent.ACTION_AIRPLANE_MODE_CHANGED) {
-                hasMatch = true;
-            }
-        }
-        assertThat(hasMatch).isFalse();
-    }
-
-    @Test
     public void getAvailabilityStatus_noMobileNetwork_unsupported() {
         when(mNetworkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)).thenReturn(
                 false);
@@ -199,8 +155,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_airplaneModeOn_preferenceDisabled() {
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 1);
+    public void refreshUi_noSims_disabled() {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
@@ -208,8 +163,12 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_airplaneModeOff_preferenceEnabled() {
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0);
+    public void refreshUi_oneSim_enabled() {
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
@@ -217,8 +176,12 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_summarySet() {
-        getShadowTelephonyManager().setNetworkOperatorName(TEST_NETWORK_NAME);
+    public void refreshUi_oneSim_summaryIsDisplayName() {
+        SubscriptionInfo info = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
@@ -226,23 +189,78 @@ public class MobileNetworkEntryPreferenceControllerTest {
     }
 
     @Test
-    public void sendBroadcast_airplaneModeOn_disablePreference() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mPreference.setEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 1);
-        mContext.sendBroadcast(new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED));
+    public void refreshUi_multiSim_enabled() {
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
 
-        assertThat(mPreference.isEnabled()).isFalse();
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mPreference.isEnabled()).isTrue();
     }
 
     @Test
-    public void sendBroadcast_airplaneModeOff_enablePreference() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mPreference.setEnabled(false);
-        Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.AIRPLANE_MODE_ON, 0);
-        mContext.sendBroadcast(new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED));
+    public void refreshUi_multiSim_summaryShowsCount() {
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
 
-        assertThat(mPreference.isEnabled()).isTrue();
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mPreference.getSummary()).isEqualTo(mContext.getResources().getQuantityString(
+                R.plurals.mobile_network_summary_count, 2, 2));
+    }
+
+    @Test
+    public void performClick_noSim_noFragmentStarted() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreference.performClick();
+
+        verify(mControllerHelper.getMockFragmentController(), never()).launchFragment(
+                any(Fragment.class));
+    }
+
+    @Test
+    public void performClick_oneSim_startsMobileNetworkFragment() {
+        int subId = 1;
+        SubscriptionInfo info = createSubscriptionInfo(subId, /* simSlotIndex= */ 1,
+                TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreference.performClick();
+
+        ArgumentCaptor<MobileNetworkFragment> captor = ArgumentCaptor.forClass(
+                MobileNetworkFragment.class);
+        verify(mControllerHelper.getMockFragmentController()).launchFragment(captor.capture());
+
+        assertThat(captor.getValue().getArguments().getInt(MobileNetworkFragment.ARG_NETWORK_SUB_ID,
+                -1)).isEqualTo(subId);
+    }
+
+    @Test
+    public void performClick_multiSim_startsMobileNetworkListFragment() {
+        SubscriptionInfo info1 = createSubscriptionInfo(/* subId= */ 1,
+                /* simSlotIndex= */ 1, TEST_NETWORK_NAME);
+        SubscriptionInfo info2 = createSubscriptionInfo(/* subId= */ 2,
+                /* simSlotIndex= */ 2, TEST_NETWORK_NAME);
+        List<SubscriptionInfo> selectable = Lists.newArrayList(info1, info2);
+        getShadowSubscriptionManager().setSelectableSubscriptionInfoList(selectable);
+
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreference.performClick();
+
+        verify(mControllerHelper.getMockFragmentController()).launchFragment(
+                any(MobileNetworkListFragment.class));
     }
 
     private ShadowTelephonyManager getShadowTelephonyManager() {
@@ -252,5 +270,20 @@ public class MobileNetworkEntryPreferenceControllerTest {
     private ShadowConnectivityManager getShadowConnectivityManager() {
         return (ShadowConnectivityManager) extract(
                 mContext.getSystemService(ConnectivityManager.class));
+    }
+
+    private ShadowSubscriptionManager getShadowSubscriptionManager() {
+        return Shadow.extract(mContext.getSystemService(SubscriptionManager.class));
+    }
+
+    private SubscriptionInfo createSubscriptionInfo(int subId, int simSlotIndex,
+            String displayName) {
+        SubscriptionInfo subInfo = new SubscriptionInfo(subId, /* iccId= */ "",
+                simSlotIndex, displayName, /* carrierName= */ "",
+                /* nameSource= */ 0, /* iconTint= */ 0, /* number= */ "",
+                /* roaming= */ 0, /* icon= */ null, /* mcc= */ "", "mncString",
+                /* countryIso= */ "", /* isEmbedded= */ false,
+                /* accessRules= */ null, /* cardString= */ "");
+        return subInfo;
     }
 }
