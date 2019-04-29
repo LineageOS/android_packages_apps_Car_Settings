@@ -69,7 +69,7 @@
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->
     <string name="sim_selection_required_pref">Selection required</string>
-    <!-- Title asking user if they wish to change the default sim for cellular data. [CHAR LIMIT=30] -->
+    <!-- Title asking user if they wish to change the default sim for cellular data. [CHAR LIMIT=60] -->
     <string name="sim_change_data_title">
         Use <xliff:g id="carrier" example="Google Fi">%1$s</xliff:g> for mobile data?
     </string>
