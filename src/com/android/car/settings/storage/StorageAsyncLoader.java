@@ -85,7 +85,6 @@ public class StorageAsyncLoader
         long otherAppsSize = 0;
         for (int i = 0, size = applicationInfos.size(); i < size; i++) {
             ApplicationInfo app = applicationInfos.get(i);
-
             StorageStatsSource.AppStorageStats stats;
             try {
                 stats = mStatsManager.getStatsForPackage(/* volumeUuid= */ null, app.packageName,
