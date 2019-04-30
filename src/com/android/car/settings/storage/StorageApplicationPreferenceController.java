@@ -30,8 +30,6 @@ import com.android.car.settings.common.FragmentController;
  */
 public class StorageApplicationPreferenceController extends ApplicationPreferenceController {
 
-    private String mVersion;
-
     public StorageApplicationPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
@@ -42,10 +40,6 @@ public class StorageApplicationPreferenceController extends ApplicationPreferenc
     protected void updateState(Preference preference) {
         preference.setTitle(getAppName());
         preference.setIcon(getAppIcon());
-        preference.setSummary(mVersion);
-    }
-
-    public void setVersion(String version) {
-        mVersion = version;
+        preference.setSummary(getAppVersion());
     }
 }

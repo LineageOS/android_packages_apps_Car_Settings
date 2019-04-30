@@ -830,6 +830,24 @@
     <string name="storage_audio_files_title">Audio files</string>
    <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
+    <!-- Individual application info screen, label under Storage heading. The amount of space taken up by the application itself (for example, the java compiled files) [CHAR LIMIT=35] -->
+    <string name="storage_application_size_label">App size</string>
+    <!-- Individual application info screen, label under Storage heading.  The amount of space taken up by the app's data (for example, downloaded emails) [CHAR LIMIT=35] -->
+    <string name="storage_data_size_label">User data</string>
+    <!-- Label that appears next to the cache size [CHAR LIMIT=35] -->
+    <string name="storage_cache_size_label">Cache</string>
+    <!-- Individual application info screen,label under Storage heading.  The total storage space taken up by this app. [CHAR LIMIT=35] -->
+    <string name="storage_total_size_label">Total</string>
+    <!-- Individual application info screen, button label under Storage heading. Button to clear all data associated with tis app (for example, remove all cached emails for an Email app) [CHAR LIMIT=35] -->
+    <string name="storage_clear_user_data_text">Clear storage</string>
+    <!-- Individual application info screen, button label under Storage heading. Text label for button [CHAR LIMIT=35] -->
+    <string name="storage_clear_cache_btn_text">Clear cache</string>
+    <!-- Individual application screen, confirmation dialog title. Displays when user selects to "Clear data". [CHAR LIMIT=35] -->
+    <string name="storage_clear_data_dlg_title">Delete app data?</string>
+    <!-- Individual application screen, confirmation dialog message. Displays when user selects to "Clear data". It warns the user of the consequences of clearing the data for an app. [CHAR LIMIT=200] -->
+    <string name="storage_clear_data_dlg_text">All this app\u2019s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.</string>
+    <!-- Text for dialog if clear data fails. [CHAR LIMIT=50] -->
+    <string name="storage_clear_failed_dlg_text">Couldn\u2019t clear storage for app.</string>
 
     <!-- Account management --><skip/>
     <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
