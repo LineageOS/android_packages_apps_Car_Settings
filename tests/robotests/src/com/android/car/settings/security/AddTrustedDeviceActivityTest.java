@@ -216,7 +216,6 @@ public class AddTrustedDeviceActivityTest {
     @Test
     public void onStart_onEscrowTokenActiveStateChanged_activated_finish() {
         mActivityController.start().postCreate(null).resume();
-        // Recreate with saved state (e.g. during config change).
         ArgumentCaptor<CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback> callBack =
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
@@ -231,5 +230,14 @@ public class AddTrustedDeviceActivityTest {
         callBack.getValue().onEscrowTokenActiveStateChanged(1, true);
 
         assertThat(mActivity.isFinishing()).isTrue();
+    }
+
+    @Test
+    public void configurationNotChanged_terminateEnrollmentHandshake() {
+        mActivityController.start();
+
+        mActivityController.pause();
+
+        verify(mMockCarTrustAgentEnrollmentManager).terminateEnrollmentHandshake();
     }
 }
