@@ -19,12 +19,12 @@
 -->
 <carVolumeItems xmlns:car="http://schemas.android.com/apk/res-auto">
     <item car:usage="voice_communication"
-          car:title="@string/test_volume_call"
+          car:titleText="@string/test_volume_call"
           car:icon="@drawable/test_icon"/>
     <item car:usage="voice_communication_signalling"
-          car:title="@string/test_volume_call"
+          car:titleText="@string/test_volume_call"
           car:icon="@drawable/test_icon"/>
     <item car:usage="media"
-          car:title="@string/test_volume_music"
+          car:titleText="@string/test_volume_music"
           car:icon="@drawable/test_icon"/>
 </carVolumeItems>
