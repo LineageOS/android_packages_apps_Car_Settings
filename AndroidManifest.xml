@@ -51,6 +51,7 @@
     <uses-permission android:name="android.permission.REBOOT"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
     <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
     <uses-permission android:name="android.permission.SET_TIME"/>
     <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
