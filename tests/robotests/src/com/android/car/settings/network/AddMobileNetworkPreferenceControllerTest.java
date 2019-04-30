@@ -16,6 +16,9 @@
 
 package com.android.car.settings.network;
 
+import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
@@ -33,21 +36,23 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowEuiccManager;
 import org.robolectric.shadows.ShadowPackageManager;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class AddMobileNetworkPreferenceControllerTest {
 
     private Context mContext;
-    private Preference mPreference;
-    private PreferenceControllerTestHelper<AddMobileNetworkPreferenceController> mControllerHelper;
+    private AddMobileNetworkPreferenceController mController;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreference = new Preference(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
-                AddMobileNetworkPreferenceController.class, mPreference);
+        PreferenceControllerTestHelper<AddMobileNetworkPreferenceController> controllerHelper =
+                new PreferenceControllerTestHelper<>(mContext,
+                        AddMobileNetworkPreferenceController.class, new Preference(mContext));
+        mController = controllerHelper.getController();
+        controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
     @After
@@ -56,22 +61,33 @@ public class AddMobileNetworkPreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_intentResolves_isVisible() {
-        getShadowPackageManager().addResolveInfoForIntent(
-                AddMobileNetworkPreferenceController.ADD_NETWORK_INTENT, new ResolveInfo());
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+    public void getAvailabilityStatus_euiccDisabled_isUnsupported() {
+        getShadowEuiccManager().setIsEnabled(false);
 
-        assertThat(mPreference.isVisible()).isTrue();
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
 
     @Test
-    public void onCreate_intentFailsToResolve_isNotVisible() {
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+    public void getAvailabilityStatus_euiccEnabled_intentResolves_isAvailable() {
+        getShadowEuiccManager().setIsEnabled(true);
+        getShadowPackageManager().addResolveInfoForIntent(
+                AddMobileNetworkPreferenceController.ADD_NETWORK_INTENT, new ResolveInfo());
 
-        assertThat(mPreference.isVisible()).isTrue();
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void getAvailabilityStatus_euiccEnabled_intentFailsToResolve_isUnsupported() {
+        getShadowEuiccManager().setIsEnabled(true);
+
+        assertThat(mController.getAvailabilityStatus()).isEqualTo(UNSUPPORTED_ON_DEVICE);
     }
 
     private ShadowPackageManager getShadowPackageManager() {
         return Shadow.extract(mContext.getPackageManager());
+    }
+
+    private ShadowEuiccManager getShadowEuiccManager() {
+        return Shadow.extract(mContext.getSystemService(Context.EUICC_SERVICE));
     }
 }
