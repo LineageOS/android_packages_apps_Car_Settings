@@ -147,7 +147,8 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
         preference.setSummary(getDomainsSummary(entry.info.packageName));
         preference.setIcon(iconDrawableFactory.getBadgedIcon(entry.info));
         preference.setOnPreferenceClickListener(pref -> {
-            // TODO: Create AppLaunchSettings.
+            getFragmentController().launchFragment(
+                    ApplicationLaunchSettingsFragment.newInstance(entry.info.packageName));
             return true;
         });
         return preference;

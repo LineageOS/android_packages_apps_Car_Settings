@@ -426,6 +426,16 @@
     <string name="domain_urls_summary_one">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g></string>
     <!-- Summary of an app that can open several domain's URLs [CHAR LIMIT=45] -->
     <string name="domain_urls_summary_some">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g> and other URLs</string>
+    <!-- Title of app specific setting to view and modify app launch settings. [CHAR LIMIT=40] -->
+    <string name="app_launch_title">Open by default</string>
+    <!-- Sub heading for preferences not related to managed domain urls. [CHAR LIMIT=40] -->
+    <string name="app_launch_other_defaults_title">Other defaults</string>
+    <!-- Text if the app is NOT a default for actions. [CHAR LIMIT=40] -->
+    <string name="auto_launch_disable_text">No defaults set.</string>
+    <!-- Text if the app is set as a default for some actions. [CHAR LIMIT=80] -->
+    <string name="auto_launch_enable_text">You\u2019ve chosen to launch this app by default for some actions.</string>
+    <!-- Summary to indicate to user that the preference can be clicked to clear the default app preference. [CHAR LIMIT=40] -->
+    <string name="auto_launch_reset_text">Clear defaults</string>
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
     <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->
