@@ -30,6 +30,7 @@ import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.assist.ManageAssistFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.managedomainurls.ManageDomainUrlsFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -140,6 +141,9 @@ public class FragmentResolver {
                     return null;
                 }
                 return ApplicationDetailsFragment.getInstance(uri.getSchemeSpecificPart());
+
+            case Settings.ACTION_MANAGE_DOMAIN_URLS:
+                return new ManageDomainUrlsFragment();
 
             case Settings.ACTION_SYNC_SETTINGS:
                 return new AccountSettingsFragment();
