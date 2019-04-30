@@ -49,6 +49,7 @@ import com.android.car.settings.storage.StorageSettingsFragment;
 import com.android.car.settings.system.AboutSettingsFragment;
 import com.android.car.settings.users.UsersListFragment;
 import com.android.car.settings.wifi.WifiSettingsFragment;
+import com.android.car.settings.wifi.preferences.WifiPreferencesFragment;
 
 
 /**
@@ -93,6 +94,9 @@ public class FragmentResolver {
             case Settings.ACTION_WIRELESS_SETTINGS:
                 return new WifiSettingsFragment();
 
+            case Settings.ACTION_WIFI_IP_SETTINGS:
+                return new WifiPreferencesFragment();
+
             case Settings.ACTION_DATA_USAGE_SETTINGS:
             case Settings.ACTION_MOBILE_DATA_USAGE:
                 return new DataUsageFragment();
@@ -116,6 +120,7 @@ public class FragmentResolver {
                 return new ApplicationsSettingsFragment();
 
             case Settings.ACTION_APPLICATION_DETAILS_SETTINGS:
+            case Settings.ACTION_NOTIFICATION_SETTINGS:
             case Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS:
             case Settings.ACTION_APP_NOTIFICATION_SETTINGS:
                 String pkg = intent.getStringExtra(Settings.EXTRA_APP_PACKAGE);
