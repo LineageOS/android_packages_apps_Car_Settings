@@ -23,6 +23,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.telephony.euicc.EuiccManager;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -53,10 +54,19 @@ public class AddMobileNetworkPreferenceController extends PreferenceController<P
     }
 
     @Override
-    protected void onCreateInternal() {
+    protected int getAvailabilityStatus() {
+        EuiccManager euiccManager = getContext().getSystemService(EuiccManager.class);
+        if (!euiccManager.isEnabled()) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
+
         List<ResolveInfo> resolveInfos = getContext().getPackageManager().queryIntentActivities(
                 ADD_NETWORK_INTENT, /* flags= */ 0);
-        getPreference().setVisible(!resolveInfos.isEmpty());
+        if (resolveInfos.isEmpty()) {
+            return UNSUPPORTED_ON_DEVICE;
+        }
+
+        return AVAILABLE;
     }
 
     @Override

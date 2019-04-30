@@ -18,49 +18,40 @@ package com.android.car.settings.network;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.UserManager;
-import android.provider.Settings;
-import android.telephony.PhoneStateListener;
-import android.telephony.ServiceState;
+import android.telephony.SubscriptionInfo;
+import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
+import java.util.List;
+
 /** Controls the preference for accessing mobile network settings. */
-public class MobileNetworkEntryPreferenceController extends PreferenceController<Preference> {
+public class MobileNetworkEntryPreferenceController extends
+        PreferenceController<Preference> implements
+        SubscriptionsChangeListener.SubscriptionsChangeAction {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
-    private final TelephonyManager mTelephonyManager;
+    private final SubscriptionsChangeListener mChangeListener;
+    private final SubscriptionManager mSubscriptionManager;
     private final ConnectivityManager mConnectivityManager;
-    private final PhoneStateListener mPhoneStateListener = new PhoneStateListener() {
-        @Override
-        public void onServiceStateChanged(ServiceState serviceState) {
-            refreshUi();
-        }
-    };
-    private final BroadcastReceiver mAirplaneModeChangedReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            refreshUi();
-        }
-    };
-    private final IntentFilter mIntentFilter = new IntentFilter(
-            Intent.ACTION_AIRPLANE_MODE_CHANGED);
+    private final TelephonyManager mTelephonyManager;
 
     public MobileNetworkEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mChangeListener = new SubscriptionsChangeListener(context, /* action= */ this);
+        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
+        mConnectivityManager = context.getSystemService(ConnectivityManager.class);
         mTelephonyManager = context.getSystemService(TelephonyManager.class);
-        mConnectivityManager = getContext().getSystemService(ConnectivityManager.class);
     }
 
     @Override
@@ -70,14 +61,12 @@ public class MobileNetworkEntryPreferenceController extends PreferenceController
 
     @Override
     protected void onStartInternal() {
-        mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_SERVICE_STATE);
-        getContext().registerReceiver(mAirplaneModeChangedReceiver, mIntentFilter);
+        mChangeListener.start();
     }
 
     @Override
     protected void onStopInternal() {
-        mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
-        getContext().unregisterReceiver(mAirplaneModeChangedReceiver);
+        mChangeListener.stop();
     }
 
     @Override
@@ -97,12 +86,43 @@ public class MobileNetworkEntryPreferenceController extends PreferenceController
 
     @Override
     protected void updateState(Preference preference) {
-        preference.setSummary(mTelephonyManager.getNetworkOperatorName());
-        preference.setEnabled(isAirplaneModeOff());
+        List<SubscriptionInfo> subs = SubscriptionUtils.getAvailableSubscriptions(
+                mSubscriptionManager, mTelephonyManager);
+        preference.setEnabled(!subs.isEmpty());
+        preference.setSummary(getSummary(subs));
     }
 
-    private boolean isAirplaneModeOff() {
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.AIRPLANE_MODE_ON, 0) == 0;
+    @Override
+    protected boolean handlePreferenceClicked(Preference preference) {
+        List<SubscriptionInfo> subs = SubscriptionUtils.getAvailableSubscriptions(
+                mSubscriptionManager, mTelephonyManager);
+        if (subs.isEmpty()) {
+            return true;
+        }
+
+        if (subs.size() == 1) {
+            getFragmentController().launchFragment(
+                    MobileNetworkFragment.newInstance(subs.get(0).getSubscriptionId()));
+        } else {
+            getFragmentController().launchFragment(new MobileNetworkListFragment());
+        }
+        return true;
+    }
+
+    @Override
+    public void onSubscriptionsChanged() {
+        refreshUi();
+    }
+
+    private CharSequence getSummary(List<SubscriptionInfo> subs) {
+        int count = subs.size();
+        if (subs.isEmpty()) {
+            return null;
+        } else if (count == 1) {
+            return subs.get(0).getDisplayName();
+        } else {
+            return getContext().getResources().getQuantityString(
+                    R.plurals.mobile_network_summary_count, count, count);
+        }
     }
 }
