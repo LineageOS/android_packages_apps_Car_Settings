@@ -22,6 +22,7 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.widget.TextView;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -36,7 +37,8 @@ import java.util.List;
 public class MobileNetworkFragment extends SettingsFragment implements
         MobileNetworkUpdateManager.MobileNetworkUpdateListener {
 
-    private static final String ARG_NETWORK_SUB_ID = "network_sub_id";
+    @VisibleForTesting
+    static final String ARG_NETWORK_SUB_ID = "network_sub_id";
 
     private SubscriptionManager mSubscriptionManager;
     private MobileNetworkUpdateManager mMobileNetworkUpdateManager;
