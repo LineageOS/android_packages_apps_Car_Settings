@@ -92,10 +92,9 @@ public class AccessPointListPreferenceController extends
     }
 
     @Override
-    protected boolean canBeShownWithRestrictions(CarUxRestrictions uxRestrictions) {
-        // Since the list dynamically changes based on the ux restrictions, we shown this
-        // fragment regardless of the restriction.
-        return true;
+    protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
+        // Since the list dynamically changes based on the ux restrictions, we enable this fragment
+        // regardless of the restriction. Intentional no-op.
     }
 
     @Override
