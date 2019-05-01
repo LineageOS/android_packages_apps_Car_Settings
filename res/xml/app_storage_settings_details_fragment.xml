@@ -19,7 +19,7 @@
                   android:title="@string/storage_settings_title">
     <Preference
         android:key="@string/pk_storage_application_details"
-        settings:controller="com.android.car.settings.applications.ApplicationWithVersionPreferenceController"/>
+        settings:controller="com.android.car.settings.storage.StorageApplicationPreferenceController"/>
     <com.android.car.settings.storage.StorageAppDetailPreference
         android:key="@string/pk_storage_application_size"
         android:selectable="false"
