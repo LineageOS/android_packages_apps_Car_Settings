@@ -20,6 +20,7 @@ import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageDataObserver;
 import android.content.pm.ModuleInfo;
@@ -35,7 +36,10 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /** Shadow of ApplicationPackageManager that allows the getting of content providers per user. */
 @Implements(value = ApplicationPackageManager.class)
@@ -46,6 +50,10 @@ public class ShadowApplicationPackageManager extends
     private static Resources sResources = null;
     private static PackageManager sPackageManager;
 
+    private final Map<Integer, String> mUserIdToDefaultBrowserMap = new HashMap<>();
+    private final Map<String, ComponentName> mPkgToDefaultActivityMap = new HashMap<>();
+    private final Map<String, IntentFilter> mPkgToDefaultActivityIntentFilterMap = new HashMap<>();
+    private final Map<IntentFilter, ComponentName> mPreferredActivities = new LinkedHashMap<>();
     private List<ResolveInfo> mHomeActivities = Collections.emptyList();
     private ComponentName mDefaultHomeActivity;
 
@@ -113,6 +121,50 @@ public class ShadowApplicationPackageManager extends
     protected ComponentName getHomeActivities(List<ResolveInfo> outActivities) {
         outActivities.addAll(mHomeActivities);
         return mDefaultHomeActivity;
+    }
+
+    @Implementation
+    @Override
+    protected void clearPackagePreferredActivities(String packageName) {
+        mPreferredActivities.clear();
+    }
+
+    @Implementation
+    @Override
+    public int getPreferredActivities(List<IntentFilter> outFilters,
+            List<ComponentName> outActivities, String packageName) {
+        for (IntentFilter filter : mPreferredActivities.keySet()) {
+            ComponentName name = mPreferredActivities.get(filter);
+            // If packageName is null, match everything, else filter by packageName.
+            if (packageName == null) {
+                outFilters.add(filter);
+                outActivities.add(name);
+            } else if (name.getPackageName().equals(packageName)) {
+                outFilters.add(filter);
+                outActivities.add(name);
+            }
+        }
+        return 0;
+    }
+
+    @Implementation
+    @Override
+    public void addPreferredActivity(IntentFilter filter, int match, ComponentName[] set,
+            ComponentName activity) {
+        mPreferredActivities.put(filter, activity);
+    }
+
+    @Implementation
+    @Override
+    protected String getDefaultBrowserPackageNameAsUser(int userId) {
+        return mUserIdToDefaultBrowserMap.getOrDefault(userId, null);
+    }
+
+    @Implementation
+    @Override
+    protected boolean setDefaultBrowserPackageNameAsUser(String packageName, int userId) {
+        mUserIdToDefaultBrowserMap.put(userId, packageName);
+        return true;
     }
 
     public void setHomeActivities(List<ResolveInfo> homeActivities) {
