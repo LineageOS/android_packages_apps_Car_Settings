@@ -37,7 +37,6 @@ import androidx.annotation.XmlRes;
 import androidx.loader.app.LoaderManager;
 
 import com.android.car.settings.R;
-import com.android.car.settings.applications.ApplicationWithVersionPreferenceController;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
@@ -160,7 +159,7 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
         }
         mAppsStorageStatsManager = new AppsStorageStatsManager(context);
         mAppsStorageStatsManager.registerListener(this);
-        use(ApplicationWithVersionPreferenceController.class,
+        use(StorageApplicationPreferenceController.class,
                 R.string.pk_storage_application_details)
                 .setAppEntry(mAppEntry)
                 .setAppState(mAppState);
