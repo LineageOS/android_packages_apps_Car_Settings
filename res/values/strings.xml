@@ -123,6 +123,10 @@
     <string name="no_carrier_update_now_text">Updated just now</string>
     <!-- Button to launch external data plan app [CHAR LIMIT=30] -->
     <string name="launch_manage_plan_text">View plan</string>
+    <!-- Title for mobile data preference, to display the mobile data usage for each app. [CHAR LIMIT=30] -->
+    <string name="app_data_usage">App data usage</string>
+    <!-- Label for application which has its data usage restricted. [CHAR LIMIT=16] -->
+    <string name="data_usage_app_restricted">restricted</string>
 
     <!-- Title of dialog for editing data usage cycle reset date. [CHAR LIMIT=48] -->
     <string name="cycle_reset_day_of_month_picker_title">Usage cycle reset date</string>

@@ -74,7 +74,7 @@ public final class DataUsageUtils {
      * Format byte value to readable string using IEC units.
      */
     public static CharSequence bytesToIecUnits(Context context, long byteValue) {
-        final Formatter.BytesResult res = Formatter.formatBytes(context.getResources(), byteValue,
+        Formatter.BytesResult res = Formatter.formatBytes(context.getResources(), byteValue,
                 Formatter.FLAG_IEC_UNITS);
         return BidiFormatter.getInstance().unicodeWrap(context.getString(
                 com.android.internal.R.string.fileSizeSuffix, res.value, res.units));
