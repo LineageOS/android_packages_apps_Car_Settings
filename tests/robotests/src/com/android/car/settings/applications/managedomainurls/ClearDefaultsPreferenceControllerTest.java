@@ -101,6 +101,7 @@ public class ClearDefaultsPreferenceControllerTest {
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
         ShadowIUsbManager.reset();
+        ShadowApplicationPackageManager.reset();
     }
 
     @Test
