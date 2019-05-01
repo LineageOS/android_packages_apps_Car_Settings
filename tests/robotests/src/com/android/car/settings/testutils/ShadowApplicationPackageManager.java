@@ -18,7 +18,6 @@ package com.android.car.settings.testutils;
 import android.annotation.UserIdInt;
 import android.app.ApplicationPackageManager;
 import android.content.ComponentName;
-import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.IPackageDataObserver;
@@ -44,7 +43,6 @@ import java.util.Map;
 public class ShadowApplicationPackageManager extends
         org.robolectric.shadows.ShadowApplicationPackageManager {
 
-    private static List<ResolveInfo> sResolveInfos = null;
     private static Resources sResources = null;
     private static PackageManager sPackageManager;
 
@@ -57,7 +55,6 @@ public class ShadowApplicationPackageManager extends
 
     @Resetter
     public static void reset() {
-        sResolveInfos = null;
         sResources = null;
         sPackageManager = null;
     }
@@ -94,12 +91,6 @@ public class ShadowApplicationPackageManager extends
     @Implementation
     public List<ApplicationInfo> getInstalledApplicationsAsUser(int flags, int userId) {
         return getInstalledApplications(flags);
-    }
-
-    @Implementation
-    public List<ResolveInfo> queryIntentActivitiesAsUser(Intent intent,
-            @PackageManager.ResolveInfoFlags int flags, @UserIdInt int userId) {
-        return sResolveInfos == null ? Collections.emptyList() : sResolveInfos;
     }
 
     @Implementation
@@ -164,15 +155,6 @@ public class ShadowApplicationPackageManager extends
 
     public void setDefaultHomeActivity(ComponentName defaultHomeActivity) {
         mDefaultHomeActivity = defaultHomeActivity;
-    }
-
-    /**
-     * If resolveInfos are set by this method then
-     * {@link ShadowApplicationPackageManager#queryIntentActivitiesAsUser}
-     * method will return the same list.
-     */
-    public static void setListOfActivities(List<ResolveInfo> resolveInfos) {
-        sResolveInfos = resolveInfos;
     }
 
     public static void setResources(Resources resources) {
