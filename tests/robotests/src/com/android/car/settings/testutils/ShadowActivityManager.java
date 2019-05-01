@@ -17,21 +17,39 @@
 package com.android.car.settings.testutils;
 
 import android.app.ActivityManager;
+import android.content.pm.IPackageDataObserver;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 @Implements(value = ActivityManager.class)
 public class ShadowActivityManager extends org.robolectric.shadows.ShadowActivityManager {
 
+    private static boolean sIsApplicationUserDataCleared;
+
     private String mMostRecentlyStoppedPackage;
+
+    @Resetter
+    public static void reset() {
+        sIsApplicationUserDataCleared = false;
+    }
 
     @Implementation
     protected void forceStopPackage(String packageName) {
         mMostRecentlyStoppedPackage = packageName;
     }
 
+    @Implementation
+    protected boolean clearApplicationUserData(String packageName, IPackageDataObserver observer) {
+        return sIsApplicationUserDataCleared;
+    }
+
     public String getMostRecentlyStoppedPackage() {
         return mMostRecentlyStoppedPackage;
+    }
+
+    public static void setApplicationUserDataCleared(boolean applicationUserDataCleared) {
+        sIsApplicationUserDataCleared = applicationUserDataCleared;
     }
 }

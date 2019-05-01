@@ -185,6 +185,11 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
+                <action android:name="android.settings.MANAGE_DOMAIN_URLS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.DATA_USAGE_SETTINGS" />
                 <action android:name="android.settings.MOBILE_DATA_USAGE" />
                 <category android:name="android.intent.category.DEFAULT" />

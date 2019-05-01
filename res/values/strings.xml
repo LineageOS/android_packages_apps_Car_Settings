@@ -39,6 +39,28 @@
     <string name="network_and_internet">Network &amp; internet</string>
     <!-- Mobile network settings [CHAR LIMIT=30] -->
     <string name="mobile_network_settings">Mobile network</string>
+    <!-- Summary of the 'Mobile network' item on the Network & internet page when there is more than
+         one mobile service configured (aka "dual SIM") - it shows a count of SIM/eSIM and tapping
+         it leads to a page showing a list of the mobile service subscriptions. [CHAR LIMIT=40] -->
+    <plurals name="mobile_network_summary_count">
+        <item quantity="one"><xliff:g id="count" example="1">%1$d</xliff:g> SIM</item>
+        <item quantity="other"><xliff:g id="count" example="2">%1$d</xliff:g> SIMs</item>
+    </plurals>
+    <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
+         that service is active and is tied to a physical SIM card [CHAR LIMIT=40] -->
+    <string name="mobile_network_active_sim">Active / SIM</string>
+    <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
+         that service is inactive and is tied to a physical SIM card [CHAR LIMIT=40] -->
+    <string name="mobile_network_inactive_sim">Inactive / SIM</string>
+    <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
+         that service is active and is tied to an eSIM profile [CHAR LIMIT=40] -->
+    <string name="mobile_network_active_esim">Active / Downloaded SIM</string>
+    <!-- Summary for an item in the page listing multiple mobile service subscriptions, indicating
+         that service is inactive and is tied to an eSIM profile [CHAR LIMIT=40] -->
+    <string name="mobile_network_inactive_esim">Inactive / Downloaded SIM</string>
+    <!-- Title of item shown at the bottom of the page listing multiple mobile service
+         subscriptions; tapping it leads to a UI to add more [CHAR LIMIT=40] -->
+    <string name="mobile_network_list_add_more">Add more</string>
     <!-- Mobile network screen, toggle mobile data title [CHAR LIMIT=30] -->
     <string name="mobile_network_toggle_title">Mobile data</string>
     <!-- Mobile network screen, toggle mobile data summary [CHAR LIMIT=50] -->
@@ -47,7 +69,7 @@
     <string name="confirm_mobile_data_disable">Turn off mobile data?</string>
     <!-- When a SIM preference hasn't been selected yet, this string is displayed as the pref summary until the user chooses a SIM subscription from the preference list. [CHAR LIMIT=50] -->
     <string name="sim_selection_required_pref">Selection required</string>
-    <!-- Title asking user if they wish to change the default sim for cellular data. [CHAR LIMIT=30] -->
+    <!-- Title asking user if they wish to change the default sim for cellular data. [CHAR LIMIT=60] -->
     <string name="sim_change_data_title">
         Use <xliff:g id="carrier" example="Google Fi">%1$s</xliff:g> for mobile data?
     </string>
@@ -441,8 +463,30 @@
     </string>
     <!-- Title of preference to add new autofill services. [CHAR_LIMIT=30] -->
     <string name="autofill_add_service">Add service</string>
+    <!-- Title of setting to change the handled domain urls [CHAR LIMIT=60]-->
+    <string name="app_launch_domain_links_title">Opening links</string>
+    <!-- Section title for the Domain URL app preference list [CHAR LIMIT=60]-->
+    <string name="domain_url_section_title">Installed apps</string>
+    <!-- Summary for an app that doesn't open any domain URLs [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_none">Don\u2019t open supported links</string>
+    <!-- Summary of an app that can open URLs for exactly one domain [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_one">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g></string>
+    <!-- Summary of an app that can open several domain's URLs [CHAR LIMIT=45] -->
+    <string name="domain_urls_summary_some">Open <xliff:g id="domain" example="mail.google.com">%s</xliff:g> and other URLs</string>
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
+    <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->
+    <string name="notification_access_title">Notification access</string>
+    <!-- Title for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_security_warning_title">Allow notification access for <xliff:g id="service" example="NotificationReader">%1$s</xliff:g>?</string>
+    <!-- Summary for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_security_warning_summary"><xliff:g id="notification_listener_name">%1$s</xliff:g> will be able to read all notifications, including personal information such as contact names and the text of messages you receive. It will also be able to dismiss notifications or trigger action buttons they contain.\n\nThis will also give the app the ability to turn Do Not Disturb on or off and change related settings.</string>
+    <!-- Summary for a warning message about revoking notification listener access, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
+    <string name="notification_listener_revoke_warning_summary">If you turn off notification access for <xliff:g id="notification_listener_name">%1$s</xliff:g>, Do Not Disturb access may also be turned off.</string>
+    <!-- Positive button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
+    <string name="notification_listener_revoke_warning_confirm">Turn off</string>
+    <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
+    <string name="notification_listener_revoke_warning_cancel">Cancel</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
@@ -786,6 +830,24 @@
     <string name="storage_audio_files_title">Audio files</string>
    <!-- Car storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calculating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
+    <!-- Individual application info screen, label under Storage heading. The amount of space taken up by the application itself (for example, the java compiled files) [CHAR LIMIT=35] -->
+    <string name="storage_application_size_label">App size</string>
+    <!-- Individual application info screen, label under Storage heading.  The amount of space taken up by the app's data (for example, downloaded emails) [CHAR LIMIT=35] -->
+    <string name="storage_data_size_label">User data</string>
+    <!-- Label that appears next to the cache size [CHAR LIMIT=35] -->
+    <string name="storage_cache_size_label">Cache</string>
+    <!-- Individual application info screen,label under Storage heading.  The total storage space taken up by this app. [CHAR LIMIT=35] -->
+    <string name="storage_total_size_label">Total</string>
+    <!-- Individual application info screen, button label under Storage heading. Button to clear all data associated with tis app (for example, remove all cached emails for an Email app) [CHAR LIMIT=35] -->
+    <string name="storage_clear_user_data_text">Clear storage</string>
+    <!-- Individual application info screen, button label under Storage heading. Text label for button [CHAR LIMIT=35] -->
+    <string name="storage_clear_cache_btn_text">Clear cache</string>
+    <!-- Individual application screen, confirmation dialog title. Displays when user selects to "Clear data". [CHAR LIMIT=35] -->
+    <string name="storage_clear_data_dlg_title">Delete app data?</string>
+    <!-- Individual application screen, confirmation dialog message. Displays when user selects to "Clear data". It warns the user of the consequences of clearing the data for an app. [CHAR LIMIT=200] -->
+    <string name="storage_clear_data_dlg_text">All this app\u2019s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.</string>
+    <!-- Text for dialog if clear data fails. [CHAR LIMIT=50] -->
+    <string name="storage_clear_failed_dlg_text">Couldn\u2019t clear storage for app.</string>
 
     <!-- Account management --><skip/>
     <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
@@ -1038,7 +1100,7 @@
     <!-- security trusted device --><skip/>
     <!-- Label for button to add a trusted device [CHAR LIMIT=50] -->
     <string name="add_device_title">Add trusted device</string>
-    <!-- Label for button to add a trusted device [CHAR LIMIT=50] -->
+    <!-- Label for button to add a trusted device [CHAR LIMIT=100] -->
     <string name="add_device_summary">Bluetooth will turn on to add trusted device</string>
     <!-- Screen title and label for button of trusted device [CHAR LIMIT=30]> -->
     <string name="trusted_device">Trusted devices</string>
@@ -1087,6 +1149,10 @@
     <string name="remove_button">Remove</string>
     <!-- Cancel button text [CHAR LIMIT=20] -->
     <string name="cancel">Cancel</string>
+    <!-- Generic dialog allow button. [CHAR_LIMIT=20] -->
+    <string name="allow">Allow</string>
+    <!-- Generic dialog deny button. [CHAR_LIMIT=20] -->
+    <string name="deny">Deny</string>
 
     <!-- Accessibility description for the backspace key in the PIN pad [CHAR LIMIT=NONE] -->
     <string name="backspace_key">Backspace key</string>

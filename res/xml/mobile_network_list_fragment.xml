@@ -18,10 +18,14 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/special_access">
+    android:title="@string/mobile_network_settings">
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_mobile_network_list"
+        settings:controller="com.android.car.settings.network.MobileNetworkListPreferenceController"/>
     <Preference
-        android:fragment="com.android.car.settings.applications.specialaccess.NotificationAccessFragment"
-        android:key="@string/pk_notification_access_entry"
-        android:title="@string/notification_access_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        android:icon="@drawable/ic_add"
+        android:key="@string/pk_mobile_network_list_add_more"
+        android:title="@string/mobile_network_list_add_more"
+        android:visibility="gone"
+        settings:controller="com.android.car.settings.network.AddMobileNetworkPreferenceController"/>
 </PreferenceScreen>

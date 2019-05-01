@@ -21,6 +21,7 @@ import android.app.ApplicationPackageManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.IPackageDataObserver;
 import android.content.pm.ModuleInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
@@ -43,6 +44,7 @@ public class ShadowApplicationPackageManager extends
 
     private static List<ResolveInfo> sResolveInfos = null;
     private static Resources sResources = null;
+    private static PackageManager sPackageManager;
 
     private List<ResolveInfo> mHomeActivities = Collections.emptyList();
     private ComponentName mDefaultHomeActivity;
@@ -51,6 +53,7 @@ public class ShadowApplicationPackageManager extends
     public static void reset() {
         sResolveInfos = null;
         sResources = null;
+        sPackageManager = null;
     }
 
     @Implementation
@@ -78,6 +81,11 @@ public class ShadowApplicationPackageManager extends
     }
 
     @Implementation
+    protected void deleteApplicationCacheFiles(String packageName, IPackageDataObserver observer) {
+        sPackageManager.deleteApplicationCacheFiles(packageName, observer);
+    }
+
+    @Implementation
     protected Resources getResourcesForApplication(String appPackageName)
             throws PackageManager.NameNotFoundException {
         return sResources;
@@ -92,6 +100,12 @@ public class ShadowApplicationPackageManager extends
     protected List<ResolveInfo> queryIntentActivitiesAsUser(Intent intent,
             @PackageManager.ResolveInfoFlags int flags, @UserIdInt int userId) {
         return sResolveInfos == null ? Collections.emptyList() : sResolveInfos;
+    }
+
+    @Implementation
+    protected ApplicationInfo getApplicationInfoAsUser(String packageName, int flags, int userId)
+            throws PackageManager.NameNotFoundException {
+        return getApplicationInfo(packageName, flags);
     }
 
     @Implementation
@@ -120,5 +134,9 @@ public class ShadowApplicationPackageManager extends
 
     public static void setResources(Resources resources) {
         sResources = resources;
+    }
+
+    public static void setPackageManager(PackageManager packageManager) {
+        sPackageManager = packageManager;
     }
 }

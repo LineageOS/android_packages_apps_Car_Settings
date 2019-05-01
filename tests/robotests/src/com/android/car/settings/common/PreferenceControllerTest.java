@@ -18,7 +18,6 @@ package com.android.car.settings.common;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
-import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_USER;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -138,16 +137,6 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void onUxRestrictionsChanged_created_notAvailable_doesNotUpdateState() {
-        mControllerHelper.markState(Lifecycle.State.CREATED);
-
-        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
-
-        // onCreate.
-        assertThat(mController.getUpdateStateCallCount()).isEqualTo(1);
-    }
-
-    @Test
     public void onUxRestrictionsChanged_notCreated_available_doesNotUpdateState() {
         mController.onUxRestrictionsChanged(LIMIT_STRINGS_UX_RESTRICTIONS);
 
@@ -155,48 +144,17 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void isAvailable_available_returnsTrue() {
-        mController.setAvailabilityStatus(AVAILABLE);
+    public void onUxRestrictionsChanged_created_restricted_preferenceDisabled() {
+        mControllerHelper.markState(Lifecycle.State.CREATED);
 
-        assertThat(mController.isAvailable()).isTrue();
-    }
-
-    @Test
-    public void isAvailable_conditionallyUnavailable_returnsFalse() {
-        mController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
-
-        assertThat(mController.isAvailable()).isFalse();
-    }
-
-    @Test
-    public void isAvailable_unsupportedOnDevice_returnsFalse() {
-        mController.setAvailabilityStatus(UNSUPPORTED_ON_DEVICE);
-
-        assertThat(mController.isAvailable()).isFalse();
-    }
-
-    @Test
-    public void isAvailable_disabledForUser_returnsFalse() {
-        mController.setAvailabilityStatus(DISABLED_FOR_USER);
-
-        assertThat(mController.isAvailable()).isFalse();
-    }
-
-    @Test
-    public void isAvailable_cannotShowWithUxRestrictions_returnsFalse() {
         mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
-        assertThat(mController.isAvailable()).isFalse();
+        verify(mPreference).setEnabled(false);
     }
 
     @Test
     public void getAvailabilityStatus_defaultsToAvailable() {
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
-    }
-
-    @Test
-    public void canBeShownWithRestrictions_defaultsToNoSetup() {
-        assertThat(mController.canBeShownWithRestrictions(NO_SETUP_UX_RESTRICTIONS)).isFalse();
     }
 
     @Test

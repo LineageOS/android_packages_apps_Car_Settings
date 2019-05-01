@@ -50,6 +50,8 @@
     <string name="pk_network_and_internet_extra_settings" translatable="false">
         network_and_internet_extra_settings
     </string>
+    <string name="pk_mobile_network_list" translatable="false">mobile_network_list</string>
+    <string name="pk_mobile_network_list_add_more" translatable="false">mobile_network_list_add_more</string>
     <string name="pk_mobile_data_toggle" translatable="false">mobile_data_toggle</string>
     <string name="pk_mobile_roaming_toggle" translatable="false">mobile_roaming_toggle</string>
     <string name="pk_data_usage_settings_entry" translatable="false">data_usage_settings_entry
@@ -151,6 +153,13 @@
     </string>
     <string name="pk_default_autofill_options" translatable="false">default_autofill_options
     </string>
+    <string name="pk_opening_links_entry" translatable="false">opening_links_entry</string>
+    <string name="pk_opening_links_options" translatable="false">opening_links_options</string>
+
+    <!-- Special App Access Settings -->
+    <string name="pk_notification_access_entry" translatable="false">notification_access_entry
+    </string>
+    <string name="pk_notification_access" translatable="false">notification_access</string>
 
     <!-- DateTime Settings -->
     <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>
@@ -180,8 +189,12 @@
     <string name="pk_storage_music_audio_details" translatable="false">storage_music_audio_details
     </string>
     <string name="pk_storage_other_apps" translatable="false">storage_other_apps</string>
-    <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details
-    </string>
+    <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details</string>
+    <string name="pk_storage_application_size" translatable="false">storage_application_size</string>
+    <string name="pk_storage_application_total_size" translatable="false">storage_application_total_size</string>
+    <string name="pk_storage_application_data_size" translatable="false">storage_application_data_size</string>
+    <string name="pk_storage_application_cache_size" translatable="false">storage_application_cache_size</string>
+    <string name="pk_storage_application_details" translatable="false">storage_application_details</string>
     <string name="pk_storage_files" translatable="false">storage_files</string>
     <string name="pk_storage_system" translatable="false">storage_system</string>
 

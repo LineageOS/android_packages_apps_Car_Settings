@@ -23,7 +23,7 @@ import androidx.preference.Preference;
 
 /**
  * Concrete implementation of {@link PreferenceController} which allows for applying the default
- * {@link #getAvailabilityStatus()} and {@link #canBeShownWithRestrictions(CarUxRestrictions)}
+ * {@link #getAvailabilityStatus()} and {@link #onApplyUxRestrictions(CarUxRestrictions)}
  * behavior to preferences which do not require additional controller logic.
  */
 public final class DefaultRestrictionsPreferenceController extends
