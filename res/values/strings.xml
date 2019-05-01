@@ -487,6 +487,17 @@
     <string name="auto_launch_enable_text">You\u2019ve chosen to launch this app by default for some actions.</string>
     <!-- Summary to indicate to user that the preference can be clicked to clear the default app preference. [CHAR LIMIT=40] -->
     <string name="auto_launch_reset_text">Clear defaults</string>
+    <!-- Title of preference to pick how the app should open related urls [CHAR LIMIT=60] -->
+    <string name="app_launch_open_domain_urls_title">Open supported links</string>
+    <!-- Explanation that the app that will ALWAYS be launched to open web links to domains that it understands [CHAR LIMIT=40] -->
+    <string name="app_link_open_always">Open in this app</string>
+    <!-- Explanation that the user will be asked whether to launch the app to open web links to domains that it understands [CHAR LIMIT=40] -->
+    <string name="app_link_open_ask">Ask every time</string>
+    <!-- Explanation that the app that will NEVER be launched to open web links to domains that it understands [CHAR LIMIT=60] -->
+    <string name="app_link_open_never">Don\u2019t open in this app</string>
+    <!-- Title of dialog showing the supported link domains [CHAR LIMIT=40] -->
+    <string name="app_launch_supported_domain_urls_title">Supported links</string>
+
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
     <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->

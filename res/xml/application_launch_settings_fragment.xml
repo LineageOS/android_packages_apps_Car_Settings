@@ -22,6 +22,18 @@
     <Preference
         android:key="@string/pk_opening_links_app_details"
         settings:controller="com.android.car.settings.applications.managedomainurls.ApplicationWithVersionPreferenceController"/>
+    <PreferenceCategory android:title="@string/app_launch_domain_links_title">
+        <ListPreference
+            android:key="@string/pk_opening_links_app_details_state"
+            android:title="@string/app_launch_open_domain_urls_title"
+            android:summary="%s"
+            settings:controller="com.android.car.settings.applications.managedomainurls.AppLinkStatePreferenceController"/>
+        <Preference
+            android:key="@string/pk_opening_links_app_details_urls"
+            android:title="@string/app_launch_supported_domain_urls_title"
+            android:dependency="@string/pk_opening_links_app_details_state"
+            settings:controller="com.android.car.settings.applications.managedomainurls.DomainUrlsPreferenceController"/>
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/app_launch_other_defaults_title">
         <Preference
             android:key="@string/pk_opening_links_app_details_reset"
