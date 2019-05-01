@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.storage;
+package com.android.car.settings.applications;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.applications.ApplicationPreferenceController;
 import com.android.car.settings.common.FragmentController;
 
-/**
- * Preference showing the application icon, title and version on the storage size application
- * details page.
- */
-public class StorageApplicationPreferenceController extends ApplicationPreferenceController {
+/** Preference showing the application icon, title, and version. */
+public class ApplicationWithVersionPreferenceController extends ApplicationPreferenceController {
 
-    public StorageApplicationPreferenceController(Context context,
+    public ApplicationWithVersionPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
             CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
