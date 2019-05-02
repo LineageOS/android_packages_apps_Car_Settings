@@ -20,7 +20,7 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/wifi_settings">
     <!-- General Details Category -->
-    <PreferenceCategory>
+    <com.android.car.settings.common.LogicalPreferenceGroup>
         <com.android.car.settings.wifi.details.WifiDetailsPreference
             android:key="@string/pk_wifi_signal_strength"
             android:selectable="false"
@@ -36,7 +36,7 @@
             android:selectable="false"
             android:title="@string/wifi_security"
             settings:controller="com.android.car.settings.wifi.details.WifiSecurityPreferenceController"/>
-    </PreferenceCategory>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 
     <!-- Ip Details Category -->
     <PreferenceCategory
