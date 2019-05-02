@@ -30,6 +30,8 @@ import com.android.car.settings.common.PreferenceController;
  */
 public class DataUsagePreferenceController extends PreferenceController<Preference> {
 
+    private int mSubId = Integer.MIN_VALUE;
+
     private SubscriptionManager mSubscriptionManager;
 
     public DataUsagePreferenceController(Context context, String preferenceKey,
@@ -45,9 +47,21 @@ public class DataUsagePreferenceController extends PreferenceController<Preferen
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        int subId = DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager);
+        int subId = mSubId != Integer.MIN_VALUE ? mSubId : getDefaultSubId();
         AppDataUsageFragment appDataUsageFragment = AppDataUsageFragment.newInstance(subId);
         getFragmentController().launchFragment(appDataUsageFragment);
         return true;
+    }
+
+    /**
+     * Sets the subId for which data usage will be loaded. If this is not set then default subId
+     * will be used to load data.
+     */
+    public void setSubId(int subId) {
+        mSubId = subId;
+    }
+
+    private int getDefaultSubId() {
+        return DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager);
     }
 }
