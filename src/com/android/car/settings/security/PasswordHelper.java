@@ -101,8 +101,8 @@ public class PasswordHelper {
 
     private int validatePin(String pin) {
         int errorCode = NO_ERROR;
-        byte[] pinBytes = pin != null ? pin.getBytes() : null;
-        PasswordMetrics metrics = PasswordMetrics.computeForPassword(pinBytes);
+
+        PasswordMetrics metrics = PasswordMetrics.computeForPassword(pin);
         int passwordQuality = getPasswordQuality();
 
         if (metrics.length < MIN_LENGTH) {
@@ -115,7 +115,7 @@ public class PasswordHelper {
 
         if (passwordQuality == DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX) {
             // Check for repeated characters or sequences (e.g. '1234', '0000', '2468')
-            int sequence = PasswordMetrics.maxLengthSequence(pinBytes);
+            int sequence = PasswordMetrics.maxLengthSequence(pin);
             if (sequence > PasswordMetrics.MAX_ALLOWED_SEQUENCE) {
                 errorCode |= CONTAINS_SEQUENTIAL_DIGITS;
             }

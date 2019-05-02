@@ -41,8 +41,7 @@ public class SavePatternWorker extends SaveLockWorkerBase {
         // If called after saveLockPattern, this will always be true
         boolean isPatternEverChosen = getUtils().isPatternEverChosen(userId);
 
-        byte[] currentPatternBytes = mCurrentPattern != null ? mCurrentPattern.getBytes() : null;
-        getUtils().saveLockPattern(mChosenPattern, currentPatternBytes, userId);
+        getUtils().saveLockPattern(mChosenPattern, mCurrentPattern, userId);
 
         if (!isPatternEverChosen) {
             getUtils().setVisiblePatternEnabled(true, userId);
