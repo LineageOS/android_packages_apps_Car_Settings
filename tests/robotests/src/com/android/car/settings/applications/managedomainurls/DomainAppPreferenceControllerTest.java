@@ -22,6 +22,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
@@ -31,6 +32,7 @@ import android.content.pm.ApplicationInfo;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -47,6 +49,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
@@ -133,6 +136,32 @@ public class DomainAppPreferenceControllerTest {
         mController.mApplicationStateCallbacks.onRebuildComplete(apps);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void performClick_startsApplicationLaunchSettingsFragmentWithPackageName() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
+        ApplicationInfo info = new ApplicationInfo();
+        info.packageName = TEST_PACKAGE_NAME;
+        info.uid = TEST_PACKAGE_ID;
+        info.sourceDir = TEST_PATH;
+        ApplicationsState.AppEntry entry = new ApplicationsState.AppEntry(mContext, info,
+                TEST_PACKAGE_ID);
+        entry.label = TEST_LABEL;
+        apps.add(entry);
+        mController.mApplicationStateCallbacks.onRebuildComplete(apps);
+
+        Preference preference = mPreferenceGroup.getPreference(0);
+        preference.performClick();
+
+        ArgumentCaptor<ApplicationLaunchSettingsFragment> captor = ArgumentCaptor.forClass(
+                ApplicationLaunchSettingsFragment.class);
+        verify(mControllerHelper.getMockFragmentController()).launchFragment(captor.capture());
+
+        String pkgName = captor.getValue().getArguments().getString(
+                ApplicationLaunchSettingsFragment.ARG_PACKAGE_NAME);
+        assertThat(pkgName).isEqualTo(TEST_PACKAGE_NAME);
     }
 
     private ShadowUserManager getShadowUserManager() {

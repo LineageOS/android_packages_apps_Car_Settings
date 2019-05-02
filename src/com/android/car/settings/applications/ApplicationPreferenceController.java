@@ -55,7 +55,6 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
         return this;
     }
 
-
     @Override
     protected void checkInitialized() {
         if (mAppEntry == null || mApplicationsState == null) {

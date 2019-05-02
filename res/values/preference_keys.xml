@@ -65,6 +65,8 @@
     <string name="pk_data_limit_group" translatable="false">data_limit_group</string>
     <string name="pk_data_set_limit" translatable="false">data_set_limit</string>
     <string name="pk_data_limit" translatable="false">data_limit</string>
+    <string name="pk_app_data_usage" translatable="false">app_data_usage</string>
+    <string name="pk_app_data_usage_detail" translatable="false">app_data_usage_detail</string>
     <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry
     </string>
     <string name="pk_wifi_tether_auto_off" translatable="false">wifi_tether_auto_off</string>
@@ -155,6 +157,14 @@
     </string>
     <string name="pk_opening_links_entry" translatable="false">opening_links_entry</string>
     <string name="pk_opening_links_options" translatable="false">opening_links_options</string>
+    <string name="pk_opening_links_app_details_entry" translatable="false">
+        opening_links_app_details_entry
+    </string>
+    <string name="pk_opening_links_app_details" translatable="false">opening_links_app_details
+    </string>
+    <string name="pk_opening_links_app_details_reset" translatable="false">
+        opening_links_app_details_reset
+    </string>
 
     <!-- Special App Access Settings -->
     <string name="pk_notification_access_entry" translatable="false">notification_access_entry

@@ -18,18 +18,13 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/data_usage_settings">
-    <com.android.car.settings.datausage.DataUsageSummaryPreference
-        android:key="@string/pk_data_usage_summary"
-        settings:controller="com.android.car.settings.datausage.DataUsageSummaryPreferenceController"
-        settings:singleLineTitle="false"/>
+    android:title="@string/app_launch_title">
     <Preference
-        android:key="@string/pk_app_data_usage"
-        android:title="@string/app_data_usage"
-        settings:controller="com.android.car.settings.datausage.DataUsagePreferenceController"/>
-    <Preference
-        android:fragment="com.android.car.settings.datausage.DataWarningAndLimitFragment"
-        android:key="@string/pk_data_warning_and_limit"
-        android:title="@string/data_warning_limit_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+        android:key="@string/pk_opening_links_app_details"
+        settings:controller="com.android.car.settings.applications.managedomainurls.ApplicationWithVersionPreferenceController"/>
+    <PreferenceCategory android:title="@string/app_launch_other_defaults_title">
+        <Preference
+            android:key="@string/pk_opening_links_app_details_reset"
+            settings:controller="com.android.car.settings.applications.managedomainurls.ClearDefaultsPreferenceController"/>
+    </PreferenceCategory>
 </PreferenceScreen>

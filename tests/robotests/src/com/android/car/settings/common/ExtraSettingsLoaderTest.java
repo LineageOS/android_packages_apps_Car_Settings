@@ -42,9 +42,8 @@ import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Map;
 
 /** Unit test for {@link ExtraSettingsLoader}. */
@@ -85,12 +84,11 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system)));
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -116,14 +114,15 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
 
-        ResolveInfo resolveInfo_nonSystem = new ResolveInfo();
-        resolveInfo_nonSystem.system = false;
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_nonSystem, resolveInfo_system)));
+        ResolveInfo resolveInfoNonSystem = new ResolveInfo();
+        resolveInfoNonSystem.system = false;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoNonSystem);
+
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -155,14 +154,14 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
 
-        ResolveInfo resolveInfo_nonSystem = new ResolveInfo();
-        resolveInfo_nonSystem.system = false;
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_nonSystem, resolveInfo_system)));
+        ResolveInfo resolveInfoNonSystem = new ResolveInfo();
+        resolveInfoNonSystem.system = false;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoNonSystem);
 
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
@@ -190,12 +189,11 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system)));
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -219,12 +217,11 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system)));
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -249,12 +246,11 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system)));
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -275,12 +271,11 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system = new ResolveInfo();
-        resolveInfo_system.system = true;
-        resolveInfo_system.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem = new ResolveInfo();
+        resolveInfoSystem.system = true;
+        resolveInfoSystem.activityInfo = activityInfo;
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system)));
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem);
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -301,16 +296,16 @@ public class ExtraSettingsLoaderTest {
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.metaData = bundle;
 
-        ResolveInfo resolveInfo_nonSystem_1 = new ResolveInfo();
-        resolveInfo_nonSystem_1.system = false;
-        resolveInfo_nonSystem_1.activityInfo = activityInfo;
+        ResolveInfo resolveInfoNonSystem1 = new ResolveInfo();
+        resolveInfoNonSystem1.system = false;
+        resolveInfoNonSystem1.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoNonSystem1);
 
-        ResolveInfo resolveInfo_nonSystem_2 = new ResolveInfo();
-        resolveInfo_nonSystem_2.system = false;
-        resolveInfo_nonSystem_2.activityInfo = activityInfo;
+        ResolveInfo resolveInfoNonSystem2 = new ResolveInfo();
+        resolveInfoNonSystem2.system = false;
+        resolveInfoNonSystem2.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoNonSystem2);
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_nonSystem_1, resolveInfo_nonSystem_2)));
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -331,21 +326,21 @@ public class ExtraSettingsLoaderTest {
         activityInfo.packageName = "package_name";
         activityInfo.name = "class_name";
 
-        ResolveInfo resolveInfo_system_1 = new ResolveInfo();
-        resolveInfo_system_1.system = true;
-        resolveInfo_system_1.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem1 = new ResolveInfo();
+        resolveInfoSystem1.system = true;
+        resolveInfoSystem1.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem1);
 
-        ResolveInfo resolveInfo_nonSystem = new ResolveInfo();
-        resolveInfo_nonSystem.system = false;
-        resolveInfo_nonSystem.activityInfo = activityInfo;
+        ResolveInfo resolveInfoNonSystem1 = new ResolveInfo();
+        resolveInfoNonSystem1.system = false;
+        resolveInfoNonSystem1.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoNonSystem1);
 
-        ResolveInfo resolveInfo_system_2 = new ResolveInfo();
-        resolveInfo_system_2.system = true;
-        resolveInfo_system_2.activityInfo = activityInfo;
+        ResolveInfo resolveInfoSystem2 = new ResolveInfo();
+        resolveInfoSystem2.system = true;
+        resolveInfoSystem2.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(intent, resolveInfoSystem2);
 
-        ShadowApplicationPackageManager.setListOfActivities(
-                new ArrayList<>(Arrays.asList(resolveInfo_system_1, resolveInfo_nonSystem,
-                        resolveInfo_system_2)));
         Map<Preference, Bundle> preferenceToBundleMap = mExtraSettingsLoader.loadPreferences(
                 intent);
 
@@ -355,6 +350,10 @@ public class ExtraSettingsLoaderTest {
             assertThat(p.getTitle()).isEqualTo(FAKE_TITLE);
             assertThat(p.getSummary()).isEqualTo(FAKE_SUMMARY);
         }
+    }
+
+    private ShadowApplicationPackageManager getShadowPackageManager() {
+        return Shadow.extract(mContext.getPackageManager());
     }
 }
 
