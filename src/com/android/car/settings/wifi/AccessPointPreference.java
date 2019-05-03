@@ -24,13 +24,10 @@ import android.text.TextUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.wifi.AccessPoint;
 
-/**
- * Renders a {@link AccessPoint} as a preference.
- */
+/** Renders a {@link AccessPoint} as a preference. */
 public class AccessPointPreference extends Preference {
     private static final Logger LOG = new Logger(AccessPointPreference.class);
     private static final int[] STATE_SECURED = {
@@ -56,9 +53,6 @@ public class AccessPointPreference extends Preference {
         String summary = accessPoint.getSummary();
         if (!TextUtils.isEmpty(summary)) {
             setSummary(summary);
-        }
-        if (accessPoint.isSaved()) {
-            setWidgetLayoutResource(R.layout.access_point_preference_widget);
         }
     }
 
