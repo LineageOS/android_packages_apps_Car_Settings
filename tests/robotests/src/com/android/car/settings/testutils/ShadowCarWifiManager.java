@@ -121,6 +121,11 @@ public class ShadowCarWifiManager {
         sInstance.connectToPublicWifi(accessPoint, listener);
     }
 
+    @Implementation
+    public void connectToSavedWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
+        sInstance.connectToSavedWifi(accessPoint, listener);
+    }
+
     public static int getCurrentState() {
         return sCurrentState;
     }

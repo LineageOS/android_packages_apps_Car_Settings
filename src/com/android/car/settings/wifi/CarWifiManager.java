@@ -185,17 +185,27 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         mWifiManager.setWifiApConfiguration(config);
     }
 
+    /** Gets the wifi state from {@link WifiManager}. */
     public int getWifiState() {
         return mWifiManager.getWifiState();
     }
 
+    /** Sets whether wifi is enabled. */
     public boolean setWifiEnabled(boolean enabled) {
         return mWifiManager.setWifiEnabled(enabled);
     }
 
+    /** Connects to an public wifi access point. */
     public void connectToPublicWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
         accessPoint.generateOpenNetworkConfig();
         mWifiManager.connect(accessPoint.getConfig(), listener);
+    }
+
+    /** Connects to a saved access point. */
+    public void connectToSavedWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
+        if (accessPoint.isSaved()) {
+            mWifiManager.connect(accessPoint.getConfig(), listener);
+        }
     }
 
     @Override
