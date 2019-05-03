@@ -19,16 +19,15 @@ package com.android.car.settings.wifi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
-import android.text.TextUtils;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.settingslib.wifi.AccessPoint;
 
 /** Renders a {@link AccessPoint} as a preference. */
-public class AccessPointPreference extends Preference {
+public class AccessPointPreference extends PasswordEditTextPreference {
     private static final Logger LOG = new Logger(AccessPointPreference.class);
     private static final int[] STATE_SECURED = {
             com.android.settingslib.R.attr.state_encrypted
@@ -47,13 +46,7 @@ public class AccessPointPreference extends Preference {
                 .obtainStyledAttributes(sWifiSignalAttributes).getDrawable(0);
         mAccessPoint = accessPoint;
         LOG.d("creating preference for ap: " + mAccessPoint);
-        setKey(accessPoint.getKey());
         setIcon(getAccessPointIcon());
-        setTitle(accessPoint.getConfigName());
-        String summary = accessPoint.getSummary();
-        if (!TextUtils.isEmpty(summary)) {
-            setSummary(summary);
-        }
     }
 
     /**
@@ -67,6 +60,18 @@ public class AccessPointPreference extends Preference {
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         setIcon(getAccessPointIcon());
+    }
+
+    @Override
+    protected void onClick() {
+        if (shouldShowPasswordDialog()) {
+            super.onClick();
+        }
+    }
+
+    private boolean shouldShowPasswordDialog() {
+        return mAccessPoint.getSecurity() != AccessPoint.SECURITY_NONE && !mAccessPoint.isSaved()
+                && !mAccessPoint.isActive();
     }
 
     private Drawable getAccessPointIcon() {

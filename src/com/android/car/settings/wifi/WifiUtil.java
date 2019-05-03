@@ -25,16 +25,24 @@ import android.net.NetworkCapabilities;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.provider.Settings;
+import android.widget.Toast;
 
 import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.settingslib.wifi.AccessPoint;
 
+import java.util.regex.Pattern;
+
 /**
  * A collections of util functions for WIFI.
  */
 public class WifiUtil {
+
+    /** Value that is returned when we fail to connect wifi. */
+    public static final int INVALID_NET_ID = -1;
+    private static final Pattern HEX_PATTERN = Pattern.compile("^[0-9A-F]+$");
+
     @DrawableRes
     public static int getIconRes(int state) {
         switch (state) {
@@ -139,5 +147,61 @@ public class WifiUtil {
     public static boolean canSignIntoNetwork(NetworkCapabilities capabilities) {
         return (capabilities != null
                 && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_CAPTIVE_PORTAL));
+    }
+
+    /**
+     * Returns netId. -1 if connection fails.
+     */
+    public static int connectToAccessPoint(Context context, String ssid, int security,
+            String password, boolean hidden) {
+        WifiManager wifiManager = context.getSystemService(WifiManager.class);
+        WifiConfiguration wifiConfig = new WifiConfiguration();
+        wifiConfig.SSID = String.format("\"%s\"", ssid);
+        wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+        wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+        wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+        wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+        wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+        wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+        wifiConfig.hiddenSSID = hidden;
+        switch (security) {
+            case AccessPoint.SECURITY_NONE:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.clear();
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+                break;
+            case AccessPoint.SECURITY_WEP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+                wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+                wifiConfig.wepKeys[0] = isHexString(password) ? password
+                        : "\"" + password + "\"";
+                wifiConfig.wepTxKeyIndex = 0;
+                break;
+            case AccessPoint.SECURITY_PSK:
+            case AccessPoint.SECURITY_EAP:
+                wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+                wifiConfig.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+                wifiConfig.preSharedKey = String.format("\"%s\"", password);
+                break;
+            default:
+                throw new IllegalArgumentException("invalid security type");
+        }
+        int netId = wifiManager.addNetwork(wifiConfig);
+        // This only means wifiManager failed writing the new wifiConfig to the db. It doesn't mean
+        // the network is invalid.
+        if (netId == INVALID_NET_ID) {
+            Toast.makeText(context, R.string.wifi_failed_connect_message,
+                    Toast.LENGTH_SHORT).show();
+        } else {
+            wifiManager.enableNetwork(netId, true);
+        }
+        return netId;
+    }
+
+    private static boolean isHexString(String password) {
+        return HEX_PATTERN.matcher(password).matches();
     }
 }
