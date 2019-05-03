@@ -19,6 +19,7 @@ package com.android.car.settings.wifi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
+import android.net.wifi.WifiConfiguration;
 
 import androidx.preference.PreferenceViewHolder;
 
@@ -69,9 +70,14 @@ public class AccessPointPreference extends PasswordEditTextPreference {
         }
     }
 
+    /**
+     * Show password dialog for one of the following conditions:
+     * 1. AP with some security but is not saved and not active
+     * 2. AP that has been saved, but not enabled due to wrong password.
+     */
     private boolean shouldShowPasswordDialog() {
-        return mAccessPoint.getSecurity() != AccessPoint.SECURITY_NONE && !mAccessPoint.isSaved()
-                && !mAccessPoint.isActive();
+        return mAccessPoint.getSecurity() != AccessPoint.SECURITY_NONE && (!mAccessPoint.isSaved()
+                || isAccessPointDisabledByWrongPassword(mAccessPoint));
     }
 
     private Drawable getAccessPointIcon() {
@@ -86,5 +92,19 @@ public class AccessPointPreference extends PasswordEditTextPreference {
         Drawable drawable = mWifiSld.getCurrent();
         drawable.setLevel(mAccessPoint.getLevel());
         return drawable;
+    }
+
+    private boolean isAccessPointDisabledByWrongPassword(AccessPoint accessPoint) {
+        WifiConfiguration config = accessPoint.getConfig();
+        if (config == null) {
+            return false;
+        }
+        WifiConfiguration.NetworkSelectionStatus networkStatus =
+                config.getNetworkSelectionStatus();
+        if (networkStatus == null || networkStatus.isNetworkEnabled()) {
+            return false;
+        }
+        return networkStatus.getNetworkSelectionDisableReason()
+                == WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD;
     }
 }
