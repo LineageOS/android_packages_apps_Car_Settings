@@ -110,12 +110,14 @@ public class AccessPointListPreferenceController extends
     @Override
     public boolean onPreferenceClick(Preference preference) {
         AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
-        // for new open unsecuried wifi network, connect to it right away
+        // For new open unsecuried wifi network, connect to it right away.
         if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
                 && !accessPoint.isSaved() && !accessPoint.isActive()) {
             getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
-        } else if (accessPoint.isSaved()) {
+        } else if (accessPoint.isActive()) {
             getFragmentController().launchFragment(WifiDetailsFragment.getInstance(accessPoint));
+        } else if (accessPoint.isSaved()) {
+            getCarWifiManager().connectToSavedWifi(accessPoint, mConnectionListener);
         } else {
             getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
         }

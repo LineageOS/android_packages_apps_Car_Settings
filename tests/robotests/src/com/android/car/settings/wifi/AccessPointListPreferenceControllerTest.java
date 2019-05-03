@@ -18,6 +18,9 @@ package com.android.car.settings.wifi;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.robolectric.Shadows.shadowOf;
 
@@ -29,9 +32,11 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
+import com.android.car.settings.wifi.details.WifiDetailsFragment;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.After;
@@ -60,6 +65,7 @@ public class AccessPointListPreferenceControllerTest {
 
     private PreferenceGroup mPreferenceGroup;
     private AccessPointListPreferenceController mController;
+    private FragmentController mFragmentController;
 
     @Before
     public void setUp() {
@@ -72,6 +78,7 @@ public class AccessPointListPreferenceControllerTest {
                 new PreferenceControllerTestHelper<>(context,
                         AccessPointListPreferenceController.class, mPreferenceGroup);
         mController = controllerHelper.getController();
+        mFragmentController = controllerHelper.getMockFragmentController();
 
         when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_NONE);
         when(mMockAccessPoint1.getLevel()).thenReturn(SIGNAL_LEVEL);
@@ -126,5 +133,54 @@ public class AccessPointListPreferenceControllerTest {
                 true, CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, 0).build();
         mController.onUxRestrictionsChanged(noSetupRestrictions);
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(savedAccessPointList.size());
+    }
+
+    @Test
+    public void performClick_noSecurityNotConnectedAccessPoint_connect() {
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_NONE);
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mMockCarWifiManager).connectToPublicWifi(eq(mMockAccessPoint1), any());
+    }
+
+    @Test
+    public void performClick_activeAccessPoint_showDetailsFragment() {
+        when(mMockAccessPoint1.isActive()).thenReturn(true);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mFragmentController).launchFragment(any(WifiDetailsFragment.class));
+    }
+
+    @Test
+    public void performClick_savedAccessPoint_connect() {
+        when(mMockAccessPoint1.isSaved()).thenReturn(true);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mMockCarWifiManager).connectToSavedWifi(eq(mMockAccessPoint1), any());
+    }
+
+    @Test
+    public void performClick_newSecureAccessPoint_showAddWifiFragment() {
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_PSK);
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mFragmentController).launchFragment(any(AddWifiFragment.class));
     }
 }
