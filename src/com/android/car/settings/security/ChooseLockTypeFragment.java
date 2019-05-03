@@ -47,8 +47,7 @@ public class ChooseLockTypeFragment extends ListItemSettingsFragment {
 
     private final ConfirmRemoveScreenLockDialog.ConfirmRemoveLockListener mConfirmListener = () -> {
         int userId = UserHandle.myUserId();
-        byte[] passwordBytes = mCurrPassword != null ? mCurrPassword.getBytes() : null;
-        new LockPatternUtils(getContext()).clearLock(passwordBytes, userId);
+        new LockPatternUtils(getContext()).clearLock(mCurrPassword, userId);
         getFragmentController().goBack();
     };
 
