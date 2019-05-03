@@ -61,6 +61,8 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx-constraintlayout_constraintlayout-solver \
       jsr305
 
+  LOCAL_REQUIRED_MODULES := privapp_whitelist_com.android.car.settings
+
   LOCAL_DX_FLAGS := --multi-dex
 
   ifdef DISABLE_AOSP_PHONE_SETTING
