@@ -75,7 +75,8 @@ public class NetworkSecurityGroupPreferenceController extends
 
     /** Returns the current password text. */
     public String getPasswordText() {
-        return mPasswordTextPreference.getText();
+        return mPasswordTextPreference.getSummary() != null
+                ? mPasswordTextPreference.getSummary().toString() : "";
     }
 
     /** Returns the currently selected security type. */
