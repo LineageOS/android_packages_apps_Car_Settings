@@ -54,7 +54,6 @@ public class ValidatedEditTextPreferenceDialogFragment extends
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
-
         mEditText = view.findViewById(android.R.id.edit);
         if (getPreference() instanceof ValidatedEditTextPreference) {
             ValidatedEditTextPreference.Validator validator =
@@ -63,6 +62,13 @@ public class ValidatedEditTextPreferenceDialogFragment extends
                 attachValidatorToView(view, validator);
             }
         }
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        allowDialogSubmissionOnlyIfValidInput((AlertDialog) getDialog());
     }
 
     private void attachValidatorToView(View view, ValidatedEditTextPreference.Validator validator) {
@@ -85,13 +91,15 @@ public class ValidatedEditTextPreferenceDialogFragment extends
 
         @Override
         public void afterTextChanged(Editable s) {
-            if (mValidator != null && mEditText != null) {
-                AlertDialog dialog = (AlertDialog) getDialog();
-                boolean valid = mValidator.isTextValid(mEditText.getText().toString());
+            allowDialogSubmissionOnlyIfValidInput((AlertDialog) getDialog());
+        }
+    }
 
-                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(valid);
-                setAllowEnterToSubmit(valid);
-            }
+    private void allowDialogSubmissionOnlyIfValidInput(AlertDialog dialog) {
+        if (dialog != null && mValidator != null && mEditText != null) {
+            boolean valid = mValidator.isTextValid(mEditText.getText().toString());
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(valid);
+            setAllowEnterToSubmit(valid);
         }
     }
 }
