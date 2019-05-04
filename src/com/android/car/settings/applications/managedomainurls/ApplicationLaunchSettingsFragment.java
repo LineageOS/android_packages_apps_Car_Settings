@@ -72,6 +72,10 @@ public class ApplicationLaunchSettingsFragment extends SettingsFragment {
         appController.setAppEntry(mAppEntry);
 
         List<AppLaunchSettingsBasePreferenceController> preferenceControllers = Arrays.asList(
+                use(AppLinkStatePreferenceController.class,
+                        R.string.pk_opening_links_app_details_state),
+                use(DomainUrlsPreferenceController.class,
+                        R.string.pk_opening_links_app_details_urls),
                 use(ClearDefaultsPreferenceController.class,
                         R.string.pk_opening_links_app_details_reset));
 

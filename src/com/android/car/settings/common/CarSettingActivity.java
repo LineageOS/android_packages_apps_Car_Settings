@@ -144,7 +144,8 @@ public class CarSettingActivity extends FragmentActivity implements FragmentCont
                                 android.R.attr.fragmentCloseEnterAnimation),
                         Themes.getAttrResourceId(/* context= */ this,
                                 android.R.attr.fragmentCloseExitAnimation))
-                .replace(R.id.fragment_container, fragment)
+                .replace(R.id.fragment_container, fragment,
+                        Integer.toString(getSupportFragmentManager().getBackStackEntryCount()))
                 .addToBackStack(null)
                 .commit();
     }
