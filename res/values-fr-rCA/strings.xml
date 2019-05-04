@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Mode Nuit"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Réseau et Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Réseau cellulaire"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> carte SIM</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> cartes SIM</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Services actifs/Carte SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Services inactifs/Carte SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Services actifs/Cartes SIM téléchargées"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Ser. inactifs/Cartes SIM téléchargées"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Ajouter"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Données mobiles"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accéder aux données sur réseau cellulaire"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Désactiver les données mobiles?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Sélection requise"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Utiliser <xliff:g id="CARRIER">%1$s</xliff:g> pour donn. mob.?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Vous utilisez le réseau de <xliff:g id="CARRIER2_0">%2$s</xliff:g> pour les données mobiles. Si vous passez au réseau de <xliff:g id="CARRIER1">%1$s</xliff:g>, celui de <xliff:g id="CARRIER2_1">%2$s</xliff:g> ne sera plus utilisé pour les données mobiles."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Utiliser <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Itinérance"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Se connecter aux services de données lors de l\'itinérance"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Voulez-vous autoriser les données en itinérance?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Des frais importants peuvent s\'appliquer."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilisation de données"</string>
@@ -65,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Mis à jour par <xliff:g id="ID_1">^1</xliff:g> à l\'instant"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Mis à jour à l\'instant"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Afficher le forfait"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Util. données des applications"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"limitée"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Date de réinitialisation du cycle d\'utilisation"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Jour de chaque mois :"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Définir"</string>
@@ -129,16 +134,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Passer automatiquement au réseau cellulaire"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utiliser le réseau de données cellulaires lorsque le réseau Wi-Fi n\'a pas accès à Internet. Des frais de transmission de données peuvent s\'appliquer."</string>
     <string name="learn_more" msgid="8214605928933358604">"En savoir plus"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nom du point d\'accès"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Activation de <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> en cours…"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"D\'autres appareils peuvent se connecter à <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mot de passe du point d\'accès"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bande PA"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Point d\'accès et partage de connexion"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Désactiver automatiquement le point d\'accès Wi‑Fi"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Le point d\'accès Wi‑Fi se désactive si aucun appareil n\'y est connecté"</string>
@@ -231,7 +231,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"L\'Assistant Google pourra accéder aux données des applications en cours d\'utilisation sur votre système, y compris les données visibles à l\'écran ou accessibles au sein des applications."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Assurez-vous de faire confiance à cette application&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Le remplissage automatique de Google&gt;%1$s&lt;/xliff:g&gt; utilise les éléments affichés à l\'écran pour déterminer les champs qui peuvent bénéficier de l\'entrée automatique."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ajouter un service"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Ouverture des liens"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Applications installées"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"N\'ouvre pas de liens compatibles"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Ouvre <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Ouvre le site <xliff:g id="DOMAIN">%s</xliff:g> et d\'autres URL"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Ouverture par défaut"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Autres paramètres par défaut"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Aucune appli configurée par défaut."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Vous avez choisi de lancer cette application par défaut pour certaines actions."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Effacer les paramètres par défaut"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"Accès spécial pour applications"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"Accès aux notifications"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Autoriser <xliff:g id="SERVICE">%1$s</xliff:g> à accéder aux notifications?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> pourra lire toutes les notifications, y compris des données personnelles, telles que le nom de contacts et le texte des messages que vous recevez. Ce service d\'écoute pourra également ignorer des notifications ou déclencher des boutons d\'action que celles-ci contiennent.\n\nCe déclenchement permettra également à l\'application d\'activer et de désactiver la fonction Ne pas déranger ainsi que de modifier les paramètres connexes."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si vous désactivez l\'accès aux notifications pour <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, l\'accès à la fonction Ne pas déranger peut également être désactivé."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Désactiver"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Annuler"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
@@ -381,6 +407,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Le répertoire Système comprend des fichiers utilisés pour faire fonctionner Android version <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fichiers audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Calcul en cours…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Taille de l\'application"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Données de l\'utilisateur"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vider le stockage"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Vider le cache"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Supprimer les données de l\'appli?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Toutes les données de cette application seront supprimées définitivement, y compris l\'intégralité des fichiers, des paramètres, des comptes, des bases de données, etc."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossible de vider le stockage de l\'application."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Comptes"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ajouter un compte"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Aucun compte ajouté"</string>
@@ -503,8 +538,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil de confiance"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth s\'activera pour ajout. app. confiance"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Appareils fiables"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appareil</item>
@@ -529,6 +563,8 @@
     <string name="delete_button" msgid="5840500432614610850">"Supprimer"</string>
     <string name="remove_button" msgid="6664656962868194178">"Supprimer"</string>
     <string name="cancel" msgid="750286395700355455">"Annuler"</string>
+    <string name="allow" msgid="7519431342750394402">"Autoriser"</string>
+    <string name="deny" msgid="340512788979930804">"Refuser"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Touche Retour arrière"</string>
     <string name="enter_key" msgid="2121394305541579468">"Touche Entrée"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Quitter le mode démo"</string>

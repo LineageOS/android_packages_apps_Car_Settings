@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"नाइट मोड"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"नेटवर्क आणि इंटरनेट"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"मोबाइल नेटवर्क"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> सिम</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> सिम</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"अ‍ॅक्टिव्ह / सिम"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"अ‍ॅक्टिव्ह नसलेले / सिम"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"अॅक्टिव्ह / डाउनलोड केलेले सिम"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"अ‍ॅक्टिव्ह नसलेले / डाउनलोड केलेले सिम"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"अधिक जोडा"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"मोबाइल डेटा"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"मोबाइल नेटवर्क वापरून डेटा अॅक्सेस करा"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"मोबाइल डेटा बंद करायचा आहे का?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"निवड आवश्यक आहे"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"मोबाइल डेटासाठी <xliff:g id="CARRIER">%1$s</xliff:g> वापरायचे का?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"तुम्ही मोबाइल डेटासाठी <xliff:g id="CARRIER2_0">%2$s</xliff:g> वापरत आहात. तुम्ही <xliff:g id="CARRIER1">%1$s</xliff:g> वर स्विच केल्यास, मोबाइल डेटासाठी <xliff:g id="CARRIER2_1">%2$s</xliff:g> वापरले जाणार नाही."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> वापरा"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"रोमिंग"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"रोमिंग असताना डेटा सेवांशी कनेक्ट करा"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"डेटा रोमिंगला अनुमती द्यायची आहे का?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"तुमच्याकडून आवश्यक शुल्क आकारले जाऊ शकते."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"डेटा वापर"</string>
@@ -55,8 +58,8 @@
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> डेटा मर्यादा"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> डेटा चेतावणी / <xliff:g id="ID_2">^2</xliff:g> डेटा मर्यादा"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="one">%d दिवस शिल्लक</item>
       <item quantity="other">%d दिवस शिल्लक</item>
+      <item quantity="one">%d दिवस शिल्लक</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"वेळ शिल्लक नाही"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"एका पेक्षा कमी दिवस शिल्लक"</string>
@@ -65,6 +68,10 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> ने आताच अपडेट केले"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"आताच अपडेट केले"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"योजना पहा"</string>
+    <!-- no translation found for app_data_usage (3878609885080232877) -->
+    <skip />
+    <!-- no translation found for data_usage_app_restricted (4570970078120010951) -->
+    <skip />
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"वापर चक्राची रीसेट केलेली तारीख"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"प्रत्येक महिन्याची तारीख:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट करा"</string>
@@ -129,16 +136,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटावर आपोआप स्विच करा"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"वाय-फायवरून इंटरनेट अॅक्सेस नसताना मोबाइल डेटा वापरा. डेटा वापर शुल्क लागू शकते."</string>
     <string name="learn_more" msgid="8214605928933358604">"अधिक जाणून घ्या"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"हॉटस्पॉटचे नाव"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> सुरू करत आहे..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"इतर डिव्हाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> शी कनेक्ट होऊ शकतात"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट पासवर्ड"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्‍पॉट आणि टेदरिंग"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट आपोआप बंद करा"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोणतीही डिव्हाइस कनेक्ट केलेली नसल्यास, वाय-फाय हॉटस्पॉट बंद होईल"</string>
@@ -215,8 +217,8 @@
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ॲप डेटा वापर"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना करत आहे…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानगी</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानग्या</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त परवानगी</item>
     </plurals>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"साहाय्य आणि व्हॉइस इनपुट"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"साहाय्य अ‍ॅप"</string>
@@ -231,7 +233,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"तुमच्या स्क्रीनवर दृश्‍यमान असलेल्या माहितीच्या किंवा अ‍ॅप्समध्ये अ‍ॅक्सेस करता येणाऱ्या माहितीच्या समावेशासह असिस्टंट तुमच्या सिस्टिमध्ये वापरल्या जाणाऱ्या अ‍ॅप्सबद्दलची माहिती वाचू शकेल."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तुम्हाला अ‍ॅपवर विश्वास असल्याची खात्री करा&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ऑटोफिल काय होऊ शकते हे ठरवण्यासाठी तुमच्या स्क्रीनवर काय आहे याचा वापर करते."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा जोडा"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"उघडणार्‍या लिंक"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"इंस्टॉल केलेली अॅप्स"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"सपोर्ट असलेल्या लिंक उघडू नका"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> उघडा"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> आणि अन्य URL उघडा"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"बाय डीफॉल्ट उघडा"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"इतर डीफॉल्‍ट"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"कोणतेही डीफॉल्ट सेट केले नाही."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"तुम्ही काही क्रियांसाठी बाय डीफॉल्ट हा अ‍ॅप लाँच करणे निवडले आहे."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"डीफॉल्ट साफ करा"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"विशेष अ‍ॅप अ‍ॅक्सेस"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"सूचना अ‍ॅक्सेस"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ला सूचना अ‍ॅक्सेस करण्याची अनुमती द्यायची का?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"संपर्क नावे आणि तुम्हाला येणारे एसएमएस यासारख्या वैयक्तिक माहितीच्या समावेशासह <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सर्व सूचना पाहू शकेल. ते त्यांच्यामधील सूचना डिसमिस करू शकेल अथवा त्यामध्ये असलेली अ‍ॅक्शन बटणे ट्रिगर करू शकेल. \n\nयामुळे अॅपला व्यत्यय आणू नका सुरू किंवा बंद करता येईल आणि संबंधित सेटिंग्ज बदलता येतील."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> अॅपसाठी सूचना अ‍ॅक्सेस बंद केल्यास, व्यत्यय आणू नका चा अ‍ॅक्सेस देखील बंद केला जाऊ शकतो."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करा"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करा"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>
@@ -275,8 +303,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"परवाने लोड करताना समस्या आली."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"लोड करत आहे…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="one">आता तुम्ही डेव्हलपर होण्यापासून <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> पायरी लांब आहात.</item>
       <item quantity="other">आता तुम्ही डेव्हलपर होण्यापासून <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> पायऱ्या लांब आहात.</item>
+      <item quantity="one">आता तुम्ही डेव्हलपर होण्यापासून <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> पायरी लांब आहात.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"आता तुम्ही एक डेव्हलपर आहात!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"आवश्यकता नाही, तुम्ही आधीपासून डेव्हलपर आहात."</string>
@@ -349,8 +377,8 @@
     <string name="user_add_user_message_update" msgid="1528170913388932459">"कोणताही वापरकर्ता इतर सर्व वापरकर्त्यांसाठी अॅप्स अपडेट करू शकतो."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"वापरकर्ता मर्यादा गाठली"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
-      <item quantity="one">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्ता तयार करू शकता.</item>
       <item quantity="other">तुम्ही <xliff:g id="COUNT">%d</xliff:g> वापरकर्ते तयार करू शकता.</item>
+      <item quantity="one">फक्त एक वापरकर्ता तयार करू शकता.</item>
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"नवीन वापरकर्ता तयार करता आला नाही"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"हा वापरकर्ता हटवायचा?"</string>
@@ -381,6 +409,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फायली"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"मोजत आहे…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"अ‍ॅप आकार"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"वापरकर्ता डेटा"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"कॅशे"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"एकूण"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"स्‍टोरेज साफ करा"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे साफ करा"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अ‍ॅप डेटा हटवायचा का?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या अॅपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"अॅपसाठी स्‍टोरेज साफ करता आले नाही."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाती"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाते जोडा"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"खाती जोडली नाहीत"</string>
@@ -473,28 +510,28 @@
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"यामध्ये चुकीच्‍या वर्णांचा समावेश असू शकत नाही."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"पासवर्ड चुकीचा आहे, किमान 4 वर्ण असणे आवश्यक आहे."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> लोअरकेस अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> लोअरकेस अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक लोअरकेस अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अप्परकेस अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अप्परकेस अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान 1 अप्परकेस अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> संख्यात्मक अंक असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> संख्यात्मक अंक असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक संख्यात्मक अंक असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> विशेष चिन्ह असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> विशेष चिन्हे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक विशेष चिन्ह असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर नसलेला वर्ण असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर नसलेले वर्ण असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक अक्षर नसलेला वर्ण असणे आवश्यक आहे</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"डिव्हाइस प्रशासक अलीकडील पासवर्ड वापरण्याची अनुमती देत नाही"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सेव्ह करताना एरर आली"</string>
@@ -503,12 +540,11 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक पर्याय"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिवसांपूर्वी"</string>
     <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय डिव्हाइस जोडा"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"विश्वसनीय डिव्हाइस जोडण्यासाठी ब्लूटूथ सुरू होईल"</string>
     <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय डिव्हाइस"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> डिव्हाइस</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> डिव्हाइस</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>डिव्हाइस</item>
     </plurals>
     <string name="remove_device_message" msgid="6447820559674148349">"ते कनेक्ट केलेले असते तेव्‍हा <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> तुमची कार अनलॉक करेल. एखाद्याने तुमचे <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> घेतल्यास, tकदाचित ते डिव्हाइस अ‍ॅक्सेस करू शकतील"</string>
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"खात्री करा"</string>
@@ -529,6 +565,8 @@
     <string name="delete_button" msgid="5840500432614610850">"हटवा"</string>
     <string name="remove_button" msgid="6664656962868194178">"काढा"</string>
     <string name="cancel" msgid="750286395700355455">"रद्द करा"</string>
+    <string name="allow" msgid="7519431342750394402">"अनुमती द्या"</string>
+    <string name="deny" msgid="340512788979930804">"नाकारा"</string>
     <string name="backspace_key" msgid="1545590866688979099">"बॅकस्‍पेस की"</string>
     <string name="enter_key" msgid="2121394305541579468">"की एंटर करा"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"डेमो मोडमधून बाहेर पडा"</string>

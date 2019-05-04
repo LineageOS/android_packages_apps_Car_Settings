@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Գիշերային ռեժիմ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Ցանց և ինտերնետ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Բջջային ցանց"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM քարտ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM քարտ</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Ակտիվ է/SIM քարտ"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Ակտիվ չէ/SIM քարտ"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Ակտիվ է/ներբեռնված SIM քարտ"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Ակտիվ չէ/ներբեռնված SIM քարտ"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Ավելացնել"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Բջջային ինտերնետ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Օգտվել բջջային ինտերնետից"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Անջատե՞լ բջջային ինտերնետը"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Ընտրեք SIM քարտը"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Անցնե՞լ <xliff:g id="CARRIER">%1$s</xliff:g>-ի բջջային ինտերնետին"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Դուք օգտագործում եք <xliff:g id="CARRIER2_0">%2$s</xliff:g>-ի բջջային ինտերնետը։ Եթե անցնեք <xliff:g id="CARRIER1">%1$s</xliff:g>-ին, <xliff:g id="CARRIER2_1">%2$s</xliff:g>-ի բջջային ինտերնետն այլևս չի օգտագործվի։"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Ընտրել <xliff:g id="CARRIER">%1$s</xliff:g>-ի ցանցը"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Ռոումինգ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Միանալ տվյալների փոխանցման ծառայություններին ռոումինգում"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Թույլատրե՞լ տվյալների ռոումինգը"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Դրա համար ձեզանից կարող են խոշոր վճարներ գանձվել:"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Թրաֆիկի օգտագործում"</string>
@@ -65,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Թարմացվել է հենց նոր <xliff:g id="ID_1">^1</xliff:g>-ի կողմից"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Թարմացվել է հենց նոր"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Դիտել սակագնային պլանը"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Հավելվածի օգտագործած թրաֆիկը"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"սահմանափակ"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Վիճակագրության զրոյացում"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Ամսվա օրը`"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Պահել"</string>
@@ -129,16 +134,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Ավտոմատ կերպով անցնել բջջային ինտերնետի"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Օգտագործել բջջային ինտերնետը, եթե չի հաջողվում միանալ համացանցին Wi-Fi-ի միջոցով։ Կարող են կիրառվել գանձումներ։"</string>
     <string name="learn_more" msgid="8214605928933358604">"Մանրամասն"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Թեժ կետի անունը"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"«<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>» թեժ կետը միանում է…"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Այլ սարքեր կարող են միանալ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ին"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Թեժ կետի գաղտնաբառը"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP դիապազոնը"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Թեժ կետ և մոդեմի ռեժիմ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Ավտոմատ անջատել թեժ կետը"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi թեժ կետը կանջատվի, եթե որևէ սարք միացած չլինի դրան"</string>
@@ -231,7 +231,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Օգնականը կկարողանա կարդալ համակարգում օգտագործվող հավելվածների մասին տվյալները, այդ թվում՝ էկրանին ցուցադրվող կամ հավելվածներից ստացվող տեղեկությունները:"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Համոզվեք, որ այս հավելվածը վստահելի է&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google-ի ինքնալրացման ծառայությունը&gt;%1$s&lt;/xliff:g&gt; վերլուծում է էկրանի պարունակությունը և գտնում է դաշտերը, որոնք կարող են ինքնալրացվել:"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Ավելացնել ծառայություն"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Հղումների բացում"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Տեղադրված հավելվածներ"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Չբացել աջակցվող հղումները"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Բացել <xliff:g id="DOMAIN">%s</xliff:g> հղումը"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Բացել <xliff:g id="DOMAIN">%s</xliff:g> տիրույթի և այլ տիրույթների URL-ներ"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Բացել ըստ կանխադրման"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Այլ կանխադրված կարգավորումներ"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Կանխադրված կարգավորումներ չկան:"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Որոշ գործողությունների համար ընտրել եք, որ հավելվածն ըստ կանխադրման գործարկվի:"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Մաքրել կանխադրված կարգավորումները"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"Հատուկ հասանելիություն հավելվածների համար"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"Ծանուցումների հասանելիություն"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Հասանելի դարձնե՞լ ծանուցումները <xliff:g id="SERVICE">%1$s</xliff:g> հավելվածին"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածը կկարողանա կարդալ բոլոր ծանուցումները, ներառյալ անձնական տվյալները, օրինակ, կոնտակտների անուններն ու հաղորդագրությունները: Այն նաև կկարողանա փակել ծանուցումները և ակտիվացնել դրանցում պարունակվող գործողությունների կոճակները:\n\nՀավելվածին նաև կտրվի «Չանհանգստացնել» գործառույթը միացնելու/անջատելու և դրա կարգավորումները փոխելու թույլտվություն:"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Եթե անջատեք ծանուցումները <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածի համար, «Չանհանգստացնել» գործառույթը նույնպես կարող է անջատվել:"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Անջատել"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Չեղարկել"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Վերջերս տեղորոշման տվյալների հարցումներ չեն արվել"</string>
@@ -381,6 +407,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Համակարգը ներառում է ֆայլեր, որոնք անհրաժեշտ են Android-ի <xliff:g id="VERSION">%s</xliff:g> տարբերակի աշխատանքի համար"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Աուդիո ֆայլեր"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Հաշվարկում…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Հավելվածի չափը"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Օգտատիրոջ տվյալներ"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Քեշ"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Ընդամենը"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Մաքրել հիշողությունը"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Մաքրել քեշը"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ջնջե՞լ հավելվածի տվյալները:"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Այս հավելվածի բոլոր տվյալներն ընդմիշտ կջնջվեն՝ ներառյալ բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Չհաջողվեց մաքրել հիշողությունը:"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Հաշիվներ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ավելացնել հաշիվ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Հաշիվներ չեն ավելացվել"</string>
@@ -503,8 +538,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման տարբերակներ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> – <xliff:g id="NUM_DAYS">%3$s</xliff:g> օր առաջ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Ավելացնել վստահելի սարք"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth-ը կմիանա, որ վստահելի սարք ավելացնեք"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Վստահելի սարքեր"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> սարք</item>
@@ -529,6 +563,8 @@
     <string name="delete_button" msgid="5840500432614610850">"Ջնջել"</string>
     <string name="remove_button" msgid="6664656962868194178">"Հեռացնել"</string>
     <string name="cancel" msgid="750286395700355455">"Չեղարկել"</string>
+    <string name="allow" msgid="7519431342750394402">"Թույլատրել"</string>
+    <string name="deny" msgid="340512788979930804">"Մերժել"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace ստեղն"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter ստեղն"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Անջատել դեմո ռեժիմը"</string>

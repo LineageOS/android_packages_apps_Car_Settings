@@ -31,21 +31,28 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"الوضع الليلي"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"الشبكة والإنترنت"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"شبكة الجوّال"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="zero"><xliff:g id="COUNT_1">%1$d</xliff:g> شريحة SIM</item>
+      <item quantity="two">شريحتا SIM <xliff:g id="COUNT_1">%1$d</xliff:g></item>
+      <item quantity="few"><xliff:g id="COUNT_1">%1$d</xliff:g> شرائح SIM</item>
+      <item quantity="many"><xliff:g id="COUNT_1">%1$d</xliff:g> شريحة SIM</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> شريحة SIM</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> شريحة SIM</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"مفعّلة / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غير مفعّلة / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"مفعّلة / شريحة SIM التي تم تنزيلها"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"غير مفعّلة / شريحة SIM التي تم تنزيلها"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"إضافة المزيد"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"بيانات الجوّال"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"الوصول إلى البيانات باستخدام شبكة الجوّال"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"هل تريد إيقاف بيانات الجوّال؟"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"يجب الاختيار."</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"هل تريد بيانات الجوّال من <xliff:g id="CARRIER">%1$s</xliff:g>؟"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"أنت تستخدم <xliff:g id="CARRIER2_0">%2$s</xliff:g> للاتصال ببيانات الجوّال. عند التبديل إلى <xliff:g id="CARRIER1">%1$s</xliff:g>، لن يتم استخدام <xliff:g id="CARRIER2_1">%2$s</xliff:g> مرة أخرى للاتصال ببيانات الجوّال."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"استخدام <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"التجوال"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"الاتصال بخدمات البيانات عند التجوال"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"هل تريد السماح بتجوال البيانات؟"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"قد يكلّف ذلك رسومًا مرتفعة."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"استخدام البيانات"</string>
@@ -69,6 +76,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"تم التحديث بواسطة <xliff:g id="ID_1">^1</xliff:g> الآن."</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"تم التحديث الآن."</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"عرض الخطة"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"استخدام بيانات التطبيق"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"مقيَّد"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"تاريخ إعادة ضبط دورة الاستخدام"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"تاريخ كل شهر:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ضبط"</string>
@@ -133,16 +142,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"التبديل إلى بيانات الجوال تلقائيًا"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"يمكنك استخدام بيانات الجوّال إذا تعذّر الدخول إلى الإنترنت عبر شبكة Wi‑Fi، وقد يتم فرض رسوم على استخدام البيانات."</string>
     <string name="learn_more" msgid="8214605928933358604">"مزيد من المعلومات"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"اسم نقطة الاتصال"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"جارٍ تفعيل <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"يمكن توصيل الأجهزة الأخرى بشبكة <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"كلمة مرور نقطة الاتصال"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة وصول"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطة الاتصال والتوصيل"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"إيقاف نقطة الاتصال تلقائيًا"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"سيتم إيقاف نقطة اتصال Wi‑Fi في حال عدم اتصال أي أجهزة."</string>
@@ -239,7 +243,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"سيتمكن المساعد من قراءة المعلومات عن التطبيقات قيد الاستخدام على نظامك، بما في ذلك المعلومات المرئية على شاشتك أو التي يمكن الوصول إليها داخل التطبيقات."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;تأكّد من أنك تثق بهذا التطبيق.&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; تستخدم البيانات المعروضة على الشاشة لتحديد ما يمكن ملؤه تلقائيًا."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"إضافة خدمة"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"فتح الروابط"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"التطبيقات المثبَّتة"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"عدم فتح الروابط المتوافقة"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"فتح <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"فتح <xliff:g id="DOMAIN">%s</xliff:g> وعناوين URL أخرى"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"الفتح تلقائيًا"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"الإعدادات التلقائية الأخرى"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"لم يتم ضبط إعدادات تلقائية."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"لقد اخترت تشغيل هذا التطبيق بشكل تلقائي لبعض الإجراءات."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"محو الإعدادات التلقائية"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"أذونات خاصة للتطبيقات"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"الوصول إلى الإشعارات"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"هل تسمح بوصول خدمة <xliff:g id="SERVICE">%1$s</xliff:g> إلى الإشعارات؟"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"سيكون بإمكان \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\" قراءة جميع الإشعارات، بما في ذلك المعلومات الشخصية مثل أسماء جهات الاتصال ونصوص الرسائل التي تتلقّاها. وسيتمكّن كذلك من تجاهل الإشعارات أو تشغيل أزرار الإجراءات التي تحتوي عليها.\n\nوتتيح هذه الميزة أيضًا للتطبيق إمكانية تفعيل ميزة \"عدم الإزعاج\" أو إيقافها وتغيير الإعدادات ذات الصلة."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"عند إيقاف الوصول إلى الإشعار لـ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>، قد يتم إيقاف الوصول إلى ميزة \"عدم الإزعاج\" أيضًا."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"إيقاف"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"إلغاء"</string>
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
@@ -397,6 +427,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"يتضمّن النظام الملفات المستخدمة لتشغيل إصدار Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"الملفات الصوتية"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"جارٍ الحساب…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"حجم التطبيق"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"بيانات المستخدمين"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"ذاكرة التخزين المؤقت"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"الإجمالي"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"مسح مساحة التخزين"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"محو ذاكرة التخزين المؤقت"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"هل تريد حذف بيانات التطبيق؟"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا. ويشمل ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات وما إلى ذلك."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر مسح مساحة تخزين للتطبيق."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"الحسابات"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"إضافة حساب"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"لم تتم إضافة أي حسابات."</string>
@@ -543,8 +582,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"خيارات قفل الشاشة"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : قبل <xliff:g id="NUM_DAYS">%3$s</xliff:g> يوم"</string>
     <string name="add_device_title" msgid="8452168024017866232">"إضافة جهاز موثوق به"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"سيتم تفعيل البلوتوث لإضافة جهاز موثوق فيه."</string>
     <string name="trusted_device" msgid="5637378361866787603">"الأجهزة الموثوق بها"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> جهاز</item>
@@ -573,6 +611,8 @@
     <string name="delete_button" msgid="5840500432614610850">"حذف"</string>
     <string name="remove_button" msgid="6664656962868194178">"إزالة"</string>
     <string name="cancel" msgid="750286395700355455">"إلغاء"</string>
+    <string name="allow" msgid="7519431342750394402">"سماح"</string>
+    <string name="deny" msgid="340512788979930804">"رفض"</string>
     <string name="backspace_key" msgid="1545590866688979099">"مفتاح Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"مفتاح Enter"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"خروج من عرض توضيحي"</string>

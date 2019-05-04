@@ -31,21 +31,21 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"இரவுப் பயன்முறை"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"நெட்வொர்க் &amp; இணையம்"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"மொபைல் நெட்வொர்க்"</string>
+    <!-- no translation found for mobile_network_summary_count (6917348330386831454) -->
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"செயலில் உள்ளது / சிம்"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"செயலில் இல்லை / சிம்"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"செயலில் உள்ளது / பதிவிறக்கிய சிம்"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"செயலில் இல்லை / பதிவிறக்கிய சிம்"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"மேலும் சேர்"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"மொபைல் டேட்டா"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"மொபைல் நெட்வொர்க் மூலம் டேட்டாவைப் பயன்படுத்து"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"மொபைல் டேட்டாவை ஆஃப் செய்யவா?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"தேர்ந்தெடுக்க வேண்டும்"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"டேட்டாவிற்கு <xliff:g id="CARRIER">%1$s</xliff:g>ஐ உபயோகிக்கவா?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"மொபைல் டேட்டாவிற்கு <xliff:g id="CARRIER2_0">%2$s</xliff:g> சிம்மைப் பயன்படுத்துகிறீர்கள். <xliff:g id="CARRIER1">%1$s</xliff:g> சிம்மிற்கு மாறினால் <xliff:g id="CARRIER2_1">%2$s</xliff:g> சிம்மை மொபைல் டேட்டாவிற்குத் தொடர்ந்து பயன்படுத்த இயலாது."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> சிம்மைப் பயன்படுத்து"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"ரோமிங்"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ரோமிங்கின்போது டேட்டா சேவைகளுடன் இணை"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"டேட்டா ரோமிங்கை அனுமதிக்கவா?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"கட்டணம் விதிக்கப்படலாம்."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"டேட்டா உபயோகம்"</string>
@@ -65,6 +65,10 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"சற்றுமுன் புதுப்பித்தது: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"சற்றுமுன் புதுப்பிக்கப்பட்டது"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"திட்டத்தைக் காட்டு"</string>
+    <!-- no translation found for app_data_usage (3878609885080232877) -->
+    <skip />
+    <!-- no translation found for data_usage_app_restricted (4570970078120010951) -->
+    <skip />
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"உபயோகச் சுழற்சி தேதியை மீட்டமைத்தல்"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"ஒவ்வொரு மாதமும்:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"அமை"</string>
@@ -129,16 +133,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"தானாகவே மொபைல் டேட்டாவிற்கு மாறு"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"வைஃபையில் இணைய அணுகல் இல்லாதபோது மொபைல் டேட்டாவைப் பயன்படுத்தும். டேட்டா உபயோகத்திற்குக் கட்டணம் விதிக்கப்படலாம்."</string>
     <string name="learn_more" msgid="8214605928933358604">"மேலும் அறிக"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ஹாட்ஸ்பாட் பெயர்"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ஆன் ஆகிறது..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> உடன் பிற சாதனங்களை இணைக்கலாம்"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ஹாட்ஸ்பாட் கடவுச்சொல்"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP அலைவரிசை"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்தல்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
@@ -228,10 +227,52 @@
     <string name="autofill_settings_title" msgid="1188754272680049972">"தன்னிரப்பிச் சேவை"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ஏதுமில்லை"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"தேர்ந்தெடுக்கப்பட்டது"</string>
-    <string name="assistant_security_warning" msgid="1844807956967428012">"திரையில் தெரியும் தகவல் அல்லது ஆப்ஸுக்குள் அணுகத்தக்க தகவல் உட்பட உங்கள் சிஸ்டமில் செயலிலுள்ள ஆப்ஸ்கள் பற்றிய தகவல்களை அசிஸ்டண்ட்டால் படிக்க இயலும்."</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"திரையில் தெரியும் தகவல் அல்லது ஆப்ஸுக்குள் அணுகத்தக்க தகவல் உட்பட உங்கள் சிஸ்டமில் செயலிலுள்ள ஆப்ஸ் பற்றிய தகவல்களை அசிஸ்டண்ட்டால் படிக்க இயலும்."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;இந்த ஆப்ஸை நம்புகிறீர்கள் என்பதை உறுதிப்படுத்தவும்&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; உங்கள் திரையில் இருப்பதைப் பயன்படுத்தி எவற்றையெல்லாம் தானாக நிரப்ப இயலும் என்பதைத் தீர்மானிக்கும்."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"சேவையைச் சேர்த்தல்"</string>
+    <!-- no translation found for app_launch_domain_links_title (774480184927726651) -->
+    <skip />
+    <!-- no translation found for domain_url_section_title (9070403140947787214) -->
+    <skip />
+    <!-- no translation found for domain_urls_summary_none (3077803215088293183) -->
+    <skip />
+    <!-- no translation found for domain_urls_summary_one (5072257421806034237) -->
+    <skip />
+    <!-- no translation found for domain_urls_summary_some (5523153458016701725) -->
+    <skip />
+    <!-- no translation found for app_launch_title (3442601467010363057) -->
+    <skip />
+    <!-- no translation found for app_launch_other_defaults_title (5734827759507953180) -->
+    <skip />
+    <!-- no translation found for auto_launch_disable_text (3595315315092716391) -->
+    <skip />
+    <!-- no translation found for auto_launch_enable_text (7230832269574106901) -->
+    <skip />
+    <!-- no translation found for auto_launch_reset_text (590439611312092392) -->
+    <skip />
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"ஆப்ஸிற்கான சிறப்பு அணுகல்"</string>
+    <!-- no translation found for notification_access_title (1467340098885813473) -->
+    <skip />
+    <!-- no translation found for notification_listener_security_warning_title (2893273335175140895) -->
+    <skip />
+    <!-- no translation found for notification_listener_security_warning_summary (7280197998063498125) -->
+    <skip />
+    <!-- no translation found for notification_listener_revoke_warning_summary (4904973394539125407) -->
+    <skip />
+    <!-- no translation found for notification_listener_revoke_warning_confirm (2759583507454984812) -->
+    <skip />
+    <!-- no translation found for notification_listener_revoke_warning_cancel (4399941651358241154) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
@@ -381,6 +422,24 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android <xliff:g id="VERSION">%s</xliff:g> பதிப்பை இயக்குவதற்குப் பயன்படுத்தப்படும் ஃபைல்களும் சிஸ்டத்தில் அடங்கும்"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ஆடியோ ஃபைல்கள்"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"கணக்கிடுகிறது…"</string>
+    <!-- no translation found for storage_application_size_label (1146156683170661354) -->
+    <skip />
+    <!-- no translation found for storage_data_size_label (5022911581004239367) -->
+    <skip />
+    <!-- no translation found for storage_cache_size_label (6361308766707419555) -->
+    <skip />
+    <!-- no translation found for storage_total_size_label (3892138268243791912) -->
+    <skip />
+    <!-- no translation found for storage_clear_user_data_text (8787615136779130680) -->
+    <skip />
+    <!-- no translation found for storage_clear_cache_btn_text (8449547925966775612) -->
+    <skip />
+    <!-- no translation found for storage_clear_data_dlg_title (5863775997588969879) -->
+    <skip />
+    <!-- no translation found for storage_clear_data_dlg_text (795055288575727801) -->
+    <skip />
+    <!-- no translation found for storage_clear_failed_dlg_text (6710485971686866306) -->
+    <skip />
     <string name="accounts_settings_title" msgid="436190037084293471">"கணக்குகள்"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"கணக்குகள் எதுவும் சேர்க்கப்படவில்லை"</string>
@@ -503,8 +562,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"திரைப் பூட்டு விருப்பங்கள்"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> நாட்கள் முன்பு"</string>
     <string name="add_device_title" msgid="8452168024017866232">"நம்பகமான சாதனத்தைச் சேர்"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"நம்பகமான சாதனத்தைச் சேர்க்க புளூடூத் ஆன் ஆகும்"</string>
     <string name="trusted_device" msgid="5637378361866787603">"நம்பகமான சாதனங்கள்"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> சாதனங்கள்</item>
@@ -529,6 +587,10 @@
     <string name="delete_button" msgid="5840500432614610850">"நீக்கு"</string>
     <string name="remove_button" msgid="6664656962868194178">"அகற்று"</string>
     <string name="cancel" msgid="750286395700355455">"ரத்துசெய்"</string>
+    <!-- no translation found for allow (7519431342750394402) -->
+    <skip />
+    <!-- no translation found for deny (340512788979930804) -->
+    <skip />
     <string name="backspace_key" msgid="1545590866688979099">"பேக்ஸ்பேஸ் விசை"</string>
     <string name="enter_key" msgid="2121394305541579468">"என்டர் விசை"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"டெமோவிலிருந்து வெளியேறு"</string>

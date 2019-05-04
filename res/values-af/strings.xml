@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nagmodus"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Netwerk en internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Selnetwerk"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-kaarte</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> SIM-kaart</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Aktief / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Onaktief / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Aktief / Afgelaaide SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Onaktief / Afgelaaide SIM"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Voeg nog by"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiele data"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Kry toegang tot data deur selnetwerk"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Skakel mobiele data af?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Keuse vereis"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Gebruik <xliff:g id="CARRIER">%1$s</xliff:g> vir mobiele data?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Jy gebruik tans <xliff:g id="CARRIER2_0">%2$s</xliff:g> vir mobiele data. As jy na <xliff:g id="CARRIER1">%1$s</xliff:g> toe oorskakel, sal <xliff:g id="CARRIER2_1">%2$s</xliff:g> nie meer vir mobiele data gebruik word nie."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Gebruik <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Swerwing"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Koppel aan datadienste tydens swerwing"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Laat dataswerwing toe?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Dit kan baie duur wees."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datagebruik"</string>
@@ -65,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Sopas opgedateer deur <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Sopas opgedateer"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Bekyk plan"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Programdatagebruik"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"beperk"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Gebruiksiklus-terugsteldatum"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum van elke maand:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Stel"</string>
@@ -129,16 +134,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Skakel outomaties oor na mobiele data"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Gebruik mobiele data wanneer Wi-Fi geen internettoegang het nie. Datagebruikheffings kan geld."</string>
     <string name="learn_more" msgid="8214605928933358604">"Kom meer te wete"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Warmkolnaam"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Skakel tans <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aan …"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Ander toestelle kan aan <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> koppel"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Warmkolwagwoord"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangpuntband"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Warmkol en verbinding"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Skakel warmkol outomaties af"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi-Fi-warmkol sal afskakel as geen toestelle gekoppel is nie"</string>
@@ -231,7 +231,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Die assistent sal inligting oor programme wat tans op jou stelsel gebruik word, kan lees, insluitend inligting wat op jou skerm sigbaar is of toeganklik is binne die programme."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Maak seker dat jy hierdie program vertrou&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Outovul&gt;%1$s&lt;/xliff:g&gt; gebruik wat op jou skerm is om te bepaal wat outomaties ingevul kan word."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Voeg diens by"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Oopmaak van skakels"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Geïnstalleerde programme"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Moenie gesteunde skakels oopmaak nie"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Maak <xliff:g id="DOMAIN">%s</xliff:g> oop"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Maak <xliff:g id="DOMAIN">%s</xliff:g> en ander URL\'e oop"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Maak by verstek oop"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Ander verstekke"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Verstekinstellings is nie gestel nie."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Jy het gekies om hierdie program by verstek vir \'n paar handelinge bekend te stel."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Vee verstekke uit"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"Spesiale programtoegang"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"Kennisgewingtoegang"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Laat kennisgewingtoegang vir <xliff:g id="SERVICE">%1$s</xliff:g> toe?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sal alle kennisgewings kan lees, insluitend persoonlike inligting soos kontakname en die teks van boodskappe wat jy ontvang. Dit sal ook kennisgewings kan toemaak of aksieknoppies binne in hulle kan aktiveer.\n\nDit sal die program ook die vermoë gee om Moenie Steur nie aan of af te skakel en verwante instellings te verander."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"As jy kennisgewingtoegang vir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> afskakel, kan Moenie Steur Nie-toegang dalk ook afgeskakel word."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Skakel af"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Onlangse liggingversoeke"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Geen onlangse liggingversoeke nie"</string>
@@ -381,6 +407,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Stelsel sluit lêers in wat gebruik word om Android-weergawe <xliff:g id="VERSION">%s</xliff:g> te laat werk"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Oudiolêers"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Bereken tans …"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Programgrootte"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Gebruikerdata"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Kasgeheue"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Totaal"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Vee berging uit"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Maak kas skoon"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vee programdata uit?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Alle data van hierdie program sal permanent uitgevee word. Dit sluit alle lêers, instellings, rekeninge, databasisse ens. in."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Kon nie berging vir program uitvee nie."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Rekeninge"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Voeg rekening by"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Geen rekeninge is bygevoeg nie"</string>
@@ -503,8 +538,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Skermslotopsies"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dae gelede"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Voeg vertroude toestel by"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth gaan aan om vertroude toestel by te voeg"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Vertroude toestelle"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> toestelle</item>
@@ -529,6 +563,8 @@
     <string name="delete_button" msgid="5840500432614610850">"Vee uit"</string>
     <string name="remove_button" msgid="6664656962868194178">"Verwyder"</string>
     <string name="cancel" msgid="750286395700355455">"Kanselleer"</string>
+    <string name="allow" msgid="7519431342750394402">"Laat toe"</string>
+    <string name="deny" msgid="340512788979930804">"Weier"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace-sleutel"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter-sleutel"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Verlaat demonstrasie"</string>

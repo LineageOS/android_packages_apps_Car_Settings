@@ -31,21 +31,25 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Ноћни режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM картица</item>
+      <item quantity="few"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM картице</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM картица</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активно/SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Неактивно/SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно/преузети SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно/преузети SIM"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Додајте још"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилни подаци"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Користи податке преко мобилне мреже"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Желите ли да искључите мобилне податке?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Треба да изаберете нешто"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Користити <xliff:g id="CARRIER">%1$s</xliff:g> за моб. податке?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Користите <xliff:g id="CARRIER2_0">%2$s</xliff:g> за мобилне податке. Ако пређете на <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> се више неће користити за мобилне податке."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Користи <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Роминг"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Повежи са услугама за податке током роминга"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Желите ли да дозволите пренос података у ромингу?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Могу да настану значајни трошкови."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Потрошња података"</string>
@@ -66,6 +70,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Малопре ажурирао оператер <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Ажурирано је малопре"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Прикажи план"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Потрошња података апликације"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"ограничено"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Датум ресетовања циклуса потрошње"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Датум сваког месеца:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Подеси"</string>
@@ -130,16 +136,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Аутоматски пређи на мобилне податке"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Користите мобилне податке када Wi‑Fi нема приступ интернету. Може да вам буде наплаћена потрошња података."</string>
     <string name="learn_more" msgid="8214605928933358604">"Сазнајте више"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Назив хотспота"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Укључује се <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други уређаји могу да се повежу са хотспотом <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка хотспота"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Опсег AP-а"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот и привезивање"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аутоматски искључи хотспот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi хотспот ће се искључити ако ниједан уређај није повезан"</string>
@@ -233,7 +234,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Помоћник ће моћи да чита информације о апликацијама које се користе у систему, укључујући информације видљиве на екрану или којима може да се приступа у оквиру апликација."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Уверите се да је ова апликација поуздана&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google аутоматско попуњавање&gt;%1$s&lt;/xliff:g&gt; користи садржај екрана за утврђивање података који могу аутоматски да се попуне."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Додајте услугу"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Отварање линкова"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Инсталиране апликације"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Не отварајте подржане линкове"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Отворите <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Отварајте <xliff:g id="DOMAIN">%s</xliff:g> и друге URL-ове"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Подразумевано отварај"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Друга подразумевана подешавања"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Нису изабране подразумеване вредности."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Изабрали сте подразумевано покретање ове апликације за неке радње."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Обришите подразумевано"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликацији"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"Приступ обавештењима"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Желите ли да дозволите да <xliff:g id="SERVICE">%1$s</xliff:g> има приступ обавештењима?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ће моћи да чита сва обавештења, укључујући личне податке, попут имена контаката и текста порука које примате. Моћи ће и да одбацује обавештења или да користи дугмад за радње која садрже. \n\nОво ће апликацији омогућити и да укључује или искључује режим Не узнемиравај и мења сродна подешавања."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за корисника <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Искључи"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>
@@ -385,6 +412,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Систем обухвата датотеке које се користе за покретање верзије Android-а <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудио датотеке"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Израчунава се…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Величина апликације"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Подаци корисника"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Укупно"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Обриши меморијски простор"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Обриши кеш"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Бришете податке апликација?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Сви подаци ове апликације биће трајно избрисани. То обухвата све датотеке, подешавања, налоге, базе података итд."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Брисање меморије за апликацију није успело."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Налози"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Додај налог"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ниједан налог није додат"</string>
@@ -513,8 +549,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опције закључавања екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пре <xliff:g id="NUM_DAYS">%3$s</xliff:g> дан(а)"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Додај поуздани уређај"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth се укључује ради додавања поузд. уређаја"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Поуздани уређаји"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уређај</item>
@@ -540,6 +575,8 @@
     <string name="delete_button" msgid="5840500432614610850">"Избриши"</string>
     <string name="remove_button" msgid="6664656962868194178">"Уклони"</string>
     <string name="cancel" msgid="750286395700355455">"Откажи"</string>
+    <string name="allow" msgid="7519431342750394402">"Дозволи"</string>
+    <string name="deny" msgid="340512788979930804">"Одбиј"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Тастер за брисање уназад"</string>
     <string name="enter_key" msgid="2121394305541579468">"Тастер Enter"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Напустите режим демонстр."</string>

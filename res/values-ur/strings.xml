@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"نائٹ موڈ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"نیٹ ورک اور انٹرنیٹ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"موبائل نیٹ ورک"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other">‎<xliff:g id="COUNT_1">%1$d</xliff:g> SIMs</item>
+      <item quantity="one">‎<xliff:g id="COUNT_0">%1$d</xliff:g> SIM</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"فعال / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"غیر فعال / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"فعال / ڈاؤن لوڈ کردہ SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"غیر فعال / ڈاؤن لوڈ کردہ SIM"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"مزید شامل کریں"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"موبائل ڈیٹا"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"موبائل نیٹ ورک کے ذریعے ڈیٹا تک رسائی حاصل کریں"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"موبائل ڈیٹا آف کریں؟"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"انتخاب درکار ہے"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"موبائل ڈیٹا کیلئے <xliff:g id="CARRIER">%1$s</xliff:g> یوز کریں؟"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"آپ موبائل ڈیٹا کے لیے <xliff:g id="CARRIER2_0">%2$s</xliff:g> استعمال کر رہے ہیں۔ اگر آپ <xliff:g id="CARRIER1">%1$s</xliff:g> پر سوئچ کریں گے تو <xliff:g id="CARRIER2_1">%2$s</xliff:g> کو موبائل ڈیٹا کے لیے مزید استعمال نہیں کیا جائے گا۔"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> استعمال کریں"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"رومنگ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"رومنگ کے وقت ڈیٹا سروسز سے منسلک کریں"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"ڈیٹا رومنگ کی اجازت دیں؟"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"آپ پر خاطر خواہ چارجز لگ سکتے ہیں۔"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ڈیٹا کا استعمال"</string>
@@ -65,6 +68,10 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> نے ابھی ابھی اپ ڈیٹ کیا"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"ابھی ابھی اپ ڈیٹ کیا گيا"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"پلان دیکھیں"</string>
+    <!-- no translation found for app_data_usage (3878609885080232877) -->
+    <skip />
+    <!-- no translation found for data_usage_app_restricted (4570970078120010951) -->
+    <skip />
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"استعمال کے سائیکل کو دوبارہ ترتیب دینے کی تاریخ"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"ہر مہینے کی تاریخ:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"سیٹ کریں"</string>
@@ -129,16 +136,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"خودکار طور پر موبائل ڈیٹا پر سوئچ کریں"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi پر انٹرنیٹ تک رسائی نہ ہونے کی صورت میں موبائل ڈیٹا استعمال کریں۔ ڈیٹا کے استعمال کے چارجز عائد ہو سکتے ہیں۔"</string>
     <string name="learn_more" msgid="8214605928933358604">"مزید جانیں"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ہاٹ اسپاٹ کا نام"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> آن ہو رہا ہے..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"دیگر آلات <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> سے منسلک ہو سکتے ہیں"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ہاٹ اسپاٹ کا پاس ورڈ"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP بینڈ"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ہاٹ اسپاٹ اور ٹیتھرنگ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خودکار طور پر ہاٹ اسپاٹ آف کریں"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"کوئی آلہ منسلک نہ ہونے پر Wi‑Fi ہاٹ اسپاٹ آف ہو جائے گا"</string>
@@ -231,7 +233,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"اسسٹنٹ آپ کے سسٹم پر زیر استعمال ایپس کے بارے میں معلومات، بشمول آپ کی اسکرین پر نظر آنے والی یا ایپس کے اندر قابل رسائی معلومات پڑھ سکے گی۔"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;یہ یقینی بنائیں کہ آپ کو اس ایپ پر اعتماد ہے&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; آٹو فل کی جانے والی چیزوں کا تعین کرنے کے لیے آپ کی اسکرین پر موجود چیزوں کو استعمال کرتی ہے۔"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"سروس شامل کریں"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"شروعاتی لنکس"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"انسٹال کردہ ایپس"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"تعاون یافتہ لنکس نہ کھولیں"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> کھولیں"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> اور دیگر URLs کھولیں"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"بطور ڈیفالٹ کھولیں"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"دیگر ڈیفالٹس"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"کوئی ڈیفالٹ سیٹ نہیں ہے۔"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"آپ نے کچھ کارروائیوں کیلئے بطور ڈیفالٹ اس ایپ کو شروع کرنے کا انتخاب کیا ہے۔"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"ڈیفالٹس صاف کریں"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"خاص ایپ تک رسائی"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"اطلاع تک رسائی"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> کیلئے اطلاع تک رسائی کی اجازت دیں؟"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> تمام اطلاعات  بشمول ذاتی معلومات جیسے رابطہ کے نام اور آپ کو موصول ہونے والے پیغامات کا متن پڑھنے کا اہل ہوگا۔ یہ ان میں شامل اطلاعات یا ٹرگر کارروائیوں کے بٹنز کو برخاست کرنے کا بھی اہل ہوگا۔\n\nاس سے ایپ کو ڈسٹرب نہ کریں آن یا آف کرنے اور متعلقہ ترتیبات تبدیل کرنے کی اہلیت بھی ملے گی۔"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر آپ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> کیلئے اطلاع کی رسائی آف کرتے ہیں تو ڈسٹرب نہ کریں کی رسائی بھی آف ہو سکتی ہے۔"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"آف کریں"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"منسوخ کریں"</string>
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
@@ -381,6 +409,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"سسٹم میں Android ورژن <xliff:g id="VERSION">%s</xliff:g> چلانے کے لیے استعمال کی جانے والی فائلیں شامل ہیں"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"آڈیو فائلز"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"حساب لگایا جا رہا ہے…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"ایپ کا سائز"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"صارف کا ڈیٹا"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"کیش"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"کُل"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"اسٹوریج صاف کریں"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"کیش صاف کریں"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ایپ کا ڈیٹا حذف کریں؟"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"اس ایپ کا سبھی ڈیٹا مستقل طور پر حذف ہو جائے گا۔ اس میں سبھی فائلیں، ترتیبات، اکاؤنٹس، ڈیٹا بیسز وغیرہ شامل ہیں۔"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ایپ کیلئے اسٹوریج صاف نہيں کر سکا۔"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"اکاؤنٹس"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"اکاؤنٹ شامل کریں"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"کوئی اکاؤنٹ شامل نہیں ہے"</string>
@@ -501,10 +538,9 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"آپ کے IT منتظم نے عمومی پاس ورڈز کو مسدود کر دیا ہے۔ کوئی دوسرا پاس ورڈ آزمائیں۔"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے۔"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"اسکرین لاک کے اختیارات"</string>
-    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دنوں پہلے"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دن پہلے"</string>
     <string name="add_device_title" msgid="8452168024017866232">"بھروسہ مند آلہ شامل کریں"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"بھروسہ مند آلات شامل کے لیے بلوٹوتھ آن ہو جائے گا"</string>
     <string name="trusted_device" msgid="5637378361866787603">"بھروسہ مند آلات"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> آلات</item>
@@ -529,6 +565,8 @@
     <string name="delete_button" msgid="5840500432614610850">"حذف کریں"</string>
     <string name="remove_button" msgid="6664656962868194178">"ہٹائیں"</string>
     <string name="cancel" msgid="750286395700355455">"منسوخ کریں"</string>
+    <string name="allow" msgid="7519431342750394402">"اجازت دیں"</string>
+    <string name="deny" msgid="340512788979930804">"مسترد کریں"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace کلید"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter کلید"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ڈیمو سے باہر نکلیں"</string>

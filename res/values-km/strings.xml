@@ -31,21 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"មុខងារយប់"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"បណ្តាញ និង​អ៊ីនធឺណិត"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"បណ្ដាញទូរសព្ទចល័ត"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other">ស៊ីម <xliff:g id="COUNT_1">%1$d</xliff:g></item>
+      <item quantity="one">ស៊ីម <xliff:g id="COUNT_0">%1$d</xliff:g></item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"សកម្ម / ស៊ីម"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"អសកម្ម / ស៊ីម"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"សកម្ម / ស៊ីមដែលបាន​ទាញយក"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"អសកម្ម / ស៊ីមដែលបានទាញយក"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"បញ្ចូល​បន្ថែម​​ទៀត"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ទិន្នន័យ​ទូរសព្ទចល័ត"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ចូល​ប្រើ​ទិន្នន័យ​ដោយ​ប្រើ​បណ្ដាញ​​ទូរសព្ទ​ចល័ត"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"បិទទិន្នន័យ​ទូរសព្ទចល័ត?"</string>
-    <!-- no translation found for sim_selection_required_pref (6599562910262785784) -->
-    <skip />
-    <!-- no translation found for sim_change_data_title (6677115745127365131) -->
-    <skip />
-    <!-- no translation found for sim_change_data_message (4669775284395549069) -->
-    <skip />
-    <!-- no translation found for sim_change_data_ok (2348804996223271081) -->
-    <skip />
-    <!-- no translation found for roaming_title (6218635014519017734) -->
-    <skip />
-    <!-- no translation found for roaming_summary (7476127740259728901) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"តម្រូវឱ្យមាន​ការជ្រើសរើស"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"ប្រើ <xliff:g id="CARRIER">%1$s</xliff:g> សម្រាប់​ទិន្នន័យទូរសព្ទចល័ត?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"អ្នក​កំពុង​ប្រើប្រាស់ <xliff:g id="CARRIER2_0">%2$s</xliff:g> សម្រាប់​ទិន្នន័យ​ទូរសព្ទចល័ត។ ប្រសិនបើអ្នកប្ដូរទៅ <xliff:g id="CARRIER1">%1$s</xliff:g> <xliff:g id="CARRIER2_1">%2$s</xliff:g> នឹងមិនត្រូវបានប្រើ​សម្រាប់ទិន្នន័យទូរសព្ទចល័ត​ទៀតទេ។"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"ប្រើ <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"រ៉ូ​មីង"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ភ្ជាប់​សេវាកម្ម​ទិន្នន័យ នៅពេលរ៉ូមីង"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"អនុញ្ញាតឱ្យ​ប្រើការ​រ៉ូមីង​ទិន្នន័យ?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"អាច​នឹងមាន​ការគិតថ្លៃខ្ពស់​ពីអ្នក។"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ការ​ប្រើ​ទិន្នន័យ"</string>
@@ -65,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"​បានធ្វើ​បច្ចុប្បន្នភាព​ដោយ <xliff:g id="ID_1">^1</xliff:g> អម្បាញ់មិញ"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"បានធ្វើ​បច្ចុប្បន្នភាព​អម្បាញ់មិញ"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"មើល​គម្រោង"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"ការប្រើទិន្នន័យកម្មវិធី"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"បានដាក់កំហិត"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"កាលបរិច្ឆេទ​កំណត់​វដ្តនៃការប្រើប្រាស់​​​ឡើង​វិញ"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"កាលបរិច្ឆេទ​នៃ​ខែ​នីមួយៗ៖"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"កំណត់"</string>
@@ -129,16 +134,11 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ប្តូរទៅ​ទិន្នន័យទូរសព្ទ​ចល័តដោយស្វ័យ​ប្រវត្តិ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ប្រើទិន្នន័យ​ទូរសព្ទចល័ត​ នៅពេល​ដែល Wi‑Fi មិនមាន​ការភ្ជាប់អ៊ីនធឺណិត។ អាច​នឹង​គិតថ្លៃលើការ​ប្រើទិន្នន័យ។"</string>
     <string name="learn_more" msgid="8214605928933358604">"ស្វែងយល់បន្ថែម"</string>
-    <!-- no translation found for wifi_hotspot_name_title (8844779338692535356) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connecting (5262510450498600038) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_name_summary_connected (7421325340822195506) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_password_title (4103948315849351988) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_ap_band_title (7685279281668988593) -->
-    <skip />
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ឈ្មោះ​ហតស្ប៉ត"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"កំពុងបើក <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ឧបករណ៍​ផ្សេងទៀត​អាចភ្ជាប់​ជាមួយ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ពាក្យសម្ងាត់​ហតស្ប៉ត"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"កម្រិតបញ្ជូន AP"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ហតស្ប៉ត និង​ការភ្ជាប់"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"បិទ​ហតស្ប៉ត​ដោយ​ស្វ័យប្រវត្តិ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ហតស៉្បត Wi-Fi នឹង​បិទ ​ប្រសិនបើ​​ឧបករណ៍​មិនត្រូវបានភ្ជាប់"</string>
@@ -231,7 +231,33 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"ជំនួយការនឹងអាចអានព័ត៌មានអំពីកម្មវិធីដែលកំពុងប្រើនៅក្នុងប្រព័ន្ធរបស់អ្នក រួម​ទាំងព័ត៌មានដែលអាចមើលឃើញនៅលើអេក្រង់របស់អ្នក ឬព័ត៌មានដែលអាចចូលប្រើនៅក្នុងកម្មវិធី​នោះផងដែរ​។"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;សូម​ប្រាកដថា​អ្នក​ទុក​ចិត្ត​លើ​កម្មវិធី​នេះ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ប្រើប្រាស់​អ្វី​ដែល​មាននៅ​លើ​អេក្រង់​របស់អ្នក ដើម្បី​កំណត់​អ្វីដែល​អាចបំពេញ​ដោយ​ស្វ័យប្រវត្តិ។"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"បញ្ចូល​សេវាកម្ម"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"បើកតំណ"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"កម្មវិធី​ដែល​បាន​ដំឡើង"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"កុំបើក​តំណ​ដែលស្គាល់"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"បើក <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"បើក <xliff:g id="DOMAIN">%s</xliff:g> និង URL ផ្សេងទៀត"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"បើកតាមលំនាំដើម"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"លំនាំដើមផ្សេងទៀត"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"គ្មាន​ការ​កំណត់​លំនាំដើមទេ។"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"អ្នក​បានជ្រើសរើស​ចាប់ផ្ដើមកម្មវិធី​នេះតាមលំនាំដើមសម្រាប់​សកម្មភាពមួយចំនួន។"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"សម្អាត​លំនាំដើម"</string>
+    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
+    <skip />
+    <!-- no translation found for app_link_open_always (5783167184335545230) -->
+    <skip />
+    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
+    <skip />
+    <!-- no translation found for app_link_open_never (2173174327831792316) -->
+    <skip />
+    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
+    <skip />
     <string name="special_access" msgid="5730278220917123811">"ការចូលប្រើកម្មវិធីពិសេស"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"ការចូលប្រើ​ការជូនដំណឹង"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"អនុញ្ញាតឱ្យចូល​ប្រើការជូនដំណឹង​សម្រាប់ <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នឹងអាច​អាន​ការជូនដំណឹង​ទាំងអស់ រួមទាំង​ព័ត៌មានផ្ទាល់ខ្លួន​ដូចជា ​ឈ្មោះទំនាក់ទំនង និងសារជាអក្សរ​ដែលអ្នក​ទទួលបាន​ជាដើម។ វា​ក៏នឹងអាច​ច្រានចោល​ការជូនដំណឹង ឬ​ចាប់ផ្តើម​ប៊ូតុង​សកម្មភាព​ដែលវាមាន​ផងដែរ។\n\nសកម្មភាពនេះក៏នឹង​អាចឱ្យ​កម្មវិធី​បើក ឬ​បិទ​មុខងារកុំរំខាន ​និងប្ដូរ​ការកំណត់​ដែលពាក់ព័ន្ធ​បានផងដែរ។"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ប្រសិនបើ​អ្នកបិទ​ការចូលប្រើ​ការជូនដំណឹង​សម្រាប់ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នោះការចូលប្រើ​មុខងារកុំរំខាន​ក៏​ត្រូវបាន​បិទ​ផងដែរ។"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"បិទ"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"បោះបង់"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>
@@ -381,6 +407,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"ប្រព័ន្ធរួមបញ្ចូលទាំងឯកសារ​ដែលប្រើ​សម្រាប់​ដំណើរការ​កំណែ Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ឯកសារ​សំឡេង"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"កំពុង​គណនា…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"ទំហំកម្មវិធី"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"ទិន្នន័យអ្នកប្រើប្រាស់"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"ឃ្លាំងផ្ទុកទិន្នន័យ"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"សរុប"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"សម្អាត​ទំហំ​ផ្ទុក"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"សម្អាត​ឃ្លាំងផ្ទុកទិន្នន័យ"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"លុប​ទិន្នន័យ​កម្មវិធី?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ទិន្នន័យ​របស់​កម្មវិធី​នេះ​ទាំងអស់​នឹង​ត្រូវ​បាន​លុប​ជា​អចិន្ត្រៃយ៍។ ទិន្នន័យទាំងនេះរួមមាន ឯកសារ​ទាំងអស់ ការ​កំណត់ គណនី មូលដ្ឋាន​ទិន្នន័យ ។ល។"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"មិនអាច​សម្អាត​ទំហំផ្ទុក​សម្រាប់​កម្មវិធី​បានទេ។"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"គណនី"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"បញ្ចូលគណនី"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"គ្មាន​គណនីដែលបានបញ្ចូលទេ"</string>
@@ -503,8 +538,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\nថ្ងៃ <xliff:g id="DATE">%2$s</xliff:g>៖ <xliff:g id="NUM_DAYS">%3$s</xliff:g> ថ្ងៃមុន"</string>
     <string name="add_device_title" msgid="8452168024017866232">"បញ្ចូល​ឧបករណ៍​ដែលទុកចិត្ត"</string>
-    <!-- no translation found for add_device_summary (5368217520710573302) -->
-    <skip />
+    <string name="add_device_summary" msgid="5368217520710573302">"ប៊្លូធូសនឹងបើក ដើម្បីបញ្ចូលឧបករណ៍​ដែលទុកចិត្ត"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other">ឧបករណ៍ <xliff:g id="COUNT_1">%d</xliff:g></item>
@@ -529,6 +563,8 @@
     <string name="delete_button" msgid="5840500432614610850">"លុប"</string>
     <string name="remove_button" msgid="6664656962868194178">"លុប"</string>
     <string name="cancel" msgid="750286395700355455">"បោះបង់"</string>
+    <string name="allow" msgid="7519431342750394402">"អនុញ្ញាត"</string>
+    <string name="deny" msgid="340512788979930804">"បដិសេធ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"គ្រាប់​ចុច​លុប"</string>
     <string name="enter_key" msgid="2121394305541579468">"គ្រាប់​ចុច​បញ្ចូល"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ចាក​ចេញ​ពីការបង្ហាញ​សាកល្បង"</string>
