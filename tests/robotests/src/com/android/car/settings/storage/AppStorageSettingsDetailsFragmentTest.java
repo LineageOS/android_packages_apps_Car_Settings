@@ -46,7 +46,7 @@ import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowRestrictedLockUtils;
+import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
@@ -63,7 +63,7 @@ import org.robolectric.annotation.Config;
 /** Unit test for {@link AppStorageSettingsDetailsFragment}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowApplicationsState.class, ShadowCarUserManagerHelper.class,
-        ShadowRestrictedLockUtils.class, ShadowApplicationPackageManager.class,
+        ShadowRestrictedLockUtilsInternal.class, ShadowApplicationPackageManager.class,
         ShadowActivityManager.class})
 public class AppStorageSettingsDetailsFragmentTest {
 
@@ -122,7 +122,7 @@ public class AppStorageSettingsDetailsFragmentTest {
     public void tearDown() {
         ShadowApplicationsState.reset();
         ShadowCarUserManagerHelper.reset();
-        ShadowRestrictedLockUtils.reset();
+        ShadowRestrictedLockUtilsInternal.reset();
         ShadowApplicationPackageManager.reset();
         ShadowActivityManager.reset();
     }
@@ -157,7 +157,7 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Test
     public void handleClearCacheClick_disallowedBySystem_shouldNotDeleteApplicationCache() {
-        ShadowRestrictedLockUtils.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
         ShadowApplicationPackageManager.setPackageManager(mPackageManager);
 
         doNothing().when(mPackageManager).deleteApplicationCacheFiles(anyString(), any());
@@ -179,8 +179,8 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Test
     public void handleClearCacheClick_allowedBySystem_shouldNotDeleteApplicationCache() {
-        ShadowRestrictedLockUtils.setEnforcedAdmin(mEnforcedAdmin);
-        ShadowRestrictedLockUtils.setHasBaseUserRestriction(true);
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setHasBaseUserRestriction(true);
         ShadowApplicationPackageManager.setPackageManager(mPackageManager);
 
         doNothing().when(mPackageManager).deleteApplicationCacheFiles(anyString(), any());
@@ -202,7 +202,7 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Test
     public void handleClearDataClick_disallowedBySystem_shouldNotShowDialogToClear() {
-        ShadowRestrictedLockUtils.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
         ShadowApplicationPackageManager.setPackageManager(mPackageManager);
 
         StorageStats stats = new StorageStats();
@@ -222,8 +222,8 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Test
     public void handleClearDataClick_allowedBySystem_shouldShowDialogToClear() {
-        ShadowRestrictedLockUtils.setEnforcedAdmin(mEnforcedAdmin);
-        ShadowRestrictedLockUtils.setHasBaseUserRestriction(true);
+        ShadowRestrictedLockUtilsInternal.setEnforcedAdmin(mEnforcedAdmin);
+        ShadowRestrictedLockUtilsInternal.setHasBaseUserRestriction(true);
         ShadowApplicationPackageManager.setPackageManager(mPackageManager);
 
         mFragmentController.resume();
