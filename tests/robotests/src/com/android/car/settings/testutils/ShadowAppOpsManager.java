@@ -43,6 +43,12 @@ public class ShadowAppOpsManager {
         mOpToKeyToMode.put(code, key, mode);
     }
 
+    /** Convenience method to get the mode directly instead of wrapped in an op list. */
+    public int getMode(int code, int uid, String packageName) {
+        Integer mode = mOpToKeyToMode.get(code, new InternalKey(uid, packageName));
+        return mode == null ? AppOpsManager.opToDefaultMode(code) : mode;
+    }
+
     @Implementation
     protected List<PackageOps> getPackagesForOps(int[] ops) {
         if (ops == null) {
