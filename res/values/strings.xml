@@ -499,6 +499,10 @@
     <string name="notification_listener_revoke_warning_confirm">Turn off</string>
     <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
     <string name="notification_listener_revoke_warning_cancel">Cancel</string>
+    <!-- Title for screen controlling which apps have access to send premium sms messages. [CHAR_LIMIT=60] -->
+    <string name="premium_sms_access_title">Premium SMS access</string>
+    <!-- Message shown for option to enable Premium SMS for an app. [CHAR_LIMIT=NONE] -->
+    <string name="premium_sms_access_description">Premium SMS may cost you money and will add up to your carrier bills. If you enable permission for an app, you will be able to send premium SMS using that app.</string>
     <!-- Title for managing apps which can query usage data. [CHAR_LIMIT=30] -->
     <string name="usage_access_title">Usage access</string>
     <!-- Description of the usage access permission. [CHAR_LIMIT=NONE] -->
