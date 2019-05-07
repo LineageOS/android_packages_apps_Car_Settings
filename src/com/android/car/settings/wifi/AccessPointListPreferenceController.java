@@ -101,7 +101,9 @@ public class AccessPointListPreferenceController extends
 
     @Override
     public void onWifiStateChanged(int state) {
-        // don't care
+        if (state == WifiManager.WIFI_STATE_ENABLED) {
+            refreshUi();
+        }
     }
 
     @Override
