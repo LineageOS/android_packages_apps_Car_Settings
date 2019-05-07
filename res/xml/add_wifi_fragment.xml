@@ -21,9 +21,20 @@
     android:title="@string/wifi_setup_add_network">
     <EditTextPreference
         android:key="@string/pk_add_wifi_network_name"
+        android:persistent="false"
         android:title="@string/wifi_ssid"
         settings:controller="com.android.car.settings.wifi.NetworkNamePreferenceController"/>
-    <com.android.car.settings.common.LogicalPreferenceGroup
-        android:key="@string/pk_add_wifi_security_group"
-        settings:controller="com.android.car.settings.wifi.NetworkSecurityGroupPreferenceController"/>
+    <ListPreference
+        android:dialogTitle="@string/wifi_security"
+        android:key="@string/pk_add_wifi_security"
+        android:persistent="false"
+        android:title="@string/wifi_security"
+        settings:controller="com.android.car.settings.wifi.NetworkSecurityPreferenceController"/>
+    <com.android.car.settings.common.PasswordEditTextPreference
+        android:dialogTitle="@string/wifi_password"
+        android:key="@string/pk_add_wifi_password"
+        android:persistent="false"
+        android:summary="@string/default_password_summary"
+        android:title="@string/wifi_password"
+        settings:controller="com.android.car.settings.wifi.NetworkPasswordPreferenceController"/>
 </PreferenceScreen>
