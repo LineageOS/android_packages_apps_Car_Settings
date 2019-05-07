@@ -19,9 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings_label">
+    <!-- TODO: Re-enable once more suggestion use cases are supported.
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_suggestions"
         settings:controller="com.android.car.settings.suggestions.SuggestionsPreferenceController"/>
+    -->
     <Preference
         android:fragment="com.android.car.settings.display.DisplaySettingsFragment"
         android:icon="@drawable/ic_settings_display"
