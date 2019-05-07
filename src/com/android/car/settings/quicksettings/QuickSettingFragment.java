@@ -121,6 +121,7 @@ public class QuickSettingFragment extends BaseFragment {
     public void onStart() {
         super.onStart();
 
+        mGridAdapter.start();
         mUserSwitcherBtn.setVisibility(showUserSwitcher() ? View.VISIBLE : View.INVISIBLE);
         // In non-user builds (that is, user-debug, eng, etc), display some version information.
         if (!Build.IS_USER) {
