@@ -16,16 +16,41 @@
 
 package com.android.car.settings.testutils;
 
+import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @Implements(WifiManager.class)
 public class ShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager {
 
     private static int sResetCalledCount = 0;
+
+    private final Map<Integer, WifiConfiguration> mNetworkIdToConfiguredNetworks =
+            new LinkedHashMap<>();
+
+    @Implementation
+    @Override
+    protected int addNetwork(WifiConfiguration config) {
+        int networkId = mNetworkIdToConfiguredNetworks.size();
+        config.networkId = -1;
+        mNetworkIdToConfiguredNetworks.put(networkId, makeCopy(config, networkId));
+        return networkId;
+    }
+
+    public WifiConfiguration getLastAddedNetworkConfiguration() {
+        return mNetworkIdToConfiguredNetworks.get(getLastAddedNetworkId());
+    }
+
+    public int getLastAddedNetworkId() {
+        return mNetworkIdToConfiguredNetworks.size() - 1;
+    }
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
@@ -39,5 +64,11 @@ public class ShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager
     @Resetter
     public static void reset() {
         sResetCalledCount = 0;
+    }
+
+    private WifiConfiguration makeCopy(WifiConfiguration config, int networkId) {
+        WifiConfiguration copy = Shadows.shadowOf(config).copy();
+        copy.networkId = networkId;
+        return copy;
     }
 }
