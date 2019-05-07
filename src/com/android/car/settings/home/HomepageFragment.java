@@ -19,11 +19,9 @@ package com.android.car.settings.home;
 import android.content.Context;
 
 import androidx.annotation.XmlRes;
-import androidx.loader.app.LoaderManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
-import com.android.car.settings.suggestions.SuggestionsPreferenceController;
 
 /**
  * Homepage for settings for car.
@@ -39,7 +37,8 @@ public class HomepageFragment extends SettingsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
-                LoaderManager.getInstance(/* owner= */ this));
+        // TODO: Re-enable suggestions once more use cases are supported.
+        // use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
+        //        LoaderManager.getInstance(/* owner= */ this));
     }
 }
