@@ -17,12 +17,7 @@
 package com.android.car.settings.common;
 
 import android.content.Context;
-import android.text.InputType;
-import android.text.TextUtils;
 import android.util.AttributeSet;
-
-import androidx.preference.Preference;
-import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
 
@@ -30,19 +25,8 @@ import com.android.car.settings.R;
  * Extends {@link ValidatedEditTextPreference} for password input. When {@link SettingsFragment}
  * detects an instance of this class, it creates a new instance of {@link
  * PasswordEditTextPreferenceDialogFragment} so that the input is obscured on the dialog's TextEdit.
- * OnPreferenceChange, it either obscures the raw password input to display as the preference's
- * summary or displays the default password summary if the input is empty.
  */
 public class PasswordEditTextPreference extends ValidatedEditTextPreference {
-
-    private OnPreferenceChangeListener mUserProvidedListener;
-    private final OnPreferenceChangeListener mCombinedListener = (preference, newValue) -> {
-        if (mUserProvidedListener != null) {
-            mUserProvidedListener.onPreferenceChange(preference, newValue);
-        }
-        obscurePasswordForPreferenceSummary(preference, newValue);
-        return true;
-    };
 
     public PasswordEditTextPreference(Context context) {
         super(context);
@@ -65,32 +49,8 @@ public class PasswordEditTextPreference extends ValidatedEditTextPreference {
         init();
     }
 
-    @Override
-    public void setOnPreferenceChangeListener(OnPreferenceChangeListener userProvidedListener) {
-        mUserProvidedListener = userProvidedListener;
-    }
-
-    @Override
-    public void onBindViewHolder(PreferenceViewHolder holder) {
-        super.onBindViewHolder(holder);
-    }
-
     private void init() {
-        super.setOnPreferenceChangeListener(mCombinedListener);
         setDialogLayoutResource(R.layout.preference_dialog_password_edittext);
-        setSummary(R.string.default_password_summary);
         setPersistent(false);
-    }
-
-    private void obscurePasswordForPreferenceSummary(Preference preference, Object password) {
-        CharSequence value = password.toString();
-        if (TextUtils.isEmpty(value)) {
-            value = getContext().getString(R.string.default_password_summary);
-            setSummaryInputType(InputType.TYPE_CLASS_TEXT);
-        } else {
-            setSummaryInputType(InputType.TYPE_CLASS_TEXT
-                    | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        }
-        preference.setSummary(value);
     }
 }
