@@ -19,6 +19,7 @@ package com.android.car.settings.wifi;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
+import android.text.InputType;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.EditTextPreference;
@@ -28,6 +29,7 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.LogicalPreferenceGroup;
+import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -144,5 +146,34 @@ public class NetworkSecurityGroupPreferenceControllerTest {
                 (EditTextPreference) mPreferenceGroup.findPreference(
                         mContext.getString(R.string.pk_add_wifi_password));
         assertThat(passwordTextPreference.isVisible()).isTrue();
+    }
+
+    @Test
+    public void onPasswordEntryEmpty_shouldShowDefaultPreferenceSummary() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        PasswordEditTextPreference passwordTextPreference =
+                (PasswordEditTextPreference) mPreferenceGroup.findPreference(
+                        mContext.getString(R.string.pk_add_wifi_password));
+        passwordTextPreference.callChangeListener("");
+
+        assertThat(passwordTextPreference.getSummaryInputType()).isEqualTo(
+                InputType.TYPE_CLASS_TEXT);
+        assertThat(passwordTextPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.default_password_summary));
+    }
+
+    @Test
+    public void onPasswordEntryNotEmpty_shouldShowObscuredPasswordPreferenceSummary() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        PasswordEditTextPreference passwordTextPreference =
+                (PasswordEditTextPreference) mPreferenceGroup.findPreference(
+                        mContext.getString(R.string.pk_add_wifi_password));
+        String testPassword = "TEST_PASSWORD";
+        passwordTextPreference.callChangeListener(testPassword);
+
+        assertThat(passwordTextPreference.getSummaryInputType()).isEqualTo(
+                (InputType.TYPE_CLASS_TEXT
+                        | InputType.TYPE_TEXT_VARIATION_PASSWORD));
+        assertThat(passwordTextPreference.getSummary()).isEqualTo(testPassword);
     }
 }
