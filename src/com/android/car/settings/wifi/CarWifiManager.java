@@ -185,6 +185,28 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         mWifiManager.setWifiApConfiguration(config);
     }
 
+    /**
+     * Gets the country code in ISO 3166 format.
+     */
+    public String getCountryCode() {
+        return mWifiManager.getCountryCode();
+    }
+
+    /**
+     * Checks if the chipset supports dual frequency band (2.4 GHz and 5 GHz).
+     */
+    public boolean isDualBandSupported() {
+        return mWifiManager.isDualBandSupported();
+    }
+
+    /**
+     * Check if the chipset requires conversion of 5GHz Only apBand to ANY.
+     * @return {@code true} if required, {@code false} otherwise.
+     */
+    public boolean isDualModeSupported() {
+        return mWifiManager.isDualModeSupported();
+    }
+
     /** Gets the wifi state from {@link WifiManager}. */
     public int getWifiState() {
         return mWifiManager.getWifiState();
