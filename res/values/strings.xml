@@ -413,6 +413,8 @@
     <string name="app_disable_dialog_text">If you disable this app, Android and other apps may no longer function as intended.</string>
     <!-- Manage applications, label for option to disable app. [CHAR LIMIT=30] -->
     <string name="app_disable_dialog_positive">Disable app</string>
+    <!-- Manage applications, text informing that an application is not installed for the current user. [CHAR_LIMIT=NONE] -->
+    <string name="not_installed">Not installed for this user</string>
     <!-- Manage applications, individual application info screen, heading for settings related to the app's permissions. for example, it may list all the permissions the app has. -->
     <string name="permissions_label">Permissions</string>
     <!-- Label for the toggle that enables/disables an app's notifications. [CHAR LIMIT=20] -->
