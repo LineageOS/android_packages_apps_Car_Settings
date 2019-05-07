@@ -25,14 +25,29 @@ import android.os.RemoteException;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.lang.reflect.Proxy;
 
 @Implements(ActivityThread.class)
 public class ShadowActivityThread {
 
+    private static IPackageManager sIPackageManager;
+
+    public static void setPackageManager(IPackageManager packageManager) {
+        sIPackageManager = packageManager;
+    }
+
+    @Resetter
+    public static void reset() {
+        sIPackageManager = null;
+    }
+
     @Implementation
     protected static IPackageManager getPackageManager() {
+        if (sIPackageManager != null) {
+            return sIPackageManager;
+        }
         ClassLoader classLoader = ShadowActivityThread.class.getClassLoader();
         Class<?> iPackageManagerClass;
         try {
