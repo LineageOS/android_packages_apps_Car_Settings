@@ -19,13 +19,14 @@ package com.android.car.settings.testutils;
 import android.content.Context;
 
 import com.android.settingslib.RestrictedLockUtils;
+import com.android.settingslib.RestrictedLockUtilsInternal;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
-@Implements(RestrictedLockUtils.class)
-public class ShadowRestrictedLockUtils {
+@Implements(RestrictedLockUtilsInternal.class)
+public class ShadowRestrictedLockUtilsInternal {
 
     private static RestrictedLockUtils.EnforcedAdmin sEnforcedAdmin;
     private static boolean sHasBaseUserRestriction;

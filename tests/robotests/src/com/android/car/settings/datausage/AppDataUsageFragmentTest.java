@@ -85,7 +85,7 @@ public class AppDataUsageFragmentTest {
     public void onActivityCreated_policyIsNull_startAndEndDateShouldHaveFourWeeksDifference() {
         mFragmentController.create();
 
-        Bundle bundle = mFragment.getBundleForNetworkStats();
+        Bundle bundle = mFragment.getBundle();
         long start = bundle.getLong(KEY_START);
         long end = bundle.getLong(KEY_END);
         long timeDiff = end - start;
@@ -102,7 +102,7 @@ public class AppDataUsageFragmentTest {
         ShadowNetworkPolicyManager.setCycleIterator(iterator);
         mFragmentController.create();
 
-        Bundle bundle = mFragment.getBundleForNetworkStats();
+        Bundle bundle = mFragment.getBundle();
         long start = bundle.getLong(KEY_START);
         long end = bundle.getLong(KEY_END);
         long timeDiff = end - start;
@@ -130,7 +130,7 @@ public class AppDataUsageFragmentTest {
         ShadowNetworkPolicyManager.setCycleIterator(iterator);
         mFragmentController.create();
 
-        Bundle bundle = mFragment.getBundleForNetworkStats();
+        Bundle bundle = mFragment.getBundle();
         long start = bundle.getLong(KEY_START);
         long end = bundle.getLong(KEY_END);
 
