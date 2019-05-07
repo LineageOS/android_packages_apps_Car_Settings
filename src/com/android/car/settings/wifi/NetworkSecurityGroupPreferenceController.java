@@ -18,6 +18,8 @@ package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.text.InputType;
+import android.text.TextUtils;
 
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceGroup;
@@ -132,6 +134,20 @@ public class NetworkSecurityGroupPreferenceController extends
         preference.setKey(getContext().getString(R.string.pk_add_wifi_password));
         preference.setTitle(R.string.wifi_password);
         preference.setDialogTitle(R.string.wifi_password);
+        preference.setSummary(R.string.default_password_summary);
+
+        preference.setOnPreferenceChangeListener((pref, password) -> {
+            CharSequence value = password.toString();
+            if (TextUtils.isEmpty(value)) {
+                value = getContext().getString(R.string.default_password_summary);
+                preference.setSummaryInputType(InputType.TYPE_CLASS_TEXT);
+            } else {
+                preference.setSummaryInputType(InputType.TYPE_CLASS_TEXT
+                        | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            }
+            preference.setSummary(value);
+            return true;
+        });
 
         return preference;
     }
