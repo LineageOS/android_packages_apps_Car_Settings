@@ -37,7 +37,7 @@ public class PatternLockPreferenceController extends LockTypeBasePreferenceContr
 
     @Override
     protected Fragment fragmentToOpen() {
-        return ChooseLockPatternFragment.newInstance(/* isInSetupWizard= */ false);
+        return ChooseLockPatternFragment.newInstance();
     }
 
     @Override
