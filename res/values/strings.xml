@@ -477,6 +477,14 @@
 
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
+    <!-- Text for toggle button to control whether system processes are shown in app lists. [CHAR_LIMIT=30] -->
+    <string name="show_system">Show system</string>
+    <!-- Text for toggle button to control whether system processes are hidden in app lists. [CHAR_LIMIT=30] -->
+    <string name="hide_system">Hide system</string>
+    <!-- Title for managing apps which can modify system settings. [CHAR_LIMIT=30] -->
+    <string name="modify_system_settings_title">Modify system settings</string>
+    <!-- Description of modifying system settings. [CHAR_LIMIT=NONE] -->
+    <string name="modify_system_settings_description">This permission allows an app to modify system settings.</string>
     <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->
     <string name="notification_access_title">Notification access</string>
     <!-- Title for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
@@ -489,6 +497,14 @@
     <string name="notification_listener_revoke_warning_confirm">Turn off</string>
     <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
     <string name="notification_listener_revoke_warning_cancel">Cancel</string>
+    <!-- Title for managing apps which can query usage data. [CHAR_LIMIT=30] -->
+    <string name="usage_access_title">Usage access</string>
+    <!-- Description of the usage access permission. [CHAR_LIMIT=NONE] -->
+    <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
+    <!-- Title for managing apps which can change Wi-Fi state. [CHAR_LIMIT=30] -->
+    <string name="wifi_control_title">Wi-Fi control</string>
+    <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
+    <string name="wifi_control_description">Wi-Fi control allow an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot.</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
