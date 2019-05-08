@@ -42,6 +42,7 @@ import java.util.List;
 public class AccessPointListPreferenceController extends
         WifiBasePreferenceController<PreferenceGroup> implements
         Preference.OnPreferenceClickListener,
+        Preference.OnPreferenceChangeListener,
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
     private static final Logger LOG = new Logger(AccessPointListPreferenceController.class);
     private List<AccessPoint> mAccessPoints = new ArrayList<>();
@@ -83,11 +84,7 @@ public class AccessPointListPreferenceController extends
         preferenceGroup.setVisible(!mAccessPoints.isEmpty());
         preferenceGroup.removeAll();
         for (AccessPoint accessPoint : mAccessPoints) {
-            LOG.d("Adding preference for " + WifiUtil.getKey(accessPoint));
-            AccessPointPreference accessPointPreference = new AccessPointPreference(
-                    getContext(), accessPoint);
-            accessPointPreference.setOnPreferenceClickListener(this);
-            preferenceGroup.addPreference(accessPointPreference);
+            preferenceGroup.addPreference(createAccessPointPreference(accessPoint));
         }
     }
 
@@ -104,7 +101,9 @@ public class AccessPointListPreferenceController extends
 
     @Override
     public void onWifiStateChanged(int state) {
-        // don't care
+        if (state == WifiManager.WIFI_STATE_ENABLED) {
+            refreshUi();
+        }
     }
 
     @Override
@@ -118,9 +117,28 @@ public class AccessPointListPreferenceController extends
             getFragmentController().launchFragment(WifiDetailsFragment.getInstance(accessPoint));
         } else if (accessPoint.isSaved()) {
             getCarWifiManager().connectToSavedWifi(accessPoint, mConnectionListener);
-        } else {
-            getFragmentController().launchFragment(AddWifiFragment.getInstance(accessPoint));
         }
         return true;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
+        WifiUtil.connectToAccessPoint(getContext(), accessPoint.getSsid().toString(),
+                accessPoint.getSecurity(), newValue.toString(), /* hidden= */ false);
+        return true;
+    }
+
+    private AccessPointPreference createAccessPointPreference(AccessPoint accessPoint) {
+        LOG.d("Adding preference for " + WifiUtil.getKey(accessPoint));
+        AccessPointPreference accessPointPreference = new AccessPointPreference(getContext(),
+                accessPoint);
+        accessPointPreference.setKey(accessPoint.getKey());
+        accessPointPreference.setTitle(accessPoint.getConfigName());
+        accessPointPreference.setDialogTitle(accessPoint.getConfigName());
+        accessPointPreference.setSummary(accessPoint.getSummary());
+        accessPointPreference.setOnPreferenceClickListener(this);
+        accessPointPreference.setOnPreferenceChangeListener(this);
+        return accessPointPreference;
     }
 }

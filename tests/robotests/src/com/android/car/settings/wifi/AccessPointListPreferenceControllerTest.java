@@ -22,11 +22,13 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.robolectric.Shadows.shadowOf;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
+import android.util.Pair;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
@@ -36,6 +38,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
+import com.android.car.settings.testutils.ShadowWifiManager;
 import com.android.car.settings.wifi.details.WifiDetailsFragment;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -46,14 +49,16 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowCarWifiManager.class})
+@Config(shadows = {ShadowCarWifiManager.class, ShadowWifiManager.class})
 public class AccessPointListPreferenceControllerTest {
     private static final int SIGNAL_LEVEL = 1;
     @Mock
@@ -63,6 +68,7 @@ public class AccessPointListPreferenceControllerTest {
     @Mock
     private CarWifiManager mMockCarWifiManager;
 
+    private Context mContext;
     private PreferenceGroup mPreferenceGroup;
     private AccessPointListPreferenceController mController;
     private FragmentController mFragmentController;
@@ -71,11 +77,12 @@ public class AccessPointListPreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarWifiManager.setInstance(mMockCarWifiManager);
-        Context context = RuntimeEnvironment.application;
-        shadowOf(context.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI, true);
-        mPreferenceGroup = new LogicalPreferenceGroup(context);
+        mContext = RuntimeEnvironment.application;
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(PackageManager.FEATURE_WIFI,
+                true);
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         PreferenceControllerTestHelper<AccessPointListPreferenceController> controllerHelper =
-                new PreferenceControllerTestHelper<>(context,
+                new PreferenceControllerTestHelper<>(mContext,
                         AccessPointListPreferenceController.class, mPreferenceGroup);
         mController = controllerHelper.getController();
         mFragmentController = controllerHelper.getMockFragmentController();
@@ -172,7 +179,10 @@ public class AccessPointListPreferenceControllerTest {
     }
 
     @Test
-    public void performClick_newSecureAccessPoint_showAddWifiFragment() {
+    public void callChangeListener_newSecureAccessPoint_wifiAdded() {
+        String ssid = "test_ssid";
+        String password = "test_password";
+        when(mMockAccessPoint1.getSsid()).thenReturn(ssid);
         when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_PSK);
         when(mMockAccessPoint1.isSaved()).thenReturn(false);
         when(mMockAccessPoint1.isActive()).thenReturn(false);
@@ -180,7 +190,36 @@ public class AccessPointListPreferenceControllerTest {
         when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
         mController.refreshUi();
 
-        mPreferenceGroup.getPreference(0).performClick();
-        verify(mFragmentController).launchFragment(any(AddWifiFragment.class));
+        mPreferenceGroup.getPreference(0).callChangeListener(password);
+        WifiConfiguration lastAdded = getShadowWifiManager().getLastAddedNetworkConfiguration();
+
+        assertThat(lastAdded.SSID).contains(ssid);
+        assertThat(lastAdded.getAuthType()).isEqualTo(WifiConfiguration.KeyMgmt.WPA_PSK);
+        assertThat(lastAdded.preSharedKey).contains(password);
+    }
+
+    @Test
+    public void callChangeListener_newSecureAccessPoint_wifiEnabled() {
+        String ssid = "test_ssid";
+        String password = "test_password";
+        when(mMockAccessPoint1.getSsid()).thenReturn(ssid);
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_PSK);
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).callChangeListener(password);
+        Pair<Integer, Boolean> lastEnabled = getShadowWifiManager().getLastEnabledNetwork();
+
+        // Enable should be called on the most recently added network id.
+        assertThat(lastEnabled.first).isEqualTo(getShadowWifiManager().getLastAddedNetworkId());
+        // WifiUtil will try to enable the network right away.
+        assertThat(lastEnabled.second).isTrue();
+    }
+
+    private ShadowWifiManager getShadowWifiManager() {
+        return Shadow.extract(mContext.getSystemService(WifiManager.class));
     }
 }

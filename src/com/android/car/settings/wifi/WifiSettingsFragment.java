@@ -32,6 +32,9 @@ import com.android.car.settings.common.SettingsFragment;
  */
 public class WifiSettingsFragment extends SettingsFragment
         implements CarWifiManager.Listener {
+
+    private static final int SEARCHING_DELAY_MILLIS = 1700;
+
     private CarWifiManager mCarWifiManager;
     private ProgressBar mProgressBar;
     private Switch mWifiSwitch;
@@ -81,7 +84,8 @@ public class WifiSettingsFragment extends SettingsFragment
 
     @Override
     public void onAccessPointsChanged() {
-        // don't care
+        mProgressBar.setVisibility(View.VISIBLE);
+        getView().postDelayed(() -> mProgressBar.setVisibility(View.GONE), SEARCHING_DELAY_MILLIS);
     }
 
     @Override

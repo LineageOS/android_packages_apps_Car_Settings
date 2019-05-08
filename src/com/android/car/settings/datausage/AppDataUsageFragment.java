@@ -97,14 +97,13 @@ public class AppDataUsageFragment extends SettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle bundle = getBundleForNetworkStats();
+        mBundle = getBundleForNetworkStats();
 
         LoaderManager loaderManager = LoaderManager.getInstance(this);
-        mAppsNetworkStatsManager.startLoading(loaderManager, bundle);
+        mAppsNetworkStatsManager.startLoading(loaderManager, mBundle);
     }
 
-    @VisibleForTesting
-    Bundle getBundleForNetworkStats() {
+    private Bundle getBundleForNetworkStats() {
         long historyStart = System.currentTimeMillis();
         long historyEnd = historyStart + 1;
 
@@ -138,5 +137,10 @@ public class AppDataUsageFragment extends SettingsFragment {
         }
 
         return SummaryForAllUidLoader.buildArgs(mNetworkTemplate, start, end);
+    }
+
+    @VisibleForTesting(otherwise = VisibleForTesting.NONE)
+    Bundle getBundle() {
+        return mBundle;
     }
 }
