@@ -101,7 +101,8 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
 
             // By adding any resources from libraries we need to the AndroidManifest, we can access
             // them from within the parallel universe's resource loader.
-            return new AndroidManifest(Fs.fromURL(manifestPath), Fs.fromURL(resDir),
+            AndroidManifest androidManifest = new AndroidManifest(Fs.fromURL(manifestPath),
+                    Fs.fromURL(resDir),
                     Fs.fromURL(assetsDir)) {
                 @Override
                 public List<ResourcePath> getIncludedResourcePaths() {
@@ -123,6 +124,10 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                     return paths;
                 }
             };
+            // Need to remove this permission since this version of robolectric does not support
+            // multiple protection levels.
+            androidManifest.getPermissions().remove("com.android.car.settings.SET_INITIAL_LOCK");
+            return androidManifest;
         } catch (MalformedURLException e) {
             throw new RuntimeException("CarSettingsobolectricTestRunner failure", e);
         }

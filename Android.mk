@@ -40,6 +40,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
+      car-setup-wizard-lib-utils \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
@@ -99,6 +100,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
+      car-setup-wizard-lib-utils \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 

@@ -16,16 +16,28 @@
 
 package com.android.car.settings.testutils;
 
+import android.app.admin.DevicePolicyManager;
+
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockPatternView;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Shadow for LockPatternUtils.
+ */
 @Implements(LockPatternUtils.class)
 public class ShadowLockPatternUtils {
 
     private static LockPatternUtils sInstance;
+    private static int sPasswordQuality = DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+    private static byte[] sSavedPassword;
+    private static List<LockPatternView.Cell> sSavedPattern;
 
     public static void setInstance(LockPatternUtils lockPatternUtils) {
         sInstance = lockPatternUtils;
@@ -34,10 +46,51 @@ public class ShadowLockPatternUtils {
     @Resetter
     public static void reset() {
         sInstance = null;
+        sPasswordQuality = DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+        sSavedPassword = null;
+        sSavedPattern = null;
+    }
+
+    /**
+     * Sets the current password quality that is returned by
+     * {@link LockPatternUtils#getKeyguardStoredPasswordQuality}.
+     */
+    public static void setPasswordQuality(int passwordQuality) {
+        sPasswordQuality = passwordQuality;
+    }
+
+    /**
+     * Returns the password saved by a call to {@link LockPatternUtils#saveLockPassword}.
+     */
+    public static byte[] getSavedPassword() {
+        return sSavedPassword;
+    }
+
+    /**
+     * Returns the pattern saved by a call to {@link LockPatternUtils#saveLockPattern}.
+     */
+    public static List<LockPatternView.Cell> getSavedPattern() {
+        return sSavedPattern;
     }
 
     @Implementation
     protected void clearLock(byte[] savedCredential, int userHandle) {
         sInstance.clearLock(savedCredential, userHandle);
+    }
+
+    @Implementation
+    public int getKeyguardStoredPasswordQuality(int userHandle) {
+        return sPasswordQuality;
+    }
+
+    @Implementation
+    public void saveLockPassword(byte[] password, byte[] savedPassword, int requestedQuality,
+            int userHandler) {
+        sSavedPassword = password;
+    }
+
+    @Implementation
+    public void saveLockPattern(List<LockPatternView.Cell> pattern, int userId) {
+        sSavedPattern = new ArrayList<>(pattern);
     }
 }
