@@ -64,11 +64,12 @@ public class RecentLocationRequestsPreferenceController extends
     protected void updateState(PreferenceGroup group) {
         if (mRecentLocationRequests == null) {
             // First time displaying a list.
-            mRecentLocationRequests = mRecentLocationApps.getAppListSorted();
+            mRecentLocationRequests =
+                    mRecentLocationApps.getAppListSorted(/* showSystemApps= */ true);
         } else {
             // If preferences were already added to the screen, get a new list
             // and only update the displayed app-list if there is a difference.
-            List<Request> newRequests = mRecentLocationApps.getAppListSorted();
+            List<Request> newRequests = mRecentLocationApps.getAppListSorted(true);
             // listsEqual compares by elements' package names only, using List.equals() will
             // not work because it will always return false since it also compares the time.
             if (listsEqual(newRequests, mRecentLocationRequests)) {
