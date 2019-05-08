@@ -37,6 +37,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
 
 import org.junit.Before;
@@ -272,7 +273,7 @@ public class SettingsFragmentTest {
     @Test
     public void onActivityCreated_hasAppIconIfRoot() {
         mFragmentController.setup();
-        TestSettingsFragment otherFragment = new TestSettingsFragment();
+        DummyFragment otherFragment = new DummyFragment();
         mFragment.launchFragment(otherFragment);
 
         FrameLayout actionBarContainer =
