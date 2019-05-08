@@ -58,9 +58,10 @@ public class BaseTestActivity extends FragmentActivity implements FragmentContro
             throw new IllegalArgumentException(
                     "cannot launch dialogs with launchFragment() - use showDialog() instead");
         }
+        String tag = Integer.toString(getSupportFragmentManager().getBackStackEntryCount());
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.fragment_container, fragment)
+                .replace(R.id.fragment_container, fragment, tag)
                 .addToBackStack(null)
                 .commit();
     }
