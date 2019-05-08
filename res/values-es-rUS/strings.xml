@@ -138,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Activando <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Otros dispositivos pueden conectarse a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contraseña del hotspot"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda del PA"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot y conexión mediante dispositivo portátil"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar hotspot automáticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Se desactivará el hotspot de Wi‑Fi si no hay dispositivos conectados"</string>
@@ -206,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"Desinstalar"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Si inhabilitas esta app, es posible que Android y otras apps ya no funcionen correctamente."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Inhabilitar app"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Permisos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificaciones"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versión: %1$s"</string>
@@ -241,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"No se establecieron opciones predet."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Elegiste iniciar esta app de manera predeterminada para algunas acciones."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Borrar valores predeterminados"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Abrir vínculos admitidos"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Abrir en esta app"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Preguntar siempre"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta app"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Vínculos admitidos"</string>
     <string name="special_access" msgid="5730278220917123811">"Acceso especial a apps"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a notificaciones"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"¿Quieres permitir que <xliff:g id="SERVICE">%1$s</xliff:g> tenga acceso a las notificaciones?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> podrá leer todas las notificaciones, incluso las que contienen información personal, como nombres de contactos y el texto de los mensajes que recibas. También podrá descartar notificaciones o utilizar los botones de acción que contengan. \n\nLa app podrá activar y desactivar el modo No interrumpir, y cambiar la configuración relacionada."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactivas el acceso a las notificaciones de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, es posible que también se desactive el modo No interrumpir."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>

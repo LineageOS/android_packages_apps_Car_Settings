@@ -68,10 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> ने आताच अपडेट केले"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"आताच अपडेट केले"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"योजना पहा"</string>
-    <!-- no translation found for app_data_usage (3878609885080232877) -->
-    <skip />
-    <!-- no translation found for data_usage_app_restricted (4570970078120010951) -->
-    <skip />
+    <string name="app_data_usage" msgid="3878609885080232877">"ॲप डेटा वापर"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"प्रतिबंधित"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"वापर चक्राची रीसेट केलेली तारीख"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"प्रत्येक महिन्याची तारीख:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट करा"</string>
@@ -140,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> सुरू करत आहे..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"इतर डिव्हाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> शी कनेक्ट होऊ शकतात"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट पासवर्ड"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्‍पॉट आणि टेदरिंग"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट आपोआप बंद करा"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोणतीही डिव्हाइस कनेक्ट केलेली नसल्यास, वाय-फाय हॉटस्पॉट बंद होईल"</string>
@@ -208,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करा"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"तुम्ही हे अ‍ॅप बंद केल्यास, Android आणि इतर अ‍ॅप्स कदाचित यापुढे अपेक्षेप्रमाणे कार्य करू शकणार नाहीत."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"अ‍ॅप बंद करा"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"परवानग्या"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचना"</string>
     <string name="application_version_label" msgid="8556889839783311649">"आवृत्त्या: %1$s"</string>
@@ -243,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"कोणतेही डीफॉल्ट सेट केले नाही."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"तुम्ही काही क्रियांसाठी बाय डीफॉल्ट हा अ‍ॅप लाँच करणे निवडले आहे."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"डीफॉल्ट साफ करा"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"सपोर्ट असलेल्या लिंक उघडा"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"हा अ‍ॅप उघडा"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"प्रत्येकवेळी विचारा"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"हा अ‍ॅप उघडू नका"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"सपोर्ट असलेल्या लिंक"</string>
     <string name="special_access" msgid="5730278220917123811">"विशेष अ‍ॅप अ‍ॅक्सेस"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना अ‍ॅक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ला सूचना अ‍ॅक्सेस करण्याची अनुमती द्यायची का?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"संपर्क नावे आणि तुम्हाला येणारे एसएमएस यासारख्या वैयक्तिक माहितीच्या समावेशासह <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सर्व सूचना पाहू शकेल. ते त्यांच्यामधील सूचना डिसमिस करू शकेल अथवा त्यामध्ये असलेली अ‍ॅक्शन बटणे ट्रिगर करू शकेल. \n\nयामुळे अॅपला व्यत्यय आणू नका सुरू किंवा बंद करता येईल आणि संबंधित सेटिंग्ज बदलता येतील."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> अॅपसाठी सूचना अ‍ॅक्सेस बंद केल्यास, व्यत्यय आणू नका चा अ‍ॅक्सेस देखील बंद केला जाऊ शकतो."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करा"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करा"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>

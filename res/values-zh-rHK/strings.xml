@@ -138,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"正在開啟<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"其他裝置可連接至<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"熱點密碼"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 頻段"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"熱點和網絡共享"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉熱點"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未連接任何裝置，Wi‑Fi 熱點將會關閉"</string>
@@ -206,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"解除安裝"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"如果您停用此應用程式，Android 和其他應用程式可能無法正常運作。"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用應用程式"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"權限"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
@@ -241,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"未設定預設值。"</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"您已設定在某些操作下啟動這個應用程式。"</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"清除預設值"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"開啟支援連結"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"在此應用程式開啟"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"每次都詢問"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"不要在此應用程式開啟"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"支援連結"</string>
     <string name="special_access" msgid="5730278220917123811">"特別應用程式權限"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"通知存取權"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"要允許<xliff:g id="SERVICE">%1$s</xliff:g>存取通知嗎？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」將可讀取所有通知，包括聯絡人姓名和訊息內容等個人資料。它亦可以關閉通知，或觸發通知內的動作按鈕。\n\n這亦允許應用程式開啟或關閉「請勿騷擾」，以及變更相關設定。"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果您關閉「<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>」的通知存取權，「請勿騷擾」的存取權亦可能會關閉。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"關閉"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置資訊要求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近沒有位置資訊要求"</string>

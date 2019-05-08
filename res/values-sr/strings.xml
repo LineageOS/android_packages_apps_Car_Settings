@@ -140,7 +140,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Укључује се <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други уређаји могу да се повежу са хотспотом <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка хотспота"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Опсег AP-а"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот и привезивање"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Аутоматски искључи хотспот"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi хотспот ће се искључити ако ниједан уређај није повезан"</string>
@@ -177,7 +199,7 @@
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Језици и унос"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Тастатура"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Управљајте тастатурама"</string>
-    <string name="text_to_speech_settings" msgid="811985746199507343">"Излаз за претв. текста у говор"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Претварање текста у говор"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Жељени механизам"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Актуелни механизам"</string>
     <string name="tts_speech_rate" msgid="4512944877291943133">"Брзина говора"</string>
@@ -206,8 +228,10 @@
     <string name="disable_text" msgid="4358165448648990820">"Онемогући"</string>
     <string name="enable_text" msgid="1794971777861881238">"Омогући"</string>
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталирај"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако онемогућите ову апликацију, Android и друге апликације можда више неће функционисати исправно."</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако онемогућите ову апликацију, Android и друге апликације можда више неће радити исправно."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Онемогући апликацију"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Дозволе"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Обавештења"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Верзија: %1$s"</string>
@@ -244,23 +268,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Нису изабране подразумеване вредности."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Изабрали сте подразумевано покретање ове апликације за неке радње."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Обришите подразумевано"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Отварај подржане линкове"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Отварај у овој апликацији"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Питај сваки пут"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Не отварај у овој апликацији"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Подржани линкови"</string>
     <string name="special_access" msgid="5730278220917123811">"Посебан приступ апликацији"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"Приступ обавештењима"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Желите ли да дозволите да <xliff:g id="SERVICE">%1$s</xliff:g> има приступ обавештењима?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ће моћи да чита сва обавештења, укључујући личне податке, попут имена контаката и текста порука које примате. Моћи ће и да одбацује обавештења или да користи дугмад за радње која садрже. \n\nОво ће апликацији омогућити и да укључује или искључује режим Не узнемиравај и мења сродна подешавања."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако искључите приступ обавештењима за корисника <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, можда ћете искључити и приступ режиму Не узнемиравај."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Искључи"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Откажи"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Локација"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Недавни захтеви за локацију"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема недавних захтева за локацију"</string>

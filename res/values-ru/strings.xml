@@ -142,7 +142,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Подключаем \"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>\"…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"К точке доступа \"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>\" можно подключать другие устройства."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Пароль точки доступа"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Диапазон Wi-Fi"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi автоматически, если к ней не подключено ни одного устройства."</string>
@@ -210,6 +232,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"Удалить"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Отключение этого приложения может привести к некорректной работе системы Android и других приложений."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Отключить приложение"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Уведомления"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
@@ -247,23 +271,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Значения по умолчанию не установлены."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Это приложение по умолчанию используется для некоторых действий."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Удалить настройки по умолчанию"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Открывать поддерживаемые ссылки"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Открывать в этом приложении"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Всегда спрашивать"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Не открывать в этом приложении"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддерживаемые ссылки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"Доступ к уведомлениям"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Предоставить приложению \"<xliff:g id="SERVICE">%1$s</xliff:g>\" доступ к уведомлениям?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Приложение \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\" сможет читать все уведомления, в том числе содержащие личную информацию (например, имена контактов и сообщения). Оно также получит право закрывать уведомления и нажимать кнопки в них.\n\nПриложение сможет включать и отключать режим \"Не беспокоить\", а также менять его настройки."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Если вы отключите доступ к уведомлениям для приложения \"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>\", также может быть отключен доступ к настройкам режима \"Не беспокоить\"."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Отключить"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отмена"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Передача геоданных"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
@@ -557,7 +592,7 @@
     <string name="error_saving_password" msgid="8334882262622500658">"Не удалось сохранить пароль"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ИТ-администратор запретил использовать простые пароли. Выберите более сложную комбинацию."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Нельзя использовать последовательности из идущих подряд или повторяющихся цифр."</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Параметры блокировки экрана"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Варианты блокировки экрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> (<xliff:g id="NUM_DAYS">%3$s</xliff:g> дн. назад)"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Добавить надежное устройство"</string>
     <string name="add_device_summary" msgid="5368217520710573302">"Будет включена функция Bluetooth"</string>
