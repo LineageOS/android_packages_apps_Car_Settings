@@ -56,8 +56,6 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
             return true;
         };
         mCarWifiManager = new CarWifiManager(context);
-        mCarWifiManager.addListener(this);
-        mCarWifiManager.start();
         mStateChangedListener = stateChangedListener;
         // init icon and text etc.
         updateAccessPointSsid();
@@ -88,6 +86,12 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
     @Override
     public State getState() {
         return mState;
+    }
+
+    @Override
+    public void start() {
+        mCarWifiManager.addListener(this);
+        mCarWifiManager.start();
     }
 
     @Override
