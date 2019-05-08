@@ -88,30 +88,4 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
     </style>
-
-    <!-- Styles for Setup Wizard -->
-
-    <style name="SetupWizardButton.Negative" parent="@style/SuwGlifButton.Secondary">
-        <!-- Negative margin to offset for padding of the button itself. We want the label to be
-             aligned with the text above it -->
-        <item name="android:layout_marginStart">-16dp</item>
-    </style>
-
-    <style name="SetupWizardButton.Positive" parent="@style/SuwGlifButton.Primary"/>
-
-    <style name="SetupWizardLockPattern">
-        <item name="*android:regularColor">@color/car_body1_light</item>
-        <item name="*android:successColor">@color/car_blue_500</item>
-        <item name="*android:errorColor">?android:attr/colorError</item>
-    </style>
-
-    <style name="SetupWizardPinPadKey">
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/car_body1_size</item>
-        <item name="android:textColor">@color/car_body3_light</item>
-        <item name="android:tint">@color/car_body3_light</item>
-        <item name="android:clickable">true</item>
-        <item name="android:background">@drawable/suw_button_ripple_bg</item>
-    </style>
 </resources>

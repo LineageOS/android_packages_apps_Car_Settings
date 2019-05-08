@@ -48,23 +48,19 @@ public class CheckLockActivity extends CarSettingActivity implements CheckLockLi
                 finish();
                 return null;
             case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
-                fragment = ConfirmLockPatternFragment.newInstance(
-                        /* isInSetupWizard= */ false);
+                fragment = new ConfirmLockPatternFragment();
                 break;
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
-                fragment = ConfirmLockPinPasswordFragment.newPinInstance(
-                        /* isInSetupWizard= */ false);
+                fragment = ConfirmLockPinPasswordFragment.newPinInstance();
                 break;
             case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
             case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
-                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
-                        /* isInSetupWizard= */ false);
+                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance();
                 break;
             default:
                 LOG.e("Unexpected password quality: " + String.valueOf(passwordQuality));
-                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance(
-                        /* isInSetupWizard= */ false);
+                fragment = ConfirmLockPinPasswordFragment.newPasswordInstance();
         }
 
         Bundle bundle = fragment.getArguments();

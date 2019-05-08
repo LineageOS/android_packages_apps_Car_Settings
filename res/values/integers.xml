@@ -43,14 +43,6 @@
     <!-- Ems value for data usage bytes threshold picker -->
     <integer name="data_usage_bytes_threshold_ems">15</integer>
 
-    <!-- Integers for Setup Wizard -->
-
-    <!-- Weight of the main content in the illustration_layout -->
-    <integer name="suw_content_weight">7</integer>
-
-    <!-- Weight of the illustration logo/video in the illustration_layout -->
-    <integer name="suw_illustration_weight">5</integer>
-
     <!-- Maximum size in pixels of default app icons -->
     <integer name="default_app_safe_icon_size">500</integer>
 </resources>
