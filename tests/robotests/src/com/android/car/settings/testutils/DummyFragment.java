@@ -16,10 +16,15 @@
 
 package com.android.car.settings.testutils;
 
-import androidx.fragment.app.Fragment;
+import com.android.car.settings.R;
+import com.android.car.settings.common.SettingsFragment;
 
 /**
  * Empty Fragment.
  */
-public class DummyFragment extends Fragment {
+public class DummyFragment extends SettingsFragment {
+    @Override
+    protected int getPreferenceScreenResId() {
+        return R.xml.settings_fragment;
+    }
 }
