@@ -76,6 +76,11 @@ public class QuickSettingGridAdapter
         }
 
         /**
+         * Called when activity owning this tile's onStart() gets called.
+         */
+        void start();
+
+        /**
          * Called when activity owning this tile's onStop() gets called.
          */
         void stop();
@@ -102,6 +107,11 @@ public class QuickSettingGridAdapter
 
     interface SeekbarTile extends SeekBar.OnSeekBarChangeListener {
         /**
+         * Called when activity owning this tile's onStart() gets called.
+         */
+        void start();
+
+        /**
          * Called when activity owning this tile's onStop() gets called.
          */
         void stop();
@@ -121,6 +131,15 @@ public class QuickSettingGridAdapter
             mTiles.add(tile);
         }
         return this;
+    }
+
+    void start() {
+        for (SeekbarTile tile : mSeekbarTiles) {
+            tile.start();
+        }
+        for (Tile tile : mTiles) {
+            tile.start();
+        }
     }
 
     void stop() {

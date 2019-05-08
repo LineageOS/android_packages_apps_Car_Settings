@@ -93,10 +93,6 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
             FragmentController fragmentController) {
         mStateChangedListener = stateChangedListener;
         mContext = context;
-        IntentFilter mBtStateChangeFilter = new IntentFilter();
-        mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
-        mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
-        mContext.registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
         mLocalManager = LocalBluetoothManager.getInstance(
                 mContext, /* onInitCallback= */ null);
         if (mLocalManager == null) {
@@ -143,6 +139,14 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
     @Override
     public State getState() {
         return mState;
+    }
+
+    @Override
+    public void start() {
+        IntentFilter mBtStateChangeFilter = new IntentFilter();
+        mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        mBtStateChangeFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
+        mContext.registerReceiver(mBtStateReceiver, mBtStateChangeFilter);
     }
 
     @Override
