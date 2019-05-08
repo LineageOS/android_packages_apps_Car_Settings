@@ -24,14 +24,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
 
 /**
  * Activity for setting screen locks
  */
-public class SettingsScreenLockActivity extends CarSettingActivity implements CheckLockListener {
+public class SettingsScreenLockActivity extends BaseCarSettingsActivity implements
+        CheckLockListener {
 
     private static final Logger LOG = new Logger(SettingsScreenLockActivity.class);
 
@@ -39,7 +40,7 @@ public class SettingsScreenLockActivity extends CarSettingActivity implements Ch
 
     @Override
     @Nullable
-    protected Fragment getFragment() {
+    protected Fragment getInitialFragment() {
         mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
 

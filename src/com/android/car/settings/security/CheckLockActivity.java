@@ -23,7 +23,7 @@ import android.os.UserHandle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
 
@@ -31,13 +31,13 @@ import com.android.internal.widget.LockPatternUtils;
  * Prompts the user to enter their pin, password, or pattern lock (if set) and returns
  * {@link #RESULT_OK} on a successful entry or immediately if the user has no lock setup.
  */
-public class CheckLockActivity extends CarSettingActivity implements CheckLockListener {
+public class CheckLockActivity extends BaseCarSettingsActivity implements CheckLockListener {
 
     private static final Logger LOG = new Logger(CheckLockActivity.class);
 
     @Override
     @Nullable
-    protected Fragment getFragment() {
+    protected Fragment getInitialFragment() {
         Fragment fragment;
         int passwordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
