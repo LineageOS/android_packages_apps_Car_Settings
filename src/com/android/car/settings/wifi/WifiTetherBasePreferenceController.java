@@ -89,6 +89,10 @@ public abstract class WifiTetherBasePreferenceController<V extends Preference> e
         mCarWifiManager.setWifiApConfig(configuration);
     }
 
+    protected CarWifiManager getCarWifiManager() {
+        return mCarWifiManager;
+    }
+
     protected abstract String getSummary();
 
     protected abstract String getDefaultSummary();
