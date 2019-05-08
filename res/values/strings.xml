@@ -184,6 +184,8 @@
     <string name="wifi_password">Password</string>
     <!-- Label for the check box to show password -->
     <string name="wifi_show_password">Show password</string>
+    <!-- Toast message when trying to connect to a hidden wifi network without a network name. [CHAR LIMIT=NONE] -->
+    <string name="wifi_no_network_name">Please enter a network name</string>
     <!-- Label for the SSID of the network -->
     <string name="wifi_ssid">Network name</string>
     <!-- Hint for a text field to enter the SSID of a hidden wifi network. [CHAR LIMIT=35] -->

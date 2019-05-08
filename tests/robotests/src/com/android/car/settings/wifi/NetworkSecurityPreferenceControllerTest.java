@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,12 +22,13 @@ import android.content.Context;
 import android.content.Intent;
 
 import androidx.lifecycle.Lifecycle;
-import androidx.preference.EditTextPreference;
+import androidx.preference.ListPreference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
+import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.After;
 import org.junit.Before;
@@ -40,22 +41,18 @@ import java.util.List;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowLocalBroadcastManager.class})
-public class NetworkNamePreferenceControllerTest {
-
-    private static final String TEST_SSID = "test_ssid";
+public class NetworkSecurityPreferenceControllerTest {
 
     private Context mContext;
-    private EditTextPreference mEditTextPreference;
-    private NetworkNamePreferenceController mController;
+    private ListPreference mListPreference;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mEditTextPreference = new EditTextPreference(mContext);
-        PreferenceControllerTestHelper<NetworkNamePreferenceController> controllerHelper =
+        mListPreference = new ListPreference(mContext);
+        PreferenceControllerTestHelper<NetworkSecurityPreferenceController> controllerHelper =
                 new PreferenceControllerTestHelper<>(mContext,
-                        NetworkNamePreferenceController.class, mEditTextPreference);
-        mController = controllerHelper.getController();
+                        NetworkSecurityPreferenceController.class, mListPreference);
         controllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
@@ -65,29 +62,33 @@ public class NetworkNamePreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_defaultState_showsDefaultString() {
-        mController.refreshUi();
-        assertThat(mEditTextPreference.getSummary()).isEqualTo(
-                mContext.getString(R.string.default_network_name_summary));
+    public void handlePreferenceChanged_unsecureNetwork_summaryUpdated() {
+        String value = Integer.toString(AccessPoint.SECURITY_NONE);
+        mListPreference.callChangeListener(value);
+
+        assertThat(mListPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.wifi_security_none));
     }
 
     @Test
-    public void handlePreferenceChanged_newTextIsSet() {
-        mEditTextPreference.setText("Old value");
-        mEditTextPreference.callChangeListener("New value");
-        assertThat(mEditTextPreference.getSummary()).isEqualTo("New value");
+    public void handlePreferenceChanged_pskNetwork_summaryUpdated() {
+        String value = Integer.toString(AccessPoint.SECURITY_PSK);
+        mListPreference.callChangeListener(value);
+
+        assertThat(mListPreference.getSummary()).isEqualTo(
+                mContext.getString(R.string.wifi_security_psk_generic));
     }
 
     @Test
     public void handlePreferenceChanged_broadcastIsSent() {
-        String value = "New value";
-        mEditTextPreference.callChangeListener(value);
+        String value = Integer.toString(AccessPoint.SECURITY_PSK);
+        mListPreference.callChangeListener(value);
 
         List<Intent> intents = ShadowLocalBroadcastManager.getSentBroadcastIntents();
         assertThat(intents).hasSize(1);
         assertThat(intents.get(0).getAction()).isEqualTo(
-                NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        assertThat(intents.get(0).getStringExtra(
-                NetworkNamePreferenceController.KEY_NETWORK_NAME)).isEqualTo(value);
+                NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
+        assertThat(intents.get(0).getIntExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE,
+                AccessPoint.SECURITY_NONE)).isEqualTo(Integer.parseInt(value));
     }
 }
