@@ -20,8 +20,23 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/special_access">
     <Preference
+        android:fragment="com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment"
+        android:key="@string/pk_modify_system_settings_entry"
+        android:title="@string/modify_system_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.applications.specialaccess.NotificationAccessFragment"
         android:key="@string/pk_notification_access_entry"
         android:title="@string/notification_access_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
+        android:fragment="com.android.car.settings.applications.specialaccess.UsageAccessFragment"
+        android:key="@string/pk_usage_access_entry"
+        android:title="@string/usage_access_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
+        android:fragment="com.android.car.settings.applications.specialaccess.WifiControlFragment"
+        android:key="@string/pk_wifi_control_entry"
+        android:title="@string/wifi_control_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
 </PreferenceScreen>
