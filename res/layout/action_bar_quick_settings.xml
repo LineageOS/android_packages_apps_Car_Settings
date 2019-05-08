@@ -19,8 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingEnd="@dimen/action_bar_with_buttons_padding_end">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/action_bar_icon_container"
@@ -45,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/action_bar_margin"/>
+        app:layout_constraintGuide_begin="@*android:dimen/action_bar_margin_start"/>
 
     <TextView
         android:id="@+id/title"
@@ -60,14 +59,12 @@
 
     <Button
         android:id="@+id/user_switcher_btn"
-        style="@style/ActionBarIconButton"
+        style="@*android:style/ActionBarButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/action_bar_button_margin_start"
-        android:drawablePadding="@dimen/action_bar_icon_button_drawable_padding"
         android:drawableStart="@drawable/ic_user"
-        android:paddingEnd="@dimen/action_bar_icon_button_padding_end"
-        android:paddingStart="@dimen/action_bar_icon_button_padding_start"
+        android:drawableTint="?android:attr/textColorPrimary"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/full_settings_btn"
         app:layout_constraintHorizontal_bias="1.0"
@@ -77,15 +74,14 @@
 
     <Button
         android:id="@+id/full_settings_btn"
-        style="@style/ActionBarIconButton"
+        style="@*android:style/ActionBarButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/action_bar_button_margin_start"
-        android:drawablePadding="@dimen/action_bar_icon_button_drawable_padding"
+        android:layout_marginHorizontal="@*android:dimen/action_bar_button_margin"
         android:drawableStart="@drawable/ic_settings_gear"
-        android:paddingEnd="@dimen/action_bar_icon_button_padding_end"
-        android:paddingStart="@dimen/action_bar_icon_button_padding_start"
         android:text="@string/more_settings_label"
+        android:drawableTint="?android:attr/textColorPrimary"
+        android:textColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/user_switcher_btn"

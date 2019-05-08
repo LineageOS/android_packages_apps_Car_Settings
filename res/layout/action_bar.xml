@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/action_bar_margin"/>
+        app:layout_constraintGuide_begin="@*android:dimen/action_bar_margin_start"/>
 
     <TextView
         android:id="@+id/title"
