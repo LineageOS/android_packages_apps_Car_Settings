@@ -24,6 +24,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.SwitchPreference;
@@ -37,7 +38,7 @@ import com.android.settingslib.applications.ApplicationsState.AppEntry;
 import com.android.settingslib.applications.ApplicationsState.AppFilter;
 import com.android.settingslib.applications.ApplicationsState.CompoundFilter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Displays a list of toggles for applications requesting permission to perform the operation with
@@ -62,59 +63,6 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
     private final AppOpsManager mAppOpsManager;
     private final ApplicationsState mApplicationsState;
 
-    private final ApplicationsState.Callbacks mCallbacks =
-            new ApplicationsState.Callbacks() {
-                @Override
-                public void onRunningStateChanged(boolean running) {
-                    // TODO: show loading UI.
-                }
-
-                @Override
-                public void onPackageListChanged() {
-                    rebuild();
-                }
-
-                @Override
-                public void onRebuildComplete(ArrayList<AppEntry> entries) {
-                    mEntries = entries;
-                    refreshUi();
-                }
-
-                @Override
-                public void onPackageIconChanged() {
-                    // No op.
-                }
-
-                @Override
-                public void onPackageSizeChanged(String packageName) {
-                    // No op.
-                }
-
-                @Override
-                public void onAllSizesComputed() {
-                    // No op.
-                }
-
-                @Override
-                public void onLauncherInfoChanged() {
-                    rebuild();
-                }
-
-                @Override
-                public void onLoadEntriesCompleted() {
-                    mHasReceivedLoadEntries = true;
-                    rebuild();
-                }
-            };
-
-    private final AppStateBaseBridge.Callback mBridgeCallback = new AppStateBaseBridge.Callback() {
-        @Override
-        public void onExtraInfoUpdated() {
-            mHasReceivedBridgeCallback = true;
-            rebuild();
-        }
-    };
-
     private final Preference.OnPreferenceChangeListener mOnPreferenceChangeListener =
             new Preference.OnPreferenceChangeListener() {
                 @Override
@@ -128,24 +76,28 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
                                 entry.info.packageName,
                                 allowOp ? AppOpsManager.MODE_ALLOWED : mNegativeOpMode);
                         // Update the extra info of this entry so that it reflects the new mode.
-                        mExtraInfoBridge.forceUpdate(entry);
+                        mAppEntryListManager.forceUpdate(entry);
                         return true;
                     }
                     return false;
                 }
             };
 
+    private final AppEntryListManager.Callback mCallback = new AppEntryListManager.Callback() {
+        @Override
+        public void onAppEntryListChanged(List<AppEntry> entries) {
+            mEntries = entries;
+            refreshUi();
+        }
+    };
+
     private int mAppOpsOpCode = AppOpsManager.OP_NONE;
     private String mPermission;
     private int mNegativeOpMode = -1;
 
-    private ApplicationsState.Session mSession;
-    private AppStateAppOpsBridge mExtraInfoBridge;
-
-    private ArrayList<AppEntry> mEntries;
-
-    private boolean mHasReceivedLoadEntries;
-    private boolean mHasReceivedBridgeCallback;
+    @VisibleForTesting
+    AppEntryListManager mAppEntryListManager;
+    private List<AppEntry> mEntries;
 
     private boolean mShowSystem;
 
@@ -155,6 +107,7 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
         mAppOpsManager = (AppOpsManager) context.getSystemService(Context.APP_OPS_SERVICE);
         mApplicationsState = ApplicationsState.getInstance(
                 (Application) context.getApplicationContext());
+        mAppEntryListManager = new AppEntryListManager(context);
     }
 
     @Override
@@ -185,7 +138,7 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
     public void setShowSystem(boolean showSystem) {
         if (mShowSystem != showSystem) {
             mShowSystem = showSystem;
-            rebuild();
+            mAppEntryListManager.forceUpdate();
         }
     }
 
@@ -204,27 +157,24 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
 
     @Override
     protected void onCreateInternal() {
-        mSession = mApplicationsState.newSession(mCallbacks);
-        mExtraInfoBridge = new AppStateAppOpsBridge(getContext(), mApplicationsState, mAppOpsOpCode,
-                mPermission, mBridgeCallback);
+        AppStateAppOpsBridge extraInfoBridge = new AppStateAppOpsBridge(getContext(), mAppOpsOpCode,
+                mPermission);
+        mAppEntryListManager.init(extraInfoBridge, this::getAppFilter, mCallback);
     }
 
     @Override
     protected void onStartInternal() {
-        mSession.onResume();
-        mExtraInfoBridge.start();
+        mAppEntryListManager.start();
     }
 
     @Override
     protected void onStopInternal() {
-        mSession.onPause();
-        mExtraInfoBridge.stop();
+        mAppEntryListManager.stop();
     }
 
     @Override
     protected void onDestroyInternal() {
-        mSession.onDestroy();
-        mExtraInfoBridge.destroy();
+        mAppEntryListManager.destroy();
     }
 
     @Override
@@ -251,15 +201,6 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
                     ApplicationsState.FILTER_DOWNLOADED_AND_LAUNCHER);
         }
         return filterObj;
-    }
-
-    private void rebuild() {
-        if (!mHasReceivedLoadEntries || !mHasReceivedBridgeCallback) {
-            // Don't rebuild the list until all the app entries are loaded.
-            return;
-        }
-        mSession.rebuild(getAppFilter(), ApplicationsState.ALPHA_COMPARATOR, /* foreground= */
-                false);
     }
 
     private static class AppOpPreference extends SwitchPreference {
