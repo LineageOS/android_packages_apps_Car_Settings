@@ -82,6 +82,10 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
     }
 
     @Override
+    public void start() {
+    }
+
+    @Override
     public void stop() {
     }
 

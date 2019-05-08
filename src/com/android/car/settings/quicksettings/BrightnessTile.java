@@ -71,8 +71,11 @@ public class BrightnessTile implements QuickSettingGridAdapter.SeekbarTile {
     }
 
     @Override
+    public void start() {
+    }
+
+    @Override
     public void stop() {
-        // nothing to do.
     }
 
     @Override
