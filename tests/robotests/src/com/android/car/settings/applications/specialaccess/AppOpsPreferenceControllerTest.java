@@ -19,9 +19,7 @@ package com.android.car.settings.applications.specialaccess;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
@@ -30,13 +28,8 @@ import android.Manifest;
 import android.app.AppOpsManager;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
-import android.content.pm.IPackageManager;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ParceledListSlice;
 import android.os.Looper;
 import android.os.RemoteException;
-import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
@@ -45,7 +38,6 @@ import androidx.preference.TwoStatePreference;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowActivityThread;
 import com.android.car.settings.testutils.ShadowAppOpsManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.settingslib.applications.ApplicationsState;
@@ -55,7 +47,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.AdditionalMatchers;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
@@ -64,13 +55,13 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 /** Unit test for {@link AppOpsPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
-@Config(shadows = {ShadowAppOpsManager.class, ShadowApplicationsState.class,
-        ShadowActivityThread.class})
+@Config(shadows = {ShadowAppOpsManager.class, ShadowApplicationsState.class})
 public class AppOpsPreferenceControllerTest {
 
     private static final int APP_OP_CODE = AppOpsManager.OP_WRITE_SETTINGS;
@@ -78,17 +69,11 @@ public class AppOpsPreferenceControllerTest {
     private static final int NEGATIVE_MODE = AppOpsManager.MODE_ERRORED;
 
     @Mock
-    private IPackageManager mIPackageManager;
-    @Mock
-    private ParceledListSlice<PackageInfo> mParceledPackages;
+    private AppEntryListManager mAppEntryListManager;
     @Mock
     private ApplicationsState mApplicationsState;
-    @Mock
-    private ApplicationsState.Session mSession;
-    @Mock
-    private ApplicationsState.Session mBridgeSession;
     @Captor
-    private ArgumentCaptor<ApplicationsState.Callbacks> mCallbackCaptor;
+    private ArgumentCaptor<AppEntryListManager.Callback> mCallbackCaptor;
 
     private Context mContext;
     private PreferenceGroup mPreferenceGroup;
@@ -98,17 +83,7 @@ public class AppOpsPreferenceControllerTest {
     @Before
     public void setUp() throws RemoteException {
         MockitoAnnotations.initMocks(this);
-        ShadowActivityThread.setPackageManager(mIPackageManager);
-        when(mIPackageManager.getPackagesHoldingPermissions(
-                AdditionalMatchers.aryEq(new String[]{PERMISSION}),
-                eq(PackageManager.GET_PERMISSIONS),
-                eq(UserHandle.myUserId())))
-                .thenReturn(mParceledPackages);
-        when(mParceledPackages.getList()).thenReturn(Collections.emptyList());
         ShadowApplicationsState.setInstance(mApplicationsState);
-        when(mApplicationsState.newSession(mCallbackCaptor.capture()))
-                .thenReturn(mSession)
-                .thenReturn(mBridgeSession);
         when(mApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
 
         mContext = RuntimeEnvironment.application;
@@ -117,14 +92,16 @@ public class AppOpsPreferenceControllerTest {
                 AppOpsPreferenceController.class);
         mController = mControllerHelper.getController();
         mController.init(APP_OP_CODE, PERMISSION, NEGATIVE_MODE);
+        mController.mAppEntryListManager = mAppEntryListManager;
         mControllerHelper.setPreference(mPreferenceGroup);
         mControllerHelper.markState(Lifecycle.State.CREATED);
+        verify(mAppEntryListManager).init(any(AppStateAppOpsBridge.class), any(),
+                mCallbackCaptor.capture());
     }
 
     @After
     public void tearDown() {
         ShadowApplicationsState.reset();
-        ShadowActivityThread.reset();
     }
 
     @Test
@@ -164,54 +141,35 @@ public class AppOpsPreferenceControllerTest {
     }
 
     @Test
-    public void onStart_resumesSessions() {
+    public void onStart_startsListManager() {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
-        verify(mSession).onResume();
-        verify(mBridgeSession).onResume();
+        verify(mAppEntryListManager).start();
     }
 
     @Test
-    public void onStop_pausesSessions() {
+    public void onStop_stopsListManager() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
 
-        verify(mSession).onPause();
-        verify(mBridgeSession).onPause();
+        verify(mAppEntryListManager).stop();
     }
 
     @Test
-    public void onDestroy_destroysSessions() {
+    public void onDestroy_destroysListManager() {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
 
-        verify(mSession).onDestroy();
-        verify(mBridgeSession).onDestroy();
+        verify(mAppEntryListManager).destroy();
     }
 
     @Test
-    public void onLoadEntriesCompleted_extraInfoUpdated_rebuildsEntries() {
+    public void onAppEntryListChanged_addsPreferencesForEntries() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-
-        // Extra info updated callback happens synchronously onStart since we are using the main
-        // looper for testing.
-        callbacks.onLoadEntriesCompleted();
-
-        verify(mSession).rebuild(any(), eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
-    }
-
-    @Test
-    public void onRebuildComplete_addsPreferencesForEntries() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        ArrayList<AppEntry> entries = new ArrayList<>();
-        entries.add(createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */ true));
-        entries.add(
+        List<AppEntry> entries = Arrays.asList(
+                createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */ true),
                 createAppEntry("another.test.package", /* uid= */ 2, /* isOpPermissible= */ false));
-        callbacks.onLoadEntriesCompleted();
 
-        callbacks.onRebuildComplete(entries);
+        mCallbackCaptor.getValue().onAppEntryListChanged(entries);
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
         assertThat(((TwoStatePreference) mPreferenceGroup.getPreference(0)).isChecked()).isTrue();
@@ -221,13 +179,11 @@ public class AppOpsPreferenceControllerTest {
     @Test
     public void onPreferenceChange_checkedState_setsAppOpModeAllowed() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        ArrayList<AppEntry> entries = new ArrayList<>();
         String packageName = "test.package";
         int uid = 1;
-        entries.add(createAppEntry("test.package", uid, /* isOpPermissible= */ false));
-        callbacks.onLoadEntriesCompleted();
-        callbacks.onRebuildComplete(entries);
+        List<AppEntry> entries = Collections.singletonList(
+                createAppEntry(packageName, uid, /* isOpPermissible= */ false));
+        mCallbackCaptor.getValue().onAppEntryListChanged(entries);
         TwoStatePreference appPref = (TwoStatePreference) mPreferenceGroup.getPreference(0);
 
         appPref.performClick();
@@ -239,13 +195,11 @@ public class AppOpsPreferenceControllerTest {
     @Test
     public void onPreferenceChange_uncheckedState_setsNegativeAppOpMode() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        ArrayList<AppEntry> entries = new ArrayList<>();
         String packageName = "test.package";
         int uid = 1;
-        entries.add(createAppEntry("test.package", uid, /* isOpPermissible= */ true));
-        callbacks.onLoadEntriesCompleted();
-        callbacks.onRebuildComplete(entries);
+        List<AppEntry> entries = Collections.singletonList(
+                createAppEntry(packageName, uid, /* isOpPermissible= */ true));
+        mCallbackCaptor.getValue().onAppEntryListChanged(entries);
         TwoStatePreference appPref = (TwoStatePreference) mPreferenceGroup.getPreference(0);
 
         appPref.performClick();
@@ -255,54 +209,35 @@ public class AppOpsPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceChange_rebuildsEntries() {
+    public void onPreferenceChange_updatesEntry() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        ArrayList<AppEntry> entries = new ArrayList<>();
-        String packageName = "test.package";
-        int uid = 1;
-        entries.add(createAppEntry("test.package", uid, /* isOpPermissible= */ false));
-        callbacks.onLoadEntriesCompleted();
-        callbacks.onRebuildComplete(entries);
+        List<AppEntry> entries = Collections.singletonList(
+                createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */ false));
+        mCallbackCaptor.getValue().onAppEntryListChanged(entries);
         TwoStatePreference appPref = (TwoStatePreference) mPreferenceGroup.getPreference(0);
 
         appPref.performClick();
 
-        // 2 times: onLoadEntriesCompleted, onPreferenceChange
-        verify(mSession, times(2)).rebuild(any(),
-                eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
+        verify(mAppEntryListManager).forceUpdate(entries.get(0));
     }
 
     @Test
-    public void showSystem_rebuildsEntries() {
+    public void showSystem_updatesEntries() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        callbacks.onLoadEntriesCompleted();
 
         mController.setShowSystem(true);
 
-        // 2 times: onLoadEntriesCompleted, setShowSystem
-        verify(mSession, times(2)).rebuild(any(),
-                eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
+        verify(mAppEntryListManager).forceUpdate();
     }
 
     @Test
-    public void rebuildFilter_showingSystemApps_keepsSystemEntries() {
+    public void appFilter_showingSystemApps_keepsSystemEntries() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        callbacks.onLoadEntriesCompleted();
         mController.setShowSystem(true);
-        ArgumentCaptor<ApplicationsState.AppFilter> filterCaptor = ArgumentCaptor.forClass(
-                ApplicationsState.AppFilter.class);
-        // 2 times: onLoadEntriesCompleted, setShowSystem
-        verify(mSession, times(2)).rebuild(filterCaptor.capture(),
-                eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
-
-        // Get the filter from setShowSystem.
-        ApplicationsState.AppFilter filter = filterCaptor.getAllValues().get(1);
+        ArgumentCaptor<AppEntryListManager.AppFilterProvider> filterCaptor =
+                ArgumentCaptor.forClass(AppEntryListManager.AppFilterProvider.class);
+        verify(mAppEntryListManager).init(any(), filterCaptor.capture(), any());
+        ApplicationsState.AppFilter filter = filterCaptor.getValue().getAppFilter();
 
         AppEntry systemApp = createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */
                 false);
@@ -312,18 +247,13 @@ public class AppOpsPreferenceControllerTest {
     }
 
     @Test
-    public void rebuildFilter_notShowingSystemApps_removesSystemEntries() {
+    public void appFilter_notShowingSystemApps_removesSystemEntries() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        callbacks.onLoadEntriesCompleted();
-        ArgumentCaptor<ApplicationsState.AppFilter> filterCaptor = ArgumentCaptor.forClass(
-                ApplicationsState.AppFilter.class);
-        verify(mSession).rebuild(filterCaptor.capture(),
-                eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
-
-        // Not showing system by default
-        ApplicationsState.AppFilter filter = filterCaptor.getValue();
+        // Not showing system by default.
+        ArgumentCaptor<AppEntryListManager.AppFilterProvider> filterCaptor =
+                ArgumentCaptor.forClass(AppEntryListManager.AppFilterProvider.class);
+        verify(mAppEntryListManager).init(any(), filterCaptor.capture(), any());
+        ApplicationsState.AppFilter filter = filterCaptor.getValue().getAppFilter();
 
         AppEntry systemApp = createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */
                 false);
@@ -333,17 +263,12 @@ public class AppOpsPreferenceControllerTest {
     }
 
     @Test
-    public void rebuildFilter_removesNullExtraInfoEntries() {
+    public void appFilter_removesNullExtraInfoEntries() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
-        ApplicationsState.Callbacks callbacks = mCallbackCaptor.getAllValues().get(0);
-        callbacks.onLoadEntriesCompleted();
-        ArgumentCaptor<ApplicationsState.AppFilter> filterCaptor = ArgumentCaptor.forClass(
-                ApplicationsState.AppFilter.class);
-        verify(mSession).rebuild(filterCaptor.capture(),
-                eq(ApplicationsState.ALPHA_COMPARATOR), /* foreground= */
-                eq(false));
-
-        ApplicationsState.AppFilter filter = filterCaptor.getValue();
+        ArgumentCaptor<AppEntryListManager.AppFilterProvider> filterCaptor =
+                ArgumentCaptor.forClass(AppEntryListManager.AppFilterProvider.class);
+        verify(mAppEntryListManager).init(any(), filterCaptor.capture(), any());
+        ApplicationsState.AppFilter filter = filterCaptor.getValue().getAppFilter();
 
         AppEntry appEntry = createAppEntry("test.package", /* uid= */ 1, /* isOpPermissible= */
                 false);
