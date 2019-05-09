@@ -33,7 +33,6 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
-import com.android.internal.widget.LockPatternUtils;
 
 import org.junit.After;
 import org.junit.Before;
@@ -57,14 +56,11 @@ public class NoLockPreferenceControllerTest {
     private Preference mPreference;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private LockPatternUtils mLockPatternUtils;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        ShadowLockPatternUtils.setInstance(mLockPatternUtils);
         mContext = RuntimeEnvironment.application;
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
@@ -96,7 +92,9 @@ public class NoLockPreferenceControllerTest {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
-        verify(mLockPatternUtils).clearLock(TEST_CURRENT_PASSWORD, TEST_USER);
+        assertThat(ShadowLockPatternUtils.getClearLockCredential()).isEqualTo(
+                TEST_CURRENT_PASSWORD);
+        assertThat(ShadowLockPatternUtils.getClearLockUser()).isEqualTo(TEST_USER);
     }
 
     @Test

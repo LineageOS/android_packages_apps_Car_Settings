@@ -21,6 +21,8 @@ import android.app.admin.PasswordMetrics;
 import android.content.Context;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
+import com.android.car.setupwizardlib.InitialLockSetupConstants.ValidateLockFlags;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -30,22 +32,20 @@ import java.util.List;
  */
 public class PasswordHelper {
     public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
-
     /**
      * Required minimum length of PIN or password.
      */
-    static final int MIN_LENGTH = 4;
-
+    public static final int MIN_LENGTH = 4;
     // Error code returned from validate(String).
     static final int NO_ERROR = 0;
     static final int CONTAINS_INVALID_CHARACTERS = 1;
     static final int TOO_SHORT = 1 << 1;
     static final int CONTAINS_NON_DIGITS = 1 << 2;
     static final int CONTAINS_SEQUENTIAL_DIGITS = 1 << 3;
-
+    private static final Logger LOG = new Logger(PasswordHelper.class);
     private final boolean mIsPin;
 
-    PasswordHelper(boolean isPin) {
+    public PasswordHelper(boolean isPin) {
         mIsPin = isPin;
     }
 
@@ -70,9 +70,21 @@ public class PasswordHelper {
     }
 
     /**
+     * Validates PIN/Password using the setup wizard {@link ValidateLockFlags}.
+     *
+     * @param password The password to validate.
+     * @return The error code where 0 is no error.
+     */
+    public int validateSetupWizard(byte[] password) {
+        return mIsPin ? translateSettingsToSuwError(validatePin(password))
+                : translateSettingsToSuwError(validatePassword(password));
+    }
+
+    /**
      * Converts error code from validatePassword to an array of messages describing the errors with
      * important message comes first.  The messages are concatenated with a space in between.
      * Please make sure each message ends with a period.
+     *
      * @param errorCode the code returned by {@link #validatePassword(byte[]) validatePassword}
      */
     public List<String> convertErrorCodeToMessages(Context context, int errorCode) {
@@ -97,6 +109,27 @@ public class PasswordHelper {
         }
 
         return errorCode;
+    }
+
+    private int translateSettingsToSuwError(int error) {
+        int output = 0;
+        if ((error & CONTAINS_NON_DIGITS) > 0) {
+            LOG.v("CONTAINS_NON_DIGITS");
+            output |= ValidateLockFlags.INVALID_BAD_SYMBOLS;
+        }
+        if ((error & CONTAINS_INVALID_CHARACTERS) > 0) {
+            LOG.v("INVALID_CHAR");
+            output |= ValidateLockFlags.INVALID_BAD_SYMBOLS;
+        }
+        if ((error & TOO_SHORT) > 0) {
+            LOG.v("TOO_SHORT");
+            output |= ValidateLockFlags.INVALID_LENGTH;
+        }
+        if ((error & CONTAINS_SEQUENTIAL_DIGITS) > 0) {
+            LOG.v("SEQUENTIAL_DIGITS");
+            output |= ValidateLockFlags.INVALID_LACKS_COMPLEXITY;
+        }
+        return output;
     }
 
     private int validatePin(byte[] pin) {
