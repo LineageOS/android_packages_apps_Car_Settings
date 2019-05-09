@@ -32,7 +32,6 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.common.Logger;
 import com.android.internal.util.ArrayUtils;
-import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
 import java.util.List;
@@ -42,7 +41,7 @@ import java.util.Map;
  * Bridges {@link AppOpsManager} app operation permission information into {@link
  * AppEntry#extraInfo} as {@link PermissionState} objects.
  */
-public class AppStateAppOpsBridge extends AppStateBaseBridge {
+public class AppStateAppOpsBridge implements AppEntryListManager.ExtraInfoBridge {
 
     private static final Logger LOG = new Logger(AppStateAppOpsBridge.class);
 
@@ -59,18 +58,14 @@ public class AppStateAppOpsBridge extends AppStateBaseBridge {
      * @param appOpsOpCode the {@link AppOpsManager} op code constant to fetch information for.
      * @param permission   the {@link android.Manifest.permission} required to perform the
      *                     operation.
-     * @param callback     a {@link Callback} which will be notified when the information is
-     *                     finished loading.
      */
-    public AppStateAppOpsBridge(Context context, ApplicationsState appState, int appOpsOpCode,
-            String permission, Callback callback) {
-        this(context, appState, appOpsOpCode, permission, callback, AppGlobals.getPackageManager());
+    public AppStateAppOpsBridge(Context context, int appOpsOpCode, String permission) {
+        this(context, appOpsOpCode, permission, AppGlobals.getPackageManager());
     }
 
     @VisibleForTesting
-    AppStateAppOpsBridge(Context context, ApplicationsState appState, int appOpsOpCode,
-            String permission, Callback callback, IPackageManager packageManager) {
-        super(appState, callback);
+    AppStateAppOpsBridge(Context context, int appOpsOpCode, String permission,
+            IPackageManager packageManager) {
         mContext = context;
         mIPackageManager = packageManager;
         mProfiles = UserManager.get(context).getUserProfiles();
@@ -80,7 +75,7 @@ public class AppStateAppOpsBridge extends AppStateBaseBridge {
     }
 
     @Override
-    protected void loadExtraInfo(List<AppEntry> entries) {
+    public void loadExtraInfo(List<AppEntry> entries) {
         SparseArray<Map<String, PermissionState>> packageToStatesMapByProfileId =
                 getPackageToStateMapsByProfileId();
         loadAppOpModes(packageToStatesMapByProfileId);
