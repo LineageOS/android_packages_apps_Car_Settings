@@ -129,11 +129,6 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
-                <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <intent-filter android:priority="100">
                 <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -291,6 +286,17 @@
                 <action android:name="android.settings.SHOW_REGULATORY_INFO" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".location.LocationSettingsActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
         <!-- This logic is copied from phone.-->
