@@ -19,6 +19,7 @@ package com.android.car.settings.security;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.setupwizardlib.InitialLockSetupConstants.ValidateLockFlags;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,12 +32,12 @@ import org.junit.runner.RunWith;
 public class PasswordHelperTest {
 
     private PasswordHelper mPasswordHelper;
-    private PasswordHelper mPinPresenter;
+    private PasswordHelper mPinHelper;
 
     @Before
     public void initObjects() {
-        mPasswordHelper = new PasswordHelper(false);
-        mPinPresenter = new PasswordHelper(true);
+        mPasswordHelper = new PasswordHelper(/* isPin= */ false);
+        mPinHelper = new PasswordHelper(/* isPin= */ true);
     }
 
     /**
@@ -51,7 +52,7 @@ public class PasswordHelperTest {
     }
 
     /**
-     * A test to check validate works when alphanumeric passwor contains white space.
+     * A test to check validate works when alphanumeric password contains white space.
      */
     @Test
     public void testValidatePasswordWhiteSpace() {
@@ -77,7 +78,7 @@ public class PasswordHelperTest {
     @Test
     public void testValidatePinContainingNonDigits() {
         byte[] password = "1a34".getBytes();
-        assertThat(mPinPresenter.validate(password))
+        assertThat(mPinHelper.validate(password))
                 .isEqualTo(PasswordHelper.CONTAINS_NON_DIGITS);
     }
 
@@ -87,7 +88,71 @@ public class PasswordHelperTest {
     @Test
     public void testValidatePinWithTooFewDigits() {
         byte[] password = "12".getBytes();
-        assertThat(mPinPresenter.validate(password))
+        assertThat(mPinHelper.validate(password))
                 .isEqualTo(PasswordHelper.TOO_SHORT);
     }
+
+    /**
+     * A test to check that validate will work as expected for setup wizard passwords that are
+     * too short.
+     */
+    @Test
+    public void testValidatePasswordTooShort_setupWizard() {
+        byte[] password = "lov".getBytes();
+        assertThat(mPasswordHelper.validateSetupWizard(password) & ValidateLockFlags.INVALID_LENGTH)
+                .isEqualTo(ValidateLockFlags.INVALID_LENGTH);
+    }
+
+    /**
+     * A test to check that validate works when setup wizard alphanumeric passwords contain white
+     * space.
+     */
+    @Test
+    public void testValidatePasswordWhiteSpace_setupWizard() {
+        byte[] password = "pass wd".getBytes();
+        assertThat(mPasswordHelper.validateSetupWizard(password)).isEqualTo(0);
+    }
+
+    /**
+     * A test to check validate works as expected for setup wizard alphanumeric password
+     * that contains an invalid character.
+     */
+    @Test
+    public void testValidatePasswordNonAscii_setupWizard() {
+        byte[] password = "1passwýd".getBytes();
+        assertThat(mPasswordHelper.validateSetupWizard(password)
+                & ValidateLockFlags.INVALID_BAD_SYMBOLS)
+                .isEqualTo(ValidateLockFlags.INVALID_BAD_SYMBOLS);
+    }
+
+    /**
+     * A test to check validate works as expected for setup wizard pin that contains non digits.
+     */
+    @Test
+    public void testValidatePinContainingNonDigits_setupWizard() {
+        byte[] password = "1a34".getBytes();
+        assertThat(mPinHelper.validateSetupWizard(password)
+                & ValidateLockFlags.INVALID_BAD_SYMBOLS)
+                .isEqualTo(ValidateLockFlags.INVALID_BAD_SYMBOLS);
+    }
+
+    /**
+     * A test to check validate works as expected for setup wizard pin with too few digits.
+     */
+    @Test
+    public void testValidatePinWithTooFewDigits_setupWizard() {
+        byte[] password = "12".getBytes();
+        assertThat(mPinHelper.validateSetupWizard(password) & ValidateLockFlags.INVALID_LENGTH)
+                .isEqualTo(ValidateLockFlags.INVALID_LENGTH);
+    }
+
+    /**
+     * A test to check that validate works as expected for a valid setup wizard pin.
+     */
+    @Test
+    public void testValidatePinWithValidPin_setupWizard() {
+        byte[] password = "1234".getBytes();
+        assertThat(mPinHelper.validateSetupWizard(password)).isEqualTo(0);
+    }
+
 }
