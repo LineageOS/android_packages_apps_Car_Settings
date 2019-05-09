@@ -18,18 +18,24 @@ package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.EditTextPreference;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.PreferenceController;
 
 /** Business logic for adding/displaying the network name. */
-public class NetworkNamePreferenceController extends
-        AddNetworkBasePreferenceController<EditTextPreference> {
+public class NetworkNamePreferenceController extends PreferenceController<EditTextPreference> {
 
-    private NetworkNameChangeListener mListener;
+    /** Action used in the {@link Intent} sent by the {@link LocalBroadcastManager}. */
+    public static final String ACTION_NAME_CHANGE =
+            "com.android.car.settings.wifi.NameChangeAction";
+    /** Key used to store the name of the network. */
+    public static final String KEY_NETWORK_NAME = "network_name";
 
     public NetworkNamePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -41,26 +47,6 @@ public class NetworkNamePreferenceController extends
         return EditTextPreference.class;
     }
 
-    /** Returns the currently inputted network name. */
-    public String getNetworkName() {
-        return getPreference().getText();
-    }
-
-    /** Sets the listener that is triggered on network name change. */
-    public void setTextChangeListener(NetworkNameChangeListener listener) {
-        mListener = listener;
-    }
-
-    @Override
-    protected void onStartInternal() {
-        if (hasAccessPoint()) {
-            getPreference().setText(getAccessPoint().getSsid().toString());
-            getPreference().setSelectable(false);
-        } else {
-            getPreference().setText(null);
-        }
-    }
-
     @Override
     protected void updateState(EditTextPreference preference) {
         preference.setSummary(TextUtils.isEmpty(preference.getText()) ? getContext().getString(
@@ -69,20 +55,16 @@ public class NetworkNamePreferenceController extends
 
     @Override
     protected boolean handlePreferenceChanged(EditTextPreference preference, Object newValue) {
-        preference.setText(newValue.toString());
-        if (mListener != null) {
-            mListener.onNetworkNameChanged(newValue.toString());
-        }
+        String name = newValue.toString();
+        preference.setText(name);
+        notifyNameChange(name);
         refreshUi();
         return true;
     }
 
-    /** A listener associated with the network name. */
-    public interface NetworkNameChangeListener {
-        /**
-         * This method is called when the network name has changed. The new name is provided as an
-         * argument.
-         */
-        void onNetworkNameChanged(String newName);
+    private void notifyNameChange(String newName) {
+        Intent intent = new Intent(ACTION_NAME_CHANGE);
+        intent.putExtra(KEY_NETWORK_NAME, newName);
+        LocalBroadcastManager.getInstance(getContext()).sendBroadcastSync(intent);
     }
 }
