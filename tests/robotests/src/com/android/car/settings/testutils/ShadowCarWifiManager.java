@@ -29,7 +29,7 @@ import org.robolectric.annotation.Resetter;
 
 import java.util.List;
 
-/**TODO: Refactor all methods to run without relying on sInstance. */
+/** TODO: Refactor all methods to run without relying on sInstance. */
 @Implements(CarWifiManager.class)
 public class ShadowCarWifiManager {
 
@@ -123,6 +123,12 @@ public class ShadowCarWifiManager {
     @Implementation
     public void connectToPublicWifi(AccessPoint accessPoint, WifiManager.ActionListener listener) {
         sInstance.connectToPublicWifi(accessPoint, listener);
+    }
+
+    @Implementation
+    protected void connectToSavedWifi(AccessPoint accessPoint,
+            WifiManager.ActionListener listener) {
+        sInstance.connectToSavedWifi(accessPoint, listener);
     }
 
     @Implementation
