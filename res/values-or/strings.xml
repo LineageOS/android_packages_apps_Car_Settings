@@ -31,13 +31,26 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ନାଇଟ୍ ମୋଡ୍"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ନେଟ୍‌ୱର୍କ ଓ ଇର୍ଣ୍ଟନେଟ୍"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"ମୋବାଇଲ୍‌ ନେଟ୍‌ୱର୍କ"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g>ଟି SIM</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g>ଟି SIM</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"ସକ୍ରିୟ / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ନିଷ୍କ୍ରିୟ / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"ସକ୍ରିୟ / ଡାଉନଲୋଡ୍ କରଯାଇଥିବା SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ନିଷ୍କ୍ରିୟ / ଡାଉନଲୋଡ୍ ହୋଇଥିବା SIM"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ଅଧିକ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ମୋବାଇଲ୍ ଡାଟା"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ମୋବାଇଲ୍ ନେଟ୍‌ୱର୍କକୁ ବ୍ୟବହାରକରି ଡାଟା ଆକ୍ସେସ୍ କରନ୍ତୁ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ମୋବାଇଲ୍‌ ଡାଟା ବନ୍ଦ କରିବେ?"</string>
-    <!-- no translation found for roaming_alert_title (4433901635766775763) -->
-    <skip />
-    <!-- no translation found for roaming_warning (5313281900566657209) -->
-    <skip />
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"ଆବଶ୍ୟକୀୟ ମନୋନୟନ"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"ମୋବାଇଲ୍ ଡାଟା ପାଇଁ <xliff:g id="CARRIER">%1$s</xliff:g> ବ୍ୟବହାର କରିନ୍ତୁ?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"ମୋବାଇଲ୍ ଡାଟା ପାଇଁ ଆପଣ <xliff:g id="CARRIER2_0">%2$s</xliff:g> ବ୍ୟବହାର କରୁଛନ୍ତି। ଯଦି ଆପଣ <xliff:g id="CARRIER1">%1$s</xliff:g>କୁ ସ୍ୱିଚ୍ କରୁଛନ୍ତି, ତେବେ ମୋବାଇଲ୍ ଡାଟା ପାଇଁ ଆଉ <xliff:g id="CARRIER2_1">%2$s</xliff:g> ବ୍ୟବହୃତ ହେବ ନାହିଁ।"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> ବ୍ୟବହାର କରନ୍ତୁ"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"ରୋମିଂ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ରୋମିଂ ବେଳେ ଡାଟା ସେବାଗୁଡ଼ିକୁ ସଂଯୋଗ କରନ୍ତୁ"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ଡାଟା ରୋମିଂର ଅନୁମତି ଦେବେ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ଆପଣଙ୍କୁ ଅଧିକ ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ଡାଟାର ବ୍ୟବହାର"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"ପ୍ରାଥମିକ ଡାଟା"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ବ୍ୟବହୃତ ହୋଇଛି"</string>
@@ -55,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"ବର୍ତ୍ତମାନ <xliff:g id="ID_1">^1</xliff:g> ଦ୍ଵାରା ଅପ୍‌ଡେଟ୍‌ ହୋଇଛି"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"ବର୍ତ୍ତମାନ ଅପ୍‌ଡେଟ୍‌ ହୋଇଛି"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"ପ୍ଲାନ୍ ଦେଖନ୍ତୁ"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"ଆପ୍‌ର ଡାଟା ବ୍ୟବହାର"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"ପ୍ରତିବନ୍ଧିତ"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"ବ୍ୟବହାର ଚକ୍ର ରିସେଟ୍‌ କରିବା ତାରିଖ"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"ପ୍ରତ୍ୟେକ ମାସର ତାରିଖ:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"ସେଟ୍‌ କରନ୍ତୁ"</string>
@@ -119,6 +134,33 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ସ୍ୱଚାଳିତ ଭାବେ ମୋବାଇଲ୍ ଡାଟାକୁ ସ୍ୱିଚ୍ କରନ୍ତୁ"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi‑Fiର ଇଣ୍ଟର୍ନେଟ୍ ଆକ୍ସେସ୍ ନଥିବା ବେଳେ ମୋବାଇଲ୍ ଡାଟା ବ୍ୟବହାର କରନ୍ତୁ। ଡାଟା ବ୍ୟବହାର ଦେୟ ଲାଗୁ ହୋଇପାରେ।"</string>
     <string name="learn_more" msgid="8214605928933358604">"ଅଧିକ ଜାଣନ୍ତୁ"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"ହଟ୍‌ସ୍ପଟ୍ ନାମ"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ଚାଲୁ ହେଉଛି..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ସହ ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ ସଂଯୁକ୍ତ ହୋଇପାରିବ"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ୍ ପାସ୍‌ୱାର୍ଡ"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ବ୍ୟାଣ୍ଡ"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ହଟ୍‌ସ୍ପଟ୍ ଏବଂ ଟିଥରିଂ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ସ୍ୱଚାଳିତ ଭାବେ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ଯଦି କୌଣସି ଡିଭାଇସ୍ ସଂଯୋଗ ନଥାଏ, ତେବେ ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ ହୋଇଯିବ"</string>
@@ -186,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"ଅନ୍‍ଇନ୍‍ଷ୍ଟଲ୍ କରନ୍ତୁ"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"ଯଦି ଆପଣ ଏହି ଆପ୍‌କୁ ନିଷ୍କ୍ରିୟ କରନ୍ତି, ତେବେ Android ଓ ଅନ୍ୟାନ୍ୟ ଆପ୍ସ ଆଉ କାମ ନକରିପାରେ।"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ଆପ୍ ଅକ୍ଷମ କରନ୍ତୁ"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"ଅନୁମତିଗୁଡ଼ିକ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ଭର୍ସନ୍‌: %1$s"</string>
@@ -211,7 +255,44 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"ଏହି ସହାୟକ, ସ୍କ୍ରିନ୍‌ରେ ଦେଖାଦେଉଥିବା କିମ୍ୱା ଆପ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ ଆକ୍ସେସ୍ ହୋଇପାରିବା ଭଳି ସୂଚନା ସମେତ ଆପଣଙ୍କ ସିଷ୍ଟମ୍‌ରେ ଥିବା ଆପ୍‌ଗୁଡ଼ିକ ବିଷୟରେ ସୂଚନା ପଢ଼ିପାରିବ।"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ଆପଣ ଏହି ଆପ୍‌କୁ ବିଶ୍ୱାସ କରୁଥିବା ନିଶ୍ଚିତ କରନ୍ତୁ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ଅଟୋଫିଲ୍‌&gt;%1$s&lt;/xliff:g&gt; କଣ ଅଟୋଫିଲ୍‌ କରାଯାଇ ପାରିବ ନିର୍ଦ୍ଧାରଣ କରିବାକୁ ଆପଣଙ୍କ ସ୍କ୍ରିନ୍‌ରେ ଯାହା ଥାଏ ତାହା ବ୍ୟବହାର କରେ।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"ସେବା ଯୋଗ କରନ୍ତୁ"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"ଓପନିଂ ଲିଙ୍କ୍"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"ଇନ୍‌ଷ୍ଟଲ୍ ହୋଇଥିବା ଆପ୍ସ"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"ସମର୍ଥିତ ଲିଙ୍କ୍‌ଗୁଡ଼ିକୁ ଖୋଲନ୍ତୁ ନାହିଁ"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> ଖୋଲନ୍ତୁ"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> ଏବଂ ଅନ୍ୟ URLଗୁଡ଼ିକୁ ଖୋଲନ୍ତୁ"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"ଡିଫଲ୍ଟ ରୂପେ ଖୋଲନ୍ତୁ"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"ଅନ୍ୟ ଡିଫଲ୍ଟଗୁଡ଼ିକ"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"କୌଣସି ଡିଫଲ୍ଟ ସେଟ୍ ହୋଇ ନାହିଁ।"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"କିଛି କାର୍ଯ୍ୟ ପାଇଁ ଆପଣ ଡିଫଲ୍ଟ ଭାବେ ଏହି ଆପ୍‌କୁ ଲଞ୍ଚ କରିବାକୁ ବାଛିଛନ୍ତି।"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"ଡିଫଲ୍ଟଗୁଡ଼ିକୁ ଖାଲି କରନ୍ତୁ"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"ସମର୍ଥିତ ଲିଙ୍କ୍‌ଗୁଡ଼ିକୁ ଖୋଲନ୍ତୁ"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"ଏହି ଆପ୍‌ରେ ଖୋଲନ୍ତୁ"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"ପ୍ରତ୍ୟେକ ଥର ପଚାରନ୍ତୁ"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"ଏହି ଆପ୍‌ରେ ଖୋଲନ୍ତୁ ନାହିଁ"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"ସମର୍ଥିତ ଲିଙ୍କ୍‌ଗୁଡ଼ିକ"</string>
     <string name="special_access" msgid="5730278220917123811">"ସ୍ବତନ୍ତ୍ର ଆପ୍ ଆକ୍‍‍ସେସ୍ କରନ୍ତୁ"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
+    <string name="notification_access_title" msgid="1467340098885813473">"ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ପାଇଁ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌ର ଅନୁମତି ଦେବେ?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ବ୍ୟକ୍ତିଗତ ସୂଚନା ଯେପରି ଯୋଗାଯୋଗ ନାମଗୁଡ଼ିକ ଏବଂ ଆପଣ ପ୍ରାପ୍ତ କରୁଥିବା ମେସେଜ୍‌ଗୁଡ଼ିକର ଟେକ୍ସଟ୍ ସମେତ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ସମସ୍ତ ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ପଢ଼ିବାରେ ସକ୍ଷମ ହେବ। ଏହା ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଖାରଜ କରିବାରେ କିମ୍ବା ସେମାନଙ୍କ ପାଖରେ ଥିବା ପଦକ୍ଷେପ ବଟନ୍‌ଗୁଡ଼ିକୁ ମଧ୍ୟ ଟ୍ରିଗର୍ କରିବାରେ ସକ୍ଷମ ହେବ। \n\n ଏହା ଆପ୍‌କୁ \'ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\' ବିକଳ୍ପକୁ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ତଥା ସମ୍ବନ୍ଧିତ ସେଟିଂସ୍‌କୁ ବଦଳାଇବା କ୍ଷମତା ମଧ୍ୟ ଦେବ।"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ଯଦି <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ପାଇଁ ଆପଣ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌କୁ ବନ୍ଦ କରିବେ, ତେବେ \"ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\" ବିକଳ୍ପ ଆକ୍ସେସ୍ ମଧ୍ୟ ହୁଏତ ବନ୍ଦ ହୋଇଯାଇପାରେ।"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ବନ୍ଦ କରନ୍ତୁ"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ୍ କରନ୍ତୁ"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ୍‌"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ସାମ୍ପ୍ରତିକ ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
@@ -250,6 +331,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ସିଷ୍ଟମ୍‍ WebView ଲାଇସେନ୍ସ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ୱାଲପେପର୍‌"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ସ୍ୟାଟେଲାଇଟ୍‌ ଇମେଜେରୀ ପ୍ରଦାତା:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ତୃତୀୟ-ପକ୍ଷ ଲାଇସେନ୍ସ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ଲାଇସେନ୍ସ ଲୋଡ୍‌ କରିବାରେ ସମସ୍ୟା ହୋଇଛି।"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ଲୋଡ୍ କରୁଛି…"</string>
@@ -360,6 +442,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android ସଂସ୍କରଣ <xliff:g id="VERSION">%s</xliff:g>କୁ ଚଲାଇବା ପାଇଁ ସିଷ୍ଟମ୍, ଫାଇଲ୍‍ଗୁଡ଼ିକୁ ଅନ୍ତର୍ଭୁକ୍ତ କରିଥାଏ"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"ଅଡିଓ ଫାଇଲ୍‌ଗୁଡ଼ିକ"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"ଗଣନା କରାଯାଉଛି…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"ଆପ୍‌ର ଆକାର"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"ଉପଯୋଗକର୍ତ୍ତା ଡାଟା"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"କ୍ୟାଶ୍"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"ମୋଟ"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ଷ୍ଟୋରେଜ୍ ଖାଲି କରନ୍ତୁ"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"କ୍ୟାଶ୍ ଖାଲି କରନ୍ତୁ"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ଆପ୍ ଡାଟା ଡିଲିଟ୍ କରିବେ?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ଏହି ସମସ୍ତ ଆପ୍ ଡାଟା ସ୍ଥାୟୀ ଭାବେ ଡିଲିଟ୍ ହୋଇଯିବ। ଏଥିରେ ସମସ୍ତ ଫାଇଲ୍, ସେଟିଂସ୍, ଆକାଉଣ୍ଟ, ଡାଟାବେସ୍ ଇତ୍ୟାଦି ସାମିଲ ଥାଏ।"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ଆପ୍ ପାଇଁ ଷ୍ଟୋରେଜ୍‌କୁ ଖାଲି କରିହେବ ନାହିଁ।"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ଆକାଉଣ୍ଟ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ଆକାଉଣ୍ଟ ଯୋଡ଼ନ୍ତୁ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"କୌଣସି ଆକାଉଣ୍ଟ ଯୋଡ଼ାଯାଇନାହିଁ"</string>
@@ -482,6 +573,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ସ୍କ୍ରୀନ୍‌ ଲକ୍‌ ବିକଳ୍ପମାନ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ଦିନ ପୂର୍ବେ"</string>
     <string name="add_device_title" msgid="8452168024017866232">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‍‍‍ ଯୋଗ କରନ୍ତୁ"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍‌କୁ ଯୋଗ କରିବାକୁ ବ୍ଲୁଟୁଥ୍ ଚାଲୁ ହେବ"</string>
     <string name="trusted_device" msgid="5637378361866787603">"ବିଶ୍ୱସ୍ତ ଡିଭାଇସ୍"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଡିଭାଇସ୍</item>
@@ -496,18 +588,18 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ଡିଭାଇସ୍ ପେୟାର୍ କରିବାକୁ ଆପଣଙ୍କ ଫୋନ୍‍‍ରୁ <xliff:g id="CAR_NAME">%1$s</xliff:g> ବାଛନ୍ତୁ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ସ୍ମାର୍ଟ ଲକ୍ ଏହି ଡିଭାଇସ୍‍ର ସୁରକ୍ଷା ବୈଶିଷ୍ଟ୍ୟ କରିପାରିବ ନାହିଁ। ଆପଣଙ୍କର କାର୍‍‍ର ସୁରକ୍ଷାରେ ସାହାଯ୍ୟ କରିବାକୁ, ଚିହ୍ନା ଡିଭାଇସ୍ କେବଳ ଆପଣ ପୂର୍ବରୁ ଆପଣଙ୍କ କାର୍ ଥରେ ଅନ୍‍ଲକ୍ କରିଥିଲେ ହିଁ ଆପଣଙ୍କ କାର୍‍କୁ ଅନ୍‍ଲକ୍ କରି ରଖିବ। ଅନ୍ୟ କେହି ଜଣେ ମଧ୍ୟ ତାହା ବ୍ୟବହାର କରୁଥିଲେ ମଧ୍ୟ, ଆପଣଙ୍କର ଚିହ୍ନା ଡିଭାଇସ୍ ନିକଟସ୍ଥ ରହିଥିଲେ ଆପଣଙ୍କ କାର୍‍ ଅନ୍‍ଲକ୍ କରି ରଖିପାରିବ।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"ଏକ ଚିହ୍ନା ଡିଭାଇସ୍‌‍ଭାବରେ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ଯୋଗ କରନ୍ତୁ"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ଫୋନ୍ ସଫଳତାର ସହ ପଞ୍ଜୀକୃତ ହୋଇଛି"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ନାମାଙ୍କନ ହୋଇପାରିଲା ନାହିଁ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ଏହାପରେ ଏକ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ଯୋଗ କରିବାରେ ଆପଣଙ୍କୁ ପ୍ରମାଣିକରଣର ଉପାୟ ସେଟ୍‍ କରିବାକୁ ହେବ। ଯଦି ଆପଣଙ୍କ ପାଖରେ ବିଶ୍ୱସନୀୟ ଡିଭାଇସ୍‌ ନାହିଁ, ତେବେ ଆପଣଙ୍କ ପ୍ରୋଫାଇଲ୍‌ ଆକ୍ସେସ୍‌ କରିବାକୁ ପ୍ରମାଣିକରଣ ଆବଶ୍ୟକ ହେବ।"</string>
-    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
-    <skip />
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ଡିଭାଇସ୍ ବିଚ୍ଛିନ୍ନ ହୋଇଛି।"</string>
     <string name="forget" msgid="3971143908183848527">"ଭୁଲିଗଲେ"</string>
     <string name="connect" msgid="5861699594602380150">"ସଂଯୋଗ କରନ୍ତୁ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ବିଛିନ୍ନ କରନ୍ତୁ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ଡିଲିଟ୍‍"</string>
     <string name="remove_button" msgid="6664656962868194178">"କାଢ଼ିଦିଅନ୍ତୁ"</string>
     <string name="cancel" msgid="750286395700355455">"କ୍ୟାନ୍ସଲ୍‍ କରନ୍ତୁ"</string>
+    <string name="allow" msgid="7519431342750394402">"ଅନୁମତି ଦିଅନ୍ତୁ"</string>
+    <string name="deny" msgid="340512788979930804">"ପ୍ରତ୍ୟାଖ୍ୟାନ କରନ୍ତୁ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace କୀ"</string>
     <string name="enter_key" msgid="2121394305541579468">"କୀ ଦବାନ୍ତୁ"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>

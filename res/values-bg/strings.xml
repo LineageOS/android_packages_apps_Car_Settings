@@ -31,9 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Нощен режим"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Мрежа и интернет"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Мобилна мрежа"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM карти</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> SIM карта</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Активно/SIM карта"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Неактивно/SIM карта"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Активно/изтеглена SIM карта"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Неактивно/изтеглена SIM карта"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Добавяне на още"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Мобилни данни"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Достъп до данните през мобилната мрежа"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Да се изключат ли мобилните данни?"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Изборът е задължителен"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Използване на <xliff:g id="CARRIER">%1$s</xliff:g> за моб. данни?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Използвате <xliff:g id="CARRIER2_0">%2$s</xliff:g> за мобилни данни. Ако превключите към <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> вече няма да се използва за мобилни данни."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Използване на <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Свързване с услуги за данни при роуминг"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Да се разреши ли роуминг на данни?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Това може да доведе до високи такси."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Пренос на данни"</string>
@@ -53,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Актуализирано току-що от <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Актуализирано току-що"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Преглед на плана"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Пренос на данни от прилож."</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"ограничено"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Дата на възстановяване на цикъла за използване"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Дата от всеки месец:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Задаване"</string>
@@ -117,6 +134,33 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Автоматично превключване към мобилни данни"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Използване на мобилни данни, когато Wi‑Fi мрежата няма достъп до интернет. Може да бъдете таксувани за пренос на данни."</string>
     <string name="learn_more" msgid="8214605928933358604">"Научете повече"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Точка за достъп: Име"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"„<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“ се включва..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Други устройства могат да се свързват към „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Парола за точката за достъп"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Честота на AP"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка за достъп и тетъринг"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматично изключване на точката за достъп"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Точката за достъп до Wi‑Fi ще се изключва, когато няма свързани устройства"</string>
@@ -184,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"Деинсталиране"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Ако деактивирате това приложение, Android и други приложения може да спрат да работят както трябва."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Деактивиране на приложението"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
@@ -209,7 +255,44 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Асистентът ще може да чете информацията за използваните в системата приложения, включително данните, видими на екрана или достъпни в тях."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Уверете се, че имате доверие на това приложение&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Функцията на Google за автоматично попълване&gt;%1$s&lt;/xliff:g&gt; използва това, което е на екрана ви, за да определи какво може да се попълни автоматично."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Добавяне на услуга"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Отваряне на връзки"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Инсталирани приложения"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Без отваряне на поддържани връзки"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Отваряне на <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Възможност за отваряне на <xliff:g id="DOMAIN">%s</xliff:g> и други URL адреси"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Отваряне по подразбиране"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Други стандартни настройки"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Не са зададени стандартни настройки."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Избрахте да стартирате това приложение по подразбиране за някои действия."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Изчистване на стандартните настройки"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Отваряне на поддържани връзки"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Отваряне в това приложение"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Извеждане на запитване всеки път"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Без отваряне в това приложение"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддържани връзки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специален достъп за приложението"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
+    <string name="notification_access_title" msgid="1467340098885813473">"Достъп до известията"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Да се разреши ли достъпът до известията за <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ще може да чете всички известия, включително личната информация, като например имената на контактите и текстовете на съобщенията, които получавате. Ще е в състояние и да отхвърля известия или да задейства бутоните за действие в тях.\n\nТова ще предостави на приложението и възможността да включва или изключва „Не безпокойте“, както и да променя сродните настройки."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако изключите достъпа до известията за „<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“, този до „Не безпокойте“ също може да се изключи."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Изключване"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отказ"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Скорошни заявки за местоположението"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>
@@ -248,6 +331,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Системни лицензи за WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тапети"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Доставчици на сателитни изображения:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Лицензи на трети страни"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Възникна проблем при зареждането на лицензите."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Зарежда се…"</string>
@@ -358,6 +442,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Категорията „Система Android“ включва файлове, използвани за изпълняването на версия <xliff:g id="VERSION">%s</xliff:g> на Android"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудиофайлове"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Изчислява се…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Размер на приложението"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Потребителски данни"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Кеш"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Общо"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Изчистване на данните"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Изчистване на кеша"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Да се изтрият ли данните от прил.?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Всички данни на това приложение ще се изтрият за постоянно. Това включва всички файлове, настройки, профили, бази от данни и др."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Данните за приложението не можаха да се изтрият."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Профили"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавяне на профил"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Няма добавени профили"</string>
@@ -480,6 +573,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заключване на екрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Преди <xliff:g id="NUM_DAYS">%3$s</xliff:g> дни"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Добав. на надеждно устройство"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ще се вкл. за добавяне на надеждно у-во"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Надеждни устройства"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> устройства</item>
@@ -494,18 +588,18 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ на телефона си, за да сдвоите устройствата."</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може да открие функциите за сигурност на това устройство. За да е защитен автомобилът ви, надеждното устройство ще може да го поддържа в отключено състояние само ако той вече е отключен от вас. То може да поддържа автомобила ви отключен, когато е близо до него, дори ако го държи някой друг."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Добавяне на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> като надеждно устройство"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонът е регистриран успешно"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацията на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не бе успешна"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"За добавянето на надеждно устройство се изисква да зададете метод на удостоверяване на следващия екран. Ако надеждното ви устройство не е у вас, удостоверяването ще се изисква за достъп до потребителския ви профил."</string>
-    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
-    <skip />
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Връзката с устройството е прекъсната."</string>
     <string name="forget" msgid="3971143908183848527">"Забравяне"</string>
     <string name="connect" msgid="5861699594602380150">"Свързване"</string>
     <string name="disconnect" msgid="6140789953324820336">"Прекрат. на връзката"</string>
     <string name="delete_button" msgid="5840500432614610850">"Изтриване"</string>
     <string name="remove_button" msgid="6664656962868194178">"Премахване"</string>
     <string name="cancel" msgid="750286395700355455">"Отказ"</string>
+    <string name="allow" msgid="7519431342750394402">"Разрешаване"</string>
+    <string name="deny" msgid="340512788979930804">"Отказ"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Клавиш „Backspace“"</string>
     <string name="enter_key" msgid="2121394305541579468">"Въведете ключа"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Демонстр. режим: Изход"</string>
