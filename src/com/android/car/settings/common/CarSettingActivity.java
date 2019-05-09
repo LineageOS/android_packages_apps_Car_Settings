@@ -21,10 +21,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.android.car.settings.R;
+
+import java.util.List;
 
 /**
  * Root activity used for most of the Settings app. This activity provides additional functionality
@@ -75,9 +78,8 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
     public void launchFragment(Fragment fragment) {
         // Called before super to clear the back stack if necessary before launching the fragment
         // in question.
-        if (fragment.getClass().getName().equals(
-                getString(R.string.config_settings_hierarchy_root_fragment))
-                && getSupportFragmentManager().getBackStackEntryCount() > 1) {
+        if (isRootFragmentRequiringCleanup(fragment)) {
+            cleanUpOrphanedDialogs();
             clearBackStack();
         }
 
@@ -124,5 +126,23 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
     private boolean intentFromSettings(Intent intent) {
         String pkgName = intent.getStringExtra(Intent.EXTRA_CALLING_PACKAGE);
         return TextUtils.equals(pkgName, getPackageName());
+    }
+
+    private boolean isRootFragmentRequiringCleanup(Fragment fragment) {
+        boolean isRoot = fragment.getClass().getName().equals(
+                getString(R.string.config_settings_hierarchy_root_fragment));
+        boolean requiresCleanup = getSupportFragmentManager().getBackStackEntryCount() > 1;
+        return isRoot && requiresCleanup;
+    }
+
+    private void cleanUpOrphanedDialogs() {
+        List<Fragment> fragments = getSupportFragmentManager().getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
+                if (fragment instanceof DialogFragment) {
+                    ((DialogFragment) fragment).dismiss();
+                }
+            }
+        }
     }
 }
