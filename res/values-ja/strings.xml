@@ -188,7 +188,7 @@
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"制限付きプロファイルではアカウントを追加できません"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"アカウントを削除"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"アカウントを削除しますか？"</string>
-    <string name="really_remove_account_message" msgid="4296769280849579900">"このアカウントを削除すると、メール、連絡先などのすべてのデータもデバイスから削除されます。"</string>
+    <string name="really_remove_account_message" msgid="4296769280849579900">"このアカウントを削除すると、メール、連絡先などのすべてのデータも端末から削除されます。"</string>
     <string name="remove_account_failed" msgid="7472511529086294087">"この変更は管理者によって許可されていません"</string>
     <string name="really_remove_user_title" msgid="4990029019291756762">"ユーザーを削除しますか？"</string>
     <string name="really_remove_user_message" msgid="3828090902833944533">"すべてのアプリとデータが削除されます。"</string>
@@ -255,7 +255,7 @@
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"<xliff:g id="NUMBER">%d</xliff:g> 文字未満にしてください"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"<xliff:g id="NUMBER">%d</xliff:g> 桁未満にしてください"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"使用できるのは 0～9 の数字のみです。"</string>
-    <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"デバイス管理により、最近使用した PIN は使用できません"</string>
+    <string name="lockpassword_pin_recently_used" msgid="7901918311213276207">"端末管理により、最近使用した PIN は使用できません"</string>
     <string name="lockpassword_pin_blacklisted_by_admin" msgid="7412709707800738442">"一般的な PIN は IT 管理者によってブロックされています。別の PIN をお試しください。"</string>
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"無効な文字があります。"</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"パスワードが無効です。4 文字以上で入力してください。"</string>
@@ -283,7 +283,7 @@
       <item quantity="other">記号または数字が <xliff:g id="COUNT">%d</xliff:g> つ以上必要です</item>
       <item quantity="one">記号または数字が 1 つ以上必要です</item>
     </plurals>
-    <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"デバイス管理により、最近使用したパスワードは使用できません"</string>
+    <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"端末管理により、最近使用したパスワードは使用できません"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"パスワードの保存中にエラーが発生しました"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"一般的なパスワードは IT 管理者によってブロックされています。別のパスワードをお試しください。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
