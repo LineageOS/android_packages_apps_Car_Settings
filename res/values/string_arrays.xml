@@ -21,4 +21,37 @@
         <item>@string/wifi_security_wep</item>
         <item>@string/wifi_security_wpa_wpa2</item>
     </string-array>
+
+    <!-- Security types for wireless tether -->
+    <string-array translatable="false" name="wifi_tether_security">
+        <item>@string/wifi_security_wpa2</item>
+        <item>@string/wifi_security_none</item>
+    </string-array>
+
+    <!-- Wi-Fi AP band settings.  Either Auto, 2.4GHz or 5GHz. -->
+    <!-- Note that adding/removing/moving the items will need wifi settings code change. -->
+    <string-array translatable="false" name="wifi_ap_band_config_full">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array translatable="false" name="wifi_ap_band_summary_full">
+        <item>@string/wifi_ap_choose_2G</item>
+        <item>@string/wifi_ap_choose_5G</item>
+    </string-array>
+
+    <string-array translatable="false" name="wifi_ap_band_dual_mode">
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array translatable="false" name="wifi_ap_band_dual_mode_summary">
+        <item>@string/wifi_ap_choose_2G</item>
+        <item>@string/wifi_ap_prefer_5G</item>
+    </string-array>
+
+    <string-array translatable="false" name="wifi_ap_band_config_2G_only">
+        <item>@string/wifi_ap_choose_auto</item>
+        <item>@string/wifi_ap_choose_2G</item>
+    </string-array>
 </resources>

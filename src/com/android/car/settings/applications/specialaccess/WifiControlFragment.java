@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,17 +14,25 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.testutils;
+package com.android.car.settings.applications.specialaccess;
+
+import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.SettingsFragment;
 
 /**
- * Empty Fragment.
+ * Displays apps which have requested to control Wi-Fi settings and their current allowed status.
  */
-public class DummyFragment extends SettingsFragment {
+public class WifiControlFragment extends AppOpsFragment {
+
     @Override
+    @XmlRes
     protected int getPreferenceScreenResId() {
-        return R.xml.settings_fragment;
+        return R.xml.wifi_control_fragment;
+    }
+
+    @Override
+    protected AppOpsPreferenceController lookupAppOpsPreferenceController() {
+        return use(WifiControlPreferenceController.class, R.string.pk_wifi_control);
     }
 }

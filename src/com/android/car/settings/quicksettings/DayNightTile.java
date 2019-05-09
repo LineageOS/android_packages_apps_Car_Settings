@@ -89,6 +89,10 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
     }
 
     @Override
+    public void start() {
+    }
+
+    @Override
     public void stop() {
     }
 

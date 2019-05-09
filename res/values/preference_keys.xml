@@ -67,8 +67,9 @@
     <string name="pk_data_limit" translatable="false">data_limit</string>
     <string name="pk_app_data_usage" translatable="false">app_data_usage</string>
     <string name="pk_app_data_usage_detail" translatable="false">app_data_usage_detail</string>
-    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry
-    </string>
+    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry</string>
+    <string name="pk_wifi_tether_security" translatable="false">wifi_tether_security</string>
+    <string name="pk_wifi_tether_ap_band" translatable="false">wifi_tether_ap_band</string>
     <string name="pk_wifi_tether_auto_off" translatable="false">wifi_tether_auto_off</string>
     <string name="pk_wifi_tether_password" translatable="false">wifi_tether_password</string>
     <string name="pk_wifi_tether_name" translatable="false">wifi_tether_name</string>
@@ -89,7 +90,6 @@
     <string name="pk_add_wifi" translatable="false">add_wifi</string>
     <string name="pk_wifi_status" translatable="false">wifi_status</string>
     <string name="pk_add_wifi_network_name" translatable="false">add_wifi_network_name</string>
-    <string name="pk_add_wifi_security_group" translatable="false">add_wifi_security_group</string>
     <string name="pk_add_wifi_security" translatable="false">add_wifi_security</string>
     <string name="pk_add_wifi_password" translatable="false">add_wifi_password</string>
     <string name="pk_wifi_preferences" translatable="false">wifi_preferences</string>
@@ -173,9 +173,24 @@
     </string>
 
     <!-- Special App Access Settings -->
+    <string name="pk_modify_system_settings_entry" translatable="false">
+        modify_system_settings_entry
+    </string>
+    <string name="pk_modify_system_settings" translatable="false">modify_system_settings</string>
+    <string name="pk_modify_system_settings_description" translatable="false">
+        modify_system_settings_description
+    </string>
     <string name="pk_notification_access_entry" translatable="false">notification_access_entry
     </string>
     <string name="pk_notification_access" translatable="false">notification_access</string>
+    <string name="pk_usage_access_entry" translatable="false">usage_access_entry</string>
+    <string name="pk_usage_access" translatable="false">usage_access</string>
+    <string name="pk_usage_access_description" translatable="false">usage_access_description
+    </string>
+    <string name="pk_wifi_control_entry" translatable="false">wifi_control_entry</string>
+    <string name="pk_wifi_control" translatable="false">wifi_control</string>
+    <string name="pk_wifi_control_description" translatable="false">wifi_control_description
+    </string>
 
     <!-- DateTime Settings -->
     <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>

@@ -116,14 +116,11 @@ public class LegalPreferenceControllerTest {
         activityInfo.name = "SomeActivity";
         activityInfo.applicationInfo = new ApplicationInfo();
         activityInfo.applicationInfo.flags = ApplicationInfo.FLAG_SYSTEM;
+        activityInfo.applicationInfo.nonLocalizedLabel = TEST_LABEL;
 
-        ResolveInfo resolveInfo = new ResolveInfo() {
-            @Override
-            public CharSequence loadLabel(PackageManager pm) {
-                return TEST_LABEL;
-            }
-        };
+        ResolveInfo resolveInfo = new ResolveInfo();
         resolveInfo.activityInfo = activityInfo;
+
         List<ResolveInfo> list = new LinkedList();
         list.add(resolveInfo);
 

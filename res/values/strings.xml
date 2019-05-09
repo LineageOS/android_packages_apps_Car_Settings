@@ -184,6 +184,8 @@
     <string name="wifi_password">Password</string>
     <!-- Label for the check box to show password -->
     <string name="wifi_show_password">Show password</string>
+    <!-- Toast message when trying to connect to a hidden wifi network without a network name. [CHAR LIMIT=NONE] -->
+    <string name="wifi_no_network_name">Please enter a network name</string>
     <!-- Label for the SSID of the network -->
     <string name="wifi_ssid">Network name</string>
     <!-- Hint for a text field to enter the SSID of a hidden wifi network. [CHAR LIMIT=35] -->
@@ -268,8 +270,30 @@
     <string name="wifi_hotspot_name_summary_connected">Other devices can connect to <xliff:g id="wifi_hotspot_name">%1$s</xliff:g></string>
     <!-- Label for Wifi hotspot password. [CHAR LIMIT=30]-->
     <string name="wifi_hotspot_password_title">Hotspot password</string>
+    <!-- Label for Wifi security type title [CHAR LIMIT=15]-->
+    <string name="wifi_hotspot_security_title">Security</string>
+    <!-- Label for Wifi security type WPA2-Personal [CHAR LIMIT=25]-->
+    <string name="wifi_hotspot_wpa2_personal">WPA2-Personal</string>
+    <!-- Label for Wifi security type WPA2-Personal [CHAR LIMIT=25]-->
+    <string name="wifi_hotspot_security_none">None</string>
     <!-- Label for Wifi hotspot AP Band. [CHAR LIMIT=15]-->
     <string name="wifi_hotspot_ap_band_title">AP Band</string>
+    <!-- Label for the RadioGroup to choose wifi ap band [CHAR LIMIT=25]-->
+    <string name="wifi_ap_band_config">Select AP Band</string>
+    <!-- Label for the radio button to choose wifi ap channel automatically [CHAR LIMIT=10]-->
+    <string name="wifi_ap_choose_auto">Auto</string>
+    <!-- Label for the radio button to choose wifi ap 2.4 GHz band [CHAR LIMIT=25]-->
+    <string name="wifi_ap_choose_2G">2.4 GHz Band</string>
+    <!-- Label for the radio button to only choose wifi ap 5GHz band [CHAR LIMIT=25]-->
+    <string name="wifi_ap_choose_5G">5.0 GHz Band</string>
+    <!-- Label for the radio button to prefer 5GHz wifi ap band  [CHAR LIMIT=80]-->
+    <string name="wifi_ap_prefer_5G">5.0 GHz Band preferred</string>
+    <!-- Label for adding to the list of selected bands when 2.4 GHz is selected [CHAR LIMIT=15]-->
+    <string name="wifi_ap_2G">2.4 GHz</string>
+    <!-- Label for adding to the list of selected bands when 5.0 GHz is selected [CHAR LIMIT=15]-->
+    <string name="wifi_ap_5G">5.0 GHz</string>
+    <!-- Label that is shown as a dialog summary informing users they must pick at LEAST one band for their hotspot [CHAR LIMIT=25]-->
+    <string name="wifi_ap_band_select_one">Choose at least one band for Wi\u2011Fi hotspot:</string>
     <!-- Tethering controls, item title to go into the tethering settings when USB, Bluetooth and Wifi tethering are available [CHAR LIMIT=60]-->
     <string name="tether_settings_title_all">Hotspot &amp; tethering</string>
     <!-- Title for the toggle to turn off hotspot automatically [CHAR LIMIT=50]-->
@@ -502,6 +526,14 @@
 
     <!-- Label for screen where user can grant applications special access to various systems. [CHAR_LIMIT=60] -->
     <string name="special_access">Special app access</string>
+    <!-- Text for toggle button to control whether system processes are shown in app lists. [CHAR_LIMIT=30] -->
+    <string name="show_system">Show system</string>
+    <!-- Text for toggle button to control whether system processes are hidden in app lists. [CHAR_LIMIT=30] -->
+    <string name="hide_system">Hide system</string>
+    <!-- Title for managing apps which can modify system settings. [CHAR_LIMIT=30] -->
+    <string name="modify_system_settings_title">Modify system settings</string>
+    <!-- Description of modifying system settings. [CHAR_LIMIT=NONE] -->
+    <string name="modify_system_settings_description">This permission allows an app to modify system settings.</string>
     <!-- Title for managing components which can listen to notifications. [CHAR_LIMIT=30] -->
     <string name="notification_access_title">Notification access</string>
     <!-- Title for a warning message about security implications of enabling a notification listener, displayed as a dialog message. [CHAR_LIMIT=NONE] -->
@@ -514,6 +546,14 @@
     <string name="notification_listener_revoke_warning_confirm">Turn off</string>
     <!-- Negative button for a dialog warning message about revoking notification listener access. [CHAR_LIMIT=30] -->
     <string name="notification_listener_revoke_warning_cancel">Cancel</string>
+    <!-- Title for managing apps which can query usage data. [CHAR_LIMIT=30] -->
+    <string name="usage_access_title">Usage access</string>
+    <!-- Description of the usage access permission. [CHAR_LIMIT=NONE] -->
+    <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
+    <!-- Title for managing apps which can change Wi-Fi state. [CHAR_LIMIT=30] -->
+    <string name="wifi_control_title">Wi-Fi control</string>
+    <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
+    <string name="wifi_control_description">Wi-Fi control allow an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot.</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
