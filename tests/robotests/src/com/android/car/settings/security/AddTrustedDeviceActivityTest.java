@@ -176,7 +176,7 @@ public class AddTrustedDeviceActivityTest {
 
         callBack.getValue().onEscrowTokenAdded(1);
 
-        assertThat(mActivityController.get().getFragment()).isInstanceOf(
+        assertThat(mActivityController.get().getInitialFragment()).isInstanceOf(
                 ConfirmLockPinPasswordFragment.class);
     }
 

@@ -19,16 +19,16 @@ package com.android.car.settings.security;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 
 /**
  * Prompts the user to enter their pin, password, or pattern lock (if set) and returns
  * {@link #RESULT_OK} on a successful entry or immediately if the user has no lock setup.
  */
-public class CheckLockActivity extends CarSettingActivity implements CheckLockListener {
+public class CheckLockActivity extends BaseCarSettingsActivity implements CheckLockListener {
     @Override
     @Nullable
-    protected Fragment getFragment() {
+    protected Fragment getInitialFragment() {
         Fragment lockFragment = ConfirmPasswordFragmentFactory.getFragment(/* context= */ this);
         if (lockFragment == null) {
             // User has not set a password
