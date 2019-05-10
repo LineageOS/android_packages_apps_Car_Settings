@@ -28,7 +28,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarSettingActivity;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 import com.android.car.settings.common.Logger;
 
 /**
@@ -59,7 +59,7 @@ import com.android.car.settings.common.Logger;
  * <li> After get the results, finish the activity
  * </ol>
  */
-public class AddTrustedDeviceActivity extends CarSettingActivity implements CheckLockListener {
+public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements CheckLockListener {
     private static final Logger LOG = new Logger(AddTrustedDeviceActivity.class);
     private static final String BLUETOOTH_DEVICE_KEY = "bluetoothDevice";
     private static final String CURRENT_HANDLE_KEY = "currentHandle";
@@ -210,15 +210,15 @@ public class AddTrustedDeviceActivity extends CarSettingActivity implements Chec
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putParcelable(BLUETOOTH_DEVICE_KEY, mBluetoothDevice);
         savedInstanceState.putLong(CURRENT_HANDLE_KEY, mHandle);
-        super.onSaveInstanceState(savedInstanceState);
     }
 
 
     @Override
     @Nullable
-    protected Fragment getFragment() {
+    protected Fragment getInitialFragment() {
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(
                 R.id.fragment_container);
         return currentFragment == null ? new AddTrustedDeviceProgressFragment() : currentFragment;

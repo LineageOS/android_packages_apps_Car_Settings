@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,10 +18,7 @@ package com.android.car.settings.common;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.testng.Assert.assertThrows;
 
 import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
@@ -31,9 +28,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.preference.Preference;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -75,8 +70,6 @@ public class CarSettingActivityTest {
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
         mActivityController.create();
-
-
     }
 
     @Test
@@ -102,12 +95,12 @@ public class CarSettingActivityTest {
         mActivityController.start().postCreate(null).resume();
         TestFragment testFragment = new TestFragment();
         mActivity.launchFragment(testFragment);
-        assertThat(mActivity.getFragment()).isEqualTo(testFragment);
+        assertThat(mActivity.getCurrentFragment()).isEqualTo(testFragment);
 
         mActivity.onNewIntent(new Intent(Settings.ACTION_DATE_SETTINGS));
         mActivity.onResume();
 
-        assertThat(mActivity.getFragment()).isNotEqualTo(testFragment);
+        assertThat(mActivity.getCurrentFragment()).isNotEqualTo(testFragment);
     }
 
     @Test
@@ -115,7 +108,7 @@ public class CarSettingActivityTest {
         mActivityController.start().postCreate(null).resume();
         Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
         mActivity.onNewIntent(intent);
-        assertThat(mActivity.getFragment()).isNotInstanceOf(TestFragment.class);
+        assertThat(mActivity.getCurrentFragment()).isNotInstanceOf(TestFragment.class);
         mActivity.onResume(); // Showing date time settings (old intent)
         mActivity.launchFragment(new TestFragment()); // Replace with test fragment.
 
@@ -126,18 +119,7 @@ public class CarSettingActivityTest {
         mActivityController.setup(outState);
 
         // Should still display most recently launched fragment.
-        assertThat(mActivityController.get().getFragment()).isInstanceOf(TestFragment.class);
-    }
-
-    @Test
-    public void onPreferenceStartFragment_launchesFragment() {
-        Preference pref = new Preference(mContext);
-        pref.setFragment(TestFragment.class.getName());
-
-        mActivity.onPreferenceStartFragment(/* caller= */ null, pref);
-
-        assertThat(mActivity.getSupportFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(TestFragment.class);
+        assertThat(mActivityController.get().getCurrentFragment()).isInstanceOf(TestFragment.class);
     }
 
     @Test
@@ -157,48 +139,6 @@ public class CarSettingActivityTest {
 
         assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
                 .isEqualTo(1);
-    }
-
-    @Test
-    public void launchFragment_dialogFragment_throwsError() {
-        DialogFragment dialogFragment = new DialogFragment();
-
-        assertThrows(IllegalArgumentException.class,
-                () -> mActivity.launchFragment(dialogFragment));
-    }
-
-    @Test
-    public void showDialog_launchDialogFragment_noTag() {
-        DialogFragment dialogFragment = mock(DialogFragment.class);
-        mActivity.showDialog(dialogFragment, /* tag */ null);
-        verify(dialogFragment).show(mActivity.getSupportFragmentManager(), null);
-    }
-
-    @Test
-    public void showDialog_launchDialogFragment_withTag() {
-        DialogFragment dialogFragment = mock(DialogFragment.class);
-        mActivity.showDialog(dialogFragment, TEST_TAG);
-        verify(dialogFragment).show(mActivity.getSupportFragmentManager(), TEST_TAG);
-    }
-
-    @Test
-    public void findDialogByTag_retrieveOriginalDialog() {
-        DialogFragment dialogFragment = new DialogFragment();
-        mActivity.showDialog(dialogFragment, TEST_TAG);
-        assertThat(mActivity.findDialogByTag(TEST_TAG)).isEqualTo(dialogFragment);
-    }
-
-    @Test
-    public void findDialogByTag_notDialogFragment() {
-        TestFragment fragment = new TestFragment();
-        mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                fragment, TEST_TAG).commit();
-        assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
-    }
-
-    @Test
-    public void findDialogByTag_noSuchFragment() {
-        assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
     }
 
     /** Simple Fragment for testing use. */
