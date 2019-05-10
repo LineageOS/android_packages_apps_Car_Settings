@@ -17,7 +17,6 @@
 package com.android.car.settings.applications.specialaccess;
 
 import android.app.AppOpsManager;
-import android.app.Application;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -61,7 +60,6 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
     };
 
     private final AppOpsManager mAppOpsManager;
-    private final ApplicationsState mApplicationsState;
 
     private final Preference.OnPreferenceChangeListener mOnPreferenceChangeListener =
             new Preference.OnPreferenceChangeListener() {
@@ -105,8 +103,6 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mAppOpsManager = (AppOpsManager) context.getSystemService(Context.APP_OPS_SERVICE);
-        mApplicationsState = ApplicationsState.getInstance(
-                (Application) context.getApplicationContext());
         mAppEntryListManager = new AppEntryListManager(context);
     }
 
@@ -185,7 +181,6 @@ public class AppOpsPreferenceController extends PreferenceController<PreferenceG
         }
         preference.removeAll();
         for (AppEntry entry : mEntries) {
-            mApplicationsState.ensureIcon(entry);
             Preference appOpPreference = new AppOpPreference(getContext(), entry);
             appOpPreference.setOnPreferenceChangeListener(mOnPreferenceChangeListener);
             preference.addPreference(appOpPreference);
