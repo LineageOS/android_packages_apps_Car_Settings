@@ -59,6 +59,7 @@ public class ShadowApplicationPackageManager extends
             new HashMap<>();
     private List<ResolveInfo> mHomeActivities = Collections.emptyList();
     private ComponentName mDefaultHomeActivity;
+    private String mPermissionControllerPackageName;
 
     @Resetter
     public static void reset() {
@@ -178,6 +179,15 @@ public class ShadowApplicationPackageManager extends
         Pair<String, Integer> key = new Pair<>(packageName, userId);
         mPkgAndUserIdToIntentVerificationStatusMap.put(key, status);
         return true;
+    }
+
+    @Implementation
+    protected String getPermissionControllerPackageName() {
+        return mPermissionControllerPackageName;
+    }
+
+    public void setPermissionControllerPackageName(String packageName) {
+        mPermissionControllerPackageName = packageName;
     }
 
     public void setHomeActivities(List<ResolveInfo> homeActivities) {
