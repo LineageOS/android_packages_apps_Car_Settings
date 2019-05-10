@@ -68,10 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"ఇప్పుడే <xliff:g id="ID_1">^1</xliff:g> అప్‌డేట్ చేసింది"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"ఇప్పుడే అప్‌డేట్ చేయబడింది"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"ప్లాన్‌ను చూడండి"</string>
-    <!-- no translation found for app_data_usage (3878609885080232877) -->
-    <skip />
-    <!-- no translation found for data_usage_app_restricted (4570970078120010951) -->
-    <skip />
+    <string name="app_data_usage" msgid="3878609885080232877">"యాప్ డేటా వినియోగం"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"నియంత్రించబడింది"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"వినియోగ సైకిల్ రీసెట్ తేదీ"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"ప్రతి నెలలో ఈ తేదీన:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"సెట్ చేయి"</string>
@@ -140,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ను ఆన్ చేస్తోంది..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ఇతర పరికరాలు <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>కు కనెక్ట్ కావచ్చు"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"హాట్‌స్పాట్ పాస్‌వర్డ్‌"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP బ్యాండ్"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"హాట్‌స్పాట్ &amp; టెథెరింగ్"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"హాట్‌స్పాట్‌ని ఆటోమేటిక్‌గా ఆఫ్ చేయండి"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"పరికరాలు ఏవీ కనెక్ట్ కాకపోతే Wi‑Fi హాట్‌స్పాట్‌ ఆఫ్ అవుతుంది"</string>
@@ -208,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"అన్ఇన్‌స్టాల్ చేయి"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"మీరు ఈ యాప్‌ను నిలిపివేస్తే, Android మరియు ఇతర యాప్‌లు ఇకపై ఉద్దేశించిన రీతిలో పని చేయకపోవచ్చు."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"యాప్‌ను నిలిపివేయి"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"అనుమతులు"</string>
     <string name="notifications_label" msgid="6586089149665170731">"నోటిఫికేషన్‌లు"</string>
     <string name="application_version_label" msgid="8556889839783311649">"వెర్షన్: %1$s"</string>
@@ -243,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"ఏ డిఫాల్ట్‌లు సెట్ చేయబడలేదు."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"మీరు కొన్ని చర్యల కోసం ఈ యాప్‌ను డిఫాల్ట్‌గా ప్రారంభించడానికి ఎంచుకున్నారు."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"డిఫాల్ట్‌లను తీసివేయి"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"మద్దతిచ్చే లింక్‌లను తెరవండి"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"ఈ యాప్‌లో తెరుస్తుంది"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"ప్రతిసారి అడుగు"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"ఈ యాప్‌లో తెరవదు"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"మద్దతిచ్చే లింక్‌లు"</string>
     <string name="special_access" msgid="5730278220917123811">"ప్రత్యేక యాప్ యాక్సెస్"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"నోటిఫికేషన్ యాక్సెస్"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను అనుమతించాలా?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ప‌రిచ‌యాల పేర్లు, మీరు స్వీకరించిన సందేశాల వంటి వ్యక్తిగత సమాచారంతో సహా అన్ని నోటిఫికేషన్‌లను చదవగలదు. అంతే కాదు ఇది నోటిఫికేషన్‌లను సవరించగలదు లేదా తీసివేయగలదు లేదా అవి కలిగి ఉండే చర్య బటన్‌లను యాక్టివేట్ చేయగలదు.\n\nఇది, అంతరాయం కలిగించవద్దు ఎంపికను ఆన్ చేయగల లేదా ఆఫ్ చేయగల సామర్థ్యాన్ని యాప్‌కు ఇవ్వడంతో పాటు సంబంధిత సెట్టింగ్‌లను కూడా మారుస్తుంది."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"మీరు <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> కోసం నోటిఫికేషన్ యాక్సెస్‌ను ఆఫ్ చేస్తే, అంతరాయం కలిగించవద్దు ఎంపిక యాక్సెస్ కూడా ఆఫ్ చేయబడవచ్చు."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ఆఫ్ చేయి"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"రద్దు చేయి"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"స్థానం"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన అభ్యర్థనలు"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన అభ్యర్థనలు లేవు"</string>

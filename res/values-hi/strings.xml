@@ -138,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> चालू किया जा रहा है..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"दूसरे डिवाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> से कनेक्ट हो सकते हैं"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट का पासवर्ड"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"एपी बैंड"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने आप बंद करें"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
@@ -206,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करें"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"अगर आप इस ऐप्लिकेशन को बंद कर देते हैं, तो हो सकता है कि Android और दूसरे ऐप्लिकेशन ठीक से काम न करें."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ऐप्लिकेशन बंद करें"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचनाएं"</string>
     <string name="application_version_label" msgid="8556889839783311649">"वर्शन: %1$s"</string>
@@ -241,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"कोई डिफ़ॉल्‍ट सेट नहीं है."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"आपने कुछ कामों के लिए इस ऐप्लिकेशन को डिफ़ॉल्‍ट रूप से लॉन्‍च करना चुना है."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"डिफ़ॉल्ट ऐप्लिकेशन हटाएं"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"सहायता करने वाले लिंक खोलें"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"इस ऐप्लिकेशन में खोलें"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"हर बार पूछें"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"इस ऐप्लिकेशन में नहीं खोलें"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"सहायता करने वाले लिंक"</string>
     <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन को खास अनुमति"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना का एक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> के लिए सूचना एक्सेस करने की अनुमति दें?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> आपकी हर सूचना पढ़ पाएगा. इसमें आपकी निजी जानकारी, जैसे कि संपर्कों के नाम और आपको आने वाले मैसेज शामिल हैं. यह सूचनाओं को खारिज करने या उनमें मौजूद कार्रवाई बटनों को ट्रिगर करने जैसे काम भी कर पाएगा.\n\nइससे यह ऐप्लिकेशन \'परेशान न करें\' सुविधा चालू या बंद कर पाएगा और इससे जुड़ी सेटिंग बदल पाएगा."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"अगर आप <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> के लिए सूचना का एक्सेस बंद करते हैं, तो \'परेशान न करें\' सेवा का एक्सेस भी बंद हो सकता है."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करें"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करें"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>

@@ -138,7 +138,29 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Menghidupkan <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Peranti lain boleh bersambung ke <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Kata laluan tempat liputan"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Jalur AP"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Tempat liputan &amp; penambatan"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Matikan tempat liputan secara automatik"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Tempat liputan Wi‑Fi akan dimatikan jika tiada peranti disambungkan"</string>
@@ -206,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"Nyahpasang"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jika anda melumpuhkan apl ini, Android dan apl lain mungkin tidak berfungsi seperti yang dimaksudkan lagi."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Lumpuhkan apl"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Kebenaran"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Pemberitahuan"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versi: %1$s"</string>
@@ -241,23 +265,34 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Tiada pilihan lalai ditetapkan."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Anda memilih untuk melancarkan apl ini secara lalai bagi sesetengah tindakan."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Kosongkan pilihan lalai"</string>
-    <!-- no translation found for app_launch_open_domain_urls_title (4705344946367759393) -->
-    <skip />
-    <!-- no translation found for app_link_open_always (5783167184335545230) -->
-    <skip />
-    <!-- no translation found for app_link_open_ask (7242075065136237456) -->
-    <skip />
-    <!-- no translation found for app_link_open_never (2173174327831792316) -->
-    <skip />
-    <!-- no translation found for app_launch_supported_domain_urls_title (7345116365785981158) -->
-    <skip />
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Buka pautan yang disokong"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Buka dalam apl ini"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Tanya setiap kali"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Jangan buka dalam apl ini"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Pautan yang disokong"</string>
     <string name="special_access" msgid="5730278220917123811">"Akses apl khas"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
     <string name="notification_access_title" msgid="1467340098885813473">"Akses pemberitahuan"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Benarkan akses pemberitahuan untuk <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> akan dapat membaca semua pemberitahuan, termasuk maklumat peribadi seperti nama kenalan dan teks mesej yang anda terima. Selain itu, apl tersebut juga dapat mengetepikan pemberitahuan atau mencetuskan butang tindakan yang terdapat pada apl ini. \n\nTindakan ini turut memberi apl tersebut keupayaan untuk menghidupkan atau mematikan ciri Jangan Ganggu dan menukar tetapan yang berkaitan."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jika anda mematikan akses pemberitahuan untuk <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, akses ciri Jangan Ganggu mungkin turut dimatikan."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Matikan"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Batal"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Lokasi"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Permintaan Lokasi Terbaharu"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Tiada permintaan lokasi terbaharu"</string>
