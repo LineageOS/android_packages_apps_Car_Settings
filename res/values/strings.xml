@@ -483,7 +483,7 @@
     <string name="show_system">Show system</string>
     <!-- Text for toggle button to control whether system processes are hidden in app lists. [CHAR_LIMIT=30] -->
     <string name="hide_system">Hide system</string>
-    <!-- Title for managing apps which can modify system settings. [CHAR_LIMIT=30] -->
+    <!-- Title for managing apps which can modify system settings. [CHAR_LIMIT=40] -->
     <string name="modify_system_settings_title">Modify system settings</string>
     <!-- Description of modifying system settings. [CHAR_LIMIT=NONE] -->
     <string name="modify_system_settings_description">This permission allows an app to modify system settings.</string>
@@ -506,7 +506,7 @@
     <!-- Title for managing apps which can change Wi-Fi state. [CHAR_LIMIT=30] -->
     <string name="wifi_control_title">Wi-Fi control</string>
     <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
-    <string name="wifi_control_description">Wi-Fi control allow an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot.</string>
+    <string name="wifi_control_description">Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot.</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
