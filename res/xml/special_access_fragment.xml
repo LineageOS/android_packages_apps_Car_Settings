@@ -40,6 +40,11 @@
         android:title="@string/usage_access_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.applications.specialaccess.DirectoryAccessFragment"
+        android:key="@string/pk_directory_access_entry"
+        android:title="@string/directory_access_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.applications.specialaccess.WifiControlFragment"
         android:key="@string/pk_wifi_control_entry"
         android:title="@string/wifi_control_title"

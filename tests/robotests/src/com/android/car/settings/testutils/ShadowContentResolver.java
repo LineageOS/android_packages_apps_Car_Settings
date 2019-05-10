@@ -23,7 +23,10 @@ import android.content.SyncAdapterType;
 import android.content.SyncInfo;
 import android.content.SyncStatusInfo;
 import android.content.SyncStatusObserver;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.CancellationSignal;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
@@ -53,6 +56,13 @@ public class ShadowContentResolver extends org.robolectric.shadows.ShadowContent
     private static List<SyncInfo> sSyncs = new ArrayList<>();
     private static SyncListener sSyncListener;
     private static SyncStatusObserver sStatusObserver;
+
+    @Implementation
+    public final Cursor query(Uri uri, String[] projection, Bundle queryArgs,
+            CancellationSignal cancellationSignal) {
+        return query(uri, projection, /* selection= */ null, /* selectionArgs= */
+                null, /* sortOrder= */ null, cancellationSignal);
+    }
 
     @Implementation
     protected static SyncAdapterType[] getSyncAdapterTypesAsUser(int userId) {
