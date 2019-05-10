@@ -219,6 +219,15 @@ public class AppEntryListManager {
         mMainHandler.removeMessages(MainHandler.MSG_INFO_UPDATED);
     }
 
+    private void loadInfo(List<ApplicationsState.AppEntry> entries) {
+        if (mExtraInfoBridge != null) {
+            mExtraInfoBridge.loadExtraInfo(entries);
+        }
+        for (ApplicationsState.AppEntry entry : entries) {
+            mApplicationsState.ensureIcon(entry);
+        }
+    }
+
     private static class BackgroundHandler extends Handler {
         private static final int MSG_LOAD_ALL = 1;
         private static final int MSG_LOAD_PKG = 2;
@@ -238,16 +247,12 @@ public class AppEntryListManager {
             }
             switch (msg.what) {
                 case MSG_LOAD_ALL:
-                    if (outer.mExtraInfoBridge != null) {
-                        outer.mExtraInfoBridge.loadExtraInfo(outer.mSession.getAllApps());
-                    }
+                    outer.loadInfo(outer.mSession.getAllApps());
                     outer.mMainHandler.sendEmptyMessage(MainHandler.MSG_INFO_UPDATED);
                     break;
                 case MSG_LOAD_PKG:
                     ApplicationsState.AppEntry entry = (ApplicationsState.AppEntry) msg.obj;
-                    if (outer.mExtraInfoBridge != null) {
-                        outer.mExtraInfoBridge.loadExtraInfo(Collections.singletonList(entry));
-                    }
+                    outer.loadInfo(Collections.singletonList(entry));
                     outer.mMainHandler.sendEmptyMessage(MainHandler.MSG_INFO_UPDATED);
                     break;
             }
