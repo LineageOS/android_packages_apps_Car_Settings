@@ -20,7 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/assist_and_voice_input_settings">
     <com.android.car.settings.common.ButtonPreference
-        android:fragment="com.android.car.settings.applications.defaultapps.DefaultAssistantPickerFragment"
         android:key="@string/pk_default_assist"
         android:title="@string/assist_app_settings"
         android:widgetLayout="@layout/details_preference_widget"
