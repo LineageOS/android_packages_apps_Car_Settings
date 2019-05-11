@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/action_bar_margin"/>
+        app:layout_constraintGuide_begin="@*android:dimen/action_bar_margin_start"/>
 
     <TextView
         android:id="@+id/title"
@@ -57,21 +57,19 @@
         app:layout_constraintStart_toEndOf="@+id/start_margin"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/end_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/action_bar_margin"/>
-
-    <Switch
-        android:id="@+id/toggle_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
+    <FrameLayout
+        android:layout_width="@*android:dimen/action_bar_margin_end"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/end_margin"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent">
+        <Switch
+            android:id="@+id/toggle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingStart="@*android:/dimen/action_bar_toggle_internal_padding"
+            android:paddingEnd="@*android:/dimen/action_bar_toggle_internal_padding"
+            android:background="@null"/>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

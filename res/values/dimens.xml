@@ -28,14 +28,6 @@
 
     <!-- Action Bar -->
     <dimen name="action_bar_height">@*android:dimen/car_app_bar_height</dimen>
-    <dimen name="action_bar_margin">@*android:dimen/car_margin</dimen>
-    <dimen name="action_bar_with_buttons_padding_end">@*android:dimen/car_keyline_1</dimen>
-    <dimen name="action_bar_button_margin_start">@*android:dimen/car_padding_4</dimen>
-    <dimen name="action_bar_button_padding_start">@*android:dimen/car_padding_3</dimen>
-    <dimen name="action_bar_button_padding_end">@*android:dimen/car_padding_3</dimen>
-    <dimen name="action_bar_icon_button_padding_start">@*android:dimen/car_padding_2</dimen>
-    <dimen name="action_bar_icon_button_padding_end">@*android:dimen/car_padding_2</dimen>
-    <dimen name="action_bar_icon_button_drawable_padding">@*android:dimen/car_padding_2</dimen>
 
     <!-- Suggestions -->
     <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
