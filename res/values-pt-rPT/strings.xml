@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Ligar"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Palavra-passe"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostrar palavra-passe"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Nome da rede"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Introduza o SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Segurança"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"A ativar <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Outros dispositivos podem ligar-se a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Palavra-passe da zona Wi-Fi"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Segurança"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 Pessoal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nenhuma"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda do PA"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Selecionar banda do PA"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automático"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Banda de 2,4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Banda de 5,0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Banda de 5,0 GHz preferida"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Selecione, pelo menos, uma banda para a zona Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Zona Wi-Fi e ligação via telemóvel"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desative a zona Wi-Fi automaticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"A zona Wi‑Fi será desativada se não forem ligados quaisquer dispositivos."</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Desinstalar"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Se desativar esta aplicação, o Android e outras aplicações podem deixar de funcionar corretamente."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desativar aplicação"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Não instalado para este utilizador"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Autorizações"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificações"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versão: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Não abrir com esta aplicação"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Links compatíveis"</string>
     <string name="special_access" msgid="5730278220917123811">"Acesso especial a aplicações"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar definições sistema"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Pretende permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desativar o acesso às notificações para o serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso ao modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Acesso de utilização"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"O acesso de utilização permite a uma aplicação monitorizar que outras aplicações está a utilizar e com que frequência, bem como o operador e as definições de idioma, entre outros detalhes."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Controlo de Wi-Fi"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Localização"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Pedidos de localização recentes"</string>

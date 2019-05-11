@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Միանալ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Գաղտնաբառ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Ցուցադրել գաղտնաբառը"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Ցանցի անունը"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Մուտքագրեք SSID-ն"</string>
     <string name="wifi_security" msgid="158358046038876532">"Անվտանգություն"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"«<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>» թեժ կետը միանում է…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Այլ սարքեր կարող են միանալ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ին"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Թեժ կետի գաղտնաբառը"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Անվտանգություն"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Չկա"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP դիապազոնը"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Ընտրեք AP դիապազոնը"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Ավտոմատ"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 ԳՀց"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5․0 ԳՀց"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 ԳՀց (նախընտրելի)"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 ԳՀց"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 ԳՀց"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Ընտրեք առնվազն մեկ դիապազոն թեժ կետի համար՝"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Թեժ կետ և մոդեմի ռեժիմ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Ավտոմատ անջատել թեժ կետը"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi թեժ կետը կանջատվի, եթե որևէ սարք միացած չլինի դրան"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Ապատեղադրել"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Եթե անջատեք այս հավելվածը, Android-ը և այլ հավելվածներ հնարավոր է՝ սխալներով աշխատեն:"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Անջատել հավելվածը"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Տեղադրված չէ այս օգտատիրոջ համար"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Թույլտվություններ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Ծանուցումներ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Տարբերակ՝ %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Չբացել այս հավելվածով"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Աջակցվող հղումներ"</string>
     <string name="special_access" msgid="5730278220917123811">"Հատուկ հասանելիություն հավելվածների համար"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Ցույց տալ համակ. գործընթացները"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Թաքցնել համակ. գործընթացները"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Համակ. կարգավորումների փոփոխում"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Այս թույլտվությունը հնարավորություն է տալիս հավելվածներին փոփոխել համակարգի կարգավորումները:"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Ծանուցումների հասանելիություն"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Հասանելի դարձնե՞լ ծանուցումները <xliff:g id="SERVICE">%1$s</xliff:g> հավելվածին"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածը կկարողանա կարդալ բոլոր ծանուցումները, ներառյալ անձնական տվյալները, օրինակ, կոնտակտների անուններն ու հաղորդագրությունները: Այն նաև կկարողանա փակել ծանուցումները և ակտիվացնել դրանցում պարունակվող գործողությունների կոճակները:\n\nՀավելվածին նաև կտրվի «Չանհանգստացնել» գործառույթը միացնելու/անջատելու և դրա կարգավորումները փոխելու թույլտվություն:"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Եթե անջատեք ծանուցումները <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> հավելվածի համար, «Չանհանգստացնել» գործառույթը նույնպես կարող է անջատվել:"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Անջատել"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Չեղարկել"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Օգտագ. տվյալների հասանելիութ."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Օգտագործման մասին տվյալների հասանելիությունը հնարավորություն է տալիս հավելվածներին հավաքել տարբեր տեղեկություններ, օրինակ, այն մասին, թե ուրիշ ինչ հավելվածներ եք օգտագործում և ինչ հաճախականությամբ, որ օպերատորից եք օգտվում, լեզվի ինչ կարգավորումներ եք սահմանել և այլն:"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ի կառավար"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Տեղորոշում"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Տեղադրության տվյալների վերջին հարցումները"</string>
@@ -354,8 +341,8 @@
     <string name="reset_esim_error_title" msgid="7245109418130525492">"Չհաջողվեց վերակայել eSIM քարտերը"</string>
     <string name="reset_network_select" msgid="2433825874868038739">"Ընտրեք ցանց"</string>
     <string name="reset_network_button_text" msgid="8374174455632765033">"Վերակայել կարգավորումները"</string>
-    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Վերակայե՞լ"</string>
-    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Վերակայե՞լ ցանցի բոլոր կարգավորումները: Այս գործողությունը հնարավոր չի լինի հետարկել:"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Զրոյացնե՞լ կարգավորումները"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Զրոյացնե՞լ ցանցի բոլոր կարգավորումները: Այս գործողությունը հնարավոր չի լինի հետարկել:"</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Վերակայել կարգավորումները"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Ցանցի կարգավորումները վերակայվել են"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Վերակայել հավելվածների կարգավորումները"</string>

@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Σύνδεση"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Κωδικός πρόσβασης"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Εμφάνιση κωδικού πρόσβασης"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Όνομα δικτύου"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Εισαγάγετε το SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Ασφάλεια"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Ενεργοποίηση <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Είναι δυνατή η σύνδεση άλλων συσκευών στο <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Κωδικός ΣΠ Wi-Fi"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Ασφάλεια"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Κανένα"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Ζώνη ΣΠ"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Επιλογή εύρους ΣΠ"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Αυτόματα"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Εύρος 2,4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Εύρος 5,0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Προτιμάται εύρος 5,0 GHz"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Επιλέξτε τουλ. ένα εύρος για το ΣΠ Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Σημείο πρόσβασης Wi-Fi και σύνδεση"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Αυτόματη απενεργοποίηση σημείου πρόσβασης Wi-Fi"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Το σημείο πρόσβασης Wi‑Fi θα απενεργοποιηθεί εάν δεν υπάρχουν συνδεδεμένες συσκευές"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Απεγκατάσταση"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Εάν απενεργοποιήσετε αυτήν την εφαρμογή, η λειτουργία του Android και άλλων εφαρμογών ενδέχεται να μην είναι η αναμενόμενη."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Απενεργοποίηση εφαρμογής"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Δεν εγκαταστάθηκε για αυτόν τον χρήστη"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Δικαιώματα"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Ειδοποιήσεις"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Έκδοση: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Να μην ανοίγει σε αυτήν την εφαρμογή"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Υποστηριζόμενοι σύνδεσμοι"</string>
     <string name="special_access" msgid="5730278220917123811">"Ειδική πρόσβαση στην εφαρμογή"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Εμφάνιση συστήματος"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Απόκρυψη συστήματος"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Τροποποίηση ρυθμ. συστήματος"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Αυτή η άδεια επιτρέπει σε μια εφαρμογή την τροποποίηση των ρυθμίσεων συστήματος."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Πρόσβαση ειδοποιήσεων"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Να επιτρέπεται η πρόσβαση των ειδοποιήσεων για την υπηρεσία <xliff:g id="SERVICE">%1$s</xliff:g>;"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"Το <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> θα μπορεί να διαβάζει όλες τις ειδοποιήσεις, συμπεριλαμβανομένων των προσωπικών πληροφοριών όπως είναι τα ονόματα των επαφών και το κείμενο των μηνυμάτων που λαμβάνετε. Επίσης, θα μπορεί να παραβλέπει ειδοποιήσεις ή να ενεργοποιεί τα κουμπιά ενεργειών που περιέχονται σε αυτές.\n\nΜε αυτόν τον τρόπο, η εφαρμογή θα μπορεί να ενεργοποιεί ή να απενεργοποιεί τη λειτουργία \"Μην ενοχλείτε\" και να αλλάζει σχετικές ρυθμίσεις."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Εάν απενεργοποιήσετε την πρόσβαση των ειδοποιήσεων για το <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, μπορεί να απενεργοποιηθεί επίσης η πρόσβαση της λειτουργίας Μην ενοχλείτε."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Απενεργοποίηση"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ακύρωση"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Πρόσβαση χρήσης"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Η πρόσβαση χρήσης επιτρέπει σε μια εφαρμογή να παρακολουθεί τις άλλες εφαρμογές που χρησιμοποιείτε, τη συχνότητα χρήσης τους, καθώς και την εταιρεία κινητής τηλεφωνίας σας, τις ρυθμίσεις γλώσσας και άλλες λεπτομέρειες."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Έλεγχος Wi-Fi"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Πρόσφατα αιτήματα τοποθεσίας"</string>
