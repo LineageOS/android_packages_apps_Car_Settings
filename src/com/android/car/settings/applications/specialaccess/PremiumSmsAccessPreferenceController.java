@@ -16,7 +16,6 @@
 
 package com.android.car.settings.applications.specialaccess;
 
-import android.app.Application;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.os.RemoteException;
@@ -33,7 +32,6 @@ import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.telephony.ISms;
 import com.android.internal.telephony.SmsUsageMonitor;
-import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 import com.android.settingslib.applications.ApplicationsState.AppFilter;
 
@@ -67,7 +65,6 @@ public class PremiumSmsAccessPreferenceController extends PreferenceController<P
     };
 
     private final ISms mSmsManager;
-    private final ApplicationsState mApplicationsState;
 
     private final Preference.OnPreferenceChangeListener mOnPreferenceChangeListener =
             new Preference.OnPreferenceChangeListener() {
@@ -108,8 +105,6 @@ public class PremiumSmsAccessPreferenceController extends PreferenceController<P
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mSmsManager = ISms.Stub.asInterface(ServiceManager.getService("isms"));
-        mApplicationsState = ApplicationsState.getInstance(
-                (Application) context.getApplicationContext());
         mAppEntryListManager = new AppEntryListManager(context);
     }
 
@@ -147,7 +142,6 @@ public class PremiumSmsAccessPreferenceController extends PreferenceController<P
         }
         preference.removeAll();
         for (AppEntry entry : mEntries) {
-            mApplicationsState.ensureIcon(entry);
             Preference appPreference = new PremiumSmsPreference(getContext(), entry);
             appPreference.setOnPreferenceChangeListener(mOnPreferenceChangeListener);
             preference.addPreference(appPreference);

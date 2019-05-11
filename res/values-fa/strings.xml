@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"اتصال"</string>
     <string name="wifi_password" msgid="5565632142720292397">"گذرواژه"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"نمایش گذرواژه"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"نام شبکه"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID را وارد کنید"</string>
     <string name="wifi_security" msgid="158358046038876532">"امنیت"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"درحال روشن کردن <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"سایر دستگاه‌ها می‌توانند به <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> متصل شوند."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"گذرواژه نقطه اتصال"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"امنیت"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-شخصی"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"هیچ‌کدام"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"باند AP"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"انتخاب باند AP"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"خودکار"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"باند ۲٫۴ گیگاهرتزی"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"باند ۵٫۰ گیگاهرتزی"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"باند ۵٫۰ گیگاهرتز اولویت دارد"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"۲٫۴ گیگاهرتز"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"۵٫۰ گیگاهرتز"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"حداقل یک باند برای نقطه اتصال Wi‑Fi انتخاب کنید:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"نقطه اتصال و اتصال به اینترنت با تلفن همراه"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خاموش شدن خودکار نقطه اتصال"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"اگر دستگاهی متصل نباشد، نقطه اتصال Wi‑Fi خاموش خواهد شد"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"حذف نصب"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"اگر این برنامه را غیرفعال کنید، ممکن است Android و سایر برنامه‌ها دیگر عملکرد موردانتظار را نداشته باشند."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"غیرفعال کردن برنامه"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"برای این کاربر نصب نشده است"</string>
     <string name="permissions_label" msgid="2701446753515612685">"مجوزها"</string>
     <string name="notifications_label" msgid="6586089149665170731">"اعلان‌ها"</string>
     <string name="application_version_label" msgid="8556889839783311649">"نسخه: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"در این برنامه باز نشود"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"پیوندهای پشتیبانی‌شده"</string>
     <string name="special_access" msgid="5730278220917123811">"دسترسی ویژه به برنامه"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"نمایش سیستم"</string>
+    <string name="hide_system" msgid="8845453295584638040">"پنهان کردن سیستم"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"تغییر تنظیمات سیستم"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"این مجوز به برنامه امکان می‌دهد تنظیمات سیستم را تغییر دهد."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"دسترسی به اعلان"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"دسترسی به اعلان برای <xliff:g id="SERVICE">%1$s</xliff:g> مجاز شود؟"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> می‌تواند همه اعلان‌ها را بخواند، ازجمله اطلاعات شخصی مانند نام مخاطبین و پیام‌های نوشتاری که دریافت می‌کنید. همچنین می‌تواند اعلان‌ها را رد کند یا دکمه عمل آن‌ها را فعال کند. \n\nهمچنین به این برنامه توانایی روشن یا خاموش کردن «مزاحم نشوید» و تغییر تنظیمات مربوطه را می‌دهد."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر دسترسی به اعلان را برای <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> خاموش کنید، ممکن است دسترسی به «مزاحم نشوید» هم خاموش شود."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"خاموش کردن"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"لغو"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"دسترسی به استفاده"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"دسترسی به میزان استفاده، امکان ردیابی اینکه از چه برنامه‌های دیگری و چند وقت یک‌بار استفاده می‌کنید و همچنین شرکت مخابراتی‌تان، تنظیمات زبان و سایر جزئیات را به برنامه می‌دهد."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"کنترل Wi-Fi"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>

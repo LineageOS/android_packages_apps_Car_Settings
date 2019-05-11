@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Koppel"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Wagwoord"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Wys wagwoord"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Netwerknaam"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Voer die SSID in"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sekuriteit"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Skakel tans <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aan …"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Ander toestelle kan aan <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> koppel"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Warmkolwagwoord"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sekuriteit"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-persoonlik"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Geen"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Toegangpuntband"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Kies toegangspuntband"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Outo"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GHz-band"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 GHz-band"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-band verkies"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Kies 1+ band vir warmkol:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Warmkol en verbinding"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Skakel warmkol outomaties af"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi-Fi-warmkol sal afskakel as geen toestelle gekoppel is nie"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Deïnstalleer"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"As jy hierdie program deaktiveer, sal Android en ander programme dalk nie meer soos bedoel werk nie."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Deaktiveer program"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Nie vir hierdie gebruiker geïnstalleer nie"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Toestemmings"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Kennisgewings"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Weergawe: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Moenie in hierdie program oopmaak nie"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Gesteunde skakels"</string>
     <string name="special_access" msgid="5730278220917123811">"Spesiale programtoegang"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Wys stelsel"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Versteek stelsel"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Verander stelselinstellings"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Hierdie toestemming laat \'n program toe om stelselinstellings te verander."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Kennisgewingtoegang"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Laat kennisgewingtoegang vir <xliff:g id="SERVICE">%1$s</xliff:g> toe?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> sal alle kennisgewings kan lees, insluitend persoonlike inligting soos kontakname en die teks van boodskappe wat jy ontvang. Dit sal ook kennisgewings kan toemaak of aksieknoppies binne-in hulle kan aktiveer.\n\nDit sal die program ook die vermoë gee om Moenie Steur nie aan of af te skakel en verwante instellings te verander."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"As jy kennisgewingtoegang vir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> afskakel, kan Moenie Steur Nie-toegang dalk ook afgeskakel word."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Skakel af"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Kanselleer"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Gebruiktoegang"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Gebruiktoegang laat \'n program toe om na te spoor watter ander programme jy gebruik en hoe gereeld, asook as jou diensverskaffer, taalinstellings en ander besonderhede."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-beheer"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Onlangse liggingversoeke"</string>
@@ -328,7 +315,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Kopiereg"</string>
     <string name="license_title" msgid="936705938435249965">"Lisensie"</string>
     <string name="terms_title" msgid="5201471373602628765">"Bepalings en voorwaardes"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"Webaansig-stelsellisensies"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Stelsel se WebView-lisensies"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Muurpapiere"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Verskaffers van satellietbeelde:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>

@@ -23,7 +23,7 @@
     <string name="brightness" msgid="2919605130898772866">"Nivell de brillantor"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Brillantor adaptativa"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimitza el nivell de brillantor segons la llum disponible"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"Opció Llum nocturna activada"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"Llum nocturna activada"</string>
     <string name="keywords_display" msgid="3978416985146943922">"pantalla, pantalla tàctil"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"pantalla atenuada, pantalla tàctil, bateria"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"pantalla atenuada, pantalla tàctil, bateria"</string>
@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Connecta"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Contrasenya"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostra la contrasenya"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Nom de la xarxa"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Introdueix l\'SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Seguretat"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"S\'està activant <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Altres dispositius es poden connectar a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contrasenya punt d\'accés Wi‑Fi"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Seguretat"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Cap"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Banda del PA"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Selecciona la banda del PA"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automàtic"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Banda de 2,4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Banda de 5,0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Preferència per la banda de 5,0 GHz"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Tria almenys una banda per al punt d\'accés Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Punt d\'accés Wi-Fi i compartició de xarxa"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactiva el punt d\'accés Wi‑Fi automàticament"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punt d\'accés Wi‑Fi es desactivarà si no hi ha cap dispositiu connectat"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Desinstal·la"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Si desactives aquesta aplicació, és possible que Android i altres aplicacions deixin de funcionar com esperes."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desactiva l\'aplicació"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"No instal·lada per a l\'usuari"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permisos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificacions"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versió: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"No obris en aquesta aplicació"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enllaços admesos"</string>
     <string name="special_access" msgid="5730278220917123811">"Accés especial d\'aplicacions"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Mostra el sistema"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Amaga el sistema"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar configuració sistema"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Aquest permís permet que una aplicació modifiqui la configuració del sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accés a les notificacions"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Vols que <xliff:g id="SERVICE">%1$s</xliff:g> tingui accés a les notificacions?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> podrà llegir totes les notificacions, inclosa la informació personal, com ara els noms dels contactes i el text dels missatges que rebis. També podrà ignorar les notificacions o activar els botons d\'acció que continguin.\n\nL\'aplicació també podrà activar i desactivar el mode No molestis i canviar la configuració que hi estigui relacionada."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactives l\'accés a les notificacions per a <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, és possible que també es desactivi l\'accés al mode No molestis."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancel·la"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Accés d\'ús"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"L\'accés a dades d\'ús permet que una aplicació pugui fer un seguiment de les altres aplicacions que utilitzes i la freqüència amb què ho fas, així com del teu operador de telefonia mòbil i de la configuració d\'idioma, entre d\'altres."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Control de la Wi‑Fi"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Ubicació"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Sol·licituds d\'ubicació recents"</string>
@@ -470,8 +457,8 @@
     <string name="really_remove_account_message" msgid="4296769280849579900">"En suprimir aquest compte, se\'n suprimiran tots els missatges, els contactes i la resta de dades del dispositiu."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"No s\'ha pogut suprimir el compte."</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronització del compte"</string>
-    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"La sincronització està activada per a <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g> elements"</string>
-    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"La sincronització està activada per a tots els elements"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Sincronització activada per a <xliff:g id="ID_1">%1$d</xliff:g> de <xliff:g id="ID_2">%2$d</xliff:g> elements"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Sincronització activada per a tots els elements"</string>
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"La sincronització està desactivada per a tots els elements"</string>
     <string name="sync_disabled" msgid="393531064334628258">"Sincronització desactivada"</string>
     <string name="sync_error" msgid="6698021343089247914">"Error de sincronització"</string>

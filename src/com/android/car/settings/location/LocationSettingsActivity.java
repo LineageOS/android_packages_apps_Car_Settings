@@ -14,19 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.applications.defaultapps;
+package com.android.car.settings.location;
 
-import androidx.annotation.XmlRes;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.R;
-import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.common.BaseCarSettingsActivity;
 
-/** Shows the option to choose the default assistant. */
-public class DefaultAssistantPickerFragment extends SettingsFragment {
+/**
+ * Starts {@link LocationSettingsFragment} in a separate activity to help with back navigation flow.
+ */
+public class LocationSettingsActivity extends BaseCarSettingsActivity {
 
+    @Nullable
     @Override
-    @XmlRes
-    protected int getPreferenceScreenResId() {
-        return R.xml.default_assistant_picker_fragment;
+    protected Fragment getInitialFragment() {
+        return new LocationSettingsFragment();
     }
 }

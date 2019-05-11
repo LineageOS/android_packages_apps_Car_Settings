@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Kết nối"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Mật khẩu"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Hiển thị mật khẩu"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Tên mạng"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Nhập SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Bảo mật"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Đang bật <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Các thiết bị khác có thể kết nối với <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Mật khẩu điểm phát sóng"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Bảo mật"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Không"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Băng tần AP"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Chọn băng tần AP"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Tự động"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Băng tần 2,4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Băng tần 5 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Ưu tiên băng tần 5 GHz"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chọn 1 băng tần cho điểm phát sóng Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Điểm phát sóng và chia sẻ kết nối"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Tự động tắt điểm phát sóng"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Điểm phát sóng Wi-Fi sẽ tắt nếu không có thiết bị nào kết nối"</string>
@@ -200,7 +191,7 @@
     <string name="text_to_speech_settings" msgid="811985746199507343">"Đầu ra văn bản sang lời nói"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Công cụ ưu tiên"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Công cụ hiện tại"</string>
-    <string name="tts_speech_rate" msgid="4512944877291943133">"Tốc độ nói"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Tốc độ lời nói"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"Cao độ"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Đặt lại"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Âm báo"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Gỡ cài đặt"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Nếu bạn tắt ứng dụng này, Android và các ứng dụng khác có thể không còn hoạt động như dự kiến."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Tắt ứng dụng"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Chưa cài đặt cho người dùng này"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Quyền"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Thông báo"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Phiên bản: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Không mở trong ứng dụng này"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Các liên kết được hỗ trợ"</string>
     <string name="special_access" msgid="5730278220917123811">"Quyền truy cập đặc biệt"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Hiển thị hệ thống"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Ẩn hệ thống"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các cài đặt hệ thống"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các tùy chọn cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cấp quyền truy cập thông báo cho <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> có thể đọc tất cả các thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và nội dung của thông báo mà bạn nhận được. Dịch vụ này cũng có thể bỏ qua thông báo hoặc kích hoạt các nút hành động trong các thông báo đó.\n\nĐiều này cũng sẽ cho phép ứng dụng bật hoặc tắt chế độ Không làm phiền và thay đổi các tùy chọn cài đặt có liên quan."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Quyền truy cập dữ liệu sử dụng"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Quyền truy cập vào dữ liệu sử dụng cho phép một ứng dụng theo dõi các ứng dụng khác mà bạn đang dùng và tần suất sử dụng, cũng như thông tin nhà mạng, các tùy chọn cài đặt ngôn ngữ và thông tin chi tiết khác."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Kiểm soát Wi-Fi"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yêu cầu vị trí gần đây"</string>

@@ -16,6 +16,7 @@
 
 package com.android.car.settings.applications.defaultapps;
 
+import android.app.role.RoleManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.ComponentName;
 import android.content.Context;
@@ -28,6 +29,7 @@ import android.service.voice.VoiceInteractionServiceInfo;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 
+import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.FragmentController;
 import com.android.internal.app.AssistUtils;
 import com.android.settingslib.applications.DefaultAppInfo;
@@ -62,6 +64,18 @@ public class DefaultAssistantPickerEntryPreferenceController extends
         }
         return new DefaultAppInfo(getContext(), getContext().getPackageManager(),
                 getCurrentProcessUserId(), cn);
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(ButtonPreference preference) {
+        String packageName = getContext().getPackageManager().getPermissionControllerPackageName();
+        if (packageName != null) {
+            Intent intent = new Intent(Intent.ACTION_MANAGE_DEFAULT_APP)
+                    .setPackage(packageName)
+                    .putExtra(Intent.EXTRA_ROLE_NAME, RoleManager.ROLE_ASSISTANT);
+            getContext().startActivity(intent);
+        }
+        return true;
     }
 
     @Nullable
