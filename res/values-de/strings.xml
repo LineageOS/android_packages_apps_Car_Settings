@@ -29,7 +29,7 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"display dimmen, bildschirm dimmen, touchscreen, akku"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"display dimmen, bildschirm dimmen, nacht, tönung"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Nachtmodus"</string>
-    <string name="network_and_internet" msgid="4229023630498537530">"Netzwerk &amp; Internet"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Netzwerk und Internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Mobilfunknetz"</string>
     <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
       <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> SIM-Karten</item>
@@ -95,6 +95,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Verbinden"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Passwort"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Passwort anzeigen"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Netzwerkname"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID eingeben"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sicherheit"</string>
@@ -138,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> wird aktiviert…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Andere Geräte können sich mit <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> verbinden"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Passwort des Hotspots"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sicherheit"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Keiner"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Band für Zugangspunkt"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Band für Zugangspunkt wählen"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automatisch"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4-GHz-Band"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5-GHz-Band"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5-GHz-Band bevorzugt"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Mindestens ein Band für WLAN-Hotspot wählen:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot und Tethering"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch deaktivieren"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Der WLAN-Hotspot wird deaktiviert, wenn keine Geräte verbunden sind"</string>
@@ -194,7 +185,7 @@
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Kopplungsanfrage"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Zum Koppeln mit <xliff:g id="DEVICE_NAME">%1$s</xliff:g> tippen."</string>
     <string name="language_settings" msgid="2079258598337245546">"Sprachen"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Sprachen &amp; Eingabe"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Sprachen und Eingabe"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatur"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Tastaturen verwalten"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Sprachausgabe"</string>
@@ -228,8 +219,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Deinstallieren"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Bei Deaktivierung dieser App funktionieren Android und andere Apps möglicherweise nicht mehr ordnungsgemäß."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"App deaktivieren"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Nicht für diesen Nutzer installiert"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Berechtigungen"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Benachrichtigungen"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version: %1$s"</string>
@@ -271,27 +261,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"In dieser App nicht öffnen"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Unterstützte Links"</string>
     <string name="special_access" msgid="5730278220917123811">"Spezieller App-Zugriff"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Systemprozesse anzeigen"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Systemprozesse ausblenden"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Systemeinstellungen ändern"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Durch diese Berechtigung kann eine App Systemeinstellungen ändern."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Benachrichtigungszugriff"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> Zugriff auf Benachrichtigungen erlauben?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kann alle Benachrichtigungen lesen, also auch persönliche Informationen wie Kontaktnamen und eingehende Nachrichten, sowie Benachrichtigungen schließen oder in ihnen enthaltene Aktionen auslösen.\n\nZusätzlich wird die App in die Lage versetzt, die \"Bitte nicht stören\"-Funktion zu aktivieren bzw. zu deaktivieren und zugehörige Einstellungen zu ändern."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Wenn du den Benachrichtigungszugriff für <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> deaktivierst, wird möglicherweise auch der \"Bitte nicht stören\"-Zugriff deaktiviert."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Deaktivieren"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Abbrechen"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Zugriff auf Nutzungsdaten"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Der Zugriff auf die Nutzungsdaten ermöglicht es einer App, verschiedene Informationen zu erfassen – welche anderen Apps du wie oft verwendest, welchen Mobilfunkanbieter du nutzt, welche Spracheinstellungen du festgelegt hast usw."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"WLAN-Steuerung"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Standort"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
@@ -363,7 +350,7 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Apps zurücksetzen"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"App-Einstellungen wurden zurückgesetzt"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Alle Daten löschen (Auslieferungszustand)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"Hierdurch werden alle Daten von der Haupteinheit deines Fahrzeugs gelöscht, u. a.:\n\n"<li>"Dein Google-Konto"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Hierdurch werden alle Daten von der Haupteinheit deines Fahrzeugs gelöscht, wie z. B. die Folgenden:\n\n"<li>"Dein Google-Konto"</li>\n<li>"System- und App-Daten sowie entsprechende Einstellungen"</li>\n<li>"Heruntergeladene Apps"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Du bist derzeit in folgenden Konten angemeldet:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Auf der Haupteinheit dieses Fahrzeugs sind andere Nutzer vorhanden."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Fahrzeug zurücksetzen"</string>
