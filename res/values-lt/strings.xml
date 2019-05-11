@@ -99,6 +99,8 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Prisijungti"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Slaptažodis"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Rodyti slaptažodį"</string>
+    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
+    <skip />
     <string name="wifi_ssid" msgid="488604828159458741">"Tinklo pavadinimas"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Įveskite SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sauga"</string>
@@ -142,29 +144,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Įjungiama: „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Kiti įrenginiai gali prisijungti prie „<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>“"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Vieš. int. prieig. tšk. slapt."</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Sauga"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Nėra"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"PT juosta"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Pasirinkti PT juostą"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automatiškai"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GHz dažnio juosta"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5 GHz dažnio juosta"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Pageidaujama 5,0 GHz dažnio juosta"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Pasir. bent 1 „Wi‑Fi“ vieš. int. prieig. tšk. dažn. juostą:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Vieš. intern. prieig. tašk. ir įreng. kaip modemo naud."</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Išjungti viešosios interneto prieigos tašką autom."</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"„Wi‑Fi“ viešosios interneto prieigos taškas bus išjungtas, jei nebus prijungta jokių įrenginių"</string>
@@ -232,8 +223,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Pašalinti"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jei išjungsite šią programą, „Android“ ir kitos programos gali neveikti, kaip numatyta."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Išjungti programą"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Neįdiegta šiam naudotojui"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Leidimai"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Pranešimai"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versija: %1$s"</string>
@@ -277,27 +267,24 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Neatidaryti šioje programoje"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Palaikomos nuorodos"</string>
     <string name="special_access" msgid="5730278220917123811">"Speciali programų prieiga"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Rodyti sistemą"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Slėpti sistemą"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sistemos nustatymų keitimas"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Programai bus leidžiama keisti sistemos nustatymus."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Prieiga prie pranešimų"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Leisti paslaugos „<xliff:g id="SERVICE">%1$s</xliff:g>“ prieigą prie pranešimų?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"„<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“ galės skaityti visus pranešimus, įskaitant asmeninę informaciją, pvz., kontaktų vardus ir gautų pranešimų tekstą. Be to, priemonė galės atsisakyti pranešimų ar suaktyvinti juose pateiktus veiksmo mygtukus.\n\nPrograma taip pat galės įjungti ar išjungti režimą „Netrukdyti“ ir keisti susijusius nustatymus."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jei išjungsite „<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“ prieigą prie pranešimų, prieiga prie režimo „Netrukdyti“ taip pat gali būti išjungta."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Išjungti"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Atšaukti"</string>
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
     <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
     <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <string name="usage_access_title" msgid="7153427122072303254">"Naudojimo prieiga"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Taikant naudojimo prieigą programa gali stebėti, kokias kitas programas naudojate ir kaip dažnai jas naudojate bei išsamią operatoriaus, kalbos nustatymų ir kitą informaciją."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"„Wi-Fi“ valdymas"</string>
+    <!-- no translation found for wifi_control_description (6021926850423169261) -->
     <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Vietovė"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Pastarosios vietovės užklausos"</string>
