@@ -20,6 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
+import android.app.role.RoleManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
@@ -31,6 +32,7 @@ import android.provider.Settings;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.ButtonPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.car.settings.testutils.ShadowVoiceInteractionServiceInfo;
@@ -43,13 +45,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadows.ShadowPackageManager;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowApplication;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 @Config(shadows = {ShadowSecureSettings.class, ShadowVoiceInteractionServiceInfo.class,
-        ShadowCarUserManagerHelper.class})
+        ShadowCarUserManagerHelper.class, ShadowApplicationPackageManager.class})
 public class DefaultAssistantPickerEntryPreferenceControllerTest {
 
     private static final String TEST_PACKAGE = "com.android.car.settings.testutils";
@@ -126,8 +128,7 @@ public class DefaultAssistantPickerEntryPreferenceControllerTest {
         Intent intent =
                 DefaultAssistantPickerEntryPreferenceController.ASSISTANT_SERVICE.setComponent(
                         ComponentName.unflattenFromString(TEST_COMPONENT));
-        ShadowPackageManager shadowPackageManager = Shadows.shadowOf(mContext.getPackageManager());
-        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
+        getShadowApplicationManager().addResolveInfoForIntent(intent, resolveInfo);
 
         DefaultAppInfo info = new DefaultAppInfo(mContext, mContext.getPackageManager(),
                 TEST_USER_ID, ComponentName.unflattenFromString(TEST_COMPONENT));
@@ -151,8 +152,7 @@ public class DefaultAssistantPickerEntryPreferenceControllerTest {
         Intent intent =
                 DefaultAssistantPickerEntryPreferenceController.ASSISTANT_SERVICE.setComponent(
                         ComponentName.unflattenFromString(TEST_COMPONENT));
-        ShadowPackageManager shadowPackageManager = Shadows.shadowOf(mContext.getPackageManager());
-        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
+        getShadowApplicationManager().addResolveInfoForIntent(intent, resolveInfo);
 
         DefaultAppInfo info = new DefaultAppInfo(mContext, mContext.getPackageManager(),
                 TEST_USER_ID, ComponentName.unflattenFromString(TEST_COMPONENT));
@@ -177,8 +177,7 @@ public class DefaultAssistantPickerEntryPreferenceControllerTest {
         Intent intent =
                 DefaultAssistantPickerEntryPreferenceController.ASSISTANT_SERVICE.setComponent(
                         ComponentName.unflattenFromString(TEST_COMPONENT));
-        ShadowPackageManager shadowPackageManager = Shadows.shadowOf(mContext.getPackageManager());
-        shadowPackageManager.addResolveInfoForIntent(intent, resolveInfo);
+        getShadowApplicationManager().addResolveInfoForIntent(intent, resolveInfo);
 
         DefaultAppInfo info = new DefaultAppInfo(mContext, mContext.getPackageManager(),
                 TEST_USER_ID, ComponentName.unflattenFromString(TEST_COMPONENT));
@@ -187,5 +186,48 @@ public class DefaultAssistantPickerEntryPreferenceControllerTest {
         assertThat(result.getAction()).isEqualTo(Intent.ACTION_MAIN);
         assertThat(result.getComponent()).isEqualTo(
                 new ComponentName(TEST_PACKAGE, TEST_SETTINGS_CLASS));
+    }
+
+    @Test
+    public void performClick_permissionControllerExists_startsPermissionController() {
+        String testPackage = "com.test.permissions";
+        getShadowApplicationManager().setPermissionControllerPackageName(testPackage);
+        mButtonPreference.performClick();
+
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(actual.getAction()).isEqualTo(Intent.ACTION_MANAGE_DEFAULT_APP);
+    }
+
+    @Test
+    public void performClick_permissionControllerExists_intentHasPackageName() {
+        String testPackage = "com.test.permissions";
+        getShadowApplicationManager().setPermissionControllerPackageName(testPackage);
+        mButtonPreference.performClick();
+
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(actual.getPackage()).isEqualTo(testPackage);
+    }
+
+    @Test
+    public void performClick_permissionControllerExists_intentHasRole() {
+        String testPackage = "com.test.permissions";
+        getShadowApplicationManager().setPermissionControllerPackageName(testPackage);
+        mButtonPreference.performClick();
+
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(actual.getStringExtra(Intent.EXTRA_ROLE_NAME)).isEqualTo(
+                RoleManager.ROLE_ASSISTANT);
+    }
+
+    @Test
+    public void performClick_permissionControllerDoesntExist_doesNotStartPermissionController() {
+        mButtonPreference.performClick();
+
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(actual).isNull();
+    }
+
+    private ShadowApplicationPackageManager getShadowApplicationManager() {
+        return Shadow.extract(mContext.getPackageManager());
     }
 }
