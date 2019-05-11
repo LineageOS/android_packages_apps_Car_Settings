@@ -31,9 +31,25 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Modul noapte"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"Rețea și internet"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"Rețea mobilă"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="few"><xliff:g id="COUNT_1">%1$d</xliff:g> carduri SIM</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> de carduri SIM</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%1$d</xliff:g> carduri SIM</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"Activ/SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"Inactiv/SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"Activ/SIM descărcat"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactiv/SIM descărcat"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Adăugați mai multe"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Date mobile"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Accesați datele folosind rețeaua mobilă"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Dezactivați datele mobile?"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"Selectați o opțiune"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"Folosiți <xliff:g id="CARRIER">%1$s</xliff:g> pentru date mobile?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"Folosiți <xliff:g id="CARRIER2_0">%2$s</xliff:g> pentru datele mobile. Când comutați la <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> nu va mai fi folosit pentru date mobile."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"Folosiți <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Conectați-vă la serviciile de date în roaming"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Permiteți roamingul de date?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Se pot acumula costuri mari."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilizarea datelor"</string>
@@ -54,6 +70,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Actualizat de <xliff:g id="ID_1">^1</xliff:g> chiar acum"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Actualizat chiar acum"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Afișați planul"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Utilizarea datelor aplicației"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"limitată"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Data de resetare a ciclului de utilizare"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data din fiecare lună:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Setați"</string>
@@ -118,6 +136,33 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Comutați automat la date mobile"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Folosiți datele mobile atunci când rețeaua Wi-Fi nu are acces la internet. Este posibil să se aplice taxe pentru utilizarea datelor."</string>
     <string name="learn_more" msgid="8214605928933358604">"Aflați mai multe"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nume hotspot"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Se activează <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Alte dispozitive se pot conecta la <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Parolă hotspot"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Bandă AP"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot și tethering"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Dezactivați automat hotspotul"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Hotspotul Wi-Fi se va dezactiva dacă nu se conectează niciun dispozitiv"</string>
@@ -185,6 +230,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"Dezinstalați"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Dacă dezactivați această aplicație, este posibil ca Android și alte aplicații să nu mai funcționeze corespunzător."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Dezactivați aplicația"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"Permisiuni"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificări"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versiunea: %1$s"</string>
@@ -211,7 +258,44 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"Aplicația asistent va putea să citească informații despre aplicațiile în uz de pe sistem, inclusiv informațiile vizibile pe ecran sau accesibile în aplicații."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Asigurați-vă că aveți încredere în această aplicație&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Completarea automată Google&gt;%1$s&lt;/xliff:g&gt; folosește conținutul de pe ecran pentru a stabili ce se poate completa automat."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"Adăugați un serviciu"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"Se deschid linkurile"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"Aplicații instalate"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Nu deschide linkurile acceptate"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"Accesați <xliff:g id="DOMAIN">%s</xliff:g>"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"Accesați <xliff:g id="DOMAIN">%s</xliff:g> și alte adrese URL"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"Deschide în mod prestabilit"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"Alte setări prestabilite"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"Nu este setată nicio valoare standard."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ați ales să lansați această aplicație în mod prestabilit pentru anumite acțiuni."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"Ștergeți datele prestabilite"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Deschide linkurile acceptate"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"Deschide în această aplicație"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"Întreabă de fiecare dată"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"Nu deschide în această aplicație"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Linkuri acceptate"</string>
     <string name="special_access" msgid="5730278220917123811">"Acces special pentru aplicații"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
+    <string name="notification_access_title" msgid="1467340098885813473">"Acces la notificări"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permiteți accesul la notificări pentru <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> va putea să citească toate notificările, inclusiv informațiile cu caracter personal, cum ar fi numele persoanelor de contact și textul mesajelor primite. De asemenea, va putea să închidă notificări sau să declanșeze butoane pentru acțiuni din acestea.\n\nAstfel, aplicația va putea să activeze sau să dezactiveze starea Nu deranja și să modifice setările aferente."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Dacă dezactivați accesul la notificări pentru <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, este posibil să fie dezactivat și accesul în modul Nu deranja."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Dezactivați"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulați"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitări recente privind locația"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nu există solicitări recente privind locația"</string>
@@ -250,6 +334,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Licențe de sistem pentru WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Imagini de fundal"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Furnizori de imagini din satelit:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licențe terță parte"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"A apărut o problemă la încărcarea licențelor."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Se încarcă…"</string>
@@ -362,6 +447,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Sistemul include fișiere folosite pentru a rula versiunea de Android <xliff:g id="VERSION">%s</xliff:g>"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Fișiere audio"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Se calculează…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Dimensiunea aplicației"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"Datele utilizatorului"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"Memorie cache"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Ștergeți datele stocate"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Goliți memoria cache"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ștergeți datele aplicației?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Toate datele acestei aplicații vor fi șterse definitiv. Aici sunt incluse toate fișierele, setările, conturile, bazele de date etc."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nu s-au putut șterge datele stocate pentru aplicație."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Conturi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adăugați un cont"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nu a fost adăugat niciun cont."</string>
@@ -490,6 +584,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opțiuni de blocare a ecranului"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: acum <xliff:g id="NUM_DAYS">%3$s</xliff:g> zile"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Adăugați un dispozitiv de încredere"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth se va activa și va adăuga dispozitivul"</string>
     <string name="trusted_device" msgid="5637378361866787603">"Dispozitive de încredere"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dispozitive</item>
@@ -505,18 +600,18 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selectați <xliff:g id="CAR_NAME">%1$s</xliff:g> de pe telefon pentru a asocia dispozitivele"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nu poate detecta funcțiile de securitate ale dispozitivului. Pentru a vă proteja mașina, dispozitivul de încredere va putea menține mașina deblocată numai după ce ați deblocat-o personal. Dispozitivul de încredere poate să mențină mașina deblocată când se află în apropiere, chiar dacă este folosită de o altă persoană."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"Adăugați <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ca dispozitiv de încredere"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonul a fost înregistrat"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Înscrierea dispozitivului <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a eșuat"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Dacă adăugați un dispozitiv de încredere, trebuie să setați apoi o metodă de autentificare. Dacă nu aveți dispozitivul de încredere cu dvs., va fi necesar să vă autentificați pentru a vă accesa profilul."</string>
-    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
-    <skip />
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispozitivul a fost deconectat."</string>
     <string name="forget" msgid="3971143908183848527">"Eliminați"</string>
     <string name="connect" msgid="5861699594602380150">"Conectați"</string>
     <string name="disconnect" msgid="6140789953324820336">"Deconectați"</string>
     <string name="delete_button" msgid="5840500432614610850">"Ștergeți"</string>
     <string name="remove_button" msgid="6664656962868194178">"Eliminați"</string>
     <string name="cancel" msgid="750286395700355455">"Anulați"</string>
+    <string name="allow" msgid="7519431342750394402">"Permiteți"</string>
+    <string name="deny" msgid="340512788979930804">"Refuzați"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Tasta Backspace"</string>
     <string name="enter_key" msgid="2121394305541579468">"Tasta Enter"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"Închideți demonstrația"</string>

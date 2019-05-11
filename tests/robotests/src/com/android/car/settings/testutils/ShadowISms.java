@@ -16,32 +16,30 @@
 
 package com.android.car.settings.testutils;
 
-import android.app.ActivityThread;
-import android.content.pm.IPackageManager;
+import android.os.IBinder;
+
+import com.android.internal.telephony.ISms;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
-@Implements(ActivityThread.class)
-public class ShadowActivityThread extends org.robolectric.shadows.ShadowActivityThread {
+@Implements(value = ISms.Stub.class)
+public class ShadowISms {
 
-    private static IPackageManager sIPackageManager;
-
-    public static void setPackageManager(IPackageManager packageManager) {
-        sIPackageManager = packageManager;
-    }
+    private static ISms sISms;
 
     @Resetter
     public static void reset() {
-        sIPackageManager = null;
+        sISms = null;
+    }
+
+    public static void setISms(ISms iSms) {
+        sISms = iSms;
     }
 
     @Implementation
-    public static IPackageManager getPackageManager() {
-        if (sIPackageManager != null) {
-            return sIPackageManager;
-        }
-        return (IPackageManager) org.robolectric.shadows.ShadowActivityThread.getPackageManager();
+    protected static ISms asInterface(IBinder obj) {
+        return sISms;
     }
 }

@@ -18,7 +18,6 @@ package com.android.car.settings.applications.specialaccess;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -31,7 +30,6 @@ import android.content.pm.IPackageManager;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ParceledListSlice;
-import android.os.Looper;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -39,7 +37,6 @@ import android.os.UserManager;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.applications.specialaccess.AppStateAppOpsBridge.PermissionState;
 import com.android.car.settings.testutils.ShadowAppOpsManager;
-import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
 import org.junit.Before;
@@ -54,6 +51,7 @@ import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowUserManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -68,16 +66,11 @@ public class AppStateAppOpsBridgeTest {
     @Mock
     private IPackageManager mIPackageManager;
     @Mock
-    private ApplicationsState mApplicationsState;
-    @Mock
-    private ApplicationsState.Session mSession;
-    @Mock
     private ParceledListSlice<PackageInfo> mParceledPackages;
     @Mock
     private ParceledListSlice<PackageInfo> mParceledPackagesOtherProfile;
 
     private List<PackageInfo> mPackages;
-    private ArrayList<AppEntry> mAppEntries;
 
     private Context mContext;
     private AppOpsManager mAppOpsManager;
@@ -94,15 +87,9 @@ public class AppStateAppOpsBridgeTest {
                 .thenReturn(mParceledPackages);
         when(mParceledPackages.getList()).thenReturn(mPackages);
 
-        mAppEntries = new ArrayList<>();
-        when(mApplicationsState.newSession(any())).thenReturn(mSession);
-        when(mApplicationsState.getBackgroundLooper()).thenReturn(Looper.getMainLooper());
-        when(mSession.getAllApps()).thenReturn(mAppEntries);
-
         mContext = RuntimeEnvironment.application;
         mAppOpsManager = (AppOpsManager) mContext.getSystemService(Context.APP_OPS_SERVICE);
-        mBridge = new AppStateAppOpsBridge(mContext, mApplicationsState, APP_OP_CODE, PERMISSION,
-                mock(AppStateBaseBridge.Callback.class), mIPackageManager);
+        mBridge = new AppStateAppOpsBridge(mContext, APP_OP_CODE, PERMISSION, mIPackageManager);
     }
 
     @Test
@@ -111,11 +98,9 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo);
+        AppEntry entry = createAppEntry(packageInfo);
 
-        AppEntry entry = mAppEntries.get(0);
-
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNull();
     }
@@ -126,11 +111,9 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo);
+        AppEntry entry = createAppEntry(packageInfo);
 
-        AppEntry entry = mAppEntries.get(0);
-
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNull();
     }
@@ -144,11 +127,9 @@ public class AppStateAppOpsBridgeTest {
         mPackages.add(packageInfo);
         when(mIPackageManager.isPackageAvailable(packageInfo.packageName,
                 UserHandle.myUserId())).thenReturn(true);
-        addEntry(packageInfo);
+        AppEntry entry = createAppEntry(packageInfo);
 
-        AppEntry entry = mAppEntries.get(0);
-
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNull();
     }
@@ -159,14 +140,11 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo);
-
         when(mIPackageManager.isPackageAvailable(packageInfo.packageName,
                 UserHandle.myUserId())).thenReturn(false);
+        AppEntry entry = createAppEntry(packageInfo);
 
-        AppEntry entry = mAppEntries.get(0);
-
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNull();
     }
@@ -177,12 +155,10 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo);
-
-        AppEntry entry = mAppEntries.get(0);
+        AppEntry entry = createAppEntry(packageInfo);
         assertThat(entry.extraInfo).isNull();
 
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNotNull();
         assertThat(((PermissionState) entry.extraInfo).isPermissible()).isTrue();
@@ -194,12 +170,10 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_DEFAULT);
-        addEntry(packageInfo);
-
-        AppEntry entry = mAppEntries.get(0);
+        AppEntry entry = createAppEntry(packageInfo);
         assertThat(entry.extraInfo).isNull();
 
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNotNull();
         assertThat(((PermissionState) entry.extraInfo).isPermissible()).isTrue();
@@ -211,12 +185,10 @@ public class AppStateAppOpsBridgeTest {
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
         addPackageWithPermission(packageInfo, AppOpsManager.MODE_IGNORED);
-        addEntry(packageInfo);
-
-        AppEntry entry = mAppEntries.get(0);
+        AppEntry entry = createAppEntry(packageInfo);
         assertThat(entry.extraInfo).isNull();
 
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNotNull();
         assertThat(((PermissionState) entry.extraInfo).isPermissible()).isFalse();
@@ -228,18 +200,15 @@ public class AppStateAppOpsBridgeTest {
         int uid1 = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo1 = createPackageInfo(packageName1, uid1);
         addPackageWithPermission(packageInfo1, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo1);
+        AppEntry entry1 = createAppEntry(packageInfo1);
 
         String packageName2 = "test.package2";
         int uid2 = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 2);
         PackageInfo packageInfo2 = createPackageInfo(packageName2, uid2);
         addPackageWithPermission(packageInfo2, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo2);
+        AppEntry entry2 = createAppEntry(packageInfo2);
 
-        AppEntry entry1 = mAppEntries.get(0);
-        AppEntry entry2 = mAppEntries.get(1);
-
-        mBridge.start();
+        mBridge.loadExtraInfo(Arrays.asList(entry1, entry2));
 
         assertThat(entry1.extraInfo).isNotNull();
         assertThat(entry2.extraInfo).isNotNull();
@@ -251,7 +220,7 @@ public class AppStateAppOpsBridgeTest {
         int uid1 = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo1 = createPackageInfo(packageName1, uid1);
         addPackageWithPermission(packageInfo1, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo1);
+        AppEntry entry1 = createAppEntry(packageInfo1);
 
         // Add a package for another profile.
         int otherUserId = UserHandle.myUserId() + 1;
@@ -269,17 +238,13 @@ public class AppStateAppOpsBridgeTest {
                 otherUserId)).thenReturn(true);
         mAppOpsManager.setMode(APP_OP_CODE, packageInfo2.applicationInfo.uid,
                 packageInfo2.packageName, AppOpsManager.MODE_ALLOWED);
-        addEntry(packageInfo2);
-
-        AppEntry entry1 = mAppEntries.get(0);
-        AppEntry entry2 = mAppEntries.get(1);
+        AppEntry entry2 = createAppEntry(packageInfo2);
 
         getShadowUserManager().addUserProfile(UserHandle.of(otherUserId));
         // Recreate the bridge so it has all user profiles.
-        mBridge = new AppStateAppOpsBridge(mContext, mApplicationsState, APP_OP_CODE, PERMISSION,
-                mock(AppStateBaseBridge.Callback.class), mIPackageManager);
+        mBridge = new AppStateAppOpsBridge(mContext, APP_OP_CODE, PERMISSION, mIPackageManager);
 
-        mBridge.start();
+        mBridge.loadExtraInfo(Arrays.asList(entry1, entry2));
 
         assertThat(entry1.extraInfo).isNotNull();
         assertThat(entry2.extraInfo).isNotNull();
@@ -290,12 +255,10 @@ public class AppStateAppOpsBridgeTest {
         String packageName = "test.package";
         int uid = UserHandle.getUid(UserHandle.myUserId(), /* appId= */ 1);
         PackageInfo packageInfo = createPackageInfo(packageName, uid);
-        addEntry(packageInfo);
-
-        AppEntry entry = mAppEntries.get(0);
+        AppEntry entry = createAppEntry(packageInfo);
         entry.extraInfo = new Object();
 
-        mBridge.start();
+        mBridge.loadExtraInfo(Collections.singletonList(entry));
 
         assertThat(entry.extraInfo).isNull();
     }
@@ -322,10 +285,10 @@ public class AppStateAppOpsBridgeTest {
                 packageInfo.packageName, mode);
     }
 
-    private void addEntry(PackageInfo packageInfo) {
+    private AppEntry createAppEntry(PackageInfo packageInfo) {
         AppEntry appEntry = mock(AppEntry.class);
         appEntry.info = packageInfo.applicationInfo;
-        mAppEntries.add(appEntry);
+        return appEntry;
     }
 
     private ShadowUserManager getShadowUserManager() {

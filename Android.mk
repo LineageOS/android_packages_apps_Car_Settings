@@ -29,7 +29,8 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_USE_AAPT2 := true
 
   LOCAL_JAVA_LIBRARIES := \
-      android.car
+      android.car \
+      telephony-common
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.car_car \
@@ -40,6 +41,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
+      car-setup-wizard-lib-utils \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
@@ -90,7 +92,8 @@ ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_USE_AAPT2 := true
 
   LOCAL_JAVA_LIBRARIES := \
-      android.car
+      android.car \
+      telephony-common
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
       androidx.car_car \
@@ -101,6 +104,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib \
+      car-setup-wizard-lib-utils \
       setup-wizard-lib-gingerbread-compat \
       SettingsLib
 

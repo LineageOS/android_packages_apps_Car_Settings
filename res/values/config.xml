@@ -24,6 +24,9 @@
     <bool name="config_show_wifi_mac_address">true</bool>
     <!-- Whether to show regulatory info or not. -->
     <bool name="config_show_regulatory_info">true</bool>
+    <!-- Whether premium SMS should be shown or not. -->
+    <bool name="config_show_premium_sms">true</bool>
+
     <!-- The component which listens for the enabling of developer options. -->
     <string name="config_dev_options_module" translatable="false">com.android.car.developeroptions/.Settings$DevelopmentSettingsDashboardActivity</string>
 </resources>

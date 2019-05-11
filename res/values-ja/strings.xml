@@ -31,9 +31,24 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"夜間モード"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"ネットワークとインターネット"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"モバイル ネットワーク"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="other">SIM: <xliff:g id="COUNT_1">%1$d</xliff:g> 枚</item>
+      <item quantity="one">SIM: <xliff:g id="COUNT_0">%1$d</xliff:g> 枚</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"有効 / SIM"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"無効 / SIM"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"有効 / ダウンロード型 SIM"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"無効 / ダウンロード型 SIM"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"追加"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"モバイルデータ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"モバイル ネットワーク経由でデータにアクセス"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"モバイルデータを OFF にしますか？"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"選択してください"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"モバイルデータに <xliff:g id="CARRIER">%1$s</xliff:g> を使用？"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"モバイルデータに <xliff:g id="CARRIER2_0">%2$s</xliff:g> を使用しています。<xliff:g id="CARRIER1">%1$s</xliff:g> に切り替えると、モバイルデータに <xliff:g id="CARRIER2_1">%2$s</xliff:g> は使用されなくなります。"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> を使用"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"ローミング"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続する"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"高額な通信料が発生することがあります。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用"</string>
@@ -53,6 +68,8 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"更新: <xliff:g id="ID_1">^1</xliff:g>、たった今"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"更新: たった今"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"プランを表示"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"アプリのデータ使用量"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"制限あり"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"使用サイクルのリセット日"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"毎月のリセット日:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"設定"</string>
@@ -117,6 +134,33 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"モバイルデータへの自動切り替え"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi でインターネットにアクセスできない場合にモバイルデータを使用します。データ通信料が発生する可能性があります。"</string>
     <string name="learn_more" msgid="8214605928933358604">"詳細"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"アクセス ポイント名"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> をON にしています…"</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"他のデバイスが <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> に接続できます"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"アクセス ポイントのパスワード"</string>
+    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
+    <skip />
+    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
+    <skip />
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 帯域幅"</string>
+    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
+    <skip />
+    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
+    <skip />
+    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
+    <skip />
+    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
+    <skip />
+    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
+    <skip />
+    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
+    <skip />
     <string name="tether_settings_title_all" msgid="4663704772599383169">"アクセス ポイントとテザリング"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"アクセス ポイントを自動的にオフにする"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"デバイスが接続されていないと、Wi-Fi アクセス ポイントはオフになります"</string>
@@ -184,6 +228,8 @@
     <string name="uninstall_text" msgid="277907956072833012">"アンインストール"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"このアプリを無効にすると、Android などの他のアプリが正しく動作しなくなる恐れがあります。"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"アプリを無効にする"</string>
+    <!-- no translation found for not_installed (4218816013370552746) -->
+    <skip />
     <string name="permissions_label" msgid="2701446753515612685">"権限"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="application_version_label" msgid="8556889839783311649">"バージョン: %1$s"</string>
@@ -209,7 +255,44 @@
     <string name="assistant_security_warning" msgid="1844807956967428012">"アシスタントはシステムで使用中のアプリに関する情報（画面に表示される情報、アプリ内でアクセス可能な情報など）を読み取れるようになります。"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;このアプリが信頼できることを確認してください&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; は画面上の内容に基づいて、自動入力可能な情報を判別します。"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"サービスの追加"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"リンクを開く"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"インストール済みアプリ"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"対応リンクを開かない"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> を開く"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> とその他の URL を開く"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"デフォルトで開く"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"その他のデフォルト"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"デフォルトとして設定されていません。"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"特定の操作で使用するデフォルトのアプリとして設定されています。"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"デフォルトを消去"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"対応リンクを開く"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"このアプリで開く"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"毎回確認"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"このアプリで開かない"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"対応リンク"</string>
     <string name="special_access" msgid="5730278220917123811">"特別なアプリアクセス"</string>
+    <!-- no translation found for show_system (4401355756969485287) -->
+    <skip />
+    <!-- no translation found for hide_system (8845453295584638040) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
+    <skip />
+    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
+    <skip />
+    <string name="notification_access_title" msgid="1467340098885813473">"通知へのアクセス"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"通知へのアクセス を <xliff:g id="SERVICE">%1$s</xliff:g> に許可しますか？"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> はすべての通知を読み取ることができます。通知には、連絡先名などの個人情報や受信したメッセージの本文も含まれます。また、通知を非表示にしたり、通知内のボタン操作を実行したりすることもできます。\n\nこれにより、アプリがサイレント モード設定を切り替えたり、関連する設定を変更したりすることも可能になります。"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> の通知アクセスを無効にすると、サイレント モードのアクセスも無効になります。"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"無効にする"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"キャンセル"</string>
+    <!-- no translation found for usage_access_title (7153427122072303254) -->
+    <skip />
+    <!-- no translation found for usage_access_description (2413168719257435422) -->
+    <skip />
+    <!-- no translation found for wifi_control_title (5660436566907731929) -->
+    <skip />
+    <!-- no translation found for wifi_control_description (2638739958154388300) -->
+    <skip />
     <string name="location_settings_title" msgid="901334356682423679">"位置情報"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
@@ -248,6 +331,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"システムの WebView ライセンス"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"壁紙"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"航空写真の提供:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"サードパーティ ライセンス"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ライセンスの読み込み中に問題が発生しました。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"読み込んでいます…"</string>
@@ -358,6 +442,15 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"システムには、Android バージョン <xliff:g id="VERSION">%s</xliff:g> の実行に使用されるファイルが含まれています"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"音声ファイル"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"計算しています…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"アプリのサイズ"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"ユーザーデータ"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"キャッシュ"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"合計"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ストレージを消去"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"キャッシュを削除"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"アプリのデータを削除しますか？"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"このアプリのすべてのデータ（ファイル、設定、アカウント、データベースを含む）が完全に削除されます。"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"アプリのストレージを消去できませんでした。"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"アカウント"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"アカウントを追加"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"アカウントが追加されていません"</string>
@@ -480,6 +573,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
     <string name="add_device_title" msgid="8452168024017866232">"信頼できるデバイスを追加"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"信頼できるデバイスを追加（Bluetooth: ON）"</string>
     <string name="trusted_device" msgid="5637378361866787603">"信頼できるデバイス"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台のデバイス</item>
@@ -494,18 +588,18 @@
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. スマートフォンで、デバイスとペア設定する <xliff:g id="CAR_NAME">%1$s</xliff:g> を選択します"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ではこのデバイスのセキュリティ機能を検出できません。車を保護するため、信頼できるデバイスでは、あなたがすでにロック解除した車のロックを解除されたままにする以外のことはできません。第三者がそのデバイスを手に取っている場合でも、近くにある車のロックが解除されたままになることがあります。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"信頼できるデバイスとして <xliff:g id="DEVICE_NAME">%1$s</xliff:g> を追加"</string>
-    <!-- no translation found for trusted_device_success_enrollment_toast (1238468775285575827) -->
-    <skip />
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"スマートフォンを登録しました"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
-    <!-- no translation found for trusted_device_disconnected_toast (2541862946536880255) -->
-    <skip />
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"デバイスの接続が解除されました。"</string>
     <string name="forget" msgid="3971143908183848527">"削除"</string>
     <string name="connect" msgid="5861699594602380150">"接続"</string>
     <string name="disconnect" msgid="6140789953324820336">"接続を解除"</string>
     <string name="delete_button" msgid="5840500432614610850">"削除"</string>
     <string name="remove_button" msgid="6664656962868194178">"削除"</string>
     <string name="cancel" msgid="750286395700355455">"キャンセル"</string>
+    <string name="allow" msgid="7519431342750394402">"許可"</string>
+    <string name="deny" msgid="340512788979930804">"許可しない"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace キー"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter キー"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"デモを終了"</string>
