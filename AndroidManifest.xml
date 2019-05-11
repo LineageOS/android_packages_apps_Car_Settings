@@ -284,6 +284,11 @@
         <activity android:name=".security.CheckLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.app.action.CONFIRM_DEVICE_CREDENTIAL" />
+                <action android:name="android.app.action.CONFIRM_FRP_CREDENTIAL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".security.AddTrustedDeviceActivity"
