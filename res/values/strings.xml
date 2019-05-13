@@ -369,6 +369,125 @@
     <!-- Sound settings screen, title for the option defining the default alarm sound. [CHAR LIMIT=30] -->
     <string name="alarm_ringtone_title">Default alarm sound</string>
 
+    <!-- Units Settings -->
+    <!-- Units Settings title [CHAR LIMIT=10] -->
+    <string name="units_settings">Units</string>
+    <string name="units_distance_and_volume_title">Distance and volume</string>
+    <string name="units_speed_title">Speed</string>
+    <string name="units_fuel_consumption_title">Fuel consumption</string>
+    <string name="units_battery_consumption_title">Energy consumption</string>
+    <string name="units_temperature_title">Temperature</string>
+    <string name="units_pressure_title">Pressure</string>
+
+    <!-- Meter per Second Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_meter_per_sec">Meter per Second</string>
+    <!-- Revolutions per Minute Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_rpm">Revolutions per Minute</string>
+    <!-- Hertz Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_hertz">Hertz</string>
+    <!-- Percentile Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_percentile">Percentile</string>
+    <!-- Millimeter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_millimeter">Millimeter</string>
+    <!-- Meter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_meter">Meter</string>
+    <!-- Kilometer Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_kilometer">Kilometer</string>
+    <!-- Mile Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_mile">Mile</string>
+    <!-- Celsius Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_celsius">Celsius</string>
+    <!-- Fahrenheit Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_fahrenheit">Fahrenheit</string>
+    <!-- Kelvin Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_kelvin">Kelvin</string>
+    <!-- Milliliter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_milliliter">Milliliter</string>
+    <!-- Liter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_liter">Liter</string>
+    <!-- Gallon Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_us_gallon">Gallon</string>
+    <!-- Imperial Gallon Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_imperial_gallon">Imperial Gallon</string>
+    <!-- Nanosecond Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_nano_secs">Nanosecond</string>
+    <!-- Second Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_secs">Second</string>
+    <!-- Year Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_year">Year</string>
+    <!-- Kilopascal Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_kilopascal">Kilopascal</string>
+    <!-- Watt Hour Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_watt_hour">Watt Hour</string>
+    <!-- Milliampere Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_milliampere">Milliampere</string>
+    <!-- Millivolt Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_millivolt">Millivolt</string>
+    <!-- Milliwatt Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_milliwatts">Milliwatt</string>
+    <!-- Ampere hour Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_ampere_hour">Ampere hour</string>
+    <!-- Kilowatt hour Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_kilowatt_hour">Kilowatt hour</string>
+    <!-- Pounds per square inch Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_psi">Pounds per square inch</string>
+    <!-- Miles per hour Unit as it is pronounced [CHAR LIMIT = 50]-->
+    <string name="units_unit_name_miles_per_hour">Miles per hour</string>
+    <!-- Kilometers per hour Unit as it is pronounced [CHAR LIMIT = 50]-->
+    <string name="units_unit_name_kilometers_per_hour">Kilometers per hour</string>
+    <!-- Bar Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_bar">Bar</string>
+    <!-- Degree Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_degrees">Degree</string>
+    <!-- Miles per Kilowatt Unit as it is pronounced [CHAR LIMIT=80]-->
+    <string name="units_unit_name_kilowatt_per_hundred_miles">Kilowatt per hundred Miles</string>
+    <!-- Kilometers per Kilowatt Unit as it is pronounced [CHAR LIMIT=80]-->
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers">Kilowatt per hundred Kilometers</string>
+    <!--Miles per gallon Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_miles_per_gallon_us">Miles per Gallon (US)</string>
+    <!--Miles per gallon Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_miles_per_gallon_uk">Miles per Gallon (UK)</string>
+    <!--Kilometers per liter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_kilometers_per_liter">Kilometers per Liter</string>
+    <!--Kilometers per liter Unit as it is pronounced [CHAR LIMIT=50]-->
+    <string name="units_unit_name_liter_per_hundred_kilometers">Liters per hundred Kilometers</string>
+
+    <!-- Units in abbreviated form -->
+    <string name="units_unit_abbreviation_meter_per_sec" translatable="false">m/s</string>
+    <string name="units_unit_abbreviation_rpm" translatable="false">RPM</string>
+    <string name="units_unit_abbreviation_hertz" translatable="false">Hz</string>
+    <string name="units_unit_abbreviation_percentile" translatable="false">%</string>
+    <string name="units_unit_abbreviation_millimeter" translatable="false">mm</string>
+    <string name="units_unit_abbreviation_meter" translatable="false">m</string>
+    <string name="units_unit_abbreviation_kilometer" translatable="false">km</string>
+    <string name="units_unit_abbreviation_mile" translatable="false">mi</string>
+    <string name="units_unit_abbreviation_celsius" translatable="false">°C</string>
+    <string name="units_unit_abbreviation_fahrenheit" translatable="false">°F</string>
+    <string name="units_unit_abbreviation_kelvin" translatable="false">K</string>
+    <string name="units_unit_abbreviation_milliliter" translatable="false">ml</string>
+    <string name="units_unit_abbreviation_liter" translatable="false">L</string>
+    <string name="units_unit_abbreviation_us_gallon" translatable="false">gal</string>
+    <string name="units_unit_abbreviation_imperial_gallon" translatable="false">IG</string>
+    <string name="units_unit_abbreviation_nano_secs" translatable="false">ns</string>
+    <string name="units_unit_abbreviation_secs" translatable="false">s</string>
+    <string name="units_unit_abbreviation_year" translatable="false">y</string>
+    <string name="units_unit_abbreviation_kilopascal" translatable="false">kPa</string>
+    <string name="units_unit_abbreviation_watt_hour" translatable="false">Wh</string>
+    <string name="units_unit_abbreviation_milliampere" translatable="false">mA</string>
+    <string name="units_unit_abbreviation_millivolt" translatable="false">mV</string>
+    <string name="units_unit_abbreviation_milliwatts" translatable="false">mW</string>
+    <string name="units_unit_abbreviation_ampere_hour" translatable="false">Ah</string>
+    <string name="units_unit_abbreviation_kilowatt_hour" translatable="false">kWh</string>
+    <string name="units_unit_abbreviation_psi" translatable="false">PSI</string>
+    <string name="units_unit_abbreviation_bar" translatable="false">bar</string>
+    <string name="units_unit_abbreviation_degrees" translatable="false">°</string>
+    <string name="units_unit_abbreviation_miles_per_hour" translatable="false">mph</string>
+    <string name="units_unit_abbreviation_kilometers_per_hour" translatable="false">km/h</string>
+    <string name="units_unit_abbreviation_miles_per_gallon_us" translatable="false">mpg (US)</string>
+    <string name="units_unit_abbreviation_miles_per_gallon_uk" translatable="false">mpg (UK)</string>
+    <string name="units_unit_abbreviation_kilometers_per_liter" translatable="false">km/L</string>
+    <string name="units_unit_abbreviation_liters_per_hundred_kilometers" translatable="false">L/100km</string>
+
     <!-- applications --><skip/>
     <!-- Apps and notifications settings title, on main settings screen. If clicked, the user is taken to a settings screen full of apps and notifications settings [CHAR LIMIT=40] -->
     <string name="apps_and_notifications_settings">Apps &amp; notifications</string>
