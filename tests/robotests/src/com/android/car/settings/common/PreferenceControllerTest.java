@@ -23,6 +23,7 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -41,6 +42,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
@@ -58,6 +60,10 @@ public class PreferenceControllerTest {
     private static final CarUxRestrictions NO_SETUP_UX_RESTRICTIONS =
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
+
+    private static final CarUxRestrictions BASELINE_UX_RESTRICTIONS =
+            new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                    CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
     private Context mContext;
     @Mock
@@ -150,6 +156,24 @@ public class PreferenceControllerTest {
         mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
 
         verify(mPreference).setEnabled(false);
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_created_restricted_unrestricted_preferenceEnabled() {
+        InOrder orderVerifier = inOrder(mPreference);
+
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+        mController.onUxRestrictionsChanged(BASELINE_UX_RESTRICTIONS);
+
+        // setEnabled(true) called on Create.
+        orderVerifier.verify(mPreference).setEnabled(true);
+
+        // setEnabled(false) called with the first UXR change event.
+        orderVerifier.verify(mPreference).setEnabled(false);
+
+        // setEnabled(true) called with the second UXR change event.
+        orderVerifier.verify(mPreference).setEnabled(true);
     }
 
     @Test
