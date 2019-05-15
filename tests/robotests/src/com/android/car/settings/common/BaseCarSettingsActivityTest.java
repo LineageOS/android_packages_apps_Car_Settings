@@ -125,6 +125,59 @@ public class BaseCarSettingsActivityTest {
         assertThat(mActivity.findDialogByTag(TEST_TAG)).isNull();
     }
 
+    @Test
+    public void onUxRestrictionsChanged_topFragmentInBackStackHasUpdatedUxRestrictions() {
+        TestFragment fragmentA = new TestFragment();
+        TestFragment fragmentB = new TestFragment();
+
+        CarUxRestrictions oldUxRestrictions = new CarUxRestrictions.Builder(
+                /* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                /* timestamp= */ 0
+        ).build();
+
+        CarUxRestrictions newUxRestrictions = new CarUxRestrictions.Builder(
+                /* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP,
+                /* timestamp= */ 0
+        ).build();
+
+        mActivity.launchFragment(fragmentA);
+        mActivity.onUxRestrictionsChanged(oldUxRestrictions);
+        mActivity.launchFragment(fragmentB);
+        mActivity.onUxRestrictionsChanged(newUxRestrictions);
+
+        assertThat(fragmentB.getUxRestrictions().toString())
+                .isEqualTo(newUxRestrictions.toString());
+    }
+
+    @Test
+    public void onBackStackChanged_uxRestrictionsChanged_currentFragmentHasUpdatedUxRestrictions() {
+        TestFragment fragmentA = new TestFragment();
+        TestFragment fragmentB = new TestFragment();
+
+        CarUxRestrictions oldUxRestrictions = new CarUxRestrictions.Builder(
+                /* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_BASELINE,
+                /* timestamp= */ 0
+        ).build();
+
+        CarUxRestrictions newUxRestrictions = new CarUxRestrictions.Builder(
+                /* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP,
+                /* timestamp= */ 0
+        ).build();
+
+        mActivity.launchFragment(fragmentA);
+        mActivity.onUxRestrictionsChanged(oldUxRestrictions);
+        mActivity.launchFragment(fragmentB);
+        mActivity.onUxRestrictionsChanged(newUxRestrictions);
+        mActivity.goBack();
+
+        assertThat(fragmentA.getUxRestrictions().toString())
+                .isEqualTo(newUxRestrictions.toString());
+    }
+
     /** Simple instance of {@link BaseCarSettingsActivity}. */
     private static class TestBaseCarSettingsActivity extends BaseCarSettingsActivity {
 
@@ -136,6 +189,17 @@ public class BaseCarSettingsActivityTest {
     }
 
     /** Simple Fragment for testing use. */
-    public static class TestFragment extends Fragment {
+    public static class TestFragment extends Fragment implements
+            CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
+        private CarUxRestrictions mCarUxRestrictions;
+
+        @Override
+        public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
+            mCarUxRestrictions = restrictionInfo;
+        }
+
+        public CarUxRestrictions getUxRestrictions() {
+            return mCarUxRestrictions;
+        }
     }
 }
