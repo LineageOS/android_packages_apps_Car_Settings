@@ -315,6 +315,8 @@
     <string name="bluetooth_notif_title">Pairing request</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_message">Tap to pair with <xliff:g id="device_name">%1$s</xliff:g>.</string>
+    <!-- Title for page which supports selecting a Bluetooth device from other applications. [CHAR_LIMIT=40]-->
+    <string name="bluetooth_device_picker">Choose Bluetooth device</string>
 
     <!-- Language settings screen heading. [CHAR LIMIT=30] -->
     <string name="language_settings">Languages</string>
