@@ -217,6 +217,7 @@ public abstract class PreferenceController<V extends Preference> implements
         }
         if (getAvailabilityStatus() == AVAILABLE) {
             mPreference.setVisible(true);
+            mPreference.setEnabled(true);
             updateState(mPreference);
             onApplyUxRestrictions(mUxRestrictions);
         } else {

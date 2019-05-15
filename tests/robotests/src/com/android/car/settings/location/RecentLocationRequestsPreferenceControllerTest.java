@@ -68,7 +68,7 @@ public class RecentLocationRequestsPreferenceControllerTest {
 
     @Test
     public void refreshUi_noRecentRequests_messageDisplayed() {
-        when(mRecentLocationApps.getAppListSorted()).thenReturn(Collections.emptyList());
+        when(mRecentLocationApps.getAppListSorted(true)).thenReturn(Collections.emptyList());
         mController.refreshUi();
 
         assertThat(mScreen.getPreference(0).getTitle()).isEqualTo(
@@ -81,7 +81,7 @@ public class RecentLocationRequestsPreferenceControllerTest {
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class));
-        when(mRecentLocationApps.getAppListSorted()).thenReturn(list);
+        when(mRecentLocationApps.getAppListSorted(true)).thenReturn(list);
         mController.refreshUi();
 
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list.size());
@@ -93,7 +93,7 @@ public class RecentLocationRequestsPreferenceControllerTest {
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class),
                 mock(RecentLocationApps.Request.class));
-        when(mRecentLocationApps.getAppListSorted()).thenReturn(list1);
+        when(mRecentLocationApps.getAppListSorted(true)).thenReturn(list1);
 
         List<RecentLocationApps.Request> list2 = new ArrayList<>(list1);
         list2.add(mock(RecentLocationApps.Request.class));
@@ -101,7 +101,7 @@ public class RecentLocationRequestsPreferenceControllerTest {
         mController.refreshUi();
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list1.size());
 
-        when(mRecentLocationApps.getAppListSorted()).thenReturn(list2);
+        when(mRecentLocationApps.getAppListSorted(true)).thenReturn(list2);
         mController.refreshUi();
 
         assertThat(mScreen.getPreferenceCount()).isEqualTo(list2.size());
