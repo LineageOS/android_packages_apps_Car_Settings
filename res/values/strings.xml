@@ -507,6 +507,10 @@
     <string name="usage_access_title">Usage access</string>
     <!-- Description of the usage access permission. [CHAR_LIMIT=NONE] -->
     <string name="usage_access_description">Usage access allows an app to track what other apps you\u2019re using and how often, as well as your carrier, language settings, and other details.</string>
+    <!-- Title for managing external storage directory access settings. [CHAR_LIMIT=30] -->
+    <string name="directory_access_title">Directory access</string>
+    <!-- String used to describe the name of a directory on a particular volume. Example: SD Card (Movies). [CHAR_LIMIT=50] -->
+    <string name="directory_on_volume"><xliff:g id="volume" example="SD Card">%1$s</xliff:g> (<xliff:g id="directory" example="Movies">%2$s</xliff:g>)</string>
     <!-- Title for managing apps which can change Wi-Fi state. [CHAR_LIMIT=30] -->
     <string name="wifi_control_title">Wi-Fi control</string>
     <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
