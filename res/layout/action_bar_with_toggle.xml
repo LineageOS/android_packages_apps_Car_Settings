@@ -68,8 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:paddingStart="@*android:/dimen/action_bar_toggle_internal_padding"
-            android:paddingEnd="@*android:/dimen/action_bar_toggle_internal_padding"
+            android:paddingStart="@*android:dimen/action_bar_toggle_internal_padding"
+            android:paddingEnd="@*android:dimen/action_bar_toggle_internal_padding"
             android:background="@null"/>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
