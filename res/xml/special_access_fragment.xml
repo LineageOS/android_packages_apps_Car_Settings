@@ -44,4 +44,8 @@
         android:key="@string/pk_wifi_control_entry"
         android:title="@string/wifi_control_title"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
+        android:key="@string/pk_more_special_access"
+        android:title="@string/more_special_access_title"
+        settings:controller="com.android.car.settings.applications.specialaccess.MoreSpecialAccessPreferenceController"/>
 </PreferenceScreen>
