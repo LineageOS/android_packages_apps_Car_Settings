@@ -57,6 +57,7 @@ import java.util.List;
 @Config(shadows = {ShadowInputMethodManager.class, ShadowDevicePolicyManager.class})
 public class EnabledKeyboardPreferenceControllerTest {
     private static final String DUMMY_LABEL = "dummy label";
+    private static final String DUMMY_ID = "dummy id";
     private static final String DUMMY_SETTINGS_ACTIVITY = "dummy settings activity";
     private static final String DUMMY_PACKAGE_NAME = "dummy package name";
     private static final String ALLOWED_PACKAGE_NAME = "allowed package name";
@@ -224,6 +225,7 @@ public class EnabledKeyboardPreferenceControllerTest {
             PackageManager packageManager, String packageName) {
         InputMethodInfo mockInfo = mock(InputMethodInfo.class);
         when(mockInfo.getPackageName()).thenReturn(packageName);
+        when(mockInfo.getId()).thenReturn(DUMMY_ID);
         when(mockInfo.loadLabel(packageManager)).thenReturn(DUMMY_LABEL);
         when(mockInfo.getServiceInfo()).thenReturn(new ServiceInfo());
         when(mockInfo.getSettingsActivity()).thenReturn(DUMMY_SETTINGS_ACTIVITY);
