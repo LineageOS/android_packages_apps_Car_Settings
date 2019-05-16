@@ -39,7 +39,7 @@ public class PasswordLockPreferenceController extends LockTypeBasePreferenceCont
 
     @Override
     protected Fragment fragmentToOpen() {
-        return ChooseLockPinPasswordFragment.newPasswordInstance(/* isInSetupWizard= */ false);
+        return ChooseLockPinPasswordFragment.newPasswordInstance();
     }
 
     @Override

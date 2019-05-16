@@ -43,7 +43,7 @@ public class ConfirmLockPinPasswordFragmentTest {
     public void initFragment() {
         mTestActivity = Robolectric.setupActivity(TestSettingsScreenLockActivity.class);
 
-        mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance(/* isInSetupWizard= */ false);
+        mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
         mTestActivity.launchFragment(mPinFragment);
     }
 
