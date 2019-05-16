@@ -31,7 +31,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.Intent;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
@@ -76,19 +75,17 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     private CachedBluetoothDeviceManager mCachedDeviceManager;
     private CachedBluetoothDeviceManager mSaveRealCachedDeviceManager;
     private LocalBluetoothManager mLocalBluetoothManager;
-    private Context mContext;
     private PreferenceGroup mPreferenceGroup;
     private PreferenceControllerTestHelper<BluetoothUnbondedDevicesPreferenceController>
             mControllerHelper;
-    private BluetoothUnbondedDevicesPreferenceController mController;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mContext = RuntimeEnvironment.application;
+        Context context = RuntimeEnvironment.application;
 
-        mLocalBluetoothManager = LocalBluetoothManager.getInstance(mContext, /* onInitCallback= */
+        mLocalBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */
                 null);
         mSaveRealCachedDeviceManager = mLocalBluetoothManager.getCachedDeviceManager();
         ReflectionHelpers.setField(mLocalBluetoothManager, "mCachedDeviceManager",
@@ -105,15 +102,14 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
                 Arrays.asList(mUnbondedCachedDevice, bondedCachedDevice));
 
         // Make sure controller is available.
-        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
+        Shadows.shadowOf(context.getPackageManager()).setSystemFeature(
                 FEATURE_BLUETOOTH, /* supported= */ true);
         BluetoothAdapter.getDefaultAdapter().enable();
         getShadowBluetoothAdapter().setState(BluetoothAdapter.STATE_ON);
 
-        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
-        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+        mPreferenceGroup = new LogicalPreferenceGroup(context);
+        mControllerHelper = new PreferenceControllerTestHelper<>(context,
                 BluetoothUnbondedDevicesPreferenceController.class, mPreferenceGroup);
-        mController = mControllerHelper.getController();
     }
 
     @After
@@ -134,43 +130,6 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     }
 
     @Test
-    public void onScanningStateChanged_scanningEnabled_receiveStopped_restartsScanning() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
-
-        BluetoothAdapter.getDefaultAdapter().cancelDiscovery();
-        mController.onScanningStateChanged(/* started= */ false);
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
-    }
-
-    @Test
-    public void onScanningStateChanged_scanningDisabled_receiveStopped_doesNothing() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        // Set a device bonding to disable scanning.
-        when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDING);
-        mController.refreshUi();
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
-
-        mController.onScanningStateChanged(/* started= */ false);
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
-    }
-
-    @Test
-    public void onDeviceBondStateChanged_refreshesUi() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
-
-        // Bond the only unbonded device.
-        when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDED);
-        when(mUnbondedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDED);
-        mController.onDeviceBondStateChanged(mUnbondedCachedDevice, BluetoothDevice.BOND_BONDED);
-
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
-    }
-
-    @Test
     public void onDeviceClicked_startsPairing() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
         BluetoothDevicePreference devicePreference =
@@ -182,20 +141,7 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     }
 
     @Test
-    public void onDeviceClicked_pairingStarted_cancelsScanning() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        BluetoothDevicePreference devicePreference =
-                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
-        when(mUnbondedCachedDevice.startPairing()).thenReturn(true);
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
-
-        devicePreference.performClick();
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
-    }
-
-    @Test
-    public void onDeviceClicked_pairingStartFails_resumeScanning() {
+    public void onDeviceClicked_pairingStartFails_resumesScanning() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
         BluetoothDevicePreference devicePreference =
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
@@ -220,7 +166,7 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     }
 
     @Test
-    public void onDeviceClicked_requests_messageAccess() {
+    public void onDeviceClicked_requestsMessageAccess() {
         mControllerHelper.markState(Lifecycle.State.STARTED);
         when(mUnbondedCachedDevice.startPairing()).thenReturn(true);
         BluetoothDevicePreference devicePreference =
@@ -238,125 +184,6 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
 
         assertThat(mControllerHelper.getController().getAvailabilityStatus()).isEqualTo(
                 DISABLED_FOR_USER);
-    }
-
-    @Test
-    public void refreshUi_noDeviceBonding_startsScanning() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-
-        mController.refreshUi();
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
-    }
-
-    @Test
-    public void refreshUi_noDeviceBonding_enablesGroup() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-
-        mController.refreshUi();
-
-        assertThat(mPreferenceGroup.isEnabled()).isTrue();
-    }
-
-    @Test
-    public void refreshUi_noDeviceBonding_setsScanModeConnectableDiscoverable() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-
-        mController.refreshUi();
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().getScanMode()).isEqualTo(
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
-    }
-
-    @Test
-    public void refreshUi_deviceBonding_stopsScanning() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDING);
-
-        mController.refreshUi();
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
-    }
-
-    @Test
-    public void refreshUi_deviceBonding_disablesGroup() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDING);
-
-        mController.refreshUi();
-
-        assertThat(mPreferenceGroup.isEnabled()).isFalse();
-    }
-
-    @Test
-    public void refreshUi_deviceBonding_setsScanModeConnectable() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDING);
-
-        mController.refreshUi();
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().getScanMode()).isEqualTo(
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-    }
-
-    @Test
-    public void onStop_stopsScanning() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isTrue();
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().isDiscovering()).isFalse();
-    }
-
-    @Test
-    public void onStop_clearsNonBondedDevices() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-
-        verify(mCachedDeviceManager).clearNonBondedDevices();
-    }
-
-    @Test
-    public void onStop_clearsGroup() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        assertThat(mPreferenceGroup.getPreferenceCount()).isGreaterThan(0);
-
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-
-        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
-    }
-
-    @Test
-    public void onStop_setsScanModeConnectable() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().getScanMode()).isEqualTo(
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-    }
-
-    @Test
-    public void discoverableScanModeTimeout_controllerStarted_resetsDiscoverableScanMode() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-
-        BluetoothAdapter.getDefaultAdapter().setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-        mContext.sendBroadcast(new Intent(BluetoothAdapter.ACTION_SCAN_MODE_CHANGED));
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().getScanMode()).isEqualTo(
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
-    }
-
-    @Test
-    public void discoverableScanModeTimeout_controllerStopped_doesNotResetDiscoverableScanMode() {
-        mControllerHelper.markState(Lifecycle.State.STARTED);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
-
-        BluetoothAdapter.getDefaultAdapter().setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
-        mContext.sendBroadcast(new Intent(BluetoothAdapter.ACTION_SCAN_MODE_CHANGED));
-
-        assertThat(BluetoothAdapter.getDefaultAdapter().getScanMode()).isEqualTo(
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE);
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
