@@ -28,6 +28,8 @@
 
     <!-- Action Bar -->
     <dimen name="action_bar_height">@*android:dimen/car_app_bar_height</dimen>
+    <!-- Guideline begin margin for when not showing exit icon -->
+    <dimen name="action_bar_no_icon_start_margin">@*android:dimen/action_bar_button_margin</dimen>
 
     <!-- Suggestions -->
     <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
