@@ -32,6 +32,7 @@ import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.DefaultApplicationsSettingsFragment;
 import com.android.car.settings.applications.assist.ManageAssistFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.specialaccess.DirectoryAccessFragment;
 import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
 import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
 import com.android.car.settings.applications.specialaccess.UsageAccessFragment;
@@ -147,6 +148,9 @@ public class FragmentResolver {
 
             case Settings.ACTION_USAGE_ACCESS_SETTINGS:
                 return new UsageAccessFragment();
+
+            case Settings.ACTION_STORAGE_VOLUME_ACCESS_SETTINGS:
+                return new DirectoryAccessFragment();
 
             case Intent.ACTION_QUICK_CLOCK:
             case Settings.ACTION_DATE_SETTINGS:
