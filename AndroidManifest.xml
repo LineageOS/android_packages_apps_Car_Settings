@@ -151,7 +151,17 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
+                <action android:name="android.settings.action.MANAGE_WRITE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.USAGE_ACCESS_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 

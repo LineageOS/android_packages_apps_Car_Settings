@@ -30,7 +30,9 @@ import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
 import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
+import com.android.car.settings.applications.specialaccess.UsageAccessFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -129,8 +131,14 @@ public class FragmentResolver {
                 }
                 return ApplicationDetailsFragment.getInstance(pkg);
 
+            case Settings.ACTION_MANAGE_WRITE_SETTINGS:
+                return new ModifySystemSettingsFragment();
+
             case Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS:
                 return new NotificationAccessFragment();
+
+            case Settings.ACTION_USAGE_ACCESS_SETTINGS:
+                return new UsageAccessFragment();
 
             case Intent.ACTION_QUICK_CLOCK:
             case Settings.ACTION_DATE_SETTINGS:
