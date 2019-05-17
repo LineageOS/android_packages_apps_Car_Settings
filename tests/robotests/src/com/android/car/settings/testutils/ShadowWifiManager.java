@@ -34,6 +34,7 @@ public class ShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager
 
     private final Map<Integer, WifiConfiguration> mNetworkIdToConfiguredNetworks =
             new LinkedHashMap<>();
+    private int mLastForgottenNetwork = Integer.MIN_VALUE;
 
     @Implementation
     @Override
@@ -54,6 +55,15 @@ public class ShadowWifiManager extends org.robolectric.shadows.ShadowWifiManager
 
     public static boolean verifyFactoryResetCalled(int numTimes) {
         return sResetCalledCount == numTimes;
+    }
+
+    @Implementation
+    protected void forget(int netId, WifiManager.ActionListener listener) {
+        mLastForgottenNetwork = netId;
+    }
+
+    public int getLastForgottenNetwork() {
+        return mLastForgottenNetwork;
     }
 
     @Implementation
