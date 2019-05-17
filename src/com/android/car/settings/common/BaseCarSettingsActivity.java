@@ -169,7 +169,7 @@ public abstract class BaseCarSettingsActivity extends FragmentActivity implement
 
     @Override
     public void onBackStackChanged() {
-        updateBlockingView(getCurrentFragment());
+        onUxRestrictionsChanged(getCarUxRestrictions());
     }
 
     @Override
