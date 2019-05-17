@@ -28,6 +28,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ServiceInfo;
 import android.graphics.drawable.Drawable;
+import android.provider.Settings;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
@@ -43,7 +44,11 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class InputMethodUtilTest {
@@ -52,8 +57,19 @@ public class InputMethodUtilTest {
     private static final String DUMMY_SETTINGS_ACTIVITY = "dummy settings activity";
     private static final String SUBTYPES_STRING =
             "English (United States), German (Belgium), and Occitan (France)";
-
+    private static final String DUMMY_ENABLED_INPUT_METHODS =
+            "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime"
+                    + ".VoiceInputMethodService:com.google.android.apps.automotive.inputmethod/"
+                    + ".InputMethodService";
+    private static final String DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT =
+            "com.google.android.apps.automotive.inputmethod/.InputMethodService";
+    private static final String DUMMY_ENABLED_INPUT_METHOD_ID =
+            "com.google.android.googlequicksearchbox/com.google.android.voicesearch.ime"
+                    + ".VoiceInputMethodService";
+    private static final String DUMMY_DISABLED_INPUT_METHOD_ID = "disabled input method id";
     private Context mContext;
+    private List<InputMethodInfo> mDummyEnabledInputMethodsListAllDefaultable;
+    private List<InputMethodInfo> mDummyEnabledInputMethodsListOneDefaultable;
 
     @Mock
     private PackageManager mPackageManager;
@@ -62,6 +78,197 @@ public class InputMethodUtilTest {
     @Mock
     private Drawable mIcon;
 
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+
+        mContext = RuntimeEnvironment.application;
+
+        Settings.Secure.putString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS, DUMMY_ENABLED_INPUT_METHODS);
+        Settings.Secure.putString(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD, DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+
+        mDummyEnabledInputMethodsListOneDefaultable = Arrays
+                .stream(DUMMY_ENABLED_INPUT_METHODS.split(String.valueOf(InputMethodUtil
+                        .INPUT_METHOD_DELIMITER))).collect(Collectors.toList()).stream().map(
+                            result -> {
+                                InputMethodInfo info = createMockInputMethodInfo(
+                                        mPackageManager, DUMMY_PACKAGE_NAME);
+                                when(info.getId()).thenReturn(result);
+                                when(info.isDefault(mContext)).thenReturn(result.equals(
+                                        DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT));
+                                return info;
+                            }).collect(Collectors.toList());
+        mDummyEnabledInputMethodsListAllDefaultable = Arrays
+                .stream(DUMMY_ENABLED_INPUT_METHODS.split(String.valueOf(InputMethodUtil
+                        .INPUT_METHOD_DELIMITER))).collect(Collectors.toList()).stream().map(
+                                result -> {
+                                    InputMethodInfo info = createMockInputMethodInfo(
+                                            mPackageManager, DUMMY_PACKAGE_NAME);
+                                    when(info.getId()).thenReturn(result);
+                                    when(info.isDefault(mContext)).thenReturn(true);
+                                    return info;
+                                }).collect(Collectors.toList());
+    }
+
+    @Test
+    public void getPackageIcon_hasApplicationIcon() throws NameNotFoundException {
+        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
+                mInputMethodManager, DUMMY_PACKAGE_NAME);
+        when(mPackageManager.getApplicationIcon(eq(info.getPackageName()))).thenReturn(mIcon);
+        assertThat(InputMethodUtil.getPackageIcon(mPackageManager, info)).isEqualTo(mIcon);
+    }
+
+    @Test
+    public void getPackageIcon_noApplicationIcon() throws NameNotFoundException {
+        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
+                mInputMethodManager, DUMMY_PACKAGE_NAME);
+        when(mPackageManager.getApplicationIcon(DUMMY_PACKAGE_NAME)).thenThrow(
+                new NameNotFoundException());
+        assertThat(InputMethodUtil.getPackageIcon(mPackageManager, info)).isEqualTo(
+                InputMethodUtil.NO_ICON);
+    }
+
+    @Test
+    public void getPackageLabel() {
+        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
+                mInputMethodManager, DUMMY_PACKAGE_NAME);
+        assertThat(InputMethodUtil.getPackageLabel(mPackageManager, info)).isEqualTo(
+                DUMMY_LABEL);
+    }
+
+    @Test
+    public void getSummaryString() {
+        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
+                mInputMethodManager, DUMMY_PACKAGE_NAME);
+        assertThat(InputMethodUtil.getSummaryString(mContext, mInputMethodManager, info)).isEqualTo(
+                SUBTYPES_STRING);
+    }
+
+    @Test
+    public void isInputMethodEnabled_isDisabled_returnsFalse() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_DISABLED_INPUT_METHOD_ID);
+
+        assertThat(InputMethodUtil.isInputMethodEnabled(mContext.getContentResolver(), info))
+                .isFalse();
+    }
+
+    @Test
+    public void isInputMethodEnabled_isEnabled_returnsTrue() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+
+        assertThat(InputMethodUtil.isInputMethodEnabled(mContext.getContentResolver(), info))
+                .isTrue();
+    }
+
+    @Test
+    public void enableInputMethod_alreadyEnabled_remainsUnchanged() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+
+        InputMethodUtil.enableInputMethod(mContext.getContentResolver(), info);
+
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo(DUMMY_ENABLED_INPUT_METHODS);
+    }
+
+    @Test
+    public void enableInputMethod_noEnabledInputMethods_addsIME() {
+        Settings.Secure.putString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS, "");
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+
+        InputMethodUtil.enableInputMethod(mContext.getContentResolver(), info);
+
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+    }
+
+    @Test
+    public void enableInputMethod_someEnabledInputMethods_addsIME() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_DISABLED_INPUT_METHOD_ID);
+
+        InputMethodUtil.enableInputMethod(mContext.getContentResolver(), info);
+
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHODS + ":"
+                        + DUMMY_DISABLED_INPUT_METHOD_ID);
+    }
+
+    @Test
+    public void disableInputMethod_notEnabled_remainsUnchanged() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_DISABLED_INPUT_METHOD_ID);
+        when(mInputMethodManager.getEnabledInputMethodList())
+                .thenReturn(mDummyEnabledInputMethodsListAllDefaultable);
+
+        InputMethodUtil.disableInputMethod(mContext, mInputMethodManager, info);
+
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo(DUMMY_ENABLED_INPUT_METHODS);
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+    }
+
+    @Test
+    public void disableInputMethod_notDefault_removesIMEWhileDefaultRemainsSame() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID);
+        when(mInputMethodManager.getEnabledInputMethodList())
+                .thenReturn(mDummyEnabledInputMethodsListAllDefaultable);
+
+        InputMethodUtil.disableInputMethod(mContext, mInputMethodManager, info);
+
+        assertThat(splitConcatenatedIdsIntoSet(Settings.Secure.getString(mContext
+                .getContentResolver(), Settings.Secure.ENABLED_INPUT_METHODS))).isEqualTo(
+                splitConcatenatedIdsIntoSet(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT));
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+    }
+
+    @Test
+    public void disableInputMethod_twoDefaultableIMEsEnabled_removesIMEAndChangesDefault() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+        when(mInputMethodManager.getEnabledInputMethodList())
+                .thenReturn(mDummyEnabledInputMethodsListAllDefaultable);
+
+        InputMethodUtil.disableInputMethod(mContext, mInputMethodManager, info);
+
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID);
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID);
+    }
+
+    @Test
+    public void disableInputMethod_isDefaultWithNoOtherDefaultableEnabled_remainsUnchanged() {
+        InputMethodInfo info = createMockInputMethodInfo(mPackageManager, DUMMY_PACKAGE_NAME);
+        when(info.getId()).thenReturn(DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+        when(mInputMethodManager.getEnabledInputMethodList())
+                .thenReturn(mDummyEnabledInputMethodsListOneDefaultable);
+
+        InputMethodUtil.disableInputMethod(mContext, mInputMethodManager, info);
+
+        assertThat(splitConcatenatedIdsIntoSet(Settings.Secure.getString(mContext
+                .getContentResolver(), Settings.Secure.ENABLED_INPUT_METHODS))).isEqualTo(
+                splitConcatenatedIdsIntoSet(DUMMY_ENABLED_INPUT_METHODS));
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.DEFAULT_INPUT_METHOD)).isEqualTo(
+                DUMMY_ENABLED_INPUT_METHOD_ID_DEFAULT);
+    }
+
     private static InputMethodInfo createMockInputMethodInfoWithSubtypes(
             PackageManager packageManager, InputMethodManager inputMethodManager,
             String packageName) {
@@ -69,7 +276,6 @@ public class InputMethodUtilTest {
         List<InputMethodSubtype> subtypes = createSubtypes();
         when(inputMethodManager.getEnabledInputMethodSubtypeList(
                 eq(mockInfo), anyBoolean())).thenReturn(subtypes);
-
         return mockInfo;
     }
 
@@ -96,43 +302,18 @@ public class InputMethodUtilTest {
                 .setIsAuxiliary(false).setIsAsciiCapable(true).build();
     }
 
-    @Before
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        mContext = RuntimeEnvironment.application;
-    }
+    private Set<String> splitConcatenatedIdsIntoSet(String ids) {
+        Set<String> result = new HashSet<>();
 
-    @Test
-    public void testGetPackageIcon_hasApplicationIcon() throws NameNotFoundException {
-        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
-                mInputMethodManager, DUMMY_PACKAGE_NAME);
-        when(mPackageManager.getApplicationIcon(eq(info.getPackageName()))).thenReturn(mIcon);
-        assertThat(InputMethodUtil.getPackageIcon(mPackageManager, info)).isEqualTo(mIcon);
-    }
+        if (ids == null || ids.isEmpty()) {
+            return result;
+        }
 
-    @Test
-    public void testGetPackageIcon_noApplicationIcon() throws NameNotFoundException {
-        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
-                mInputMethodManager, DUMMY_PACKAGE_NAME);
-        when(mPackageManager.getApplicationIcon(DUMMY_PACKAGE_NAME)).thenThrow(
-                new NameNotFoundException());
-        assertThat(InputMethodUtil.getPackageIcon(mPackageManager, info)).isEqualTo(
-                InputMethodUtil.NO_ICON);
-    }
+        InputMethodUtil.sInputMethodSplitter.setString(ids);
+        while (InputMethodUtil.sInputMethodSplitter.hasNext()) {
+            result.add(InputMethodUtil.sInputMethodSplitter.next());
+        }
 
-    @Test
-    public void testGetPackageLabel() {
-        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
-                mInputMethodManager, DUMMY_PACKAGE_NAME);
-        assertThat(InputMethodUtil.getPackageLabel(mPackageManager, info)).isEqualTo(
-                DUMMY_LABEL);
-    }
-
-    @Test
-    public void testGetSummaryString() {
-        InputMethodInfo info = createMockInputMethodInfoWithSubtypes(mPackageManager,
-                mInputMethodManager, DUMMY_PACKAGE_NAME);
-        assertThat(InputMethodUtil.getSummaryString(mContext, mInputMethodManager, info)).isEqualTo(
-                SUBTYPES_STRING);
+        return result;
     }
 }

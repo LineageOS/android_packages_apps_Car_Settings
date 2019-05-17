@@ -23,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.SwitchPreference;
@@ -41,8 +42,10 @@ import java.util.Set;
 /** Updates the available keyboard list. */
 public class KeyboardManagementPreferenceController extends
         PreferenceController<PreferenceGroup> {
-    private static final String DIRECT_BOOT_WARN_DIALOG_TAG = "DirectBootWarnDialog";
-    private static final String SECURITY_WARN_DIALOG_TAG = "SecurityWarnDialog";
+    @VisibleForTesting
+    static final String DIRECT_BOOT_WARN_DIALOG_TAG = "DirectBootWarnDialog";
+    @VisibleForTesting
+    static final String SECURITY_WARN_DIALOG_TAG = "SecurityWarnDialog";
     private static final String KEY_INPUT_METHOD_INFO = "INPUT_METHOD_INFO";
     private final InputMethodManager mInputMethodManager;
     private final DevicePolicyManager mDevicePolicyManager;
