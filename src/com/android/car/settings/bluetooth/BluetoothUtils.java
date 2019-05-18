@@ -162,6 +162,13 @@ final class BluetoothUtils {
         return false;
     }
 
+    static void persistSelectedDeviceInPicker(Context context, String deviceAddress) {
+        SharedPreferences.Editor editor = getSharedPreferences(context).edit();
+        editor.putString(KEY_LAST_SELECTED_DEVICE, deviceAddress);
+        editor.putLong(KEY_LAST_SELECTED_DEVICE_TIME, System.currentTimeMillis());
+        editor.apply();
+    }
+
     public static LocalBluetoothManager getLocalBtManager(Context context) {
         return LocalBluetoothManager.getInstance(context, mOnInitCallback);
     }
