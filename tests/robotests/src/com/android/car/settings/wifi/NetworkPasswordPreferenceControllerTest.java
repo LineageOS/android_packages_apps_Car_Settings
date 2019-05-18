@@ -29,7 +29,6 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
@@ -42,7 +41,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
-import org.robolectric.shadows.ShadowToast;
 
 import java.util.List;
 
@@ -52,7 +50,7 @@ public class NetworkPasswordPreferenceControllerTest {
 
     private Context mContext;
     private LocalBroadcastManager mLocalBroadcastManager;
-    private PasswordEditTextPreference mPasswordEditTextPreference;
+    private NetworkNameRestrictedPasswordEditTextPreference mPasswordEditTextPreference;
     private PreferenceControllerTestHelper<NetworkPasswordPreferenceController>
             mPreferenceControllerHelper;
     private NetworkPasswordPreferenceController mController;
@@ -61,7 +59,7 @@ public class NetworkPasswordPreferenceControllerTest {
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(mContext);
-        mPasswordEditTextPreference = new PasswordEditTextPreference(mContext);
+        mPasswordEditTextPreference = new NetworkNameRestrictedPasswordEditTextPreference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 NetworkPasswordPreferenceController.class, mPasswordEditTextPreference);
         mController = mPreferenceControllerHelper.getController();
@@ -149,23 +147,6 @@ public class NetworkPasswordPreferenceControllerTest {
         mLocalBroadcastManager.sendBroadcastSync(intent);
 
         assertThat(mPasswordEditTextPreference.isVisible()).isTrue();
-    }
-
-    @Test
-    public void handlePreferenceChanged_hasSecurity_noNetworkNameSet_showToast() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        Intent intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
-        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE,
-                AccessPoint.SECURITY_PSK);
-        mLocalBroadcastManager.sendBroadcastSync(intent);
-
-        intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, "");
-        mLocalBroadcastManager.sendBroadcastSync(intent);
-
-        mPasswordEditTextPreference.callChangeListener("password");
-        assertThat(ShadowToast.getTextOfLatestToast()).isEqualTo(
-                mContext.getString(R.string.wifi_no_network_name));
     }
 
     @Test
