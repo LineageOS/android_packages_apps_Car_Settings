@@ -97,6 +97,12 @@
 
             <intent-filter android:priority="1">
                 <action android:name="android.settings.SOUND_SETTINGS" />
+                <action android:name="android.settings.panel.action.VOLUME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.panel.action.INTERNET_CONNECTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
@@ -104,6 +110,7 @@
                 <action android:name="android.net.wifi.PICK_WIFI_NETWORK" />
                 <action android:name="android.settings.WIFI_SETTINGS" />
                 <action android:name="android.settings.WIRELESS_SETTINGS" />
+                <action android:name="android.settings.panel.action.WIFI" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
