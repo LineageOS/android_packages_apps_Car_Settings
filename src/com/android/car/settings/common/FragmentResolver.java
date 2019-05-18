@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -40,6 +41,7 @@ import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
 import com.android.car.settings.location.LocationScanningFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
+import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.storage.StorageSettingsFragment;
@@ -84,11 +86,16 @@ public class FragmentResolver {
                 return new DisplaySettingsFragment();
 
             case Settings.ACTION_SOUND_SETTINGS:
+            case Settings.Panel.ACTION_VOLUME:
                 return new SoundSettingsFragment();
 
-            case android.net.wifi.WifiManager.ACTION_PICK_WIFI_NETWORK:
+            case Settings.Panel.ACTION_INTERNET_CONNECTIVITY:
+                return new NetworkAndInternetFragment();
+
+            case WifiManager.ACTION_PICK_WIFI_NETWORK:
             case Settings.ACTION_WIFI_SETTINGS:
             case Settings.ACTION_WIRELESS_SETTINGS:
+            case Settings.Panel.ACTION_WIFI:
                 return new WifiSettingsFragment();
 
             case Settings.ACTION_WIFI_IP_SETTINGS:
