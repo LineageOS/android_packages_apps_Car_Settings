@@ -70,8 +70,8 @@
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Tarif anzeigen"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Datennutzung durch Apps"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"Eingeschränkt"</string>
-    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Datum für Zurücksetzung des Nutzungszyklus"</string>
-    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Datum (monatlich):"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Tag für Zurücksetzung des Nutzungszyklus"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Jeden Monat zurücksetzen am:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Festlegen"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Datenwarnung &amp; Datenlimit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Datennutzungszyklus der App"</string>
@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Verbinden"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Passwort"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Passwort anzeigen"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Gib einen Netzwerknamen ein"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Netzwerkname"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID eingeben"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sicherheit"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"> zusätzliche Berechtigungen</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> zusätzliche Berechtigung</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent &amp; Spracheingabe"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistent-App"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Text auf Bildschirm verwenden"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Wenn du den Benachrichtigungszugriff für <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> deaktivierst, wird möglicherweise auch der \"Bitte nicht stören\"-Zugriff deaktiviert."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Deaktivieren"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Abbrechen"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Zugriff auf Premium-SMS"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Bei Premium-SMS können Kosten entstehen, die über den Mobilfunkanbieter abgerechnet werden. Wenn du für eine App Premium-SMS zulässt, kannst du aus ihr Premium-SMS versenden."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Zugriff auf Nutzungsdaten"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Der Zugriff auf die Nutzungsdaten ermöglicht es einer App, verschiedene Informationen zu erfassen – welche anderen Apps du wie oft verwendest, welchen Mobilfunkanbieter du nutzt, welche Spracheinstellungen du festgelegt hast usw."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"WLAN-Steuerung"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Die WLAN-Steuerung erlaubt einer App, die WLAN-Funktion zu aktivieren oder zu deaktivieren, nach WLANs zu scannen und eine Verbindung zu ihnen herzustellen, Netzwerke hinzuzufügen oder zu entfernen oder einen lokal beschränkten Hotspot zu starten."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Standort"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Keine letzten Standortanfragen"</string>

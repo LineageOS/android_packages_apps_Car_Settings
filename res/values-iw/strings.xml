@@ -99,8 +99,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"התחברות"</string>
     <string name="wifi_password" msgid="5565632142720292397">"סיסמה"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"הצגת סיסמה"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"יש להזין שם רשת"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"שם הרשת"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"הזנת ה-SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"אבטחה"</string>
@@ -144,29 +143,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"המערכת מפעילה את <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"אפשר לחבר מכשירים נוספים לנקודה <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"הסיסמה לנקודה לשיתוף אינטרנט"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"אבטחה"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"אין"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"תדר AP"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"בחירת תדר AP"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"אוטומטי"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"תדר של ‎2.4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"תדר של ‎5.0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"עדיפות לתדר של ‎5.0 GHz"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"‎2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"‎5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"יש לבחור תדר אחד לפחות לנקודת Wi‑Fi לשיתוף אינטרנט:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"נקודה לשיתוף אינטרנט ושיתוף אינטרנט בין מכשירים"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"כיבוי אוטומטי של הנקודה לשיתוף אינטרנט"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"נקודת ה-Wi‑Fi לשיתוף אינטרנט תיכבה כשאין אף מכשיר מחובר"</string>
@@ -234,8 +222,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"הסרת התקנה"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"אם האפליקציה הזו תושבת, ייתכן ש-Android ואפליקציות אחרות לא יפעלו כצפוי."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"השבתת האפליקציה"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"לא מותקנת אצל המשתמש הזה"</string>
     <string name="permissions_label" msgid="2701446753515612685">"הרשאות"</string>
     <string name="notifications_label" msgid="6586089149665170731">"התראות"</string>
     <string name="application_version_label" msgid="8556889839783311649">"גרסה: %1$s"</string>
@@ -250,6 +237,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> הרשאות נוספות</item>
       <item quantity="one">הרשאה אחת (<xliff:g id="COUNT_0">%d</xliff:g>) נוספת</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"קלט אסיסטנט וקלט קולי"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"אפליקציית עזרה"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"שימוש בטקסט המופיע במסך"</string>
@@ -279,32 +268,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"אין לפתוח באפליקציה זו"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"קישורים נתמכים"</string>
     <string name="special_access" msgid="5730278220917123811">"הרשאת גישה מיוחדת לאפליקציה"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"הצגת המערכת"</string>
+    <string name="hide_system" msgid="8845453295584638040">"הסתרת המערכת"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"שינוי הגדרות המערכת"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ההרשאה הזו מתירה לאפליקציה לשנות את הגדרות המערכת."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"גישה להתראות"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"האם להתיר ל-<xliff:g id="SERVICE">%1$s</xliff:g> לגשת אל התראות?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ל-<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> תהיה אפשרות לקרוא את כל ההתראות, כולל מידע אישי כמו שמות של אנשי קשר והודעות טקסט שמתקבלות. האפליקציה תוכל גם לבטל התראות או להפעיל לחצני פעולה שהן כוללות.\n\nכמו כן, האפליקציה תוכל להפעיל או לכבות את התכונה \'נא לא להפריע\' ולשנות הגדרות קשורות."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"אם הגישה של <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> להתראות תושבת, ניתן יהיה להשבית גם את הגישה לתכונה \'נא לא להפריע\'."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"כיבוי"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ביטול"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"שליחת הודעות SMS בתשלום"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"החיובים תמורת שליחה של הודעות SMS בתשלום, אם יהיו, יצורפו לחשבונות הספק שלך. לאחר שמפעילים את ההרשאה לאפליקציה כלשהי, ניתן לשלוח באמצעותה הודעות SMS בתשלום."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"גישה לנתוני השימוש"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"גישה לנתוני השימוש מאפשרת לאפליקציה לעקוב אחר האפליקציות האחרות שנעשה בהן שימוש ואחר תדירות השימוש בהן. המידע כולל גם את זהות הספק, הגדרות השפה ופרטים אחרים."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"שליטה ב-Wi-Fi"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"שליטה ב-Wi-Fi מאפשרת לאפליקציות להפעיל ולכבות חיבור Wi-Fi, לסרוק רשתות Wi-Fi ולהתחבר אליהן, להוסיף ולהסיר רשתות או להפעיל נקודה לשיתוף אינטרנט באופן מקומי בלבד."</string>
     <string name="location_settings_title" msgid="901334356682423679">"מיקום"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"בקשות של מיקומים אחרונים"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"אין בקשות של מיקומים אחרונים"</string>

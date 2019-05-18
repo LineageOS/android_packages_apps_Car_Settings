@@ -51,7 +51,9 @@
         network_and_internet_extra_settings
     </string>
     <string name="pk_mobile_network_list" translatable="false">mobile_network_list</string>
-    <string name="pk_mobile_network_list_add_more" translatable="false">mobile_network_list_add_more</string>
+    <string name="pk_mobile_network_list_add_more" translatable="false">
+        mobile_network_list_add_more
+    </string>
     <string name="pk_mobile_data_toggle" translatable="false">mobile_data_toggle</string>
     <string name="pk_mobile_roaming_toggle" translatable="false">mobile_roaming_toggle</string>
     <string name="pk_data_usage_settings_entry" translatable="false">data_usage_settings_entry
@@ -67,7 +69,8 @@
     <string name="pk_data_limit" translatable="false">data_limit</string>
     <string name="pk_app_data_usage" translatable="false">app_data_usage</string>
     <string name="pk_app_data_usage_detail" translatable="false">app_data_usage_detail</string>
-    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry</string>
+    <string name="pk_wifi_tether_settings_entry" translatable="false">wifi_tether_settings_entry
+    </string>
     <string name="pk_wifi_tether_security" translatable="false">wifi_tether_security</string>
     <string name="pk_wifi_tether_ap_band" translatable="false">wifi_tether_ap_band</string>
     <string name="pk_wifi_tether_auto_off" translatable="false">wifi_tether_auto_off</string>
@@ -110,6 +113,7 @@
     </string>
     <string name="pk_bluetooth_device_address" translatable="false">bluetooth_device_address
     </string>
+    <string name="pk_bluetooth_device_picker" translatable="false">bluetooth_device_picker</string>
 
     <!-- Applications and Notifications Settings -->
     <string name="pk_applications_settings_screen_entry" translatable="false">
@@ -194,6 +198,7 @@
     <string name="pk_wifi_control" translatable="false">wifi_control</string>
     <string name="pk_wifi_control_description" translatable="false">wifi_control_description
     </string>
+    <string name="pk_more_special_access" translatable="false">more_special_access</string>
 
     <!-- DateTime Settings -->
     <string name="pk_auto_datetime_switch" translatable="false">auto_datetime_switch</string>
@@ -223,12 +228,21 @@
     <string name="pk_storage_music_audio_details" translatable="false">storage_music_audio_details
     </string>
     <string name="pk_storage_other_apps" translatable="false">storage_other_apps</string>
-    <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details</string>
-    <string name="pk_storage_application_size" translatable="false">storage_application_size</string>
-    <string name="pk_storage_application_total_size" translatable="false">storage_application_total_size</string>
-    <string name="pk_storage_application_data_size" translatable="false">storage_application_data_size</string>
-    <string name="pk_storage_application_cache_size" translatable="false">storage_application_cache_size</string>
-    <string name="pk_storage_application_details" translatable="false">storage_application_details</string>
+    <string name="pk_storage_other_apps_details" translatable="false">storage_other_apps_details
+    </string>
+    <string name="pk_storage_application_size" translatable="false">storage_application_size
+    </string>
+    <string name="pk_storage_application_total_size" translatable="false">
+        storage_application_total_size
+    </string>
+    <string name="pk_storage_application_data_size" translatable="false">
+        storage_application_data_size
+    </string>
+    <string name="pk_storage_application_cache_size" translatable="false">
+        storage_application_cache_size
+    </string>
+    <string name="pk_storage_application_details" translatable="false">storage_application_details
+    </string>
     <string name="pk_storage_files" translatable="false">storage_files</string>
     <string name="pk_storage_system" translatable="false">storage_system</string>
 

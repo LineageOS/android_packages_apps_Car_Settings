@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Қосылу"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Құпия сөз"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Құпия сөзді көрсету"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Желі атауын енгізіңіз."</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Желі атауы"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID идентификаторын енгізіңіз"</string>
     <string name="wifi_security" msgid="158358046038876532">"Қауіпсіздік"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> қосылуда..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Басқа құрылғылар <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> хотспотына қосыла алады."</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Хотспот құпия сөзі"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Қауіпсіздік"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Жоқ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP диапазоны"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Wi-Fi жиілік диапазоны"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Авто"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 ГГц диапазоны"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 ГГц диапазоны"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 ГГц диапазоны таңдалды"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 ГГц"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 ГГц"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi хотспоты үшін кемінде бір диапазон таңдаңыз."</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот және тетеринг"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Хотспотты автоматты өшіру"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ешқандай құрылғы жалғанбаса, Wi‑Fi хотспоты өшеді"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Жою"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Бұл қолданбаны өшірсеңіз, Android жүйесі мен басқа қолданбалар тиісінше жұмыс істемеуі мүмкін."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Қолданбаны өшіру"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Бұл пайдаланушы үшін орнатылмаған"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Рұқсаттар"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Хабарландырулар"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Нұсқа: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> қосымша рұқсат</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> қосымша рұқсат</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Көмекші және дауыспен енгізу"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Көмекші қолданба"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Экрандағы мәтінді пайдалану"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Осы қолданбада ашпау"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Қолдау көрсетілетін сілтемелер"</string>
     <string name="special_access" msgid="5730278220917123811">"Қолданба пайдалануға арналған арнайы рұқсат"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Жүйені көрсету"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Жүйені жасыру"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Жүйе параметрлерін өзгерту"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Бұл рұқсат қолданбаға жүйе параметрлерін өзгертуге рұқсат етеді."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Хабарландыруларды пайдалану"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> қызметіне хабарландыруларды пайдалануға рұқсат берілсін бе?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> барлық хабарландыруларды, соның ішінде контакт аттары, сізге келген хабарлардың мәтіні сияқты жеке ақпаратты оқи алатын болады. Сондай-ақ хабарландыруларды өзгерте, жаба немесе олардағы әрекет түймелерін қоса алады. \n\nБұл, сондай-ақ қолданбаға \"Мазаламау\" режимін қосуға немесе өшіруге және тиісті параметрлерді өзгертуге мүмкіндік береді."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Егер <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> үшін хабарландыруларды пайдалану мүмкіндігін өшірсеңіз, \"Мазаламау\" режимін пайдалану мүмкін болмайды."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Өшіру"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Бас тарту"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Ақылы SMS жіберу"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Ақылы SMS жіберу үшін оператор тарифтеріне сәйкес ақы алынады. Егер қолданбаға рұқсат берсеңіз, сол қолданба арқылы ақылы SMS жібере аласыз."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Пайдалану тарихын көру"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Пайдалану тарихын көру мүмкіндігі қолданбаға сіз басқа қандай қолданбаларды пайдаланатыныңызды және оларды қаншалықты жиі пайдаланатыныңызды, сондай-ақ операторды, тіл параметрлерін және басқа мәліметтерді бақылауға мүмкіндік береді."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi желісін басқару"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi желісін басқару функциясы қолданбаға Wi-Fi желісін қосуға немесе өшіруге, Wi-Fi желілерін іздеуге және оларға жалғануға, желілерді енгізуге не өшіруге немесе тек жергілікті хотспотты іске қосуға рұқсат етеді."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Орналасқан жер"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жақында жасалған орналасқан жерді анықтау сұраулары"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Орналасқан жерді анықтау сұраулары жақында жасалмаған"</string>

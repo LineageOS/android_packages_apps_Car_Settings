@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -30,7 +31,9 @@ import com.android.car.settings.accounts.ChooseAccountFragment;
 import com.android.car.settings.applications.ApplicationDetailsFragment;
 import com.android.car.settings.applications.ApplicationsSettingsFragment;
 import com.android.car.settings.applications.defaultapps.DefaultAutofillPickerFragment;
+import com.android.car.settings.applications.specialaccess.ModifySystemSettingsFragment;
 import com.android.car.settings.applications.specialaccess.NotificationAccessFragment;
+import com.android.car.settings.applications.specialaccess.UsageAccessFragment;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
 import com.android.car.settings.datausage.DataUsageFragment;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
@@ -40,6 +43,7 @@ import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
 import com.android.car.settings.location.LocationScanningFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
+import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.storage.StorageSettingsFragment;
@@ -84,11 +88,16 @@ public class FragmentResolver {
                 return new DisplaySettingsFragment();
 
             case Settings.ACTION_SOUND_SETTINGS:
+            case Settings.Panel.ACTION_VOLUME:
                 return new SoundSettingsFragment();
 
-            case android.net.wifi.WifiManager.ACTION_PICK_WIFI_NETWORK:
+            case Settings.Panel.ACTION_INTERNET_CONNECTIVITY:
+                return new NetworkAndInternetFragment();
+
+            case WifiManager.ACTION_PICK_WIFI_NETWORK:
             case Settings.ACTION_WIFI_SETTINGS:
             case Settings.ACTION_WIRELESS_SETTINGS:
+            case Settings.Panel.ACTION_WIFI:
                 return new WifiSettingsFragment();
 
             case Settings.ACTION_WIFI_IP_SETTINGS:
@@ -129,8 +138,14 @@ public class FragmentResolver {
                 }
                 return ApplicationDetailsFragment.getInstance(pkg);
 
+            case Settings.ACTION_MANAGE_WRITE_SETTINGS:
+                return new ModifySystemSettingsFragment();
+
             case Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS:
                 return new NotificationAccessFragment();
+
+            case Settings.ACTION_USAGE_ACCESS_SETTINGS:
+                return new UsageAccessFragment();
 
             case Intent.ACTION_QUICK_CLOCK:
             case Settings.ACTION_DATE_SETTINGS:

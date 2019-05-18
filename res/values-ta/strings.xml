@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"இணை"</string>
     <string name="wifi_password" msgid="5565632142720292397">"கடவுச்சொல்"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"கடவுச்சொல்லைக் காட்டு"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"நெட்வொர்க் பெயரை உள்ளிடவும்"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"நெட்வொர்க் பெயர்"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSIDயை உள்ளிடவும்"</string>
     <string name="wifi_security" msgid="158358046038876532">"பாதுகாப்பு"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ஆன் ஆகிறது..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> உடன் பிற சாதனங்களை இணைக்கலாம்"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ஹாட்ஸ்பாட் கடவுச்சொல்"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"பாதுகாப்பு"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ஏதுமில்லை"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP அலைவரிசை"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP அலைவரிசையை தேர்ந்தெடு"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"தானியங்கு"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 GHz அலைவரிசை"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 GHz அலைவரிசை"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz அலைவரிசைக்கு முன்னுரிமை"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ஒன்றைத் தேர்வுசெய்யவும்:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ஹாட்ஸ்பாட்டும் இணைப்பு முறையும்"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ஹாட்ஸ்பாட்டைத் தானாக ஆஃப் செய்தல்"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"சாதனங்கள் எவையும் இணைக்கப்படவில்லை எனில் வைஃபை ஹாட்ஸ்பாட் ஆஃப் செய்யப்படும்"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"நிறுவல் நீக்கு"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"இந்த ஆப்ஸை முடக்கினால் Androidடும் பிற ஆப்ஸும் எதிர்பார்த்தவாறு செயல்படாமல் போகக்கூடும்."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ஆப்ஸை முடக்கு"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"இவருக்கு நிறுவப்படவில்லை"</string>
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> கூடுதல் அனுமதிகள்</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> கூடுதல் அனுமதி</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"அசிஸ்டண்ட் &amp; குரல் உள்ளீடு"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"அசிஸ்ட் ஆப்ஸ்"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"திரையில் உள்ள உரையைப் பயன்படுத்துதல்"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"இந்த ஆப்ஸில் திறக்காதே"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"ஆதரிக்கப்படும் இணைப்புகள்"</string>
     <string name="special_access" msgid="5730278220917123811">"ஆப்ஸிற்கான சிறப்பு அணுகல்"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"சிஸ்டம் ஆப்ஸைக் காட்டு"</string>
+    <string name="hide_system" msgid="8845453295584638040">"சிஸ்டம் ஆப்ஸை மறை"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"சிஸ்டம் அமைப்புகளை மாற்று"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"இது சிஸ்டம் அமைப்புகளை மாற்ற அனுமதிக்கும்."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"அறிவிப்பு அணுகல்"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> சேவைக்கான அறிவிப்பு அணுகலை அனுமதிக்கவா?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"தொடர்புகளின் பெயர்கள், நீங்கள் பெறும் மெசேஜ்களின் உரை போன்ற தனிப்பட்ட தகவல் உட்பட அனைத்து அறிவிப்புகளையும் <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ஆல் படிக்க முடியும். அத்துடன் அறிவிப்புகளை நிராகரிக்கவோ அல்லது அறிவிப்புகளில் உள்ள செயல் பொத்தான்களைத் தூண்டவோ முடியும். \n\nஇது \'தொந்தரவு செய்ய வேண்டாமை\' இயக்குவதற்கான அல்லது முடக்குவதற்கான அனுமதியையும், தொடர்புடையை அமைப்புகளை மாற்றுவதற்கான அனுமதியையும் ஆப்ஸிற்கு அளிக்கும்."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>என்பதற்கு அறிவிப்பு அணுகலை முடக்கினால், \'தொந்தரவு செய்யாதே\' அணுகல் ஆஃ செய்யப்படக்கூடும்."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ஆஃப் செய்"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"வேண்டாம்"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"பிரீமிய SMS அணுகல்"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"பிரீமிய SMSஸுக்குக் கட்டணம் விதிக்கப்படலாம், அது மொபைல் நிறுவன பில்களில் சேர்க்கப்படும். ஆப்ஸுக்கான அனுமதியை இயக்கினால் அதன் மூலம் பிரீமிய SMSஸை அனுப்ப இயலும்."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"உபயோக அணுகல்"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"’உபயோக அணுகல்’ மூலம் நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்பதை அறிந்துகொள்ளும் அனுமதியை ஆப்ஸிற்கு வழங்கலாம். உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"வைஃபை அணுகல்"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"’வைஃபை கட்டுப்பாடு’ மூலம் ஆப்ஸிலிருந்து வைஃபையை ஆன் அல்லது ஆஃப் செய்யலாம், வைஃபை நெட்வொர்க்குகளை ஸ்கேன் செய்து இணைக்கலாம், நெட்வொர்க்குகளைச் சேர்க்ககலாம் அல்லது அகற்றலாம் அல்லது சாதனத்திற்குள் மட்டும் இயங்கும் ஹாட்ஸ்பாட்டைத் தொடங்கலாம்."</string>
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
