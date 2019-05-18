@@ -22,20 +22,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.wifi.AccessPoint;
 
 /** Business logic relating to the security type and associated password. */
 public class NetworkPasswordPreferenceController extends
-        PreferenceController<PasswordEditTextPreference> {
+        PreferenceController<NetworkNameRestrictedPasswordEditTextPreference> {
 
     private static final Logger LOG = new Logger(NetworkPasswordPreferenceController.class);
 
@@ -43,6 +41,7 @@ public class NetworkPasswordPreferenceController extends
         @Override
         public void onReceive(Context context, Intent intent) {
             mNetworkName = intent.getStringExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME);
+            getPreference().setNetworkName(mNetworkName);
             refreshUi();
         }
     };
@@ -66,8 +65,8 @@ public class NetworkPasswordPreferenceController extends
     }
 
     @Override
-    protected Class<PasswordEditTextPreference> getPreferenceType() {
-        return PasswordEditTextPreference.class;
+    protected Class<NetworkNameRestrictedPasswordEditTextPreference> getPreferenceType() {
+        return NetworkNameRestrictedPasswordEditTextPreference.class;
     }
 
     @Override
@@ -85,7 +84,7 @@ public class NetworkPasswordPreferenceController extends
     }
 
     @Override
-    protected void updateState(PasswordEditTextPreference preference) {
+    protected void updateState(NetworkNameRestrictedPasswordEditTextPreference preference) {
         if (TextUtils.isEmpty(mNetworkName)) {
             getPreference().setDialogTitle(R.string.wifi_password);
         } else {
@@ -95,13 +94,8 @@ public class NetworkPasswordPreferenceController extends
     }
 
     @Override
-    protected boolean handlePreferenceChanged(PasswordEditTextPreference preference,
-            Object newValue) {
-        if (TextUtils.isEmpty(mNetworkName)) {
-            Toast.makeText(getContext(), R.string.wifi_no_network_name, Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
+    protected boolean handlePreferenceChanged(
+            NetworkNameRestrictedPasswordEditTextPreference preference, Object newValue) {
         String password = newValue.toString();
         int netId = WifiUtil.connectToAccessPoint(getContext(), mNetworkName, mSecurityType,
                 password, /* hidden= */ true);
