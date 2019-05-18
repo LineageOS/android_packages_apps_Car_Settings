@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ସଂଯୋଗ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ପାସୱର୍ଡ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ପାସ୍‍ୱର୍ଡ ଦେଖାନ୍ତୁ"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"ଦୟାକରି ଏକ ନେଟ୍‍ୱାର୍କ ନାମ ଲେଖନ୍ତୁ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ନେଟୱାର୍କ ନାମ"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ଲେଖନ୍ତୁ"</string>
     <string name="wifi_security" msgid="158358046038876532">"ସୁରକ୍ଷା"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ଚାଲୁ ହେଉଛି..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ସହ ଅନ୍ୟ ଡିଭାଇସ୍‌ଗୁଡ଼ିକ ସଂଯୁକ୍ତ ହୋଇପାରିବ"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ହଟସ୍ପଟ୍ ପାସ୍‌ୱାର୍ଡ"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ସୁରକ୍ଷା"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ବ୍ୟକ୍ତିଗତ"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"କୌଣସିଟି ନୁହେଁ"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ବ୍ୟାଣ୍ଡ"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP ବ୍ୟାଣ୍ଡ୍ ଚୟନ କରନ୍ତୁ"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ସ୍ଵଚାଳିତ"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 GHz ବ୍ୟାଣ୍ଡ୍"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 GHz ବ୍ୟାଣ୍ଡ୍"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz ବ୍ୟାଣ୍ଡ୍ ଅଧିକ ପସନ୍ଦ କରାଯାଇଛି"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ପାଇଁ ଅତିକମ୍‌ରେ ଗୋଟିଏ ବ୍ୟାଣ୍ଡ୍ ବାଛନ୍ତୁ:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ହଟ୍‌ସ୍ପଟ୍ ଏବଂ ଟିଥରିଂ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ସ୍ୱଚାଳିତ ଭାବେ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ଯଦି କୌଣସି ଡିଭାଇସ୍ ସଂଯୋଗ ନଥାଏ, ତେବେ ୱାଇ-ଫାଇ ହଟ୍‌ସ୍ପଟ୍ ବନ୍ଦ ହୋଇଯିବ"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"ଅନ୍‍ଇନ୍‍ଷ୍ଟଲ୍ କରନ୍ତୁ"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"ଯଦି ଆପଣ ଏହି ଆପ୍‌କୁ ନିଷ୍କ୍ରିୟ କରନ୍ତି, ତେବେ Android ଓ ଅନ୍ୟାନ୍ୟ ଆପ୍ସ ଆଉ କାମ ନକରିପାରେ।"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ଆପ୍ ଅକ୍ଷମ କରନ୍ତୁ"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"ଏହି ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ପାଇଁ ଇନ୍‌ଷ୍ଟଲ୍ କରାଯାଇନାହିଁ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ଅନୁମତିଗୁଡ଼ିକ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ଭର୍ସନ୍‌: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ଟି ଅତିରିକ୍ତ ଅନୁମତି</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>ଟି ଅତିରିକ୍ତ ଅନୁମତି</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ଆସିଷ୍ଟାଣ୍ଟ ଓ ଭଏସ୍‌ ଇନପୁଟ୍‌"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"ସହାୟକ ଆପ୍‌"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ସ୍କ୍ରିନ୍‌ରୁ ଟେକ୍ସଟ୍‌ ବ୍ୟବହାର କରନ୍ତୁ"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"ଏହି ଆପ୍‌ରେ ଖୋଲନ୍ତୁ ନାହିଁ"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"ସମର୍ଥିତ ଲିଙ୍କ୍‌ଗୁଡ଼ିକ"</string>
     <string name="special_access" msgid="5730278220917123811">"ସ୍ବତନ୍ତ୍ର ଆପ୍ ଆକ୍‍‍ସେସ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"ସିଷ୍ଟମ୍ ଦେଖାନ୍ତୁ"</string>
+    <string name="hide_system" msgid="8845453295584638040">"ସିଷ୍ଟମ୍‌କୁ ଲୁଚାନ୍ତୁ"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"ସିଷ୍ଟମ୍ ସେଟିଂସ୍ ବଦଳାନ୍ତୁ"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ଏହି ଅନୁମତି କୌଣସି ଆପ୍‍କୁ ସିଷ୍ଟମ୍ ସେଟିଂସ୍ ବଦଳାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> ପାଇଁ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌ର ଅନୁମତି ଦେବେ?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"ବ୍ୟକ୍ତିଗତ ସୂଚନା ଯେପରି ଯୋଗାଯୋଗ ନାମଗୁଡ଼ିକ ଏବଂ ଆପଣ ପ୍ରାପ୍ତ କରୁଥିବା ମେସେଜ୍‌ଗୁଡ଼ିକର ଟେକ୍ସଟ୍ ସମେତ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ସମସ୍ତ ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ପଢ଼ିବାରେ ସକ୍ଷମ ହେବ। ଏହା ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକୁ ଖାରଜ କରିବାରେ କିମ୍ବା ସେମାନଙ୍କ ପାଖରେ ଥିବା ପଦକ୍ଷେପ ବଟନ୍‌ଗୁଡ଼ିକୁ ମଧ୍ୟ ଟ୍ରିଗର୍ କରିବାରେ ସକ୍ଷମ ହେବ। \n\n ଏହା ଆପ୍‌କୁ \'ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\' ବିକଳ୍ପକୁ ଚାଲୁ କିମ୍ବା ବନ୍ଦ କରିବା ତଥା ସମ୍ବନ୍ଧିତ ସେଟିଂସ୍‌କୁ ବଦଳାଇବା କ୍ଷମତା ମଧ୍ୟ ଦେବ।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ଯଦି <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ପାଇଁ ଆପଣ ବିଜ୍ଞପ୍ତି ଆକ୍ସେସ୍‌କୁ ବନ୍ଦ କରିବେ, ତେବେ \"ବିରକ୍ତ କରନ୍ତୁ ନାହିଁ\" ବିକଳ୍ପ ଆକ୍ସେସ୍ ମଧ୍ୟ ହୁଏତ ବନ୍ଦ ହୋଇଯାଇପାରେ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ବନ୍ଦ କରନ୍ତୁ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ବାତିଲ୍ କରନ୍ତୁ"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"ପ୍ରିମିୟମ୍ SMS ଆକ୍ସେସ୍"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"ପ୍ରିମିୟମ୍ SMSରେ ଆପଣଙ୍କୁ ଖର୍ଚ୍ଚ କରିବାକୁ ପଡ଼ିପାରେ ଏବଂ ତାହା ଆପଣଙ୍କର ମୋବାଇଲ୍ କମ୍ପାନୀର ବିଲ୍‌ରେ ଯୋଗ ହୋଇଯିବ। ଯଦି ଆପଣ ଏକ ଆପ୍ ପାଇଁ ଅନୁମତି ଦେଇଛନ୍ତି, ତେବେ ସେହି ଆପ୍ ବ୍ୟବହାର କରି ଆପଣ ପ୍ରିମିୟମ୍ SMS ପଠାଇ ପାରିବେ।"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"ବ୍ୟବହାର ଆକସେସ୍"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"ଆପଣ କେଉଁ ଅନ୍ୟ ଆପ୍ସ କେତେ ଥର ବ୍ୟବହାର କରୁଛନ୍ତି, ତଥା ଆପଣଙ୍କ ମୋବାଇଲ କମ୍ପାନୀ, ଭାଷା ସେଟିଂସ୍ ଏବଂ ଅନ୍ୟ ବିବରଣୀକୁ ଟ୍ରାକ୍ କରିବା ପାଇଁ, ବ୍ୟବହାରର ଆକସେସ୍‍ ଏକ ଆପ୍‌କୁ ଅନୁମତି ଦେଇଥାଏ।"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"ୱାଇ-ଫାଇ ନିୟନ୍ତ୍ରଣ"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"ୱାଇ-ଫାଇ ନିୟନ୍ତ୍ରଣ କୌଣସି ଆପ୍‍କୁ ୱାଇ-ଫାଇ ଚାଲୁ କରିବା କିମ୍ବା ବନ୍ଦ କରିବା, ସ୍କାନ୍ କରି ୱାଇ-ଫାଇ ନେଟ୍‍ୱାର୍କ ସହ ସଂଯୋଗ କରିବା, ନେଟ୍‍ୱାର୍କଗୁଡ଼ିକୁ ଯୋଗ କରିବା କିମ୍ବା କାଢ଼ି ଦେବା କିମ୍ବା କେବଳ ଏକ ସ୍ଥାନୀୟ ହଟ୍‌ସ୍ପଟ୍ ଆରମ୍ଭ କରିବାକୁ ଅନୁମତି ଦେଇଥାଏ।"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ଲୋକେସନ୍‌"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ସାମ୍ପ୍ରତିକ ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>

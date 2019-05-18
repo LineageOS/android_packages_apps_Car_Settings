@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Koble til"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Passord"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Vis passordet"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Skriv inn et nettverksnavn"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nettverksnavn"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Skriv inn SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Sikkerhet"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> tillatelser til</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> tillatelse til</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistent og taleinndata"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Assistentapp"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Bruk teksten fra skjermen"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Hvis du slår av varseltilgang for <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, kan tilgang til «Ikke forstyrr» også bli slått av."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slå av"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Avbryt"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Tilgang til premium-SMS"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS kan koste penger og legges til telefonregningen din. Hvis du slår på tillatelse for en app, kan du sende premium-SMS via den appen."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Brukstilgang"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Med brukstilgang kan apper spore hvilke andre apper du bruker, og hvor ofte du bruker dem. Operatør, språkinnstillinger og annen informasjon kan også spores med brukstilgang."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-kontroll"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Med Wi-Fi-kontroll kan en app slå Wi-Fi på eller av, søke etter og koble til Wi-Fi-nettverk, legge til eller fjerne nettverk eller starte en lokal Wi-Fi-sone"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Posisjon"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nylige posisjonsforespørsler"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ingen nylige posisjonsforespørsler"</string>

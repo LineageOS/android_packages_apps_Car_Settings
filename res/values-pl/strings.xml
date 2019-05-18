@@ -99,8 +99,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Połącz"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Hasło"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Pokaż hasło"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Wpisz nazwę sieci"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nazwa sieci"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Wpisz identyfikator SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Zabezpieczenia"</string>
@@ -238,6 +237,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatkowego uprawnienia</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dodatkowe uprawnienie</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asystent i rozpoznawanie mowy"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplikacja asystująca"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Używanie tekstu na ekranie"</string>
@@ -277,15 +278,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Jeśli wyłączysz dostęp do powiadomień dla aplikacji <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, możesz również wyłączyć opcję Nie przeszkadzać."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Wyłącz"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anuluj"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Dostęp do SMS-ów specjalnych"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Za SMS-y specjalne może być pobierana dodatkowa, wyższa opłata, która pojawi się na Twoim rachunku telefonicznym. Po włączeniu tego uprawnienia możliwe będzie wysyłanie SMS-ów specjalnych z wybranej aplikacji."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Dostęp do danych o użyciu"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Dostęp do danych o użyciu umożliwia aplikacji śledzenie tego, jakich innych aplikacji używasz i jak często, oraz odczytywanie m.in. informacji o operatorze i ustawień językowych."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Sterowanie Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Sterowanie Wi-Fi pozwala aplikacji na włączanie i wyłączanie Wi-Fi, wyszukiwanie sieci Wi-Fi i łączenie się z nimi, dodawanie oraz usuwanie sieci i uruchamianie lokalnego hotspota."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokalizacja"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Ostatnie prośby o lokalizację"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Brak ostatnich próśb o lokalizację"</string>

@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Erabili <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Ibiltaritza"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Konektatu datu-zerbitzuetara ibiltaritzan"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"Datu-ibiltaritza baimendu nahi duzu?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Datu-ibiltaritza erabiltzeko baimena eman nahi duzu?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Baliteke kostu handiak ordaindu behar izatea."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Datuen erabilera"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datu nagusiak"</string>
@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Konektatu"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Pasahitza"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Erakutsi pasahitza"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Idatzi sarearen izena"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Sarearen izena"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Idatzi SSIDa"</string>
     <string name="wifi_security" msgid="158358046038876532">"Segurtasuna"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aktibatzen…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Beste gailu batzuk konektatu egin daitezke <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> sare publikora"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Sare publikoaren pasahitza"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Segurtasuna"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 pertsonala"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Bat ere ez"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP banda"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"Hautatu AP banda"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Automatikoa"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GHz-ko banda"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5,0 GHz-ko banda"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-ko banda hobetsia"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Aukeratu gutxienez banda bat Wi-Fi sare publikorako:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Sare publikoa eta konexioa partekatzea"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desaktibatu automatikoki sare publikoa"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-sare publikoa desaktibatu egingo da ez badauka gailurik konektatuta"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"Desinstalatu"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Aplikazioa desgaitzen baduzu, baliteke Android-ek eta beste aplikazio batzuek behar bezala ez funtzionatzea."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Desgaitu aplikazioa"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"Ez dago instalatuta erabiltzaile honentzat"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Baimenak"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Jakinarazpenak"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Bertsioa: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> baimen gehigarri</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> baimen gehigarri</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Laguntza eta ahozko idazketa"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Laguntza-aplikazioa"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Erabili pantailako testua"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Ez ireki aplikazio honetan"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Onartzen diren estekak"</string>
     <string name="special_access" msgid="5730278220917123811">"Aplikazio-baimen bereziak"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"Erakutsi sistema"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Ezkutatu sistema"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sistemaren ezarpenak aldatzea"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Baimen honekin, sistemaren ezarpenak alda ditzakete aplikazioek."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Jakinarazpenetarako sarbidea"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> zerbitzuari jakinarazpenetarako sarbidea eman nahi diozu?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioak jakinarazpen guztiak irakurri ahal izango ditu, informazio pertsonala (adibidez, kontaktuen izenak eta jasotako testu-mezuak) dutenak barne. Horrez gain, jakinarazpenak baztertu eta haietako ekintza-botoiak abiarazi ahal izango ditu.\n\nGainera, Ez molestatu modua aktibatzeko eta desaktibatzeko aukera izango du aplikazioak, baita horrekin erlazionatutako ezarpenak aldatzekoa ere."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> aplikazioari jakinarazpenak atzitzeko aukera desaktibatzen badiozu, baliteke Ez molestatu modurako sarbidea era desaktibatzea."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desaktibatu"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Utzi"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMSetarako sarbidea"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMSak ordaindu egin behar izan ditzakezu eta, hala bada, operadorearen fakturan gehituko da haien kostua. Aplikazioei baimen hau ematen badiezu, premium SMSak bidaltzeko gai izango dira."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"Erabilera-datuetarako sarbidea"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Erabilera-datuek zer beste aplikazio eta zer maiztasunekin erabiltzen dituzun jakiteko baimena ematen die aplikazioei, baita zer operadore duzun, zer hizkuntza-ezarpen dituzun eta beste xehetasun batzuk ere."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-konexioa kontrolatzea"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wifia kontrolatzeko baimenarekin, aplikazioak hauek egin ditzake: wifi-konexioa aktibatu edo desaktibatu, wifi-sareak bilatu eta haietara konektatu, sareak gehitu edo kendu, edota sare publiko lokalak sortu."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Kokapena"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Azken kokapen-eskaerak"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ez da egin kokapen-eskaerarik azkenaldian"</string>
@@ -445,7 +424,7 @@
     <string name="storage_other_apps" msgid="945509804756782640">"Beste aplikazio batzuk"</string>
     <string name="storage_files" msgid="6382081694781340364">"Fitxategiak"</string>
     <string name="storage_system" msgid="1271345630248014010">"Sistema"</string>
-    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android-en <xliff:g id="VERSION">%s</xliff:g> bertsioa exekutatzeko balio duten fitxategiak daude sisteman"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"Android-en <xliff:g id="VERSION">%s</xliff:g>. bertsioa exekutatzeko balio duten fitxategiak daude sisteman"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Audio-fitxategiak"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Kalkulatzen…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"Aplikazioaren tamaina"</string>

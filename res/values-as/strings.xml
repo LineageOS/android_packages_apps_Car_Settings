@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"সংযোগ কৰক"</string>
     <string name="wifi_password" msgid="5565632142720292397">"পাছৱৰ্ড"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"পাছৱৰ্ড দেখুৱাওক"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"অনুগ্ৰহ কৰি নেটৱৰ্কৰ এটা নাম দিয়ক"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"নেটৱৰ্কৰ নাম"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID দিয়ক"</string>
     <string name="wifi_security" msgid="158358046038876532">"সুৰক্ষা"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> অন কৰি থকা হৈছে..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ৰ সৈতে অন্য ডিভাইচে সংযোগ কৰিব পাৰে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটৰ পাছৱৰ্ড"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"সুৰক্ষা"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-ব্যক্তিগত"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"নাই"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"এপি বেণ্ড"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP বেণ্ড বাছনি কৰক"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"স্বয়ংক্ৰিয়"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"২.৪ গিগাহাৰ্টজ বেণ্ড"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"৫.০ গিগাহাৰ্টজ বেণ্ড"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"৫.০ গিগাহাৰ্টজ বেণ্ডক অগ্ৰাধিকাৰ দিয়া হৈছে"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"২.৪ গিগাহাৰ্টজ"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"৫.০ গিগাহাৰ্টজ"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ৱাই-ফাই হটস্পটৰ বাবে কমেও এটা বেণ্ড বাছনি কৰক:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"হ’টস্পট আৰু টেডাৰিং"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"স্বয়ংক্ৰিয়ভাৱে হটস্পট অফ কৰক"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"যদি কোনো ডিভাইচ সংযোগ হৈ নাথাকে, তেন্তে ৱাই-ফাই হটস্পট অফ হ’ব"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"আনইনষ্টল কৰক"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"আপুনি যদি এই এপ্‌টো অক্ষম কৰে, তেন্তে Android আৰু অন্য এপ্‌সমূহে বিচৰাধৰণে আৰু কাম নকৰিব পাৰে।"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"এপ্‌টো অক্ষম কৰক"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"এই ব্যৱহাৰকাৰীজনৰ বাবে ইনষ্টল কৰা হোৱা নাই"</string>
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতি"</string>
     <string name="notifications_label" msgid="6586089149665170731">"জাননী"</string>
     <string name="application_version_label" msgid="8556889839783311649">"সংস্কৰণ: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টা অতিৰিক্ত অনুমতি</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টা অতিৰিক্ত অনুমতি</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"সহায় আৰু ধ্বনি ইনপুট"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"সহায়ক এপ্"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"স্ক্ৰীণৰ পৰা পাঠ ব্যৱহাৰ কৰক"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"এইটো এপত নুখুলিব"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"সমৰ্থিত লিংকসমূহ"</string>
     <string name="special_access" msgid="5730278220917123811">"বিশেষ এপ্ এক্সেছ"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"ছিষ্টেম দেখুৱাওক"</string>
+    <string name="hide_system" msgid="8845453295584638040">"ছিষ্টেম লুকুৱাওক"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"ছিষ্টেমৰ ছেটিংসমূহ সংশোধন কৰক"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটোৱে কোনো এপক ছিষ্টেম ছেটিংসমূহ সংশোধন কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"জাননীৰ এক্সেছ"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি দিবনে?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>এ সকলো জাননী আৰু ব্যক্তিগত তথ্য যেনে সম্পৰ্কৰ নাম আৰু আপুনি লাভ কৰা পাঠ বাৰ্তা পঢ়িবলৈ সক্ষম হ’ব। ই জাননী প্ৰত্যাখ্যান কৰিব পাৰিব বা সেইবিলাকত থকা ক্ৰিয়া সম্পৰ্কীয় বুটামৰ দ্বাৰা কৰিবলগীয়া কাৰ্যসমূহৰ সূচনা কৰিব পাৰিব। \n\nই এপ্‌টোক অসুবিধা নিদিব অন বা অফ কৰাৰ লগতে তাৰ লগত জড়িত ছেটিংসমূহ সলনি কৰাৰ ক্ষমতা দিব।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপুনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>ক জাননী এক্সেছ কৰাৰ অনুমতি নিদিয়ে, তেন্তে অসুবিধা নিদিব-ৰ এক্সেছো অফ হ’ব পাৰে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"অফ কৰক"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল কৰক"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"প্ৰিমিয়াম এছএমএছৰ এক্সেছ"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপটো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"ব্যৱহাৰৰ এক্সেছ"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"ব্যৱহাৰৰ এক্সেছ সুবিধাই এটা এপক আপুনি আন কি এপ্ ব্যৱহাৰ কৰে আৰু সেইবোৰ কিমান সঘনাই ব্যৱহাৰ কৰে, লগতে আপোনাৰ বাহক, ভাষাৰ ছেটিংসমূহ আৰু অন্যান্য সবিশেষ ট্ৰেক কৰিবলৈ অনুমতি দিয়ে।"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"ৱাই-ফাই নিয়ন্ত্ৰণ"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"ৱাই-ফাই নিয়ন্ত্ৰণ সুবিধাই এটা এপক ৱাই-ফাই অন বা অফ কৰিবলৈ, স্কেন কৰিবলৈ আৰু ৱাই-ফাই নেটৱৰ্কৰ সৈতে সংযোগ কৰিবলৈ আৰু বা নেটৱৰ্ক আঁতৰাবলৈ, বা স্থানীয়-মাত্ৰ হটস্পট আৰম্ভ কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"শেহতীয়া অৱস্থানৰ অনুৰোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"শেহতীয়াকৈ কোনো এপে অৱস্থানৰ অনুৰোধ প্ৰেৰণ কৰা নাই"</string>

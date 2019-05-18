@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Kết nối"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Mật khẩu"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Hiển thị mật khẩu"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Vui lòng nhập một tên mạng"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Tên mạng"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Nhập SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Bảo mật"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> quyền bổ sung</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> quyền bổ sung</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Trợ lý và nhập bằng giọng nói"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Ứng dụng trợ lý"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Sử dụng văn bản từ màn hình"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Nếu bạn tắt quyền truy cập thông báo của <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, thì quyền truy cập chế độ Không làm phiền cũng có thể bị tắt."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Tắt"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hủy"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Quyền truy cập vào Tin nhắn dịch vụ"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Tin nhắn dịch vụ có thể làm bạn mất tiền và sẽ cộng thêm vào hóa đơn nhà mạng của bạn. Nếu cấp quyền cho một ứng dụng, thì bạn có thể gửi Tin nhắn dịch vụ bằng ứng dụng đó."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Quyền truy cập dữ liệu sử dụng"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Quyền truy cập vào dữ liệu sử dụng cho phép một ứng dụng theo dõi các ứng dụng khác mà bạn đang dùng và tần suất sử dụng, cũng như thông tin nhà mạng, các tùy chọn cài đặt ngôn ngữ và thông tin chi tiết khác."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kiểm soát Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Tùy chọn kiểm soát Wi-Fi cho phép một ứng dụng bật/tắt Wi-Fi, quét và kết nối vào mạng Wi-Fi, thêm/xóa mạng hoặc bắt đầu một điểm phát sóng chỉ dành cho mạng cục bộ."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yêu cầu vị trí gần đây"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Không có yêu cầu vị trí gần đây nào"</string>

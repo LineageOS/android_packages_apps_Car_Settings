@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ភ្ជាប់"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ពាក្យសម្ងាត់"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"បង្ហាញពាក្យសម្ងាត់"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"សូមបញ្ចូល​ឈ្មោះបណ្ដាញ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ឈ្មោះ​បណ្តាញ"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"បញ្ចូល SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"សុវត្ថិភាព"</string>
@@ -232,6 +231,8 @@
       <item quantity="other">ការអនុញ្ញាតបន្ថែម <xliff:g id="COUNT_1">%d</xliff:g></item>
       <item quantity="one">ការអនុញ្ញាតបន្ថែម <xliff:g id="COUNT_0">%d</xliff:g></item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ជំនួយ និងការបញ្ចូលសំឡេង"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"កម្មវិធី​ជំនួយ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ប្រើ​អត្ថបទ​ពី​អេក្រង់"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ប្រសិនបើ​អ្នកបិទ​ការចូលប្រើ​ការជូនដំណឹង​សម្រាប់ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> នោះការចូលប្រើ​មុខងារកុំរំខាន​ក៏​ត្រូវបាន​បិទ​ផងដែរ។"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"បិទ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"បោះបង់"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"ការចូលប្រើ SMS បង់ប្រាក់"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"សេវាកម្ម SMS បង់ប្រាក់​អាចនឹងគិតថ្លៃពីអ្នក ហើយបញ្ចូលតម្លៃនោះ​ទៅក្នុងការគិតថ្លៃតាម​ក្រុមហ៊ុនសេវាទូរសព្ទ​របស់អ្នក។ ប្រសិនបើ​អ្នកបើកការអនុញ្ញាតសម្រាប់កម្មវិធី នោះអ្នកនឹង​អាចផ្ញើសេវាកម្ម SMS បង់ប្រាក់​ដោយប្រើកម្មវិធីនោះ។"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ការចូល​ប្រើប្រាស់"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ការចូល​ប្រើប្រាស់​អនុញ្ញាតឱ្យ​កម្មវិធី​តាមដាន​កម្មវិធី​ផ្សេងទៀត​ដែលអ្នកកំពុងប្រើ និងប្រើប្រាស់​ញឹកញាប់​កម្រិតណា ហើយ​វា​ក៏តាមដាន​ក្រុមហ៊ុនសេវាទូរសព្ទ ការកំណត់ភាសា និងព័ត៌មាន​លម្អិត​ផ្សេងទៀត​របស់អ្នក​ផងដែរ។"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ការ​គ្រប់គ្រង Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"ការ​គ្រប់គ្រង Wi-Fi អនុញ្ញាតឱ្យ​កម្មវិធីបើក ឬបិទ Wi-Fi ស្កេន និងភ្ជាប់បណ្តាញ Wi-Fi បញ្ចូល ឬលុប​បណ្តាញ ឬចាប់ផ្តើម​តែហតស្ប៉ត​មូលដ្ឋាន​ប៉ុណ្ណោះ។"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"សំណើ​ទីតាំង​ថ្មីៗ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"គ្មាន​សំណើ​ទីតាំង​ថ្មីៗ​ទេ"</string>

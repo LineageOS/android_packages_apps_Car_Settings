@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Conectar"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Contraseña"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostrar contraseña"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Ingresa un nombre de red"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nombre de la red"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Ingresa el SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Seguridad"</string>
@@ -154,7 +153,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Elige al menos una banda para el hotspot de Wi-Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot y conexión mediante dispositivo portátil"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar hotspot automáticamente"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Se desactivará el hotspot de Wi‑Fi si no hay dispositivos conectados"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Si no hay dispositivos conectados, se desactivará el hotspot de Wi‑Fi"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Dispositivo sin nombre"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Dispositivos sincronizados"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> permisos adicionales</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permiso adicional</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistencia y entrada de voz"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplicación de asistencia"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Utilizar el texto de la pantalla"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactivas el acceso a las notificaciones de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, es posible que también se desactive el modo No interrumpir."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acceso a SMS premium"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS Premium podría implicar cargos en la factura de tu proveedor. Si otorgaste permiso a alguna app, podrás enviar SMS premium con ella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso de uso"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"El acceso a los datos de uso permite que una app controle qué otras aplicaciones utilizas y con qué frecuencia, así como el operador, la configuración de idioma y otros detalles."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"El acceso a los datos de uso permite que una app controle qué otras apps usas y con qué frecuencia, así como el operador, la configuración de idioma y otros detalles."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control de Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Control de Wi-Fi permite que esta app active o desactive la conexión Wi-Fi, busque redes Wi-Fi y se conecte a ellas, agregue o quite redes, o inicie un hotspot de acceso local exclusivo."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de ubicación recientes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hay solicitudes de ubicación recientes"</string>

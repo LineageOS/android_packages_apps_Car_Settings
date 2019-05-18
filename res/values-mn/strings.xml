@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Холбох"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Нууц үг"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Нууц үгийг харуулах"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Сүлжээний нэр оруулна уу"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Сүлжээний нэр"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID-г оруулна уу"</string>
     <string name="wifi_security" msgid="158358046038876532">"Нууцлал"</string>
@@ -143,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Аюулгүй байдал"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Хувийн"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Байхгүй"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Зурвас"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP зурвас сонгох"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Автомат"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 Гц зурвас"</string>
@@ -232,6 +231,8 @@
       <item quantity="other">Нэмэлт <xliff:g id="COUNT_1">%d</xliff:g> зөвшөөрөл</item>
       <item quantity="one">Нэмэлт <xliff:g id="COUNT_0">%d</xliff:g> зөвшөөрөл</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Туслах ба дуугаар оруулах"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Туслах апп"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Дэлгэцийн текстийг ашиглах"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Та <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-н мэдэгдлийн хандалтыг унтраасан тохиолдолд Бүү саад бол горимын хандалт мөн унтарна."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Унтраах"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Цуцлах"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Premium SMS хандалт"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS-н төлбөрийг таны оператор компанийн төлбөр дээр нэмэхийг анхаарна уу. Та энэ аппын зөвшөөрлийг идэвхжүүлсэн тохиолдолд энэ аппыг ашиглан premium SMS илгээх боломжтой болно."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Ашиглалтын хандалт"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Ашиглалтын хандалт нь аппад таны хэрэглэж буй бусад апп болон хэрэглээний давтамж, мөн оператор компани, хэлний тохиргоо болон бусад дэлгэрэнгүй мэдээллийг хянахыг зөвшөөрдөг."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi хяналт"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi хяналт нь аппад Wi-Fi-г унтраах эсвэл асаах, Wi-Fi сүлжээнд скан хийх болон холбогдох, сүлжээ нэмэх эсвэл хасах, эсвэл зөвхөн дотоодод ашиглах сүлжээний цэгийг эхлүүлэхийг зөвшөөрдөг."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Байршил"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Саяхны байршлын хүсэлтүүд"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Саяхны байршлын хүсэлт алга"</string>

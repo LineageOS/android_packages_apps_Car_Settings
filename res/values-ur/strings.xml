@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"منسلک کریں"</string>
     <string name="wifi_password" msgid="5565632142720292397">"پاس ورڈ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"پاس ورڈ دکھائیں"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"براہ کرم نیٹ ورک کا نام درج کریں"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"نیٹ ورک کا نام"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID درج کریں"</string>
     <string name="wifi_security" msgid="158358046038876532">"سیکیورٹی"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> آن ہو رہا ہے..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"دیگر آلات <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> سے منسلک ہو سکتے ہیں"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"ہاٹ اسپاٹ کا پاس ورڈ"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"سیکیورٹی"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 ذاتی"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"کوئی نہیں"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP بینڈ"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP بینڈ منتخب کریں"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"خودکار"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"‎2.4 GHz بینڈ"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"‎5.0 GHz بینڈ"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"‎5.0 GHz بینڈ کو ترجیح دی جاتی ہے"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"‎2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"‎5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi ہاٹ اسپاٹ کیلئے کم از کم ایک بینڈ چنیں:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ہاٹ اسپاٹ اور ٹیتھرنگ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"خودکار طور پر ہاٹ اسپاٹ آف کریں"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"کوئی آلہ منسلک نہ ہونے پر Wi‑Fi ہاٹ اسپاٹ آف ہو جائے گا"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"اَن انسٹال کریں"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"اگر آپ اس ایپ کو غیر فعال کر دیتے ہیں تو ہو سکتا ہے Android اور دیگر ایپس ٹھیک طرح سے کام نہ کریں۔"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ایپ کو غیر فعال کریں"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"اس صارف کیلئے انسٹال نہیں ہے"</string>
     <string name="permissions_label" msgid="2701446753515612685">"اجازتیں"</string>
     <string name="notifications_label" msgid="6586089149665170731">"اطلاعات"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ورژن: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> اضافی اجازتیں</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> اضافی اجازت</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"معاون اور صوتی ان پٹ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"معاون ایپ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"سکرین سے متن استعمال کریں"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"اس ایپ میں نہ کھولیں"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"تعاون یافتہ لنکس"</string>
     <string name="special_access" msgid="5730278220917123811">"خاص ایپ تک رسائی"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"سسٹم دکھائیں"</string>
+    <string name="hide_system" msgid="8845453295584638040">"سسٹم چھپائیں"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"سسٹم کی ترتیبات میں ترمیم کریں"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"اس اجازت سے ایپ کو سسٹم کی ترتیبات میں ترمیم کرنے میں سہولت ہوتی ہے۔"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"اطلاع تک رسائی"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> کیلئے اطلاع تک رسائی کی اجازت دیں؟"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> تمام اطلاعات  بشمول ذاتی معلومات جیسے رابطہ کے نام اور آپ کو موصول ہونے والے پیغامات کا متن پڑھنے کا اہل ہوگا۔ یہ ان میں شامل اطلاعات یا ٹرگر کارروائیوں کے بٹنز کو برخاست کرنے کا بھی اہل ہوگا۔\n\nاس سے ایپ کو ڈسٹرب نہ کریں آن یا آف کرنے اور متعلقہ ترتیبات تبدیل کرنے کی اہلیت بھی ملے گی۔"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"اگر آپ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> کیلئے اطلاع کی رسائی آف کرتے ہیں تو ڈسٹرب نہ کریں کی رسائی بھی آف ہو سکتی ہے۔"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"آف کریں"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"منسوخ کریں"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"پریمیم SMS رسائی"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"ہو سکتا ہے آپ کو پریمیم SMS کے پیسے ادا کرنا پڑیں اور یہ آپ کے کیرئیر بلز میں شامل ہو جائیں گے۔ اگر آپ ایک ایپ کیلئے اجازت فعال کرتے ہیں تو آپ اس ایپ کو استعمال کرکے آپ پریمیم SMS بھیج پائیں گے۔"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"استعمال تک رسائی"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"استعمال تک رسائی کسی ایپ کو آپ کا کیریئر، زبان کی ترتیبات اور دیگر تفصیلات سمیت یہ ٹریک کرنے کی اجازت دیتی ہے کہ آپ کن دیگر ایپس کو اور کتنی بار استعمال کر رہے ہیں۔"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi کنٹرول"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi کنٹرول ایپ کو Wi-Fi آن یا آف کرنے، Wi-Fi نیٹ ورکس اسکین اور ان سے منسلک کرنے، نیٹ ورکس شامل کرنے یا ہٹانے یا صرف مقامی ہاٹ اسپاٹ شروع کرنے کی اجازت دیتا ہے۔"</string>
     <string name="location_settings_title" msgid="901334356682423679">"مقام"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
