@@ -112,8 +112,8 @@
     <string name="force_stop" msgid="2153183697014720520">"सक्तीने थांबवा"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना करत आहे…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानगी</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त परवानग्या</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त परवानगी</item>
     </plurals>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"सिस्टम अपडेट"</string>
@@ -260,28 +260,28 @@
     <string name="lockpassword_illegal_character" msgid="1984970060523635618">"यामध्ये चुकीच्‍या वर्णांचा समावेश असू शकत नाही."</string>
     <string name="lockpassword_invalid_password" msgid="1690956113717418430">"पासवर्ड चुकीचा आहे, किमान 4 वर्ण असणे आवश्यक आहे."</string>
     <plurals name="lockpassword_password_requires_letters" formatted="false" msgid="424616259312760303">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_lowercase" formatted="false" msgid="2267487180744744833">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> लोअरकेस अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> लोअरकेस अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक लोअरकेस अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_uppercase" formatted="false" msgid="7999264563026517898">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अप्परकेस अक्षर असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अप्परकेस अक्षरे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान 1 अप्परकेस अक्षर असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_numeric" formatted="false" msgid="7935079851855168646">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> संख्यात्मक अंक असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> संख्यात्मक अंक असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक संख्यात्मक अंक असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_symbols" formatted="false" msgid="3994046435150094132">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> विशेष चिन्ह असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> विशेष चिन्हे असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक विशेष चिन्ह असणे आवश्यक आहे</item>
     </plurals>
     <plurals name="lockpassword_password_requires_nonletter" formatted="false" msgid="6878486326748506524">
-      <item quantity="one">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर नसलेला वर्ण असणे आवश्यक आहे</item>
       <item quantity="other">किमान <xliff:g id="COUNT">%d</xliff:g> अक्षर नसलेले वर्ण असणे आवश्यक आहे</item>
+      <item quantity="one">किमान एक अक्षर नसलेला वर्ण असणे आवश्यक आहे</item>
     </plurals>
     <string name="lockpassword_password_recently_used" msgid="8255729487108602924">"डिव्हाइस प्रशासक अलीकडील पासवर्ड वापरण्याची अनुमती देत नाही"</string>
     <string name="error_saving_password" msgid="8334882262622500658">"पासवर्ड सेव्ह करताना एरर आली"</string>

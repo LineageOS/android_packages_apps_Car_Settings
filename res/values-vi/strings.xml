@@ -119,7 +119,7 @@
     <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Bản cập nhật hệ thống"</string>
     <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
     <string name="firmware_version" msgid="8491753744549309333">"Phiên bản Android"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Mức bản vá bảo mật của Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Cấp bản vá bảo mật của Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Kiểu máy"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Phiên bản băng tần cơ sở"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Phiên bản Kernel"</string>
@@ -197,46 +197,46 @@
     <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Bỏ qua"</string>
     <string name="remove_user_error_retry" msgid="8291692909396995093">"Thử lại"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Thêm người dùng mới?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Khi bạn thêm một người dùng mới, người đó cần thiết lập không gian của họ."</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Khi bạn thêm một người dùng mới, họ cần thiết lập không gian của mình."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Bất kỳ người dùng nào cũng có thể cập nhật ứng dụng cho tất cả những người dùng khác."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Bảo mật"</string>
-    <string name="security_settings_subtitle" msgid="2244635550239273229">"Khóa màn hình"</string>
+    <string name="security_settings_subtitle" msgid="2244635550239273229">"Phương thức khóa màn hình"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Không"</string>
     <string name="security_lock_pattern" msgid="1174352995619563104">"Hình mở khóa"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"Mã PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Mật khẩu"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Chọn một cách khóa"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Tùy chọn khóa màn hình"</string>
+    <string name="screen_lock_options" msgid="7023338635352915768">"Tùy chọn phương thức khóa màn hình"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Nhập hình mở khóa của bạn"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Xác nhận"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Vẽ lại"</string>
     <string name="continue_button_text" msgid="5129979170426836641">"Tiếp tục"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"Thử lại"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"Bỏ qua"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"Đặt khóa màn hình"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"Đặt phương thức khóa màn hình"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"Chọn mã PIN của bạn"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Chọn hình mở khóa của bạn"</string>
     <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Chọn mật khẩu của bạn"</string>
-    <string name="current_screen_lock" msgid="637651611145979587">"Khóa màn hình hiện tại"</string>
+    <string name="current_screen_lock" msgid="637651611145979587">"Phương thức khóa màn hình hiện tại"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Để bảo mật, hãy đặt hình mở khóa"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Xóa"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Hủy"</string>
-    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Hình mở khóa mới của bạn"</string>
+    <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Hình mở khóa mới"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Vẽ hình mở khóa"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Thả ngón tay khi hoàn tất"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Đã ghi lại hình mở khóa"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Vẽ lại hình mở khóa để xác nhận"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kết nối ít nhất 4 điểm. Hãy thử lại."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Hình mở khóa sai"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Hình không chính xác"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cách vẽ hình mở khóa"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Lỗi khi lưu mẫu"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
-    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa khóa màn hình?"</string>
+    <string name="remove_screen_lock_title" msgid="1234382338764193387">"Xóa phương thức khóa màn hình?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Thao tác này sẽ cho phép bất cứ ai truy cập vào tài khoản của bạn"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"Nhập mã PIN của bạn"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Nhập mật khẩu của bạn"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"Để bảo mật, hãy đặt mã PIN"</string>
-    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Nhập lại mã PIN của bạn"</string>
+    <string name="confirm_your_pin_header" msgid="9096581288537156102">"Nhập lại mã PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN phải có ít nhất 4 chữ số"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Mã PIN không hợp lệ. Mã này phải có ít nhất 4 chữ số."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"Các mã PIN không khớp"</string>
@@ -244,12 +244,12 @@
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Mã PIN sai"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Mật khẩu sai"</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Để bảo mật, hãy đặt mật khẩu"</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"Nhập lại mật khẩu của bạn"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"Nhập lại mật khẩu"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Mật khẩu không khớp"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Xóa"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Hủy"</string>
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Xác nhận"</string>
-    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Phải có ít nhất 4 ký tự"</string>
+    <string name="choose_lock_password_hints" msgid="3903696950202491593">"Mật khẩu phải chứa ít nhất 4 ký tự"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> ký tự"</string>
     <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"Mã PIN phải chứa ít nhất <xliff:g id="COUNT">%d</xliff:g> chữ số"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Chỉ được có ít hơn <xliff:g id="NUMBER">%d</xliff:g> ký tự"</string>
@@ -287,7 +287,7 @@
     <string name="error_saving_password" msgid="8334882262622500658">"Lỗi khi lưu mật khẩu"</string>
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Quản trị viên CNTT đã chặn những mật khẩu phổ biến. Hãy thử mật khẩu khác."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại."</string>
-    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn khóa màn hình"</string>
+    <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
     <string name="forget" msgid="3971143908183848527">"Xóa"</string>
     <string name="delete_button" msgid="5840500432614610850">"Xóa"</string>
     <string name="remove_button" msgid="6664656962868194178">"Xóa"</string>

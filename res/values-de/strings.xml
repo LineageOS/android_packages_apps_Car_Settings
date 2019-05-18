@@ -22,7 +22,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Mehr"</string>
     <string name="display_settings" msgid="5325515247739279185">"Display"</string>
     <string name="brightness" msgid="2919605130898772866">"Helligkeit"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Adaptive Helligkeit"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Automatische Helligkeit"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Helligkeit an Lichtverhältnisse anpassen"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Nachtlicht ist eingeschaltet"</string>
     <string name="keywords_display" msgid="3978416985146943922">"bildschirm, display, touchscreen"</string>
@@ -108,7 +108,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Keine Berechtigungen gewährt"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Keine Berechtigungen angefordert"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datennutzung"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Datennutzung durch Apps"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Datenverbrauch durch Apps"</string>
     <string name="force_stop" msgid="2153183697014720520">"Beenden erzwingen"</string>
     <string name="computing_size" msgid="5791407621793083965">"Berechnung läuft…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
@@ -143,7 +143,7 @@
     <string name="webview_license_title" msgid="2531829466541104826">"System-WebView-Lizenz"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Hintergründe"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Satellitenbilder bereitgestellt von:\n© 2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
-    <string name="settings_license_activity_title" msgid="8499293744313077709">"Drittlizenzen"</string>
+    <string name="settings_license_activity_title" msgid="8499293744313077709">"Lizenzen Dritter"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Beim Laden der Lizenzen ist ein Problem aufgetreten."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Wird geladen…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum &amp; Uhrzeit"</string>
@@ -230,7 +230,7 @@
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Falsches Muster"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Zeichnen eines Entsperrungsmusters"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Fehler beim Speichern des Musters"</string>
-    <string name="okay" msgid="4589873324439764349">"OK"</string>
+    <string name="okay" msgid="4589873324439764349">"Ok"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"Displaysperre entfernen?"</string>
     <string name="remove_screen_lock_message" msgid="6675850371585564965">"Dadurch können andere auf dein Konto zugreifen"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"PIN eingeben"</string>

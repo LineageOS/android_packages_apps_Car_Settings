@@ -103,10 +103,10 @@
     <string name="applications_settings" msgid="794261395191035632">"App-info"</string>
     <string name="disable_text" msgid="4358165448648990820">"Uitschakelen"</string>
     <string name="enable_text" msgid="1794971777861881238">"Inschakelen"</string>
-    <string name="permissions_label" msgid="2701446753515612685">"Machtigingen"</string>
+    <string name="permissions_label" msgid="2701446753515612685">"Rechten"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versie: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen machtigingen verleend"</string>
-    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen machtigingen aangevraagd"</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Geen rechten verleend"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Geen rechten aangevraagd"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datagebruik"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Gegevensgebruik van app"</string>
     <string name="force_stop" msgid="2153183697014720520">"Gedwongen stoppen"</string>
@@ -140,7 +140,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Copyright"</string>
     <string name="license_title" msgid="936705938435249965">"Licentie"</string>
     <string name="terms_title" msgid="5201471373602628765">"Algemene voorwaarden"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"Systeemlicentie voor webweergave"</string>
+    <string name="webview_license_title" msgid="2531829466541104826">"Systeemlicentie voor WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Achtergronden"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Providers van satellietbeelden:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licenties van derden"</string>
@@ -184,7 +184,7 @@
     <string name="account_list_title" msgid="7631588514613843065">"Accounts voor <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_details_title" msgid="7529571432258448573">"Accountgegevens"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Account toevoegen"</string>
-    <string name="add_an_account" msgid="1072285034300995091">"Een account toevoegen"</string>
+    <string name="add_an_account" msgid="1072285034300995091">"Account toevoegen"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Beperkte profielen kunnen geen accounts toevoegen"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Account verwijderen"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Account verwijderen?"</string>
