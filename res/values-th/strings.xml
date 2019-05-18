@@ -41,7 +41,7 @@
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ไม่ได้ใช้งาน/ซิมที่ดาวน์โหลด"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"เพิ่มอีก"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"เน็ตมือถือ"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงข้อมูลโดยใช้เครือข่ายมือถือ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"เข้าถึงอินเทอร์เน็ตโดยใช้เครือข่ายมือถือ"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ปิดเน็ตมือถือใช่ไหม"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"ต้องเลือก"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"ใช้อินเทอร์เน็ตมือถือของ <xliff:g id="CARRIER">%1$s</xliff:g> ไหม"</string>
@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"เชื่อมต่อ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"รหัสผ่าน"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"แสดงรหัสผ่าน"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"โปรดป้อนชื่อเครือข่าย"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ชื่อเครือข่าย"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"ป้อน SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"ความปลอดภัย"</string>
@@ -232,6 +231,8 @@
       <item quantity="other">สิทธิ์เพิ่มเติม <xliff:g id="COUNT_1">%d</xliff:g> รายการ</item>
       <item quantity="one">สิทธิ์เพิ่มเติม <xliff:g id="COUNT_0">%d</xliff:g> รายการ</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ผู้ช่วยและป้อนข้อมูลด้วยเสียง"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"แอปผู้ช่วย"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ใช้ข้อความจากหน้าจอ"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"หากคุณปิดการเข้าถึงการแจ้งเตือนสำหรับ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ระบบอาจปิดการเข้าถึงฟีเจอร์ห้ามรบกวนไปด้วย"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ปิด"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ยกเลิก"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"การเข้าถึง SMS แบบพรีเมียม"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS แบบพรีเมียมอาจมีค่าใช้จ่ายและจะเพิ่มเข้าไปในใบเรียกเก็บเงินจากผู้ให้บริการ หากคุณให้สิทธิ์แอปหนึ่งๆ คุณจะใช้แอปนั้นส่ง SMS แบบพรีเมียมได้"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"การเข้าถึงการใช้งาน"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"การเข้าถึงการใช้งานทำให้แอปติดตามได้ว่าคุณกำลังใช้แอปอื่นใดอยู่และความถี่ในการใช้แอปดังกล่าว รวมทั้งผู้ให้บริการ การตั้งค่าภาษา และรายละเอียดอื่นๆ"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"การเข้าถึงการใช้งานทำให้แอปติดตามได้ว่าคุณกำลังใช้แอปอื่นใดอยู่บ้างในความถี่มากน้อยเท่าใด ตลอดจนทราบข้อมูลผู้ให้บริการ การตั้งค่าภาษา และรายละเอียดอื่นๆ"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"การควบคุม Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"การควบคุม Wi-Fi จะอนุญาตให้แอปเปิดหรือปิด Wi-Fi, สแกนหาและเชื่อมต่อเครือข่าย Wi-Fi, เพิ่มหรือนำเครือข่ายออก หรือเริ่มฮอตสปอตในพื้นที่เท่านั้น"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>

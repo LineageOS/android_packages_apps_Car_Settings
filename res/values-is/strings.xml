@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Tengja"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Aðgangsorð"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Sýna aðgangsorð"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Sláðu inn heiti netkerfis"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Heiti nets"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Sláðu inn SSID-kennið"</string>
     <string name="wifi_security" msgid="158358046038876532">"Öryggi"</string>
@@ -232,6 +231,8 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> viðbótarheimild</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> viðbótarheimildir</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Aðstoð og raddinntak"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aðstoðarforrit"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Nota texta af skjánum"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ef þú slekkur á tilkynningaaðgangi fyrir <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> kann einnig að verða slökkt á Ónáðið ekki."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Slökkva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Hætta við"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Sérstakur SMS-aðgangur"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Sérstök SMS-skilaboð geta kostað þig peninga og munu bætast við símreikninginn þinn. Ef þú virkjar leyfi fyrir forrit geturðu sent sérstök SMS með því forriti."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Notkunaraðgangur"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Aðgangur að notkun gerir forriti kleift að fylgjast með því hvaða önnur forrit þú notar og hversu oft, sem og símafyrirtækinu þínu, tungumálastillingum og öðrum upplýsingum."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi stjórnun"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi stjórnun leyfir forriti að kveikja og slökkva á Wi-Fi, leita að og tengjast við Wi-Fi net, bæta við og fjarlægja net og búa til staðbundinn heitan reit."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Staðsetning"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Engar nýlegar staðsetningarbeiðnir"</string>

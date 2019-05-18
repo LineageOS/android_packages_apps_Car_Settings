@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"დაკავშირება"</string>
     <string name="wifi_password" msgid="5565632142720292397">"პაროლი"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"პაროლის გამოჩენა"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"გთხოვთ, შეიყვანოთ ქსელის სახელი"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ქსელის სახელი"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"შეიყვანეთ SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"უსაფრთხოება"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"ირთვება <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-ს შეიძლება სხვა მოწყობილობები დაუკავშირდეს"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"უსადენო ქსელის პაროლი"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"უსაფრთხოება"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"არცერთი"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP Band"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"აირჩიეთ AP Band"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ავტომატური"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 გჰც დიაპაზონი"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5 გჰც დიაპაზონი"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"სასურველია 5-გიგაჰერციანი დიაპაზონი"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 გჰც"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 გჰც"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"აირჩიეთ 1 დიაპ. Wi‑Fi ქსელისთვის:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"უსადენო ქსელი და ტეტერინგი"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"უსადენო ქსელის ავტომატურად გამორთვა"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi უსადენო ქსელი გამოირთვება, თუ მასთან არცერთი მოწყობილობა არ არის დაკავშირებული"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"დეინსტალაცია"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"ამ აპის გათიშვის შემთხვევაში, Android-მა და სხვა აპებმა შეიძლება გამართულად აღარ იმუშაოს."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"აპის გათიშვა"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"ამ მომხმარებლისთვის დაყენებული არ არის"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ნებართვები"</string>
     <string name="notifications_label" msgid="6586089149665170731">"შეტყობინებები"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ვერსია: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> დამატებითი ნებართვა</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> დამატებითი ნებართვა</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ასისტენტი და ხმოვანი შეყვანა"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"დამხმარე აპი"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ტექსტის გამოყენება ეკრანიდან"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"არ გახსნა ამ აპში"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"მხარდაჭერილი ბმულები"</string>
     <string name="special_access" msgid="5730278220917123811">"აპების სპეციალური წვდომა"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"სისტემის ჩვენება"</string>
+    <string name="hide_system" msgid="8845453295584638040">"სისტემური პროცესების დამალვა"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"სისტემის პარამეტრების შეცვლა"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ეს ნებართვა უფლებას აძლევს აპს, შეცვალოს სისტემის პარამეტრები."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"შეტყობინებებზე წვდომა"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"გსურთ, მიანიჭოთ <xliff:g id="SERVICE">%1$s</xliff:g>-ს შეტყობინებებზე წვდომა?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> შეძლებს ყველა შეტყობინების წაკითხვას, მათ შორის, ისეთი პირადი ინფორმაციის, როგორიცაა კონტაქტების სახელები და თქვენ მიერ მიღებული შეტყობინებების ტექსტი. მას ასევე შეეძლება შეტყობინებების უგულებელყოფა და იმ მოქმედების ღილაკების ამოქმედება, რომლებსაც ისინი შეიცავს.\n\n აპს „არ შემაწუხოთ“ რეჟიმის ჩართვის ან გამორთვის და დაკავშირებული პარამეტრების შეცვლის შესაძლებლობაც მიეცემა."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"შეტყობინებებზე წვდომის გამორთვის შემთხვევაში <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> სავარაუდოდ, „არ შემაწუხოთ“ რეჟიმზე წვდომასაც დაკარგავს."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"გამორთვა"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"გაუქმება"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"პრემიუმ SMS შეტყობინებების გაგზავნაზე წვდომა"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"პრემიუმ SMS შეტყობინებებისთვის შეიძლება დამატებითი საფასურის გადახდა მოგიწიოთ. აპისთვის ამ ნებართვის მიცემის შემთხვევაში, თქვენ მისი მეშვეობით პრემიუმ SMS შეტყობინებების გაგზავნას შეძლებთ."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"გამოყენებაზე წვდომა"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"გამოყენებაზე წვდომა საშუალებას აძლევს აპს, თვალყური ადევნოს, სხვა რომელ აპებს იყენებთ და რამდენად ხშირად, ასევე თქვენს ოპერატორს, ენის პარამეტრებსა და სხვა დეტალებს."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-ს მართვა"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-ს მართვა საშუალებას აძლევს აპს, ჩართოს ან გამორთოს Wi-Fi, მოახდინოს სკანირება Wi-Fi ქსელების აღმოსაჩენად და მათთან დასაკავშირებლად, დაამატოს ან ამოშალოს ქსელები, ან გაუშვას მხოლოდ ადგილობრივი მოხმარების უსადენო ქსელი."</string>
     <string name="location_settings_title" msgid="901334356682423679">"მდებარეობა"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"მდებარეობის ბოლოდროინდელი მოთხოვნები"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"მდებარეობის ბოლოდროინდელი მოთხოვნები არ არის"</string>

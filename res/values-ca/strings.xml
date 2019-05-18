@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Connecta"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Contrasenya"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostra la contrasenya"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Introdueix un nom de xarxa"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nom de la xarxa"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Introdueix l\'SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Seguretat"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> permisos addicionals</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permís addicional</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistència i entrada de veu"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplicació d\'assistència"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Utilitza el text de la pantalla"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Si desactives l\'accés a les notificacions per a <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, és possible que també es desactivi l\'accés al mode No molestis."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactiva"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancel·la"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Accés a SMS prèmium"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Els SMS prèmium et poden costar diners, i aquest import s\'afegirà a la facturació de l\'operador. Si actives el permís en una aplicació, podràs enviar SMS prèmium utilitzant-la."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accés d\'ús"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"L\'accés a dades d\'ús permet que una aplicació pugui fer un seguiment de les altres aplicacions que utilitzes i la freqüència amb què ho fas, així com del teu operador de telefonia mòbil i de la configuració d\'idioma, entre d\'altres."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control de la Wi‑Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"El control de la Wi‑Fi permet que una aplicació activi o desactivi la Wi‑Fi, cerqui xarxes Wi‑Fi, s\'hi connecti, n\'afegeixi o en suprimeixi, o que iniciï un punt d\'accés Wi‑Fi només local."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicació"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Sol·licituds d\'ubicació recents"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"No hi ha cap sol·licitud d\'ubicació recent"</string>
@@ -436,7 +434,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Esborra l\'emmagatzematge"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Esborra la memòria cau"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vols suprimir les dades de l\'app?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"S\'eliminaran totes les dades d\'aquesta aplicació permanentment. Això inclou tots els fitxers, la configuració, els comptes, les bases de dades, etc."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Se suprimiran totes les dades d\'aquesta aplicació permanentment. Això inclou tots els fitxers, la configuració, els comptes, les bases de dades, etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"No s\'ha pogut esborrar l\'emmagatzematge de l\'aplicació."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Comptes"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Afegeix un compte"</string>

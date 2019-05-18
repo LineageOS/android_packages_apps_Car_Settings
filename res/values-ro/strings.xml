@@ -97,8 +97,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Conectați"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Parolă"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Afișează parola"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Introduceți numele unei rețele"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Numele rețelei"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Introduceți identificatorul SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Securitate"</string>
@@ -235,6 +234,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> de permisiuni suplimentare</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> permisiune suplimentară</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistent și intrare vocală"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplicație asistent"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Folosiți textul de pe ecran"</string>
@@ -274,15 +275,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Dacă dezactivați accesul la notificări pentru <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, este posibil să fie dezactivat și accesul în modul Nu deranja."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Dezactivați"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Anulați"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acces la SMS-uri premium"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS-urile premium pot genera costuri care se vor adăuga la factura operatorului. Dacă activați permisiunea pentru o aplicație, veți putea trimite SMS-uri premium folosind acea aplicație."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acces la datele de utilizare"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Cu accesul la datele de utilizare, o aplicație poate să înregistreze ce alte aplicații folosiți și cât de des le folosiți, precum și operatorul, setările de limbă și alte detalii."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Cu controlul rețelei Wi-Fi, o aplicație poate să activeze sau să dezactiveze conexiunea Wi-Fi, să scaneze și să se conecteze la rețelele Wi-Fi, să adauge sau să elimine rețele sau să pornească un hotspot local."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locație"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitări recente privind locația"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nu există solicitări recente privind locația"</string>

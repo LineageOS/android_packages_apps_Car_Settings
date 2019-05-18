@@ -55,7 +55,7 @@
     <string name="data_usage_title" msgid="2923515974389203812">"Основни данни"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Използвани данни: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"Предупреждение за данните: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_limit" msgid="6862164869877993009">"Ограничение за данните: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Лимит за данните: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Предупреждение за данните: <xliff:g id="ID_1">^1</xliff:g>/ограничение за данните: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="other">Остават %d дни</item>
@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Свързване"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Парола"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Показване на паролата"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Моля, въведете име на мрежа"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Име на мрежата"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Въведете SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Сигурност"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> допълнителни разрешения</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> допълнително разрешение</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Помощник и гласово въвеждане"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Помощно приложение"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Използване на текста от екрана"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ако изключите достъпа до известията за „<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>“, този до „Не безпокойте“ също може да се изключи."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Изключване"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Отказ"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Достъп до SMS, за които получателят заплаща"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS съобщенията, за които се таксува получателят, може да ви въвлекат в разходи и ще увеличат сметката към оператора ви. Ако дадете разрешението на дадено приложение, ще можете да изпращате такива съобщения чрез него."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Достъп до данни за ползването"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Достъпът до данните за ползването разрешава на приложението да проследява какви други приложения използвате и колко често, както и оператора ви, настройките ви за езика и други подробности."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Управление на Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Управлението на Wi-Fi разрешава на дадено приложение да включва и изключва Wi-Fi, да сканира за Wi-Fi мрежи и да се свързва с тях, да добавя или премахва мрежи и да стартира точки за достъп само на локално ниво."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Местоположение"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Скорошни заявки за местоположението"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>

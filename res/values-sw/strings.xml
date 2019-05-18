@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Unganisha"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Nenosiri"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Onyesha nenosiri"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Tafadhali weka jina la mtandao"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Jina la mtandao"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Weka SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Usalama"</string>
@@ -232,6 +231,8 @@
       <item quantity="other">Ruhusa <xliff:g id="COUNT_1">%d</xliff:g> za ziada</item>
       <item quantity="one">Ruhusa <xliff:g id="COUNT_0">%d</xliff:g> ya ziada</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Mratibu na kuweka data kwa kutamka"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Programu ya usaidizi"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Tumia maandishi kutoka kwenye skrini"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ukizima ufikiaji wa arifa katika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, huenda hali hii pia ikazima ufikiaji wa kipengee cha Usinisumbue."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Zima"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Ghairi"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Kufikia huduma ya SMS zinazolipiwa"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Gharama ya huduma ya SMS zinazolipiwa itajumuishwa kwenye bili yako ya mtoa huduma. Ikiwa utaipa programu fulani ruhusa, utaweza kutuma SMS zinazolipiwa ukitumia programu hiyo."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Kufikia matumizi"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Ufikiaji wa matumizi huruhusu programu kufuatilia programu zingine unazotumia na mara ngapi unazitumia, pamoja na mtoa huduma, mipangilio ya lugha na maelezo yako mengine."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kudhibiti Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Kidhibiti cha Wi-Fi huruhusu programu iwashe au izime Wi-Fi, itafute na iunganishe kwenye mitandao ya Wi-Fi, iongeze au iondoe mitandao au ianzishe mtandaopepe wa eneo mahususi."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Mahali"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Maombi ya Hivi Karibuni ya Kutambua Eneo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Hamna maombi ya hivi karibuni ya kutambua eneo"</string>

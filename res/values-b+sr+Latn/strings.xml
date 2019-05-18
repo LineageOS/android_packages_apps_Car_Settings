@@ -97,8 +97,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Poveži se"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Lozinka"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Prikaži lozinku"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Unesite naziv mreže"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Naziv mreže"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Unesite SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Bezbednost"</string>
@@ -235,6 +234,8 @@
       <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> dodatne dozvole</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dodatnih dozvola</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Pomoćnik i glasovni unos"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Aplikacija za pomoć"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Koristi tekst sa ekrana"</string>
@@ -274,15 +275,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Ako isključite pristup obaveštenjima za korisnika <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, možda ćete isključiti i pristup režimu Ne uznemiravaj."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Isključi"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Otkaži"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premijum SMS-ovima"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"Premijum SMS-ovi mogu da koštaju i povećaće račune kod mobilnog operatera. Ako omogućite dozvolu za neku aplikaciju, moći ćete da šaljete premijum SMS-ove pomoću te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korišćenju"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Pristup korišćenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi mobilnog operatera, jezička podešavanja i druge podatke."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrola Wi-Fi mreže"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Kontrola Wi-Fi mreže omogućava aplikaciji da uključi ili isključi Wi-Fi, traži i povezuje se na Wi-Fi mreže, dodaje ili uklanja mreže ili pokreće samo lokalni hotspot."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtevi za lokaciju"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahteva za lokaciju"</string>
