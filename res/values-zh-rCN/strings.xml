@@ -96,8 +96,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"连接"</string>
     <string name="wifi_password" msgid="5565632142720292397">"密码"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"显示密码"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"请输入网络名称"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"网络名称"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"输入 SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"安全性"</string>
@@ -141,29 +140,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"正在开启<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"其他设备可以连接到 <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"热点密码"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"安全"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"无"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 频段"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"选择 AP 频段"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"自动"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 GHz 频段"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 GHz 频段"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"首选 5.0 GHz 频段"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"请为 WLAN 热点至少选择一个频段："</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"热点和网络共享"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自动关闭热点"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未连接任何设备，WLAN 热点将关闭"</string>
@@ -232,8 +220,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"卸载"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"如果您停用此应用，Android 和其他应用可能会无法正常运行。"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用应用"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"尚未为此用户安装"</string>
     <string name="permissions_label" msgid="2701446753515612685">"权限"</string>
     <string name="notifications_label" msgid="6586089149665170731">"通知"</string>
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
@@ -246,6 +233,8 @@
       <item quantity="other">另外 <xliff:g id="COUNT_1">%d</xliff:g> 项权限</item>
       <item quantity="one">另外 <xliff:g id="COUNT_0">%d</xliff:g> 项权限</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"辅助应用"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕上的文字内容"</string>
@@ -275,32 +264,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"不要在此应用中打开"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"支持的链接"</string>
     <string name="special_access" msgid="5730278220917123811">"特殊应用权限"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"显示系统程序"</string>
+    <string name="hide_system" msgid="8845453295584638040">"隐藏系统程序"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"修改系统设置"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"此权限可让应用修改系统设置。"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"通知访问权限"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"要允许<xliff:g id="SERVICE">%1$s</xliff:g>访问通知吗？"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>将可读取所有通知（包括联系人姓名和您收到的消息正文等个人信息），而且还能关闭通知或触发通知中的操作按钮。\n\n此外，该应用将因此能够开启或关闭勿扰模式，以及更改相关设置。"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"如果您停用<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>的通知访问权限，勿扰模式的访问权限可能也会遭到停用。"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"关闭"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"付费短信权限"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"“付费短信”可能会产生费用，而且相关费用将计入您的运营商帐单。如果您为某个应用启用该权限，那么您将能够使用该应用发送付费短信。"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"使用情况访问权限"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"向应用授予“使用情况访问权限”后，应用即可跟踪您正在使用的其他应用和使用频率，以及您的运营商、语言设置及其他详细信息。"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"WLAN 控制"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"向应用授予“WLAN 控制”权限后，应用就能开启或关闭 WLAN、扫描及连接到 WLAN 网络、添加或移除网络，或启动仅限本地的热点。"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>

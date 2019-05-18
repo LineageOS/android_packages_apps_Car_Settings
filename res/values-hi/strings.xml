@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"जोड़ें"</string>
     <string name="wifi_password" msgid="5565632142720292397">"पासवर्ड"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"पासवर्ड दिखाएं"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"कृपया किसी नेटवर्क का नाम डालें"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"नेटवर्क का नाम"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID डालें"</string>
     <string name="wifi_security" msgid="158358046038876532">"सुरक्षा"</string>
@@ -140,29 +139,18 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> चालू किया जा रहा है..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"दूसरे डिवाइस <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> से कनेक्ट हो सकते हैं"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"हॉटस्पॉट का पासवर्ड"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"सुरक्षा"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2 व्यक्तिगत"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"कोई नहीं"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"एपी बैंड"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"एपी बैंड चुनें"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"अपने आप"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 गीगाहर्ट्ज़ बैंड"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 गीगाहर्ट्ज़ बैंड"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 गीगाहर्ट्ज़ बैंड का इस्तेमाल करना बेहतर होगा"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 गीगाहर्ट्ज़"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 गीगाहर्ट्ज़"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"वाई-फ़ाई हॉटस्पॉट से जुड़ने के लिए कम से कम एक बैंड चुनें:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हॉटस्पॉट और टेदरिंग"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"हॉटस्पॉट अपने आप बंद करें"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कोई डिवाइस कनेक्ट नहीं होने पर वाई-फ़ाई हॉटस्पॉट बंद हो जाएगा"</string>
@@ -230,8 +218,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"अनइंस्टॉल करें"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"अगर आप इस ऐप्लिकेशन को बंद कर देते हैं, तो हो सकता है कि Android और दूसरे ऐप्लिकेशन ठीक से काम न करें."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ऐप्लिकेशन बंद करें"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"इस उपयोगकर्ता के लिए इंस्टॉल नहीं किया गया"</string>
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतियां"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचनाएं"</string>
     <string name="application_version_label" msgid="8556889839783311649">"वर्शन: %1$s"</string>
@@ -244,6 +231,8 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतियां</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"असिस्ट और बोलकर फ़ोन को निर्देश"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"सहायक ऐप्लिकेशन"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रीन के टेक्स्ट का इस्तेमाल करना"</string>
@@ -273,32 +262,22 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"इस ऐप्लिकेशन में नहीं खोलें"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"सहायता करने वाले लिंक"</string>
     <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन को खास अनुमति"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"सिस्टम के ऐप्लिकेशन दिखाएं"</string>
+    <string name="hide_system" msgid="8845453295584638040">"सिस्टम के ऐप्लिकेशन छिपाएं"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"सिस्टम की सेटिंग बदलें"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"यह अनुमति किसी ऐप्लिकेशन को सिस्टम की सेटिंग बदलने देती है."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचना का एक्सेस"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> के लिए सूचना एक्सेस करने की अनुमति दें?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> आपकी हर सूचना पढ़ पाएगा. इसमें आपकी निजी जानकारी, जैसे कि संपर्कों के नाम और आपको आने वाले मैसेज शामिल हैं. यह सूचनाओं को खारिज करने या उनमें मौजूद कार्रवाई बटनों को ट्रिगर करने जैसे काम भी कर पाएगा.\n\nइससे यह ऐप्लिकेशन \'परेशान न करें\' सुविधा चालू या बंद कर पाएगा और इससे जुड़ी सेटिंग बदल पाएगा."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"अगर आप <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> के लिए सूचना का एक्सेस बंद करते हैं, तो \'परेशान न करें\' सेवा का एक्सेस भी बंद हो सकता है."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"बंद करें"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द करें"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रीमियम मैसेज (एसएमएस) का एक्सेस"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रीमियम मैसेज (एसएमएस) के लिए आपको पैसे चुकाने पड़ सकते हैं जिसे आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी आपके बिल में जोड़ देगी. अगर आप किसी ऐप्लिकेशन के लिए यह अनुमति देते हैं, तो आप उस ऐप्लिकेशन का इस्तेमाल करके प्रीमियम मैसेज (एसएमएस) भेज सकते हैं."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"उपयोग का एक्सेस"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"\'डेटा खर्च\' देखने की मंज़ूरी से कोई ऐप्लिकेशन इस बात पर नज़र रख पाता है कि आप कौनसे ऐप्लिकेशन चला रहे हैं और उन्हें कितनी बार इस्तेमाल करते हैं. साथ ही, ऐप्लिकेशन आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी, भाषा सेटिंग और दूसरी जानकारी देख पाता है."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"वाई-फ़ाई नियंत्रण"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"वाई-फ़ाई का नियंत्रण किसी ऐप्लिकेशन को वाई-फ़ाई चालू या बंद करने, वाई-फ़ाई नेटवर्क ढूंढने और उससे जुड़ने की अनुमति देता है. साथ ही, नेटवर्क जोड़ने या हटाने या सिर्फ़ सीमित दायरे में इस्तेमाल होने वाला हॉटस्पॉट चालू करने की अनुमति देता है."</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>

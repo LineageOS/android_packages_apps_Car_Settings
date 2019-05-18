@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ချိတ်ရန်"</string>
     <string name="wifi_password" msgid="5565632142720292397">"စကားဝှက်"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"စကားဝှက်ကို ပြရန်"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"ကွန်ရက်အမည် ထည့်ပါ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ကွန်ရက် အမည်"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ထည့်သွင်းရန်"</string>
     <string name="wifi_security" msgid="158358046038876532">"လုံခြုံရေး"</string>
@@ -232,6 +231,8 @@
       <item quantity="other">နောက်ထပ် ခွင့်ပြုချက် <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
       <item quantity="one">နောက်ထပ် ခွင့်ပြုချက် <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"အကူနှင့် အသံဖြင့်စာရိုက်ခြင်း"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"အကူအညီ အက်ပ်"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ဖန်သားပြင်မှ စာသားကိုသုံးခြင်း"</string>
@@ -272,15 +273,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> အတွက် အကြောင်းကြားချက် အသုံးပြုခွင့်ကို ပိတ်လိုက်လျှင် \'မနှောင့်ယှက်ရ\' ကို အသုံးပြုခွင့်လည်း ပိတ်ပါမည်။"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ပိတ်ရန်"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"မလုပ်တော့"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"ပရီမီယံ SMS သုံးခွင့်ရှိခြင်း"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"ပရီမီယံ SMS သည်ငွေကြေးကုန်ကျနိုင်ပြီး သင့်ဖုန်းဝန်ဆောင်မှုပေးသူ၏ ငွေတောင်းခံလွှာသို့ ပေါင်း၍ ထည့်သွင်းပါမည်။ အက်ပ်တစ်ခုကို သင်ခွင့်ပြုလိုက်လျှင် ၎င်းအက်ပ်ကိုအသုံးပြုပြီး ပရီမီယံ SMS ပို့နိုင်မည်ဖြစ်သည်။"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"အသုံးပြုမှု ကြည့်ခြင်း"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ဝင်ရောက်အသုံးပြုခွင့်သည် အက်ပ်တစ်ခုအား သင်အသုံးပြုနေသော အခြားအက်ပ်များနှင့် သုံးသည့် အကြိမ်ရေနှင့်တကွ သင့်ဖုန်း၏ ဝန်ဆောင်မှုဌာန၊ ဘာသာစကား ဆက်တင်နှင့် အခြားအသေးစိတ်များကို ခြေရာခံရန် ခွင့်ပြုသည်။"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi ထိန်းချုပ်မှု"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi ထိန်းချုပ်မှုသည် အက်ပ်တစ်ခုအား Wi-Fi ဖွင့်ရန် သို့မဟုတ် ပိတ်ရန်၊ Wi-Fi ကွန်ရက်များ ရှာဖွေရန်နှင့် ၎င်းတို့သို့ ချိတ်ဆက်ရန်၊ ကွန်ရက်များ ထည့်ရန် သို့မဟုတ် ဖယ်ရှားရန် သို့မဟုတ် စက်တွင်းသာသုံးသည့် ဟော့စပေါ့စတင်ရန်တို့ကို ခွင့်ပြုသည်။"</string>
     <string name="location_settings_title" msgid="901334356682423679">"တည်နေရာ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
