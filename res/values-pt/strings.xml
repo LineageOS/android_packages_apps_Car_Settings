@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Conectar"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Senha"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Mostrar senha"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"Insira um nome de rede"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Nome da rede"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"Digite o SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"Segurança"</string>
@@ -232,6 +231,8 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> permissão adicional</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> permissões adicionais</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistente e entrada de texto por voz"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App assistivo"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Usar texto da tela"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se você desativar o acesso a notificações para <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso \"Não perturbe\" também seja desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"Acesso a SMS premium"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"O SMS premium pode gerar custos e será adicionado à sua conta da operadora. Se você conceder permissão para um app, será possível enviar SMS premium usando esse app."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acesso ao uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"O acesso ao uso permite que um app monitore quais outros apps você está usando e com que frequência, bem como sua operadora, suas configurações de idioma e outros detalhes."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Controle de Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"O controle de Wi-Fi permite que um app ative ou desative o Wi-Fi, verifique redes Wi-Fi e se conecte a elas, adicione ou remova redes, ou inicie um ponto de acesso somente local."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Local"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitações recentes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nenhuma solicitação recente de local"</string>

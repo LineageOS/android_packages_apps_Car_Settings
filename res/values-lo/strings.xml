@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ເຊື່ອມຕໍ່"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ລະຫັດຜ່ານ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ສະແດງລະຫັດຜ່ານ"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"ກະລຸນາປ້ອນຊື່ເຄືອຂ່າຍ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ຊື່ເຄືອຂ່າຍ"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"ປ້ອນ SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"ຄວາມປອດໄພ"</string>
@@ -151,7 +150,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"ເລືອກຄື້ນ 5.0 GHz ກ່ອນ"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ເລືອກແຖບຄວາມຖີ່ຢ່າງໜ້ອຍໜຶ່ງຄື້ນສຳລັບ Wi‑Fi:"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ເລືອກຢ່າງໜ້ອຍໜຶ່ງຄື້ນສຳລັບ Wi‑Fi ຮັອດສະປອດ:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ຮັອດສະປອດ ແລະ ການປ່ອຍສັນຍານ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ປິດຮັອດສະປອດອັດຕະໂນມັດ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ຮັອດສະປອດ Wi‑Fi ຈະປິດຖ້າບໍ່ມີອຸປະກອນເຊື່ອມຕໍ່"</string>
@@ -232,6 +231,8 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ການອະນຸຍາດເພີ່ມເຕີມ</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ການອະນຸຍາດເພີ່ມເຕີມ</item>
     </plurals>
+    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
+    <skip />
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ການຊ່ວຍເຫຼືອ ແລະ ການປ້ອນຂໍ້ມູນດ້ວຍສຽງ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"ແອັບຜູ້ຊ່ວຍ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ໃຊ້ຂໍ້ຄວາມຈາກໜ້າຈໍ"</string>
@@ -271,15 +272,12 @@
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"ຖ້າທ່ານປິດການເຂົ້າເຖິງການແຈ້ງເຕືອນສຳລັບ <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, ລະບົບອາດຈະປິດການເຂົ້າເຖິງຫ້າມລົບກວນເຊັ່ນກັນ."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"ປິດ"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ຍົກເລີກ"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"ການເຂົ້າເຖິງ SMS ແບບພຣີມຽມ"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS ແບບພຣີມຽມອາດຈະເຮັດໃຫ້ທ່ານເສຍເງິນ ແລະ ຈະເພີ່ມໃສ່ໃບບິນຜູ້ໃຫ້ບໍລິການຂອງທ່ານ. ຖ້າທ່ານເປີດໃຊ້ການອະນຸຍາດສຳລັບແອັບໃດໜຶ່ງ, ທ່ານຈະສາມາດສົ່ງ SMS ແບບພຣີມຽມໂດຍໃຊ້ແອັບນັ້ນໄດ້."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ການເຂົ້າເຖິງການນຳໃຊ້"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ການເຂົ້າເຖິງການນຳໃຊ້ອະນຸຍາດໃຫ້ແອັບຕິດຕາມເບິ່ງວ່າທ່ານກຳລັງໃຊ້ແອັບອື່ນໃດແດ່ ແລະ ໃຊ້ເລື້ອຍໆສໍ່າໃດ, ເຊັ່ນດຽວກັນກັບຜູ້ໃຫ້ບໍລິການ, ການຕັ້ງຄ່າພາສາ ແລະ ລາຍລະອຽດອື່ນໆຂອງທ່ານ."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ການຄວບຄຸມ Wi-Fi"</string>
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="wifi_control_description" msgid="6021926850423169261">"ການຄວບຄຸມ Wi-Fi ອະນຸຍາດໃຫ້ແອັບເປີດ ຫຼື ປິດ Wi-Fi, ສະແກນ ແລະ ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi-Fi, ເພີ່ມ ຫຼື ລຶບເຄືອຂ່າຍອອກ ຫຼື ເລີ່ມຮັອດສະປອດສະເພາະພື້ນທີ່ໄດ້."</string>
     <string name="location_settings_title" msgid="901334356682423679">"ສະຖານທີ່"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ບໍ່ມີຄຳຂໍຂໍ້ມູນສະຖານທີ່ຫຼ້າສຸດ"</string>
