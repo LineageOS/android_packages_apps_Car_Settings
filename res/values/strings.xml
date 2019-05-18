@@ -560,6 +560,8 @@
     <string name="wifi_control_title">Wi-Fi control</string>
     <!-- Description of the change wifi state permission. [CHAR_LIMIT=NONE] -->
     <string name="wifi_control_description">Wi-Fi control allows an app to turn Wi-Fi on or off, scan and connect to Wi-Fi networks, add or remove networks, or start a local-only hotspot.</string>
+    <!-- Title for item that when selected will launch into additional special access settings. [CHAR_LIMIT=30] -->
+    <string name="more_special_access_title">More</string>
 
     <!-- Location --><skip/>
     <!-- Main setting menu item to go into location settings [CHAR LIMIT=40] -->
