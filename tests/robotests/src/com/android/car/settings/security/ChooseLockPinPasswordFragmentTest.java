@@ -38,8 +38,7 @@ public class ChooseLockPinPasswordFragmentTest {
     @Before
     public void initFragment() {
         mFragment = FragmentController.of(
-                ChooseLockPinPasswordFragment.newPasswordInstance(/* isInSetupWizard= */
-                        false)).setup();
+                ChooseLockPinPasswordFragment.newPasswordInstance()).setup();
     }
 
     /**
