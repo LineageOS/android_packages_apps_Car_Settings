@@ -50,6 +50,7 @@ import org.robolectric.util.ReflectionHelpers.ClassParameter;
 public class PreferenceControllerTestHelper<T extends PreferenceController> {
 
     private static final String PREFERENCE_KEY = "preference_key";
+
     private static final CarUxRestrictions UX_RESTRICTIONS =
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
@@ -148,6 +149,10 @@ public class PreferenceControllerTestHelper<T extends PreferenceController> {
                 dispatchEvent(upEvent(mState));
             }
         }
+    }
+
+    public static String getKey() {
+        return PREFERENCE_KEY;
     }
 
     /*
