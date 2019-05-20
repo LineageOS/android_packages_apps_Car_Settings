@@ -47,6 +47,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Unit test for {@link PreferenceController}.
  */
@@ -65,11 +68,12 @@ public class PreferenceControllerTest {
             new CarUxRestrictions.Builder(/* reqOpt= */ true,
                     CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
 
-    private Context mContext;
-    @Mock
-    private Preference mPreference;
     private PreferenceControllerTestHelper<FakePreferenceController> mControllerHelper;
     private FakePreferenceController mController;
+    private Context mContext;
+
+    @Mock
+    private Preference mPreference;
 
     @Before
     public void setUp() {
@@ -174,6 +178,58 @@ public class PreferenceControllerTest {
 
         // setEnabled(true) called with the second UXR change event.
         orderVerifier.verify(mPreference).setEnabled(true);
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restricted_allPreferencesIgnore_preferenceEnabled() {
+        // mPreference cannot be a Mock here because its real methods need to be invoked.
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+
+        Set preferencesIgnoringUxRestrictions = new HashSet();
+        mController.setUxRestrictionsIgnoredConfig(/* allIgnores= */ true,
+                preferencesIgnoringUxRestrictions);
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        assertThat(mPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restricted_thisPreferenceIgnores_preferenceEnabled() {
+        // mPreference cannot be a Mock here because its real methods need to be invoked.
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+
+        Set preferencesIgnoringUxRestrictions = new HashSet();
+        preferencesIgnoringUxRestrictions.add(PreferenceControllerTestHelper.getKey());
+        mController.setUxRestrictionsIgnoredConfig(/* allIgnores= */ false,
+                preferencesIgnoringUxRestrictions);
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        assertThat(mPreference.isEnabled()).isTrue();
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restricted_uxRestrictionsNotIgnored_preferenceDisabled() {
+        // mPreference cannot be a Mock here because its real methods need to be invoked.
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+                FakePreferenceController.class, mPreference);
+        mController = mControllerHelper.getController();
+
+        Set preferencesIgnoringUxRestrictions = new HashSet();
+        mController.setUxRestrictionsIgnoredConfig(/* allIgnores= */ false,
+                preferencesIgnoringUxRestrictions);
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+        mController.onUxRestrictionsChanged(NO_SETUP_UX_RESTRICTIONS);
+
+        assertThat(mPreference.isEnabled()).isFalse();
     }
 
     @Test
