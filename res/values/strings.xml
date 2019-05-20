@@ -293,6 +293,18 @@
     <string name="bluetooth_profiles">Profiles</string>
     <!-- Title for BT error dialogs. -->
     <string name="bluetooth_error_title"></string>
+    <!-- Strings for msg to display to user while bluetooth is turning on [CHAR LIMIT=60] -->
+    <string name="bluetooth_turning_on">"Turning Bluetooth on\u2026"</string>
+    <!-- Strings for msg to display to user while bluetooth is turning off [CHAR LIMIT=60] -->
+    <string name="bluetooth_turning_off">"Turning Bluetooth off\u2026"</string>
+    <!-- This string asks the user whether or not to allow an app to enable bluetooth. [CHAR LIMIT=100] -->
+    <string name="bluetooth_ask_enablement"><xliff:g id="app_name" example="FancyApp">%1$s</xliff:g> wants to turn on Bluetooth</string>
+    <!-- This string asks the user whether or not to allow an app to disable bluetooth. [CHAR LIMIT=100] -->
+    <string name="bluetooth_ask_disablement"><xliff:g id="app_name" example="FancyApp">%1$s</xliff:g> wants to turn off Bluetooth</string>
+    <!-- This string asks the user whether or not to allow an app to enable bluetooth. [CHAR LIMIT=100] -->
+    <string name="bluetooth_ask_enablement_no_name">An app wants to turn on Bluetooth</string>
+    <!-- This string asks the user whether or not to allow an app to disable bluetooth. [CHAR LIMIT=100] -->
+    <string name="bluetooth_ask_disablement_no_name">An app wants to turn off Bluetooth</string>
 
     <!-- Bluetooth pairing --><skip/>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
