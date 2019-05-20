@@ -20,7 +20,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
@@ -50,31 +49,18 @@ public class ConfirmLockPatternFragment extends BaseFragment {
     private CheckLockListener mCheckLockListener;
 
     private int mUserId;
-    private boolean mIsInSetupWizard;
     private List<LockPatternView.Cell> mPattern;
-
-    /**
-     * Factory method for creating ConfirmLockPatternFragment
-     */
-    public static ConfirmLockPatternFragment newInstance(boolean isInSetupWizard) {
-        ConfirmLockPatternFragment patternFragment = new ConfirmLockPatternFragment();
-        Bundle bundle = new Bundle();
-        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
-        patternFragment.setArguments(bundle);
-        return patternFragment;
-    }
 
     @Override
     @LayoutRes
     protected int getActionBarLayoutId() {
-        return mIsInSetupWizard ? R.layout.suw_action_bar_with_button
-                : R.layout.action_bar_with_button;
+        return R.layout.action_bar_with_button;
     }
 
     @Override
     @LayoutRes
     protected int getLayoutId() {
-        return mIsInSetupWizard ? R.layout.suw_confirm_lock_pattern : R.layout.confirm_lock_pattern;
+        return R.layout.confirm_lock_pattern;
     }
 
     @Override
@@ -98,11 +84,6 @@ public class ConfirmLockPatternFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         mLockPatternUtils = new LockPatternUtils(getContext());
         mUserId = UserHandle.myUserId();
-
-        Bundle args = getArguments();
-        if (args != null) {
-            mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
-        }
     }
 
     @Override
@@ -119,25 +100,6 @@ public class ConfirmLockPatternFragment extends BaseFragment {
             mCheckLockWorker = (CheckLockWorker) getFragmentManager().findFragmentByTag(
                     FRAGMENT_TAG_CHECK_LOCK_WORKER);
         }
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        if (!mIsInSetupWizard) {
-            return;
-        }
-
-        // Don't show toolbar title in Setup Wizard.
-        ((TextView) getActivity().findViewById(R.id.title)).setText("");
-
-        Button mPrimaryButton = (Button) getActivity().findViewById(R.id.action_button1);
-        mPrimaryButton.setText(R.string.lockscreen_skip_button_text);
-        mPrimaryButton.setOnClickListener(v -> {
-            SetupWizardScreenLockActivity activity = (SetupWizardScreenLockActivity) getActivity();
-            activity.onCancel();
-        });
     }
 
     @Override
