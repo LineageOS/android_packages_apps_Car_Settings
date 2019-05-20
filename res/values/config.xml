@@ -26,6 +26,14 @@
     <bool name="config_show_regulatory_info">true</bool>
     <!-- Whether premium SMS should be shown or not. -->
     <bool name="config_show_premium_sms">true</bool>
+    <!-- Whether all preferences should always ignore UX Restrictions -->
+    <bool name="config_always_ignore_ux_restrictions">false</bool>
+    <!-- Array of Preference Keys that ignore UX Restrictions -->
+    <string-array name="config_ignore_ux_restrictions">
+        <item>@string/pk_display_settings_entry</item>
+        <item>@string/pk_sound_settings_entry</item>
+        <item>@string/pk_storage_settings_entry</item>
+    </string-array>
 
     <!-- The component which listens for the enabling of developer options. -->
     <string name="config_dev_options_module" translatable="false">com.android.car.developeroptions/.Settings$DevelopmentSettingsDashboardActivity</string>

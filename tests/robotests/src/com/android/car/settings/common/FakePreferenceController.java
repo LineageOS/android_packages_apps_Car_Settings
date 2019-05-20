@@ -21,6 +21,9 @@ import android.content.Context;
 
 import androidx.preference.Preference;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Concrete {@link PreferenceController} with methods for verifying behavior in tests.
  */
@@ -42,6 +45,8 @@ public class FakePreferenceController extends PreferenceController<Preference> {
     private Object mHandlePreferenceChangedValueArg;
     private int mHandlePreferenceClickedCallCount;
     private Preference mHandlePreferenceClickedArg;
+    private boolean mAllIgnoresUxRestrictions = false;
+    private Set<String> mPreferencesIgnoringUxRestrictions = new HashSet<>();
 
     public FakePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -175,4 +180,16 @@ public class FakePreferenceController extends PreferenceController<Preference> {
     Preference getHandlePreferenceClickedArg() {
         return mHandlePreferenceClickedArg;
     }
+
+    @Override
+    protected boolean isUxRestrictionsIgnored(boolean allIgnores, Set preferencesThatIgnore) {
+        return super.isUxRestrictionsIgnored(mAllIgnoresUxRestrictions,
+                mPreferencesIgnoringUxRestrictions);
+    }
+
+    protected void setUxRestrictionsIgnoredConfig(boolean allIgnore, Set preferencesThatIgnore) {
+        mAllIgnoresUxRestrictions = allIgnore;
+        mPreferencesIgnoringUxRestrictions = preferencesThatIgnore;
+    }
+
 }
