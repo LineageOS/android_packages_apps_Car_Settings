@@ -40,11 +40,6 @@ public abstract class BaseFragment extends Fragment implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
 
     /**
-     * For indicating a fragment is running in Setup Wizard
-     */
-    public static final String EXTRA_RUNNING_IN_SETUP_WIZARD = "extra_running_in_setup_wizard";
-
-    /**
      * Assume The activity holds this fragment also implements the FragmentController.
      * This function should be called after onAttach()
      */
