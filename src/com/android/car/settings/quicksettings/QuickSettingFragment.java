@@ -29,10 +29,14 @@ import android.os.UserManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.Guideline;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.car.settings.R;
@@ -93,6 +97,17 @@ public class QuickSettingFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         mHomeFragmentLauncher = new HomeFragmentLauncher();
         Activity activity = requireActivity();
+
+        FragmentManager fragmentManager = ((FragmentActivity) activity).getSupportFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() == 1
+                && fragmentManager.findFragmentByTag("0") != null
+                && fragmentManager.findFragmentByTag("0").getClass().getName().equals(
+                getString(R.string.config_settings_hierarchy_root_fragment))
+                && !getContext().getResources()
+                .getBoolean(R.bool.config_show_settings_root_exit_icon)) {
+            hideExitIcon();
+        }
+
         activity.findViewById(R.id.action_bar_icon_container).setOnClickListener(
                 v -> activity.finish());
 
@@ -234,5 +249,14 @@ public class QuickSettingFragment extends BaseFragment {
 
     private boolean hasPreferenceIgnoringUxRestrictions(boolean allIgnores, Set prefsThatIgnore) {
         return allIgnores || prefsThatIgnore.size() > 0;
+    }
+
+    private void hideExitIcon() {
+        requireActivity().findViewById(R.id.action_bar_icon_container)
+                .setVisibility(FrameLayout.GONE);
+
+        Guideline guideLine = (Guideline) requireActivity().findViewById(R.id.start_margin);
+        guideLine.setGuidelineBegin(getResources()
+                .getDimensionPixelOffset(R.dimen.action_bar_no_icon_start_margin));
     }
 }
