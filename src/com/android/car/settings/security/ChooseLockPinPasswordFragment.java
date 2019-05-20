@@ -66,7 +66,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private int mUserId;
     private int mErrorCode = PasswordHelper.NO_ERROR;
 
-    private boolean mIsInSetupWizard;
     private boolean mIsPin;
     private boolean mIsAlphaMode;
 
@@ -89,87 +88,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private SavePasswordWorker mSavePasswordWorker;
     private PasswordHelper mPasswordHelper;
 
-    // Keep track internally of where the user is in choosing a password.
-    @VisibleForTesting
-    enum Stage {
-        Introduction(
-                R.string.choose_lock_password_hints,
-                R.string.choose_lock_pin_hints,
-                R.string.continue_button_text,
-                R.string.lockpassword_cancel_label,
-                R.drawable.ic_arrow_forward,
-                R.drawable.suw_ic_arrow_forward),
-
-        PasswordInvalid(
-                R.string.lockpassword_invalid_password,
-                R.string.lockpin_invalid_pin,
-                R.string.continue_button_text,
-                R.string.lockpassword_clear_label,
-                R.drawable.ic_arrow_forward,
-                R.drawable.suw_ic_arrow_forward),
-
-        NeedToConfirm(
-                R.string.confirm_your_password_header,
-                R.string.confirm_your_pin_header,
-                R.string.lockpassword_confirm_label,
-                R.string.lockpassword_cancel_label,
-                R.drawable.ic_check,
-                R.drawable.suw_ic_check),
-
-        ConfirmWrong(
-                R.string.confirm_passwords_dont_match,
-                R.string.confirm_pins_dont_match,
-                R.string.continue_button_text,
-                R.string.lockpassword_cancel_label,
-                R.drawable.ic_check,
-                R.drawable.suw_ic_check),
-
-        SaveFailure(
-                R.string.error_saving_password,
-                R.string.error_saving_lockpin,
-                R.string.lockscreen_retry_button_text,
-                R.string.lockpassword_cancel_label,
-                R.drawable.ic_check,
-                R.drawable.suw_ic_check);
-
-        public final int alphaHint;
-        public final int numericHint;
-        public final int primaryButtonText;
-        public final int secondaryButtonText;
-        public final int enterKeyIcon;
-        public final int suwEnterKeyIcon;
-
-        Stage(@StringRes int hintInAlpha,
-                @StringRes int hintInNumeric,
-                @StringRes int primaryButtonText,
-                @StringRes int secondaryButtonText,
-                @DrawableRes int enterKeyIcon,
-                @DrawableRes int suwEnterKeyIcon) {
-            this.alphaHint = hintInAlpha;
-            this.numericHint = hintInNumeric;
-            this.primaryButtonText = primaryButtonText;
-            this.secondaryButtonText = secondaryButtonText;
-            this.enterKeyIcon = enterKeyIcon;
-            this.suwEnterKeyIcon = suwEnterKeyIcon;
-        }
-
-        @StringRes
-        public int getHint(boolean isAlpha) {
-            if (isAlpha) {
-                return alphaHint;
-            } else {
-                return numericHint;
-            }
-        }
-    }
-
     /**
      * Factory method for creating fragment in password mode
      */
-    public static ChooseLockPinPasswordFragment newPasswordInstance(boolean isInSetupWizard) {
+    public static ChooseLockPinPasswordFragment newPasswordInstance() {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = new Bundle();
-        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
         bundle.putBoolean(EXTRA_IS_PIN, false);
         passwordFragment.setArguments(bundle);
         return passwordFragment;
@@ -178,10 +102,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     /**
      * Factory method for creating fragment in Pin mode
      */
-    public static ChooseLockPinPasswordFragment newPinInstance(boolean isInSetupWizard) {
+    public static ChooseLockPinPasswordFragment newPinInstance() {
         ChooseLockPinPasswordFragment passwordFragment = new ChooseLockPinPasswordFragment();
         Bundle bundle = new Bundle();
-        bundle.putBoolean(EXTRA_RUNNING_IN_SETUP_WIZARD, isInSetupWizard);
         bundle.putBoolean(EXTRA_IS_PIN, true);
         passwordFragment.setArguments(bundle);
         return passwordFragment;
@@ -190,18 +113,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     @Override
     @LayoutRes
     protected int getActionBarLayoutId() {
-        return mIsInSetupWizard ? R.layout.suw_action_bar_with_button
-                : R.layout.action_bar_with_button;
+        return R.layout.action_bar_with_button;
     }
 
     @Override
     @LayoutRes
     protected int getLayoutId() {
-        if (mIsInSetupWizard) {
-            return mIsPin ? R.layout.suw_choose_lock_pin : R.layout.suw_choose_lock_password;
-        } else {
-            return mIsPin ? R.layout.choose_lock_pin : R.layout.choose_lock_password;
-        }
+        return mIsPin ? R.layout.choose_lock_pin : R.layout.choose_lock_password;
     }
 
     @Override
@@ -217,7 +135,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         Bundle args = getArguments();
         if (args != null) {
-            mIsInSetupWizard = args.getBoolean(BaseFragment.EXTRA_RUNNING_IN_SETUP_WIZARD);
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
             mExistingPassword = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
@@ -278,14 +195,6 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mHintMessage = view.findViewById(R.id.hint_text);
 
-        if (mIsInSetupWizard) {
-            View screenLockOptions = view.findViewById(R.id.screen_lock_options);
-            screenLockOptions.setVisibility(View.VISIBLE);
-            screenLockOptions.setOnClickListener(v -> {
-                new LockTypeDialogFragment().show(getFragmentManager(), LOCK_OPTIONS_DIALOG_TAG);
-            });
-        }
-
         if (mIsPin) {
             initPinView(view);
         } else {
@@ -307,13 +216,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (mIsInSetupWizard) {
-            mProgressBar = requireActivity().findViewById(R.id.suw_progress_bar);
-            // Don't show toolbar title in Setup Wizard
-            ((TextView) requireActivity().findViewById(R.id.title)).setText("");
-        } else {
-            mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-        }
+        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
 
         mPrimaryButton = requireActivity().findViewById(R.id.action_button1);
         mPrimaryButton.setOnClickListener(view -> handlePrimaryButtonClick());
@@ -472,18 +375,9 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (mUiStage.secondaryButtonText == R.string.lockpassword_clear_label) {
             mPasswordField.setText("");
             mUiStage = Stage.Introduction;
-            if (mIsInSetupWizard && mUiStage.secondaryButtonText
-                    == R.string.lockpassword_cancel_label) {
-                setSecondaryButtonText(R.string.lockscreen_skip_button_text);
-            } else {
-                setSecondaryButtonText(mUiStage.secondaryButtonText);
-            }
+            setSecondaryButtonText(mUiStage.secondaryButtonText);
         } else {
-            if (mIsInSetupWizard) {
-                ((SetupWizardScreenLockActivity) getActivity()).onCancel();
-            } else {
-                getFragmentController().goBack();
-            }
+            getFragmentController().goBack();
         }
     }
 
@@ -534,8 +428,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         if (mIsPin) {
-            mPinPad.setEnterKeyIcon(
-                    mIsInSetupWizard ? mUiStage.suwEnterKeyIcon : mUiStage.enterKeyIcon);
+            mPinPad.setEnterKeyIcon(mUiStage.enterKeyIcon);
         }
 
         switch (mUiStage) {
@@ -558,12 +451,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         }
 
         setPrimaryButtonText(mUiStage.primaryButtonText);
-        if (mIsInSetupWizard && mUiStage.secondaryButtonText
-                == R.string.lockpassword_cancel_label) {
-            setSecondaryButtonText(R.string.lockscreen_skip_button_text);
-        } else {
-            setSecondaryButtonText(mUiStage.secondaryButtonText);
-        }
+        setSecondaryButtonText(mUiStage.secondaryButtonText);
         mPasswordEntryInputDisabler.setInputEnabled(inputAllowed);
     }
 
@@ -598,10 +486,72 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mPasswordField.setText("");
 
-        if (mIsInSetupWizard) {
-            ((SetupWizardScreenLockActivity) getActivity()).onComplete();
-        } else {
-            getActivity().finish();
+        getActivity().finish();
+    }
+
+    // Keep track internally of where the user is in choosing a password.
+    @VisibleForTesting
+    enum Stage {
+        Introduction(
+                R.string.choose_lock_password_hints,
+                R.string.choose_lock_pin_hints,
+                R.string.continue_button_text,
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_arrow_forward),
+
+        PasswordInvalid(
+                R.string.lockpassword_invalid_password,
+                R.string.lockpin_invalid_pin,
+                R.string.continue_button_text,
+                R.string.lockpassword_clear_label,
+                R.drawable.ic_arrow_forward),
+
+        NeedToConfirm(
+                R.string.confirm_your_password_header,
+                R.string.confirm_your_pin_header,
+                R.string.lockpassword_confirm_label,
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check),
+
+        ConfirmWrong(
+                R.string.confirm_passwords_dont_match,
+                R.string.confirm_pins_dont_match,
+                R.string.continue_button_text,
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check),
+
+        SaveFailure(
+                R.string.error_saving_password,
+                R.string.error_saving_lockpin,
+                R.string.lockscreen_retry_button_text,
+                R.string.lockpassword_cancel_label,
+                R.drawable.ic_check);
+
+        public final int alphaHint;
+        public final int numericHint;
+        public final int primaryButtonText;
+        public final int secondaryButtonText;
+        public final int enterKeyIcon;
+
+        Stage(@StringRes int hintInAlpha,
+                @StringRes int hintInNumeric,
+                @StringRes int primaryButtonText,
+                @StringRes int secondaryButtonText,
+                @DrawableRes int enterKeyIcon) {
+            this.alphaHint = hintInAlpha;
+            this.numericHint = hintInNumeric;
+            this.primaryButtonText = primaryButtonText;
+            this.secondaryButtonText = secondaryButtonText;
+            this.enterKeyIcon = enterKeyIcon;
+        }
+
+        @StringRes
+        public int getHint(boolean isAlpha) {
+            if (isAlpha) {
+                return alphaHint;
+            } else {
+                return numericHint;
+            }
         }
     }
 
