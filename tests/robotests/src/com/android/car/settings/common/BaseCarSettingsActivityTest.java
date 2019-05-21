@@ -69,7 +69,7 @@ public class BaseCarSettingsActivityTest {
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new TestBaseCarSettingsActivity());
         mActivity = mActivityController.get();
-        mActivityController.create();
+        mActivityController.setup();
     }
 
     @Test
