@@ -20,7 +20,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.net.wifi.WifiManager;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
@@ -37,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Renders a list of {@link AccessPoint} as a list of preference.
+ * Renders a list of {@link AccessPoint} as a list of preferences.
  */
 public class AccessPointListPreferenceController extends
         WifiBasePreferenceController<PreferenceGroup> implements
@@ -45,21 +44,9 @@ public class AccessPointListPreferenceController extends
         Preference.OnPreferenceChangeListener,
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
     private static final Logger LOG = new Logger(AccessPointListPreferenceController.class);
-    private List<AccessPoint> mAccessPoints = new ArrayList<>();
-
     private final WifiManager.ActionListener mConnectionListener =
-            new WifiManager.ActionListener() {
-                @Override
-                public void onSuccess() {
-                }
-
-                @Override
-                public void onFailure(int reason) {
-                    Toast.makeText(getContext(),
-                            R.string.wifi_failed_connect_message,
-                            Toast.LENGTH_SHORT).show();
-                }
-            };
+            new WifiUtil.ActionFailedListener(getContext(), R.string.wifi_failed_connect_message);
+    private List<AccessPoint> mAccessPoints = new ArrayList<>();
 
     public AccessPointListPreferenceController(@NonNull Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -115,7 +102,8 @@ public class AccessPointListPreferenceController extends
             getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
         } else if (accessPoint.isActive()) {
             getFragmentController().launchFragment(WifiDetailsFragment.getInstance(accessPoint));
-        } else if (accessPoint.isSaved()) {
+        } else if (accessPoint.isSaved() && !WifiUtil.isAccessPointDisabledByWrongPassword(
+                accessPoint)) {
             getCarWifiManager().connectToSavedWifi(accessPoint, mConnectionListener);
         }
         return true;
@@ -139,6 +127,15 @@ public class AccessPointListPreferenceController extends
         accessPointPreference.setSummary(accessPoint.getSummary());
         accessPointPreference.setOnPreferenceClickListener(this);
         accessPointPreference.setOnPreferenceChangeListener(this);
+        accessPointPreference.showButton(false);
+
+        if (accessPoint.isSaved() && WifiUtil.isAccessPointDisabledByWrongPassword(accessPoint)) {
+            accessPointPreference.setWidgetLayoutResource(R.layout.delete_preference_widget);
+            accessPointPreference.setOnButtonClickListener(
+                    preference -> WifiUtil.forget(getContext(), accessPoint));
+            accessPointPreference.showButton(true);
+        }
+
         return accessPointPreference;
     }
 }

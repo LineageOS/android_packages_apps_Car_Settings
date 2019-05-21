@@ -20,6 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -176,6 +177,33 @@ public class AccessPointListPreferenceControllerTest {
 
         mPreferenceGroup.getPreference(0).performClick();
         verify(mMockCarWifiManager).connectToSavedWifi(eq(mMockAccessPoint1), any());
+    }
+
+    @Test
+    public void performButtonClick_savedAccessPoint_wrongPassword_forgetsNetwork() {
+        int netId = 1;
+
+        WifiConfiguration config = mock(WifiConfiguration.class);
+        WifiConfiguration.NetworkSelectionStatus status = mock(
+                WifiConfiguration.NetworkSelectionStatus.class);
+        config.networkId = netId;
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_PSK);
+        when(mMockAccessPoint1.isSaved()).thenReturn(true);
+        when(mMockAccessPoint1.getConfig()).thenReturn(config);
+        when(config.getNetworkSelectionStatus()).thenReturn(status);
+        when(status.isNetworkEnabled()).thenReturn(false);
+        when(status.getNetworkSelectionDisableReason()).thenReturn(
+                WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD);
+
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        ButtonPasswordEditTextPreference preference =
+                (ButtonPasswordEditTextPreference) mPreferenceGroup.getPreference(0);
+        preference.performButtonClick();
+
+        assertThat(getShadowWifiManager().getLastForgottenNetwork()).isEqualTo(netId);
     }
 
     @Test
