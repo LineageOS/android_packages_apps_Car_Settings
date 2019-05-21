@@ -19,16 +19,14 @@ package com.android.car.settings.wifi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
-import android.net.wifi.WifiConfiguration;
 
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.PasswordEditTextPreference;
 import com.android.settingslib.wifi.AccessPoint;
 
 /** Renders a {@link AccessPoint} as a preference. */
-public class AccessPointPreference extends PasswordEditTextPreference {
+public class AccessPointPreference extends ButtonPasswordEditTextPreference {
     private static final Logger LOG = new Logger(AccessPointPreference.class);
     private static final int[] STATE_SECURED = {
             com.android.settingslib.R.attr.state_encrypted
@@ -77,7 +75,7 @@ public class AccessPointPreference extends PasswordEditTextPreference {
      */
     private boolean shouldShowPasswordDialog() {
         return mAccessPoint.getSecurity() != AccessPoint.SECURITY_NONE && (!mAccessPoint.isSaved()
-                || isAccessPointDisabledByWrongPassword(mAccessPoint));
+                || WifiUtil.isAccessPointDisabledByWrongPassword(mAccessPoint));
     }
 
     private Drawable getAccessPointIcon() {
@@ -92,19 +90,5 @@ public class AccessPointPreference extends PasswordEditTextPreference {
         Drawable drawable = mWifiSld.getCurrent();
         drawable.setLevel(mAccessPoint.getLevel());
         return drawable;
-    }
-
-    private boolean isAccessPointDisabledByWrongPassword(AccessPoint accessPoint) {
-        WifiConfiguration config = accessPoint.getConfig();
-        if (config == null) {
-            return false;
-        }
-        WifiConfiguration.NetworkSelectionStatus networkStatus =
-                config.getNetworkSelectionStatus();
-        if (networkStatus == null || networkStatus.isNetworkEnabled()) {
-            return false;
-        }
-        return networkStatus.getNetworkSelectionDisableReason()
-                == WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD;
     }
 }

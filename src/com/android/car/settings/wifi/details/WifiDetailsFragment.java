@@ -21,7 +21,6 @@ import android.net.LinkProperties;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
-import android.net.NetworkInfo.State;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -157,7 +156,7 @@ public class WifiDetailsFragment extends SettingsFragment
         mForgetButton = getActivity().findViewById(R.id.action_button1);
         mForgetButton.setText(R.string.forget);
         mForgetButton.setOnClickListener(v -> {
-            forget();
+            WifiUtil.forget(getContext(), mAccessPoint);
             goBack();
         });
     }
@@ -242,23 +241,5 @@ public class WifiDetailsFragment extends SettingsFragment
         WifiConfiguration wifiConfig = mWifiInfoProvider.getNetworkConfiguration();
         LOG.d("wifiConfig is: " + wifiConfig);
         return wifiConfig != null && !WifiUtil.isNetworkLockedDown(getContext(), wifiConfig);
-    }
-
-    private void forget() {
-        if (!mAccessPoint.isSaved()) {
-            if (mAccessPoint.getNetworkInfo() != null
-                    && mAccessPoint.getNetworkInfo().getState() != State.DISCONNECTED) {
-                // Network is active but has no network ID - must be ephemeral.
-                mWifiManager.disableEphemeralNetwork(
-                        AccessPoint.convertToQuotedString(mAccessPoint.getSsidStr()));
-            } else {
-                // Should not happen, but a monkey seems to trigger it
-                LOG.e("Failed to forget invalid network " + mAccessPoint.getConfig());
-                return;
-            }
-        } else {
-            mWifiManager.forget(mAccessPoint.getConfig().networkId,
-                    new ActionFailListener(R.string.wifi_failed_forget_message));
-        }
     }
 }

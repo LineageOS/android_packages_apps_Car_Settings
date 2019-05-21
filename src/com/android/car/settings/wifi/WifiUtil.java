@@ -22,6 +22,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.NetworkCapabilities;
+import android.net.NetworkInfo;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.provider.Settings;
@@ -30,6 +31,7 @@ import android.widget.Toast;
 import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.regex.Pattern;
@@ -38,6 +40,8 @@ import java.util.regex.Pattern;
  * A collections of util functions for WIFI.
  */
 public class WifiUtil {
+
+    private static final Logger LOG = new Logger(WifiUtil.class);
 
     /** Value that is returned when we fail to connect wifi. */
     public static final int INVALID_NET_ID = -1;
@@ -201,7 +205,66 @@ public class WifiUtil {
         return netId;
     }
 
+    /** Forget the network specified by {@code accessPoint}. */
+    public static void forget(Context context, AccessPoint accessPoint) {
+        WifiManager wifiManager = context.getSystemService(WifiManager.class);
+        if (!accessPoint.isSaved()) {
+            if (accessPoint.getNetworkInfo() != null
+                    && accessPoint.getNetworkInfo().getState() != NetworkInfo.State.DISCONNECTED) {
+                // Network is active but has no network ID - must be ephemeral.
+                wifiManager.disableEphemeralNetwork(
+                        AccessPoint.convertToQuotedString(accessPoint.getSsidStr()));
+            } else {
+                // Should not happen, but a monkey seems to trigger it
+                LOG.e("Failed to forget invalid network " + accessPoint.getConfig());
+                return;
+            }
+        } else {
+            wifiManager.forget(accessPoint.getConfig().networkId,
+                    new ActionFailedListener(context, R.string.wifi_failed_forget_message));
+        }
+    }
+
+    /** Returns {@code true} if the access point was disabled due to the wrong password. */
+    public static boolean isAccessPointDisabledByWrongPassword(AccessPoint accessPoint) {
+        WifiConfiguration config = accessPoint.getConfig();
+        if (config == null) {
+            return false;
+        }
+        WifiConfiguration.NetworkSelectionStatus networkStatus =
+                config.getNetworkSelectionStatus();
+        if (networkStatus == null || networkStatus.isNetworkEnabled()) {
+            return false;
+        }
+        return networkStatus.getNetworkSelectionDisableReason()
+                == WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD;
+    }
+
     private static boolean isHexString(String password) {
         return HEX_PATTERN.matcher(password).matches();
+    }
+
+    /**
+     * A shared implementation of {@link WifiManager.ActionListener} which shows a failure message
+     * in a toast.
+     */
+    public static class ActionFailedListener implements WifiManager.ActionListener {
+        private final Context mContext;
+        @StringRes
+        private final int mFailureMessage;
+
+        public ActionFailedListener(Context context, @StringRes int failureMessage) {
+            mContext = context;
+            mFailureMessage = failureMessage;
+        }
+
+        @Override
+        public void onSuccess() {
+        }
+
+        @Override
+        public void onFailure(int reason) {
+            Toast.makeText(mContext, mFailureMessage, Toast.LENGTH_SHORT).show();
+        }
     }
 }
