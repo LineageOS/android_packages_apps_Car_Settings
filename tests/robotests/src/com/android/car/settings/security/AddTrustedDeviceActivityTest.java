@@ -159,7 +159,7 @@ public class AddTrustedDeviceActivityTest {
     public void onLockVerified_showAddTrustedDeviceProgressFragment() {
         mActivityController.start().postCreate(null).resume();
 
-        mActivity.launchFragment(ConfirmLockPinPasswordFragment.newPinInstance(false));
+        mActivity.launchFragment(ConfirmLockPinPasswordFragment.newPinInstance());
         mActivity.onLockVerified("lock".getBytes());
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))

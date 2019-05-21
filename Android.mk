@@ -40,9 +40,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx-constraintlayout_constraintlayout \
       car-apps-common \
       car-settings-lib \
-      car-setup-wizard-lib \
       car-setup-wizard-lib-utils \
-      setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
@@ -103,9 +101,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx-constraintlayout_constraintlayout \
       car-apps-common \
       car-settings-lib \
-      car-setup-wizard-lib \
       car-setup-wizard-lib-utils \
-      setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
