@@ -28,12 +28,14 @@
         android:fragment="com.android.car.settings.display.DisplaySettingsFragment"
         android:icon="@drawable/ic_settings_display"
         android:key="@string/pk_display_settings_entry"
-        android:title="@string/display_settings"/>
+        android:title="@string/display_settings"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.sound.SoundSettingsFragment"
         android:icon="@drawable/ic_settings_sound"
         android:key="@string/pk_sound_settings_entry"
-        android:title="@string/sound_settings"/>
+        android:title="@string/sound_settings"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.network.NetworkAndInternetFragment"
         android:icon="@drawable/ic_settings_wifi"
@@ -87,7 +89,8 @@
         android:fragment="com.android.car.settings.storage.StorageSettingsFragment"
         android:icon="@drawable/ic_storage"
         android:key="@string/pk_storage_settings_entry"
-        android:title="@string/storage_settings_title"/>
+        android:title="@string/storage_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
         android:fragment="com.android.car.settings.security.SecuritySettingsFragment"
         android:icon="@drawable/ic_lock"

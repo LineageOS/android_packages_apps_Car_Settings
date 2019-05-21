@@ -26,8 +26,13 @@ import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.preference.Preference;
 
+import com.android.car.settings.R;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Controller which encapsulates the business logic associated with a {@link Preference}. All car
@@ -114,6 +119,18 @@ public abstract class PreferenceController<V extends Preference> implements
      */
     public static final int DISABLED_FOR_USER = 3;
 
+    /**
+     * Indicates whether all Preferences are configured to ignore UX Restrictions Event.
+     */
+    private final boolean mAlwaysIgnoreUxRestrictions;
+
+    /**
+     * Set of the keys of Preferences that ignore UX Restrictions. When mAlwaysIgnoreUxRestrictions
+     * is configured to be false, then only the Preferences whose keys are contained in this Set
+     * ignore UX Restrictions.
+     */
+    private final Set<String> mPreferencesIgnoringUxRestrictions;
+
     private final Context mContext;
     private final String mPreferenceKey;
     private final FragmentController mFragmentController;
@@ -132,6 +149,10 @@ public abstract class PreferenceController<V extends Preference> implements
         mPreferenceKey = preferenceKey;
         mFragmentController = fragmentController;
         mUxRestrictions = uxRestrictions;
+        mPreferencesIgnoringUxRestrictions = new HashSet<String>(Arrays.asList(
+                mContext.getResources().getStringArray(R.array.config_ignore_ux_restrictions)));
+        mAlwaysIgnoreUxRestrictions =
+                mContext.getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
     }
 
     /**
@@ -413,7 +434,9 @@ public abstract class PreferenceController<V extends Preference> implements
      * additional driving restrictions.
      */
     protected void onApplyUxRestrictions(CarUxRestrictions uxRestrictions) {
-        if (CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
+        if (!isUxRestrictionsIgnored(mAlwaysIgnoreUxRestrictions,
+                mPreferencesIgnoringUxRestrictions)
+                && CarUxRestrictionsHelper.isNoSetup(uxRestrictions)) {
             mPreference.setEnabled(false);
         }
     }
@@ -441,5 +464,9 @@ public abstract class PreferenceController<V extends Preference> implements
      */
     protected boolean handlePreferenceClicked(V preference) {
         return false;
+    }
+
+    protected boolean isUxRestrictionsIgnored(boolean allIgnores, Set prefsThatIgnore) {
+        return allIgnores || prefsThatIgnore.contains(mPreferenceKey);
     }
 }
