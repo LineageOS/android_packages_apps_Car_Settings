@@ -82,7 +82,7 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
                 @Override
                 public void onAuthStringAvailable(BluetoothDevice device, String authString) {
                     ConfirmPairingCodeDialog dialog = ConfirmPairingCodeDialog.newInstance(
-                            device.getAddress(), authString);
+                            authString);
                     dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
                     showDialog(dialog, ConfirmPairingCodeDialog.TAG);
                 }
