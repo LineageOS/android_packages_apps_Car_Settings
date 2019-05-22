@@ -35,7 +35,6 @@ public class StorageMediaCategoryDetailPreferenceController extends
         StorageApplicationListPreferenceController {
 
     private long mExternalAudioBytes;
-    private boolean mIsStorageAudioPreferenceAdded;
 
     public StorageMediaCategoryDetailPreferenceController(Context context,
             String preferenceKey, FragmentController fragmentController,
@@ -46,18 +45,15 @@ public class StorageMediaCategoryDetailPreferenceController extends
     @Override
     public void onDataLoaded(ArrayList<ApplicationsState.AppEntry> apps) {
         super.onDataLoaded(apps);
-        if (mIsStorageAudioPreferenceAdded) {
-            return;
-        }
         Preference preference = createPreference(
                 getContext().getString(R.string.storage_audio_files_title),
                 Long.toString(mExternalAudioBytes),
-                getContext().getDrawable(R.drawable.ic_headset), /* key= */ null);
+                getContext().getDrawable(R.drawable.ic_headset),
+                getContext().getString(R.string.pk_storage_music_audio_files));
         // remove the onClickListener which was set above with null key. This preference should
         // do nothing on click.
         preference.setOnPreferenceClickListener(null);
         getPreference().addPreference(preference);
-        mIsStorageAudioPreferenceAdded = true;
     }
 
     /**

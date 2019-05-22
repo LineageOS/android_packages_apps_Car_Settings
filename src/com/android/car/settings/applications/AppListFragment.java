@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.applications.specialaccess;
+package com.android.car.settings.applications;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -25,11 +25,10 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 
 /**
- * Fragment which hosts an {@link AppOpsPreferenceController} to display a list of controls to
- * allow/disallow app operations. There is a toggle in the app bar for showing/hiding system
- * applications. The semantics of what constitues a system app is left up to the controller.
+ * Fragment base class for use in cases where a list of applications is displayed with the option to
+ * show/hide system apps in the list.
  */
-public abstract class AppOpsFragment extends SettingsFragment {
+public abstract class AppListFragment extends SettingsFragment {
 
     private static final String KEY_SHOW_SYSTEM = "showSystem";
 
@@ -41,15 +40,11 @@ public abstract class AppOpsFragment extends SettingsFragment {
         return R.layout.action_bar_with_button;
     }
 
-    /** Returns the {@link AppOpsPreferenceController} via {@link #use(Class, int)} lookup. */
-    protected abstract AppOpsPreferenceController lookupAppOpsPreferenceController();
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             mShowSystem = savedInstanceState.getBoolean(KEY_SHOW_SYSTEM, false);
-            lookupAppOpsPreferenceController().setShowSystem(mShowSystem);
         }
     }
 
@@ -60,9 +55,23 @@ public abstract class AppOpsFragment extends SettingsFragment {
         setButtonText(toggleShowSystem);
         toggleShowSystem.setOnClickListener(v -> {
             mShowSystem = !mShowSystem;
-            lookupAppOpsPreferenceController().setShowSystem(mShowSystem);
+            onToggleShowSystemApps(mShowSystem);
             setButtonText(toggleShowSystem);
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        onToggleShowSystemApps(mShowSystem);
+    }
+
+    /** Called when a user toggles the option to show system applications in the list. */
+    protected abstract void onToggleShowSystemApps(boolean showSystem);
+
+    /** Returns {@code true} if system applications should be shown in the list. */
+    protected final boolean shouldShowSystemApps() {
+        return mShowSystem;
     }
 
     private void setButtonText(Button button) {
