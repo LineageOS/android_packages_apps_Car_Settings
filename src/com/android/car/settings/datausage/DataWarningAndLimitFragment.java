@@ -19,9 +19,11 @@ package com.android.car.settings.datausage;
 import android.content.Context;
 import android.net.NetworkPolicyManager;
 import android.net.NetworkTemplate;
+import android.os.Bundle;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
@@ -39,6 +41,18 @@ public class DataWarningAndLimitFragment extends SettingsFragment {
     private NetworkPolicyEditor mPolicyEditor;
     private NetworkTemplate mNetworkTemplate;
 
+    /**
+     * Creates a new instance of {@link DataWarningAndLimitFragment} with the given template. If the
+     * template is {@code null}, the fragment will use the default data network template.
+     */
+    public static DataWarningAndLimitFragment newInstance(@Nullable NetworkTemplate template) {
+        DataWarningAndLimitFragment fragment = new DataWarningAndLimitFragment();
+        Bundle args = new Bundle();
+        args.putParcelable(NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE, template);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
@@ -50,10 +64,14 @@ public class DataWarningAndLimitFragment extends SettingsFragment {
         super.onAttach(context);
 
         mPolicyEditor = new NetworkPolicyEditor(NetworkPolicyManager.from(context));
-        mTelephonyManager = context.getSystemService(TelephonyManager.class);
-        mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
-        mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
-                DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
+        mNetworkTemplate = getArguments().getParcelable(
+                NetworkPolicyManager.EXTRA_NETWORK_TEMPLATE);
+        if (mNetworkTemplate == null) {
+            mTelephonyManager = context.getSystemService(TelephonyManager.class);
+            mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
+            mNetworkTemplate = DataUsageUtils.getMobileNetworkTemplate(mTelephonyManager,
+                    DataUsageUtils.getDefaultSubscriptionId(mSubscriptionManager));
+        }
 
         // Loads the current policies to the policy editor cache.
         mPolicyEditor.read();
