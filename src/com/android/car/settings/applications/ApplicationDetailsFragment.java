@@ -265,14 +265,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     }
 
     private boolean shouldDisableUninstallButton() {
-        // TODO: Remove this condition when phone settings is removed from automotive builds.
-        // This is a temporary measure to allow enabling the phone settings package.
-        // It is not an expected case long-term to have packages in the disabled state that
-        // normally cannot be disabled by a user.
-        if (mPackageName.equals("com.android.settings")) {
-            return false;
-        }
-
         if (shouldDisableUninstallForHomeApp()) {
             LOG.d("Uninstall disabled for home app");
             return true;

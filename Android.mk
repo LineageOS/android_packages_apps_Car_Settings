@@ -22,6 +22,7 @@ include $(CLEAR_VARS)
 # (for example, projected). See b/30064991
 ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_PACKAGE_NAME := CarSettings
+  LOCAL_OVERRIDES_PACKAGES := Settings
   LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_SRC_FILES := $(call all-java-files-under, src)
@@ -40,9 +41,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx-constraintlayout_constraintlayout \
       car-apps-common \
       car-settings-lib \
-      car-setup-wizard-lib \
       car-setup-wizard-lib-utils \
-      setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
@@ -67,12 +66,6 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DX_FLAGS := --multi-dex
 
-  ifdef DISABLE_AOSP_PHONE_SETTING
-    ifeq ($(DISABLE_AOSP_PHONE_SETTING),true)
-      # This will hide AOSP phone setting.
-      LOCAL_OVERRIDES_PACKAGES := Settings
-    endif
-  endif
   include $(BUILD_PACKAGE)
 endif
 
@@ -85,6 +78,7 @@ include $(CLEAR_VARS)
 # (for example, projected). See b/30064991
 ifeq (,$(TARGET_BUILD_APPS))
   LOCAL_PACKAGE_NAME := CarSettingsForTesting
+  LOCAL_OVERRIDES_PACKAGES := Settings
   LOCAL_PRIVATE_PLATFORM_APIS := true
 
   LOCAL_SRC_FILES := $(call all-java-files-under, src)
@@ -103,9 +97,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       androidx-constraintlayout_constraintlayout \
       car-apps-common \
       car-settings-lib \
-      car-setup-wizard-lib \
       car-setup-wizard-lib-utils \
-      setup-wizard-lib-gingerbread-compat \
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
@@ -129,12 +121,6 @@ ifeq (,$(TARGET_BUILD_APPS))
 
   LOCAL_DX_FLAGS := --multi-dex
 
-  ifdef DISABLE_AOSP_PHONE_SETTING
-    ifeq ($(DISABLE_AOSP_PHONE_SETTING),true)
-      # This will hide AOSP phone setting.
-      LOCAL_OVERRIDES_PACKAGES := Settings
-    endif
-  endif
   include $(BUILD_PACKAGE)
 endif
 ###################################################################################

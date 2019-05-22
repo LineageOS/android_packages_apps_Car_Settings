@@ -15,12 +15,6 @@
     limitations under the License.
 -->
 
-<!--
-    NOTE:
-    This layout is mirrored in suw_confirm_lock_pattern.xml with just the styling differences
-    between setup wizard and settings applied. Any changes to ids/components outside of styling
-    needs to be duplicated in that file or breakages will occur.
--->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"

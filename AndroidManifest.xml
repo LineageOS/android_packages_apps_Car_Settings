@@ -224,12 +224,11 @@
         </activity>
 
         <!-- Alias for launcher activity only, as this belongs to each profile. -->
-        <!-- TODO: once phone setting is removed from car system image, set priority to 1 -->
         <activity-alias android:name="Settings"
                         android:label="@string/settings_label"
                         android:launchMode="singleTask"
                         android:targetActivity=".common.CarSettingActivity">
-            <intent-filter android:priority="10">
+            <intent-filter android:priority="1">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -287,17 +286,6 @@
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.car.settings.SCREEN_LOCK_ACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <meta-data android:name="distractionOptimized" android:value="true"/>
-        </activity>
-
-        <activity android:name=".security.SetupWizardScreenLockActivity"
-                  android:theme="@style/Theme.Car.SetupWizard.NoActionBar.Accent"
-                  android:configChanges="orientation|keyboardHidden|screenSize"
-                  android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.car.settings.SETUP_WIZARD_SCREEN_LOCK_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>

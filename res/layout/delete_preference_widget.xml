@@ -15,15 +15,9 @@
     limitations under the License.
 -->
 
-<vector
+<ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="@dimen/suw_icon_size"
-    android:height="@dimen/suw_icon_size"
-    android:viewportHeight="24"
-    android:viewportWidth="24">
-    <path
-        android:pathData="M0 0h24v24H0z"/>
-    <path
-        android:fillColor="#FF000000"
-        android:pathData="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-</vector>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:src="@drawable/ic_delete"/>
