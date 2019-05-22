@@ -23,11 +23,12 @@ import android.content.Context;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.AppListFragment;
 
 /**
  * Displays apps which have requested to access usage data and their current allowed status.
  */
-public class UsageAccessFragment extends AppOpsFragment {
+public class UsageAccessFragment extends AppListFragment {
 
     @Override
     @XmlRes
@@ -38,13 +39,14 @@ public class UsageAccessFragment extends AppOpsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        lookupAppOpsPreferenceController().init(AppOpsManager.OP_GET_USAGE_STATS,
+        use(AppOpsPreferenceController.class, R.string.pk_usage_access).init(
+                AppOpsManager.OP_GET_USAGE_STATS,
                 Manifest.permission.PACKAGE_USAGE_STATS,
                 AppOpsManager.MODE_IGNORED);
     }
 
     @Override
-    protected AppOpsPreferenceController lookupAppOpsPreferenceController() {
-        return use(AppOpsPreferenceController.class, R.string.pk_usage_access);
+    protected void onToggleShowSystemApps(boolean showSystem) {
+        use(AppOpsPreferenceController.class, R.string.pk_usage_access).setShowSystem(showSystem);
     }
 }
