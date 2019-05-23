@@ -37,6 +37,11 @@
         android:title="@string/sound_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.units.UnitsSettingsFragment"
+        android:icon="@drawable/ic_settings_units"
+        android:key="@string/pk_units_settings_entry"
+        android:title="@string/units_settings"/>
+    <Preference
         android:fragment="com.android.car.settings.network.NetworkAndInternetFragment"
         android:icon="@drawable/ic_settings_wifi"
         android:key="@string/pk_network_and_internet_entry"
