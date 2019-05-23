@@ -1207,7 +1207,7 @@
     <!-- Messages shown to alert user about the safety of the trusted device feature [CHAR LIMIT=NONE]-->
     <string name="trusted_device_safety_alert">Smart Lock can\'t detect security features of this device. To help protect your car, trusted device will only be able to keep your car unlocked once it\'s already unlocked by you. Your trusted device can keep your car unlocked when it\'s nearby, even if someone else is holding it.</string>
     <!-- Confirm pairing code dialog title [CHAR LIMIT=60]-->
-    <string name="trusted_device_pairing_code_dialog_title">Add <xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> as a trusted device</string>
+    <string name="trusted_device_pairing_code_dialog_title">Please confirm that the pairing codes match</string>
     <!-- Toast shown when user enrolls a device successfully [CHAR LIMIT=100]-->
     <string name="trusted_device_success_enrollment_toast">Phone has been enrolled successfully</string>
     <!-- Toast shown when enrolling a device fails [CHAR LIMIT=50]-->
