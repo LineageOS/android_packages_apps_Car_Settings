@@ -23,11 +23,12 @@ import android.content.Context;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.AppListFragment;
 
 /**
  * Displays apps which have requested to modify system settings and their current allowed status.
  */
-public class ModifySystemSettingsFragment extends AppOpsFragment {
+public class ModifySystemSettingsFragment extends AppListFragment {
 
     @Override
     @XmlRes
@@ -38,13 +39,15 @@ public class ModifySystemSettingsFragment extends AppOpsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        lookupAppOpsPreferenceController().init(AppOpsManager.OP_WRITE_SETTINGS,
+        use(AppOpsPreferenceController.class, R.string.pk_modify_system_settings).init(
+                AppOpsManager.OP_WRITE_SETTINGS,
                 Manifest.permission.WRITE_SETTINGS,
                 AppOpsManager.MODE_ERRORED);
     }
 
     @Override
-    protected AppOpsPreferenceController lookupAppOpsPreferenceController() {
-        return use(AppOpsPreferenceController.class, R.string.pk_modify_system_settings);
+    protected void onToggleShowSystemApps(boolean showSystem) {
+        use(AppOpsPreferenceController.class, R.string.pk_modify_system_settings).setShowSystem(
+                showSystem);
     }
 }

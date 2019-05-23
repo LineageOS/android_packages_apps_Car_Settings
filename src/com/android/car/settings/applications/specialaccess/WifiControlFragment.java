@@ -19,11 +19,12 @@ package com.android.car.settings.applications.specialaccess;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.AppListFragment;
 
 /**
  * Displays apps which have requested to control Wi-Fi settings and their current allowed status.
  */
-public class WifiControlFragment extends AppOpsFragment {
+public class WifiControlFragment extends AppListFragment {
 
     @Override
     @XmlRes
@@ -32,7 +33,8 @@ public class WifiControlFragment extends AppOpsFragment {
     }
 
     @Override
-    protected AppOpsPreferenceController lookupAppOpsPreferenceController() {
-        return use(WifiControlPreferenceController.class, R.string.pk_wifi_control);
+    protected void onToggleShowSystemApps(boolean showSystem) {
+        use(WifiControlPreferenceController.class, R.string.pk_wifi_control).setShowSystem(
+                showSystem);
     }
 }

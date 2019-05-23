@@ -26,14 +26,14 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 
 import com.android.car.settings.R;
+import com.android.car.settings.applications.AppListFragment;
 import com.android.car.settings.applications.ApplicationListItemManager;
-import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.applications.ApplicationsState;
 
 /**
  * Lists all installed applications with category audio and their summary.
  */
-public class StorageMediaCategoryDetailFragment extends SettingsFragment {
+public class StorageMediaCategoryDetailFragment extends AppListFragment {
 
     private ApplicationListItemManager mAppListItemManager;
 
@@ -70,8 +70,7 @@ public class StorageMediaCategoryDetailFragment extends SettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAppListItemManager.startLoading(ApplicationsState.FILTER_AUDIO,
-                ApplicationsState.SIZE_COMPARATOR);
+        mAppListItemManager.startLoading(getAppFilter(), ApplicationsState.SIZE_COMPARATOR);
     }
 
     @Override
@@ -84,5 +83,19 @@ public class StorageMediaCategoryDetailFragment extends SettingsFragment {
     public void onStop() {
         super.onStop();
         mAppListItemManager.onFragmentStop();
+    }
+
+    @Override
+    protected void onToggleShowSystemApps(boolean showSystem) {
+        mAppListItemManager.rebuildWithFilter(getAppFilter());
+    }
+
+    private ApplicationsState.AppFilter getAppFilter() {
+        ApplicationsState.AppFilter filter = ApplicationsState.FILTER_AUDIO;
+        if (!shouldShowSystemApps()) {
+            filter = new ApplicationsState.CompoundFilter(filter,
+                    ApplicationsState.FILTER_DOWNLOADED_AND_LAUNCHER_AND_INSTANT);
+        }
+        return filter;
     }
 }
