@@ -20,6 +20,7 @@ import android.os.storage.VolumeInfo;
 
 import androidx.lifecycle.Lifecycle;
 
+import com.android.car.settings.common.Logger;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ import java.util.List;
 /**
  * Class used to load the applications installed on the system with their metadata.
  */
+// TODO: consolidate with AppEntryListManager.
 public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     /**
      * Callback that is called once the list of applications are loaded.
@@ -40,6 +42,8 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
          */
         void onDataLoaded(ArrayList<ApplicationsState.AppEntry> apps);
     }
+
+    private static final Logger LOG = new Logger(ApplicationListItemManager.class);
 
     private final VolumeInfo mVolumeInfo;
     private final Lifecycle mLifecycle;
@@ -90,16 +94,31 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     /**
      * Starts the new session and start loading the list of installed applications on the device.
      * This list will be filtered out based on the {@link ApplicationsState.AppFilter} provided.
-     * Once the list is ready {@link AppListItemListener#onDataLoaded} method will be called.
+     * Once the list is ready, {@link AppListItemListener#onDataLoaded} will be called.
      *
-     * @param appFilter based on which the list of applications will be filtered before returning.
+     * @param appFilter          based on which the list of applications will be filtered before
+     *                           returning.
      * @param appEntryComparator comparator based on which the application list will be sorted.
      */
     public void startLoading(ApplicationsState.AppFilter appFilter,
             Comparator<ApplicationsState.AppEntry> appEntryComparator) {
+        if (mSession != null) {
+            LOG.w("Loading already started but restart attempted.");
+            return; // Prevent leaking sessions.
+        }
         mAppFilter = appFilter;
         mAppEntryComparator = appEntryComparator;
         mSession = mAppState.newSession(this, mLifecycle);
+    }
+
+    /**
+     * Rebuilds the list of applications using the provided {@link ApplicationsState.AppFilter}.
+     * The filter will be used for all subsequent loading. Once the list is ready, {@link
+     * AppListItemListener#onDataLoaded} will be called.
+     */
+    public void rebuildWithFilter(ApplicationsState.AppFilter appFilter) {
+        mAppFilter = appFilter;
+        rebuild();
     }
 
     @Override
@@ -176,8 +195,6 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
         if (compositeFilter != null) {
             filterObj = new ApplicationsState.CompoundFilter(filterObj, compositeFilter);
         }
-        filterObj = new ApplicationsState.CompoundFilter(filterObj,
-                ApplicationsState.FILTER_DOWNLOADED_AND_LAUNCHER_AND_INSTANT);
         ApplicationsState.AppFilter finalFilterObj = filterObj;
         mSession.rebuild(finalFilterObj, mAppEntryComparator, /* foreground= */ false);
     }
