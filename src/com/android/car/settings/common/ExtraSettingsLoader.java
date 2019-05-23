@@ -137,7 +137,8 @@ public class ExtraSettingsLoader {
             preference.setSummary(summary);
             if (icon != null) {
                 preference.setIcon(icon.loadDrawable(mContext));
-                preference.getIcon().setTint(Themes.getAttrColor(mContext, R.attr.iconColor));
+                preference.getIcon().setTintList(
+                        Themes.getAttrColorStateList(mContext, R.attr.iconColor));
             }
             preference.setIntent(extraSettingIntent);
             mPreferenceBundleMap.put(preference, metaData);

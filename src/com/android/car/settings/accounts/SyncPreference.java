@@ -69,15 +69,15 @@ public class SyncPreference extends SwitchPreference {
         switch (mSyncState) {
             case ACTIVE:
                 setIcon(R.drawable.ic_sync_anim);
-                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+                getIcon().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
                 break;
             case PENDING:
                 setIcon(R.drawable.ic_sync);
-                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+                getIcon().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
                 break;
             case FAILED:
                 setIcon(R.drawable.ic_sync_problem);
-                getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+                getIcon().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
                 break;
             default:
                 setIcon(null);
