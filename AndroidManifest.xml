@@ -337,6 +337,23 @@
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
+        <activity android:name=".datausage.DataWarningAndLimitActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize"
+                  android:exported="true">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
+            android:name=".wifi.WifiRequestToggleActivity"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
+                <action android:name="android.net.wifi.action.REQUEST_DISABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!-- This logic is copied from phone.-->
         <!-- Ensures there's lightweight fallback activity when no other MAIN/HOME activity is present.-->
         <activity android:name=".FallbackHome"
