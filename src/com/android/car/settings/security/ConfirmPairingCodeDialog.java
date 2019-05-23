@@ -30,19 +30,16 @@ import com.android.car.settings.R;
 public class ConfirmPairingCodeDialog extends DialogFragment {
     /** Identifier for the dialog which confirms the pairing code. */
     public static final String TAG = "confirm_pairing_code_dialog";
-    private static final String DEVICE_NAME_KEY = "deviceName";
     private static final String PAIRING_CODE_KEY = "pairingCode";
     private ConfirmPairingCodeListener mConfirmPairingCodeListener;
 
     /**
      * Factory method for creating a ConfirmPairingCodeFragment
      *
-     * @param deviceName  the name of current connected device
      * @param pairingCode the pairing code sent by the connected device
      */
-    public static ConfirmPairingCodeDialog newInstance(String deviceName, String pairingCode) {
+    public static ConfirmPairingCodeDialog newInstance(String pairingCode) {
         Bundle args = new Bundle();
-        args.putString(DEVICE_NAME_KEY, deviceName);
         args.putString(PAIRING_CODE_KEY, pairingCode);
 
         ConfirmPairingCodeDialog dialog = new ConfirmPairingCodeDialog();
@@ -58,11 +55,9 @@ public class ConfirmPairingCodeDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Bundle args = getArguments();
-        String deviceName = args.getString(DEVICE_NAME_KEY);
         String pairingCode = args.getString(PAIRING_CODE_KEY);
         return new AlertDialog.Builder(getContext())
-                .setTitle(getContext().getString(R.string.trusted_device_pairing_code_dialog_title,
-                        deviceName))
+                .setTitle(getContext().getString(R.string.trusted_device_pairing_code_dialog_title))
                 .setMessage(pairingCode)
                 .setPositiveButton(R.string.trusted_device_confirm_button, (dialog, which) -> {
                     if (mConfirmPairingCodeListener != null) {
