@@ -44,8 +44,12 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-setup-wizard-lib-utils \
       SettingsLib
 
-  LOCAL_RESOURCE_DIR := \
-      $(LOCAL_PATH)/res
+  # Including the resources for the static android libraries allows this app to pick up their static overlays.
+  LOCAL_RESOURCE_DIR += \
+      $(LOCAL_PATH)/res \
+      $(LOCAL_PATH)/../libs/car-apps-common/res \
+      $(LOCAL_PATH)/../libs/car-settings-lib/res \
+      $(LOCAL_PATH)/../../../../frameworks/base/packages/SettingsLib/res
 
   LOCAL_CERTIFICATE := platform
 
@@ -101,8 +105,11 @@ ifeq (,$(TARGET_BUILD_APPS))
       SettingsLib
 
   LOCAL_RESOURCE_DIR := \
+      $(LOCAL_PATH)/res \
       $(LOCAL_PATH)/tests/robotests/res \
-      $(LOCAL_PATH)/res
+      $(LOCAL_PATH)/../libs/car-apps-common/res \
+      $(LOCAL_PATH)/../libs/car-settings-lib/res \
+      $(LOCAL_PATH)/../../../../frameworks/base/packages/SettingsLib/res
 
   LOCAL_CERTIFICATE := platform
 
