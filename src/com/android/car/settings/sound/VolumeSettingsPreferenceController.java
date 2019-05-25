@@ -142,7 +142,8 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         SeekBarPreference preference = new SeekBarPreference(getContext());
         preference.setTitle(getContext().getString(titleId));
         preference.setIcon(getContext().getDrawable(iconResId));
-        preference.getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+        preference.getIcon().setTintList(
+                Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
         try {
             preference.setValue(mCarAudioManager.getGroupVolume(volumeGroupId));
             preference.setMin(mCarAudioManager.getGroupMinVolume(volumeGroupId));
