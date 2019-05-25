@@ -25,13 +25,12 @@ import android.os.storage.StorageManager;
 import android.os.storage.VolumeInfo;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.SettingsFragment;
 import com.android.settingslib.applications.ApplicationsState;
 
 /**
  * Lists all installed applications and their summary.
  */
-public class ApplicationsSettingsFragment extends SettingsFragment {
+public class ApplicationsSettingsFragment extends AppListFragment {
 
     private ApplicationListItemManager mAppListItemManager;
 
@@ -57,7 +56,7 @@ public class ApplicationsSettingsFragment extends SettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAppListItemManager.startLoading(/* AppFilter= */ null, ApplicationsState.ALPHA_COMPARATOR);
+        mAppListItemManager.startLoading(getAppFilter(), ApplicationsState.ALPHA_COMPARATOR);
     }
 
     @Override
@@ -70,5 +69,15 @@ public class ApplicationsSettingsFragment extends SettingsFragment {
     public void onStop() {
         super.onStop();
         mAppListItemManager.onFragmentStop();
+    }
+
+    @Override
+    protected void onToggleShowSystemApps(boolean showSystem) {
+        mAppListItemManager.rebuildWithFilter(getAppFilter());
+    }
+
+    private ApplicationsState.AppFilter getAppFilter() {
+        return shouldShowSystemApps() ? null
+                : ApplicationsState.FILTER_DOWNLOADED_AND_LAUNCHER_AND_INSTANT;
     }
 }

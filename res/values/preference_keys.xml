@@ -225,6 +225,8 @@
 
     <!-- Storage -->
     <string name="pk_storage_music_audio" translatable="false">storage_music_audio</string>
+    <string name="pk_storage_music_audio_files" translatable="false">storage_music_audio_files
+    </string>
     <string name="pk_storage_music_audio_details" translatable="false">storage_music_audio_details
     </string>
     <string name="pk_storage_other_apps" translatable="false">storage_other_apps</string>
@@ -258,6 +260,14 @@
     <string name="pk_default_notification" translatable="false">default_notification</string>
     <string name="pk_default_alarm" translatable="false">default_alarm</string>
     <string name="pk_sounds_extra_settings" translatable="false">sounds_extra_settings</string>
+
+    <!-- Units Settings -->
+    <string name="pk_units_settings_entry" translatable="false">units_settings_entry</string>
+    <string name="pk_units_distance_and_volume" translatable="false">units_distance_and_volume</string>
+    <string name="pk_units_speed">units_speed</string>
+    <string name="pk_units_fuel_consumption">units_fuel_consumption</string>
+    <string name="pk_units_temperature">units_temperature</string>
+    <string name="pk_units_pressure">units_pressure</string>
 
     <!-- Location Settings -->
     <string name="pk_location_recent_requests_entry" translatable="false">

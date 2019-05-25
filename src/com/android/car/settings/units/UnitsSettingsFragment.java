@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright (C) 2019 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,27 +14,20 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.applications.specialaccess;
+package com.android.car.settings.units;
 
-import androidx.annotation.XmlRes;
+import androidx.annotation.LayoutRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.applications.AppListFragment;
+import com.android.car.settings.common.SettingsFragment;
 
-/**
- * Displays apps which have requested to control Wi-Fi settings and their current allowed status.
- */
-public class WifiControlFragment extends AppListFragment {
+/** Fragment to host Units-related preferences. */
+public class UnitsSettingsFragment extends SettingsFragment {
 
     @Override
-    @XmlRes
+    @LayoutRes
     protected int getPreferenceScreenResId() {
-        return R.xml.wifi_control_fragment;
+        return R.xml.units_fragment;
     }
 
-    @Override
-    protected void onToggleShowSystemApps(boolean showSystem) {
-        use(WifiControlPreferenceController.class, R.string.pk_wifi_control).setShowSystem(
-                showSystem);
-    }
 }
