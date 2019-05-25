@@ -255,6 +255,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".bluetooth.BluetoothRequestPermissionActivity"
+                  android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
+                <action android:name="android.bluetooth.adapter.action.REQUEST_DISABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".accounts.AddAccountActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
                   android:configChanges="orientation|keyboardHidden|screenSize"/>
