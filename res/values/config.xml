@@ -27,7 +27,7 @@
     <!-- Whether premium SMS should be shown or not. -->
     <bool name="config_show_premium_sms">true</bool>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
-    <bool name="config_show_settings_root_exit_icon">false</bool>
+    <bool name="config_show_settings_root_exit_icon">true</bool>
     <!-- Whether all preferences should always ignore UX Restrictions -->
     <bool name="config_always_ignore_ux_restrictions">false</bool>
     <!-- Array of Preference Keys that ignore UX Restrictions -->
