@@ -431,13 +431,22 @@
     <!-- Units Settings -->
     <!-- Units Settings title [CHAR LIMIT=10] -->
     <string name="units_settings">Units</string>
-    <string name="units_distance_and_volume_title">Distance and volume</string>
     <string name="units_speed_title">Speed</string>
+    <string name="units_distance_title">Distance</string>
     <string name="units_fuel_consumption_title">Fuel consumption</string>
-    <string name="units_battery_consumption_title">Energy consumption</string>
+    <string name="units_energy_consumption_title">Energy consumption</string>
     <string name="units_temperature_title">Temperature</string>
+    <string name="units_volume_title">Volume</string>
     <string name="units_pressure_title">Pressure</string>
 
+    <!--Units list entry, it shows the unit abbreviation (not translated) and then the same unit as it is pronounced, in that order. (e.g. mph - Miles per hour) [CHAR LIMIT = 120] -->
+    <string name="units_list_entry"><xliff:g example="mph" id="unit_abbreviation">%1$s</xliff:g> - <xliff:g example="Miles per hour" id="unit_pronunciation">%2$s</xliff:g></string>
+    <!--Units template for ratio units with numerators and denominators [CHAR LIMIT = 50]-->
+    <string name="units_ratio"><xliff:g example="km" id="unit_numerator">%1$s</xliff:g>/<xliff:g example="h" id="unit_denominator">%2$s</xliff:g></string>
+    <!--Units numerator part that can be used in ratio units string template-->
+    <string name="units_ratio_numerator"><xliff:g example="10" id="unit_numerator_quantity">%1$d</xliff:g><xliff:g example="kWh" id="unit_numerator_unit">%2$s</xliff:g></string>
+    <!--Units denominator part that can be used in ratio units string template-->
+    <string name="units_ratio_denominator"><xliff:g example="100" id="unit_denominator_quantity">%1$d</xliff:g><xliff:g example="mi" id="unit_denominator_unit">%2$s</xliff:g></string>
     <!-- Meter per Second Unit as it is pronounced [CHAR LIMIT=50]-->
     <string name="units_unit_name_meter_per_sec">Meter per Second</string>
     <!-- Revolutions per Minute Unit as it is pronounced [CHAR LIMIT=50]-->
