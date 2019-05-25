@@ -71,7 +71,8 @@ public class BluetoothDeviceNamePreferenceController extends
         }
         preference.setTitle(cachedDevice.getName());
         preference.setIcon(pair.first);
-        preference.getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+        preference.getIcon().setTintList(
+                Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
         preference.setSummary(summaryJoiner.toString());
     }
 

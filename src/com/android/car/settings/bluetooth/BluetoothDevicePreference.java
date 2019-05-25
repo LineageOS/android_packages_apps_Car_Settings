@@ -82,7 +82,7 @@ public class BluetoothDevicePreference extends ButtonPreference {
                 .getBtClassDrawableWithDescription(getContext(), mCachedDevice);
         if (pair.first != null) {
             setIcon(pair.first);
-            getIcon().setTint(Themes.getAttrColor(getContext(), R.attr.iconColor));
+            getIcon().setTintList(Themes.getAttrColorStateList(getContext(), R.attr.iconColor));
         }
 
         setEnabled(!mCachedDevice.isBusy());
