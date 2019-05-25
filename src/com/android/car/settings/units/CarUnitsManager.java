@@ -109,7 +109,7 @@ public class CarUnitsManager {
         List<Integer> availableUnitsId = new ArrayList<Integer>();
         List<Unit> units = new ArrayList<Unit>();
 
-        if (configs.get(0) == null) {
+        if (configs == null || configs.size() < 1 || configs.get(0) == null) {
             return null;
         }
 

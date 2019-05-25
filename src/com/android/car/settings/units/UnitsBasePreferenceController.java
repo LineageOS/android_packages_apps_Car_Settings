@@ -26,6 +26,7 @@ import android.content.Context;
 import androidx.annotation.CallSuper;
 import androidx.preference.ListPreference;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.annotations.VisibleForTesting;
@@ -151,8 +152,9 @@ public abstract class UnitsBasePreferenceController extends PreferenceController
     }
 
     protected String generateEntryStringFromUnit(Unit unit) {
-        return getContext().getString(unit.getAbbreviationResId()) + " - "
-                + getContext().getString(unit.getNameResId());
+        return getContext().getString(R.string.units_list_entry,
+                getContext().getString(unit.getAbbreviationResId()),
+                getContext().getString(unit.getNameResId()));
     }
 
     protected String[] getIdsOfSupportedUnits() {

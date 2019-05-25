@@ -24,10 +24,10 @@ import androidx.preference.ListPreference;
 
 import com.android.car.settings.common.FragmentController;
 
-/** Controls {@link Unit} used for HVAC Temperature Display. */
-public class UnitsTemperaturePreferenceController extends UnitsBasePreferenceController {
+/** Controls {@link Unit} used for Pressure Display. */
+public class UnitsPressurePreferenceController extends UnitsBasePreferenceController {
 
-    public UnitsTemperaturePreferenceController(Context context, String preferenceKey,
+    public UnitsPressurePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
@@ -39,6 +39,6 @@ public class UnitsTemperaturePreferenceController extends UnitsBasePreferenceCon
 
     @Override
     protected int getPropertyId() {
-        return VehiclePropertyIds.HVAC_TEMPERATURE_DISPLAY_UNITS;
+        return VehiclePropertyIds.TIRE_PRESSURE_DISPLAY_UNITS;
     }
 }
