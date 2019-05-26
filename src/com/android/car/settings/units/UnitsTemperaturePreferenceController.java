@@ -28,8 +28,7 @@ import com.android.car.settings.common.FragmentController;
 public class UnitsTemperaturePreferenceController extends UnitsBasePreferenceController {
 
     public UnitsTemperaturePreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController,
-            CarUxRestrictions uxRestrictions) {
+            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
