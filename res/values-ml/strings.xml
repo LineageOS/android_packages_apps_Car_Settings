@@ -154,6 +154,12 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ഹോട്ട്‌സ്പോട്ടും ‌ടെതറിംഗും"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ഹോട്ട്‌സ്‌പോട്ട് സ്വയമേവ ഓഫാക്കുക"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ഉപകരണങ്ങളൊന്നും കണക്‌റ്റ് ചെയ്‌തില്ലെങ്കിൽ വൈഫൈ ഹോട്ട്‌സ്‌പോട്ട് ഓഫാകും"</string>
+    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
+    <skip />
+    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
+    <skip />
+    <!-- no translation found for wifi_error (3105105447117289410) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"പേരിടാത്ത ഉപകരണം"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ജോടിയാക്കിയ ഉപകരണങ്ങൾ"</string>
@@ -170,6 +176,18 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"ലഭ്യമായ ഉപകരണങ്ങൾ"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"പ്രൊഫൈലുകള്‍‌"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <skip />
+    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth ജോടിയാക്കൽ അഭ്യർത്ഥന"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ജോടിയാക്കി കണ‌ക്‌റ്റ് ചെയ്യുക"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth ജോടിയാക്കൽ കോഡ്"</string>
@@ -183,6 +201,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"സാധാരണ 0000 അല്ലെങ്കിൽ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ജോടിയാക്കൽ അഭ്യർത്ഥന"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്ന ഉപകരണവുമായി ജോടിയാക്കാൻ ടാപ്പ് ചെയ്യുക."</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth ഉപകരണം തിരഞ്ഞെടുക്കുക"</string>
     <string name="language_settings" msgid="2079258598337245546">"ഭാഷകൾ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ഭാഷകളും ഇൻപുട്ടും"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"കീബോർഡ്"</string>
@@ -204,6 +223,102 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ഫോണിന്റെ റിംഗ്ടോൺ"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ഡിഫോൾട്ടായ അറിയിപ്പ് ശബ്‌ദം"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ഡിഫോൾട്ടായ അലാറം ശബ്‌ദം"</string>
+    <!-- no translation found for units_settings (402325305096925886) -->
+    <skip />
+    <!-- no translation found for units_speed_title (7115143916747108160) -->
+    <skip />
+    <!-- no translation found for units_distance_title (6257691565990474635) -->
+    <skip />
+    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
+    <skip />
+    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
+    <skip />
+    <!-- no translation found for units_temperature_title (22994498606206991) -->
+    <skip />
+    <!-- no translation found for units_volume_title (1912873077839446914) -->
+    <skip />
+    <!-- no translation found for units_pressure_title (7477179239294531518) -->
+    <skip />
+    <!-- no translation found for units_list_entry (7277796571051055840) -->
+    <skip />
+    <!-- no translation found for units_ratio (1085608614216280006) -->
+    <skip />
+    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
+    <skip />
+    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
+    <skip />
+    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
+    <skip />
+    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
+    <skip />
+    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
+    <skip />
+    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
+    <skip />
+    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
+    <skip />
+    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
+    <skip />
+    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
+    <skip />
+    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
+    <skip />
+    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
+    <skip />
+    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
+    <skip />
+    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
+    <skip />
+    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
+    <skip />
+    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
+    <skip />
+    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
+    <skip />
+    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
+    <skip />
+    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
+    <skip />
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ആപ്പുകളും അറിയിപ്പുകളും"</string>
     <string name="all_applications" msgid="7798210477486822168">"എല്ലാ ആപ്പുകളും കാണിക്കൂ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ഡിഫോൾട്ട് ആപ്പുകൾ"</string>
@@ -231,8 +346,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> അധിക അനുമതികൾ</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> അധിക അനുമതി</item>
     </plurals>
-    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
-    <skip />
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"കുറിപ്പ്: റീബൂട്ട് ചെയ്‌ത ശേഷം, വാഹനം അൺലോക്ക് ചെയ്യുന്നത് വരെ ഈ ആപ്പിന് പ്രവർത്തനം തുടങ്ങാൻ കഴിയില്ല."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"അസിസ്‌റ്റും വോയ്‌സ് ഇൻപുട്ടും"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"സഹായ ആപ്പ്"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"സ്ക്രീനിലെ ടെക്‌സ്‌റ്റ് ഉപയോഗിക്കുക"</string>
@@ -278,6 +392,7 @@
     <string name="usage_access_description" msgid="2413168719257435422">"നിങ്ങൾ മറ്റ് ഏതെല്ലാം ആപ്പുകൾ ഉപയോഗിക്കുന്നുണ്ടെന്നും അവ എത്ര തവണ ഉപയോഗിക്കുന്നുണ്ടെന്നും നിങ്ങളുടെ സേവനദാതാവ്, ഭാഷാ ക്രമീകരണം എന്നിവയും മറ്റ് വിശദാംശങ്ങളും ട്രാക്ക് ചെയ്യാനും ഉപയോഗ ആക്‌സസ് ആപ്പിനെ അനുവദിക്കുന്നു."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"വൈഫൈ നിയന്ത്രണം"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"വൈഫൈ ഓണാക്കാനോ ഓഫാക്കാനോ, സ്‌കാൻ ചെയ്‌ത് വൈഫൈ നെറ്റ്‌വർക്കുകളിലേക്ക് കണക്‌റ്റ് ചെയ്യാനും നെറ്റ്‌വർക്കുകൾ ചേർക്കാനോ നീക്കം ചെയ്യാനോ, ഉപകരണം ഉള്ളിടത്ത് മാത്രം പ്രവർത്തിക്കുന്ന ഹോട്ട്‌സ്‌പോട്ട് ആരംഭിക്കാനോ വൈഫൈ നിയന്ത്രണം ആപ്പിനെ അനുവദിക്കുന്നു."</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"കൂടുതൽ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ലൊക്കേഷൻ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകൾ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"അടുത്തിടെയുള്ള ലൊക്കേഷൻ അഭ്യർത്ഥനകളൊന്നുമില്ല"</string>
@@ -358,7 +473,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"മായ്‌ക്കുന്നു"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"കാത്തിരിക്കുക..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"തീയതിയും സമയവും"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"തീയതിയും സമയവും സജ്ജമാക്കുക"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"തീയതി, സമയം, സമയ മേഖല, ഫോർമാറ്റുകൾ എന്നിവ സജ്ജീകരിക്കുക"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"സ്വമേധയാ ഉള്ള തീയതിയും സമയവും"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"നെറ്റ്‌വർക്ക് നൽകുന്ന സമയം ഉപയോഗിക്കുക"</string>
@@ -572,7 +686,8 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. നിങ്ങളുടെ ഫോണിൽ സഹകാരി ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-ന് ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ ഫീച്ചറുകൾ തിരിച്ചറിയാനാവുന്നില്ല. നിങ്ങളുടെ കാർ പരിരക്ഷിക്കാൻ സഹായിക്കുന്നതിന്, നിങ്ങൾ മുമ്പേ തന്നെ അൺലോക്ക് ചെയ്‌തെങ്കിൽ മാത്രമേ ഉപകരണത്തിന് കാർ അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകൂ. നിങ്ങളുടെ കാർ മറ്റാരുടെയെങ്കിലും പക്കൽ ആണെങ്കിൽ പോലും, അത് സമീപത്തുണ്ടെങ്കിൽ നിങ്ങളുടെ വിശ്വസ്‌ത ഉപകരണത്തിന് അത് അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകും."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എന്നതിനെ ഒരു വിശ്വസ്‌ത ഉപകരണമായി ചേർക്കുക"</string>
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
+    <skip />
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ഫോൺ എൻറോൾ ചെയ്‌തു"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>

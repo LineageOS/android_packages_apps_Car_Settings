@@ -154,6 +154,12 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot en tethering"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automatisch uitschakelen"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-hotspot wordt uitgeschakeld als er geen apparaten verbonden zijn"</string>
+    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
+    <skip />
+    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
+    <skip />
+    <!-- no translation found for wifi_error (3105105447117289410) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Naamloos apparaat"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Gekoppelde apparaten"</string>
@@ -170,6 +176,18 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Beschikbare apparaten"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profielen"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <skip />
+    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-koppelingsverzoek"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Koppelen en verbinden"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-koppelingscode"</string>
@@ -183,6 +201,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Meestal 0000 of 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Koppelingsverzoek"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Tik om te koppelen met <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth-apparaat kiezen"</string>
     <string name="language_settings" msgid="2079258598337245546">"Talen"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Talen en invoer"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Toetsenbord"</string>
@@ -194,16 +213,112 @@
     <string name="tts_pitch" msgid="2389171233852604923">"Hoogte"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Resetten"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Geluid"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"Beltoonvolume"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"Ringtonevolume"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigatievolume"</string>
-    <string name="incoming_call_volume_title" msgid="6972117872424656876">"Beltoon"</string>
+    <string name="incoming_call_volume_title" msgid="6972117872424656876">"Ringtone"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Melding"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Media"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"Volume voor muziek en video\'s instellen"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarm"</string>
-    <string name="ringtone_title" msgid="8370531086214517972">"Beltoon telefoon"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"Ringtone telefoon"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Standaard meldingsgeluid"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Standaard wekkergeluid"</string>
+    <!-- no translation found for units_settings (402325305096925886) -->
+    <skip />
+    <!-- no translation found for units_speed_title (7115143916747108160) -->
+    <skip />
+    <!-- no translation found for units_distance_title (6257691565990474635) -->
+    <skip />
+    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
+    <skip />
+    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
+    <skip />
+    <!-- no translation found for units_temperature_title (22994498606206991) -->
+    <skip />
+    <!-- no translation found for units_volume_title (1912873077839446914) -->
+    <skip />
+    <!-- no translation found for units_pressure_title (7477179239294531518) -->
+    <skip />
+    <!-- no translation found for units_list_entry (7277796571051055840) -->
+    <skip />
+    <!-- no translation found for units_ratio (1085608614216280006) -->
+    <skip />
+    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
+    <skip />
+    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
+    <skip />
+    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
+    <skip />
+    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
+    <skip />
+    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
+    <skip />
+    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
+    <skip />
+    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
+    <skip />
+    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
+    <skip />
+    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
+    <skip />
+    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
+    <skip />
+    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
+    <skip />
+    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
+    <skip />
+    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
+    <skip />
+    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
+    <skip />
+    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
+    <skip />
+    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
+    <skip />
+    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
+    <skip />
+    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
+    <skip />
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps en meldingen"</string>
     <string name="all_applications" msgid="7798210477486822168">"Alle apps weergeven"</string>
     <string name="default_applications" msgid="1558183275638697087">"Standaard-apps"</string>
@@ -231,8 +346,7 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> aanvullende rechten</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> aanvullend recht</item>
     </plurals>
-    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
-    <skip />
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Opmerking: Na opnieuw opstarten kan deze app pas worden gestart nadat je je voertuig hebt ontgrendeld."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"De Assistent en spraakinvoer"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"App voor assistentie"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Tekst van scherm gebruiken"</string>
@@ -278,6 +392,7 @@
     <string name="usage_access_description" msgid="2413168719257435422">"Met gebruikstoegang kan een app bijhouden welke andere apps je gebruikt (en hoe vaak), welke provider je hebt, je taalinstellingen en andere details."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wifi-beheer"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Met \'Wifi-beheer\' kun je een app toestaan om wifi in of uit te schakelen, wifi-netwerken te scannen en er verbinding mee te maken, netwerken toe te voegen of te verwijderen of een hotspot \'Alleen lokaal\' te starten."</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"Meer"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Locatie"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Recente locatieverzoeken"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Geen recente locatieverzoeken"</string>
@@ -358,7 +473,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Wissen"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Even geduld..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Datum en tijd"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Datum en tijd instellen"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Datum, tijd, tijdzone en notaties instellen"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Automatische datum en tijd"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Netwerktijd gebruiken"</string>
@@ -572,7 +686,8 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download de bijbehorende app op je telefoon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecteer <xliff:g id="CAR_NAME">%1$s</xliff:g> op je telefoon om de apparaten te koppelen"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock kan de beveiligingsfuncties van dit apparaat niet detecteren. Ter beveiliging van je auto kan het vertrouwde apparaat je auto alleen ontgrendeld houden nadat je deze zelf al hebt ontgrendeld. Je vertrouwde apparaat kan je auto ontgrendeld houden wanneer het in de buurt is, ook als iemand anders het apparaat vasthoudt."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> toevoegen als vertrouwd apparaat"</string>
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
+    <skip />
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"De telefoon is ingeschreven"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Inschrijving van <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislukt"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Als je een vertrouwd apparaat toevoegt, moet je daarna een verificatiemethode instellen. Als je je vertrouwde apparaat niet bij je hebt, is verificatie vereist voor toegang tot je profiel."</string>
