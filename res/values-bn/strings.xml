@@ -95,8 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"কানেক্ট"</string>
     <string name="wifi_password" msgid="5565632142720292397">"পাসওয়ার্ড"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"পাসওয়ার্ড দেখুন"</string>
-    <!-- no translation found for wifi_no_network_name (6819604337231313594) -->
-    <skip />
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"নেটওয়ার্কের নাম লিখুন"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"নেটওয়ার্কের নাম"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID লিখুন"</string>
     <string name="wifi_security" msgid="158358046038876532">"নিরাপত্তা"</string>
@@ -140,32 +139,27 @@
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> চালু করা হচ্ছে..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>-এর সাথে অন্য ডিভাইস কানেক্ট করা যেতে পারে"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"হটস্পটের পাসওয়ার্ড"</string>
-    <!-- no translation found for wifi_hotspot_security_title (2299925790743587725) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_wpa2_personal (7135181212837798318) -->
-    <skip />
-    <!-- no translation found for wifi_hotspot_security_none (2514844105085054386) -->
-    <skip />
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"নিরাপত্তা"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"কোনওটিই নয়"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP ব্যান্ড"</string>
-    <!-- no translation found for wifi_ap_band_config (6143905484067008736) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_auto (3779526909841604566) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_2G (6356913773766753502) -->
-    <skip />
-    <!-- no translation found for wifi_ap_choose_5G (8561440488455528673) -->
-    <skip />
-    <!-- no translation found for wifi_ap_prefer_5G (8252845223773871750) -->
-    <skip />
-    <!-- no translation found for wifi_ap_2G (5364135697314262014) -->
-    <skip />
-    <!-- no translation found for wifi_ap_5G (4945574428537860279) -->
-    <skip />
-    <!-- no translation found for wifi_ap_band_select_one (615578175244067396) -->
-    <skip />
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP ব্যান্ড বেছে নিন"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"অটো"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"২.৪ GHz ব্যান্ড"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"৫.০ GHz ব্যান্ড"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"বেছে নেওয়া ৫.০ GHz ব্যান্ড"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"২.৪ GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"৫.০ GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ওয়াই-ফাই হটস্পটের জন্য অন্তত একটি ব্যান্ড বেছে নিন:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"হটস্পট ও টিথারিং"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"নিজে থেকে হটস্পট বন্ধ করুন"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"কোনও ডিভাইস কানেক্ট করা না থাকলে ওয়াই-ফাই হটস্পট বন্ধ হয়ে যাবে"</string>
+    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
+    <skip />
+    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
+    <skip />
+    <!-- no translation found for wifi_error (3105105447117289410) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ব্লুটুথ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"নামবিহীন ডিভাইস"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"পেয়ার করা ডিভাইসগুলি"</string>
@@ -182,6 +176,18 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"উপলভ্য ডিভাইস"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"প্রোফাইলগুলি"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <skip />
+    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ব্লুটুথ পেয়ার করার অনুরোধ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"পেয়ার এবং কানেক্ট করুন"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ব্লুটুথ এর সাথে পেয়ার করার কোড"</string>
@@ -195,6 +201,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"সাধারণত ০০০০ বা ১২৩৪"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"পেয়ার করার অনুরোধ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> এর সঙ্গে পেয়ার করতে ট্যাপ করুন।"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"ব্লুটুথ ডিভাইস বেছে নিন"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষাগুলি ও ইনপুট"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"কীবোর্ড"</string>
@@ -216,6 +223,102 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ফোনের রিংটোন"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ডিফল্ট বিজ্ঞপ্তির সাউন্ড"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ডিফল্ট অ্যালার্মের শব্দ"</string>
+    <!-- no translation found for units_settings (402325305096925886) -->
+    <skip />
+    <!-- no translation found for units_speed_title (7115143916747108160) -->
+    <skip />
+    <!-- no translation found for units_distance_title (6257691565990474635) -->
+    <skip />
+    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
+    <skip />
+    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
+    <skip />
+    <!-- no translation found for units_temperature_title (22994498606206991) -->
+    <skip />
+    <!-- no translation found for units_volume_title (1912873077839446914) -->
+    <skip />
+    <!-- no translation found for units_pressure_title (7477179239294531518) -->
+    <skip />
+    <!-- no translation found for units_list_entry (7277796571051055840) -->
+    <skip />
+    <!-- no translation found for units_ratio (1085608614216280006) -->
+    <skip />
+    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
+    <skip />
+    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
+    <skip />
+    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
+    <skip />
+    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
+    <skip />
+    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
+    <skip />
+    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
+    <skip />
+    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
+    <skip />
+    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
+    <skip />
+    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
+    <skip />
+    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
+    <skip />
+    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
+    <skip />
+    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
+    <skip />
+    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
+    <skip />
+    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
+    <skip />
+    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
+    <skip />
+    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
+    <skip />
+    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
+    <skip />
+    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
+    <skip />
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"অ্যাপ ও বিজ্ঞপ্তি"</string>
     <string name="all_applications" msgid="7798210477486822168">"সব অ্যাপ দেখুন"</string>
     <string name="default_applications" msgid="1558183275638697087">"ডিফল্ট অ্যাপ"</string>
@@ -230,8 +333,7 @@
     <string name="uninstall_text" msgid="277907956072833012">"আনইনস্টল করুন"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"আপনি এই অ্যাপটি বন্ধ করলে, Android এবং অন্যান্য অ্যাপকে যে কাজের উদ্দেশ্যে তৈরি করা হয়েছিল সেগুলি আর কাজ নাও করতে পারে।"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"অ্যাপ বন্ধ করুন"</string>
-    <!-- no translation found for not_installed (4218816013370552746) -->
-    <skip />
+    <string name="not_installed" msgid="4218816013370552746">"এই ব্যবহারকারীর জন্য ইনস্টল করা নেই"</string>
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতিগুলি"</string>
     <string name="notifications_label" msgid="6586089149665170731">"বিজ্ঞপ্তি"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ভার্সন: %1$s"</string>
@@ -244,6 +346,7 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি অতিরিক্ত অনুমতি</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি অতিরিক্ত অনুমতি</item>
     </plurals>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"দ্রষ্টব্য: রিবুট করার পরে, আপনার গাড়ি আনলক না করা পর্যন্ত আপনি এই অ্যাপটিকে চালু করতে পারবেন না।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"অ্যাসিস্ট্যান্ট এবং ভয়েস ইনপুট"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"সহায়তা অ্যাপ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"স্ক্রিন থেকে টেক্সট ব্যবহার করুন"</string>
@@ -273,32 +376,23 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"এই অ্যাপে খুলবেন না"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"সমর্থিত লিঙ্ক"</string>
     <string name="special_access" msgid="5730278220917123811">"অ্যাপের বিশেষ অ্যাক্সেস"</string>
-    <!-- no translation found for show_system (4401355756969485287) -->
-    <skip />
-    <!-- no translation found for hide_system (8845453295584638040) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_title (4596320571562433972) -->
-    <skip />
-    <!-- no translation found for modify_system_settings_description (5295023124419592452) -->
-    <skip />
+    <string name="show_system" msgid="4401355756969485287">"সিস্টেম অ্যাপ দেখুন"</string>
+    <string name="hide_system" msgid="8845453295584638040">"সিস্টেম লুকান"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"সিস্টেম সেটিংস পরিবর্তন করুন"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটি কোনও অ্যাপকে সিস্টেম সেটিংস পরিবর্তন করার অনুমতি দেয়।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"বিজ্ঞপ্তির অ্যাক্সেস"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>-কে বিজ্ঞপ্তিতে অ্যাক্সেস দিতে চান?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> পরিচিতির নাম ও আপনার পাওয়া মেসেজের মত ব্যক্তিগত তথ্য সহ সমস্ত বিজ্ঞপ্তি পড়তে পারবেন। এটি আবার এর মধ্যে থাকা বিজ্ঞপ্তি বা নির্দিষ্ট কাজের বোতাম খারিজ করতে পারবে।\n\nএছাড়াও এটি এই অ্যাপকে \'বিরক্ত করবেন না\' বিকল্পটিকে চালু বা বন্ধ করার এবং সেই সংক্রান্ত সেটিংস পরিবর্তন করার সুবিধা দেয়।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-এর জন্য বিজ্ঞপ্তির অ্যাক্সেস বন্ধ করেন, তাহলে \'বিরক্ত করবে না\' এর অ্যাক্সেসও বন্ধ হয়ে যেতে পারে।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"বন্ধ করুন"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"বাতিল করুন"</string>
-    <!-- no translation found for premium_sms_access_title (1409118461646148686) -->
-    <skip />
-    <!-- no translation found for premium_sms_access_description (7119026067677052169) -->
-    <skip />
-    <!-- no translation found for usage_access_title (7153427122072303254) -->
-    <skip />
-    <!-- no translation found for usage_access_description (2413168719257435422) -->
-    <skip />
-    <!-- no translation found for wifi_control_title (5660436566907731929) -->
-    <skip />
-    <!-- no translation found for wifi_control_description (6021926850423169261) -->
-    <skip />
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"প্রিমিয়াম এসএমএস অ্যাক্সেস"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"প্রিমিয়াম এসএমএসের জন্য অর্থ খরচ হতে পারে এবং আপনার পরিষেবা প্রদানকারীর বিলে যোগ করা হবে৷ আপনি যদি কোনও অ্যাপের জন্য অনুমতি চালু করেন তাহলে আপনি সেই অ্যাপ ব্যবহার করে প্রিমিয়াম এসএমএস পাঠাতে পারবেন।"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"ব্যবহারের তথ্যে অ্যাক্সেস"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"ব্যবহার অ্যাক্সেস ফিচারের মাধ্যমে কোনও অ্যাপ, আপনি কী কী অ্যাপ ব্যবহার করছেন এবং কত ঘন ঘন ব্যবহার করছেন তা ট্র্যাক করতে পারে, এর পাশাপাশি আপনার পরিষেবা প্রদানকারী, ভাষা সেটিংস, এবং অন্যান্য বিষয়ে বিবরণ দেখতে পারে।"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"ওয়াই-ফাই কন্ট্রোল"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"ওয়াই-ফাই কন্ট্রোল সুবিধাটি কোনও অ্যাপকে ওয়াই-ফাই চালু অথবা বন্ধ করতে, ওয়াই-ফাই নেটওয়ার্ক স্ক্যান করে তাতে কানেক্ট করতে, নেটওয়ার্ক যোগ করতে বা মুছে ফেলতে অথবা শুধুমাত্র স্থানীয় ব্যবহারের জন্য হটস্পট চালু করতে অনুমতি দেয়।"</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"আরও"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
@@ -379,7 +473,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"মোছা হচ্ছে"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"অপেক্ষা করুন..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"দিন ও তারিখ"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"তারিখ ও সময় সেট করুন"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"তারিখ, সময়, টাইম জোন ও ফর্ম্যাট সেট করুন"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"অটোমেটিক তারিখ ও সময়"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"নেটওয়ার্ক প্রদত্ত সময় ব্যবহার করুন"</string>
@@ -593,7 +686,8 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপনার ফোনে কম্প্যানিয়ন অ্যাপ ডাউনলোড করুন"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock এই ডিভাইসের নিরাপত্তা বিষয়ক ফিচার শনাক্ত করতে পারে না। গাড়ি রক্ষায় সাহায্য করতে, আপনার গাড়ি আনলক করে রাখলেই বিশ্বস্ত ডিভাইস শুধুমাত্র আপনার গাড়িকে আনলক করতে পারবে। আপনার গাড়ি আশেপাশে থাকার সময় এমনকি যদি এটি অন্য কারও কাছে থাকে তাহলেও বিশ্বস্ত ডিভাইস আপনার গাড়িটি আনলক করতে পারবে।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-কে বিশ্বস্ত ডিভাইস হিসেবে যোগ করুন"</string>
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
+    <skip />
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফোনটি নথিভুক্ত করা হয়েছে"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"একটি বিশ্বস্ত ডিভাইস যোগ করার পর যাচাইকরণ পদ্ধতি সেট করতে হবে। যদি আপনার বিশ্বস্ত ডিভাইস হাতের কাছে না থাকে তাহলে আপনার প্রোফাইল অ্যাক্সেস করার জন্য যাচাইকরণ করা প্রয়োজন।"</string>
