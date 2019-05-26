@@ -154,6 +154,12 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ਹੌਟਸਪੌਟ ਅਤੇ ਟੈਦਰਿੰਗ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ਹੌਟਸਪੌਟ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਬੰਦ ਕਰੋ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ਕਿਸੇ ਵੀ ਡੀਵਾਈਸ ਦੇ ਨਾ ਕਨੈਕਟ ਹੋਣ \'ਤੇ ਵਾਈ-ਫਾਈ ਹੌਟਸਪੌਟ ਬੰਦ ਹੋ ਜਾਵੇਗਾ"</string>
+    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
+    <skip />
+    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
+    <skip />
+    <!-- no translation found for wifi_error (3105105447117289410) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ਬਲੂਟੁੱਥ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ਬੇਨਾਮ ਡੀਵਾਈਸ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ਜੋੜਾਬੱਧ ਕੀਤੇ ਡੀਵਾਈਸ"</string>
@@ -170,6 +176,18 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"ਉਪਲਬਧ ਡੀਵਾਈਸਾਂ"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"ਪ੍ਰੋਫਾਈਲਾਂ"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <skip />
+    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ਬਲੂਟੁੱਥ ਜੋੜਾਬੱਧ ਕਰਨ ਦੀ ਬੇਨਤੀ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ਜੋੜਾਬੱਧ ਕਰੋ ਅਤੇ ਕਨੈਕਟ ਕਰੋ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ਬਲੂਟੁੱਥ ਜੋੜਾਬੱਧਕਰਨ ਕੋਡ"</string>
@@ -183,6 +201,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ਆਮ ਤੌਰ \'ਤੇ 0000 ਜਾਂ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ਜੋੜਾਬੱਧ ਕਰਨ ਦੀ ਬੇਨਤੀ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨਾਲ ਜੋੜਾ ਬਣਾਉਣ ਲਈ ਟੈਪ ਕਰੋ।"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"ਬਲੂਟੁੱਥ ਡੀਵਾਈਸ ਚੁਣੋ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ਭਾਸ਼ਾਵਾਂ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਇਨਪੁੱਟ"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"ਕੀ-ਬੋਰਡ"</string>
@@ -204,6 +223,102 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ਫ਼ੋਨ ਦੀ ਰਿੰਗਟੋਨ"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਸੂਚਨਾ ਧੁਨੀ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਅਲਾਰਮ ਧੁਨੀ"</string>
+    <!-- no translation found for units_settings (402325305096925886) -->
+    <skip />
+    <!-- no translation found for units_speed_title (7115143916747108160) -->
+    <skip />
+    <!-- no translation found for units_distance_title (6257691565990474635) -->
+    <skip />
+    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
+    <skip />
+    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
+    <skip />
+    <!-- no translation found for units_temperature_title (22994498606206991) -->
+    <skip />
+    <!-- no translation found for units_volume_title (1912873077839446914) -->
+    <skip />
+    <!-- no translation found for units_pressure_title (7477179239294531518) -->
+    <skip />
+    <!-- no translation found for units_list_entry (7277796571051055840) -->
+    <skip />
+    <!-- no translation found for units_ratio (1085608614216280006) -->
+    <skip />
+    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
+    <skip />
+    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
+    <skip />
+    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
+    <skip />
+    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
+    <skip />
+    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
+    <skip />
+    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
+    <skip />
+    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
+    <skip />
+    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
+    <skip />
+    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
+    <skip />
+    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
+    <skip />
+    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
+    <skip />
+    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
+    <skip />
+    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
+    <skip />
+    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
+    <skip />
+    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
+    <skip />
+    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
+    <skip />
+    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
+    <skip />
+    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
+    <skip />
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ਐਪਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ"</string>
     <string name="all_applications" msgid="7798210477486822168">"ਸਾਰੀਆਂ ਐਪਾਂ ਦਿਖਾਓ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ਪੂਰਵ-ਨਿਰਧਾਰਤ ਐਪਾਂ"</string>
@@ -231,8 +346,7 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਵਧੀਕ ਇਜਾਜ਼ਤ</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਵਧੀਕ ਇਜਾਜ਼ਤਾਂ</item>
     </plurals>
-    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
-    <skip />
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ਨੋਟ ਕਰੋ: ਰੀਬੂਟ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਆਪਣਾ ਵਾਹਨ ਅਣਲਾਕ ਨਹੀਂ ਕਰਦੇ ਓਦੋਂ ਤੱਕ ਇਹ ਐਪ ਚਾਲੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"\'ਅਸਿਸਟੈਂਟ\' ਅਤੇ ਵੌਇਸ ਇਨਪੁਟ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"ਸਹਾਇਕ ਐਪ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ਸਕ੍ਰੀਨ ਤੋਂ ਲਿਖਤ ਵਰਤੋ"</string>
@@ -278,6 +392,7 @@
     <string name="usage_access_description" msgid="2413168719257435422">"ਵਰਤੋਂ ਪਹੁੰਚ ਕਿਸੇ ਐਪ ਨੂੰ ਇਹ ਨਜ਼ਰ ਰੱਖਣ ਦਿੰਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਕਿਹੜੀਆਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ ਅਤੇ ਕਿੰਨੀ ਵਾਰੀ, ਜਿਵੇਂ ਕਿ ਤੁਹਾਡਾ ਕੈਰੀਅਰ, ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ, ਅਤੇ ਹੋਰ ਵੇਰਵੇ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ਵਾਈ‑ਫਾਈ ਕੰਟਰੋਲ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ਵਾਈ-ਫਾਈ ਕੰਟਰੋਲ ਰਾਹੀਂ ਕੋਈ ਐਪ ਵਾਈ-ਫਾਈ ਚਾਲੂ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੀ ਹੈ, ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸਕੈਨ ਅਤੇ ਉਹਨਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦੀ ਹੈ, ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰ ਜਾਂ ਹਟਾ ਸਕਦੀ ਹੈ, ਜਾਂ ਸਿਰਫ਼-ਸਥਾਨਕ ਹੌਟਸਪੌਟ ਸ਼ੁਰੂ ਕਰ ਸਕਦੀ ਹੈ।"</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"ਹੋਰ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ਕੋਈ ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ ਨਹੀਂ"</string>
@@ -358,7 +473,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"ਮਿਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਸੈੱਟ ਕਰੋ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ਤਾਰੀਖ, ਸਮਾਂ, ਸਮਾਂ ਖੇਤਰ ਅਤੇ ਵੰਨਗੀ ਸੈੱਟ ਕਰੋ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ਸਵੈਚਲਿਤ ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"ਨੈੱਟਵਰਕ ਵੱਲੋਂ ਮੁਹੱਈਆ ਕਰਵਾਇਆ ਸਮਾਂ ਵਰਤੋ"</string>
@@ -572,7 +686,8 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ ਸੰਬੰਧੀ ਐਪ ਡਾਊਨਲੋਡ ਕਰੋ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ਡੀਵਾਈਸਾਂ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ <xliff:g id="CAR_NAME">%1$s</xliff:g> ਚੁਣੋ"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"ਸਮਾਰਟ ਲਾਕ ਇਸ ਡੀਵਾਈਸ ਦੀਆਂ ਸੁਰੱਖਿਆ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਪਤਾ ਨਹੀਂ ਲਗਾ ਸਕਦਾ। ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਲਈ, ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨੂੰ ਸਿਰਫ਼ ਤਾਂ ਹੀ ਅਣਲਾਕ ਰੱਖ ਸਕੇਗਾ, ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਕਾਰ ਨੂੰ ਅਣਲਾਕ ਕੀਤਾ ਹੋਵੇ। ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਤੁਹਾਡੀ ਕਾਰ ਨਜ਼ਦੀਕ ਹੋਣ \'ਤੇ ਉਸਨੂੰ ਅਣਲਾਕ ਰੱਖ ਸਕਦਾ ਹੈ, ਭਾਵੇਂ ਡੀਵਾਈਸ ਨੂੰ ਕਿਸੇ ਹੋਰ ਨੇ ਫੜ੍ਹਿਆ ਹੋਵੇ।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਵਜੋਂ ਸ਼ਾਮਲ ਕਰੋ"</string>
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
+    <skip />
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ਫ਼ੋਨ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਦਰਜ ਕੀਤਾ ਗਿਆ"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਦਰਜ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਅੱਗੇ ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣੀਕਰਨ ਵਿਧੀ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਫ਼ਾਈਲ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।"</string>

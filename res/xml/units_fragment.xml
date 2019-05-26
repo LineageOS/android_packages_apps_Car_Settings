@@ -18,8 +18,45 @@
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
                   android:title="@string/units_settings" >
     <ListPreference
+        android:key="@string/pk_units_speed"
+        android:title="@string/units_speed_title"
+        android:dialogTitle="@string/units_speed_title"
+        settings:controller="com.android.car.settings.units.UnitsSpeedPreferenceController"/>
+
+    <ListPreference
+        android:key="@string/pk_units_distance"
+        android:title="@string/units_distance_title"
+        android:dialogTitle="@string/units_distance_title"
+        settings:controller="com.android.car.settings.units.UnitsDistancePreferenceController"/>
+
+    <ListPreference
+        android:key="@string/pk_units_fuel_consumption"
+        android:title="@string/units_fuel_consumption_title"
+        android:dialogTitle="@string/units_fuel_consumption_title"
+        settings:controller="com.android.car.settings.units.UnitsFuelConsumptionPreferenceController"/>
+
+    <ListPreference
+        android:key="@string/pk_units_energy_consumption"
+        android:title="@string/units_energy_consumption_title"
+        android:dialogTitle="@string/units_energy_consumption_title"
+        settings:controller="com.android.car.settings.units.UnitsEnergyConsumptionPreferenceController"/>
+
+    <ListPreference
         android:key="@string/pk_units_temperature"
         android:title="@string/units_temperature_title"
         android:dialogTitle="@string/units_temperature_title"
         settings:controller="com.android.car.settings.units.UnitsTemperaturePreferenceController"/>
+
+    <ListPreference
+        android:key="@string/pk_units_volume"
+        android:title="@string/units_volume_title"
+        android:dialogTitle="@string/units_volume_title"
+        settings:controller="com.android.car.settings.units.UnitsVolumePreferenceController"/>
+
+    <ListPreference
+        android:key="@string/pk_units_pressure"
+        android:title="@string/units_pressure_title"
+        android:dialogTitle="@string/units_pressure_title"
+        settings:controller="com.android.car.settings.units.UnitsPressurePreferenceController"/>
+
 </PreferenceScreen>

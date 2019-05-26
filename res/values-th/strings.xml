@@ -154,6 +154,12 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"ฮอตสปอตและการเชื่อมต่ออินเทอร์เน็ตผ่านมือถือ"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"ปิดฮอตสปอตโดยอัตโนมัติ"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"ฮอตสปอต Wi‑Fi จะปิดถ้าไม่มีอุปกรณ์ที่เชื่อมต่อ"</string>
+    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
+    <skip />
+    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
+    <skip />
+    <!-- no translation found for wifi_error (3105105447117289410) -->
+    <skip />
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"บลูทูธ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"อุปกรณ์ไม่มีชื่อ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"อุปกรณ์ที่จับคู่"</string>
@@ -170,6 +176,18 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"อุปกรณ์ที่ใช้ได้"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"การตั้งค่า"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <skip />
+    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
+    <skip />
+    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"คำขอจับคู่อุปกรณ์บลูทูธ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"จับคู่อุปกรณ์และเชื่อมต่อ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"รหัสการจับคู่บลูทูธ"</string>
@@ -183,6 +201,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ปกติจะเป็น 0000 หรือ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"คำขอจับคู่อุปกรณ์"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"แตะเพื่อจับคู่กับ <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"เลือกอุปกรณ์บลูทูธ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ภาษา"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ภาษาและการป้อนข้อมูล"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"แป้นพิมพ์"</string>
@@ -204,6 +223,102 @@
     <string name="ringtone_title" msgid="8370531086214517972">"เสียงเรียกเข้าของโทรศัพท์"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"เสียงการแจ้งเตือนเริ่มต้น"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"เสียงปลุกเริ่มต้น"</string>
+    <!-- no translation found for units_settings (402325305096925886) -->
+    <skip />
+    <!-- no translation found for units_speed_title (7115143916747108160) -->
+    <skip />
+    <!-- no translation found for units_distance_title (6257691565990474635) -->
+    <skip />
+    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
+    <skip />
+    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
+    <skip />
+    <!-- no translation found for units_temperature_title (22994498606206991) -->
+    <skip />
+    <!-- no translation found for units_volume_title (1912873077839446914) -->
+    <skip />
+    <!-- no translation found for units_pressure_title (7477179239294531518) -->
+    <skip />
+    <!-- no translation found for units_list_entry (7277796571051055840) -->
+    <skip />
+    <!-- no translation found for units_ratio (1085608614216280006) -->
+    <skip />
+    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
+    <skip />
+    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
+    <skip />
+    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
+    <skip />
+    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
+    <skip />
+    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
+    <skip />
+    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
+    <skip />
+    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
+    <skip />
+    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
+    <skip />
+    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
+    <skip />
+    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
+    <skip />
+    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
+    <skip />
+    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
+    <skip />
+    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
+    <skip />
+    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
+    <skip />
+    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
+    <skip />
+    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
+    <skip />
+    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
+    <skip />
+    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
+    <skip />
+    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
+    <skip />
+    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
+    <skip />
+    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
+    <skip />
+    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
+    <skip />
+    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
+    <skip />
+    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
+    <skip />
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"แอปและการแจ้งเตือน"</string>
     <string name="all_applications" msgid="7798210477486822168">"แสดงแอปทั้งหมด"</string>
     <string name="default_applications" msgid="1558183275638697087">"แอปเริ่มต้น"</string>
@@ -231,8 +346,7 @@
       <item quantity="other">สิทธิ์เพิ่มเติม <xliff:g id="COUNT_1">%d</xliff:g> รายการ</item>
       <item quantity="one">สิทธิ์เพิ่มเติม <xliff:g id="COUNT_0">%d</xliff:g> รายการ</item>
     </plurals>
-    <!-- no translation found for direct_boot_unaware_dialog_message_car (2857599310518724080) -->
-    <skip />
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"หมายเหตุ: หลังจากรีบูต แอปนี้จะเริ่มทำงานไม่ได้จนกว่าคุณจะปลดล็อกยานพาหนะ"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ผู้ช่วยและป้อนข้อมูลด้วยเสียง"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"แอปผู้ช่วย"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ใช้ข้อความจากหน้าจอ"</string>
@@ -278,6 +392,7 @@
     <string name="usage_access_description" msgid="2413168719257435422">"การเข้าถึงการใช้งานทำให้แอปติดตามได้ว่าคุณกำลังใช้แอปอื่นใดอยู่บ้างในความถี่มากน้อยเท่าใด ตลอดจนทราบข้อมูลผู้ให้บริการ การตั้งค่าภาษา และรายละเอียดอื่นๆ"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"การควบคุม Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"การควบคุม Wi-Fi จะอนุญาตให้แอปเปิดหรือปิด Wi-Fi, สแกนหาและเชื่อมต่อเครือข่าย Wi-Fi, เพิ่มหรือนำเครือข่ายออก หรือเริ่มฮอตสปอตในพื้นที่เท่านั้น"</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"เพิ่มเติม"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ตำแหน่ง"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
@@ -358,7 +473,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"กำลังลบ"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"โปรดรอสักครู่..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"วันที่และเวลา"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ตั้งวันที่และเวลา"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ตั้งวันที่ เวลา เขตเวลาและรูปแบบ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"วันที่และเวลาอัตโนมัติ"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"ใช้เวลาที่ระบุโดยเครือข่าย"</string>
@@ -572,7 +686,8 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ดาวน์โหลดแอปที่ใช้ร่วมกันในโทรศัพท์"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ไม่พบฟีเจอร์ความปลอดภัยของอุปกรณ์นี้ เพื่อช่วยปกป้องรถยนต์ของคุณ อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้ก็ต่อเมื่อคุณเป็นผู้ปลดล็อกไว้แล้วเท่านั้น อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้เมื่ออยู่ใกล้กันแม้ว่าผู้อื่นจะเป็นคนถืออุปกรณ์ก็ตาม"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"เพิ่ม <xliff:g id="DEVICE_NAME">%1$s</xliff:g> เป็นอุปกรณ์ที่เชื่อถือได้"</string>
+    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
+    <skip />
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ลงทะเบียนโทรศัพท์เรียบร้อยแล้ว"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ในการเพิ่มอุปกรณ์ที่เชื่อถือได้ คุณจำเป็นต้องกำหนดวิธีการตรวจสอบสิทธิ์ในขั้นถัดไป หากไม่มีอุปกรณ์ที่เชื่อถือได้ ระบบจะขอให้มีการตรวจสอบสิทธิ์ในการเข้าถึงโปรไฟล์ของคุณ"</string>
