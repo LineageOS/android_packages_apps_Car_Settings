@@ -169,6 +169,12 @@ final class BluetoothUtils {
         editor.apply();
     }
 
+    static void persistDiscoverableEndTimestamp(Context context, long endTimestamp) {
+        SharedPreferences.Editor editor = getSharedPreferences(context).edit();
+        editor.putLong(KEY_DISCOVERABLE_END_TIMESTAMP, endTimestamp);
+        editor.apply();
+    }
+
     public static LocalBluetoothManager getLocalBtManager(Context context) {
         return LocalBluetoothManager.getInstance(context, mOnInitCallback);
     }

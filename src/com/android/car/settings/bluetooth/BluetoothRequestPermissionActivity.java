@@ -32,47 +32,72 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.text.TextUtils;
+import android.util.Log;
+
+import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.settingslib.bluetooth.BluetoothDiscoverableTimeoutReceiver;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 /**
- * Code drop from {@link com.android.settings.bluetooth.RequestPermissionActivity}.
- *
  * This {@link Activity} handles requests to toggle Bluetooth by collecting user
- * consent and waiting until the state change is completed.
+ * consent and waiting until the state change is completed. It can also be used to make the device
+ * explicitly discoverable for a given amount of time.
  */
-public class BluetoothRequestPermissionActivity extends Activity implements
-        DialogInterface.OnClickListener, DialogInterface.OnCancelListener {
+public class BluetoothRequestPermissionActivity extends Activity {
     private static final Logger LOG = new Logger(BluetoothRequestPermissionActivity.class);
-    private static final int REQUEST_UNKNOWN = 0;
-    private static final int REQUEST_ENABLE = 1;
-    private static final int REQUEST_DISABLE = 2;
+
+    @VisibleForTesting
+    static final int REQUEST_UNKNOWN = 0;
+    @VisibleForTesting
+    static final int REQUEST_ENABLE = 1;
+    @VisibleForTesting
+    static final int REQUEST_DISABLE = 2;
+    @VisibleForTesting
+    static final int REQUEST_ENABLE_DISCOVERABLE = 3;
+
+    private static final int DISCOVERABLE_TIMEOUT_TWO_MINUTES = 120;
+    private static final int DISCOVERABLE_TIMEOUT_ONE_HOUR = 3600;
+
+    @VisibleForTesting
+    static final int DEFAULT_DISCOVERABLE_TIMEOUT = DISCOVERABLE_TIMEOUT_TWO_MINUTES;
+    @VisibleForTesting
+    static final int MAX_DISCOVERABLE_TIMEOUT = DISCOVERABLE_TIMEOUT_ONE_HOUR;
+
+    private AlertDialog mDialog;
     private int mRequest;
+    private int mTimeout = DEFAULT_DISCOVERABLE_TIMEOUT;
+
     @NonNull
     private CharSequence mAppLabel;
     private LocalBluetoothAdapter mLocalBluetoothAdapter;
     private LocalBluetoothManager mLocalBluetoothManager;
-    private AlertDialog mDialog;
     private StateChangeReceiver mReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setResult(Activity.RESULT_CANCELED);
-
         mRequest = parseIntent();
         if (mRequest == REQUEST_UNKNOWN) {
-            finish();
+            finishWithResult(RESULT_CANCELED);
             return;
         }
 
-        mReceiver = new StateChangeReceiver();
+        mLocalBluetoothManager = LocalBluetoothManager.getInstance(
+                getApplicationContext(), /* onInitCallback= */ null);
+        if (mLocalBluetoothManager == null) {
+            LOG.e("Bluetooth is not supported on this device");
+            finishWithResult(RESULT_CANCELED);
+        }
+
+        mLocalBluetoothAdapter = mLocalBluetoothManager.getBluetoothAdapter();
 
         int btState = mLocalBluetoothAdapter.getState();
+        Log.e("TEST_TEST", "request: " + mRequest + " state: " + btState);
         switch (mRequest) {
             case REQUEST_DISABLE:
                 switch (btState) {
@@ -83,12 +108,13 @@ public class BluetoothRequestPermissionActivity extends Activity implements
 
                     case BluetoothAdapter.STATE_ON:
                     case BluetoothAdapter.STATE_TURNING_ON:
-                        createDecisionDialog();
+                        mDialog = createRequestDisableBluetoothDialog();
+                        mDialog.show();
                         break;
 
                     default:
                         LOG.e("Unknown adapter state: " + btState);
-                        finish();
+                        finishWithResult(RESULT_CANCELED);
                         break;
                 }
                 break;
@@ -96,163 +122,90 @@ public class BluetoothRequestPermissionActivity extends Activity implements
                 switch (btState) {
                     case BluetoothAdapter.STATE_OFF:
                     case BluetoothAdapter.STATE_TURNING_OFF:
-                        createDecisionDialog();
+                        mDialog = createRequestEnableBluetoothDialog();
+                        mDialog.show();
                         break;
-
                     case BluetoothAdapter.STATE_ON:
+                    case BluetoothAdapter.STATE_TURNING_ON:
                         proceedAndFinish();
                         break;
                     default:
                         LOG.e("Unknown adapter state: " + btState);
-                        finish();
+                        finishWithResult(RESULT_CANCELED);
                         break;
                 }
-        }
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mReceiver.register();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        mReceiver.unregister();
-    }
-
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-        switch (which) {
-            case DialogInterface.BUTTON_POSITIVE:
-                proceedAndFinish();
                 break;
-
-            case DialogInterface.BUTTON_NEGATIVE:
-                onCancel(/* dialog = */ null);
-                break;
-        }
-    }
-
-    @Override
-    public void onCancel(DialogInterface dialog) {
-        setResult(Activity.RESULT_CANCELED);
-        finish();
-    }
-
-    private void createInterimDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(/* context = */ this);
-
-        switch (mRequest) {
-            case REQUEST_ENABLE:
-                builder.setMessage(getString(R.string.bluetooth_turning_on));
-                break;
-            default:
-                builder.setMessage(getString(R.string.bluetooth_turning_off));
-                break;
-        }
-        builder.setCancelable(false).setOnCancelListener(/* listener = */ this);
-
-        mDialog = builder.create();
-        mDialog.show();
-    }
-
-    private void createDecisionDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(/* context= */ this);
-        switch (mRequest) {
-            case REQUEST_ENABLE:
-                builder.setMessage(
-                        mAppLabel != null ? getString(R.string.bluetooth_ask_enablement,
-                                mAppLabel)
-                                : getString(R.string.bluetooth_ask_enablement_no_name));
-                break;
-
-            case REQUEST_DISABLE: {
-                builder.setMessage(
-                        mAppLabel != null ? getString(R.string.bluetooth_ask_disablement, mAppLabel)
-                                : getString(R.string.bluetooth_ask_disablement_no_name));
-                break;
-            }
-        }
-
-        builder.setPositiveButton(R.string.allow, this::decisionDialogPositiveButtonListener)
-                .setNegativeButton(R.string.deny, (dialog, which) -> onCancel(/* dialog = */ null))
-                .setOnCancelListener(/* listener = */ this);
-
-        mDialog = builder.create();
-        mDialog.show();
-    }
-
-    private void decisionDialogPositiveButtonListener(DialogInterface dialog, int which) {
-        dialog.dismiss();
-
-        if (!hasUserRestriction()) {
-            switch (mRequest) {
-                case REQUEST_ENABLE:
-                    if (mLocalBluetoothAdapter.getState() == BluetoothAdapter.STATE_ON) {
-                        proceedAndFinish();
-                    } else {
-                        // If BT is not up yet, show "Turning on Bluetooth..."
-                        createInterimDialog();
-                    }
-                    break;
-
-                case REQUEST_DISABLE:
-                    if (mLocalBluetoothAdapter.getState() == BluetoothAdapter.STATE_OFF) {
-                        proceedAndFinish();
-                    } else {
-                        // If BT is not up yet, show "Turning off Bluetooth..."
-                        createInterimDialog();
-                    }
-                    break;
-
-                default:
-                    finish();
-                    break;
-            }
-        }
-    }
-
-    private boolean hasUserRestriction() {
-        switch (mRequest) {
-            case REQUEST_ENABLE:
-                UserManager userManager = getSystemService(UserManager.class);
-                if (userManager.hasUserRestriction(UserManager.DISALLOW_BLUETOOTH)) {
-                    // If Bluetooth is disallowed, don't try to enable it, show policy
-                    // transparency
-                    // message instead.
-                    DevicePolicyManager dpm = getSystemService(DevicePolicyManager.class);
-                    Intent intent = dpm.createAdminSupportIntent(
-                            UserManager.DISALLOW_BLUETOOTH);
-                    if (intent != null) {
-                        startActivity(intent);
-                    }
-
-                    return true;
-                } else {
-                    mLocalBluetoothAdapter.enable();
+            case REQUEST_ENABLE_DISCOVERABLE:
+                switch (btState) {
+                    case BluetoothAdapter.STATE_OFF:
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                    case BluetoothAdapter.STATE_TURNING_ON:
+                        /*
+                         * Strictly speaking STATE_TURNING_ON belong with STATE_ON; however, BT
+                         * may not be ready when the user clicks yes and we would fail to turn on
+                         * discovery mode. We still show the dialog and handle this case via the
+                         * broadcast receiver.
+                         */
+                        mDialog = createRequestEnableBluetoothDialogWithTimeout(mTimeout);
+                        mDialog.show();
+                        break;
+                    case BluetoothAdapter.STATE_ON:
+                        mDialog = createDiscoverableConfirmDialog(mTimeout);
+                        mDialog.show();
+                        break;
+                    default:
+                        LOG.e("Unknown adapter state: " + btState);
+                        finishWithResult(RESULT_CANCELED);
+                        break;
                 }
                 break;
-
-            case REQUEST_DISABLE: {
-                mLocalBluetoothAdapter.disable();
-            }
-            break;
         }
+    }
 
-        return false;
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mReceiver != null) {
+            unregisterReceiver(mReceiver);
+        }
     }
 
     private void proceedAndFinish() {
+        if (mRequest == REQUEST_ENABLE_DISCOVERABLE) {
+            finishWithResult(setDiscoverable(mTimeout));
+        } else {
+            finishWithResult(RESULT_OK);
+        }
+    }
+
+    // Returns the code that should be used to finish the activity.
+    private int setDiscoverable(int timeoutSeconds) {
+        if (!mLocalBluetoothAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE,
+                timeoutSeconds)) {
+            return RESULT_CANCELED;
+        }
+
+        // If already in discoverable mode, this will extend the timeout.
+        long endTime = System.currentTimeMillis() + (long) timeoutSeconds * 1000;
+        BluetoothUtils.persistDiscoverableEndTimestamp(/* context= */ this, endTime);
+        if (timeoutSeconds > 0) {
+            BluetoothDiscoverableTimeoutReceiver.setDiscoverableAlarm(/* context= */ this, endTime);
+        }
+
+        int returnCode = timeoutSeconds;
+        return returnCode < RESULT_FIRST_USER ? RESULT_FIRST_USER : returnCode;
+    }
+
+    private void finishWithResult(int result) {
         if (mDialog != null) {
             mDialog.dismiss();
         }
+        setResult(result);
         finish();
     }
 
     private int parseIntent() {
-        int request = REQUEST_UNKNOWN;
+        int request;
         Intent intent = getIntent();
         if (intent == null) {
             return REQUEST_UNKNOWN;
@@ -265,6 +218,15 @@ public class BluetoothRequestPermissionActivity extends Activity implements
             case BluetoothAdapter.ACTION_REQUEST_DISABLE:
                 request = REQUEST_DISABLE;
                 break;
+            case BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE:
+                request = REQUEST_ENABLE_DISCOVERABLE;
+                mTimeout = intent.getIntExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION,
+                        DEFAULT_DISCOVERABLE_TIMEOUT);
+
+                if (mTimeout < 1 || mTimeout > MAX_DISCOVERABLE_TIMEOUT) {
+                    mTimeout = DEFAULT_DISCOVERABLE_TIMEOUT;
+                }
+                break;
             default:
                 LOG.e("Error: this activity may be started only with intent "
                         + BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -273,7 +235,7 @@ public class BluetoothRequestPermissionActivity extends Activity implements
 
         String packageName = getCallingPackage();
         if (TextUtils.isEmpty(packageName)) {
-            packageName = getIntent().getStringExtra(Intent.EXTRA_PACKAGE_NAME);
+            packageName = intent.getStringExtra(Intent.EXTRA_PACKAGE_NAME);
         }
         if (!TextUtils.isEmpty(packageName)) {
             try {
@@ -286,63 +248,175 @@ public class BluetoothRequestPermissionActivity extends Activity implements
             }
         }
 
-        mLocalBluetoothManager = LocalBluetoothManager.getInstance(
-                getApplicationContext(), /* onInitCallback= */ null);
-        if (mLocalBluetoothManager == null) {
-            LOG.e("Bluetooth is not supported on this device");
-            return REQUEST_UNKNOWN;
-        }
-
-        mLocalBluetoothAdapter = mLocalBluetoothManager.getBluetoothAdapter();
-        if (mLocalBluetoothAdapter == null) {
-            LOG.e("Error: there's a problem starting Bluetooth");
-            return REQUEST_UNKNOWN;
-        }
-
         return request;
     }
 
+    private AlertDialog createWaitingDialog() {
+        int message = mRequest == REQUEST_DISABLE ? R.string.bluetooth_turning_off
+                : R.string.bluetooth_turning_on;
+
+        return new AlertDialog.Builder(/* context= */ this)
+                .setMessage(message)
+                .setCancelable(false).setOnCancelListener(
+                        dialog -> finishWithResult(RESULT_CANCELED))
+                .create();
+    }
+
+    // Assumes {@code timeoutSeconds} > 0.
+    private AlertDialog createDiscoverableConfirmDialog(int timeoutSeconds) {
+        String message = mAppLabel != null
+                ? getString(R.string.bluetooth_ask_discovery, mAppLabel, timeoutSeconds)
+                : getString(R.string.bluetooth_ask_discovery_no_name, timeoutSeconds);
+
+        return new AlertDialog.Builder(/* context= */ this)
+                .setMessage(message)
+                .setPositiveButton(R.string.allow, (dialog, which) -> proceedAndFinish())
+                .setNegativeButton(R.string.deny,
+                        (dialog, which) -> finishWithResult(RESULT_CANCELED))
+                .setOnCancelListener(dialog -> finishWithResult(RESULT_CANCELED))
+                .create();
+    }
+
+    private AlertDialog createRequestEnableBluetoothDialog() {
+        String message = mAppLabel != null
+                ? getString(R.string.bluetooth_ask_enablement, mAppLabel)
+                : getString(R.string.bluetooth_ask_enablement_no_name);
+
+        return new AlertDialog.Builder(/* context= */ this)
+                .setMessage(message)
+                .setPositiveButton(R.string.allow, this::onConfirmEnableBluetooth)
+                .setNegativeButton(R.string.deny,
+                        (dialog, which) -> finishWithResult(RESULT_CANCELED))
+                .setOnCancelListener(dialog -> finishWithResult(RESULT_CANCELED))
+                .create();
+    }
+
+    // Assumes {@code timeoutSeconds} > 0.
+    private AlertDialog createRequestEnableBluetoothDialogWithTimeout(int timeoutSeconds) {
+        String message = mAppLabel != null
+                ? getString(R.string.bluetooth_ask_enablement_and_discovery, mAppLabel,
+                        timeoutSeconds)
+                : getString(R.string.bluetooth_ask_enablement_and_discovery_no_name,
+                        timeoutSeconds);
+
+        return new AlertDialog.Builder(/* context= */ this)
+                .setMessage(message)
+                .setPositiveButton(R.string.allow, this::onConfirmEnableBluetooth)
+                .setNegativeButton(R.string.deny,
+                        (dialog, which) -> finishWithResult(RESULT_CANCELED))
+                .setOnCancelListener(dialog -> finishWithResult(RESULT_CANCELED))
+                .create();
+    }
+
+    private void onConfirmEnableBluetooth(DialogInterface dialog, int which) {
+        UserManager userManager = getSystemService(UserManager.class);
+        if (userManager.hasUserRestriction(UserManager.DISALLOW_BLUETOOTH)) {
+            // If Bluetooth is disallowed, don't try to enable it, show policy
+            // transparency message instead.
+            DevicePolicyManager dpm = getSystemService(DevicePolicyManager.class);
+            Intent intent = dpm.createAdminSupportIntent(
+                    UserManager.DISALLOW_BLUETOOTH);
+            if (intent != null) {
+                startActivity(intent);
+            }
+            return;
+        }
+
+        mLocalBluetoothAdapter.enable();
+
+        int desiredState = BluetoothAdapter.STATE_ON;
+        if (mLocalBluetoothAdapter.getState() == desiredState) {
+            proceedAndFinish();
+        } else {
+            // Register this receiver to listen for state change after the enabling has started.
+            mReceiver = new StateChangeReceiver(desiredState);
+            registerReceiver(mReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+
+            if (mRequest == REQUEST_ENABLE) {
+                // Show dialog while waiting for enabling to complete.
+                mDialog = createWaitingDialog();
+            } else {
+                mDialog = createDiscoverableConfirmDialog(mTimeout);
+            }
+            mDialog.show();
+        }
+    }
+
+    private AlertDialog createRequestDisableBluetoothDialog() {
+        String message = mAppLabel != null
+                ? getString(R.string.bluetooth_ask_disablement, mAppLabel)
+                : getString(R.string.bluetooth_ask_disablement_no_name);
+
+        return new AlertDialog.Builder(/* context= */ this)
+                .setMessage(message)
+                .setPositiveButton(R.string.allow, this::onConfirmDisableBluetooth)
+                .setNegativeButton(R.string.deny,
+                        (dialog, which) -> finishWithResult(RESULT_CANCELED))
+                .setOnCancelListener(dialog -> finishWithResult(RESULT_CANCELED))
+                .create();
+    }
+
+    private void onConfirmDisableBluetooth(DialogInterface dialog, int which) {
+        mLocalBluetoothAdapter.disable();
+
+        int desiredState = BluetoothAdapter.STATE_OFF;
+        if (mLocalBluetoothAdapter.getState() == desiredState) {
+            proceedAndFinish();
+        } else {
+            // Register this receiver to listen for state change after the disabling has started.
+            mReceiver = new StateChangeReceiver(desiredState);
+            registerReceiver(mReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
+
+            // Show dialog while waiting for disabling to complete.
+            mDialog = createWaitingDialog();
+            mDialog.show();
+        }
+    }
+
+    @VisibleForTesting
+    int getRequestType() {
+        return mRequest;
+    }
+
+    @VisibleForTesting
+    int getTimeout() {
+        return mTimeout;
+    }
+
+    @VisibleForTesting
+    AlertDialog getCurrentDialog() {
+        return mDialog;
+    }
+
+    /**
+     * Listens for bluetooth state changes and finishes the activity if changed to the desired
+     * state. If the desired bluetooth state is not received in time, the activity is finished with
+     * {@link Activity#RESULT_CANCELED}.
+     */
     private final class StateChangeReceiver extends BroadcastReceiver {
         private static final long TOGGLE_TIMEOUT_MILLIS = 10000; // 10 sec
+        private final int mDesiredState;
 
-        StateChangeReceiver() {
+        StateChangeReceiver(int desiredState) {
+            mDesiredState = desiredState;
+
             getWindow().getDecorView().postDelayed(() -> {
                 if (!isFinishing() && !isDestroyed()) {
-                    onCancel(null);
+                    finishWithResult(RESULT_CANCELED);
                 }
             }, TOGGLE_TIMEOUT_MILLIS);
         }
 
-        public void register() {
-            registerReceiver(/* receiver= */ this,
-                    new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
-        }
-
-        public void unregister() {
-            unregisterReceiver(/* receiver= */ this);
-        }
-
+        @Override
         public void onReceive(Context context, Intent intent) {
-            Activity activity = BluetoothRequestPermissionActivity.this;
             if (intent == null) {
                 return;
             }
+
             int currentState = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
                     BluetoothDevice.ERROR);
-            switch (mRequest) {
-                case REQUEST_ENABLE:
-                    if (currentState == BluetoothAdapter.STATE_ON) {
-                        activity.setResult(Activity.RESULT_OK);
-                        proceedAndFinish();
-                    }
-                    break;
-
-                case REQUEST_DISABLE:
-                    if (currentState == BluetoothAdapter.STATE_OFF) {
-                        activity.setResult(Activity.RESULT_OK);
-                        proceedAndFinish();
-                    }
-                    break;
+            if (mDesiredState == currentState) {
+                proceedAndFinish();
             }
         }
     }
