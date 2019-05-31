@@ -176,17 +176,19 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"இணைப்பிற்குக் கிடைக்கும் சாதனங்கள்"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"புளூடூத் சுயவிவரங்கள்"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"புளூடூத்தை ஆன் செய்கிறது…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"புளூடூத்தை ஆஃப் செய்கிறது…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"புளூடூத்தை ஆன் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸ் அனுமதி கேட்கிறது"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"புளூடூத்தை ஆஃப் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸ் அனுமதி கேட்கிறது"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"புளூடூத்தை ஆன் செய்ய ஓர் ஆப்ஸ் அனுமதி கேட்கிறது"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"புளூடூத்தை ஆஃப் செய்ய ஓர் ஆப்ஸ் அனுமதி கேட்கிறது"</string>
+    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
     <skip />
-    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
     <skip />
-    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
     <skip />
-    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
     <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"புளூடூத் இணைப்பிற்கான கோரிக்கை"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ஜோடி சேர்த்து, இணை"</string>
@@ -201,8 +203,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"பொதுவாக 0000 அல்லது 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"இணைப்பிற்கான கோரிக்கை"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> உடன் இணைக்க, தட்டவும்."</string>
-    <!-- no translation found for bluetooth_device_picker (673238198452345475) -->
-    <skip />
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"புளூடூத் சாதனத்தைத் தேர்வுசெய்க"</string>
     <string name="language_settings" msgid="2079258598337245546">"மொழிகள்"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"மொழிகள் &amp; உள்ளீடு"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"கீபோர்டு"</string>
@@ -228,26 +229,19 @@
     <skip />
     <!-- no translation found for units_speed_title (7115143916747108160) -->
     <skip />
-    <!-- no translation found for units_distance_title (6257691565990474635) -->
-    <skip />
+    <string name="units_distance_title" msgid="6257691565990474635">"தொலைவு"</string>
     <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
     <skip />
-    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
-    <skip />
+    <string name="units_energy_consumption_title" msgid="2775408854562057609">"ஆற்றல் நுகர்வு"</string>
     <!-- no translation found for units_temperature_title (22994498606206991) -->
     <skip />
-    <!-- no translation found for units_volume_title (1912873077839446914) -->
-    <skip />
+    <string name="units_volume_title" msgid="1912873077839446914">"ஒலியளவு"</string>
     <!-- no translation found for units_pressure_title (7477179239294531518) -->
     <skip />
-    <!-- no translation found for units_list_entry (7277796571051055840) -->
-    <skip />
-    <!-- no translation found for units_ratio (1085608614216280006) -->
-    <skip />
-    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
-    <skip />
-    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
-    <skip />
+    <string name="units_list_entry" msgid="7277796571051055840">"<xliff:g id="UNIT_ABBREVIATION">%1$s</xliff:g> - <xliff:g id="UNIT_PRONUNCIATION">%2$s</xliff:g>"</string>
+    <string name="units_ratio" msgid="1085608614216280006">"<xliff:g id="UNIT_NUMERATOR">%1$s</xliff:g>/<xliff:g id="UNIT_DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="units_ratio_numerator" msgid="3462102280813794384">"<xliff:g id="UNIT_NUMERATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_NUMERATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_ratio_denominator" msgid="6737154450651499228">"<xliff:g id="UNIT_DENOMINATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_DENOMINATOR_UNIT">%2$s</xliff:g>"</string>
     <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
     <skip />
     <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
@@ -393,8 +387,7 @@
     <string name="usage_access_description" msgid="2413168719257435422">"’உபயோக அணுகல்’ மூலம் நீங்கள் வேறு எந்தெந்த ஆப்ஸை எவ்வளவு அடிக்கடி பயன்படுத்துகிறீர்கள் என்பதை அறிந்துகொள்ளும் அனுமதியை ஆப்ஸிற்கு வழங்கலாம். உங்கள் மொபைல் நிறுவனம், மொழி அமைப்புகள் மற்றும் பிற விவரங்களையும் அறிந்து கொள்ளும் அனுமதியும் இதில் அடங்கும்."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"வைஃபை அணுகல்"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"’வைஃபை கட்டுப்பாடு’ மூலம் ஆப்ஸிலிருந்து வைஃபையை ஆன் அல்லது ஆஃப் செய்யலாம், வைஃபை நெட்வொர்க்குகளை ஸ்கேன் செய்து இணைக்கலாம், நெட்வொர்க்குகளைச் சேர்க்ககலாம் அல்லது அகற்றலாம் அல்லது சாதனத்திற்குள் மட்டும் இயங்கும் ஹாட்ஸ்பாட்டைத் தொடங்கலாம்."</string>
-    <!-- no translation found for more_special_access_title (166115485446645971) -->
-    <skip />
+    <string name="more_special_access_title" msgid="166115485446645971">"மேலும்"</string>
     <string name="location_settings_title" msgid="901334356682423679">"இடம்"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள்"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"இருப்பிடத் தகவல் குறித்த சமீபத்திய கோரிக்கைகள் இல்லை"</string>
