@@ -158,12 +158,9 @@
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot a tethering"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatické vypnutí hotspotu"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Pokud nebudou připojena žádná zařízení, hotspot Wi-Fi se vypne"</string>
-    <!-- no translation found for wifi_ask_enable (4452418245680754578) -->
-    <skip />
-    <!-- no translation found for wifi_ask_disable (2949290055916181553) -->
-    <skip />
-    <!-- no translation found for wifi_error (3105105447117289410) -->
-    <skip />
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"Aplikace <xliff:g id="REQUESTER">%s</xliff:g> chce zapnout Wi-Fi"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"Aplikace <xliff:g id="REQUESTER">%s</xliff:g> chce vypnout Wi-Fi"</string>
+    <string name="wifi_error" msgid="3105105447117289410">"Chyba"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"Zařízení bez názvu"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Spárovaná zařízení"</string>
@@ -180,17 +177,19 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"Dostupná zařízení"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"Profily"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <!-- no translation found for bluetooth_turning_on (7046983059601710414) -->
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"Zapínání Bluetooth…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"Vypínání Bluetooth…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"Aplikace <xliff:g id="APP_NAME">%1$s</xliff:g> chce zapnout Bluetooth"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"Aplikace <xliff:g id="APP_NAME">%1$s</xliff:g> chce vypnout Bluetooth"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikace chce zapnout Bluetooth"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikace chce vypnout Bluetooth"</string>
+    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
     <skip />
-    <!-- no translation found for bluetooth_turning_off (1753975097241024061) -->
+    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
     <skip />
-    <!-- no translation found for bluetooth_ask_enablement (8565428400407368667) -->
+    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
     <skip />
-    <!-- no translation found for bluetooth_ask_disablement (6056441896274912839) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_no_name (3191739265037605547) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_disablement_no_name (5694464250599567283) -->
+    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
     <skip />
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Požadavek na párování zařízení Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Párovat a připojit"</string>
@@ -227,102 +226,54 @@
     <string name="ringtone_title" msgid="8370531086214517972">"Vyzváněcí tón telefonu"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"Výchozí zvuk oznámení"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"Výchozí zvuk budíku"</string>
-    <!-- no translation found for units_settings (402325305096925886) -->
-    <skip />
-    <!-- no translation found for units_speed_title (7115143916747108160) -->
-    <skip />
-    <!-- no translation found for units_distance_title (6257691565990474635) -->
-    <skip />
-    <!-- no translation found for units_fuel_consumption_title (6415108114453652570) -->
-    <skip />
-    <!-- no translation found for units_energy_consumption_title (2775408854562057609) -->
-    <skip />
-    <!-- no translation found for units_temperature_title (22994498606206991) -->
-    <skip />
-    <!-- no translation found for units_volume_title (1912873077839446914) -->
-    <skip />
-    <!-- no translation found for units_pressure_title (7477179239294531518) -->
-    <skip />
-    <!-- no translation found for units_list_entry (7277796571051055840) -->
-    <skip />
-    <!-- no translation found for units_ratio (1085608614216280006) -->
-    <skip />
-    <!-- no translation found for units_ratio_numerator (3462102280813794384) -->
-    <skip />
-    <!-- no translation found for units_ratio_denominator (6737154450651499228) -->
-    <skip />
-    <!-- no translation found for units_unit_name_meter_per_sec (9151123661434898991) -->
-    <skip />
-    <!-- no translation found for units_unit_name_rpm (4084216808160262380) -->
-    <skip />
-    <!-- no translation found for units_unit_name_hertz (5373975672472735625) -->
-    <skip />
-    <!-- no translation found for units_unit_name_percentile (1630667431830186060) -->
-    <skip />
-    <!-- no translation found for units_unit_name_millimeter (318832924604375755) -->
-    <skip />
-    <!-- no translation found for units_unit_name_meter (4778344873095502130) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilometer (4351417123421381297) -->
-    <skip />
-    <!-- no translation found for units_unit_name_mile (8337486880403419613) -->
-    <skip />
-    <!-- no translation found for units_unit_name_celsius (1642787068882598698) -->
-    <skip />
-    <!-- no translation found for units_unit_name_fahrenheit (7617395181535026095) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kelvin (4043908998904418360) -->
-    <skip />
-    <!-- no translation found for units_unit_name_milliliter (2735564290593738653) -->
-    <skip />
-    <!-- no translation found for units_unit_name_liter (2682609997247920434) -->
-    <skip />
-    <!-- no translation found for units_unit_name_us_gallon (2991675590060288099) -->
-    <skip />
-    <!-- no translation found for units_unit_name_imperial_gallon (7827144733136304182) -->
-    <skip />
-    <!-- no translation found for units_unit_name_nano_secs (7258767560309570567) -->
-    <skip />
-    <!-- no translation found for units_unit_name_secs (2282853373442592245) -->
-    <skip />
-    <!-- no translation found for units_unit_name_year (8237348390239986270) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilopascal (371397110720444118) -->
-    <skip />
-    <!-- no translation found for units_unit_name_watt_hour (1581554497071668301) -->
-    <skip />
-    <!-- no translation found for units_unit_name_milliampere (4477388320207031153) -->
-    <skip />
-    <!-- no translation found for units_unit_name_millivolt (4730384331465782188) -->
-    <skip />
-    <!-- no translation found for units_unit_name_milliwatts (6689028603486588098) -->
-    <skip />
-    <!-- no translation found for units_unit_name_ampere_hour (6139925422033142476) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilowatt_hour (4282251431283475831) -->
-    <skip />
-    <!-- no translation found for units_unit_name_psi (9199487304284041266) -->
-    <skip />
-    <!-- no translation found for units_unit_name_miles_per_hour (3988395919988136895) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilometers_per_hour (8243061370606677881) -->
-    <skip />
-    <!-- no translation found for units_unit_name_bar (4051903414466411804) -->
-    <skip />
-    <!-- no translation found for units_unit_name_degrees (47944625323398947) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilowatt_per_hundred_miles (715836273168653604) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilowatt_per_hundred_kilometers (2761254652642587883) -->
-    <skip />
-    <!-- no translation found for units_unit_name_miles_per_gallon_us (3911349970584135950) -->
-    <skip />
-    <!-- no translation found for units_unit_name_miles_per_gallon_uk (7700318800709988481) -->
-    <skip />
-    <!-- no translation found for units_unit_name_kilometers_per_liter (8769902235588571155) -->
-    <skip />
-    <!-- no translation found for units_unit_name_liter_per_hundred_kilometers (4867647387452453552) -->
-    <skip />
+    <string name="units_settings" msgid="402325305096925886">"Jednotky"</string>
+    <string name="units_speed_title" msgid="7115143916747108160">"Rychlost"</string>
+    <string name="units_distance_title" msgid="6257691565990474635">"Vzdálenost"</string>
+    <string name="units_fuel_consumption_title" msgid="6415108114453652570">"Spotřeba paliva"</string>
+    <string name="units_energy_consumption_title" msgid="2775408854562057609">"Spotřeba energie"</string>
+    <string name="units_temperature_title" msgid="22994498606206991">"Teplota"</string>
+    <string name="units_volume_title" msgid="1912873077839446914">"Hlasitost"</string>
+    <string name="units_pressure_title" msgid="7477179239294531518">"Tlak"</string>
+    <string name="units_list_entry" msgid="7277796571051055840">"<xliff:g id="UNIT_ABBREVIATION">%1$s</xliff:g>–<xliff:g id="UNIT_PRONUNCIATION">%2$s</xliff:g>"</string>
+    <string name="units_ratio" msgid="1085608614216280006">"<xliff:g id="UNIT_NUMERATOR">%1$s</xliff:g>/<xliff:g id="UNIT_DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="units_ratio_numerator" msgid="3462102280813794384">"<xliff:g id="UNIT_NUMERATOR_QUANTITY">%1$d</xliff:g> <xliff:g id="UNIT_NUMERATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_ratio_denominator" msgid="6737154450651499228">"<xliff:g id="UNIT_DENOMINATOR_QUANTITY">%1$d</xliff:g> <xliff:g id="UNIT_DENOMINATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_unit_name_meter_per_sec" msgid="9151123661434898991">"Metr za sekundu"</string>
+    <string name="units_unit_name_rpm" msgid="4084216808160262380">"Otáčky za minutu"</string>
+    <string name="units_unit_name_hertz" msgid="5373975672472735625">"Hertz"</string>
+    <string name="units_unit_name_percentile" msgid="1630667431830186060">"Percentil"</string>
+    <string name="units_unit_name_millimeter" msgid="318832924604375755">"Milimetr"</string>
+    <string name="units_unit_name_meter" msgid="4778344873095502130">"Metr"</string>
+    <string name="units_unit_name_kilometer" msgid="4351417123421381297">"Kilometr"</string>
+    <string name="units_unit_name_mile" msgid="8337486880403419613">"Míle"</string>
+    <string name="units_unit_name_celsius" msgid="1642787068882598698">"Stupně Celsia"</string>
+    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"Stupně Fahrenheita"</string>
+    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"Stupně Kelvina"</string>
+    <string name="units_unit_name_milliliter" msgid="2735564290593738653">"Mililitr"</string>
+    <string name="units_unit_name_liter" msgid="2682609997247920434">"Litr"</string>
+    <string name="units_unit_name_us_gallon" msgid="2991675590060288099">"Galon"</string>
+    <string name="units_unit_name_imperial_gallon" msgid="7827144733136304182">"Imperiální galon"</string>
+    <string name="units_unit_name_nano_secs" msgid="7258767560309570567">"Nanosekunda"</string>
+    <string name="units_unit_name_secs" msgid="2282853373442592245">"Sekunda"</string>
+    <string name="units_unit_name_year" msgid="8237348390239986270">"Rok"</string>
+    <string name="units_unit_name_kilopascal" msgid="371397110720444118">"Kilopascal"</string>
+    <string name="units_unit_name_watt_hour" msgid="1581554497071668301">"Watthodina"</string>
+    <string name="units_unit_name_milliampere" msgid="4477388320207031153">"Miliampér"</string>
+    <string name="units_unit_name_millivolt" msgid="4730384331465782188">"Milivolt"</string>
+    <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"Miliwatt"</string>
+    <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"Ampérhodina"</string>
+    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"Kilowatthodina"</string>
+    <string name="units_unit_name_psi" msgid="9199487304284041266">"Libry na palec čtvereční"</string>
+    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"Míle za hodinu"</string>
+    <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"Kilometry za hodinu"</string>
+    <string name="units_unit_name_bar" msgid="4051903414466411804">"Bar"</string>
+    <string name="units_unit_name_degrees" msgid="47944625323398947">"Stupeň"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"Kilowatt na sto mil"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"Kilowatt na to kilometrů"</string>
+    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"Míle na galon (USA)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"Míle na galon (Velká Británie)"</string>
+    <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"Kilometry na litr"</string>
+    <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"Litry na sto kilometrů"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Aplikace a oznámení"</string>
     <string name="all_applications" msgid="7798210477486822168">"Zobrazit všechny aplikace"</string>
     <string name="default_applications" msgid="1558183275638697087">"Výchozí aplikace"</string>
@@ -710,8 +661,7 @@
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Stáhněte si do telefonu doprovodnou aplikaci"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. V telefonu vyberte <xliff:g id="CAR_NAME">%1$s</xliff:g> a zařízení spárujte"</string>
     <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Funkci Smart Lock se nepodařilo rozpoznat bezpečnostní prvky tohoto zařízení. Z důvodu ochrany vašeho auta bude důvěryhodné zařízení moci udržovat auto odemknuté až poté, co jej odemknete. Pokud je důvěryhodné zařízení poblíž, může vaše auto udržet odemknuté i v případě, že jej drží někdo jiný."</string>
-    <!-- no translation found for trusted_device_pairing_code_dialog_title (8173792468216796873) -->
-    <skip />
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Ověřte, zda se párovací kódy shodují"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon byl úspěšně zaregistrován"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registrace zařízení <xliff:g id="DEVICE_NAME">%1$s</xliff:g> se nezdařila"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Když přidáte důvěryhodné zařízení, bude nutné následně nastavit metodu ověření. Pokud důvěryhodné zařízení nemáte u sebe, před zobrazení profilu bude nutné provést ověření."</string>

@@ -256,8 +256,12 @@
         </activity>
 
         <activity android:name=".bluetooth.BluetoothRequestPermissionActivity"
-                  android:excludeFromRecents="true">
+                  android:theme="@style/ActionDialogTheme"
+                  android:excludeFromRecents="true"
+                  android:clearTaskOnLaunch="true"
+                  android:launchMode="singleInstance">
             <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -355,7 +359,10 @@
 
         <activity
             android:name=".wifi.WifiRequestToggleActivity"
-            android:excludeFromRecents="true">
+            android:theme="@style/ActionDialogTheme"
+            android:excludeFromRecents="true"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
                 <action android:name="android.net.wifi.action.REQUEST_DISABLE" />
