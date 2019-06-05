@@ -51,7 +51,7 @@
         car:titleText="@*android:string/volume_alarm"
         car:usage="alarm"/>
     <item
-        car:icon="@drawable/ic_audio_navi"
+        car:icon="@drawable/car_ic_navigation"
         car:titleText="@string/navi_volume_title"
         car:usage="assistance_navigation_guidance"/>
     <item
