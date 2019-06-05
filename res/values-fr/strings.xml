@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> requiert la désactivation du Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Une application requiert l\'activation du Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Une application requiert la désactivation du Bluetooth"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> nécessite que d\'autres appareils Bluetooth puissent détecter votre casque pendant <xliff:g id="TIMEOUT">%2$d</xliff:g> secondes."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Une application nécessite que d\'autres appareils Bluetooth puissent détecter votre casque pendant <xliff:g id="TIMEOUT">%1$d</xliff:g> secondes."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> requiert l\'activation du Bluetooth et nécessite que d\'autres appareils puissent détecter votre casque pendant <xliff:g id="TIMEOUT">%2$d</xliff:g> secondes."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Une application requiert l\'activation du Bluetooth et nécessite que d\'autres appareils puissent détecter votre casque pendant <xliff:g id="TIMEOUT">%1$d</xliff:g> secondes."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Demande d\'association Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Associer et connecter"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Code d\'association Bluetooth"</string>

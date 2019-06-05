@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」要求關閉藍牙功能"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"某個應用程式要求開啟藍牙功能"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"某個應用程式要求關閉藍牙功能"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」要求開放 <xliff:g id="TIMEOUT">%2$d</xliff:g> 秒，讓其他藍牙裝置能偵測到你的資訊娛樂主機。"</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"某個應用程式要求開放 <xliff:g id="TIMEOUT">%1$d</xliff:g> 秒，讓其他藍牙裝置能偵測到你的資訊娛樂主機。"</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」要求開啟藍牙功能 <xliff:g id="TIMEOUT">%2$d</xliff:g> 秒，讓其他裝置能偵測到你的資訊娛樂主機。"</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"有應用程式要求開啟藍牙功能 <xliff:g id="TIMEOUT">%1$d</xliff:g> 秒，讓其他裝置能搜尋到資訊娛樂主機。"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"藍牙配對要求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配對並連線"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"藍牙配對碼"</string>
