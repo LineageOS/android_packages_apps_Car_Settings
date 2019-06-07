@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"I-<xliff:g id="APP_NAME">%1$s</xliff:g> ifuna ukuvala i-Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Uhlelo lokusebenza lifuna ukuvula i-Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Uhlelo lokusebenza lifuna ukuvala i-Bluetooth"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"I-<xliff:g id="APP_NAME">%1$s</xliff:g> ifuna ukwenza i-headunit yakho ibonakale kumanye amadivayisi e-Bluetooth ngamasekhondi angu-<xliff:g id="TIMEOUT">%2$d</xliff:g>."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Uhlelo lokusebenza lufuna ukwenza i-headunit ibonakale kumanye amadivayisi e-Bluetooth ngamasekhondi angu-<xliff:g id="TIMEOUT">%1$d</xliff:g>."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"I-<xliff:g id="APP_NAME">%1$s</xliff:g> ifuna ukuvula i-Bluetooth iphinde yenze i-headunit yakho ibonakale kumanye amadivayisi ngamasekhondi angu-<xliff:g id="TIMEOUT">%2$d</xliff:g>."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Uhlelo lokusebenza lufuna ukuvula i-Bluetooth luphinde lwenze i-headunit yakho ibonakale kwamanye amadivayisi ngamasekhondi angu-<xliff:g id="TIMEOUT">%1$d</xliff:g>."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Isicelo sokubhanqa i-Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Pheya futhi uxhume"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Ikhodi yokumatanisa ye-Bluetooth"</string>
