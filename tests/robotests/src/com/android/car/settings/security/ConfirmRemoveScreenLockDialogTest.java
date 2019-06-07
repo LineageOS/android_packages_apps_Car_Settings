@@ -47,7 +47,7 @@ public class ConfirmRemoveScreenLockDialogTest {
         mDialog = new ConfirmRemoveScreenLockDialog();
         mDialog.setConfirmRemoveScreenLockListener(mListener);
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-        mTestActivity.showDialog(mDialog, TEST_TAG);
+        mDialog.show(mTestActivity.getSupportFragmentManager(), TEST_TAG);
     }
 
     @Test
@@ -68,6 +68,6 @@ public class ConfirmRemoveScreenLockDialogTest {
     }
 
     private boolean isDialogShown() {
-        return mTestActivity.findDialogByTag(TEST_TAG) != null;
+        return mTestActivity.getSupportFragmentManager().findFragmentByTag(TEST_TAG) != null;
     }
 }

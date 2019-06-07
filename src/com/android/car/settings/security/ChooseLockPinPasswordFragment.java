@@ -377,7 +377,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mUiStage = Stage.Introduction;
             setSecondaryButtonText(mUiStage.secondaryButtonText);
         } else {
-            getFragmentController().goBack();
+            getFragmentHost().goBack();
         }
     }
 

@@ -50,7 +50,7 @@ public class BluetoothRenameDialogFragmentTest {
     public void setUp() {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
         mFragment = new TestBluetoothRenameDialogFragment();
-        activity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
         mDialog = (AlertDialog) ShadowDialog.getLatestDialog();
     }
 

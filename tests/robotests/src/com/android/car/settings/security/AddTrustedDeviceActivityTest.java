@@ -152,7 +152,8 @@ public class AddTrustedDeviceActivityTest {
                 enrollmentCallBack.capture());
         enrollmentCallBack.getValue().onAuthStringAvailable(mBluetoothDevice, "123");
 
-        assertThat(mActivity.findDialogByTag(ConfirmPairingCodeDialog.TAG)).isNotNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(
+                ConfirmPairingCodeDialog.TAG)).isNotNull();
     }
 
     @Test

@@ -73,7 +73,7 @@ public class EditTextPreferenceDialogFragmentTest {
     public void dialogPopulatedWithPreferenceText() {
         mPreference.setText("text");
 
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         EditText editTextView = ShadowAlertDialog.getLatestAlertDialog().findViewById(
                 android.R.id.edit);
 
@@ -82,7 +82,7 @@ public class EditTextPreferenceDialogFragmentTest {
 
     @Test
     public void softInputMethodSetOnWindow() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(getShadowWindowFromDialog(
                 ShadowAlertDialog.getLatestAlertDialog()).getSoftInputMode()).isEqualTo(
@@ -91,7 +91,7 @@ public class EditTextPreferenceDialogFragmentTest {
 
     @Test
     public void editTextHasFocus() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         EditText editTextView = ShadowAlertDialog.getLatestAlertDialog().findViewById(
                 android.R.id.edit);
 
@@ -101,7 +101,7 @@ public class EditTextPreferenceDialogFragmentTest {
     @Test
     public void onDialogClosed_positiveResult_updatesPreference() {
         String text = "text";
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         EditText editTextView = dialog.findViewById(android.R.id.edit);
         editTextView.setText(text);
@@ -113,7 +113,7 @@ public class EditTextPreferenceDialogFragmentTest {
 
     @Test
     public void onDialogClosed_negativeResult_doesNothing() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         EditText editTextView = dialog.findViewById(android.R.id.edit);
         editTextView.setText("text");
@@ -127,7 +127,7 @@ public class EditTextPreferenceDialogFragmentTest {
     public void instanceStateRetained() {
         String text = "text";
         mPreference.setText(text);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         // Save instance state.
         Bundle outState = new Bundle();

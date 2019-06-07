@@ -23,7 +23,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.FragmentHost;
 import com.android.car.settings.wifi.CarWifiManager;
 import com.android.car.settings.wifi.WifiSettingsFragment;
 import com.android.car.settings.wifi.WifiUtil;
@@ -49,10 +49,10 @@ public class WifiTile implements QuickSettingGridAdapter.Tile, CarWifiManager.Li
     WifiTile(
             Context context,
             StateChangedListener stateChangedListener,
-            FragmentController fragmentController) {
+            FragmentHost fragmentHost) {
         mContext = context;
         mLaunchWifiSettings = v -> {
-            fragmentController.launchFragment(new WifiSettingsFragment());
+            fragmentHost.launchFragment(new WifiSettingsFragment());
             return true;
         };
         mCarWifiManager = new CarWifiManager(context);

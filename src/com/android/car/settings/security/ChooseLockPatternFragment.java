@@ -385,7 +385,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
                 updateStage(Stage.Introduction);
                 break;
             case Cancel:
-                getFragmentController().goBack();
+                getFragmentHost().goBack();
                 break;
             default:
                 throw new IllegalStateException("secondary footer button pressed, but stage of "

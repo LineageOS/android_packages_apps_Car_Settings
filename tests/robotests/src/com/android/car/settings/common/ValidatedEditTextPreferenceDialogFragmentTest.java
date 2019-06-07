@@ -71,7 +71,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void noValidatorSet_shouldEnablePositiveButton_and_allowEnterToSubmit() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         Button positiveButton = ShadowAlertDialog.getLatestAlertDialog().getButton(
                 DialogInterface.BUTTON_POSITIVE);
@@ -95,7 +95,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
                         return value.length() > 100;
                     }
                 });
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         Button positiveButton = ShadowAlertDialog.getLatestAlertDialog().getButton(
                 DialogInterface.BUTTON_POSITIVE);
@@ -116,7 +116,7 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
                         return value.length() > 1;
                     }
                 });
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         Button positiveButton = ShadowAlertDialog.getLatestAlertDialog().getButton(
                 DialogInterface.BUTTON_POSITIVE);

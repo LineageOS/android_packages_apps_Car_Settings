@@ -289,7 +289,7 @@ public class UserGridRecyclerView extends RecyclerView implements
                     // If there are restrictions, show a 50% opaque "add user" view
                     holder.mView.setAlpha(mOpacityDisabled);
                     holder.mView.setOnClickListener(
-                            v -> mBaseFragment.getFragmentController().showBlockingMessage());
+                            v -> mBaseFragment.getFragmentHost().showBlockingMessage());
                 } else {
                     holder.mView.setOnClickListener(v -> handleAddUserClicked(v));
                 }

@@ -357,7 +357,7 @@ public class MobileDataTogglePreferenceControllerTest {
 
     private AlertDialog showDialog(ConfirmationDialogFragment dialog) {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
-        activity.showDialog(dialog, /* tag= */ null);
+        dialog.show(activity.getSupportFragmentManager(), /* tag= */ null);
         return (AlertDialog) ShadowDialog.getLatestDialog();
     }
 }

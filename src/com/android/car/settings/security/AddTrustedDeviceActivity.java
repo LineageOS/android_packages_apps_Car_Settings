@@ -84,7 +84,7 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
                     ConfirmPairingCodeDialog dialog = ConfirmPairingCodeDialog.newInstance(
                             authString);
                     dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
-                    showDialog(dialog, ConfirmPairingCodeDialog.TAG);
+                    dialog.show(getSupportFragmentManager(), ConfirmPairingCodeDialog.TAG);
                 }
 
                 @Override
@@ -166,7 +166,8 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
             mHandle = savedInstanceState.getLong(CURRENT_HANDLE_KEY);
         }
         ConfirmPairingCodeDialog dialog =
-                (ConfirmPairingCodeDialog) findDialogByTag(ConfirmPairingCodeDialog.TAG);
+                (ConfirmPairingCodeDialog) getSupportFragmentManager().findFragmentByTag(
+                        ConfirmPairingCodeDialog.TAG);
         if (dialog != null) {
             dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
         }
