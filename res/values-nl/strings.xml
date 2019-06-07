@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth uitschakelen"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Een app wil Bluetooth inschakelen"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Een app wil Bluetooth uitschakelen"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Een app wil je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere Bluetooth-apparaten."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> wil Bluetooth inschakelen en je hoofdunit <xliff:g id="TIMEOUT">%2$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Een app wil Bluetooth inschakelen en je hoofdunit <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar maken voor andere apparaten."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-koppelingsverzoek"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Koppelen en verbinden"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-koppelingscode"</string>

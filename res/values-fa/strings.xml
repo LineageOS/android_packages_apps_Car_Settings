@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد بلوتوث را خاموش کند"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"برنامه‌ای می‌خواهد بلوتوث را روشن کند"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"برنامه‌ای می‌خواهد بلوتوث را خاموش کند"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد سیستم صوتی شما را برای سایر دستگاه‌های بلوتوث به‌مدت <xliff:g id="TIMEOUT">%2$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"برنامه‌ای می‌خواهد سیستم صوتی شما را برای سایر دستگاه‌های بلوتوث به‌مدت <xliff:g id="TIMEOUT">%1$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> می‌خواهد بلوتوث را روشن کند و سیستم صوتی شما را برای سایر دستگاه‌ها به‌مدت <xliff:g id="TIMEOUT">%2$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"برنامه‌ای می‌خواهد بلوتوث را روشن کند و سیستم صوتی شما را برای سایر دستگاه‌ها به مدت <xliff:g id="TIMEOUT">%1$d</xliff:g> ثانیه قابل‌مشاهده کند."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"درخواست مرتبط‌سازی بلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"مرتبط‌ کردن و اتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"کد مرتبط‌سازی بلوتوث"</string>

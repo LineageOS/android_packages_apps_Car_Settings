@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g>, બ્લૂટૂથ બંધ કરવા માગે છે"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"કોઈ ઍપ બ્લૂટૂથ ચાલુ કરવા માગે છે"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"કોઈ ઍપ બ્લૂટૂથ બંધ કરવા માગે છે"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g>, તમારા હેડયૂનિટને અન્ય બ્લૂટૂથ ડિવાઇસ પર <xliff:g id="TIMEOUT">%2$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"ઍપ, તમારા હેડયૂનિટને અન્ય બ્લૂટૂથ ડિવાઇસ પર <xliff:g id="TIMEOUT">%1$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g>, બ્લૂટૂથ ચાલુ કરવા અને તમારા હેડયૂનિટને અન્ય ડિવાઇસ પર <xliff:g id="TIMEOUT">%2$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"ઍપ, બ્લૂટૂથ ચાલુ કરવા અને તમારા હેડયૂનિટને અન્ય ડિવાઇસ પર <xliff:g id="TIMEOUT">%1$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"બ્લૂટૂથ જોડાણ બનાવવાની વિનંતી"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"જોડાણ બનાવો અને કનેક્ટ કરો"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"બ્લૂટૂથનો જોડાણ કરવાનો કોડ"</string>

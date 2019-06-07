@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth\'u deaktiv etmək istəyir"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Tətbiq Bluetooth\'u aktiv etmək istəyir"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Tətbiq Bluetooth\'u deaktiv etmək istəyir"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> əsas cihazı digər Bluetooth cihazları üçün <xliff:g id="TIMEOUT">%2$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Tətbiq əsas cihazı digər Bluetooth cihazları üçün <xliff:g id="TIMEOUT">%1$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth\'u aktiv etmək və əsas cihazı digər cihazlar üçün <xliff:g id="TIMEOUT">%2$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Tətbiq Bluetooth\'u aktiv etmək və əsas cihazı digər cihazlar üçün <xliff:g id="TIMEOUT">%1$d</xliff:g> saniyə ərzində görünən etmək istəyir."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth birləşdirmə sorğusu"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"birləşdirin və əlaqə yaradın"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth birləşdirmə kodu"</string>
