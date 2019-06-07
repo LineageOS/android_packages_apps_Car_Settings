@@ -183,14 +183,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> chce wyłączyć Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Aplikacja chce włączyć Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Aplikacja chce wyłączyć Bluetooth"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"Aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> chce ustawić moduł główny jako widoczny dla innych urządzeń Bluetooth przez <xliff:g id="TIMEOUT">%2$d</xliff:g> s."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Aplikacja chce ustawić moduł główny jako wykrywalny dla innych urządzeń Bluetooth przez <xliff:g id="TIMEOUT">%1$d</xliff:g> s."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"Aplikacja <xliff:g id="APP_NAME">%1$s</xliff:g> chce włączyć Bluetooth i ustawić moduł główny jako widoczny dla innych urządzeń przez <xliff:g id="TIMEOUT">%2$d</xliff:g> s."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Aplikacja chce włączyć Bluetooth i ustawić moduł główny jako widoczny dla innych urządzeń przez <xliff:g id="TIMEOUT">%1$d</xliff:g> s."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Prośba o sparowanie Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Sparuj i połącz"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Kod parowania Bluetooth"</string>

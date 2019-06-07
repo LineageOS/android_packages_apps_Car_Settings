@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> inataka kuzima Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Programu inataka kuwasha Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Programu inataka kuzima Bluetooth"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> inataka kufanya redio ya gari lako ionekane kwenye vifaa vingine vya Bluetooth kwa sekunde <xliff:g id="TIMEOUT">%2$d</xliff:g>."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Programu fulani inataka kufanya redio ya gari lako ionekane kwenye vifaa vingine vya Bluetooth kwa sekunde <xliff:g id="TIMEOUT">%1$d</xliff:g>."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> inataka kuwasha Bluetooth na kufanya redio ya gari lako ionekane kwenye vifaa vingine kwa sekunde <xliff:g id="TIMEOUT">%2$d</xliff:g>."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Programu inataka kuwasha Bluetooth na kufanya redio ya gari lako ionekane kwenye vifaa vingine kwa sekunde <xliff:g id="TIMEOUT">%1$d</xliff:g>."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Ombi la kuoanisha Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Oanisha kisha unganisha"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Msimbo wa kuoanisha Bluetooth"</string>

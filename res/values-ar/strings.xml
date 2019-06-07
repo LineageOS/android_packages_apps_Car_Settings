@@ -187,14 +187,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> إيقاف البلوتوث"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"يريد أحد التطبيقات تشغيل بلوتوث"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"يريد أحد التطبيقات إيقاف البلوتوث"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> أن تكون وحدة الرأس مرئية لأجهزة البلوتوث الأخرى لمدة <xliff:g id="TIMEOUT">%2$d</xliff:g> من الثواني."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"يريد أحد التطبيقات أن تكون وحدة الرأس مرئية لأجهزة البلوتوث الأخرى لمدة <xliff:g id="TIMEOUT">%1$d</xliff:g> من الثواني."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> تفعيل البلوتوث وجعل وحدة الرأس مرئية للأجهزة الأخرى لمدة <xliff:g id="TIMEOUT">%2$d</xliff:g> من الثواني."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"يريد أحد التطبيقات تفعيل البلوتوث وجعل وحدة الرأس مرئية للأجهزة الأخرى لمدة <xliff:g id="TIMEOUT">%1$d</xliff:g> من الثواني."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"طلب إقران البلوتوث"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"الإقران والاتصال"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"رمز إقران البلوتوث"</string>

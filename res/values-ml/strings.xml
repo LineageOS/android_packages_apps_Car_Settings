@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"Bluetooth ഓഫാക്കാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Bluetooth ഓണാക്കാൻ ഒരു ആപ്പ് താൽപ്പര്യപ്പെടുന്നു"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Bluetooth ഓഫാക്കാൻ ഒരു ആപ്പ് താൽപ്പര്യപ്പെടുന്നു"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"നിങ്ങളുടെ ഹെഡ്‌യൂണിറ്റ് <xliff:g id="TIMEOUT">%2$d</xliff:g> സെക്കൻഡ് നേരത്തേക്ക് മറ്റ് Bluetooth ഉപകരണങ്ങൾക്ക് ദൃശ്യമാക്കാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"ഒരു ആപ്പ് <xliff:g id="TIMEOUT">%1$d</xliff:g> സെക്കൻഡ് നേരത്തേക്ക് നിങ്ങളുടെ ഹെഡ്‌യൂണിറ്റ് മറ്റ് Bluetooth ഉപകരണങ്ങൾക്ക് ദൃശ്യമാക്കാൻ താൽപ്പര്യപ്പെടുന്നു."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"Bluetooth ഓണാക്കി <xliff:g id="TIMEOUT">%2$d</xliff:g> സെക്കൻഡ് നേരത്തേക്ക് നിങ്ങളുടെ ഹെഡ്‌യൂണിറ്റ് മറ്റ് ഉപകരണങ്ങൾക്ക് ദൃശ്യമാക്കാൻ <xliff:g id="APP_NAME">%1$s</xliff:g> താൽപ്പര്യപ്പെടുന്നു."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"ഒരു ആപ്പ് Bluetooth ഓണാക്കി <xliff:g id="TIMEOUT">%1$d</xliff:g> സെക്കൻഡ് നേരത്തേക്ക് നിങ്ങളുടെ ഹെഡ്‌യൂണിറ്റ് മറ്റ് ഉപകരണങ്ങൾക്ക് ദൃശ്യമാക്കാൻ താൽപ്പര്യപ്പെടുന്നു."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth ജോടിയാക്കൽ അഭ്യർത്ഥന"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ജോടിയാക്കി കണ‌ക്‌റ്റ് ചെയ്യുക"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth ജോടിയാക്കൽ കോഡ്"</string>
