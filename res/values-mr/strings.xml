@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला ब्लूटूथ बंद करायचे आहे"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"अॅपला ब्लूटूथ सुरू करायचे आहे"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"अॅपला ब्लूटूथ बंद करायचे आहे"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला तुमचे टॅबलेट इतर ब्लूटूथ डिव्हाइससाठी <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंदांकरिता दृश्यमान करायचे आहे."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एका अ‍ॅपला तुमचे हेडयुनिट इतर ब्लूटूथ डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान करायचे आहे."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंदांकरिता दृश्‍यमान करायचे आहे."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एका अ‍ॅपला ब्लूटूथ सुरू करायचे आहे आणि तुमचे हेडयुनिट इतर डिव्हाइससाठी <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंदांकरिता दृश्यमान बनवायचे आहे."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ पेअरींग विनंती"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"पेअर करा आणि कनेक्ट करा"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लूटूथ पेअरींग कोड"</string>

@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"Gustong i-off ng <xliff:g id="APP_NAME">%1$s</xliff:g> ang Bluetooth"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Gustong i-on ng isang app ang Bluetooth"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Gustong i-off ng isang app ang Bluetooth"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"Gusto ng <xliff:g id="APP_NAME">%1$s</xliff:g> na gawing nakikita ng iba pang Bluetooth device ang iyong headunit sa loob ng <xliff:g id="TIMEOUT">%2$d</xliff:g> (na) segundo."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"May app na gustong gawing nakikita ng iba pang Bluetooth device ang iyong headunit sa loob ng <xliff:g id="TIMEOUT">%1$d</xliff:g> (na) segundo."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"Gusto ng <xliff:g id="APP_NAME">%1$s</xliff:g> na i-on ang Bluetooth at gawing nakikita ng iba pang device ang iyong headunit sa loob ng <xliff:g id="TIMEOUT">%2$d</xliff:g> (na) segundo."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"May app na gustong mag-on sa Bluetooth at gawing nakikita ng iba pang device ang iyong headunit sa loob ng <xliff:g id="TIMEOUT">%1$d</xliff:g> (na) segundo."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Kahilingan sa pagpapares ng Bluetooth"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Ipares at kumonekta"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Code ng pagpapares ng Bluetooth"</string>
