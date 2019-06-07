@@ -23,7 +23,6 @@ import static org.mockito.Mockito.when;
 import android.content.Context;
 import android.media.Ringtone;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.ShadowRingtoneManager;
 
 import org.junit.After;
@@ -32,11 +31,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowLooper;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowRingtoneManager.class})
 public class VolumeSettingsRingtoneManagerTest {
 

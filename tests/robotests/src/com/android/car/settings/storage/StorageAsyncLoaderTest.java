@@ -35,7 +35,6 @@ import android.net.TrafficStats;
 import android.os.UserHandle;
 import android.util.SparseArray;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.settingslib.applications.StorageStatsSource;
 
@@ -45,6 +44,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
@@ -53,7 +53,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** Unit test for {@link StorageAsyncLoader}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowApplicationPackageManager.class})
 public class StorageAsyncLoaderTest {
     private static final int PRIMARY_USER_ID = 0;

@@ -27,7 +27,6 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 
@@ -35,12 +34,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.shadows.ShadowDialog;
 
 /** Unit test for {@link BluetoothRenameDialogFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class BluetoothRenameDialogFragmentTest {
 
     private TestBluetoothRenameDialogFragment mFragment;

@@ -40,7 +40,6 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Handler;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.wifi.details.WifiInfoProvider.Listener;
 import com.android.settingslib.wifi.AccessPoint;
 
@@ -51,9 +50,10 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class WifiInfoProviderImplTest {
     private static final int LEVEL = 1;
     private static final int RSSI = -55;

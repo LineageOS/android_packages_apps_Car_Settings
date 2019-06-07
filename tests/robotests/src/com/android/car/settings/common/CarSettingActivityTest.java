@@ -30,7 +30,6 @@ import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.testutils.DummyFragment;
@@ -42,11 +41,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 
 /** Unit test for {@link CarSettingActivity}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class CarSettingActivityTest {
 
     private static final String TEST_TAG = "test_tag";

@@ -27,7 +27,6 @@ import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
@@ -42,11 +41,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 import java.util.Arrays;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUserManager.class, ShadowCarUserManagerHelper.class,
         ShadowUserIconProvider.class})
 public class UserDetailsBaseFragmentTest {

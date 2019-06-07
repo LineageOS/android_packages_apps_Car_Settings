@@ -36,7 +36,6 @@ import android.text.format.Formatter;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowDataUsageController;
@@ -52,6 +51,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
@@ -60,7 +60,7 @@ import java.time.Period;
 import java.time.ZonedDateTime;
 import java.util.concurrent.TimeUnit;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowTelephonyManager.class, ShadowSubscriptionManager.class,
         ShadowDataUsageController.class})
 public class DataUsageSummaryPreferenceControllerTest {

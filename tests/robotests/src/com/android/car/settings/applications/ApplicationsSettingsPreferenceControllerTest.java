@@ -27,7 +27,6 @@ import android.content.pm.ApplicationInfo;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -36,12 +35,13 @@ import com.android.settingslib.applications.ApplicationsState;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.ArrayList;
 
 /** Unit test for {@link ApplicationsSettingsPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ApplicationsSettingsPreferenceControllerTest {
 
     private static final String SOURCE = "source";

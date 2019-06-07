@@ -22,16 +22,15 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class AddNewUserTaskTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;

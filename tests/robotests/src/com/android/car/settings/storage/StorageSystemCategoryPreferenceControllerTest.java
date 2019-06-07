@@ -23,19 +23,19 @@ import android.os.Build;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowAlertDialog;
 import org.robolectric.shadows.ShadowApplication;
 
 /** Unit test for {@link StorageSystemCategoryPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class StorageSystemCategoryPreferenceControllerTest {
 
     @Test
