@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth-г унтраах хүсэлтэй байна"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"Апп Bluetooth-г асаах хүсэлтэй байна"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"Апп Bluetooth-г унтраах хүсэлтэй байна"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> таны машины дэлгэцийг бусад Bluetooth төхөөрөмжид <xliff:g id="TIMEOUT">%2$d</xliff:g> секундийн турш харуулах хүсэлтэй байна."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"Апп таны машины дэлгэцийг бусад Bluetooth төхөөрөмжид <xliff:g id="TIMEOUT">%1$d</xliff:g> секундийн турш харуулах хүсэлтэй байна."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> Bluetooth-г асааж, таны машины дэлгэцийг бусад төхөөрөмжид <xliff:g id="TIMEOUT">%2$d</xliff:g> секундийн турш харуулах хүсэлтэй байна."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"Апп Bluetooth-г асааж, таны машины дэлгэцийг бусад төхөөрөмжид <xliff:g id="TIMEOUT">%1$d</xliff:g> секундийн турш харуулах хүсэлтэй байна."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth-г хослуулах хүсэлт"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Хослуулах &amp; холбох"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth-н хослуулах код"</string>
