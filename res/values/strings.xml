@@ -1347,13 +1347,13 @@
     <!-- Cancel button label of confirm remove device dialog [CHAR LIMIT=20]-->
     <string name="trusted_device_done_button">Done</string>
     <!-- Message shown on the add trusted device page [CHAR LIMIT=NONE]-->
-    <string name="add_trusted_device_instruction">Use the companion app to set up a trusted device. Once set up, you will be able to unlock your user profile when your phone is detected by the vehicle</string>
+    <string name="add_trusted_device_instruction">Use the companion app to set up a trusted device. Once set up, your user profile will unlock automatically when your phone is detected near the vehicle.</string>
     <!-- Step one of adding a trusted device [CHAR LIMIT=NONE]-->
     <string name="trusted_device_download_app">1. Download the companion app on your phone</string>
     <!-- Step two of adding a trusted device [CHAR LIMIT=NONE]-->
     <string name="trusted_device_select_device">2. Select <xliff:g id="car_name" example="MyCar">%1$s</xliff:g> on your phone to pair the devices</string>
     <!-- Messages shown to alert user about the safety of the trusted device feature [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_safety_alert">Smart Lock can\'t detect security features of this device. To help protect your car, trusted device will only be able to keep your car unlocked once it\'s already unlocked by you. Your trusted device can keep your car unlocked when it\'s nearby, even if someone else is holding it.</string>
+    <string name="trusted_device_safety_alert">A trusted device nearby your car will unlock the car upon ignition, even if someone else is holding the device.</string>
     <!-- Confirm pairing code dialog title [CHAR LIMIT=60]-->
     <string name="trusted_device_pairing_code_dialog_title">Please confirm that the pairing codes match</string>
     <!-- Toast shown when user enrolls a device successfully [CHAR LIMIT=100]-->
