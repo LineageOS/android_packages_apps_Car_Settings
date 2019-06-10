@@ -34,7 +34,6 @@ ifeq (,$(TARGET_BUILD_APPS))
       telephony-common
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      androidx.car_car \
       androidx.lifecycle_lifecycle-common-java8 \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
@@ -94,7 +93,6 @@ ifeq (,$(TARGET_BUILD_APPS))
       telephony-common
 
   LOCAL_STATIC_ANDROID_LIBRARIES := \
-      androidx.car_car \
       androidx.lifecycle_lifecycle-common-java8 \
       androidx.lifecycle_lifecycle-extensions \
       androidx.preference_preference \
