@@ -29,7 +29,6 @@ import android.view.ContextThemeWrapper;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
@@ -137,8 +136,8 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         if (!(getActivity() instanceof UxRestrictionsProvider)) {
             throw new IllegalStateException("Must attach to a UxRestrictionsProvider");
         }
-        if (!(getActivity() instanceof FragmentController)) {
-            throw new IllegalStateException("Must attach to a FragmentController");
+        if (!(getActivity() instanceof FragmentHost)) {
+            throw new IllegalStateException("Must attach to a FragmentHost");
         }
 
         TypedValue tv = new TypedValue();
@@ -278,17 +277,12 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
 
     @Override
     public void launchFragment(Fragment fragment) {
-        ((FragmentController) requireActivity()).launchFragment(fragment);
+        getFragmentHost().launchFragment(fragment);
     }
 
     @Override
     public void goBack() {
-        requireActivity().onBackPressed();
-    }
-
-    @Override
-    public void showBlockingMessage() {
-        Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
+        getFragmentHost().goBack();
     }
 
     @Override
@@ -365,6 +359,10 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         if ((requestCode & 0xff00) != 0) {
             throw new IllegalArgumentException("Can only use lower 8 bits for requestCode");
         }
+    }
+
+    private FragmentHost getFragmentHost() {
+        return (FragmentHost) requireActivity();
     }
 
     private void hideExitIcon() {

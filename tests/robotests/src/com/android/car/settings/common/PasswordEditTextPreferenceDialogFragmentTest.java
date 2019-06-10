@@ -68,7 +68,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
 
     @Test
     public void onStart_inputTypeSetToPassword_shouldRevealShowPasswordCheckBoxUnchecked() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
 
@@ -79,7 +79,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
     @Test
     public void onCheckBoxChecked_shouldRevealRawPassword() {
         String testPassword = "TEST_PASSWORD";
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
         EditText editText = dialog.findViewById(android.R.id.edit);
@@ -94,7 +94,7 @@ public class PasswordEditTextPreferenceDialogFragmentTest {
     @Test
     public void onCheckBoxUnchecked_shouldObscureRawPassword() {
         String testPassword = "TEST_PASSWORD";
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
         CheckBox checkBox = dialog.findViewById(R.id.checkbox);
         EditText editText = dialog.findViewById(android.R.id.edit);

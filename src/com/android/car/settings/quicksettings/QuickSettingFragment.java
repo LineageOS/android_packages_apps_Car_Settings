@@ -123,17 +123,17 @@ public class QuickSettingFragment extends BaseFragment {
         mFullSettingsBtn.setOnClickListener(mHomeFragmentLauncher);
         mUserSwitcherBtn = activity.findViewById(R.id.user_switcher_btn);
         mUserSwitcherBtn.setOnClickListener(v -> {
-            getFragmentController().launchFragment(new UserSwitcherFragment());
+            getFragmentHost().launchFragment(new UserSwitcherFragment());
         });
         setupUserButton(activity);
 
         View exitBtn = activity.findViewById(R.id.action_bar_icon_container);
-        exitBtn.setOnClickListener(v -> getFragmentController().goBack());
+        exitBtn.setOnClickListener(v -> getFragmentHost().goBack());
 
         mGridAdapter
-                .addTile(new WifiTile(activity, mGridAdapter, getFragmentController()))
-                .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentController()))
-                .addTile(new DayNightTile(activity, mGridAdapter, getFragmentController()))
+                .addTile(new WifiTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentHost()))
+                .addTile(new DayNightTile(activity, mGridAdapter, getFragmentHost()))
                 .addTile(new CelluarTile(activity, mGridAdapter))
                 .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
@@ -241,9 +241,9 @@ public class QuickSettingFragment extends BaseFragment {
         @Override
         public void onClick(View v) {
             if (mShowBlockingMessage) {
-                getFragmentController().showBlockingMessage();
+                getFragmentHost().showBlockingMessage();
             } else {
-                getFragmentController().launchFragment(new HomepageFragment());
+                getFragmentHost().launchFragment(new HomepageFragment());
             }
         }
     }

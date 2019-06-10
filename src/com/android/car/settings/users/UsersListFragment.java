@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
@@ -194,5 +195,9 @@ public class UsersListFragment extends SettingsFragment implements
 
             dialogFragment.show(getFragmentManager(), ConfirmationDialogFragment.TAG);
         }
+    }
+
+    private void showBlockingMessage() {
+        Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
     }
 }

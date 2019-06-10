@@ -110,7 +110,7 @@ public class BluetoothDisconnectConfirmDialogFragmentTest {
 
     private AlertDialog showDialog(BluetoothDisconnectConfirmDialogFragment fragment) {
         BaseTestActivity activity = Robolectric.setupActivity(BaseTestActivity.class);
-        activity.showDialog(fragment, /* tag= */ null);
+        fragment.show(activity.getSupportFragmentManager(), /* tag= */ null);
         return (AlertDialog) ShadowDialog.getLatestDialog();
     }
 }
