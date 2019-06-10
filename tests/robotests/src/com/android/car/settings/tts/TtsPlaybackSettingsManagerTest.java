@@ -29,7 +29,6 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TtsEngines;
 import android.speech.tts.Voice;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.car.settings.testutils.ShadowTextToSpeech;
 import com.android.car.settings.testutils.ShadowTtsEngines;
@@ -40,13 +39,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowAlertDialog;
 
 import java.util.Locale;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowTtsEngines.class, ShadowTextToSpeech.class, ShadowSecureSettings.class})
 public class TtsPlaybackSettingsManagerTest {
 

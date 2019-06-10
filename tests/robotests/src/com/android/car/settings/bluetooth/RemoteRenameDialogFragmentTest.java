@@ -27,7 +27,6 @@ import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.widget.EditText;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
@@ -42,13 +41,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowDialog;
 import org.robolectric.util.ReflectionHelpers;
 
 /** Unit test for {@link RemoteRenameDialogFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
 public class RemoteRenameDialogFragmentTest {
 

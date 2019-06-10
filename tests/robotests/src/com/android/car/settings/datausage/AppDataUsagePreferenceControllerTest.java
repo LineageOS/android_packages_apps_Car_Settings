@@ -28,7 +28,6 @@ import android.net.NetworkStats;
 
 import androidx.lifecycle.Lifecycle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
@@ -42,11 +41,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppDataUsagePreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUidDetailProvider.class})
 public class AppDataUsagePreferenceControllerTest {
 

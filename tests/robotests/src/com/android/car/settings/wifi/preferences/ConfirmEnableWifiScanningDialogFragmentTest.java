@@ -21,7 +21,6 @@ import static org.mockito.Mockito.verify;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 
 import org.junit.Before;
@@ -30,9 +29,10 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.shadows.ShadowDialog;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ConfirmEnableWifiScanningDialogFragmentTest {
 
     private ConfirmEnableWifiScanningDialogFragment mFragment;

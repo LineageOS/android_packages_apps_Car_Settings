@@ -28,7 +28,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.settingslib.datetime.ZoneGetter;
@@ -38,6 +37,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowApplication;
 
@@ -46,7 +46,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class TimeZonePickerScreenPreferenceControllerTest {
 
     private PreferenceGroup mPreferenceGroup;

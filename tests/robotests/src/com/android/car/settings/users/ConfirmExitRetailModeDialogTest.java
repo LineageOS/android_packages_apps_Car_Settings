@@ -22,7 +22,6 @@ import static org.mockito.Mockito.verify;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
 
@@ -32,11 +31,12 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 
 /**
  * Tests for ConfirmExitRetailModeDialog.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ConfirmExitRetailModeDialogTest {
     private BaseTestActivity mTestActivity;
     private Fragment mTestFragment;

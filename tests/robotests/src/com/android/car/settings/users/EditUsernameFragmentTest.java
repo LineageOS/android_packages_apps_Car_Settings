@@ -27,7 +27,6 @@ import android.os.UserManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
@@ -39,12 +38,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 /**
  * Tests for EditUsernameFragment.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class EditUsernameFragmentTest {
     private BaseTestActivity mTestActivity;

@@ -37,7 +37,6 @@ import android.os.ParcelUuid;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -53,6 +52,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
@@ -63,7 +63,7 @@ import org.robolectric.util.ReflectionHelpers;
 import java.util.Arrays;
 
 /** Unit test for {@link BluetoothDevicePickerPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowBluetoothAdapter.class,
         ShadowBluetoothPan.class})
 public class BluetoothDevicePickerPreferenceControllerTest {

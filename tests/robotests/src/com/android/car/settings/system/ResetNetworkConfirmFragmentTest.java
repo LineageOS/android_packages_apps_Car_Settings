@@ -32,7 +32,6 @@ import android.widget.Button;
 
 import androidx.preference.PreferenceManager;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -48,6 +47,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
@@ -56,7 +56,7 @@ import org.robolectric.shadows.ShadowContextImpl;
 
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {
         ShadowConnectivityManager.class,
         ShadowWifiManager.class,

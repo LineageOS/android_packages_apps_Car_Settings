@@ -32,7 +32,6 @@ import android.content.Context;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCar;
 
@@ -41,13 +40,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCar.class})
 public class TrustedDeviceEntryPreferenceControllerTest {
 

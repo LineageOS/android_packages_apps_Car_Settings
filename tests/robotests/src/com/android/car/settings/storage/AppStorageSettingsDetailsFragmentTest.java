@@ -39,7 +39,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowActivityManager;
@@ -57,11 +56,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppStorageSettingsDetailsFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowApplicationsState.class, ShadowCarUserManagerHelper.class,
         ShadowRestrictedLockUtilsInternal.class, ShadowApplicationPackageManager.class,
         ShadowActivityManager.class})

@@ -32,7 +32,6 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.security.CheckLockActivity;
 import com.android.car.settings.testutils.FragmentController;
@@ -45,13 +44,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 
 import java.util.Collections;
 
 /** Unit test for {@link MasterClearFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserManager.class})
 public class MasterClearFragmentTest {
 

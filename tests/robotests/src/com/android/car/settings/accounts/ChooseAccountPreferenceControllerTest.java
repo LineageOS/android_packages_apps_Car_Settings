@@ -35,7 +35,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.LogicalPreferenceGroup;
@@ -51,6 +50,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
@@ -59,7 +59,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /** Unit tests for {@link ChooseAccountPreferenceController}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowContentResolver.class,
         ShadowAccountManager.class})
 public class ChooseAccountPreferenceControllerTest {

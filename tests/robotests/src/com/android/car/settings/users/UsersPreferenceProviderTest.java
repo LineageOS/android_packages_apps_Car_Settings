@@ -29,7 +29,6 @@ import android.content.pm.UserInfo;
 
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 
 import org.junit.Before;
@@ -37,12 +36,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 import java.util.Arrays;
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class UsersPreferenceProviderTest {
 
     private static final String TEST_CURRENT_USER_NAME = "Current User";

@@ -30,7 +30,6 @@ import android.os.UserHandle;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -40,6 +39,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
 /**
@@ -47,7 +47,7 @@ import org.robolectric.annotation.Config;
  *
  * <p>Largely copied from {@link com.android.settings.accounts.AccountSyncPreferenceControllerTest}.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowContentResolver.class})
 public class AccountSyncPreferenceControllerTest {
     private static final int SYNCABLE = 1;
