@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> က ဘလူးတုသ်ကို ပိတ်လိုသည်"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"အက်ပ်တစ်ခုက ဘလူးတုသ်ကို ဖွင့်လိုသည်"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"အက်ပ်တစ်ခုက ဘလူးတုသ်ကို ပိတ်လိုသည်"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> သည် အခြား ဘလူးတုသ်စက်ပစ္စည်းများကို သင့်စက်အထိုင်ဘောက်စ်အား <xliff:g id="TIMEOUT">%2$d</xliff:g> စက္ကန့်ကြာမျှ မြင်တွေ့စေလိုသည်။"</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"အက်ပ်တစ်ခုသည် အခြား ဘလူးတုသ်စက်ပစ္စည်းများကို သင့်စက်အထိုင်ဘောက်စ်အား <xliff:g id="TIMEOUT">%1$d</xliff:g> စက္ကန့်ကြာမျှ မြင်တွေ့စေလိုသည်။"</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> က ဘလူးတုသ်ဖွင့်၍ အခြားစက်ပစ္စည်းများကို သင့်စက်အထိုင်ဘောက်စ်အား <xliff:g id="TIMEOUT">%2$d</xliff:g> စက္ကန့်ကြာမျှ မြင်တွေ့စေလိုသည်။"</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"အက်ပ်တစ်ခုက ဘလူးတုသ် ဖွင့်၍ အခြားစက်ပစ္စည်းများကို သင့်စက်အထိုက်ဘောက်စ်အား <xliff:g id="TIMEOUT">%1$d</xliff:g> စက္ကန့်ကြာမျှ မြင်တွေ့စေလိုသည်။"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ဘလူးတုသ်တွဲချိတ်ရန် တောင်းဆိုချက်"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"တွဲချိတ်ရန်နှင့် ချိတ်ဆက်ရန်"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ဘလူးတုသ် တွဲချိတ်ခြင်းကုဒ်"</string>
