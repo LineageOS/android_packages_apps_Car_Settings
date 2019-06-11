@@ -40,11 +40,10 @@ public abstract class BaseFragment extends Fragment implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
 
     /**
-     * Assume The activity holds this fragment also implements the FragmentController.
-     * This function should be called after onAttach()
+     * Return the {@link FragmentHost}.
      */
-    public final FragmentController getFragmentController() {
-        return (FragmentController) getActivity();
+    public final FragmentHost getFragmentHost() {
+        return (FragmentHost) requireActivity();
     }
 
     /**
@@ -109,8 +108,8 @@ public abstract class BaseFragment extends Fragment implements
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (!(getActivity() instanceof FragmentController)) {
-            throw new IllegalStateException("Must attach to a FragmentController");
+        if (!(getActivity() instanceof FragmentHost)) {
+            throw new IllegalStateException("Must attach to a FragmentHost");
         }
         if (!(getActivity() instanceof UxRestrictionsProvider)) {
             throw new IllegalStateException("Must attach to a UxRestrictionsProvider");
@@ -150,6 +149,6 @@ public abstract class BaseFragment extends Fragment implements
      * Allow fragment to intercept back press and customize behavior.
      */
     protected void onBackPressed() {
-        getFragmentController().goBack();
+        getFragmentHost().goBack();
     }
 }

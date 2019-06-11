@@ -20,7 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.verify;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
 
@@ -30,8 +29,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ConfirmRemoveScreenLockDialogTest {
 
     private static final String TEST_TAG = "test_dialog_tag";
@@ -47,7 +47,7 @@ public class ConfirmRemoveScreenLockDialogTest {
         mDialog = new ConfirmRemoveScreenLockDialog();
         mDialog.setConfirmRemoveScreenLockListener(mListener);
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-        mTestActivity.showDialog(mDialog, TEST_TAG);
+        mDialog.show(mTestActivity.getSupportFragmentManager(), TEST_TAG);
     }
 
     @Test
@@ -68,6 +68,6 @@ public class ConfirmRemoveScreenLockDialogTest {
     }
 
     private boolean isDialogShown() {
-        return mTestActivity.findDialogByTag(TEST_TAG) != null;
+        return mTestActivity.getSupportFragmentManager().findFragmentByTag(TEST_TAG) != null;
     }
 }

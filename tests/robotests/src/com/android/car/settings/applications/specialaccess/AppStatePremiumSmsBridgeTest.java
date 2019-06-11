@@ -24,7 +24,6 @@ import static org.mockito.Mockito.when;
 import android.content.pm.ApplicationInfo;
 import android.os.RemoteException;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.internal.telephony.ISms;
 import com.android.internal.telephony.SmsUsageMonitor;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
@@ -34,11 +33,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 
 import java.util.Arrays;
 
 /** Unit test for {@link AppStatePremiumSmsBridge}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class AppStatePremiumSmsBridgeTest {
 
     @Mock

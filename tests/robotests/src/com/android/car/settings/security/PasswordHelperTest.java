@@ -18,17 +18,17 @@ package com.android.car.settings.security;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.setupwizardlib.InitialLockSetupConstants.ValidateLockFlags;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 
 /**
  * Tests for PasswordHelper class.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class PasswordHelperTest {
 
     private PasswordHelper mPasswordHelper;

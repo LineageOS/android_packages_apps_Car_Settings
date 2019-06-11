@@ -75,7 +75,7 @@ public class DatePickerFragment extends BaseFragment {
                 ((AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE)).setTime(when);
                 getContext().sendBroadcast(new Intent(Intent.ACTION_TIME_CHANGED));
             }
-            getFragmentController().goBack();
+            getFragmentHost().goBack();
         });
     }
 }

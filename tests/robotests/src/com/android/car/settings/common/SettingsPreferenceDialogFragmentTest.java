@@ -28,12 +28,12 @@ import android.view.WindowManager;
 import androidx.preference.DialogPreference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.testutils.BaseTestActivity;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.shadow.api.Shadow;
@@ -42,7 +42,7 @@ import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowWindow;
 
 /** Unit test for {@link SettingsPreferenceDialogFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SettingsPreferenceDialogFragmentTest {
 
     private ActivityController<BaseTestActivity> mTestActivityController;
@@ -75,7 +75,7 @@ public class SettingsPreferenceDialogFragmentTest {
         mPreference.setNegativeButtonText("negative button text");
         mPreference.setDialogMessage("dialog message");
 
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(getShadowAlertDialog().getTitle()).isEqualTo(mPreference.getDialogTitle());
         assertThat(ShadowAlertDialog.getLatestAlertDialog().getButton(
@@ -94,7 +94,7 @@ public class SettingsPreferenceDialogFragmentTest {
         mPreference.setNegativeButtonText("negative button text");
         mPreference.setDialogMessage("dialog message");
 
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         View messageView = ShadowAlertDialog.getLatestAlertDialog().findViewById(
                 android.R.id.message);
 
@@ -107,7 +107,7 @@ public class SettingsPreferenceDialogFragmentTest {
         mPreference.setPositiveButtonText("positive button text");
         mPreference.setNegativeButtonText("negative button text");
 
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         View messageView = ShadowAlertDialog.getLatestAlertDialog().findViewById(
                 android.R.id.message);
 
@@ -116,14 +116,14 @@ public class SettingsPreferenceDialogFragmentTest {
 
     @Test
     public void getPreference_returnsDialogRequestingPreference() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(mFragment.getPreference()).isEqualTo(mPreference);
     }
 
     @Test
     public void dialogClosed_positiveButton_callsOnDialogClosed() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
 
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
@@ -133,7 +133,7 @@ public class SettingsPreferenceDialogFragmentTest {
 
     @Test
     public void dialogClosed_negativeButton_callsOnDialogClosed() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
 
         dialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
@@ -144,7 +144,7 @@ public class SettingsPreferenceDialogFragmentTest {
     @Test
     public void subclassNeedsInputMethod_softInputModeSetOnWindow() {
         mFragment.setNeedsInputMethod(true);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(getShadowWindowFromDialog(
                 ShadowAlertDialog.getLatestAlertDialog()).getSoftInputMode()).isEqualTo(
@@ -154,7 +154,7 @@ public class SettingsPreferenceDialogFragmentTest {
     @Test
     public void subclassDoesNotNeedInputMethod_noWindowSoftInputMode() {
         mFragment.setNeedsInputMethod(false);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(getShadowWindowFromDialog(
                 ShadowAlertDialog.getLatestAlertDialog()).getSoftInputMode()).isEqualTo(0);
@@ -171,7 +171,7 @@ public class SettingsPreferenceDialogFragmentTest {
         mPreference.setNegativeButtonText(negativeButtonText);
         mPreference.setDialogMessage(dialogMessage);
 
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         // Save instance state.
         Bundle outState = new Bundle();

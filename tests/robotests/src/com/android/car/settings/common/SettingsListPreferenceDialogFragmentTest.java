@@ -25,20 +25,20 @@ import android.os.Bundle;
 
 import androidx.preference.ListPreference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.shadows.ShadowAlertDialog;
 import org.robolectric.shadows.ShadowApplication;
 
 /** Unit test for {@link SettingsListPreferenceDialogFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SettingsListPreferenceDialogFragmentTest {
 
     private ActivityController<BaseTestActivity> mTestActivityController;
@@ -70,14 +70,14 @@ public class SettingsListPreferenceDialogFragmentTest {
 
     @Test
     public void dialogPopulatedWithPreferenceEntries() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         assertThat(getShadowAlertDialog().getItems()).isEqualTo(mPreference.getEntries());
     }
 
     @Test
     public void itemSelected_dismissesDialog() {
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         getShadowAlertDialog().clickOnItem(1);
 
@@ -87,7 +87,7 @@ public class SettingsListPreferenceDialogFragmentTest {
     @Test
     public void itemSelected_setsPreferenceValue() {
         mPreference.setValueIndex(0);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         getShadowAlertDialog().clickOnItem(1);
 
@@ -97,7 +97,7 @@ public class SettingsListPreferenceDialogFragmentTest {
     @Test
     public void onDialogClosed_negativeResult_doesNothing() {
         mPreference.setValueIndex(0);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
 
         dialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
@@ -108,7 +108,7 @@ public class SettingsListPreferenceDialogFragmentTest {
     @Test
     public void instanceStateRetained() {
         mPreference.setValueIndex(0);
-        mTestActivity.showDialog(mFragment, /* tag= */ null);
+        mFragment.show(mTestActivity.getSupportFragmentManager(), /* tag= */ null);
 
         // Save instance state.
         Bundle outState = new Bundle();

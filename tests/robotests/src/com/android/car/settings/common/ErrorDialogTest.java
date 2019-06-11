@@ -22,7 +22,6 @@ import static org.robolectric.RuntimeEnvironment.application;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.DialogTestUtils;
@@ -32,11 +31,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 
 /**
  * Tests for ErrorDialog.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ErrorDialogTest {
     private static final String ERROR_DIALOG_TAG = "ErrorDialogTag";
     private BaseTestActivity mTestActivity;

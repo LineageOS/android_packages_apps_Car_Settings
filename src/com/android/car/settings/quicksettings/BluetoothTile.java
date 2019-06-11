@@ -28,7 +28,7 @@ import android.view.View;
 
 import com.android.car.settings.R;
 import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
-import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.FragmentHost;
 import com.android.car.settings.common.Logger;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -90,7 +90,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
     BluetoothTile(
             Context context,
             StateChangedListener stateChangedListener,
-            FragmentController fragmentController) {
+            FragmentHost fragmentHost) {
         mStateChangedListener = stateChangedListener;
         mContext = context;
         mLocalManager = LocalBluetoothManager.getInstance(
@@ -109,7 +109,7 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
             mState = State.OFF;
         }
         mLaunchBluetoothSettings = v -> {
-            fragmentController.launchFragment(new BluetoothSettingsFragment());
+            fragmentHost.launchFragment(new BluetoothSettingsFragment());
             return true;
         };
     }

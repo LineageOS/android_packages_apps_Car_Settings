@@ -33,7 +33,6 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
@@ -45,6 +44,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
@@ -52,7 +52,7 @@ import org.robolectric.annotation.Config;
 /**
  * Unit tests for {@link AddTrustedDeviceActivity}.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCar.class, ShadowLockPatternUtils.class})
 public class AddTrustedDeviceActivityTest {
     private static final String ADDRESS = "00:11:22:33:AA:BB";
@@ -152,7 +152,8 @@ public class AddTrustedDeviceActivityTest {
                 enrollmentCallBack.capture());
         enrollmentCallBack.getValue().onAuthStringAvailable(mBluetoothDevice, "123");
 
-        assertThat(mActivity.findDialogByTag(ConfirmPairingCodeDialog.TAG)).isNotNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(
+                ConfirmPairingCodeDialog.TAG)).isNotNull();
     }
 
     @Test

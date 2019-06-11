@@ -24,7 +24,6 @@ import android.widget.Button;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
@@ -35,12 +34,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.List;
 
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowLocalBroadcastManager.class, ShadowWifiManager.class})
 public class AddWifiFragmentTest {
 

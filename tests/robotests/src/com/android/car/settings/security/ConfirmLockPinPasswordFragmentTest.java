@@ -20,20 +20,19 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.view.View;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.testutils.BaseTestActivity;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
 
 /**
  * Tests for ConfirmLockPinPasswordFragment class.
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ConfirmLockPinPasswordFragmentTest {
 
     private TestSettingsScreenLockActivity mTestActivity;
@@ -63,18 +62,10 @@ public class ConfirmLockPinPasswordFragmentTest {
      * The containing activity of ConfirmLockPinPasswordFragment must implement two interfaces
      */
     private static class TestSettingsScreenLockActivity extends BaseTestActivity implements
-            CheckLockListener, FragmentController {
+            CheckLockListener {
 
         @Override
         public void onLockVerified(byte[] lock) {
-        }
-
-        @Override
-        public void goBack() {
-        }
-
-        @Override
-        public void showBlockingMessage() {
         }
     }
 }

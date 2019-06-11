@@ -35,7 +35,6 @@ import android.widget.FrameLayout;
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
@@ -43,10 +42,11 @@ import com.android.car.settings.testutils.FragmentController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 
 /** Unit test for {@link SettingsFragment}. */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class SettingsFragmentTest {
 
     private static final String TEST_TAG = "test_tag";

@@ -29,7 +29,6 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.SwitchPreference;
 
-import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
@@ -38,6 +37,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -46,7 +46,7 @@ import org.robolectric.annotation.Config;
  * Note that the switch preference represents the opposite of the restriction it is controlling.
  * i.e. DISALLOW_ADD_USER may be the restriction, but the switch represents "create new users".
  */
-@RunWith(CarSettingsRobolectricTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class})
 public class PermissionsPreferenceControllerTest {
 
