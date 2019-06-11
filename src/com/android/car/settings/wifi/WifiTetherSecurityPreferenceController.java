@@ -89,19 +89,24 @@ public class WifiTetherSecurityPreferenceController extends
         return null;
     }
 
+    /** Overriding to orchestrate the order in which the intents are broadcast. */
+    @Override
+    protected void setCarWifiApConfig(WifiConfiguration configuration) {
+        getCarWifiManager().setWifiApConfig(configuration);
+        broadcastSecurityTypeChanged();
+        requestWifiTetherRestart();
+    }
+
     private void updateSecurityType() {
         WifiConfiguration config = getCarWifiApConfig();
         config.allowedKeyManagement.clear();
         config.allowedKeyManagement.set(mSecurityType);
-
         if (mSecurityType == WifiConfiguration.KeyMgmt.NONE) {
             config.preSharedKey = "";
         } else {
             config.preSharedKey = getSavedPassword();
         }
-
         setCarWifiApConfig(config);
-        broadcastSecurityTypeChanged();
     }
 
     private void broadcastSecurityTypeChanged() {

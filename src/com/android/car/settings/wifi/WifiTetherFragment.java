@@ -31,6 +31,7 @@ import android.widget.Switch;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
@@ -44,6 +45,7 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
     private ConnectivityManager mConnectivityManager;
     private ProgressBar mProgressBar;
     private Switch mTetherSwitch;
+    private boolean mRestartBooked = false;
 
     private final ConnectivityManager.OnStartTetheringCallback mOnStartTetheringCallback =
             new ConnectivityManager.OnStartTetheringCallback() {
@@ -54,6 +56,20 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
                     mTetherSwitch.setEnabled(true);
                 }
             };
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int state = intent.getIntExtra(
+                    WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_FAILED);
+            handleWifiApStateChanged(state);
+        }
+    };
+    private final BroadcastReceiver mRestartReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            restartTethering();
+        }
+    };
 
     @Override
     @LayoutRes
@@ -88,10 +104,12 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
     @Override
     public void onStart() {
         super.onStart();
-
-        mCarWifiManager.start();
         getContext().registerReceiver(mReceiver,
                 new IntentFilter(WifiManager.WIFI_AP_STATE_CHANGED_ACTION));
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mRestartReceiver,
+                new IntentFilter(
+                        WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING));
+        mCarWifiManager.start();
     }
 
     @Override
@@ -99,6 +117,7 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
         super.onStop();
         mCarWifiManager.stop();
         getContext().unregisterReceiver(mReceiver);
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mRestartReceiver);
         mProgressBar.setVisibility(View.GONE);
     }
 
@@ -111,11 +130,9 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
         if (!isChecked) {
-            mConnectivityManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
+            stopTethering();
         } else {
-            mConnectivityManager.startTethering(ConnectivityManager.TETHERING_WIFI,
-                    /* showProvisioningUi= */ true,
-                    mOnStartTetheringCallback, new Handler(Looper.getMainLooper()));
+            startTethering();
         }
     }
 
@@ -123,15 +140,6 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
         mTetherSwitch.setChecked(mCarWifiManager.isWifiApEnabled());
         mTetherSwitch.setOnCheckedChangeListener(this);
     }
-
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final int state = intent.getIntExtra(
-                    WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_FAILED);
-            handleWifiApStateChanged(state);
-        }
-    };
 
     private void handleWifiApStateChanged(int state) {
         switch (state) {
@@ -153,6 +161,10 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
             case WifiManager.WIFI_AP_STATE_DISABLED:
                 mTetherSwitch.setChecked(false);
                 mTetherSwitch.setEnabled(true);
+                if (mRestartBooked) {
+                    mTetherSwitch.setChecked(true);
+                    mRestartBooked = false;
+                }
                 break;
             default:
                 mTetherSwitch.setChecked(false);
@@ -160,4 +172,20 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
                 break;
         }
     }
+
+    private void startTethering() {
+        mConnectivityManager.startTethering(ConnectivityManager.TETHERING_WIFI,
+                /* showProvisioningUi= */ true,
+                mOnStartTetheringCallback, new Handler(Looper.getMainLooper()));
+    }
+
+    private void stopTethering() {
+        mConnectivityManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
+    }
+
+    private void restartTethering() {
+        stopTethering();
+        mRestartBooked = true;
+    }
+
 }
