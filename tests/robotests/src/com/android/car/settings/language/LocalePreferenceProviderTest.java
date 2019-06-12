@@ -29,8 +29,8 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 
+import com.android.car.settings.R;
 import com.android.car.settings.common.LogicalPreferenceGroup;
-import com.android.car.settingslib.R;
 import com.android.internal.app.LocaleStore;
 import com.android.internal.app.SuggestedLocaleAdapter;
 

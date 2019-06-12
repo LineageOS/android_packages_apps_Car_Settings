@@ -31,8 +31,8 @@ import android.os.UserHandle;
 import android.util.ArraySet;
 import android.util.SparseArray;
 
+import com.android.car.settings.common.AsyncLoader;
 import com.android.car.settings.common.Logger;
-import com.android.car.settingslib.loader.AsyncLoader;
 import com.android.settingslib.applications.StorageStatsSource;
 
 import java.io.IOException;
