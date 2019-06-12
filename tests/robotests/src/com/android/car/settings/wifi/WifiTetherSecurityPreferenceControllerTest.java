@@ -115,7 +115,6 @@ public class WifiTetherSecurityPreferenceControllerTest {
 
         assertThat(mCarWifiManager.getWifiApConfig().getAuthType())
                 .isEqualTo(WifiConfiguration.KeyMgmt.NONE);
-
     }
 
     @Test
@@ -157,7 +156,7 @@ public class WifiTetherSecurityPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceChanged_broadcastsExactlyOneIntent() {
+    public void onPreferenceChanged_broadcastsExactlyTwoIntents() {
         WifiConfiguration config = new WifiConfiguration();
         config.allowedKeyManagement.clear();
         config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
@@ -167,7 +166,37 @@ public class WifiTetherSecurityPreferenceControllerTest {
         int newSecurityType = WifiConfiguration.KeyMgmt.WPA2_PSK;
         mController.handlePreferenceChanged(mPreference, newSecurityType);
 
-        assertThat(ShadowLocalBroadcastManager.getSentBroadcastIntents().size()).isEqualTo(1);
+        assertThat(ShadowLocalBroadcastManager.getSentBroadcastIntents().size()).isEqualTo(2);
+    }
+
+    @Test
+    public void onPreferenceChanged_broadcastsSecurityTypeChangedFirst() {
+        WifiConfiguration config = new WifiConfiguration();
+        config.allowedKeyManagement.clear();
+        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        mCarWifiManager.setWifiApConfig(config);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+
+        int newSecurityType = WifiConfiguration.KeyMgmt.WPA2_PSK;
+        mController.handlePreferenceChanged(mPreference, newSecurityType);
+
+        assertThat(ShadowLocalBroadcastManager.getSentBroadcastIntents().get(0).getAction())
+                .isEqualTo(WifiTetherSecurityPreferenceController.ACTION_SECURITY_TYPE_CHANGED);
+    }
+
+    @Test
+    public void onPreferenceChanged_broadcastsRequestTetheringRestartSecond() {
+        WifiConfiguration config = new WifiConfiguration();
+        config.allowedKeyManagement.clear();
+        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        mCarWifiManager.setWifiApConfig(config);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+
+        int newSecurityType = WifiConfiguration.KeyMgmt.WPA2_PSK;
+        mController.handlePreferenceChanged(mPreference, newSecurityType);
+
+        assertThat(ShadowLocalBroadcastManager.getSentBroadcastIntents().get(1).getAction())
+                .isEqualTo(WifiTetherSecurityPreferenceController.ACTION_RESTART_WIFI_TETHERING);
     }
 
     @Test

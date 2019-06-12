@@ -29,6 +29,7 @@ import static org.mockito.Mockito.when;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
@@ -193,6 +194,36 @@ public class BluetoothBondedDevicesPreferenceControllerTest {
                 (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
 
         assertThat(devicePreference.isActionShown()).isFalse();
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_hasRestrictions_buttonHidden() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+
+        CarUxRestrictions restrictions = new CarUxRestrictions.Builder(
+                true, CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, 0).build();
+        mController.onUxRestrictionsChanged(restrictions);
+
+        assertThat(devicePreference.isActionShown()).isFalse();
+    }
+
+    @Test
+    public void onUxRestrictionsChanged_restrictionToggled_buttonShown() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+
+        CarUxRestrictions restrictions = new CarUxRestrictions.Builder(
+                true, CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, 0).build();
+        mController.onUxRestrictionsChanged(restrictions);
+
+        CarUxRestrictions noRestrictions = new CarUxRestrictions.Builder(
+                true, CarUxRestrictions.UX_RESTRICTIONS_BASELINE, 0).build();
+        mController.onUxRestrictionsChanged(noRestrictions);
+
+        assertThat(devicePreference.isActionShown()).isTrue();
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
