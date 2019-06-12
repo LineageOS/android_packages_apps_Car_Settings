@@ -1353,7 +1353,7 @@
     <!-- Step two of adding a trusted device [CHAR LIMIT=NONE]-->
     <string name="trusted_device_select_device">2. Select <xliff:g id="car_name" example="MyCar">%1$s</xliff:g> on your phone to pair the devices</string>
     <!-- Messages shown to alert user about the safety of the trusted device feature [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_safety_alert">A trusted device nearby your car will unlock the car upon ignition, even if someone else is holding the device.</string>
+    <string name="trusted_device_safety_alert">A trusted device nearby your car will unlock the user profile upon ignition, even if someone else is holding the device.</string>
     <!-- Confirm pairing code dialog title [CHAR LIMIT=60]-->
     <string name="trusted_device_pairing_code_dialog_title">Please confirm that the pairing codes match</string>
     <!-- Toast shown when user enrolls a device successfully [CHAR LIMIT=100]-->
