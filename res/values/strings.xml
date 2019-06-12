@@ -753,8 +753,10 @@
     <string name="firmware_version">Android version</string>
     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
     <string name="security_patch">Android security patch level</string>
-    <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
-    <string name="model_info">Model</string>
+    <!-- About car screen, preference for showing hardware information such as model and serial number.  [CHAR LIMIT=40] -->
+    <string name="hardware_info">Model &amp; hardware</string>
+    <!-- About car screen, hardware info summary.  [CHAR LIMIT=40] -->
+    <string name="hardware_info_summary">Model&#58; <xliff:g example="Hawk" id="model">%1$s</xliff:g></string>
     <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
     <string name="baseband_version">Baseband version</string>
     <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
@@ -808,6 +810,12 @@
     <string name="wallpaper_attributions">Wallpapers</string>
     <!-- About phone settings screen, setting option name to see wallpapers attributions values -->
     <string name="wallpaper_attributions_values">Satellite imagery providers:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky</string>
+    <!-- About > Hardware info screen, model label  [CHAR LIMIT=40] -->
+    <string name="model_info">Model</string>
+    <!-- About > Hardware info screen, serial number label. [CHAR LIMIT=40]-->
+    <string name="status_serial_number">Serial number</string>
+    <!-- About > Hardware info screen, hardware revision label. [CHAR LIMIT=40] -->
+    <string name="hardware_revision">Hardware version</string>
 
     <!-- Text to display in regulatory info screen (from device overlay). [CHAR LIMIT=NONE] -->
     <string name="regulatory_info_text"></string>

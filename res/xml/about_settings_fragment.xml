@@ -20,9 +20,10 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/about_settings">
     <Preference
-        android:key="@string/pk_model_info"
-        android:title="@string/model_info"
-        settings:controller="com.android.car.settings.system.ModelInfoPreferenceController"/>
+        android:fragment="com.android.car.settings.system.HardwareInfoFragment"
+        android:key="@string/pk_hardware_info"
+        android:title="@string/hardware_info"
+        settings:controller="com.android.car.settings.system.HardwareInfoPreferenceController"/>
     <Preference
         android:key="@string/pk_firmware_version"
         android:title="@string/firmware_version"
