@@ -629,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"पुष्टि गर्नुहोस्"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय यन्त्रलाई हटाउनुहोस्"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"सम्पन्न भयो"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"कुनै विश्वसनीय यन्त्र सेटअप गर्न सहयोगी अनुप्रयोग प्रयोग गर्नुहोस्। सेटअप भएपछि, सवारी साधनले तपाईंको फोन पत्ता लागाएपछि तपाईं आफ्नो प्रयोगकर्ता प्रोफाइल अनलक गर्न सक्नु हुने छ"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"कुनै विश्वसनीय यन्त्र सेटअप गर्न सहयोगी अनुप्रयोग प्रयोग गर्नुहोस्। सेटअप भएपछि तपाईंको फोन सवारी साधानको नजिकै भएको कुरा पहिचान हुँदा तपाईंको प्रयोगकर्ता प्रोफाइल अनलक हुने छ।"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"१. आफ्नो फोनमा सहयोगी अनुप्रयोग डाउनलोड गर्नुहोस्"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"२. यन्त्रहरूको जोडा बनाउन आफ्नो फोनमा <xliff:g id="CAR_NAME">%1$s</xliff:g> चयन गर्नुहोस्"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ले यस यन्त्रका सुरक्षासम्बन्धी सुविधाहरू पत्ता लगाउन सक्दैन। तपाईंको कारलाई सुरक्षित राख्न मद्दत गर्नका लागि विश्वसनीय यन्त्रले तपाईंले अनलक गरेपछि मात्र तपाईंको कार अनलक अवस्थामा राख्न सक्ने छ। तपाईंको विश्वसनीय यन्त्र जोसुकैका हातमा भए तापनि त्यसले तपाईंको कार वरपर हुँदा त्यसलाई अनलक अवस्थामा राख्न सक्छ।"</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"जोडा मिलाउने कोड मिल्दाजुल्दा छन् भन्ने सुनिश्चित गर्नुहोस्"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"फोन सफलतापूर्वक दर्ता गरिएको छ"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> दर्ता गर्न सकिएन"</string>

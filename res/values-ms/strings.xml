@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Sahkan"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Alih keluar peranti yang dipercayai"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Gunakan apl rakan untuk menyediakan peranti yang dipercayai. Setelah peranti disediakan, anda akan dapat membuka kunci profil pengguna anda apabila telefon anda dikesan oleh kenderaan"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gunakan apl rakan untuk menyediakan peranti yang dipercayai. Setelah peranti disediakan, profil pengguna anda akan dibuka kunci secara automatik apabila telefon anda dikesan berada berdekatan kenderaan."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Muat turun apl rakan pada telefon anda"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> pada telefon anda untuk menggandingkan peranti tersebut"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock tidak dapat mengesan ciri keselamatan peranti ini. Untuk melindungi kereta anda, peranti yang dipercayai hanya dapat memastikan kereta anda kekal tidak berkunci setelah anda membuka kunci kereta anda itu. Peranti yang dipercayai boleh memastikan kereta anda kekal tidak berkunci apabila berada berdekatan, walaupun orang lain yang memegang peranti itu."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Peranti yang dipercayai berdekatan kereta anda akan membuka kunci profil pengguna apabila kereta dihidupkan, walaupun orang lain yang memegang peranti itu."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Sila sahkan bahawa kod gandingan adalah sepadan"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon telah berjaya didaftarkan"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>

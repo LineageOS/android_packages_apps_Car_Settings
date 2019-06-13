@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Staðfesta"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Fjarlægja traust tæki"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Lokið"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Notaðu fylgiforritið til að setja upp traust tæki. Þegar það hefur verið sett upp geturðu opnað notandaprófílinn þinn þegar bíllinn ber kennsl á símann þinn"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Notaðu fylgiforritið til að setja upp traust tæki. Þegar það hefur verið sett upp mun notandaprófílinn þinn opnast sjálfkrafa þegar borið er kennsl á tækið nálægt ökutækinu."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Sæktu fylgiforritið í símann þinn"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Veldu <xliff:g id="CAR_NAME">%1$s</xliff:g> í símanum til að para tækin"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock getur ekki greint öryggiseiginleika þessa tækis. Til að tryggja öryggi bílsins þíns getur traust tæki aðeins haldið bílnum ólæstum þegar þú hefur þegar tekið hann úr lás. Trausta tækið þitt getur haldið bílnum ólæstum þegar það er nálægt, jafnvel þótt einhver annar haldi á því."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Traust tæki nálægt bílnum mun opna notandaprófílinn þegar bíllinn er gangsettur, jafnvel þótt einhver annar haldi á tækinu."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Staðfestu að pörunarkóðarnir stemmi"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Síminn hefur verið skráður"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Skráning <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mistókst"</string>

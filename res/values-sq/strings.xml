@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmo"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hiq pajisjen e besuar"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"U krye"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Përdor aplikacionin shoqërues për të konfiguruar një pajisje të besuar. Pasi të konfigurohet, do të jesh në gjendje të shkyçësh profilin tënd të përdoruesit kur telefoni yt të zbulohet nga automjeti"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Përdor aplikacionin shoqërues për të konfiguruar një pajisje të besuar. Pasi të konfigurohet, profili yt si përdorues do të shkyçet automatikisht kur telefoni yt të zbulohet pranë automjetit."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Shkarko aplikacionin shoqërues në telefonin tënd"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nuk mund të zbulojë funksionet e sigurisë së kësaj pajisjeje. Për të ndihmuar në mbrojtjen e makinës sate, pajisja e besuar do të mund ta mbajë makinën tënde të shkyçur vetëm pasi të jetë shkyçur tashmë nga ti. Pajisja jote e besuar mund ta mbajë makinën tënde të shkyçur kur është në afërsi, edhe nëse e mban dikush tjetër."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Një pajisje e besuar në afërsi do ta shkyçë profilin e përdoruesit pas ndezjes, edhe nëse pajisjen e mban dikush tjetër."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmo se kodet e çiftimit përputhen"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefoni është regjistruar me sukses"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>

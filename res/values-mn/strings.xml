@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Баталгаажуулах"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Итгэмжлэгдсэн төхөөрөмжийг устгах"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Болсон"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Итгэмжлэгдсэн төхөөрөмжийг тохируулахын тулд дэмжигч аппыг ашиглана уу. Тохируулсны дараа тээврийн хэрэгсэл таны утсыг илрүүлсэн үед та хэрэглэгчийн профайлынхаа түгжээг тайлах боломжтой болно"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Итгэмжлэгдсэн төхөөрөмжийг тохируулахын тулд дэмжигч аппыг ашиглана уу. Үүнийг тохируулмагц таны утсыг тээврийн хэрэгслийн ойролцоо байгааг илрүүлэх үед таны хэрэглэгчийн профайл түгжээг автоматаар тайлна."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Утсандаа дэмжигч аппыг татаж авна уу"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Төхөөрөмжүүдийг хослуулахын тулд утаснаасаа <xliff:g id="CAR_NAME">%1$s</xliff:g>-г сонгоно уу"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock энэ төхөөрөмжийн аюулгүй байдлын онцлогуудыг илрүүлэх боломжгүй. Итгэмжлэгдсэн төхөөрөмж танд машинаа хамгаалахад туслах зорилгоор таныг машиныхаа түгжээг тайлсны дараа түгжээгүй байлгах боломжтой болно. Таны итгэмжлэгдсэн төхөөрөмж ойролцоо байх үед, үүнийг хэн нэгэн барьж байсан ч гэсэн таны машиныг түгжээгүй байлгах боломжтой."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Хэн нэгэн төхөөрөмжийг барьж байсан ч таны машины ойролцоох итгэмжлэгдсэн төхөөрөмж хэрэглэгчийн профайлыг асаахад түгжээг тайлна."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Хослуулах кодын тохирох сонголтыг баталгаажуулна уу"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Утсыг амжилттай бүртгүүллээ"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-г бүртгүүлж чадсангүй"</string>

@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потвърждаване"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Премахване на надеждното устройство"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Използвайте придружаващото приложение, за да настроите надеждно устройство. След настройването ще можете да отключвате потребителския си профил, когато телефонът ви бъде разпознат от автомобила."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Използвайте придружаващото приложение, за да настроите надеждно устройство. След настройването потребителският ви профил ще се отключва автоматично, когато телефонът ви бъде открит в близост до превозното средство."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Изтеглете придружаващото приложение на телефона си."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ на телефона си, за да сдвоите устройствата."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може да открие функциите за сигурност на това устройство. За да е защитен автомобилът ви, надеждното устройство ще може да го поддържа в отключено състояние само ако той вече е отключен от вас. То може да поддържа автомобила ви отключен, когато е близо до него, дори ако го държи някой друг."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Надеждно устройство в близост до автомобила ви ще отключва потребителския профил при запалване дори ако друг човек държи устройството."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Моля, потвърдете, че кодовете за сдвояване съвпадат"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонът е регистриран успешно"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацията на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не бе успешна"</string>
