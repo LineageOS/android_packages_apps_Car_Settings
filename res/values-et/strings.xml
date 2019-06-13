@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kinnita"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eemalda usaldusväärne seade"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Valmis"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Kasutage usaldusväärse seadme seadistamiseks kaasrakendust. Kui see on seadistatud, on teil võimalik avada oma kasutajaprofiil, kui sõiduk tuvastab teie telefoni"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Kasutage usaldusväärse seadme seadistamiseks kaasrakendust. Kui see on seadistatud, avaneb teie kasutajaprofiil automaatselt, kui sõiduki läheduses tuvastatakse teie telefon."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Laadige oma telefonis alla kaasrakendus."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tehke seadmete sidumiseks oma telefonis valik <xliff:g id="CAR_NAME">%1$s</xliff:g>."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ei suuda tuvastada selle seadme turvafunktsioone. Teie auto kaitsmiseks saab usaldusväärne seade teie auto avatuna hoida vaid siis, kui olete ise lukustuse tühistanud. Teie usaldusväärne seade võib hoida teie auto avatuna, kui see on läheduses, isegi kui see on kellegi teise käes."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Teie auto läheduses olev usaldusväärne seade avab käivitamisel kasutajaprofiili ka siis, kui seade on kellelgi teise käes."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Veenduge, et sidumiskoodid ühtiksid"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefoni registreerimine õnnestus"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Seadme <xliff:g id="DEVICE_NAME">%1$s</xliff:g> registreerimine ebaõnnestus"</string>

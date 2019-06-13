@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"تأیید"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"حذف دستگاه مطمئن"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"تمام"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"از برنامه همراه برای راه‌اندازی دستگاه مطمئن استفاده کنید. زمانی‌که تنظیم انجام شد، درصورت شناسایی تلفن توسط وسیله نقلیه، می‌توانید قفل نمایه کاربری‌تان را باز کنید."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"از برنامه همراه برای راه‌اندازی دستگاه مطمئن استفاده کنید. پس از راه‌اندازی دستگاه مطمئن، وقتی تلفنتان اطراف خودرو شناسایی می‌شود، نمایه کاربری‌تان به‌طور خودکار قفل خودرو را باز می‌کند."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"۱. برنامه همراه را در تلفنتان بارگیری کنید"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"۲. برای مرتبط‌سازی دستگاه‌ها، <xliff:g id="CAR_NAME">%1$s</xliff:g> را در تلفنتان انتخاب کنید"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock نمی‌تواند ویژگی‌های امنیتی این دستگاه را شناسایی کند. برای کمک به محافظت از خودرو، دستگاه مطمئن تنها زمانی که از قبل قفل تلفنتان را باز کرده باشید می‌تواند قفل آن را باز نگه‌دارد. دستگاه مطمئن شما می‌تواند هنگامی‌که خودرویتان در اطراف است قفل آن را باز نگه‌دارد، حتی اگر تلفن در دست شخص دیگری باشد."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"اگر دستگاهی مطمئن در اطراف خودروتان وجود داشته باشد، به‌محض روشن شدن خودرو قفل نمایه کاربر باز می‌شود، حتی اگر دستگاه در اختیار فرد دیگری باشد."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"لطفاً تأیید کنید که کدهای مرتبط‌سازی مطابقت دارند"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"تلفن با موفقیت ثبت‌نام شد"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ثبت‌نام <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ناموفق بود"</string>

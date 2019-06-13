@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirma"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Suprimeix el dispositiu de confiança"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Fet"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Fes servir l\'aplicació complementària per configurar un dispositiu de confiança. Un cop configurat, podràs desbloquejar el teu perfil d\'usuari quan el vehicle detecti el telèfon"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilitza l\'aplicació complementària per configurar un dispositiu de confiança. Un cop configurat, el teu perfil d\'usuari es desbloquejarà automàticament quan el telèfon es detecti a prop del vehicle."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Baixa l\'aplicació complementària al telèfon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> al telèfon per vincular els dispositius"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock no pot detectar les funcions de seguretat d\'aquest dispositiu. Per protegir el cotxe, el dispositiu de confiança només podrà mantenir-lo desbloquejat si l\'has desbloquejat tu. El dispositiu de confiança pot mantenir el cotxe desbloquejat quan estigui a prop, encara que l\'agafi algú altre."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Un dispositiu de confiança proper desbloquejarà el perfil d\'usuari en arrencar-lo, encara que sigui una altra persona qui sostingui el dispositiu."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que coincideixen els codis de sincronització"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"El telèfon s\'ha inscrit correctament."</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"No s\'ha pogut inscriure el dispositiu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

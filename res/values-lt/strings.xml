@@ -653,10 +653,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Patvirtinti"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Pašalinti patikimą įrenginį"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Atlikta"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Naudokite papildomą programą, kad nustatytumėte patikimą įrenginį. Nustatę galėsite atrakinti naudotojo profilį, kai transporto priemonė aptiks telefoną"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Naudokite papildomą programą, kad nustatytumėte patikimą įrenginį. Jį nustačius jūsų naudotojo profilis bus atrakintas automatiškai, kai telefonas bus aptiktas netoli transporto priemonės."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Atsisiųskite papildomą programą telefone"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pasirinkite automobilį „<xliff:g id="CAR_NAME">%1$s</xliff:g>“ telefone, kad susietumėte įrenginius"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"„Smart Lock“ negali aptikti šio įrenginio saugos funkcijų. Automobilio saugos sumetimais patikimas įrenginys galės laikyti atrakintą automobilį, tik kai jį jau būsite atrakinę. Patikimas įrenginys negali laikyti atrakinto automobilio, kai jis yra netoliese, net jei įrenginį laiko kažkas kitas."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Netoli jūsų automobilio esantis patikimas įrenginys atrakins naudotojo profilį užvedus automobilį, net jei įrenginį laiko kažkas kitas."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Patvirtinkite, kad susiejimo kodai atitinka"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonas sėkmingai užregistruotas"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"„<xliff:g id="DEVICE_NAME">%1$s</xliff:g>“ įrenginio registracija nepavyko"</string>
