@@ -30,6 +30,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.car.apps.common.widget.PagedRecyclerView;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.SettingsFragment;
@@ -69,12 +70,16 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
                         CHECK_LOCK_REQUEST_CODE, /* callback= */ this));
         masterClearButton.setEnabled(false);
 
-        masterClearButton.getViewTreeObserver().addOnGlobalLayoutListener(
+        getListView().getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        masterClearButton.setEnabled(isAtEnd());
-                        masterClearButton.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                        PagedRecyclerView pagedRecyclerView = (PagedRecyclerView) getListView();
+                        if (pagedRecyclerView.fullyInitialized()) {
+                            masterClearButton.setEnabled(isAtEnd());
+                            masterClearButton.getViewTreeObserver().removeOnGlobalLayoutListener(
+                                    this);
+                        }
                     }
                 });
         getListView().setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
