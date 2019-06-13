@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"დადასტურება"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"სანდო მოწყობილობის ამოშლა"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"მზადაა"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"გამოიყენეთ კომპანიონი აპი სანდო მოწყობილობის დასაყენებლად. დაყენების შემდეგ შეგეძლებათ თქვენი მომხმარებლის პროფილის განბლოკვა, როცა ავტომობილი ამოიცნობს თქვენს ტელეფონს."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"სანდო მოწყობილობის დასაყენებლად გამოიყენეთ კომპანიონი აპი. დაყენების შემდეგ თქვენი მომხმარებლის პროფილი ავტომატურად განიბლოკება, როცა თქვენ ტელეფონი ავტომობილთან ახლოს დაფიქსირდება."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ჩამოტვირთეთ კომპანიონი აპი თქვენს ტელეფონზე"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. თქვენს ტელეფონზე აირჩიეთ <xliff:g id="CAR_NAME">%1$s</xliff:g> მოწყობილობების დასაწყვილებლად"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-მა ვერ მოახერხა ამ მოწყობილობის უსაფრთხოების ფუნქციების დადგენა. ავტომობილის დაცვის მიზნით, სანდო მოწყობილობა თქვენი ავტომობილის განბლოკილ მდგომარეობაში შენარჩუნებას შეძლებს მხოლოდ მას შემდეგ, რაც ის თქვენ მიერ განიბლოკება. სანდო მოწყობილობა თქვენი ავტომობილის განბლოკილ მდგომარეობაში შენარჩუნებას შეძლებს, როცა ის ახლოს მდებარეობს, მაშინაც კი, თუ ის სხვას უკავია."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"თქვენს ავტომობილთან ახლოს მდებარე სანდო მოწყობილობა განბლოკავს მომხმარებლის პროფილს აალებისას, მაშინაც კი, თუ მოწყობილობა სხვას უკავია."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"გთხოვთ, დაადასტუროთ, რომ დაკავშირების კოდები ემთხვევა"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ტელეფონი წარმატებით დარეგისტრირდა"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ის რეგისტრაცია ვერ მოხერხდა"</string>

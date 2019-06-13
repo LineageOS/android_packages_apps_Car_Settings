@@ -629,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Təsdiq"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Güvənli cihazı silin"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Hazırdır"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Etibarlı cihaz ayarlamaq üçün kompanyon tətbiq istifadə edin. Ayarlandıqdan sonra, telefonunuz avtomobil tərəfindən aşkarlandıqda istifadəçi profilinizi kiliddən çıxara biləcəksiniz"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Etibarlı cihaz ayarlamaq üçün kompanyon tətbiq istifadə edin. Ayarlandıqdan sonra, telefonunuz avtomobil tərəfindən aşkarlandıqda istifadəçi profiliniz avtomatik kiliddən çıxarılacaq."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Telefonunuza kompanyon tətbiqini endirin"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları birləşdirmək üçün telefonda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçin"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock bu cihazın təhlükəsizlik xüsusiyyətlərini aşkarlaya bilmir. Telefonunuzu qorumağa kömək etmək üçün etibarlı cihaz yalnızca avtomobilin kilidini açdığınız zaman kilidi açıq vəziyyətdə saxlaya biləcək. Etibarlı cihazınız hətta başqasının əlində olarkən belə, yaxınlıqda olduqda avtomobili kilidi açıq saxlaya bilər."</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Birləşdirmə kodlarının uyğun gəldiyini təsdiqləyin"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon uğurla qeydiyyata alındı"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qeydiyyatı alınmadı"</string>

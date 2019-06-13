@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bekräfta"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ta bort betrodd enhet"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Klar"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Konfigurera en betrodd enhet med den tillhörande appen. När konfigureringen är klar låses din användarprofil upp när bilen känner av mobilen"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Konfigurera en betrodd enhet med den tillhörande appen. När den har konfigurerats låses användarprofilen upp automatiskt när mobilen upptäcks i närheten av fordonet."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Ladda ned den tillhörande appen på mobilen"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Koppla enheterna genom att välja <xliff:g id="CAR_NAME">%1$s</xliff:g> på mobilen"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock kan inte identifiera enhetens säkerhetsfunktioner. Som en säkerhetsåtgärd kan den betrodda enheten bara hålla bilen olåst efter att den har låsts upp av dig. Den betrodda enheten kan hålla bilen olåst när den finns i närheten, även om någon annan håller i enheten."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"När en betrodd enhet är i närheten av din bil låses användarprofilen upp vid start, även om någon annan håller i enheten."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Bekräfta att kopplingskoderna stämmer överens"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Mobilen har registrerats"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Det gick inte att registrera <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

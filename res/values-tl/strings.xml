@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kumpirmahin"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Mag-alis ng pinagkakatiwalaang device"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Tapos na"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Buksan ang kasamang app para mag-set up ng pinagkakatiwalaang device. Kapag na-set up ito, maa-unlock mo ang iyong profile ng user kapag na-detect ng sasakyan ang telepono mo"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Buksan ang kasamang app para mag-set up ng pinagkakatiwalaang device. Kapag na-set up na, awtomatikong maa-unlock ang iyong profile ng user kapag na-detect na malapit sa sasakyan ang telepono."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. I-download ang kasamang app sa iyong telepono"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Piliin ang <xliff:g id="CAR_NAME">%1$s</xliff:g> sa iyong telepono para ipares ang mga device"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Hindi ma-detect ng Smart Lock ang mga panseguridad na feature ng device na ito. Para makatulong na maprotektahan ang iyong kotse, magagawa lang ng pinagkakatiwalaang device na panatilihing naka-unlock ang kotse mo kapag na-unlock mo na ito. Mapapanatili ng iyong pinagkakatiwalaang device na naka-unlock ang kotse mo, kahit na ibang tao ang humahawak nito."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Ia-unlock ng pinagkakatiwalaang device malapit sa iyong kotse ang profile ng user kapag pinaandar ito, kahit na ibang tao ang humahawak sa device."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Pakikumpirma kung magkatugma ang mga code ng pagpapares"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Matagumpay na na-enroll ang teleponono"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Hindi na-enroll ang <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

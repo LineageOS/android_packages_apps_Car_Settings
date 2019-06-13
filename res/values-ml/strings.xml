@@ -629,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"സ്ഥിരീകരിക്കുക"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"വിശ്വസ്‌ത ഉപകരണം നീക്കം ചെയ്യുക"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"ചെയ്‌തു"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ഒരു വിശ്വസ്‌ത ഉപകരണം സജ്ജീകരിക്കാൻ, സഹകാരി ആപ്പ് ഉപയോഗിക്കുക. ഒരിക്കൽ സജ്ജീകരിച്ചാൽ, വാഹനം നിങ്ങളുടെ ഫോണിനെ കണ്ടെത്തിയാൽ നിങ്ങളുടെ ഉപയോക്തൃ പ്രൊഫൈൽ അൺലോക്ക് ചെയ്യാനാവും."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"വിശ്വസ്‌ത ഉപകരണം സജ്ജീകരിക്കാൻ സഹകാരി ആപ്പ് ഉപയോഗിക്കുക. ഒരിക്കൽ സജ്ജീകരിച്ചാൽ, വാഹനത്തിനടുത്ത് നിങ്ങളുടെ ഫോൺ കണ്ടെത്തുമ്പോൾ നിങ്ങളുടെ ഉപയോക്തൃ പ്രൊഫൈൽ സ്വയമേവ അൺലോക്ക് ചെയ്യും."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. നിങ്ങളുടെ ഫോണിൽ സഹകാരി ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock-ന് ഈ ഉപകരണത്തിന്റെ സുരക്ഷാ ഫീച്ചറുകൾ തിരിച്ചറിയാനാവുന്നില്ല. നിങ്ങളുടെ കാർ പരിരക്ഷിക്കാൻ സഹായിക്കുന്നതിന്, നിങ്ങൾ മുമ്പേ തന്നെ അൺലോക്ക് ചെയ്‌തെങ്കിൽ മാത്രമേ ഉപകരണത്തിന് കാർ അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകൂ. നിങ്ങളുടെ കാർ മറ്റാരുടെയെങ്കിലും പക്കൽ ആണെങ്കിൽ പോലും, അത് സമീപത്തുണ്ടെങ്കിൽ നിങ്ങളുടെ വിശ്വസ്‌ത ഉപകരണത്തിന് അത് അൺലോക്ക് ചെയ്‌ത് നിലനിർത്താനാകും."</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ജോടിയാക്കൽ കോഡുകൾ തമ്മിൽ പൊരുത്തമുണ്ടെന്ന് ഉറപ്പാക്കുക"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ഫോൺ എൻറോൾ ചെയ്‌തു"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>

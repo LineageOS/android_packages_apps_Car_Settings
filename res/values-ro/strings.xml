@@ -641,10 +641,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmați"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eliminați dispozitivul de încredere"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Gata"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Folosiți aplicația parteneră pentru a configura un dispozitiv de încredere. După configurare veți putea să vă deblocați profilul de utilizator atunci când mașina vă detectează telefonul."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Folosiți aplicația parteneră pentru a configura un dispozitiv de încredere. După configurare, profilul dvs. de utilizator va debloca automat mașina atunci când aceasta vă detectează telefonul în apropiere."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descărcați aplicația parteneră pe telefon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selectați <xliff:g id="CAR_NAME">%1$s</xliff:g> de pe telefon pentru a asocia dispozitivele"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nu poate detecta funcțiile de securitate ale dispozitivului. Pentru a vă proteja mașina, dispozitivul de încredere va putea menține mașina deblocată numai după ce ați deblocat-o personal. Dispozitivul de încredere poate să mențină mașina deblocată când se află în apropiere, chiar dacă este folosită de o altă persoană."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Un dispozitiv de încredere aflat în apropierea mașinii dvs. va debloca profilul utilizatorului atunci când mașina este pornită, chiar dacă este folosit de o altă persoană."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirmați potrivirea codurilor de conectare"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonul a fost înregistrat"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Înscrierea dispozitivului <xliff:g id="DEVICE_NAME">%1$s</xliff:g> a eșuat"</string>

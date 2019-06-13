@@ -653,10 +653,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potwierdź"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Usuń zaufane urządzenie"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Skonfiguruj zaufane urządzenie w aplikacji towarzyszącej. Dzięki temu Twój profil użytkownika zostanie odblokowany, gdy tylko samochód wykryje Twój telefon."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Skonfiguruj zaufane urządzenie w aplikacji towarzyszącej. Dzięki temu Twój profil użytkownika odblokuje się automatycznie, gdy tylko samochód wykryje Twój telefon w pobliżu."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Pobierz aplikację towarzyszącą na telefon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Na telefonie wybierz <xliff:g id="CAR_NAME">%1$s</xliff:g>, by sparować urządzenia"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock nie może wykryć funkcji zabezpieczeń na tym urządzeniu. Aby chronić Twój samochód, zaufane urządzenie będzie zapobiegać automatycznemu zamknięciu pojazdu tylko wtedy, gdy wcześniej samodzielnie go otworzysz. Zaufane urządzenie zapobiega automatycznemu zamknięciu, gdy znajduje się w pobliżu samochodu, nawet jeśli urządzenie trzyma ktoś inny."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Zaufane urządzenie w pobliżu samochodu odblokuje profil użytkownika w momencie włączenia zapłonu, nawet jeśli urządzenie trzyma ktoś inny."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Potwierdź, że kody parowania są takie same"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon został zarejestrowany"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nie udało się zarejestrować urządzenia <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

@@ -653,10 +653,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"אישור"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"הסרת מכשיר מהימן"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"סיום"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"יש להשתמש באפליקציה הנלווית כדי להגדיר מכשיר מהימן. לאחר ההגדרה, ניתן יהיה לבטל את הנעילה של פרופיל המשתמש כשהרכב מזהה את הטלפון"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"יש להשתמש באפליקציה הנלווית כדי להגדיר מכשיר מהימן. לאחר ההגדרה, הנעילה של פרופיל המשתמש תבוטל באופן אוטומטי כשהטלפון שלך יזוהה ליד הרכב."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. יש להוריד את האפליקציה הנלווית לטלפון שלך"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. יש לבחור את <xliff:g id="CAR_NAME">%1$s</xliff:g> בטלפון כדי להתאים את המכשירים"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock לא מצליח לזהות את תכונות האבטחה של המכשיר הזה. כדי לעזור בהגנה על המכונית, מכשיר מהימן יוכל למנוע את נעילת המכונית רק לאחר שהנעילה תבוטל על ידך. המכשיר המהימן שלך יכול למנוע את נעילת המכונית כשהוא בקרבת מקום, גם אם הוא בידיו של מישהו אחר."</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"יש לאשר שקודי ההתאמה תואמים"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"רישום הטלפון הסתיים בהצלחה"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ההרשמה של <xliff:g id="DEVICE_NAME">%1$s</xliff:g> נכשלה"</string>

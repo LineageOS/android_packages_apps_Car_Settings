@@ -179,14 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"புளூடூத்தை ஆஃப் செய்ய <xliff:g id="APP_NAME">%1$s</xliff:g> ஆப்ஸ் அனுமதி கேட்கிறது"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"புளூடூத்தை ஆன் செய்ய ஓர் ஆப்ஸ் அனுமதி கேட்கிறது"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"புளூடூத்தை ஆஃப் செய்ய ஓர் ஆப்ஸ் அனுமதி கேட்கிறது"</string>
-    <!-- no translation found for bluetooth_ask_discovery (8774333095928068465) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_discovery_no_name (164397600370102369) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery (5487502083015708674) -->
-    <skip />
-    <!-- no translation found for bluetooth_ask_enablement_and_discovery_no_name (907153034209916282) -->
-    <skip />
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"உங்கள் ஹெட்யூனிட்டை பிற புளூடூத் சாதனங்களுக்கு <xliff:g id="TIMEOUT">%2$d</xliff:g> வினாடிகள் தெரியும்படி வைத்திருக்க <xliff:g id="APP_NAME">%1$s</xliff:g> விரும்புகிறது."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"உங்கள் ஹெட்யூனிட்டை பிற புளூடூத் சாதனங்களுக்கு <xliff:g id="TIMEOUT">%1$d</xliff:g> வினாடிகள் தெரியும்படி வைத்திருக்க ஆப்ஸ் விரும்புகிறது."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"புளூடூத்தை இயக்கி பிற சாதனங்களுக்கு <xliff:g id="TIMEOUT">%2$d</xliff:g> வினாடிகள் உங்கள் ஹெட்யூனிட்டைத் தெரியும்படி வைத்திருக்க <xliff:g id="APP_NAME">%1$s</xliff:g> விரும்புகிறது."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"புளூடூத்தை இயக்கி உங்கள் ஹெட்யூனிட்டை பிற சாதனங்களுக்கு <xliff:g id="TIMEOUT">%1$d</xliff:g> வினாடிகள் தெரியும்படி வைத்திருக்க ஆப்ஸ் விரும்புகிறது."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"புளூடூத் இணைப்பிற்கான கோரிக்கை"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ஜோடி சேர்த்து, இணை"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"புளூடூத் இணைத்தல் குறியீடு"</string>
@@ -633,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"உறுதிப்படுத்து"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"நம்பகமான சாதனத்தை அகற்று"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"முடிந்தது"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"நம்பகமான சாதனத்தை அமைக்க கம்பேனியன் ஆப்ஸைப் பயன்படுத்தவும். அமைவு முடிந்ததும், உங்கள் மொபைலை வாகனம் கண்டறிந்தால் உங்களின் பயனர் சுயவிவரத்தை அன்லாக் செய்ய இயலும்"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"’நம்பகமான சாதனம்’ ஒன்றை அமைக்க கம்பேனியன் ஆப்ஸைப் பயன்படுத்தவும். அமைத்த பிறகும் வாகனத்திற்கு அருகில் மொபைல் கண்டறியப்பட்டால் உங்களின் பயனர் சுயவிவரத்தை அன்லாக் செய்ய முடியும்."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. உங்கள் மொபைலில் கம்பேனியன் ஆப்ஸைப் பதிவிறக்கவும்"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. சாதனங்களை இணைக்க உங்கள் மொபைலில் <xliff:g id="CAR_NAME">%1$s</xliff:g> என்பதைத் தேர்வுசெய்யவும்"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ஆப்ஸால் இந்தச் சாதனத்தின் பாதுகாப்பு அம்சங்களைக் கண்டறிய இயலாது. உங்கள் காரைப் பாதுகாக்க, நீங்கள் ஏற்கனவே அன்லாக் செய்திருந்தால் மட்டுமே, நம்பகமான சாதனங்களால் அதனை அன்லாக் செய்ய இயலும். வேறு யாராவது உங்கள் காரை வைத்திருந்தாலும்கூட, அருகில் இருக்கும்போது நம்பகமான சாதனங்களால் உங்கள் காரை அன்லாக் செய்ய இயலும்."</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"இணைத்தல் குறியீடுகள் பொருந்துவதை உறுதிசெய்க"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"மொபைல் பதிவுசெய்யப்பட்டது"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> பதிவு செய்வதில் தோல்வி"</string>
