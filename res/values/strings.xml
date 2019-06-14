@@ -1365,6 +1365,18 @@
     <!-- Toast shown when phone is disconnected [CHAR LIMIT=50]-->
     <string name="trusted_device_disconnected_toast">Device disconnected.</string>
 
+    <!-- security credentials --><skip/>
+    <!-- Title of preference to reset credential storage. [CHAR LIMIT=40] -->
+    <string name="credentials_reset">Clear credentials</string>
+    <!-- Summary of preference to reset credential storage. [CHAR LIMIT=NONE] -->
+    <string name="credentials_reset_summary">Remove all certificates</string>
+    <!-- Description of dialog to reset credential storage [CHAR LIMIT=NONE] -->
+    <string name="credentials_reset_hint">Remove all the contents?</string>
+    <!-- Toast message after credential storage is erased. [CHAR LIMIT=60] -->
+    <string name="credentials_erased">Credential storage is erased.</string>
+    <!-- Toast message when credential storage could not be erased. [CHAR LIMIT=60] -->
+    <string name="credentials_not_erased">Credential storage couldn\u2019t be erased.</string>
+
     <!-- generic --><skip/>
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->
     <string name="forget">Forget</string>
