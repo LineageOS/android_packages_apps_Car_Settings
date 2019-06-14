@@ -356,13 +356,22 @@
     </string>
 
     <!-- About Settings -->
-    <string name="pk_model_info" translatable="false">model_info</string>
+    <string name="pk_hardware_info" translatable="false">hardware_info</string>
     <string name="pk_firmware_version" translatable="false">firmware_version</string>
     <string name="pk_security_patch" translatable="false">security_patch</string>
     <string name="pk_kernel_version" translatable="false">kernel_version</string>
     <string name="pk_build_number" translatable="false">build_number</string>
     <string name="pk_regulatory_labels" translatable="false">regulatory_labels</string>
     <string name="pk_about_bluetooth_mac_address" translatable="false">about_bluetooth_mac_address
+    </string>
+
+    <!-- Hardware Info -->
+    <string name="pk_hardware_info_device_model" translatable="false">hardware_info_device_model
+    </string>
+    <string name="pk_hardware_info_device_serial" translatable="false">hardware_info_device_serial
+    </string>
+    <string name="pk_hardware_info_device_revision" translatable="false">
+        hardware_info_device_revision
     </string>
 
     <!-- Reset Options -->

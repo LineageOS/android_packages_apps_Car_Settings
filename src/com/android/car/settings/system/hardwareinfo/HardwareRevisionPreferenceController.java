@@ -14,23 +14,24 @@
  * limitations under the License.
  */
 
-package com.android.car.settings.system;
+package com.android.car.settings.system.hardwareinfo;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.Build;
+import android.os.SystemProperties;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
-import com.android.settingslib.DeviceInfoUtils;
 
-/** Updates the model info entry summary with the model info. */
-public class ModelInfoPreferenceController extends PreferenceController<Preference> {
+/** Updates hardware revision entry summary with the hardware revision. */
+public class HardwareRevisionPreferenceController extends PreferenceController<Preference> {
 
-    public ModelInfoPreferenceController(Context context, String preferenceKey,
-            FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
+    public HardwareRevisionPreferenceController(Context context,
+                                                String preferenceKey,
+                                                FragmentController fragmentController,
+                                                CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
     }
 
@@ -41,6 +42,6 @@ public class ModelInfoPreferenceController extends PreferenceController<Preferen
 
     @Override
     protected void updateState(Preference preference) {
-        preference.setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
+        preference.setSummary(SystemProperties.get("ro.boot.hardware.revision"));
     }
 }

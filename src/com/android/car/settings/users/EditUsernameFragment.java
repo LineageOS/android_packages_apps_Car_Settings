@@ -32,12 +32,14 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
-import com.android.car.settingslib.util.SettingsConstants;
 
 /**
  * Enables user to edit their username.
  */
 public class EditUsernameFragment extends BaseFragment {
+
+    private static final String USER_NAME_SET = "user_name_set";
+
     private UserInfo mUserInfo;
 
     private EditText mUserNameEditText;
@@ -135,7 +137,7 @@ public class EditUsernameFragment extends BaseFragment {
             // Save new user's name.
             mCarUserManagerHelper.setUserName(mUserInfo, mUserNameEditText.getText().toString());
             Settings.Secure.putInt(getActivity().getContentResolver(),
-                    SettingsConstants.USER_NAME_SET, 1);
+                    USER_NAME_SET, 1);
             getActivity().onBackPressed();
         });
     }
