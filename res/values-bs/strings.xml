@@ -641,10 +641,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potvrdi"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ukloni pouzdani uređaj"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Gotovo"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Postavite pouzdani uređaj pomoću prateće aplikacije. Nakon što ga postavite, moći ćete otključati svoj korisnički profil kada vozilo otkrije vaš telefon"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Postavite pouzdani uređaj pomoću prateće aplikacije. Nakon što ga postavite, vaš će se korisnički profil automatski otključati kada se detektira da se telefon nalazi u blizini vozila."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Preuzmite prateću aplikaciju na svoj telefon"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Odaberite automobil <xliff:g id="CAR_NAME">%1$s</xliff:g> na telefonu da uparite uređaje"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Funkcija Smart Lock ne može prepoznati sigurnosne funkcije ovog uređaja. Kako bi zaštitio vaš automobil, pouzdani uređaj će moći održati vaš automobil otključanim samo nakon što ga vi otključate. Vaš pouzdani uređaj može zadržati vaš automobil otključanim kada je u blizini, čak i ako ga drži neko drugi."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Čak i ako neko drugi bude držao pouzdani uređaj u blizini vašeg automobila, automobil će pri paljenju otključati profil korisnika."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Potvrdite da se kodovi uparivanja podudaraju"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon je uspješno prijavljen"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Prijava uređaja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> nije uspjela"</string>

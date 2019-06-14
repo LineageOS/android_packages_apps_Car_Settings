@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"확인"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"신뢰할 수 있는 기기 삭제"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"완료"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"호환 앱을 사용해 신뢰할 수 있는 기기를 설정하세요. 설정이 완료되면 차량에서 휴대전화가 감지된 경우 사용자 프로필을 잠금 해제할 수 있습니다."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"호환 앱을 사용해 신뢰할 수 있는 기기를 설정하세요. 설정이 완료되면 차량 근처에서 휴대전화가 감지된 경우 사용자 프로필이 자동으로 잠금 해제됩니다."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. 휴대전화에 호환 앱을 다운로드합니다."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. 휴대전화에서 <xliff:g id="CAR_NAME">%1$s</xliff:g>을(를) 선택하여 기기를 페어링합니다."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock에서 이 기기의 보안 기기를 감지할 수 없습니다. 차량 보호를 위해 신뢰할 수 있는 기기 기능을 사용하더라도 사용자가 이미 차량을 잠금 해제한 경우에만 잠금 해제된 상태를 유지할 수 있습니다. 가까이에 다른 사람이 신뢰할 수 있는 기기를 갖고 있더라도 차량을 잠금 해제된 상태로 유지할 수 있습니다."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"차량 근처에 신뢰할 수 있는 기기가 있는 경우 다른 사람이 기기를 들고 있어도 시동을 걸면 사용자 프로필이 잠금 해제됩니다."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"페어링 코드가 일치하는지 확인하세요."</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"휴대전화를 등록했습니다."</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>을(를) 등록하는 데 실패했습니다."</string>

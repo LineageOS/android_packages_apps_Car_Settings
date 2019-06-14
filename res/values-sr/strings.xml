@@ -641,10 +641,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Уклони поуздани уређај"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Поуздани уређај подесите помоћу пратеће апликације. Када га подесите, моћи ћете да откључавате кориснички профил када возило открије телефон"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Поуздани уређај подесите помоћу пратеће апликације. Када га подесите, кориснички профил се аутоматски откључава када се открије да је телефон близу возила."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преузмите пратећу апликацију на телефону"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изаберите <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефону да бисте упарили уређаје"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може да открије безбедносне функције овог уређаја. Да би аутомобил био заштићен, поуздани уређај ће омогућити да аутомобил остане откључан само када га ви претходно откључате. Поуздани уређај може да омогући да аутомобил остане откључан када се налази у близини, чак и када га неко други држи."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Поуздани уређај у близини аутомобила откључава профил корисника после паљења, чак и када га неко други држи."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдите да се кодови за упаривање подударају"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон је регистрован"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрација уређаја <xliff:g id="DEVICE_NAME">%1$s</xliff:g> није успела"</string>

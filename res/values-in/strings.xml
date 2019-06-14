@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmasi"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hapus perangkat tepercaya"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Gunakan aplikasi pendamping untuk menyiapkan perangkat dipercaya. Setelah menyiapkannya, Anda dapat membuka kunci profil pengguna jika ponsel terdeteksi oleh kendaraan"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gunakan aplikasi pendamping untuk menyiapkan perangkat dipercaya. Setelah disiapkan, profil pengguna akan dibuka kuncinya secara otomatis saat ponsel terdeteksi di dekat kendaraan."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download aplikasi pendamping di ponsel"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> di ponsel untuk menghubungkan perangkat"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock tidak dapat mendeteksi fitur keamanan perangkat ini. Untuk membantu melindungi mobil Anda, perangkat dipercaya hanya dapat membuka kunci mobil jika Anda sudah membuka kuncinya. Perangkat dipercaya dapat membuka kunci mobil Anda saat berada di sekitarnya, meski orang lain memegangnya."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Perangkat dipercaya di dekat mobil Anda akan membuka kunci profil pengguna setelah mobil distarter, meskipun orang lain memegang perangkat."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmasi bahwa kode penghubung cocok"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Ponsel telah berhasil didaftarkan"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>

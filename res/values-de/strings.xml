@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bestätigen"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Vertrauenswürdiges Gerät entfernen"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Fertig"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Verwende die Companion App, um ein vertrauenswürdiges Gerät einzurichten. Danach kannst du dein Nutzerprofil entsperren, wenn dein Smartphone vom Fahrzeug erkannt wird"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Verwende die Companion App, um ein vertrauenswürdiges Gerät einzurichten. Danach wird dein Nutzerprofil entsperrt, sobald dein Smartphone in der Nähe des Fahrzeugs erkannt wird"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lade die Companion App auf dein Smartphone herunter"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2 Wähle auf deinem Smartphone \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\" aus, um die Geräte zu koppeln"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock erkennt die Sicherheitsfunktionen dieses Geräts nicht. Zum Schutz deines Autos kann das vertrauenswürdige Gerät nur dann dafür sorgen, dass dein Auto entsperrt bleibt, wenn du es vorher entsperrt hast. Mit dem vertrauenswürdigen Gerät bleibt dein Auto entsperrt, solange sich das Gerät in der Nähe befindet, und zwar auch dann, wenn eine andere Person es in der Hand hält."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Mit einem vertrauenswürdigen Gerät, das sich in der Nähe deines Autos befindet, wird dein Nutzerprofil beim Starten entsperrt. Dies gilt auch dann, wenn eine andere Person es in der Hand hält."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Bestätige bitte, dass die Kopplungscodes übereinstimmen"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Smartphone erfolgreich angemeldet"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Anmeldung von <xliff:g id="DEVICE_NAME">%1$s</xliff:g> fehlgeschlagen"</string>

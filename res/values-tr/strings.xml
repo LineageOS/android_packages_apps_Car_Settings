@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Onayla"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Güvenilen cihazı kaldır"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Bitti"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Güvenilen cihaz ayarlamak için tamamlayıcı uygulamayı kullanın. Ayarlama yapmanızın ardından, telefonunuz araç tarafından algılandığında kullanıcı profilinizin kilidini açabilirsiniz"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Güvenilen cihaz ayarlamak için tamamlayıcı uygulamayı kullanın. Ayarlama yapıldıktan sonra telefonunuz aracın yakınında algılandığında kullanıcı profiliniz kilidi otomatik olarak açacaktır."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Tamamlayıcı uygulamayı telefonunuza indirin"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları eşlemek için telefonunuzda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçimini yapın"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock, bu cihazın güvenlik özelliklerini algılayamıyor. Güvenilen cihaz, aracınızın korunmasına yardımcı olmak için yalnızca siz kilidini açtıktan sonra aracı açık tutabilecektir. Güvenilen cihazınız başkasının elinde olsa bile aracınız yakındayken aracın kilidini açık tutabilir."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Aracınızın yakınındaki güvenilen bir cihaz, cihazı başka biri tutuyor olsa bile kontak açıldıktan sonra kullanıcı profilinin kilidini açacaktır."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Lütfen eşleme kodlarının eşleştiğini onaylayın"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon başarıyla kaydedildi"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> kaydı başarısız oldu"</string>

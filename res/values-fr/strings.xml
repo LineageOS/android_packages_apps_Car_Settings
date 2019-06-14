@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmer"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Supprimer l\'appareil vérifié"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utilisez l\'application associée pour configurer un appareil vérifié. Une fois cette opération effectuée, vous pourrez déverrouiller votre profil utilisateur lorsque votre téléphone sera détecté par le véhicule"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilisez l\'application associée pour configurer un appareil vérifié. Une fois configuré, votre profil utilisateur permettra de déverrouiller automatiquement la voiture si votre téléphone est détecté à proximité de cette dernière."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Téléchargez l\'application associée sur votre téléphone"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Sélectionnez <xliff:g id="CAR_NAME">%1$s</xliff:g> sur votre téléphone pour associer les appareils"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ne parvient pas à détecter les fonctionnalités de sécurité de cet appareil. Dans le but de protéger votre voiture, l\'appareil vérifié ne pourra la maintenir déverrouillée que lorsque vous l\'aurez déjà vous-même déverrouillée. Votre appareil vérifié peut maintenir la voiture déverrouillée lorsqu\'elle se trouve à proximité, même si une autre personne le tient dans sa main."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Le profil utilisateur sera déverrouillé au démarrage de la voiture en présence d\'un appareil vérifié se trouvant à proximité, même si une autre personne le tient dans sa main."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Veuillez confirmer que les codes d\'association correspondent"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Le téléphone a bien été enregistré"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

@@ -179,10 +179,10 @@
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लूटूथ बंद करना चाहता है"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"कोई ऐप्लिकेशन ब्लूटूथ चालू करना चाहता है"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"कोई ऐप्लिकेशन ब्लूटूथ बंद करना चाहता है"</string>
-    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकेंड के लिए आपका हेड यूनिट दूसरे डिवाइस को दिखाना चाहता है."</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरे ब्लूटूथ डिवाइस को दिखाना चाहता है."</string>
     <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एक ऐप्लिकेशन <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरे ब्लूटूथ डिवाइस को दिखाना चाहता है."</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लूटूथ को चालू करना चाहता है और <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरे डिवाइस को दिखाना चाहता है."</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एक ऐप्लिकेशन ब्लूटूथ को चालू करना और <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरी डिवाइस को दिखाना चाहता है."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लूटूथ को चालू करके <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरे डिवाइस को दिखाना चाहता है."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एक ऐप्लिकेशन ब्लूटूथ को चालू करके <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकंड के लिए आपका हेड यूनिट दूसरे डिवाइस को दिखाना चाहता है."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लूटूथ के ज़रिए जोड़ने का अनुरोध किया गया"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"दूसरे डिवाइस से जोड़ें और कनेक्‍ट करें"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्‍लूटूथ के ज़रिए जोड़ने वाला कोड"</string>
@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"पुष्टि करें"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"भरोसेमंद डिवाइस हटाएं"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"हो गया"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"भरोसेमंद डिवाइस सेट अप करने के लिए साथी ऐप्लिकेशन का इस्तेमाल करें. इसके सेट अप हो जाने पर, जब गाड़ी आपके फ़ोन को पहचान लेगी तब आप अपनी उपयोगकर्ता प्रोफ़ाइल अनलॉक कर पाएंगे"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"भरोसेमंद डिवाइस सेट अप करने के लिए साथी ऐप्लिकेशन का इस्तेमाल करें. इसके सेट अप के बाद, जब भी आपका फ़ोन कार के आस-पास होगा, तब आपकी उपयोगकर्ता प्रोफ़ाइल अपने आप अनलॉक हो जाएगी."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. अपने फ़ोन पर साथी ऐप्लिकेशन डाउनलोड करें"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. डिवाइसों को जोड़ने के लिए अपने फ़ोन पर <xliff:g id="CAR_NAME">%1$s</xliff:g> चुनें"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock इस डिवाइस की सुरक्षा सुविधाओं को नहीं पहचान पा रहा है. आपकी कार की सुरक्षा के लिए, भरोसेमंद डिवाइस उसे तभी अनलॉक रख पाएगा जब आपने कार को पहले अनलॉक किया हो. कार आस-पास होने पर आपका भरोसेमंद डिवाइस उसे अनलॉक रख सकता है, भले ही वह डिवाइस किसी और व्यक्ति के पास हो."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"कार चालू हाेते ही इसके आस-पास मौजूद भरोसेमंद डिवाइस उपयाेगकर्ता की प्राेफ़ाइल अनलॉक कर देगा, भले ही वह डिवाइस किसी और के पास हो."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"कृपया पुष्टि करें कि जोड़ने के कोड का मिलान हो गया है"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"फ़ोन रजिस्टर हो गया है"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> का नाम दर्ज नहीं हो सका"</string>

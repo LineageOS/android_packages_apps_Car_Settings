@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ยืนยัน"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"นำอุปกรณ์ที่เชื่อถือได้ออก"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"เสร็จ"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ใช้แอปที่ใช้ร่วมกันเพื่อตั้งค่าอุปกรณ์ที่เชื่อถือได้ เมื่อตั้งค่าแล้ว คุณจะปลดล็อกโปรไฟล์ผู้ใช้ได้เมื่อรถยนต์ตรวจพบโทรศัพท์"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ใช้แอปที่ใช้ร่วมกันเพื่อตั้งค่าอุปกรณ์ที่เชื่อถือได้ เมื่อตั้งค่าแล้ว โปรไฟล์ผู้ใช้ของคุณจะปลดล็อกโดยอัตโนมัติเมื่อระบบตรวจพบโทรศัพท์ใกล้ยานพาหนะ"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ดาวน์โหลดแอปที่ใช้ร่วมกันในโทรศัพท์"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. เลือก <xliff:g id="CAR_NAME">%1$s</xliff:g> ในโทรศัพท์เพื่อจับคู่กับอุปกรณ์"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ไม่พบฟีเจอร์ความปลอดภัยของอุปกรณ์นี้ เพื่อช่วยปกป้องรถยนต์ของคุณ อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้ก็ต่อเมื่อคุณเป็นผู้ปลดล็อกไว้แล้วเท่านั้น อุปกรณ์ที่เชื่อถือได้จะทำให้รถยนต์ของคุณปลดล็อกอยู่ตลอดได้เมื่ออยู่ใกล้กันแม้ว่าผู้อื่นจะเป็นคนถืออุปกรณ์ก็ตาม"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"อุปกรณ์ที่เชื่อถือได้ใกล้รถของคุณจะปลดล็อกโปรไฟล์ผู้ใช้เมื่อสตาร์ทรถ แม้อุปกรณ์จะอยู่ในมือคนอื่น"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"โปรดยืนยันว่ารหัสการจับคู่อุปกรณ์ตรงกัน"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ลงทะเบียนโทรศัพท์เรียบร้อยแล้ว"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>

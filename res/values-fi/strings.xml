@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Vahvista"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Poista luotettu laite"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Valmis"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Määritä luotettu laite kumppanisovelluksen avulla. Voit poistaa käyttäjäprofiilisi lukituksen määrityksen jälkeen, kun ajoneuvo on havainnut puhelimen."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Määritä luotettu laite kumppanisovelluksen avulla. Määrityksen jälkeen käyttäjäprofiilisi lukitus avataan automaattisesti, kun puhelin havaitaan auton lähistöllä."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lataa kumppanisovellus puhelimelle"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Muodosta laitepari valitsemalla <xliff:g id="CAR_NAME">%1$s</xliff:g> puhelimella"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ei tunnistanut tämän laitteen suojausominaisuuksia. Autosi suojaamiseksi luotettu laite voi pitää auton lukituksen avoinna vasta avattuasi lukituksen itse. Luotettu laite voi pitää auton lukituksen avoinna ollessaan sen lähellä, vaikka laite olisi jonkun muun käsissä."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Auton lähellä oleva luotettu laite avaa käyttäjäprofiilin lukituksen käynnistyksen yhteydessä, vaikka laite olisi jonkun muun käsissä."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Vahvista, että yhdistämiskoodit ovat samat"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Puhelin on lisätty"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Liittyminen epäonnistui: <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
