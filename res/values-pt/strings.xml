@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remover dispositivo confiável"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Concluído"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Use o app complementar para configurar um dispositivo confiável. Após a configuração, será possível desbloquear seu perfil de usuário quando o smartphone for detectado pelo veículo."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Use o app complementar para configurar um dispositivo confiável. Após a configuração, seu perfil de usuário será desbloqueado automaticamente quando o smartphone for detectado pelo veículo."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Faça o download do app complementar no smartphone."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecione <xliff:g id="CAR_NAME">%1$s</xliff:g> no smartphone para parear os dispositivos."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Os recursos de segurança deste dispositivo não podem ser detectados pelo Smart Lock. Para ajudar a proteger seu carro, será possível mantê-lo destrancado com o dispositivo confiável apenas depois que você destrancá-lo. É possível manter o carro destrancado com o dispositivo confiável por perto mesmo que outra pessoa o esteja segurando."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"O perfil de usuário será desbloqueado com um dispositivo confiável próximo após a ignição, mesmo que outra pessoa esteja segurando o dispositivo."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirme a correspondências dos códigos de pareamento"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"A inscrição do smartphone foi concluída"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Falha na inscrição do <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

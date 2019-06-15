@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Megerősítés"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Megbízható eszköz eltávolítása"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Kész"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Állítson be megbízható eszközt a társalkalmazással. A beállítás után feloldhatja felhasználói profilját, amikor a jármű érzékeli telefonját"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Állítson be megbízható eszközt a társalkalmazással. A beállítást követően felhasználó profilja automatikusan feloldódik, amint azt észleljük, hogy a telefon a jármű közelében van."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Töltse le telefonjára a társalkalmazást."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Az eszközök párosításához válassza a(z) <xliff:g id="CAR_NAME">%1$s</xliff:g> elemet a telefonon."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"A Smart Lock nem észleli az eszköz biztonsági funkcióit. Az autó védelme érdekében a megbízható eszköz csak akkor tarthatja feloldott állapotban az autót, ha Ön előtte elvégezte a feloldást. A megbízható eszköz feloldott állapotban tarthatja az autót, ha a közelében van, még akkor is, ha valaki más tartja az eszközt."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Az autó közelében lévő megbízható eszközök indításkor feloldják a felhasználói profil zárolását, akkor is, ha éppen másnál van az eszköz."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Ellenőrizze, hogy egyeznek-e a párosítókódok"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"A telefon regisztrációja sikeresen megtörtént"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nem sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> regisztrációja"</string>

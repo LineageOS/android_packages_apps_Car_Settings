@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remover dispositivo fidedigno"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Concluído"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Utilize a aplicação associada para configurar um dispositivo fidedigno. Após a configuração, poderá desbloquear o perfil do utilizador quando o telemóvel for detetado pelo veículo."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilize a aplicação associada para configurar um dispositivo fidedigno. Após a configuração, o seu perfil de utilizador será desbloqueado automaticamente quando o telemóvel for detetado perto do veículo."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Transfira a aplicação associada no telemóvel."</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecione o automóvel <xliff:g id="CAR_NAME">%1$s</xliff:g> no telemóvel para sincronizar os dispositivos."</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"O Smart Lock não consegue detetar funcionalidades de segurança deste dispositivo. Para ajudar a proteger o seu automóvel, o dispositivo fidedigno só pode manter o automóvel desbloqueado após já ter sido desbloqueado por si. O dispositivo fidedigno pode manter o automóvel desbloqueado quando estiver próximo, mesmo se outra pessoa estiver a utilizá-lo."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Um dispositivo fidedigno próximo do seu automóvel irá desbloquear o perfil do utilizador no arranque, mesmo se outra pessoa estiver a utilizar o dispositivo."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirme se os códigos de sincronização coincidem"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"O telemóvel foi inscrito com êxito."</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Falha ao inscrever o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>

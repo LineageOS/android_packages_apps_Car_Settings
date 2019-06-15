@@ -632,10 +632,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"确认"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除可信设备"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"请使用配套应用来设置可信设备。设置成功后，您将可以在车辆检测到您的手机时解锁您的用户个人资料"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"请使用配套应用来设置可信设备。设置后，您的用户个人资料就会在系统检测到手机位于汽车附近时自动解锁。"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手机上下载配套应用"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 未能检测到此设备的安全功能。为了保护您的汽车，只有当您将汽车解锁后，可信设备才会让汽车保持解锁状态。当您的可信设备在汽车附近时，就会让汽车保持解锁状态（即使是其他人拿着此设备也是如此）。"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"只要可信设备位于您的汽车附近，即可在汽车发动后将用户个人资料解锁（即使该设备在其他人手中也是如此）。"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"请确认配对码是否一致"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"手机已成功注册"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>

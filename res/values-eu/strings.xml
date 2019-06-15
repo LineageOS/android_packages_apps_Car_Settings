@@ -196,7 +196,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Normalean 0000 edo 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Parekatzeko eskaera"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Sakatu <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuarekin parekatzeko."</string>
-    <string name="bluetooth_device_picker" msgid="673238198452345475">"Aukeratu Bluetooth gailua"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"Aukeratu Bluetooth bidezko gailua"</string>
     <string name="language_settings" msgid="2079258598337245546">"Hizkuntzak"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Hizkuntzak eta idazketa"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Teklatua"</string>
@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Berretsi"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Kendu gailu fidagarria"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Eginda"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Erabili aplikazio osagarria gailu fidagarri bat konfiguratzeko. Konfiguratu ondoren, erabiltzaile-profila desblokeatu ahalko duzu ibilgailuak zure telefonoa hautematen duenean"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Erabili aplikazio osagarria gailu fidagarri bat konfiguratzeko. Konfiguratu ostean, erabiltzaile-profila automatikoki desblokeatuko da telefonoa hautematen denean ibilgailuaren inguruan."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Deskargatu aplikazio osagarria telefonoan"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Gailuak parekatzeko, hautatu <xliff:g id="CAR_NAME">%1$s</xliff:g> telefonoan"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock eginbideak ezin ditu hauteman gailu honen segurtasun-eginbideak. Autoa babesteko, zuk desblokeatzen baduzu bakarrik mantendu ahal izango du gailu fidagarriak autoa desblokeatuta. Gailu fidagarria gai da autoa desblokeatuta mantentzeko elkarrengandik hurbil daudenean, baita gailua darabilena zeu ez bazara ere."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Autoaren inguruan dagoen gailu fidagarri batek erabiltzailearen profila desblokeatuko du motorra martxan jartzean, baita gailua darabilena zeu ez bazara ere."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Berretsi parekatze-kodeak bat datozela"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Erregistratu da telefonoa"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuaren harpidetzeak huts egin du"</string>

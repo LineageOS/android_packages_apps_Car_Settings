@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Quitar dispositivo de confianza"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Listo"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Usa la aplicación complementaria para configurar un dispositivo de confianza. Una vez que lo hagas, podrás desbloquear tu perfil de usuario cuando el vehículo detecte el teléfono."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Usa la aplicación complementaria para configurar un dispositivo de confianza. Una vez que lo hagas, tu perfil de usuario se desbloqueará automáticamente cuando el teléfono se detecte cerca del vehículo."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descarga la aplicación complementaria en el teléfono"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para vincular los dispositivos"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock no puede detectar las funciones de seguridad de este dispositivo. Para proteger el coche, el dispositivo de confianza solo podrá mantenerlo desbloqueado una vez que lo hayas desbloqueado tú. El dispositivo de confianza puede mantener el coche desbloqueado si está cerca, aunque lo esté sujetado otra persona."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Es posible que un dispositivo de confianza que se encuentre cerca pueda desbloquear el perfil del usuario al arrancar el coche, aunque lo esté sujetando otra persona."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que los códigos de sincronización coinciden"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"El teléfono se ha registrado correctamente"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> no se ha podido registrar"</string>
