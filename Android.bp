@@ -63,7 +63,6 @@ android_app {
 // Duplicate of CarSettings which includes testing only resources for Robolectric
 android_app {
     name: "CarSettingsForTesting",
-    overrides: ["Settings"],
     platform_apis: true,
 
     srcs: ["src/**/*.java"],
@@ -112,5 +111,3 @@ android_app {
         },
     },
 }
-
-
