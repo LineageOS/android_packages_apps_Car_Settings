@@ -677,10 +677,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"تأكيد"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"إزالة الجهاز الموثوق به"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"تم"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"استخدِم التطبيق المصاحب لإعداد جهاز موثوق به. بعد إعداد الجهاز، ستتمكّن من فتح ملفك الشخصي للمستخدم عندما يتم رصد هاتفك بواسطة المركبة."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"استخدِم التطبيق المصاحب لإعداد جهاز موثوق به. بعد إعداد الجهاز، يتم إلغاء قفل الملف الشخصي للمستخدم تلقائيًا عند رصد هاتفك بالقرب من المركبة."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. تنزيل التطبيق المصاحب على هاتفك"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. اختيار <xliff:g id="CAR_NAME">%1$s</xliff:g> على هاتفك لإقران الأجهزة"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"يتعذّر على Smart Lock رصد الميزات الأمنية لهذا الجهاز. للمساعدة في حماية سيارتك، لن يتمكّن الجهاز الموثوق به من أن يُبقي سيارتك مفتوحة إلا إذا سبقَ وتم فتحها بواسطتك. ويمكن للجهاز الموثوق به أن يُبقي سيارتك مفتوحة عندما يكون قريبًا منها، حتى لو كان يحمله شخص غيرك."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"يمكن لجهاز موثوق به قريب من سيارتك أن يلغي قفل الملف الشخصي للمستخدم عند تشغيل محركها، حتى وإن كان شخص غيرك يحمل الجهاز."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"يُرجى التأكُّد من تطابُق رموز الإقران."</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"تم تسجيل الهاتف بنجاح."</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"تعذّر تسجيل جهاز <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>

@@ -641,10 +641,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potvrdi"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ukloni pouzdani uređaj"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Gotovo"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Pouzdani uređaj podesite pomoću prateće aplikacije. Kada ga podesite, moći ćete da otključavate korisnički profil kada vozilo otkrije telefon"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Pouzdani uređaj podesite pomoću prateće aplikacije. Kada ga podesite, korisnički profil se automatski otključava kada se otkrije da je telefon blizu vozila."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Preuzmite prateću aplikaciju na telefonu"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Izaberite <xliff:g id="CAR_NAME">%1$s</xliff:g> na telefonu da biste uparili uređaje"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ne može da otkrije bezbednosne funkcije ovog uređaja. Da bi automobil bio zaštićen, pouzdani uređaj će omogućiti da automobil ostane otključan samo kada ga vi prethodno otključate. Pouzdani uređaj može da omogući da automobil ostane otključan kada se nalazi u blizini, čak i kada ga neko drugi drži."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Pouzdani uređaj u blizini automobila otključava profil korisnika posle paljenja, čak i kada ga neko drugi drži."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Potvrdite da se kodovi za uparivanje podudaraju"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon je registrovan"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registracija uređaja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> nije uspela"</string>

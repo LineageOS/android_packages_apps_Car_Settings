@@ -629,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ದೃಢೀಕರಿಸಿ"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"ಮುಗಿದಿದೆ"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಬಳಸಿ. ಸೆಟಪ್ ನಂತರ, ವಾಹನವು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಪತ್ತೆಹಚ್ಚಿದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಬಳಸಿ. ಸೆಟಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಫೋನ್ ವಾಹನದ ಬಳಿ ಕಂಡುಬಂದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರರ ಪ್ರೊಫೈಲ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅನ್‌ಲಾಕ್ ಆಗುತ್ತದೆ."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ಗೆ ಈ ಸಾಧನದ ಭದ್ರತೆ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಪತ್ತೆಹೆಚ್ಚಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಕಾರ್ ಸಂರಕ್ಷಿಸುವುದಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು, ನೀವು ಈಗಾಗಲೇ ನಿಮ್ಮ ಕಾರ್ ಅನ್‌ಲಾಕ್ ಮಾಡಿದ್ದರೆ ಅದನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿಯೇ ಇರಿಸಲು ಮಾತ್ರವೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಕ್ಕೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಬೇರೆ ಯಾರಾದರೂ ನಿಮ್ಮ ಕಾರ್ ಇರಿಸಿಕೊಂಡಿದ್ದರೂ, ಅದು ಹತ್ತಿರದಲ್ಲಿರುವಾಗ ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿ ಇರಿಸಬಹುದು."</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ಜೋಡಣೆ ಕೋಡ್‌ಗಳು ಹೊಂದಾಣಿಕೆಯಾಗಿವೆಯೇ ಎಂದು ದೃಢೀಕರಿಸಿ"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ಫೋನ್ ಅನ್ನು ಯಶಸ್ವಿಯಾಗಿ ನೋಂದಣಿ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ನೋಂದಣಿ ವಿಫಲವಾಗಿದೆ"</string>

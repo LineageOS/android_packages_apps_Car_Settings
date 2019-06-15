@@ -653,10 +653,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Пацвердзіць"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Выдаліць давераную прыладу"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Гатова"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Для наладкі даверанай прылады выкарыстоўвайце спадарожную праграму. Калі пасля наладкі аўтамабіль выявіць тэлефон, вы зможаце разблакіраваць профіль карыстальніка"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Для наладкі даверанай прылады выкарыстоўвайце спадарожную праграму. Пасля наладкі ваш карыстальніцкі профіль аўтаматычна разблакіруецца, калі ваш тэлефон будзе выяўлены паблізу ад аўтамабіля."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Спампуйце спадарожную праграму на тэлефон"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Каб спалучыць прылады, выберыце на тэлефоне назву \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\""</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"\"Разумная блакіроўка\" не можа вызначаць якасць бяспекі прылады. З мэтай абароны вашага аўтамабіля давераная прылада будзе трымаць ваш аўтамабіль разблакіраваным, толькі калі вы яго ўжо разблакіравалі. Давераная прылада можа трымаць аўтамабіль разблакіраваным, калі ён знаходзіцца паблізу, незалежна ад таго, хто ім кіруе."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Давераная прылада паблізу ад вашага аўтамабіля разблакіруе профіль карыстальніка пасля запуску рухавіка, незалежна ад таго, хто кіруе прыладай."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Пацвердзіце, што коды спалучэння супадаюць"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Тэлефон паспяхова зарэгістраваны"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не ўдалося зарэгістраваць прыладу \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>

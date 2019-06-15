@@ -653,10 +653,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Підтвердити"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Вилучити надійний пристрій"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Налаштуйте надійний пристрій у супутньому додатку. Тоді ви зможете розблокувати профіль користувача, коли телефон підключиться до автомобіля."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Налаштуйте надійний пристрій у супутньому додатку. Тоді ваш профіль користувача розблокуватиметься автоматично, коли телефон підключиться до транспортного засобу."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Завантажте супутній додаток на телефон"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. На телефоні виберіть <xliff:g id="CAR_NAME">%1$s</xliff:g>, щоб підключити пристрої"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може виявляти функцій безпеки цього пристрою. Щоб покращити захист, надійний пристрій може лише не дати автомобілю заблокуватись, якщо ви його розблокували. Ця функція працює, якщо пристрій поруч, навіть в іншої людини."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Надійний пристрій розблоковує профіль користувача після запалювання, якщо він поруч, навіть в іншої людини."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Підтвердьте, що коди підключення збігаються"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон зареєстровано"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не вдалося зареєструвати пристрій <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>

@@ -629,10 +629,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Отстрани доверлив уред"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Употребете ја придружната апликација за да поставите доверлив уред. Откако ќе го поставите, ќе може да го отклучите корисничкиот профил кога возилото ќе го открие вашиот телефон"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Употребете ја придружната апликација за да поставите доверлив уред. Откако ќе го поставите, вашиот кориснички профил ќе се отклучи автоматски кога вашиот телефон ќе се открие во близина на возилото."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преземете ја придружната апликација на телефонот"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефонот за да ги спарите уредите"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock не може да ги открие безбедносните функции на уредов. За да помогне да се заштити автомобилот, доверливиот уред ќе може да го чува автомобилот отклучен само откако вие ќе го отклучите. Вашиот доверлив уред може да го чува автомобилот отклучен кога е во близина, дури и ако некој друг го држи."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Доверлив уред во близина на вашиот автомобил може да го отклучи корисничкиот профил по стартувањето на автомобилот, дури и кога некој друг го држи уредот."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдете дека кодовите за спарување се совпаѓаат"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонот е регистриран успешно"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацијата на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не успеа"</string>

@@ -629,10 +629,11 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"কনফার্ম করুন"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"বিশ্বস্ত ডিভাইস সরান"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"হয়ে গেছে"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"কোনও বিশ্বস্ত ডিভাইস সেট-আপ করতে কম্প্যানিয়ন অ্যাপ ব্যবহার করুন। একবার সেট-আপ হয়ে গেলে, যখন গাড়ি আপনার ফোন শনাক্ত করবে তখন ব্যবহারকারী হিসেবে আপনি নিজের প্রোফাইল আনলক করতে পারবেন"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"কোনও বিশ্বস্ত ডিভাইস সেট-আপ করতে কম্প্যানিয়ন অ্যাপ ব্যবহার করুন। সেট-আপ হয়ে যাওয়ার পরে গাড়ির আশেপাশে আপনার ফোন শনাক্ত হলে ব্যবহারকারী হিসেবে আপনার প্রোফাইল অটোমেটিক আনলক হয়ে যাবে।"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপনার ফোনে কম্প্যানিয়ন অ্যাপ ডাউনলোড করুন"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock এই ডিভাইসের নিরাপত্তা বিষয়ক ফিচার শনাক্ত করতে পারে না। গাড়ি রক্ষায় সাহায্য করতে, আপনার গাড়ি আনলক করে রাখলেই বিশ্বস্ত ডিভাইস শুধুমাত্র আপনার গাড়িকে আনলক করতে পারবে। আপনার গাড়ি আশেপাশে থাকার সময় এমনকি যদি এটি অন্য কারও কাছে থাকে তাহলেও বিশ্বস্ত ডিভাইস আপনার গাড়িটি আনলক করতে পারবে।"</string>
+    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
+    <skip />
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"পেয়ারিং কোড মিলছে কিনা কনফার্ম করুন"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফোনটি নথিভুক্ত করা হয়েছে"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>

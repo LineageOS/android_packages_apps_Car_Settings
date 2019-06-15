@@ -653,10 +653,10 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potrdi"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"Odstrani zaupanja vredno napravo"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"Končano"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"S spremljevalno aplikacijo nastavite zaupanja vredno napravo. Ko je nastavljena, lahko profil uporabnika odklenete, ko vozilo zazna vaš telefon."</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"S spremljevalno aplikacijo nastavite zaupanja vredno napravo. Ko je nastavljena, se profil uporabnika odklene samodejno, ko je telefon zaznan v bližini vozila."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. V telefon prenesite spremljevalno aplikacijo"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. Če želite seznaniti napravi, v telefonu izberite avtomobil <xliff:g id="CAR_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Funkcija Smart Lock ne zazna varnostnih funkcij te naprave. Zaradi boljše zaščite avtomobila zaupanja vredna naprava prepreči zaklepanje avtomobila šele, ko ga odklenete vi. Zaupanja vredna naprava prepreči zaklepanje avtomobila, ko je v bližini, tudi če jo ima v rokah kdo drug."</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Zaupanja vredna naprava v bližini avtomobila bo po vžigu odklenila profil uporabnika, tudi če ima napravo v rokah kdo drug."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Potrdite ujemanje kod za seznanjanje"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon je uspešno prijavljen"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Včlanitev naprave <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ni uspela"</string>
