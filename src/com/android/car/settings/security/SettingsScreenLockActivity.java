@@ -41,6 +41,11 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity implemen
     @Override
     @Nullable
     protected Fragment getInitialFragment() {
+        Fragment currentFragment = getCurrentFragment();
+        if (currentFragment != null) {
+            return currentFragment;
+        }
+
         mPasswordQuality = new LockPatternUtils(this).getKeyguardStoredPasswordQuality(
                 UserHandle.myUserId());
 
