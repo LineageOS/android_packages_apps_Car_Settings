@@ -42,12 +42,7 @@ public class BluetoothPairingSelectionFragment extends SettingsFragment {
         @Override
         public void onDeviceBondStateChanged(CachedBluetoothDevice cachedDevice, int bondState) {
             if (bondState == BluetoothDevice.BOND_BONDED) {
-                // We are in a dispatch loop from event manager to all listeners. goBack will pop
-                // immediately, stopping this fragment causing an unregister from the event manager
-                // and a ConcurrentModificationException. Wait until the dispatch is done to go
-                // back.
-                requireActivity().getMainThreadHandler().post(
-                        BluetoothPairingSelectionFragment.this::goBack);
+                goBack();
             }
         }
     };
