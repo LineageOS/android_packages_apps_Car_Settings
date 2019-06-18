@@ -48,12 +48,11 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        style="@*android:style/ActionBarTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/action_button2"
         app:layout_constraintStart_toEndOf="@+id/start_margin"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -67,7 +66,7 @@
         app:layout_constraintEnd_toStartOf="@+id/action_button1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/start_margin"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
