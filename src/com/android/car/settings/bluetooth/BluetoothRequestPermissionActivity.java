@@ -32,7 +32,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -97,7 +96,6 @@ public class BluetoothRequestPermissionActivity extends Activity {
         mLocalBluetoothAdapter = mLocalBluetoothManager.getBluetoothAdapter();
 
         int btState = mLocalBluetoothAdapter.getState();
-        Log.e("TEST_TEST", "request: " + mRequest + " state: " + btState);
         switch (mRequest) {
             case REQUEST_DISABLE:
                 switch (btState) {
