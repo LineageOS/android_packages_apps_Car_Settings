@@ -632,8 +632,7 @@
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"কোনও বিশ্বস্ত ডিভাইস সেট-আপ করতে কম্প্যানিয়ন অ্যাপ ব্যবহার করুন। সেট-আপ হয়ে যাওয়ার পরে গাড়ির আশেপাশে আপনার ফোন শনাক্ত হলে ব্যবহারকারী হিসেবে আপনার প্রোফাইল অটোমেটিক আনলক হয়ে যাবে।"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপনার ফোনে কম্প্যানিয়ন অ্যাপ ডাউনলোড করুন"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
-    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
-    <skip />
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"কোনও বিশ্বস্ত ডিভাইস আপনার গাড়ির আশেপাশে থাকলে বা ডিভাইসটি অন্য কারও কাছে থাকলে গাড়ি চালু করার সাথে সাথে এটি গাড়ি আনলক করবে।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"পেয়ারিং কোড মিলছে কিনা কনফার্ম করুন"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফোনটি নথিভুক্ত করা হয়েছে"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>
