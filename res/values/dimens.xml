@@ -46,6 +46,7 @@
 
     <!-- Quick Settings -->
     <dimen name="brightness_seekbar_margin_bottom">@*android:dimen/car_padding_4</dimen>
+    <dimen name="brightness_seekbar_padding_horizontal">@*android:dimen/car_padding_3</dimen>
     <dimen name="brightness_seekbar_height">@*android:dimen/car_single_line_list_item_height</dimen>
     <dimen name="brightness_seekbar_track_height">6dp</dimen>
     <dimen name="brightness_seekbar_track_corner">3dp</dimen>
