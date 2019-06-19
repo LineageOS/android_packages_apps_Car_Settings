@@ -632,8 +632,7 @@
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ໃຊ້ແອັບຊ່ວຍເຫຼືອເພື່ອຕັ້ງຄ່າອຸປະກອນທີ່ເຊື່ອຖືໄດ້. ເມື່ອຕັ້ງຄ່າແລ້ວ, ໂປຣໄຟລ໌ຜູ້ໃຊ້ຂອງທ່ານຈະປົດລັອກໂດຍອັດຕະໂນມັດ ເມື່ອພາຫານະທີ່ຢູ່ໃກ້ຄຽງກວດພົບໂທລະສັບຂອງທ່ານ."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ດາວໂຫຼດແອັບຊ່ວຍເຫຼືອໃນໂທລະສັບຂອງທ່ານ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ເລືອກ <xliff:g id="CAR_NAME">%1$s</xliff:g> ໃນໂທລະສັບຂອງທ່ານເພື່ອຈັບຄູ່ອຸປະກອນ"</string>
-    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
-    <skip />
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້ທີ່ຢູ່ໃກ້ກັບລົດຂອງທ່ານຈະປົດລັອກໂປຣໄຟລ໌ຜູ້ໃຊ້ຫຼັງຈາກຕິດເຄື່ອງແລ້ວ, ເຖິງແມ່ນວ່າຄົນອື່ນກຳລັງຖືອຸປະກອນໄວ້ຢູ່ກໍຕາມ."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ກະລຸນາຢືນຢັນວ່າລະຫັດຈັບຄູ່ກົງກັນ"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ລົງທະບຽນໂທລະສັບສຳເລັດແລ້ວ"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ການລົງທະບຽນ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ບໍ່ສຳເລັດ"</string>
