@@ -42,15 +42,10 @@
     </style>
 
     <style name="PreferenceTheme">
-        <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment.Settings</item>
-        <item name="preferenceFragmentListStyle">@style/PreferenceFragmentList.Settings</item>
-        <item name="preferenceStyle">@style/Preference.Settings</item>
-        <item name="preferenceCategoryStyle">@style/Preference.Settings.Category</item>
-        <item name="checkBoxPreferenceStyle">@style/Preference.Settings.CheckBoxPreference</item>
-        <item name="dialogPreferenceStyle">@style/Preference.Settings.DialogPreference</item>
+        <item name="preferenceFragmentCompatStyle">@style/SettingsPreferenceFragment</item>
+        <item name="preferenceFragmentListStyle">@style/SettingsPreferenceFragmentList</item>
         <item name="editTextPreferenceStyle">@style/Preference.Settings.DialogPreference.EditTextPreference</item>
         <item name="seekBarPreferenceStyle">@style/Preference.Settings.SeekBarPreference</item>
-        <item name="switchPreferenceStyle">@style/Preference.Settings.SwitchPreference</item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">

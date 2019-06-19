@@ -16,13 +16,11 @@
 -->
 
 <resources>
-    <style name="PreferenceFragment.Settings">
+    <style name="SettingsPreferenceFragment">
         <item name="android:layout">@layout/settings_fragment</item>
-        <item name="android:divider">@drawable/divider</item>
-        <item name="allowDividerAfterLastItem">false</item>
     </style>
 
-    <style name="PreferenceFragmentList.Settings">
+    <style name="SettingsPreferenceFragmentList">
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingBottom">0dp</item>
         <item name="android:paddingStart">0dp</item>
@@ -31,46 +29,13 @@
         <item name="android:paddingRight">0dp</item>
     </style>
 
-    <style name="Preference.Settings" parent="@*android:style/Preference.DeviceDefault">
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
-    </style>
-
-    <style name="Preference.Settings.Category"
-           parent="@*android:style/Preference.DeviceDefault.Category">
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
-    </style>
-
-    <style name="Preference.Settings.CheckBoxPreference"
-           parent="@*android:style/Preference.DeviceDefault.CheckBoxPreference">
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
-    </style>
-
-    <style name="Preference.Settings.DialogPreference"
-           parent="@*android:style/Preference.DeviceDefault.DialogPreference">
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
-    </style>
-
     <style name="Preference.Settings.DialogPreference.EditTextPreference"
            parent="@*android:style/Preference.DeviceDefault.DialogPreference.EditTextPreference">
         <item name="dialogLayout">@layout/preference_dialog_edittext</item>
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
     </style>
 
     <style name="Preference.Settings.SeekBarPreference"
            parent="@*android:style/Preference.DeviceDefault.SeekBarPreference">
         <item name="layout">@layout/seekbar_preference</item>
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
-    </style>
-
-    <style name="Preference.Settings.SwitchPreference"
-           parent="@*android:style/Preference.DeviceDefault.SwitchPreference">
-        <item name="allowDividerAbove">true</item>
-        <item name="allowDividerBelow">true</item>
     </style>
 </resources>
