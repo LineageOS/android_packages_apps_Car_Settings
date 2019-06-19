@@ -18,9 +18,6 @@
 <resources>
     <dimen name="icon_size">@*android:dimen/car_primary_icon_size</dimen>
     <dimen name="touch_target_size">@*android:dimen/car_touch_target_size</dimen>
-    <dimen name="divider_height">@*android:dimen/car_list_divider_height</dimen>
-    <dimen name="divider_inset_left">@*android:dimen/car_keyline_1</dimen>
-    <dimen name="divider_inset_right">@*android:dimen/car_keyline_1</dimen>
 
     <dimen name="button_min_width">@*android:dimen/car_button_min_width</dimen>
     <dimen name="button_fading_edge_length">40dp</dimen>
