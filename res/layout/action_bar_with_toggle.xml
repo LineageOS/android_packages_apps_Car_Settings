@@ -48,16 +48,16 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        style="@*android:style/ActionBarTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggle_switch_container"
         app:layout_constraintStart_toEndOf="@+id/start_margin"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <FrameLayout
+        android:id="@+id/toggle_switch_container"
         android:layout_width="@*android:dimen/action_bar_margin_end"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,8 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:paddingStart="@*android:dimen/action_bar_toggle_internal_padding"
+            android:background="@null"
             android:paddingEnd="@*android:dimen/action_bar_toggle_internal_padding"
-            android:background="@null"/>
+            android:paddingStart="@*android:dimen/action_bar_toggle_internal_padding"/>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
