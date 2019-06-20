@@ -29,6 +29,7 @@ import android.app.Activity;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.telephony.euicc.EuiccManager;
 import android.widget.Button;
 
@@ -47,6 +48,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowContextImpl;
@@ -69,7 +72,10 @@ public class MasterClearFragmentTest {
     public void setUp() {
         // Setup needed by instantiated PreferenceControllers.
         MockitoAnnotations.initMocks(this);
+        Context context = RuntimeEnvironment.application;
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        Shadows.shadowOf(context.getPackageManager())
+                .setSystemFeature(PackageManager.FEATURE_AUTOMOTIVE, true);
         when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(Collections.emptyList());
         // Robolectric doesn't know about the euicc manager, so we must add it ourselves.
         getSystemServiceMap().put(Context.EUICC_SERVICE, EuiccManager.class.getName());
