@@ -22,10 +22,13 @@ import android.widget.ProgressBar;
 import android.widget.Switch;
 
 import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.settingslib.wifi.AccessPoint;
 
 /**
  * Main page to host Wifi related preferences.
@@ -34,10 +37,13 @@ public class WifiSettingsFragment extends SettingsFragment
         implements CarWifiManager.Listener {
 
     private static final int SEARCHING_DELAY_MILLIS = 1700;
+    private static final String EXTRA_CONNECTED_ACCESS_POINT_KEY = "connected_access_point_key";
 
     private CarWifiManager mCarWifiManager;
     private ProgressBar mProgressBar;
     private Switch mWifiSwitch;
+    @Nullable
+    private String mConnectedAccessPointKey;
 
     @Override
     @LayoutRes
@@ -58,6 +64,17 @@ public class WifiSettingsFragment extends SettingsFragment
 
         mProgressBar = requireActivity().findViewById(R.id.progress_bar);
         setupWifiSwitch();
+
+        if (savedInstanceState != null) {
+            mConnectedAccessPointKey = savedInstanceState.getString(
+                    EXTRA_CONNECTED_ACCESS_POINT_KEY);
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(EXTRA_CONNECTED_ACCESS_POINT_KEY, mConnectedAccessPointKey);
     }
 
     @Override
@@ -86,6 +103,16 @@ public class WifiSettingsFragment extends SettingsFragment
     public void onAccessPointsChanged() {
         mProgressBar.setVisibility(View.VISIBLE);
         getView().postDelayed(() -> mProgressBar.setVisibility(View.GONE), SEARCHING_DELAY_MILLIS);
+        AccessPoint connectedAccessPoint = mCarWifiManager.getConnectedAccessPoint();
+        if (connectedAccessPoint != null) {
+            String connectedAccessPointKey = connectedAccessPoint.getKey();
+            if (!connectedAccessPointKey.equals(mConnectedAccessPointKey)) {
+                scrollToPreference(connectedAccessPointKey);
+                mConnectedAccessPointKey = connectedAccessPointKey;
+            }
+        } else {
+            mConnectedAccessPointKey = null;
+        }
     }
 
     @Override
