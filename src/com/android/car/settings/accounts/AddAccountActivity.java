@@ -69,7 +69,7 @@ public class AddAccountActivity extends Activity {
     static final String EXTRA_HAS_MULTIPLE_USERS = "hasMultipleUsers";
 
     // Need a specific request code for add account activity.
-    public static final int ADD_ACCOUNT_REQUEST = 2001;
+    private static final int ADD_ACCOUNT_REQUEST = 2001;
 
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserHandle mUserHandle;
@@ -103,6 +103,16 @@ public class AddAccountActivity extends Activity {
             }
         }
     };
+
+    /**
+     * Creates an intent to start the {@link AddAccountActivity} to add an account of the given
+     * account type.
+     */
+    public static Intent createAddAccountActivityIntent(Context context, String accountType) {
+        Intent intent = new Intent(context, AddAccountActivity.class);
+        intent.putExtra(EXTRA_SELECTED_ACCOUNT, accountType);
+        return intent;
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

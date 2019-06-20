@@ -18,6 +18,7 @@ package com.android.car.settings.accounts;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -28,6 +29,10 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Lists the user's accounts and any related options.
@@ -72,6 +77,29 @@ public class AccountSettingsFragment extends SettingsFragment {
     }
 
     private void onAddAccountClicked() {
-        launchFragment(new ChooseAccountFragment());
+        AccountTypesHelper helper = new AccountTypesHelper(getContext());
+        Intent activityIntent = requireActivity().getIntent();
+
+        String[] authorities = activityIntent.getStringArrayExtra(Settings.EXTRA_AUTHORITIES);
+        if (authorities != null) {
+            helper.setAuthorities(Arrays.asList(authorities));
+        }
+
+        String[] accountTypesForFilter =
+                activityIntent.getStringArrayExtra(Settings.EXTRA_ACCOUNT_TYPES);
+        if (accountTypesForFilter != null) {
+            helper.setAccountTypesFilter(
+                    new HashSet<>(Arrays.asList(accountTypesForFilter)));
+        }
+
+        Set<String> authorizedAccountTypes = helper.getAuthorizedAccountTypes();
+
+        if (authorizedAccountTypes.size() == 1) {
+            String accountType = authorizedAccountTypes.iterator().next();
+            startActivity(
+                    AddAccountActivity.createAddAccountActivityIntent(getContext(), accountType));
+        } else {
+            launchFragment(new ChooseAccountFragment());
+        }
     }
 }
