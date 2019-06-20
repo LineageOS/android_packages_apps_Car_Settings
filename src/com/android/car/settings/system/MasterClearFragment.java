@@ -70,19 +70,22 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
                         CHECK_LOCK_REQUEST_CODE, /* callback= */ this));
         masterClearButton.setEnabled(false);
 
-        getListView().getViewTreeObserver().addOnGlobalLayoutListener(
+        RecyclerView recyclerView = getListView();
+        recyclerView.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        PagedRecyclerView pagedRecyclerView = (PagedRecyclerView) getListView();
-                        if (pagedRecyclerView.fullyInitialized()) {
-                            masterClearButton.setEnabled(isAtEnd());
-                            masterClearButton.getViewTreeObserver().removeOnGlobalLayoutListener(
-                                    this);
+                        if (recyclerView instanceof PagedRecyclerView) {
+                            PagedRecyclerView pagedRecyclerView = (PagedRecyclerView) recyclerView;
+                            if (!pagedRecyclerView.fullyInitialized()) {
+                                return;
+                            }
                         }
+                        masterClearButton.setEnabled(isAtEnd());
+                        recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                     }
                 });
-        getListView().setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
+        recyclerView.setOnScrollChangeListener((v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
             if (isAtEnd()) {
                 masterClearButton.setEnabled(true);
             }
@@ -98,7 +101,10 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
 
     /** Returns {@code true} if the RecyclerView is completely displaying the last item. */
     private boolean isAtEnd() {
-        RecyclerView.LayoutManager layoutManager = getListView().getLayoutManager();
+        RecyclerView recyclerView = getListView();
+        RecyclerView.LayoutManager layoutManager = (recyclerView instanceof PagedRecyclerView)
+                ? ((PagedRecyclerView) recyclerView).getEffectiveLayoutManager()
+                : recyclerView.getLayoutManager();
         if (layoutManager == null || layoutManager.getChildCount() == 0) {
             return true;
         }
