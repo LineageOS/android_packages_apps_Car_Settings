@@ -23,6 +23,8 @@ import android.telephony.TelephonyManager;
 import android.view.View;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.FragmentHost;
+import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.settingslib.net.DataUsageController;
 
 /**
@@ -35,10 +37,12 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
     @Nullable
     private final String mCarrierName;
     private final boolean mAvailable;
+    private final View.OnLongClickListener mLaunchDisplaySettings;
 
     private State mState = State.ON;
 
-    CelluarTile(Context context, StateChangedListener stateChangedListener) {
+    CelluarTile(Context context, StateChangedListener stateChangedListener,
+            FragmentHost fragmentHost) {
         mStateChangedListener = stateChangedListener;
         mContext = context;
         TelephonyManager manager =
@@ -48,6 +52,11 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
         mAvailable = mDataUsageController.isMobileDataSupported();
         mState = mAvailable && mDataUsageController.isMobileDataEnabled() ? State.ON : State.OFF;
         mCarrierName = mAvailable ? manager.getNetworkOperatorName() : null;
+
+        mLaunchDisplaySettings = v -> {
+            fragmentHost.launchFragment(new MobileNetworkFragment());
+            return true;
+        };
     }
 
     @Override
@@ -55,9 +64,9 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
         mState = enabled ? State.ON : State.OFF;
     }
 
-    @Nullable
+    @Override
     public View.OnLongClickListener getOnLongClickListener() {
-        return null;
+        return mLaunchDisplaySettings;
     }
 
     @Override
