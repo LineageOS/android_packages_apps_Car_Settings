@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.SwitchPreference;
@@ -48,6 +49,7 @@ public class GroupSelectionPreferenceControllerTest {
         TestGroupSelectionPreferenceController(Context context, String preferenceKey,
                 FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
             super(context, preferenceKey, fragmentController, uxRestrictions);
+            mGroupPreferences = new ArrayList<>();
         }
 
         @Override
@@ -56,6 +58,7 @@ public class GroupSelectionPreferenceControllerTest {
         }
 
         @Override
+        @NonNull
         protected List<TwoStatePreference> getGroupPreferences() {
             return mGroupPreferences;
         }
