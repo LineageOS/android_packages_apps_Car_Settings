@@ -55,8 +55,8 @@ public abstract class DefaultAppEntryBasePreferenceController<V extends Preferen
         CharSequence defaultAppLabel = getDefaultAppLabel();
         if (!TextUtils.isEmpty(defaultAppLabel)) {
             preference.setSummary(defaultAppLabel);
-            DefaultAppUtils.setSafeIcon(preference, getDefaultAppIcon(),
-                    getContext().getResources().getInteger(R.integer.default_app_safe_icon_size));
+            preference.setIcon(DefaultAppUtils.getSafeIcon(getDefaultAppIcon(),
+                    getContext().getResources().getInteger(R.integer.default_app_safe_icon_size)));
         } else {
             LOG.d("No default app");
             preference.setSummary(R.string.app_list_preference_none);
