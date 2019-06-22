@@ -104,9 +104,10 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-setup-wizard-lib-utils \
       SettingsLib
 
+  # Testing only resources must be applied first so they take precedence.
   LOCAL_RESOURCE_DIR := \
-      $(LOCAL_PATH)/res \
       $(LOCAL_PATH)/tests/robotests/res \
+      $(LOCAL_PATH)/res \
       $(LOCAL_PATH)/../libs/car-apps-common/res \
       $(LOCAL_PATH)/../libs/car-settings-lib/res \
       $(LOCAL_PATH)/../../../../frameworks/base/packages/SettingsLib/res
