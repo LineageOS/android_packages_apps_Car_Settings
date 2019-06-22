@@ -20,6 +20,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
+import android.content.Context;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 
 import androidx.preference.PreferenceViewHolder;
@@ -40,7 +42,9 @@ public class ButtonPasswordEditTextPreferenceTest {
 
     @Before
     public void setUp() {
-        View rootView = View.inflate(RuntimeEnvironment.application, R.layout.two_action_preference,
+        Context context = RuntimeEnvironment.application;
+        Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
+        View rootView = View.inflate(themedContext, R.layout.two_action_preference, /* root= */
                 null);
         mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
         mButtonPreference = new ButtonPasswordEditTextPreference(RuntimeEnvironment.application);
