@@ -27,7 +27,9 @@ import static org.mockito.Mockito.when;
 
 import android.app.Activity;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
@@ -45,6 +47,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 
@@ -64,7 +68,10 @@ public class MasterClearFragmentTest {
     public void setUp() {
         // Setup needed by instantiated PreferenceControllers.
         MockitoAnnotations.initMocks(this);
+        Context context = RuntimeEnvironment.application;
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        Shadows.shadowOf(context.getPackageManager())
+                .setSystemFeature(PackageManager.FEATURE_AUTOMOTIVE, true);
         when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(Collections.emptyList());
 
         mFragment = FragmentController.of(new MasterClearFragment()).setup();
