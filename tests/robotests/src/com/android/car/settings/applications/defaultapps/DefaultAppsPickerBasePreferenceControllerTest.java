@@ -26,7 +26,6 @@ import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.text.TextUtils;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -37,6 +36,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.common.RadioButtonPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import com.google.android.collect.Lists;
@@ -121,7 +121,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
     @Test
     public void refreshUi_noCandidates_hasSingleNoneElement() {
         mController.setCurrentDefault("");
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
         // Has the "None" element.
@@ -131,15 +131,13 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         assertThat(preference.getTitle()).isEqualTo(
                 mContext.getString(R.string.app_list_preference_none));
         assertThat(preference.getIcon()).isNotNull();
-        assertThat(preference.getSummary()).isEqualTo(
-                mContext.getString(R.string.default_app_selected_app));
     }
 
     @Test
     public void refreshUi_noCandidates_noNoneElement() {
         mController.setCurrentDefault("");
         mController.setIncludeNonePreference(false);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
         // None element removed.
@@ -154,7 +152,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         when(testApp.getKey()).thenReturn(testKey);
         mController.setTestCandidates(Lists.newArrayList(testApp));
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
@@ -169,11 +167,11 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mController.setTestCandidates(Lists.newArrayList(testApp));
         mController.setCurrentDefault(testKey);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        assertThat(mPreferenceGroup.findPreference(testKey).getSummary()).isEqualTo(
-                mContext.getString(R.string.default_app_selected_app));
+        RadioButtonPreference preference = mPreferenceGroup.findPreference(testKey);
+        assertThat(preference.isChecked()).isTrue();
     }
 
     @Test
@@ -185,19 +183,23 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mController.setTestCandidates(Lists.newArrayList(testApp));
         mController.setCurrentDefault(testKey);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        Preference currentDefault = mPreferenceGroup.findPreference(testKey);
-        Preference otherOption = mPreferenceGroup.getPreference(0);
+        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        RadioButtonPreference otherOption =
+                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
 
-        assertThat(TextUtils.isEmpty(currentDefault.getSummary())).isFalse();
-        assertThat(TextUtils.isEmpty(otherOption.getSummary())).isTrue();
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
 
         currentDefault.performClick();
 
-        assertThat(TextUtils.isEmpty(currentDefault.getSummary())).isFalse();
-        assertThat(TextUtils.isEmpty(otherOption.getSummary())).isTrue();
+        currentDefault = mPreferenceGroup.findPreference(testKey);
+        otherOption = (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
     }
 
     @Test
@@ -208,20 +210,25 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         when(testApp.getKey()).thenReturn(testKey);
         mController.setTestCandidates(Lists.newArrayList(testApp));
         mController.setCurrentDefault(testKey);
+        mController.setTestMessage(null);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        Preference currentDefault = mPreferenceGroup.findPreference(testKey);
-        Preference otherOption = mPreferenceGroup.getPreference(0);
+        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        RadioButtonPreference otherOption =
+                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
 
-        assertThat(TextUtils.isEmpty(currentDefault.getSummary())).isFalse();
-        assertThat(TextUtils.isEmpty(otherOption.getSummary())).isTrue();
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
 
         otherOption.performClick();
 
-        assertThat(TextUtils.isEmpty(currentDefault.getSummary())).isTrue();
-        assertThat(TextUtils.isEmpty(otherOption.getSummary())).isFalse();
+        currentDefault = mPreferenceGroup.findPreference(testKey);
+        otherOption = (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+
+        assertThat(currentDefault.isChecked()).isFalse();
+        assertThat(otherOption.isChecked()).isTrue();
     }
 
     @Test
@@ -234,14 +241,15 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mController.setCurrentDefault(testKey);
         mController.setTestMessage("Non-empty message");
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        Preference currentDefault = mPreferenceGroup.findPreference(testKey);
-        Preference otherOption = mPreferenceGroup.getPreference(0);
+        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        RadioButtonPreference otherOption =
+                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
 
-        assertThat(TextUtils.isEmpty(currentDefault.getSummary())).isFalse();
-        assertThat(TextUtils.isEmpty(otherOption.getSummary())).isTrue();
+        assertThat(currentDefault.isChecked()).isTrue();
+        assertThat(otherOption.isChecked()).isFalse();
 
         otherOption.performClick();
 
@@ -261,11 +269,12 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         // Currently, the testApp is the default selection.
         mController.setCurrentDefault(testKey);
 
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
         // This preference represents the "None" option.
-        Preference otherOption = mPreferenceGroup.getPreference(0);
+        RadioButtonPreference otherOption =
+                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
         assertThat(mController.getCurrentDefaultKey()).isEqualTo(testKey);
 
         otherOption.performClick();

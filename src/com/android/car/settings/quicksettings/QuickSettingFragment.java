@@ -134,7 +134,7 @@ public class QuickSettingFragment extends BaseFragment {
                 .addTile(new WifiTile(activity, mGridAdapter, getFragmentHost()))
                 .addTile(new BluetoothTile(activity, mGridAdapter, getFragmentHost()))
                 .addTile(new DayNightTile(activity, mGridAdapter, getFragmentHost()))
-                .addTile(new CelluarTile(activity, mGridAdapter))
+                .addTile(new CelluarTile(activity, mGridAdapter, getFragmentHost()))
                 .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
 
