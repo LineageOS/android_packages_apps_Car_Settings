@@ -632,8 +632,7 @@
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"’நம்பகமான சாதனம்’ ஒன்றை அமைக்க கம்பேனியன் ஆப்ஸைப் பயன்படுத்தவும். அமைத்த பிறகும் வாகனத்திற்கு அருகில் மொபைல் கண்டறியப்பட்டால் உங்களின் பயனர் சுயவிவரத்தை அன்லாக் செய்ய முடியும்."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. உங்கள் மொபைலில் கம்பேனியன் ஆப்ஸைப் பதிவிறக்கவும்"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. சாதனங்களை இணைக்க உங்கள் மொபைலில் <xliff:g id="CAR_NAME">%1$s</xliff:g> என்பதைத் தேர்வுசெய்யவும்"</string>
-    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
-    <skip />
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"வேறு யாராவது இந்தச் சாதனத்தை வைத்திருந்தாலும்கூட உங்கள் காருக்கு அருகில் இருக்கும்போது ஆன் செய்தால் ஒரு நம்பகமான சாதனம் பயனர் சுயவிவரத்தை அன்லாக் செய்யும்."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"இணைத்தல் குறியீடுகள் பொருந்துவதை உறுதிசெய்க"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"மொபைல் பதிவுசெய்யப்பட்டது"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> பதிவு செய்வதில் தோல்வி"</string>
