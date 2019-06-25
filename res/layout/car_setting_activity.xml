@@ -24,13 +24,6 @@
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/action_bar_height"/>
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/TrimmedHorizontalProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:visibility="gone"/>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,6 +31,13 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/TrimmedHorizontalProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"/>
         <!-- set the text clickable to true so that it blocks touch event -->
         <TextView
             android:id="@+id/restricted_message"
