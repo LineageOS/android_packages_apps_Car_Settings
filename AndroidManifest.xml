@@ -46,6 +46,7 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_USERS"/>
     <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -58,7 +59,6 @@
     <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <uses-permission android:name="android.permission.START_FOREGROUND"/>
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
