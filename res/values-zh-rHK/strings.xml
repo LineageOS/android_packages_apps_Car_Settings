@@ -58,8 +58,8 @@
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> 數據用量上限"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> 數據用量警告/<xliff:g id="ID_2">^2</xliff:g> 數據用量上限"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="other">剩餘 %d 天</item>
-      <item quantity="one">剩餘 %d 天</item>
+      <item quantity="other">尚餘 %d 天</item>
+      <item quantity="one">尚餘 %d 天</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"已沒有剩餘時間"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"剩餘不到 1 天"</string>
