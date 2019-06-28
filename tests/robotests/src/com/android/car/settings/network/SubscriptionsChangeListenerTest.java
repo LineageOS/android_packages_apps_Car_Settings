@@ -92,8 +92,8 @@ public class SubscriptionsChangeListenerTest {
         boolean hasMatch = false;
         for (ShadowApplication.Wrapper wrapper :
                 ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0)
-                    == TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED) {
+            if (wrapper.getIntentFilter().matchAction(
+                    TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED)) {
                 hasMatch = true;
             }
         }
@@ -116,8 +116,8 @@ public class SubscriptionsChangeListenerTest {
         boolean hasMatch = false;
         for (ShadowApplication.Wrapper wrapper :
                 ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0)
-                    == TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED) {
+            if (wrapper.getIntentFilter().matchAction(
+                    TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED)) {
                 hasMatch = true;
             }
         }
