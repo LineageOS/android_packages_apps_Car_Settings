@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+    Copyright 2018 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,55 +29,89 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"屏幕变暗, 调暗屏幕, 触摸屏, 电池"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"屏幕变暗, 夜间, 色调"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"夜间模式"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"网络和互联网"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"移动网络"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"移动数据"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"通过移动网络访问数据"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"要关闭移动数据网络吗？"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"流量消耗"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"数据流量警告和上限"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"应用流量用量周期"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"设置数据流量警告"</string>
+    <string name="data_warning" msgid="116776633806885370">"数据流量警告"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"设置数据流量上限"</string>
+    <string name="data_limit" msgid="227338836292511425">"数据流量上限"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"限制流量用量"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"当移动数据流量的用量达到您设置的上限时，您汽车的音响主机将关闭移动数据网络。\n\n由于流量用量是由音响主机计算的，而您的运营商对流量用量的计算方式可能有所不同，因此建议您设置一个保守的上限值。"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"设置和管理无线接入点"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在开启 WLAN…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在关闭 WLAN…"</string>
+    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
+    <skip />
+    <string name="wifi_disabled" msgid="5013262438128749950">"已停用 WLAN"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"无法取消保存网络"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"无法连接到网络"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"添加网络"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"已停用 WLAN"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"连接"</string>
     <string name="wifi_password" msgid="5565632142720292397">"密码"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"显示密码"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"网络名称"</string>
+    <string name="wifi_ssid_hint" msgid="3170608752313710099">"输入 SSID"</string>
     <string name="wifi_security" msgid="158358046038876532">"安全性"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"信号强度"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"信号强度"</string>
     <string name="wifi_status" msgid="5688013206066543952">"状态"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"连接速度"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"频率"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP 地址"</string>
+    <string name="show_password" msgid="2074628020371139240">"显示密码"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"输入网络名称"</string>
+    <string name="default_password_summary" msgid="8789594645836902982">"输入密码"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"微弱"</item>
-    <item msgid="2032262610626057081">"一般"</item>
-    <item msgid="3859756017461098953">"良好"</item>
-    <item msgid="1521103743353335724">"极佳"</item>
+    <item msgid="7683058295076342057">"微弱"</item>
+    <item msgid="1639222824821660744">"一般"</item>
+    <item msgid="1838705897358163300">"良好"</item>
+    <item msgid="6067166649320533751">"极佳"</item>
   </string-array>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"蓝牙"</string>
-    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"开启蓝牙"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"蓝牙"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"已停用蓝牙"</string>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2.4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"网络详情"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC 地址"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP 地址"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"子网掩码"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 地址"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"网关"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"WLAN 偏好设置"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"自动开启 WLAN"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"位于已保存的高品质网络（例如您的家庭网络）附近时自动重新开启 WLAN"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"无法使用，因为位置信息服务已关闭。请开启"<annotation id="link">"位置信息服务"</annotation>"。"</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"要开启 WLAN 扫描功能吗？"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"开启"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"WLAN 扫描功能已开启"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自动切换到移动数据网络"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"在 WLAN 网络无法连接到互联网时切换到移动数据网络（可能会消耗移动数据流量）。"</string>
+    <string name="learn_more" msgid="8214605928933358604">"了解详情"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"蓝牙"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"管理连接、设置设备名称和可检测性"</string>
-    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"计算机"</string>
-    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"耳机"</string>
-    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"手机"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"成像设备"</string>
-    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"耳机"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"外围输入设备"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"蓝牙"</string>
-    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"已配对的设备"</string>
-    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"可配对的设备"</string>
-    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"没有已配对的设备"</string>
-    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"无可用设备"</string>
-    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"已配对的设备"</string>
-    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"名称"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"用于"</string>
-    <string name="wifi_ssid_hint" msgid="4155050863239489553">"更改蓝牙设备的名称"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"未命名的设备"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"已配对的设备"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"与新设备配对"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"系统将开启蓝牙以进行配对"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"要断开该设备的连接吗？"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"您的车辆将断开与<xliff:g id="DEVICE_NAME">%1$s</xliff:g>的连接。"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"车辆的蓝牙地址：<xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"设备的蓝牙地址：<xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"车辆名称"</string>
+    <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"重命名此车辆"</string>
+    <string name="bluetooth_rename_device" msgid="8406868875363878712">"重命名设备"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"重命名"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"可配对的设备"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"配置文件"</string>
+    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"蓝牙配对请求"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"配对和连接"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"蓝牙"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"蓝牙配对码"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN 码由字母或符号组成"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"输入配对码，然后按回车键"</string>
@@ -90,8 +123,17 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"通常为 0000 或 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"配对请求"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"点按即可与 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 配对。"</string>
-    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"语言"</string>
+    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
+    <skip />
+    <string name="keyboard_settings" msgid="1959697870618278081">"键盘"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"管理键盘"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"文字转语音 (TTS) 输出"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"首选引擎"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"当前引擎"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"语速"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"音调"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"重置"</string>
     <string name="sound_settings" msgid="3072423952331872246">"提示音"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"铃声音量"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"导航音量"</string>
@@ -100,30 +142,65 @@
     <string name="media_volume_title" msgid="6697416686272606865">"媒体"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"设置音乐和视频的音量"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"闹钟"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"手机铃声"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"默认通知提示音"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"默认闹钟提示音"</string>
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"应用和通知"</string>
+    <string name="all_applications" msgid="7798210477486822168">"显示所有应用"</string>
+    <string name="default_applications" msgid="1558183275638697087">"默认应用"</string>
     <string name="applications_settings" msgid="794261395191035632">"应用信息"</string>
+    <string name="force_stop" msgid="2153183697014720520">"强行停止"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"要强行停止吗？"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"如果您强行停止某个应用，可能会导致该应用无法正常运行。"</string>
     <string name="disable_text" msgid="4358165448648990820">"停用"</string>
     <string name="enable_text" msgid="1794971777861881238">"启用"</string>
+    <string name="uninstall_text" msgid="277907956072833012">"卸载"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"如果您停用此应用，Android 和其他应用可能会无法正常运行。"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"停用应用"</string>
     <string name="permissions_label" msgid="2701446753515612685">"权限"</string>
     <string name="application_version_label" msgid="8556889839783311649">"版本：%1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"未授予任何权限"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"未请求任何权限"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"流量使用情况"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"应用的流量使用情况"</string>
-    <string name="force_stop" msgid="2153183697014720520">"强行停止"</string>
     <string name="computing_size" msgid="5791407621793083965">"正在计算…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other">另外 <xliff:g id="COUNT_1">%d</xliff:g> 项权限</item>
       <item quantity="one">另外 <xliff:g id="COUNT_0">%d</xliff:g> 项权限</item>
     </plurals>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"助手和语音输入"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"辅助应用"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"使用屏幕上的文字内容"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"允许辅助应用使用屏幕上的文字内容"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"使用屏幕截图"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"允许辅助应用使用屏幕截图"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"自动填充服务"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"无"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"已选择"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"辅助应用将可读取您系统中使用的应用的相关信息，其中包括您屏幕上显示的信息或应用中可使用的信息。"</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;请确认这是您信任的应用&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt;会根据您的屏幕内容判断可自动填充哪些内容。"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"添加服务"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"位置信息"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"扫描"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"WLAN 扫描"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"允许应用和服务随时扫描 WLAN 网络（即使 WLAN 已关闭）。这可用于改进基于位置的功能和服务。"</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"蓝牙扫描"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"允许应用和服务随时扫描附近的设备（即使蓝牙已关闭）。这可用于改进基于位置的功能和服务。"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系统"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"系统更新"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"系统更新"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 安全补丁程序级别"</string>
     <string name="model_info" msgid="4966408071657934452">"型号"</string>
     <string name="baseband_version" msgid="2370088062235041897">"基带版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"内核版本"</string>
     <string name="build_number" msgid="3997326631001009102">"版本号"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"蓝牙地址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未提供"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"状态"</string>
     <string name="device_status" msgid="267298179806290920">"状态"</string>
@@ -140,12 +217,49 @@
     <string name="copyright_title" msgid="4220237202917417876">"版权"</string>
     <string name="license_title" msgid="936705938435249965">"许可"</string>
     <string name="terms_title" msgid="5201471373602628765">"条款及条件"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"系统 WebView 许可"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"系统 WebView 许可"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"壁纸"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"卫星图像提供商：\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"第三方许可"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"加载许可时出现问题。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"正在加载…"</string>
+    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
+      <item quantity="other">现在只需再执行 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 步操作即可进入开发者模式。</item>
+      <item quantity="one">现在只需再执行 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 步操作即可进入开发者模式。</item>
+    </plurals>
+    <string name="show_dev_on" msgid="5339077400040834808">"您现在已处于开发者模式！"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"您已处于开发者模式，无需进行此操作。"</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"开发者选项"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"重置选项"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"重置网络、应用或设备"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"重置网络"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"这将重置所有网络设置，其中包括："</string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"WLAN"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"移动数据"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"蓝牙"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"清空所有车辆 eSIM"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"此操作不会取消您的服务套餐。"</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"无法重置 eSIM"</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"选择网络"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"重置设置"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"要重置吗？"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"要重置所有网络设置吗？此操作无法撤消！"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"重置设置"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"网络设置已重置"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"重置应用偏好设置"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"此操作将会重置以下所有偏好设置：\n\n"<li>"已停用的应用"</li>\n<li>"已停用的应用通知"</li>\n<li>"执行操作的默认应用"</li>\n<li>"应用的后台流量限制"</li>\n<li>"任何权限限制"</li>\n\n"您将不会丢失任何应用数据。"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"清空所有数据（恢复出厂设置）"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"这样做将会清空您车辆音响主机中的所有数据，其中包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统与应用的数据和设置"</li>\n<li>"已下载的应用"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登录以下帐号："</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"此车辆目前还有其他用户。"</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"重置车辆"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"要重置吗？"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"要清空您的所有个人信息和下载的应用吗？此操作无法撤消！"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"清空所有内容"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"正在清空"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"请稍候…"</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"日期和时间"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"设置日期和时间"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"设置日期、时间、时区和格式"</string>
@@ -165,23 +279,59 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"按时区排序"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"日期"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"时间"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"添加用户"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"删除用户"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"新用户"</string>
-    <string name="user_guest" msgid="3465399481257448601">"访客"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理员"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"目前登录的是管理员帐号"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"所有管理员权限"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"指定为管理员"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"该用户将可以删除其他用户（包括其他管理员），并将系统恢复出厂设置。"</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"此操作无法撤消。"</string>
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"是的，指定为管理员"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"创建新用户"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"拨打电话"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"使用汽车的移动数据收发短信"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"安装新应用"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"卸载应用"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"添加用户"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"新用户"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"要添加新用户吗？"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"当您添加新用户时，该用户必须设置自己的空间。"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"任何用户均可为所有其他用户更新应用。"</string>
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"已达到用户数上限"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">您最多可以创建 <xliff:g id="COUNT">%d</xliff:g> 位用户。</item>
+      <item quantity="one">您只能创建一位用户。</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"无法创建新用户"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"要删除此用户吗？"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"所有应用和数据都将随之删除。"</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"无法删除用户。"</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"关闭"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"重试"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"要删除最后一位用户吗？"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"删除这量车唯一的用户后，系统便会创建新的管理员用户。"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"所有与此用户关联的数据、设置以及应用都将随之删除。您将需要重新设置系统。"</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"选择新的管理员"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"您至少要有一位管理员。要删除现有的这位管理员，请先选择接替者。"</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"选择管理员"</string>
+    <string name="user_guest" msgid="3465399481257448601">"访客"</string>
+    <string name="start_guest_session" msgid="4438752398760283201">"访客"</string>
     <string name="user_switch" msgid="6544839750534690781">"开关"</string>
     <string name="current_user_name" msgid="3813671533249316823">"您 (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"名称"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"未设置"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"修改用户名"</string>
     <string name="users_list_title" msgid="770764290290240909">"用户"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"已授予%1$s的权限"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"帐号"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"用户"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何帐号"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>的帐号"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"自动同步数据"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"让应用自动刷新数据"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"要开启自动同步数据功能吗？"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"您在网络上对自己的帐号进行的所有更改都会自动同步到您的设备。\n\n有些帐号还可以自动将您在手机上进行的所有更改同步到网络上。Google 帐号就支持这类双向同步。"</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"要关闭自动同步数据功能吗？"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"这样可以节省数据流量，但您需要手动同步每个帐号才能获得最新信息，并且在有更新时不会收到通知。"</string>
     <string name="account_details_title" msgid="7529571432258448573">"帐号信息"</string>
     <string name="add_account_title" msgid="5988746086885210040">"添加帐号"</string>
     <string name="add_an_account" msgid="1072285034300995091">"添加帐号"</string>
@@ -189,16 +339,20 @@
     <string name="remove_account_title" msgid="8840386525787836381">"移除帐号"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"要移除帐号吗？"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"移除该帐号后，设备上的相关消息、联系人和其他数据也将全部删除！"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"您的管理员不允许进行这项更改"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"要移除此用户吗？"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"该用户名下的所有应用和数据都将随之删除。"</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"无法移除用户。"</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"要重试吗？"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"关闭"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"重试"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"要添加新用户吗？"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"当您添加新用户时，该用户必须设置自己的空间。"</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"任何用户均可为所有其他用户更新应用。"</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"无法移除帐号。"</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"帐号同步"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"已开启 <xliff:g id="ID_1">%1$d</xliff:g> 项（共 <xliff:g id="ID_2">%2$d</xliff:g> 项）的同步功能"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"已开启所有项的同步功能"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"已关闭所有项的同步功能"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"已关闭同步功能"</string>
+    <string name="sync_error" msgid="6698021343089247914">"同步错误"</string>
+    <string name="last_synced" msgid="4745124489150101529">"上次同步时间：<xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="sync_in_progress" msgid="1237573373537382416">"目前正在同步…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"点按即可立即同步（<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>）"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"立即同步"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"取消同步"</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"同步目前发生问题，将很快恢复正常。"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"安全"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"屏幕锁定"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"无"</string>
@@ -206,7 +360,8 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN 码"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"密码"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"选择一种锁定类型"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"屏幕锁定选项"</string>
+    <!-- no translation found for screen_lock_options (8531177937577168185) -->
+    <skip />
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"绘制您的图案"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"确认"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"重新绘制"</string>
@@ -216,7 +371,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"设置屏幕锁定"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"选择 PIN 码"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"选择您的图案"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"选择密码"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"选择您的密码"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"当前屏幕锁定设置"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"为了安全起见，请设置解锁图案"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"清除"</string>
@@ -288,7 +443,28 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"常用密码已被您的 IT 管理员屏蔽。请尝试一个不同的密码。"</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"添加可信设备"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"可信设备"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台设备</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 台设备</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"您的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 会在连接到这辆车后将其解锁。如果有人拿到您的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，对方也许能够访问此设备"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"确认"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除可信设备"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"请使用配套应用来设置可信设备。设置成功后，您将可以在车辆检测到您的手机时解锁您的用户个人资料"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手机上下载配套应用"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock 未能检测到此设备的安全功能。为了保护您的汽车，只有当您将汽车解锁后，可信设备才会让汽车保持解锁状态。当您的可信设备在汽车附近时，就会让汽车保持解锁状态（即使是其他人拿着此设备也是如此）。"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"将 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 添加为可信设备"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 已成功添加为可信设备"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
     <string name="forget" msgid="3971143908183848527">"忽略"</string>
+    <string name="connect" msgid="5861699594602380150">"连接"</string>
+    <string name="disconnect" msgid="6140789953324820336">"断开连接"</string>
     <string name="delete_button" msgid="5840500432614610850">"删除"</string>
     <string name="remove_button" msgid="6664656962868194178">"移除"</string>
     <string name="cancel" msgid="750286395700355455">"取消"</string>
@@ -298,8 +474,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"退出演示模式"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"这项操作会删除演示帐号并将系统恢复出厂设置，且所有用户数据都会丢失。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
-    <string name="suggestion_primary_button" msgid="6421115494714083020">"完成设置"</string>
-    <string name="suggestion_secondary_button" msgid="7075088546904464681">"以后再说"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"无法在驾驶时使用此功能。"</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"驾车时无法添加用户。"</string>
 </resources>
