@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"புளூடூத் சாதனத்தைத் தேர்வுசெய்க"</string>
     <string name="language_settings" msgid="2079258598337245546">"மொழிகள்"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"மொழிகள் &amp; உள்ளீடு"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"பரிந்துரைகள்"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"அனைத்து மொழிகளும்"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"கீபோர்டு"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"கீபோர்டு நிர்வகித்தல்"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"உரையிலிருந்து பேச்சுக்கு"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android பதிப்பு"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android பாதுகாப்பின் பேட்ச் நிலை"</string>
-    <string name="model_info" msgid="4966408071657934452">"மாடல்"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"மாடல் &amp; வன்பொருள்"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"மாடல்: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"பேஸ்பேண்ட் பதிப்பு"</string>
     <string name="kernel_version" msgid="7327212934187011508">"கர்னல் பதிப்பு"</string>
     <string name="build_number" msgid="3997326631001009102">"பதிப்பு எண்"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"சிஸ்டம் WebView உரிமங்கள்"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"வால்பேப்பர்கள்"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"சாட்டிலைட் படங்களை வழங்குபவர்கள்:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"மாடல்"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"வரிசை எண்"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"வன்பொருள் பதிப்பு"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"மூன்றாம் தரப்பு உரிமங்கள்"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"உரிமங்களை ஏற்றுவதில் சிக்கல்."</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"பெயர்"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"அமைக்கவில்லை"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"பயனர் பெயரைத் திருத்தவும்"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"காலியாக இருக்கக்கூடாது."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"பயனர்பெயரைத் தவறாக உள்ளிட்டுள்ளீர்கள்."</string>
     <string name="users_list_title" msgid="770764290290240909">"பயனர்கள்"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sக்கு இந்த அனுமதிகள் உள்ளன"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"சேமிப்பகம்"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ஆப்ஸ் தரவை நீக்கவா?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"இந்த ஆப்ஸின் அனைத்துத் தகவலும் நிரந்தரமாக நீக்கப்படும். இதில் அனைத்து ஃபைல்களும், அமைப்புகளும், கணக்குகளும், தரவுத்தளங்களும் போன்றவை அடங்கும்."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ஆப்ஸின் சேமிப்பகத்தை அழிக்க இயலவில்லை."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> பாதுகாப்பாக வெளியேற்றப்பட்டது"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>ஐப் பாதுகாப்பாக வெளியேற்ற முடியவில்லை"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"கணக்குகள்"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"கணக்கைச் சேர்"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"கணக்குகள் எதுவும் சேர்க்கப்படவில்லை"</string>
@@ -632,13 +642,17 @@
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"’நம்பகமான சாதனம்’ ஒன்றை அமைக்க கம்பேனியன் ஆப்ஸைப் பயன்படுத்தவும். அமைத்த பிறகும் வாகனத்திற்கு அருகில் மொபைல் கண்டறியப்பட்டால் உங்களின் பயனர் சுயவிவரத்தை அன்லாக் செய்ய முடியும்."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. உங்கள் மொபைலில் கம்பேனியன் ஆப்ஸைப் பதிவிறக்கவும்"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. சாதனங்களை இணைக்க உங்கள் மொபைலில் <xliff:g id="CAR_NAME">%1$s</xliff:g> என்பதைத் தேர்வுசெய்யவும்"</string>
-    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
-    <skip />
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"வேறு யாராவது இந்தச் சாதனத்தை வைத்திருந்தாலும்கூட உங்கள் காருக்கு அருகில் இருக்கும்போது ஆன் செய்தால் ஒரு நம்பகமான சாதனம் பயனர் சுயவிவரத்தை அன்லாக் செய்யும்."</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"இணைத்தல் குறியீடுகள் பொருந்துவதை உறுதிசெய்க"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"மொபைல் பதிவுசெய்யப்பட்டது"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> பதிவு செய்வதில் தோல்வி"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"நம்பகமான சாதனத்தைச் சேர்த்த பிறகு அடையாளச் சரிபார்ப்பு முறையை அமைக்க வேண்டும். உங்களிடம் நம்பகமான சாதனம் இல்லையெனில் அடையாளச் சரிபார்ப்பிற்காக உங்கள் சுயவிவரத்தை அணுக வேண்டிய அவசியம் ஏற்படும்."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"சாதனம் துண்டிக்கப்பட்டது."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"அனுமதிச் சான்றுகளை அழித்தல்"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"அனைத்து சான்றிதழ்களையும் அகற்றும்"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"அனைத்து உள்ளடக்கத்தையும் அகற்ற வேண்டுமா?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"நற்சான்று சேமிப்பகம் அழிக்கப்பட்டது."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"நற்சான்று சேமிப்பகத்தை அழிக்க முடியாது."</string>
     <string name="forget" msgid="3971143908183848527">"அகற்று"</string>
     <string name="connect" msgid="5861699594602380150">"இணை"</string>
     <string name="disconnect" msgid="6140789953324820336">"துண்டி"</string>

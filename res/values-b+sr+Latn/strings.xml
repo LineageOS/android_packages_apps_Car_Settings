@@ -49,7 +49,7 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"Koristite <xliff:g id="CARRIER2_0">%2$s</xliff:g> za mobilne podatke. Ako pređete na <xliff:g id="CARRIER1">%1$s</xliff:g>, <xliff:g id="CARRIER2_1">%2$s</xliff:g> se više neće koristiti za mobilne podatke."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Koristi <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roming"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Poveži sa uslugama za podatke tokom rominga"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Poveži sa uslugama za podatke u romingu"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Želite li da dozvolite prenos podataka u romingu?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Mogu da nastanu značajni troškovi."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Potrošnja podataka"</string>
@@ -201,6 +201,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Odaberite Bluetooth uređaj"</string>
     <string name="language_settings" msgid="2079258598337245546">"Jezici"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Jezici i unos"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Predloženi"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Svi jezici"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastatura"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Upravljajte tastaturama"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Pretvaranje teksta u govor"</string>
@@ -357,7 +359,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verzija Android-a"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivo bezbednosne zakrpe za Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model i hardver"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Model: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Verzija osnovnog propusnog opsega"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Verzija jezgra"</string>
     <string name="build_number" msgid="3997326631001009102">"Broj verzije"</string>
@@ -381,6 +384,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"Licence za sistemski WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Pozadine"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Dobavljači satelitskih slika:\n©2014. CNES/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Model"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Serijski broj"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Verzija hardvera"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Licence treće strane"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Došlo je do problema pri učitavanju licenci."</string>
@@ -483,6 +489,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"Ime"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Nije podešeno"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Izmenite ime korisnika"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"Polje ne sme da bude prazno."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"Korisničko ime koje ste uneli je nevažeće."</string>
     <string name="users_list_title" msgid="770764290290240909">"Korisnici"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"Dozvola je data korisniku %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Memorijski prostor"</string>
@@ -502,6 +510,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Brišete podatke aplikacija?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Svi podaci ove aplikacije biće trajno izbrisani. To obuhvata sve datoteke, podešavanja, naloge, baze podataka itd."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Brisanje memorije za aplikaciju nije uspelo."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Uređaj <xliff:g id="NAME">%1$s</xliff:g> je bezbedno isključen"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Bezbedno isključivanje uređaja <xliff:g id="NAME">%1$s</xliff:g> nije uspelo"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Nalozi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj nalog"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nijedan nalog nije dodat"</string>
@@ -650,6 +660,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registracija uređaja <xliff:g id="DEVICE_NAME">%1$s</xliff:g> nije uspela"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Za dodavanje pouzdanog uređaja sledeće što treba da uradite je da podesite metod potvrde identiteta. Ako nemate pouzdani uređaj sa sobom, potvrda identiteta će biti potrebna da biste pristupili profilu."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Prekinuta je veza sa uređajem."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Obriši akreditive"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Uklonite sve sertifikate"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Želite li da uklonite sav sadržaj?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Skladište akreditiva je obrisano."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Brisanje skladišta akreditiva nije uspelo."</string>
     <string name="forget" msgid="3971143908183848527">"Zaboravi"</string>
     <string name="connect" msgid="5861699594602380150">"Poveži"</string>
     <string name="disconnect" msgid="6140789953324820336">"Prekini vezu"</string>

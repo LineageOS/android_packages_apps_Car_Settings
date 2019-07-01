@@ -207,6 +207,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"اختيار جهاز البلوتوث"</string>
     <string name="language_settings" msgid="2079258598337245546">"اللغات"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"اللغات والإدخال"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"اللغات المقترحة"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"جميع اللغات"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"لوحة المفاتيح"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"إدارة لوحات المفاتيح"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"إخراج النص إلى كلام"</string>
@@ -366,7 +368,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"تحديثات النظام"</string>
     <string name="firmware_version" msgid="8491753744549309333">"إصدار Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"مستوى رمز تصحيح أمان Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"الطراز"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"الطراز والأجهزة"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"الطراز: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"إصدار النطاق الأساسي"</string>
     <string name="kernel_version" msgid="7327212934187011508">"إصدار النواة"</string>
     <string name="build_number" msgid="3997326631001009102">"رقم الإصدار"</string>
@@ -390,6 +393,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"تراخيص WebView للنظام"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"الخلفيات"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"الشركات الموفرة لصور القمر الصناعي:\n©2014 CNES / Astrium وDigitalGlobe وBluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"الطراز"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"الرقم التسلسلي"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"إصدار الجهاز"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"تراخيص الأطراف الثالثة"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"حدثت مشكلة أثناء تحميل التراخيص."</string>
@@ -498,6 +504,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"الاسم"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"لم يتم الإعداد."</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"تعديل اسم المستخدم"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"يجب عدم ترك الحقل فارغًا."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"اسم المستخدم المُدخل غير صالح."</string>
     <string name="users_list_title" msgid="770764290290240909">"المستخدمون"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"تمّ منح الأذونات للمستخدم %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"التخزين"</string>
@@ -517,6 +525,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"هل تريد حذف بيانات التطبيق؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا. ويشمل ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات وما إلى ذلك."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر مسح مساحة تخزين للتطبيق."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"تم إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"تعذّر إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"الحسابات"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"إضافة حساب"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"لم تتم إضافة أي حسابات."</string>
@@ -686,6 +696,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"تعذّر تسجيل جهاز <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"سيتعيَّن عليك تحديد طريقة المصادقة بعد إضافة جهاز موثوق به. وإذا لم يكن بحوزتك جهازك الموثوق به، ستلزم المصادقة للوصول إلى ملفك الشخصي."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"تم قطع اتصال جهازك."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"محو بيانات الاعتماد"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"إزالة جميع الشهادات"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"هل تريد إزالة جميع المحتوى؟"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"تم مسح وحدة تخزين بيانات الاعتماد."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"تعذر محو وحدة تخزين بيانات الاعتماد."</string>
     <string name="forget" msgid="3971143908183848527">"حذف"</string>
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>

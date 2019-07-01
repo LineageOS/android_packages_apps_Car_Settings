@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"انتخاب دستگاه بلوتوث"</string>
     <string name="language_settings" msgid="2079258598337245546">"زبان‌ها"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"زبان‌ها و ورودی"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"پیشنهادی"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"همه زبان‌ها"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"صفحه‌کلید"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"مدیریت صفحه‌کلیدها"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"خروجی تبدیل نوشتار به گفتار"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
     <string name="firmware_version" msgid="8491753744549309333">"نسخه Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"سطح وصله امنیتی Android"</string>
-    <string name="model_info" msgid="4966408071657934452">"مدل"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"مدل و سخت‌افزار"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"مدل: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"نسخه باند پایه"</string>
     <string name="kernel_version" msgid="7327212934187011508">"نسخهٔ اصلی"</string>
     <string name="build_number" msgid="3997326631001009102">"شمارهٔ ساخت"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"مجوزهای «وب‌نمای» سیستم"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"کاغذدیواری"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ارائه‌دهندگان تصویر ماهواره‌ای:\n©2014 CNES / Astrium،‏ DigitalGlobe،‏ Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"مدل"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"شماره سریال"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"نسخه سخت‌افزار"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"مجوزهای شخص ثالث"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"مشکلی در بارگیری مجوزها وجود دارد."</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"نام"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"تنظیم نشده"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ویرایش نام کاربر"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"این فیلد نمی‌تواند خالی باشد."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"نام کاربری واردشده نامعتبر است."</string>
     <string name="users_list_title" msgid="770764290290240909">"کاربران"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"مجوزها به %1$s داده شد"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"فضای ذخیره‌سازی"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"داده‌های برنامه حذف شود؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"همه داده‌های این برنامه به‌صورت دائمی حذف می‌شود. این شامل تمام فایل‌ها، تنظیمات، حساب‌ها، پایگاه‌های داده و دیگر موارد می‌شود."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"فضای ذخیره‌سازی برای برنامه پاک نشد."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> به‌صورت امن خارج شد"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> به‌صورت امن خارج نشد"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"حساب‌ها"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"افزودن حساب"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"حسابی اضافه نشده است"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ثبت‌نام <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ناموفق بود"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"افزودن دستگاه مطمئن مستلزم تنظیم روش احراز هویت در مرحله بعد است. اگر دستگاه مطمئن‌تان را با خود حمل نمی‌کنید، برای دسترسی به نمایه‌تان باید احراز هویت کنید."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ارتباط دستگاه قطع شد."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات کاربری"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"حذف تمام گواهی‌ها"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"همه محتوا حذف شود؟"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"حافظه اطلاعات کاربری پاک شد."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"حافظه اطلاعات کاربری پاک نمی‌شود."</string>
     <string name="forget" msgid="3971143908183848527">"فراموش کردن"</string>
     <string name="connect" msgid="5861699594602380150">"اتصال"</string>
     <string name="disconnect" msgid="6140789953324820336">"قطع اتصال"</string>

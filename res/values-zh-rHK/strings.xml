@@ -58,8 +58,8 @@
     <string name="cell_data_limit" msgid="6862164869877993009">"<xliff:g id="ID_1">^1</xliff:g> 數據用量上限"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"<xliff:g id="ID_1">^1</xliff:g> 數據用量警告/<xliff:g id="ID_2">^2</xliff:g> 數據用量上限"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
-      <item quantity="other">剩餘 %d 天</item>
-      <item quantity="one">剩餘 %d 天</item>
+      <item quantity="other">尚餘 %d 天</item>
+      <item quantity="one">尚餘 %d 天</item>
     </plurals>
     <string name="billing_cycle_none_left" msgid="3499893148398931302">"已沒有剩餘時間"</string>
     <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"剩餘不到 1 天"</string>
@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"選擇藍牙裝置"</string>
     <string name="language_settings" msgid="2079258598337245546">"語言"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"語言及輸入"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"建議"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"所有語言"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"鍵盤"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"管理鍵盤"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"文字轉語音輸出"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 安全性修補程式級別"</string>
-    <string name="model_info" msgid="4966408071657934452">"型號"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"型號和硬件"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"型號：<xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"基頻版本"</string>
     <string name="kernel_version" msgid="7327212934187011508">"核心版本"</string>
     <string name="build_number" msgid="3997326631001009102">"版本號碼"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"系統 WebView 授權"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"桌布"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"衛星影像供應商：\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"型號"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"序號"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"硬件版本"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"第三方授權"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"載入授權時發生問題。"</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"名稱"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"未設定"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"編輯使用者名稱"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"欄位不得留空。"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"輸入的使用者名稱無效。"</string>
     <string name="users_list_title" msgid="770764290290240909">"使用者"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"已向 %1$s 授予的權限"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"儲存空間"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"要刪除應用程式資料嗎？"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"系統會永久刪除此應用程式的所有資料，包括所有檔案、設定、帳戶、資料庫等。"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"無法清除應用程式的儲存空間。"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"已安全移除 <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"無法安全移除 <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"帳戶"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"新增帳戶"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未新增任何帳戶"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"「<xliff:g id="DEVICE_NAME">%1$s</xliff:g>」註冊失敗"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"如要加入信任的裝置，則需要在下一步設定驗證方法。如果未有攜帶信任的裝置，便需要通過驗證才可存取您的設定檔。"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"裝置已中斷連線。"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有憑證"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有內容嗎？"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"認證儲存空間已清除。"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"無法清除認證儲存空間。"</string>
     <string name="forget" msgid="3971143908183848527">"忘記"</string>
     <string name="connect" msgid="5861699594602380150">"連接"</string>
     <string name="disconnect" msgid="6140789953324820336">"解除連接"</string>

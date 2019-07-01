@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‎‏‎‏‎‏‎‏‏‏‏‏‎‏‎‎‏‎‏‎‎‏‎‎‏‏‎‎‎‏‎‎‏‏‏‏‏‏‏‎‎‏‏‏‎‏‏‎‏‎‏‎‎‎‎‎‏‏‎Choose Bluetooth device‎‏‎‎‏‎"</string>
     <string name="language_settings" msgid="2079258598337245546">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‎‏‏‎‏‏‎‏‏‎‎‎‎‎‎‏‎‏‎‏‎‏‏‎‏‏‏‎‎‎‏‏‎‎‎‎‏‎‎‎‏‎‏‏‏‎‎‎‏‎‏‏‎‏‎‏‎‎Languages‎‏‎‎‏‎"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‏‎‏‏‏‏‎‏‏‎‏‎‏‏‎‏‎‏‏‏‏‏‎‏‎‏‎‎‎‏‏‏‎‏‎‎‏‏‏‏‎‏‏‎‎‏‎‏‎‎‏‏‏‏‏‎‎‎‎Languages &amp; input‎‏‎‎‏‎"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‏‎‎‏‎‏‏‎‎‎‏‎‏‏‏‎‏‏‏‎‎‎‏‎‏‏‏‎‏‎‏‏‎‎‎‎‏‏‎‏‏‏‏‏‎‏‏‎‏‎‏‏‏‎‎‎‏‏‎‎‎Suggested‎‏‎‎‏‎"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‏‏‏‎‎‏‎‎‎‎‎‎‎‎‏‎‎‎‎‎‎‎‎‏‎‏‎‎‎‎‏‏‎‏‎‏‎‏‎‎‏‏‎‎‎‏‏‎‏‎‏‎‏‏‎‎‎All languages‎‏‎‎‏‎"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‎‏‏‎‎‏‏‎‎‏‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‎‎‏‎‎‏‎‏‎‏‎‏‎‎‏‎‏‎‏‎‏‏‏‎‎‎‏‏‎‎‎‎‎‏‎Keyboard‎‏‎‎‏‎"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‎‎‎‎‏‎‎‏‎‎‎‎‏‎‎‎‎‏‎‎‎‏‏‎‏‏‎‏‎‎‎‏‎‎‎‏‏‏‏‎‎‏‏‎‎‏‎‏‎‎‎‏‎‎‎‏‎‎‎Manage keyboards‎‏‎‎‏‎"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‏‎‏‎‎‎‏‎‎‏‏‎‎‎‎‎‎‏‎‏‏‏‎‏‏‏‏‏‎‏‏‎‎‏‏‏‎‎‏‏‎‏‏‏‏‎‎‎‏‏‎‎‎‏‏‏‏‎Text-to-speech output‎‏‎‎‏‎"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‎‎‏‏‏‏‏‏‎‏‏‎‏‎‏‎‎‏‎‎‎‏‎‎‎‏‎‏‏‎‏‎‏‏‎‎‏‏‏‎‎‏‏‏‎‎‎‎‎‏‏‎‎‏‏‏‎System updates‎‏‎‎‏‎"</string>
     <string name="firmware_version" msgid="8491753744549309333">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‏‏‎‏‏‎‎‎‏‏‎‎‎‏‎‏‎‎‎‎‏‎‏‎‎‎‎‏‎‏‏‏‏‏‏‏‎‏‎‎‎‏‏‎‏‎‏‏‏‎‎‏‎‏‎‏‎Android version‎‏‎‎‏‎"</string>
     <string name="security_patch" msgid="4794276590178386903">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‎‏‎‏‎‎‎‏‎‎‎‏‎‏‏‎‎‎‏‎‎‏‎‏‎‎‎‎‏‎‏‏‎‎‎‏‎‎‎‏‏‎‏‏‏‎‎‎‎‏‏‏‏‎‏‎‏‏‏‎Android security patch level‎‏‎‎‏‎"</string>
-    <string name="model_info" msgid="4966408071657934452">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‎‎‏‏‏‎‏‎‎‏‏‏‏‏‏‏‎‎‎‏‏‎‎‏‏‎‏‏‏‎‎‏‏‏‎‎‏‏‏‎‏‎‎‎Model‎‏‎‎‏‎"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‎‎‏‎‎‎‏‏‏‎‎‎‎‏‎‏‎‎‏‏‎‎‏‎‎‎‎‎‏‎‏‏‏‎‏‎‏‎‏‎‏‎‏‏‏‏‏‎‎‏‎‎‏‎‏‎‎Model &amp; hardware‎‏‎‎‏‎"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‎‏‎‏‎‏‎‏‎‏‎‏‎‎‏‎‎‎‏‎‏‏‏‏‏‏‏‏‎‎‎‎‏‎‏‏‎‏‎‏‎‏‏‎‏‏‏‎‎‏‎‎‎‎‏‎‎‎‏‎Model: ‎‏‎‎‏‏‎<xliff:g id="MODEL">%1$s</xliff:g>‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
     <string name="baseband_version" msgid="2370088062235041897">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‎‎‎‏‏‏‎‎‏‎‎‎‎‏‏‏‏‏‎‏‎‎‎‏‎‎‏‎‎‎‎‏‎‏‏‏‏‏‎‏‎‎‏‏‏‏‎‎‎‎‎‎‏‏‎‏‎‎‏‎Baseband version‎‏‎‎‏‎"</string>
     <string name="kernel_version" msgid="7327212934187011508">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‎‎‏‎‏‏‎‏‎‏‏‏‏‎‏‏‏‏‏‎‏‎‏‎‏‎‏‏‏‏‎‏‎‎‏‏‏‏‏‎‏‏‏‎‏‎‏‎‎‏‏‎‏‏‎‏‏‎‏‎‎‎Kernel version‎‏‎‎‏‎"</string>
     <string name="build_number" msgid="3997326631001009102">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‎‏‏‏‏‎‎‏‎‏‎‏‏‎‏‏‎‏‏‎‎‏‎‎‎‏‏‎‎‏‎‎‎‎‎‎‎‏‏‎‎‎‏‎‏‎‏‏‏‏‎‎‏‏‏‎‎Build number‎‏‎‎‏‎"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‎‏‎‏‏‎‎‏‏‏‏‏‏‎‎‏‏‏‏‎‎‎‎‎‎‏‏‏‏‎‎‏‎‎‏‏‎‎‏‎‏‎‎‏‏‏‏‎‏‏‏‎‎‎‏‏‏‏‎System WebView licenses‎‏‎‎‏‎"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‏‏‎‎‎‏‎‏‏‏‏‏‎‎‎‏‎‎‎‏‎‏‎‎‎‏‏‏‏‏‎‏‎‎‏‏‏‏‎‎‎‏‏‏‏‏‎‏‎‏‏‎‎‏‎Wallpapers‎‏‎‎‏‎"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‎‏‏‏‎‎‏‎‎‎‏‏‏‎‏‎‏‎‏‏‎‏‎‏‎‏‏‎‏‎‎‏‏‎‏‏‏‎‏‏‏‎‏‏‏‏‎‏‏‏‏‎‏‎‏‎‎‏‏‎Satellite imagery providers:‎‏‎‎‏‏‎\n‎‏‎‎‏‏‏‎©2014 CNES / Astrium, DigitalGlobe, Bluesky‎‏‎‎‏‎"</string>
+    <string name="model_info" msgid="4966408071657934452">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‎‎‏‏‏‎‏‎‎‏‏‏‏‏‏‏‎‎‎‏‏‎‎‏‏‎‏‏‏‎‎‏‏‏‎‎‏‏‏‎‏‎‎‎Model‎‏‎‎‏‎"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‏‎‏‎‏‏‏‎‏‎‎‏‎‎‎‏‏‏‏‏‎‏‎‏‏‏‎‏‎‏‏‎‏‎‏‏‎‏‏‏‏‎‏‎‎‏‎‎‏‎‎‎‎Serial number‎‏‎‎‏‎"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‏‏‏‏‎‏‎‎‏‎‏‏‎‏‎‏‏‎‏‎‎‏‏‎‎‎‎‏‏‎‏‏‎‏‎‎‎‏‏‎‏‎‏‏‎‏‏‎‏‏‎‏‎‎‏‎‏‎‏‎‎Hardware version‎‏‎‎‏‎"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‎‏‎‏‏‏‏‏‎‎‏‏‏‎‎‎‏‏‏‎‏‎‏‎‎‎‎‏‎‎‎‏‎‏‏‏‎‏‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‎‏‏‎‏‎Third-party licenses‎‏‎‎‏‎"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‎‎‏‎‏‏‎‏‏‏‏‏‎‏‏‏‏‎‏‏‎‏‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‎‏‏‎‎‎‏‏‏‎‎‎‎‎‎‏‎‏‏‏‎‎There is a problem loading the licenses.‎‏‎‎‏‎"</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‏‏‎‎‏‎‎‎‏‏‏‏‎‎‏‎‏‎‏‏‎‏‎‎‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎‏‎‏‎‎‎‎‎‎‎‏‎‏‏‏‏‏‎‏‎Name‎‏‎‎‏‎"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‎‎‏‏‏‎‎‏‏‏‎‎‏‎‏‏‏‏‎‎‎‏‎‎‏‎‏‎‏‏‎‎‏‎‎‎‏‎‏‏‎‎‎‏‎‏‏‏‏‏‏‎‏‎‎‎‏‎Not set up‎‏‎‎‏‎"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‏‏‏‎‏‎‎‎‎‎‏‏‏‏‏‎‏‎‏‎‎‏‎‎‏‎‏‎‎‏‏‏‏‏‎‎‏‏‎‏‏‏‏‏‎‎‏‏‎‏‎‏‎‎‏‏‏‎‎Edit user name‎‏‎‎‏‎"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‏‏‎‎‏‏‏‏‏‏‎‏‎‎‎‏‎‏‏‎‏‏‎‎‏‎‏‏‏‎‎‏‏‎‎‏‏‎‎‏‏‎‏‎‎‏‏‎‏‎‏‎‎‎‏‏‏‎‏‏‎Field can’t be blank.‎‏‎‎‏‎"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‏‎‎‏‏‎‎‎‏‎‎‏‏‎‎‎‏‏‏‎‎‎‎‎‎‎‏‎‎‏‎‏‎‏‎‏‏‏‎‏‏‏‏‏‎‎‎‏‎‏‎‎‎‏‎Username entered is invalid.‎‏‎‎‏‎"</string>
     <string name="users_list_title" msgid="770764290290240909">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‎‏‎‏‏‎‎‏‎‎‏‎‎‏‏‏‎‎‎‎‎‏‎‎‏‏‏‎‏‎‎‎‎‎‏‎‎‏‏‏‎‎‏‎‎‏‏‎‏‏‎‎‎‏‏‎‏‎Users‎‏‎‎‏‎"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‎‎‎‎‏‏‏‏‎‏‎‏‎‎‏‏‎‎‎‏‏‏‎‎‏‎‎‏‏‎‏‏‏‎‎‏‏‎‏‏‏‎‎‏‏‎‎‏‏‎Permissions granted to %1$s‎‏‎‎‏‎"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‏‎‎‏‏‎‏‏‏‎‏‏‎‎‏‎‏‎‏‎‏‎‎‏‏‏‏‎‎‏‎‏‎‏‎‎‏‏‏‏‎‏‏‎‏‎‎‎‏‏‎‎‏‎‏‎Storage‎‏‎‎‏‎"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‏‏‎‎‎‎‎‎‏‎‏‎‎‎‏‎‎‏‏‎‎‏‏‏‏‎‎‎‎‏‎‏‏‎‎‎‎‎‎‏‎‎‏‏‎‎‏‏‎‎‏‎‏‏‏‎Delete app data?‎‏‎‎‏‎"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‎‏‏‎‎‎‎‏‎‎‎‏‎‎‏‏‎‏‎‏‎‎‏‎‎‏‎‏‎‎‏‎‏‎‎‎‏‎‏‏‎‏‎‎‎‎‏‏‎‎‎‏‎‏‏‏‎‎‏‎All this app’s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.‎‏‎‎‏‎"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‎‏‎‎‏‎‎‎‎‎‎‏‏‎‏‏‏‏‎‏‏‏‎‎‎‎‎‎‎‎‎‏‎‎‏‎‏‎‎‎‏‏‎‎‏‏‏‏‎‏‏‎‎‎‎‎‏‎‎Couldn’t clear storage for app.‎‏‎‎‏‎"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‏‏‎‏‎‏‏‎‎‎‏‏‏‏‎‏‏‏‎‏‏‏‎‏‎‎‎‎‎‏‎‎‎‎‎‎‏‏‎‏‏‏‎‎‎‎‏‎‏‏‎‎‎‎‏‏‏‎‏‏‎‏‎‎‏‎‎‏‏‎<xliff:g id="NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎ is safely ejected‎‏‎‎‏‎"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‏‏‏‏‏‎‏‏‏‎‎‏‏‏‎‏‎‏‎‎‎‏‏‏‏‎‎‏‎‎‎‏‎‎‏‎‎‎‏‎‏‎‎‏‎‏‎‏‏‎‏‏‎‏‎‎‎‎‏‏‎Couldn’t safely eject ‎‏‎‎‏‏‎<xliff:g id="NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎‎‏‎‎‏‎"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‎‏‏‏‏‎‎‎‎‎‏‏‎‏‏‎‏‎‏‎‎‎‏‎‎‎‎‏‏‏‎‎‎‏‎‏‏‎‏‏‏‏‏‎‎‏‎‏‎‎‏‎‎‏‎‏‎‏‏‏‏‏‎Accounts‎‏‎‎‏‎"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‎‏‏‏‏‏‏‎‎‎‏‏‏‏‏‏‎‏‎‏‎‎‎‎‏‏‎‏‏‎‎‎‏‎‏‏‏‎‏‏‎‏‎‏‎‏‎‏‎‎‏‎‏‏‏‏‎‎‏‎Add account‎‏‎‎‏‎"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‎‎‏‏‏‎‏‏‏‎‎‎‏‏‏‏‏‎‎‏‏‎‎‎‏‏‎‎‏‏‎‏‎‏‏‏‎‏‎‏‎‎‏‏‎‏‏‏‏‎‎‎‏‏‏‏‏‎‏‏‏‎No accounts added‎‏‎‎‏‎"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‏‏‏‎‎‏‏‎‎‎‏‏‎‎‏‎‏‎‎‎‎‏‎‎‏‏‎‏‎‏‎‏‎‏‎‎‏‏‏‎‎‎‎‏‎‎‎‎‏‏‏‎‎‎‎‎‎‏‎‎‎‎‏‎‎‏‏‎<xliff:g id="DEVICE_NAME">%1$s</xliff:g>‎‏‎‎‏‏‏‎ enrollment failed‎‏‎‎‏‎"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‏‎‏‎‎‎‏‎‎‎‎‏‎‎‎‎‏‏‏‎‎‎‏‏‏‏‎‎‏‎‎‎‏‏‎‏‎‏‎‎‏‏‏‏‎‏‏‎‏‎‏‎‏‎‎‎‎‏‎Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile.‎‏‎‎‏‎"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‎‏‏‎‏‎‎‎‏‏‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‏‎‏‏‎‎‎‎‎‎‏‏‏‎‏‏‏‏‏‎‎‎‎‏‏‏‏‏‏‏‎Device disconnected.‎‏‎‎‏‎"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‎‎‏‏‎‎‎‎‏‎‎‎‎‎‏‎‏‏‎‏‏‏‏‏‏‎‏‎‏‏‏‏‎‎‎‎‎‎‏‎‎‏‎‎‎‎‏‏‎‎‏‎‏‏‏‏‎‏‏‏‏‏‎Clear credentials‎‏‎‎‏‎"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‎‎‎‎‏‏‎‏‎‏‏‎‎‎‏‏‎‏‎‏‏‎‎‏‏‏‎‎‏‏‏‏‎‏‎‏‎‎‎‎‎‏‎‏‏‏‎‏‏‎‎‏‏‏‎‏‎‏‎Remove all certificates‎‏‎‎‏‎"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‎‎‎‎‎‎‎‎‎‎‏‏‏‎‎‏‏‎‏‎‎‏‏‎‏‏‎‎‏‎‎‎‏‎‎‎‎‏‏‏‏‏‎‏‎‏‎‏‏‎‎‎‎‏‏‏‏‎‏‎Remove all the contents?‎‏‎‎‏‎"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‎‎‎‏‎‏‏‏‎‏‎‏‎‎‏‎‏‎‎‏‏‏‏‎‎‎‎‏‏‎‎‏‏‎‏‎‎‏‎‎‏‎‎‎‏‏‏‏‎‏‏‏‎‎‎‏‎‏‎‏‏‎Credential storage is erased.‎‏‎‎‏‎"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‎‎‏‏‏‎‏‎‎‏‏‎‎‎‎‏‎‎‏‎‏‎‏‏‏‏‏‎‏‏‏‏‎‎‏‎‎‎‏‎‎‎‏‎‎‏‏‏‏‎‎‏‎‎‎‎‎‎‎Credential storage couldn’t be erased.‎‏‎‎‏‎"</string>
     <string name="forget" msgid="3971143908183848527">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‎‏‏‎‏‏‏‎‎‎‏‏‏‎‎‎‏‎‏‎‏‏‎‎‏‎‏‏‎‎‎‎‎‏‎‏‏‏‏‎‏‎‎‎‎‎‏‎‎‏‏‎‏‏‎‎‏‎‎‏‏‏‏‎Forget‎‏‎‎‏‎"</string>
     <string name="connect" msgid="5861699594602380150">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‎‎‏‎‏‎‏‏‎‎‎‏‏‏‏‎‎‎‎‏‎‏‏‏‎‎‏‏‎‎‎‎‏‎‎‎‏‎‏‎‎‏‏‎‏‏‏‏‎‏‏‎‏‏‏‎‏‏‎‎Connect‎‏‎‎‏‎"</string>
     <string name="disconnect" msgid="6140789953324820336">"‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‎‏‏‏‎‏‏‎‎‎‎‏‏‏‏‏‏‏‏‎‏‎‏‎‏‎‎‏‏‏‎‎‎‎‏‏‏‎‏‏‏‏‏‏‎‏‏‎‏‎‏‏‎‎‎‎‎‎‎‏‏‎‏‏‎‏‎‏‎‎‏‏‏‎‏‏‏‎‎‎‎‎Disconnect‎‏‎‎‏‎"</string>

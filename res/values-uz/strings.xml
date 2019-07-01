@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth qurilmani tanlang"</string>
     <string name="language_settings" msgid="2079258598337245546">"Tillar"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Tillar va matn kiritish"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Taklif qilingan"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"Barcha tillar"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Klaviatura"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"Klaviaturalar boshqaruvi"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Nutq sintezi"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"Tizimni yangilash"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyasi"</string>
     <string name="security_patch" msgid="4794276590178386903">"Tizim xavfsizligi uchun yangilanish"</string>
-    <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"Model va apparat taʼminoti"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"Modeli: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Aloqa moduli versiyasi"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Yadro versiyasi"</string>
     <string name="build_number" msgid="3997326631001009102">"Nashr raqami"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"WebView tizim litsenziyalari"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Orqa fon rasmlari"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Sputnik tasvirlari:\n© CNES 2014/Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"Seriya raqami"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"Apparat versiyasi"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Uchinchi tomon litsenziyalari"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Litsenziyalarni yuklashda muammo yuz berdi."</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"Ism"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Sozlanmagan"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Foydalanuvchi nomini tahrirlash"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"Maydon toʻldirilishi shart."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"Kiritilgan foydalanuvchi nomi xato."</string>
     <string name="users_list_title" msgid="770764290290240909">"Foydalanuvchilar"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s uchun ruxsatlar berildi"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Xotira"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ilova maʼlumotlari oʻchirilsinmi?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Ushbu ilovaning barcha maʼlumotlari, jumladan, fayllar, maʼlumotlar bazalari, sozlamalar, hisoblar va boshqa narsalar oʻchirib tashlanadi. Keyin ularni qayta tiklab boʻlmaydi."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Xotira tozalanmadi."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olindi"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olinmadi"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob qo‘shish"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisobga kirilmagan"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qayd qilinmadi"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ishonchl qurilma kiritgandan keyin autentifikatsiya usulini sozlash talab qilinadi. Agar ishonchli qurilma yoningizda boʻlmasa, autentifikatsiya profilingizga kirishda talab etiladi."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Qurilma uzildi."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Hisob axborotini tozalash"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Barcha sertifikatlarni olib tashlash"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Hamma narsa oʻchirib tashlansinmi?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Hisob axborotlari ombori tozalandi."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Hisob axborotlari ombori tozalanmadi."</string>
     <string name="forget" msgid="3971143908183848527">"Olib tashlash"</string>
     <string name="connect" msgid="5861699594602380150">"Ulash"</string>
     <string name="disconnect" msgid="6140789953324820336">"Uzish"</string>
