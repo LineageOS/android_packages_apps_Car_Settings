@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Bluetooth デバイスの選択"</string>
     <string name="language_settings" msgid="2079258598337245546">"言語"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"言語と入力"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"候補"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"すべての言語"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"キーボード"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"キーボードの管理"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"テキスト読み上げの設定"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"システム アップデート"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android のバージョン"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android セキュリティ パッチレベル"</string>
-    <string name="model_info" msgid="4966408071657934452">"モデル"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"モデルとハードウェア"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"モデル: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"ベースバンド バージョン"</string>
     <string name="kernel_version" msgid="7327212934187011508">"カーネル バージョン"</string>
     <string name="build_number" msgid="3997326631001009102">"ビルド番号"</string>
@@ -364,7 +367,7 @@
     <string name="device_status" msgid="267298179806290920">"ステータス"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"電池やネットワークなどの情報のステータス"</string>
     <string name="device_status_summary" product="default" msgid="9130360324418117815">"電話番号、電波状態など"</string>
-    <string name="about_settings" msgid="4329457966672592345">"情報"</string>
+    <string name="about_settings" msgid="4329457966672592345">"Android Auto について"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"規約、ステータス、ソフトウェア バージョンを表示"</string>
     <string name="legal_information" msgid="1838443759229784762">"規約"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"システムの WebView ライセンス"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"壁紙"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"航空写真の提供:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"モデル"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"シリアル番号"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"ハードウェア バージョン"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"サードパーティ ライセンス"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ライセンスの読み込み中に問題が発生しました。"</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"名前"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"セットアップしていません"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ユーザー名の編集"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"フィールドは空欄にできません。"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"入力されたユーザー名が無効です。"</string>
     <string name="users_list_title" msgid="770764290290240909">"ユーザー"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s さんに権限が付与されました"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"ストレージ"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"アプリのデータを削除しますか？"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"このアプリのすべてのデータ（ファイル、設定、アカウント、データベースを含む）が完全に削除されます。"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"アプリのストレージを消去できませんでした。"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出しました"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>を安全に取り出せませんでした"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"アカウント"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"アカウントを追加"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"アカウントが追加されていません"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"デバイスの接続が解除されました。"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"認証情報の消去"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"証明書をすべて削除する"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"コンテンツをすべて削除しますか？"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"認証情報ストレージを消去しました。"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"認証情報ストレージを消去できませんでした。"</string>
     <string name="forget" msgid="3971143908183848527">"削除"</string>
     <string name="connect" msgid="5861699594602380150">"接続"</string>
     <string name="disconnect" msgid="6140789953324820336">"接続を解除"</string>

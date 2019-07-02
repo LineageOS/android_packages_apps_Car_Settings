@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"ব্লুটুথ ডিভাইচ বাছনি কৰক"</string>
     <string name="language_settings" msgid="2079258598337245546">"ভাষা"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ভাষা আৰু ইনপুট"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"প্ৰস্তাৱিত"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"সকলো ভাষা"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"কীব’ৰ্ড"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"কীব’ৰ্ড পৰিচালনা কৰক"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"পাঠৰ পৰা কথনৰ আউটপুট"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"ছিষ্টেম আপডে’ট"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android সংস্কৰণ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android সুৰক্ষা পেচ্চ স্তৰ"</string>
-    <string name="model_info" msgid="4966408071657934452">"ম\'ডেল"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"মডেল আৰু হাৰ্ডৱেৰ"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"মডেল: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"বেইছবেণ্ডৰ সংস্কৰণ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"কাৰ্ণেলৰ সংস্কৰণ"</string>
     <string name="build_number" msgid="3997326631001009102">"বিল্ড নম্বৰ"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"ছিষ্টেম ৱেবভিউ অনুজ্ঞাপত্ৰ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ৱালপেপাৰ"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"উপগ্ৰহ ছবি যোগানকাৰী:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"ম\'ডেল"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"ক্ৰমিক নম্বৰ"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"হাৰ্ডৱেৰৰ সংস্কৰণ"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"তৃতীয় পক্ষৰ অনুজ্ঞাপত্ৰ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"অনুজ্ঞাপত্ৰসমূহ ল\'ড কৰাত সমস্যা।"</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"নাম"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ছেট আপ কৰা হোৱা নাই"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ব্যৱহাৰকাৰীৰ নাম সম্পাদনা কৰক"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"খালী ঠাই পূৰ নকৰাকৈ এৰিব নোৱাৰি।"</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"প্ৰদত্ত ব্যৱহাৰকাৰীৰ নাম মান্য নহয়।"</string>
     <string name="users_list_title" msgid="770764290290240909">"ব্যৱহাৰকাৰীসকল"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sক অনুমতি প্ৰদান কৰা হ’ল"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"ষ্ট’ৰেজ"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"এপ্ ডেটা মচিবনে?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"এই এপ্‌টোৰ সকলো ডেটা স্থায়ীভাৱে মচা হ’ব। সেই ডেটাসমূহৰ ভিতৰত সকলো ফাইল, ছেটিংসমূহ, একাউণ্টবোৰ, ডেটাবেছসমূহ আদি অন্তৰ্ভুক্ত থাকে।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"এপৰ ষ্ট’ৰেজ মচিব পৰা নগ’ল।"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>ক সুৰক্ষিতভাৱে গুচোৱা হ’ল"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>ক সুৰক্ষিতভাৱে গুচাব পৰা নগ’ল"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"একাউণ্টসমূহ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"একাউণ্ট যোগ কৰক"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"কোনো একাউণ্ট যোগ কৰা হোৱা নাই"</string>
@@ -632,13 +642,17 @@
     <string name="add_trusted_device_instruction" msgid="2280382609884918033">"এটা বিশ্বাসী ডিভাইচ ছেট আপ কৰিবলৈ সহযোগী এপ্‌টো ব্যৱহাৰ কৰক। ছেট আপ কৰাৰ পিছত, গাড়ীখনৰ ওচৰত আপোনাৰ ফ’নটো চিনাক্ত কৰিলে আপোনাৰ ব্যৱহাৰকাৰী প্ৰ’ফাইলটো স্বয়ংক্ৰিয়ভাৱে আনলক হ\'ব।"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপোনাৰ ফ’নটোত সহযোগী এপ্‌টো ডাউনল’ড কৰক"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইচকেইটা যোৰা লগাবলৈ আপোনাৰ ফ’নটোত <xliff:g id="CAR_NAME">%1$s</xliff:g> বাছনি কৰক"</string>
-    <!-- no translation found for trusted_device_safety_alert (3834898922112046769) -->
-    <skip />
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"আপোনাৰ গাড়ীখনৰ আশে পাশে থকা কোনো বিশ্বাসী ডিভাইচে গাড়ীখন ষ্টার্ট হ\'লে ব্যৱহাৰকাৰী প্ৰ\'ফাইলটো আনলক কৰিব, আনকি অন্য কোনো লোকে ডিভাইচটো লৈ থাকিলেও।"</string>
     <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"অনুগ্ৰহ কৰি যোৰা লগোৱা ক\'ডসমূহৰ মিল আছে বুলি নিশ্চিত কৰক"</string>
     <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফ\'নটো পঞ্জীয়ন কৰা হ\'ল"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> যোৰা লগাব পৰা নগ’ল"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"আপুনি কোনো বিশ্বাসী ডিভাইচ যোগ কৰিলে তাৰ পিছত এটা বিশ্বাসযোগ্যতা প্ৰমাণীকৰণ পদ্ধতি ছেট কৰাৰ প্ৰয়োজন হ’ব। যদি বিশ্বাসী ডিভাইচটো আপোনাৰ সৈতে নাই তেন্তে আপোনাৰ প্ৰ’ফাইলটো এক্সেছ কৰিবলৈ বিশ্বাসযোগ্যতা প্ৰমাণীকৰণৰ প্ৰয়োজন হ’ব।"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ডিভাইচৰ সংযোগ বিচ্ছিন্ন কৰা হ’ল।"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"ক্ৰেডেনশ্বিয়েল মচক"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"সকলো প্ৰমাণপত্ৰ আঁতৰাওক"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"সকলো সমল আঁতৰাবনে?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ক্ৰেডেনশ্বিয়েল ষ্ট’ৰেজ মচা হ’ল।"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ক্ৰেডেনশ্বিয়েল ষ্ট’ৰেজ মচিব পৰা নগ’ল।"</string>
     <string name="forget" msgid="3971143908183848527">"পাহৰক"</string>
     <string name="connect" msgid="5861699594602380150">"সংযোগ কৰক"</string>
     <string name="disconnect" msgid="6140789953324820336">"সংযোগ বিচ্ছিন্ন কৰক"</string>

@@ -199,6 +199,8 @@
     <string name="bluetooth_device_picker" msgid="673238198452345475">"બ્લૂટૂથ ડિવાઇસ પસંદ કરો"</string>
     <string name="language_settings" msgid="2079258598337245546">"ભાષાઓ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ભાષા અને ઇનપુટ"</string>
+    <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"સૂચવેલા"</string>
+    <string name="language_picker_list_all_header" msgid="1577387973934368428">"બધી ભાષાઓ"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"કીબોર્ડ"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"કીબોર્ડ મેનેજ કરો"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"ટેક્સ્ટ ટુ સ્પીચ આઉટપુટ"</string>
@@ -354,7 +356,8 @@
     <string name="system_update_settings_title" msgid="8448588267784138855">"સિસ્ટમ અપડેટ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android વર્ઝન"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android સુરક્ષા પૅચ લેવલ"</string>
-    <string name="model_info" msgid="4966408071657934452">"મૉડલ"</string>
+    <string name="hardware_info" msgid="3973165746261507658">"મૉડલ અને હાર્ડવેર"</string>
+    <string name="hardware_info_summary" msgid="8262576443254075921">"મૉડલ: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"બેઝબૅન્ડ વર્ઝન"</string>
     <string name="kernel_version" msgid="7327212934187011508">"કર્નલ વર્ઝન"</string>
     <string name="build_number" msgid="3997326631001009102">"બિલ્ડ નંબર"</string>
@@ -378,6 +381,9 @@
     <string name="webview_license_title" msgid="6442372337052056463">"સિસ્ટમ WebView લાઇસન્સ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"વૉલપેપર"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ઉપગ્રહ છબી પ્રદાતાઓ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="model_info" msgid="4966408071657934452">"મૉડલ"</string>
+    <string name="status_serial_number" msgid="9158889113131907656">"અનુક્રમ નંબર"</string>
+    <string name="hardware_revision" msgid="5713759927934872874">"હાર્ડવેરનું વર્ઝન"</string>
     <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"તૃતીય-પક્ષ લાઇસન્સ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"લાઇસન્સ લોડ કરવામાં સમસ્યા છે."</string>
@@ -478,6 +484,8 @@
     <string name="user_name_label" msgid="3210832645046206845">"નામ"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"સેટ કરેલ નથી"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"વપરાશકર્તાના નામમાં ફેરફાર કરો"</string>
+    <string name="name_input_blank_error" msgid="2088850865880984123">"ફીલ્ડ ખાલી રાખી શકાય નહીં."</string>
+    <string name="name_input_invalid_error" msgid="3523545780580744273">"દાખલ કરેલું વપરાશકર્તાનું નામ અમાન્ય છે."</string>
     <string name="users_list_title" msgid="770764290290240909">"વપરાશકર્તાઓ"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sને આપેલી પરવાનગીઓ"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"સ્ટોરેજ"</string>
@@ -497,6 +505,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ઍપ ડેટા ડિલીટ કરીએ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"આ ઍપનો બધો ડેટા હંમેશ માટે ડિલીટ કરવામાં આવશે. આમાં બધી ફાઇલો, સેટિંગ, એકાઉન્ટ, ડેટાબેઝ વગેરેનો સમાવેશ થાય છે."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ઍપ માટે સ્ટોરેજ સાફ ન કરી શક્યાં."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢ્યું છે"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢી શકાયું નથી"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"એકાઉન્ટ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"એકાઉન્ટ ઉમેરો"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"કોઈ એકાઉન્ટ ઉમેરવામાં આવ્યા નથી"</string>
@@ -638,6 +648,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ની નોંધણી નિષ્ફળ રહી"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"કોઈ વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે, તમારે પહેલાં કોઈ પ્રમાણીકરણ પદ્ધતિ સેટ કરવી આવશ્યક છે. જો તમારી પાસે તમારું વિશ્વસનીય ડિવાઇસ ન હોય, તો તમારી પ્રોફાઇલને ઍક્સેસ કરવા માટે પ્રમાણીકરણ આવશ્યક રહેશે."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ડિવાઇસ ડિસ્કનેક્ટ થયું."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"લૉગ ઇન વિગતોને સાફ કરો"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"બધા પ્રમાણપત્ર કાઢી નાખો"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"બધું કન્ટેન્ટ કાઢી નાખીએ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખ્યું છે."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખી શકાયું નથી."</string>
     <string name="forget" msgid="3971143908183848527">"ભૂલી જાઓ"</string>
     <string name="connect" msgid="5861699594602380150">"કનેક્ટ કરો"</string>
     <string name="disconnect" msgid="6140789953324820336">"ડિસ્કનેક્ટ કરો"</string>
