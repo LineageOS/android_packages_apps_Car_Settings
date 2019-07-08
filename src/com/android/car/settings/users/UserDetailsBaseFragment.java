@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -115,10 +116,8 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     private void showRemoveUserButton() {
         Button removeUserBtn = getActivity().findViewById(R.id.action_button1);
-        // If the current user is not allowed to remove users, the user trying to be removed
-        // cannot be removed, or the current user is a demo user, do not show delete button.
         if (!mCarUserManagerHelper.canCurrentProcessRemoveUsers()
-                || !mCarUserManagerHelper.canUserBeRemoved(mUserInfo)
+                || mUserInfo.id == UserHandle.USER_SYSTEM
                 || mCarUserManagerHelper.isCurrentProcessDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);
             return;

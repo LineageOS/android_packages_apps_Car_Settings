@@ -18,11 +18,11 @@ package com.android.car.settings.users;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
@@ -95,29 +95,26 @@ public class UserDetailsBaseFragmentTest {
     @Test
     public void testRemoveUserButtonVisible_whenAllowedToRemoveUsers() {
         when(mCarUserManagerHelper.canCurrentProcessRemoveUsers()).thenReturn(true);
-        when(mCarUserManagerHelper.canUserBeRemoved(any())).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        createUserDetailsBaseFragment();
+        createUserDetailsBaseFragment(/*userId=*/1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.VISIBLE);
     }
 
     @Test
-    public void testRemoveUserButtonHidden_whenNotAllowedToRemoveUSers() {
+    public void testRemoveUserButtonHidden_whenNotAllowedToRemoveUsers() {
         when(mCarUserManagerHelper.canCurrentProcessRemoveUsers()).thenReturn(false);
-        when(mCarUserManagerHelper.canUserBeRemoved(any())).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        createUserDetailsBaseFragment();
+        createUserDetailsBaseFragment(/*userId=*/1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
 
     @Test
-    public void testRemoveUserButtonHidden_whenUserCannotBeRemoved() {
+    public void testRemoveUserButtonHidden_whenUserIsSystemUser() {
         when(mCarUserManagerHelper.canCurrentProcessRemoveUsers()).thenReturn(true);
-        when(mCarUserManagerHelper.canUserBeRemoved(any())).thenReturn(false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        createUserDetailsBaseFragment();
+        createUserDetailsBaseFragment(UserHandle.USER_SYSTEM);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
@@ -125,9 +122,8 @@ public class UserDetailsBaseFragmentTest {
     @Test
     public void testRemoveUserButtonHidden_demoUser() {
         when(mCarUserManagerHelper.canCurrentProcessRemoveUsers()).thenReturn(true);
-        when(mCarUserManagerHelper.canUserBeRemoved(any())).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
-        createUserDetailsBaseFragment();
+        createUserDetailsBaseFragment(/*userId=*/1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
@@ -135,19 +131,19 @@ public class UserDetailsBaseFragmentTest {
     @Test
     public void testRemoveUserButtonClick_createsRemovalDialog() {
         when(mCarUserManagerHelper.canCurrentProcessRemoveUsers()).thenReturn(true);
-        when(mCarUserManagerHelper.canUserBeRemoved(any())).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mCarUserManagerHelper.getAllPersistentUsers()).thenReturn(
                 Arrays.asList(new UserInfo()));
-        createUserDetailsBaseFragment();
+        createUserDetailsBaseFragment(/*userId=*/1);
         mRemoveUserButton.performClick();
 
         assertThat(mUserDetailsBaseFragment.findDialogByTag(
                 ConfirmationDialogFragment.TAG)).isNotNull();
     }
 
-    private void createUserDetailsBaseFragment() {
+    private void createUserDetailsBaseFragment(int userId) {
         UserInfo testUser = new UserInfo();
+        testUser.id = userId;
         // Use UserDetailsFragment, since we cannot test an abstract class.
         mUserDetailsBaseFragment = UserDetailsBaseFragment.addUserIdToFragmentArguments(
                 new TestUserDetailsBaseFragment(), testUser.id);
