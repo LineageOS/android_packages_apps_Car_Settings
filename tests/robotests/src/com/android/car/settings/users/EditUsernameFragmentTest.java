@@ -21,7 +21,6 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
 import android.widget.Button;
@@ -29,41 +28,33 @@ import android.widget.EditText;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
-import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.annotation.Config;
 
 /**
  * Tests for EditUsernameFragment.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class EditUsernameFragmentTest {
-    private BaseTestActivity mTestActivity;
+    @Rule
+    public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     @Mock
     private UserManager mUserManager;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
+
+    private BaseTestActivity mTestActivity;
 
     @Before
     public void setUpTestActivity() {
-        MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
     }
 
     /**
@@ -84,7 +75,8 @@ public class EditUsernameFragmentTest {
      */
     @Test
     public void testClickingOkSavesNewUserName() {
-        UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
+        int userId = 10;
+        UserInfo testUser = new UserInfo(userId, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
         Button okButton = (Button) mTestActivity.findViewById(R.id.action_button2);
@@ -95,7 +87,7 @@ public class EditUsernameFragmentTest {
         assertThat(okButton.isEnabled()).isTrue();
         okButton.callOnClick();
 
-        verify(mCarUserManagerHelper).setUserName(testUser, newUserName);
+        verify(mUserManager).setUserName(userId, newUserName);
     }
 
     /**
@@ -138,6 +130,7 @@ public class EditUsernameFragmentTest {
 
     private void createEditUsernameFragment(UserInfo userInfo) {
         EditUsernameFragment fragment = EditUsernameFragment.newInstance(userInfo);
+        fragment.mUserManager = mUserManager;
         mTestActivity.launchFragment(fragment);
     }
 }

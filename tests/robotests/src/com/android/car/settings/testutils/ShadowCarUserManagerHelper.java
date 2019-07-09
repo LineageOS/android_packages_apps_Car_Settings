@@ -49,11 +49,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected void setUserName(UserInfo user, String name) {
-        sMockInstance.setUserName(user, name);
-    }
-
-    @Implementation
     protected UserInfo getCurrentProcessUserInfo() {
         return sMockInstance.getCurrentProcessUserInfo();
     }
@@ -126,11 +121,6 @@ public class ShadowCarUserManagerHelper {
     @Implementation
     protected boolean canCurrentProcessRemoveUsers() {
         return sMockInstance.canCurrentProcessRemoveUsers();
-    }
-
-    @Implementation
-    protected boolean canUserBeRemoved(UserInfo userInfo) {
-        return sMockInstance.canUserBeRemoved(userInfo);
     }
 
     @Implementation
