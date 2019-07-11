@@ -26,6 +26,7 @@ import static org.mockito.Mockito.verify;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.Process;
 import android.os.UserManager;
 import android.widget.Button;
 
@@ -34,6 +35,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -45,6 +47,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
 import java.util.ArrayList;
 
@@ -52,14 +55,14 @@ import java.util.ArrayList;
  * Tests for UserDetailsFragment.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserManager.class,
+        ShadowUserIconProvider.class})
 public class UsersListFragmentTest {
 
     private Context mContext;
     private BaseTestActivity mTestActivity;
     private UsersListFragment mFragment;
     private Button mActionButton;
-    private ConfirmationDialogFragment mDialog;
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -78,6 +81,7 @@ public class UsersListFragmentTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
+        ShadowUserManager.reset();
     }
 
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
@@ -113,7 +117,8 @@ public class UsersListFragmentTest {
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
     @Test
     public void testCallOnClick_showAddUserDialog() {
-        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessAddUsers();
+        getShadowUserManager().setUserRestriction(
+                Process.myUserHandle(), UserManager.DISALLOW_ADD_USER, false);
         createUsersListFragment();
 
         mActionButton.callOnClick();
@@ -137,5 +142,9 @@ public class UsersListFragmentTest {
 
     private boolean isDialogShown(String tag) {
         return mTestActivity.getSupportFragmentManager().findFragmentByTag(tag) != null;
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadow.extract(mContext.getSystemService(UserManager.class));
     }
 }

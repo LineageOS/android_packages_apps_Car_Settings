@@ -30,6 +30,7 @@ import android.content.pm.UserInfo;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,11 +39,13 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.annotation.Config;
 
 import java.util.Arrays;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
+@Config(shadows = {ShadowUserIconProvider.class})
 public class UsersPreferenceProviderTest {
 
     private static final String TEST_CURRENT_USER_NAME = "Current User";

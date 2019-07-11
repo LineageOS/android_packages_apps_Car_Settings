@@ -18,6 +18,7 @@ package com.android.car.settings.testutils;
 
 import android.annotation.UserIdInt;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.ArrayMap;
 
@@ -66,6 +67,11 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
             int userHandle, int profileUserHandle, String profileName, int profileFlags) {
         mProfiles.putIfAbsent(userHandle, new ArrayList<>());
         mProfiles.get(userHandle).add(new UserInfo(profileUserHandle, profileName, profileFlags));
+    }
+
+    @Implementation
+    protected void setUserRestriction(String key, boolean value, UserHandle userHandle) {
+        setUserRestriction(userHandle, key, value);
     }
 
     @Resetter

@@ -19,6 +19,7 @@ package com.android.car.settings.system;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
@@ -30,11 +31,13 @@ import com.android.car.settings.development.DevelopmentSettingsUtil;
 public class DeveloperOptionsEntryPreferenceController extends PreferenceController<Preference> {
 
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
 
     public DeveloperOptionsEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -45,6 +48,6 @@ public class DeveloperOptionsEntryPreferenceController extends PreferenceControl
     @Override
     protected int getAvailabilityStatus() {
         return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
-                mCarUserManagerHelper) ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+                mCarUserManagerHelper, mUserManager) ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 }
