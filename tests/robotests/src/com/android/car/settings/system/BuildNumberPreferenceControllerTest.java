@@ -18,9 +18,6 @@ package com.android.car.settings.system;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
@@ -37,7 +34,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,11 +43,12 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowToast;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserManager.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class BuildNumberPreferenceControllerTest {
 
     private Context mContext;
@@ -61,19 +58,19 @@ public class BuildNumberPreferenceControllerTest {
     private Preference mPreference;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private UserManager mUserManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        ShadowUserManager.setInstance(mUserManager);
         mContext = RuntimeEnvironment.application;
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 BuildNumberPreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
+
+        int userId = UserHandle.myUserId();
+        Shadows.shadowOf(UserManager.get(mContext)).addUser(userId, "User Name", /* flags= */ 0);
 
         // By default, user is an admin user.
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
@@ -81,8 +78,8 @@ public class BuildNumberPreferenceControllerTest {
 
         // By default, no restrictions on debugging features.
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(new UserInfo());
-        when(mUserManager.hasUserRestriction(eq(UserManager.DISALLOW_DEBUGGING_FEATURES),
-                any(UserHandle.class))).thenReturn(false);
+        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(UserHandle.of(userId),
+                UserManager.DISALLOW_DEBUGGING_FEATURES, false);
 
         // By default device is provisioned.
         Settings.Global.putInt(mContext.getContentResolver(),
@@ -92,14 +89,11 @@ public class BuildNumberPreferenceControllerTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_RESUME);
-
-        when(mUserManager.getUserInfo(anyInt())).thenReturn(new UserInfo(10, null, 0));
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
@@ -163,7 +157,7 @@ public class BuildNumberPreferenceControllerTest {
             mPreference.performClick();
         }
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isTrue();
+                mCarUserManagerHelper, UserManager.get(mContext))).isTrue();
     }
 
     @Test

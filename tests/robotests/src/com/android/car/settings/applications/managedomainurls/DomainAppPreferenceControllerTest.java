@@ -40,7 +40,6 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowIconDrawableFactory;
-import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 
@@ -53,14 +52,15 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
 import java.util.ArrayList;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUserManager.class, ShadowCarUserManagerHelper.class,
-        ShadowIconDrawableFactory.class, ShadowApplicationsState.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowIconDrawableFactory.class,
+        ShadowApplicationsState.class})
 public class DomainAppPreferenceControllerTest {
 
     private static final int USER_ID = 10;
@@ -109,7 +109,6 @@ public class DomainAppPreferenceControllerTest {
     public void tearDown() {
         ShadowApplicationsState.reset();
         ShadowCarUserManagerHelper.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
@@ -165,6 +164,6 @@ public class DomainAppPreferenceControllerTest {
     }
 
     private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(UserManager.get(mContext));
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

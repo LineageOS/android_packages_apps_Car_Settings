@@ -18,11 +18,8 @@ package com.android.car.settings.users;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
-import android.content.pm.UserInfo;
 import android.os.UserManager;
 import android.widget.TextView;
 
@@ -30,7 +27,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
-import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -41,11 +37,11 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUserManager.class, ShadowCarUserManagerHelper.class,
-        ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
 public class UserDetailsFragmentTest {
 
     private static final String TEST_NAME = "test_name";
@@ -53,12 +49,11 @@ public class UserDetailsFragmentTest {
     private static final int TEST_USER_ID = 10;
 
     private Context mContext;
+    private UserManager mUserManager;
     private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private UserManager mUserManager;
 
     private TextView mTitle;
 
@@ -66,44 +61,42 @@ public class UserDetailsFragmentTest {
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        ShadowUserManager.setInstance(mUserManager);
 
         mContext = RuntimeEnvironment.application;
+        mUserManager = UserManager.get(mContext);
+        Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_NAME, /* flags= */ 0);
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
     public void testCarUserManagerHelperUpdateListener_showsCorrectText() {
-        UserInfo testUser = new UserInfo(TEST_USER_ID, TEST_NAME, /* flags= */ 0);
-        when(mUserManager.getUserInfo(TEST_USER_ID)).thenReturn(testUser);
         createUserDetailsFragment();
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
         assertThat(mTitle.getText()).isEqualTo(
-                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUser));
+                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
+                        mUserManager.getUserInfo(TEST_USER_ID)));
     }
 
     @Test
     public void testCarUserManagerHelperUpdateListener_textChangesWithUserUpdate() {
-        UserInfo testUser = new UserInfo(TEST_USER_ID, TEST_NAME, /* flags= */ 0);
-        when(mUserManager.getUserInfo(TEST_USER_ID)).thenReturn(testUser);
-
         createUserDetailsFragment();
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
         assertThat(mTitle.getText()).isEqualTo(
-                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUser));
+                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
+                        mUserManager.getUserInfo(TEST_USER_ID)));
 
-        UserInfo testUserUpdated = new UserInfo(TEST_USER_ID, TEST_UPDATED_NAME, /* flags= */ 0);
-        when(mUserManager.getUserInfo(TEST_USER_ID)).thenReturn(testUserUpdated);
+        mUserManager.removeUser(TEST_USER_ID);
+        Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_UPDATED_NAME, /* flags= */ 0);
 
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
         assertThat(mTitle.getText()).isEqualTo(
-                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUserUpdated));
+                UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
+                        mUserManager.getUserInfo(TEST_USER_ID)));
     }
 
     private void createUserDetailsFragment() {
