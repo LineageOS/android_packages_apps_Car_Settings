@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,6 +38,7 @@ import com.android.car.settings.common.SettingsFragment;
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private UserInfo mUserInfo;
 
     private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
@@ -74,6 +76,7 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         super.onAttach(context);
         int userId = getArguments().getInt(Intent.EXTRA_USER_ID);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mUserManager = UserManager.get(getContext());
         mUserInfo = UserUtils.getUserInfo(getContext(), userId);
     }
 
@@ -116,7 +119,7 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     private void showRemoveUserButton() {
         Button removeUserBtn = getActivity().findViewById(R.id.action_button1);
-        if (!mCarUserManagerHelper.canCurrentProcessRemoveUsers()
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)
                 || mUserInfo.id == UserHandle.USER_SYSTEM
                 || mCarUserManagerHelper.isCurrentProcessDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);

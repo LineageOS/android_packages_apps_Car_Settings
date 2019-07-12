@@ -33,6 +33,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -43,9 +44,10 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserManager.class})
 public class DeveloperOptionsEntryPreferenceControllerTest {
 
     private Context mContext;
@@ -64,17 +66,16 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
                 new Preference(mContext)).getController();
 
         // Setup admin user who is able to enable developer settings.
-        mUserInfo = new UserInfo();
+        mUserInfo = new UserInfo(10, null, 0);
         when(mShadowCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mShadowCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mShadowCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(mUserInfo);
-        new CarUserManagerHelper(mContext).setUserRestriction(mUserInfo,
-                UserManager.DISALLOW_DEBUGGING_FEATURES, false);
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
+        ShadowUserManager.reset();
     }
 
     @Test
@@ -95,8 +96,12 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     public void testGetAvailabilityStatus_devOptionsEnabled_hasUserRestriction_isUnavailable() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        new CarUserManagerHelper(mContext).setUserRestriction(mUserInfo,
-                UserManager.DISALLOW_DEBUGGING_FEATURES, true);
+        getShadowUserManager().setUserRestriction(
+                mUserInfo.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadow.extract(mContext.getSystemService(UserManager.class));
     }
 }

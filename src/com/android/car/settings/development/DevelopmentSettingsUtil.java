@@ -59,12 +59,12 @@ public class DevelopmentSettingsUtil {
      * debugging is allowed for user, and the user is an admin or a demo user.
      */
     public static boolean isDevelopmentSettingsEnabled(Context context,
-            CarUserManagerHelper carUserManagerHelper) {
+            CarUserManagerHelper carUserManagerHelper, UserManager userManager) {
         boolean settingEnabled = Settings.Global.getInt(context.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, Build.IS_ENG ? 1 : 0) != 0;
-        boolean hasRestriction = carUserManagerHelper.hasUserRestriction(
+        boolean hasRestriction = userManager.hasUserRestriction(
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
-                carUserManagerHelper.getCurrentProcessUserInfo());
+                carUserManagerHelper.getCurrentProcessUserInfo().getUserHandle());
         boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
                 || carUserManagerHelper.isCurrentProcessDemoUser();
         return isAdminOrDemo && !hasRestriction && settingEnabled;

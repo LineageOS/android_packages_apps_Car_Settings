@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -47,6 +48,7 @@ public class UsersListFragment extends SettingsFragment implements
     private static final String FACTORY_RESET_REASON = "ExitRetailModeConfirmed";
 
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
 
     private ProgressBar mProgressBar;
     private Button mAddUserButton;
@@ -84,6 +86,7 @@ public class UsersListFragment extends SettingsFragment implements
         mOpacityDisabled = getContext().getResources().getFloat(R.dimen.opacity_disabled);
         mOpacityEnabled = getContext().getResources().getFloat(R.dimen.opacity_enabled);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mUserManager = UserManager.get(getContext());
     }
 
     @Override
@@ -102,7 +105,7 @@ public class UsersListFragment extends SettingsFragment implements
         });
         if (mCarUserManagerHelper.isCurrentProcessDemoUser()) {
             mAddUserButton.setText(R.string.exit_retail_button_text);
-        } else if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
+        } else if (canCurrentProcessAddUsers()) {
             mAddUserButton.setText(R.string.user_add_user_menu);
         }
     }
@@ -188,7 +191,7 @@ public class UsersListFragment extends SettingsFragment implements
         }
 
         // Only add the add user button if the current user is allowed to add a user.
-        if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
+        if (canCurrentProcessAddUsers()) {
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getConfirmCreateNewUserDialogFragment(getContext(),
                             mConfirmListener, null);
@@ -199,5 +202,9 @@ public class UsersListFragment extends SettingsFragment implements
 
     private void showBlockingMessage() {
         Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
+    }
+
+    private boolean canCurrentProcessAddUsers() {
+        return !mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER);
     }
 }
