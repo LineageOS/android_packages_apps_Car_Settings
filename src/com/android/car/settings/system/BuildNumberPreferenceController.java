@@ -20,6 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Build;
+import android.os.UserManager;
 import android.widget.Toast;
 
 import androidx.preference.Preference;
@@ -33,6 +34,7 @@ import com.android.car.settings.development.DevelopmentSettingsUtil;
 public class BuildNumberPreferenceController extends PreferenceController<Preference> {
 
     private final CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private Toast mDevHitToast;
     private int mDevHitCountdown;
 
@@ -40,6 +42,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -55,7 +58,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
     protected void onResumeInternal() {
         mDevHitToast = null;
         mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
-                mCarUserManagerHelper) ? -1 : getTapsToBecomeDeveloper();
+                mCarUserManagerHelper, mUserManager) ? -1 : getTapsToBecomeDeveloper();
     }
 
     @Override

@@ -22,6 +22,8 @@ import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.pm.UserInfo;
+import android.os.UserManager;
 import android.provider.Settings;
 
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
@@ -35,13 +37,19 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class})
 public class DevelopmentSettingsUtilTest {
 
+    private static final UserInfo USER_INFO = new UserInfo(0, null, 0);
+
     private Context mContext;
+    private UserManager mUserManager;
+
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -52,6 +60,10 @@ public class DevelopmentSettingsUtilTest {
         mContext = RuntimeEnvironment.application;
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(USER_INFO);
+
+        mUserManager = UserManager.get(mContext);
+        getShadowUserManager().addUser(USER_INFO.id, USER_INFO.name, USER_INFO.flags);
     }
 
     @After
@@ -66,7 +78,7 @@ public class DevelopmentSettingsUtilTest {
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isFalse();
+                mCarUserManagerHelper, mUserManager)).isFalse();
     }
 
     @Test
@@ -75,7 +87,7 @@ public class DevelopmentSettingsUtilTest {
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isTrue();
+                mCarUserManagerHelper, mUserManager)).isTrue();
     }
 
     @Test
@@ -86,7 +98,7 @@ public class DevelopmentSettingsUtilTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isFalse();
+                mCarUserManagerHelper, mUserManager)).isFalse();
     }
 
     @Test
@@ -97,7 +109,7 @@ public class DevelopmentSettingsUtilTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isTrue();
+                mCarUserManagerHelper, mUserManager)).isTrue();
     }
 
     @Test
@@ -108,7 +120,35 @@ public class DevelopmentSettingsUtilTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isFalse();
+                mCarUserManagerHelper, mUserManager)).isFalse();
+    }
+
+    @Test
+    public void isEnabled_hasDisallowDebuggingRestriction_shouldReturnFalse() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+
+        getShadowUserManager().setUserRestriction(
+                USER_INFO.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
+
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
+                mCarUserManagerHelper, mUserManager)).isFalse();
+    }
+
+    @Test
+    public void isEnabled_doesNotHaveDisallowDebuggingRestriction_shouldReturnTrue() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+
+        getShadowUserManager().setUserRestriction(
+                USER_INFO.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, false);
+
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
+                mCarUserManagerHelper, mUserManager)).isTrue();
     }
 
     @Test
@@ -145,5 +185,9 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
         assertThat(DevelopmentSettingsUtil.isDeviceProvisioned(mContext)).isFalse();
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

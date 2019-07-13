@@ -19,13 +19,13 @@ package com.android.car.settings.users;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.widget.Button;
 
@@ -44,6 +44,7 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
@@ -59,12 +60,9 @@ public class UsersListFragmentTest {
     private BaseTestActivity mTestActivity;
     private UsersListFragment mFragment;
     private Button mActionButton;
-    private ConfirmationDialogFragment mDialog;
 
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private UserManager mUserManager;
 
 
     @Before
@@ -113,7 +111,6 @@ public class UsersListFragmentTest {
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
     @Test
     public void testCallOnClick_showAddUserDialog() {
-        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessAddUsers();
         createUsersListFragment();
 
         mActionButton.callOnClick();
@@ -121,10 +118,11 @@ public class UsersListFragmentTest {
     }
 
     private void createUsersListFragment() {
-        UserInfo testUser = new UserInfo();
+        Shadows.shadowOf(UserManager.get(mContext)).addUser(UserHandle.myUserId(),
+                "User Name", /* flags= */ 0);
+        UserInfo testUser = UserManager.get(mContext).getUserInfo(UserHandle.myUserId());
         mFragment = new UsersListFragment();
         doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-        doReturn(testUser).when(mUserManager).getUserInfo(anyInt());
         doReturn(new ArrayList<UserInfo>()).when(mCarUserManagerHelper).getAllSwitchableUsers();
         doReturn(null).when(mCarUserManagerHelper).createNewNonAdminUser(any());
         mTestActivity.launchFragment(mFragment);
@@ -132,7 +130,7 @@ public class UsersListFragmentTest {
     }
 
     private void refreshButtons() {
-        mActionButton = (Button) mTestActivity.findViewById(R.id.action_button1);
+        mActionButton = mTestActivity.findViewById(R.id.action_button1);
     }
 
     private boolean isDialogShown(String tag) {

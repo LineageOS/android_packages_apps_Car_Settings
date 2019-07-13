@@ -18,13 +18,12 @@ package com.android.car.settings.system;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
@@ -44,6 +43,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowToast;
 
@@ -69,14 +69,17 @@ public class BuildNumberPreferenceControllerTest {
                 BuildNumberPreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
 
+        int userId = UserHandle.myUserId();
+        Shadows.shadowOf(UserManager.get(mContext)).addUser(userId, "User Name", /* flags= */ 0);
+
         // By default, user is an admin user.
         when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
 
         // By default, no restrictions on debugging features.
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(new UserInfo());
-        when(mCarUserManagerHelper.hasUserRestriction(eq(UserManager.DISALLOW_DEBUGGING_FEATURES),
-                any(UserInfo.class))).thenReturn(false);
+        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(UserHandle.of(userId),
+                UserManager.DISALLOW_DEBUGGING_FEATURES, false);
 
         // By default device is provisioned.
         Settings.Global.putInt(mContext.getContentResolver(),
@@ -154,7 +157,7 @@ public class BuildNumberPreferenceControllerTest {
             mPreference.performClick();
         }
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper)).isTrue();
+                mCarUserManagerHelper, UserManager.get(mContext))).isTrue();
     }
 
     @Test

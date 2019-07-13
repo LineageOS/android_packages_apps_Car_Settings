@@ -16,14 +16,13 @@
 
 package com.android.car.settings.testutils;
 
-import android.annotation.UserIdInt;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.ArrayMap;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
-import org.robolectric.annotation.Resetter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,18 +31,8 @@ import java.util.Map;
 
 @Implements(UserManager.class)
 public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
-    private static UserManager sInstance;
 
     private Map<Integer, List<UserInfo>> mProfiles = new ArrayMap<>();
-
-    public static void setInstance(UserManager manager) {
-        sInstance = manager;
-    }
-
-    @Implementation
-    protected UserInfo getUserInfo(@UserIdInt int userHandle) {
-        return sInstance.getUserInfo(userHandle);
-    }
 
     @Implementation
     protected int[] getProfileIdsWithDisabled(int userId) {
@@ -68,8 +57,8 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         mProfiles.get(userHandle).add(new UserInfo(profileUserHandle, profileName, profileFlags));
     }
 
-    @Resetter
-    public static void reset() {
-        sInstance = null;
+    @Implementation
+    protected void setUserRestriction(String key, boolean value, UserHandle userHandle) {
+        setUserRestriction(userHandle, key, value);
     }
 }

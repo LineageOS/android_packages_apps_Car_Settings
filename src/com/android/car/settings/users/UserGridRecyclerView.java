@@ -124,7 +124,7 @@ public class UserGridRecyclerView extends RecyclerView implements
         }
 
         // Add start guest user record if the system is not logged in as guest already.
-        if (!mCarUserManagerHelper.isForegroundUserGuest()) {
+        if (!mCarUserManagerHelper.getCurrentForegroundUserInfo().isGuest()) {
             userRecords.add(createStartGuestUserRecord());
         }
 

@@ -19,6 +19,10 @@ package com.android.car.settings.users;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.UserManager;
 
 import com.android.car.settings.R;
@@ -60,4 +64,13 @@ public class UserUtils {
         return carUserManagerHelper.isCurrentProcessAdminUser() && !userInfo.isAdmin();
     }
 
+    /**
+     * Returns a {@link Drawable} for the given {@code icon} scaled to the appropriate size.
+     */
+    public static Drawable scaleUserIcon(Resources res, Bitmap icon) {
+        int desiredSize = res.getDimensionPixelSize(R.dimen.icon_size);
+        Bitmap scaledIcon =
+                Bitmap.createScaledBitmap(icon, desiredSize, desiredSize, /*filter=*/true);
+        return new BitmapDrawable(res, scaledIcon);
+    }
 }

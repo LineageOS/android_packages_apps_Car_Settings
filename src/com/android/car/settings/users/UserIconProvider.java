@@ -53,8 +53,7 @@ public class UserIconProvider {
             return context.getDrawable(R.drawable.ic_user);
         }
         Resources res = context.getResources();
-        BitmapDrawable scaledIcon = (BitmapDrawable) mCarUserManagerHelper.scaleUserIcon(icon, res
-                .getDimensionPixelSize(R.dimen.icon_size));
+        BitmapDrawable scaledIcon = (BitmapDrawable) UserUtils.scaleUserIcon(res, icon);
 
         // Enforce that the icon is circular
         RoundedBitmapDrawable circleIcon = RoundedBitmapDrawableFactory
@@ -69,19 +68,7 @@ public class UserIconProvider {
      * @return Drawable representing the default guest icon.
      */
     public Drawable getDefaultGuestIcon(Context context) {
-        return UserIconProvider.scaleUserIcon(mCarUserManagerHelper.getGuestDefaultIcon(),
-                mCarUserManagerHelper, context);
-    }
-
-    /**
-     * Scales passed in bitmap to the appropriate user icon size.
-     *
-     * @param bitmap Bitmap to scale.
-     * @return Drawable scaled to the user icon size.
-     */
-    public static Drawable scaleUserIcon(Bitmap bitmap, CarUserManagerHelper userManagerHelper,
-            Context context) {
-        return userManagerHelper.scaleUserIcon(bitmap, context.getResources()
-                .getDimensionPixelSize(R.dimen.icon_size));
+        return UserUtils.scaleUserIcon(
+                context.getResources(), mCarUserManagerHelper.getGuestDefaultIcon());
     }
 }

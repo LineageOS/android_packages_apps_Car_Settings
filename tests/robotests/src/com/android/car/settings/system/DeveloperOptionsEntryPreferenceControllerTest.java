@@ -42,6 +42,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 
 @RunWith(RobolectricTestRunner.class)
@@ -64,12 +65,10 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
                 new Preference(mContext)).getController();
 
         // Setup admin user who is able to enable developer settings.
-        mUserInfo = new UserInfo();
+        mUserInfo = new UserInfo(10, null, 0);
         when(mShadowCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mShadowCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mShadowCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(mUserInfo);
-        new CarUserManagerHelper(mContext).setUserRestriction(mUserInfo,
-                UserManager.DISALLOW_DEBUGGING_FEATURES, false);
     }
 
     @After
@@ -95,8 +94,8 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     public void testGetAvailabilityStatus_devOptionsEnabled_hasUserRestriction_isUnavailable() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        new CarUserManagerHelper(mContext).setUserRestriction(mUserInfo,
-                UserManager.DISALLOW_DEBUGGING_FEATURES, true);
+        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(
+                mUserInfo.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
     }
 }
