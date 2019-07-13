@@ -18,7 +18,6 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.app.Activity;
@@ -34,7 +33,6 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.pm.Signature;
-import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -103,16 +101,14 @@ public class ApplicationDetailsFragmentTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         int userId = UserHandle.myUserId();
-        UserInfo userInfo = new UserInfo();
-        userInfo.id = userId;
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
-        when(mCarUserManagerHelper.getAllUsers()).thenReturn(Collections.singletonList(userInfo));
-        UserManager mockUserManager = mock(UserManager.class);
-        when(mockUserManager.getUserInfo(userId)).thenReturn(userInfo);
-        ShadowUserManager.setInstance(mockUserManager);
 
         mContext = RuntimeEnvironment.application;
+        getShadowUserManager().addUser(userId, "userName", /* flags= */ 0);
         getShadowUserManager().addProfile(userId, userId, "profileName", /* profileFlags= */ 0);
+
+        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
+        when(mCarUserManagerHelper.getAllUsers()).thenReturn(
+                Collections.singletonList(UserManager.get(mContext).getUserInfo(userId)));
 
         mActivity = new TestActivity();
         mController = ActivityController.of(mActivity);

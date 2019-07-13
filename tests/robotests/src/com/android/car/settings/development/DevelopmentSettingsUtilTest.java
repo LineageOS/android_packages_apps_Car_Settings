@@ -18,8 +18,6 @@ package com.android.car.settings.development;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
@@ -30,7 +28,6 @@ import android.provider.Settings;
 
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
-import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -40,12 +37,12 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class,
-        ShadowUserManager.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class})
 public class DevelopmentSettingsUtilTest {
 
     private static final UserInfo USER_INFO = new UserInfo(0, null, 0);
@@ -65,17 +62,14 @@ public class DevelopmentSettingsUtilTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(USER_INFO);
 
-        mUserManager = mContext.getSystemService(UserManager.class);
-        UserManager mockUserManager = mock(UserManager.class);
-        when(mockUserManager.getUserInfo(anyInt())).thenReturn(USER_INFO);
-        ShadowUserManager.setInstance(mockUserManager);
+        mUserManager = UserManager.get(mContext);
+        getShadowUserManager().addUser(USER_INFO.id, USER_INFO.name, USER_INFO.flags);
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
         ShadowLocalBroadcastManager.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
@@ -194,6 +188,6 @@ public class DevelopmentSettingsUtilTest {
     }
 
     private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(mContext.getSystemService(UserManager.class));
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

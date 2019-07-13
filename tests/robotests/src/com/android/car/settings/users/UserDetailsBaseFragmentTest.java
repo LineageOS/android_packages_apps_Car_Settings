@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Process;
 import android.os.UserHandle;
@@ -33,7 +34,6 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
-import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -44,14 +44,14 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUserManager.class, ShadowCarUserManagerHelper.class,
-        ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
 public class UserDetailsBaseFragmentTest {
 
     /*
@@ -71,20 +71,19 @@ public class UserDetailsBaseFragmentTest {
         }
     }
 
+    private Context mContext;
     private BaseTestActivity mTestActivity;
     private UserDetailsBaseFragment mUserDetailsBaseFragment;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
-    private UserManager mUserManager;
 
     private Button mRemoveUserButton;
 
     @Before
     public void setUpTestActivity() {
+        mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        ShadowUserManager.setInstance(mUserManager);
 
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
@@ -92,7 +91,6 @@ public class UserDetailsBaseFragmentTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
@@ -141,7 +139,7 @@ public class UserDetailsBaseFragmentTest {
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mCarUserManagerHelper.getAllPersistentUsers()).thenReturn(
-                Arrays.asList(new UserInfo()));
+                Collections.singletonList(new UserInfo()));
         createUserDetailsBaseFragment(/*userId=*/1);
         mRemoveUserButton.performClick();
 
@@ -155,12 +153,12 @@ public class UserDetailsBaseFragmentTest {
         // Use UserDetailsFragment, since we cannot test an abstract class.
         mUserDetailsBaseFragment = UserDetailsBaseFragment.addUserIdToFragmentArguments(
                 new TestUserDetailsBaseFragment(), testUser.id);
-        when(mUserManager.getUserInfo(testUser.id)).thenReturn(testUser);
+        getShadowUserManager().addUser(testUser.id, "testUser", /* flags= */ 0);
         mTestActivity.launchFragment(mUserDetailsBaseFragment);
-        mRemoveUserButton = (Button) mTestActivity.findViewById(R.id.action_button1);
+        mRemoveUserButton = mTestActivity.findViewById(R.id.action_button1);
     }
 
     private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(RuntimeEnvironment.application.getSystemService(UserManager.class));
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

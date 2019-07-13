@@ -33,7 +33,6 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -43,11 +42,11 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
-import org.robolectric.shadow.api.Shadow;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserManager.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class DeveloperOptionsEntryPreferenceControllerTest {
 
     private Context mContext;
@@ -75,7 +74,6 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
-        ShadowUserManager.reset();
     }
 
     @Test
@@ -96,12 +94,8 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     public void testGetAvailabilityStatus_devOptionsEnabled_hasUserRestriction_isUnavailable() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        getShadowUserManager().setUserRestriction(
+        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(
                 mUserInfo.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
-    }
-
-    private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(mContext.getSystemService(UserManager.class));
     }
 }
