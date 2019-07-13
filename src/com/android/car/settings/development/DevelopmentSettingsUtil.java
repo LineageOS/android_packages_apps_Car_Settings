@@ -66,7 +66,7 @@ public class DevelopmentSettingsUtil {
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
                 carUserManagerHelper.getCurrentProcessUserInfo().getUserHandle());
         boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
-                || carUserManagerHelper.isCurrentProcessDemoUser();
+                || userManager.isDemoUser();
         return isAdminOrDemo && !hasRestriction && settingEnabled;
     }
 
@@ -78,10 +78,11 @@ public class DevelopmentSettingsUtil {
 
     private static boolean showDeveloperOptions(Context context) {
         CarUserManagerHelper carUserManagerHelper = new CarUserManagerHelper(context);
+        UserManager userManager = UserManager.get(context);
         boolean showDev = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context)
                 && !isMonkeyRunning();
         boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
-                || carUserManagerHelper.isCurrentProcessDemoUser();
+                || userManager.isDemoUser();
         if (UserHandle.MU_ENABLED && !isAdminOrDemo) {
             showDev = false;
         }

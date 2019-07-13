@@ -121,7 +121,7 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         Button removeUserBtn = getActivity().findViewById(R.id.action_button1);
         if (mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)
                 || mUserInfo.id == UserHandle.USER_SYSTEM
-                || mCarUserManagerHelper.isCurrentProcessDemoUser()) {
+                || mUserManager.isDemoUser()) {
             removeUserBtn.setVisibility(View.GONE);
             return;
         }

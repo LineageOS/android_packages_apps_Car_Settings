@@ -68,8 +68,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        if (!mCarUserManagerHelper.isCurrentProcessAdminUser()
-                && !mCarUserManagerHelper.isCurrentProcessDemoUser()) {
+        if (!mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserManager.isDemoUser()) {
             return false;
         }
 

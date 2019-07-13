@@ -103,7 +103,7 @@ public class UsersListFragment extends SettingsFragment implements
                 handleAddUserClicked();
             }
         });
-        if (mCarUserManagerHelper.isCurrentProcessDemoUser()) {
+        if (mUserManager.isDemoUser()) {
             mAddUserButton.setText(R.string.exit_retail_button_text);
         } else if (canCurrentProcessAddUsers()) {
             mAddUserButton.setText(R.string.user_add_user_menu);
@@ -174,7 +174,7 @@ public class UsersListFragment extends SettingsFragment implements
 
     private void handleAddUserClicked() {
         // If the user is a demo user, show a dialog asking if they want to exit retail/demo mode.
-        if (mCarUserManagerHelper.isCurrentProcessDemoUser()) {
+        if (mUserManager.isDemoUser()) {
             ConfirmExitRetailModeDialog dialog = new ConfirmExitRetailModeDialog();
             dialog.setConfirmExitRetailModeListener(this);
             dialog.show(this);

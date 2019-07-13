@@ -23,12 +23,13 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.pm.UserInfo;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
@@ -37,20 +38,16 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.robolectric.Shadows;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class LockTypeBasePreferenceControllerTest {
 
     // Test classes used to test LockTypeBasePreferenceController.
@@ -85,24 +82,16 @@ public class LockTypeBasePreferenceControllerTest {
             mPreferenceControllerHelper;
     private TestLockPreferenceController mController;
     private Preference mPreference;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestLockPreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
@@ -135,13 +124,15 @@ public class LockTypeBasePreferenceControllerTest {
 
     @Test
     public void testGetAvailabilityStatus_guestUser() {
-        when(mCarUserManagerHelper.isCurrentProcessGuestUser()).thenReturn(true);
+        Shadows.shadowOf(UserManager.get(mContext))
+                .addUser(UserHandle.myUserId(), "name", UserInfo.FLAG_GUEST);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 
     @Test
     public void testGetAvailabilityStatus_otherUser() {
-        when(mCarUserManagerHelper.isCurrentProcessGuestUser()).thenReturn(false);
+        Shadows.shadowOf(UserManager.get(mContext))
+                .addUser(UserHandle.myUserId(), "name", /* flags= */ 0);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 }

@@ -46,6 +46,7 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowToast;
+import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class})
@@ -69,17 +70,13 @@ public class BuildNumberPreferenceControllerTest {
                 BuildNumberPreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
 
-        int userId = UserHandle.myUserId();
-        Shadows.shadowOf(UserManager.get(mContext)).addUser(userId, "User Name", /* flags= */ 0);
-
         // By default, user is an admin user.
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         // By default, no restrictions on debugging features.
-        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(new UserInfo());
-        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(UserHandle.of(userId),
-                UserManager.DISALLOW_DEBUGGING_FEATURES, false);
+        Shadows.shadowOf(UserManager.get(mContext))
+                .setUserRestriction(UserHandle.of(UserHandle.myUserId()),
+                        UserManager.DISALLOW_DEBUGGING_FEATURES, false);
 
         // By default device is provisioned.
         Settings.Global.putInt(mContext.getContentResolver(),
@@ -105,22 +102,22 @@ public class BuildNumberPreferenceControllerTest {
 
     @Test
     public void testHandlePreferenceClicked_nonAdmin_returnFalse() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
+        setCurrentUserWithFlags(/* flags= */ 0);
 
         assertThat(mController.handlePreferenceClicked(mPreference)).isFalse();
     }
 
     @Test
     public void testHandlePreferenceClicked_demoUser_returnsTrue() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
 
         assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
     @Test
     public void testHandlePreferenceClicked_adminUser_returnsTrue() {
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+
         assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
     }
 
@@ -187,5 +184,17 @@ public class BuildNumberPreferenceControllerTest {
     private int getTapsToShowToast() {
         return mContext.getResources().getInteger(
                 R.integer.enable_developer_settings_clicks_to_show_toast_count);
+    }
+
+    private void setCurrentUserWithFlags(int flags) {
+        UserInfo userInfo = new UserInfo(UserHandle.myUserId(), null, flags);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser())
+                .thenReturn(UserInfo.FLAG_ADMIN == (flags & UserInfo.FLAG_ADMIN));
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(userInfo);
+        getShadowUserManager().addUser(userInfo.id, userInfo.name, userInfo.flags);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

@@ -27,6 +27,9 @@ import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.pm.UserInfo;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
@@ -42,7 +45,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link MasterClearEntryPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
@@ -74,21 +79,21 @@ public class MasterClearEntryPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
+        setCurrentUserWithFlags(/* flags= */ 0);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 
     @Test
     public void getAvailabilityStatus_adminUser_available() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
     public void getAvailabilityStatus_adminUser_restricted_disabledForUser() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
         when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 DISALLOW_FACTORY_RESET)).thenReturn(true);
 
@@ -97,8 +102,7 @@ public class MasterClearEntryPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_demoMode_demoUser_available() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
@@ -107,13 +111,23 @@ public class MasterClearEntryPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_demoMode_demoUser_restricted_disabledForUser() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
         when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
                 DISALLOW_FACTORY_RESET)).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
+    }
+
+    private void setCurrentUserWithFlags(int flags) {
+        UserInfo userInfo = new UserInfo(UserHandle.myUserId(), null, flags);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser())
+                .thenReturn(UserInfo.FLAG_ADMIN == (flags & UserInfo.FLAG_ADMIN));
+        getShadowUserManager().addUser(userInfo.id, userInfo.name, userInfo.flags);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

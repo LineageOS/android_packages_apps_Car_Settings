@@ -81,7 +81,7 @@ public class UsersListFragmentTest {
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
     @Test
     public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
-        createUsersListFragment();
+        createUsersListFragment(/* flags= */ 0);
         mFragment.mConfirmListener.onConfirm(/* arguments= */ null);
         Robolectric.flushBackgroundThreadScheduler();
         verify(mCarUserManagerHelper)
@@ -91,8 +91,7 @@ public class UsersListFragmentTest {
     /* Test that if we're in demo user, click on the button starts exit out of the retail mode. */
     @Test
     public void testCallOnClick_demoUser_exitRetailMode() {
-        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
-        createUsersListFragment();
+        createUsersListFragment(UserInfo.FLAG_DEMO);
         mActionButton.callOnClick();
         assertThat(isDialogShown(ConfirmExitRetailModeDialog.DIALOG_TAG)).isTrue();
     }
@@ -102,7 +101,7 @@ public class UsersListFragmentTest {
     public void testCallOnClick_userLimitReached_showErrorDialog() {
         doReturn(5).when(mCarUserManagerHelper).getMaxSupportedRealUsers();
         doReturn(true).when(mCarUserManagerHelper).isUserLimitReached();
-        createUsersListFragment();
+        createUsersListFragment(/* flags= */ 0);
 
         mActionButton.callOnClick();
         assertThat(isDialogShown(MaxUsersLimitReachedDialog.DIALOG_TAG)).isTrue();
@@ -111,15 +110,15 @@ public class UsersListFragmentTest {
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
     @Test
     public void testCallOnClick_showAddUserDialog() {
-        createUsersListFragment();
+        createUsersListFragment(/* flags= */ 0);
 
         mActionButton.callOnClick();
         assertThat(isDialogShown(ConfirmationDialogFragment.TAG)).isTrue();
     }
 
-    private void createUsersListFragment() {
+    private void createUsersListFragment(int flags) {
         Shadows.shadowOf(UserManager.get(mContext)).addUser(UserHandle.myUserId(),
-                "User Name", /* flags= */ 0);
+                "User Name", flags);
         UserInfo testUser = UserManager.get(mContext).getUserInfo(UserHandle.myUserId());
         mFragment = new UsersListFragment();
         doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
