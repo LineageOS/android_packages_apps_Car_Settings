@@ -113,7 +113,7 @@ public class WifiInfoProvider implements DefaultLifecycleObserver {
                 case WifiManager.CONFIGURED_NETWORKS_CHANGED_ACTION:
                     LOG.d("Wifi Config changed.");
                     if (!intent.getBooleanExtra(WifiManager.EXTRA_MULTIPLE_NETWORKS_CHANGED,
-                            false /* defaultValue */)) {
+                            /* defaultValue= */ false)) {
                         // only one network changed
                         WifiConfiguration wifiConfiguration = intent
                                 .getParcelableExtra(WifiManager.EXTRA_WIFI_CONFIGURATION);

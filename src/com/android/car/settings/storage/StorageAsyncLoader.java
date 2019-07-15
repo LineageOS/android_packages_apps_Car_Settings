@@ -96,7 +96,7 @@ public class StorageAsyncLoader
             }
 
             long dataSize = stats.getDataBytes();
-            long cacheQuota = mStatsManager.getCacheQuotaBytes(/* volumeUuid= */null, app.uid);
+            long cacheQuota = mStatsManager.getCacheQuotaBytes(/* volumeUuid= */ null, app.uid);
             long cacheBytes = stats.getCacheBytes();
             long blamedSize = dataSize;
             // Technically, we could show overages as freeable on the storage settings screen.

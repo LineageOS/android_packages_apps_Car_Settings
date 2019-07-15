@@ -165,7 +165,7 @@ public class SettingsFragmentTest {
     public void showDialog_noTag_launchesDialogFragment() {
         mFragmentController.setup();
         DialogFragment dialogFragment = mock(DialogFragment.class);
-        mFragment.showDialog(dialogFragment, /* tag */ null);
+        mFragment.showDialog(dialogFragment, /* tag= */ null);
         verify(dialogFragment).show(mFragment.getFragmentManager(), null);
     }
 
@@ -223,8 +223,8 @@ public class SettingsFragmentTest {
         assertThrows(
                 () -> mFragment.startIntentSenderForResult(
                         mock(IntentSender.class), /* requestCode= */ 0xffff,
-                        /* fillInIntent= */null, /* flagsMask= */ 0,
-                        /* flagsValues= */0, /* options= */ null,
+                        /* fillInIntent= */ null, /* flagsMask= */ 0,
+                        /* flagsValues= */ 0, /* options= */ null,
                         mock(ActivityResultCallback.class)));
     }
 
@@ -235,8 +235,8 @@ public class SettingsFragmentTest {
             for (int i = 0; i < 0xff; i++) {
                 mFragment.startIntentSenderForResult(
                         mock(IntentSender.class), /* requestCode= */ 0xffff,
-                        /* fillInIntent= */null, /* flagsMask= */ 0,
-                        /* flagsValues= */0, /* options= */ null,
+                        /* fillInIntent= */ null, /* flagsMask= */ 0,
+                        /* flagsValues= */ 0, /* options= */ null,
                         mock(ActivityResultCallback.class));
             }
         });

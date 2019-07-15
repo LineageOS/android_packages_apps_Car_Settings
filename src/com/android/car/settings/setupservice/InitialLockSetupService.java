@@ -109,7 +109,7 @@ public class InitialLockSetupService extends Service {
                 case LockTypes.PIN:
                     // fall through
                 case LockTypes.PATTERN:
-                    return new LockConfig(/* enabled= */true, PasswordHelper.MIN_LENGTH);
+                    return new LockConfig(/* enabled= */ true, PasswordHelper.MIN_LENGTH);
             }
             return null;
         }
@@ -178,8 +178,8 @@ public class InitialLockSetupService extends Service {
                         // Need to remove the setup wizard lib pattern encoding and use the
                         // LockPatternUtils pattern format.
                         List<LockPatternView.Cell> pattern = toSettingsPattern(password);
-                        lockPatternUtils.saveLockPattern(pattern, /* savedPattern =*/ null,
-                                userId, /* allowUntrustedChange =*/ false);
+                        lockPatternUtils.saveLockPattern(pattern, /* savedPattern= */ null,
+                                userId, /* allowUntrustedChange= */ false);
                         pattern.clear();
                         success = true;
                         break;

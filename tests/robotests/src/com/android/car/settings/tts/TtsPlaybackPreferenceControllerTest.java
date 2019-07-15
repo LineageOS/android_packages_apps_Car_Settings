@@ -67,7 +67,7 @@ public class TtsPlaybackPreferenceControllerTest {
 
     private static final String DEFAULT_ENGINE_NAME = "com.android.car.settings.tts.test.default";
     private static final TextToSpeech.EngineInfo ENGINE_INFO = new TextToSpeech.EngineInfo();
-    private static final Voice VOICE = new Voice("Test Name", Locale.ENGLISH, /* quality= */0,
+    private static final Voice VOICE = new Voice("Test Name", Locale.ENGLISH, /* quality= */ 0,
             /* latency= */ 0, /* requiresNetworkConnection= */ true, /* features= */ null);
 
     static {

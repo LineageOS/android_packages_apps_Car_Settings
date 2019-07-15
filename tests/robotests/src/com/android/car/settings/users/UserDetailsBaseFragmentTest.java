@@ -98,7 +98,7 @@ public class UserDetailsBaseFragmentTest {
         getShadowUserManager().setUserRestriction(
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        createUserDetailsBaseFragment(/*userId=*/1);
+        createUserDetailsBaseFragment(/* userId= */ 1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.VISIBLE);
     }
@@ -108,7 +108,7 @@ public class UserDetailsBaseFragmentTest {
         getShadowUserManager().setUserRestriction(
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, true);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        createUserDetailsBaseFragment(/*userId=*/1);
+        createUserDetailsBaseFragment(/* userId= */ 1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
@@ -128,7 +128,7 @@ public class UserDetailsBaseFragmentTest {
         getShadowUserManager().setUserRestriction(
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, false);
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
-        createUserDetailsBaseFragment(/*userId=*/1);
+        createUserDetailsBaseFragment(/* userId= */ 1);
 
         assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
     }
@@ -140,7 +140,7 @@ public class UserDetailsBaseFragmentTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mCarUserManagerHelper.getAllPersistentUsers()).thenReturn(
                 Collections.singletonList(new UserInfo()));
-        createUserDetailsBaseFragment(/*userId=*/1);
+        createUserDetailsBaseFragment(/* userId= */ 1);
         mRemoveUserButton.performClick();
 
         assertThat(mUserDetailsBaseFragment.findDialogByTag(

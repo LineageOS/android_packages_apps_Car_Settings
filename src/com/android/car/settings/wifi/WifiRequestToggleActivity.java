@@ -84,7 +84,7 @@ public class WifiRequestToggleActivity extends Activity implements DialogInterfa
 
         try {
             ApplicationInfo applicationInfo = getPackageManager().getApplicationInfo(
-                    packageName,  /* flags= */ 0);
+                    packageName, /* flags= */ 0);
             mAppLabel = applicationInfo.loadSafeLabel(getPackageManager());
         } catch (PackageManager.NameNotFoundException e) {
             LOG.e("Couldn't find app with package name " + packageName);
