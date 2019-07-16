@@ -17,7 +17,6 @@
 package com.android.car.settings.development;
 
 import android.app.ActivityManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -58,15 +57,13 @@ public class DevelopmentSettingsUtil {
      * Checks that the development settings should be enabled. Returns true if global toggle is set,
      * debugging is allowed for user, and the user is an admin or a demo user.
      */
-    public static boolean isDevelopmentSettingsEnabled(Context context,
-            CarUserManagerHelper carUserManagerHelper, UserManager userManager) {
+    public static boolean isDevelopmentSettingsEnabled(Context context, UserManager userManager) {
         boolean settingEnabled = Settings.Global.getInt(context.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, Build.IS_ENG ? 1 : 0) != 0;
         boolean hasRestriction = userManager.hasUserRestriction(
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
-                carUserManagerHelper.getCurrentProcessUserInfo().getUserHandle());
-        boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
-                || userManager.isDemoUser();
+                UserHandle.of(UserHandle.myUserId()));
+        boolean isAdminOrDemo = userManager.isAdminUser() || userManager.isDemoUser();
         return isAdminOrDemo && !hasRestriction && settingEnabled;
     }
 
@@ -77,12 +74,10 @@ public class DevelopmentSettingsUtil {
     }
 
     private static boolean showDeveloperOptions(Context context) {
-        CarUserManagerHelper carUserManagerHelper = new CarUserManagerHelper(context);
         UserManager userManager = UserManager.get(context);
         boolean showDev = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context)
                 && !isMonkeyRunning();
-        boolean isAdminOrDemo = carUserManagerHelper.isCurrentProcessAdminUser()
-                || userManager.isDemoUser();
+        boolean isAdminOrDemo = userManager.isAdminUser() || userManager.isDemoUser();
         if (UserHandle.MU_ENABLED && !isAdminOrDemo) {
             showDev = false;
         }

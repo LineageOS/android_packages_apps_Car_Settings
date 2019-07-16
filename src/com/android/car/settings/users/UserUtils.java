@@ -59,9 +59,8 @@ public class UserUtils {
      * Returns whether or not the current user is an admin and whether the user info they are
      * viewing is of a non-admin.
      */
-    public static boolean isAdminViewingNonAdmin(CarUserManagerHelper carUserManagerHelper,
-            UserInfo userInfo) {
-        return carUserManagerHelper.isCurrentProcessAdminUser() && !userInfo.isAdmin();
+    public static boolean isAdminViewingNonAdmin(UserManager userManager, UserInfo userInfo) {
+        return userManager.isAdminUser() && !userInfo.isAdmin();
     }
 
     /**

@@ -17,7 +17,6 @@
 package com.android.car.settings.system;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.UserManager;
 
@@ -30,13 +29,11 @@ import com.android.car.settings.development.DevelopmentSettingsUtil;
 /** Controls the visibility of the developer options setting. */
 public class DeveloperOptionsEntryPreferenceController extends PreferenceController<Preference> {
 
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
 
     public DeveloperOptionsEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         mUserManager = UserManager.get(context);
     }
 
@@ -47,7 +44,7 @@ public class DeveloperOptionsEntryPreferenceController extends PreferenceControl
 
     @Override
     protected int getAvailabilityStatus() {
-        return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
-                mCarUserManagerHelper, mUserManager) ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+        return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(), mUserManager)
+                ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
     }
 }

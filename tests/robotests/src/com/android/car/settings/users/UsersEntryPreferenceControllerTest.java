@@ -20,59 +20,49 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.UserInfo;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.annotation.Config;
+import org.robolectric.Shadows;
+import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link UsersEntryPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class UsersEntryPreferenceControllerTest {
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private Context mContext;
     private Preference mPreference;
     private PreferenceControllerTestHelper<UsersEntryPreferenceController> mControllerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
-        Context context = RuntimeEnvironment.application;
-        mPreference = new Preference(context);
-        mControllerHelper = new PreferenceControllerTestHelper<>(context,
+        mContext = RuntimeEnvironment.application;
+        mPreference = new Preference(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 UsersEntryPreferenceController.class, mPreference);
         mControllerHelper.markState(Lifecycle.State.STARTED);
     }
 
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
-    }
-
     @Test
     public void preferenceClicked_adminUser_handled() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         assertThat(
                 mPreference.getOnPreferenceClickListener().onPreferenceClick(mPreference)).isTrue();
@@ -80,7 +70,7 @@ public class UsersEntryPreferenceControllerTest {
 
     @Test
     public void preferenceClicked_adminUser_launchesUsersListFragment() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         mPreference.performClick();
 
@@ -90,7 +80,7 @@ public class UsersEntryPreferenceControllerTest {
 
     @Test
     public void preferenceClicked_nonAdminUser_handled() {
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
+        setCurrentUserWithFlags(/* flags= */ 0);
 
         assertThat(
                 mPreference.getOnPreferenceClickListener().onPreferenceClick(mPreference)).isTrue();
@@ -98,9 +88,7 @@ public class UsersEntryPreferenceControllerTest {
 
     @Test
     public void preferenceClicked_nonAdminUser_launchesUserDetailsFragment() {
-        int userId = 1234;
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
+        setCurrentUserWithFlags(/* flags= */ 0);
 
         mPreference.performClick();
 
@@ -110,6 +98,15 @@ public class UsersEntryPreferenceControllerTest {
                 fragmentCaptor.capture());
         UserDetailsFragment launchedFragment = fragmentCaptor.getValue();
         assertThat(launchedFragment.getArguments()).isNotNull();
-        assertThat(launchedFragment.getArguments().getInt(Intent.EXTRA_USER_ID)).isEqualTo(userId);
+        assertThat(launchedFragment.getArguments().getInt(Intent.EXTRA_USER_ID))
+                .isEqualTo(UserHandle.myUserId());
+    }
+
+    private void setCurrentUserWithFlags(int flags) {
+        getShadowUserManager().addUser(UserHandle.myUserId(), "test name", flags);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

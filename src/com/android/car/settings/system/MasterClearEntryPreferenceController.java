@@ -55,7 +55,7 @@ public class MasterClearEntryPreferenceController extends PreferenceController<P
     }
 
     private boolean isUserRestricted() {
-        return !(mCarUserManagerHelper.isCurrentProcessAdminUser() || isDemoUser())
+        return !(mUserManager.isAdminUser() || isDemoUser())
                 || mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_FACTORY_RESET);
     }
 

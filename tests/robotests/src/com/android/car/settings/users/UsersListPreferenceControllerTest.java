@@ -26,6 +26,7 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserManager;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
@@ -43,7 +44,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowUserManager;
 
 import java.util.Collections;
 
@@ -58,21 +61,24 @@ public class UsersListPreferenceControllerTest {
 
     private PreferenceControllerTestHelper<UsersListPreferenceController> mControllerHelper;
     private PreferenceGroup mPreferenceGroup;
+    private Context mContext;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
-        Context context = RuntimeEnvironment.application;
+        mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mPreferenceGroup = new LogicalPreferenceGroup(context);
-        mControllerHelper = new PreferenceControllerTestHelper<>(context,
+        mPreferenceGroup = new LogicalPreferenceGroup(mContext);
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 UsersListPreferenceController.class, mPreferenceGroup);
 
+        getShadowUserManager().addUser(TEST_CURRENT_USER.id, TEST_CURRENT_USER.name,
+                TEST_CURRENT_USER.flags);
+        getShadowUserManager().switchUser(TEST_CURRENT_USER.id);
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
         when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
 
@@ -105,5 +111,9 @@ public class UsersListPreferenceControllerTest {
         mPreferenceGroup.getPreference(2).performClick();
 
         verify(mControllerHelper.getMockFragmentController(), never()).launchFragment(any());
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

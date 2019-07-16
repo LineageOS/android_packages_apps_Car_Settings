@@ -17,7 +17,6 @@
 package com.android.car.settings.system;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Build;
 import android.os.UserManager;
@@ -33,7 +32,6 @@ import com.android.car.settings.development.DevelopmentSettingsUtil;
 /** Updates the build number entry summary with the build number. */
 public class BuildNumberPreferenceController extends PreferenceController<Preference> {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
     private Toast mDevHitToast;
     private int mDevHitCountdown;
@@ -41,7 +39,6 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
     public BuildNumberPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         mUserManager = UserManager.get(context);
     }
 
@@ -57,8 +54,9 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
     @Override
     protected void onResumeInternal() {
         mDevHitToast = null;
-        mDevHitCountdown = DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(),
-                mCarUserManagerHelper, mUserManager) ? -1 : getTapsToBecomeDeveloper();
+        mDevHitCountdown =
+                DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(), mUserManager)
+                        ? -1 : getTapsToBecomeDeveloper();
     }
 
     @Override
@@ -68,7 +66,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        if (!mCarUserManagerHelper.isCurrentProcessAdminUser() && !mUserManager.isDemoUser()) {
+        if (!mUserManager.isAdminUser() && !mUserManager.isDemoUser()) {
             return false;
         }
 

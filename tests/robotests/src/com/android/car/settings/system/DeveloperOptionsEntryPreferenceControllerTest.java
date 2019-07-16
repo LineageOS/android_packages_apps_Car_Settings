@@ -21,58 +21,41 @@ import static com.android.car.settings.common.PreferenceController.CONDITIONALLY
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class DeveloperOptionsEntryPreferenceControllerTest {
 
     private Context mContext;
     private DeveloperOptionsEntryPreferenceController mController;
-    private UserInfo mUserInfo;
-    @Mock
-    private CarUserManagerHelper mShadowCarUserManagerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mShadowCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
         mController = new PreferenceControllerTestHelper<>(mContext,
                 DeveloperOptionsEntryPreferenceController.class,
                 new Preference(mContext)).getController();
 
         // Setup admin user who is able to enable developer settings.
-        mUserInfo = new UserInfo(10, null, 0);
-        when(mShadowCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mShadowCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(mUserInfo);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
+        getShadowUserManager().addUser(UserHandle.myUserId(), "test name", UserInfo.FLAG_ADMIN);
     }
 
     @Test
@@ -93,8 +76,14 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
     public void testGetAvailabilityStatus_devOptionsEnabled_hasUserRestriction_isUnavailable() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(
-                mUserInfo.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()),
+                UserManager.DISALLOW_DEBUGGING_FEATURES,
+                true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(mContext));
     }
 }

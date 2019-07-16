@@ -17,8 +17,9 @@
 package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
@@ -34,12 +35,12 @@ public class UsersEntryPreferenceController extends PreferenceController<Prefere
 
     private static final Logger LOG = new Logger(UsersEntryPreferenceController.class);
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final UserManager mUserManager;
 
     public UsersEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -49,15 +50,15 @@ public class UsersEntryPreferenceController extends PreferenceController<Prefere
 
     @Override
     public boolean handlePreferenceClicked(Preference preference) {
-        if (mCarUserManagerHelper.isCurrentProcessAdminUser()) {
+        if (mUserManager.isAdminUser()) {
             // Admins can see a full list of users in Settings.
             LOG.v("Creating UsersListFragment for admin user.");
             getFragmentController().launchFragment(new UsersListFragment());
         } else {
             // Non-admins can only manage themselves in Settings.
             LOG.v("Creating UserDetailsFragment for non-admin.");
-            getFragmentController().launchFragment(UserDetailsFragment.newInstance(
-                    mCarUserManagerHelper.getCurrentProcessUserId()));
+            getFragmentController().launchFragment(
+                    UserDetailsFragment.newInstance(UserHandle.myUserId()));
         }
         return true;
     }
