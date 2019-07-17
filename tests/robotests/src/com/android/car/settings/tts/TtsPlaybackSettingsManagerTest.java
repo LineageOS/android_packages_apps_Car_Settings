@@ -201,7 +201,7 @@ public class TtsPlaybackSettingsManagerTest {
 
     @Test
     public void speakSampleText_requiresNetworkConnection_languageNotAvailable_showsAlert() {
-        Voice voice = new Voice("Test Name", Locale.FRANCE, /* quality= */0,
+        Voice voice = new Voice("Test Name", Locale.FRANCE, /* quality= */ 0,
                 /* latency= */ 0, /* requiresNetworkConnection= */ true, /* features= */ null);
         when(mTts.getVoice()).thenReturn(voice);
         when(mEnginesHelper.parseLocaleString(Locale.FRANCE.toString())).thenReturn(Locale.FRANCE);
@@ -215,7 +215,7 @@ public class TtsPlaybackSettingsManagerTest {
 
     @Test
     public void speakSampleText_requiresNetworkConnection_languageAvailable_speaksText() {
-        Voice voice = new Voice("Test Name", Locale.FRENCH, /* quality= */0,
+        Voice voice = new Voice("Test Name", Locale.FRENCH, /* quality= */ 0,
                 /* latency= */ 0, /* requiresNetworkConnection= */ true, /* features= */ null);
         when(mTts.getVoice()).thenReturn(voice);
         when(mTts.isLanguageAvailable(Locale.FRENCH)).thenReturn(TextToSpeech.LANG_AVAILABLE);
@@ -227,7 +227,7 @@ public class TtsPlaybackSettingsManagerTest {
 
     @Test
     public void speakSampleText_doesNotRequireNetworkConnection_speaksText() {
-        Voice voice = new Voice("Test Name", Locale.FRENCH, /* quality= */0,
+        Voice voice = new Voice("Test Name", Locale.FRENCH, /* quality= */ 0,
                 /* latency= */ 0, /* requiresNetworkConnection= */ false, /* features= */ null);
         when(mTts.getVoice()).thenReturn(voice);
 

@@ -53,7 +53,7 @@ public class FallbackHome extends Activity {
 
     private final Runnable mProgressTimeoutRunnable = () -> {
         View v = getLayoutInflater().inflate(
-                R.layout.fallback_home_finishing_boot, null /* root */);
+                R.layout.fallback_home_finishing_boot, /* root= */ null);
         setContentView(v);
         v.setAlpha(0f);
         v.animate()
@@ -103,7 +103,8 @@ public class FallbackHome extends Activity {
         } else {
             WallpaperColors colors = mWallManager.getWallpaperColors(WallpaperManager.FLAG_SYSTEM);
             if (colors == null) {
-                mWallManager.addOnColorsChangedListener(mColorsChangedListener, null /* handler */);
+                mWallManager.addOnColorsChangedListener(mColorsChangedListener,
+                        /* handler= */ null);
             } else {
                 flags = updateVisibilityFlagsFromColors(colors, flags);
             }

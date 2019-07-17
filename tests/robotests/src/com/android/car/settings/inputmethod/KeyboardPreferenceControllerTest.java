@@ -186,9 +186,12 @@ public class KeyboardPreferenceControllerTest {
         resolveInfo.serviceInfo = serviceInfo;
         resolveInfo.nonLocalizedLabel = label;
         when(resolveInfo.loadLabel(packageManager)).thenReturn(label);
-        return new InputMethodInfo(resolveInfo, /* isAuxIme */false,
-                DUMMY_SETTINGS_ACTIVITY,  /* subtypes */null, /* isDefaultResId */
-                1, /*forceDefault*/false);
+        return new InputMethodInfo(resolveInfo,
+                /* isAuxIme= */ false,
+                DUMMY_SETTINGS_ACTIVITY,
+                /* subtypes= */ null,
+                /* isDefaultResId= */ 1,
+                /* forceDefault= */ false);
     }
 
     private static ShadowInputMethodManager getShadowInputMethodManager(Context context) {

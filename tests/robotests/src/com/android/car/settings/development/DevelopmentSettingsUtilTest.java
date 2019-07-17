@@ -23,6 +23,7 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
@@ -45,8 +46,6 @@ import org.robolectric.shadows.ShadowUserManager;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class})
 public class DevelopmentSettingsUtilTest {
 
-    private static final UserInfo USER_INFO = new UserInfo(0, null, 0);
-
     private Context mContext;
     private UserManager mUserManager;
 
@@ -58,12 +57,7 @@ public class DevelopmentSettingsUtilTest {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
-        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(USER_INFO);
-
         mUserManager = UserManager.get(mContext);
-        getShadowUserManager().addUser(USER_INFO.id, USER_INFO.name, USER_INFO.flags);
     }
 
     @After
@@ -74,6 +68,7 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_settingsOff_isAdmin_notDemo_shouldReturnFalse() {
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
@@ -83,6 +78,7 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_settingsOn_isAdmin_notDemo_shouldReturnTrue() {
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
@@ -92,10 +88,10 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_settingsOn_notAdmin_notDemo_shouldReturnFalse() {
+        setCurrentUserWithFlags(/* flags= */ 0);
+
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper, mUserManager)).isFalse();
@@ -103,10 +99,10 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_settingsOn_notAdmin_isDemo_shouldReturnTrue() {
+        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
+
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper, mUserManager)).isTrue();
@@ -114,10 +110,10 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_settingsOff_notAdmin_isDemo_shouldReturnFalse() {
+        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
+
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(false);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper, mUserManager)).isFalse();
@@ -125,13 +121,15 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_hasDisallowDebuggingRestriction_shouldReturnFalse() {
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN | UserInfo.FLAG_DEMO);
+
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         getShadowUserManager().setUserRestriction(
-                USER_INFO.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, true);
+                UserHandle.of(UserHandle.myUserId()),
+                UserManager.DISALLOW_DEBUGGING_FEATURES,
+                true);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper, mUserManager)).isFalse();
@@ -139,13 +137,15 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_doesNotHaveDisallowDebuggingRestriction_shouldReturnTrue() {
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN | UserInfo.FLAG_DEMO);
+
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
 
         getShadowUserManager().setUserRestriction(
-                USER_INFO.getUserHandle(), UserManager.DISALLOW_DEBUGGING_FEATURES, false);
+                UserHandle.of(UserHandle.myUserId()),
+                UserManager.DISALLOW_DEBUGGING_FEATURES,
+                false);
 
         assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
                 mCarUserManagerHelper, mUserManager)).isTrue();
@@ -185,6 +185,14 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
         assertThat(DevelopmentSettingsUtil.isDeviceProvisioned(mContext)).isFalse();
+    }
+
+    private void setCurrentUserWithFlags(int flags) {
+        UserInfo userInfo = new UserInfo(UserHandle.myUserId(), null, flags);
+        when(mCarUserManagerHelper.isCurrentProcessAdminUser())
+                .thenReturn(UserInfo.FLAG_ADMIN == (flags & UserInfo.FLAG_ADMIN));
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(userInfo);
+        getShadowUserManager().addUser(userInfo.id, userInfo.name, userInfo.flags);
     }
 
     private ShadowUserManager getShadowUserManager() {

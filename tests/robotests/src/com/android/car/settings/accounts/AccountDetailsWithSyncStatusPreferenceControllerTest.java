@@ -144,7 +144,7 @@ public class AccountDetailsWithSyncStatusPreferenceControllerTest {
             String authority = authorities[i];
             // Adds a sync adapter type that has the right account type and is visible.
             SyncAdapterType syncAdapterType = new SyncAdapterType(authority,
-                    ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                    ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
             syncAdapters[i] = syncAdapterType;
 
             // Sets that the sync adapter is syncable.

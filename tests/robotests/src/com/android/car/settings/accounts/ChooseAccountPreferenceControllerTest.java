@@ -149,7 +149,7 @@ public class ChooseAccountPreferenceControllerTest {
         // Adds a sync adapter type for the com.acct1 account type that does not have the same
         // authority as the one passed to someAuthority
         SyncAdapterType syncAdapterType = new SyncAdapterType("someAuthority",
-                "com.acct1", /* userVisible */ true, /* supportsUploading */ true);
+                "com.acct1", /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
@@ -170,7 +170,7 @@ public class ChooseAccountPreferenceControllerTest {
         // Adds a sync adapter type for the com.acct1 account type that has the same authority as
         // the one passed to someAuthority
         SyncAdapterType syncAdapterType = new SyncAdapterType("someAuthority",
-                "com.acct1", /* userVisible */ true, /* supportsUploading */ true);
+                "com.acct1", /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 

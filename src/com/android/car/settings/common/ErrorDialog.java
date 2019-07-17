@@ -60,7 +60,7 @@ public class ErrorDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new AlertDialog.Builder(getContext())
                 .setTitle(getArguments().getInt(ERROR_DIALOG_TITLE_KEY))
-                .setPositiveButton(android.R.string.ok, /* listener =*/ null)
+                .setPositiveButton(android.R.string.ok, /* listener= */ null)
                 .create();
     }
 }

@@ -195,9 +195,9 @@ public class AppDataUsagePreferenceController extends
      * Accumulate data usage of a network stats entry for the item mapped by the collapse key.
      * Creates the item if needed.
      *
-     * @param collapseKey the collapse key used to map the item.
-     * @param knownItems collection of known (already existing) items.
-     * @param entry the network stats entry to extract data usage from.
+     * @param collapseKey  the collapse key used to map the item.
+     * @param knownItems   collection of known (already existing) items.
+     * @param entry        the network stats entry to extract data usage from.
      * @param itemCategory the item is categorized on the list view by this category. Must be
      */
     private static long accumulate(int collapseKey, SparseArray<AppItem> knownItems,
@@ -234,12 +234,12 @@ public class AppDataUsagePreferenceController extends
                 CharSequence s = DataUsageUtils.bytesToIecUnits(context, item.total);
                 setSummary(s);
             }
-            mDetail = provider.getUidDetail(item.key, false /* blocking */);
+            mDetail = provider.getUidDetail(item.key, /* blocking= */ false);
             if (mDetail != null) {
                 setAppInfo();
             } else {
                 ThreadUtils.postOnBackgroundThread(() -> {
-                    mDetail = provider.getUidDetail(mItem.key, true /* blocking */);
+                    mDetail = provider.getUidDetail(mItem.key, /* blocking= */ true);
                     ThreadUtils.postOnMainThread(() -> setAppInfo());
                 });
             }

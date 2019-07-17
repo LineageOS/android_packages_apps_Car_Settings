@@ -112,7 +112,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_syncAdapterDoesNotHaveSameAccountType_shouldNotBeShown() {
         // Adds a sync adapter type that is visible but does not have the right account type.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                DIFFERENT_ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                DIFFERENT_ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
@@ -125,7 +125,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_syncAdapterIsNotVisible_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type but is not visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ false, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible= */ false, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
 
@@ -138,7 +138,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_syncAdapterIsNotSyncable_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to not syncable.
@@ -153,7 +153,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_syncAdapterDoesNotHaveProviderInfo_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
@@ -170,7 +170,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_providerInfoDoesNotHaveLabel_shouldNotBeShown() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
@@ -195,7 +195,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
     public void refreshUi_providerLabelShouldBeSet() {
         // Adds a sync adapter type that has the right account type and is visible.
         SyncAdapterType syncAdapterType = new SyncAdapterType(AUTHORITY,
-                ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
         SyncAdapterType[] syncAdapters = {syncAdapterType};
         ShadowContentResolver.setSyncAdapterTypes(syncAdapters);
         // Sets that the sync adapter to syncable.
@@ -517,7 +517,7 @@ public class AccountSyncDetailsPreferenceControllerTest {
             String authority = authorities[i];
             // Adds a sync adapter type that has the right account type and is visible.
             SyncAdapterType syncAdapterType = new SyncAdapterType(authority,
-                    ACCOUNT_TYPE, /* userVisible */ true, /* supportsUploading */ true);
+                    ACCOUNT_TYPE, /* userVisible= */ true, /* supportsUploading= */ true);
             syncAdapters[i] = syncAdapterType;
 
             // Sets that the sync adapter is syncable.

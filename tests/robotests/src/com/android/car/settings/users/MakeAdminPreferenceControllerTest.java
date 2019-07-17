@@ -51,7 +51,7 @@ import org.robolectric.annotation.Config;
 public class MakeAdminPreferenceControllerTest {
 
     private static final UserInfo TEST_USER = new UserInfo(/* id= */ 10,
-            "Test Username", /* flags= */0);
+            "Test Username", /* flags= */ 0);
 
     private PreferenceControllerTestHelper<MakeAdminPreferenceController>
             mPreferenceControllerHelper;

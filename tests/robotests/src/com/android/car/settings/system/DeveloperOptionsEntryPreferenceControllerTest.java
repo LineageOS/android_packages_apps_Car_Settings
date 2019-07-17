@@ -67,7 +67,6 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
         // Setup admin user who is able to enable developer settings.
         mUserInfo = new UserInfo(10, null, 0);
         when(mShadowCarUserManagerHelper.isCurrentProcessAdminUser()).thenReturn(true);
-        when(mShadowCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         when(mShadowCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(mUserInfo);
     }
 

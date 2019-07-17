@@ -17,9 +17,9 @@
 package com.android.car.settings.security;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserManager;
 
 import androidx.fragment.app.Fragment;
 import androidx.preference.Preference;
@@ -34,14 +34,14 @@ import com.android.car.settings.common.PreferenceController;
  */
 public abstract class LockTypeBasePreferenceController extends PreferenceController<Preference> {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final UserManager mUserManager;
     private byte[] mCurrentPassword;
     private int mCurrentPasswordQuality;
 
     public LockTypeBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
     }
 
 
@@ -113,7 +113,7 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
 
     @Override
     public int getAvailabilityStatus() {
-        return mCarUserManagerHelper.isCurrentProcessGuestUser() ? DISABLED_FOR_USER : AVAILABLE;
+        return mUserManager.isGuestUser() ? DISABLED_FOR_USER : AVAILABLE;
     }
 
     private CharSequence getSummary() {

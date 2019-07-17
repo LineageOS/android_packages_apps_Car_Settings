@@ -99,7 +99,7 @@ public abstract class AssistConfigBasePreferenceController extends
                 if (mUriList != null) {
                     for (Uri uri : mUriList) {
                         cr.registerContentObserver(uri, /* notifyForDescendants= */ false,
-                                /* observer=*/ this);
+                                /* observer= */ this);
                     }
                 }
             } else {
