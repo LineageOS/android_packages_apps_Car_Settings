@@ -23,12 +23,14 @@ import android.os.UserManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 /** Controls the visibility of the developer options setting. */
 public class DeveloperOptionsEntryPreferenceController extends PreferenceController<Preference> {
 
+    private static final Logger LOG = new Logger(DeveloperOptionsEntryPreferenceController.class);
     private UserManager mUserManager;
 
     public DeveloperOptionsEntryPreferenceController(Context context, String preferenceKey,
@@ -46,5 +48,19 @@ public class DeveloperOptionsEntryPreferenceController extends PreferenceControl
     protected int getAvailabilityStatus() {
         return DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(getContext(), mUserManager)
                 ? AVAILABLE : CONDITIONALLY_UNAVAILABLE;
+    }
+
+    @Override
+    protected boolean handlePreferenceClicked(Preference preference) {
+        // TODO(b/137797266): This should be removed when the root cause of the inconsistency is
+        //  discovered and fixed.
+        if (!DevelopmentSettingsUtil.isDeveloperOptionsModuleEnabled(getContext())) {
+            LOG.e("Inconsistent state: developer options enabled, but developer options module "
+                    + "disabled. Retry enabling...");
+            DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), /* enable= */ true);
+        }
+
+        getContext().startActivity(preference.getIntent());
+        return true;
     }
 }

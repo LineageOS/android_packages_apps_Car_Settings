@@ -22,11 +22,13 @@ import static com.android.car.settings.common.PreferenceController.CONDITIONALLY
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
+import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -38,21 +40,28 @@ import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
+import org.robolectric.shadows.ShadowApplication;
 import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
 public class DeveloperOptionsEntryPreferenceControllerTest {
 
     private Context mContext;
+    private PreferenceControllerTestHelper<DeveloperOptionsEntryPreferenceController>
+            mControllerHelper;
     private DeveloperOptionsEntryPreferenceController mController;
+    private Preference mPreference;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        mController = new PreferenceControllerTestHelper<>(mContext,
+        mPreference = new Preference(mContext);
+        mPreference.setIntent(new Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS));
+        mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 DeveloperOptionsEntryPreferenceController.class,
-                new Preference(mContext)).getController();
+                mPreference);
+        mController = mControllerHelper.getController();
 
         // Setup admin user who is able to enable developer settings.
         getShadowUserManager().addUser(UserHandle.myUserId(), "test name", UserInfo.FLAG_ADMIN);
@@ -81,6 +90,17 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
                 true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
+    }
+
+    @Test
+    public void performClick_startsActivity() {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreference.performClick();
+
+        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
+        assertThat(actual.getAction()).isEqualTo(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS);
     }
 
     private ShadowUserManager getShadowUserManager() {
