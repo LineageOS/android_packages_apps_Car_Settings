@@ -19,9 +19,14 @@ package com.android.car.settings.accounts;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.doReturn;
+import static org.robolectric.RuntimeEnvironment.application;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.accounts.AuthenticatorDescription;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
+import android.os.UserManager;
 import android.view.View;
 import android.widget.Button;
 
@@ -39,7 +44,10 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
 /**
  * Tests for AccountSettingsFragment class.
@@ -48,6 +56,8 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
         ShadowContentResolver.class})
 public class AccountSettingsFragmentTest {
+    private static final int USER_ID = 111;
+
     private BaseTestActivity mActivity;
     private AccountSettingsFragment mFragment;
 
@@ -60,7 +70,7 @@ public class AccountSettingsFragmentTest {
 
         // Set up user info
         ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
-        doReturn(new UserInfo()).when(
+        doReturn(new UserInfo(USER_ID, "USER", /* flags= */ 0)).when(
                 mMockCarUserManagerHelper).getCurrentProcessUserInfo();
 
         mActivity = Robolectric.setupActivity(BaseTestActivity.class);
@@ -101,8 +111,56 @@ public class AccountSettingsFragmentTest {
                 R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
     }
 
+    @Test
+    public void clickAddAccountButton_shouldNotOpenChooseAccountFragmentWhenOneType() {
+        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        getShadowUserManager().addProfile(USER_ID, USER_ID,
+                String.valueOf(USER_ID), /* profileFlags= */ 0);
+        addAccountAndDescription(USER_ID, "accountName", R.string.account_type1_label);
+        initFragment();
+
+        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
+        addAccountButton.performClick();
+
+        assertThat(mFragment.getFragmentManager().findFragmentById(
+                R.id.fragment_container)).isNotInstanceOf(ChooseAccountFragment.class);
+    }
+
+    @Test
+    public void clickAddAccountButton_shouldOpenChooseAccountFragmentWhenTwoTypes() {
+        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        getShadowUserManager().addProfile(USER_ID, USER_ID,
+                String.valueOf(USER_ID), /* profileFlags= */ 0);
+        addAccountAndDescription(USER_ID, "accountName1", R.string.account_type1_label);
+        addAccountAndDescription(USER_ID, "accountName2", R.string.account_type2_label);
+        initFragment();
+
+        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
+        addAccountButton.performClick();
+
+        assertThat(mFragment.getFragmentManager().findFragmentById(
+                R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
+    }
+
     private void initFragment() {
         mFragment = new AccountSettingsFragment();
         mActivity.launchFragment(mFragment);
+    }
+
+    private void addAccountAndDescription(int profileId, String accountName, int labelId) {
+        String type = accountName + "_type";
+        getShadowAccountManager().addAccountAsUser(profileId, new Account(accountName, type));
+        getShadowAccountManager().addAuthenticatorAsUser(profileId,
+                new AuthenticatorDescription(type, "com.android.car.settings",
+                        labelId, /* iconId= */ R.drawable.ic_add, /* smallIconId= */
+                        0, /* prefId= */ 0));
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadows.shadowOf(UserManager.get(application));
+    }
+
+    private ShadowAccountManager getShadowAccountManager() {
+        return Shadow.extract(AccountManager.get(application));
     }
 }
