@@ -119,11 +119,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected boolean isCurrentProcessAdminUser() {
-        return sMockInstance.isCurrentProcessAdminUser();
-    }
-
-    @Implementation
     protected boolean isCurrentProcessUserHasRestriction(String restriction) {
         return sMockInstance.isCurrentProcessUserHasRestriction(restriction);
     }

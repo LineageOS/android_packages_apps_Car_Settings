@@ -18,52 +18,32 @@ package com.android.car.settings.development;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
 
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
-import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
-
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowUserManager;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLocalBroadcastManager.class})
 public class DevelopmentSettingsUtilTest {
 
     private Context mContext;
     private UserManager mUserManager;
 
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
         mUserManager = UserManager.get(mContext);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
-        ShadowLocalBroadcastManager.reset();
     }
 
     @Test
@@ -72,8 +52,8 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isFalse();
     }
 
     @Test
@@ -82,8 +62,8 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isTrue();
     }
 
     @Test
@@ -93,8 +73,8 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isFalse();
     }
 
     @Test
@@ -104,8 +84,8 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isTrue();
     }
 
     @Test
@@ -115,8 +95,8 @@ public class DevelopmentSettingsUtilTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isFalse();
     }
 
     @Test
@@ -131,8 +111,8 @@ public class DevelopmentSettingsUtilTest {
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
                 true);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isFalse();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isFalse();
     }
 
     @Test
@@ -147,8 +127,8 @@ public class DevelopmentSettingsUtilTest {
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
                 false);
 
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext,
-                mCarUserManagerHelper, mUserManager)).isTrue();
+        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
+                .isTrue();
     }
 
     @Test
@@ -188,11 +168,7 @@ public class DevelopmentSettingsUtilTest {
     }
 
     private void setCurrentUserWithFlags(int flags) {
-        UserInfo userInfo = new UserInfo(UserHandle.myUserId(), null, flags);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser())
-                .thenReturn(UserInfo.FLAG_ADMIN == (flags & UserInfo.FLAG_ADMIN));
-        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(userInfo);
-        getShadowUserManager().addUser(userInfo.id, userInfo.name, userInfo.flags);
+        getShadowUserManager().addUser(UserHandle.myUserId(), "test name", flags);
     }
 
     private ShadowUserManager getShadowUserManager() {

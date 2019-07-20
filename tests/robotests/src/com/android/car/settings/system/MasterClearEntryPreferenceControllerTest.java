@@ -23,9 +23,6 @@ import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
@@ -35,34 +32,28 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
-import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link MasterClearEntryPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class})
 public class MasterClearEntryPreferenceControllerTest {
+    private static final int SECONDARY_USER_ID = 10;
 
     private Context mContext;
     private MasterClearEntryPreferenceController mController;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
 
         mController = new PreferenceControllerTestHelper<>(mContext,
@@ -74,35 +65,34 @@ public class MasterClearEntryPreferenceControllerTest {
     public void tearDown() {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 0);
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
     public void getAvailabilityStatus_nonAdminUser_disabledForUser() {
-        setCurrentUserWithFlags(/* flags= */ 0);
+        createAndSwitchToSecondaryUserWithFlags(/* flags= */ 0);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 
     @Test
     public void getAvailabilityStatus_adminUser_available() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
+        createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_ADMIN);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
     public void getAvailabilityStatus_adminUser_restricted_disabledForUser() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_FACTORY_RESET)).thenReturn(true);
+        createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_ADMIN);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(SECONDARY_USER_ID), DISALLOW_FACTORY_RESET, true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 
     @Test
     public void getAvailabilityStatus_demoMode_demoUser_available() {
-        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
+        createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_DEMO);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
@@ -111,20 +101,18 @@ public class MasterClearEntryPreferenceControllerTest {
 
     @Test
     public void getAvailabilityStatus_demoMode_demoUser_restricted_disabledForUser() {
-        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_FACTORY_RESET)).thenReturn(true);
+        createAndSwitchToSecondaryUserWithFlags(UserInfo.FLAG_DEMO);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(SECONDARY_USER_ID), DISALLOW_FACTORY_RESET, true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVICE_DEMO_MODE, 1);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
 
-    private void setCurrentUserWithFlags(int flags) {
-        UserInfo userInfo = new UserInfo(UserHandle.myUserId(), null, flags);
-        when(mCarUserManagerHelper.isCurrentProcessAdminUser())
-                .thenReturn(UserInfo.FLAG_ADMIN == (flags & UserInfo.FLAG_ADMIN));
-        getShadowUserManager().addUser(userInfo.id, userInfo.name, userInfo.flags);
+    private void createAndSwitchToSecondaryUserWithFlags(int flags) {
+        getShadowUserManager().addUser(SECONDARY_USER_ID, "test name", flags);
+        getShadowUserManager().switchUser(SECONDARY_USER_ID);
     }
 
     private ShadowUserManager getShadowUserManager() {
