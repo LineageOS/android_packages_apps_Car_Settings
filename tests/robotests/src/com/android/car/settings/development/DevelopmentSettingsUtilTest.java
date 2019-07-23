@@ -47,7 +47,7 @@ public class DevelopmentSettingsUtilTest {
     }
 
     @Test
-    public void isEnabled_settingsOff_isAdmin_notDemo_shouldReturnFalse() {
+    public void isEnabled_settingsOff_isAdmin_shouldReturnFalse() {
         setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
@@ -57,7 +57,7 @@ public class DevelopmentSettingsUtilTest {
     }
 
     @Test
-    public void isEnabled_settingsOn_isAdmin_notDemo_shouldReturnTrue() {
+    public void isEnabled_settingsOn_isAdmin_shouldReturnTrue() {
         setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
@@ -67,7 +67,7 @@ public class DevelopmentSettingsUtilTest {
     }
 
     @Test
-    public void isEnabled_settingsOn_notAdmin_notDemo_shouldReturnFalse() {
+    public void isEnabled_settingsOn_notAdmin_shouldReturnFalse() {
         setCurrentUserWithFlags(/* flags= */ 0);
 
         Settings.Global.putInt(mContext.getContentResolver(),
@@ -78,30 +78,8 @@ public class DevelopmentSettingsUtilTest {
     }
 
     @Test
-    public void isEnabled_settingsOn_notAdmin_isDemo_shouldReturnTrue() {
-        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
-
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
-
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
-                .isTrue();
-    }
-
-    @Test
-    public void isEnabled_settingsOff_notAdmin_isDemo_shouldReturnFalse() {
-        setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
-
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
-
-        assertThat(DevelopmentSettingsUtil.isDevelopmentSettingsEnabled(mContext, mUserManager))
-                .isFalse();
-    }
-
-    @Test
     public void isEnabled_hasDisallowDebuggingRestriction_shouldReturnFalse() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN | UserInfo.FLAG_DEMO);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
@@ -117,7 +95,7 @@ public class DevelopmentSettingsUtilTest {
 
     @Test
     public void isEnabled_doesNotHaveDisallowDebuggingRestriction_shouldReturnTrue() {
-        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN | UserInfo.FLAG_DEMO);
+        setCurrentUserWithFlags(UserInfo.FLAG_ADMIN);
 
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);

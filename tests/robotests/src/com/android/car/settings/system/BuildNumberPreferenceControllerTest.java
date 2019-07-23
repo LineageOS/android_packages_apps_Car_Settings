@@ -101,10 +101,10 @@ public class BuildNumberPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceClicked_demoUser_returnsTrue() {
+    public void testHandlePreferenceClicked_demoUser_returnsFalse() {
         setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
 
-        assertThat(mController.handlePreferenceClicked(mPreference)).isTrue();
+        assertThat(mController.handlePreferenceClicked(mPreference)).isFalse();
     }
 
     @Test
