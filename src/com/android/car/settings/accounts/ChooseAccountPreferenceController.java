@@ -20,12 +20,15 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
+import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.settingslib.accounts.AuthenticatorHelper;
@@ -42,12 +45,15 @@ import java.util.Set;
  *
  * <p>Largely derived from {@link com.android.settings.accounts.ChooseAccountActivity}
  */
-public class ChooseAccountPreferenceController extends PreferenceController<PreferenceGroup> {
+public class ChooseAccountPreferenceController extends
+        PreferenceController<PreferenceGroup> implements ActivityResultCallback {
     @VisibleForTesting
     static final int ADD_ACCOUNT_REQUEST_CODE = 100;
 
     private AccountTypesHelper mAccountTypesHelper;
     private ArrayMap<String, AuthenticatorDescriptionPreference> mPreferences = new ArrayMap<>();
+    private boolean mIsStarted = false;
+    private boolean mHasPendingBack = false;
 
     public ChooseAccountPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -86,7 +92,16 @@ public class ChooseAccountPreferenceController extends PreferenceController<Pref
      */
     @Override
     protected void onStartInternal() {
+        mIsStarted = true;
         mAccountTypesHelper.listenToAccountUpdates();
+
+        if (mHasPendingBack) {
+            mHasPendingBack = false;
+
+            // Post the fragment navigation because FragmentManager may still be executing
+            // transactions during onStart.
+            new Handler().post(() -> getFragmentController().goBack());
+        }
     }
 
     /**
@@ -95,6 +110,7 @@ public class ChooseAccountPreferenceController extends PreferenceController<Pref
     @Override
     protected void onStopInternal() {
         mAccountTypesHelper.stopListeningToAccountUpdates();
+        mIsStarted = false;
     }
 
     /** Forces a refresh of the authenticator description preferences. */
@@ -145,12 +161,7 @@ public class ChooseAccountPreferenceController extends PreferenceController<Pref
                         Intent intent = AddAccountActivity.createAddAccountActivityIntent(
                                 getContext(), preference.getAccountType());
                         getFragmentController().startActivityForResult(intent,
-                                ADD_ACCOUNT_REQUEST_CODE,
-                                (requestCode, resultCode, data) -> {
-                                    if (requestCode == ADD_ACCOUNT_REQUEST_CODE) {
-                                        getFragmentController().goBack();
-                                    }
-                                });
+                                ADD_ACCOUNT_REQUEST_CODE, /* callback= */ this);
                         return true;
                     });
             authenticatorDescriptionPreferences.add(preference);
@@ -167,6 +178,17 @@ public class ChooseAccountPreferenceController extends PreferenceController<Pref
     @VisibleForTesting
     AuthenticatorHelper getAuthenticatorHelper() {
         return mAccountTypesHelper.getAuthenticatorHelper();
+    }
+
+    @Override
+    public void processActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == ADD_ACCOUNT_REQUEST_CODE) {
+            if (mIsStarted) {
+                getFragmentController().goBack();
+            } else {
+                mHasPendingBack = true;
+            }
+        }
     }
 
     /** Handles adding accounts. */

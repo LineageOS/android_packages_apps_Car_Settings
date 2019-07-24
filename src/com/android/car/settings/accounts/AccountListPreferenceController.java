@@ -58,6 +58,7 @@ public class AccountListPreferenceController extends
     private final ArrayMap<String, Preference> mPreferences = new ArrayMap<>();
     private AuthenticatorHelper mAuthenticatorHelper;
     private String[] mAuthorities;
+    private boolean mListenerRegistered = false;
 
     public AccountListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -96,6 +97,7 @@ public class AccountListPreferenceController extends
     protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
         mCarUserManagerHelper.registerOnUsersUpdateListener(this);
+        mListenerRegistered = true;
     }
 
     /**
@@ -105,6 +107,7 @@ public class AccountListPreferenceController extends
     protected void onStopInternal() {
         mAuthenticatorHelper.stopListeningToAccountUpdates();
         mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
+        mListenerRegistered = false;
     }
 
     @Override
@@ -133,8 +136,12 @@ public class AccountListPreferenceController extends
                 getContext().getString(R.string.account_list_title, mUserInfo.name));
 
         // Recreate the authentication helper to refresh the list of enabled accounts
+        mAuthenticatorHelper.stopListeningToAccountUpdates();
         mAuthenticatorHelper = new AuthenticatorHelper(getContext(), mUserInfo.getUserHandle(),
                 this);
+        if (mListenerRegistered) {
+            mAuthenticatorHelper.listenToAccountUpdates();
+        }
 
         Set<String> preferencesToRemove = new HashSet<>(mPreferences.keySet());
         List<? extends Preference> preferences = getAccountPreferences(preferencesToRemove);
