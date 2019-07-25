@@ -66,7 +66,7 @@ public class BuildNumberPreferenceController extends PreferenceController<Prefer
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        if (!mUserManager.isAdminUser() && !mUserManager.isDemoUser()) {
+        if (!mUserManager.isAdminUser()) {
             return false;
         }
 
