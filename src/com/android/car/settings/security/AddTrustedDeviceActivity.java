@@ -189,15 +189,16 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
         }
         mCarTrustAgentEnrollmentManager.setEnrollmentCallback(mCarTrustAgentEnrollmentCallback);
         mCarTrustAgentEnrollmentManager.setBleCallback(mCarTrustAgentBleCallback);
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        // When activity is pausing not because of a configuration change
+        // When activity is pausing not because of a configuration change, e.g. user click
+        // notifications.
         if (getChangingConfigurations() == 0) {
             mCarTrustAgentEnrollmentManager.terminateEnrollmentHandshake();
+            finish();
         }
     }
 
