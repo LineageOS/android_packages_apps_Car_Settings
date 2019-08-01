@@ -177,27 +177,27 @@ public class AccountDetailsFragment extends SettingsFragment implements
         private static final String KEY_ACCOUNT = "account";
         private static final String DIALOG_TAG = "confirmRemoveAccount";
         private static final Logger LOG = new Logger(ConfirmRemoveAccountDialogFragment.class);
+
+        private Fragment mTargetFragment;
         private final AccountManagerCallback<Bundle> mCallback =
                 future -> {
                     // If already out of this screen, don't proceed.
-                    if (!getTargetFragment().isResumed()) {
+                    if (!mTargetFragment.isResumed()) {
                         return;
                     }
 
                     boolean success = false;
                     try {
-                        success =
-                                future.getResult().getBoolean(
-                                        AccountManager.KEY_BOOLEAN_RESULT);
+                        success = future.getResult().getBoolean(AccountManager.KEY_BOOLEAN_RESULT);
                     } catch (OperationCanceledException | IOException | AuthenticatorException e) {
                         LOG.v("removeAccount error: " + e);
                     }
-                    final Activity activity = getTargetFragment().getActivity();
+
+                    Activity activity = mTargetFragment.getActivity();
                     if (!success && activity != null && !activity.isFinishing()) {
-                        ErrorDialog.show(getTargetFragment(),
-                                R.string.remove_account_error_title);
+                        ErrorDialog.show(mTargetFragment, R.string.remove_account_error_title);
                     } else {
-                        getTargetFragment().getFragmentManager().popBackStack();
+                        mTargetFragment.getFragmentManager().popBackStack();
                     }
                 };
         private Account mAccount;
@@ -205,8 +205,7 @@ public class AccountDetailsFragment extends SettingsFragment implements
 
         public static void show(
                 Fragment parent, Account account, UserHandle userHandle) {
-            final ConfirmRemoveAccountDialogFragment dialog =
-                    new ConfirmRemoveAccountDialogFragment();
+            ConfirmRemoveAccountDialogFragment dialog = new ConfirmRemoveAccountDialogFragment();
             Bundle bundle = new Bundle();
             bundle.putParcelable(KEY_ACCOUNT, account);
             bundle.putParcelable(Intent.EXTRA_USER, userHandle);
@@ -221,6 +220,7 @@ public class AccountDetailsFragment extends SettingsFragment implements
             final Bundle arguments = getArguments();
             mAccount = arguments.getParcelable(KEY_ACCOUNT);
             mUserHandle = arguments.getParcelable(Intent.EXTRA_USER);
+            mTargetFragment = getTargetFragment();
         }
 
         @Override
