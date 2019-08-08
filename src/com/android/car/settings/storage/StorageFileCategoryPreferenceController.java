@@ -44,6 +44,13 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
     }
 
     @Override
+    protected void onCreateInternal() {
+        super.onCreateInternal();
+        getPreference().setSelectable(
+                getFilesIntent().resolveActivity(getContext().getPackageManager()) != null);
+    }
+
+    @Override
     protected long calculateCategoryUsage(SparseArray<StorageAsyncLoader.AppsStorageResult> result,
             long usedSizeBytes) {
         StorageAsyncLoader.AppsStorageResult data = result.get(
