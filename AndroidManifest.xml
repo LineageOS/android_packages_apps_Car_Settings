@@ -336,6 +336,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".users.UserSwitcherActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:windowSoftInputMode="adjustResize"
+                  android:exported="true">
+        </activity>
+
         <activity android:name=".security.AddTrustedDeviceActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
