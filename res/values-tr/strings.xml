@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+    Copyright 2018 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,55 +29,88 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ekranı karartma, dokunmatik ekran, pil"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"loş ekran, gece, tonlama"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"Gece modu"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"Ağ ve internet"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"Mobil ağ"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobil veri"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Verilere mobil ağ üzerinden erişim"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Mobil veri kapatılsın mı?"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"Veri kullanımı"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Veri uyarısı ve limiti"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Uygulama veri kullanımı döngüsü"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Veri uyarısı oluştur"</string>
+    <string name="data_warning" msgid="116776633806885370">"Veri uyarısı"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"Veri limiti ayarla"</string>
+    <string name="data_limit" msgid="227338836292511425">"Veri limiti"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Veri kullanımını sınırlama"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Aracınızın ana birimi, belirlediğiniz mobil veri limitine ulaşıldığında mobil veriyi kapatır.\n\nVeri kullanımı ana birim tarafından ölçülür ve operatörünüz kullanımı farklı bir şekilde hesaplayabilir. Bu nedenle, risk almadan güvenli bir limit belirleyin."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Kablosuz"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"Kablosuz erişim noktaları kurun ve bunları yönetin"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Kablosuz açılıyor…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Kablosuz kapatılıyor…"</string>
+    <string name="loading_wifi_list" msgid="8584901433195876465">"Kablosuz listesi yükleniyor"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"Kablosuz devre dışı"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Ağ unutulamadı"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Ağa bağlanılamadı"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Ağ ekle"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Kablosuz devre dışı"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Bağlan"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Şifre"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Şifreyi göster"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"Ağ adı"</string>
+    <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID\'yi girin"</string>
     <string name="wifi_security" msgid="158358046038876532">"Güvenlik"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"Sinyal gücü"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"Sinyal gücü"</string>
     <string name="wifi_status" msgid="5688013206066543952">"Durum"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"Bağlantı hızı"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"Frekans"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP adresi"</string>
+    <string name="show_password" msgid="2074628020371139240">"Şifreyi göster"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"Ağ adını girin"</string>
+    <string name="default_password_summary" msgid="8789594645836902982">"Şifreyi girin"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"Zayıf"</item>
-    <item msgid="2032262610626057081">"Yeterli"</item>
-    <item msgid="3859756017461098953">"İyi"</item>
-    <item msgid="1521103743353335724">"Mükemmel"</item>
+    <item msgid="7683058295076342057">"Zayıf"</item>
+    <item msgid="1639222824821660744">"Yeterli"</item>
+    <item msgid="1838705897358163300">"İyi"</item>
+    <item msgid="6067166649320533751">"Mükemmel"</item>
   </string-array>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"Bluetooth"</string>
-    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"Bluetooth\'u aç"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"Bluetooth"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"Bluetooth devre dışı"</string>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mb/sn."</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Ağ ayrıntıları"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC adresi"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP adresi"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Alt ağ maskesi"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 adresleri"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Ağ geçidi"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Kablosuz tercihleri"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Kablosuzu otomatik olarak aç"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Ev ağınız gibi yüksek kaliteli kayıtlı ağların yakınında olduğunuzda kablosuz özelliği tekrar açılır"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Konum kapalı olduğundan kullanılamıyor. "<annotation id="link">"Konum"</annotation>"\'u açın."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Kablosuz taraması açılsın mı?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aç"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Kablosuz tarama açıldı"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Mobil veriye otomatik olarak geç"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Kablosuz internet erişimi yoksa mobil veri kullan. Veri kullanımı ücretleri uygulanabilir."</string>
+    <string name="learn_more" msgid="8214605928933358604">"Daha fazla bilgi"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"Bluetooth"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"Bağlantıları yönetin, cihaz adını girin ve bulunabilirlik ayarını yapın"</string>
-    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"Bilgisayar"</string>
-    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"Mikrofonlu kulaklık"</string>
-    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"Telefon"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"Görüntüleme"</string>
-    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"Kulaklık"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"Giriş Çevre Birimi"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"Bluetooth"</string>
-    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"Eşlenen cihazlar"</string>
-    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"Kullanılabilir cihazlar"</string>
-    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"Eşlenen cihaz yok"</string>
-    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"Kullanılabilir cihaz yok"</string>
-    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"Eşlenen cihaz"</string>
-    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"Ad"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"Şunun için kullan:"</string>
-    <string name="wifi_ssid_hint" msgid="4155050863239489553">"Bluetooth cihazının adını değiştirin"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"Adsız cihaz"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"Eşlenen cihazlar"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"Yeni cihaz eşle"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth, eşleme yapmak için açılır"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Cihazla bağlantı kesilsin mi?"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Aracınızın <xliff:g id="DEVICE_NAME">%1$s</xliff:g> bağlantısı kesilecek."</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Aracın Bluetooth adresi: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Cihazın Bluetooth adresi: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"Araç adı"</string>
+    <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Bu aracın adını değiştirin"</string>
+    <string name="bluetooth_rename_device" msgid="8406868875363878712">"Cihazın adını değiştir"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"Yeniden adlandır"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"Kullanılabilir cihazlar"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"Profiller"</string>
+    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"Bluetooth eşleme isteği"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"Eşleştir ve bağlan"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"Bluetooth"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Bluetooth eşleme kodu"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN, harf veya simge içerir"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Eşleme kodunu girip Return veya Enter tuşuna basın"</string>
@@ -90,8 +122,16 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Genellikle 0000 veya 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Eşleme isteği"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ile eşlemek için dokunun."</string>
-    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"Diller"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Diller ve giriş"</string>
+    <string name="keyboard_settings" msgid="1959697870618278081">"Klavye"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Klavyeleri yönet"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"Metin okuma çıkışı"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Tercih edilen motor"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Mevcut motor"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"Konuşma Hızı"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"Perde"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"Sıfırla"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ses"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Zil sesi düzeyi"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Gezinme ses düzeyi"</string>
@@ -100,30 +140,65 @@
     <string name="media_volume_title" msgid="6697416686272606865">"Medya"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"Müziğin ve videoların ses düzeyini ayarla"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarm"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"Telefon zil sesi"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"Varsayılan bildirim sesi"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Varsayılan alarm sesi"</string>
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Uygulamalar ve bildirimler"</string>
+    <string name="all_applications" msgid="7798210477486822168">"Tüm uygulamaları göster"</string>
+    <string name="default_applications" msgid="1558183275638697087">"Varsayılan uygulamalar"</string>
     <string name="applications_settings" msgid="794261395191035632">"Uygulama bilgileri"</string>
+    <string name="force_stop" msgid="2153183697014720520">"Zorla durdur"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"Zorla durdurulsun mu?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"Uygulama zorla durdurulursa hatalı davranabilir."</string>
     <string name="disable_text" msgid="4358165448648990820">"Devre dışı bırak"</string>
     <string name="enable_text" msgid="1794971777861881238">"Etkinleştir"</string>
+    <string name="uninstall_text" msgid="277907956072833012">"Yüklemeyi kaldır"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"Bu uygulamayı devre dışı bırakırsanız Android ve diğer uygulamalar artık beklendiği gibi çalışmayabilir."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Uygulamayı devre dışı bırak"</string>
     <string name="permissions_label" msgid="2701446753515612685">"İzinler"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Sürüm: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Hiçbir izin verilmedi"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Hiçbir izin istenmedi"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Veri kullanımı"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uygulama veri kullanımı"</string>
-    <string name="force_stop" msgid="2153183697014720520">"Zorla durdur"</string>
     <string name="computing_size" msgid="5791407621793083965">"Hesaplanıyor…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ek izin</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ek izin</item>
     </plurals>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Asistan ve ses girişi"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"Asistan uygulaması"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"Ekrandaki metni kullan"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Asistan uygulamasının, ekran içeriklerine metin biçiminde erişmesine izin ver"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Ekran görüntüsü kullan"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Asistan uygulamasının ekrandaki bir resme erişmesine izin ver"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"Otomatik doldurma hizmeti"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"Yok"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"Seçilen"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"Asistan, ekranınızda görünür olan veya uygulamaların içinden erişilebilen bilgiler dahil olmak üzere sisteminizde kullanılan uygulamalar hakkındaki bilgileri okuyabilecektir."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Bu uygulamaya güvendiğinizden emin olun&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Otomatik Doldurma&gt;%1$s&lt;/xliff:g&gt; özelliği, otomatik doldurulabilecek alanları belirlemek için ekranınızdaki bilgileri kullanır."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Hizmet ekle"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Konum"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yeni Konum İstekleri"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Yeni konum isteği yok"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uygulama düzeyinde izinler"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Tarama"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"Konum Hizmetleri"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Kablosuz taraması"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Uygulamaların ve hizmetlerin kablosuz ağları Kablosuz özelliği kapalıyken bile her zaman taramasına izin verin. Bu özellik, konuma dayalı özellikleri ve hizmetleri iyileştirme gibi amaçlar için kullanılabilir."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth taraması"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Uygulamaların ve hizmetlerin etrafınızdaki cihazları Bluetooth kapalıyken bile her zaman taramasına izin verin. Bu özellik, konuma dayalı özellikleri ve hizmetleri iyileştirme gibi amaçlar için kullanılabilir."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"Sistem güncellemeleri"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"Sistem güncellemeleri"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android sürümü"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android güvenlik yaması düzeyi"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Ana bant sürümü"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Çekirdek sürümü"</string>
     <string name="build_number" msgid="3997326631001009102">"Derleme numarası"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth adresi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Kullanılamıyor"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Durum"</string>
     <string name="device_status" msgid="267298179806290920">"Durum"</string>
@@ -140,12 +215,49 @@
     <string name="copyright_title" msgid="4220237202917417876">"Telif hakkı"</string>
     <string name="license_title" msgid="936705938435249965">"Lisans"</string>
     <string name="terms_title" msgid="5201471373602628765">"Şartlar ve koşullar"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"Sistem Web Görünümü Lisansı"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"Sistem Web Görünümü lisansları"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Duvar kağıtları"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Uydu görüntüsü sağlayıcıları:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"Üçüncü taraf lisansları"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Lisansları yüklemeyle ilgili bir sorun var."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Yükleniyor…"</string>
+    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
+      <item quantity="other">Geliştirici olmanıza <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> adım kaldı.</item>
+      <item quantity="one">Geliştirici olmanıza <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> adım kaldı.</item>
+    </plurals>
+    <string name="show_dev_on" msgid="5339077400040834808">"Artık bir geliştiricisiniz!"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"Gerekli değil, siz zaten bir geliştiricisiniz."</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"Geliştirici seçenekleri"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Sıfırlama seçenekleri"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"Ağı, uygulamaları veya cihazı sıfırlama"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"Ağı sıfırla"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"Bu işlem, şunlar dahil tüm ağ ayarlarını sıfırlayacak:"</string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Kablosuz"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobil veri"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"Tüm araç eSIM\'lerini sil"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"Bu işlem, hizmet planınızı iptal etmez."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM\'ler sıfırlanamıyor"</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"Ağ seçin"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"Ayarları sıfırla"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"Sıfırlansın mı?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Tüm ağ ayarları sıfırlansın mı? Bu işlem geri alınamaz!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Ayarları sıfırla"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"Ağ ayarları sıfırlandı"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Uygulama tercihlerini sıfırla"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Bu işlem, şunlarla ilgili tüm tercihleri sıfırlayacaktır:\n\n"<li>"Devre dışı bırakılan uygulamalar"</li>\n<li>"Devre dışı bırakılan uygulama bildirimleri"</li>\n<li>"İşlemler için varsayılan uygulamalar"</li>\n<li>"Uygulamalar için arka plan verileri kısıtlamaları"</li>\n<li>"Tüm izin kısıtlamaları"</li>\n\n"Uygulama verileriniz kaybolmayacak."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Uygulamaları sıfırla"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Uygulama tercihleri sıfırlandı"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Tüm verileri sil (fabrika ayarları)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"Bu işlem, aracınızın ana biriminden şunlar dahil tüm verileri siler:\n\n"<li>"Google hesabınız"</li>\n<li>"Sistem ve uygulama verileri ile ayarları"</li>\n<li>"İndirilen uygulamalar"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"Şu anda oturum açmış olduğunuz hesaplar:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"Bu araçta başka kullanıcılar da var."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"Aracı sıfırla"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Sıfırlansın mı?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Tüm kişisel bilgileriniz ve indirdiğiniz uygulamalar silinsin mi? Bu işlem geri alınamaz!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Her şeyi sil"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"Siliniyor"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"Lütfen bekleyin..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Tarih ve saat"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"Tarih ve saati ayarlayın"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Tarihi, saati, saat dilimini ve biçimleri ayarlayın"</string>
@@ -165,23 +277,59 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Saat dilimine göre sırala"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Tarih"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Saat"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Kullanıcı ekle"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Hesap ekle"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"Kullanıcıyı sil"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"Yeni kullanıcı"</string>
-    <string name="user_guest" msgid="3465399481257448601">"Misafir"</string>
     <string name="user_admin" msgid="1535484812908584809">"Yönetici"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"Yönetici olarak oturum açıldı"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Tüm yönetici izinleri"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Yönetici yap"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Kullanıcı, diğer Yöneticiler dahil tüm kullanıcıları silebilecek ve sistemi fabrika ayarlarına sıfırlayabilecektir."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"Bu işlem geri alınamaz."</string>
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"Evet, yönetici yap"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"Yeni kullanıcı oluşturma"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"Telefon araması yapma"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"Araç mobil verisiyle mesajlaşma"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"Yeni uygulama yükleme"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Uygulamaları kaldırma"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"Kullanıcı ekle"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"Yeni kullanıcı"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Kullanıcı eklensin mi?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni kullanıcı eklediğinizde, bu kişinin alanını ayarlaması gerekir."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncelleyebilir."</string>
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"Kullanıcı sınırına ulaşıldı"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="other">En fazla <xliff:g id="COUNT">%d</xliff:g> kullanıcı oluşturabilirsiniz.</item>
+      <item quantity="one">Yalnızca bir kullanıcı oluşturulabilir.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"Yeni kullanıcı oluşturulamadı"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"Bu kullanıcı silinsin mi?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Tüm uygulamalar ve veriler silinecek."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"Kullanıcı silinemedi."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"Kapat"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"Tekrar dene"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"Kullanıcı silinsin mi?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"Bu aracın kalan son kullanıcısı silindikten sonra yeni bir yönetici kullanıcı oluşturulacak."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"Bu kullanıcıyla ilişkili tüm veriler, ayarlar ve uygulamalar silinecek. Sistemi tekrar ayarlamanız gerekecek."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"Yeni yönetici seçin"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"En az bir yöneticiye ihtiyacınız var. Bu yöneticiyi silmek için önce yedek yönetici seçin."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"Yönetici seçin"</string>
+    <string name="user_guest" msgid="3465399481257448601">"Misafir"</string>
+    <string name="start_guest_session" msgid="4438752398760283201">"Misafir"</string>
     <string name="user_switch" msgid="6544839750534690781">"Değiştir"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Siz (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Ad"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"Yapılandırılmamış"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"Kullanıcı adını düzenleme"</string>
     <string name="users_list_title" msgid="770764290290240909">"Kullanıcılar"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s için izinler verildi"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hesaplar"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"Kullanıcı"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Hesap ekle"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hiçbir hesap eklenmedi"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> adlı kullanıcının hesapları"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"Verileri otomatik olarak senkronize et"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Uygulamaların verileri otomatik olarak yenilemesine izin ver"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Otomatik veri senk. açılsın mı?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Hesaplarınızda web üzerinden yaptığınız tüm değişiklikler cihazınıza otomatik olarak kopyalanacaktır.\n\nBazı hesaplar telefonda yaptığınız değişiklikleri de web\'e otomatik olarak kopyalayabilir. Google Hesaplarının işleyişi bu şekildedir."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Otomatik senk. kapatılsın mı?"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Bu işlem verileri korur ancak son bilgileri almak için her bir hesabı manuel olarak senkronize etmeniz gerekecektir. Güncelleme olduğunda bildirim de almazsınız."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hesap bilgileri"</string>
     <string name="add_account_title" msgid="5988746086885210040">"Hesap ekle"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Hesap ekleme"</string>
@@ -189,16 +337,20 @@
     <string name="remove_account_title" msgid="8840386525787836381">"Hesabı kaldır"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"Hesap kaldırılsın mı?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"Bu hesabın kaldırılması, hesaba ait tüm mesajların, kişilerin ve cihazdaki diğer verilerin silinmesine neden olacak!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"Yöneticiniz bu değişikliğe izin vermiyor"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"Kullanıcı kaldırılsın mı?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"Tüm uygulamalar ve veriler silinecek."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"Kullanıcı kaldırılamadı."</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"Tekrar denensin mi?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"Kapat"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"Tekrar dene"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Kullanıcı eklensin mi?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"Yeni kullanıcı eklediğinizde, bu kişinin alanını ayarlaması gerekir."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"Herhangi bir kullanıcı, diğer tüm kullanıcılar için uygulamaları güncelleyebilir."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"Hesap kaldırılamadı."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"Hesap senkronizasyonu"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"Senkronizasyon <xliff:g id="ID_1">%1$d</xliff:g>/<xliff:g id="ID_2">%2$d</xliff:g> öğe için açık"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"Senkronizasyon tüm öğeler için açık"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"Senkronizasyon tüm öğeler için kapalı"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"Senkronizasyon KAPALI"</string>
+    <string name="sync_error" msgid="6698021343089247914">"Senkronizasyon hatası"</string>
+    <string name="last_synced" msgid="4745124489150101529">"Son senkronizasyon: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="sync_in_progress" msgid="1237573373537382416">"Şimdi senkronize ediliyor…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"Şimdi senkronize etmek için dokunun<xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"Şimdi senkronize et"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Senkronizasyonu iptal et"</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"Şu anda senkronizasyon sorunu yaşanıyor. Senkronizasyon kısa bir süre sonra tekrar devreye girecek."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Güvenlik"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Ekran kilidi"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Yok"</string>
@@ -206,7 +358,7 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Şifre"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"Kilit türü seçin"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"Ekran kilidi seçenekleri"</string>
+    <string name="screen_lock_options" msgid="8531177937577168185">"Kilit seçenekleri"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Deseninizi girin"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Onayla"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"Yeniden çiz"</string>
@@ -216,7 +368,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"Ekran kilidi ayarlama"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"PIN\'inizi seçin"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"Deseninizi seçin"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"Şifrenizi seçin"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"Şifrenizi seçin"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"Geçerli ekran kilidi"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"Güvenlik için desen oluşturun"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Temizle"</string>
@@ -288,7 +440,28 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"Yaygın olarak kullanılan şifreler BT yöneticiniz tarafından engellenir. Farklı bir şifre deneyin."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Artan, azalan veya tekrar eden rakam dizisine izin verilmez."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran kilidi seçenekleri"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> gün önce"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Güvenilen cihaz ekle"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Güvenilen cihazlar"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> cihaz</item>
+      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> cihaz</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> cihazınız bu araca bağlı olduğunda aracın kilidini açacaktır. <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> cihazınız bir kişinin eline geçerse bu kişi cihazınıza erişebilir."</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Onayla"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Güvenilen cihazı kaldır"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"Bitti"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"Güvenilen cihaz ayarlamak için tamamlayıcı uygulamayı kullanın. Ayarlama yapmanızın ardından, telefonunuz araç tarafından algılandığında kullanıcı profilinizin kilidini açabilirsiniz"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Tamamlayıcı uygulamayı telefonunuza indirin"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları eşlemek için telefonunuzda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçimini yapın"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock, bu cihazın güvenlik özelliklerini algılayamıyor. Güvenilen cihaz, aracınızın korunmasına yardımcı olmak için yalnızca siz kilidini açtıktan sonra aracı açık tutabilecektir. Güvenilen cihazınız başkasının elinde olsa bile aracınız yakındayken aracın kilidini açık tutabilir."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> adlı cihazı güvenilen cihaz olarak ekle"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> güvenilen cihaz olarak başarıyla eklendi"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> kaydı başarısız oldu"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Güvenilen cihaz eklemek için kimlik doğrulama yöntemi belirlemeniz gerekir. Güvenilen cihazınız yanınızda değilse profilinize erişmek için kimlik doğrulama gerekecektir."</string>
     <string name="forget" msgid="3971143908183848527">"Unut"</string>
+    <string name="connect" msgid="5861699594602380150">"Bağlan"</string>
+    <string name="disconnect" msgid="6140789953324820336">"Bağlantıyı kes"</string>
     <string name="delete_button" msgid="5840500432614610850">"Sil"</string>
     <string name="remove_button" msgid="6664656962868194178">"Kaldır"</string>
     <string name="cancel" msgid="750286395700355455">"İptal et"</string>
@@ -298,8 +471,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"Demo modundan çık"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Bu işlem, demo hesabını silecek ve sistemi fabrika verilerine sıfırlayacak. Tüm kullanıcı verileri kaybolacak."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çık"</string>
-    <string name="suggestion_primary_button" msgid="6421115494714083020">"kurulumu bitir"</string>
-    <string name="suggestion_secondary_button" msgid="7075088546904464681">"şimdi değil"</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"KAPAT"</string>
     <string name="restricted_while_driving" msgid="6217369093121968299">"Sürüş sırasında bu özellik kullanılamaz."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Sürüş sırasında kullanıcı eklenemez."</string>
 </resources>

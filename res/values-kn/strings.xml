@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
- * Copyright (c) 2017, The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
-*/
+    Copyright 2018 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
  -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
@@ -30,55 +29,88 @@
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"ಡಿಮ್‌‌ ಪರದೆ, ಟಚ್‌ಸ್ಕ್ರೀನ್, ಬ್ಯಾಟರಿ"</string>
     <string name="keywords_display_night_display" msgid="2922294576679769957">"ಮಂದ ಪರದೆ, ರಾತ್ರಿ ,ಟಿಂಟ್"</string>
     <string name="night_mode_tile_label" msgid="6603597795502131664">"ರಾತ್ರಿ ಮೋಡ್"</string>
+    <string name="network_and_internet" msgid="4229023630498537530">"ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು ಇಂಟರ್ನೆಟ್"</string>
+    <string name="mobile_network_settings" msgid="1708621113321368597">"ಮೊಬೈಲ್‌ ನೆಟ್‌ವರ್ಕ್‌"</string>
+    <string name="mobile_network_toggle_title" msgid="3515647310810280063">"ಮೊಬೈಲ್ ಡೇಟಾ"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ ಬಳಸಿ ಡೇಟಾ ಪ್ರವೇಶಿಸಿ"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"ಮೊಬೈಲ್ ಡೇಟಾ ಆಫ್ ಮಾಡಬೇಕೆ?"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"ಡೇಟಾ ಬಳಕೆ"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"ಡೇಟಾ ಎಚ್ಚರಿಕೆ ಮತ್ತು ಮಿತಿ"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"ಆ್ಯಪ್‌ ಡೇಟಾ ಬಳಕೆ ಆವರ್ತನೆ"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"ಡೇಟಾ ಎಚ್ಚರಿಕೆಯನ್ನು ಹೊಂದಿಸಿ"</string>
+    <string name="data_warning" msgid="116776633806885370">"ಡೇಟಾ ಎಚ್ಚರಿಕೆ"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"ಡೇಟಾ ಮಿತಿ ಹೊಂದಿಸಿ"</string>
+    <string name="data_limit" msgid="227338836292511425">"ಡೇಟಾ ಮಿತಿ"</string>
+    <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ಡೇಟಾ ಬಳಕೆಯನ್ನು ಮಿತಿಗೊಳಿಸುವಿಕೆ"</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"ನೀವು ಹೊಂದಿಸಿರುವ ಮಿತಿಯನ್ನು ತಲುಪಿದಾಗ ನಿಮ್ಮ ವಾಹನದ ಹೆಡ್ ಯೂನಿಟ್ ಒಮ್ಮೆ ನಿಮ್ಮ ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಆಫ್ ಮಾಡುತ್ತದೆ.\n\n ಡೇಟಾ ಬಳಕೆಯನ್ನು ಹೆಡ್ ಯೂನಿಟ್ ಮೂಲಕ ಅಳೆಯಲಾಗುವ ಕಾರಣ ಮತ್ತು ನಿಮ್ಮ ವಾಹಕವು ಬಳಕೆಯನ್ನು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಪರಿಗಣಿಸಬಹುದಾದ ಕಾರಣ, ಸುರಕ್ಷಿತ ಮಿತಿಯನ್ನು ಹೊಂದಿಸುವುದು ಸೂಕ್ತ."</string>
     <string name="wifi_settings" msgid="7701477685273103841">"ವೈ‑ಫೈ"</string>
-    <string name="wifi_settings_summary" msgid="6095898149997291025">"ವಯರ್‌ಲೆಸ್‌ ಪ್ರವೇಶಿಸುವಿಕೆ ಅಂಶಗಳನ್ನು ಸೆಟಪ್‌ ಮಾಡಿ ಮತ್ತು ನಿರ್ವಹಿಸಿ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"ವೈ-ಫೈ ಆನ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"ವೈ-ಫೈ ಆಫ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="loading_wifi_list" msgid="8584901433195876465">"ವೈ-ಫೈ ಪಟ್ಟಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"ವೈ-ಫೈ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ನೆಟ್‌ವರ್ಕ್‌ ಮರೆಯಲು ವಿಫಲವಾಗಿದೆ"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ನೆಟ್‌ವರ್ಕ್‌ ಸಂಪರ್ಕಿಸಲು ವಿಫಲವಾಗಿದೆ"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"ನೆಟ್‌ವರ್ಕ್‌ ಸೇರಿಸಿ"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"ವೈ-ಫೈ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ಸಂಪರ್ಕಿಸಿ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"ನೆಟ್‌ವರ್ಕ್‌ ಹೆಸರು"</string>
+    <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ನಮೂದಿಸಿ"</string>
     <string name="wifi_security" msgid="158358046038876532">"ಭದ್ರತೆ"</string>
-    <string name="wifi_signal" msgid="1817579728350364549">"ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯ"</string>
+    <string name="wifi_signal_strength" msgid="8507318230553042817">"ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯ"</string>
     <string name="wifi_status" msgid="5688013206066543952">"ಸ್ಥಿತಿ"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"ಲಿಂಕ್ ವೇಗ"</string>
     <string name="wifi_frequency" msgid="8951455949682864922">"ತರಂಗಾಂತರ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ವಿಳಾಸ"</string>
+    <string name="show_password" msgid="2074628020371139240">"ಪಾಸ್‌ವರ್ಡ್ ತೋರಿಸಿ"</string>
+    <string name="default_network_name_summary" msgid="8148402439232464276">"ನೆಟ್‌ವರ್ಕ್ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"</string>
+    <string name="default_password_summary" msgid="8789594645836902982">"ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ"</string>
     <string name="access_point_tag_key" msgid="1517143378973053337">"access_point_tag_key"</string>
   <string-array name="wifi_signals">
     <item msgid="4897376984576812606">"ಕಳಪೆ"</item>
-    <item msgid="2032262610626057081">"ಸಾಮಾನ್ಯ"</item>
-    <item msgid="3859756017461098953">"ಉತ್ತಮ"</item>
-    <item msgid="1521103743353335724">"ಉತ್ಕೃಷ್ಟ"</item>
+    <item msgid="7683058295076342057">"ಕಳಪೆ"</item>
+    <item msgid="1639222824821660744">"ಸಾಮಾನ್ಯ"</item>
+    <item msgid="1838705897358163300">"ಉತ್ತಮ"</item>
+    <item msgid="6067166649320533751">"ಅತ್ಯುತ್ತಮ"</item>
   </string-array>
-    <string name="bluetooth_quick_toggle_title" msgid="637869245038061523">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_quick_toggle_summary" msgid="4390699431893305353">"ಬ್ಲೂಟೂತ್ ಆನ್ ಮಾಡಿ"</string>
-    <string name="bluetooth_settings" msgid="3878243366013638982">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_disabled" msgid="4187409401590350572">"ಬ್ಲೂಟೂತ್‌ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"</string>
+    <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
+    <string name="wifi_band_24ghz" msgid="8972492390639295220">"2.4 GHz"</string>
+    <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"ನೆಟ್‌ವರ್ಕ್‌ ವಿವರಗಳು"</string>
+    <string name="wifi_mac_address" msgid="1466178247802349180">"MAC ವಿಳಾಸ"</string>
+    <string name="wifi_ip_address_title" msgid="300539799594024884">"IP ವಿಳಾಸ"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"ಸಬ್‌ನೆಟ್‌ ಮಾಸ್ಕ್‌"</string>
+    <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
+    <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 ವಿಳಾಸಗಳು"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"ಗೇಟ್‌ವೇ"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"ವೈ-ಫೈ ಆದ್ಯತೆಗಳು"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"ವೈ-ಫೈ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆನ್ ಮಾಡಿ"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"ನಿಮ್ಮ ಮನೆಯ ನೆಟ್‌ವರ್ಕ್‍ನಂತಹ ಉಳಿಸಿದ ಉನ್ನತ-ಗುಣಮಟ್ಟದ ನೆಟ್‌ವರ್ಕ್‌ಗಳ ಸಮೀಪದಲ್ಲಿರುವಾಗ ವೈ-ಫೈ ಸ್ವಯಂ ಆನ್ ಆಗುತ್ತದೆ"</string>
+    <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"ಸ್ಥಳವನ್ನು ಆಫ್ ಮಾಡಿರುವ ಕಾರಣ ಲಭ್ಯವಿಲ್ಲ. "<annotation id="link">"ಸ್ಥಳವನ್ನು"</annotation>" ಆನ್ ಮಾಡಿ."</string>
+    <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"ವೈ-ಫೈ ಸ್ಕ್ಯಾನ್‌ ಮಾಡುವಿಕೆಯನ್ನು ಆನ್ ಮಾಡುವುದೇ?"</string>
+    <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"ಆನ್ ಮಾಡಿ"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್ ಅನ್ನು ಆನ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"ಮೊಬೈಲ್ ಡೇಟಾಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಿಸಿ"</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"ವೈ-ಫೈ ಯಾವುದೇ ಇಂಟರ್ನೆಟ್ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರದಿದ್ದರೆ, ಮೊಬೈಲ್ ಡೇಟಾವನ್ನು ಬಳಸಿ. ಡೇಟಾ ಬಳಕೆಯ ಶುಲ್ಕ ಅನ್ವಯಿಸಬಹುದು."</string>
+    <string name="learn_more" msgid="8214605928933358604">"ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_settings_summary" msgid="4023303473646769835">"ಸಂಪರ್ಕಗಳನ್ನು ನಿರ್ವಹಿಸಿ, ಸಾಧನದ ಹೆಸರು &amp; ಅನ್ವೇಷಣೆಯಾಗುವಿಕೆಯನ್ನು ಹೊಂದಿಸಿ"</string>
-    <string name="bluetooth_talkback_computer" msgid="5223330129934365312">"ಕಂಪ್ಯೂಟರ್‌"</string>
-    <string name="bluetooth_talkback_headset" msgid="6155254514321149935">"ಹೆಡ್‌ಸೆಟ್"</string>
-    <string name="bluetooth_talkback_phone" msgid="8833977851215000426">"ಫೋನ್"</string>
-    <string name="bluetooth_talkback_imaging" msgid="8762390801115154654">"ಇಮೇಜಿಂಗ್"</string>
-    <string name="bluetooth_talkback_headphone" msgid="5362155791551671490">"ಹೆಡ್‌ಫೋನ್"</string>
-    <string name="bluetooth_talkback_input_peripheral" msgid="868933277567862622">"ಪೆರಿಪೆರಲ್ ಇನ್‌ಪುಟ್‌‌"</string>
-    <string name="bluetooth_talkback_bluetooth" msgid="1715933297419387985">"ಬ್ಲೂಟೂತ್‌"</string>
-    <string name="bluetooth_preference_paired_devices" msgid="5875643105380630583">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
-    <string name="bluetooth_preference_found_devices" msgid="125155123214560511">"ಲಭ್ಯವಿರುವ ಸಾಧನಗಳು"</string>
-    <string name="bluetooth_preference_no_paired_devices" msgid="483742146117390001">"ಯಾವುದೇ ಜೋಡಿಸಲಾದ ಸಾಧನಗಳಿಲ್ಲ"</string>
-    <string name="bluetooth_preference_no_found_devices" msgid="1391812056491062262">"ಲಭ್ಯವಿರುವ ಯಾವುದೇ ಸಾಧನಗಳಿಲ್ಲ"</string>
-    <string name="bluetooth_preference_paired_dialog_title" msgid="2470829827455850904">"ಜೋಡಿ ಮಾಡಲಾಗಿರುವ ಸಾಧನ"</string>
-    <string name="bluetooth_preference_paired_dialog_name_label" msgid="3528740139365123415">"ಹೆಸರು"</string>
-    <string name="bluetooth_device_advanced_profile_header_title" msgid="8165093257483965783">"ಇದಕ್ಕೆ ಬಳಸಿ"</string>
-    <string name="wifi_ssid_hint" msgid="4155050863239489553">"ಬ್ಲೂಟೂತ್ ಸಾಧನದ ಹೆಸರನ್ನು ಬದಲಾಯಿಸಿ"</string>
+    <string name="bluetooth_device" msgid="3178478829314083240">"ಹೆಸರಿಸದಿರುವ ಸಾಧನ"</string>
+    <string name="bluetooth_paired_devices" msgid="6463199569164652410">"ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು"</string>
+    <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"ಹೊಸ ಸಾಧನವನ್ನು ಜೋಡಿಸಿ"</string>
+    <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"ಜೋಡಿಸಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
+    <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"ಸಾಧನದ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸುವುದೇ?"</string>
+    <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನದಿಂದ ನಿಮ್ಮ ವಾಹನದ ಸಂಪರ್ಕವನ್ನು ಕಡಿತಗೊಳಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"ವಾಹನದ ಬ್ಲೂಟೂತ್‌ ವಿಳಾಸ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"ಸಾಧನದ ಬ್ಲೂಟೂತ್ ವಿಳಾಸ: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_name" msgid="2609869978821094114">"ವಾಹನದ ಹೆಸರು"</string>
+    <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"ಈ ವಾಹನವನ್ನು ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_rename_device" msgid="8406868875363878712">"ಸಾಧನವನ್ನು ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_rename_button" msgid="2397892174725986383">"ಮರುಹೆಸರಿಸಿ"</string>
+    <string name="bluetooth_available_devices" msgid="1854446368146061448">"ಲಭ್ಯವಿರುವ ಸಾಧನಗಳು"</string>
+    <string name="bluetooth_profiles" msgid="5580372290862835951">"ಪ್ರೊಫೈಲ್‌ಗಳು"</string>
+    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ಬ್ಲೂಟೂತ್‌‌ ಜೋಡಣೆ ವಿನಂತಿ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"ಜೋಡಿಸಿ ಮತ್ತು ಸಂಪರ್ಕಪಡಿಸಿ"</string>
-    <string name="bluetooth" msgid="5235115159234688629">"ಬ್ಲೂಟೂತ್‌"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ಬ್ಲೂಟೂತ್ ಜೋಡಣೆ ಕೋಡ್"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"ಅಕ್ಷರಗಳು ಅಥವಾ ಚಿಹ್ನೆಗಳನ್ನು ಪಿನ್‌ ಹೊಂದಿದೆ"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"ಜೋಡಣೆ ಕೋಡ್‌ ಟೈಪ್‌ ಮಾಡಿ ತದನಂತರ ರಿಟರ್ನ್‌ ಅಥವಾ ಎಂಟರ್‌ ಒತ್ತಿ."</string>
@@ -90,8 +122,16 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"ಸಾಮಾನ್ಯವಾಗಿ 0000 ರಿಂದ 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"ಜೋಡಣೆ ವಿನಂತಿ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಜೊತೆಗೆ ಜೋಡಿ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ."</string>
-    <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
     <string name="language_settings" msgid="2079258598337245546">"ಭಾಷೆಗಳು"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"ಭಾಷೆಗಳು &amp; ಇನ್‌ಪುಟ್"</string>
+    <string name="keyboard_settings" msgid="1959697870618278081">"ಕೀಬೋರ್ಡ್"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"ಕೀಬೋರ್ಡ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ"</string>
+    <string name="text_to_speech_settings" msgid="811985746199507343">"ಪಠ್ಯದಿಂದ ಧ್ವನಿ ಔಟ್‌ಪುಟ್‌"</string>
+    <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"ಆದ್ಯತೆಯ ಎಂಜಿನ್‌"</string>
+    <string name="text_to_speech_current_engine" msgid="8133107484909612597">"ಪ್ರಸ್ತುತ ಎಂಜಿನ್"</string>
+    <string name="tts_speech_rate" msgid="4512944877291943133">"ಧ್ವನಿಯ ಪ್ರಮಾಣ"</string>
+    <string name="tts_pitch" msgid="2389171233852604923">"ಪಿಚ್"</string>
+    <string name="tts_reset" msgid="6289481549801844709">"ಮರುಹೊಂದಿಸಿ"</string>
     <string name="sound_settings" msgid="3072423952331872246">"ಶಬ್ದ"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"ರಿಂಗ್ ವಾಲ್ಯೂಮ್"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"ನ್ಯಾವಿಗೇಷನ್ ವಾಲ್ಯೂಮ್‌"</string>
@@ -100,30 +140,65 @@
     <string name="media_volume_title" msgid="6697416686272606865">"ಮಾಧ್ಯಮ"</string>
     <string name="media_volume_summary" msgid="2961762827637127239">"ಸಂಗೀತ ಮತ್ತು ವೀಡಿಯೊಗಳಿಗೆ ವಾಲ್ಯೂಮ್‌ ಅನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"ಅಲಾರಮ್"</string>
+    <string name="ringtone_title" msgid="8370531086214517972">"ಫೋನ್ ರಿಂಗ್‌ಟೋನ್"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"ಡಿಫಾಲ್ಟ್ ಅಧಿಸೂಚನೆ ಧ್ವನಿ"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"ಡಿಫಾಲ್ಟ್ ಅಲಾರಮ್ ಧ್ವನಿ"</string>
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ಆ್ಯಪ್‌ಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳು"</string>
+    <string name="all_applications" msgid="7798210477486822168">"ಎಲ್ಲಾ ಆ್ಯಪ್‌ಗಳನ್ನು ತೋರಿಸಿ"</string>
+    <string name="default_applications" msgid="1558183275638697087">"ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು"</string>
     <string name="applications_settings" msgid="794261395191035632">"ಅಪ್ಲಿಕೇಶನ್ ಮಾಹಿತಿ"</string>
+    <string name="force_stop" msgid="2153183697014720520">"ಸ್ಥಗಿತಗೊಳಿಸಿ"</string>
+    <string name="force_stop_dialog_title" msgid="3342850939200388694">"ಬಲವಂತವಾಗಿ ಸ್ಥಗಿತಗೊಳಿಸುವುದೇ?"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"ಅಪ್ಲಿಕೇಶನ್‌ ಅನ್ನು ಬಲವಂತವಾಗಿ ಸ್ಥಗಿತಗೊಳಿಸಿದರೆ, ಅದು ಸರಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸದಿರಬಹುದು."</string>
     <string name="disable_text" msgid="4358165448648990820">"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="enable_text" msgid="1794971777861881238">"ಸಕ್ರಿಯಗೊಳಿಸಿ"</string>
+    <string name="uninstall_text" msgid="277907956072833012">"ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"ನೀವು ಈ ಅಪ್ಲಿಕೇಶನ್‌ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಇನ್ನು ಮುಂದೆ Android  ಮತ್ತು ಇತರ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಉದ್ದೇಶಿಸಿದಂತೆ ಕಾರ್ಯನಿರ್ವಹಿಸದಿರಬಹುದು."</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ಅಪ್ಲಿಕೇಶನ್‌ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ಅನುಮತಿಗಳು"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ಆವೃತ್ತಿ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ಯಾವುದೇ ಅನುಮತಿಗಳನ್ನು ನೀಡಲಾಗಿಲ್ಲ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ಯಾವುದೇ ಅನುಮತಿಗಳನ್ನು ವಿನಂತಿಸಿಲ್ಲ"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ಡೇಟಾ ಬಳಕೆ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ಅಪ್ಲಿಕೇಶನ್‌ ಡೇಟಾ ಬಳಕೆ"</string>
-    <string name="force_stop" msgid="2153183697014720520">"ಸ್ಥಗಿತಗೊಳಿಸಿ"</string>
     <string name="computing_size" msgid="5791407621793083965">"ಗಣನೆ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಹೆಚ್ಚುವರಿ ಅನುಮತಿಗಳು</item>
     </plurals>
+    <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"ಅಸಿಸ್ಟೆಂಟ್ ಮತ್ತು ಧ್ವನಿ ಇನ್‌ಪುಟ್"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌"</string>
+    <string name="assist_access_context_title" msgid="8034851731390785301">"ಪರದೆಯಿಂದ ಪಠ್ಯವನ್ನು ಬಳಸಿ"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಪರದೆ ವಿಷಯಗಳನ್ನು ಪಠ್ಯದಂತೆ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ಬಳಸಿ"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ಅಸಿಸ್ಟೆಂಟ್ ಆ್ಯಪ್‌ಗೆ ಪರದೆಯ ಚಿತ್ರವನ್ನು ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸಿ"</string>
+    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
+    <skip />
+    <string name="autofill_settings_title" msgid="1188754272680049972">"ಸ್ವಯಂ ಭರ್ತಿ ಸೇವೆ"</string>
+    <string name="app_list_preference_none" msgid="7753357799926715901">"ಯಾವುದೂ ಬೇಡ"</string>
+    <string name="default_app_selected_app" msgid="5289396663745484773">"ಆಯ್ಕೆಮಾಡಲಾಗಿದೆ"</string>
+    <string name="assistant_security_warning" msgid="1844807956967428012">"ನಿಮ್ಮ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಗೋಚರಿಸುವ ಅಥವಾ ಆ್ಯಪ್‌ಗಳಲ್ಲಿಯೇ ಪ್ರವೇಶಿಸಬಹುದಾದಂತಹ ಮಾಹಿತಿ ಸೇರಿದಂತೆ, ನಿಮ್ಮ ಸಿಸ್ಟಂನಲ್ಲಿ ಬಳಕೆಯಲ್ಲಿರುವ ಆ್ಯಪ್‌ಗಳ ಕುರಿತು ಮಾಹಿತಿಯನ್ನು ಓದಲು ಅಸಿಸ್ಟೆಂಟ್‌ಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
+    <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ನಿಮಗೆ ಈ ಅಪ್ಲಿಕೇಶನ್ ಮೇಲೆ ವಿಶ್ವಾಸವಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ &lt;/b&gt; &lt;br/&gt; &lt;br/&gt; ಯಾವ ಕ್ಷೇತ್ರಗಳನ್ನು ಸ್ವಯಂ-ಭರ್ತಿ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸಲು &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; ನಿಮ್ಮ ಪರದೆಯಲ್ಲಿರುವ ಮಾಹಿತಿಯನ್ನು ಬಳಸಿಕೊಳ್ಳುತ್ತದೆ."</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"ಸೇವೆಯನ್ನು ಸೇರಿಸಿ"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ಯಾವುದೇ ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು ಇಲ್ಲ"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ಆ್ಯಪ್‌ ಹಂತದ ಅನುಮತಿಗಳು"</string>
+    <string name="location_settings_scanning_title" msgid="4253945869911300740">"ಸ್ಕ್ಯಾನ್ ಮಾಡುವಿಕೆ"</string>
+    <string name="location_settings_services_title" msgid="1186133632690970468">"ಸ್ಥಳ ಸೇವೆಗಳು"</string>
+    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್"</string>
+    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ವೈ-ಫೈ ಆಫ್‌ ಆಗಿದ್ದರೂ ಸಹ, ಯಾವ ಸಮುಯದಲ್ಲಾದರೂ ವೈ-ಫೈಗೆ ಸ್ಕ್ಯಾನ್‌ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅನುಮತಿಸಿ. ಉದಾಹರಣೆಗೆ, ಸ್ಥಳ ಆಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಇದನ್ನು ಬಳಸಬಹುದಾಗಿದೆ."</string>
+    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"ಬ್ಲೂಟೂತ್ ಸ್ಕ್ಯಾನಿಂಗ್"</string>
+    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ಬ್ಲೂಟೂತ್‌ ಆಫ್‌ ಆಗಿದ್ದರೂ ಸಹ, ಯಾವ ಸಮಯದಲ್ಲಾದರೂ ಸಮೀಪದ ಸಾಧನಗಳಿಗೆ ಸ್ಕ್ಯಾನ್‌ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅನುಮತಿಸಿ. ಉದಾಹರಣೆಗೆ, ಸ್ಥಳ ಆಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಇದನ್ನು ಬಳಸಬಹುದಾಗಿದೆ."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ಸಿಸ್ಟಂ"</string>
-    <string name="system_update_settings_list_item_title" msgid="5182439376921868735">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
-    <string name="system_update_settings_list_item_summary" msgid="7395202602021608371"></string>
+    <string name="system_update_settings_title" msgid="8448588267784138855">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ಆವೃತ್ತಿ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ಭದ್ರತೆ ಪ್ಯಾಚ್ ಮಟ್ಟ"</string>
     <string name="model_info" msgid="4966408071657934452">"ಮಾಡೆಲ್"</string>
     <string name="baseband_version" msgid="2370088062235041897">"ಬೇಸ್‌ಬ್ಯಾಂಡ್ ಆವೃತ್ತಿ"</string>
     <string name="kernel_version" msgid="7327212934187011508">"ಕೆರ್ನಲ್ ಆವೃತ್ತಿ"</string>
     <string name="build_number" msgid="3997326631001009102">"ಬಿಲ್ಡ್ ಸಂಖ್ಯೆ"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"ಬ್ಲೂಟೂತ್‌‌ ವಿಳಾಸ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ಸ್ಥಿತಿ"</string>
     <string name="device_status" msgid="267298179806290920">"ಸ್ಥಿತಿ"</string>
@@ -140,12 +215,49 @@
     <string name="copyright_title" msgid="4220237202917417876">"ಹಕ್ಕುಸ್ವಾಮ್ಯ"</string>
     <string name="license_title" msgid="936705938435249965">"ಪರವಾನಗಿ"</string>
     <string name="terms_title" msgid="5201471373602628765">"ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು"</string>
-    <string name="webview_license_title" msgid="2531829466541104826">"ಸಿಸ್ಟಂ ವೆಬ್‌ವೀಕ್ಷಣೆ ಪರವಾನಗಿ"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"ಸಿಸ್ಟಂ ವೆಬ್‌ವೀಕ್ಷಣೆ ಪರವಾನಗಿಗಳು"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ವಾಲ್‌ಪೇಪರ್‌ಗಳು"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ಉಪಗ್ರಹ ಚಿತ್ರಣ ಪೂರೈಕೆದಾರರು:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"ಮೂರನೇ-ವ್ಯಕ್ತಿ ಪರವಾನಗಿಗಳು"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ಪರವಾನಗಿಗಳನ್ನು ಲೋಡ್‌ ಮಾಡುವಲ್ಲಿ ಸಮಸ್ಯೆ ಇದೆ."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"ಲೋಡ್ ಆಗುತ್ತಿದೆ..."</string>
+    <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
+      <item quantity="one">ನೀವು ಇದೀಗ ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹಂತಗಳ ದೂರದಲ್ಲಿರುವಿರಿ.</item>
+      <item quantity="other">ನೀವು ಇದೀಗ ಡೆವಲಪರ್ ಆಗುವುದಕ್ಕೆ <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> ಹಂತಗಳ ದೂರದಲ್ಲಿರುವಿರಿ.</item>
+    </plurals>
+    <string name="show_dev_on" msgid="5339077400040834808">"ಇದೀಗ ನೀವು ಡೆವಲಪರ್‌!"</string>
+    <string name="show_dev_already" msgid="1678087328973865736">"ಅಗತ್ಯವಿಲ್ಲ, ನೀವು ಈಗಾಗಲೇ ಡೆವಲಪರ್‌ ಆಗಿರುವಿರಿ."</string>
+    <string name="developer_options_settings" msgid="1530739225109118480">"ಡೆವಲಪರ್ ಆಯ್ಕೆಗಳು"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"ಮರುಹೊಂದಿಸುವ ಆಯ್ಕೆಗಳು"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"ನೆಟ್‌ವರ್ಕ್, ಆ್ಯಪ್‌ಗಳು ಅಥವಾ ಸಾಧನಗಳ ಮರುಹೊಂದಿಸುವಿಕೆ"</string>
+    <string name="reset_network_title" msgid="1284233059990797263">"ನೆಟ್‌ವರ್ಕ್‌ ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"ಇದು ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಎಲ್ಲವನ್ನೂ ಮರುಹೊಂದಿಸುತ್ತದೆ, ಅವುಗಳಲ್ಲಿ ಈ ಮುಂದಿನವುಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ:"</string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"ವೈ-ಫೈ"</li></string>
+    <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"ಮೊಬೈಲ್ ಡೇಟಾ"</li></string>
+    <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"ಬ್ಲೂಟೂತ್"</li></string>
+    <string name="reset_esim_title" msgid="8132107637911831211">"ಎಲ್ಲಾ ವಾಹನದ eSIMಗಳನ್ನು ಅಳಿಸಿ"</string>
+    <string name="reset_esim_desc" msgid="1437276625485586740">"ಇದು ನಿಮ್ಮ ಸೇವಾ ಯೋಜನೆಯನ್ನು ರದ್ದುಗೊಳಿಸುವುದಿಲ್ಲ."</string>
+    <string name="reset_esim_error_title" msgid="7245109418130525492">"eSIM ಗಳನ್ನು ಮರುಹೊಂದಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="reset_network_select" msgid="2433825874868038739">"ನೆಟ್‌ವರ್ಕ್ ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="reset_network_button_text" msgid="8374174455632765033">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_network_confirm_title" msgid="5255502723840197663">"ಮರುಹೊಂದಿಸುವುದೇ?"</string>
+    <string name="reset_network_confirm_desc" msgid="7721698076856330212">"ಎಲ್ಲಾ ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಮರುಹೊಂದಿಸುವುದೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"ಸೆಟ್ಟಿಂಗ್‌ ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_network_complete_toast" msgid="3804108209431416865">"ನೆಟ್‌ವರ್ಕ್‌ ಸೆಟ್ಟಿಂಗ್‌ ಅನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"ಆ್ಯಪ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"ಇದು ಕೆಳಗಿನ ಎಲ್ಲಾ ಆದ್ಯತೆಗಳಿಗಾಗಿ ಮರುಹೊಂದಿಸುತ್ತದೆ:\n\n"<li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ಗಳು"</li>\n<li>"ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿದ ಆ್ಯಪ್‌ ಅಧಿಸೂಚನೆಗಳು"</li>\n<li>"ಕ್ರಿಯೆಗಳಿಗಾಗಿ ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು"</li>\n<li>"ಆ್ಯಪ್‌ ಹಿನ್ನೆಲೆ ಡೇಟಾ ನಿರ್ಬಂಧಗಳು"</li>\n<li>"ಯಾವುದೇ ಅನುಮತಿ ನಿರ್ಬಂಧಗಳು"</li>\n\n"ಯಾವುದೇ ಆ್ಯಪ್‌ ಡೇಟಾವನ್ನು ನೀವು ಕಳೆದುಕೊಳ್ಳುವುದಿಲ್ಲ."</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"ಆಪ್‌‌ಗಳನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾಶಸ್ತ್ಯಗಳನ್ನು ಮರುಹೊಂದಿಸಲಾಗಿದೆ"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"ಎಲ್ಲಾ ಡೇಟಾ ಅಳಿಸಿ (ಫ್ಯಾಕ್ಟರಿ ಮರುಹೊಂದಿಸಿ)"</string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"ಇವುಗಳು ಸೇರಿದಂತೆ ಇದು ನಿಮ್ಮ ವಾಹನದ ಹೆಡ್ ಯೂನಿಟ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸುತ್ತದೆ:\n\n"<li>"ನಿಮ್ಮ Google ಖಾತೆ"</li>\n<li>"ಸಿಸ್ಟಂ ಮತ್ತು ಆ್ಯಪ್‌ ಡೇಟಾ ಹಾಗೂ ಸೆಟ್ಟಿಂಗ್‌ಗಳು"</li>\n<li>"ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳು"</li></string>
+    <string name="master_clear_accounts" msgid="7797522012993567494">"ನೀವು ಪ್ರಸ್ತುತವಾಗಿ ಕೆಳಗಿನ ಖಾತೆಗಳಿಗೆ ಸೈನ್ ಇನ್ ಆಗಿರುವಿರಿ:"</string>
+    <string name="master_clear_other_users_present" msgid="8383376863095743337">"ಈ ವಾಹನದಲ್ಲಿ ಇತರ ಬಳಕೆದಾರರಿದ್ದಾರೆ."</string>
+    <string name="master_clear_button_text" msgid="8010754220392741160">"ವಾಹನವನ್ನು ಮರುಹೊಂದಿಸಿ"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"ಮರುಹೊಂದಿಸುವುದೇ?"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"ನಿಮ್ಮ ಎಲ್ಲ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಮತ್ತು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳನ್ನು ಅಳಿಸಬೇಕೇ? ನೀವು ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ!"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ"</string>
+    <string name="master_clear_progress_title" msgid="7087480656932674774">"ಅಳಿಸಲಾಗುತ್ತಿದೆ"</string>
+    <string name="master_clear_progress_text" msgid="3440789441935303176">"ನಿರೀಕ್ಷಿಸಿ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಬದಲಾಯಿಸಿ"</string>
     <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಹೊಂದಿಸಿ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ದಿನಾಂಕ, ಸಮಯ, ಸಮಯದ ವಲಯದ, ಮತ್ತು ಫರ್ಮ್ಯಾಟ್‌ಗಳನ್ನು ಹೊಂದಿಸಿ"</string>
@@ -165,23 +277,59 @@
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"ಸಮಯ ವಲಯದ ಅನುಸಾರ ವಿಂಗಡಿಸಿ"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"ದಿನಾಂಕ"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"ಸಮಯ"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"ಖಾತೆ ಸೇರಿಸಿ"</string>
-    <string name="user_delete_user_description" msgid="2300280525351142435">"ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿ"</string>
-    <string name="user_new_user_name" msgid="7115771396412339662">"ಹೊಸ ಬಳಕೆದಾರರು"</string>
-    <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
     <string name="user_admin" msgid="1535484812908584809">"ನಿರ್ವಾಹಕ"</string>
     <string name="signed_in_admin_user" msgid="1267225622818673274">"ನಿರ್ವಾಹಕರಾಗಿ ಸೈನ್ ಇನ್ ಮಾಡಲಾಗಿದೆ"</string>
+    <string name="grant_admin_permissions_title" msgid="4628430467359951437">"ಎಲ್ಲಾ ನಿರ್ವಾಹಕರ ಅನುಮತಿಗಳು"</string>
+    <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"ನಿರ್ವಹಣೆ ಮಾಡಿ"</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"ಬಳಕೆದಾರರಿಗೆ ಇತರ ನಿರ್ವಾಹಕರು ಸೇರಿದಂತೆ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ, ಮತ್ತು ಸಿಸ್ಟಂ ಅನ್ನು ಫ್ಯಾಕ್ಟರಿ ರಿಸೆಟ್‌ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
+    <string name="action_not_reversible_message" msgid="740401337875726973">"ಈ ಕ್ರಿಯೆಯನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗುವುದಿಲ್ಲ."</string>
+    <string name="confirm_grant_admin" msgid="7852596890218647682">"ಹೌದು, ನಿರ್ವಹಣೆ ಮಾಡಿ"</string>
+    <string name="create_user_permission_title" msgid="7781550880565935298">"ಹೊಸ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಿ"</string>
+    <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"ಫೋನ್ ಕರೆಗಳನ್ನು ಮಾಡಿ"</string>
+    <string name="sms_messaging_permission_title" msgid="6099328509729071243">"ಕಾರ್‌ನ ಮೊಬೈಲ್ ಡೇಟಾದ ಮೂಲಕ ಸಂದೇಶ ಕಳುಹಿಸುವಿಕೆ"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"ಹೊಸ ಆ್ಯಪ್‌ಗಳನ್ನು ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"ಆ್ಯಪ್‌ಗಳನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿ"</string>
+    <string name="user_new_user_name" msgid="7115771396412339662">"ಹೊಸ ಬಳಕೆದಾರರು"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸುವುದೇ?"</string>
+    <string name="user_add_user_message_setup" msgid="6030901156040053106">"ನೀವು ಹೊಸ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿದಾಗ, ಆ ವ್ಯಕ್ತಿಯು ಅವರ ಸ್ಥಳವನ್ನು ಸೆಟಪ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"ಯಾವುದೇ ಬಳಕೆದಾರರು ಎಲ್ಲಾ ಇತರೆ ಬಳಕೆದಾರರಿಗಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬಹುದು."</string>
+    <string name="user_limit_reached_title" msgid="8803355734556061238">"ಬಳಕೆದಾರರ ಮಿತಿ ತಲುಪಿದೆ"</string>
+    <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
+      <item quantity="one">ನೀವು <xliff:g id="COUNT">%d</xliff:g> ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
+      <item quantity="other">ನೀವು <xliff:g id="COUNT">%d</xliff:g> ಬಳಕೆದಾರರವರೆಗೆ ಸೇರಿಸಬಹುದು.</item>
+    </plurals>
+    <string name="add_user_error_title" msgid="3206300411663817038">"ಹೊಸ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲು ವಿಫಲವಾಗಿದೆ"</string>
+    <string name="delete_user_dialog_title" msgid="3422867434431562007">"ಈ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸುವುದೇ?"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="delete_user_error_title" msgid="7609819398530124827">"ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ."</string>
+    <string name="delete_user_error_dismiss" msgid="429156446763738273">"ವಜಾಗೊಳಿಸಿ"</string>
+    <string name="delete_user_error_retry" msgid="5116434895572670563">"ಮರುಪ್ರಯತ್ನ"</string>
+    <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"ಬಳಕೆದಾರನನ್ನು ಅಳಿಸುವುದೇ?"</string>
+    <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"ಈ ಕಾರಿಗೆ ಉಳಿದಿರುವ ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಿದ ನಂತರ, ಹೊಸ ನಿರ್ವಾಹಕ ಬಳಕೆದಾರರನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ."</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"ಈ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಯೋಜಿತವಾಗಿರುವ ಎಲ್ಲಾ ಡೇಟಾ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಆ್ಯಪ್‌ಗಳನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ. ನೀವು ಸಿಸ್ಟಮ್ ಅನ್ನು ಮತ್ತೆ ಹೊಂದಿಸಬೇಕಾಗಿದೆ."</string>
+    <string name="choose_new_admin_title" msgid="1915428454917699587">"ಹೊಸ ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
+    <string name="choose_new_admin_message" msgid="7468286545352043354">"ನಿಮಗೆ ಕನಿಷ್ಟ ಒಂದು ನಿರ್ವಾಹಕ ಅಗತ್ಯವಿರುತ್ತದೆ. ಇದನ್ನು ಅಳಿಸಲು, ಮೊದಲು ಬದಲಿ ಆಯ್ಕೆ ಮಾಡಿ."</string>
+    <string name="choose_new_admin_label" msgid="5987653639387437939">"ನಿರ್ವಾಹಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"</string>
+    <string name="user_guest" msgid="3465399481257448601">"ಅತಿಥಿ"</string>
+    <string name="start_guest_session" msgid="4438752398760283201">"ಅತಿಥಿ"</string>
     <string name="user_switch" msgid="6544839750534690781">"ಬದಲಿಸಿ"</string>
     <string name="current_user_name" msgid="3813671533249316823">"ನೀವು (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"ಹೆಸರು"</string>
     <string name="user_summary_not_set_up" msgid="1473688119241224145">"ಇನ್ನೂ ಸೆಟಪ್‌ ಮಾಡಿಲ್ಲ"</string>
     <string name="edit_user_name_title" msgid="6890782937520262478">"ಬಳಕೆದಾರರ ಹೆಸರನ್ನು ಎಡಿಟ್ ಮಾಡಿ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ಬಳಕೆದಾರರು"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s ಗೆ ಅನುಮತಿಗಳನ್ನು ನೀಡಲಾಗಿದೆ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ಖಾತೆಗಳು"</string>
-    <string name="user_details_title" msgid="1104762783367701498">"ಬಳಕೆದಾರ"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ಯಾವುದೇ ಖಾತೆಗಳನ್ನು ಸೇರಿಸಿಲ್ಲ"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> ಅವರಿಗಾಗಿ ಖಾತೆಗಳು"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"ಡೇಟಾವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಿಂಕ್ ಮಾಡಿ"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"ಆ್ಯಪ್‌ಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಡೇಟಾವನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಲಿ"</string>
+    <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆನ್‌‌ಮಾಡುವುದೇ?"</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"ವೆಬ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಖಾತೆಗಳಿಗೆ ಮಾಡಲಾದ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಮ್ಮ ಸಾಧನಕ್ಕೆ ನಕಲಿಸಲಾಗುತ್ತದೆ. \n\nಫೋನ್‌ನಲ್ಲಿ ನೀವು ಮಾಡುವ ಯಾವುದೇ ಬದಲಾವಣೆಗಳನ್ನು ಕೆಲವು ಖಾತೆಗಳು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ವೆಬ್‌ಗೆ ನಕಲಿಸುತ್ತವೆ. Google ಖಾತೆ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ರೀತಿ ಇದು."</string>
+    <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"ಸ್ವಯಂ-ಸಿಂಕ್‌ ಡೇಟಾ ಆಫ್‌ ಮಾಡುವುದೇ?"</string>
+    <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"ಇದು ಡೇಟಾ ಪೋಲಾಗದಂತೆ ತಡೆಯುತ್ತದೆ, ಆದರೆ ಇತ್ತೀಚಿನ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲು ನೀವು ಪ್ರತಿ ಖಾತೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸಿಂಕ್‌ ಮಾಡಬೇಕಾಗುತ್ತದೆ. ಮತ್ತು ಅಪ್‌ಡೇಟ್‌ಗಳ ಸಂದರ್ಭದಲ್ಲಿ ನೀವು ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ."</string>
     <string name="account_details_title" msgid="7529571432258448573">"ಖಾತೆಯ ಮಾಹಿತಿ"</string>
     <string name="add_account_title" msgid="5988746086885210040">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="add_an_account" msgid="1072285034300995091">"ಖಾತೆಯನ್ನು ಸೇರಿಸಿ"</string>
@@ -189,16 +337,20 @@
     <string name="remove_account_title" msgid="8840386525787836381">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
     <string name="really_remove_account_title" msgid="3555164432587924900">"ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"ಈ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕುವುದರಿಂದ ಸಾಧನದಲ್ಲಿರುವ ಅದರ ಎಲ್ಲ ಸಂದೇಶಗಳು, ಸಂಪರ್ಕಗಳು ಮತ್ತು ಇತರೆ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ!"</string>
-    <string name="remove_account_failed" msgid="7472511529086294087">"ಈ ಬದಲಾವಣೆಗೆ ನಿಮ್ಮ ನಿರ್ವಾಹಕರು ಅನುಮತಿಸುವುದಿಲ್ಲ"</string>
-    <string name="really_remove_user_title" msgid="4990029019291756762">"ಬಳಕೆದಾರರನ್ನು ತೆಗೆಯುವುದೇ?"</string>
-    <string name="really_remove_user_message" msgid="3828090902833944533">"ಎಲ್ಲ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ."</string>
-    <string name="remove_user_error_title" msgid="2038275458657689420">"ಬಳಕೆದಾರರನ್ನು ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ."</string>
-    <string name="remove_user_error_message" msgid="6803947507134323358">"ಮತ್ತೆ ಪ್ರಯತ್ನಿಸುವುದೇ?"</string>
-    <string name="remove_user_error_dismiss" msgid="4006591159426844335">"ವಜಾಗೊಳಿಸಿ"</string>
-    <string name="remove_user_error_retry" msgid="8291692909396995093">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸುವುದೇ?"</string>
-    <string name="user_add_user_message_setup" msgid="6030901156040053106">"ನೀವು ಹೊಸ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಿದಾಗ, ಆ ವ್ಯಕ್ತಿಯು ಅವರ ಸ್ಥಳವನ್ನು ಸೆಟಪ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"ಯಾವುದೇ ಬಳಕೆದಾರರು ಎಲ್ಲಾ ಇತರೆ ಬಳಕೆದಾರರಿಗಾಗಿ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಅಪ್‌ಡೇಟ್‌ ಮಾಡಬಹುದು."</string>
+    <string name="remove_account_error_title" msgid="8368044943174826635">"ಖಾತೆ ತೆಗೆದುಹಾಕಲು ವಿಫಲವಾಗಿದೆ."</string>
+    <string name="account_sync_title" msgid="6541844336300236915">"ಖಾತೆ ಸಿಂಕ್"</string>
+    <string name="account_sync_summary_some_on" msgid="4525960296068027182">"<xliff:g id="ID_2">%2$d</xliff:g> ಐಟಂಗಳಲ್ಲಿ <xliff:g id="ID_1">%1$d</xliff:g> ಕ್ಕಾಗಿ ಸಿಂಕ್ ಆನ್ ಇದೆ"</string>
+    <string name="account_sync_summary_all_on" msgid="3652264471870312725">"ಎಲ್ಲಾ ಐಟಂಗಳಿಗಾಗಿ ಸಿಂಕ್ ಆನ್ ಇದೆ"</string>
+    <string name="account_sync_summary_all_off" msgid="6550959714035312414">"ಎಲ್ಲಾ ಐಟಂಗಳಿಗಾಗಿ ಸಿಂಕ್ ಆಫ್ ಇದೆ"</string>
+    <string name="sync_disabled" msgid="393531064334628258">"ಸಿಂಕ್‌ ಆಫ್ ಆಗಿದೆ"</string>
+    <string name="sync_error" msgid="6698021343089247914">"ಸಿಂಕ್ ದೋಷ"</string>
+    <string name="last_synced" msgid="4745124489150101529">"ಕೊನೆಯದಾಗಿ ಸಿಂಕ್ ಮಾಡಿರುವುದು <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="sync_in_progress" msgid="1237573373537382416">"ಇದೀಗ ಸಿಂಕ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
+    <string name="sync_one_time_sync" msgid="491707183321353107">"ಈಗ ಸಿಂಕ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ <xliff:g id="LAST_SYNC_TIME">
+%1$s</xliff:g>"</string>
+    <string name="sync_button_sync_now" msgid="5767643057970371315">"ಈಗ ಸಿಂಕ್ ಮಾಡಿ"</string>
+    <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ಸಿಂಕ್ ರದ್ದುಗೊಳಿಸಿ"</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"ಸಿಂಕ್‌ ಪ್ರಸ್ತುತ ಸಮಸ್ಯೆ ಎದುರಿಸುತ್ತಿದೆ. ಶೀಘ್ರದಲ್ಲಿಯೇ ಅದು ಯಥಾಸ್ಥಿತಿಗೆ ಬರಲಿದೆ."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ಭದ್ರತೆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ಪರದೆ ಲಾಕ್"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ಯಾವುದೂ ಅಲ್ಲ"</string>
@@ -206,7 +358,7 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"ಪಿನ್"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"ಪಾಸ್‌ವರ್ಡ್"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"ಲಾಕ್ ಪ್ರಕಾರವನ್ನು ಆರಿಸಿ"</string>
-    <string name="screen_lock_options" msgid="7023338635352915768">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
+    <string name="screen_lock_options" msgid="8531177937577168185">"ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್ ನಮೂದಿಸಿ"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"ದೃಢೀಕರಿಸಿ"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"ಮರುರಚಿಸಿ"</string>
@@ -216,7 +368,7 @@
     <string name="set_screen_lock" msgid="5239317292691332780">"ಪರದೆ ಲಾಕ್ ಹೊಂದಿಸಿ"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ನಿಮ್ಮ ಪಿನ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ಪ್ಯಾಟರ್ನ್ ಆಯ್ಕೆ ಮಾಡಿ"</string>
-    <string name="lockscreen_choose_your_password" msgid="5703747830308181428">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ"</string>
     <string name="current_screen_lock" msgid="637651611145979587">"ಪ್ರಸ್ತುತ ಸ್ಕ್ರೀನ್ ಲಾಕ್"</string>
     <string name="choose_lock_pattern_message" msgid="6242765203541309524">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪ್ಯಾಟ್ರನ್ ಹೊಂದಿಸಿ"</string>
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"ತೆರವುಗೊಳಿಸಿ"</string>
@@ -232,7 +384,7 @@
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ಪ್ಯಾಟರ್ನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
     <string name="okay" msgid="4589873324439764349">"ಸರಿ"</string>
     <string name="remove_screen_lock_title" msgid="1234382338764193387">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ತೆಗೆದುಹಾಕಿ"</string>
-    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಾರಾದರೂ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ"</string>
+    <string name="remove_screen_lock_message" msgid="6675850371585564965">"ಇದು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಯಾರು ಬೇಕಾದರೂ ಪ್ರವೇಶಿಸಲು ಅನುಮತಿಸುತ್ತದೆ"</string>
     <string name="lock_settings_enter_pin" msgid="1669172111244633904">"ನಿಮ್ಮ ಪಿನ್ ನಮೂದಿಸಿ"</string>
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ನಮೂದಿಸಿ"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"ಸುರಕ್ಷತೆಗಾಗಿ, ಪಿನ್ ಅನ್ನು ಹೊಂದಿಸಿ"</string>
@@ -288,7 +440,28 @@
     <string name="lockpassword_password_blacklisted_by_admin" msgid="7965893810326503891">"ಸರಳವಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳನ್ನು ನಿಮ್ಮ ಐಟಿ ನಿರ್ವಾಹಕರಿಂದ ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ಬೇರೆಯ ಪಾಸ್‌ವರ್ಡ್‌ ಪ್ರಯತ್ನಿಸಿ."</string>
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ಅಂಕಿಗಳ ಆರೋಹಣ, ಅವರೋಹಣ ಅಥವಾ ಪುನರಾವರ್ತಿತ ಅನುಕ್ರಮವನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
+    <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ದಿನಗಳ ಹಿಂದೆ"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಿ"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಗಳು"</string>
+    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಸಾಧನಗಳು</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಸಾಧನಗಳು</item>
+    </plurals>
+    <string name="remove_device_message" msgid="6447820559674148349">"ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ಸಂಪರ್ಕಿತಗೊಂಡಾಗ ಈ ಕಾರ್‌ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ಒಂದು ವೇಳೆ ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ಅನ್ನು ಯಾರಾದರೂ ತೆಗೆದುಕೊಂಡರೆ, ಅವರಿಗೆ ಈ ಸಾಧನವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು"</string>
+    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ದೃಢೀಕರಿಸಿ"</string>
+    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
+    <string name="trusted_device_done_button" msgid="8481956533222625296">"ಮುಗಿದಿದೆ"</string>
+    <string name="add_trusted_device_instruction" msgid="109228038968439923">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಬಳಸಿ. ಸೆಟಪ್ ನಂತರ, ವಾಹನವು ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಪತ್ತೆಹಚ್ಚಿದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ"</string>
+    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"</string>
+    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>
+    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock ಗೆ ಈ ಸಾಧನದ ಭದ್ರತೆ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಪತ್ತೆಹೆಚ್ಚಲು ಸಾಧ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಕಾರ್ ಸಂರಕ್ಷಿಸುವುದಕ್ಕೆ ಸಹಾಯ ಮಾಡಲು, ನೀವು ಈಗಾಗಲೇ ನಿಮ್ಮ ಕಾರ್ ಅನ್‌ಲಾಕ್ ಮಾಡಿದ್ದರೆ ಅದನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿಯೇ ಇರಿಸಲು ಮಾತ್ರವೇ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಕ್ಕೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ. ಬೇರೆ ಯಾರಾದರೂ ನಿಮ್ಮ ಕಾರ್ ಇರಿಸಿಕೊಂಡಿದ್ದರೂ, ಅದು ಹತ್ತಿರದಲ್ಲಿರುವಾಗ ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಆಗಿ ಇರಿಸಬಹುದು."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಿ"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ಸಾಧನವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಎಂಬಂತೆ ಸೇರಿಸಲಾಗಿದೆ"</string>
+    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ನೋಂದಣಿ ವಿಫಲವಾಗಿದೆ"</string>
+    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೇರಿಸುವುದು ನೀವು ಪ್ರಮಾಣೀಕರಣ ವಿಧಾನವನ್ನು ಹೊಂದಿಸುವ ಅಗತ್ಯವಿದೆ. ನೀವು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ನಿಮ್ಮೊಂದಿಗೆ ಹೊಂದಿಲ್ಲದೇ ಇದ್ದರೆ, ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಪ್ರಮಾಣೀಕರಣದ ಅಗತ್ಯವಿದೆ."</string>
     <string name="forget" msgid="3971143908183848527">"ಮರೆಯಿರಿ"</string>
+    <string name="connect" msgid="5861699594602380150">"ಸಂಪರ್ಕಿಸಿ"</string>
+    <string name="disconnect" msgid="6140789953324820336">"ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಿ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ಅಳಿಸಿ"</string>
     <string name="remove_button" msgid="6664656962868194178">"ತೆಗೆದುಹಾಕಿ"</string>
     <string name="cancel" msgid="750286395700355455">"ರದ್ದುಮಾಡಿ"</string>
@@ -298,8 +471,7 @@
     <string name="exit_retail_mode_dialog_title" msgid="7970631760237469168">"ಡೆಮೊ ಮೋಡ್‌ನಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ಇದು ಡೆಮೊ ಖಾತೆಯನ್ನು ಅಳಿಸುತ್ತದೆ ಮತ್ತು ಫ್ಯಾಕ್ಟರಿ ಡೇಟಾ ಸಿಸ್ಟಂ ಅನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರ ಡೇಟಾವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ಡೆಮೊದಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
-    <string name="suggestion_primary_button" msgid="6421115494714083020">"ಸೆಟಪ್ ಪೂರ್ಣಗೊಳಿಸಿ"</string>
-    <string name="suggestion_secondary_button" msgid="7075088546904464681">"ಈಗಲೇ ಬೇಡ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ಚಾಲನೆ ಮಾಡುವಾಗ ವೈಶಿಷ್ಟ್ಯ ಲಭ್ಯವಿಲ್ಲ."</string>
+    <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ವಜಾಗೊಳಿಸಿ"</string>
+    <string name="restricted_while_driving" msgid="6217369093121968299">"ಡ್ರೈವ್ ಮಾಡುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯ ಲಭ್ಯವಿಲ್ಲ."</string>
     <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ಚಾಲನೆ ಮಾಡುವಾಗ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
 </resources>
