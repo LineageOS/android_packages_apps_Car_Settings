@@ -214,6 +214,11 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
+                <action android:name="android.settings.SECURITY_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.LOCALE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -332,6 +337,17 @@
         <activity android:name=".security.AddTrustedDeviceActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <activity android:name=".security.CredentialStorageActivity"
+                  android:theme="@style/ActionDialogTheme"
+                  android:launchMode="singleTop"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.credentials.INSTALL" />
+                <action android:name="com.android.credentials.RESET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".system.ThirdPartyLicensesActivity"
