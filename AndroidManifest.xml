@@ -46,6 +46,7 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_USERS"/>
     <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -411,6 +412,11 @@
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
             </intent-filter>
         </receiver>
+
+        <!-- Exported for SystemUI to trigger -->
+        <receiver android:name=".storage.StorageUnmountReceiver"
+                  android:exported="true"
+                  android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
         <!-- FileProvider to share a generated license html file.
              Note that "com.android.settings.files" is set here as its authorities because a Uri
