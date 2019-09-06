@@ -133,7 +133,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         boolean hasMatch = false;
         for (ShadowApplication.Wrapper wrapper :
                 ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0) == Intent.ACTION_AIRPLANE_MODE_CHANGED) {
+            if (wrapper.getIntentFilter().hasAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)) {
                 hasMatch = true;
             }
         }
@@ -152,7 +152,7 @@ public class MobileNetworkEntryPreferenceControllerTest {
         boolean hasMatch = false;
         for (ShadowApplication.Wrapper wrapper :
                 ShadowApplication.getInstance().getRegisteredReceivers()) {
-            if (wrapper.getIntentFilter().getAction(0) == Intent.ACTION_AIRPLANE_MODE_CHANGED) {
+            if (wrapper.getIntentFilter().hasAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)) {
                 hasMatch = true;
             }
         }
