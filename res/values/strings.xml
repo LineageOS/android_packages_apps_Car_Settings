@@ -1077,6 +1077,10 @@
     <string name="storage_clear_data_dlg_text">All this app\u2019s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.</string>
     <!-- Text for dialog if clear data fails. [CHAR LIMIT=55] -->
     <string name="storage_clear_failed_dlg_text">Couldn\u2019t clear storage for app.</string>
+    <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=80]-->
+    <string name="storage_unmount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is safely ejected</string>
+    <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=80]-->
+    <string name="storage_unmount_failure">Couldn\u2019t safely eject <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
 
     <!-- Account management --><skip/>
     <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
