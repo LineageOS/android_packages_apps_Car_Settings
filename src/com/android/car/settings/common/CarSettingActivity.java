@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -68,22 +69,20 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (mHasNewIntent) {
             Fragment fragment = FragmentResolver.getFragmentForIntent(/* context= */ this,
                     getIntent());
-            launchIfDifferent(fragment);
+            if (fragment == null) {
+                LOG.w("Intent has no specified settings page. Defaulting to the root fragment");
+                fragment = getRootFragment();
+            }
+
+            if (!intentFromSettings(getIntent())) {
+                clearAll();
+                launchFragment(fragment);
+            } else {
+                cleanUpOrphanedDialogs();
+                launchIfDifferent(fragment);
+            }
             mHasNewIntent = false;
         }
-    }
-
-    @Override
-    public void launchFragment(Fragment fragment) {
-        // Called before super to clear the back stack if necessary before launching the fragment
-        // in question.
-        if (isRootFragmentRequiringCleanup(fragment)) {
-            cleanUpOrphanedDialogs();
-            getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
-        }
-
-        super.launchFragment(fragment);
     }
 
     /**
@@ -96,15 +95,17 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (getCurrentFragment() != null) {
             return getCurrentFragment();
         }
+        return getRootFragment();
+    }
+
+    private Fragment getRootFragment() {
         return Fragment.instantiate(this,
                 getString(R.string.config_settings_hierarchy_root_fragment));
     }
 
-    private boolean isRootFragmentRequiringCleanup(Fragment fragment) {
-        boolean isRoot = fragment.getClass().getName().equals(
-                getString(R.string.config_settings_hierarchy_root_fragment));
-        boolean requiresCleanup = getSupportFragmentManager().getBackStackEntryCount() > 1;
-        return isRoot && requiresCleanup;
+    private void clearAll() {
+        cleanUpOrphanedDialogs();
+        clearBackStack();
     }
 
     private void cleanUpOrphanedDialogs() {
@@ -116,5 +117,15 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
                 }
             }
         }
+    }
+
+    private void clearBackStack() {
+        getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
+                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    private boolean intentFromSettings(Intent intent) {
+        String pkgName = intent.getStringExtra(Intent.EXTRA_CALLING_PACKAGE);
+        return TextUtils.equals(pkgName, getPackageName());
     }
 }
