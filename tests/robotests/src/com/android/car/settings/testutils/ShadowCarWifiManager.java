@@ -96,13 +96,13 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
-    public boolean setWifiEnabled(boolean enabled) {
-        return sInstance.setWifiEnabled(enabled);
+    public boolean isWifiEnabled() {
+        return sInstance.isWifiEnabled();
     }
 
     @Implementation
-    public boolean isWifiEnabled() {
-        return sInstance.isWifiEnabled();
+    public int getWifiState() {
+        return sInstance.getWifiState();
     }
 
     @Implementation
@@ -144,6 +144,11 @@ public class ShadowCarWifiManager {
     @Implementation
     protected boolean isDualBandSupported() {
         return sIsDualBandSupported;
+    }
+
+    @Implementation
+    protected boolean addListener(CarWifiManager.Listener listener) {
+        return sInstance.addListener(listener);
     }
 
     public static void setIsDualModeSupported(boolean supported) {
