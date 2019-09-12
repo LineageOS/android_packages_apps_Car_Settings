@@ -86,6 +86,35 @@ public class CarSettingActivityTest {
     }
 
     @Test
+    public void launchWithIntent_hasNoBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void launchWithIntentFromExternalPackage_hasNoBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, "com.test.package");
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void launchWithIntentFromSettings_hasBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, mContext.getPackageName());
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(2);
+    }
+
+    @Test
     public void launchWithEmptyIntent_resolveToDefaultFragment() {
         CarSettingActivity activity =
                 Robolectric.buildActivity(CarSettingActivity.class).setup().get();
@@ -124,7 +153,7 @@ public class CarSettingActivityTest {
     }
 
     @Test
-    public void launchFragment_rootFragment_clearsBackStack() {
+    public void launchWithIntentNoPackage_clearsBackStack() {
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -133,17 +162,15 @@ public class CarSettingActivityTest {
         TestFragment testFragment2 = new TestFragment();
         mActivity.launchFragment(testFragment2);
 
-        // Add root fragment
-        Fragment root = Fragment.instantiate(mContext,
-                mContext.getString(R.string.config_settings_hierarchy_root_fragment));
-        mActivity.launchFragment(root);
+        mActivity.onNewIntent(new Intent(Settings.ACTION_DATE_SETTINGS));
+        mActivity.onResume();
 
         assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
                 .isEqualTo(1);
     }
 
     @Test
-    public void launchFragment_rootFragment_dismissesDialogs() {
+    public void launchWithIntentNoPackage_dismissesDialogs() {
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -161,10 +188,55 @@ public class CarSettingActivityTest {
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNotNull();
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNotNull();
 
-        // Add root fragment
-        Fragment root = Fragment.instantiate(mContext,
-                mContext.getString(R.string.config_settings_hierarchy_root_fragment));
-        mActivity.launchFragment(root);
+        mActivity.onNewIntent(new Intent(Settings.ACTION_DATE_SETTINGS));
+        mActivity.onResume();
+
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNull();
+    }
+
+    @Test
+    public void launchWithIntentFromSettings_doesNotClearBackStack() {
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Add fragment 2
+        TestFragment testFragment2 = new TestFragment();
+        mActivity.launchFragment(testFragment2);
+
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, mContext.getPackageName());
+        mActivity.onNewIntent(intent);
+        mActivity.onResume();
+
+        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
+                .isGreaterThan(1);
+    }
+
+    @Test
+    public void launchWithIntentFromSettings_dismissesDialogs() {
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Show dialog 1
+        String tag1 = "tag1";
+        TestDialogFragment testDialogFragment1 = new TestDialogFragment();
+        testDialogFragment1.show(mActivity.getSupportFragmentManager(), tag1);
+
+        // Show dialog 2
+        String tag2 = "tag2";
+        TestDialogFragment testDialogFragment2 = new TestDialogFragment();
+        testDialogFragment2.show(mActivity.getSupportFragmentManager(), tag2);
+
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNotNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNotNull();
+
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, mContext.getPackageName());
+        mActivity.onNewIntent(intent);
+        mActivity.onResume();
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNull();
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNull();
