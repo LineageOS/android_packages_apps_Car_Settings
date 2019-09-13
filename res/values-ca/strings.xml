@@ -492,11 +492,13 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Dades d\'usuari"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Memòria cau"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Total"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Esborra l\'emmagatzematge"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Esborra emmagatzematge"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Esborra la memòria cau"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vols suprimir les dades de l\'app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Se suprimiran totes les dades d\'aquesta aplicació permanentment. Això inclou tots els fitxers, la configuració, els comptes, les bases de dades, etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"No s\'ha pogut esborrar l\'emmagatzematge de l\'aplicació."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"S\'ha expulsat <xliff:g id="NAME">%1$s</xliff:g> de manera segura"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"No s\'ha pogut expulsar <xliff:g id="NAME">%1$s</xliff:g> de manera segura"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Comptes"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Afegeix un compte"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"No s\'ha afegit cap compte"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"No s\'ha pogut inscriure el dispositiu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Per afegir un dispositiu de confiança, cal que defineixis un mètode d\'autenticació a continuació. Si no tens a mà el dispositiu de confiança, caldrà que utilitzis el mètode d\'autenticació per accedir al perfil."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"S\'ha desconnectat el dispositiu."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Esborrar les credencials"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Suprimeix tots els certificats"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Vols suprimir tots els continguts?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"S\'ha esborrat l\'emmagatzematge de credencials."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"No s\'ha pogut esborrar l\'emmagatzematge de credencials."</string>
     <string name="forget" msgid="3971143908183848527">"Oblida"</string>
     <string name="connect" msgid="5861699594602380150">"Connecta"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconnecta"</string>
