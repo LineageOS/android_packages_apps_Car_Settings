@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"యాప్ డేటాను తొలగించాలా?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ఈ యాప్ డేటా మొత్తం శాశ్వతంగా తొలగించబడుతుంది. ఇందులో అన్ని ఫైల్‌లు, సెట్టింగ్‌లు, ఖాతాలు, డేటాబేస్‌లు మొదలైనవి ఉంటాయి."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"యాప్ యొక్క నిల్వను తీసివేయడం సాధ్యపడలేదు."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> సురక్షితంగా తొలగించబడింది"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>ని సురక్షితంగా తొలగించలేకపోయింది"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ఖాతాలు"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ఖాతాను జోడించు"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ఖాతాలు జోడించబడలేదు"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> నమోదు విఫలమైంది"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"విశ్వసనీయ పరికరాన్ని జోడించడానికి తర్వాత ప్రమాణీకరణ పద్ధతిని సెట్ చేయాల్సిన అవసరం ఉంది. మీ వద్ద మీ విశ్వసనీయ పరికరం లేకపోతే, మీ ప్రొఫైల్‌ను యాక్సెస్ చేయడానికి ప్రామాణీకరణ చేయాల్సిన అవసరం ఉంది."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"పరికరం డిస్‌కనెక్ట్ చేయబడింది."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"అన్ని స‌ర్టిఫికెట్‌ల‌ను తీసివేయండి"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"అన్ని కంటెంట్‌లను తీసివేయాలా?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ఆధారాల నిల్వ తొలగించబడింది."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ఆధారాల నిల్వను తొలగించడం సాధ్యపడలేదు."</string>
     <string name="forget" msgid="3971143908183848527">"విస్మరించు"</string>
     <string name="connect" msgid="5861699594602380150">"కనెక్ట్ చేయి"</string>
     <string name="disconnect" msgid="6140789953324820336">"డిస్‌కనెక్ట్ చేయి"</string>

@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vill du ta bort appdata?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"All appdata tas bort permanent. Det inkluderar bland annat alla filer, inställningar, konton och databaser."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Det gick inte att rensa appens lagringsutrymme."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> har matats ut på ett säkert sätt"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Det gick inte att mata ut <xliff:g id="NAME">%1$s</xliff:g> på ett säkert sätt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konton"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lägg till konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Inga konton har lagts till"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Det gick inte att registrera <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"När du lägger till en betrodd enhet måste du lägga till en autentiseringsmetod också. Autentisering krävs för att komma åt profilen om du inte skulle ha den betrodda enheten med dig."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Enheten har kopplats från."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Rensa användaruppgifter"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Ta bort alla certifikat"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Vill du ta bort allt innehåll?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Uppgiftslagring raderad."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Det gick inte att radera uppgiftslagringen."</string>
     <string name="forget" msgid="3971143908183848527">"Glöm"</string>
     <string name="connect" msgid="5861699594602380150">"Anslut"</string>
     <string name="disconnect" msgid="6140789953324820336">"Koppla från"</string>

@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminare i dati dell\'app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Tutti i dati dell\'app verranno eliminati definitivamente, inclusi tutti i file, le impostazioni, gli account, i database e così via."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossibile cancellare spazio archiviazione app."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Espulsione della <xliff:g id="NAME">%1$s</xliff:g> eseguita in modo sicuro"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Impossibile espellere in modo sicuro la <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Account"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Aggiungi account"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nessun account aggiunto"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Registrazione del dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> non riuscita"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"L\'aggiunta di un dispositivo attendibile comporta necessariamente la successiva impostazione di un metodo di autenticazione. Se non hai con te il dispositivo attendibile, l\'autenticazione dovrà necessariamente accedere al tuo profilo."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispositivo disconnesso."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Cancella credenziali"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Rimuovi tutti i certificati"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Rimuovere tutti i contenuti?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Archivio credenziali cancellato."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Impossibile cancellare l\'archivio credenziali."</string>
     <string name="forget" msgid="3971143908183848527">"Elimina"</string>
     <string name="connect" msgid="5861699594602380150">"Collega"</string>
     <string name="disconnect" msgid="6140789953324820336">"Scollega"</string>

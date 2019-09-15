@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ઍપ ડેટા ડિલીટ કરીએ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"આ ઍપનો બધો ડેટા હંમેશ માટે ડિલીટ કરવામાં આવશે. આમાં બધી ફાઇલો, સેટિંગ, એકાઉન્ટ, ડેટાબેઝ વગેરેનો સમાવેશ થાય છે."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ઍપ માટે સ્ટોરેજ સાફ ન કરી શક્યાં."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢ્યું છે"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢી શકાયું નથી"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"એકાઉન્ટ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"એકાઉન્ટ ઉમેરો"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"કોઈ એકાઉન્ટ ઉમેરવામાં આવ્યા નથી"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ની નોંધણી નિષ્ફળ રહી"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"કોઈ વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે, તમારે પહેલાં કોઈ પ્રમાણીકરણ પદ્ધતિ સેટ કરવી આવશ્યક છે. જો તમારી પાસે તમારું વિશ્વસનીય ડિવાઇસ ન હોય, તો તમારી પ્રોફાઇલને ઍક્સેસ કરવા માટે પ્રમાણીકરણ આવશ્યક રહેશે."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ડિવાઇસ ડિસ્કનેક્ટ થયું."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"લૉગ ઇન વિગતોને સાફ કરો"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"બધા પ્રમાણપત્ર કાઢી નાખો"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"બધું કન્ટેન્ટ કાઢી નાખીએ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખ્યું છે."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખી શકાયું નથી."</string>
     <string name="forget" msgid="3971143908183848527">"ભૂલી જાઓ"</string>
     <string name="connect" msgid="5861699594602380150">"કનેક્ટ કરો"</string>
     <string name="disconnect" msgid="6140789953324820336">"ડિસ્કનેક્ટ કરો"</string>

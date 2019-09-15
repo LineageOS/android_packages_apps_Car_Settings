@@ -499,6 +499,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"要删除应用数据吗？"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"系统会永久删除此应用的所有数据。删除的内容包括所有文件、设置、帐号、数据库等。"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"无法清除应用的存储数据。"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>已安全弹出"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"无法安全弹出<xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"帐号"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"添加帐号"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"未添加任何帐号"</string>
@@ -641,6 +643,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"设备已断开连接。"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有证书"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有内容吗？"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"凭据存储空间已清空。"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"无法清空凭据存储空间。"</string>
     <string name="forget" msgid="3971143908183848527">"忽略"</string>
     <string name="connect" msgid="5861699594602380150">"连接"</string>
     <string name="disconnect" msgid="6140789953324820336">"断开连接"</string>
