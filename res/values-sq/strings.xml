@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Të fshihen të dhënat e aplikacionit?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Të gjitha të dhënat e këtij aplikacioni do të fshihen përgjithmonë. Kjo përfshin të gjithë skedarët, cilësimet, llogaritë, bazat e të dhënave etj."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nuk mund të pastrohet hapësira për aplikacionin."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> u nxor në mënyrë të sigurt"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> nuk mund të nxirrej në mënyrë të sigurt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Llogaritë"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Shto llogari"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nuk u shtua asnjë llogari"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Shtimi i një pajisjeje të besuar kërkon që të caktosh më pas një metodë vërtetimi. Nëse nuk e ke pajisjen e besuar me vete, do të kërkohet vërtetim për të pasur qasje te profili yt."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Pajisja u shkëput"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Hiqi të gjitha certifikatat"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Të hiqen të gjitha përmbajtjet?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Hapësira ruajtëse e kredencialeve është spastruar."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Ruajtja e kredencialeve s\'mund të pastrohej."</string>
     <string name="forget" msgid="3971143908183848527">"Harro"</string>
     <string name="connect" msgid="5861699594602380150">"Lidh"</string>
     <string name="disconnect" msgid="6140789953324820336">"Shkëput"</string>

@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eyða forritsgögnum?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Öllum gögnum þessa forrits verður eytt fyrir fullt og allt. Í þessu felast allar skrár, stillingar, reikningar, gagnagrunnar o.s.frv."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Ekki var hægt að hreinsa geymslu fyrir forrit."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> var aftengt á öruggan hátt"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Ekki var hægt að aftengja <xliff:g id="NAME">%1$s</xliff:g> á öruggan hátt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Reikningar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Bæta reikningi við"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Engum reikningum bætt við"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Skráning <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mistókst"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ef þú bætir við traustu tæki verðurðu að stilla auðkenningarmáta. Ef þú ert ekki með traust tæki við höndina verður auðkenningar krafist til að fá aðgang að prófílnum þínum."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Tæki aftengt."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Hreinsa skilríki"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjarlægja öll vottorð"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Fjarlægja allt innihald?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Hreinsað úr skilríkjageymslu."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Ekki tókst að eyða skilríkjageymslu."</string>
     <string name="forget" msgid="3971143908183848527">"Gleyma"</string>
     <string name="connect" msgid="5861699594602380150">"Tengja"</string>
     <string name="disconnect" msgid="6140789953324820336">"Aftengja"</string>

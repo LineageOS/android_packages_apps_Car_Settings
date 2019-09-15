@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Supprimer les données ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Les données de cette application (fichiers, paramètres, comptes, bases de données, etc.) seront définitivement supprimées."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Impossible d\'effacer les données de l\'application."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"La mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" a bien été éjectée de manière sécurisée"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Impossible d\'éjecter la mémoire de stockage \"<xliff:g id="NAME">%1$s</xliff:g>\" de manière sécurisée"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Comptes"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ajouter un compte"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Aucun compte ajouté"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pour ajouter un appareil vérifié, vous devez définir une méthode d\'authentification à l\'étape suivante. Si vous n\'avez pas votre appareil vérifié avec vous, vous devrez obligatoirement passer par l\'étape d\'authentification pour accéder à votre profil."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Appareil déconnecté."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Effacer les identifiants"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Supprimer tous les certificats"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Supprimer l\'intégralité du contenu ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"L\'espace de stockage des identifiants a été effacé."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Impossible d\'effacer l\'espace de stockage des identifiants."</string>
     <string name="forget" msgid="3971143908183848527">"Supprimer"</string>
     <string name="connect" msgid="5861699594602380150">"Connecter"</string>
     <string name="disconnect" msgid="6140789953324820336">"Déconnecter"</string>

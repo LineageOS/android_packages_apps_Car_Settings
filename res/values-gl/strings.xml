@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminar os datos da aplicación?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos, etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Non se puido borrar o almacenamento da aplicación."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>: expulsouse con seguranza"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>: non se puido expulsar con seguranza"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Contas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Engadir conta"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Non se engadiron contas"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Produciuse un erro durante a inscrición de <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Se engades un dispositivo de confianza, despois terás que definir un método de autenticación. Se non tes á man o dispositivo de confianza, deberás verificar a túa identidade para acceder ao teu perfil."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Desconectouse o dispositivo."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Borrar credenciais"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Elimina todos os certificados"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Queres quitar todo o contido?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Borrouse o almacenamento de credenciais."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Non se puido borrar o almacenamento de credenciais."</string>
     <string name="forget" msgid="3971143908183848527">"Borrar"</string>
     <string name="connect" msgid="5861699594602380150">"Conectar"</string>
     <string name="disconnect" msgid="6140789953324820336">"Desconectar"</string>

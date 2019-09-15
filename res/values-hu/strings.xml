@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Törli az alkalmazásadatokat?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Az alkalmazás minden adatát véglegesen törölni fogja. Ez magában foglalja az összes fájlt, beállítást, fiókot, adatbázist stb."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nem sikerült tárhelyet üríteni az alkalmazásnak."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"A(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságosan eltávolítva"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Nem sikerült a(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságos eltávolítása"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Fiókok"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Fiók hozzáadása"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nincs hozzáadott fiók"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nem sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> regisztrációja"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ha megbízható eszközt szeretne hozzáadni, akkor a következő lépésben hitelesítési módot kell megadnia. Ha nincs Önnél megbízható eszköze, hitelesítésre lesz szükség a profiljához való hozzáféréshez."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Eszköz leválasztva."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Hitelesítési adatok törlése"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Összes tanúsítvány eltávolítása"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Eltávolítja az összes tartalmat?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Hitelesítési adatok tárolója ürítve."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Nem sikerült üríteni a hitelesítési adatok tárolóját."</string>
     <string name="forget" msgid="3971143908183848527">"Elfelejtés"</string>
     <string name="connect" msgid="5861699594602380150">"Csatlakozás"</string>
     <string name="disconnect" msgid="6140789953324820336">"Leválasztás"</string>

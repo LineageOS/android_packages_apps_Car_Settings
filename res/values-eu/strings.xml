@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Aplikazioaren datuak ezabatu nahi dituzu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Aplikazio honetako datu guztiak betiko ezabatuko dira; besteak beste, fitxategi, ezarpen, kontu eta datu-base guztiak."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Ezin izan da garbitu aplikazioaren biltegia."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Atera da segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Ezin izan da atera segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontuak"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontua"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ez da gehitu konturik"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuaren harpidetzeak huts egin du"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Gailu fidagarri bat gehitzen baduzu, autentifikazio-metodo bat ezartzea izango da hurrengo urratsa. Ez badaukazu gailu fidagarririk gertu, sistemak autentifikatzeko eskatuko dizu profila atzitzen duzunean."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Gailu deskonektatu egin da."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Garbitu kredentzialak"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Kendu ziurtagiri guztiak"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Eduki guztiak kendu nahi dituzu?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Ezabatu dira kredentzialen biltegiaren datuak."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Ezin izan dira ezabatu kredentzialen biltegiaren datuak."</string>
     <string name="forget" msgid="3971143908183848527">"Ahaztu"</string>
     <string name="connect" msgid="5861699594602380150">"Konektatu"</string>
     <string name="disconnect" msgid="6140789953324820336">"Deskonektatu"</string>

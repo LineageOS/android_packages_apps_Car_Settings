@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vil du slette appdata?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Alle data i denne app slettes permanent. Det omfatter alle filer, indstillinger, konti, databaser osv."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Appens lager kunne ikke ryddes."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> blev skubbet sikkert ud"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke skubbes sikkert ud"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Tilføj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Der er ikke tilføjet nogen konti"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Tilmeldingen af <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislykkedes"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Hvis du vil tilføje en godkendt enhed, skal du først angive en godkendelsesmetode. Hvis du ikke har din godkendte enhed med dig, kræves der godkendelse, før du kan få adgang til din profil."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Forbindelsen til enheden blev afbrudt."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Ryd loginoplysninger"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjern alle certifikater"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Vil du fjerne alt indhold?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Lager for loginoplysninger er slettet."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Lager for loginoplysninger kunne ikke slettes."</string>
     <string name="forget" msgid="3971143908183848527">"Glem"</string>
     <string name="connect" msgid="5861699594602380150">"Opret forbindelse"</string>
     <string name="disconnect" msgid="6140789953324820336">"Afbryd forbindelse"</string>

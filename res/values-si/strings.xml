@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"යෙදුම් දත්ත මකන්න ද?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"මෙම යෙදුමේ සියලු දත්ත ස්ථිරව මකා දමනු ඇත. මෙයට සියලු ගොනු, සැකසීම්, ගිණුම්, දත්ත සමුදා, ආදිය අඩංගුයි."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"යෙදුම සඳහා ආචයනය හිස් කළ නොහැකි විය."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> සුරක්ෂිතව ගැලවිණි"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> සුරක්ෂිතව ගැලවීමට නොහැකි විය"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ගිණුම්"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ගිණුම එක් කරන්න"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ගිණුම් එක් නොකෙරිණි"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ලියාපදිංචි වීම අසාර්ථකයි"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"විශ්වාසදායී උපාංගයක් එක් කිරීමට ඔබට මීළඟට සත්‍යාපන ක්‍රමයක් සැකසීමට අවශ්‍ය කරයි. ඔබට ඔබේ විශ්වාසදායී උපාංගය ළඟ නොමැති නම්, ඔබේ පැතිකඩට ප්‍රවේශයට සත්‍යාපනය අවශ්‍ය වනු ඇත."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"උපාංගය විසන්ධි වී ඇත."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"අක්තපත්‍ර හිස් කරන්න"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"සියලුම සහතික ඉවත් කරන්න"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"සියලු අන්තර්ගත ඉවත් කරන්න ද?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"අක්තපත්‍ර ආචයනය මැකිණි."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"අක්තපත්‍ර ආචයනය මැකීමට නොහැකි විය."</string>
     <string name="forget" msgid="3971143908183848527">"අමතක කරන්න"</string>
     <string name="connect" msgid="5861699594602380150">"සබඳින්න"</string>
     <string name="disconnect" msgid="6140789953324820336">"විසන්ධි කරන්න"</string>

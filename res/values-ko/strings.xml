@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"앱 데이터를 삭제하시겠습니까?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"앱의 전체 데이터가 영구적으로 삭제됩니다. 여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"앱 저장용량을 비우지 못했습니다."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 안전하게 제거되었습니다."</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 안전하게 제거하지 못했습니다."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"추가된 계정이 없습니다."</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>을(를) 등록하는 데 실패했습니다."</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"신뢰할 수 있는 기기를 추가하면 다음번에 인증 수단을 설정해야 합니다. 신뢰할 수 있는 기기가 없으면 인증 과정을 거쳐야 내 프로필에 액세스할 수 있습니다."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"기기 연결이 끊어졌습니다."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"사용자 인증 정보 삭제"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"모든 인증서 삭제"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"콘텐츠를 모두 삭제하시겠습니까?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"사용자 인증 정보 저장소가 삭제되었습니다."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"사용자 인증 정보 저장소를 삭제하지 못했습니다."</string>
     <string name="forget" msgid="3971143908183848527">"삭제"</string>
     <string name="connect" msgid="5861699594602380150">"연결"</string>
     <string name="disconnect" msgid="6140789953324820336">"연결 해제"</string>

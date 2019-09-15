@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Uygulama verileri silinsin mi?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Bu uygulamanın tüm verileri kalıcı olarak silinecek. Bu veriler arasında tüm dosyalar, ayarlar, hesaplar, veritabanları vb. yer alıyor."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Uygulama depolama alanı temizlenemedi."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> güvenli bir şekilde çıkarıldı"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> güvenli bir şekilde çıkarılamadı"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hesaplar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hesap ekle"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hiçbir hesap eklenmedi"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> kaydı başarısız oldu"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Güvenilen cihaz eklemek için kimlik doğrulama yöntemi belirlemeniz gerekir. Güvenilen cihazınız yanınızda değilse profilinize erişmek için kimlik doğrulama gerekecektir."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Cihazın bağlantısı kesildi."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Kimlik bilgilerini temizle"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Tüm sertifikaları kaldır"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Tüm içerik kaldırılsın mı?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Kimlik bilgileri deposu silindi."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Kimlik bilgileri deposu silinemedi."</string>
     <string name="forget" msgid="3971143908183848527">"Unut"</string>
     <string name="connect" msgid="5861699594602380150">"Bağlan"</string>
     <string name="disconnect" msgid="6140789953324820336">"Bağlantıyı kes"</string>

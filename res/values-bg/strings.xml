@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Да се изтрият ли данните от прил.?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Всички данни на това приложение ще се изтрият за постоянно. Това включва всички файлове, настройки, профили, бази от данни и др."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Данните за приложението не можаха да се изтрият."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Безопасното изваждане на <xliff:g id="NAME">%1$s</xliff:g> бе успешно"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> не можа да се извади безопасно"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Профили"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Добавяне на профил"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Няма добавени профили"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацията на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не бе успешна"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"За добавянето на надеждно устройство се изисква да зададете метод на удостоверяване на следващия екран. Ако надеждното ви устройство не е у вас, удостоверяването ще се изисква за достъп до потребителския ви профил."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Връзката с устройството е прекъсната."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Изчистване на идентификационните данни"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Премахване на всички сертификати"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Да се премахне ли цялото съдържание?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"Идентификационните данни са изтрити."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"Хранилището за идент. данни не можа да бъде изтрито."</string>
     <string name="forget" msgid="3971143908183848527">"Забравяне"</string>
     <string name="connect" msgid="5861699594602380150">"Свързване"</string>
     <string name="disconnect" msgid="6140789953324820336">"Прекрат. на връзката"</string>

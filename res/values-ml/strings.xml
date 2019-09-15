@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ആപ്പ് ഡാറ്റ ഇല്ലാതാക്കണോ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ഈ ആപ്പിന്‍റെ എല്ലാ ഡാറ്റയും ശാശ്വതമായി ഇല്ലാതാക്കും. ഫയലുകൾ, ക്രമീകരണം, അക്കൗണ്ടുകൾ, ഡാറ്റാബേസുകൾ മുതലായവ ഇതിൽ ഉൾപ്പെടും."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ആപ്പിനായി സ്‌റ്റോറേജ് മായ്‌ക്കാൻ കഴിഞ്ഞില്ല."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> സുരക്ഷിതമായി ഇജക്റ്റ് ചെയ്‌തു"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> സുരക്ഷിതമായി ഇജക്റ്റ് ചെയ്യാനായില്ല"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"അക്കൗണ്ടുകൾ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"അക്കൗണ്ട് ചേർക്കുക"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"അക്കൗണ്ടുകളൊന്നും ചേർത്തില്ല"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ഉപകരണം വിച്ഛേദിച്ചു."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"ക്രെഡൻഷ്യലുകൾ മായ്ക്കുക"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"എല്ലാ സർട്ടിഫിക്കറ്റുകളും നീക്കം ചെയ്യുക"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"എല്ലാ ഉള്ളടക്കങ്ങളും നീക്കം ചെയ്യണോ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ക്രെഡൻഷ്യൽ സ്റ്റോറേജ് മായ്ച്ചു."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ക്രെഡൻഷ്യൽ സ്റ്റോറേജ് മായ്ക്കാനായില്ല."</string>
     <string name="forget" msgid="3971143908183848527">"മറക്കുക"</string>
     <string name="connect" msgid="5861699594602380150">"കണക്റ്റ് ചെയ്യുക"</string>
     <string name="disconnect" msgid="6140789953324820336">"വിച്ഛേദിക്കുക"</string>

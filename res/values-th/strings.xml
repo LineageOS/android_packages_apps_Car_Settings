@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ลบข้อมูลแอปไหม"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ข้อมูลทั้งหมดของแอปนี้จะถูกลบอย่างถาวร ซึ่งรวมถึงไฟล์ การตั้งค่า บัญชี ฐานข้อมูล และอื่นๆ ทั้งหมด"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ล้างพื้นที่เก็บข้อมูลของแอปไม่ได้"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"นำ<xliff:g id="NAME">%1$s</xliff:g>ออกได้อย่างปลอดภัยแล้ว"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"ไม่สามารถนำ<xliff:g id="NAME">%1$s</xliff:g>ออกได้อย่างปลอดภัย"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"บัญชี"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"เพิ่มบัญชี"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ไม่ได้เพิ่มบัญชี"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"การลงทะเบียน <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ล้มเหลว"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ในการเพิ่มอุปกรณ์ที่เชื่อถือได้ คุณจำเป็นต้องกำหนดวิธีการตรวจสอบสิทธิ์ในขั้นถัดไป หากไม่มีอุปกรณ์ที่เชื่อถือได้ ระบบจะขอให้มีการตรวจสอบสิทธิ์ในการเข้าถึงโปรไฟล์ของคุณ"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"อุปกรณ์ถูกตัดการเชื่อมต่อ"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"ล้างข้อมูลรับรอง"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"นำใบรับรองทั้งหมดออก"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"ลบเนื้อหาทั้งหมดหรือไม่"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ลบที่เก็บข้อมูลรับรองแล้ว"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ไม่สามารถลบที่เก็บข้อมูลรับรอง"</string>
     <string name="forget" msgid="3971143908183848527">"ลืม"</string>
     <string name="connect" msgid="5861699594602380150">"เชื่อมต่อ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ยกเลิกการเชื่อมต่อ"</string>

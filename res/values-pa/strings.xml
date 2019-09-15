@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ਕੀ ਐਪ ਡਾਟਾ ਮਿਟਾਉਣਾ ਹੈ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ਇਸ ਐਪ ਦਾ ਸਾਰਾ ਡਾਟਾ ਸਥਾਈ ਤੌਰ ਤੇ ਮਿਟਾਇਆ ਜਾਏਗਾ। ਇਸ ਵਿੱਚ ਸਾਰੀਆਂ ਫ਼ਾਈਲਾਂ, ਸੈਟਿੰਗਾਂ, ਖਾਤੇ, ਡਾਟਾਬੇਸ ਆਦਿ ਸ਼ਾਮਲ ਹਨ।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ਐਪ ਦੀ ਸਟੋਰੇਜ ਕਲੀਅਰ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> ਸੁਰੱਖਿਅਤ ਰੂਪ ਨਾਲ ਕੱਢੀ ਗਈ ਹੈ"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੂਪ ਨਾਲ ਨਹੀਂ ਕੱਢ ਸਕਿਆ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ਖਾਤੇ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ਖਾਤਾ ਸ਼ਾਮਲ ਕਰੋ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ਕੋਈ ਖਾਤੇ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੇ ਗਏ"</string>
@@ -638,6 +640,11 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਦਰਜ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਅੱਗੇ ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣੀਕਰਨ ਵਿਧੀ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਫ਼ਾਈਲ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।"</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ਡੀਵਾਈਸ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ।"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਕਲੀਅਰ ਕਰੋ"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"ਸਾਰੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਹਟਾਓ"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"ਕੀ ਸਾਰੀਆਂ ਸਮੱਗਰੀਆਂ ਹਟਾਉਣੀਆਂ ਹਨ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਸਟੋਰੇਜ ਮਿਟਾਈ ਗਈ।"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ਕ੍ਰੈਡੈਂਸ਼ੀਅਲ ਸਟੋਰੇਜ ਨਹੀਂ ਮਿਟਾਈ ਜਾ ਸਕੀ।"</string>
     <string name="forget" msgid="3971143908183848527">"ਛੱਡੋ"</string>
     <string name="connect" msgid="5861699594602380150">"ਕਨੈਕਟ ਕਰੋ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ਡਿਸਕਨੈਕਟ ਕਰੋ"</string>
