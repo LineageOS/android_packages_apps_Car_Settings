@@ -69,20 +69,30 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (mHasNewIntent) {
             Fragment fragment = FragmentResolver.getFragmentForIntent(/* context= */ this,
                     getIntent());
-            if (fragment == null) {
-                LOG.w("Intent has no specified settings page. Defaulting to the root fragment");
-                fragment = getRootFragment();
-            }
-
-            if (!intentFromSettings(getIntent())) {
-                clearAll();
-                launchFragment(fragment);
-            } else {
-                cleanUpOrphanedDialogs();
-                launchIfDifferent(fragment);
-            }
+            launchIfDifferent(fragment);
             mHasNewIntent = false;
         }
+    }
+
+    @Override
+    public void launchFragment(Fragment fragment) {
+        // Called before super to clear the back stack if necessary before launching the fragment
+        // in question.
+        if (fragment.getClass().getName().equals(
+                getString(R.string.config_settings_hierarchy_root_fragment))
+                && getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            clearAll();
+        }
+
+        if (mHasNewIntent) {
+            if (intentFromSettings(getIntent())) {
+                cleanUpOrphanedDialogs();
+            } else {
+                clearAll();
+            }
+        }
+
+        super.launchFragment(fragment);
     }
 
     /**
@@ -95,7 +105,17 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (getCurrentFragment() != null) {
             return getCurrentFragment();
         }
-        return getRootFragment();
+
+        // Even in on create, start the fragment from the intent unless the action is not specified
+        // or if the intent originated from within Car Settings.
+        Fragment fragment = FragmentResolver.getFragmentForIntent(/* context= */ this,
+                getIntent());
+        if (fragment == null || intentFromSettings(getIntent())) {
+            LOG.w("Intent has no specified settings page. Defaulting to the root fragment");
+            fragment = getRootFragment();
+        }
+
+        return fragment;
     }
 
     private Fragment getRootFragment() {
