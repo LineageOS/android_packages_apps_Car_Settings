@@ -309,7 +309,7 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"المساعدة والإدخال الصوتي"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"تطبيق المساعد"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"استخدام نص من الشاشة"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"السماح للتطبيق المساعد بالوصول إلى محتوى الشاشة كالنص"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"السماح للتطبيق المساعد بالوصول إلى محتوى الشاشة كنص"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"استخدام لقطة الشاشة"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"السماح للتطبيق المساعد بالوصول إلى صورة للشاشة"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"الإدخال الصوتي"</string>
@@ -517,6 +517,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"هل تريد حذف بيانات التطبيق؟"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"سيتم حذف جميع بيانات هذا التطبيق نهائيًا. ويشمل ذلك جميع الملفات والإعدادات والحسابات وقواعد البيانات وما إلى ذلك."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"تعذّر مسح مساحة تخزين للتطبيق."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"تم إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"تعذّر إخراج <xliff:g id="NAME">%1$s</xliff:g> بشكل آمن."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"الحسابات"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"إضافة حساب"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"لم تتم إضافة أي حسابات."</string>

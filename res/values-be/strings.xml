@@ -304,7 +304,7 @@
     <string name="assist_app_settings" msgid="9085261410166776497">"Праграма-памочнік"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Выкарыстоўваць тэкст з экрана"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Дазволіць праграме-памочніку мець доступ да змесціва на экране ў выглядзе тэксту"</string>
-    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Выкарыстоўваць скрыншот"</string>
+    <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Выкарыстоўваць здымак экрана"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Дазволіць праграме-памочніку мець доступ да відарыса на экране"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Галасавы ўвод"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Сэрвіс аўтазапаўнення"</string>
@@ -507,6 +507,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Выдаліць даныя праграмы?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Усе даныя гэтай праграмы будуць назаўсёды выдаленыя. Гэта датычыцца ўсіх файлаў, налад, уліковых запісаў, баз даных і г. д."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Не ўдалося ачысціць сховішча для праграмы."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> бяспечна вынята"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Не ўдалося бяспечна выняць <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Уліковыя запісы"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Дадаць уліковы запіс"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Уліковыя запісы не дададзены"</string>
