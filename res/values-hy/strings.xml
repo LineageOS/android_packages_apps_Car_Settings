@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Ավելին"</string>
     <string name="display_settings" msgid="5325515247739279185">"Էկրան"</string>
     <string name="brightness" msgid="2919605130898772866">"Պայծառության մակարդակ"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Հարմարողական պայծառություն"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Հարմարվող պայծառություն"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Փոխել պայծառությունն ըստ լուսավորվածության մակարդակի"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Գիշերային ռեժիմը միացված է"</string>
     <string name="keywords_display" msgid="3978416985146943922">"էկրան, հպէկրան"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ջնջե՞լ հավելվածի տվյալները:"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Այս հավելվածի բոլոր տվյալներն ընդմիշտ կջնջվեն՝ ներառյալ բոլոր ֆայլերը, կարգավորումները, հաշիվները, տվյալների շտեմարանները և այլն:"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Չհաջողվեց մաքրել հիշողությունը:"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Կրիչը (<xliff:g id="NAME">%1$s</xliff:g>) անվտանգ կերպով հեռացվեց"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Չհաջողվեց հեռացնել կրիչը (<xliff:g id="NAME">%1$s</xliff:g>)"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Հաշիվներ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ավելացնել հաշիվ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Հաշիվներ չեն ավելացվել"</string>

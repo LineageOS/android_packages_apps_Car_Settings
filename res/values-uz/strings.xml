@@ -208,7 +208,7 @@
     <string name="tts_pitch" msgid="2389171233852604923">"Ohang"</string>
     <string name="tts_reset" msgid="6289481549801844709">"Asliga qaytarish"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Ovoz"</string>
-    <string name="ring_volume_title" msgid="3135241004980719442">"Chaqiruv tovushi"</string>
+    <string name="ring_volume_title" msgid="3135241004980719442">"Jiringlash tovushi"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"Navigatsiya tovushi"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Rington"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Bildirishnoma"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ilova maʼlumotlari oʻchirilsinmi?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Ushbu ilovaning barcha maʼlumotlari, jumladan, fayllar, maʼlumotlar bazalari, sozlamalar, hisoblar va boshqa narsalar oʻchirib tashlanadi. Keyin ularni qayta tiklab boʻlmaydi."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Xotira tozalanmadi."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olindi"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olinmadi"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob qo‘shish"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisobga kirilmagan"</string>

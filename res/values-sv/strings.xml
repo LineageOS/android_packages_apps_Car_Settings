@@ -299,7 +299,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Använda text från skärmen"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Tillåt att assistentappen får åtkomst till innehåll på skärmen, till exempel text"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Använda skärmdump"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Tillåt att assistenappen får åtkomst till en bild på skärmen"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Tillåt att assistentappen får åtkomst till en bild på skärmen"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Röstinmatning"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Tjänsten Autofyll"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ingen"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vill du ta bort appdata?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"All appdata tas bort permanent. Det inkluderar bland annat alla filer, inställningar, konton och databaser."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Det gick inte att rensa appens lagringsutrymme."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> har matats ut på ett säkert sätt"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Det gick inte att mata ut <xliff:g id="NAME">%1$s</xliff:g> på ett säkert sätt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konton"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lägg till konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Inga konton har lagts till"</string>
