@@ -242,6 +242,24 @@ public class CarSettingActivityTest {
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNull();
     }
 
+    @Test
+    public void launchFragment_validIntent_clearsBackStack() {
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Add fragment 2
+        TestFragment testFragment2 = new TestFragment();
+        mActivity.launchFragment(testFragment2);
+
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        mActivity.onNewIntent(intent);
+        mActivity.launchFragment(new DatetimeSettingsFragment());
+
+        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
+                .isEqualTo(1);
+    }
+
     /** Simple Fragment for testing use. */
     public static class TestFragment extends Fragment {
     }
