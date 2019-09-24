@@ -211,6 +211,7 @@
 
             <intent-filter android:priority="100">
                 <action android:name="android.settings.INTERNAL_STORAGE_SETTINGS" />
+                <action android:name="android.os.storage.action.MANAGE_STORAGE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
