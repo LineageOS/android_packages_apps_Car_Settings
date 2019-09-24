@@ -82,6 +82,12 @@ public class EnabledKeyboardPreferenceController extends
             if (!isAllowedByOrganization) {
                 continue;
             }
+            // TODO(b/141699946): disabling needs to be moved elsewhere, ideally at start-up
+            if (inputMethodInfo.getPackageName().equals(InputMethodUtil.GOOGLE_VOICE_TYPING)) {
+                InputMethodUtil.disableInputMethod(getContext(), mInputMethodManager,
+                        inputMethodInfo);
+                continue;
+            }
 
             Preference preference = createPreference(inputMethodInfo);
             if (mPreferences.containsKey(preference.getKey())) {
