@@ -19,12 +19,12 @@ package com.android.car.settings.bluetooth;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
 import android.bluetooth.BluetoothAdapter;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -64,7 +64,7 @@ public class BluetoothSettingsFragment extends SettingsFragment {
                 }
             };
 
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private LocalBluetoothManager mLocalBluetoothManager;
     private Switch mBluetoothSwitch;
 
@@ -83,7 +83,7 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
         mLocalBluetoothManager = BluetoothUtils.getLocalBtManager(context);
         if (mLocalBluetoothManager == null) {
             goBack();
@@ -113,7 +113,7 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     }
 
     private boolean isUserRestricted() {
-        return mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_BLUETOOTH);
+        return mUserManager.hasUserRestriction(DISALLOW_BLUETOOTH);
     }
 
     private void handleStateChanged(int state) {

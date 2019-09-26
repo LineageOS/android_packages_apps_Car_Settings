@@ -157,8 +157,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_APPS_CONTROL)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_APPS_CONTROL, true);
         mController.start();
 
         assertThat(findForceStopButton(mActivity).isEnabled()).isFalse();
@@ -436,8 +436,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_APPS_CONTROL)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_APPS_CONTROL, true);
         mController.start();
 
         assertThat(findUninstallButton(mActivity).isEnabled()).isFalse();
@@ -448,8 +448,8 @@ public class ApplicationDetailsFragmentTest {
         getShadowPackageManager().addPackage(createPackageInfoWithApplicationInfo(PACKAGE_NAME));
         mActivity.launchFragment(mFragment);
 
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_UNINSTALL_APPS)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), UserManager.DISALLOW_UNINSTALL_APPS, true);
         mController.start();
 
         assertThat(findUninstallButton(mActivity).isEnabled()).isFalse();
