@@ -18,12 +18,11 @@ package com.android.car.settings.accounts;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.when;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.view.View;
@@ -35,8 +34,9 @@ import androidx.fragment.app.Fragment;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowAccountManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
+import com.android.car.settings.testutils.ShadowUserHelper;
+import com.android.car.settings.users.UserHelper;
 
 import org.junit.After;
 import org.junit.Before;
@@ -53,8 +53,7 @@ import org.robolectric.shadow.api.Shadow;
  * Tests for the {@link AccountDetailsFragment}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
-        ShadowContentResolver.class})
+@Config(shadows = {ShadowAccountManager.class, ShadowContentResolver.class, ShadowUserHelper.class})
 public class AccountDetailsFragmentTest {
     private static final String DIALOG_TAG = "confirmRemoveAccount";
     private final Account mAccount = new Account("Name", "com.acct");
@@ -65,13 +64,14 @@ public class AccountDetailsFragmentTest {
     private Context mContext;
     private BaseTestActivity mActivity;
     private AccountDetailsFragment mFragment;
+
     @Mock
-    private CarUserManagerHelper mMockCarUserManagerHelper;
+    private UserHelper mMockUserHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mMockUserHelper);
 
         mContext = application;
         // Add the account to the official list of accounts
@@ -82,9 +82,9 @@ public class AccountDetailsFragmentTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
         ShadowContentResolver.reset();
         mActivity.clearOnBackPressedFlag();
+        ShadowUserHelper.reset();
     }
 
     @Test
@@ -97,7 +97,8 @@ public class AccountDetailsFragmentTest {
 
     @Test
     public void cannotModifyUsers_removeAccountButtonShouldNotBeVisible() {
-        doReturn(false).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(false);
         initFragment();
 
         Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
@@ -106,7 +107,8 @@ public class AccountDetailsFragmentTest {
 
     @Test
     public void canModifyUsers_removeAccountButtonShouldBeVisible() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(true);
         initFragment();
 
         Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
@@ -115,7 +117,8 @@ public class AccountDetailsFragmentTest {
 
     @Test
     public void onRemoveAccountButtonClicked_canModifyUsers_shouldShowConfirmRemoveAccountDialog() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts())
+                .thenReturn(true);
         initFragment();
 
         Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
