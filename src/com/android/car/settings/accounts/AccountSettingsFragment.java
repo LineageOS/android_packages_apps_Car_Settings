@@ -16,7 +16,6 @@
 
 package com.android.car.settings.accounts;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +28,7 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.users.UserHelper;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -56,7 +56,7 @@ public class AccountSettingsFragment extends SettingsFragment {
 
         // Enable the add account button if the user is allowed to modify accounts
         Button addAccountButton = requireActivity().findViewById(R.id.action_button1);
-        if (new CarUserManagerHelper(getContext()).canCurrentProcessModifyAccounts()) {
+        if (UserHelper.getInstance(getContext()).canCurrentProcessModifyAccounts()) {
             addAccountButton.setText(R.string.user_add_account_menu);
             addAccountButton.setOnClickListener(v -> onAddAccountClicked());
         } else {
