@@ -18,8 +18,12 @@ package com.android.car.settings.users;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.UserInfo;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
 
@@ -35,12 +39,16 @@ import com.android.car.settings.common.PreferenceController;
 public abstract class UserDetailsBasePreferenceController<V extends Preference> extends
         PreferenceController<V> {
 
-    private final CarUserManagerHelper.OnUsersUpdateListener mOnUsersUpdateListener = () -> {
-        refreshUserInfo();
-        refreshUi();
-    };
     private final CarUserManagerHelper mCarUserManagerHelper;
     private UserInfo mUserInfo;
+
+    private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            refreshUserInfo();
+            refreshUi();
+        }
+    };
 
     public UserDetailsBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -73,13 +81,33 @@ public abstract class UserDetailsBasePreferenceController<V extends Preference> 
     /** Registers a listener which updates the displayed user name when a user is modified. */
     @Override
     protected void onCreateInternal() {
-        getCarUserManagerHelper().registerOnUsersUpdateListener(mOnUsersUpdateListener);
+        registerForUserEvents();
     }
 
     /** Unregisters a listener which updates the displayed user name when a user is modified. */
     @Override
     protected void onDestroyInternal() {
-        getCarUserManagerHelper().unregisterOnUsersUpdateListener(mOnUsersUpdateListener);
+        unregisterForUserEvents();
+    }
+
+    private void registerForUserEvents() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_USER_REMOVED);
+        filter.addAction(Intent.ACTION_USER_ADDED);
+        filter.addAction(Intent.ACTION_USER_INFO_CHANGED);
+        filter.addAction(Intent.ACTION_USER_SWITCHED);
+        filter.addAction(Intent.ACTION_USER_STOPPED);
+        filter.addAction(Intent.ACTION_USER_UNLOCKED);
+        getContext().registerReceiverAsUser(
+                mUserUpdateReceiver,
+                UserHandle.ALL,
+                filter,
+                /* broadcastPermission= */ null,
+                /* scheduler= */ null);
+    }
+
+    private void unregisterForUserEvents() {
+        getContext().unregisterReceiver(mUserUpdateReceiver);
     }
 
     /** Gets the car user manager helper. */

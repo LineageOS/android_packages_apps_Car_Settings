@@ -17,7 +17,6 @@
 package com.android.car.settings.testutils;
 
 import android.car.userlib.CarUserManagerHelper;
-import android.car.userlib.CarUserManagerHelper.OnUsersUpdateListener;
 import android.content.pm.UserInfo;
 
 import org.robolectric.annotation.Implementation;
@@ -86,16 +85,6 @@ public class ShadowCarUserManagerHelper {
     @Implementation
     protected UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
-    }
-
-    @Implementation
-    protected void registerOnUsersUpdateListener(OnUsersUpdateListener listener) {
-        sMockInstance.registerOnUsersUpdateListener(listener);
-    }
-
-    @Implementation
-    protected void unregisterOnUsersUpdateListener(OnUsersUpdateListener listener) {
-        sMockInstance.unregisterOnUsersUpdateListener(listener);
     }
 
     @Implementation

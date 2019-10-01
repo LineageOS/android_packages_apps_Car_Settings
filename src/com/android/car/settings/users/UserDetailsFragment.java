@@ -16,15 +16,18 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.widget.TextView;
 
-import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.internal.annotations.VisibleForTesting;
 
 /**
  * Shows details for a user with the ability to remove user and edit current user.
@@ -38,11 +41,14 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     }
 
     @VisibleForTesting
-    final CarUserManagerHelper.OnUsersUpdateListener mOnUsersUpdateListener = () -> {
-        // Update the user info value, as it may have changed.
-        refreshUserInfo();
-        // Update the text in the action bar when there is a user update.
-        ((TextView) getActivity().findViewById(R.id.title)).setText(getTitleText());
+    final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Update the user info value, as it may have changed.
+            refreshUserInfo();
+            // Update the text in the action bar when there is a user update.
+            ((TextView) getActivity().findViewById(R.id.title)).setText(getTitleText());
+        }
     };
 
     @Override
@@ -61,17 +67,37 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getCarUserManagerHelper().registerOnUsersUpdateListener(mOnUsersUpdateListener);
+        registerForUserEvents();
     }
 
     @Override
     public void onDestroy() {
+        unregisterForUserEvents();
         super.onDestroy();
-        getCarUserManagerHelper().unregisterOnUsersUpdateListener(mOnUsersUpdateListener);
     }
 
     @Override
     protected String getTitleText() {
         return UserUtils.getUserDisplayName(getContext(), getCarUserManagerHelper(), getUserInfo());
+    }
+
+    private void registerForUserEvents() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_USER_REMOVED);
+        filter.addAction(Intent.ACTION_USER_ADDED);
+        filter.addAction(Intent.ACTION_USER_INFO_CHANGED);
+        filter.addAction(Intent.ACTION_USER_SWITCHED);
+        filter.addAction(Intent.ACTION_USER_STOPPED);
+        filter.addAction(Intent.ACTION_USER_UNLOCKED);
+        getContext().registerReceiverAsUser(
+                mUserUpdateReceiver,
+                UserHandle.ALL,
+                filter,
+                /* broadcastPermission= */ null,
+                /* scheduler= */ null);
+    }
+
+    private void unregisterForUserEvents() {
+        getContext().unregisterReceiver(mUserUpdateReceiver);
     }
 }
