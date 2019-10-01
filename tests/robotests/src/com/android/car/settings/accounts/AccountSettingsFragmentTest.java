@@ -19,6 +19,7 @@ package com.android.car.settings.accounts;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.when;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.Account;
@@ -35,6 +36,8 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
+import com.android.car.settings.testutils.ShadowUserHelper;
+import com.android.car.settings.users.UserHelper;
 
 import org.junit.After;
 import org.junit.Before;
@@ -54,7 +57,7 @@ import org.robolectric.shadows.ShadowUserManager;
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
-        ShadowContentResolver.class})
+        ShadowContentResolver.class, ShadowUserHelper.class})
 public class AccountSettingsFragmentTest {
     private static final int USER_ID = 111;
 
@@ -64,10 +67,13 @@ public class AccountSettingsFragmentTest {
     @Mock
     private CarUserManagerHelper mMockCarUserManagerHelper;
 
+    @Mock
+    private UserHelper mMockUserHelper;
+
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-
+        ShadowUserHelper.setInstance(mMockUserHelper);
         // Set up user info
         ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
         doReturn(new UserInfo(USER_ID, "USER", /* flags= */ 0)).when(
@@ -78,12 +84,13 @@ public class AccountSettingsFragmentTest {
 
     @After
     public void tearDown() {
+        ShadowUserHelper.reset();
         ShadowCarUserManagerHelper.reset();
     }
 
     @Test
     public void cannotModifyUsers_addAccountButtonShouldNotBeVisible() {
-        doReturn(false).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
         initFragment();
 
         Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
@@ -92,7 +99,7 @@ public class AccountSettingsFragmentTest {
 
     @Test
     public void canModifyUsers_addAccountButtonShouldBeVisible() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         initFragment();
 
         Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
@@ -101,7 +108,7 @@ public class AccountSettingsFragmentTest {
 
     @Test
     public void clickAddAccountButton_shouldOpenChooseAccountFragment() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         initFragment();
 
         Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
@@ -113,7 +120,7 @@ public class AccountSettingsFragmentTest {
 
     @Test
     public void clickAddAccountButton_shouldNotOpenChooseAccountFragmentWhenOneType() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         getShadowUserManager().addProfile(USER_ID, USER_ID,
                 String.valueOf(USER_ID), /* profileFlags= */ 0);
         addAccountAndDescription(USER_ID, "accountName", R.string.account_type1_label);
@@ -128,7 +135,7 @@ public class AccountSettingsFragmentTest {
 
     @Test
     public void clickAddAccountButton_shouldOpenChooseAccountFragmentWhenTwoTypes() {
-        doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
+        when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         getShadowUserManager().addProfile(USER_ID, USER_ID,
                 String.valueOf(USER_ID), /* profileFlags= */ 0);
         addAccountAndDescription(USER_ID, "accountName1", R.string.account_type1_label);

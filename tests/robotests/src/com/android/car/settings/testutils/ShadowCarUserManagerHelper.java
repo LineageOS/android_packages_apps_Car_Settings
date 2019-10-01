@@ -104,11 +104,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected boolean canCurrentProcessModifyAccounts() {
-        return sMockInstance.canCurrentProcessModifyAccounts();
-    }
-
-    @Implementation
     protected int getMaxSupportedRealUsers() {
         return sMockInstance.getMaxSupportedRealUsers();
     }

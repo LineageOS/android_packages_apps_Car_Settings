@@ -23,7 +23,6 @@ import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -44,6 +43,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.users.UserHelper;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.io.IOException;
@@ -121,7 +121,7 @@ public class AccountDetailsFragment extends SettingsFragment implements
 
         // Enable the remove account button if the user is allowed to modify accounts.
         Button removeAccountButton = requireActivity().findViewById(R.id.action_button1);
-        if (new CarUserManagerHelper(getContext()).canCurrentProcessModifyAccounts()) {
+        if (UserHelper.getInstance(getContext()).canCurrentProcessModifyAccounts()) {
             removeAccountButton.setText(R.string.remove_button);
             removeAccountButton.setOnClickListener(v -> onRemoveAccountClicked());
         } else {
