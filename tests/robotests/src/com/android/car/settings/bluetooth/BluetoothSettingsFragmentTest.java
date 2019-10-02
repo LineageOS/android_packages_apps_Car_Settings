@@ -24,41 +24,36 @@ import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.widget.Switch;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
 /** Unit test for {@link BluetoothSettingsFragment}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowBluetoothAdapter.class,
-        ShadowBluetoothPan.class})
+@Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
 public class BluetoothSettingsFragmentTest {
 
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
     private Context mContext;
     private LocalBluetoothManager mLocalBluetoothManager;
     private FragmentController<BluetoothSettingsFragment> mFragmentController;
@@ -67,7 +62,6 @@ public class BluetoothSettingsFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
 
         mContext = RuntimeEnvironment.application;
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(mContext, /* onInitCallback= */
@@ -78,7 +72,6 @@ public class BluetoothSettingsFragmentTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
         ShadowBluetoothAdapter.reset();
     }
 
@@ -166,8 +159,8 @@ public class BluetoothSettingsFragmentTest {
 
     @Test
     public void stateChanged_on_userRestricted_setsSwitchDisabled() {
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), DISALLOW_BLUETOOTH, true);
         mFragmentController.setup();
 
         sendStateChangedIntent(STATE_ON);
@@ -213,8 +206,8 @@ public class BluetoothSettingsFragmentTest {
 
     @Test
     public void stateChanged_off_userRestricted_setsSwitchDisabled() {
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), DISALLOW_BLUETOOTH, true);
         mFragmentController.setup();
 
         sendStateChangedIntent(STATE_OFF);
@@ -244,5 +237,9 @@ public class BluetoothSettingsFragmentTest {
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
         return Shadow.extract(BluetoothAdapter.getDefaultAdapter());
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadow.extract(UserManager.get(mContext));
     }
 }

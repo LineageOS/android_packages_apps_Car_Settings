@@ -71,6 +71,7 @@ public class AddAccountActivity extends Activity {
     // Need a specific request code for add account activity.
     private static final int ADD_ACCOUNT_REQUEST = 2001;
 
+    private UserManager mUserManager;
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserHandle mUserHandle;
     private PendingIntent mPendingIntent;
@@ -86,7 +87,7 @@ public class AddAccountActivity extends Activity {
             try {
                 Bundle result = future.getResult();
 
-                Intent intent = (Intent) result.getParcelable(AccountManager.KEY_INTENT);
+                Intent intent = result.getParcelable(AccountManager.KEY_INTENT);
                 Bundle addAccountOptions = new Bundle();
                 addAccountOptions.putBoolean(EXTRA_HAS_MULTIPLE_USERS,
                         hasMultipleUsers(AddAccountActivity.this));
@@ -129,11 +130,11 @@ public class AddAccountActivity extends Activity {
             LOG.v("Restored from previous add account call: " + mAddAccountCalled);
         }
 
+        mUserManager = UserManager.get(getApplicationContext());
         mCarUserManagerHelper = new CarUserManagerHelper(this);
-        mUserHandle = mCarUserManagerHelper.getCurrentProcessUserInfo().getUserHandle();
+        mUserHandle = UserHandle.of(mCarUserManagerHelper.getCurrentProcessUserId());
 
-        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
             // We aren't allowed to add an account.
             Toast.makeText(
                     this, R.string.user_cannot_add_accounts_message, Toast.LENGTH_LONG)

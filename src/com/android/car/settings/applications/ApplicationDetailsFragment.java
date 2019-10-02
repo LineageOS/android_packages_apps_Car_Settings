@@ -92,6 +92,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
 
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
+    private UserManager mUserManager;
     private CarUserManagerHelper mCarUserManagerHelper;
 
     private String mPackageName;
@@ -131,6 +132,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         super.onAttach(context);
         mDpm = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
         mPm = context.getPackageManager();
+        mUserManager = UserManager.get(context);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
 
         // These should be loaded before onCreate() so that the controller operates as expected.
@@ -243,8 +245,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
 
     private void updateForceStopButtonInner(boolean enabled) {
         mForceStopButton.setEnabled(
-                enabled && !mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                        UserManager.DISALLOW_APPS_CONTROL));
+                enabled && !mUserManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL));
     }
 
     private void updateUninstallButton() {
@@ -298,14 +299,12 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
             return true;
         }
 
-        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_APPS_CONTROL)) {
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_APPS_CONTROL)) {
             LOG.d("Uninstall disabled because user has DISALLOW_APPS_CONTROL restriction");
             return true;
         }
 
-        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_UNINSTALL_APPS)) {
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_UNINSTALL_APPS)) {
             LOG.d("Uninstall disabled because user has DISALLOW_UNINSTALL_APPS restriction");
             return true;
         }

@@ -26,12 +26,11 @@ import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_O
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
 import android.app.admin.DevicePolicyManager;
 import android.bluetooth.BluetoothAdapter;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -46,40 +45,39 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 
 
 /**
  * Unit tests for {@link AddTrustedDevicePreferenceController}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowLockPatternUtils.class, ShadowBluetoothAdapter.class,
-        ShadowCarUserManagerHelper.class})
+@Config(shadows = {ShadowLockPatternUtils.class, ShadowBluetoothAdapter.class})
 public class AddTrustedDevicePreferenceControllerTest {
 
     private Context mContext;
     private PreferenceControllerTestHelper<AddTrustedDevicePreferenceController>
             mPreferenceControllerHelper;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
     private Preference mPreference;
     private AddTrustedDevicePreferenceController mController;
+    private UserHandle mMyUserHandle;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        mMyUserHandle = UserHandle.of(UserHandle.myUserId());
         mPreference = new Preference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 AddTrustedDevicePreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
-        Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
+        Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 FEATURE_BLUETOOTH, /* supported= */ true);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
@@ -94,8 +92,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     @Test
     public void refreshUi_hasPassword_preferenceEnabled() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(false);
+        getShadowUserManager().setUserRestriction(mMyUserHandle, DISALLOW_BLUETOOTH, false);
 
         mController.refreshUi();
 
@@ -105,8 +102,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     @Test
     public void refreshUi_noPassword_preferenceDisabled() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(false);
+        getShadowUserManager().setUserRestriction(mMyUserHandle, DISALLOW_BLUETOOTH, false);
 
         mController.refreshUi();
 
@@ -116,8 +112,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     @Test
     public void refreshUi_bluetoothAdapterEnabled_setsEmptySummary() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(false);
+        getShadowUserManager().setUserRestriction(mMyUserHandle, DISALLOW_BLUETOOTH, false);
         BluetoothAdapter.getDefaultAdapter().enable();
 
         mController.refreshUi();
@@ -158,8 +153,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     public void getAvailabilityStatus_disallowBluetoothUserRestriction_disabledForUser() {
         Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
                 FEATURE_BLUETOOTH, /* supported= */ true);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_BLUETOOTH)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(mMyUserHandle, DISALLOW_BLUETOOTH, true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
@@ -168,8 +162,7 @@ public class AddTrustedDevicePreferenceControllerTest {
     public void getAvailabilityStatus_disallowConfigBluetoothUserRestriction_disabledForUser() {
         Shadows.shadowOf(RuntimeEnvironment.application.getPackageManager()).setSystemFeature(
                 FEATURE_BLUETOOTH, /* supported= */ true);
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_CONFIG_BLUETOOTH)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(mMyUserHandle, DISALLOW_CONFIG_BLUETOOTH, true);
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(DISABLED_FOR_USER);
     }
@@ -181,5 +174,9 @@ public class AddTrustedDevicePreferenceControllerTest {
         // No user restrictions.
 
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadow.extract(UserManager.get(mContext));
     }
 }

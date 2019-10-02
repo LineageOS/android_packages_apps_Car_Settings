@@ -17,7 +17,6 @@
 package com.android.car.settings.network;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.UserManager;
@@ -38,7 +37,7 @@ public class MobileNetworkEntryPreferenceController extends
         PreferenceController<Preference> implements
         SubscriptionsChangeListener.SubscriptionsChangeAction {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final UserManager mUserManager;
     private final SubscriptionsChangeListener mChangeListener;
     private final SubscriptionManager mSubscriptionManager;
     private final ConnectivityManager mConnectivityManager;
@@ -47,7 +46,7 @@ public class MobileNetworkEntryPreferenceController extends
     public MobileNetworkEntryPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
         mChangeListener = new SubscriptionsChangeListener(context, /* action= */ this);
         mSubscriptionManager = context.getSystemService(SubscriptionManager.class);
         mConnectivityManager = context.getSystemService(ConnectivityManager.class);
@@ -75,9 +74,9 @@ public class MobileNetworkEntryPreferenceController extends
             return UNSUPPORTED_ON_DEVICE;
         }
 
-        boolean isNotAdmin = !mCarUserManagerHelper.getCurrentProcessUserInfo().isAdmin();
-        boolean hasRestriction = mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS);
+        boolean isNotAdmin = !mUserManager.isAdminUser();
+        boolean hasRestriction =
+                mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_MOBILE_NETWORKS);
         if (isNotAdmin || hasRestriction) {
             return DISABLED_FOR_USER;
         }

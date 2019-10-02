@@ -114,11 +114,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected boolean isCurrentProcessUserHasRestriction(String restriction) {
-        return sMockInstance.isCurrentProcessUserHasRestriction(restriction);
-    }
-
-    @Implementation
     protected boolean removeUser(UserInfo userInfo, String guestUserName) {
         return sMockInstance.removeUser(userInfo, guestUserName);
     }

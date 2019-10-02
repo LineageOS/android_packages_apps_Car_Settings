@@ -19,8 +19,8 @@ package com.android.car.settings.security;
 import static android.os.UserManager.DISALLOW_CONFIG_CREDENTIALS;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserManager;
 
 import androidx.preference.Preference;
 
@@ -30,12 +30,12 @@ import com.android.car.settings.common.PreferenceController;
 /** Controls whether the option to reset credentials is shown to the user. */
 public class CredentialsResetPreferenceController extends PreferenceController<Preference> {
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
+    private final UserManager mUserManager;
 
     public CredentialsResetPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserManager = UserManager.get(context);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class CredentialsResetPreferenceController extends PreferenceController<P
 
     @Override
     public int getAvailabilityStatus() {
-        return mCarUserManagerHelper.isCurrentProcessUserHasRestriction(DISALLOW_CONFIG_CREDENTIALS)
+        return mUserManager.hasUserRestriction(DISALLOW_CONFIG_CREDENTIALS)
                 ? DISABLED_FOR_USER : AVAILABLE;
     }
 }

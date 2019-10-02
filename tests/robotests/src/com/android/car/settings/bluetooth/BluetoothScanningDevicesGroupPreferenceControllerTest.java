@@ -27,9 +27,10 @@ import static org.mockito.Mockito.when;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.os.UserHandle;
+import android.os.UserManager;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
@@ -56,18 +57,16 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowUserManager;
 import org.robolectric.util.ReflectionHelpers;
 
 import java.util.Collections;
 
 /** Unit test for {@link BluetoothScanningDevicesGroupPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowBluetoothAdapter.class,
-        ShadowBluetoothPan.class})
+@Config(shadows = {ShadowBluetoothAdapter.class, ShadowBluetoothPan.class})
 public class BluetoothScanningDevicesGroupPreferenceControllerTest {
 
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
     private CachedBluetoothDevice mCachedDevice;
     @Mock
@@ -85,7 +84,6 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mContext = RuntimeEnvironment.application;
 
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(mContext, /* onInitCallback= */
@@ -122,8 +120,8 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
 
     @Test
     public void disallowConfigBluetooth_doesNotStartScanning() {
-        when(mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                DISALLOW_CONFIG_BLUETOOTH)).thenReturn(true);
+        getShadowUserManager().setUserRestriction(
+                UserHandle.of(UserHandle.myUserId()), DISALLOW_CONFIG_BLUETOOTH, true);
 
         mControllerHelper.markState(Lifecycle.State.STARTED);
 
@@ -314,6 +312,10 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
         return (ShadowBluetoothAdapter) Shadow.extract(BluetoothAdapter.getDefaultAdapter());
+    }
+
+    private ShadowUserManager getShadowUserManager() {
+        return Shadow.extract(UserManager.get(mContext));
     }
 
     private static final class TestBluetoothScanningDevicesGroupPreferenceController extends

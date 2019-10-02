@@ -60,15 +60,15 @@ public class CredentialStorageActivity extends FragmentActivity {
 
     private static final int CONFIRM_CLEAR_SYSTEM_CREDENTIAL_REQUEST = 1;
 
-    private final KeyStore mKeyStore = KeyStore.getInstance();
-
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private LockPatternUtils mUtils;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCarUserManagerHelper = new CarUserManagerHelper(this);
+        mUserManager = UserManager.get(getApplicationContext());
         mUtils = new LockPatternUtils(this);
     }
 
@@ -80,8 +80,7 @@ public class CredentialStorageActivity extends FragmentActivity {
             return;
         }
 
-        if (mCarUserManagerHelper.isCurrentProcessUserHasRestriction(
-                UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
+        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
             finish();
             return;
         }

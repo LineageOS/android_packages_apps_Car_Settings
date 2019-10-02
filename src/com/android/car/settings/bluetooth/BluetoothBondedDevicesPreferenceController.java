@@ -76,9 +76,7 @@ public class BluetoothBondedDevicesPreferenceController extends
     protected void updateState(PreferenceGroup preferenceGroup) {
         super.updateState(preferenceGroup);
 
-        boolean hasUserRestriction =
-                getCarUserManagerHelper().isCurrentProcessUserHasRestriction(
-                        DISALLOW_CONFIG_BLUETOOTH);
+        boolean hasUserRestriction = getUserManager().hasUserRestriction(DISALLOW_CONFIG_BLUETOOTH);
         updateActionVisibility(preferenceGroup, !hasUserRestriction);
     }
 
