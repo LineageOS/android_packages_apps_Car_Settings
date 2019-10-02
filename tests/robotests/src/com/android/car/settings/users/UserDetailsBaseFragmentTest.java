@@ -20,7 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.Process;
@@ -32,7 +31,7 @@ import android.widget.Button;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
@@ -51,7 +50,7 @@ import org.robolectric.shadows.ShadowUserManager;
 import java.util.Collections;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UserDetailsBaseFragmentTest {
 
     /*
@@ -75,7 +74,7 @@ public class UserDetailsBaseFragmentTest {
     private BaseTestActivity mTestActivity;
     private UserDetailsBaseFragment mUserDetailsBaseFragment;
     @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserHelper mUserHelper;
 
     private Button mRemoveUserButton;
 
@@ -83,7 +82,7 @@ public class UserDetailsBaseFragmentTest {
     public void setUpTestActivity() {
         mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mUserHelper);
 
         setCurrentUserWithFlags(/* flags= */ 0);
 
@@ -92,7 +91,7 @@ public class UserDetailsBaseFragmentTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
+        ShadowUserHelper.reset();
     }
 
     @Test
@@ -137,7 +136,7 @@ public class UserDetailsBaseFragmentTest {
     public void testRemoveUserButtonClick_createsRemovalDialog() {
         getShadowUserManager().setUserRestriction(
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, false);
-        when(mCarUserManagerHelper.getAllPersistentUsers()).thenReturn(
+        when(mUserHelper.getAllPersistentUsers()).thenReturn(
                 Collections.singletonList(new UserInfo()));
         createUserDetailsBaseFragment(/* userId= */ 1);
         mRemoveUserButton.performClick();
