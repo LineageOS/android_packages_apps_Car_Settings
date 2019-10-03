@@ -211,8 +211,8 @@ public class InitialLockSetupServiceTest {
         }
         int result = service.setLock(LockTypes.PATTERN, patternBytes);
         assertThat(result).isEqualTo(SetLockCodes.SUCCESS);
-        List<LockPatternView.Cell> savedPattern = ShadowLockPatternUtils.getSavedPattern();
-        assertThat(savedPattern).containsExactlyElementsIn(pattern);
+        byte[] savedPattern = ShadowLockPatternUtils.getSavedPattern();
+        assertThat(savedPattern).isEqualTo(LockPatternUtils.patternToByteArray(pattern));
     }
 
     @Test

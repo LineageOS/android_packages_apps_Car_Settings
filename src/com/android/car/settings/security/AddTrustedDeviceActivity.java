@@ -30,6 +30,7 @@ import androidx.fragment.app.Fragment;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseCarSettingsActivity;
 import com.android.car.settings.common.Logger;
+import com.android.internal.widget.LockscreenCredential;
 
 /**
  * Activity which manages the enrollment process and communicates between
@@ -231,7 +232,7 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
     }
 
     @Override
-    public void onLockVerified(byte[] lock) {
+    public void onLockVerified(LockscreenCredential lock) {
         getSupportFragmentManager().popBackStack();
     }
 

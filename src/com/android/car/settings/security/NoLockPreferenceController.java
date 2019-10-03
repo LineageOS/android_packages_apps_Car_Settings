@@ -27,6 +27,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 
 /** Business logic for the no lock preference. */
 public class NoLockPreferenceController extends LockTypeBasePreferenceController {
@@ -38,7 +39,8 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
     final ConfirmRemoveScreenLockDialog.ConfirmRemoveScreenLockListener mRemoveLockListener =
             () -> {
                 int userId = new CarUserManagerHelper(getContext()).getCurrentProcessUserId();
-                new LockPatternUtils(getContext()).clearLock(getCurrentPassword(), userId);
+                new LockPatternUtils(getContext()).setLockCredential(
+                        LockscreenCredential.createNone(), getCurrentPassword(), userId);
                 getFragmentController().goBack();
             };
 

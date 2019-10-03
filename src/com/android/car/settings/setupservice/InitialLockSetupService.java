@@ -35,6 +35,7 @@ import com.android.car.setupwizardlib.InitialLockSetupHelper;
 import com.android.car.setupwizardlib.LockConfig;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
+import com.android.internal.widget.LockscreenCredential;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -158,28 +159,33 @@ public class InitialLockSetupService extends Service {
                     case LockTypes.PASSWORD:
                         // Need to remove setup wizard lib byte array encoding and use the
                         // LockPatternUtils encoding.
-                        byte[] encodedPassword = LockPatternUtils.charSequenceToByteArray(
-                                InitialLockSetupHelper.byteArrayToCharSequence(password));
-                        lockPatternUtils.saveLockPassword(encodedPassword,
-                                /* savedPassword= */ null,
-                                DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC, userId);
+                        CharSequence passwordStr =
+                                InitialLockSetupHelper.byteArrayToCharSequence(password);
+                        lockPatternUtils.setLockCredential(
+                                LockscreenCredential.createPassword(passwordStr),
+                                /* savedPassword= */ LockscreenCredential.createNone(),
+                                userId);
                         success = true;
                         break;
                     case LockTypes.PIN:
                         // Need to remove setup wizard lib byte array encoding and use the
                         // LockPatternUtils encoding.
-                        byte[] encodedPin = LockPatternUtils.charSequenceToByteArray(
-                                InitialLockSetupHelper.byteArrayToCharSequence(password));
-                        lockPatternUtils.saveLockPassword(encodedPin, /* savedPassword= */ null,
-                                DevicePolicyManager.PASSWORD_QUALITY_NUMERIC, userId);
+                        CharSequence pinStr =
+                                InitialLockSetupHelper.byteArrayToCharSequence(password);
+                        lockPatternUtils.setLockCredential(
+                                LockscreenCredential.createPin(pinStr),
+                                /* savedPassword= */ LockscreenCredential.createNone(),
+                                userId);
                         success = true;
                         break;
                     case LockTypes.PATTERN:
                         // Need to remove the setup wizard lib pattern encoding and use the
                         // LockPatternUtils pattern format.
                         List<LockPatternView.Cell> pattern = toSettingsPattern(password);
-                        lockPatternUtils.saveLockPattern(pattern, /* savedPattern= */ null,
-                                userId, /* allowUntrustedChange= */ false);
+                        lockPatternUtils.setLockCredential(
+                                LockscreenCredential.createPattern(pattern),
+                                /* savedPassword= */ LockscreenCredential.createNone(),
+                                userId);
                         pattern.clear();
                         success = true;
                         break;
