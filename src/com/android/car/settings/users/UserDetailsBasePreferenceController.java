@@ -23,7 +23,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.UserInfo;
-import android.os.UserHandle;
 
 import androidx.preference.Preference;
 
@@ -91,19 +90,8 @@ public abstract class UserDetailsBasePreferenceController<V extends Preference> 
     }
 
     private void registerForUserEvents() {
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_USER_REMOVED);
-        filter.addAction(Intent.ACTION_USER_ADDED);
-        filter.addAction(Intent.ACTION_USER_INFO_CHANGED);
-        filter.addAction(Intent.ACTION_USER_SWITCHED);
-        filter.addAction(Intent.ACTION_USER_STOPPED);
-        filter.addAction(Intent.ACTION_USER_UNLOCKED);
-        getContext().registerReceiverAsUser(
-                mUserUpdateReceiver,
-                UserHandle.ALL,
-                filter,
-                /* broadcastPermission= */ null,
-                /* scheduler= */ null);
+        IntentFilter filter = new IntentFilter(Intent.ACTION_USER_INFO_CHANGED);
+        getContext().registerReceiver(mUserUpdateReceiver, filter);
     }
 
     private void unregisterForUserEvents() {

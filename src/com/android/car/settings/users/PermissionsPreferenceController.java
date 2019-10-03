@@ -108,6 +108,7 @@ public class PermissionsPreferenceController extends
 
     @Override
     protected void onCreateInternal() {
+        super.onCreateInternal();
         for (SwitchPreference switchPreference : mPermissionPreferences) {
             getPreference().addPreference(switchPreference);
         }
