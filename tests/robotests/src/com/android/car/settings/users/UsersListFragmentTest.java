@@ -33,6 +33,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
@@ -53,7 +54,8 @@ import java.util.ArrayList;
  * Tests for UserDetailsFragment.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
+        ShadowUserHelper.class})
 public class UsersListFragmentTest {
 
     private Context mContext;
@@ -64,17 +66,21 @@ public class UsersListFragmentTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
+    @Mock
+    private UserHelper mUserHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mUserHelper);
         mContext = RuntimeEnvironment.application;
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
     public void tearDown() {
+        ShadowUserHelper.reset();
         ShadowCarUserManagerHelper.reset();
     }
 
@@ -122,7 +128,7 @@ public class UsersListFragmentTest {
         UserInfo testUser = UserManager.get(mContext).getUserInfo(UserHandle.myUserId());
         mFragment = new UsersListFragment();
         doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-        doReturn(new ArrayList<UserInfo>()).when(mCarUserManagerHelper).getAllSwitchableUsers();
+        doReturn(new ArrayList<UserInfo>()).when(mUserHelper).getAllSwitchableUsers();
         doReturn(null).when(mCarUserManagerHelper).createNewNonAdminUser(any());
         mTestActivity.launchFragment(mFragment);
         refreshButtons();

@@ -23,6 +23,7 @@ import android.util.ArrayMap;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
+import org.robolectric.annotation.Resetter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -32,20 +33,21 @@ import java.util.Map;
 @Implements(UserManager.class)
 public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
 
-    private Map<Integer, List<UserInfo>> mProfiles = new ArrayMap<>();
+    private static boolean sIsHeadlessSystemUserMode = true;
+    private static Map<Integer, List<UserInfo>> sProfiles = new ArrayMap<>();
 
     @Implementation
     protected int[] getProfileIdsWithDisabled(int userId) {
-        if (mProfiles.containsKey(userId)) {
-            return mProfiles.get(userId).stream().mapToInt(userInfo -> userInfo.id).toArray();
+        if (sProfiles.containsKey(userId)) {
+            return sProfiles.get(userId).stream().mapToInt(userInfo -> userInfo.id).toArray();
         }
         return new int[]{};
     }
 
     @Implementation
     protected List<UserInfo> getProfiles(int userHandle) {
-        if (mProfiles.containsKey(userHandle)) {
-            return new ArrayList<>(mProfiles.get(userHandle));
+        if (sProfiles.containsKey(userHandle)) {
+            return new ArrayList<>(sProfiles.get(userHandle));
         }
         return Collections.emptyList();
     }
@@ -53,12 +55,33 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     /** Adds a profile to be returned by {@link #getProfiles(int)}. **/
     public void addProfile(
             int userHandle, int profileUserHandle, String profileName, int profileFlags) {
-        mProfiles.putIfAbsent(userHandle, new ArrayList<>());
-        mProfiles.get(userHandle).add(new UserInfo(profileUserHandle, profileName, profileFlags));
+        sProfiles.putIfAbsent(userHandle, new ArrayList<>());
+        sProfiles.get(userHandle).add(new UserInfo(profileUserHandle, profileName, profileFlags));
     }
 
     @Implementation
     protected void setUserRestriction(String key, boolean value, UserHandle userHandle) {
         setUserRestriction(userHandle, key, value);
+    }
+
+    @Implementation
+    protected List<UserInfo> getUsers(boolean excludeDying) {
+        return super.getUsers();
+    }
+
+    @Implementation
+    protected static boolean isHeadlessSystemUserMode() {
+        return sIsHeadlessSystemUserMode;
+    }
+
+    public static void setIsHeadlessSystemUserMode(boolean isEnabled) {
+        sIsHeadlessSystemUserMode = isEnabled;
+    }
+
+    @Resetter
+    public static void reset() {
+        org.robolectric.shadows.ShadowUserManager.reset();
+        sIsHeadlessSystemUserMode = true;
+        sProfiles.clear();
     }
 }

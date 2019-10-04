@@ -36,6 +36,7 @@ import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
@@ -54,7 +55,8 @@ import java.util.Collections;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
+        ShadowUserHelper.class})
 public class UsersBasePreferenceControllerTest {
 
     private static class TestUsersBasePreferenceController extends UsersBasePreferenceController {
@@ -90,24 +92,28 @@ public class UsersBasePreferenceControllerTest {
     private Context mContext;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
+    @Mock
+    private UserHelper mUserHelper;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mUserHelper);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestUsersBasePreferenceController.class, mPreferenceGroup);
         mController = mControllerHelper.getController();
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
-        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
     }
 
     @After
     public void tearDown() {
+        ShadowUserHelper.reset();
         ShadowCarUserManagerHelper.reset();
     }
 
@@ -148,7 +154,7 @@ public class UsersBasePreferenceControllerTest {
 
         // Mock a change so that other user becomes an admin.
         UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
-        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(adminOtherUser));
 
         mController.refreshUi();
@@ -193,7 +199,7 @@ public class UsersBasePreferenceControllerTest {
 
         // Mock a change so that other user becomes an admin.
         UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
-        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(adminOtherUser));
 
         mContext.sendBroadcast(new Intent(Intent.ACTION_USER_SWITCHED));

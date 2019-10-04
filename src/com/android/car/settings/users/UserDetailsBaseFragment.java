@@ -131,7 +131,8 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     }
 
     private void showConfirmRemoveUserDialog() {
-        boolean isLastUser = mCarUserManagerHelper.getAllPersistentUsers().size() == 1;
+        boolean isLastUser =
+                UserHelper.getInstance(getContext()).getAllPersistentUsers().size() == 1;
         boolean isLastAdmin = mUserInfo.isAdmin()
                 && mCarUserManagerHelper.getAllAdminUsers().size() == 1;
 

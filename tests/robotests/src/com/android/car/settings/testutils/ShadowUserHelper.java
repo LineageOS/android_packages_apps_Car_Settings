@@ -16,11 +16,15 @@
 
 package com.android.car.settings.testutils;
 
+import android.content.pm.UserInfo;
+
 import com.android.car.settings.users.UserHelper;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
+
+import java.util.List;
 
 /**
  * Shadow for {@link UserHelper}.
@@ -39,7 +43,18 @@ public class ShadowUserHelper {
     }
 
     @Implementation
-    public boolean canCurrentProcessModifyAccounts() {
+    protected boolean canCurrentProcessModifyAccounts() {
         return sInstance.canCurrentProcessModifyAccounts();
+    }
+
+    @Implementation
+    protected List<UserInfo> getAllSwitchableUsers() {
+        return sInstance.getAllSwitchableUsers();
+    }
+
+
+    @Implementation
+    protected List<UserInfo> getAllPersistentUsers() {
+        return sInstance.getAllPersistentUsers();
     }
 }

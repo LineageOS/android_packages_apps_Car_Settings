@@ -30,8 +30,10 @@ import android.content.pm.UserInfo;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -45,7 +47,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowUserIconProvider.class})
+@Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UsersPreferenceProviderTest {
 
     private static final String TEST_CURRENT_USER_NAME = "Current User";
@@ -71,10 +73,13 @@ public class UsersPreferenceProviderTest {
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
     private UsersPreferenceProvider.UserClickListener mUserClickListener;
+    @Mock
+    private UserHelper mUserHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
+        ShadowUserHelper.setInstance(mUserHelper);
         mContext = RuntimeEnvironment.application;
 
         List<UserInfo> users = Arrays.asList(TEST_OTHER_USER_1, TEST_GUEST_USER_1,
@@ -83,7 +88,12 @@ public class UsersPreferenceProviderTest {
 
         doReturn(TEST_CURRENT_USER).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
         doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(TEST_CURRENT_USER);
-        doReturn(users).when(mCarUserManagerHelper).getAllSwitchableUsers();
+        doReturn(users).when(mUserHelper).getAllSwitchableUsers();
+    }
+
+    @After
+    public void tearDown() {
+        ShadowUserHelper.reset();
     }
 
     @Test
