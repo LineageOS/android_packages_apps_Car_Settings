@@ -17,11 +17,15 @@
 package com.android.car.settings.users;
 
 import android.car.userlib.CarUserManagerHelper;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.os.UserHandle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,8 +52,7 @@ import java.util.List;
  * Displays a GridLayout with icons for the users in the system to allow switching between users.
  * One of the uses of this is for the lock screen in auto.
  */
-public class UserGridRecyclerView extends RecyclerView implements
-        CarUserManagerHelper.OnUsersUpdateListener {
+public class UserGridRecyclerView extends RecyclerView {
 
     private UserAdapter mAdapter;
     private CarUserManagerHelper mCarUserManagerHelper;
@@ -57,6 +60,13 @@ public class UserGridRecyclerView extends RecyclerView implements
     private BaseFragment mBaseFragment;
     public AddNewUserTask mAddNewUserTask;
     public boolean mEnableAddUserButton;
+
+    private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onUsersUpdate();
+        }
+    };
 
     public UserGridRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -74,7 +84,7 @@ public class UserGridRecyclerView extends RecyclerView implements
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
-        mCarUserManagerHelper.registerOnUsersUpdateListener(this);
+        registerForUserEvents();
     }
 
     /**
@@ -83,7 +93,7 @@ public class UserGridRecyclerView extends RecyclerView implements
     @Override
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
+        unregisterForUserEvents();
         if (mAddNewUserTask != null) {
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
         }
@@ -189,14 +199,33 @@ public class UserGridRecyclerView extends RecyclerView implements
         mBaseFragment = fragment;
     }
 
-    @Override
-    public void onUsersUpdate() {
+    private void onUsersUpdate() {
         // If you can show the add user button, there is no restriction
         mAdapter.setAddUserRestricted(!mEnableAddUserButton);
         mAdapter.clearUsers();
         mAdapter.updateUsers(createUserRecords(mCarUserManagerHelper
                 .getAllUsers()));
         mAdapter.notifyDataSetChanged();
+    }
+
+    private void registerForUserEvents() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_USER_REMOVED);
+        filter.addAction(Intent.ACTION_USER_ADDED);
+        filter.addAction(Intent.ACTION_USER_INFO_CHANGED);
+        filter.addAction(Intent.ACTION_USER_SWITCHED);
+        filter.addAction(Intent.ACTION_USER_STOPPED);
+        filter.addAction(Intent.ACTION_USER_UNLOCKED);
+        mContext.registerReceiverAsUser(
+                mUserUpdateReceiver,
+                UserHandle.ALL,
+                filter,
+                /* broadcastPermission= */ null,
+                /* scheduler= */ null);
+    }
+
+    private void unregisterForUserEvents() {
+        mContext.unregisterReceiver(mUserUpdateReceiver);
     }
 
     /**

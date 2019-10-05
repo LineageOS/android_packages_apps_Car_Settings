@@ -41,6 +41,7 @@ import com.android.car.settings.security.CheckLockActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -54,11 +55,10 @@ import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowApplication;
 
-import java.util.Collections;
-
 /** Unit test for {@link MasterClearFragment}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowAccountManager.class,
+        ShadowUserManager.class})
 public class MasterClearFragmentTest {
 
     @Mock
@@ -78,7 +78,6 @@ public class MasterClearFragmentTest {
                 "Profile Name", /* profileFlags= */ 0);
         Shadows.shadowOf(context.getPackageManager())
                 .setSystemFeature(PackageManager.FEATURE_AUTOMOTIVE, true);
-        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(Collections.emptyList());
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
 
         mFragment = FragmentController.of(new MasterClearFragment()).setup();
@@ -87,6 +86,7 @@ public class MasterClearFragmentTest {
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
+        ShadowUserManager.reset();
     }
 
     @Test

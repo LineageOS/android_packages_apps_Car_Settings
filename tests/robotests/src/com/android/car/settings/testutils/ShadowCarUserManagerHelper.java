@@ -17,7 +17,6 @@
 package com.android.car.settings.testutils;
 
 import android.car.userlib.CarUserManagerHelper;
-import android.car.userlib.CarUserManagerHelper.OnUsersUpdateListener;
 import android.content.pm.UserInfo;
 
 import org.robolectric.annotation.Implementation;
@@ -69,33 +68,13 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected List<UserInfo> getAllSwitchableUsers() {
-        return sMockInstance.getAllSwitchableUsers();
-    }
-
-    @Implementation
     protected List<UserInfo> getAllUsers() {
         return sMockInstance.getAllUsers();
     }
 
     @Implementation
-    protected List<UserInfo> getAllPersistentUsers() {
-        return sMockInstance.getAllPersistentUsers();
-    }
-
-    @Implementation
     protected UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
-    }
-
-    @Implementation
-    protected void registerOnUsersUpdateListener(OnUsersUpdateListener listener) {
-        sMockInstance.registerOnUsersUpdateListener(listener);
-    }
-
-    @Implementation
-    protected void unregisterOnUsersUpdateListener(OnUsersUpdateListener listener) {
-        sMockInstance.unregisterOnUsersUpdateListener(listener);
     }
 
     @Implementation

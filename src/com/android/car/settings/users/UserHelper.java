@@ -15,10 +15,18 @@
  */
 package com.android.car.settings.users;
 
+import android.app.ActivityManager;
 import android.content.Context;
+import android.content.pm.UserInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.internal.annotations.VisibleForTesting;
+
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Helper class for providing basic user logic that applies across the Settings app for Cars.
@@ -52,5 +60,41 @@ public class UserHelper {
         return !mUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)
                 && !mUserManager.isDemoUser()
                 && !mUserManager.isGuestUser();
+    }
+
+    /**
+     * Returns a list of {@code UserInfo} representing all users that can be swapped with the
+     * current user into the foreground.
+     */
+    public List<UserInfo> getAllSwitchableUsers() {
+        final int foregroundUserId = ActivityManager.getCurrentUser();
+        return getAllLivingUsersWithFilter(userInfo -> userInfo.id != foregroundUserId);
+    }
+
+    /**
+     * Returns a list of {@code UserInfo} representing all users that are non-ephemeral and are
+     * valid to have in the foreground.
+     */
+    public List<UserInfo> getAllPersistentUsers() {
+        return getAllLivingUsersWithFilter(userInfo -> !userInfo.isEphemeral());
+    }
+
+    /**
+     * Gets all users that are not dying.  This method will handle
+     * {@link UserManager#isHeadlessSystemUserMode} and ensure the system user is not
+     * part of the return list when the flag is on.
+     * @param filter The filter to apply to the list of users
+     * @return A filtered list containing living users
+     */
+    private List<UserInfo> getAllLivingUsersWithFilter(Predicate<? super UserInfo> filter) {
+        Stream<UserInfo> filteredListStream = mUserManager.getUsers(/* excludeDying= */ true)
+                .stream()
+                .filter(filter);
+
+        if (UserManager.isHeadlessSystemUserMode()) {
+            filteredListStream =
+                    filteredListStream.filter(userInfo -> userInfo.id != UserHandle.USER_SYSTEM);
+        }
+        return filteredListStream.collect(Collectors.toList());
     }
 }

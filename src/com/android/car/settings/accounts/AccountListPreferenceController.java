@@ -20,7 +20,10 @@ import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
@@ -33,6 +36,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.users.UserHelper;
+import com.android.internal.annotations.VisibleForTesting;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
@@ -50,8 +54,7 @@ import java.util.Set;
  */
 public class AccountListPreferenceController extends
         PreferenceController<PreferenceCategory> implements
-        AuthenticatorHelper.OnAccountsUpdateListener,
-        CarUserManagerHelper.OnUsersUpdateListener {
+        AuthenticatorHelper.OnAccountsUpdateListener {
     private static final String NO_ACCOUNT_PREF_KEY = "no_accounts_added";
 
     private final UserInfo mUserInfo;
@@ -60,6 +63,13 @@ public class AccountListPreferenceController extends
     private AuthenticatorHelper mAuthenticatorHelper;
     private String[] mAuthorities;
     private boolean mListenerRegistered = false;
+
+    private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            onUsersUpdate();
+        }
+    };
 
     public AccountListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -98,7 +108,7 @@ public class AccountListPreferenceController extends
     @Override
     protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
-        mCarUserManagerHelper.registerOnUsersUpdateListener(this);
+        registerForUserEvents();
         mListenerRegistered = true;
     }
 
@@ -108,7 +118,7 @@ public class AccountListPreferenceController extends
     @Override
     protected void onStopInternal() {
         mAuthenticatorHelper.stopListeningToAccountUpdates();
-        mCarUserManagerHelper.unregisterOnUsersUpdateListener(this);
+        unregisterForUserEvents();
         mListenerRegistered = false;
     }
 
@@ -119,8 +129,8 @@ public class AccountListPreferenceController extends
         }
     }
 
-    @Override
-    public void onUsersUpdate() {
+    @VisibleForTesting
+    void onUsersUpdate() {
         forceUpdateAccountsCategory();
     }
 
@@ -228,6 +238,27 @@ public class AccountListPreferenceController extends
 
         return emptyPreference;
     }
+
+    private void registerForUserEvents() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_USER_REMOVED);
+        filter.addAction(Intent.ACTION_USER_ADDED);
+        filter.addAction(Intent.ACTION_USER_INFO_CHANGED);
+        filter.addAction(Intent.ACTION_USER_SWITCHED);
+        filter.addAction(Intent.ACTION_USER_STOPPED);
+        filter.addAction(Intent.ACTION_USER_UNLOCKED);
+        getContext().registerReceiverAsUser(
+                mUserUpdateReceiver,
+                UserHandle.ALL,
+                filter,
+                /* broadcastPermission= */ null,
+                /* scheduler= */ null);
+    }
+
+    private void unregisterForUserEvents() {
+        getContext().unregisterReceiver(mUserUpdateReceiver);
+    }
+
 
     /**
      * Returns whether the account type has any of the authorities requested by the caller.

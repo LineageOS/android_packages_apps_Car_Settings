@@ -76,7 +76,7 @@ public class UserDetailsFragmentTest {
     @Test
     public void testCarUserManagerHelperUpdateListener_showsCorrectText() {
         createUserDetailsFragment();
-        mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
+        mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
         assertThat(mTitle.getText()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
                         mUserManager.getUserInfo(TEST_USER_ID)));
@@ -85,7 +85,7 @@ public class UserDetailsFragmentTest {
     @Test
     public void testCarUserManagerHelperUpdateListener_textChangesWithUserUpdate() {
         createUserDetailsFragment();
-        mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
+        mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
         assertThat(mTitle.getText()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
                         mUserManager.getUserInfo(TEST_USER_ID)));
@@ -93,7 +93,7 @@ public class UserDetailsFragmentTest {
         mUserManager.removeUser(TEST_USER_ID);
         Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_UPDATED_NAME, /* flags= */ 0);
 
-        mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
+        mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
         assertThat(mTitle.getText()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper,
                         mUserManager.getUserInfo(TEST_USER_ID)));

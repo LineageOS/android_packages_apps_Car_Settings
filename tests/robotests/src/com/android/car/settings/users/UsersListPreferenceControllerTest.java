@@ -34,6 +34,7 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
+import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
@@ -51,7 +52,8 @@ import org.robolectric.shadows.ShadowUserManager;
 import java.util.Collections;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
+        ShadowUserHelper.class})
 public class UsersListPreferenceControllerTest {
 
     private static final UserInfo TEST_CURRENT_USER = new UserInfo(/* id= */ 10,
@@ -64,12 +66,15 @@ public class UsersListPreferenceControllerTest {
     private Context mContext;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
+    @Mock
+    private UserHelper mUserHelper;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
+        ShadowUserHelper.setInstance(mUserHelper);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 UsersListPreferenceController.class, mPreferenceGroup);
@@ -79,7 +84,7 @@ public class UsersListPreferenceControllerTest {
         getShadowUserManager().switchUser(TEST_CURRENT_USER.id);
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
-        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
 
         mControllerHelper.markState(Lifecycle.State.STARTED);
@@ -87,6 +92,7 @@ public class UsersListPreferenceControllerTest {
 
     @After
     public void tearDown() {
+        ShadowUserHelper.reset();
         ShadowCarUserManagerHelper.reset();
     }
 

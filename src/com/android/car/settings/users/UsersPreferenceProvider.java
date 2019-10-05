@@ -91,7 +91,7 @@ public class UsersPreferenceProvider {
         }
 
         // Display other users on the system
-        List<UserInfo> infos = mCarUserManagerHelper.getAllSwitchableUsers();
+        List<UserInfo> infos = UserHelper.getInstance(mContext).getAllSwitchableUsers();
         for (UserInfo userInfo : infos) {
             if (!userInfo.isGuest()) { // Do not show guest users.
                 users.add(createUserPreference(userInfo));
