@@ -199,11 +199,15 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
         }
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) findDialogByTag(CONFIRM_CLEAR_STORAGE_DIALOG_TAG),
-                mConfirmClearStorageDialog, /* rejectListener= */ null);
+                mConfirmClearStorageDialog,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) findDialogByTag(
                         CONFIRM_CANNOT_CLEAR_STORAGE_DIALOG_TAG),
-                mConfirmCannotClearStorageDialog, /* rejectListener= */ null);
+                mConfirmCannotClearStorageDialog,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override

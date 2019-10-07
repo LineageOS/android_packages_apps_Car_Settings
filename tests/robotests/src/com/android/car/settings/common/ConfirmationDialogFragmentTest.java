@@ -84,7 +84,7 @@ public class ConfirmationDialogFragmentTest {
     }
 
     @Test
-    public void buildDialogFragment_negativeButtonNotSet_negativeButtonNotVisible() {
+    public void buildDialogFragment_positiveButtonSet_negativeAndNeutralButtonNotVisible() {
         mDialogFragmentBuilder.setPositiveButton(R.string.test_positive_button_label, null);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
         dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
@@ -94,10 +94,12 @@ public class ConfirmationDialogFragmentTest {
                 View.VISIBLE);
         assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
                 View.GONE);
+        assertThat(dialog.getButton(DialogInterface.BUTTON_NEUTRAL).getVisibility()).isEqualTo(
+                View.GONE);
     }
 
     @Test
-    public void buildDialogFragment_positiveButtonNotSet_positiveButtonNotVisible() {
+    public void buildDialogFragment_negativeButtonSet_positiveAndNeutralButtonNotVisible() {
         mDialogFragmentBuilder.setNegativeButton(R.string.test_negative_button_label, null);
         ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
         dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
@@ -106,6 +108,23 @@ public class ConfirmationDialogFragmentTest {
         assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).getVisibility()).isEqualTo(
                 View.GONE);
         assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
+                View.VISIBLE);
+        assertThat(dialog.getButton(DialogInterface.BUTTON_NEUTRAL).getVisibility()).isEqualTo(
+                View.GONE);
+    }
+
+    @Test
+    public void buildDialogFragment_neutralButtonSet_positiveAndNegativeButtonNotVisible() {
+        mDialogFragmentBuilder.setNeutralButton(R.string.test_neutral_button_label, null);
+        ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
+        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+
+        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        assertThat(dialog.getButton(DialogInterface.BUTTON_POSITIVE).getVisibility()).isEqualTo(
+                View.GONE);
+        assertThat(dialog.getButton(DialogInterface.BUTTON_NEGATIVE).getVisibility()).isEqualTo(
+                View.GONE);
+        assertThat(dialog.getButton(DialogInterface.BUTTON_NEUTRAL).getVisibility()).isEqualTo(
                 View.VISIBLE);
     }
 

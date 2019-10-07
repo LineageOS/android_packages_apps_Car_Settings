@@ -45,8 +45,10 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         private String mMessage;
         private String mPosLabel;
         private String mNegLabel;
+        private String mNeuLabel;
         private ConfirmListener mConfirmListener;
         private RejectListener mRejectListener;
+        private NeutralListener mNeutralListener;
 
         public Builder(Context context) {
             mContext = context;
@@ -104,6 +106,13 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             return this;
         }
 
+        /** Sets the neutral button label. */
+        public Builder setNeutralButton(@StringRes int label, NeutralListener neutralListener) {
+            mNeuLabel = mContext.getString(label);
+            mNeutralListener = neutralListener;
+            return this;
+        }
+
         /** Adds an argument string to the argument bundle. */
         public Builder addArgumentString(String argumentKey, String argument) {
             if (mArgs == null) {
@@ -148,13 +157,16 @@ public class ConfirmationDialogFragment extends DialogFragment implements
     private static final String MESSAGE_KEY = TAG + "_message";
     private static final String POSITIVE_KEY = TAG + "_positive";
     private static final String NEGATIVE_KEY = TAG + "_negative";
+    private static final String NEUTRAL_KEY = TAG + "_neutral";
 
     private String mTitle;
     private String mMessage;
     private String mPosLabel;
     private String mNegLabel;
+    private String mNeuLabel;
     private ConfirmListener mConfirmListener;
     private RejectListener mRejectListener;
+    private NeutralListener mNeutralListener;
 
     /** Constructs the dialog fragment from the arguments provided in the {@link Builder} */
     private static ConfirmationDialogFragment init(Builder builder) {
@@ -165,9 +177,11 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         args.putString(MESSAGE_KEY, builder.mMessage);
         args.putString(POSITIVE_KEY, builder.mPosLabel);
         args.putString(NEGATIVE_KEY, builder.mNegLabel);
+        args.putString(NEUTRAL_KEY, builder.mNeuLabel);
         dialogFragment.setArguments(args);
         dialogFragment.setConfirmListener(builder.mConfirmListener);
         dialogFragment.setRejectListener(builder.mRejectListener);
+        dialogFragment.setNeutralListener(builder.mNeutralListener);
         return dialogFragment;
     }
 
@@ -176,10 +190,13 @@ public class ConfirmationDialogFragment extends DialogFragment implements
      * way to reattach the listeners.
      */
     public static void resetListeners(@Nullable ConfirmationDialogFragment dialogFragment,
-            @Nullable ConfirmListener confirmListener, @Nullable RejectListener rejectListener) {
+            @Nullable ConfirmListener confirmListener,
+            @Nullable RejectListener rejectListener,
+            @Nullable NeutralListener neutralListener) {
         if (dialogFragment != null) {
             dialogFragment.setConfirmListener(confirmListener);
             dialogFragment.setRejectListener(rejectListener);
+            dialogFragment.setNeutralListener(neutralListener);
         }
     }
 
@@ -205,6 +222,17 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         return mRejectListener;
     }
 
+    /** Sets the listener which listens to a click on the neutral button. */
+    private void setNeutralListener(NeutralListener neutralListener) {
+        mNeutralListener = neutralListener;
+    }
+
+    /** Gets the listener which listens to a click on the neutral button. */
+    @Nullable
+    public NeutralListener getNeutralListener() {
+        return mNeutralListener;
+    }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -219,6 +247,7 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             mMessage = getArguments().getString(MESSAGE_KEY);
             mPosLabel = getArguments().getString(POSITIVE_KEY);
             mNegLabel = getArguments().getString(NEGATIVE_KEY);
+            mNeuLabel = getArguments().getString(NEUTRAL_KEY);
         }
     }
 
@@ -244,6 +273,9 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         if (!TextUtils.isEmpty(mNegLabel)) {
             builder.setNegativeButton(mNegLabel, this);
         }
+        if (!TextUtils.isEmpty(mNeuLabel)) {
+            builder.setNeutralButton(mNeuLabel, this);
+        }
         return builder.create();
     }
 
@@ -256,6 +288,10 @@ public class ConfirmationDialogFragment extends DialogFragment implements
         } else if (which == DialogInterface.BUTTON_NEGATIVE) {
             if (mRejectListener != null) {
                 mRejectListener.onReject(getArguments().getBundle(ARGUMENTS_KEY));
+            }
+        } else if (which == DialogInterface.BUTTON_NEUTRAL) {
+            if (mNeutralListener != null) {
+                mNeutralListener.onNeutral(getArguments().getBundle(ARGUMENTS_KEY));
             }
         }
     }
@@ -276,5 +312,15 @@ public class ConfirmationDialogFragment extends DialogFragment implements
          * constructing the dialog through with {@link Builder#addArgumentString(String, String)}.
          */
         void onReject(@Nullable Bundle arguments);
+    }
+
+    /** Listens to the neutral button action. */
+    public interface NeutralListener {
+        /**
+         * Defines the action to take on neutral button click. The bundle will contain the arguments
+         * added when constructing the dialog through with
+         * {@link Builder#addArgumentString(String, String)}.
+         */
+        void onNeutral(@Nullable Bundle arguments);
     }
 }

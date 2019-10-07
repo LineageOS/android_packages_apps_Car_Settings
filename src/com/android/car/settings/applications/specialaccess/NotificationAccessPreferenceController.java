@@ -104,14 +104,20 @@ public class NotificationAccessPreferenceController extends PreferenceController
         ConfirmationDialogFragment grantConfirmDialogFragment =
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         GRANT_CONFIRM_DIALOG_TAG);
-        ConfirmationDialogFragment.resetListeners(grantConfirmDialogFragment,
-                mGrantConfirmListener, /* rejectListener= */ null);
+        ConfirmationDialogFragment.resetListeners(
+                grantConfirmDialogFragment,
+                mGrantConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
 
         ConfirmationDialogFragment revokeConfirmDialogFragment =
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         REVOKE_CONFIRM_DIALOG_TAG);
-        ConfirmationDialogFragment.resetListeners(revokeConfirmDialogFragment,
-                mRevokeConfirmListener, /* rejectListener= */ null);
+        ConfirmationDialogFragment.resetListeners(
+                revokeConfirmDialogFragment,
+                mRevokeConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
 
         mServiceListing.addCallback(mCallback);
     }

@@ -30,7 +30,6 @@ import android.os.UserManager;
 import android.widget.Button;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
@@ -88,7 +87,7 @@ public class UsersListFragmentTest {
     @Test
     public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
         createUsersListFragment(/* flags= */ 0);
-        mFragment.mConfirmListener.onConfirm(/* arguments= */ null);
+        mFragment.mConfirmCreateNewUserListener.onConfirm(/* arguments= */ null);
         Robolectric.flushBackgroundThreadScheduler();
         verify(mCarUserManagerHelper)
                 .createNewNonAdminUser(mContext.getString(R.string.user_new_user_name));
@@ -99,7 +98,7 @@ public class UsersListFragmentTest {
     public void testCallOnClick_demoUser_exitRetailMode() {
         createUsersListFragment(UserInfo.FLAG_DEMO);
         mActionButton.callOnClick();
-        assertThat(isDialogShown(ConfirmExitRetailModeDialog.DIALOG_TAG)).isTrue();
+        assertThat(isDialogShown(UsersListFragment.CONFIRM_EXIT_RETAIL_MODE_DIALOG_TAG)).isTrue();
     }
 
     /* Test that if the max num of users is reached, click on the button informs user of that. */
@@ -110,7 +109,7 @@ public class UsersListFragmentTest {
         createUsersListFragment(/* flags= */ 0);
 
         mActionButton.callOnClick();
-        assertThat(isDialogShown(MaxUsersLimitReachedDialog.DIALOG_TAG)).isTrue();
+        assertThat(isDialogShown(UsersListFragment.MAX_USERS_LIMIT_REACHED_DIALOG_TAG)).isTrue();
     }
 
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
@@ -119,7 +118,7 @@ public class UsersListFragmentTest {
         createUsersListFragment(/* flags= */ 0);
 
         mActionButton.callOnClick();
-        assertThat(isDialogShown(ConfirmationDialogFragment.TAG)).isTrue();
+        assertThat(isDialogShown(UsersListFragment.CONFIRM_CREATE_NEW_USER_DIALOG_TAG)).isTrue();
     }
 
     private void createUsersListFragment(int flags) {
