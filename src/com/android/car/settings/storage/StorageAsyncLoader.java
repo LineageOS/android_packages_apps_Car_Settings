@@ -21,7 +21,6 @@ import static android.content.pm.ApplicationInfo.CATEGORY_GAME;
 import static android.content.pm.ApplicationInfo.CATEGORY_IMAGE;
 import static android.content.pm.ApplicationInfo.CATEGORY_VIDEO;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -33,6 +32,7 @@ import android.util.SparseArray;
 
 import com.android.car.settings.common.AsyncLoader;
 import com.android.car.settings.common.Logger;
+import com.android.car.settings.users.UserHelper;
 import com.android.settingslib.applications.StorageStatsSource;
 
 import java.io.IOException;
@@ -48,23 +48,22 @@ public class StorageAsyncLoader
         extends AsyncLoader<SparseArray<StorageAsyncLoader.AppsStorageResult>> {
     private static final Logger LOG = new Logger(StorageAsyncLoader.class);
 
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final StorageStatsSource mStatsManager;
     private final PackageManager mPackageManager;
+    private final UserHelper mUserHelper;
 
-    public StorageAsyncLoader(Context context, CarUserManagerHelper carUserManagerHelper,
-            StorageStatsSource source) {
+    public StorageAsyncLoader(Context context, StorageStatsSource source) {
         super(context);
-        mCarUserManagerHelper = carUserManagerHelper;
         mStatsManager = source;
         mPackageManager = context.getPackageManager();
+        mUserHelper = UserHelper.getInstance(context);
     }
 
     @Override
     public SparseArray<AppsStorageResult> loadInBackground() {
         ArraySet<String> seenPackages = new ArraySet<>();
         SparseArray<AppsStorageResult> result = new SparseArray<>();
-        List<UserInfo> infos = mCarUserManagerHelper.getAllUsers();
+        List<UserInfo> infos = mUserHelper.getAllUsers();
         for (int i = 0, userCount = infos.size(); i < userCount; i++) {
             UserInfo info = infos.get(i);
             result.put(info.id, getStorageResultForUser(info.id, seenPackages));

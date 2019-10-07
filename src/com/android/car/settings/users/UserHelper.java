@@ -15,6 +15,7 @@
  */
 package com.android.car.settings.users;
 
+import android.annotation.Nullable;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.UserInfo;
@@ -63,12 +64,20 @@ public class UserHelper {
     }
 
     /**
+     * Returns a list of {@code UserInfo} representing all users that can be brought to the
+     * foreground.
+     */
+    public List<UserInfo> getAllUsers() {
+        return getAllLivingUsers(/* filter= */ null);
+    }
+
+    /**
      * Returns a list of {@code UserInfo} representing all users that can be swapped with the
      * current user into the foreground.
      */
     public List<UserInfo> getAllSwitchableUsers() {
         final int foregroundUserId = ActivityManager.getCurrentUser();
-        return getAllLivingUsersWithFilter(userInfo -> userInfo.id != foregroundUserId);
+        return getAllLivingUsers(userInfo -> userInfo.id != foregroundUserId);
     }
 
     /**
@@ -76,20 +85,31 @@ public class UserHelper {
      * valid to have in the foreground.
      */
     public List<UserInfo> getAllPersistentUsers() {
-        return getAllLivingUsersWithFilter(userInfo -> !userInfo.isEphemeral());
+        return getAllLivingUsers(userInfo -> !userInfo.isEphemeral());
+    }
+
+    /**
+     * Returns a list of {@code UserInfo} representing all admin users and are
+     * valid to have in the foreground.
+     */
+    public List<UserInfo> getAllAdminUsers() {
+        return getAllLivingUsers(UserInfo::isAdmin);
     }
 
     /**
      * Gets all users that are not dying.  This method will handle
      * {@link UserManager#isHeadlessSystemUserMode} and ensure the system user is not
      * part of the return list when the flag is on.
-     * @param filter The filter to apply to the list of users
-     * @return A filtered list containing living users
+     * @param filter Optional filter to apply to the list of users.  Pass null to skip.
+     * @return An optionally filtered list containing all living users
      */
-    private List<UserInfo> getAllLivingUsersWithFilter(Predicate<? super UserInfo> filter) {
-        Stream<UserInfo> filteredListStream = mUserManager.getUsers(/* excludeDying= */ true)
-                .stream()
-                .filter(filter);
+    private List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
+        Stream<UserInfo> filteredListStream =
+                mUserManager.getUsers(/* excludeDying= */ true).stream();
+
+        if (filter != null) {
+            filteredListStream = filteredListStream.filter(filter);
+        }
 
         if (UserManager.isHeadlessSystemUserMode()) {
             filteredListStream =

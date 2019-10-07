@@ -33,6 +33,7 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUidDetailProvider;
+import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.settingslib.net.UidDetail;
 
 import org.junit.After;
@@ -47,7 +48,8 @@ import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppDataUsagePreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUidDetailProvider.class})
+@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUidDetailProvider.class,
+        ShadowUserManager.class})
 public class AppDataUsagePreferenceControllerTest {
 
     private static final int USER_ID = 10;

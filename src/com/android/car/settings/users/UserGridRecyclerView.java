@@ -47,6 +47,7 @@ import com.android.internal.util.UserIcons;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Displays a GridLayout with icons for the users in the system to allow switching between users.
@@ -108,8 +109,8 @@ public class UserGridRecyclerView extends RecyclerView {
      * Initializes the adapter that populates the grid layout
      */
     public void buildAdapter() {
-        List<UserRecord> userRecords = createUserRecords(mCarUserManagerHelper
-                .getAllUsers());
+        List<UserRecord> userRecords =
+                createUserRecords(getUsersForUserGrid());
         mAdapter = new UserAdapter(mContext, userRecords);
         super.setAdapter(mAdapter);
     }
@@ -208,9 +209,15 @@ public class UserGridRecyclerView extends RecyclerView {
         // If you can show the add user button, there is no restriction
         mAdapter.setAddUserRestricted(!mEnableAddUserButton);
         mAdapter.clearUsers();
-        mAdapter.updateUsers(createUserRecords(mCarUserManagerHelper
-                .getAllUsers()));
+        mAdapter.updateUsers(createUserRecords(getUsersForUserGrid()));
         mAdapter.notifyDataSetChanged();
+    }
+
+    private List<UserInfo> getUsersForUserGrid() {
+        List<UserInfo> users = UserHelper.getInstance(mContext).getAllUsers();
+        return users.stream()
+                .filter(userInfo -> userInfo.supportsSwitchToByUser())
+                .collect(Collectors.toList());
     }
 
     private void registerForUserEvents() {

@@ -107,8 +107,6 @@ public class ApplicationDetailsFragmentTest {
         getShadowUserManager().addProfile(userId, userId, "profileName", /* profileFlags= */ 0);
 
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
-        when(mCarUserManagerHelper.getAllUsers()).thenReturn(
-                Collections.singletonList(UserManager.get(mContext).getUserInfo(userId)));
 
         mActivity = new TestActivity();
         mController = ActivityController.of(mActivity);
