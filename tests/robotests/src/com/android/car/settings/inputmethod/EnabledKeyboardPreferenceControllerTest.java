@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ServiceInfo;
+import android.provider.Settings;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
@@ -121,6 +122,19 @@ public class EnabledKeyboardPreferenceControllerTest {
         mControllerHelper.getController().refreshUi();
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+    }
+
+    @Test
+    public void refreshUi_disableVoiceTyping() {
+        List<InputMethodInfo> infos =
+                createInputMethodInfoList(InputMethodUtil.GOOGLE_VOICE_TYPING);
+        getShadowInputMethodManager(mContext).setEnabledInputMethodList(infos);
+
+        mControllerHelper.getController().refreshUi();
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+        assertThat(Settings.Secure.getString(mContext.getContentResolver(),
+                Settings.Secure.ENABLED_INPUT_METHODS)).isEqualTo("");
     }
 
     @Test
