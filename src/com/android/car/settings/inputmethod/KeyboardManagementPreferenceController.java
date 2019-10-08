@@ -130,6 +130,10 @@ public class KeyboardManagementPreferenceController extends
                 continue;
             }
 
+            if (inputMethodInfo.getPackageName().equals(InputMethodUtil.GOOGLE_VOICE_TYPING)) {
+                continue;
+            }
+
             Preference preference = createSwitchPreference(inputMethodInfo);
 
             preference.setEnabled(!isOnlyEnabledDefaultInputMethod(inputMethodInfo));
