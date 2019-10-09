@@ -24,18 +24,23 @@ import static com.android.car.settings.common.PreferenceController.DISABLED_FOR_
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass;
+import android.bluetooth.BluetoothClass.Device.Major;
 import android.bluetooth.BluetoothDevice;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.content.res.Resources;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
+import com.android.car.settings.R;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -72,18 +77,26 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     @Mock
     private BluetoothDevice mUnbondedDevice;
     @Mock
+    private BluetoothClass mBluetoothClass;
+    @Mock
     private CachedBluetoothDeviceManager mCachedDeviceManager;
     private CachedBluetoothDeviceManager mSaveRealCachedDeviceManager;
     private LocalBluetoothManager mLocalBluetoothManager;
     private PreferenceGroup mPreferenceGroup;
     private PreferenceControllerTestHelper<BluetoothUnbondedDevicesPreferenceController>
             mControllerHelper;
+    private int[] mUnbondedDeviceFilter;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        Context context = RuntimeEnvironment.application;
+        mUnbondedDeviceFilter = new int[]{};
+        Context context = spy(RuntimeEnvironment.application);
+        Resources resources = spy(context.getResources());
+        when(context.getResources()).thenReturn(resources);
+        when(resources.getIntArray(R.array.config_unbonded_device_filter_whitelist))
+                .thenReturn(mUnbondedDeviceFilter);
 
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(context, /* onInitCallback= */
                 null);
@@ -94,6 +107,8 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
         when(mUnbondedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_NONE);
         when(mUnbondedCachedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_NONE);
         when(mUnbondedCachedDevice.getDevice()).thenReturn(mUnbondedDevice);
+        when(mBluetoothClass.getMajorDeviceClass()).thenReturn(Major.PHONE);
+        when(mUnbondedDevice.getBluetoothClass()).thenReturn(mBluetoothClass);
         BluetoothDevice bondedDevice = mock(BluetoothDevice.class);
         when(bondedDevice.getBondState()).thenReturn(BluetoothDevice.BOND_BONDED);
         CachedBluetoothDevice bondedCachedDevice = mock(CachedBluetoothDevice.class);
@@ -121,7 +136,17 @@ public class BluetoothUnbondedDevicesPreferenceControllerTest {
     }
 
     @Test
-    public void showsOnlyUnbondedDevices() {
+    public void showsUnbondedDevices() {
+        mControllerHelper.markState(Lifecycle.State.STARTED);
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
+        BluetoothDevicePreference devicePreference =
+                (BluetoothDevicePreference) mPreferenceGroup.getPreference(0);
+        assertThat(devicePreference.getCachedDevice()).isEqualTo(mUnbondedCachedDevice);
+    }
+
+    @Test
+    public void configUnbondedDeviceFilterIncludesPhones_showsUnbondedPhones() {
+        mUnbondedDeviceFilter = new int[] {Major.PHONE};
         mControllerHelper.markState(Lifecycle.State.STARTED);
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(1);
         BluetoothDevicePreference devicePreference =
