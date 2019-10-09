@@ -53,8 +53,7 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
     @Override
     protected long calculateCategoryUsage(SparseArray<StorageAsyncLoader.AppsStorageResult> result,
             long usedSizeBytes) {
-        StorageAsyncLoader.AppsStorageResult data = result.get(
-                getCarUserManagerHelper().getCurrentProcessUserId());
+        StorageAsyncLoader.AppsStorageResult data = result.get(UserHandle.myUserId());
         return data.getExternalStats().totalBytes - data.getExternalStats().audioBytes
                 - data.getExternalStats().videoBytes - data.getExternalStats().imageBytes
                 - data.getExternalStats().appBytes;
@@ -62,10 +61,10 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
 
     @Override
     protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
+        int myUserId = UserHandle.myUserId();
         Intent intent = getFilesIntent();
-        intent.putExtra(Intent.EXTRA_USER_ID, getCarUserManagerHelper().getCurrentProcessUserId());
-        getContext().startActivityAsUser(intent,
-                new UserHandle(getCarUserManagerHelper().getCurrentProcessUserId()));
+        intent.putExtra(Intent.EXTRA_USER_ID, myUserId);
+        getContext().startActivityAsUser(intent, UserHandle.of(myUserId));
         return true;
     }
 

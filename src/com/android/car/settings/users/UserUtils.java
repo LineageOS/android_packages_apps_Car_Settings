@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
@@ -49,9 +48,8 @@ public class UserUtils {
      * Returns the user name that should be displayed. The caller shouldn't use userInfo.name
      * directly, because the display name is modified for the current process user.
      */
-    public static String getUserDisplayName(Context context,
-            CarUserManagerHelper carUserManagerHelper, UserInfo userInfo) {
-        return carUserManagerHelper.isCurrentProcessUser(userInfo) ? context.getString(
+    public static String getUserDisplayName(Context context, UserInfo userInfo) {
+        return UserHelper.getInstance(context).isCurrentProcessUser(userInfo) ? context.getString(
                 R.string.current_user_name, userInfo.name) : userInfo.name;
     }
 

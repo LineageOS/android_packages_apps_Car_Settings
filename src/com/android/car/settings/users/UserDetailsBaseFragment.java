@@ -102,11 +102,6 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         titleView.setText(getTitleText());
     }
 
-    /** Make CarUserManagerHelper available to subclasses. */
-    protected CarUserManagerHelper getCarUserManagerHelper() {
-        return mCarUserManagerHelper;
-    }
-
     /** Make UserInfo available to subclasses. */
     protected UserInfo getUserInfo() {
         return mUserInfo;

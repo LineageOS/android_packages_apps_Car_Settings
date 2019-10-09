@@ -62,4 +62,9 @@ public class ShadowUserHelper {
     protected List<UserInfo> getAllPersistentUsers() {
         return sInstance.getAllPersistentUsers();
     }
+
+    @Implementation
+    public boolean isCurrentProcessUser(UserInfo userInfo) {
+        return sInstance.isCurrentProcessUser(userInfo);
+    }
 }

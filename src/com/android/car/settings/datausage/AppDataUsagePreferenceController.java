@@ -20,7 +20,6 @@ import static android.net.TrafficStats.UID_REMOVED;
 import static android.net.TrafficStats.UID_TETHERING;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.net.NetworkStats;
@@ -55,13 +54,11 @@ public class AppDataUsagePreferenceController extends
         PreferenceController<PreferenceGroup> implements AppsNetworkStatsManager.Callback {
 
     private final UidDetailProvider mUidDetailProvider;
-    private final CarUserManagerHelper mCarUserManagerHelper;
 
     public AppDataUsagePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUidDetailProvider = new UidDetailProvider(getContext());
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
     }
 
     @Override
@@ -92,7 +89,7 @@ public class AppDataUsagePreferenceController extends
 
     private long aggregateDataUsage(SparseArray<AppItem> knownItems, List<AppItem> items,
             NetworkStats.Entry entry, List<UserInfo> profiles) {
-        int currentUserId = mCarUserManagerHelper.getCurrentProcessUserId();
+        int currentUserId = UserHandle.myUserId();
 
         // Decide how to collapse items together.
         int uid = entry.uid;

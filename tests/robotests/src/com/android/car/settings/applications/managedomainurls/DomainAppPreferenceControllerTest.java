@@ -26,9 +26,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertThrows;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.os.UserHandle;
 import android.os.UserManager;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -38,7 +38,6 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowIconDrawableFactory;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.core.lifecycle.Lifecycle;
@@ -59,15 +58,14 @@ import org.robolectric.shadows.ShadowUserManager;
 import java.util.ArrayList;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowIconDrawableFactory.class,
-        ShadowApplicationsState.class})
+@Config(shadows = {ShadowIconDrawableFactory.class, ShadowApplicationsState.class})
 public class DomainAppPreferenceControllerTest {
 
-    private static final int USER_ID = 10;
     private static final String TEST_PACKAGE_NAME = "com.android.test.package";
     private static final int TEST_PACKAGE_ID = 1;
     private static final String TEST_LABEL = "Test App";
     private static final String TEST_PATH = "TEST_PATH";
+    private final int mUserId = UserHandle.myUserId();
 
     private Context mContext;
     private PreferenceGroup mPreferenceGroup;
@@ -75,19 +73,15 @@ public class DomainAppPreferenceControllerTest {
     private DomainAppPreferenceController mController;
     private Lifecycle mLifecycle;
     @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
     private ApplicationsState mApplicationsState;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowApplicationsState.setInstance(mApplicationsState);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(USER_ID);
 
         mContext = RuntimeEnvironment.application;
-        getShadowUserManager().addProfile(USER_ID, USER_ID, "Test Name", /* profileFlags= */
+        getShadowUserManager().addProfile(mUserId, mUserId, "Test Name", /* profileFlags= */
                 FLAG_ADMIN);
 
         when(mApplicationsState.newSession(any(), any())).thenReturn(
@@ -108,7 +102,6 @@ public class DomainAppPreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowApplicationsState.reset();
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

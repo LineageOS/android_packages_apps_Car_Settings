@@ -19,9 +19,9 @@ package com.android.car.settings.users;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
@@ -86,9 +86,9 @@ public class UsersPreferenceProviderTest {
                 TEST_GUEST_USER_2,
                 TEST_OTHER_USER_2);
 
-        doReturn(TEST_CURRENT_USER).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessUser(TEST_CURRENT_USER);
-        doReturn(users).when(mUserHelper).getAllSwitchableUsers();
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+        when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(users);
     }
 
     @After

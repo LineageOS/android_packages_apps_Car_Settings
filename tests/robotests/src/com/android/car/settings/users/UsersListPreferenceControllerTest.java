@@ -83,7 +83,7 @@ public class UsersListPreferenceControllerTest {
                 TEST_CURRENT_USER.flags);
         getShadowUserManager().switchUser(TEST_CURRENT_USER.id);
         when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
-        when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
 

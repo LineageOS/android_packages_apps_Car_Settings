@@ -31,7 +31,6 @@ import static org.mockito.Mockito.when;
 
 import android.app.Activity;
 import android.app.usage.StorageStats;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -44,7 +43,6 @@ import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
@@ -62,9 +60,8 @@ import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppStorageSettingsDetailsFragment}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowApplicationsState.class, ShadowCarUserManagerHelper.class,
-        ShadowRestrictedLockUtilsInternal.class, ShadowApplicationPackageManager.class,
-        ShadowActivityManager.class})
+@Config(shadows = {ShadowApplicationsState.class, ShadowRestrictedLockUtilsInternal.class,
+        ShadowApplicationPackageManager.class, ShadowActivityManager.class})
 public class AppStorageSettingsDetailsFragmentTest {
 
     private static final String PACKAGE_NAME = "com.google.packageName";
@@ -72,7 +69,6 @@ public class AppStorageSettingsDetailsFragmentTest {
     private static final int UID = 12;
     private static final String LABEL = "label";
     private static final String SIZE_STR = "12.34 MB";
-    private static final int TEST_USER_ID = 10;
 
     private Context mContext;
     private AppStorageSettingsDetailsFragment mFragment;
@@ -80,9 +76,6 @@ public class AppStorageSettingsDetailsFragmentTest {
 
     @Mock
     private ApplicationsState mApplicationsState;
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Mock
     private RestrictedLockUtils.EnforcedAdmin mEnforcedAdmin;
@@ -111,9 +104,6 @@ public class AppStorageSettingsDetailsFragmentTest {
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
         appEntry.info.packageName = PACKAGE_NAME;
         when(mApplicationsState.getEntry(eq(PACKAGE_NAME), anyInt())).thenReturn(appEntry);
-        // Set user.
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER_ID);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowApplicationsState.setInstance(mApplicationsState);
         mFragmentController.create();
     }
@@ -121,7 +111,6 @@ public class AppStorageSettingsDetailsFragmentTest {
     @After
     public void tearDown() {
         ShadowApplicationsState.reset();
-        ShadowCarUserManagerHelper.reset();
         ShadowRestrictedLockUtilsInternal.reset();
         ShadowApplicationPackageManager.reset();
         ShadowActivityManager.reset();

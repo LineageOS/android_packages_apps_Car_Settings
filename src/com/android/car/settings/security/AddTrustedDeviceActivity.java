@@ -19,8 +19,8 @@ package com.android.car.settings.security;
 import android.bluetooth.BluetoothDevice;
 import android.car.Car;
 import android.car.trust.CarTrustAgentEnrollmentManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -67,7 +67,6 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
     private Car mCar;
     private BluetoothDevice mBluetoothDevice;
     private long mHandle;
-    private CarUserManagerHelper mCarUserManagerHelper;
     @Nullable
     private CarTrustAgentEnrollmentManager mCarTrustAgentEnrollmentManager;
 
@@ -161,7 +160,6 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
             LOG.e("CarTrustAgentEnrollmentManager is null");
             finish();
         }
-        mCarUserManagerHelper = new CarUserManagerHelper(this);
         if (savedInstanceState != null) {
             mBluetoothDevice = savedInstanceState.getParcelable(BLUETOOTH_DEVICE_KEY);
             mHandle = savedInstanceState.getLong(CURRENT_HANDLE_KEY);
@@ -180,7 +178,7 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
         super.onStart();
         if (mHandle != 0) {
             if (mCarTrustAgentEnrollmentManager.isEscrowTokenActive(mHandle,
-                    mCarUserManagerHelper.getCurrentProcessUserId())) {
+                    UserHandle.myUserId())) {
                 onDeviceAddedSuccessfully();
                 finish();
             }

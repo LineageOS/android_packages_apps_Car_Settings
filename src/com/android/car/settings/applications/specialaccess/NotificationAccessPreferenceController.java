@@ -19,7 +19,6 @@ package com.android.car.settings.applications.specialaccess;
 import android.Manifest;
 import android.app.NotificationManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageItemInfo;
@@ -65,7 +64,6 @@ public class NotificationAccessPreferenceController extends PreferenceController
     private final NotificationManager mNm;
     private final ServiceListing mServiceListing;
     private final IconDrawableFactory mIconDrawableFactory;
-    private final CarUserManagerHelper mCarUserManagerHelper;
 
     private final ServiceListing.Callback mCallback = this::onServicesReloaded;
 
@@ -91,7 +89,6 @@ public class NotificationAccessPreferenceController extends PreferenceController
                 .setNoun("notification listener") // For logging.
                 .build();
         mIconDrawableFactory = IconDrawableFactory.newInstance(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
@@ -147,7 +144,7 @@ public class NotificationAccessPreferenceController extends PreferenceController
             CharSequence title = null;
             try {
                 title = packageManager.getApplicationInfoAsUser(service.packageName, /* flags= */ 0,
-                        mCarUserManagerHelper.getCurrentProcessUserId()).loadLabel(packageManager);
+                        UserHandle.myUserId()).loadLabel(packageManager);
             } catch (PackageManager.NameNotFoundException e) {
                 LOG.e("can't find package name", e);
             }

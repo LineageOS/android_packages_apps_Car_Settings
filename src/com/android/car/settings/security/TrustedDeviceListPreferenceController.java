@@ -23,8 +23,8 @@ import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.trust.TrustedDeviceInfo;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -32,7 +32,6 @@ import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
-import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.widget.LockPatternUtils;
 
@@ -43,8 +42,6 @@ import java.util.List;
  * Business logic of trusted device list page
  */
 public class TrustedDeviceListPreferenceController extends PreferenceController<PreferenceGroup> {
-    private static final Logger LOG = new Logger(TrustedDeviceListPreferenceController.class);
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final LockPatternUtils mLockPatternUtils;
     private final Car mCar;
     @Nullable
@@ -83,14 +80,13 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
             new ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener() {
                 public void onConfirmRemoveDevice(long handle) {
                     mCarTrustAgentEnrollmentManager.removeEscrowToken(handle,
-                            mCarUserManagerHelper.getCurrentProcessUserId());
+                            UserHandle.myUserId());
                 }
             };
 
     public TrustedDeviceListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         mLockPatternUtils = new LockPatternUtils(context);
         mCar = Car.createCar(context);
         mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
@@ -129,8 +125,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     }
 
     private boolean hasPassword() {
-        return mLockPatternUtils.getKeyguardStoredPasswordQuality(
-                mCarUserManagerHelper.getCurrentProcessUserId())
+        return mLockPatternUtils.getKeyguardStoredPasswordQuality(UserHandle.myUserId())
                 != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
     }
 
@@ -167,8 +162,7 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     private List<Preference> createTrustDevicePreferenceList() {
         List<Preference> trustedDevicesList = new ArrayList<>();
         List<TrustedDeviceInfo> devices =
-                mCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                        mCarUserManagerHelper.getCurrentProcessUserId());
+                mCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(UserHandle.myUserId());
         for (TrustedDeviceInfo deviceInfo : devices) {
             trustedDevicesList.add(
                     createTrustedDevicePreference(deviceInfo.getName(), deviceInfo.getHandle()));

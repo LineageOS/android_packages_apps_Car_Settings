@@ -117,4 +117,14 @@ public class UserHelper {
         }
         return filteredListStream.collect(Collectors.toList());
     }
+
+    /**
+     * Checks whether passed in user is the user that's running the current process.
+     *
+     * @param userInfo User to check.
+     * @return {@code true} if user running the process, {@code false} otherwise.
+     */
+    public boolean isCurrentProcessUser(UserInfo userInfo) {
+        return UserHandle.myUserId() == userInfo.id;
+    }
 }

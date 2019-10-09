@@ -22,8 +22,8 @@ import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.trust.CarTrustAgentEnrollmentManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
 
 import androidx.preference.Preference;
 
@@ -39,7 +39,6 @@ public class TrustedDeviceEntryPreferenceController extends PreferenceController
 
     private static final Logger LOG = new Logger(TrustedDeviceEntryPreferenceController.class);
     private final Car mCar;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     @Nullable
     private CarTrustAgentEnrollmentManager mCarTrustAgentEnrollmentManager;
 
@@ -47,7 +46,6 @@ public class TrustedDeviceEntryPreferenceController extends PreferenceController
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mCar = Car.createCar(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         try {
             mCarTrustAgentEnrollmentManager = (CarTrustAgentEnrollmentManager) mCar.getCarManager(
                     Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE);
@@ -66,7 +64,7 @@ public class TrustedDeviceEntryPreferenceController extends PreferenceController
         int listSize = 0;
         try {
             listSize = mCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                    mCarUserManagerHelper.getCurrentProcessUserId()).size();
+                    UserHandle.myUserId()).size();
         } catch (CarNotConnectedException e) {
             LOG.e(e.getMessage(), e);
         }
