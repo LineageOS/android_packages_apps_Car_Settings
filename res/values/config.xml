@@ -28,6 +28,23 @@
     <bool name="config_show_premium_sms">true</bool>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
     <bool name="config_show_settings_root_exit_icon">true</bool>
+    <!--
+        Array of bluetooth device major classes that should be used for unbonded
+        device filter.
+
+        The values of the device major classes can be found in
+        android.bluetooth.BluetoothClass. If the array is empty, the device
+        filter will return all unbonded devices.
+
+        Example usage:
+        <integer-array name="config_unbonded_device_filter_whitelist">
+            <item>0x0200</item>
+        </integer-array>
+
+        This filter would only return unbonded devices which correspond to the
+        major class for PHONE.
+    -->
+    <integer-array name="config_unbonded_device_filter_whitelist"/>
     <!-- Whether all preferences should always ignore UX Restrictions -->
     <bool name="config_always_ignore_ux_restrictions">false</bool>
     <!-- Array of Preference Keys that ignore UX Restrictions -->
