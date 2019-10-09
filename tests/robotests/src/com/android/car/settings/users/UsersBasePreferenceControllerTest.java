@@ -50,7 +50,6 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -76,15 +75,8 @@ public class UsersBasePreferenceControllerTest {
     private static final UserInfo TEST_OTHER_USER = new UserInfo(/* id= */ 11,
             "TEST_OTHER_NAME", /* flags= */ 0);
 
-    private static final List<String> LISTENER_ACTIONS = new ArrayList<>(
-            Arrays.asList(
-                    Intent.ACTION_USER_REMOVED,
-                    Intent.ACTION_USER_ADDED,
-                    Intent.ACTION_USER_INFO_CHANGED,
-                    Intent.ACTION_USER_SWITCHED,
-                    Intent.ACTION_USER_STOPPED,
-                    Intent.ACTION_USER_UNLOCKED
-            ));
+    private static final List<String> LISTENER_ACTIONS =
+            Collections.singletonList(Intent.ACTION_USER_INFO_CHANGED);
 
     private PreferenceControllerTestHelper<TestUsersBasePreferenceController> mControllerHelper;
     private TestUsersBasePreferenceController mController;
@@ -202,7 +194,7 @@ public class UsersBasePreferenceControllerTest {
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(adminOtherUser));
 
-        mContext.sendBroadcast(new Intent(Intent.ACTION_USER_SWITCHED));
+        mContext.sendBroadcast(new Intent(LISTENER_ACTIONS.get(0)));
 
         List<Preference> newPreferences = new ArrayList<>();
         for (int i = 0; i < mPreferenceGroup.getPreferenceCount(); i++) {

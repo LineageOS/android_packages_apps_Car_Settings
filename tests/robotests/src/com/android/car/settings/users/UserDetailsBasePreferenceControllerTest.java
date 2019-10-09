@@ -44,8 +44,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
@@ -66,21 +65,13 @@ public class UserDetailsBasePreferenceControllerTest {
         }
     }
 
-    private static final List<String> LISTENER_ACTIONS = new ArrayList<>(
-            Arrays.asList(
-                    Intent.ACTION_USER_REMOVED,
-                    Intent.ACTION_USER_ADDED,
-                    Intent.ACTION_USER_INFO_CHANGED,
-                    Intent.ACTION_USER_SWITCHED,
-                    Intent.ACTION_USER_STOPPED,
-                    Intent.ACTION_USER_UNLOCKED
-            ));
+    private static final List<String> LISTENER_ACTIONS =
+            Collections.singletonList(Intent.ACTION_USER_INFO_CHANGED);
 
     private PreferenceControllerTestHelper<TestUserDetailsBasePreferenceController>
             mPreferenceControllerHelper;
     private TestUserDetailsBasePreferenceController mController;
     private Preference mPreference;
-    private Context mContext;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
 
@@ -88,11 +79,11 @@ public class UserDetailsBasePreferenceControllerTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
-        mContext = RuntimeEnvironment.application;
-        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
+        Context context = RuntimeEnvironment.application;
+        mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(context,
                 TestUserDetailsBasePreferenceController.class);
         mController = mPreferenceControllerHelper.getController();
-        mPreference = new Preference(mContext);
+        mPreference = new Preference(context);
     }
 
     @After
