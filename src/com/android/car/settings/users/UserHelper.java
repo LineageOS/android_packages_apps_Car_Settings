@@ -127,4 +127,20 @@ public class UserHelper {
     public boolean isCurrentProcessUser(UserInfo userInfo) {
         return UserHandle.myUserId() == userInfo.id;
     }
+
+    /**
+     * Gets UserInfo for the user running the caller process.
+     *
+     * <p>Differentiation between foreground user and current process user is relevant for
+     * multi-user deployments.
+     *
+     * <p>Some multi-user aware components (like SystemUI) needs to run a singleton component
+     * in system user. Current process user is always the same for that component, even when
+     * the foreground user changes.
+     *
+     * @return {@link UserInfo} for the user running the current process.
+     */
+    public UserInfo getCurrentProcessUserInfo() {
+        return mUserManager.getUserInfo(UserHandle.myUserId());
+    }
 }

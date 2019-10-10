@@ -67,4 +67,9 @@ public class ShadowUserHelper {
     public boolean isCurrentProcessUser(UserInfo userInfo) {
         return sInstance.isCurrentProcessUser(userInfo);
     }
+
+    @Implementation
+    protected UserInfo getCurrentProcessUserInfo() {
+        return sInstance.getCurrentProcessUserInfo();
+    }
 }

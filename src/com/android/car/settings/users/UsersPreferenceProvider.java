@@ -83,7 +83,7 @@ public class UsersPreferenceProvider {
      */
     public List<Preference> createUserList() {
         List<Preference> users = new ArrayList<>();
-        UserInfo currUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
+        UserInfo currUserInfo = UserHelper.getInstance(mContext).getCurrentProcessUserInfo();
 
         // Show current user
         if (mIncludeCurrentUser) {

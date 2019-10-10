@@ -19,18 +19,15 @@ package com.android.car.settings.accounts;
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
 
-import static org.mockito.Mockito.doReturn;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.SyncAdapterType;
-import android.content.pm.UserInfo;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ShadowAccountManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
 
 import org.junit.After;
@@ -49,10 +46,8 @@ import java.util.Set;
 
 /** Unit tests for {@link AccountTypesHelper}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowContentResolver.class,
-        ShadowAccountManager.class})
+@Config(shadows = {ShadowContentResolver.class, ShadowAccountManager.class})
 public class AccountTypesHelperTest {
-    private static final int USER_ID = 0;
     private static final String ACCOUNT_TYPE_1 = "com.acct1";
     private static final String ACCOUNT_TYPE_2 = "com.acct2";
     private static final String ACCOUNT_TYPE_3 = "com.acct3";
@@ -70,11 +65,6 @@ public class AccountTypesHelperTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        // Set up user info.
-        ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
-        doReturn(new UserInfo(USER_ID, "name", 0)).when(
-                mMockCarUserManagerHelper).getCurrentProcessUserInfo();
-
         // Add authenticated account types.
         addAuthenticator(ACCOUNT_TYPE_1, /* label= */ R.string.account_type1_label);
         addAuthenticator(ACCOUNT_TYPE_2, /* label= */ R.string.account_type2_label);
@@ -85,7 +75,6 @@ public class AccountTypesHelperTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
         ShadowContentResolver.reset();
     }
 

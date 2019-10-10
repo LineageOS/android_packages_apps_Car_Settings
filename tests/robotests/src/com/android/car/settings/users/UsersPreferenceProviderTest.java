@@ -86,7 +86,7 @@ public class UsersPreferenceProviderTest {
                 TEST_GUEST_USER_2,
                 TEST_OTHER_USER_2);
 
-        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+        when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(users);
     }

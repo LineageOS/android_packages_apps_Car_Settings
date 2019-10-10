@@ -22,13 +22,12 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.robolectric.RuntimeEnvironment.application;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 
@@ -41,8 +40,9 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowAccountManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
+import com.android.car.settings.testutils.ShadowUserHelper;
+import com.android.car.settings.users.UserHelper;
 
 import org.junit.After;
 import org.junit.Before;
@@ -57,8 +57,7 @@ import org.robolectric.shadow.api.Shadow;
 
 /** Unit tests for {@link ChooseAccountPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowContentResolver.class,
-        ShadowAccountManager.class})
+@Config(shadows = {ShadowUserHelper.class, ShadowContentResolver.class, ShadowAccountManager.class})
 public class ChooseAccountPreferenceControllerTest {
     private static final int USER_ID = 0;
 
@@ -66,7 +65,7 @@ public class ChooseAccountPreferenceControllerTest {
     private PreferenceGroup mPreferenceGroup;
     private ChooseAccountPreferenceController mController;
     @Mock
-    private CarUserManagerHelper mMockCarUserManagerHelper;
+    private UserHelper mMockUserHelper;
 
     private AccountManager mAccountManager = AccountManager.get(application);
 
@@ -75,9 +74,9 @@ public class ChooseAccountPreferenceControllerTest {
         MockitoAnnotations.initMocks(this);
 
         // Set up user info
-        ShadowCarUserManagerHelper.setMockInstance(mMockCarUserManagerHelper);
-        doReturn(new UserInfo(USER_ID, "name", 0)).when(
-                mMockCarUserManagerHelper).getCurrentProcessUserInfo();
+        ShadowUserHelper.setInstance(mMockUserHelper);
+        when(mMockUserHelper.getCurrentProcessUserInfo())
+                .thenReturn(new UserInfo(USER_ID, "name", 0));
 
         // Add authenticated account types
         addAuthenticator(/* type= */ "com.acct1", /* label= */ R.string.account_type1_label);
@@ -93,7 +92,7 @@ public class ChooseAccountPreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
+        ShadowUserHelper.reset();
         ShadowContentResolver.reset();
     }
 

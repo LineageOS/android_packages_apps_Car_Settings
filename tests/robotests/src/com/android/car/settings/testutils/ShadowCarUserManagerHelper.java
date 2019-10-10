@@ -47,11 +47,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected UserInfo getCurrentProcessUserInfo() {
-        return sMockInstance.getCurrentProcessUserInfo();
-    }
-
-    @Implementation
     protected UserInfo getCurrentForegroundUserInfo() {
         return sMockInstance.getCurrentForegroundUserInfo();
     }
