@@ -34,11 +34,10 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockPatternView.Cell;
 import com.android.internal.widget.LockPatternView.DisplayMode;
+import com.android.internal.widget.LockscreenCredential;
 
 import com.google.android.collect.Lists;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -71,10 +70,10 @@ public class ChooseLockPatternFragment extends BaseFragment {
     private Button mSecondaryButton;
     private Button mPrimaryButton;
     private ProgressBar mProgressBar;
-    private List<LockPatternView.Cell> mChosenPattern;
+    private LockscreenCredential mChosenPattern;
     // Existing pattern that user previously set
-    private byte[] mCurrentPattern;
-    private SavePatternWorker mSavePatternWorker;
+    private LockscreenCredential mCurrentCredential;
+    private SaveLockWorker mSaveLockWorker;
     private Runnable mClearPatternRunnable = () -> mLockPatternView.clearPattern();
     // The pattern listener that responds according to a user choosing a new
     // lock pattern.
@@ -117,10 +116,13 @@ public class ChooseLockPatternFragment extends BaseFragment {
                         throw new IllegalStateException(
                                 "null chosen pattern in stage 'need to confirm");
                     }
-                    if (mChosenPattern.equals(pattern)) {
-                        updateStage(Stage.ChoiceConfirmed);
-                    } else {
-                        updateStage(Stage.ConfirmWrong);
+                    try (LockscreenCredential credential =
+                            LockscreenCredential.createPattern(pattern)) {
+                        if (mChosenPattern.equals(credential)) {
+                            updateStage(Stage.ChoiceConfirmed);
+                        } else {
+                            updateStage(Stage.ConfirmWrong);
+                        }
                     }
                 }
 
@@ -128,7 +130,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
                     if (pattern.size() < LockPatternUtils.MIN_LOCK_PATTERN_SIZE) {
                         updateStage(Stage.ChoiceTooShort);
                     } else {
-                        mChosenPattern = new ArrayList<LockPatternView.Cell>(pattern);
+                        mChosenPattern = LockscreenCredential.createPattern(pattern);
                         updateStage(Stage.FirstChoiceValid);
                     }
                 }
@@ -168,13 +170,12 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
         Bundle args = getArguments();
         if (args != null) {
-            mCurrentPattern = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrentCredential = args.getParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
 
         if (savedInstanceState != null) {
             mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
-            mChosenPattern = LockPatternUtils.byteArrayToPattern(
-                    savedInstanceState.getByteArray(STATE_CHOSEN_PATTERN));
+            mChosenPattern = savedInstanceState.getParcelable(STATE_CHOSEN_PATTERN);
         }
     }
 
@@ -194,7 +195,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
         // Re-attach to the exiting worker if there is one.
         if (savedInstanceState != null) {
-            mSavePatternWorker = (SavePatternWorker) getFragmentManager().findFragmentByTag(
+            mSaveLockWorker = (SaveLockWorker) getFragmentManager().findFragmentByTag(
                     FRAGMENT_TAG_SAVE_PATTERN_WORKER);
         }
     }
@@ -216,9 +217,9 @@ public class ChooseLockPatternFragment extends BaseFragment {
         super.onStart();
         updateStage(mUiStage);
 
-        if (mSavePatternWorker != null) {
+        if (mSaveLockWorker != null) {
             setPrimaryButtonEnabled(true);
-            mSavePatternWorker.setListener(this::onChosenLockSaveFinished);
+            mSaveLockWorker.setListener(this::onChosenLockSaveFinished);
         }
     }
 
@@ -226,15 +227,14 @@ public class ChooseLockPatternFragment extends BaseFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(STATE_UI_STAGE, mUiStage.ordinal());
-        outState.putByteArray(STATE_CHOSEN_PATTERN,
-                LockPatternUtils.patternToByteArray(mChosenPattern));
+        outState.putParcelable(STATE_CHOSEN_PATTERN, mChosenPattern);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mSavePatternWorker != null) {
-            mSavePatternWorker.setListener(null);
+        if (mSaveLockWorker != null) {
+            mSaveLockWorker.setListener(null);
         }
         mProgressBar.setVisibility(View.GONE);
     }
@@ -406,31 +406,31 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
     // Save recorded pattern as an async task and proceed to next
     private void startSaveAndFinish() {
-        if (mSavePatternWorker != null && !mSavePatternWorker.isFinished()) {
+        if (mSaveLockWorker != null && !mSaveLockWorker.isFinished()) {
             LOG.v("startSaveAndFinish with a running SavePatternWorker.");
             return;
         }
 
         setPrimaryButtonEnabled(false);
 
-        if (mSavePatternWorker == null) {
-            mSavePatternWorker = new SavePatternWorker();
-            mSavePatternWorker.setListener(this::onChosenLockSaveFinished);
+        if (mSaveLockWorker == null) {
+            mSaveLockWorker = new SaveLockWorker();
+            mSaveLockWorker.setListener(this::onChosenLockSaveFinished);
 
             getFragmentManager()
                     .beginTransaction()
-                    .add(mSavePatternWorker, FRAGMENT_TAG_SAVE_PATTERN_WORKER)
+                    .add(mSaveLockWorker, FRAGMENT_TAG_SAVE_PATTERN_WORKER)
                     .commitNow();
         }
 
-        mSavePatternWorker.start(mUserId, mChosenPattern, mCurrentPattern);
+        mSaveLockWorker.start(mUserId, mChosenPattern, mCurrentCredential);
         mProgressBar.setVisibility(View.VISIBLE);
     }
 
     @VisibleForTesting
     void onComplete() {
-        if (mCurrentPattern != null) {
-            Arrays.fill(mCurrentPattern, (byte) 0);
+        if (mCurrentCredential != null) {
+            mCurrentCredential.zeroize();
         }
 
         getActivity().finish();

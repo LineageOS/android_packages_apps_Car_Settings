@@ -32,6 +32,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,7 +48,8 @@ import org.robolectric.annotation.Config;
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowLockPatternUtils.class})
 public class NoLockPreferenceControllerTest {
 
-    private static final byte[] TEST_CURRENT_PASSWORD = "test_password".getBytes();
+    private static final LockscreenCredential TEST_CURRENT_PASSWORD =
+            LockscreenCredential.createPassword("test_password");
     private static final int TEST_USER = 10;
 
     private Context mContext;

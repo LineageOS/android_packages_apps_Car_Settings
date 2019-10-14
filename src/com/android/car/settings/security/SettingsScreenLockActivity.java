@@ -27,6 +27,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseCarSettingsActivity;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 
 /**
  * Activity for setting screen locks
@@ -80,13 +81,13 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity implemen
     }
 
     @Override
-    public void onLockVerified(byte[] lock) {
+    public void onLockVerified(LockscreenCredential lock) {
         Fragment fragment = new ChooseLockTypeFragment();
         Bundle bundle = fragment.getArguments();
         if (bundle == null) {
             bundle = new Bundle();
         }
-        bundle.putByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
+        bundle.putParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
         bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
 

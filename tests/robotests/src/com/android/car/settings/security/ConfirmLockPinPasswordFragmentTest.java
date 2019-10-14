@@ -22,6 +22,7 @@ import android.view.View;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -65,7 +66,7 @@ public class ConfirmLockPinPasswordFragmentTest {
             CheckLockListener {
 
         @Override
-        public void onLockVerified(byte[] lock) {
+        public void onLockVerified(LockscreenCredential lock) {
         }
     }
 }

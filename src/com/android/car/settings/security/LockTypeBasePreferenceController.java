@@ -27,6 +27,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.internal.widget.LockscreenCredential;
 
 /**
  * Business Logic for security lock preferences. It can be extended to change which fragment should
@@ -35,7 +36,7 @@ import com.android.car.settings.common.PreferenceController;
 public abstract class LockTypeBasePreferenceController extends PreferenceController<Preference> {
 
     private final UserManager mUserManager;
-    private byte[] mCurrentPassword;
+    private LockscreenCredential mCurrentPassword;
     private int mCurrentPasswordQuality;
 
     public LockTypeBasePreferenceController(Context context, String preferenceKey,
@@ -79,12 +80,12 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
     }
 
     /** Sets the current password so it can be provided in the bundle in the fragment. */
-    public void setCurrentPassword(byte[] currentPassword) {
+    public void setCurrentPassword(LockscreenCredential currentPassword) {
         mCurrentPassword = currentPassword;
     }
 
     /** Gets the current password. */
-    protected byte[] getCurrentPassword() {
+    protected LockscreenCredential getCurrentPassword() {
         return mCurrentPassword;
     }
 
@@ -102,7 +103,7 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
                 if (args == null) {
                     args = new Bundle();
                 }
-                args.putByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrentPassword);
+                args.putParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, mCurrentPassword);
                 fragment.setArguments(args);
             }
             getFragmentController().launchFragment(fragment);
