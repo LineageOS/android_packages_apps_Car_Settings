@@ -27,16 +27,16 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 
 /**
- * Tests for SavePatternWorker class.
+ * Tests for SaveLockWorker class.
  */
 @RunWith(RobolectricTestRunner.class)
-public class SavePatternWorkerTest {
+public class SaveLockWorkerTest {
     /**
      * A test to check return value when save worker succeeds
      */
     @Test
     public void testSaveLockSuccessReturnsTrue() {
-        SavePatternWorker worker = spy(new SavePatternWorker());
+        SaveLockWorker worker = spy(new SaveLockWorker());
 
         doNothing().when(worker).saveLock();
 
@@ -48,7 +48,7 @@ public class SavePatternWorkerTest {
      */
     @Test
     public void testSaveLockFailureReturnsFalse() {
-        SavePatternWorker worker = spy(new SavePatternWorker());
+        SaveLockWorker worker = spy(new SaveLockWorker());
 
         doThrow(new RuntimeException()).when(worker).saveLock();
 

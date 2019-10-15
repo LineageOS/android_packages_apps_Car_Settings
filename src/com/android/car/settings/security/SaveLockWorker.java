@@ -25,12 +25,13 @@ import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 
 /**
  * An invisible retained worker fragment to track the AsyncWork that saves
  * the chosen lock credential (pattern/pin/password).
  */
-abstract class SaveLockWorkerBase extends Fragment {
+public class SaveLockWorker extends Fragment {
     /**
      * Callback when lock save has finished
      */
@@ -38,13 +39,17 @@ abstract class SaveLockWorkerBase extends Fragment {
         void onChosenLockSaveFinished(boolean isSaveSuccessful);
     }
 
-    private static final Logger LOG = new Logger(SaveLockWorkerBase.class);
+    private static final Logger LOG = new Logger(SaveLockWorker.class);
 
     private Listener mListener;
     private boolean mFinished;
     private boolean mIsSaveSuccessful;
     private LockPatternUtils mUtils;
     private int mUserId;
+
+    private LockscreenCredential mEnteredCredential;
+    private LockscreenCredential mCurrentCredential;
+    private int mRequestedQuality;
 
     final LockPatternUtils getUtils() {
         return mUtils;
@@ -69,10 +74,18 @@ abstract class SaveLockWorkerBase extends Fragment {
         mUserId = userId;
     }
 
+    void start(int userId, LockscreenCredential enteredCredential,
+            LockscreenCredential currentCredential) {
+        init(userId);
+        mEnteredCredential = enteredCredential;
+        mCurrentCredential = currentCredential != null ? currentCredential
+                : LockscreenCredential.createNone();
+        start();
+    }
     /**
      * Start executing the async task.
      */
-    final void start() {
+    private void start() {
         mFinished = false;
         new Task().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
@@ -115,7 +128,18 @@ abstract class SaveLockWorkerBase extends Fragment {
      * Executes the save and verify work in background.
      */
     @WorkerThread
-    abstract void saveLock();
+    void saveLock() {
+        final int userId = getUserId();
+
+        // If called after setLockCredential, this will always be true
+        boolean isPatternEverChosen = getUtils().isPatternEverChosen(userId);
+
+        getUtils().setLockCredential(mEnteredCredential, mCurrentCredential, userId);
+
+        if (mEnteredCredential.isPattern() && !isPatternEverChosen) {
+            getUtils().setVisiblePatternEnabled(true, userId);
+        }
+    }
 
     // Save chosen lock task.
     private class Task extends AsyncTask<Void, Void, Boolean> {

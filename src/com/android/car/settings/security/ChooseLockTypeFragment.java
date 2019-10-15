@@ -23,6 +23,7 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.internal.widget.LockscreenCredential;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class ChooseLockTypeFragment extends SettingsFragment {
 
     public static final String EXTRA_CURRENT_PASSWORD_QUALITY = "extra_current_password_quality";
 
-    private byte[] mCurrPassword;
+    private LockscreenCredential mCurrPassword;
     private int mPasswordQuality;
 
     @Override
@@ -48,7 +49,7 @@ public class ChooseLockTypeFragment extends SettingsFragment {
         super.onAttach(context);
         Bundle args = getArguments();
         if (args != null) {
-            mCurrPassword = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            mCurrPassword = args.getParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
             mPasswordQuality = args.getInt(EXTRA_CURRENT_PASSWORD_QUALITY);
         }
 

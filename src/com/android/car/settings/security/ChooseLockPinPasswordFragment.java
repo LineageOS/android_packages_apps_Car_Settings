@@ -36,18 +36,18 @@ import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.LayoutRes;
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.Logger;
-import com.android.internal.widget.LockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 import com.android.internal.widget.TextViewInputDisabler;
 
-import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Fragment for choosing a lock password/pin.
@@ -70,11 +70,11 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private boolean mIsAlphaMode;
 
     // Password currently in the input field
-    private byte[] mCurrentEntry;
+    private LockscreenCredential mCurrentEntry;
     // Existing password that user previously set
-    private byte[] mExistingPassword;
+    private LockscreenCredential mExistingCredential;
     // Password must be entered twice.  This is what user entered the first time.
-    private byte[] mFirstEntry;
+    private LockscreenCredential mFirstEntry;
 
     private PinPadView mPinPad;
     private TextView mHintMessage;
@@ -85,7 +85,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
     private TextViewInputDisabler mPasswordEntryInputDisabler;
-    private SavePasswordWorker mSavePasswordWorker;
+    private SaveLockWorker mSaveLockWorker;
     private PasswordHelper mPasswordHelper;
 
     /**
@@ -136,7 +136,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         Bundle args = getArguments();
         if (args != null) {
             mIsPin = args.getBoolean(EXTRA_IS_PIN);
-            mExistingPassword = args.getByteArray(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
+            mExistingCredential = args.getParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK);
         }
 
         mPasswordHelper = new PasswordHelper(mIsPin);
@@ -148,7 +148,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         if (savedInstanceState != null) {
             mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
-            mFirstEntry = savedInstanceState.getByteArray(STATE_FIRST_ENTRY);
+            mFirstEntry = savedInstanceState.getParcelable(STATE_FIRST_ENTRY);
         }
     }
 
@@ -208,7 +208,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         // Re-attach to the exiting worker if there is one.
         if (savedInstanceState != null) {
-            mSavePasswordWorker = (SavePasswordWorker) getFragmentManager().findFragmentByTag(
+            mSaveLockWorker = (SaveLockWorker) getFragmentManager().findFragmentByTag(
                     FRAGMENT_TAG_SAVE_PASSWORD_WORKER);
         }
     }
@@ -230,8 +230,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         super.onStart();
         updateStage(mUiStage);
 
-        if (mSavePasswordWorker != null) {
-            mSavePasswordWorker.setListener(this::onChosenLockSaveFinished);
+        if (mSaveLockWorker != null) {
+            mSaveLockWorker.setListener(this::onChosenLockSaveFinished);
         }
     }
 
@@ -239,14 +239,14 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(STATE_UI_STAGE, mUiStage.ordinal());
-        outState.putByteArray(STATE_FIRST_ENTRY, mFirstEntry);
+        outState.putParcelable(STATE_FIRST_ENTRY, mFirstEntry);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mSavePasswordWorker != null) {
-            mSavePasswordWorker.setListener(null);
+        if (mSaveLockWorker != null) {
+            mSaveLockWorker.setListener(null);
         }
         mProgressBar.setVisibility(View.GONE);
     }
@@ -261,9 +261,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     /**
      * Returns the string in the password entry field
      */
-    @Nullable
-    private byte[] getEnteredPassword() {
-        return LockPatternUtils.charSequenceToByteArray(mPasswordField.getText());
+    @NonNull
+    private LockscreenCredential getEnteredPassword() {
+        if (mIsPin) {
+            return LockscreenCredential.createPinOrNone(mPasswordField.getText());
+        } else {
+            return LockscreenCredential.createPasswordOrNone(mPasswordField.getText());
+        }
     }
 
     private void initPinView(View view) {
@@ -277,14 +281,12 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
             @Override
             public void onBackspaceClick() {
-                byte[] pin = getEnteredPassword();
-                if (pin != null && pin.length > 0) {
+                LockscreenCredential pin = getEnteredPassword();
+                if (pin.size() > 0) {
                     mPasswordField.getText().delete(mPasswordField.getSelectionEnd() - 1,
                             mPasswordField.getSelectionEnd());
                 }
-                if (pin != null) {
-                    Arrays.fill(pin, (byte) 0);
-                }
+                pin.zeroize();
             }
 
             @Override
@@ -297,9 +299,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private boolean shouldEnableSubmit() {
-        return getEnteredPassword() != null
-                && getEnteredPassword().length >= PasswordHelper.MIN_LENGTH
-                && (mSavePasswordWorker == null || mSavePasswordWorker.isFinished());
+        return getEnteredPassword().size() >= PasswordHelper.MIN_LENGTH
+                && (mSaveLockWorker == null || mSaveLockWorker.isFinished());
     }
 
     private void updateSubmitButtonsState() {
@@ -342,14 +343,14 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                     updateStage(Stage.NeedToConfirm);
                 } else {
                     updateStage(Stage.PasswordInvalid);
-                    Arrays.fill(mCurrentEntry, (byte) 0);
+                    mCurrentEntry.zeroize();
                 }
                 break;
             case NeedToConfirm:
             case SaveFailure:
                 // Password must be entered twice. mFirstEntry is the one the user entered
                 // the first time.  mCurrentEntry is what's currently in the input field
-                if (Arrays.equals(mFirstEntry, mCurrentEntry)) {
+                if (Objects.equals(mFirstEntry, mCurrentEntry)) {
                     startSaveAndFinish();
                 } else {
                     CharSequence tmp = mPasswordField.getText();
@@ -357,7 +358,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
                         Selection.setSelection((Spannable) tmp, 0, tmp.length());
                     }
                     updateStage(Stage.ConfirmWrong);
-                    Arrays.fill(mCurrentEntry, (byte) 0);
+                    mCurrentEntry.zeroize();
                 }
                 break;
             default:
@@ -368,7 +369,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     // Updates display message and proceed to next step according to the different text on
     // the secondary button.
     private void handleSecondaryButtonClick() {
-        if (mSavePasswordWorker != null) {
+        if (mSaveLockWorker != null) {
             return;
         }
 
@@ -393,25 +394,24 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     // Starts an async task to save the chosen password.
     private void startSaveAndFinish() {
-        if (mSavePasswordWorker != null && !mSavePasswordWorker.isFinished()) {
+        if (mSaveLockWorker != null && !mSaveLockWorker.isFinished()) {
             LOG.v("startSaveAndFinish with a running SaveAndFinishWorker.");
             return;
         }
 
         mPasswordEntryInputDisabler.setInputEnabled(false);
 
-        if (mSavePasswordWorker == null) {
-            mSavePasswordWorker = new SavePasswordWorker();
-            mSavePasswordWorker.setListener(this::onChosenLockSaveFinished);
+        if (mSaveLockWorker == null) {
+            mSaveLockWorker = new SaveLockWorker();
+            mSaveLockWorker.setListener(this::onChosenLockSaveFinished);
 
             getFragmentManager()
                     .beginTransaction()
-                    .add(mSavePasswordWorker, FRAGMENT_TAG_SAVE_PASSWORD_WORKER)
+                    .add(mSaveLockWorker, FRAGMENT_TAG_SAVE_PASSWORD_WORKER)
                     .commitNow();
         }
 
-        mSavePasswordWorker.start(mUserId, mCurrentEntry, mExistingPassword,
-                mPasswordHelper.getPasswordQuality());
+        mSaveLockWorker.start(mUserId, mCurrentEntry, mExistingCredential);
 
         mProgressBar.setVisibility(View.VISIBLE);
         updateSubmitButtonsState();
@@ -421,7 +421,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private void updateUi() {
         updateSubmitButtonsState();
 
-        boolean inputAllowed = mSavePasswordWorker == null || mSavePasswordWorker.isFinished();
+        boolean inputAllowed = mSaveLockWorker == null || mSaveLockWorker.isFinished();
 
         if (mUiStage != Stage.Introduction) {
             setSecondaryButtonEnabled(inputAllowed);
@@ -473,15 +473,15 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     @VisibleForTesting
     void onComplete() {
         if (mCurrentEntry != null) {
-            Arrays.fill(mCurrentEntry, (byte) 0);
+            mCurrentEntry.zeroize();
         }
 
-        if (mExistingPassword != null) {
-            Arrays.fill(mExistingPassword, (byte) 0);
+        if (mExistingCredential != null) {
+            mExistingCredential.zeroize();
         }
 
         if (mFirstEntry != null) {
-            Arrays.fill(mFirstEntry, (byte) 0);
+            mFirstEntry.zeroize();
         }
 
         mPasswordField.setText("");

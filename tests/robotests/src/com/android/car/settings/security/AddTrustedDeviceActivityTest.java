@@ -36,6 +36,7 @@ import android.os.Bundle;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
+import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.After;
 import org.junit.Before;
@@ -161,7 +162,7 @@ public class AddTrustedDeviceActivityTest {
         mActivityController.start().postCreate(null).resume();
 
         mActivity.launchFragment(ConfirmLockPinPasswordFragment.newPinInstance());
-        mActivity.onLockVerified("lock".getBytes());
+        mActivity.onLockVerified(LockscreenCredential.createPassword("lock"));
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
                 .isInstanceOf(AddTrustedDeviceProgressFragment.class);
