@@ -38,6 +38,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 
 import java.util.HashSet;
 import java.util.List;
@@ -137,7 +138,7 @@ public class MasterClearAccountsPreferenceController extends PreferenceControlle
     }
 
     private Preference createPreference(String title, @Nullable Drawable icon) {
-        Preference preference = new Preference(getContext());
+        CarUiPreference preference = new CarUiPreference(getContext());
         preference.setTitle(title);
         preference.setIcon(icon);
         preference.setSelectable(false);

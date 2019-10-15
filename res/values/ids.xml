@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2018 The Android Open Source Project
+    Copyright 2019 The Android Open Source Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,11 +15,8 @@
     limitations under the License.
 -->
 
-<Switch
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/master_switch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:clickable="false"
-    android:focusable="false"/>
+<resources>
+    <!-- Ids for toolbar menu items for purposes of selecting items for tests -->
+    <item type="id" name="toolbar_menu_item_0"/>
+    <item type="id" name="toolbar_menu_item_1"/>
+</resources>

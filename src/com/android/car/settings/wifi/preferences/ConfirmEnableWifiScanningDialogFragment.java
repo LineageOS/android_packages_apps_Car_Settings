@@ -16,7 +16,6 @@
 
 package com.android.car.settings.wifi.preferences;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -24,15 +23,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import androidx.fragment.app.DialogFragment;
-
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 import com.android.settingslib.HelpUtils;
 
 /** Dialog to request enabling of wifi scanning when user tries to enable auto wifi wakeup. */
-public class ConfirmEnableWifiScanningDialogFragment extends DialogFragment implements
-        DialogInterface.OnClickListener {
+public class ConfirmEnableWifiScanningDialogFragment extends CarUiDialogFragment {
 
     public static final String TAG = "ConfirmEnableWifiScanningDialogFragment";
     private static final Logger LOG = new Logger(ConfirmEnableWifiScanningDialogFragment.class);
@@ -46,7 +44,7 @@ public class ConfirmEnableWifiScanningDialogFragment extends DialogFragment impl
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext())
+        AlertDialogBuilder builder = new AlertDialogBuilder(getContext())
                 .setTitle(R.string.wifi_settings_scanning_required_title)
                 .setPositiveButton(R.string.wifi_settings_scanning_required_turn_on, this)
                 .setNegativeButton(R.string.cancel, null);
@@ -87,6 +85,10 @@ public class ConfirmEnableWifiScanningDialogFragment extends DialogFragment impl
                 LOG.e("Activity was not found for intent, " + intent.toString());
             }
         }
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     /** Listener for when the dialog is confirmed and the wifi scanning is enabled. */

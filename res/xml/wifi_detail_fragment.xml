@@ -80,6 +80,7 @@
         <Preference
             android:key="@string/pk_wifi_ipv6"
             android:selectable="false"
-            settings:controller="com.android.car.settings.wifi.details.WifiIpv6AddressPreferenceController"/>
+            settings:controller="com.android.car.settings.wifi.details.WifiIpv6AddressPreferenceController"
+            settings:showChevron="false"/>
     </PreferenceCategory>
 </PreferenceScreen>

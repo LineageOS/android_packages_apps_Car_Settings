@@ -38,15 +38,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
-import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 import java.util.Objects;
 
 /** Dialog fragment for renaming a Bluetooth device. */
-public abstract class BluetoothRenameDialogFragment extends DialogFragment implements TextWatcher,
-        TextView.OnEditorActionListener {
+public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment implements
+        TextWatcher, TextView.OnEditorActionListener {
 
     // Keys to save the edited name and edit status for restoring after configuration change.
     private static final String KEY_NAME = "device_name";
@@ -98,6 +98,10 @@ public abstract class BluetoothRenameDialogFragment extends DialogFragment imple
         });
 
         return mAlertDialog;
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     @Override
