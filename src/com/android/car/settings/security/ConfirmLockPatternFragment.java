@@ -53,12 +53,6 @@ public class ConfirmLockPatternFragment extends BaseFragment {
 
     @Override
     @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @LayoutRes
     protected int getLayoutId() {
         return R.layout.confirm_lock_pattern;
     }

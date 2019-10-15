@@ -31,6 +31,7 @@ import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
@@ -135,7 +136,7 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
     private Preference createPreference(ApplicationsState.AppEntry entry) {
         String key = entry.info.packageName + "|" + entry.info.uid;
         IconDrawableFactory iconDrawableFactory = IconDrawableFactory.newInstance(getContext());
-        Preference preference = new Preference(getContext());
+        CarUiPreference preference = new CarUiPreference(getContext());
         preference.setKey(key);
         preference.setTitle(entry.label);
         preference.setSummary(

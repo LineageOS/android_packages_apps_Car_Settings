@@ -16,20 +16,19 @@
 
 package com.android.car.settings.network;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 /** Dialog to confirm disabling mobile data. */
-public class ConfirmMobileDataDisableDialog extends DialogFragment implements
-        DialogInterface.OnClickListener {
+public class ConfirmMobileDataDisableDialog extends CarUiDialogFragment {
 
     /**
      * Tag used to open and identify the dialog fragment from the FragmentManager or
@@ -50,7 +49,7 @@ public class ConfirmMobileDataDisableDialog extends DialogFragment implements
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getContext())
+        return new AlertDialogBuilder(getContext())
                 .setMessage(R.string.confirm_mobile_data_disable)
                 .setPositiveButton(android.R.string.ok, this)
                 .setNegativeButton(android.R.string.cancel, this)
@@ -69,6 +68,10 @@ public class ConfirmMobileDataDisableDialog extends DialogFragment implements
                 mListener.onMobileDataDisableRejected();
             }
         }
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     /**

@@ -109,6 +109,8 @@ public class CarSettingsRobolectricTestRunner extends RobolectricTestRunner {
                     List<ResourcePath> paths = super.getIncludedResourcePaths();
                     paths.add(createResourcePath("file:packages/apps/Car/Settings/res"));
 
+                    paths.add(createResourcePath("file:packages/apps/Car/libs/car-ui-lib/res"));
+
                     // Has to come before the "car" library due to a conflicting resource name
                     paths.add(
                             createResourcePath("file:packages/apps/Car/libs/car-apps-common/res"));

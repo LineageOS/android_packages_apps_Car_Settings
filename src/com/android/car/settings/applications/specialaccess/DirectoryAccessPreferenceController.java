@@ -29,12 +29,12 @@ import android.net.Uri;
 import android.util.ArraySet;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 import com.android.settingslib.applications.ApplicationsState.AppFilter;
 
@@ -146,7 +146,7 @@ public class DirectoryAccessPreferenceController extends PreferenceController<Pr
         }
         preference.removeAll();
         for (AppEntry entry : mEntries) {
-            Preference appPreference = new Preference(getContext());
+            CarUiPreference appPreference = new CarUiPreference(getContext());
             String key = entry.info.packageName + "|" + entry.info.uid;
             appPreference.setKey(key);
             appPreference.setTitle(entry.label);

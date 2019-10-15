@@ -16,18 +16,17 @@
 
 package com.android.car.settings.security;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
-import androidx.fragment.app.DialogFragment;
-
 import com.android.car.settings.R;
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 /**
  * Dialog to confirm screen lock removal.
  */
-public class ConfirmRemoveScreenLockDialog extends DialogFragment {
+public class ConfirmRemoveScreenLockDialog extends CarUiDialogFragment {
 
     /** Identifier for the dialog which confirms the removal of a screen lock. */
     public static final String TAG = "confirm_remove_lock_dialog";
@@ -40,7 +39,7 @@ public class ConfirmRemoveScreenLockDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getContext())
+        return new AlertDialogBuilder(getContext())
                 .setTitle(R.string.remove_screen_lock_title)
                 .setMessage(R.string.remove_screen_lock_message)
                 .setPositiveButton(R.string.remove_button, (dialog, which) -> {
@@ -51,6 +50,10 @@ public class ConfirmRemoveScreenLockDialog extends DialogFragment {
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .create();
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     /** A listener for when user confirms lock removal for the current user. */

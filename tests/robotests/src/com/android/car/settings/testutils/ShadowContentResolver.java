@@ -44,7 +44,7 @@ import java.util.Map;
  * include an implementation of getSyncAdapterTypesAsUser, which is used by {@link
  * com.android.settingslib.accounts.AuthenticatorHelper#buildAccountTypeToAuthoritiesMap}.
  */
-@Implements(ContentResolver.class)
+@Implements(value = ContentResolver.class, inheritImplementationMethods = true)
 public class ShadowContentResolver extends org.robolectric.shadows.ShadowContentResolver {
     private static final int SYNCABLE = 1;
 

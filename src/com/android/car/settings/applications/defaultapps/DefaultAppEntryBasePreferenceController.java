@@ -29,6 +29,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 /**
@@ -61,6 +62,9 @@ public abstract class DefaultAppEntryBasePreferenceController<V extends Preferen
             LOG.d("No default app");
             preference.setSummary(R.string.app_list_preference_none);
             preference.setIcon(null);
+            if (preference instanceof CarUiPreference) {
+                ((CarUiPreference) preference).setShowChevron(false);
+            }
         }
     }
 

@@ -24,7 +24,6 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.service.oemlock.OemLockManager;
 import android.service.persistentdata.PersistentDataBlockManager;
-import android.widget.Button;
 
 import androidx.preference.PreferenceManager;
 
@@ -33,6 +32,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowOemLockManager;
 import com.android.car.settings.testutils.ShadowPersistentDataBlockManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -173,8 +174,9 @@ public class MasterClearConfirmFragmentTest {
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
 
-    private Button findMasterClearConfirmButton(Activity activity) {
-        return activity.findViewById(R.id.action_button1);
+    private MenuItem findMasterClearConfirmButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 
     private ShadowPersistentDataBlockManager getShadowPdbManager() {

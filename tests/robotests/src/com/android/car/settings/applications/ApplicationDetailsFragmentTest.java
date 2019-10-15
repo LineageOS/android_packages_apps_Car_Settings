@@ -39,7 +39,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -54,6 +53,8 @@ import com.android.car.settings.testutils.ShadowIconDrawableFactory;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.car.settings.testutils.ShadowUtils;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -243,7 +244,7 @@ public class ApplicationDetailsFragmentTest {
 
         mController.start();
 
-        assertThat(findDisableButton(mActivity).getText()).isEqualTo(
+        assertThat(findDisableButton(mActivity).getTitle()).isEqualTo(
                 mContext.getString(R.string.disable_text));
     }
 
@@ -257,7 +258,7 @@ public class ApplicationDetailsFragmentTest {
 
         mController.start();
 
-        assertThat(findDisableButton(mActivity).getText()).isEqualTo(
+        assertThat(findDisableButton(mActivity).getTitle()).isEqualTo(
                 mContext.getString(R.string.enable_text));
     }
 
@@ -272,7 +273,7 @@ public class ApplicationDetailsFragmentTest {
 
         mController.start();
 
-        assertThat(findDisableButton(mActivity).getText()).isEqualTo(
+        assertThat(findDisableButton(mActivity).getTitle()).isEqualTo(
                 mContext.getString(R.string.enable_text));
     }
 
@@ -334,7 +335,7 @@ public class ApplicationDetailsFragmentTest {
 
         mController.start();
 
-        assertThat(findUninstallButton(mActivity).getText()).isEqualTo(
+        assertThat(findUninstallButton(mActivity).getTitle()).isEqualTo(
                 mContext.getString(R.string.uninstall_text));
     }
 
@@ -564,17 +565,19 @@ public class ApplicationDetailsFragmentTest {
         assertThat(mActivity.getOnBackPressedFlag()).isTrue();
     }
 
-    private Button findForceStopButton(Activity activity) {
-        return activity.findViewById(R.id.action_button2);
+    private MenuItem findForceStopButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(1);
     }
 
-    private Button findDisableButton(Activity activity) {
+    private MenuItem findDisableButton(Activity activity) {
         // Same button is used with a different handler.  This method is purely for readability.
         return findUninstallButton(activity);
     }
 
-    private Button findUninstallButton(Activity activity) {
-        return activity.findViewById(R.id.action_button1);
+    private MenuItem findUninstallButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 
     private PackageInfo createPackageInfoWithApplicationInfo(String packageName) {

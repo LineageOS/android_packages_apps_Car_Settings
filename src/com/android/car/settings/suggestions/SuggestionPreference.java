@@ -20,17 +20,17 @@ import android.content.Context;
 import android.service.settings.suggestions.Suggestion;
 import android.view.View;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiPreference;
 
 import java.util.Objects;
 
 /**
  * Custom preference for Suggestions.
  */
-public class SuggestionPreference extends Preference {
+public class SuggestionPreference extends CarUiPreference {
 
     public static final String SUGGESTION_PREFERENCE_KEY = "suggestion_pref_key";
 
