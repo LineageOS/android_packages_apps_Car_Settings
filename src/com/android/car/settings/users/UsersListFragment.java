@@ -24,19 +24,19 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
-import com.android.car.settings.common.CarUxRestrictionsHelper;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.annotations.VisibleForTesting;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Lists all Users available on this device.
@@ -59,14 +59,11 @@ public class UsersListFragment extends SettingsFragment implements
     private UserManager mUserManager;
 
     private ProgressBar mProgressBar;
-    private Button mAddUserButton;
+    private MenuItem mAddUserButton;
 
     private AsyncTask mAddNewUserTask;
     /** Indicates that a task is running. */
     private boolean mIsBusy;
-    private float mOpacityDisabled;
-    private float mOpacityEnabled;
-    private boolean mRestricted;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmCreateNewUserListener = arguments -> {
@@ -93,22 +90,19 @@ public class UsersListFragment extends SettingsFragment implements
     };
 
     @Override
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mAddUserButton);
+    }
+
+    @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.users_list_fragment;
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mOpacityDisabled = getContext().getResources().getFloat(R.dimen.opacity_disabled);
-        mOpacityEnabled = getContext().getResources().getFloat(R.dimen.opacity_enabled);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mUserManager = UserManager.get(getContext());
     }
@@ -126,35 +120,22 @@ public class UsersListFragment extends SettingsFragment implements
                 mConfirmExitRetailModeListener,
                 /* rejectListener= */ null,
                 /* neutralListener= */ null);
+
+        mAddUserButton = new MenuItem.Builder(getContext())
+                .setOnClickListener(i -> handleAddUserClicked())
+                .setTitle(mUserManager.isDemoUser()
+                        ? R.string.exit_retail_button_text : R.string.user_add_user_menu)
+                .setVisible(mUserManager.isDemoUser()
+                        || canCurrentProcessAddUsers())
+                .setUxRestrictions(CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP)
+                .build();
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-
-        mAddUserButton = getActivity().findViewById(R.id.action_button1);
-        mAddUserButton.setOnClickListener(v -> {
-            if (mRestricted) {
-                showBlockingMessage();
-            } else {
-                handleAddUserClicked();
-            }
-        });
-        if (mUserManager.isDemoUser()) {
-            mAddUserButton.setText(R.string.exit_retail_button_text);
-        } else if (canCurrentProcessAddUsers()) {
-            mAddUserButton.setText(R.string.user_add_user_menu);
-        } else {
-            mAddUserButton.setVisibility(View.GONE);
-        }
-    }
-
-    @Override
-    public void onUxRestrictionsChanged(CarUxRestrictions restrictionInfo) {
-        mRestricted = CarUxRestrictionsHelper.isNoSetup(restrictionInfo);
-        mAddUserButton.setAlpha(mRestricted ? mOpacityDisabled : mOpacityEnabled);
+        mProgressBar = getToolbar().getProgressBar();
     }
 
     @Override
@@ -227,10 +208,6 @@ public class UsersListFragment extends SettingsFragment implements
 
             dialogFragment.show(getFragmentManager(), CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
         }
-    }
-
-    private void showBlockingMessage() {
-        Toast.makeText(getContext(), R.string.restricted_while_driving, Toast.LENGTH_SHORT).show();
     }
 
     private boolean canCurrentProcessAddUsers() {

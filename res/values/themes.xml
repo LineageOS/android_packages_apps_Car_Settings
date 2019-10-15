@@ -16,8 +16,7 @@
 -->
 
 <resources>
-    <style name="CarSettingTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar">
-        <item name="preferenceTheme">@style/PreferenceTheme</item>
+    <style name="CarSettingTheme" parent="@style/Theme.CarUi">
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="wifiSignalColor">?android:attr/textColorPrimary</item>
         <item name="iconColor">?android:attr/textColorPrimary</item>
@@ -39,13 +38,6 @@
         <item name="android:fragmentOpenExitAnimation">@animator/trans_left_out</item>
         <item name="android:fragmentCloseEnterAnimation">@animator/trans_left_in</item>
         <item name="android:fragmentCloseExitAnimation">@animator/trans_right_out</item>
-    </style>
-
-    <style name="PreferenceTheme">
-        <item name="preferenceFragmentCompatStyle">@style/SettingsPreferenceFragment</item>
-        <item name="preferenceFragmentListStyle">@style/SettingsPreferenceFragmentList</item>
-        <item name="editTextPreferenceStyle">@style/Preference.Settings.DialogPreference.EditTextPreference</item>
-        <item name="seekBarPreferenceStyle">@style/Preference.Settings.SeekBarPreference</item>
     </style>
 
     <style name="FallbackHome" parent="@android:style/Theme.DeviceDefault.NoActionBar">

@@ -22,16 +22,18 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.wifi.AccessPoint;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Adds a hidden wifi network. The connect button on the fragment is only used for unsecure hidden
@@ -62,20 +64,19 @@ public class AddWifiFragment extends SettingsFragment {
         }
     };
 
-    private Button mAddWifiButton;
+    private MenuItem mAddWifiButton;
     private String mNetworkName;
     private int mSecurityType = AccessPoint.SECURITY_NONE;
+
+    @Override
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mAddWifiButton);
+    }
 
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.add_wifi_fragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
     }
 
     @Override
@@ -85,6 +86,20 @@ public class AddWifiFragment extends SettingsFragment {
             mNetworkName = savedInstanceState.getString(KEY_NETWORK_NAME);
             mSecurityType = savedInstanceState.getInt(KEY_SECURITY_TYPE, AccessPoint.SECURITY_NONE);
         }
+
+        mAddWifiButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.wifi_setup_connect)
+                .setOnClickListener(i -> {
+                    // This only needs to handle hidden/unsecure networks.
+                    int netId = WifiUtil.connectToAccessPoint(getContext(), mNetworkName,
+                            AccessPoint.SECURITY_NONE, /* password= */ null, /* hidden= */ true);
+                    LOG.d("connected to netId: " + netId);
+                    if (netId != WifiUtil.INVALID_NET_ID) {
+                        goBack();
+                    }
+                })
+                .build();
+        setButtonEnabledState();
     }
 
     @Override
@@ -92,26 +107,6 @@ public class AddWifiFragment extends SettingsFragment {
         super.onSaveInstanceState(outState);
         outState.putString(KEY_NETWORK_NAME, mNetworkName);
         outState.putInt(KEY_SECURITY_TYPE, mSecurityType);
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mAddWifiButton = getActivity().findViewById(R.id.action_button1);
-        mAddWifiButton.setText(R.string.wifi_setup_connect);
-        setButtonEnabledState();
-
-        // This only needs to handle hidden/unsecure networks.
-        mAddWifiButton.setOnClickListener(v -> {
-            int netId = WifiUtil.connectToAccessPoint(getContext(), mNetworkName,
-                    AccessPoint.SECURITY_NONE, /* password= */ null, /* hidden= */ true);
-
-            LOG.d("connected to netId: " + netId);
-            if (netId != WifiUtil.INVALID_NET_ID) {
-                goBack();
-            }
-        });
     }
 
     @Override

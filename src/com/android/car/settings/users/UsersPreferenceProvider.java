@@ -22,6 +22,7 @@ import android.content.pm.UserInfo;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,7 +104,7 @@ public class UsersPreferenceProvider {
     }
 
     private Preference createUserPreference(UserInfo userInfo) {
-        Preference preference = new Preference(mContext);
+        CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
                 new UserIconProvider().getRoundedUserIcon(userInfo, mContext));
         preference.setTitle(UserUtils.getUserDisplayName(mContext, userInfo));
@@ -128,7 +129,7 @@ public class UsersPreferenceProvider {
     }
 
     private Preference createGuestUserPreference() {
-        Preference preference = new Preference(mContext);
+        CarUiPreference preference = new CarUiPreference(mContext);
         preference.setIcon(
                 new UserIconProvider().getRoundedGuestDefaultIcon(mContext.getResources()));
         preference.setTitle(R.string.user_guest);

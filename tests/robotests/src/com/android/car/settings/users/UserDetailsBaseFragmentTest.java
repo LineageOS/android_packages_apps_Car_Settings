@@ -25,14 +25,14 @@ import android.content.pm.UserInfo;
 import android.os.Process;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.view.View;
-import android.widget.Button;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -40,7 +40,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
@@ -71,22 +70,21 @@ public class UserDetailsBaseFragmentTest {
     }
 
     private Context mContext;
-    private BaseTestActivity mTestActivity;
+
     private UserDetailsBaseFragment mUserDetailsBaseFragment;
     @Mock
     private UserHelper mUserHelper;
 
-    private Button mRemoveUserButton;
+    private MenuItem mRemoveUserButton;
+
+    private FragmentController<UserDetailsBaseFragment> mFragmentController;
 
     @Before
     public void setUpTestActivity() {
         mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
         ShadowUserHelper.setInstance(mUserHelper);
-
         setCurrentUserWithFlags(/* flags= */ 0);
-
-        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
@@ -100,7 +98,7 @@ public class UserDetailsBaseFragmentTest {
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, false);
         createUserDetailsBaseFragment(/* userId= */ 1);
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mRemoveUserButton.isVisible()).isTrue();
     }
 
     @Test
@@ -109,7 +107,7 @@ public class UserDetailsBaseFragmentTest {
                 Process.myUserHandle(), UserManager.DISALLOW_REMOVE_USER, true);
         createUserDetailsBaseFragment(/* userId= */ 1);
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -119,7 +117,7 @@ public class UserDetailsBaseFragmentTest {
 
         createUserDetailsBaseFragment(UserHandle.USER_SYSTEM);
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -129,7 +127,7 @@ public class UserDetailsBaseFragmentTest {
         setCurrentUserWithFlags(UserInfo.FLAG_DEMO);
         createUserDetailsBaseFragment(/* userId= */ 1);
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -151,9 +149,17 @@ public class UserDetailsBaseFragmentTest {
         // Use UserDetailsFragment, since we cannot test an abstract class.
         mUserDetailsBaseFragment = UserDetailsBaseFragment.addUserIdToFragmentArguments(
                 new TestUserDetailsBaseFragment(), testUser.id);
+
         getShadowUserManager().addUser(testUser.id, "testUser", /* flags= */ 0);
-        mTestActivity.launchFragment(mUserDetailsBaseFragment);
-        mRemoveUserButton = mTestActivity.findViewById(R.id.action_button1);
+        mFragmentController = FragmentController.of(mUserDetailsBaseFragment).create().start();
+        if (mUserDetailsBaseFragment.getToolbarMenuItems() != null) {
+            mRemoveUserButton =
+                    ((Toolbar) mUserDetailsBaseFragment.requireActivity().requireViewById(
+                            R.id.toolbar))
+                            .getMenuItems().get(0);
+        } else {
+            mRemoveUserButton = null;
+        }
     }
 
     private void setCurrentUserWithFlags(int flags) {
