@@ -47,11 +47,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected UserInfo getCurrentForegroundUserInfo() {
-        return sMockInstance.getCurrentForegroundUserInfo();
-    }
-
-    @Implementation
     protected UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
     }

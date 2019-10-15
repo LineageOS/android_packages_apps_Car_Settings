@@ -16,6 +16,7 @@
 
 package com.android.car.settings.users;
 
+import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,6 +27,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,6 +64,7 @@ public class UserGridRecyclerView extends RecyclerView {
 
     private UserAdapter mAdapter;
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private Context mContext;
     private BaseFragment mBaseFragment;
     public AddNewUserTask mAddNewUserTask;
@@ -78,6 +81,7 @@ public class UserGridRecyclerView extends RecyclerView {
         super(context, attrs);
         mContext = context;
         mCarUserManagerHelper = new CarUserManagerHelper(mContext);
+        mUserManager = UserManager.get(mContext);
         mEnableAddUserButton = true;
 
         addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
@@ -109,8 +113,7 @@ public class UserGridRecyclerView extends RecyclerView {
      * Initializes the adapter that populates the grid layout
      */
     public void buildAdapter() {
-        List<UserRecord> userRecords =
-                createUserRecords(getUsersForUserGrid());
+        List<UserRecord> userRecords = createUserRecords(getUsersForUserGrid());
         mAdapter = new UserAdapter(mContext, userRecords);
         super.setAdapter(mAdapter);
     }
@@ -126,8 +129,7 @@ public class UserGridRecyclerView extends RecyclerView {
 
         // If the foreground user CAN switch to other users, iterate through all users.
         for (UserInfo userInfo : userInfoList) {
-            boolean isForeground =
-                    mCarUserManagerHelper.getCurrentForegroundUserId() == userInfo.id;
+            boolean isForeground = ActivityManager.getCurrentUser() == userInfo.id;
 
             if (!isForeground && userInfo.isGuest()) {
                 // Don't display temporary running background guests in the switcher.
@@ -142,7 +144,7 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         // Add start guest user record if the system is not logged in as guest already.
-        if (!mCarUserManagerHelper.getCurrentForegroundUserInfo().isGuest()) {
+        if (!getCurrentForegroundUserInfo().isGuest()) {
             userRecords.add(createStartGuestUserRecord());
         }
 
@@ -155,10 +157,14 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     private UserRecord createForegroundUserRecord() {
-        return new UserRecord(mCarUserManagerHelper.getCurrentForegroundUserInfo(),
+        return new UserRecord(getCurrentForegroundUserInfo(),
                 /* isStartGuestSession= */ false,
                 /* isAddUser= */ false,
                 /* isForeground= */ true);
+    }
+
+    private UserInfo getCurrentForegroundUserInfo() {
+        return mUserManager.getUserInfo(ActivityManager.getCurrentUser());
     }
 
     /**
