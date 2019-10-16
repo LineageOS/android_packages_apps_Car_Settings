@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.storage.StorageManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
@@ -166,6 +167,7 @@ public class FragmentResolver {
                 return new AccountSettingsFragment();
 
             case Settings.ACTION_INTERNAL_STORAGE_SETTINGS:
+            case StorageManager.ACTION_MANAGE_STORAGE:
                 return new StorageSettingsFragment();
 
             case Settings.ACTION_LOCALE_SETTINGS:
