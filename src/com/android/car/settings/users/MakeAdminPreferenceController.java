@@ -59,8 +59,11 @@ public class MakeAdminPreferenceController extends
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         ConfirmationDialogFragment.TAG);
 
-        ConfirmationDialogFragment.resetListeners(dialog, mConfirmListener, /* rejectListener= */
-                null);
+        ConfirmationDialogFragment.resetListeners(
+                dialog,
+                mConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override

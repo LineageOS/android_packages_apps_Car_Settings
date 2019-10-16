@@ -68,17 +68,18 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         ConfirmationDialogFragment.TAG);
 
-        ConfirmationDialogFragment.resetListeners(dialogFragment,
-                mConfirmListener, /* rejectListener= */ null);
+        ConfirmationDialogFragment.resetListeners(
+                dialogFragment,
+                mConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override
     protected void userClicked(UserInfo userToMakeAdmin) {
-
         ConfirmationDialogFragment dialogFragment =
                 UsersDialogProvider.getConfirmGrantAdminDialogFragment(getContext(),
                         mConfirmListener, /* rejectListener= */ null, userToMakeAdmin);
-
         getFragmentController().showDialog(dialogFragment, ConfirmationDialogFragment.TAG);
     }
 

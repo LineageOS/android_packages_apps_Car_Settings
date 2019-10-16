@@ -64,7 +64,8 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         ConfirmationDialogFragment.TAG),
                 mConfirmListener,
-                /* rejectListener= */ null);
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override

@@ -159,10 +159,14 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         super.onCreate(savedInstanceState);
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) findDialogByTag(DISABLE_CONFIRM_DIALOG_TAG),
-                mDisableConfirmListener, /* rejectListener= */ null);
+                mDisableConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) findDialogByTag(FORCE_STOP_CONFIRM_DIALOG_TAG),
-                mForceStopConfirmListener, /* rejectListener= */ null);
+                mForceStopConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override
