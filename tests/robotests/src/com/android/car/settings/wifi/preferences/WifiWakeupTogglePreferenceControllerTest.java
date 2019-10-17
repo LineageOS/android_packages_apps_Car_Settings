@@ -34,6 +34,7 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
@@ -111,8 +112,8 @@ public class WifiWakeupTogglePreferenceControllerTest {
         mTwoStatePreference.performClick();
 
         verify(mControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmEnableWifiScanningDialogFragment.class),
-                eq(ConfirmEnableWifiScanningDialogFragment.TAG));
+                any(ConfirmationDialogFragment.class),
+                eq(ConfirmationDialogFragment.TAG));
     }
 
     @Test
@@ -187,42 +188,42 @@ public class WifiWakeupTogglePreferenceControllerTest {
     }
 
     @Test
-    public void onWifiScanningEnabled_setsWifiScanningOn() {
+    public void onConfirmWifiScanning_setsWifiScanningOn() {
         setLocationEnabled(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
-        mController.onWifiScanningEnabled();
+        mController.mConfirmListener.onConfirm(/* arguments= */ null);
 
         assertThat(Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0)).isEqualTo(1);
     }
 
     @Test
-    public void onWifiScanningEnabled_showsToast() {
+    public void onConfirmWifiScanning_showsToast() {
         setLocationEnabled(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
-        mController.onWifiScanningEnabled();
+        mController.mConfirmListener.onConfirm(/* arguments= */ null);
 
         assertThat(ShadowToast.showedToast(
                 mContext.getString(R.string.wifi_settings_scanning_required_enabled))).isTrue();
     }
 
     @Test
-    public void onWifiScanningEnabled_enablesWifiWakeup() {
+    public void onConfirmWifiScanning_enablesWifiWakeup() {
         setLocationEnabled(true);
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
-        mController.onWifiScanningEnabled();
+        mController.mConfirmListener.onConfirm(/* arguments= */ null);
 
         assertThat(Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.WIFI_WAKEUP_ENABLED, 0)).isEqualTo(1);

@@ -86,8 +86,11 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
         ConfirmationDialogFragment dialogFragment =
                 (ConfirmationDialogFragment) findDialogByTag(ConfirmationDialogFragment.TAG);
-        ConfirmationDialogFragment.resetListeners(dialogFragment,
-                mConfirmListener, /* rejectListener= */ null);
+        ConfirmationDialogFragment.resetListeners(
+                dialogFragment,
+                mConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override

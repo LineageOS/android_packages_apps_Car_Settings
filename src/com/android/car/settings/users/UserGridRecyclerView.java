@@ -54,6 +54,11 @@ import java.util.List;
  */
 public class UserGridRecyclerView extends RecyclerView {
 
+    private static final String MAX_USERS_LIMIT_REACHED_DIALOG_TAG =
+            "com.android.car.settings.users.MaxUsersLimitReachedDialog";
+    private static final String CONFIRM_CREATE_NEW_USER_DIALOG_TAG =
+            "com.android.car.settings.users.ConfirmCreateNewUserDialog";
+
     private UserAdapter mAdapter;
     private CarUserManagerHelper mCarUserManagerHelper;
     private Context mContext;
@@ -267,6 +272,7 @@ public class UserGridRecyclerView extends RecyclerView {
             mNewUserName = mRes.getString(R.string.user_new_user_name);
             mOpacityDisabled = mRes.getFloat(R.dimen.opacity_disabled);
             mOpacityEnabled = mRes.getFloat(R.dimen.opacity_enabled);
+            resetDialogListeners();
         }
 
         /**
@@ -346,6 +352,21 @@ public class UserGridRecyclerView extends RecyclerView {
             mIsAddUserRestricted = isAddUserRestricted;
         }
 
+        /** Resets listeners for shown dialog fragments. */
+        private void resetDialogListeners() {
+            if (mBaseFragment != null) {
+                ConfirmationDialogFragment dialog =
+                        (ConfirmationDialogFragment) mBaseFragment
+                                .getFragmentManager()
+                                .findFragmentByTag(CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
+                ConfirmationDialogFragment.resetListeners(
+                        dialog,
+                        mConfirmListener,
+                        mRejectListener,
+                        /* neutralListener= */ null);
+            }
+        }
+
         private void handleUserSwitch(UserInfo userInfo) {
             if (mCarUserManagerHelper.switchToUser(userInfo)) {
                 // Successful switch, close Settings app.
@@ -372,18 +393,19 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         private void showMaxUsersLimitReachedDialog() {
-            MaxUsersLimitReachedDialog dialog = new MaxUsersLimitReachedDialog(
-                    mCarUserManagerHelper.getMaxSupportedRealUsers());
-            if (mBaseFragment != null) {
-                dialog.show(mBaseFragment);
-            }
+            ConfirmationDialogFragment dialogFragment =
+                    UsersDialogProvider.getMaxUsersLimitReachedDialogFragment(getContext(),
+                            mCarUserManagerHelper.getMaxSupportedRealUsers());
+            dialogFragment.show(
+                    mBaseFragment.getFragmentManager(), MAX_USERS_LIMIT_REACHED_DIALOG_TAG);
         }
 
         private void showConfirmCreateNewUserDialog() {
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getConfirmCreateNewUserDialogFragment(getContext(),
                             mConfirmListener, mRejectListener);
-            dialogFragment.show(mBaseFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+            dialogFragment.show(
+                    mBaseFragment.getFragmentManager(), CONFIRM_CREATE_NEW_USER_DIALOG_TAG);
         }
 
         private Bitmap getUserRecordIcon(UserRecord userRecord) {
