@@ -28,6 +28,7 @@ import android.os.UserHandle;
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
@@ -77,14 +78,17 @@ public class NoLockPreferenceControllerTest {
     @Test
     public void testHandlePreferenceClicked_goesToNextFragment() {
         mPreference.performClick();
+
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmRemoveScreenLockDialog.class), anyString());
+                any(ConfirmationDialogFragment.class), anyString());
     }
 
     @Test
     public void testConfirmRemoveScreenLockListener_removesLock() {
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
-        mController.mRemoveLockListener.onConfirmRemoveScreenLock();
+
+        mController.mConfirmListener.onConfirm(/* arguments= */ null);
+
         assertThat(ShadowLockPatternUtils.getClearLockCredential()).isEqualTo(
                 TEST_CURRENT_PASSWORD);
         assertThat(ShadowLockPatternUtils.getClearLockUser()).isEqualTo(UserHandle.myUserId());
@@ -93,7 +97,9 @@ public class NoLockPreferenceControllerTest {
     @Test
     public void testConfirmRemoveScreenLockListener_goesBack() {
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
-        mController.mRemoveLockListener.onConfirmRemoveScreenLock();
+
+        mController.mConfirmListener.onConfirm(/* arguments= */ null);
+
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 }

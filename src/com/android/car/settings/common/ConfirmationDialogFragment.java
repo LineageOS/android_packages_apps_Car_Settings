@@ -122,6 +122,15 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             return this;
         }
 
+        /** Adds an argument long to the argument bundle. */
+        public Builder addArgumentLong(String argumentKey, long argument) {
+            if (mArgs == null) {
+                mArgs = new Bundle();
+            }
+            mArgs.putLong(argumentKey, argument);
+            return this;
+        }
+
         /** Adds an argument boolean to the argument bundle. */
         public Builder addArgumentBoolean(String argumentKey, boolean argument) {
             if (mArgs == null) {

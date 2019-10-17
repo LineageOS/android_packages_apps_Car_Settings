@@ -31,6 +31,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.internal.widget.LockPatternUtils;
@@ -42,6 +43,8 @@ import java.util.List;
  * Business logic of trusted device list page
  */
 public class TrustedDeviceListPreferenceController extends PreferenceController<PreferenceGroup> {
+    @VisibleForTesting
+    static final String KEY_HANDLE = "handle";
     private final LockPatternUtils mLockPatternUtils;
     private final Car mCar;
     @Nullable
@@ -76,13 +79,11 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
             };
 
     @VisibleForTesting
-    final ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener mConfirmRemoveDeviceListener =
-            new ConfirmRemoveDeviceDialog.ConfirmRemoveDeviceListener() {
-                public void onConfirmRemoveDevice(long handle) {
-                    mCarTrustAgentEnrollmentManager.removeEscrowToken(handle,
-                            UserHandle.myUserId());
-                }
-            };
+    final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        long handle = arguments.getLong(KEY_HANDLE);
+        mCarTrustAgentEnrollmentManager.removeEscrowToken(handle,
+                UserHandle.myUserId());
+    };
 
     public TrustedDeviceListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -127,6 +128,18 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
     private boolean hasPassword() {
         return mLockPatternUtils.getKeyguardStoredPasswordQuality(UserHandle.myUserId())
                 != DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+    }
+
+    @Override
+    protected void onCreateInternal() {
+        ConfirmationDialogFragment dialog =
+                (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
+                        ConfirmationDialogFragment.TAG);
+        ConfirmationDialogFragment.resetListeners(
+                dialog,
+                mConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
     @Override
@@ -176,10 +189,9 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
         preference.setTitle(deviceName);
         preference.setKey(String.valueOf(handle));
         preference.setOnPreferenceClickListener((Preference pref) -> {
-            ConfirmRemoveDeviceDialog dialog = ConfirmRemoveDeviceDialog.newInstance(deviceName,
-                    handle);
-            dialog.setConfirmRemoveDeviceListener(mConfirmRemoveDeviceListener);
-            getFragmentController().showDialog(dialog, ConfirmRemoveDeviceDialog.TAG);
+            getFragmentController().showDialog(
+                    getConfirmRemoveDeviceDialogFragment(deviceName, handle),
+                    ConfirmationDialogFragment.TAG);
             return true;
         });
         return preference;
@@ -189,5 +201,18 @@ public class TrustedDeviceListPreferenceController extends PreferenceController<
         Preference preference = new Preference(getContext());
         preference.setSummary(R.string.trusted_device_set_authentication_reminder);
         return preference;
+    }
+
+    private ConfirmationDialogFragment getConfirmRemoveDeviceDialogFragment(
+            String deviceName, long handle) {
+        return new ConfirmationDialogFragment.Builder(getContext())
+                .setTitle(deviceName)
+                .setMessage(getContext().getString(
+                        R.string.remove_device_message, deviceName, deviceName))
+                .setPositiveButton(R.string.trusted_device_remove_button, mConfirmListener)
+                .setNegativeButton(
+                        R.string.trusted_device_done_button, /* mRejectListener= */ null)
+                .addArgumentLong(KEY_HANDLE, handle)
+                .build();
     }
 }
