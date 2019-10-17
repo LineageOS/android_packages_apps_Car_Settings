@@ -24,7 +24,6 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -65,11 +64,6 @@ public class ShadowCarUserManagerHelper {
     @Implementation
     protected boolean isCurrentProcessUser(UserInfo userInfo) {
         return sMockInstance.isCurrentProcessUser(userInfo);
-    }
-
-    @Implementation
-    protected List<UserInfo> getAllUsers() {
-        return sMockInstance.getAllUsers();
     }
 
     @Implementation

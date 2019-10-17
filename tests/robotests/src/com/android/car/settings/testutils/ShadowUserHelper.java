@@ -48,6 +48,11 @@ public class ShadowUserHelper {
     }
 
     @Implementation
+    protected List<UserInfo> getAllUsers() {
+        return sInstance.getAllUsers();
+    }
+
+    @Implementation
     protected List<UserInfo> getAllSwitchableUsers() {
         return sInstance.getAllSwitchableUsers();
     }

@@ -51,6 +51,7 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.users.UserHelper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -94,6 +95,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     private PackageManager mPm;
     private UserManager mUserManager;
     private CarUserManagerHelper mCarUserManagerHelper;
+    private UserHelper mUserHelper;
 
     private String mPackageName;
     private PackageInfo mPackageInfo;
@@ -134,6 +136,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserHelper = UserHelper.getInstance(context);
 
         // These should be loaded before onCreate() so that the controller operates as expected.
         mPackageName = getArguments().getString(EXTRA_PACKAGE_NAME);
@@ -293,7 +296,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         // We don't allow uninstalling profile/device owner on any user because if it's a system
         // app, "uninstall" is actually "downgrade to the system version + disable", and
         // "downgrade" will clear data on all users.
-        if (isProfileOrDeviceOwner(mPackageName, mDpm, mCarUserManagerHelper)) {
+        if (isProfileOrDeviceOwner(mPackageName, mDpm, mUserHelper)) {
             LOG.d("Uninstall disabled because package is profile or device owner");
             return true;
         }
