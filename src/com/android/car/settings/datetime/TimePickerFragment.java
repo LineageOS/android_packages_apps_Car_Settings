@@ -20,6 +20,7 @@ import android.app.AlarmManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.widget.Button;
 import android.widget.TimePicker;
 
@@ -62,6 +63,7 @@ public class TimePickerFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
 
         mTimePicker = (TimePicker) getView().findViewById(R.id.time_picker);
+        mTimePicker.setIs24HourView(is24Hour());
 
         Button button = (Button) getActivity().findViewById(R.id.action_button1);
         button.setText(android.R.string.ok);
@@ -79,5 +81,9 @@ public class TimePickerFragment extends BaseFragment {
             }
             getFragmentController().goBack();
         });
+    }
+
+    private boolean is24Hour() {
+        return DateFormat.is24HourFormat(getContext());
     }
 }
