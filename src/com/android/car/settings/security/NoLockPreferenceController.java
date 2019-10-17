@@ -18,8 +18,8 @@ package com.android.car.settings.security;
 
 import android.app.admin.DevicePolicyManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -38,7 +38,7 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
     @VisibleForTesting
     final ConfirmRemoveScreenLockDialog.ConfirmRemoveScreenLockListener mRemoveLockListener =
             () -> {
-                int userId = new CarUserManagerHelper(getContext()).getCurrentProcessUserId();
+                int userId = UserHandle.myUserId();
                 new LockPatternUtils(getContext()).setLockCredential(
                         LockscreenCredential.createNone(), getCurrentPassword(), userId);
                 getFragmentController().goBack();

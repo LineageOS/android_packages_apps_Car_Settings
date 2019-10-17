@@ -20,9 +20,6 @@ import static android.os.storage.VolumeInfo.MOUNT_FLAG_PRIMARY;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -34,14 +31,12 @@ import androidx.lifecycle.Lifecycle;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowStorageManagerVolumeProvider;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
@@ -52,19 +47,14 @@ import org.robolectric.shadows.ShadowApplicationPackageManager;
 
 /** Unit test for {@link StorageFileCategoryPreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowStorageManagerVolumeProvider.class, ShadowCarUserManagerHelper.class})
+@Config(shadows = {ShadowStorageManagerVolumeProvider.class})
 public class StorageFileCategoryPreferenceControllerTest {
 
-    private static final int TEST_USER = 10;
 
     private Context mContext;
     private ProgressBarPreference mProgressBarPreference;
-    private StorageFileCategoryPreferenceController mController;
     private PreferenceControllerTestHelper<StorageFileCategoryPreferenceController>
             mPreferenceControllerHelper;
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
@@ -73,9 +63,6 @@ public class StorageFileCategoryPreferenceControllerTest {
         mProgressBarPreference = new ProgressBarPreference(mContext);
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 StorageFileCategoryPreferenceController.class, mProgressBarPreference);
-        mController = mPreferenceControllerHelper.getController();
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
     }
 
     @After

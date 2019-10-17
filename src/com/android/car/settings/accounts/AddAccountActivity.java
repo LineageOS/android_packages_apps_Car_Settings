@@ -24,7 +24,6 @@ import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
 import android.app.Activity;
 import android.app.PendingIntent;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -72,7 +71,6 @@ public class AddAccountActivity extends Activity {
     private static final int ADD_ACCOUNT_REQUEST = 2001;
 
     private UserManager mUserManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserHandle mUserHandle;
     private PendingIntent mPendingIntent;
     private boolean mAddAccountCalled;
@@ -131,8 +129,7 @@ public class AddAccountActivity extends Activity {
         }
 
         mUserManager = UserManager.get(getApplicationContext());
-        mCarUserManagerHelper = new CarUserManagerHelper(this);
-        mUserHandle = UserHandle.of(mCarUserManagerHelper.getCurrentProcessUserId());
+        mUserHandle = UserHandle.of(UserHandle.myUserId());
 
         if (mUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
             // We aren't allowed to add an account.

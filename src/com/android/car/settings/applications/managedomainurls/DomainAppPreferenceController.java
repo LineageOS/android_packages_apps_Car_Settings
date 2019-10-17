@@ -18,10 +18,9 @@ package com.android.car.settings.applications.managedomainurls;
 
 import android.app.Application;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.util.ArrayMap;
+import android.os.UserHandle;
 import android.util.IconDrawableFactory;
 
 import androidx.annotation.VisibleForTesting;
@@ -40,7 +39,6 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
 
     private final ApplicationsState mApplicationsState;
     private final PackageManager mPm;
-    private final CarUserManagerHelper mCarUserManagerHelper;
 
     @VisibleForTesting
     final ApplicationsState.Callbacks mApplicationStateCallbacks =
@@ -82,7 +80,6 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
             };
 
     private ApplicationsState.Session mSession;
-    private ArrayMap<String, Preference> mPreferenceCache;
 
     public DomainAppPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -90,7 +87,6 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
         mApplicationsState = ApplicationsState.getInstance(
                 (Application) context.getApplicationContext());
         mPm = context.getPackageManager();
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
@@ -140,7 +136,7 @@ public class DomainAppPreferenceController extends PreferenceController<Preferen
         preference.setTitle(entry.label);
         preference.setSummary(
                 DomainUrlsUtils.getDomainsSummary(getContext(), entry.info.packageName,
-                        mCarUserManagerHelper.getCurrentProcessUserId(),
+                        UserHandle.myUserId(),
                         DomainUrlsUtils.getHandledDomains(mPm, entry.info.packageName)));
         preference.setIcon(iconDrawableFactory.getBadgedIcon(entry.info));
         preference.setOnPreferenceClickListener(pref -> {

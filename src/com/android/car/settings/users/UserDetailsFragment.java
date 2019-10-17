@@ -77,7 +77,7 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
 
     @Override
     protected String getTitleText() {
-        return UserUtils.getUserDisplayName(getContext(), getCarUserManagerHelper(), getUserInfo());
+        return UserUtils.getUserDisplayName(getContext(), getUserInfo());
     }
 
     private void registerForUserEvents() {

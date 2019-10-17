@@ -57,16 +57,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected int getCurrentProcessUserId() {
-        return sMockInstance.getCurrentProcessUserId();
-    }
-
-    @Implementation
-    protected boolean isCurrentProcessUser(UserInfo userInfo) {
-        return sMockInstance.isCurrentProcessUser(userInfo);
-    }
-
-    @Implementation
     protected UserInfo createNewNonAdminUser(String userName) {
         return sMockInstance.createNewNonAdminUser(userName);
     }

@@ -19,10 +19,10 @@ package com.android.car.settings.setupservice;
 
 import android.app.Service;
 import android.app.admin.DevicePolicyManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.IBinder;
+import android.os.UserHandle;
 
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.security.PasswordHelper;
@@ -70,7 +70,7 @@ public class InitialLockSetupService extends Service {
             // Check permission as a failsafe.
             return null;
         }
-        int userId = new CarUserManagerHelper(getApplicationContext()).getCurrentProcessUserId();
+        int userId = UserHandle.myUserId();
         LockPatternUtils lockPatternUtils = new LockPatternUtils(getApplicationContext());
         // Deny binding if there is an existing lock.
         if (lockPatternUtils.getKeyguardStoredPasswordQuality(userId)
@@ -138,9 +138,7 @@ public class InitialLockSetupService extends Service {
         @Override
         @SetLockCodes
         public int setLock(@LockTypes int lockType, byte[] password) {
-            int userId = new CarUserManagerHelper(
-                    InitialLockSetupService.this.getApplicationContext())
-                    .getCurrentProcessUserId();
+            int userId = UserHandle.myUserId();
             LockPatternUtils lockPatternUtils = new LockPatternUtils(
                     InitialLockSetupService.this.getApplicationContext());
             int currentPassword = lockPatternUtils.getKeyguardStoredPasswordQuality(userId);

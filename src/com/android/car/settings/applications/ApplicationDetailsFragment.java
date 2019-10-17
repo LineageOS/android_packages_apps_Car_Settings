@@ -24,7 +24,6 @@ import static com.android.car.settings.applications.ApplicationsUtils.isProfileO
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -94,7 +93,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserHelper mUserHelper;
 
     private String mPackageName;
@@ -135,7 +133,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         mDpm = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
         mUserHelper = UserHelper.getInstance(context);
 
         // These should be loaded before onCreate() so that the controller operates as expected.
@@ -210,8 +207,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     }
 
     private void retrieveAppEntry() {
-        mAppEntry = mAppState.getEntry(mPackageName,
-                mCarUserManagerHelper.getCurrentProcessUserId());
+        mAppEntry = mAppState.getEntry(mPackageName, UserHandle.myUserId());
         if (mAppEntry != null) {
             try {
                 mPackageInfo = mPm.getPackageInfo(mPackageName,
