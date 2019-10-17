@@ -26,6 +26,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.os.UserHandle;
+import android.os.UserManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,8 +110,7 @@ public class UserGridRecyclerView extends RecyclerView {
      * Initializes the adapter that populates the grid layout
      */
     public void buildAdapter() {
-        List<UserRecord> userRecords =
-                createUserRecords(getUsersForUserGrid());
+        List<UserRecord> userRecords = createUserRecords(getUsersForUserGrid());
         mAdapter = new UserAdapter(mContext, userRecords);
         super.setAdapter(mAdapter);
     }
@@ -214,9 +214,9 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     private List<UserInfo> getUsersForUserGrid() {
-        List<UserInfo> users = UserHelper.getInstance(mContext).getAllUsers();
+        List<UserInfo> users = UserManager.get(mContext).getUsers(/* excludeDying= */ true);
         return users.stream()
-                .filter(userInfo -> userInfo.supportsSwitchToByUser())
+                .filter(UserInfo::supportsSwitchToByUser)
                 .collect(Collectors.toList());
     }
 
