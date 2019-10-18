@@ -28,6 +28,7 @@ import android.car.Car;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.trust.TrustedDeviceInfo;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
@@ -35,6 +36,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCar;
@@ -190,12 +192,14 @@ public class TrustedDeviceListPreferenceControllerTest {
         p.performClick();
 
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmRemoveDeviceDialog.class), anyString());
+                any(ConfirmationDialogFragment.class), anyString());
     }
 
     @Test
-    public void onRemoveDeviceDialogConfirmed_remoeEscrwoToken() {
-        mController.mConfirmRemoveDeviceListener.onConfirmRemoveDevice(1);
+    public void onRemoveDeviceDialogConfirmed_removeEscrowToken() {
+        Bundle arguments = new Bundle();
+        arguments.putLong(TrustedDeviceListPreferenceController.KEY_HANDLE, 1);
+        mController.mConfirmListener.onConfirm(arguments);
 
         verify(mMockCarTrustAgentEnrollmentManager).removeEscrowToken(1,
                 UserHandle.myUserId());

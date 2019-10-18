@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
@@ -152,7 +153,7 @@ public class AddTrustedDeviceActivityTest {
         enrollmentCallBack.getValue().onAuthStringAvailable(mBluetoothDevice, "123");
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(
-                ConfirmPairingCodeDialog.TAG)).isNotNull();
+                ConfirmationDialogFragment.TAG)).isNotNull();
     }
 
     @Test
@@ -202,9 +203,17 @@ public class AddTrustedDeviceActivityTest {
         verify(mMockCarTrustAgentEnrollmentManager).setBleCallback(bleCallBack.capture());
 
         bleCallBack.getValue().onBleEnrollmentDeviceConnected(mBluetoothDevice);
-        mActivity.mConfirmParingCodeListener.onConfirmPairingCode();
+        mActivity.mConfirmListener.onConfirm(/* arguments= */ null);
         verify(mMockCarTrustAgentEnrollmentManager).enrollmentHandshakeAccepted(mBluetoothDevice);
+    }
 
+    @Test
+    public void onPairingCodeDialogCancelled_finish() {
+        mActivityController.start().postCreate(null).resume();
+
+        mActivity.mRejectListener.onReject(/* arguments= */ null);
+
+        assertThat(mActivity.isFinishing()).isTrue();
     }
 
     @Test
