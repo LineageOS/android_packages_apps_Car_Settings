@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Itinerancia"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Conéctase a servizos de datos en itinerancia"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Queres permitir a itinerancia de datos?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"É posible que se apliquen cargos elevados."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Poden aplicarse tarifas de itinerancia."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Uso de datos"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Datos principais"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Datos usados: <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -331,7 +331,7 @@
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Con este permiso as aplicacións poden modificar a configuración do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a notificacións"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Queres permitir que <xliff:g id="SERVICE">%1$s</xliff:g> teña acceso ás notificacións?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificacións, incluída a información persoal, coma os nomes dos contactos e o texto das mensaxes que recibas. Tamén poderá ignorar notificacións ou activar os botóns de acción que conteñan.\n\nAdemais, poderá activar ou desactivar o modo Non molestar e cambiar a configuración asociada."</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> poderá ler todas as notificacións, incluída a información persoal, coma os nomes dos contactos e o texto das mensaxes que recibas. Tamén poderá ignorar notificacións ou activar os botóns de acción que estas conteñan.\n\nAdemais, poderá activar ou desactivar o modo Non molestar e cambiar a configuración asociada."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desactivas o acceso de <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ás notificacións, tamén se pode desactivar o acceso no modo Non molestar."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desactivar"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"Cancelar"</string>

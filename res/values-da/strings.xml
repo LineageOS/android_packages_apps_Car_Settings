@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Opret forbindelse til datatjenester under roaming"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Vil du tillade dataroaming?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"Du kan risikere at skulle betale høje gebyrer."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Du skal muligvis betale roaminggebyrer."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Dataforbrug"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Primære data"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Der er brugt <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
@@ -427,7 +427,7 @@
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent et øjeblik..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslæt"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angiv dato, klokkeslæt, tidszone og formater"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og klokkeslæt"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og tid"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Brug netværkets tid"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatisk tidszone"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Brug netværkets tidszone"</string>
@@ -537,7 +537,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synkroniser nu"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annuller synkronisering"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"Der er problemer med synkroniseringen i øjeblikket. Den er snart tilbage."</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"Der er i øjeblikket problemer med synkroniseringen. Den fortsætter om et øjeblik."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhed"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skærmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ingen"</string>

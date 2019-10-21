@@ -26,8 +26,8 @@ import android.car.Car;
 import android.car.CarNotConnectedException;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.trust.TrustedDeviceInfo;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
@@ -58,7 +58,6 @@ public class TrustedDeviceEntryPreferenceControllerTest {
     @Mock
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
     private TrustedDeviceEntryPreferenceController mController;
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Before
     public void setUp() {
@@ -70,7 +69,6 @@ public class TrustedDeviceEntryPreferenceControllerTest {
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceEntryPreferenceController.class, mTrustedDevicePreference);
         mController = mPreferenceControllerHelper.getController();
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
     }
 
@@ -87,7 +85,7 @@ public class TrustedDeviceEntryPreferenceControllerTest {
         devices.add(new TrustedDeviceInfo(1, "", ""));
         devices.add(new TrustedDeviceInfo(2, "", ""));
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId()))
+                UserHandle.myUserId()))
                 .thenReturn(devices);
         mController.refreshUi();
         assertThat(mTrustedDevicePreference.getSummary()).isEqualTo("2 devices");

@@ -50,7 +50,7 @@
     <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда мобилдик Интернетке туташат"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Интернет-роумингди иштетесизби?"</string>
-    <string name="roaming_warning" msgid="5313281900566657209">"Көп акча төлөп калышыңыз мүмкүн."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Роуминг акысын төлөп калышыңыз мүмкүн."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Дайындардын колдонулушу"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Негизги тарифтик план"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> колдонулду"</string>
@@ -328,7 +328,7 @@
     <string name="show_system" msgid="4401355756969485287">"Тутум процесстерин көрсөтүү"</string>
     <string name="hide_system" msgid="8845453295584638040">"Тутумдагы процесстерди жашыруу"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Тутум жөндөөлөрүн өзгөртүү"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"Мындай уруксат колдонмого тутум жөндөөлөрүн өзгөртүү мүмкүнчүлүгүн берет."</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"Колдонмо тутум жөндөөлөрүн өзгөртө алат."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Билдирмелерди угуу"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> кызматына билдирмелерди угууга уруксат берилсинби?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> колдонмосу эскертмелердин баарын, ошону менен катар байланыштардын аты-жөнү жана кабыл алынган билдирүүлөр сыяктуу жеке маалыматты окуй алат. Мындан тышкары, ал билдирмелерди жок кылып же алардагы баскычтарды баса алат.\n\nУшуну менен колдонмо \"Тынчымды алба\" режимин иштетүү же өчүрүү, ошондой эле анын жөндөөлөрүн өзгөртүү мүмкүнчүлүгүнө ээ болот."</string>
@@ -338,7 +338,7 @@
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Артыкчылыктуу SMS жөнөтүүгө уруксат"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Артыкчылыктуу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу артыкчылыктуу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу мүмкүнчүлүгү колдонмонун башка кандай колдонмолорду жана канча ирет пайдаланып жатканыңызга, ошондой эле операторуңуз, тил жөндөөлөрү жана башка маалыматтарга көз салышына жол ачат."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил жөндөөлөрүн жана башка параметрлерди көрө аласыз."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi\'ды көзөмөлдөө"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi\'ды көзөмөлдөө колдонмого Wi-Fi\'ды өчүрүп же күйгүзүүгө, Wi-Fi тармактарын издеп, аларга туташууга, тармактарды кошуп же алып салууга же жергиликтүү туташуу түйүнүн иштетүүгө уруксат берет."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Дагы"</string>

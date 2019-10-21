@@ -48,6 +48,11 @@ public class ShadowUserHelper {
     }
 
     @Implementation
+    protected List<UserInfo> getAllUsers() {
+        return sInstance.getAllUsers();
+    }
+
+    @Implementation
     protected List<UserInfo> getAllSwitchableUsers() {
         return sInstance.getAllSwitchableUsers();
     }
@@ -56,5 +61,15 @@ public class ShadowUserHelper {
     @Implementation
     protected List<UserInfo> getAllPersistentUsers() {
         return sInstance.getAllPersistentUsers();
+    }
+
+    @Implementation
+    public boolean isCurrentProcessUser(UserInfo userInfo) {
+        return sInstance.isCurrentProcessUser(userInfo);
+    }
+
+    @Implementation
+    protected UserInfo getCurrentProcessUserInfo() {
+        return sInstance.getCurrentProcessUserInfo();
     }
 }

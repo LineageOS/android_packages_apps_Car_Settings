@@ -20,9 +20,6 @@ import static android.net.TrafficStats.UID_TETHERING;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.net.NetworkStats;
 
@@ -31,8 +28,8 @@ import androidx.lifecycle.Lifecycle;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.common.ProgressBarPreference;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUidDetailProvider;
+import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.settingslib.net.UidDetail;
 
 import org.junit.After;
@@ -47,19 +44,14 @@ import org.robolectric.annotation.Config;
 
 /** Unit test for {@link AppDataUsagePreferenceController}. */
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUidDetailProvider.class})
+@Config(shadows = {ShadowUidDetailProvider.class, ShadowUserManager.class})
 public class AppDataUsagePreferenceControllerTest {
-
-    private static final int USER_ID = 10;
 
     private Context mContext;
     private LogicalPreferenceGroup mLogicalPreferenceGroup;
     private AppDataUsagePreferenceController mController;
     private PreferenceControllerTestHelper<AppDataUsagePreferenceController>
             mPreferenceControllerHelper;
-
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     @Mock
     private UidDetail mUidDetail;
@@ -73,16 +65,13 @@ public class AppDataUsagePreferenceControllerTest {
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 AppDataUsagePreferenceController.class, mLogicalPreferenceGroup);
         mController = mPreferenceControllerHelper.getController();
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(USER_ID);
 
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         mPreferenceControllerHelper.markState(Lifecycle.State.CREATED);
     }
 
     @After
     public void tearDown() {
         ShadowUidDetailProvider.reset();
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

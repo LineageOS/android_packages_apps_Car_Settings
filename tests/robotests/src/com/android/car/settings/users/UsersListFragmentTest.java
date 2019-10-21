@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
@@ -126,9 +127,9 @@ public class UsersListFragmentTest {
                 "User Name", flags);
         UserInfo testUser = UserManager.get(mContext).getUserInfo(UserHandle.myUserId());
         mFragment = new UsersListFragment();
-        doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-        doReturn(new ArrayList<UserInfo>()).when(mUserHelper).getAllSwitchableUsers();
-        doReturn(null).when(mCarUserManagerHelper).createNewNonAdminUser(any());
+        when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(testUser);
+        when(mUserHelper.getAllSwitchableUsers()).thenReturn(new ArrayList<>());
+        when(mCarUserManagerHelper.createNewNonAdminUser(any())).thenReturn(null);
         mTestActivity.launchFragment(mFragment);
         refreshButtons();
     }

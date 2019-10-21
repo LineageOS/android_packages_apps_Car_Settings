@@ -95,15 +95,54 @@ public class UserHelperTest {
     }
 
     @Test
+    public void testGetAllsers() {
+        // Add system user
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
+
+        // Create two admin, and two non-admin users.
+        int fgUserId = ActivityManager.getCurrentUser();
+        UserInfo fgUser = createNonAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
+        UserInfo user3 = createNonAdminUser(fgUserId + 2);
+        UserInfo user4 = createAdminUser(fgUserId + 3);
+
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
+
+        // Should return all non-system users
+        assertThat(mUserHelper.getAllUsers()).containsExactly(fgUser, user2, user3, user4);
+    }
+
+    @Test
+    public void testGetAllUsers_notHeadless() {
+        ShadowUserManager.setIsHeadlessSystemUserMode(false);
+
+        // Add system user
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
+
+        // Create two admin, and two non-admin users.
+        int fgUserId = ActivityManager.getCurrentUser();
+        UserInfo fgUser = createNonAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
+        UserInfo user3 = createNonAdminUser(fgUserId + 2);
+        UserInfo user4 = createAdminUser(fgUserId + 3);
+
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
+
+        // Should return all users
+        assertThat(mUserHelper.getAllUsers())
+                .containsExactly(systemUser, fgUser, user2, user3, user4);
+    }
+
+    @Test
     public void testGetAllSwitchableUsers() {
         // Add system user
-        UserInfo systemUser = createUserInfoForId(UserHandle.USER_SYSTEM);
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
 
         // Create two non-foreground users.
         int fgUserId = ActivityManager.getCurrentUser();
-        UserInfo fgUser = createUserInfoForId(fgUserId);
-        UserInfo user1 = createUserInfoForId(fgUserId + 1);
-        UserInfo user2 = createUserInfoForId(fgUserId + 2);
+        UserInfo fgUser = createAdminUser(fgUserId);
+        UserInfo user1 = createAdminUser(fgUserId + 1);
+        UserInfo user2 = createAdminUser(fgUserId + 2);
 
         mockGetUsers(systemUser, fgUser, user1, user2);
 
@@ -116,13 +155,13 @@ public class UserHelperTest {
         ShadowUserManager.setIsHeadlessSystemUserMode(false);
 
         // Add system user
-        UserInfo systemUser = createUserInfoForId(UserHandle.USER_SYSTEM);
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
 
         // Create two non-foreground users.
         int fgUserId = ActivityManager.getCurrentUser();
-        UserInfo fgUser = createUserInfoForId(fgUserId);
-        UserInfo user1 = createUserInfoForId(fgUserId + 1);
-        UserInfo user2 = createUserInfoForId(fgUserId + 2);
+        UserInfo fgUser = createAdminUser(fgUserId);
+        UserInfo user1 = createAdminUser(fgUserId + 1);
+        UserInfo user2 = createAdminUser(fgUserId + 2);
 
         mockGetUsers(systemUser, fgUser, user1, user2);
 
@@ -133,22 +172,20 @@ public class UserHelperTest {
     @Test
     public void testGetAllPersistentUsers() {
         // Add system user
-        UserInfo systemUser = createUserInfoForId(UserHandle.USER_SYSTEM);
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
 
         // Create two non-ephemeral users.
         int fgUserId = ActivityManager.getCurrentUser();
-        UserInfo user1 = createUserInfoForId(fgUserId);
-        UserInfo user2 = createUserInfoForId(fgUserId + 1);
+        UserInfo fgUser = createAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
         // Create two ephemeral users.
-        UserInfo user3 = new UserInfo(
-                fgUserId + 2, /* name = */ "user3", UserInfo.FLAG_EPHEMERAL);
-        UserInfo user4 = new UserInfo(
-                fgUserId + 3, /* name = */ "user4", UserInfo.FLAG_EPHEMERAL);
+        UserInfo user3 = createEphemeralUser(fgUserId + 2);
+        UserInfo user4 = createEphemeralUser(fgUserId + 3);
 
-        mockGetUsers(systemUser, user1, user2, user3, user4);
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
 
         // Should return all non-ephemeral users.
-        assertThat(mUserHelper.getAllPersistentUsers()).containsExactly(user1, user2);
+        assertThat(mUserHelper.getAllPersistentUsers()).containsExactly(fgUser, user2);
     }
 
     @Test
@@ -156,28 +193,70 @@ public class UserHelperTest {
         ShadowUserManager.setIsHeadlessSystemUserMode(false);
 
         // Add system user
-        UserInfo systemUser = createUserInfoForId(UserHandle.USER_SYSTEM);
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
 
         // Create two non-ephemeral users.
         int fgUserId = ActivityManager.getCurrentUser();
-        UserInfo user1 = createUserInfoForId(fgUserId);
-        UserInfo user2 = createUserInfoForId(fgUserId + 1);
+        UserInfo fgUser = createAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
         // Create two ephemeral users.
-        UserInfo user3 = new UserInfo(
-                fgUserId + 2, /* name = */ "user3", UserInfo.FLAG_EPHEMERAL);
-        UserInfo user4 = new UserInfo(
-                fgUserId + 3, /* name = */ "user4", UserInfo.FLAG_EPHEMERAL);
+        UserInfo user3 = createEphemeralUser(fgUserId + 2);
+        UserInfo user4 = createEphemeralUser(fgUserId + 3);
 
-        mockGetUsers(systemUser, user1, user2, user3, user4);
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
 
         // Should return all non-ephemeral users.
-        assertThat(mUserHelper.getAllPersistentUsers()).containsExactly(systemUser, user1, user2);
+        assertThat(mUserHelper.getAllPersistentUsers()).containsExactly(systemUser, fgUser, user2);
     }
 
-    private UserInfo createUserInfoForId(int id) {
-        UserInfo userInfo = new UserInfo();
-        userInfo.id = id;
-        return userInfo;
+    @Test
+    public void testGetAllAdminUsers() {
+        // Add system user
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
+
+        // Create two admin, and two non-admin users.
+        int fgUserId = ActivityManager.getCurrentUser();
+        UserInfo fgUser = createNonAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
+        UserInfo user3 = createNonAdminUser(fgUserId + 2);
+        UserInfo user4 = createAdminUser(fgUserId + 3);
+
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
+
+        // Should return only admin users.
+        assertThat(mUserHelper.getAllAdminUsers()).containsExactly(user2, user4);
+    }
+
+    @Test
+    public void testGetAllAdminUsers_notHeadless() {
+        ShadowUserManager.setIsHeadlessSystemUserMode(false);
+
+        // Add system user
+        UserInfo systemUser = createAdminUser(UserHandle.USER_SYSTEM);
+
+        // Create two admin, and two non-admin users.
+        int fgUserId = ActivityManager.getCurrentUser();
+        UserInfo fgUser = createNonAdminUser(fgUserId);
+        UserInfo user2 = createAdminUser(fgUserId + 1);
+        UserInfo user3 = createNonAdminUser(fgUserId + 2);
+        UserInfo user4 = createAdminUser(fgUserId + 3);
+
+        mockGetUsers(systemUser, fgUser, user2, user3, user4);
+
+        // Should return only admin users.
+        assertThat(mUserHelper.getAllAdminUsers()).containsExactly(systemUser, user2, user4);
+    }
+
+    private UserInfo createAdminUser(int id) {
+        return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
+    }
+
+    private UserInfo createNonAdminUser(int id) {
+        return new UserInfo(id, null, 0);
+    }
+
+    private UserInfo createEphemeralUser(int id) {
+        return new UserInfo(id, null, UserInfo.FLAG_EPHEMERAL);
     }
 
     private void mockGetUsers(UserInfo... users) {

@@ -102,11 +102,6 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         titleView.setText(getTitleText());
     }
 
-    /** Make CarUserManagerHelper available to subclasses. */
-    protected CarUserManagerHelper getCarUserManagerHelper() {
-        return mCarUserManagerHelper;
-    }
-
     /** Make UserInfo available to subclasses. */
     protected UserInfo getUserInfo() {
         return mUserInfo;
@@ -134,10 +129,10 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     }
 
     private void showConfirmRemoveUserDialog() {
-        boolean isLastUser =
-                UserHelper.getInstance(getContext()).getAllPersistentUsers().size() == 1;
+        UserHelper userHelper = UserHelper.getInstance(getContext());
+        boolean isLastUser = userHelper.getAllPersistentUsers().size() == 1;
         boolean isLastAdmin = mUserInfo.isAdmin()
-                && mCarUserManagerHelper.getAllAdminUsers().size() == 1;
+                && userHelper.getAllAdminUsers().size() == 1;
 
         ConfirmationDialogFragment dialogFragment;
 

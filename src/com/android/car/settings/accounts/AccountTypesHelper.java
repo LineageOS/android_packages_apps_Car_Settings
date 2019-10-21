@@ -18,7 +18,6 @@ package com.android.car.settings.accounts;
 
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -61,8 +60,7 @@ public class AccountTypesHelper {
         mAccountTypesExclusionFilter.add("com.android.bluetooth.pbapsink");
         setAccountTypesExclusionFilter(mAccountTypesExclusionFilter);
 
-        mUserHandle = new CarUserManagerHelper(
-                mContext).getCurrentProcessUserInfo().getUserHandle();
+        mUserHandle = UserHandle.of(UserHandle.myUserId());
         mAuthenticatorHelper = new AuthenticatorHelper(mContext, mUserHandle,
                 userHandle -> {
                     // Only force a refresh if accounts have changed for the current user.

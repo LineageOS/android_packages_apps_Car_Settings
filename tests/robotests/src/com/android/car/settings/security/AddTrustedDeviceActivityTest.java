@@ -29,11 +29,12 @@ import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.car.trust.CarTrustAgentEnrollmentManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.ShadowCar;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
 import com.android.internal.widget.LockscreenCredential;
@@ -66,7 +67,6 @@ public class AddTrustedDeviceActivityTest {
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
     @Mock
     private CarUxRestrictionsManager mMockCarUxRestrictionsManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private BluetoothDevice mBluetoothDevice;
 
     @Before
@@ -80,7 +80,6 @@ public class AddTrustedDeviceActivityTest {
         mContext = RuntimeEnvironment.application;
         ShadowCar.setCarManager(Car.CAR_TRUST_AGENT_ENROLLMENT_SERVICE,
                 mMockCarTrustAgentEnrollmentManager);
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mBluetoothDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(ADDRESS);
         mActivityController = ActivityController.of(new AddTrustedDeviceActivity());
         mActivity = mActivityController.get();
@@ -132,7 +131,7 @@ public class AddTrustedDeviceActivityTest {
         mActivityController.stop();
 
         when(mMockCarTrustAgentEnrollmentManager.isEscrowTokenActive(1,
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(true);
+                UserHandle.myUserId())).thenReturn(true);
         Bundle outState = new Bundle();
         outState.putLong(CURRENT_HANDLE_KEY, 1);
         outState.putParcelable(BLUETOOTH_DEVICE_KEY, mBluetoothDevice);
@@ -154,7 +153,7 @@ public class AddTrustedDeviceActivityTest {
         enrollmentCallBack.getValue().onAuthStringAvailable(mBluetoothDevice, "123");
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(
-                ConfirmPairingCodeDialog.TAG)).isNotNull();
+                ConfirmationDialogFragment.TAG)).isNotNull();
     }
 
     @Test
@@ -204,9 +203,17 @@ public class AddTrustedDeviceActivityTest {
         verify(mMockCarTrustAgentEnrollmentManager).setBleCallback(bleCallBack.capture());
 
         bleCallBack.getValue().onBleEnrollmentDeviceConnected(mBluetoothDevice);
-        mActivity.mConfirmParingCodeListener.onConfirmPairingCode();
+        mActivity.mConfirmListener.onConfirm(/* arguments= */ null);
         verify(mMockCarTrustAgentEnrollmentManager).enrollmentHandshakeAccepted(mBluetoothDevice);
+    }
 
+    @Test
+    public void onPairingCodeDialogCancelled_finish() {
+        mActivityController.start().postCreate(null).resume();
+
+        mActivity.mRejectListener.onReject(/* arguments= */ null);
+
+        assertThat(mActivity.isFinishing()).isTrue();
     }
 
     @Test

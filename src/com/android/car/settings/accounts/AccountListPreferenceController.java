@@ -19,7 +19,6 @@ package com.android.car.settings.accounts;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -58,7 +57,6 @@ public class AccountListPreferenceController extends
     private static final String NO_ACCOUNT_PREF_KEY = "no_accounts_added";
 
     private final UserInfo mUserInfo;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final ArrayMap<String, Preference> mPreferences = new ArrayMap<>();
     private AuthenticatorHelper mAuthenticatorHelper;
     private String[] mAuthorities;
@@ -74,8 +72,7 @@ public class AccountListPreferenceController extends
     public AccountListPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
-        mUserInfo = mCarUserManagerHelper.getCurrentProcessUserInfo();
+        mUserInfo = UserHelper.getInstance(context).getCurrentProcessUserInfo();
         mAuthenticatorHelper = new AuthenticatorHelper(context,
                 mUserInfo.getUserHandle(), /* listener= */ this);
     }

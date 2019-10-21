@@ -17,9 +17,9 @@
 package com.android.car.settings.applications.defaultapps;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.os.UserHandle;
 import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
@@ -42,12 +42,10 @@ public abstract class DefaultAppEntryBasePreferenceController<V extends Preferen
 
     private static final Logger LOG = new Logger(
             DefaultAppEntryBasePreferenceController.class);
-    private final CarUserManagerHelper mCarUserManagerHelper;
 
     public DefaultAppEntryBasePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
     }
 
     @Override
@@ -70,7 +68,7 @@ public abstract class DefaultAppEntryBasePreferenceController<V extends Preferen
 
     /** Gets the current process user id. */
     protected int getCurrentProcessUserId() {
-        return mCarUserManagerHelper.getCurrentProcessUserId();
+        return UserHandle.myUserId();
     }
 
     private Drawable getDefaultAppIcon() {

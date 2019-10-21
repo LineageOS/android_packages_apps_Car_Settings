@@ -24,7 +24,6 @@ import static com.android.car.settings.applications.ApplicationsUtils.isProfileO
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -51,6 +50,7 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.users.UserHelper;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
@@ -93,7 +93,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     private DevicePolicyManager mDpm;
     private PackageManager mPm;
     private UserManager mUserManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserHelper mUserHelper;
 
     private String mPackageName;
     private PackageInfo mPackageInfo;
@@ -133,7 +133,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         mDpm = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
         mPm = context.getPackageManager();
         mUserManager = UserManager.get(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
+        mUserHelper = UserHelper.getInstance(context);
 
         // These should be loaded before onCreate() so that the controller operates as expected.
         mPackageName = getArguments().getString(EXTRA_PACKAGE_NAME);
@@ -207,8 +207,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     }
 
     private void retrieveAppEntry() {
-        mAppEntry = mAppState.getEntry(mPackageName,
-                mCarUserManagerHelper.getCurrentProcessUserId());
+        mAppEntry = mAppState.getEntry(mPackageName, UserHandle.myUserId());
         if (mAppEntry != null) {
             try {
                 mPackageInfo = mPm.getPackageInfo(mPackageName,
@@ -293,7 +292,7 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         // We don't allow uninstalling profile/device owner on any user because if it's a system
         // app, "uninstall" is actually "downgrade to the system version + disable", and
         // "downgrade" will clear data on all users.
-        if (isProfileOrDeviceOwner(mPackageName, mDpm, mCarUserManagerHelper)) {
+        if (isProfileOrDeviceOwner(mPackageName, mDpm, mUserHelper)) {
             LOG.d("Uninstall disabled because package is profile or device owner");
             return true;
         }

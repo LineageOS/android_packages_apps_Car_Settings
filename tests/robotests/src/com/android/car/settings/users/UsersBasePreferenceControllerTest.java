@@ -23,7 +23,6 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
@@ -35,7 +34,6 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 
@@ -54,8 +52,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
-        ShadowUserHelper.class})
+@Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UsersBasePreferenceControllerTest {
 
     private static class TestUsersBasePreferenceController extends UsersBasePreferenceController {
@@ -83,22 +80,19 @@ public class UsersBasePreferenceControllerTest {
     private PreferenceGroup mPreferenceGroup;
     private Context mContext;
     @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-    @Mock
     private UserHelper mUserHelper;
 
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowUserHelper.setInstance(mUserHelper);
         mPreferenceGroup = new LogicalPreferenceGroup(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestUsersBasePreferenceController.class, mPreferenceGroup);
         mController = mControllerHelper.getController();
-        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
-        when(mCarUserManagerHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
+        when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
+        when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
     }
@@ -106,7 +100,6 @@ public class UsersBasePreferenceControllerTest {
     @After
     public void tearDown() {
         ShadowUserHelper.reset();
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

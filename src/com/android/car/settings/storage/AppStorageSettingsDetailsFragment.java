@@ -17,7 +17,6 @@
 package com.android.car.settings.storage;
 
 import android.app.ActivityManager;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -93,7 +92,6 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
 
     // User info
     private int mUserId;
-    private CarUserManagerHelper mCarUserManagerHelper;
 
     //  An observer callback to get notified when the cache file deletion is complete.
     private ClearCacheObserver mClearCacheObserver;
@@ -143,8 +141,7 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mCarUserManagerHelper = new CarUserManagerHelper(context);
-        mUserId = mCarUserManagerHelper.getCurrentProcessUserId();
+        mUserId = UserHandle.myUserId();
         mPackageName = getArguments().getString(EXTRA_PACKAGE_NAME);
         mAppState = ApplicationsState.getInstance(requireActivity().getApplication());
         mAppEntry = mAppState.getEntry(mPackageName, mUserId);

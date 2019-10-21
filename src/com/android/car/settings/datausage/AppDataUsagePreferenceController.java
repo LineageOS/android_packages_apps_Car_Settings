@@ -20,7 +20,6 @@ import static android.net.TrafficStats.UID_REMOVED;
 import static android.net.TrafficStats.UID_TETHERING;
 
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.net.NetworkStats;
@@ -33,6 +32,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.common.ProgressBarPreference;
+import com.android.car.settings.users.UserHelper;
 import com.android.settingslib.AppItem;
 import com.android.settingslib.net.UidDetail;
 import com.android.settingslib.net.UidDetailProvider;
@@ -54,13 +54,11 @@ public class AppDataUsagePreferenceController extends
         PreferenceController<PreferenceGroup> implements AppsNetworkStatsManager.Callback {
 
     private final UidDetailProvider mUidDetailProvider;
-    private final CarUserManagerHelper mCarUserManagerHelper;
 
     public AppDataUsagePreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mUidDetailProvider = new UidDetailProvider(getContext());
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
     }
 
     @Override
@@ -73,8 +71,8 @@ public class AppDataUsagePreferenceController extends
         List<AppItem> items = new ArrayList<>();
         long largest = 0;
 
-        List<UserInfo> profiles = mCarUserManagerHelper.getAllUsers();
-        SparseArray<AppItem> knownItems = new SparseArray<AppItem>();
+        List<UserInfo> profiles = UserHelper.getInstance(getContext()).getAllUsers();
+        SparseArray<AppItem> knownItems = new SparseArray<>();
 
         NetworkStats.Entry entry = null;
         if (stats != null) {
@@ -91,7 +89,7 @@ public class AppDataUsagePreferenceController extends
 
     private long aggregateDataUsage(SparseArray<AppItem> knownItems, List<AppItem> items,
             NetworkStats.Entry entry, List<UserInfo> profiles) {
-        int currentUserId = mCarUserManagerHelper.getCurrentProcessUserId();
+        int currentUserId = UserHandle.myUserId();
 
         // Decide how to collapse items together.
         int uid = entry.uid;

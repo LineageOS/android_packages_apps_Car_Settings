@@ -18,11 +18,8 @@ package com.android.car.settings.applications;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import static org.mockito.Mockito.when;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -44,7 +41,6 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowDevicePolicyManager;
 import com.android.car.settings.testutils.ShadowIconDrawableFactory;
 import com.android.car.settings.testutils.ShadowPermissionControllerManager;
@@ -58,7 +54,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
@@ -77,7 +72,6 @@ import java.util.Collections;
 @Config(shadows = {
         ShadowActivityManager.class,
         ShadowApplicationPackageManager.class,
-        ShadowCarUserManagerHelper.class,
         ShadowDevicePolicyManager.class,
         ShadowIconDrawableFactory.class,
         ShadowPermissionControllerManager.class,
@@ -88,9 +82,6 @@ public class ApplicationDetailsFragmentTest {
 
     private static final String PACKAGE_NAME = "com.android.car.settings.test";
 
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
-
     private Context mContext;
     private TestActivity mActivity;
     private ActivityController<TestActivity> mController;
@@ -99,16 +90,11 @@ public class ApplicationDetailsFragmentTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         int userId = UserHandle.myUserId();
 
         mContext = RuntimeEnvironment.application;
         getShadowUserManager().addUser(userId, "userName", /* flags= */ 0);
         getShadowUserManager().addProfile(userId, userId, "profileName", /* profileFlags= */ 0);
-
-        when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(userId);
-        when(mCarUserManagerHelper.getAllUsers()).thenReturn(
-                Collections.singletonList(UserManager.get(mContext).getUserInfo(userId)));
 
         mActivity = new TestActivity();
         mController = ActivityController.of(mActivity);
@@ -123,7 +109,6 @@ public class ApplicationDetailsFragmentTest {
         ReflectionHelpers.setStaticField(ApplicationsState.class, "sInstance", null);
         ReflectionHelpers.setStaticField(Utils.class, "sSystemSignature", null);
         ShadowApplicationPackageManager.reset();
-        ShadowCarUserManagerHelper.reset();
         ShadowDevicePolicyManager.reset();
         ShadowSmsApplication.reset();
         ShadowUserManager.reset();

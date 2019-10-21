@@ -17,6 +17,7 @@
 package com.android.car.settings.quicksettings;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
@@ -69,7 +70,7 @@ public class QuickSettingFragment extends BaseFragment {
      */
     private Set<String> mPreferencesIgnoringUxRestrictions;
 
-    private CarUserManagerHelper mCarUserManagerHelper;
+    private UserManager mUserManager;
     private UserIconProvider mUserIconProvider;
     private QuickSettingGridAdapter mGridAdapter;
     private RecyclerView mListView;
@@ -95,6 +96,7 @@ public class QuickSettingFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mUserManager = UserManager.get(getContext());
         mHomeFragmentLauncher = new HomeFragmentLauncher();
         Activity activity = requireActivity();
 
@@ -113,8 +115,7 @@ public class QuickSettingFragment extends BaseFragment {
 
         mOpacityDisabled = activity.getResources().getFloat(R.dimen.opacity_disabled);
         mOpacityEnabled = activity.getResources().getFloat(R.dimen.opacity_enabled);
-        mCarUserManagerHelper = new CarUserManagerHelper(activity);
-        mUserIconProvider = new UserIconProvider(mCarUserManagerHelper);
+        mUserIconProvider = new UserIconProvider(new CarUserManagerHelper(activity));
         mListView = activity.findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.setLayoutManager(mGridAdapter.getGridLayoutManager());
@@ -195,7 +196,7 @@ public class QuickSettingFragment extends BaseFragment {
 
     private void setupUserButton(Context context) {
         Button userButton = requireActivity().findViewById(R.id.user_switcher_btn);
-        UserInfo currentUserInfo = mCarUserManagerHelper.getCurrentForegroundUserInfo();
+        UserInfo currentUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
         Drawable userIcon = mUserIconProvider.getUserIcon(currentUserInfo, context);
         userButton.setCompoundDrawablesRelativeWithIntrinsicBounds(userIcon, /* top= */
                 null, /* end= */ null, /* bottom= */ null);

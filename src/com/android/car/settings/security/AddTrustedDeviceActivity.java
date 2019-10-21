@@ -19,8 +19,9 @@ package com.android.car.settings.security;
 import android.bluetooth.BluetoothDevice;
 import android.car.Car;
 import android.car.trust.CarTrustAgentEnrollmentManager;
-import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.UserHandle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -29,6 +30,7 @@ import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseCarSettingsActivity;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.internal.widget.LockscreenCredential;
 
@@ -67,9 +69,18 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
     private Car mCar;
     private BluetoothDevice mBluetoothDevice;
     private long mHandle;
-    private CarUserManagerHelper mCarUserManagerHelper;
     @Nullable
     private CarTrustAgentEnrollmentManager mCarTrustAgentEnrollmentManager;
+
+    @VisibleForTesting
+    final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
+        mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted(mBluetoothDevice);
+    };
+
+    @VisibleForTesting
+    final ConfirmationDialogFragment.RejectListener mRejectListener = arguments -> {
+        finish();
+    };
 
     private final CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback
             mCarTrustAgentEnrollmentCallback =
@@ -82,10 +93,8 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
 
                 @Override
                 public void onAuthStringAvailable(BluetoothDevice device, String authString) {
-                    ConfirmPairingCodeDialog dialog = ConfirmPairingCodeDialog.newInstance(
-                            authString);
-                    dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
-                    dialog.show(getSupportFragmentManager(), ConfirmPairingCodeDialog.TAG);
+                    getConfirmPairingCodeDialogFragment(getApplicationContext(), authString)
+                            .show(getSupportFragmentManager(), ConfirmationDialogFragment.TAG);
                 }
 
                 @Override
@@ -139,18 +148,6 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
                 }
             };
 
-    @VisibleForTesting
-    final ConfirmPairingCodeDialog.ConfirmPairingCodeListener mConfirmParingCodeListener =
-            new ConfirmPairingCodeDialog.ConfirmPairingCodeListener() {
-                public void onConfirmPairingCode() {
-                    mCarTrustAgentEnrollmentManager.enrollmentHandshakeAccepted(mBluetoothDevice);
-                }
-
-                public void onDialogCancelled() {
-                    finish();
-                }
-            };
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -161,17 +158,18 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
             LOG.e("CarTrustAgentEnrollmentManager is null");
             finish();
         }
-        mCarUserManagerHelper = new CarUserManagerHelper(this);
         if (savedInstanceState != null) {
             mBluetoothDevice = savedInstanceState.getParcelable(BLUETOOTH_DEVICE_KEY);
             mHandle = savedInstanceState.getLong(CURRENT_HANDLE_KEY);
         }
-        ConfirmPairingCodeDialog dialog =
-                (ConfirmPairingCodeDialog) getSupportFragmentManager().findFragmentByTag(
-                        ConfirmPairingCodeDialog.TAG);
-        if (dialog != null) {
-            dialog.setConfirmPairingCodeListener(mConfirmParingCodeListener);
-        }
+        ConfirmationDialogFragment dialog =
+                (ConfirmationDialogFragment) getSupportFragmentManager().findFragmentByTag(
+                        ConfirmationDialogFragment.TAG);
+        ConfirmationDialogFragment.resetListeners(
+                dialog,
+                mConfirmListener,
+                /* rejectListener= */ null,
+                /* neutralListener= */ null);
     }
 
 
@@ -180,7 +178,7 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
         super.onStart();
         if (mHandle != 0) {
             if (mCarTrustAgentEnrollmentManager.isEscrowTokenActive(mHandle,
-                    mCarUserManagerHelper.getCurrentProcessUserId())) {
+                    UserHandle.myUserId())) {
                 onDeviceAddedSuccessfully();
                 finish();
             }
@@ -245,5 +243,15 @@ public class AddTrustedDeviceActivity extends BaseCarSettingsActivity implements
         Toast.makeText(this,
                 getResources().getString(R.string.trusted_device_success_enrollment_toast),
                 Toast.LENGTH_LONG).show();
+    }
+
+    private ConfirmationDialogFragment getConfirmPairingCodeDialogFragment(
+            Context context, String pairingCode) {
+        return new ConfirmationDialogFragment.Builder(context)
+                .setTitle(context.getString(R.string.trusted_device_pairing_code_dialog_title))
+                .setMessage(pairingCode)
+                .setPositiveButton(R.string.trusted_device_confirm_button, mConfirmListener)
+                .setNegativeButton(android.R.string.cancel, mRejectListener)
+                .build();
     }
 }

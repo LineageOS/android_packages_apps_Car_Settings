@@ -27,14 +27,16 @@ import android.app.admin.DevicePolicyManager;
 import android.car.Car;
 import android.car.trust.CarTrustAgentEnrollmentManager;
 import android.car.trust.TrustedDeviceInfo;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
+import android.os.Bundle;
+import android.os.UserHandle;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowCar;
@@ -69,7 +71,6 @@ public class TrustedDeviceListPreferenceControllerTest {
             mPreferenceControllerHelper;
     @Mock
     private CarTrustAgentEnrollmentManager mMockCarTrustAgentEnrollmentManager;
-    private CarUserManagerHelper mCarUserManagerHelper;
     private PreferenceGroup mPreferenceGroup;
     private TrustedDeviceListPreferenceController mController;
     private TrustedDeviceInfo mTestDevice1 = new TrustedDeviceInfo(1, "", "");
@@ -86,7 +87,6 @@ public class TrustedDeviceListPreferenceControllerTest {
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TrustedDeviceListPreferenceController.class, mPreferenceGroup);
         mController = mPreferenceControllerHelper.getController();
-        mCarUserManagerHelper = new CarUserManagerHelper(mContext);
         mDevices.add(mTestDevice1);
         mDevices.add(mTestDevice2);
         mUpdatedDevices.add(mTestDevice1);
@@ -105,7 +105,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     public void onDeviceRemoved_refreshUi() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
+                UserHandle.myUserId())).thenReturn(mUpdatedDevices);
 
         mController.refreshUi();
 
@@ -117,7 +117,7 @@ public class TrustedDeviceListPreferenceControllerTest {
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
         mUpdatedDevices.remove(0);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
+                UserHandle.myUserId())).thenReturn(mUpdatedDevices);
         callBack.getValue().onEscrowTokenRemoved(mUpdatedDevices.get(0).getHandle());
 
         assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(2);
@@ -126,7 +126,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     @Test
     public void onDeviceAdded_refreshUi() {
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
+                UserHandle.myUserId())).thenReturn(mDevices);
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         mController.refreshUi();
 
@@ -136,7 +136,7 @@ public class TrustedDeviceListPreferenceControllerTest {
                 ArgumentCaptor.forClass(
                         CarTrustAgentEnrollmentManager.CarTrustAgentEnrollmentCallback.class);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
+                UserHandle.myUserId())).thenReturn(mUpdatedDevices);
         verify(mMockCarTrustAgentEnrollmentManager).setEnrollmentCallback(callBack.capture());
 
         callBack.getValue().onEscrowTokenActiveStateChanged(mUpdatedDevices.get(0).getHandle(),
@@ -149,8 +149,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     public void refreshUi_noDevices_hasPassword_hidesGroup() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(
-                Collections.emptyList());
+                UserHandle.myUserId())).thenReturn(Collections.emptyList());
 
         mController.refreshUi();
 
@@ -162,7 +161,7 @@ public class TrustedDeviceListPreferenceControllerTest {
     public void refreshUi_devices_hasPassword_showsGroup() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mUpdatedDevices);
+                UserHandle.myUserId())).thenReturn(mUpdatedDevices);
 
         mController.refreshUi();
 
@@ -186,21 +185,23 @@ public class TrustedDeviceListPreferenceControllerTest {
     public void onPreferenceClicked_hasPassword_showDialog() {
         ShadowLockPatternUtils.setPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_SOMETHING);
         when(mMockCarTrustAgentEnrollmentManager.getEnrolledDeviceInfoForUser(
-                mCarUserManagerHelper.getCurrentProcessUserId())).thenReturn(mDevices);
+                UserHandle.myUserId())).thenReturn(mDevices);
         mController.refreshUi();
         Preference p = mPreferenceGroup.getPreference(0);
 
         p.performClick();
 
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmRemoveDeviceDialog.class), anyString());
+                any(ConfirmationDialogFragment.class), anyString());
     }
 
     @Test
-    public void onRemoveDeviceDialogConfirmed_remoeEscrwoToken() {
-        mController.mConfirmRemoveDeviceListener.onConfirmRemoveDevice(1);
+    public void onRemoveDeviceDialogConfirmed_removeEscrowToken() {
+        Bundle arguments = new Bundle();
+        arguments.putLong(TrustedDeviceListPreferenceController.KEY_HANDLE, 1);
+        mController.mConfirmListener.onConfirm(arguments);
 
         verify(mMockCarTrustAgentEnrollmentManager).removeEscrowToken(1,
-                mCarUserManagerHelper.getCurrentProcessUserId());
+                UserHandle.myUserId());
     }
 }
