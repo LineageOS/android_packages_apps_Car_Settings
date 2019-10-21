@@ -220,9 +220,9 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     private List<UserInfo> getUsersForUserGrid() {
-        List<UserInfo> users = UserHelper.getInstance(mContext).getAllUsers();
+        List<UserInfo> users = UserManager.get(mContext).getUsers(/* excludeDying= */ true);
         return users.stream()
-                .filter(userInfo -> userInfo.supportsSwitchToByUser())
+                .filter(UserInfo::supportsSwitchToByUser)
                 .collect(Collectors.toList());
     }
 
