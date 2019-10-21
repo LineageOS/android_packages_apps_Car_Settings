@@ -21,6 +21,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.media.AudioAttributes;
 import android.media.Ringtone;
 
 import com.android.car.settings.testutils.ShadowRingtoneManager;
@@ -41,7 +42,7 @@ import org.robolectric.shadows.ShadowLooper;
 public class VolumeSettingsRingtoneManagerTest {
 
     private static final int TEST_GROUP_ID = 1;
-    private static final int TEST_USAGE_ID = 18;
+    private static final int TEST_USAGE_ID = AudioAttributes.USAGE_MEDIA;
 
     private Context mContext;
     private VolumeSettingsRingtoneManager mRingtoneManager;
