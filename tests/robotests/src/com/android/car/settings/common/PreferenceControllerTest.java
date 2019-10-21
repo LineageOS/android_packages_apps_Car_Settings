@@ -17,6 +17,7 @@
 package com.android.car.settings.common;
 
 import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.CONDITIONALLY_UNAVAILABLE;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
@@ -25,7 +26,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.verify;
 import static org.testng.Assert.assertThrows;
 
@@ -246,24 +247,37 @@ public class PreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_created_available_preferenceShown() {
+    public void refreshUi_created_available_preferenceShownAndEnabled() {
         mControllerHelper.markState(Lifecycle.State.CREATED);
+        reset(mPreference);
 
         mController.refreshUi();
 
-        // onCreate, refreshUi.
-        verify(mPreference, times(2)).setVisible(true);
+        verify(mPreference).setVisible(true);
+        verify(mPreference).setEnabled(true);
+    }
+
+    @Test
+    public void refreshUi_created_availableForViewing_preferenceShownAndDisabled() {
+        mController.setAvailabilityStatus(AVAILABLE_FOR_VIEWING);
+        mControllerHelper.markState(Lifecycle.State.CREATED);
+        reset(mPreference);
+
+        mController.refreshUi();
+
+        verify(mPreference).setVisible(true);
+        verify(mPreference).setEnabled(false);
     }
 
     @Test
     public void refreshUi_created_notAvailable_preferenceHidden() {
         mController.setAvailabilityStatus(CONDITIONALLY_UNAVAILABLE);
         mControllerHelper.markState(Lifecycle.State.CREATED);
+        reset(mPreference);
 
         mController.refreshUi();
 
-        // onCreate, refreshUi.
-        verify(mPreference, times(2)).setVisible(false);
+        verify(mPreference).setVisible(false);
     }
 
     @Test
