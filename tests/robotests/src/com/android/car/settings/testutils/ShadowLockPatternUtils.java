@@ -94,7 +94,7 @@ public class ShadowLockPatternUtils {
     @Implementation
     public boolean setLockCredential(LockscreenCredential newCredential,
             LockscreenCredential savedCredential, int userId) {
-        if (newCredential.isPassword()) {
+        if (newCredential.isPassword() || newCredential.isPin()) {
             sSavedPassword = newCredential.duplicate().getCredential();
         } else if (newCredential.isPattern()) {
             sSavedPattern = newCredential.duplicate().getCredential();
