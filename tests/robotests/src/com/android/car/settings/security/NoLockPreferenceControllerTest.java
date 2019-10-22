@@ -22,6 +22,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.UserHandle;
 
@@ -76,11 +77,22 @@ public class NoLockPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceClicked_goesToNextFragment() {
+    public void testHandlePreferenceClicked_ifNotSelectedAsLock_goesToNextFragment() {
+        mController.setCurrentPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
+
         mPreference.performClick();
 
         verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
                 any(ConfirmationDialogFragment.class), anyString());
+    }
+
+    @Test
+    public void testHandlePreferenceClicked_ifSelectedAsLock_goesBack() {
+        mController.setCurrentPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+
+        mPreference.performClick();
+
+        verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 
     @Test
