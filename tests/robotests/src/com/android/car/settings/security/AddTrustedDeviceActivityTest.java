@@ -161,7 +161,7 @@ public class AddTrustedDeviceActivityTest {
         mActivityController.start().postCreate(null).resume();
 
         mActivity.launchFragment(ConfirmLockPinPasswordFragment.newPinInstance());
-        mActivity.onLockVerified(LockscreenCredential.createPassword("lock"));
+        mActivity.onLockVerified(LockscreenCredential.createPin("1111"));
 
         assertThat(mActivity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
                 .isInstanceOf(AddTrustedDeviceProgressFragment.class);
