@@ -43,4 +43,9 @@ public class DeviceModelPreferenceController extends PreferenceController<Prefer
     protected void updateState(Preference preference) {
         preference.setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
     }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        return AVAILABLE_FOR_VIEWING;
+    }
 }

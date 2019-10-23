@@ -44,4 +44,9 @@ public class HardwareRevisionPreferenceController extends PreferenceController<P
     protected void updateState(Preference preference) {
         preference.setSummary(SystemProperties.get("ro.boot.hardware.revision"));
     }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        return AVAILABLE_FOR_VIEWING;
+    }
 }
