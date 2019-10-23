@@ -16,7 +16,7 @@
 
 package com.android.car.settings.system;
 
-import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -76,12 +76,12 @@ public class WifiMacAddressPreferenceControllerTest {
     }
 
     @Test
-    public void getAvailabilityStatus_wifiAvailable_available() {
+    public void getAvailabilityStatus_wifiAvailable_availableForViewing() {
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 PackageManager.FEATURE_WIFI, /* supported= */ true);
 
         assertThat(mControllerHelper.getController().getAvailabilityStatus())
-                .isEqualTo(AVAILABLE);
+                .isEqualTo(AVAILABLE_FOR_VIEWING);
     }
 
     @Test

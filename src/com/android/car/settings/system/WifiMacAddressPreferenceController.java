@@ -50,7 +50,7 @@ public class WifiMacAddressPreferenceController extends PreferenceController<Pre
                 || !getContext().getResources().getBoolean(R.bool.config_show_wifi_mac_address)) {
             return UNSUPPORTED_ON_DEVICE;
         }
-        return super.getAvailabilityStatus();
+        return AVAILABLE_FOR_VIEWING;
     }
 
     protected void init(Context context) {
