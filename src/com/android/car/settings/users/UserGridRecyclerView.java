@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static android.os.UserManager.DISALLOW_ADD_USER;
+
 import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
@@ -149,7 +151,8 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         // Add "add user" record if the foreground user can add users
-        if (mCarUserManagerHelper.canForegroundUserAddUsers()) {
+        UserHandle fgUserHandle = UserHandle.of(ActivityManager.getCurrentUser());
+        if (!mUserManager.hasUserRestriction(DISALLOW_ADD_USER, fgUserHandle)) {
             userRecords.add(createAddUserRecord());
         }
 
@@ -395,7 +398,7 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         private void handleAddUserClicked(View addUserView) {
-            if (mCarUserManagerHelper.isUserLimitReached()) {
+            if (!mUserManager.canAddMoreUsers()) {
                 showMaxUsersLimitReachedDialog();
             } else {
                 mAddUserView = addUserView;
