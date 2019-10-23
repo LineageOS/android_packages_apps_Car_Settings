@@ -20,13 +20,14 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
+import android.view.View;
 import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -80,6 +81,38 @@ public class UsersListFragmentTest {
         ShadowCarUserManagerHelper.reset();
     }
 
+    @Test
+    public void onCreate_userInDemoMode_showsExitRetailModeButton() {
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
+
+        createUsersListFragment();
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mActionButton.getText().toString())
+            .isEqualTo(mContext.getString(R.string.exit_retail_button_text));
+    }
+
+    @Test
+    public void onCreate_userCanAddNewUser_showsAddUserButton() {
+        when(mCarUserManagerHelper.canCurrentProcessAddUsers()).thenReturn(true);
+
+        createUsersListFragment();
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mActionButton.getText().toString())
+            .isEqualTo(mContext.getString(R.string.user_add_user_menu));
+    }
+
+    @Test
+    public void onCreate_userRestrictedFromAddingNewUserAndNotInDemo_doesNotShowActionButton() {
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
+        when(mCarUserManagerHelper.canCurrentProcessAddUsers()).thenReturn(false);
+
+        createUsersListFragment();
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.GONE);
+    }
+
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
     @Test
     public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
@@ -93,7 +126,7 @@ public class UsersListFragmentTest {
     /* Test that if we're in demo user, click on the button starts exit out of the retail mode. */
     @Test
     public void testCallOnClick_demoUser_exitRetailMode() {
-        doReturn(true).when(mCarUserManagerHelper).isCurrentProcessDemoUser();
+        when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
         createUsersListFragment();
         mActionButton.callOnClick();
         assertThat(isDialogShown(ConfirmExitRetailModeDialog.DIALOG_TAG)).isTrue();
@@ -102,8 +135,8 @@ public class UsersListFragmentTest {
     /* Test that if the max num of users is reached, click on the button informs user of that. */
     @Test
     public void testCallOnClick_userLimitReached_showErrorDialog() {
-        doReturn(5).when(mCarUserManagerHelper).getMaxSupportedRealUsers();
-        doReturn(true).when(mCarUserManagerHelper).isUserLimitReached();
+        when(mCarUserManagerHelper.getMaxSupportedRealUsers()).thenReturn(5);
+        when(mCarUserManagerHelper.isUserLimitReached()).thenReturn(true);
         createUsersListFragment();
 
         mActionButton.callOnClick();
@@ -113,7 +146,7 @@ public class UsersListFragmentTest {
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
     @Test
     public void testCallOnClick_showAddUserDialog() {
-        doReturn(true).when(mCarUserManagerHelper).canCurrentProcessAddUsers();
+        when(mCarUserManagerHelper.canCurrentProcessAddUsers()).thenReturn(true);
         createUsersListFragment();
 
         mActionButton.callOnClick();
@@ -123,10 +156,10 @@ public class UsersListFragmentTest {
     private void createUsersListFragment() {
         UserInfo testUser = new UserInfo();
         mFragment = new UsersListFragment();
-        doReturn(testUser).when(mCarUserManagerHelper).getCurrentProcessUserInfo();
-        doReturn(testUser).when(mUserManager).getUserInfo(anyInt());
-        doReturn(new ArrayList<UserInfo>()).when(mCarUserManagerHelper).getAllSwitchableUsers();
-        doReturn(null).when(mCarUserManagerHelper).createNewNonAdminUser(any());
+        when(mCarUserManagerHelper.getCurrentProcessUserInfo()).thenReturn(testUser);
+        when(mUserManager.getUserInfo(anyInt())).thenReturn(testUser);
+        when(mCarUserManagerHelper.getAllSwitchableUsers()).thenReturn(new ArrayList<UserInfo>());
+        when(mCarUserManagerHelper.createNewNonAdminUser(any())).thenReturn(null);
         mTestActivity.launchFragment(mFragment);
         refreshButtons();
     }
