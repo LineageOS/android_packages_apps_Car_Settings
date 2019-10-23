@@ -27,6 +27,7 @@ import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.view.View;
 import android.widget.Button;
 
 import com.android.car.settings.R;
@@ -85,10 +86,35 @@ public class UsersListFragmentTest {
         ShadowUserManager.reset();
     }
 
+    @Test
+    public void onCreate_userInDemoMode_showsExitRetailModeButton() {
+        createUsersListFragment(UserInfo.FLAG_DEMO, /* disallowAddUser= */ false);
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mActionButton.getText().toString())
+            .isEqualTo(mContext.getString(R.string.exit_retail_button_text));
+    }
+
+    @Test
+    public void onCreate_userCanAddNewUser_showsAddUserButton() {
+        createUsersListFragment(/* flags= */ 0, /* disallowAddUser= */ false);
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mActionButton.getText().toString())
+            .isEqualTo(mContext.getString(R.string.user_add_user_menu));
+    }
+
+    @Test
+    public void onCreate_userRestrictedFromAddingNewUserAndNotInDemo_doesNotShowActionButton() {
+        createUsersListFragment(/* flags= */ 0, /*disallowAddUser= */ true);
+
+        assertThat(mActionButton.getVisibility()).isEqualTo(View.GONE);
+    }
+
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
     @Test
     public void testOnCreateNewUserConfirmedInvokesCreateNewNonAdminUser() {
-        createUsersListFragment(/* flags= */ 0);
+        createUsersListFragment(/* flags= */ 0, /* disallowAddUser= */ false);
         mFragment.mConfirmCreateNewUserListener.onConfirm(/* arguments= */ null);
         Robolectric.flushBackgroundThreadScheduler();
         verify(mCarUserManagerHelper)
@@ -98,8 +124,10 @@ public class UsersListFragmentTest {
     /* Test that if we're in demo user, click on the button starts exit out of the retail mode. */
     @Test
     public void testCallOnClick_demoUser_exitRetailMode() {
-        createUsersListFragment(UserInfo.FLAG_DEMO);
+        createUsersListFragment(UserInfo.FLAG_DEMO, /* disallowAddUser= */ false);
+
         mActionButton.callOnClick();
+
         assertThat(isDialogShown(UsersListFragment.CONFIRM_EXIT_RETAIL_MODE_DIALOG_TAG)).isTrue();
     }
 
@@ -107,7 +135,7 @@ public class UsersListFragmentTest {
     @Test
     public void testCallOnClick_userLimitReached_showErrorDialog() {
         ShadowUserManager.setCanAddMoreUsers(false);
-        createUsersListFragment(/* flags= */ 0);
+        createUsersListFragment(/* flags= */ 0, /* disallowAddUser= */ true);
 
         mActionButton.callOnClick();
         assertThat(isDialogShown(UsersListFragment.MAX_USERS_LIMIT_REACHED_DIALOG_TAG)).isTrue();
@@ -116,16 +144,18 @@ public class UsersListFragmentTest {
     /* Test that if user can add other users, click on the button creates a dialog to confirm. */
     @Test
     public void testCallOnClick_showAddUserDialog() {
-        createUsersListFragment(/* flags= */ 0);
+        createUsersListFragment(/* flags= */ 0, /* disallowAddUser= */ false);
 
         mActionButton.callOnClick();
         assertThat(isDialogShown(UsersListFragment.CONFIRM_CREATE_NEW_USER_DIALOG_TAG)).isTrue();
     }
 
-    private void createUsersListFragment(int flags) {
+    private void createUsersListFragment(int flags, boolean disallowAddUser) {
         Shadows.shadowOf(UserManager.get(mContext)).addUser(UserHandle.myUserId(),
                 "User Name", flags);
         UserInfo testUser = UserManager.get(mContext).getUserInfo(UserHandle.myUserId());
+        Shadows.shadowOf(UserManager.get(mContext)).setUserRestriction(
+                testUser.getUserHandle(), UserManager.DISALLOW_ADD_USER, disallowAddUser);
         mFragment = new UsersListFragment();
         when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(testUser);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(new ArrayList<>());
