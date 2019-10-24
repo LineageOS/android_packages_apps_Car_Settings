@@ -52,11 +52,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected boolean isUserLimitReached() {
-        return sMockInstance.isUserLimitReached();
-    }
-
-    @Implementation
     protected int getMaxSupportedRealUsers() {
         return sMockInstance.getMaxSupportedRealUsers();
     }

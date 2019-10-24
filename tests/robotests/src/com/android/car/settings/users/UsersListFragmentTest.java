@@ -19,7 +19,6 @@ package com.android.car.settings.users;
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -35,6 +34,7 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
 import org.junit.Before;
@@ -55,7 +55,7 @@ import java.util.ArrayList;
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowCarUserManagerHelper.class, ShadowUserIconProvider.class,
-        ShadowUserHelper.class})
+        ShadowUserHelper.class, ShadowUserManager.class})
 public class UsersListFragmentTest {
 
     private Context mContext;
@@ -82,6 +82,7 @@ public class UsersListFragmentTest {
     public void tearDown() {
         ShadowUserHelper.reset();
         ShadowCarUserManagerHelper.reset();
+        ShadowUserManager.reset();
     }
 
     /* Test that onCreateNewUserConfirmed invokes a creation of a new non-admin. */
@@ -105,8 +106,7 @@ public class UsersListFragmentTest {
     /* Test that if the max num of users is reached, click on the button informs user of that. */
     @Test
     public void testCallOnClick_userLimitReached_showErrorDialog() {
-        doReturn(5).when(mCarUserManagerHelper).getMaxSupportedRealUsers();
-        doReturn(true).when(mCarUserManagerHelper).isUserLimitReached();
+        ShadowUserManager.setCanAddMoreUsers(false);
         createUsersListFragment(/* flags= */ 0);
 
         mActionButton.callOnClick();

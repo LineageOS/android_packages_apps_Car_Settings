@@ -34,6 +34,7 @@ import java.util.Map;
 public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager {
 
     private static boolean sIsHeadlessSystemUserMode = true;
+    private static boolean sCanAddMoreUsers = true;
     private static Map<Integer, List<UserInfo>> sProfiles = new ArrayMap<>();
 
     @Implementation
@@ -78,10 +79,20 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         sIsHeadlessSystemUserMode = isEnabled;
     }
 
+    @Implementation
+    protected static boolean canAddMoreUsers() {
+        return sCanAddMoreUsers;
+    }
+
+    public static void setCanAddMoreUsers(boolean isEnabled) {
+        sCanAddMoreUsers = isEnabled;
+    }
+
     @Resetter
     public static void reset() {
         org.robolectric.shadows.ShadowUserManager.reset();
         sIsHeadlessSystemUserMode = true;
+        sCanAddMoreUsers = true;
         sProfiles.clear();
     }
 }

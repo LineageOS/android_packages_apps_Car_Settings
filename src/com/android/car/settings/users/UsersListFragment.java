@@ -208,7 +208,7 @@ public class UsersListFragment extends SettingsFragment implements
 
         // If no more users can be added because the maximum allowed number is reached, let the user
         // know.
-        if (mCarUserManagerHelper.isUserLimitReached()) {
+        if (!mUserManager.canAddMoreUsers()) {
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getMaxUsersLimitReachedDialogFragment(getContext(),
                             mCarUserManagerHelper.getMaxSupportedRealUsers());
