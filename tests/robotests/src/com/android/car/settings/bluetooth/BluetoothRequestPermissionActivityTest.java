@@ -146,6 +146,7 @@ public class BluetoothRequestPermissionActivityTest {
                 BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE);
     }
 
+    @Test
     public void onCreate_requestDiscoverableIntent_bypassforGeneric_noScanModeChange() {
         getShadowLocalBluetoothAdapter().setState(BluetoothAdapter.STATE_ON);
         mAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_NONE);
