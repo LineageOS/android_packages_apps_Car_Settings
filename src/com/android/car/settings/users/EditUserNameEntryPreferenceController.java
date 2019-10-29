@@ -47,8 +47,7 @@ public class EditUserNameEntryPreferenceController extends
             getFragmentController().launchFragment(EditUsernameFragment.newInstance(getUserInfo()));
         });
 
-        Drawable icon = new UserIconProvider(getCarUserManagerHelper()).getUserIcon(getUserInfo(),
-                getContext());
+        Drawable icon = new UserIconProvider().getRoundedUserIcon(getUserInfo(), getContext());
         preference.setIcon(icon);
         preference.setTitle(UserUtils.getUserDisplayName(getContext(), getUserInfo()));
 

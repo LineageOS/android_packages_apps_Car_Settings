@@ -64,7 +64,7 @@ public class UserUtils {
     /**
      * Returns a {@link Drawable} for the given {@code icon} scaled to the appropriate size.
      */
-    public static Drawable scaleUserIcon(Resources res, Bitmap icon) {
+    public static BitmapDrawable scaleUserIcon(Resources res, Bitmap icon) {
         int desiredSize = res.getDimensionPixelSize(R.dimen.icon_size);
         Bitmap scaledIcon =
                 Bitmap.createScaledBitmap(icon, desiredSize, desiredSize, /*filter=*/true);

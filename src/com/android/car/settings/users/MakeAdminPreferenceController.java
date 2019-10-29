@@ -77,8 +77,7 @@ public class MakeAdminPreferenceController extends
             getFragmentController().showDialog(dialogFragment, ConfirmationDialogFragment.TAG);
         });
 
-        Drawable icon = new UserIconProvider(getCarUserManagerHelper()).getUserIcon(getUserInfo(),
-                getContext());
+        Drawable icon = new UserIconProvider().getRoundedUserIcon(getUserInfo(), getContext());
         preference.setIcon(icon);
     }
 }

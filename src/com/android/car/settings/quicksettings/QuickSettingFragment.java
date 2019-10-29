@@ -19,7 +19,6 @@ package com.android.car.settings.quicksettings;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.car.drivingstate.CarUxRestrictions;
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.graphics.drawable.Drawable;
@@ -115,7 +114,7 @@ public class QuickSettingFragment extends BaseFragment {
 
         mOpacityDisabled = activity.getResources().getFloat(R.dimen.opacity_disabled);
         mOpacityEnabled = activity.getResources().getFloat(R.dimen.opacity_enabled);
-        mUserIconProvider = new UserIconProvider(new CarUserManagerHelper(activity));
+        mUserIconProvider = new UserIconProvider();
         mListView = activity.findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
         mListView.setLayoutManager(mGridAdapter.getGridLayoutManager());
@@ -197,7 +196,7 @@ public class QuickSettingFragment extends BaseFragment {
     private void setupUserButton(Context context) {
         Button userButton = requireActivity().findViewById(R.id.user_switcher_btn);
         UserInfo currentUserInfo = mUserManager.getUserInfo(ActivityManager.getCurrentUser());
-        Drawable userIcon = mUserIconProvider.getUserIcon(currentUserInfo, context);
+        Drawable userIcon = mUserIconProvider.getRoundedUserIcon(currentUserInfo, context);
         userButton.setCompoundDrawablesRelativeWithIntrinsicBounds(userIcon, /* top= */
                 null, /* end= */ null, /* bottom= */ null);
         userButton.setText(currentUserInfo.name);

@@ -16,7 +16,9 @@
 
 package com.android.car.settings.testutils;
 
+import android.annotation.UserIdInt;
 import android.content.pm.UserInfo;
+import android.graphics.Bitmap;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.ArrayMap;
@@ -36,6 +38,7 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     private static boolean sIsHeadlessSystemUserMode = true;
     private static boolean sCanAddMoreUsers = true;
     private static Map<Integer, List<UserInfo>> sProfiles = new ArrayMap<>();
+    private static Map<Integer, Bitmap> sUserIcons = new ArrayMap<>();
 
     @Implementation
     protected int[] getProfileIdsWithDisabled(int userId) {
@@ -88,11 +91,21 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
         sCanAddMoreUsers = isEnabled;
     }
 
+    @Implementation
+    public Bitmap getUserIcon(@UserIdInt int userId) {
+        return sUserIcons.get(userId);
+    }
+
+    public static void setUserIcon(@UserIdInt int userId, Bitmap icon) {
+        sUserIcons.put(userId, icon);
+    }
+
     @Resetter
     public static void reset() {
         org.robolectric.shadows.ShadowUserManager.reset();
         sIsHeadlessSystemUserMode = true;
         sCanAddMoreUsers = true;
         sProfiles.clear();
+        sUserIcons.clear();
     }
 }
