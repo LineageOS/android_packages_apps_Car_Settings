@@ -252,7 +252,6 @@ public class PreferenceControllerTest {
 
         mController.refreshUi();
 
-        // onCreate, refreshUi.
         verify(mPreference).setVisible(true);
         verify(mPreference).setEnabled(true);
     }
@@ -265,7 +264,6 @@ public class PreferenceControllerTest {
 
         mController.refreshUi();
 
-        // onCreate, refreshUi.
         verify(mPreference).setVisible(true);
         verify(mPreference).setEnabled(false);
     }
@@ -278,7 +276,6 @@ public class PreferenceControllerTest {
 
         mController.refreshUi();
 
-        // onCreate, refreshUi.
         verify(mPreference).setVisible(false);
     }
 

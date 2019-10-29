@@ -254,7 +254,7 @@ public abstract class PreferenceController<V extends Preference> implements
     }
 
     private boolean isAvailable() {
-        final int availabilityStatus = getAvailabilityStatus();
+        int availabilityStatus = getAvailabilityStatus();
         return availabilityStatus == AVAILABLE || availabilityStatus == AVAILABLE_FOR_VIEWING;
     }
 
