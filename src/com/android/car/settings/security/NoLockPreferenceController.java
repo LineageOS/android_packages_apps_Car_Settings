@@ -64,10 +64,16 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        ConfirmRemoveScreenLockDialog dialog = new ConfirmRemoveScreenLockDialog();
-        dialog.setConfirmRemoveScreenLockListener(mRemoveLockListener);
-        getFragmentController().showDialog(dialog,
+        if (isCurrentLock()) {
+            // No need to show dialog to confirm remove screen lock if screen lock is already
+            // removed, which is true if this controller is the current lock.
+            getFragmentController().goBack();
+        } else {
+            ConfirmRemoveScreenLockDialog dialog = new ConfirmRemoveScreenLockDialog();
+            dialog.setConfirmRemoveScreenLockListener(mRemoveLockListener);
+            getFragmentController().showDialog(dialog,
                 ConfirmRemoveScreenLockDialog.TAG);
+        }
         return true;
     }
 
