@@ -23,7 +23,6 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
@@ -69,8 +68,6 @@ public class UsersPreferenceProviderTest {
 
 
     private Context mContext;
-    @Mock
-    private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
     private UsersPreferenceProvider.UserClickListener mUserClickListener;
     @Mock
@@ -180,6 +177,6 @@ public class UsersPreferenceProviderTest {
     }
 
     private UsersPreferenceProvider createProvider() {
-        return new UsersPreferenceProvider(mContext, mCarUserManagerHelper, mUserClickListener);
+        return new UsersPreferenceProvider(mContext, mUserClickListener);
     }
 }

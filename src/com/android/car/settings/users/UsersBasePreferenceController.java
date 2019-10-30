@@ -55,8 +55,7 @@ public abstract class UsersBasePreferenceController extends PreferenceController
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mCarUserManagerHelper = new CarUserManagerHelper(context);
         UsersPreferenceProvider.UserClickListener userClickListener = this::userClicked;
-        mPreferenceProvider = new UsersPreferenceProvider(context, mCarUserManagerHelper,
-                userClickListener);
+        mPreferenceProvider = new UsersPreferenceProvider(context, userClickListener);
     }
 
     @Override

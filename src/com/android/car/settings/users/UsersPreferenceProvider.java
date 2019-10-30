@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
@@ -46,15 +45,12 @@ public class UsersPreferenceProvider {
     }
 
     private final Context mContext;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final UserClickListener mUserPreferenceClickListener;
     private boolean mIncludeCurrentUser;
     private boolean mIncludeGuest;
 
-    public UsersPreferenceProvider(Context context, CarUserManagerHelper carUserManagerHelper,
-            UserClickListener listener) {
+    public UsersPreferenceProvider(Context context, UserClickListener listener) {
         mContext = context;
-        mCarUserManagerHelper = carUserManagerHelper;
         mUserPreferenceClickListener = listener;
         mIncludeCurrentUser = true;
         mIncludeGuest = true;
@@ -109,7 +105,7 @@ public class UsersPreferenceProvider {
     private Preference createUserPreference(UserInfo userInfo) {
         Preference preference = new Preference(mContext);
         preference.setIcon(
-                new UserIconProvider(mCarUserManagerHelper).getUserIcon(userInfo, mContext));
+                new UserIconProvider().getRoundedUserIcon(userInfo, mContext));
         preference.setTitle(UserUtils.getUserDisplayName(mContext, userInfo));
 
         if (!userInfo.isInitialized()) {
@@ -134,7 +130,7 @@ public class UsersPreferenceProvider {
     private Preference createGuestUserPreference() {
         Preference preference = new Preference(mContext);
         preference.setIcon(
-                new UserIconProvider(mCarUserManagerHelper).getDefaultGuestIcon(mContext));
+                new UserIconProvider().getRoundedGuestDefaultIcon(mContext.getResources()));
         preference.setTitle(R.string.user_guest);
         return preference;
     }
