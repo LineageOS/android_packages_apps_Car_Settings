@@ -18,6 +18,7 @@ package com.android.car.settings.common;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -77,8 +78,11 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (fragment.getClass().getName().equals(
                 getString(R.string.config_settings_hierarchy_root_fragment))
                 && getSupportFragmentManager().getBackStackEntryCount() > 1) {
-            getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
-                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            clearBackStack();
+        }
+
+        if (mHasNewIntent && !intentFromSettings(getIntent())) {
+            clearBackStack();
         }
 
         super.launchFragment(fragment);
@@ -94,7 +98,31 @@ public class CarSettingActivity extends BaseCarSettingsActivity {
         if (getCurrentFragment() != null) {
             return getCurrentFragment();
         }
+
+        // Even in on create, start the fragment from the intent unless the action is not specified
+        // or if the intent originated from within Car Settings.
+        Fragment fragment = FragmentResolver.getFragmentForIntent(/* context= */ this,
+                getIntent());
+        if (fragment == null || intentFromSettings(getIntent())) {
+            LOG.w("Intent has no specified settings page. Defaulting to the root fragment");
+            fragment = getRootFragment();
+        }
+
+        return fragment;
+    }
+
+    private Fragment getRootFragment() {
         return Fragment.instantiate(this,
                 getString(R.string.config_settings_hierarchy_root_fragment));
+    }
+
+    private void clearBackStack() {
+        getSupportFragmentManager().popBackStackImmediate(/* name= */ null,
+                FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+    private boolean intentFromSettings(Intent intent) {
+        String pkgName = intent.getStringExtra(Intent.EXTRA_CALLING_PACKAGE);
+        return TextUtils.equals(pkgName, getPackageName());
     }
 }

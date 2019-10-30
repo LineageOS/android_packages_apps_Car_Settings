@@ -46,6 +46,7 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.MANAGE_USERS"/>
     <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
     <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -58,7 +59,6 @@
     <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <uses-permission android:name="android.permission.START_FOREGROUND"/>
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
-    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
 
@@ -215,6 +215,11 @@
             </intent-filter>
 
             <intent-filter android:priority="100">
+                <action android:name="android.settings.SECURITY_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
                 <action android:name="android.settings.LOCALE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -335,6 +340,17 @@
                   android:windowSoftInputMode="adjustResize">
         </activity>
 
+        <activity android:name=".security.CredentialStorageActivity"
+                  android:theme="@style/ActionDialogTheme"
+                  android:launchMode="singleTop"
+                  android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.credentials.INSTALL" />
+                <action android:name="com.android.credentials.RESET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".system.ThirdPartyLicensesActivity"
                   android:label="@string/settings_license_activity_title"
                   android:configChanges="orientation|keyboardHidden|screenSize"
@@ -412,6 +428,11 @@
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
             </intent-filter>
         </receiver>
+
+        <!-- Exported for SystemUI to trigger -->
+        <receiver android:name=".storage.StorageUnmountReceiver"
+                  android:exported="true"
+                  android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
         <!-- FileProvider to share a generated license html file.
              Note that "com.android.settings.files" is set here as its authorities because a Uri
