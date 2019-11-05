@@ -421,7 +421,7 @@
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent et øjeblik..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslæt"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Angiv dato, klokkeslæt, tidszone og formater"</string>
-    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og klokkeslæt"</string>
+    <string name="date_time_auto" msgid="3570339569471779767">"Automatisk dato og tid"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Brug netværkets tid"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Automatisk tidszone"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Brug netværkets tidszone"</string>
@@ -492,11 +492,13 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Brugerdata"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Cache"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"I alt"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Ryd lager"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Ryd lagerplads"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Ryd cache"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Vil du slette appdata?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Alle data i denne app slettes permanent. Det omfatter alle filer, indstillinger, konti, databaser osv."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Appens lager kunne ikke ryddes."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> blev skubbet sikkert ud"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> kunne ikke skubbes sikkert ud"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Konti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Tilføj konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Der er ikke tilføjet nogen konti"</string>
@@ -527,7 +529,7 @@
 %1$s</xliff:g>"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synkroniser nu"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annuller synkronisering"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"Der er problemer med synkroniseringen i øjeblikket. Den er snart tilbage."</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"Der er i øjeblikket problemer med synkroniseringen. Den fortsætter om et øjeblik."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sikkerhed"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Skærmlås"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ingen"</string>

@@ -322,7 +322,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"हर बार पूछें"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"इस ऐप्लिकेशन में नहीं खोलें"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"सहायता करने वाले लिंक"</string>
-    <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन को खास अनुमति"</string>
+    <string name="special_access" msgid="5730278220917123811">"ऐप्लिकेशन के लिए खास ऐक्सेस"</string>
     <string name="show_system" msgid="4401355756969485287">"सिस्टम के ऐप्लिकेशन दिखाएं"</string>
     <string name="hide_system" msgid="8845453295584638040">"सिस्टम के ऐप्लिकेशन छिपाएं"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"सिस्टम की सेटिंग बदलें"</string>
@@ -441,7 +441,7 @@
     <string name="signed_in_admin_user" msgid="1267225622818673274">"एडमिन के तौर पर साइन-इन किया है"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"एडमिन के सभी अधिकार"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"एडमिन बनाएं"</string>
-    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"एडमिन बनने वाला उपयोगकर्ता, दूसरे उपयोगकर्ताअों और एडमिन के नाम मिटा सकता है और सिस्टम को फ़ैक्ट्री रीसेट कर सकता है."</string>
+    <string name="grant_admin_permissions_message" msgid="1751910369004774830">"एडमिन बनने वाला उपयोगकर्ता, दूसरे उपयोगकर्ताओं और एडमिन के नाम मिटा सकता है और सिस्टम को फ़ैक्ट्री रीसेट कर सकता है."</string>
     <string name="action_not_reversible_message" msgid="740401337875726973">"दूसरे उपयोगकर्ता को एडमिन के अधिकार देने के बाद वापस नहीं लिए जा सकते."</string>
     <string name="confirm_grant_admin" msgid="7852596890218647682">"हां, एडमिन बना दें"</string>
     <string name="create_user_permission_title" msgid="7781550880565935298">"नए उपयोगकर्ता बनाएं"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ऐप्लिकेशन डेटा मिटाएं?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"इस ऐप्लिकेशन का पूरा डेटा हमेशा के लिए मिटा दिया जाएगा. इसमें सभी फ़ाइलें, सेटिंग, खाते, डेटाबेस वगैरह शामिल हैं."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ऐप्लिकेशन के लिए मेमोरी खाली नहीं की जा सकी."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से निकाला गया"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> को सुरक्षित रूप से निकाला नहीं जा सका"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाते"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता जोड़ें"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कोई खाता जोड़ा नहीं गया है"</string>

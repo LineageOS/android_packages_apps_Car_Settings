@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ಆ್ಯಪ್ ಡೇಟಾ ಅಳಿಸುವುದೇ?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"ಈ ಆ್ಯಪ್‌ನ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ. ಇದರಲ್ಲಿ ಎಲ್ಲಾ ಫೈಲ್‌ಗಳು, ಸೆಟ್ಟಿಂಗ್‌ಗಳು, ಖಾತೆಗಳು, ಡೇಟಾಬೇಸ್‌ಗಳು ಇತ್ಯಾದಿಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ಆ್ಯಪ್‌ಗಾಗಿ ಸಂಗ್ರಹಣೆ ತೆರವುಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> ಸುರಕ್ಷಿತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗಿದೆ"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> ಸುರಕ್ಷಿತವಾಗಿ ಇಜೆಕ್ಟ್‌ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"ಖಾತೆಗಳು"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"ಖಾತೆ ಸೇರಿಸಿ"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ಯಾವುದೇ ಖಾತೆಗಳನ್ನು ಸೇರಿಸಿಲ್ಲ"</string>
@@ -521,7 +523,7 @@
     <string name="account_sync_summary_all_off" msgid="6550959714035312414">"ಎಲ್ಲಾ ಐಟಂಗಳಿಗಾಗಿ ಸಿಂಕ್ ಆಫ್ ಇದೆ"</string>
     <string name="sync_disabled" msgid="393531064334628258">"ಸಿಂಕ್‌ ಆಫ್ ಆಗಿದೆ"</string>
     <string name="sync_error" msgid="6698021343089247914">"ಸಿಂಕ್ ದೋಷ"</string>
-    <string name="last_synced" msgid="4745124489150101529">"ಕೊನೆಯದಾಗಿ ಸಿಂಕ್ ಮಾಡಿರುವುದು <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
+    <string name="last_synced" msgid="4745124489150101529">"ಕೊನೆಯದಾಗಿ ಸಿಂಕ್ ಮಾಡಿರುವುದು: <xliff:g id="LAST_SYNC_TIME">%1$s</xliff:g>"</string>
     <string name="sync_in_progress" msgid="1237573373537382416">"ಇದೀಗ ಸಿಂಕ್‌ ಮಾಡಲಾಗುತ್ತಿದೆ…"</string>
     <string name="sync_one_time_sync" msgid="491707183321353107">"ಈಗ ಸಿಂಕ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ <xliff:g id="LAST_SYNC_TIME">
 %1$s</xliff:g>"</string>

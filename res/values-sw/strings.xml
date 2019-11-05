@@ -353,7 +353,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Mfumo"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Masasisho ya mfumo"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Toleo la Android"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Kiwango cha rekebisho la usalama kwenye Android"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Usasishaji wa rekebisho la usalama kwenye Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Muundo"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Toleo la mitambo ya redio"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Toleo la kiini"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ungependa kufuta data ya programu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Data yote ya programu hii itafutwa kabisa. Hii inajumuisha faili, mipangilio, akaunti, hifadhidata zote na mengineyo."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Imeshindwa kufuta hifadhi ya programu."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> imeondolewa kwa usalama"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Imeshindwa kuondoa <xliff:g id="NAME">%1$s</xliff:g> kwa usalama"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Akaunti"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Ongeza akaunti"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hakuna akaunti zilizoongezwa"</string>
