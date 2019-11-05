@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अनुप्रयोगको डेटा मेटाउने हो?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"यस एपका सम्पूर्ण डेटा स्थायी रूपमा मेटाइने छ। यसमा सम्पूर्ण फाइल, सेटिङ, खाता, डेटाबेस आदि पर्दछन्।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"अनुप्रयोगका लागि भण्डारण खाली गर्न सकिएन।"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकालिएको छ"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकाल्न सकिएन"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"खाताहरू"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"खाता थप्नुहोस्"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"कुनै पनि खाता थपिएन"</string>

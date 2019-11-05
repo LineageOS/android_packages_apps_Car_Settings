@@ -269,7 +269,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Rakendused ja märguanded"</string>
     <string name="all_applications" msgid="7798210477486822168">"Kuva kõik rakendused"</string>
     <string name="default_applications" msgid="1558183275638697087">"Vaikerakendused"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Rakenduse load"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Rakenduste load"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Rakendused, mis kasutavad üksusi <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Rakenduse teave"</string>
     <string name="force_stop" msgid="2153183697014720520">"Sundpeata"</string>
@@ -284,7 +284,7 @@
     <string name="permissions_label" msgid="2701446753515612685">"Load"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Märguanded"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versioon: %1$s"</string>
-    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Lube ei antud"</string>
+    <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Lube pole antud"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Lube ei taotletud"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Andmekasutus"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Rakenduste andmekasutus"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Kas kustutada rakenduse andmed?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Rakenduse kõik andmed kustutatakse jäädavalt. See hõlmab kõiki faile, seadeid, kontosid, andmebaase jne."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Rakenduse salvestusruumi ei õnnestunud tühjendada."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Üksus <xliff:g id="NAME">%1$s</xliff:g> eemaldati ohutult"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Üksust <xliff:g id="NAME">%1$s</xliff:g> ei saanud ohutult eemaldada"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontod"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lisa konto"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Kontosid pole lisatud"</string>

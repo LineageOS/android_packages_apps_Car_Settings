@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Törli az alkalmazásadatokat?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Az alkalmazás minden adatát véglegesen törölni fogja. Ez magában foglalja az összes fájlt, beállítást, fiókot, adatbázist stb."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Nem sikerült tárhelyet üríteni az alkalmazásnak."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"A(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságosan eltávolítva"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Nem sikerült a(z) <xliff:g id="NAME">%1$s</xliff:g> biztonságos eltávolítása"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Fiókok"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Fiók hozzáadása"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nincs hozzáadott fiók"</string>

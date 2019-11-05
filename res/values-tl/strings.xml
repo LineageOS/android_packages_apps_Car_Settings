@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"I-delete ang data ng app?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Permanenteng made-delete ang lahat ng data ng app na ito. Kabilang dito ang lahat ng file, setting, account, database, atbp."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Hindi ma-clear ang storage para sa app."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Na-eject na nang ligtas ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Hindi ma-eject nang ligtas ang <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Mga Account"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Magdagdag ng account"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Walang naidagdag na account"</string>

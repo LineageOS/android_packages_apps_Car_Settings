@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"Más"</string>
     <string name="display_settings" msgid="5325515247739279185">"Pantalla"</string>
     <string name="brightness" msgid="2919605130898772866">"Nivel de brillo"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo automático"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"Brillo adaptativo"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Optimizar el nivel de brillo según la luz disponible"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"Luz nocturna activada"</string>
     <string name="keywords_display" msgid="3978416985146943922">"pantalla, pantalla táctil"</string>
@@ -75,7 +75,7 @@
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Definir"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Límite y advertencia de datos"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de uso de datos de aplicaciones"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Definir advertencia de datos"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Establecer advertencia de datos"</string>
     <string name="data_warning" msgid="116776633806885370">"Advertencia de datos"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Establecer límite de datos"</string>
     <string name="data_limit" msgid="227338836292511425">"Límite de datos"</string>
@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"¿Eliminar datos de la aplicación?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Todos los datos de esta aplicación se eliminarán de forma permanente. Esto incluye todos los archivos, ajustes, cuentas, bases de datos, etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"No se ha podido borrar almacenamiento de la app."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> se ha expulsado de forma segura"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"No se ha podido expulsar <xliff:g id="NAME">%1$s</xliff:g> de forma segura"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Cuentas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Añadir cuenta"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"No se ha añadido ninguna cuenta"</string>

@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"앱 데이터를 삭제하시겠습니까?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"앱의 전체 데이터가 영구적으로 삭제됩니다. 여기에는 모든 파일, 설정, 계정, 데이터베이스 등이 포함됩니다."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"앱 저장용량을 비우지 못했습니다."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>이(가) 안전하게 제거되었습니다."</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>을(를) 안전하게 제거하지 못했습니다."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"계정"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"계정 추가"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"추가된 계정이 없습니다."</string>

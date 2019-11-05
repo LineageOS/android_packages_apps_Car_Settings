@@ -339,7 +339,7 @@
     <string name="premium_sms_access_title" msgid="1409118461646148686">"Pristup premium SMS-ovima"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Moguće je da se usluga slanja premium SMS-ova dodatno plaća, a trošak će se dodati na račun operatera. Ako aplikaciji date odobrenje, moći ćete slati premium SMS-ove putem te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korištenju"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"Pristup korištenju omogućava praćenje drugih aplikacija koje koristite i učestalosti korištenja, kao i praćenje vašeg operatera, postavke jezika i druge detalje."</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"Pristup korištenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi vašeg mobilnog operatera, postavke jezika i druge detalje."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje WiFi mrežom"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontroliranje WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, skenira i da se poveže na WiFi, doda ili ukloni mreže te pokrene lokalnu pristupnu tačku."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Više"</string>
@@ -502,6 +502,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Izbrisati podatke aplikacija?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Svi podaci ove aplikacije će biti trajno izbrisani. To uključuje sve fajlove, postavke, račune, baze podataka itd."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Pohrana za aplikaciju nije obrisana."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> je sigurno izbačena"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> se ne može sigurno izbaciti"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Računi"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Dodaj račun"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nije dodan nijedan račun"</string>

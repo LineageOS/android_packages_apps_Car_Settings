@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Aplikazioaren datuak ezabatu nahi dituzu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Aplikazio honetako datu guztiak betiko ezabatuko dira; besteak beste, fitxategi, ezarpen, kontu eta datu-base guztiak."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Ezin izan da garbitu aplikazioaren biltegia."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"Atera da segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Ezin izan da atera segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontuak"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontua"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ez da gehitu konturik"</string>
@@ -504,7 +506,7 @@
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizatu datuak automatikoki"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Utzi aplikazioei datuak automatikoki freskatzen"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Sinkronizazio automatikoa aktibatu nahi duzu?"</string>
-    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Kontuei sarean egiten dizkiezun aldaketa guztiak automatikoki kopiatuko dira gailuan.\n\nHorrez gain, baliteke kontu batzuek sarean kopiatzea telefonoan egiten dituzun aldaketak. Google kontuek horrela funtzionatzen dute."</string>
+    <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Kontuei sarean egiten dizkiezun aldaketa guztiak automatikoki kopiatuko dira gailuan.\n\nHorrez gain, baliteke kontu batzuek sarean kopiatzea telefonoan egiten dituzun aldaketak. Google-ko kontuek horrela funtzionatzen dute."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Sinkronizazio automatikoa desaktibatu nahi duzu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Datuak aurrezten lagunduko dizu, baina kontu bakoitza eskuz sinkronizatu beharko duzu informazio berriena biltzeko. Gainera, ez duzu jasoko berritasunen jakinarazpenik."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontuaren informazioa"</string>

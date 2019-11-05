@@ -497,6 +497,8 @@
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Poistetaanko sovellusdata?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Kaikki tämän sovelluksen tiedot poistetaan pysyvästi. Tähän sisältyvät kaikki tiedostot, asetukset, tilit, tietokannat jne."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Tallennettujen tietojen poisto epäonnistui."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> on poistettu turvallisesti"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"Turvallinen poistaminen epäonnistui: <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Tilit"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Lisää tili"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Tilejä ei lisätty"</string>
