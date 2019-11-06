@@ -18,6 +18,8 @@ package com.android.car.settings.testutils;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.os.UserManager;
 
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 
@@ -35,6 +37,12 @@ public class ShadowUserIconProvider {
 
     @Implementation
     protected RoundedBitmapDrawable getRoundedGuestDefaultIcon(Resources resources) {
+        return null;
+    }
+
+    @Implementation
+    protected Bitmap assignDefaultIcon(
+            UserManager userManager, Resources resources, UserInfo userInfo) {
         return null;
     }
 }

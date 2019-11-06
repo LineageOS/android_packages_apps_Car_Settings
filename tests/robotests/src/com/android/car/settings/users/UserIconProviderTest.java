@@ -16,10 +16,14 @@
 
 package com.android.car.settings.users;
 
+import static android.content.pm.UserInfo.FLAG_GUEST;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.content.pm.UserInfo;
+import android.graphics.Bitmap;
+import android.os.UserManager;
 
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 
@@ -42,11 +46,13 @@ public class UserIconProviderTest {
     private Context mContext;
     private UserIconProvider mUserIconProvider;
     private UserInfo mUserInfo;
+    private UserManager mUserManager;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
+        mUserManager = (UserManager) mContext.getSystemService(Context.USER_SERVICE);
 
         mUserIconProvider = new UserIconProvider();
         mUserInfo = new UserInfo(/* id= */ 10, "USER_NAME", /* flags= */ 0);
@@ -68,7 +74,31 @@ public class UserIconProviderTest {
         assertThat(getShadowUserManager().getUserIcon(mUserInfo.id)).isNotNull();
     }
 
+    @Test
+    public void assignDefaultIcon_AssignsIconForNonGuest() {
+        ShadowUserManager.setUserIcon(mUserInfo.id, null);
+
+        Bitmap returnedIcon = mUserIconProvider.assignDefaultIcon(
+                mUserManager, mContext.getResources(), mUserInfo);
+
+        assertThat(returnedIcon).isNotNull();
+        assertThat(getShadowUserManager().getUserIcon(mUserInfo.id)).isNotNull();
+    }
+
+    @Test
+    public void assignDefaultIcon_AssignsIconForGuest() {
+        UserInfo guestUserInfo =
+                new UserInfo(/* id= */ 11, "USER_NAME", FLAG_GUEST);
+        ShadowUserManager.setUserIcon(guestUserInfo.id, null);
+
+        Bitmap returnedIcon = mUserIconProvider.assignDefaultIcon(
+                mUserManager, mContext.getResources(), guestUserInfo);
+
+        assertThat(returnedIcon).isNotNull();
+        assertThat(getShadowUserManager().getUserIcon(guestUserInfo.id)).isNotNull();
+    }
+
     private ShadowUserManager getShadowUserManager() {
-        return Shadow.extract(mContext.getSystemService(Context.USER_SERVICE));
+        return Shadow.extract(mUserManager);
     }
 }

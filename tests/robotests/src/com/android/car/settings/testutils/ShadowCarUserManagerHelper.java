@@ -62,11 +62,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected boolean removeUser(UserInfo userInfo, String guestUserName) {
-        return sMockInstance.removeUser(userInfo, guestUserName);
-    }
-
-    @Implementation
     protected void setUserRestriction(UserInfo userInfo, String restriction, boolean enable) {
         Map<String, Boolean> permissionsMap = sUserRestrictionMap.getOrDefault(userInfo.id,
                 new HashMap<>());

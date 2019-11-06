@@ -16,16 +16,24 @@
 
 package com.android.car.settings.users;
 
+import static android.os.UserManager.USER_TYPE_SYSTEM_HEADLESS;
+
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.ActivityManager;
+import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
+import android.content.res.Resources;
 import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.car.settings.testutils.ShadowActivityManager;
+import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
 
 import org.junit.After;
@@ -42,18 +50,26 @@ import java.util.Arrays;
 import java.util.List;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(shadows = {ShadowActivityManager.class, ShadowUserManager.class})
+@Config(shadows = {ShadowActivityManager.class, ShadowUserManager.class,
+        ShadowUserIconProvider.class})
 public class UserHelperTest {
+
+    private static final String DEFAULT_ADMIN_NAME = "default_admin";
 
     private UserHelper mUserHelper;
 
     @Mock
     private UserManager mMockUserManager;
+    @Mock
+    private Resources mMockResources;
+    @Mock
+    private CarUserManagerHelper mMockCarUserManagerHelper;
 
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mUserHelper = new UserHelper(mMockUserManager);
+        mUserHelper = new UserHelper(
+                mMockUserManager, mMockResources, DEFAULT_ADMIN_NAME, mMockCarUserManagerHelper);
 
         when(mMockUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS))
                 .thenReturn(false);
@@ -245,6 +261,98 @@ public class UserHelperTest {
 
         // Should return only admin users.
         assertThat(mUserHelper.getAllAdminUsers()).containsExactly(systemUser, user2, user4);
+    }
+
+    @Test
+    public void testRemoveUser_isAdminUser_cannotRemoveSystemUser() {
+        UserInfo systemUser = new UserInfo(
+                UserHandle.USER_SYSTEM,
+                "Driver",
+                /* iconPath= */ null,
+                /* flags= */ UserInfo.FLAG_ADMIN | UserInfo.FLAG_SYSTEM,
+                /* userType= */ USER_TYPE_SYSTEM_HEADLESS);
+
+        assertThat(mUserHelper.removeUser(systemUser)).isFalse();
+    }
+
+    @Test
+    public void testRemoveUser_isAdmin_canRemoveOtherUsers() {
+        // Create admin user and non-admin user
+        int fgUserId = ActivityManager.getCurrentUser();
+        int nonAdminUserId = fgUserId + 1;
+        UserInfo fgUser = createAdminUser(fgUserId);
+        UserInfo nonAdminUser = createNonAdminUser(nonAdminUserId);
+
+        mockGetUsers(fgUser, nonAdminUser);
+
+
+        when(mMockUserManager.removeUser(nonAdminUserId)).thenReturn(true);
+
+        // If Admin is removing non-current, non-system user, simply calls removeUser.
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+        assertThat(mUserHelper.removeUser(nonAdminUser)).isTrue();
+        verify(mMockUserManager).removeUser(nonAdminUserId);
+    }
+
+    @Test
+    public void testRemoveUser_isNonAdmin_cannotRemoveOtherUsers() {
+        // Create two non-admin users
+        int fgUserId = ActivityManager.getCurrentUser();
+        UserInfo fgUser = createNonAdminUser(fgUserId);
+        UserInfo user2 = createNonAdminUser(fgUserId + 1);
+        mockGetUsers(fgUser, user2);
+
+        // Make current user non-admin.
+        when(mMockUserManager.isAdminUser()).thenReturn(false);
+
+        // Mock so that removeUser always pretends it's successful.
+        when(mMockUserManager.removeUser(anyInt())).thenReturn(true);
+
+        // If Non-Admin is trying to remove someone other than themselves, they should fail.
+        assertThat(mUserHelper.removeUser(user2)).isFalse();
+        verify(mMockUserManager, never()).removeUser(user2.id);
+    }
+
+
+    @Test
+    public void testRemoveUser_removesLastAdminUser_createsAndSwitchesToNewAdminUser() {
+        // Ensure admin status
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+
+        // Create one admin and one non-admin
+        int baseId = 10;
+        UserInfo adminUser = createAdminUser(baseId);
+        UserInfo nonAdminInfo = createNonAdminUser(baseId + 1);
+        mockGetUsers(adminUser, nonAdminInfo);
+
+        UserInfo newAdminInfo = createAdminUser(baseId + 2);
+        when(mMockUserManager.createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN))
+                .thenReturn(newAdminInfo);
+
+        mUserHelper.removeUser(adminUser);
+        verify(mMockUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
+        verify(mMockCarUserManagerHelper).switchToUserId(newAdminInfo.id);
+        verify(mMockUserManager).removeUser(adminUser.id);
+    }
+
+    @Test
+    public void testRemoveUser_removesLastAdminUserFailsCreateNewUser_doesNotRemoveOrSwitchUser() {
+        // Ensure admin status
+        when(mMockUserManager.isAdminUser()).thenReturn(true);
+
+        // Create one admin and one non-admin
+        int baseId = 10;
+        UserInfo adminUser = createAdminUser(baseId);
+        UserInfo nonAdminInfo = createNonAdminUser(baseId + 1);
+        mockGetUsers(adminUser, nonAdminInfo);
+
+        // Fail to create a new user to force a failure case
+        when(mMockUserManager.createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN)).thenReturn(null);
+
+        mUserHelper.removeUser(adminUser);
+        verify(mMockUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
+        verify(mMockCarUserManagerHelper, never()).switchToUserId(anyInt());
+        verify(mMockUserManager, never()).removeUser(adminUser.id);
     }
 
     private UserInfo createAdminUser(int id) {

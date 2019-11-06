@@ -16,7 +16,6 @@
 
 package com.android.car.settings.users;
 
-import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
@@ -36,8 +35,6 @@ import com.android.car.settings.common.SettingsFragment;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
-
-    private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
     private UserInfo mUserInfo;
 
@@ -46,8 +43,7 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
             launchFragment(ChooseNewAdminFragment.newInstance(mUserInfo));
         } else {
-            if (mCarUserManagerHelper.removeUser(
-                    mUserInfo, getContext().getString(R.string.user_guest))) {
+            if (UserHelper.getInstance(getContext()).removeUser(mUserInfo)) {
                 getActivity().onBackPressed();
             } else {
                 // If failed, need to show error dialog for users.
@@ -75,7 +71,6 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         int userId = getArguments().getInt(Intent.EXTRA_USER_ID);
-        mCarUserManagerHelper = new CarUserManagerHelper(getContext());
         mUserManager = UserManager.get(getContext());
         mUserInfo = UserUtils.getUserInfo(getContext(), userId);
     }
