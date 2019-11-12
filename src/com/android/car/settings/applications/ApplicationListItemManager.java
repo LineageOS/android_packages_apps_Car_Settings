@@ -64,7 +64,7 @@ public class ApplicationListItemManager implements ApplicationsState.Callbacks {
     // Contains all of the apps that we are expecting to load.
     private Set<ApplicationsState.AppEntry> mAppsToLoad = new HashSet<>();
     // Contains all apps that have been successfully loaded.
-    private ArrayList<ApplicationsState.AppEntry> mLoadedApps;
+    private ArrayList<ApplicationsState.AppEntry> mLoadedApps = new ArrayList<>();
 
     // Indicates whether onRebuildComplete's throttling is off and it is ready to render updates.
     // onRebuildComplete uses throttling to prevent it from being called too often, since the
