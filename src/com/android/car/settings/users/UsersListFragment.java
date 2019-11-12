@@ -103,6 +103,8 @@ public class UsersListFragment extends SettingsFragment implements
             mAddUserButton.setText(R.string.exit_retail_button_text);
         } else if (mCarUserManagerHelper.canCurrentProcessAddUsers()) {
             mAddUserButton.setText(R.string.user_add_user_menu);
+        } else {
+            mAddUserButton.setVisibility(View.GONE);
         }
     }
 

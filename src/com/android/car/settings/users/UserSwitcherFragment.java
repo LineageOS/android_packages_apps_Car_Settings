@@ -37,7 +37,7 @@ public class UserSwitcherFragment extends BaseFragment {
     @Override
     @LayoutRes
     protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+        return R.layout.action_bar;
     }
 
     @Override
