@@ -392,7 +392,10 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         private void handleGuestSessionClicked() {
-            if (mCarUserManagerHelper.startGuestSession(mGuestName)) {
+            UserInfo guest =
+                    UserHelper.getInstance(mContext).createNewOrFindExistingGuest(mContext);
+            if (guest != null) {
+                mCarUserManagerHelper.switchToUser(guest);
                 // Successful start, will switch to guest now. Close Settings app.
                 mBaseFragment.getActivity().finish();
             }

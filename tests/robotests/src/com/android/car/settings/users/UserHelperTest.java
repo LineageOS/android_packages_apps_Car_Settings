@@ -20,13 +20,17 @@ import static android.os.UserManager.USER_TYPE_SYSTEM_HEADLESS;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.nullable;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
+import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.os.UserHandle;
@@ -43,7 +47,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
+import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowProcess;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,7 +61,9 @@ import java.util.List;
 public class UserHelperTest {
 
     private static final String DEFAULT_ADMIN_NAME = "default_admin";
+    private static final String DEFAULT_GUEST_NAME = "default_guest";
 
+    private Context mContext;
     private UserHelper mUserHelper;
 
     @Mock
@@ -68,8 +76,9 @@ public class UserHelperTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        mUserHelper = new UserHelper(
-                mMockUserManager, mMockResources, DEFAULT_ADMIN_NAME, mMockCarUserManagerHelper);
+        mContext = RuntimeEnvironment.application;
+        mUserHelper = new UserHelper(mMockUserManager, mMockResources,
+                DEFAULT_ADMIN_NAME, DEFAULT_GUEST_NAME, mMockCarUserManagerHelper);
 
         when(mMockUserManager.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS))
                 .thenReturn(false);
@@ -272,7 +281,7 @@ public class UserHelperTest {
                 /* flags= */ UserInfo.FLAG_ADMIN | UserInfo.FLAG_SYSTEM,
                 /* userType= */ USER_TYPE_SYSTEM_HEADLESS);
 
-        assertThat(mUserHelper.removeUser(systemUser)).isFalse();
+        assertThat(mUserHelper.removeUser(mContext, systemUser)).isFalse();
     }
 
     @Test
@@ -290,7 +299,7 @@ public class UserHelperTest {
 
         // If Admin is removing non-current, non-system user, simply calls removeUser.
         when(mMockUserManager.isAdminUser()).thenReturn(true);
-        assertThat(mUserHelper.removeUser(nonAdminUser)).isTrue();
+        assertThat(mUserHelper.removeUser(mContext, nonAdminUser)).isTrue();
         verify(mMockUserManager).removeUser(nonAdminUserId);
     }
 
@@ -309,7 +318,7 @@ public class UserHelperTest {
         when(mMockUserManager.removeUser(anyInt())).thenReturn(true);
 
         // If Non-Admin is trying to remove someone other than themselves, they should fail.
-        assertThat(mUserHelper.removeUser(user2)).isFalse();
+        assertThat(mUserHelper.removeUser(mContext, user2)).isFalse();
         verify(mMockUserManager, never()).removeUser(user2.id);
     }
 
@@ -329,7 +338,7 @@ public class UserHelperTest {
         when(mMockUserManager.createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN))
                 .thenReturn(newAdminInfo);
 
-        mUserHelper.removeUser(adminUser);
+        mUserHelper.removeUser(mContext, adminUser);
         verify(mMockUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManagerHelper).switchToUserId(newAdminInfo.id);
         verify(mMockUserManager).removeUser(adminUser.id);
@@ -349,10 +358,29 @@ public class UserHelperTest {
         // Fail to create a new user to force a failure case
         when(mMockUserManager.createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN)).thenReturn(null);
 
-        mUserHelper.removeUser(adminUser);
+        mUserHelper.removeUser(mContext, adminUser);
         verify(mMockUserManager).createUser(DEFAULT_ADMIN_NAME, UserInfo.FLAG_ADMIN);
         verify(mMockCarUserManagerHelper, never()).switchToUserId(anyInt());
         verify(mMockUserManager, never()).removeUser(adminUser.id);
+    }
+
+    @Test
+    public void testRemoveUser_removeForegroundUser_callsSwitchToGuest() {
+        // Create foreground user
+        int baseId = 10;
+        ShadowProcess.setUid(baseId * UserHandle.PER_USER_RANGE); // User 10
+        UserInfo currentUser = createNonAdminUser(baseId);
+        when(mMockUserManager.isAdminUser()).thenReturn(false);
+        mockGetUsers(currentUser);
+
+        UserInfo guestUser = createGuestUser(baseId + 1);
+        when(mMockUserManager.createGuest(any(Context.class), eq(DEFAULT_GUEST_NAME)))
+                .thenReturn(guestUser);
+
+        mUserHelper.removeUser(mContext, currentUser);
+        verify(mMockUserManager).createGuest(any(Context.class), eq(DEFAULT_GUEST_NAME));
+        verify(mMockCarUserManagerHelper).switchToUserId(guestUser.id);
+        verify(mMockUserManager).removeUser(currentUser.id);
     }
 
     @Test
@@ -391,6 +419,39 @@ public class UserHelperTest {
         assertThat(mUserHelper.getMaxSupportedRealUsers()).isEqualTo(5);
     }
 
+    @Test
+    public void testCreateNewOrFindExistingGuest_ifGuestExists_returnsExistingGuest() {
+        // Create two users and a guest user.
+        UserInfo user1 = createAdminUser(10);
+        UserInfo user2 = createNonAdminUser(12);
+        UserInfo guestUser = createGuestUser(13);
+
+        mockGetUsers(user1, user2, guestUser);
+        when(mMockUserManager.createGuest(any(), nullable(String.class))).thenReturn(null);
+        when(mMockUserManager.findCurrentGuestUser()).thenReturn(guestUser);
+
+        UserInfo guest = mUserHelper.createNewOrFindExistingGuest(mContext);
+        assertThat(guest).isEqualTo(guestUser);
+    }
+
+    @Test
+    public void testCreateNewOrFindExistingGuest_ifNoGuest_createsNewGuest() {
+        // Create two users.
+        UserInfo user1 = createAdminUser(10);
+        UserInfo user2 = createNonAdminUser(12);
+
+        mockGetUsers(user1, user2);
+
+        // Create a user for the "new guest" user.
+        UserInfo guestInfo = createGuestUser(21);
+        when(mMockUserManager.createGuest(eq(mContext), eq(DEFAULT_GUEST_NAME)))
+                .thenReturn(guestInfo);
+
+        UserInfo guest = mUserHelper.createNewOrFindExistingGuest(mContext);
+        verify(mMockUserManager).createGuest(eq(mContext), eq(DEFAULT_GUEST_NAME));
+        assertThat(guest).isEqualTo(guestInfo);
+    }
+
     private UserInfo createAdminUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
     }
@@ -405,6 +466,10 @@ public class UserHelperTest {
 
     private UserInfo createManagedProfile(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_MANAGED_PROFILE);
+    }
+
+    private UserInfo createGuestUser(int id) {
+        return new UserInfo(id, null, UserInfo.FLAG_GUEST);
     }
 
     private void mockGetUsers(UserInfo... users) {

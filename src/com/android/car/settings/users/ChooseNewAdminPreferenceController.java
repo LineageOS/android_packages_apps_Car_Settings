@@ -90,7 +90,8 @@ public class ChooseNewAdminPreferenceController extends UsersBasePreferenceContr
     }
 
     private void removeOldAdmin() {
-        if (!UserHelper.getInstance(getContext()).removeUser(mAdminInfo)) {
+        Context context = getContext();
+        if (!UserHelper.getInstance(context).removeUser(context, mAdminInfo)) {
             // If failed, need to show error dialog for users.
             getFragmentController().showDialog(
                     ErrorDialog.newInstance(R.string.delete_user_error_title), /* tag= */ null);

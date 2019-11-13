@@ -43,7 +43,8 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
         if (userType.equals(UsersDialogProvider.LAST_ADMIN)) {
             launchFragment(ChooseNewAdminFragment.newInstance(mUserInfo));
         } else {
-            if (UserHelper.getInstance(getContext()).removeUser(mUserInfo)) {
+            Context context = getContext();
+            if (UserHelper.getInstance(context).removeUser(context, mUserInfo)) {
                 getActivity().onBackPressed();
             } else {
                 // If failed, need to show error dialog for users.

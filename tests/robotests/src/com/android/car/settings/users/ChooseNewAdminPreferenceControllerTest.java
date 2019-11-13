@@ -126,12 +126,12 @@ public class ChooseNewAdminPreferenceControllerTest {
     public void testAssignNewAdminAndRemoveOldAdmin_removeUserCalled() {
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
-        verify(mUserHelper).removeUser(eq(TEST_ADMIN_USER));
+        verify(mUserHelper).removeUser(any(Context.class), eq(TEST_ADMIN_USER));
     }
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_success_noErrorDialog() {
-        when(mUserHelper.removeUser(TEST_ADMIN_USER)).thenReturn(true);
+        when(mUserHelper.removeUser(any(Context.class), eq(TEST_ADMIN_USER))).thenReturn(true);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
@@ -141,7 +141,7 @@ public class ChooseNewAdminPreferenceControllerTest {
 
     @Test
     public void testAssignNewAdminAndRemoveOldAdmin_failure_errorDialog() {
-        when(mUserHelper.removeUser(TEST_ADMIN_USER)).thenReturn(false);
+        when(mUserHelper.removeUser(any(Context.class), eq(TEST_ADMIN_USER))).thenReturn(false);
 
         mController.assignNewAdminAndRemoveOldAdmin(TEST_OTHER_USER);
 
