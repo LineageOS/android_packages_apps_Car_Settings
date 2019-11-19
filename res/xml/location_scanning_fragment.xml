@@ -22,11 +22,11 @@
     <SwitchPreference
         android:key="@string/pk_location_scanning_wifi"
         android:summary="@string/location_settings_wifi_scanning_summary"
-        android:title="@string/location_settings_wifi_scanning_title"
+        android:title="@string/location_scanning_wifi_always_scanning_title"
         settings:controller="com.android.car.settings.location.WifiScanningPreferenceController"/>
     <SwitchPreference
         android:key="@string/pk_location_scanning_bluetooth"
         android:summary="@string/location_settings_bluetooth_scanning_summary"
-        android:title="@string/location_settings_bluetooth_scanning_title"
+        android:title="@string/location_scanning_bluetooth_always_scanning_title"
         settings:controller="com.android.car.settings.location.BluetoothScanningPreferenceController"/>
 </PreferenceScreen>
