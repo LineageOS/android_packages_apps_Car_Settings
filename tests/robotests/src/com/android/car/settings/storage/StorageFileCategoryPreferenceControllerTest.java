@@ -106,7 +106,18 @@ public class StorageFileCategoryPreferenceControllerTest {
     }
 
     @Test
-    public void handlePreferenceClicked_currentUser_resolvable_startNewActivity() {
+    public void handlePreferenceClicked_currentUserAndNoActivityToHandleIntent_doesNotThrow() {
+        VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
+        volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
+        ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
+
+        mProgressBarPreference.performClick();
+
+        assertThat(ShadowApplication.getInstance().getNextStartedActivity()).isNull();
+    }
+
+    @Test
+    public void handlePreferenceClicked_currentUserAndActivityToHandleIntent_startsNewActivity() {
         VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
         volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
         Intent browseIntent = volumeInfo.buildBrowseIntent();
