@@ -72,4 +72,9 @@ public class ShadowUserHelper {
     protected UserInfo getCurrentProcessUserInfo() {
         return sInstance.getCurrentProcessUserInfo();
     }
+
+    @Implementation
+    public boolean removeUser(UserInfo userInfo) {
+        return sInstance.removeUser(userInfo);
+    }
 }
