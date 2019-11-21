@@ -16,7 +16,8 @@
 
 package com.android.car.settings.datetime;
 
-import android.app.AlarmManager;
+import android.app.timezonedetector.ManualTimeZoneSuggestion;
+import android.app.timezonedetector.TimeZoneDetector;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
@@ -43,12 +44,12 @@ public class TimeZonePickerScreenPreferenceController extends
 
     private List<Preference> mZonesList;
     @VisibleForTesting
-    AlarmManager mAlarmManager;
+    TimeZoneDetector mTimeZoneDetector;
 
     public TimeZonePickerScreenPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
-        mAlarmManager = (AlarmManager) getContext().getSystemService(Context.ALARM_SERVICE);
+        mTimeZoneDetector = getContext().getSystemService(TimeZoneDetector.class);
     }
 
     @Override
@@ -90,7 +91,10 @@ public class TimeZonePickerScreenPreferenceController extends
         preference.setTitle(timeZone.get(ZoneGetter.KEY_DISPLAY_LABEL).toString());
         preference.setSummary(timeZone.get(ZoneGetter.KEY_OFFSET_LABEL).toString());
         preference.setOnPreferenceClickListener(pref -> {
-            mAlarmManager.setTimeZone(timeZone.get(ZoneGetter.KEY_ID).toString());
+            String tzId = timeZone.get(ZoneGetter.KEY_ID).toString();
+            ManualTimeZoneSuggestion suggestion = TimeZoneDetector.createManualTimeZoneSuggestion(
+                    tzId, "Settings: Set time zone");
+            mTimeZoneDetector.suggestManualTimeZone(suggestion);
             getFragmentController().goBack();
 
             // Note: This is intentionally ACTION_TIME_CHANGED, not ACTION_TIMEZONE_CHANGED.
