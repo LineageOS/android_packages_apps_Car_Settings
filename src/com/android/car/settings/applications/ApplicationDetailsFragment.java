@@ -148,6 +148,9 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
                 R.string.pk_application_details_notifications).setPackageInfo(mPackageInfo);
         use(PermissionsPreferenceController.class,
                 R.string.pk_application_details_permissions).setPackageName(mPackageName);
+        use(StoragePreferenceController.class,
+                R.string.pk_application_details_storage)
+                .setAppEntry(mAppEntry).setPackageName(mPackageName);
         use(VersionPreferenceController.class,
                 R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
     }
