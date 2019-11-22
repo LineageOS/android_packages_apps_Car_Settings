@@ -599,12 +599,16 @@
     <string name="permissions_label">Permissions</string>
     <!-- Label for the toggle that enables/disables an app's notifications. [CHAR LIMIT=20] -->
     <string name="notifications_label">Notifications</string>
+    <!-- Label that lead into individual application storage info screen -->
+    <string name="storage_application_label">Storage &amp; cache</string>
     <!-- Label for displaying application version. -->
     <string name="application_version_label">Version: %1$s</string>
     <!-- Runtime permissions preference summary, shown when the app has no permissions granted. [CHAR LIMIT=40] -->
     <string name="runtime_permissions_summary_no_permissions_granted">No permissions granted</string>
     <!-- Runtime permissions preference summary, shown when the app requests no permissions. [CHAR LIMIT=40] -->
     <string name="runtime_permissions_summary_no_permissions_requested">No permissions requested</string>
+    <!-- Application's internal storage size preference summary. [CHAR LIMIT=40] -->
+    <string name="storage_type_internal">%s in internal storage</string>
     <!-- Activity title for network data usage summary. [CHAR LIMIT=25] -->
     <string name="data_usage_summary_title">Data usage</string>
     <!-- Activity title for Appk data usage summary. [CHAR LIMIT=25] -->
