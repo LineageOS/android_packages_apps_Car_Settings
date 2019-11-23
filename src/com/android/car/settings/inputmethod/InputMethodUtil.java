@@ -45,7 +45,7 @@ public final class InputMethodUtil {
     /**
      * Google Voice Typing package name.
      */
-    public static final String GOOGLE_VOICE_TYPING = "com.google.android.googlequicksearchbox";
+    public static final String GOOGLE_VOICE_TYPING = "com.google.android.carassistant";
     /**
      * Splitter for Enabled Input Methods' concatenated string.
      */
