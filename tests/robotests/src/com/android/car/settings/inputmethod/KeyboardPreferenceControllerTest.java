@@ -169,18 +169,6 @@ public class KeyboardPreferenceControllerTest {
         assertThat(mPreference.getSummary()).isEqualTo(EMPTY);
     }
 
-    @Test
-    public void refreshUi_disableVoiceTyping() {
-        List<InputMethodInfo> infos = new ArrayList<>();
-        PackageManager packageManager = mContext.getPackageManager();
-        infos.add(createInputMethodInfo(
-                packageManager, InputMethodUtil.GOOGLE_VOICE_TYPING, DUMMY_LABEL));
-        getShadowInputMethodManager(mContext).setEnabledInputMethodList(infos);
-
-        mControllerHelper.getController().refreshUi();
-        assertThat(mPreference.getSummary()).isEqualTo(EMPTY);
-    }
-
     private static InputMethodInfo createInputMethodInfo(
             PackageManager packageManager, String packageName, String label) {
         ResolveInfo resolveInfo = mock(ResolveInfo.class);
