@@ -412,7 +412,7 @@ public class UserGridRecyclerView extends RecyclerView {
         private void showMaxUsersLimitReachedDialog() {
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getMaxUsersLimitReachedDialogFragment(getContext(),
-                            mCarUserManagerHelper.getMaxSupportedRealUsers());
+                            UserHelper.getInstance(mContext).getMaxSupportedRealUsers());
             dialogFragment.show(
                     mBaseFragment.getFragmentManager(), MAX_USERS_LIMIT_REACHED_DIALOG_TAG);
         }

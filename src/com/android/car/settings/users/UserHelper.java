@@ -125,7 +125,6 @@ public class UserHelper {
         return mUserManager.removeUser(userInfo.id);
     }
 
-
     /**
      * Creates a new user on the system, the created user would be granted admin role.
      * Only admins can create other admins.
@@ -241,5 +240,47 @@ public class UserHelper {
      */
     public UserInfo getCurrentProcessUserInfo() {
         return mUserManager.getUserInfo(UserHandle.myUserId());
+    }
+
+    /**
+     * Maximum number of users allowed on the device. This includes real users, managed profiles
+     * and restricted users, but excludes guests.
+     *
+     * <p> It excludes system user in headless system user model.
+     *
+     * @return Maximum number of users that can be present on the device.
+     */
+    private int getMaxSupportedUsers() {
+        int maxSupportedUsers = UserManager.getMaxSupportedUsers();
+        if (UserManager.isHeadlessSystemUserMode()) {
+            maxSupportedUsers -= 1;
+        }
+        return maxSupportedUsers;
+    }
+
+    private int getManagedProfilesCount() {
+        List<UserInfo> users = getAllUsers();
+
+        // Count all users that are managed profiles of another user.
+        int managedProfilesCount = 0;
+        for (UserInfo user : users) {
+            if (user.isManagedProfile()) {
+                managedProfilesCount++;
+            }
+        }
+        return managedProfilesCount;
+    }
+
+    /**
+     * Get the maximum number of real (non-guest, non-managed profile) users that can be created on
+     * the device. This is a dynamic value and it decreases with the increase of the number of
+     * managed profiles on the device.
+     *
+     * <p> It excludes system user in headless system user model.
+     *
+     * @return Maximum number of real users that can be created.
+     */
+    public int getMaxSupportedRealUsers() {
+        return getMaxSupportedUsers() - getManagedProfilesCount();
     }
 }
