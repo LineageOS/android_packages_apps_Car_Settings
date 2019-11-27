@@ -30,9 +30,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -79,11 +77,6 @@ public class BuildNumberPreferenceControllerTest {
         Settings.Global.putInt(mContext.getContentResolver(),
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_RESUME);
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
