@@ -355,6 +355,42 @@ public class UserHelperTest {
         verify(mMockUserManager, never()).removeUser(adminUser.id);
     }
 
+    @Test
+    public void testGetMaxSupportedRealUsers_isHeadless() {
+        ShadowUserManager.setIsHeadlessSystemUserMode(true);
+        ShadowUserManager.setMaxSupportedUsers(7);
+
+        // Create System user, two managed profiles, and two normal users.
+        UserInfo user0 = createAdminUser(0);
+        UserInfo user1 = createNonAdminUser(10);
+        UserInfo user2 = createManagedProfile(11);
+        UserInfo user3 = createNonAdminUser(13);
+        UserInfo user4 = createManagedProfile(14);
+
+        mockGetUsers(user0, user1, user2, user3, user4);
+
+        // Max users - # managed profiles - headless system user.
+        assertThat(mUserHelper.getMaxSupportedRealUsers()).isEqualTo(4);
+    }
+
+    @Test
+    public void testGetMaxSupportedRealUsers_isNotHeadless() {
+        ShadowUserManager.setIsHeadlessSystemUserMode(false);
+        ShadowUserManager.setMaxSupportedUsers(7);
+
+        // Create System user, two managed profiles, and two normal users.
+        UserInfo user0 = createAdminUser(0);
+        UserInfo user1 = createNonAdminUser(10);
+        UserInfo user2 = createManagedProfile(11);
+        UserInfo user3 = createNonAdminUser(13);
+        UserInfo user4 = createManagedProfile(14);
+
+        mockGetUsers(user0, user1, user2, user3, user4);
+
+        // Max users - # managed profiles
+        assertThat(mUserHelper.getMaxSupportedRealUsers()).isEqualTo(5);
+    }
+
     private UserInfo createAdminUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_ADMIN);
     }
@@ -365,6 +401,10 @@ public class UserHelperTest {
 
     private UserInfo createEphemeralUser(int id) {
         return new UserInfo(id, null, UserInfo.FLAG_EPHEMERAL);
+    }
+
+    private UserInfo createManagedProfile(int id) {
+        return new UserInfo(id, null, UserInfo.FLAG_MANAGED_PROFILE);
     }
 
     private void mockGetUsers(UserInfo... users) {

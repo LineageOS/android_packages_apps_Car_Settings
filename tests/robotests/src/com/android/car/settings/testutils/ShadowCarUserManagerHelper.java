@@ -52,11 +52,6 @@ public class ShadowCarUserManagerHelper {
     }
 
     @Implementation
-    protected int getMaxSupportedRealUsers() {
-        return sMockInstance.getMaxSupportedRealUsers();
-    }
-
-    @Implementation
     protected void grantAdminPermissions(UserInfo user) {
         sMockInstance.grantAdminPermissions(user);
     }
