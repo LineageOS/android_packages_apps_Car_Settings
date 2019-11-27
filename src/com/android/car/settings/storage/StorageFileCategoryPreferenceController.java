@@ -24,6 +24,7 @@ import android.os.storage.StorageManager;
 import android.util.SparseArray;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.ProgressBarPreference;
 import com.android.settingslib.deviceinfo.StorageManagerVolumeProvider;
 import com.android.settingslib.deviceinfo.StorageVolumeProvider;
@@ -32,6 +33,8 @@ import com.android.settingslib.deviceinfo.StorageVolumeProvider;
  * Controller which determines the storage for file category in the storage preference screen.
  */
 public class StorageFileCategoryPreferenceController extends StorageUsageBasePreferenceController {
+
+    private static final Logger LOG = new Logger(StorageFileCategoryPreferenceController.class);
 
     private StorageVolumeProvider mStorageVolumeProvider;
 
@@ -57,8 +60,12 @@ public class StorageFileCategoryPreferenceController extends StorageUsageBasePre
     protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
         Intent intent = getFilesIntent();
         intent.putExtra(Intent.EXTRA_USER_ID, getCarUserManagerHelper().getCurrentProcessUserId());
-        getContext().startActivityAsUser(intent,
+        if (intent.resolveActivity(getContext().getPackageManager()) != null) {
+            getContext().startActivityAsUser(intent,
                 new UserHandle(getCarUserManagerHelper().getCurrentProcessUserId()));
+        } else {
+            LOG.i("No activity found to handle intent: " + intent);
+        }
         return true;
     }
 
