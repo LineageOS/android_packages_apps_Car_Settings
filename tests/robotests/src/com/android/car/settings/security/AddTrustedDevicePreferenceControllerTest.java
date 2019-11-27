@@ -38,7 +38,6 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowLockPatternUtils;
 
 import org.junit.After;
@@ -86,7 +85,6 @@ public class AddTrustedDevicePreferenceControllerTest {
     public void tearDown() {
         ShadowLockPatternUtils.reset();
         ShadowBluetoothAdapter.reset();
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test

@@ -40,7 +40,6 @@ import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.settingslib.bluetooth.BluetoothDeviceFilter;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
 import com.android.settingslib.bluetooth.CachedBluetoothDeviceManager;
@@ -112,7 +111,6 @@ public class BluetoothScanningDevicesGroupPreferenceControllerTest {
 
     @After
     public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
         ShadowBluetoothAdapter.reset();
         ReflectionHelpers.setField(mLocalBluetoothManager, "mCachedDeviceManager",
                 mSaveRealCachedDeviceManager);
