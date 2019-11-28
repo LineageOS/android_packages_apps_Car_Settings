@@ -213,7 +213,7 @@ public class UsersListFragment extends SettingsFragment implements
         if (!mUserManager.canAddMoreUsers()) {
             ConfirmationDialogFragment dialogFragment =
                     UsersDialogProvider.getMaxUsersLimitReachedDialogFragment(getContext(),
-                            mCarUserManagerHelper.getMaxSupportedRealUsers());
+                            UserHelper.getInstance(getContext()).getMaxSupportedRealUsers());
 
             dialogFragment.show(getFragmentManager(), MAX_USERS_LIMIT_REACHED_DIALOG_TAG);
             return;

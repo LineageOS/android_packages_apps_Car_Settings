@@ -39,6 +39,7 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
     private static boolean sCanAddMoreUsers = true;
     private static Map<Integer, List<UserInfo>> sProfiles = new ArrayMap<>();
     private static Map<Integer, Bitmap> sUserIcons = new ArrayMap<>();
+    private static int sMaxSupportedUsers = 10;
 
     @Implementation
     protected int[] getProfileIdsWithDisabled(int userId) {
@@ -98,6 +99,15 @@ public class ShadowUserManager extends org.robolectric.shadows.ShadowUserManager
 
     public static void setUserIcon(@UserIdInt int userId, Bitmap icon) {
         sUserIcons.put(userId, icon);
+    }
+
+    @Implementation
+    public static int getMaxSupportedUsers() {
+        return sMaxSupportedUsers;
+    }
+
+    public static void setMaxSupportedUsers(int maxSupportedUsers) {
+        sMaxSupportedUsers = maxSupportedUsers;
     }
 
     @Resetter

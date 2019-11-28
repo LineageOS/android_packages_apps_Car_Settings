@@ -37,10 +37,8 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowCarrierConfigManager;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -75,11 +73,6 @@ public class SystemUpdatePreferenceControllerTest {
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 SystemUpdatePreferenceController.class, mPreference);
         mController = mControllerHelper.getController();
-    }
-
-    @After
-    public void tearDown() {
-        ShadowCarUserManagerHelper.reset();
     }
 
     @Test
