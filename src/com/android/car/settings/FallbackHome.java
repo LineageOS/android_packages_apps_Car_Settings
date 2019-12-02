@@ -117,6 +117,7 @@ public class FallbackHome extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        LOG.d("onResume() for user " + getUserId() + ". Provisioned: " + mProvisioned);
         if (mProvisioned) {
             mHandler.postDelayed(mProgressTimeoutRunnable, PROGRESS_TIMEOUT);
         }
@@ -155,13 +156,15 @@ public class FallbackHome extends Activity {
                     // SUW and this activity continues to throw out warnings. See b/28870689.
                     return;
                 }
-                LOG.d("User unlocked but no home; let's hope someone enables one soon?");
+                LOG.d("User " + getUserId() + " unlocked but no home; let's hope someone enables "
+                        + "one soon?");
                 mHandler.sendEmptyMessageDelayed(0, 500);
             } else {
-                LOG.d("User unlocked and real home found; let's go!");
+                LOG.d("User " + getUserId() + " unlocked and real home ("
+                        + homeInfo.activityInfo.packageName + ") found; let's go!");
                 getSystemService(PowerManager.class).userActivity(
                         SystemClock.uptimeMillis(), false);
-                finish();
+                finishAndRemoveTask();
             }
         }
     }
