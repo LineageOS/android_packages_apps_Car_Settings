@@ -83,9 +83,48 @@ public class CarSettingActivityTest {
     }
 
     @Test
-    public void launchWithEmptyIntent_resolveToDefaultFragment() {
+    public void launchWithIntent_hasNoBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void launchWithIntentFromExternalPackage_hasNoBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, "com.test.package");
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(1);
+    }
+
+    @Test
+    public void launchWithIntentFromSettings_hasBackstack() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        intent.putExtra(Intent.EXTRA_CALLING_PACKAGE, mContext.getPackageName());
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
+        assertThat(activity.getSupportFragmentManager().getBackStackEntryCount()).isEqualTo(2);
+    }
+
+    @Test
+    public void launchCarSettings_resolveToDefaultFragment() {
         CarSettingActivity activity =
                 Robolectric.buildActivity(CarSettingActivity.class).setup().get();
+        assertThat(activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
+                .isInstanceOf(DummyFragment.class);
+    }
+
+    @Test
+    public void launchWithEmptyIntent_resolveToDefaultFragment() {
+        MockitoAnnotations.initMocks(this);
+        Intent intent = new Intent();
+        CarSettingActivity activity =
+                Robolectric.buildActivity(CarSettingActivity.class, intent).setup().get();
         assertThat(activity.getSupportFragmentManager().findFragmentById(R.id.fragment_container))
                 .isInstanceOf(DummyFragment.class);
     }
@@ -136,6 +175,24 @@ public class CarSettingActivityTest {
         Fragment root = Fragment.instantiate(mContext,
                 mContext.getString(R.string.config_settings_hierarchy_root_fragment));
         mActivity.launchFragment(root);
+
+        assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
+                .isEqualTo(1);
+    }
+
+    @Test
+    public void launchFragment_validIntent_clearsBackStack() {
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Add fragment 2
+        TestFragment testFragment2 = new TestFragment();
+        mActivity.launchFragment(testFragment2);
+
+        Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
+        mActivity.onNewIntent(intent);
+        mActivity.launchFragment(new DatetimeSettingsFragment());
 
         assertThat(mActivity.getSupportFragmentManager().getBackStackEntryCount())
                 .isEqualTo(1);

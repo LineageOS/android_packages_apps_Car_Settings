@@ -1077,6 +1077,10 @@
     <string name="storage_clear_data_dlg_text">All this app\u2019s data will be deleted permanently. This includes all files, settings, accounts, databases, etc.</string>
     <!-- Text for dialog if clear data fails. [CHAR LIMIT=55] -->
     <string name="storage_clear_failed_dlg_text">Couldn\u2019t clear storage for app.</string>
+    <!-- Toast informing that storage unmount operation was successful. [CHAR LIMIT=80]-->
+    <string name="storage_unmount_success"><xliff:g id="name" example="SD card">%1$s</xliff:g> is safely ejected</string>
+    <!-- Toast informing that storage unmount operation failed. [CHAR LIMIT=80]-->
+    <string name="storage_unmount_failure">Couldn\u2019t safely eject <xliff:g id="name" example="SD card">%1$s</xliff:g></string>
 
     <!-- Account management --><skip/>
     <!-- Title for settings that lead into information about User's accounts [CHAR LIMIT=35] -->
@@ -1364,6 +1368,18 @@
     <string name="trusted_device_set_authentication_reminder">Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile.</string>
     <!-- Toast shown when phone is disconnected [CHAR LIMIT=50]-->
     <string name="trusted_device_disconnected_toast">Device disconnected.</string>
+
+    <!-- security credentials --><skip/>
+    <!-- Title of preference to reset credential storage. [CHAR LIMIT=40] -->
+    <string name="credentials_reset">Clear credentials</string>
+    <!-- Summary of preference to reset credential storage. [CHAR LIMIT=NONE] -->
+    <string name="credentials_reset_summary">Remove all certificates</string>
+    <!-- Description of dialog to reset credential storage [CHAR LIMIT=NONE] -->
+    <string name="credentials_reset_hint">Remove all the contents?</string>
+    <!-- Toast message after credential storage is erased. [CHAR LIMIT=60] -->
+    <string name="credentials_erased">Credential storage is erased.</string>
+    <!-- Toast message when credential storage could not be erased. [CHAR LIMIT=60] -->
+    <string name="credentials_not_erased">Credential storage couldn\u2019t be erased.</string>
 
     <!-- generic --><skip/>
     <!-- Button label for generic forget action [CHAR LIMIT=20] -->

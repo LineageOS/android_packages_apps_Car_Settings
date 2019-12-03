@@ -45,6 +45,7 @@ import com.android.car.settings.location.LocationScanningFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.car.settings.network.NetworkAndInternetFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
+import com.android.car.settings.security.SecuritySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
 import com.android.car.settings.storage.StorageSettingsFragment;
 import com.android.car.settings.system.AboutSettingsFragment;
@@ -162,6 +163,9 @@ public class FragmentResolver {
 
             case Settings.ACTION_INTERNAL_STORAGE_SETTINGS:
                 return new StorageSettingsFragment();
+
+            case Settings.ACTION_SECURITY_SETTINGS:
+                return new SecuritySettingsFragment();
 
             case Settings.ACTION_LOCALE_SETTINGS:
                 return new LanguagePickerFragment();
