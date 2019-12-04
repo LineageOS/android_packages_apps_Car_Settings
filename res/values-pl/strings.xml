@@ -324,10 +324,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Za SMS-y specjalne może być pobierana dodatkowa, wyższa opłata, która pojawi się na Twoim rachunku telefonicznym. Po włączeniu tego uprawnienia możliwe będzie wysyłanie SMS-ów specjalnych z wybranej aplikacji."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Dostęp do danych o użyciu"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Dostęp do danych o użyciu umożliwia aplikacji śledzenie tego, jakich innych aplikacji używasz i jak często, oraz odczytywanie m.in. informacji o operatorze i ustawień językowych."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Dostęp do katalogu"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Sterowanie Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Sterowanie Wi-Fi pozwala aplikacji na włączanie i wyłączanie Wi-Fi, wyszukiwanie sieci Wi-Fi i łączenie się z nimi, dodawanie oraz usuwanie sieci i uruchamianie lokalnego hotspota."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokalizacja"</string>
@@ -342,8 +340,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Zezwól na wyszukiwanie urządzeń w pobliżu przez aplikacje i usługi w dowolnym momencie, nawet gdy Bluetooth jest wyłączony. Może to np. pomóc usprawnić działanie funkcji i usług opartych na lokalizacji."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aktualizacje systemu"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Brak dostępu"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Wersja Androida"</string>
     <string name="security_patch" msgid="4794276590178386903">"Stan aktualizacji zabezpieczeń Androida"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -351,8 +348,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Wersja jądra"</string>
     <string name="build_number" msgid="3997326631001009102">"Numer kompilacji"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adres Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Adres MAC karty Wi-Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Niedostępna"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stan"</string>
     <string name="device_status" msgid="267298179806290920">"Stan"</string>

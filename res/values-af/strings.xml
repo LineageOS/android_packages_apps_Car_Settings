@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium-SMS\'e kan jou geld kos en die koste sal by jou diensverskafferfakture gevoeg word. As jy toestemming vir \'n program aktiveer, sal jy premium-SMS\'e met daardie program kan stuur."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Gebruiktoegang"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Gebruiktoegang laat \'n program toe om na te spoor watter ander programme jy gebruik en hoe gereeld, asook as jou diensverskaffer, taalinstellings en ander besonderhede."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Gidstoegang"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi-beheer"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi-beheer laat \'n program toe om Wi-Fi aan of af te skakel, Wi-Fi-netwerke te soek en aan hulle te koppel, netwerke by te voeg of te verwyder, en om \'n warmkol wat net plaaslik is, te begin."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ligging"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Laat programme en dienste toe om enige tyd na toestelle in die omtrek te soek, selfs wanneer Bluetooth af is. Dit kan byvoorbeeld gebruik word om ligginggegronde kenmerke en dienste te verbeter."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Stelsel"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Stelselopdaterings"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Nie beskikbaar nie"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-weergawe"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android-sekuriteitregstellingvlak"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Kernweergawe"</string>
     <string name="build_number" msgid="3997326631001009102">"Bounommer"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth-adres"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi-Fi-MAC-adres"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nie beskikbaar nie"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>

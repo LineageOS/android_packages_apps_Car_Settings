@@ -305,7 +305,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Preguntar siempre"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enlaces compatibles"</string>
-    <string name="special_access" msgid="5730278220917123811">"Acceso especial de apps"</string>
+    <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar apps del sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar apps del sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar ajustes del sistema"</string>
@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Es posible que el envío de SMS premium te cueste dinero y el importe correspondiente se sume a las facturas de tu operador. Si habilitas el permiso para una aplicación, puedes enviar SMS premium con ella."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Acceso a datos de uso"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"El acceso a los datos de uso permite que una aplicación controle qué otras aplicaciones utilizas y con qué frecuencia, así como tu operador, los ajustes de idioma y otros detalles."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Acceso al directorio"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Control de la conexión Wi‑Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"El control de la conexión Wi‑Fi permite que una aplicación active o desactive la red Wi‑Fi, busque redes inalámbricas y se conecte a ellas, añada o quite redes o inicie un punto de acceso local."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Ubicación"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Permite que las aplicaciones y los servicios busquen dispositivos cercanos en cualquier momento aunque la conexión Bluetooth esté desactivada. Se utiliza, por ejemplo, para mejorar los servicios y funciones basados en la ubicación."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizaciones del sistema"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"No disponible"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versión de Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivel del parche de seguridad de Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modelo"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Versión de kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Número de compilación"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Dirección de Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Dirección MAC de la red Wi‑Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"No disponible"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Estado"</string>
     <string name="device_status" msgid="267298179806290920">"Estado"</string>
@@ -519,7 +515,7 @@
 %1$s</xliff:g>)"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizar"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Cancelar sincronización"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"No se puede sincronizar el dispositivo en este momento. Se restablecerá en breve."</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"En este momento hay problemas con la sincronización. Se restablecerá en breve."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>

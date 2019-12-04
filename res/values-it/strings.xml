@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Gli SMS premium potrebbero comportare costi, che verranno aggiunti alle fatture del tuo operatore. Se attivi l\'autorizzazione per un\'app, potrai utilizzare tale app per inviare SMS premium."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Accesso ai dati di utilizzo"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Accesso ai dati di utilizzo consente a un\'app di monitorare quali altre app utilizzi e con quale frequenza, oltre a informazioni come operatore, lingua impostata e altri dettagli."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Accesso alla directory"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Controllo del Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Controllo del Wi-Fi consente a un\'app di attivare o disattivare il Wi-Fi, cercare e connettersi a reti Wi-Fi, aggiungere e rimuovere reti oppure avviare un hotspot solo locale."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Luogo"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Consenti ad app e servizi di cercare dispositivi nelle vicinanze in qualsiasi momento, anche quando il Bluetooth non è attivo. Questa funzione è utile, ad esempio, per migliorare funzioni e servizi basati sulla posizione."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aggiornamenti di sistema"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Non disponibile"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versione Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Livello patch di sicurezza Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modello"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Versione kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Numero build"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Indirizzo Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Indirizzo MAC Wi‑Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Non disponibile"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stato"</string>
     <string name="device_status" msgid="267298179806290920">"Stato"</string>

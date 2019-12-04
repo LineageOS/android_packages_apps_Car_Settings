@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ፕሪሚየም ኤስኤምኤስ ውድ ገንዘብ ሊያስወጣዎት ይችላል፣ እና በአገልግሎት አቅራቢ ክፍያዎ ላይ ሒሳብ ያስጨምርብዎታል። ለመተግበሪያ ፈቃድን ካነቁ ያንን መተግበሪያ በመጠቀም ፕሪሚየም ኤስኤምኤስ መላክ ይችላሉ።"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"የአጠቃቀም መዳረሻ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"የአጠቃቀም መዳረሻ አንድ መተግበሪያ የሚጠቀሟቸውን ሌሎች መተግበሪያዎች እና ምን ያህል ጊዜ እንደሚጠቀሙባቸው፣ እንዲሁም የአገልግሎት አቅራቢዎን፣ የቋንቋ ቅንብሮችዎን እና ሌሎች ዝርዝሮችዎን እንዲከታተል ያስችለዋል።"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"የማውጫ መዳረሻ"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"የWi-Fi ቁጥጥር"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi መቆጣጠሪያ አንድ መተግበሪያ Wi-Fiን እንዲያበራ ወይም እንዲያጠፋ፣ የWi-Fi አውታረ መረቦች እንዲቃኝ እና ከእነሱ ጋር እንዲገናኝ፣ አውታረ መረቦችን እንዲያክል ወይም እንዲያስወግድድ፣ ወይም የአካባቢ-ብቻ መገናኛ ነጥብን እንዲያስጀምርር ያስችለዋል።"</string>
     <string name="location_settings_title" msgid="901334356682423679">"አካባቢ"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ብሉቱዝ ጠፍቶ ቢሆንም እንኳ በማንኛውም ጊዜ መተግበሪያዎች እና አገልግሎቶች በአቅራቢያ ያሉ መሣሪያዎችን እንዲቃኙ ይፍቀዱ። ይህ ለምሳሌ በአካባቢ ላይ የተመሠረቱ ባሕሪያትን እና አገልግሎቶችን ለማሻሻል ጥቅም ላይ ሊውል ይችላል።"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ሥርዓት"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"የሥርዓት ዝማኔዎች"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"አይገኝም"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ሥሪት"</string>
     <string name="security_patch" msgid="4794276590178386903">"የAndroid ደህነንት መጠገኛ ደረጃ"</string>
     <string name="model_info" msgid="4966408071657934452">"ሞዴል"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"የአውራ ከዋኝ ሥሪት"</string>
     <string name="build_number" msgid="3997326631001009102">"የግንብ ቁጥር"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"የብሉቱዝ አድራሻ"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"የWi-Fi MAC አድራሻ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"አይገኝም"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ሁኔታ"</string>
     <string name="device_status" msgid="267298179806290920">"ሁኔታ"</string>

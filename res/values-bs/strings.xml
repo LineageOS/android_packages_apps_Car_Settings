@@ -322,10 +322,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Moguće je da se usluga slanja premium SMS-ova dodatno plaća, a trošak će se dodati na račun operatera. Ako aplikaciji date odobrenje, moći ćete slati premium SMS-ove putem te aplikacije."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Pristup korištenju"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Pristup korištenju omogućava aplikaciji da prati koje druge aplikacije koristite i koliko često, kao i da vidi vašeg mobilnog operatera, postavke jezika i druge detalje."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Pristup direktorijima"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Upravljanje WiFi mrežom"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kontroliranje WiFi mreže omogućava aplikaciji da uključi ili isključi WiFi, skenira i da se poveže na WiFi, doda ili ukloni mreže te pokrene lokalnu pristupnu tačku."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokacija"</string>
@@ -340,8 +338,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Dozvolite aplikacijama i uslugama skeniranje uređaja u blizini u svakom trenutku, čak i kada je Bluetooth isključen. Ovim se, naprimjer, mogu poboljšati funkcije i usluge zasnovane na lokaciji."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sistema"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Nedostupno"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verzija Androida"</string>
     <string name="security_patch" msgid="4794276590178386903">"Nivo sigurnosne zakrpe Androida"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -349,8 +346,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Osnovna verzija"</string>
     <string name="build_number" msgid="3997326631001009102">"Broj međuverzije"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth adresa"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"MAC adresa WiFi mreže"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nije dostupno"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>

@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Tasuliste SMS-ide saatmisel võidakse teilt nõuda tasu, mis lisatakse operaatori esitatud arvele. Kui annate rakendusele loa, on teil selle rakenduse abil võimalik tasulisi SMS-e saata."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Juurdepääs kasutusele"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Juurdepääs kasutusele võimaldab rakendusel jälgida, milliseid teisi rakendusi (ning kui sageli), operaatorit ja keeleseadeid kasutate, ning vaadata teisi üksikasju."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Juurdepääs kaustale"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"WiFi-seadete juhtimine"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"WiFi-seadete juhtimine lubab rakendusel WiFi sisse või välja lülitada, WiFi-võrke otsida ja nendega ühenduse luua, võrke lisada või eemaldada või kohaliku kuumkoha luua."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Asukoht"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Lubage rakendustel ja teenustel alati otsida läheduses olevaid seadmeid isegi siis, kui Bluetooth on väljas. Seda saab kasutada näiteks asukohapõhiste funktsioonide ja teenuste täiustamiseks."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Süsteem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Süsteemivärskendused"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Pole saadaval"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Androidi versioon"</string>
     <string name="security_patch" msgid="4794276590178386903">"Androidi turvapaiga tase"</string>
     <string name="model_info" msgid="4966408071657934452">"Mudel"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Tuuma versioon"</string>
     <string name="build_number" msgid="3997326631001009102">"Järgunumber"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetoothi aadress"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"WiFi MAC-aadress"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Pole saadaval"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Olek"</string>
     <string name="device_status" msgid="267298179806290920">"Olek"</string>

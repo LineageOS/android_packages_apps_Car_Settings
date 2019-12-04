@@ -324,10 +324,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Za prémiové správy SMS sa môžu účtovať poplatky, ktoré sa naúčtujú na faktúru operátora. Ak aktivujete toto povolenie pre aplikáciu, budete môcť pomocou nej posielať prémiové správy SMS."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Prístup k údajom o používaní"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Prístup k údajom o používaní umožňuje aplikácii sledovať, aké ďalšie aplikácie používate, ako často ich používate, ako aj nastavenia jazyka, operátora a ďalšie podrobnosti."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Prístup k adresáru"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Ovládanie Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Ovládanie Wi‑Fi umožňuje aplikácii zapnúť alebo vypnúť pripojenie Wi‑Fi, vyhľadávať siete Wi‑Fi a pripájať sa k nim, pridávať ich alebo odstraňovať, prípadne spustiť výhradne miestny hotspot."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Poloha"</string>
@@ -342,8 +340,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Povoľte aplikáciám a službám kedykoľvek vyhľadávať zariadenia v okolí, a to aj vtedy, keď je rozhranie Bluetooth vypnuté. Môžete to využiť napríklad na zlepšenie funkcií a služieb podmienených polohou."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Systém"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aktualizácie systému"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Nie je k dispozícii"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verzia Androidu"</string>
     <string name="security_patch" msgid="4794276590178386903">"Úroveň opráv zabezpečenia systému"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -351,8 +348,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Verzia jadra"</string>
     <string name="build_number" msgid="3997326631001009102">"Číslo zostavy"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Adresa Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Adresa MAC siete Wi‑Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Nie je k dispozícii"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Stav"</string>
     <string name="device_status" msgid="267298179806290920">"Stav"</string>
