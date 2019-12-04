@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"या वापरकर्त्यासाठी इंस्टॉल केले नाही"</string>
     <string name="permissions_label" msgid="2701446753515612685">"परवानग्या"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचना"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"स्टोरेज आणि कॅशे"</string>
     <string name="application_version_label" msgid="8556889839783311649">"आवृत्त्या: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"कोणत्याही परवानग्यांना मंजूरी दिली नाही"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"कोणत्याही परवानग्यांची विनंती केली नाही"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"संचयमध्ये %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटा वापर"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ॲप डेटा वापर"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना करत आहे…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ॲप पातळी परवानग्या"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"स्कॅन करत आहे"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"स्‍थान सेवा"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"वाय-फाय स्कॅन करत आहे"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"वाय-फाय स्कॅनिंग"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"वाय-फाय बंद असले तरीही अ‍ॅप्स आणि सेवांना वाय-फाय नेटवर्क कधीही स्कॅन करण्याची अनुमती द्या. याचा वापर स्थान आधारित वैशिष्ट्ये आणि सेवा सुधारणे अशा कामांसाठी केला जाऊ शकतो."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"ब्लूटूथ स्कॅन करत आहे"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ब्लूटूथ स्कॅनिंग"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ब्लूटूथ बंद असले, तरीही अ‍ॅप्स आणि सेवांना जवळपासची डिव्हाइस कधीही स्कॅन करण्याची अनुमती द्या. याचा वापर उदाहरणार्थ, स्थान आधारित वैशिष्ट्ये आणि सेवा सुधारण्यासाठी केला जाऊ शकतो."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>

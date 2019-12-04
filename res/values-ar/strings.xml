@@ -293,9 +293,11 @@
     <string name="not_installed" msgid="4218816013370552746">"لم يتم تثبيت التطبيق لهذا المستخدم."</string>
     <string name="permissions_label" msgid="2701446753515612685">"الأذونات"</string>
     <string name="notifications_label" msgid="6586089149665170731">"الإشعارات"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"التخزين وذاكرة التخزين المؤقت"</string>
     <string name="application_version_label" msgid="8556889839783311649">"الإصدار: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"لم يتم منح أي أذونات."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"لم يتم طلب أي أذونات."</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"وحدة التخزين الداخلية %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"استخدام البيانات"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"استخدام بيانات التطبيق"</string>
     <string name="computing_size" msgid="5791407621793083965">"جارٍ الحساب…"</string>
@@ -360,9 +362,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"البحث عن الموقع الجغرافي"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"البحث عن شبكات Wi-Fi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"البحث عن شبكات Wi-Fi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"يمكنك السماح للتطبيقات والخدمات بالبحث عن الأجهزة المجاورة في أيّ وقت، حتى في حال إيقاف Wi‑Fi. ويمكن استخدام هذه البيانات مثلاً لتحسين الميزات والخدمات المستندة إلى الموقع الجغرافي."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"البحث عن بلوتوث"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"البحث عن بلوتوث"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"يمكنك السماح للتطبيقات والخدمات بالبحث عن الأجهزة المجاورة في أيّ وقت، حتى في حال إيقاف البلوتوث. ويمكن استخدام هذه البيانات مثلاً لتحسين الميزات والخدمات المستندة إلى الموقع الجغرافي."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"النظام"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"تحديثات النظام"</string>

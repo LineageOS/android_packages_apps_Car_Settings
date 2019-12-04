@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"இவருக்கு நிறுவப்படவில்லை"</string>
     <string name="permissions_label" msgid="2701446753515612685">"அனுமதிகள்"</string>
     <string name="notifications_label" msgid="6586089149665170731">"அறிவிப்புகள்"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"சேமிப்பகமும் தற்காலிக சேமிப்பும்"</string>
     <string name="application_version_label" msgid="8556889839783311649">"பதிப்பு: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"அனுமதிகள் எதுவும் வழங்கப்படவில்லை"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"அனுமதிகள் எதையும் கோரவில்லை"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"அகச் சேமிப்பகத்தில் %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"டேட்டா உபயோகம்"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ஆப்ஸ் டேட்டா உபயோகம்"</string>
     <string name="computing_size" msgid="5791407621793083965">"கணக்கிடுகிறது…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ஆப்ஸ் நிலை அனுமதிகள்"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"ஸ்கேன் செய்தல்"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"இருப்பிடச் சேவைகள்"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"வைஃபை ஸ்கேன் செய்தல்"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"வைஃபை ஸ்கேன் செய்தல்"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"வைஃபை ஆஃப் செய்யப்பட்டிருந்தாலும்கூட எந்தநேரத்திலும் வைஃபை நெட்வொர்க்குகளைத் தேட ஆப்ஸையும் சேவைகளையும் அனுமதிக்கும். உதாரணத்திற்கு இருப்பிடம் சார்ந்த அம்சங்களையும் சேவைகளையும் மேம்படுத்துவதற்கும் இதைப் பயன்படுத்தலாம்."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"புளூடூத் ஸ்கேன் செய்தல்"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"புளூடூத் ஸ்கேன் செய்தல்"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"புளூடூத் ஆஃப் செய்யப்பட்டிருந்தாலும்கூட எந்தநேரத்திலும் அருகிலுள்ள சாதனங்களைத் தேட ஆப்ஸையும் சேவைகளையும் அனுமதிக்கும். உதாரணத்திற்கு இருப்பிடம் சார்ந்த அம்சங்களையும் சேவைகளையும் மேம்படுத்துவதற்கும் இதைப் பயன்படுத்தலாம்."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"சிஸ்டம்"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"சிஸ்டம் புதுப்பிப்புகள்"</string>

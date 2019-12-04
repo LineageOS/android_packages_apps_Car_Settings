@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Haijasakinishwa kwa ajili ya mtumiaji huyu"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Ruhusa"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Arifa"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Nafasi ya hifadhi na akiba"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Toleo: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Hakuna ruhusa zilizotolewa"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Hakuna ruhusa zilizoombwa"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s katika hifadhi ya mfumo"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Matumizi ya data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Matumizi ya data ya programu"</string>
     <string name="computing_size" msgid="5791407621793083965">"Inahesabu…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Ruhusa za kiwango cha programu"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Kutafuta"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Huduma za Mahali"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Kutafuta Wi-Fi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Kutafuta Wi-Fi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Ruhusu programu na huduma zitafute mitandao ya Wi-Fi wakati wowote, hata wakati umezima Wi-Fi. Hali hii inaweza kutumika, kwa mfano, kuboresha huduma na vipengele vinavyohusiana na mahali."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Kutafuta Bluetooth"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Kutafuta Bluetooth"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Ruhusu programu na huduma itafute vifaa vilivyo karibu wakati wowote, hata wakati umezima Bluetooth. Hali hii inaweza kutumika, kwa mfano, kuboresha huduma na vipengele vinavyohusiana na mahali."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Mfumo"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Masasisho ya mfumo"</string>
