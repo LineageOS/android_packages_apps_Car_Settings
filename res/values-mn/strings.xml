@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Энэ хэрэглэгчид зориулан суулгаагүй"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Зөвшөөрлүүд"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Мэдэгдэл"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Хадгалах сан болон завсрын санах ойд хадгалах"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Хувилбар: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Зөвшөөрөл олгоогүй байна"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Хүссэн зөвшөөрөл алга"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s-н дотоод сан"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Дата ашиглалт"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Аппын дата ашиглалт"</string>
     <string name="computing_size" msgid="5791407621793083965">"Тооцоолж байна…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Скан хийж байна"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi-Fi скан хийх"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi-Fi скан"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Апп болон үйлчилгээнд Wi‑Fi унтраалттай үед ч Wi‑Fi сүлжээг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүдийг сайжруулахад ашиглаж магадгүй."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth скан хийх"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth скан"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Апп болон үйлчилгээнд Bluetooth унтраалттай үед ч ойролцоох төхөөрөмжийг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүдийг сайжруулахад ашиглаж магадгүй."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>

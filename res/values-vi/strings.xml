@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Chưa cài đặt cho người dùng này"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Quyền"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Thông báo"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Bộ nhớ và bộ nhớ đệm"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Phiên bản: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Chưa được cấp quyền nào"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Không yêu cầu quyền"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s trong bộ nhớ trong"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Mức sử dụng dữ liệu"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Sử dụng dữ liệu ứng dụng"</string>
     <string name="computing_size" msgid="5791407621793083965">"Đang tính toán…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Quét"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Quét Wi‑Fi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Quét tìm Wi‑Fi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Cho phép các ứng dụng và dịch vụ quét tìm mạng Wi‑Fi bất kỳ lúc nào, ngay cả khi Wi-Fi tắt. Bạn có thể sử dụng tùy chọn cài đặt này để cải thiện các tính năng và dịch vụ dựa trên vị trí."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Quét tìm Bluetooth"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Quét tìm Bluetooth"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Cho phép các ứng dụng và dịch vụ quét tìm thiết bị lân cận bất kỳ lúc nào, ngay cả khi Bluetooth đang tắt. Bạn có thể sử dụng tùy chọn cài đặt này để cải thiện các tính năng và dịch vụ dựa trên vị trí."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Hệ thống"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Bản cập nhật hệ thống"</string>

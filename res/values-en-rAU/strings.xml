@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Not installed for this user"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permission"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notifications"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Storage and cache"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"No permissions granted"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"No permissions requested"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s in internal storage"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Data usage"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"App data usage"</string>
     <string name="computing_size" msgid="5791407621793083965">"Computing…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"App-level permissions"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Scanning"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Location Services"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi scanning"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi scanning"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Allow apps and services to scan for Wi‑Fi networks at any time, even when Wi‑Fi is off. This can be used, for example, to improve location-based features and services."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth scanning"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth scanning"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Allow apps and services to scan for nearby devices at any time, even when Bluetooth is off. This can be used, for example, to improve location-based features and services."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"System updates"</string>

@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"ለዚህ ተጠቃሚ አልተጫነም"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ፈቃዶች"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ማሳወቂያዎች"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"ማከማቻ እና መሸጎጫ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ስሪት፦ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ምንም ፈቃዶች አልተሰጡም"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ምንም ፈቃዶች አልተጠየቁም"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s በውስጣዊ ማከማቻ ውስጥ ነው"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"የውሂብ አጠቃቀም"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"የመተግበሪያ ውሂብ አጠቃቀም"</string>
     <string name="computing_size" msgid="5791407621793083965">"በማስላት ላይ…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"የመተግበሪያ ደረጃ ፈቃዶች"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"በመቃኘት ላይ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"የአካባቢ አገልግሎቶች"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi ቅኝት"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi ቅኝት"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi-Fi ጠፍቶ ቢሆንም እንኳ በማንኛውም ጊዜ የWi-Fi አውታረ መረቦችን እንዲቃኙ ይፍቀዱ። ይህ ለምሳሌ በአካባቢ ላይ የተመሠረቱ ባሕሪያትን እና አገልግሎቶችን ለማሻሻል ጥቅም ላይ ሊውል ይችላል።"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"የብሉቱዝ ቅኝት"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"የብሉቱዝ ቅኝት"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ብሉቱዝ ጠፍቶ ቢሆንም እንኳ በማንኛውም ጊዜ መተግበሪያዎች እና አገልግሎቶች በአቅራቢያ ያሉ መሣሪያዎችን እንዲቃኙ ይፍቀዱ። ይህ ለምሳሌ በአካባቢ ላይ የተመሠረቱ ባሕሪያትን እና አገልግሎቶችን ለማሻሻል ጥቅም ላይ ሊውል ይችላል።"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ሥርዓት"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"የሥርዓት ዝማኔዎች"</string>

@@ -287,9 +287,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Nav instalēta šim lietotājam"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Atļaujas"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Paziņojumi"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Krātuve un kešatmiņa"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versija: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nav piešķirta neviena atļauja."</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nav pieprasīta neviena atļauja."</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s: iekšējā atmiņa"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datu lietojums"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Lietotnes datu lietojums"</string>
     <string name="computing_size" msgid="5791407621793083965">"Notiek aprēķināšana…"</string>
@@ -351,9 +353,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Lietotnes līmeņa atļaujas"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Notiek meklēšana"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Atrašanās vietu pakalpojumi"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi meklēšana"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi meklēšana"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Ļauj lietotnēm un pakalpojumiem meklēt Wi-Fi tīklus vienmēr, pat ja Wi-Fi ir izslēgts. Šo iestatījumu var izmantot, piemēram, lai uzlabotu atrašanās vietas funkcijas un pakalpojumus."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth meklēšana"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth meklēšana"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Ļauj lietotnēm un pakalpojumiem meklēt tuvumā esošas ierīces vienmēr, pat ja Bluetooth ir izslēgts. Šo iestatījumu var izmantot, piemēram, lai uzlabotu atrašanās vietas funkcijas un pakalpojumus."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistēma"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistēmas atjauninājumi"</string>

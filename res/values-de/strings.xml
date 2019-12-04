@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Nicht für diesen Nutzer installiert"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Berechtigungen"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Benachrichtigungen"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Speicher und Cache"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Version: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Keine Berechtigungen gewährt"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Keine Berechtigungen angefordert"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s in internem Speicher"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datennutzung"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Datenverbrauch durch Apps"</string>
     <string name="computing_size" msgid="5791407621793083965">"Berechnung läuft…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Berechtigungen auf App-Ebene"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Suche"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Standortdienste"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"WLAN-Suche"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"WLAN-Suche"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Apps und Dienste dürfen immer nach WLANs suchen, auch wenn die WLAN-Funktion deaktiviert ist. Dadurch können beispielsweise standortbasierte Funktionen und Dienste verbessert werden."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth-Suche"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth-Suche"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Apps und Dienste dürfen immer nach Geräten in der Nähe suchen, auch wenn Bluetooth deaktiviert ist. Dadurch können beispielsweise standortbasierte Funktionen und Dienste verbessert werden."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemupdates"</string>

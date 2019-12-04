@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Nincs telepítve ennél a felhasználónál"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Engedélyek"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Értesítések"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Tárhely és gyorsítótár"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Verzió: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Nincsenek megadott engedélyek"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Nincsenek kért engedélyek"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s a belső tárhelyen"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Adathasználat"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Alkalmazás adathasználata"</string>
     <string name="computing_size" msgid="5791407621793083965">"Számítás…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Keresés"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi-alapú keresés"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi-keresés"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy Wi-Fi-hálózatokat keressenek még akkor is, ha ki van kapcsolva a Wi-Fi. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth-alapú keresés"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth-keresés"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy közeli eszközöket keressenek még akkor is, ha ki van kapcsolva a Bluetooth. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Rendszer"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>

@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"ఈ వినియోగదారుని కోసం ఇన్‌స్టాల్ చేయలేదు"</string>
     <string name="permissions_label" msgid="2701446753515612685">"అనుమతులు"</string>
     <string name="notifications_label" msgid="6586089149665170731">"నోటిఫికేషన్‌లు"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"నిల్వ &amp; కాష్"</string>
     <string name="application_version_label" msgid="8556889839783311649">"వెర్షన్: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"అనుమతులు మంజూరు కాలేదు"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"అనుమతులను అభ్యర్థించలేదు"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"అంతర్గత నిల్వలో %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"డేటా వినియోగం"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"యాప్ డేటా వినియోగం"</string>
     <string name="computing_size" msgid="5791407621793083965">"గణిస్తోంది…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"స్కానింగ్"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"స్థాన సేవలు"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi స్కానింగ్"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi స్కానింగ్"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi‑Fi ఆఫ్‌లో ఉన్నా కూడా, ఏ సమయంలోనైనా Wi‑Fi నెట్‌‍వర్క్‌లను స్కాన్ చేయడానికి యాప్‌లను మరియు సేవలను అనుమతించండి. ఉదాహరణకు, ఇది స్థాన ఆధారిత ఫీచర్‌లు మరియు సేవలను మెరుగుపరచడానికి ఉపయోగించబడుతుంది."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"బ్లూటూత్ స్కానింగ్"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"బ్లూటూత్ స్కానింగ్"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"బ్లూటూత్ ఆఫ్‌లో ఉన్నప్పుడు కూడా, ఏ సమయంలోనైనా సమీపంలోని పరికరాలను స్కాన్ చేయడానికి యాప్‌లను మరియు సేవలను అనుమతించండి. ఉదాహరణకు, ఇది స్థాన ఆధారిత ఫీచర్‌లు మరియు సేవలను మెరుగుపరచడానికి ఉపయోగించబడుతుంది."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>

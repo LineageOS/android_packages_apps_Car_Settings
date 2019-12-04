@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Не е инсталирано за този потребител"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Разрешения"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Известия"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Хранилище и кеш"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Версия: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Няма предоставени разрешения"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Няма заявени разрешения"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s във вътрешното хранилище"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Пренос на данни"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Прилож.: Пренос на данни"</string>
     <string name="computing_size" msgid="5791407621793083965">"Изчислява се…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Сканиране"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Сканиране за Wi‑Fi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Сканиране за Wi‑Fi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Разрешете на приложенията и услугите да сканират за Wi‑Fi мрежи по всяко време дори когато функцията за Wi‑Fi e изключена. Това може да послужи например за подобряване на базиращите се на местоположението функции и услуги."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Сканиране за устройства с Bluetooth"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Сканиране за устройства с Bluetooth"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Разрешете на приложенията и услугите да сканират за устройства в близост по всяко време дори когато функцията за Bluetooth e изключена. Това може да послужи например за подобряване на базиращите се на местоположението функции и услуги."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системни актуализации"</string>
