@@ -283,9 +283,11 @@
     <string name="not_installed" msgid="4218816013370552746">"No instalada para este usuario"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permisos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificaciones"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Almacenamiento y caché"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versión: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"No se han concedido permisos"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"No se han solicitado permisos"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s en el almacenamiento interno"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Uso de datos"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso de datos de la app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Calculando…"</string>
@@ -322,7 +324,7 @@
     <string name="app_link_open_ask" msgid="7242075065136237456">"Preguntar siempre"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enlaces compatibles"</string>
-    <string name="special_access" msgid="5730278220917123811">"Acceso especial de apps"</string>
+    <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
     <string name="show_system" msgid="4401355756969485287">"Mostrar apps del sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ocultar apps del sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar ajustes del sistema"</string>
@@ -529,7 +531,7 @@
 %1$s</xliff:g>)"</string>
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizar"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Cancelar sincronización"</string>
-    <string name="sync_is_failing" msgid="5766255460901806206">"No se puede sincronizar el dispositivo en este momento. Se restablecerá en breve."</string>
+    <string name="sync_is_failing" msgid="5766255460901806206">"En este momento hay problemas con la sincronización. Se restablecerá en breve."</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Seguridad"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ninguno"</string>
