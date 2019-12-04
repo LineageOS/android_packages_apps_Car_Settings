@@ -138,7 +138,7 @@ public class BluetoothDevicePickerPreferenceControllerTest {
     @Test
     public void onStart_appliesFilterType() {
         // Setup device to pass the filter.
-        when(mBondedDevice.getUuids()).thenReturn(new ParcelUuid[]{BluetoothUuid.AudioSink});
+        when(mBondedDevice.getUuids()).thenReturn(new ParcelUuid[]{BluetoothUuid.A2DP_SINK});
         Intent launchIntent = createLaunchIntent(/* needsAuth= */ false,
                 BluetoothDevicePicker.FILTER_TYPE_AUDIO, "test.package", "TestClass");
         mControllerHelper.getController().setLaunchIntent(launchIntent);
