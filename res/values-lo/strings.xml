@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS ແບບພຣີມຽມອາດຈະເຮັດໃຫ້ທ່ານເສຍເງິນ ແລະ ຈະເພີ່ມໃສ່ໃບບິນຜູ້ໃຫ້ບໍລິການຂອງທ່ານ. ຖ້າທ່ານເປີດໃຊ້ການອະນຸຍາດສຳລັບແອັບໃດໜຶ່ງ, ທ່ານຈະສາມາດສົ່ງ SMS ແບບພຣີມຽມໂດຍໃຊ້ແອັບນັ້ນໄດ້."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ການເຂົ້າເຖິງການນຳໃຊ້"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ການເຂົ້າເຖິງການນຳໃຊ້ອະນຸຍາດໃຫ້ແອັບຕິດຕາມເບິ່ງວ່າທ່ານກຳລັງໃຊ້ແອັບອື່ນໃດແດ່ ແລະ ໃຊ້ເລື້ອຍໆສໍ່າໃດ, ເຊັ່ນດຽວກັນກັບຜູ້ໃຫ້ບໍລິການ, ການຕັ້ງຄ່າພາສາ ແລະ ລາຍລະອຽດອື່ນໆຂອງທ່ານ."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ການເຂົ້າເຖິງແຟ້ມ"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ການຄວບຄຸມ Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ການຄວບຄຸມ Wi-Fi ອະນຸຍາດໃຫ້ແອັບເປີດ ຫຼື ປິດ Wi-Fi, ສະແກນ ແລະ ເຊື່ອມຕໍ່ກັບເຄືອຂ່າຍ Wi-Fi, ເພີ່ມ ຫຼື ລຶບເຄືອຂ່າຍອອກ ຫຼື ເລີ່ມຮັອດສະປອດສະເພາະພື້ນທີ່ໄດ້."</string>
     <string name="location_settings_title" msgid="901334356682423679">"ສະຖານທີ່"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ອະນຸຍາດໃຫ້ແອັບ ແລະ ການບໍລິການຕ່າງໆສະແກນຫາອຸປະກອນທີ່ຢູ່ໃກ້ຄຽງໄດ້ທຸກເມື່ອ, ເຖິງແມ່ນໃນເວລາທີ່ Bluetooth ປິດຢູ່ກໍຕາມ. ສາມາດໃຊ້ຄຸນສົມບັດນີ້ເພື່ອປັບປຸງຄຸນສົມບັດ ແລະ ການບໍລິການຕ່າງໆທີ່ອີງໃສ່ສະຖານທີ່ໄດ້."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ລະບົບ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ການອັບເດດລະບົບ"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"ບໍ່ສາມາດໃຊ້ໄດ້"</string>
     <string name="firmware_version" msgid="8491753744549309333">"ເວີຊັນ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"ລະດັບໂປຣແກຣມແກ້ໄຂຄວາມປອດໄພ Android"</string>
     <string name="model_info" msgid="4966408071657934452">"ລຸ້ນ"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"ເວີຊັນ Kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"ເລກທີລຸ້ນ"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ທີ່ຢູ່ Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"ທີ່ຢູ່ Wi-Fi MAC"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ບໍ່ສາມາດໃຊ້ໄດ້"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ສະຖານະ"</string>
     <string name="device_status" msgid="267298179806290920">"ສະຖານະ"</string>

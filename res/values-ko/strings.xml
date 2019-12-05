@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"프리미엄 SMS는 요금이 부과될 수 있으며 이는 이동통신사 요금에 추가됩니다. 앱에 권한을 부여하면 해당 앱을 사용하여 프리미엄 SMS를 사용할 수 있게 됩니다."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"사용 기록에 액세스"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"앱에서 사용 기록에 액세스하도록 허용하면 사용 중인 다른 앱의 종류와 사용 빈도, 이동통신사, 언어 설정, 기타 세부정보를 추적할 수 있게 됩니다."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"디렉터리 액세스"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="DIRECTORY">%2$s</xliff:g>(<xliff:g id="VOLUME">%1$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 제어"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 제어를 사용하면 앱에서 Wi-Fi를 사용 또는 사용 중지하고, Wi-Fi 네트워크를 검색 및 연결하고, 네트워크를 추가 또는 제거하며, 로컬 전용 핫스팟을 시작하도록 허용합니다."</string>
     <string name="location_settings_title" msgid="901334356682423679">"위치"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"블루투스가 꺼져 있을 때도 항상 앱과 서비스에서 주변 기기를 검색하도록 허용합니다. 이 설정은 예를 들면 위치 기반 기능 및 서비스를 개선하는 데 사용될 수 있습니다."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"시스템"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"시스템 업데이트"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"사용할 수 없음"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 버전"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 보안 패치 수준"</string>
     <string name="model_info" msgid="4966408071657934452">"모델"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"커널 버전"</string>
     <string name="build_number" msgid="3997326631001009102">"빌드 번호"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"블루투스 주소"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi-Fi MAC 주소"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"사용할 수 없음"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"상태"</string>
     <string name="device_status" msgid="267298179806290920">"상태"</string>

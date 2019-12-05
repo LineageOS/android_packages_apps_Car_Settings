@@ -321,10 +321,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ပရီမီယံ SMS သည်ငွေကြေးကုန်ကျနိုင်ပြီး သင့်ဖုန်းဝန်ဆောင်မှုပေးသူ၏ ငွေတောင်းခံလွှာသို့ ပေါင်း၍ ထည့်သွင်းပါမည်။ အက်ပ်တစ်ခုကို သင်ခွင့်ပြုလိုက်လျှင် ၎င်းအက်ပ်ကိုအသုံးပြုပြီး ပရီမီယံ SMS ပို့နိုင်မည်ဖြစ်သည်။"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"အသုံးပြုမှု ကြည့်ခြင်း"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ဝင်ရောက်အသုံးပြုခွင့်သည် အက်ပ်တစ်ခုအား သင်အသုံးပြုနေသော အခြားအက်ပ်များနှင့် သုံးသည့် အကြိမ်ရေနှင့်တကွ သင့်ဖုန်း၏ ဝန်ဆောင်မှုဌာန၊ ဘာသာစကား ဆက်တင်နှင့် အခြားအသေးစိတ်များကို ခြေရာခံရန် ခွင့်ပြုသည်။"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ဖိုင်လမ်းညွှန် သုံးခွင့်"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi ထိန်းချုပ်မှု"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi ထိန်းချုပ်မှုသည် အက်ပ်တစ်ခုအား Wi-Fi ဖွင့်ရန် သို့မဟုတ် ပိတ်ရန်၊ Wi-Fi ကွန်ရက်များ ရှာဖွေရန်နှင့် ၎င်းတို့သို့ ချိတ်ဆက်ရန်၊ ကွန်ရက်များ ထည့်ရန် သို့မဟုတ် ဖယ်ရှားရန် သို့မဟုတ် စက်တွင်းသာသုံးသည့် ဟော့စပေါ့စတင်ရန်တို့ကို ခွင့်ပြုသည်။"</string>
     <string name="location_settings_title" msgid="901334356682423679">"တည်နေရာ"</string>
@@ -339,8 +337,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ဘလူးတုသ်ကို ပိတ်ထားသော်လည်း အနီးအနားရှိ စက်ပစ္စည်းများကို အချိန်မရွေးရှာဖွေရန် အက်ပ်နှင့် ဝန်ဆောင်မှုများအား ခွင့်ပြုပါ။ ဥပမာအားဖြင့် ၎င်းကို တည်နေရာအခြေပြု လုပ်ဆောင်ချက်နှင့် ဝန်ဆောင်မှုများ တိုးတက်လာစေရန် အသုံးပြုနိုင်ပါသည်။"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"စနစ်"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"စနစ်အပ်ဒိတ်များ"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"မရနိုင်ပါ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ဗားရှင်း"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android လုံခြုံရေးပက်ချ်အဆင့်"</string>
     <string name="model_info" msgid="4966408071657934452">"မော်ဒယ်"</string>
@@ -348,8 +345,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Kernel ဗားရှင်း"</string>
     <string name="build_number" msgid="3997326631001009102">"တည်ဆောက်မှုနံပါတ်"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ဘလူးတုသ်လိပ်စာ"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi-Fi ၏ MAC လိပ်စာ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"မရနိုင်ပါ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"အခြေအနေ"</string>
     <string name="device_status" msgid="267298179806290920">"အခြေအနေ"</string>

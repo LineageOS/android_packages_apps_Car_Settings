@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"付費短訊的費用可能高昂，並會增加您流動網絡供應商帳單的款項。如果您為應用程式開放權限，將可以透過該應用程式發送付費短訊。"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"使用情況存取權"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"使用記錄存取權允許應用程式追蹤您正在使用的其他應用程式和使用頻率，以及流動網絡供應商、語言設定和其他詳情。"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"目錄存取權"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 控制"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 控制允許應用程式開啟或關閉 Wi-Fi，掃瞄和連線至 Wi-Fi 網絡、新增或移除網絡，或啟動僅限本機的熱點。"</string>
     <string name="location_settings_title" msgid="901334356682423679">"位置"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"允許應用程式和服務隨時掃瞄附近的裝置 (即使藍牙功能已關閉)。此操作可用來改善適地性功能和服務。"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系統"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系統更新"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"無法提供"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android 安全性修補程式級別"</string>
     <string name="model_info" msgid="4966408071657934452">"型號"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"核心版本"</string>
     <string name="build_number" msgid="3997326631001009102">"版本號碼"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"藍牙位址"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi-Fi MAC 位址"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"未有資料"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"狀態"</string>
     <string name="device_status" msgid="267298179806290920">"狀態"</string>

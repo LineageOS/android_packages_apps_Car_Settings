@@ -324,10 +324,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Обратите внимание, что такие SMS могут оплачиваться дополнительно. Предоставив разрешение приложению, вы сможете отправлять платные SMS с его помощью."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Доступ к истории использования"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Эта настройка разрешает отслеживать данные об использовании других приложений, сведения об операторе связи, языковые настройки и другую информацию."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Доступ к каталогам"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Управление сетями Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Эта настройка разрешает приложению сканировать, добавлять и удалять сети Wi-Fi, подключаться к ним, включать и отключать модуль Wi-Fi, а также создавать локальные точки доступа."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Передача геоданных"</string>
@@ -342,8 +340,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Разрешите приложениям и сервисам искать сигналы устройств, расположенных поблизости, даже если Bluetooth отключен. Таким образом можно улучшить работу функций и сервисов, использующих данные о местоположении."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Обновления системы"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Недоступно"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Обновление системы безопасности"</string>
     <string name="model_info" msgid="4966408071657934452">"Модель"</string>
@@ -351,8 +348,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Версия ядра"</string>
     <string name="build_number" msgid="3997326631001009102">"Номер сборки"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Адрес Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"MAC-адрес Wi-Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Недоступно"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Статус"</string>
     <string name="device_status" msgid="267298179806290920">"Статус"</string>

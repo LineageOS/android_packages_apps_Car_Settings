@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Артыкчылыктуу SMS үчүн сизден акы алынып, ал операторуңуздун эсептерине кошулушу мүмкүн. Эгер кайсы бир колдонмого уруксат берсеңиз, ошол колдонмо аркылуу артыкчылыктуу SMS жөнөтө аласыз."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил жөндөөлөрүн жана башка параметрлерди көрө аласыз."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Каталогго мүмкүнчүлүк алуу"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi\'ды көзөмөлдөө"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi\'ды көзөмөлдөө колдонмого Wi-Fi\'ды өчүрүп же күйгүзүүгө, Wi-Fi тармактарын издеп, аларга туташууга, тармактарды кошуп же алып салууга же жергиликтүү туташуу түйүнүн иштетүүгө уруксат берет."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Жайгашкан жер"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bluetooth өчүп турса да, колдонмолор менен кызматтарга жакын жердеги түзмөктөрдү издегенге уруксат бересиз. Бул параметр менен жайгашкан жерди тагыраак аныктоого болот."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Тутум жаңыртуулары"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Жеткиликсиз"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
     <string name="security_patch" msgid="4794276590178386903">"Коопсуздук тутумунун жаңыртуусу:"</string>
     <string name="model_info" msgid="4966408071657934452">"Үлгү"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Өзөктүн версиясы"</string>
     <string name="build_number" msgid="3997326631001009102">"Курама номери"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth дареги"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi-Fi MAC дареги"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Жеткиликтүү эмес"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Абалы"</string>
     <string name="device_status" msgid="267298179806290920">"Абалы"</string>

@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Puwedeng kailanganin mong magbayad para sa Premium SMS at isasama ito sa mga singilin ng iyong carrier. Kung ie-enable mo ang pahintulot para sa isang app, magagawa mong magpadala ng premium SMS gamit ang app na iyon."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Access sa paggamit"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Ang access sa paggamit ay nagbibigay-daan sa isang app na subaybayan kung ano ang iba pang app na ginagamit mo at kung gaano kadalas, pati ang iyong carrier, mga setting ng wika, at iba pang detalye."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Access sa directory"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Kontrol sa Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Nagbibigay-daan ang kontrol sa Wi-Fi na i-on o i-off ng isang app ang Wi-Fi, mag-scan ng at kumonekta sa mga Wi-Fi network, magdagdag o mag-alis ng mga network, o magsimula ng panglokal lang na hotspot."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Lokasyon"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bigyang-daan ang mga app at serbisyo na mag-scan ng mga kalapit na device anumang oras, kahit na naka-off ang Bluetooth. Magagamit ito, halimbawa, para pahusayin ang mga feature at serbisyong batay sa lokasyon."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mga pag-update ng system"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Hindi available"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Bersyon ng Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Antas ng patch ng seguridad ng Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Modelo"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Kernel version"</string>
     <string name="build_number" msgid="3997326631001009102">"Numero ng build"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Address ng bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"MAC Address ng Wi-Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Hindi available"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Status"</string>
     <string name="device_status" msgid="267298179806290920">"Status"</string>

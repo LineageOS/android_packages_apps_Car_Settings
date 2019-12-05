@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Τα SMS επιπλέον χρέωσης ενδέχεται να κοστίζουν χρήματα και θα αυξήσουν το συνολικό ποσό των λογαριασμών της εταιρείας κινητής τηλεφωνίας. Εάν ενεργοποιήσετε την πρόσβαση για μια εφαρμογή, θα μπορείτε να στέλνετε SMS επιπλέον χρέωσης χρησιμοποιώντας τη συγκεκριμένη εφαρμογή."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Πρόσβαση χρήσης"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Η πρόσβαση χρήσης επιτρέπει σε μια εφαρμογή να παρακολουθεί τις άλλες εφαρμογές που χρησιμοποιείτε, τη συχνότητα χρήσης τους, καθώς και την εταιρεία κινητής τηλεφωνίας σας, τις ρυθμίσεις γλώσσας και άλλες λεπτομέρειες."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Πρόσβαση στον κατάλογο"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Έλεγχος Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Ο έλεγχος Wi-Fi επιτρέπει σε μια εφαρμογή να ενεργοποιεί ή να απενεργοποιεί το Wi-Fi, να κάνει σάρωση για δίκτυα Wi-Fi και να συνδέεται σε αυτά, να προσθέτει ή να καταργεί δίκτυα ή να ξεκινά τοπικά σημεία πρόσβασης Wi-Fi."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Τοποθεσία"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Επιτρέψτε σε εφαρμογές/υπηρεσίες να κάνουν σάρωση για κοντινές συσκευές, ακόμα και όταν το Bluetooth είναι ανενεργό. Η σάρωση μπορεί να χρησιμοποιηθεί, για παράδειγμα, για τη βελτίωση λειτουργιών/υπηρεσιών που εκτελούνται βάσει τοποθεσίας."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Σύστημα"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ενημερώσεις συστήματος"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Μη διαθέσιμο"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Έκδοση Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"Επίπεδο ενημέρωσης κώδικα ασφαλείας Android"</string>
     <string name="model_info" msgid="4966408071657934452">"Μοντέλο"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Έκδοση Kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Αριθμός έκδοσης"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Διεύθυνση Bluetooth"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Διεύθυνση MAC Wi-Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Μη διαθέσιμο"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Κατάσταση"</string>
     <string name="device_status" msgid="267298179806290920">"Κατάσταση"</string>

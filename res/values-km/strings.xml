@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"សេវាកម្ម SMS បង់ប្រាក់​អាចនឹងគិតថ្លៃពីអ្នក ហើយបញ្ចូលតម្លៃនោះ​ទៅក្នុងការគិតថ្លៃតាម​ក្រុមហ៊ុនសេវាទូរសព្ទ​របស់អ្នក។ ប្រសិនបើ​អ្នកបើកការអនុញ្ញាតសម្រាប់កម្មវិធី នោះអ្នកនឹង​អាចផ្ញើសេវាកម្ម SMS បង់ប្រាក់​ដោយប្រើកម្មវិធីនោះ។"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ការចូល​ប្រើប្រាស់"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ការចូល​ប្រើប្រាស់​អនុញ្ញាតឱ្យ​កម្មវិធី​តាមដាន​កម្មវិធី​ផ្សេងទៀត​ដែលអ្នកកំពុងប្រើ និងប្រើប្រាស់​ញឹកញាប់​កម្រិតណា ហើយ​វា​ក៏តាមដាន​ក្រុមហ៊ុនសេវាទូរសព្ទ ការកំណត់ភាសា និងព័ត៌មាន​លម្អិត​ផ្សេងទៀត​របស់អ្នក​ផងដែរ។"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ការចូល​ប្រើ​បញ្ជី"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ការ​គ្រប់គ្រង Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ការ​គ្រប់គ្រង Wi-Fi អនុញ្ញាតឱ្យ​កម្មវិធីបើក ឬបិទ Wi-Fi ស្កេន និងភ្ជាប់បណ្តាញ Wi-Fi បញ្ចូល ឬលុប​បណ្តាញ ឬចាប់ផ្តើម​តែហតស្ប៉ត​មូលដ្ឋាន​ប៉ុណ្ណោះ។"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ទីតាំង"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"អនុញ្ញាត​ឱ្យ​កម្មវិធី និងសេវាកម្ម​ស្កេនរក​ឧបករណ៍ដែល​នៅ​ជិត​បាន​គ្រប់ពេល ទោះបីជា​ប៊្លូធូសបិទ​ក៏ដោយ។ ឧទាហរណ៍ សកម្មភាព​នេះ​អាច​ត្រូវ​បាន​ប្រើ ដើម្បី​កែលម្អ​មុខងារ និងសេវាកម្មនានា​ដែល​ផ្អែក​លើ​ទីតាំង។"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ប្រព័ន្ធ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"បច្ចុប្បន្នភាព​ប្រព័ន្ធ"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"មិនមាន"</string>
     <string name="firmware_version" msgid="8491753744549309333">"កំណែ Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"កម្រិតបំណះសុវត្ថិភាព Android"</string>
     <string name="model_info" msgid="4966408071657934452">"ម៉ូដែល"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"កំណែ​ខឺណែល"</string>
     <string name="build_number" msgid="3997326631001009102">"លេខ​កំណែបង្កើត"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"អាសយដ្ឋាន​ប៊្លូធូស"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"អាសយដ្ឋាន Wi‑Fi MAC"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"មិនមានទេ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ស្ថានភាព"</string>
     <string name="device_status" msgid="267298179806290920">"ស្ថានភាព"</string>

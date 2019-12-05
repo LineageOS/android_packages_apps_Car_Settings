@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ممکن است استفاده از «پیامک ممتاز» برای شما هزینه داشته باشد و مبلغ صورت‌حساب‌های شرکت مخابراتی‌تان را افزایش دهد. اگر مجوز را برای برنامه‌ای فعال کنید، می‌توانید با استفاده از آن برنامه پیامک ممتاز ارسال کنید."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"دسترسی به استفاده"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"دسترسی به میزان استفاده، امکان ردیابی اینکه از چه برنامه‌های دیگری و چند وقت یک‌بار استفاده می‌کنید و همچنین شرکت مخابراتی‌تان، تنظیمات زبان و سایر جزئیات را به برنامه می‌دهد."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"دسترسی به فهرست راهنما"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"کنترل Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"کنترل Wi-Fi به برنامه‌ اجازه می‌دهد Wi-Fi را روشن یا خاموش کند، شبکه‌های Wi-Fi را اسکن کند و به آن‌ها متصل شود، شبکه‌ها را اضافه یا حذف کند یا نقطه اتصالی فقط محلی راه‌اندازی کند."</string>
     <string name="location_settings_title" msgid="901334356682423679">"مکان"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"به برنامه‌ها و سرویس‌ها اجازه دهید درهر زمانی (حتی وقتی «بلوتوث» خاموش است) دستگاه‌های اطراف را اسکن کنند. برای مثال این مورد مي‌تواند برای بهبود ویژگی‌ها و سرویس‌های مکان‌مبنا استفاده شود."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سیستم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"دردسترس نیست"</string>
     <string name="firmware_version" msgid="8491753744549309333">"نسخه Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"سطح وصله امنیتی Android"</string>
     <string name="model_info" msgid="4966408071657934452">"مدل"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"نسخهٔ اصلی"</string>
     <string name="build_number" msgid="3997326631001009102">"شمارهٔ ساخت"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"نشانی بلوتوث"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"نشانی Wi-Fi MAC"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"در دسترس نیست"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"وضعیت"</string>
     <string name="device_status" msgid="267298179806290920">"وضعیت"</string>

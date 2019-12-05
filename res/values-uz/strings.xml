@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"SMS uchun sizdan haq olinishi va operatorga qoʻshimcha to‘lov amalga oshirilishi mumkin. Agar ilova uchun ruxsatnoma taqdim etsangiz, oʻsha ilovadan SMS yuborishingiz mumkin boʻladi."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Foydalanish tarixiga kirish"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Foydalanish tarixiga kirish huquqi qanday ilovalardan va qancha muddatda foydalanishingiz, shuningdek, tarmoq operatori, til va boshqa parametrlarni kuzatish imkonini beradi."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Kataloglarga kirish"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi tarmoqlarni boshqarish"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi tarmoqlarni boshqarish ilovaga Wi-Fi aloqasini yoqish yoki faolsizlantirish, Wi-Fi tarmoqlarni aniqlash va ularga ulanish, tarmoqlar kiritish yoki ularni olib tashlash yoki faqat mahalliy hotspotni ishga tushirish imkoniyatini beradi."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Joylashuv"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bluetooth yoniq emasligida ham ilovalar va xizmatlarga yaqin-atrofdagi qurilmalarni qidirish uchun ruxsat. Shunda joylashuv axborotiga asoslangan funksiya va xizmatlarning ishlashi yanada yaxshilanadi."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Tizim"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Tizimni yangilash"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Mavjud emas"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyasi"</string>
     <string name="security_patch" msgid="4794276590178386903">"Tizim xavfsizligi uchun yangilanish"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Yadro versiyasi"</string>
     <string name="build_number" msgid="3997326631001009102">"Nashr raqami"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth manzili"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi‑Fi MAC manzili"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Mavjud emas"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Holati"</string>
     <string name="device_status" msgid="267298179806290920">"Holati"</string>

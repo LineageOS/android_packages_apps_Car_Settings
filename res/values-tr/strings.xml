@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"Premium SMS kullanımı, para ödemenizi gerektirebilir ve bu ücret operatör faturanıza eklenir. Bir uygulamaya bu izni verdiğinizde söz konusu uygulamayı kullanarak premium SMS gönderebilirsiniz."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"Kullanım erişimi"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Kullanım erişimi vermeniz hâlinde uygulama, başka hangi uygulamaları ve ne sıklıkta kullandığınızı, operatörünüzü, dil ayarlarınızı ve diğer ayrıntıları takip edebilir."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"Dizin erişimi"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi kontrolü"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Kablosuz bağlantı kontrolü, bir uygulamanın kablosuz bağlantıyı açmasına veya kapatmasına, kablosuz ağları taramasına, eklemesine ya da kaldırmasına, kablosuz ağlara bağlanmasına veya yalnızca yerel hotspot bağlantısı başlatmasına izin verir."</string>
     <string name="location_settings_title" msgid="901334356682423679">"Konum"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Uygulamaların ve hizmetlerin etrafınızdaki cihazları Bluetooth kapalıyken bile her zaman taramasına izin verin. Bu özellik, konuma dayalı özellikleri ve hizmetleri iyileştirme gibi amaçlar için kullanılabilir."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistem güncellemeleri"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"Kullanılamıyor"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android sürümü"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android güvenlik yaması düzeyi"</string>
     <string name="model_info" msgid="4966408071657934452">"Model"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Çekirdek sürümü"</string>
     <string name="build_number" msgid="3997326631001009102">"Derleme numarası"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth adresi"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Kablosuz MAC Adresi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Kullanılamıyor"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Durum"</string>
     <string name="device_status" msgid="267298179806290920">"Durum"</string>

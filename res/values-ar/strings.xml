@@ -328,10 +328,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"يمكن أن تكلفك الرسائل القصيرة SMS المميزة بعض الرسوم، وستتم إضافة هذه الرسوم إلى فواتير مشغِّل شبكة الجوّال. وفي حال تفعيل الإذن لأحد التطبيقات، ستتمكن من إرسال رسائل قصيرة SMS مميزة باستخدام هذا التطبيق."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"الوصول إلى بيانات الاستخدام"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"يتيح الدخول إلى بيانات الاستخدام للتطبيق إمكانية تتبُّع التطبيقات الأخرى التي تستخدمها ومدى تكرار استخدامها ومشغّل شبكة الجوّال وإعدادات اللغة وغيرها من التفاصيل."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"الوصول إلى الدليل"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"التحكّم في شبكة Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"يسمح التحكم في شبكة Wi-Fi للتطبيق بتفعيل شبكات Wi-Fi أو إيقافها أو البحث عنها أو الاتصال بها أو إضافتها أو إزالتها أو بدء نقطة اتصال محلية فقط."</string>
     <string name="location_settings_title" msgid="901334356682423679">"الموقع الجغرافي"</string>
@@ -346,8 +344,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"يمكنك السماح للتطبيقات والخدمات بالبحث عن الأجهزة المجاورة في أيّ وقت، حتى في حال إيقاف البلوتوث. ويمكن استخدام هذه البيانات مثلاً لتحسين الميزات والخدمات المستندة إلى الموقع الجغرافي."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"النظام"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"تحديثات النظام"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"القيمة غير متاحة"</string>
     <string name="firmware_version" msgid="8491753744549309333">"إصدار Android"</string>
     <string name="security_patch" msgid="4794276590178386903">"مستوى رمز تصحيح أمان Android"</string>
     <string name="model_info" msgid="4966408071657934452">"الطراز"</string>
@@ -355,8 +352,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"إصدار النواة"</string>
     <string name="build_number" msgid="3997326631001009102">"رقم الإصدار"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"عنوان البلوتوث"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"عنوان MAC لشبكة Wi-Fi"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"غير متوفرة"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"الحالة"</string>
     <string name="device_status" msgid="267298179806290920">"الحالة"</string>

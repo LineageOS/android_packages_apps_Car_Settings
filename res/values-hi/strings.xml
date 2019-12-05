@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रीमियम मैसेज (एसएमएस) के लिए आपको पैसे चुकाने पड़ सकते हैं जिसे आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी आपके बिल में जोड़ देगी. अगर आप किसी ऐप्लिकेशन के लिए यह अनुमति देते हैं, तो आप उस ऐप्लिकेशन का इस्तेमाल करके प्रीमियम मैसेज (एसएमएस) भेज सकते हैं."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"इस्तेमाल का ऐक्‍सेस"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"\'डेटा खर्च\' देखने की मंज़ूरी से कोई ऐप्लिकेशन इस बात पर नज़र रख पाता है कि आप कौनसे ऐप्लिकेशन चला रहे हैं और उन्हें कितनी बार इस्तेमाल करते हैं. साथ ही, ऐप्लिकेशन आपकी मोबाइल और इंटरनेट सेवा देने वाली कंपनी, भाषा सेटिंग और दूसरी जानकारी देख पाता है."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"डायरेक्ट्री का ऐक्सेस"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"वाई-फ़ाई नियंत्रण"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"वाई-फ़ाई का नियंत्रण किसी ऐप्लिकेशन को वाई-फ़ाई चालू या बंद करने, वाई-फ़ाई नेटवर्क ढूंढने और उससे जुड़ने की अनुमति देता है. साथ ही, नेटवर्क जोड़ने या हटाने या सिर्फ़ सीमित दायरे में इस्तेमाल होने वाला हॉटस्पॉट चालू करने की अनुमति देता है."</string>
     <string name="location_settings_title" msgid="901334356682423679">"जगह"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ऐप्लिकेशन और सेवाओं को किसी भी समय आस-पास के डिवाइस स्कैन करने की मंज़ूरी दें, भले ही ब्लूटूथ बंद हो. इसका इस्तेमाल करके, जगह की जानकारी जैसी सुविधाओं और सेवाओं में सुधार किया जा सकता है."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"उपलब्ध नहीं है"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android का वर्शन"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android सुरक्षा पैच लेवल"</string>
     <string name="model_info" msgid="4966408071657934452">"मॉडल"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"Kernel का वर्शन"</string>
     <string name="build_number" msgid="3997326631001009102">"बिल्‍ड नंबर"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ब्लूटूथ का पता"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"वाई-फ़ाई का एमएसी (मैक) पता"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"उपलब्ध नहीं है"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"स्थिति"</string>
     <string name="device_status" msgid="267298179806290920">"स्थिति"</string>
