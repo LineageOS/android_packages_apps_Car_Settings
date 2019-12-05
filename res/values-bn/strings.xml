@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"এই ব্যবহারকারীর জন্য ইনস্টল করা নেই"</string>
     <string name="permissions_label" msgid="2701446753515612685">"অনুমতিগুলি"</string>
     <string name="notifications_label" msgid="6586089149665170731">"বিজ্ঞপ্তি"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"স্টোরেজ ও ক্যাশে"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ভার্সন: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"কোনও অনুমতি দেওয়া হয় নি"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"কোনও অনুমতির অনুরোধ জানানো হয়নি"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"ইন্টারনাল স্টোরেজে %s রয়েছে"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ডেটা ব্যবহার"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"অ্যাপ ডেটার ব্যবহার"</string>
     <string name="computing_size" msgid="5791407621793083965">"কম্পিউটিং..."</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"স্ক্যান করা হচ্ছে"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"লোকেশন পরিষেবা"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"ওয়াই-ফাই স্ক্যানিং"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"ওয়াই-ফাই স্ক্যানিং"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ব্লুটুথ বন্ধ থাকলেও অ্যাপ এবং পরিষেবাগুলিকে যেকোনও সময় ওয়াই-ফাই নেটওয়ার্ক স্ক্যান করার অনুমতি দিন। এটি বিভিন্ন ক্ষেত্রে কাজে লাগতে পারে, যেমন লোকেশন-ভিত্তিক বৈশিষ্ট্য এবং পরিষেবার উন্নতির জন্য।"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"ব্লুটুথ স্ক্যানিং"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ব্লুটুথ স্ক্যানিং"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ব্লুটুথ বন্ধ থাকলেও অ্যাপ এবং পরিষেবাগুলিকে যেকোনও সময় আশেপাশে থাকা অন্যান্য ডিভাইস স্ক্যান করার অনুমতি দিন। এটি বিভিন্ন ক্ষেত্রে কাজে লাগতে পারে, যেমন লোকেশন-ভিত্তিক বৈশিষ্ট্য এবং পরিষেবার উন্নতির জন্য।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"সিস্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>

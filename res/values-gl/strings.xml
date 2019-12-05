@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Sen instalar para este usuario"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Permisos"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Notificacións"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Almacenamento e memoria caché"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versión %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Non se outorgou ningún permiso"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Non se solicitou ningún permiso"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s de almacenamento interno"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Uso de datos"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Uso de datos da aplicación"</string>
     <string name="computing_size" msgid="5791407621793083965">"Calculando…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Busca de localizacións"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Busca de redes wifi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Busca de redes wifi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Permite ás aplicacións e aos servizos buscar redes wifi en calquera momento, mesmo cando a wifi está desactivada. Esta opción pode utilizarse, por exemplo, para mellorar as funcións e os servizos baseados na localización."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Busca de dispositivos Bluetooth"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Busca de dispositivos Bluetooth"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Permite ás aplicacións e aos servizos buscar dispositivos próximos en calquera momento, mesmo cando o Bluetooth está desactivado. Esta opción pode utilizarse, por exemplo, para mellorar as funcións e os servizos baseados na localización."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizacións do sistema"</string>

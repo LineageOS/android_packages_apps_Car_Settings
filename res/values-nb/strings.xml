@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Ikke installert for brukeren"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Tillatelser"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Varsler"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Lagring og buffer"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versjon: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ingen tillatelser er gitt"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ingen tillatelser er forespurt"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s i internminne"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Databruk"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Appens databruk"</string>
     <string name="computing_size" msgid="5791407621793083965">"Beregner …"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tillatelser på appnivå"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Søking"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Posisjonstjenester"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wi‑Fi-søking"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi-skanning"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"La apper og tjenester søke etter Wi-Fi-nettverk når som helst, selv når Wi-Fi er slått av. Dette kan for eksempel brukes til å forbedre posisjonsbaserte funksjoner og tjenester."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth-skanning"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth-skanning"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"La apper og tjenester søke etter enheter i nærheten når som helst, selv når Bluetooth er slått av. Dette kan for eksempel brukes til å forbedre posisjonsbaserte funksjoner og tjenester."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemoppdateringer"</string>

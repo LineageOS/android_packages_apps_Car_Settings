@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.content.Context;
 import android.content.pm.UserInfo;
 
 import com.android.car.settings.users.UserHelper;
@@ -74,7 +75,12 @@ public class ShadowUserHelper {
     }
 
     @Implementation
-    public boolean removeUser(UserInfo userInfo) {
-        return sInstance.removeUser(userInfo);
+    public boolean removeUser(Context context, UserInfo userInfo) {
+        return sInstance.removeUser(context, userInfo);
+    }
+
+    @Implementation
+    public UserInfo createNewOrFindExistingGuest(Context context) {
+        return sInstance.createNewOrFindExistingGuest(context);
     }
 }

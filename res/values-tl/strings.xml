@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Hindi naka-install para sa user na ito"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Mga Pahintulot"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Mga Notification"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Storage at cache"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Bersyon: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Walang ibinigay na pahintulot"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Walang hiniling na pahintulot"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s sa internal storage"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Paggamit ng data"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Paggamit ng data ng app"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kinakalkula…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Mga pahintulot sa antas ng app"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Pag-scan"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Mga Serbisyo ng Lokasyon"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Pag-scan ng Wi‑Fi"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Pag-scan ng Wi‑Fi"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Bigyang-daan ang mga app at serbisyo na mag-scan ng mga Wi-Fi network anumang oras, kahit na naka-off ang Wi-Fi. Magagamit ito, halimbawa, para pahusayin ang mga feature at serbisyong batay sa lokasyon."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Pag-scan ng Bluetooth"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Pag-scan ng Bluetooth"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bigyang-daan ang mga app at serbisyo na mag-scan ng mga kalapit na device anumang oras, kahit na naka-off ang Bluetooth. Magagamit ito, halimbawa, para pahusayin ang mga feature at serbisyong batay sa lokasyon."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mga pag-update ng system"</string>

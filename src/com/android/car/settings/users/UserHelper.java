@@ -44,6 +44,7 @@ public class UserHelper {
     private final Resources mResources;
     private final CarUserManagerHelper mCarUserManagerHelper;
     private final String mDefaultAdminName;
+    private final String mDefaultGuestName;
 
     /**
      * Returns an instance of UserHelper.
@@ -54,6 +55,7 @@ public class UserHelper {
             Resources resources = appContext.getResources();
             sInstance = new UserHelper(UserManager.get(appContext), resources,
                     resources.getString(com.android.internal.R.string.owner_name),
+                    resources.getString(R.string.user_guest),
                     new CarUserManagerHelper(appContext));
         }
         return sInstance;
@@ -61,23 +63,25 @@ public class UserHelper {
 
     @VisibleForTesting
     UserHelper(UserManager userManager, Resources resources, String defaultAdminName,
-            CarUserManagerHelper carUserManagerHelper) {
+            String defaultGuestName, CarUserManagerHelper carUserManagerHelper) {
         mUserManager = userManager;
         mResources = resources;
-        mCarUserManagerHelper = carUserManagerHelper;
         mDefaultAdminName = defaultAdminName;
+        mDefaultGuestName = defaultGuestName;
+        mCarUserManagerHelper = carUserManagerHelper;
     }
 
     /**
      * Tries to remove the user that's passed in. System user cannot be removed.
-     * If the user to be removed is user currently running the process,
-     * it switches to the guest user first, and then removes the user.
+     * If the user to be removed is user currently running the process, it switches to the guest
+     * user first, and then removes the user.
      * If the user being removed is the last admin user, this will create a new admin user.
      *
+     * @param context An application context
      * @param userInfo User to be removed
      * @return {@code true} if user is successfully removed, {@code false} otherwise.
      */
-    public boolean removeUser(UserInfo userInfo) {
+    public boolean removeUser(Context context, UserInfo userInfo) {
         if (userInfo.id == UserHandle.USER_SYSTEM) {
             Log.w(TAG, "User " + userInfo.id + " is system user, could not be removed.");
             return false;
@@ -103,7 +107,12 @@ public class UserHelper {
                 Log.w(TAG, "User switching is not allowed. Current user cannot be deleted");
                 return false;
             }
-            mCarUserManagerHelper.startGuestSession(mResources.getString(R.string.user_guest));
+            UserInfo guestUser = createNewOrFindExistingGuest(context);
+            if (guestUser == null) {
+                Log.e(TAG, "Could not create a Guest user.");
+                return false;
+            }
+            mCarUserManagerHelper.switchToUserId(guestUser.id);
         }
 
         return mUserManager.removeUser(userInfo.id);
@@ -149,6 +158,26 @@ public class UserHelper {
         new UserIconProvider().assignDefaultIcon(mUserManager, mResources, user);
 
         return user;
+    }
+
+    /**
+     * Creates and returns a new guest user or returns the existing one.
+     * Returns null if it fails to create a new guest.
+     *
+     * @param context an application context
+     * @return The UserInfo representing the Guest, or null if it failed
+     */
+    @Nullable
+    public UserInfo createNewOrFindExistingGuest(Context context) {
+        // CreateGuest will return null if a guest already exists.
+        UserInfo newGuest =
+                mUserManager.createGuest(context, mDefaultGuestName);
+        if (newGuest != null) {
+            new UserIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);
+            return newGuest;
+        }
+
+        return mUserManager.findCurrentGuestUser();
     }
 
     /**

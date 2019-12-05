@@ -285,9 +285,11 @@
     <string name="not_installed" msgid="4218816013370552746">"Ez dago instalatuta erabiltzaile honentzat"</string>
     <string name="permissions_label" msgid="2701446753515612685">"Baimenak"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Jakinarazpenak"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"Memoria eta cachea"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Bertsioa: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Ez du baimenik"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ez du eskatu baimenik"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"%s barneko memorian"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Datuen erabilera"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Aplik. datuen erabilera"</string>
     <string name="computing_size" msgid="5791407621793083965">"Kalkulatzen…"</string>
@@ -348,9 +350,9 @@
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
     <string name="location_settings_scanning_title" msgid="4253945869911300740">"Bilaketa"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="8021558840074023719">"Wifi-sareen bilaketa"</string>
+    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wifi-sareen bilaketa"</string>
     <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Eman wifi-sareak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita wifi-konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="2969682902241932059">"Bluetooth gailuak bilatzea"</string>
+    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth gailuen bilaketa"</string>
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Eman inguruko gailuak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita Bluetooth konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
