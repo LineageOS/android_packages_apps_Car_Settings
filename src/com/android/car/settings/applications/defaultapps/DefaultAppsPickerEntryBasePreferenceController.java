@@ -19,6 +19,7 @@ package com.android.car.settings.applications.defaultapps;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 
 import androidx.annotation.Nullable;
 
@@ -48,9 +49,25 @@ public abstract class DefaultAppsPickerEntryBasePreferenceController extends
         super.updateState(preference);
 
         Intent intent = getSettingIntent(getCurrentDefaultAppInfo());
-        preference.showAction(intent != null);
+        boolean isSafeIntent = false;
         if (intent != null) {
-            preference.setOnButtonClickListener(p -> getContext().startActivity(intent));
+            ActivityInfo info = intent.resolveActivityInfo(
+                    getContext().getPackageManager(), intent.getFlags());
+            // If activity exists and is visible to Car Settings, allow intenting to the activity.
+            if (info != null && info.exported) {
+                isSafeIntent = true;
+            }
+        }
+        preference.showAction(isSafeIntent);
+        if (isSafeIntent) {
+            // Use startActivityForResult because some apps need to check the identity of the
+            // caller.
+            preference.setOnButtonClickListener(p -> getContext().startActivityForResult(
+                    getContext().getBasePackageName(),
+                    intent,
+                    /* requestCode= */ 0,
+                    /* options= */ null
+            ));
         }
     }
 
