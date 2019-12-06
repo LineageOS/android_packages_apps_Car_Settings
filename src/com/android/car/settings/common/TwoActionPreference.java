@@ -21,16 +21,16 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
-import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.CarUiPreference;
 
 /**
  * A preference which can perform two actions. The secondary action is shown by default.
  * {@link #showAction(boolean)} may be used to manually set the visibility of the action.
  */
-public abstract class TwoActionPreference extends Preference {
+public abstract class TwoActionPreference extends CarUiPreference {
 
     private boolean mIsActionShown;
 
@@ -61,6 +61,7 @@ public abstract class TwoActionPreference extends Preference {
                 R.styleable.TwoActionPreference);
         mIsActionShown = preferenceAttributes.getBoolean(
                 R.styleable.TwoActionPreference_actionShown, true);
+        setShowChevron(false);
     }
 
     /**
@@ -79,15 +80,15 @@ public abstract class TwoActionPreference extends Preference {
     }
 
     @Override
-    public final void onBindViewHolder(PreferenceViewHolder holder) {
+    public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        View actionConatiner = holder.findViewById(R.id.action_widget_container);
+        View actionContainer = holder.findViewById(R.id.action_widget_container);
         View widgetFrame = holder.findViewById(android.R.id.widget_frame);
         if (mIsActionShown) {
-            actionConatiner.setVisibility(View.VISIBLE);
+            actionContainer.setVisibility(View.VISIBLE);
             onBindWidgetFrame(widgetFrame);
         } else {
-            actionConatiner.setVisibility(View.GONE);
+            actionContainer.setVisibility(View.GONE);
         }
     }
 

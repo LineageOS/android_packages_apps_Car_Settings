@@ -26,18 +26,17 @@ import android.accounts.AccountManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowContentResolver;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -45,7 +44,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
@@ -63,7 +61,7 @@ public class AccountDetailsFragmentTest {
     private final CharSequence mAccountLabel = "Type 1";
 
     private Context mContext;
-    private BaseTestActivity mActivity;
+    private FragmentController<AccountDetailsFragment> mFragmentController;
     private AccountDetailsFragment mFragment;
     @Mock
     private CarUserManagerHelper mMockCarUserManagerHelper;
@@ -76,23 +74,19 @@ public class AccountDetailsFragmentTest {
         mContext = application;
         // Add the account to the official list of accounts
         getShadowAccountManager().addAccount(mAccount);
-
-        mActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
     public void tearDown() {
         ShadowCarUserManagerHelper.reset();
         ShadowContentResolver.reset();
-        mActivity.clearOnBackPressedFlag();
     }
 
     @Test
     public void onActivityCreated_titleShouldBeSet() {
         initFragment();
-
-        TextView title = mFragment.requireActivity().findViewById(R.id.title);
-        assertThat(title.getText()).isEqualTo(mAccountLabel);
+        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        assertThat(toolbar.getTitle()).isEqualTo(mAccountLabel);
     }
 
     @Test
@@ -100,8 +94,9 @@ public class AccountDetailsFragmentTest {
         doReturn(false).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
         initFragment();
 
-        Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(removeAccountButton.getVisibility()).isEqualTo(View.GONE);
+        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        assertThat(toolbar.getMenuItems()).hasSize(1);
+        assertThat(toolbar.getMenuItems().get(0).isVisible()).isFalse();
     }
 
     @Test
@@ -109,8 +104,9 @@ public class AccountDetailsFragmentTest {
         doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
         initFragment();
 
-        Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(removeAccountButton.getVisibility()).isEqualTo(View.VISIBLE);
+        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        assertThat(toolbar.getMenuItems()).hasSize(1);
+        assertThat(toolbar.getMenuItems().get(0).isVisible()).isTrue();
     }
 
     @Test
@@ -118,12 +114,10 @@ public class AccountDetailsFragmentTest {
         doReturn(true).when(mMockCarUserManagerHelper).canCurrentProcessModifyAccounts();
         initFragment();
 
-        Button removeAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        removeAccountButton.performClick();
+        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        toolbar.getMenuItems().get(0).performClick();
 
-        Fragment dialogFragment =
-                mFragment.requireActivity().getSupportFragmentManager().findFragmentByTag(
-                        DIALOG_TAG);
+        Fragment dialogFragment = mFragment.findDialogByTag(DIALOG_TAG);
 
         assertThat(dialogFragment).isNotNull();
         assertThat(dialogFragment).isInstanceOf(
@@ -133,7 +127,6 @@ public class AccountDetailsFragmentTest {
     @Test
     public void accountExists_accountStillExists_shouldBeTrue() {
         initFragment();
-
         // Nothing has happened to the account so this should return true;
         assertThat(mFragment.accountExists()).isTrue();
     }
@@ -141,7 +134,6 @@ public class AccountDetailsFragmentTest {
     @Test
     public void accountExists_accountWasRemoved_shouldBeFalse() {
         initFragment();
-
         // Clear accounts so that the account being displayed appears to have been removed
         getShadowAccountManager().removeAllAccounts();
         assertThat(mFragment.accountExists()).isFalse();
@@ -150,17 +142,18 @@ public class AccountDetailsFragmentTest {
     @Test
     public void onAccountsUpdate_accountDoesNotExist_shouldGoBack() {
         initFragment();
-
         // Clear accounts so that the account being displayed appears to have been removed
         getShadowAccountManager().removeAllAccounts();
         mFragment.onAccountsUpdate(null);
 
-        assertThat(mActivity.getOnBackPressedFlag()).isTrue();
+        assertThat(((BaseTestActivity) mFragment.requireActivity())
+                .getOnBackPressedFlag()).isTrue();
     }
 
     private void initFragment() {
         mFragment = AccountDetailsFragment.newInstance(mAccount, mAccountLabel, mUserInfo);
-        mActivity.launchFragment(mFragment);
+        mFragmentController = FragmentController.of(mFragment);
+        mFragmentController.setup();
     }
 
     private ShadowAccountManager getShadowAccountManager() {

@@ -16,23 +16,22 @@
 
 package com.android.car.settings.users;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 /**
  * A dialog that asks the user to confirm that they want to exit retail mode, which will result in
  * a factory reset.
  */
-public class ConfirmExitRetailModeDialog extends DialogFragment implements
-        DialogInterface.OnClickListener {
+public class ConfirmExitRetailModeDialog extends CarUiDialogFragment {
     @VisibleForTesting
     static final String DIALOG_TAG = "ConfirmExitRetailModeDialog";
     private ConfirmExitRetailModeListener mListener;
@@ -59,7 +58,7 @@ public class ConfirmExitRetailModeDialog extends DialogFragment implements
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getContext())
+        return new AlertDialogBuilder(getContext())
                 .setTitle(R.string.exit_retail_mode_dialog_title)
                 .setMessage(R.string.exit_retail_mode_dialog_body)
                 .setPositiveButton(R.string.exit_retail_mode_dialog_confirmation_button_text, this)
@@ -73,6 +72,10 @@ public class ConfirmExitRetailModeDialog extends DialogFragment implements
             mListener.onExitRetailModeConfirmed();
         }
         dialog.dismiss();
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     /**
