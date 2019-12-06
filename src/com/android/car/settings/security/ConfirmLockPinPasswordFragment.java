@@ -82,12 +82,6 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
 
     @Override
     @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
-    }
-
-    @Override
-    @LayoutRes
     protected int getLayoutId() {
         return mIsPin ? R.layout.confirm_lock_pin : R.layout.confirm_lock_password;
     }

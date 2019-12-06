@@ -20,19 +20,22 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Lists the user's accounts and any related options.
  */
 public class AccountSettingsFragment extends SettingsFragment {
+    private MenuItem mAddAccountButton;
+
     @Override
     @XmlRes
     protected int getPreferenceScreenResId() {
@@ -40,23 +43,22 @@ public class AccountSettingsFragment extends SettingsFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    protected List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mAddAccountButton);
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        // Enable the add account button if the user is allowed to modify accounts
-        Button addAccountButton = requireActivity().findViewById(R.id.action_button1);
-        if (new CarUserManagerHelper(getContext()).canCurrentProcessModifyAccounts()) {
-            addAccountButton.setText(R.string.user_add_account_menu);
-            addAccountButton.setOnClickListener(v -> onAddAccountClicked());
-        } else {
-            addAccountButton.setVisibility(View.GONE);
-        }
+        boolean canModifyAccounts = new CarUserManagerHelper(getContext())
+                .canCurrentProcessModifyAccounts();
+
+        mAddAccountButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.user_add_account_menu)
+                .setOnClickListener(i -> onAddAccountClicked())
+                .setVisible(canModifyAccounts)
+                .build();
     }
 
     @Override

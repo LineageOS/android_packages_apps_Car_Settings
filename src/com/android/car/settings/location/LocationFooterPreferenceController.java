@@ -28,13 +28,13 @@ import android.location.LocationManager;
 
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -87,7 +87,7 @@ public class LocationFooterPreferenceController extends PreferenceController<Pre
 
             // For each injected footer: Create a new preference, set the summary
             // and icon, then inject under the footer preference group.
-            Preference newPreference = new Preference(getContext());
+            CarUiPreference newPreference = new CarUiPreference(getContext());
             newPreference.setSummary(footerString);
             newPreference.setIcon(R.drawable.ic_settings_about);
             getPreference().addPreference(newPreference);
