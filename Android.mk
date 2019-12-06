@@ -42,13 +42,15 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib-utils \
-      SettingsLib
+      SettingsLib \
+      car-ui-lib \
 
   # Including the resources for the static android libraries allows this app to pick up their static overlays.
   LOCAL_RESOURCE_DIR += \
       $(LOCAL_PATH)/res \
       $(LOCAL_PATH)/../libs/car-apps-common/res \
       $(LOCAL_PATH)/../libs/car-settings-lib/res \
+      $(LOCAL_PATH)/../libs/car-ui-lib/res \
       $(LOCAL_PATH)/../../../../frameworks/base/packages/SettingsLib/res
 
   LOCAL_CERTIFICATE := platform
@@ -102,7 +104,8 @@ ifeq (,$(TARGET_BUILD_APPS))
       car-apps-common \
       car-settings-lib \
       car-setup-wizard-lib-utils \
-      SettingsLib
+      SettingsLib \
+      car-ui-lib \
 
   # Testing only resources must be applied first so they take precedence.
   LOCAL_RESOURCE_DIR := \
@@ -110,6 +113,7 @@ ifeq (,$(TARGET_BUILD_APPS))
       $(LOCAL_PATH)/res \
       $(LOCAL_PATH)/../libs/car-apps-common/res \
       $(LOCAL_PATH)/../libs/car-settings-lib/res \
+      $(LOCAL_PATH)/../libs/car-ui-lib/res \
       $(LOCAL_PATH)/../../../../frameworks/base/packages/SettingsLib/res
 
   LOCAL_CERTIFICATE := platform

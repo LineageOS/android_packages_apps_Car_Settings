@@ -16,20 +16,20 @@
 
 package com.android.car.settings.users;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.os.Bundle;
 
 import androidx.annotation.VisibleForTesting;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 /**
  * Dialog to inform that user deletion failed and offers to retry.
  */
-public class MaxUsersLimitReachedDialog extends DialogFragment {
+public class MaxUsersLimitReachedDialog extends CarUiDialogFragment {
     @VisibleForTesting
     static final String DIALOG_TAG = "MaxUsersLimitReachedDialog";
     private final int mMaxUserLimit;
@@ -51,11 +51,15 @@ public class MaxUsersLimitReachedDialog extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        return new AlertDialog.Builder(getContext())
+        return new AlertDialogBuilder(getContext())
                 .setTitle(R.string.user_limit_reached_title)
                 .setMessage(getResources().getQuantityString(
                         R.plurals.user_limit_reached_message, mMaxUserLimit, mMaxUserLimit))
                 .setPositiveButton(android.R.string.ok, null)
                 .create();
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 }

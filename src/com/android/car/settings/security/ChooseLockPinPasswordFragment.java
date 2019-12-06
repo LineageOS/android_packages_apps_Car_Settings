@@ -29,7 +29,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -43,6 +42,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.TextViewInputDisabler;
 
@@ -78,8 +78,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     private PinPadView mPinPad;
     private TextView mHintMessage;
-    private Button mSecondaryButton;
-    private Button mPrimaryButton;
+    private MenuItem mSecondaryButton;
+    private MenuItem mPrimaryButton;
     private EditText mPasswordField;
     private ProgressBar mProgressBar;
 
@@ -111,9 +111,8 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Arrays.asList(mPrimaryButton, mSecondaryButton);
     }
 
     @Override
@@ -150,6 +149,13 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
             mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
             mFirstEntry = savedInstanceState.getByteArray(STATE_FIRST_ENTRY);
         }
+
+        mPrimaryButton = new MenuItem.Builder(getContext())
+                .setOnClickListener(i -> handlePrimaryButtonClick())
+                .build();
+        mSecondaryButton = new MenuItem.Builder(getContext())
+                .setOnClickListener(i -> handleSecondaryButtonClick())
+                .build();
     }
 
     @Override
@@ -216,13 +222,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-
-        mPrimaryButton = requireActivity().findViewById(R.id.action_button1);
-        mPrimaryButton.setOnClickListener(view -> handlePrimaryButtonClick());
-        mSecondaryButton = getActivity().findViewById(R.id.action_button2);
-        mSecondaryButton.setVisibility(View.VISIBLE);
-        mSecondaryButton.setOnClickListener(view -> handleSecondaryButtonClick());
+        mProgressBar = getToolbar().getProgressBar();
     }
 
     @Override
@@ -312,7 +312,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private void setPrimaryButtonText(@StringRes int textId) {
-        mPrimaryButton.setText(textId);
+        mPrimaryButton.setTitle(textId);
     }
 
     private void setSecondaryButtonEnabled(boolean enabled) {
@@ -320,7 +320,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     }
 
     private void setSecondaryButtonText(@StringRes int textId) {
-        mSecondaryButton.setText(textId);
+        mSecondaryButton.setTitle(textId);
     }
 
     // Updates display message and proceed to next step according to the different text on

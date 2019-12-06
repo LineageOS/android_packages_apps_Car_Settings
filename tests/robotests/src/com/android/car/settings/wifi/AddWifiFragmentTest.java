@@ -20,7 +20,6 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.content.Intent;
-import android.widget.Button;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -29,6 +28,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.After;
@@ -140,8 +141,9 @@ public class AddWifiFragmentTest {
         assertThat(getAddWifiButton().isEnabled()).isFalse();
     }
 
-    private Button getAddWifiButton() {
-        return mFragment.requireActivity().findViewById(R.id.action_button1);
+    private MenuItem getAddWifiButton() {
+        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 
     private boolean isReceiverRegisteredForAction(String action) {
