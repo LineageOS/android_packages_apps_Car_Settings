@@ -32,6 +32,7 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import org.junit.Before;
@@ -71,7 +72,7 @@ public class DefaultAppEntryBasePreferenceControllerTest {
     }
 
     private Context mContext;
-    private Preference mPreference;
+    private CarUiPreference mPreference;
     private PreferenceControllerTestHelper<TestDefaultAppEntryBasePreferenceController>
             mControllerHelper;
     private TestDefaultAppEntryBasePreferenceController mController;
@@ -79,7 +80,7 @@ public class DefaultAppEntryBasePreferenceControllerTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
-        mPreference = new Preference(mContext);
+        mPreference = new CarUiPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestDefaultAppEntryBasePreferenceController.class,
                 mPreference);

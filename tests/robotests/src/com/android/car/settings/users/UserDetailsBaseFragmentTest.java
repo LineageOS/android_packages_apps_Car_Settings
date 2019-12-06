@@ -24,16 +24,16 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
-import android.view.View;
-import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -41,7 +41,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
 
 import java.util.Arrays;
@@ -68,22 +67,21 @@ public class UserDetailsBaseFragmentTest {
         }
     }
 
-    private BaseTestActivity mTestActivity;
     private UserDetailsBaseFragment mUserDetailsBaseFragment;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
     private UserManager mUserManager;
 
-    private Button mRemoveUserButton;
+    private MenuItem mRemoveUserButton;
+
+    private FragmentController<UserDetailsBaseFragment> mFragmentController;
 
     @Before
     public void setUpTestActivity() {
         MockitoAnnotations.initMocks(this);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowUserManager.setInstance(mUserManager);
-
-        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
@@ -99,7 +97,7 @@ public class UserDetailsBaseFragmentTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         createUserDetailsBaseFragment();
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(mRemoveUserButton.isVisible()).isTrue();
     }
 
     @Test
@@ -109,7 +107,7 @@ public class UserDetailsBaseFragmentTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         createUserDetailsBaseFragment();
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -119,7 +117,7 @@ public class UserDetailsBaseFragmentTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(false);
         createUserDetailsBaseFragment();
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -129,7 +127,7 @@ public class UserDetailsBaseFragmentTest {
         when(mCarUserManagerHelper.isCurrentProcessDemoUser()).thenReturn(true);
         createUserDetailsBaseFragment();
 
-        assertThat(mRemoveUserButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(mRemoveUserButton.isVisible()).isFalse();
     }
 
     @Test
@@ -152,7 +150,16 @@ public class UserDetailsBaseFragmentTest {
         mUserDetailsBaseFragment = UserDetailsBaseFragment.addUserIdToFragmentArguments(
                 new TestUserDetailsBaseFragment(), testUser.id);
         when(mUserManager.getUserInfo(testUser.id)).thenReturn(testUser);
-        mTestActivity.launchFragment(mUserDetailsBaseFragment);
-        mRemoveUserButton = (Button) mTestActivity.findViewById(R.id.action_button1);
+
+        mFragmentController = FragmentController.of(mUserDetailsBaseFragment).create().start();
+
+        if (mUserDetailsBaseFragment.getToolbarMenuItems() != null) {
+            mRemoveUserButton =
+                    ((Toolbar) mUserDetailsBaseFragment.requireActivity().requireViewById(
+                            R.id.toolbar))
+                            .getMenuItems().get(0);
+        } else {
+            mRemoveUserButton = null;
+        }
     }
 }

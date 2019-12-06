@@ -25,15 +25,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Main page for Bluetooth settings. It manages the power switch for the Bluetooth adapter. It also
@@ -51,22 +52,18 @@ public class BluetoothSettingsFragment extends SettingsFragment {
             handleStateChanged(state);
         }
     };
-    private final CompoundButton.OnCheckedChangeListener mBluetoothSwitchListener =
-            new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    mBluetoothSwitch.setEnabled(false);
-                    if (isChecked) {
-                        mBluetoothAdapter.enable();
-                    } else {
-                        mBluetoothAdapter.disable();
-                    }
-                }
-            };
+    private final MenuItem.OnClickListener mBluetoothSwitchListener = item -> {
+        item.setEnabled(false);
+        if (item.isChecked()) {
+            mBluetoothAdapter.enable();
+        } else {
+            mBluetoothAdapter.disable();
+        }
+    };
 
     private CarUserManagerHelper mCarUserManagerHelper;
     private LocalBluetoothManager mLocalBluetoothManager;
-    private Switch mBluetoothSwitch;
+    private MenuItem mBluetoothSwitch;
 
     @Override
     @XmlRes
@@ -75,9 +72,18 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_toggle;
+    protected List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mBluetoothSwitch);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mBluetoothSwitch = new MenuItem.Builder(getContext())
+                .setCheckable()
+                .setOnClickListener(mBluetoothSwitchListener)
+                .build();
     }
 
     @Override
@@ -88,13 +94,6 @@ public class BluetoothSettingsFragment extends SettingsFragment {
         if (mLocalBluetoothManager == null) {
             goBack();
         }
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mBluetoothSwitch = requireActivity().findViewById(R.id.toggle_switch);
-        mBluetoothSwitch.setOnCheckedChangeListener(mBluetoothSwitchListener);
     }
 
     @Override
@@ -119,7 +118,7 @@ public class BluetoothSettingsFragment extends SettingsFragment {
     private void handleStateChanged(int state) {
         // Momentarily clear the listener so that we don't update the adapter while trying to
         // reflect the adapter state.
-        mBluetoothSwitch.setOnCheckedChangeListener(null);
+        mBluetoothSwitch.setOnClickListener(null);
         switch (state) {
             case BluetoothAdapter.STATE_TURNING_ON:
                 mBluetoothSwitch.setEnabled(false);
@@ -138,6 +137,6 @@ public class BluetoothSettingsFragment extends SettingsFragment {
                 mBluetoothSwitch.setEnabled(!isUserRestricted());
                 mBluetoothSwitch.setChecked(false);
         }
-        mBluetoothSwitch.setOnCheckedChangeListener(mBluetoothSwitchListener);
+        mBluetoothSwitch.setOnClickListener(mBluetoothSwitchListener);
     }
 }

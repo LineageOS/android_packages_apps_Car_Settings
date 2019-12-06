@@ -18,16 +18,15 @@ package com.android.car.settings.bluetooth;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.View;
-import android.widget.ProgressBar;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
+import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 import org.junit.After;
@@ -73,13 +72,10 @@ public class BluetoothDevicePickerFragmentTest {
 
     @Test
     public void onStart_showsProgressBar() {
-        mFragmentController.create();
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.GONE);
+        mFragmentController.setup();
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
 
-        mFragmentController.start();
-
-        assertThat(progressBar.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.VISIBLE);
     }
 
     @Test
@@ -92,15 +88,11 @@ public class BluetoothDevicePickerFragmentTest {
     @Test
     public void onStop_hidesProgressBar() {
         mFragmentController.setup().onPause();
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.VISIBLE);
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        toolbar.showProgressBar();
 
         mFragmentController.stop();
 
-        assertThat(progressBar.getVisibility()).isEqualTo(View.GONE);
-    }
-
-    private ProgressBar findProgressBar(Activity activity) {
-        return activity.findViewById(R.id.progress_bar);
+        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.GONE);
     }
 }
