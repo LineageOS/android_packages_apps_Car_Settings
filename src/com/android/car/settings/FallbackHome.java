@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ResolveInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -30,9 +31,13 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.provider.Settings;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.android.car.settings.common.Logger;
 
@@ -69,6 +74,7 @@ public class FallbackHome extends Activity {
         mProvisioned = Settings.Global.getInt(getContentResolver(),
                 Settings.Global.DEVICE_PROVISIONED, 0) != 0;
         int flags;
+        boolean showInfo = false;
         if (!mProvisioned) {
             setTheme(R.style.FallbackHome_SetupWizard);
             flags = View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -76,6 +82,32 @@ public class FallbackHome extends Activity {
         } else {
             flags = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+            // TODO: read from developer settings instead, so it can be used on user builds
+            showInfo = Build.IS_DEBUGGABLE;
+        }
+
+        if (showInfo) {
+            // Display some info about the current user, which is useful to debug / track user
+            // switching delays.
+            // NOTE: we're manually creating the view (instead of inflating it from XML) to
+            // minimize the performance impact.
+            TextView view = new TextView(this);
+            view.setText("FallbackHome for user " + getUserId() + ".\n\n"
+                    + "This activity is displayed while the user is starting, \n"
+                    + "and it will be replaced by the proper Home \n"
+                    + "(once the user is unlocked).\n\n"
+                    + "NOTE: this message is only shown on debuggable builds");
+            view.setGravity(Gravity.CENTER);
+            view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+
+            LinearLayout parent = new LinearLayout(this);
+            parent.setOrientation(LinearLayout.VERTICAL);
+            parent.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT));
+            parent.addView(view);
+
+            setContentView(parent);
         }
 
         getWindow().getDecorView().setSystemUiVisibility(flags);
