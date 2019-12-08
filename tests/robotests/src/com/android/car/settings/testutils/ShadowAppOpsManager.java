@@ -67,7 +67,7 @@ public class ShadowAppOpsManager {
                 if (mode == null) {
                     mode = AppOpsManager.opToDefaultMode(op);
                 }
-                OpEntry opEntry = new OpEntry(op, mode, new Pair[0]);
+                OpEntry opEntry = new OpEntry(op, mode, Collections.emptyMap());
                 PackageOps packageOp = new PackageOps(key.mPackageName, key.mUid,
                         Collections.singletonList(opEntry));
                 result.add(packageOp);
