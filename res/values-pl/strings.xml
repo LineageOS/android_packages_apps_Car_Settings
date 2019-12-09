@@ -56,9 +56,9 @@
     <string name="data_usage_settings" msgid="7877132994777987848">"Użycie danych"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dane podstawowe"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Wykorzystano <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"Próg ostrzegawczy: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Ostrzeżenie dotyczące danych: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Limit danych: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Próg ostrzegawczy: <xliff:g id="ID_1">^1</xliff:g> / limit danych: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Ostrzeżenie dotyczące danych: <xliff:g id="ID_1">^1</xliff:g> / limit danych: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="few">%d dni do końca</item>
       <item quantity="many">%d dni do końca</item>
@@ -77,10 +77,10 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Data resetowania cyklu transmisji danych"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data w każdym miesiącu:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Ustaw"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Dane i limit"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Ostrzeżenie dotyczące danych i limit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"Cykl użycia danych w aplikacjach"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"Ustaw próg ostrzegawczy"</string>
-    <string name="data_warning" msgid="116776633806885370">"Ostrzeżenie: użycie danych"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"Ustaw ostrzeżenie dotyczące danych"</string>
+    <string name="data_warning" msgid="116776633806885370">"Ostrzeżenie dotyczące danych"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Ustaw limit danych"</string>
     <string name="data_limit" msgid="227338836292511425">"Limit danych"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Ograniczanie użycia danych"</string>
