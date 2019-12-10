@@ -36,14 +36,10 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
-import androidx.preference.EditTextPreference;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
-import com.android.car.ui.preference.EditTextPreferenceDialogFragment;
-import com.android.car.ui.preference.ListPreferenceDialogFragment;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
@@ -254,27 +250,16 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             return;
         }
 
-        DialogFragment dialogFragment;
         if (preference instanceof ValidatedEditTextPreference) {
-            if (preference instanceof PasswordEditTextPreference) {
-                dialogFragment = PasswordEditTextPreferenceDialogFragment.newInstance(
-                        preference.getKey());
-            } else {
-                dialogFragment = ValidatedEditTextPreferenceDialogFragment.newInstance(
-                        preference.getKey());
-            }
-        } else if (preference instanceof EditTextPreference) {
-            dialogFragment = EditTextPreferenceDialogFragment.newInstance(preference.getKey());
-        } else if (preference instanceof ListPreference) {
-            dialogFragment = ListPreferenceDialogFragment.newInstance(preference.getKey());
-        } else {
-            throw new IllegalArgumentException(
-                    "Tried to display dialog for unknown preference type. Did you forget to "
-                            + "override onDisplayPreferenceDialog()?");
-        }
+            DialogFragment dialogFragment = preference instanceof PasswordEditTextPreference
+                    ? PasswordEditTextPreferenceDialogFragment.newInstance(preference.getKey())
+                    : ValidatedEditTextPreferenceDialogFragment.newInstance(preference.getKey());
 
-        dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
-        showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
+            dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
+            showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
+        } else {
+            super.onDisplayPreferenceDialog(preference);
+        }
     }
 
     @Override
