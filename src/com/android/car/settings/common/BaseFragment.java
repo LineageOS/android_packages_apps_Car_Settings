@@ -23,7 +23,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
@@ -78,8 +77,8 @@ public abstract class BaseFragment extends Fragment implements
 
     /**
      * Returns the string id for the current Fragment title. Subclasses should override this
-     * method to set the title to display. Use {@link #setTitle(CharSequence)} to update the
-     * displayed title while resumed. The default title is the Settings Activity label.
+     * method to set the title to display. Use {@link #getToolbar().setTitle(CharSequence)} to
+     * update the displayed title while resumed. The default title is the Settings Activity label.
      */
     @StringRes
     protected int getTitleId() {
@@ -104,19 +103,6 @@ public abstract class BaseFragment extends Fragment implements
 
     protected final Toolbar getToolbar() {
         return requireActivity().findViewById(R.id.toolbar);
-    }
-
-    /**
-     * Should be used to override fragment's title. This should only be called after
-     * {@link #onActivityCreated(Bundle)}.
-     *
-     * @param title CharSequence to set as the new title.
-     */
-    protected final void setTitle(CharSequence title) {
-        TextView titleView = requireActivity().findViewById(R.id.title);
-        if (titleView != null) {
-            titleView.setText(title);
-        }
     }
 
     @Override

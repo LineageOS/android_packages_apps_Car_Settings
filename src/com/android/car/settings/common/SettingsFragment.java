@@ -90,7 +90,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     protected abstract int getPreferenceScreenResId();
 
     protected Toolbar getToolbar() {
-        return requireActivity().requireViewById(R.id.toolbar);
+        return requireActivity().findViewById(R.id.toolbar);
     }
     /**
      * Returns the MenuItems to display in the toolbar. Subclasses should override this to
