@@ -19,10 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/modify_system_settings_title">
-    <Preference
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_modify_system_settings_description"
         android:selectable="false"
-        android:summary="@string/modify_system_settings_description"/>
+        android:summary="@string/modify_system_settings_description"
+        settings:showChevron="false"/>
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_modify_system_settings"
         settings:controller="com.android.car.settings.applications.specialaccess.AppOpsPreferenceController"/>
