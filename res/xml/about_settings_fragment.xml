@@ -23,8 +23,7 @@
         android:fragment="com.android.car.settings.system.HardwareInfoFragment"
         android:key="@string/pk_hardware_info"
         android:title="@string/hardware_info"
-        settings:controller="com.android.car.settings.system.HardwareInfoPreferenceController"
-        settings:showChevron="false"/>
+        settings:controller="com.android.car.settings.system.HardwareInfoPreferenceController"/>
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_firmware_version"
         android:title="@string/firmware_version"
