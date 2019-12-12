@@ -19,8 +19,6 @@ package com.android.car.settings.security;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
@@ -30,6 +28,7 @@ import androidx.annotation.VisibleForTesting;
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.Logger;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.LockPatternView;
 import com.android.internal.widget.LockPatternView.Cell;
@@ -38,6 +37,7 @@ import com.android.internal.widget.LockscreenCredential;
 
 import com.google.android.collect.Lists;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -67,10 +67,9 @@ public class ChooseLockPatternFragment extends BaseFragment {
     private Stage mUiStage = Stage.Introduction;
     private LockPatternView mLockPatternView;
     private TextView mMessageText;
-    private Button mSecondaryButton;
-    private Button mPrimaryButton;
-    private ProgressBar mProgressBar;
     private LockscreenCredential mChosenPattern;
+    private MenuItem mSecondaryButton;
+    private MenuItem mPrimaryButton;
     // Existing pattern that user previously set
     private LockscreenCredential mCurrentCredential;
     private SaveLockWorker mSaveLockWorker;
@@ -145,9 +144,8 @@ public class ChooseLockPatternFragment extends BaseFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Arrays.asList(mPrimaryButton, mSecondaryButton);
     }
 
     @Override
@@ -177,6 +175,13 @@ public class ChooseLockPatternFragment extends BaseFragment {
             mUiStage = Stage.values()[savedInstanceState.getInt(STATE_UI_STAGE)];
             mChosenPattern = savedInstanceState.getParcelable(STATE_CHOSEN_PATTERN);
         }
+
+        mPrimaryButton = new MenuItem.Builder(getContext())
+                .setOnClickListener(i -> handlePrimaryButtonClick())
+                .build();
+        mSecondaryButton = new MenuItem.Builder(getContext())
+                .setOnClickListener(i -> handleSecondaryButtonClick())
+                .build();
     }
 
     @Override
@@ -198,18 +203,6 @@ public class ChooseLockPatternFragment extends BaseFragment {
             mSaveLockWorker = (SaveLockWorker) getFragmentManager().findFragmentByTag(
                     FRAGMENT_TAG_SAVE_PATTERN_WORKER);
         }
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-
-        mPrimaryButton = requireActivity().findViewById(R.id.action_button1);
-        mPrimaryButton.setOnClickListener(view -> handlePrimaryButtonClick());
-        mSecondaryButton = requireActivity().findViewById(R.id.action_button2);
-        mSecondaryButton.setVisibility(View.VISIBLE);
-        mSecondaryButton.setOnClickListener(view -> handleSecondaryButtonClick());
     }
 
     @Override
@@ -236,7 +229,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         if (mSaveLockWorker != null) {
             mSaveLockWorker.setListener(null);
         }
-        mProgressBar.setVisibility(View.GONE);
+        getToolbar().hideProgressBar();
     }
 
     /**
@@ -320,11 +313,11 @@ public class ChooseLockPatternFragment extends BaseFragment {
     }
 
     private void setPrimaryButtonText(@StringRes int textId) {
-        mPrimaryButton.setText(textId);
+        mPrimaryButton.setTitle(textId);
     }
 
     private void setSecondaryButtonVisible(boolean visible) {
-        mSecondaryButton.setVisibility(visible ? View.VISIBLE : View.GONE);
+        mSecondaryButton.setVisible(visible);
     }
 
     private void setSecondaryButtonEnabled(boolean enabled) {
@@ -332,7 +325,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
     }
 
     private void setSecondaryButtonText(@StringRes int textId) {
-        mSecondaryButton.setText(textId);
+        mSecondaryButton.setTitle(textId);
     }
 
     // Update display message and decide on next step according to the different mText
@@ -395,7 +388,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
     @VisibleForTesting
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
-        mProgressBar.setVisibility(View.GONE);
+        getToolbar().hideProgressBar();
 
         if (isSaveSuccessful) {
             onComplete();
@@ -424,7 +417,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
 
         mSaveLockWorker.start(mUserId, mChosenPattern, mCurrentCredential);
-        mProgressBar.setVisibility(View.VISIBLE);
+        getToolbar().showProgressBar();
     }
 
     @VisibleForTesting

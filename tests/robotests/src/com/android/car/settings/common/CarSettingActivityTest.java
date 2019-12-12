@@ -64,6 +64,7 @@ public class CarSettingActivityTest {
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
+        Robolectric.getForegroundThreadScheduler().pause();
         CarUxRestrictions noSetupRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* time= */ 0).build();
         when(mMockCarUxRestrictionsManager.getCurrentCarUxRestrictions())
@@ -124,6 +125,8 @@ public class CarSettingActivityTest {
 
     @Test
     public void onResume_newIntent_launchesNewFragment() {
+        Robolectric.getForegroundThreadScheduler().unPause();
+
         TestFragment testFragment = new TestFragment();
         mActivity.launchFragment(testFragment);
         assertThat(mActivity.getCurrentFragment()).isEqualTo(testFragment);
@@ -154,6 +157,7 @@ public class CarSettingActivityTest {
 
     @Test
     public void launchWithIntentNoPackage_clearsBackStack() {
+        Robolectric.getForegroundThreadScheduler().unPause();
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -171,6 +175,7 @@ public class CarSettingActivityTest {
 
     @Test
     public void launchWithIntentNoPackage_dismissesDialogs() {
+        Robolectric.getForegroundThreadScheduler().unPause();
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -197,6 +202,7 @@ public class CarSettingActivityTest {
 
     @Test
     public void launchWithIntentFromSettings_doesNotClearBackStack() {
+        Robolectric.getForegroundThreadScheduler().unPause();
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -216,6 +222,7 @@ public class CarSettingActivityTest {
 
     @Test
     public void launchWithIntentFromSettings_dismissesDialogs() {
+        Robolectric.getForegroundThreadScheduler().unPause();
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);
@@ -244,6 +251,8 @@ public class CarSettingActivityTest {
 
     @Test
     public void launchFragment_validIntent_clearsBackStack() {
+        Robolectric.getForegroundThreadScheduler().unPause();
+
         // Add fragment 1
         TestFragment testFragment1 = new TestFragment();
         mActivity.launchFragment(testFragment1);

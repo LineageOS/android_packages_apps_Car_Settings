@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.XmlRes;
 
@@ -46,7 +45,7 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
             // Update the user info value, as it may have changed.
             refreshUserInfo();
             // Update the text in the action bar when there is a user update.
-            ((TextView) getActivity().findViewById(R.id.title)).setText(getTitleText());
+            getToolbar().setTitle(getTitleText());
         }
     };
 

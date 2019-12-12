@@ -24,7 +24,6 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.LayoutRes;
@@ -32,7 +31,11 @@ import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.annotations.VisibleForTesting;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Enables user to edit their username.
@@ -44,9 +47,9 @@ public class EditUsernameFragment extends BaseFragment {
     private UserInfo mUserInfo;
 
     private EditText mUserNameEditText;
-    private Button mOkButton;
-    private Button mCancelButton;
     @VisibleForTesting UserManager mUserManager;
+    private MenuItem mOkButton;
+    private MenuItem mCancelButton;
 
     /**
      * Creates instance of EditUsernameFragment.
@@ -61,9 +64,8 @@ public class EditUsernameFragment extends BaseFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Arrays.asList(mCancelButton, mOkButton);
     }
 
     @Override
@@ -82,6 +84,22 @@ public class EditUsernameFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mUserInfo = getArguments().getParcelable(Intent.EXTRA_USER);
+
+        mCancelButton = new MenuItem.Builder(getContext())
+                .setTitle(android.R.string.cancel)
+                .setOnClickListener(i -> getActivity().onBackPressed())
+                .build();
+        mOkButton = new MenuItem.Builder(getContext())
+                .setTitle(android.R.string.ok)
+                .setOnClickListener(i -> {
+                    // Save new user's name.
+                    mUserManager.setUserName(mUserInfo.id,
+                            mUserNameEditText.getText().toString());
+                    Settings.Secure.putInt(getActivity().getContentResolver(),
+                            USER_NAME_SET, 1);
+                    getActivity().onBackPressed();
+                })
+                .build();
     }
 
     @Override
@@ -97,8 +115,6 @@ public class EditUsernameFragment extends BaseFragment {
             mUserManager = UserManager.get(getContext());
         }
 
-        showOkButton();
-        showCancelButton();
         configureUsernameEditing();
     }
 
@@ -129,30 +145,6 @@ public class EditUsernameFragment extends BaseFragment {
             @Override
             public void afterTextChanged(Editable s) {
             }
-        });
-    }
-
-    private void showOkButton() {
-        // Configure OK button.
-        mOkButton = getActivity().findViewById(R.id.action_button2);
-        mOkButton.setVisibility(View.VISIBLE);
-        mOkButton.setText(android.R.string.ok);
-        mOkButton.setOnClickListener(view -> {
-            // Save new user's name.
-            mUserManager.setUserName(mUserInfo.id, mUserNameEditText.getText().toString());
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    USER_NAME_SET, 1);
-            getActivity().onBackPressed();
-        });
-    }
-
-    private void showCancelButton() {
-        // Configure Cancel button.
-        mCancelButton = getActivity().findViewById(R.id.action_button1);
-        mCancelButton.setVisibility(View.VISIBLE);
-        mCancelButton.setText(android.R.string.cancel);
-        mCancelButton.setOnClickListener(view -> {
-            getActivity().onBackPressed();
         });
     }
 }

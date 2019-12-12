@@ -20,17 +20,16 @@ import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.os.UserManager;
-import android.widget.TextView;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
@@ -46,10 +45,11 @@ public class UserDetailsFragmentTest {
 
     private Context mContext;
     private UserManager mUserManager;
-    private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
 
-    private TextView mTitle;
+    private Toolbar mToolbar;
+
+    private FragmentController<UserDetailsFragment> mFragmentController;
 
     @Before
     public void setUpTestActivity() {
@@ -58,14 +58,13 @@ public class UserDetailsFragmentTest {
         mContext = RuntimeEnvironment.application;
         mUserManager = UserManager.get(mContext);
         Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_NAME, /* flags= */ 0);
-        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @Test
     public void testCarUserManagerHelperUpdateListener_showsCorrectText() {
         createUserDetailsFragment();
         mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mUserManager.getUserInfo(TEST_USER_ID)));
     }
 
@@ -73,20 +72,22 @@ public class UserDetailsFragmentTest {
     public void testCarUserManagerHelperUpdateListener_textChangesWithUserUpdate() {
         createUserDetailsFragment();
         mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mUserManager.getUserInfo(TEST_USER_ID)));
 
         mUserManager.removeUser(TEST_USER_ID);
         Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_UPDATED_NAME, /* flags= */ 0);
 
         mUserDetailsFragment.mUserUpdateReceiver.onReceive(/* context= */ null, /* intent= */ null);
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mUserManager.getUserInfo(TEST_USER_ID)));
     }
 
     private void createUserDetailsFragment() {
         mUserDetailsFragment = UserDetailsFragment.newInstance(TEST_USER_ID);
-        mTestActivity.launchFragment(mUserDetailsFragment);
-        mTitle = mTestActivity.findViewById(R.id.title);
+        mFragmentController = FragmentController.of(mUserDetailsFragment);
+        mFragmentController.setup();
+
+        mToolbar = ((Toolbar) mUserDetailsFragment.requireActivity().findViewById(R.id.toolbar));
     }
 }
