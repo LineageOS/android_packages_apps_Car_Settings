@@ -27,6 +27,7 @@ import androidx.preference.PreferenceGroup;
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceUtil;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.internal.app.LocaleHelper;
 import com.android.internal.app.LocaleStore;
 import com.android.internal.app.SuggestedLocaleAdapter;
@@ -126,7 +127,7 @@ public class LocalePreferenceProvider {
             case TYPE_LOCALE:
                 LocaleStore.LocaleInfo info =
                         (LocaleStore.LocaleInfo) mSuggestedLocaleAdapter.getItem(position);
-                Preference preference = new Preference(mContext);
+                CarUiPreference preference = new CarUiPreference(mContext);
                 preference.setTitle(info.getFullNameNative());
                 LocaleUtil.setLocaleArgument(preference, info);
                 return preference;

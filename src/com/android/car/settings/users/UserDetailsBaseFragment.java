@@ -22,21 +22,21 @@ import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import androidx.annotation.LayoutRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
+
+import java.util.Collections;
+import java.util.List;
 
 /** Common logic shared for controlling the action bar which contains a button to delete a user. */
 public abstract class UserDetailsBaseFragment extends SettingsFragment {
     private UserManager mUserManager;
     private UserInfo mUserInfo;
+    private MenuItem mDeleteButton;
 
     private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
         String userType = arguments.getString(UsersDialogProvider.KEY_USER_TYPE);
@@ -63,9 +63,8 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mDeleteButton);
     }
 
     @Override
@@ -87,15 +86,24 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
                 mConfirmListener,
                 /* rejectListener= */ null,
                 /* neutralListener= */ null);
+
+        // If the current user is not allowed to remove users, the user trying to be removed
+        // cannot be removed, or the current user is a demo user, do not show delete button.
+        boolean isVisible = !mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)
+                && mUserInfo.id != UserHandle.USER_SYSTEM
+                && !mUserManager.isDemoUser();
+        mDeleteButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.delete_button)
+                .setOnClickListener(i -> showConfirmRemoveUserDialog())
+                .setVisible(isVisible)
+                .build();
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showRemoveUserButton();
 
-        TextView titleView = getActivity().findViewById(R.id.title);
-        titleView.setText(getTitleText());
+        getToolbar().setTitle(getTitleText());
     }
 
     /** Make UserInfo available to subclasses. */
@@ -110,19 +118,6 @@ public abstract class UserDetailsBaseFragment extends SettingsFragment {
 
     /** Defines the text that should be shown in the action bar. */
     protected abstract String getTitleText();
-
-    private void showRemoveUserButton() {
-        Button removeUserBtn = getActivity().findViewById(R.id.action_button1);
-        if (mUserManager.hasUserRestriction(UserManager.DISALLOW_REMOVE_USER)
-                || mUserInfo.id == UserHandle.USER_SYSTEM
-                || mUserManager.isDemoUser()) {
-            removeUserBtn.setVisibility(View.GONE);
-            return;
-        }
-        removeUserBtn.setVisibility(View.VISIBLE);
-        removeUserBtn.setText(R.string.delete_button);
-        removeUserBtn.setOnClickListener(v -> showConfirmRemoveUserDialog());
-    }
 
     private void showConfirmRemoveUserDialog() {
         UserHelper userHelper = UserHelper.getInstance(getContext());

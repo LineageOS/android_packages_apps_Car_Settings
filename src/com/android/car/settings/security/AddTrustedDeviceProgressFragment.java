@@ -16,8 +16,6 @@
 package com.android.car.settings.security;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
@@ -27,7 +25,6 @@ import com.android.car.settings.common.SettingsFragment;
  * to user.
  */
 public class AddTrustedDeviceProgressFragment extends SettingsFragment {
-    private ProgressBar mProgressBar;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -37,20 +34,19 @@ public class AddTrustedDeviceProgressFragment extends SettingsFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
-        mProgressBar.setVisibility(View.VISIBLE);
+        getToolbar().showProgressBar();
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        mProgressBar.setVisibility(View.VISIBLE);
+        getToolbar().showProgressBar();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        mProgressBar.setVisibility(View.GONE);
+        getToolbar().hideProgressBar();
     }
 }
 

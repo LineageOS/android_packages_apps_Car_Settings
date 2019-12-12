@@ -27,6 +27,7 @@ import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.datetime.ZoneGetter;
 
 import java.util.ArrayList;
@@ -85,7 +86,7 @@ public class TimeZonePickerScreenPreferenceController extends
 
     /** Construct a time zone preference based on the Map object given by {@link ZoneGetter}. */
     private Preference createTimeZonePreference(Map<String, Object> timeZone) {
-        Preference preference = new Preference(getContext());
+        CarUiPreference preference = new CarUiPreference(getContext());
         preference.setKey(timeZone.get(ZoneGetter.KEY_ID).toString());
         preference.setTitle(timeZone.get(ZoneGetter.KEY_DISPLAY_LABEL).toString());
         preference.setSummary(timeZone.get(ZoneGetter.KEY_OFFSET_LABEL).toString());

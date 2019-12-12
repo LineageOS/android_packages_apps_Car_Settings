@@ -20,7 +20,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
-import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
@@ -89,8 +88,7 @@ public class MobileNetworkFragment extends SettingsFragment implements
         super.onActivityCreated(savedInstanceState);
 
         if (mTitle != null) {
-            TextView titleView = requireActivity().findViewById(R.id.title);
-            titleView.setText(mTitle);
+            getToolbar().setTitle(mTitle);
         }
     }
 
@@ -113,13 +111,11 @@ public class MobileNetworkFragment extends SettingsFragment implements
         }
 
         if (info != null) {
-            TextView titleView = requireActivity().findViewById(R.id.title);
-
             // It is possible for this to be called before the activity is fully created. If so,
             // cache the value so that it can be constructed onActivityCreated.
             mTitle = info.getDisplayName();
-            if (titleView != null) {
-                titleView.setText(mTitle);
+            if (getToolbar() != null) {
+                getToolbar().setTitle(mTitle);
             }
         }
     }

@@ -23,11 +23,12 @@ import static org.mockito.Mockito.verify;
 
 import android.content.pm.UserInfo;
 import android.os.UserManager;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -79,13 +80,14 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(userId, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        Button okButton = (Button) mTestActivity.findViewById(R.id.action_button2);
+        MenuItem okButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+                .getMenuItems().get(1);
 
         String newUserName = "new_user_name";
         userNameEditText.requestFocus();
         userNameEditText.setText(newUserName);
         assertThat(okButton.isEnabled()).isTrue();
-        okButton.callOnClick();
+        okButton.performClick();
 
         verify(mUserManager).setUserName(userId, newUserName);
     }
@@ -99,14 +101,15 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(userId, /* name= */ "test_user", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        Button cancelButton = (Button) mTestActivity.findViewById(R.id.action_button1);
+        MenuItem cancelButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+                .getMenuItems().get(0);
 
         String newUserName = "new_user_name";
         userNameEditText.requestFocus();
         userNameEditText.setText(newUserName);
 
         mTestActivity.clearOnBackPressedFlag();
-        cancelButton.callOnClick();
+        cancelButton.performClick();
 
         // Back called.
         assertThat(mTestActivity.getOnBackPressedFlag()).isTrue();
@@ -120,7 +123,8 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        Button okButton = (Button) mTestActivity.findViewById(R.id.action_button2);
+        MenuItem okButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+                .getMenuItems().get(1);
 
         userNameEditText.requestFocus();
         userNameEditText.setText("");

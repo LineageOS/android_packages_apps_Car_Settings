@@ -27,15 +27,15 @@ import android.accounts.AuthenticatorDescription;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.view.View;
-import android.widget.Button;
 
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.users.UserHelper;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -43,7 +43,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
@@ -58,7 +57,7 @@ import org.robolectric.shadows.ShadowUserManager;
 public class AccountSettingsFragmentTest {
     private final int mUserId = UserHandle.myUserId();
 
-    private BaseTestActivity mActivity;
+    private FragmentController<AccountSettingsFragment> mFragmentController;
     private AccountSettingsFragment mFragment;
 
     @Mock
@@ -71,8 +70,6 @@ public class AccountSettingsFragmentTest {
         // Set up user info
         when(mMockUserHelper.getCurrentProcessUserInfo())
                 .thenReturn(new UserInfo(mUserId, "USER", /* flags= */ 0));
-
-        mActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
@@ -85,8 +82,8 @@ public class AccountSettingsFragmentTest {
         when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(false);
         initFragment();
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(addAccountButton.getVisibility()).isEqualTo(View.GONE);
+        assertThat(getToolbar().getMenuItems()).hasSize(1);
+        assertThat(getToolbar().getMenuItems().get(0).isVisible()).isFalse();
     }
 
     @Test
@@ -94,8 +91,8 @@ public class AccountSettingsFragmentTest {
         when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         initFragment();
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        assertThat(addAccountButton.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(getToolbar().getMenuItems()).hasSize(1);
+        assertThat(getToolbar().getMenuItems().get(0).isVisible()).isTrue();
     }
 
     @Test
@@ -103,7 +100,7 @@ public class AccountSettingsFragmentTest {
         when(mMockUserHelper.canCurrentProcessModifyAccounts()).thenReturn(true);
         initFragment();
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
+        MenuItem addAccountButton = getToolbar().getMenuItems().get(0);
         addAccountButton.performClick();
 
         assertThat(mFragment.getFragmentManager().findFragmentById(
@@ -118,7 +115,7 @@ public class AccountSettingsFragmentTest {
         addAccountAndDescription(mUserId, "accountName", R.string.account_type1_label);
         initFragment();
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
+        MenuItem addAccountButton = getToolbar().getMenuItems().get(0);
         addAccountButton.performClick();
 
         assertThat(mFragment.getFragmentManager().findFragmentById(
@@ -134,8 +131,7 @@ public class AccountSettingsFragmentTest {
         addAccountAndDescription(mUserId, "accountName2", R.string.account_type2_label);
         initFragment();
 
-        Button addAccountButton = mFragment.requireActivity().findViewById(R.id.action_button1);
-        addAccountButton.performClick();
+        getToolbar().getMenuItems().get(0).performClick();
 
         assertThat(mFragment.getFragmentManager().findFragmentById(
                 R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
@@ -143,7 +139,8 @@ public class AccountSettingsFragmentTest {
 
     private void initFragment() {
         mFragment = new AccountSettingsFragment();
-        mActivity.launchFragment(mFragment);
+        mFragmentController = FragmentController.of(mFragment);
+        mFragmentController.setup();
     }
 
     private void addAccountAndDescription(int profileId, String accountName, int labelId) {
@@ -161,5 +158,9 @@ public class AccountSettingsFragmentTest {
 
     private ShadowAccountManager getShadowAccountManager() {
         return Shadow.extract(AccountManager.get(application));
+    }
+
+    private Toolbar getToolbar() {
+        return mFragment.requireActivity().requireViewById(R.id.toolbar);
     }
 }
