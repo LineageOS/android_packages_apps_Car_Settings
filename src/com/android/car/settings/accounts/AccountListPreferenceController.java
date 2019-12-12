@@ -251,7 +251,7 @@ public class AccountListPreferenceController extends
         return false;
     }
 
-    private static class AccountPreference extends Preference {
+    private static class AccountPreference extends CarUiPreference {
         /** Account that this Preference represents. */
         private final Account mAccount;
         private final CharSequence mLabel;
@@ -266,6 +266,7 @@ public class AccountListPreferenceController extends
             setTitle(account.name);
             setSummary(label);
             setIcon(icon);
+            setShowChevron(false);
         }
 
         /**

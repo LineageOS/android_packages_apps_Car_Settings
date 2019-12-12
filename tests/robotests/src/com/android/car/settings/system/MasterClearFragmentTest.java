@@ -86,7 +86,9 @@ public class MasterClearFragmentTest {
 
     @Test
     public void masterClearButtonClicked_launchesCheckLockActivity() {
-        findMasterClearButton(mFragment.requireActivity()).performClick();
+        MenuItem masterClearButton = findMasterClearButton(mFragment.requireActivity());
+        masterClearButton.setEnabled(true);
+        masterClearButton.performClick();
 
         Intent startedIntent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(startedIntent.getComponent().getClassName()).isEqualTo(
