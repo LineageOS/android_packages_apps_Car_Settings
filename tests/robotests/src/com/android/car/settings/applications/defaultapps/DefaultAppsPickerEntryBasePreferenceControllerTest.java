@@ -121,7 +121,7 @@ public class DefaultAppsPickerEntryBasePreferenceControllerTest {
     }
 
     @Test
-    public void refreshUi_hasSettingIntentButNoVisibleActivity_actionButtonIsNotVisible() {
+    public void refreshUi_hasSettingIntentButNoVisibleActivity_actionButtonIsVisible() {
         ActivityInfo activityInfo = new ActivityInfo();
         activityInfo.exported = false;
         ResolveInfo resolveInfo = new ResolveInfo();
@@ -132,7 +132,7 @@ public class DefaultAppsPickerEntryBasePreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mController.refreshUi();
 
-        assertThat(mButtonPreference.isActionShown()).isFalse();
+        assertThat(mButtonPreference.isActionShown()).isTrue();
     }
 
     @Test
