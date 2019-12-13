@@ -46,9 +46,9 @@ public class ButtonPreferenceTest {
         Context context = RuntimeEnvironment.application;
         Context themedContext = new ContextThemeWrapper(context, R.style.CarSettingTheme);
 
-        View rootView = View.inflate(themedContext, R.layout.two_action_preference, null);
-        mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
         mButtonPreference = new ButtonPreference(context);
+        View rootView = View.inflate(themedContext, mButtonPreference.getLayoutResource(), null);
+        mViewHolder = PreferenceViewHolder.createInstanceForTests(rootView);
     }
 
     @Test
