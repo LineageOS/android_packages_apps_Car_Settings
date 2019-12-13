@@ -19,7 +19,6 @@ package com.android.car.settings.applications.defaultapps;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 
 import androidx.annotation.Nullable;
 
@@ -48,27 +47,22 @@ public abstract class DefaultAppsPickerEntryBasePreferenceController extends
     protected void updateState(ButtonPreference preference) {
         super.updateState(preference);
 
+        // If activity does not exist, return. Otherwise allow intenting to the activity.
         Intent intent = getSettingIntent(getCurrentDefaultAppInfo());
-        boolean isSafeIntent = false;
-        if (intent != null) {
-            ActivityInfo info = intent.resolveActivityInfo(
-                    getContext().getPackageManager(), intent.getFlags());
-            // If activity exists and is visible to Car Settings, allow intenting to the activity.
-            if (info != null && info.exported) {
-                isSafeIntent = true;
-            }
+        if (intent == null || intent.resolveActivityInfo(
+                getContext().getPackageManager(), intent.getFlags()) == null) {
+            preference.showAction(false);
+            return;
         }
-        preference.showAction(isSafeIntent);
-        if (isSafeIntent) {
-            // Use startActivityForResult because some apps need to check the identity of the
-            // caller.
-            preference.setOnButtonClickListener(p -> getContext().startActivityForResult(
-                    getContext().getBasePackageName(),
-                    intent,
-                    /* requestCode= */ 0,
-                    /* options= */ null
-            ));
-        }
+
+        // Use startActivityForResult because some apps need to check the identity of the caller.
+        preference.setOnButtonClickListener(p -> getContext().startActivityForResult(
+                getContext().getBasePackageName(),
+                intent,
+                /* requestCode= */ 0,
+                /* options= */ null
+        ));
+        preference.showAction(true);
     }
 
     /**
