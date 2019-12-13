@@ -65,7 +65,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_5GhzBandNotSupported_preferenceIsNotEnabled() {
-        ShadowCarWifiManager.setIsDualBandSupported(false);
+        ShadowCarWifiManager.setIs5GhzBandSupported(false);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(!mPreference.isEnabled()).isTrue();
@@ -73,7 +73,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_5GhzBandNotSupported_summarySetToChoose2Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(false);
+        ShadowCarWifiManager.setIs5GhzBandSupported(false);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mPreference.getSummary())
@@ -82,7 +82,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_5GhzBandIsSupported_preferenceIsEnabled() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mPreference.isEnabled()).isTrue();
@@ -90,7 +90,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_wifiConfigApBandSetTo2Ghz_valueIsSetTo2Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_2GHZ;
         mCarWifiManager.setWifiApConfig(config);
@@ -102,7 +102,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_wifiConfigApBandSetTo5Ghz_valueIsSetTo5Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_5GHZ;
         mCarWifiManager.setWifiApConfig(config);
@@ -114,7 +114,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onPreferenceChangedTo5Ghz_updatesApBandConfigTo5Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         ShadowCarWifiManager.setIsDualModeSupported(false);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_2GHZ;
@@ -129,7 +129,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onPreferenceChangedTo2Ghz_updatesApBandConfigTo2Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         ShadowCarWifiManager.setIsDualModeSupported(false);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_5GHZ;
@@ -144,7 +144,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onStart_dualModeIsSupported_summarySetToPrefer5Ghz() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         ShadowCarWifiManager.setIsDualModeSupported(true);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_5GHZ;
@@ -156,7 +156,7 @@ public class WifiTetherApBandPreferenceControllerTest {
 
     @Test
     public void onPreferenceChangedTo5Ghz_dualModeIsSupported_defaultToApBandAny() {
-        ShadowCarWifiManager.setIsDualBandSupported(true);
+        ShadowCarWifiManager.setIs5GhzBandSupported(true);
         ShadowCarWifiManager.setIsDualModeSupported(true);
         WifiConfiguration config = new WifiConfiguration();
         config.apBand = WifiConfiguration.AP_BAND_2GHZ;

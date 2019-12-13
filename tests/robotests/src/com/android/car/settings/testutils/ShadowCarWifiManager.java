@@ -42,7 +42,7 @@ public class ShadowCarWifiManager {
     private static int sCurrentState = STATE_UNKNOWN;
     private static WifiConfiguration sWifiConfiguration = new WifiConfiguration();
     private static boolean sIsDualModeSupported = true;
-    private static boolean sIsDualBandSupported = true;
+    private static boolean sIs5GhzBandSupported = true;
 
     public static void setInstance(CarWifiManager wifiManager) {
         sInstance = wifiManager;
@@ -54,7 +54,7 @@ public class ShadowCarWifiManager {
         sWifiConfiguration = new WifiConfiguration();
         sCurrentState = STATE_UNKNOWN;
         sIsDualModeSupported = true;
-        sIsDualBandSupported = true;
+        sIs5GhzBandSupported = true;
     }
 
     @Implementation
@@ -142,8 +142,8 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
-    protected boolean isDualBandSupported() {
-        return sIsDualBandSupported;
+    protected boolean is5GhzBandSupported() {
+        return sIs5GhzBandSupported;
     }
 
     @Implementation
@@ -155,8 +155,8 @@ public class ShadowCarWifiManager {
         sIsDualModeSupported = supported;
     }
 
-    public static void setIsDualBandSupported(boolean supported) {
-        sIsDualBandSupported = supported;
+    public static void setIs5GhzBandSupported(boolean supported) {
+        sIs5GhzBandSupported = supported;
     }
 
     public static int getCurrentState() {

@@ -152,6 +152,6 @@ public class WifiTetherApBandPreferenceController extends
 
     private boolean is5GhzBandSupported() {
         String countryCode = getCarWifiManager().getCountryCode();
-        return getCarWifiManager().isDualBandSupported() && countryCode != null;
+        return getCarWifiManager().is5GhzBandSupported() && countryCode != null;
     }
 }
