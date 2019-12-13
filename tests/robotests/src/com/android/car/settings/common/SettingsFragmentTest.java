@@ -38,8 +38,6 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
-import com.android.car.ui.preference.EditTextPreferenceDialogFragment;
-import com.android.car.ui.preference.ListPreferenceDialogFragment;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
@@ -93,56 +91,11 @@ public class SettingsFragmentTest {
     }
 
     @Test
-    public void onDisplayPreferenceDialog_editTextPreference_showsDialog() {
-        mFragmentController.setup();
-
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
-
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
-    }
-
-    @Test
-    public void onDisplayPreferenceDialog_listPreference_showsDialog() {
-        mFragmentController.setup();
-
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_list_preference)).performClick();
-
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                ListPreferenceDialogFragment.class);
-    }
-
-    @Test
     public void onDisplayPreferenceDialog_unknownPreferenceType_throwsIllegalArgumentException() {
         mFragmentController.setup();
 
         assertThrows(IllegalArgumentException.class,
                 () -> mFragment.onDisplayPreferenceDialog(new Preference(mContext)));
-    }
-
-    @Test
-    public void onDisplayPreferenceDialog_alreadyShowing_doesNothing() {
-        mFragmentController.setup();
-
-        // Show a dialog.
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
-
-        // Attempt to show another.
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_list_preference)).performClick();
-
-        // Assert only one shown at a time.
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
     }
 
     @Test
