@@ -26,6 +26,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_tts_playback_group"
         settings:controller="com.android.car.settings.tts.TtsPlaybackPreferenceController">
+        <!-- Currently disabled in TtsPlaybackPreferenceController -->
         <ListPreference
             android:key="@string/pk_tts_default_language"
             android:persistent="false"
