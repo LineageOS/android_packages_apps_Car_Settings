@@ -128,6 +128,9 @@ public class TtsPlaybackPreferenceController extends
     protected void updateState(PreferenceGroup preference) {
         boolean isValid = isDefaultLocaleValid();
         mDefaultLanguagePreference.setEnabled(isValid);
+        // Always hide default language preference for now.
+        // TODO: Unhide once product requirements are clarified.
+        mDefaultLanguagePreference.setVisible(false);
         mSpeechRatePreference.setEnabled(isValid);
         mVoicePitchPreference.setEnabled(isValid);
         mResetPreference.setEnabled(isValid);
