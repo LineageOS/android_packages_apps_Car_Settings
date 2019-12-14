@@ -193,10 +193,10 @@ public class CarWifiManager implements WifiTracker.WifiListener {
     }
 
     /**
-     * Checks if the chipset supports dual frequency band (2.4 GHz and 5 GHz).
+     * Checks if the chipset supports 5GHz frequency band.
      */
-    public boolean isDualBandSupported() {
-        return mWifiManager.isDualBandSupported();
+    public boolean is5GhzBandSupported() {
+        return mWifiManager.is5GHzBandSupported();
     }
 
     /**
