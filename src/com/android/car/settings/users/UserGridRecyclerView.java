@@ -19,6 +19,7 @@ package com.android.car.settings.users;
 import static android.os.UserManager.DISALLOW_ADD_USER;
 import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
 
+import android.annotation.IntDef;
 import android.app.ActivityManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
@@ -38,6 +39,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawable;
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -49,6 +51,8 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.internal.util.UserIcons;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -143,9 +147,7 @@ public class UserGridRecyclerView extends RecyclerView {
             }
 
             UserRecord record = new UserRecord(userInfo,
-                    /* isStartGuestSession= */ false,
-                    /* isAddUser= */ false,
-                    isForeground);
+                    isForeground ? UserRecord.FOREGROUND_USER : UserRecord.BACKGROUND_USER);
             userRecords.add(record);
         }
 
@@ -163,10 +165,7 @@ public class UserGridRecyclerView extends RecyclerView {
     }
 
     private UserRecord createForegroundUserRecord() {
-        return new UserRecord(getCurrentForegroundUserInfo(),
-                /* isStartGuestSession= */ false,
-                /* isAddUser= */ false,
-                /* isForeground= */ true);
+        return new UserRecord(getCurrentForegroundUserInfo(), UserRecord.FOREGROUND_USER);
     }
 
     private UserInfo getCurrentForegroundUserInfo() {
@@ -193,24 +192,14 @@ public class UserGridRecyclerView extends RecyclerView {
      * Create guest user record
      */
     private UserRecord createStartGuestUserRecord() {
-        UserInfo userInfo = new UserInfo();
-        userInfo.name = mContext.getString(R.string.start_guest_session);
-        return new UserRecord(userInfo,
-                /* isStartGuestSession= */ true,
-                /* isAddUser= */ false,
-                /* isForeground= */ false);
+        return new UserRecord(/* userInfo= */ null, UserRecord.START_GUEST);
     }
 
     /**
      * Create add user record
      */
     private UserRecord createAddUserRecord() {
-        UserInfo userInfo = new UserInfo();
-        userInfo.name = mContext.getString(R.string.user_add_user_menu);
-        return new UserRecord(userInfo,
-                /* isStartGuestSession= */ false,
-                /* isAddUser= */ true,
-                /* isForeground= */ false);
+        return new UserRecord(/* userInfo= */ null, UserRecord.ADD_USER);
     }
 
     public void setFragment(BaseFragment fragment) {
@@ -322,42 +311,41 @@ public class UserGridRecyclerView extends RecyclerView {
             UserRecord userRecord = mUsers.get(position);
             RoundedBitmapDrawable circleIcon = getCircularUserRecordIcon(userRecord);
             holder.mUserAvatarImageView.setImageDrawable(circleIcon);
-            holder.mUserNameTextView.setText(userRecord.mInfo.name);
+            holder.mUserNameTextView.setText(getUserRecordName(userRecord));
 
             // Defaults to 100% opacity and no circle around the icon.
             holder.mView.setAlpha(mOpacityEnabled);
             holder.mFrame.setBackgroundResource(0);
 
             // Foreground user record.
-            if (userRecord.mIsForeground) {
-                // Add a circle around the icon.
-                holder.mFrame.setBackgroundResource(R.drawable.user_avatar_bg_circle);
-                // Go back to quick settings if user selected is already the foreground user.
-                holder.mView.setOnClickListener(v -> mBaseFragment.getActivity().onBackPressed());
-                return;
-            }
+            switch (userRecord.mType) {
+                case UserRecord.FOREGROUND_USER:
+                    // Add a circle around the icon.
+                    holder.mFrame.setBackgroundResource(R.drawable.user_avatar_bg_circle);
+                    // Go back to quick settings if user selected is already the foreground user.
+                    holder.mView.setOnClickListener(v
+                            -> mBaseFragment.getActivity().onBackPressed());
+                    break;
 
-            // Start guest session record.
-            if (userRecord.mIsStartGuestSession) {
-                holder.mView.setOnClickListener(v -> handleGuestSessionClicked());
-                return;
-            }
+                case UserRecord.START_GUEST:
+                    holder.mView.setOnClickListener(v -> handleGuestSessionClicked());
+                    break;
 
-            // Add user record.
-            if (userRecord.mIsAddUser) {
-                if (mIsAddUserRestricted) {
-                    // If there are restrictions, show a 50% opaque "add user" view
-                    holder.mView.setAlpha(mOpacityDisabled);
-                    holder.mView.setOnClickListener(
-                            v -> mBaseFragment.getFragmentHost().showBlockingMessage());
-                } else {
-                    holder.mView.setOnClickListener(v -> handleAddUserClicked(v));
-                }
-                return;
-            }
+                case UserRecord.ADD_USER:
+                    if (mIsAddUserRestricted) {
+                        // If there are restrictions, show a 50% opaque "add user" view
+                        holder.mView.setAlpha(mOpacityDisabled);
+                        holder.mView.setOnClickListener(
+                                v -> mBaseFragment.getFragmentHost().showBlockingMessage());
+                    } else {
+                        holder.mView.setOnClickListener(v -> handleAddUserClicked(v));
+                    }
+                    break;
 
-            // User record;
-            holder.mView.setOnClickListener(v -> handleUserSwitch(userRecord.mInfo));
+                default:
+                    // User record;
+                    holder.mView.setOnClickListener(v -> handleUserSwitch(userRecord.mInfo));
+            }
         }
 
         /**
@@ -431,17 +419,40 @@ public class UserGridRecyclerView extends RecyclerView {
         private RoundedBitmapDrawable getCircularUserRecordIcon(UserRecord userRecord) {
             Resources resources = mContext.getResources();
             RoundedBitmapDrawable circleIcon;
-            if (userRecord.mIsStartGuestSession) {
-                circleIcon = mUserIconProvider.getRoundedGuestDefaultIcon(resources);
-            } else if (userRecord.mIsAddUser) {
-                circleIcon = RoundedBitmapDrawableFactory.create(mRes, UserIcons.convertToBitmap(
-                                mContext.getDrawable(R.drawable.user_add_circle)));
-                circleIcon.setCircular(true);
-            } else {
-                circleIcon = mUserIconProvider.getRoundedUserIcon(userRecord.mInfo, mContext);
+            switch (userRecord.mType) {
+                case UserRecord.START_GUEST:
+                    circleIcon = mUserIconProvider.getRoundedGuestDefaultIcon(resources);
+                    break;
+                case UserRecord.ADD_USER:
+                    circleIcon = getCircularAddUserIcon();
+                    break;
+                default:
+                    circleIcon = mUserIconProvider.getRoundedUserIcon(userRecord.mInfo, mContext);
             }
-
             return circleIcon;
+        }
+
+        private RoundedBitmapDrawable getCircularAddUserIcon() {
+            RoundedBitmapDrawable circleIcon =
+                    RoundedBitmapDrawableFactory.create(mRes, UserIcons.convertToBitmap(
+                            mContext.getDrawable(R.drawable.user_add_circle)));
+            circleIcon.setCircular(true);
+            return circleIcon;
+        }
+
+        private String getUserRecordName(UserRecord userRecord) {
+            String recordName;
+            switch (userRecord.mType) {
+                case UserRecord.START_GUEST:
+                    recordName = mContext.getString(R.string.start_guest_session);
+                    break;
+                case UserRecord.ADD_USER:
+                    recordName = mContext.getString(R.string.user_add_user_menu);
+                    break;
+                default:
+                    recordName = userRecord.mInfo.name;
+            }
+            return recordName;
         }
 
         @Override
@@ -498,16 +509,20 @@ public class UserGridRecyclerView extends RecyclerView {
     public static final class UserRecord {
 
         public final UserInfo mInfo;
-        public final boolean mIsStartGuestSession;
-        public final boolean mIsAddUser;
-        public final boolean mIsForeground;
+        public final @UserRecordType int mType;
 
-        public UserRecord(UserInfo userInfo, boolean isStartGuestSession, boolean isAddUser,
-                boolean isForeground) {
+        public static final int START_GUEST = 0;
+        public static final int ADD_USER = 1;
+        public static final int FOREGROUND_USER = 2;
+        public static final int BACKGROUND_USER = 3;
+
+        @IntDef({START_GUEST, ADD_USER, FOREGROUND_USER, BACKGROUND_USER})
+        @Retention(RetentionPolicy.SOURCE)
+        public @interface UserRecordType{}
+
+        public UserRecord(@Nullable UserInfo userInfo, @UserRecordType int recordType) {
             mInfo = userInfo;
-            mIsStartGuestSession = isStartGuestSession;
-            mIsAddUser = isAddUser;
-            mIsForeground = isForeground;
+            mType = recordType;
         }
     }
 
