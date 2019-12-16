@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ప్రీమియం SMSతో మీకు డబ్బు ఖర్చు కావచ్చు, ఈ ఛార్జీ మీ క్యారియర్ బిల్లులలో విధించబడుతుంది. మీరు ఒక యాప్‌కు అనుమతిని ఇస్తే, ఆ యాప్‌ను ఉపయోగించి మీరు ప్రీమియం SMSను పంపగలరు."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"వినియోగ యాక్సెస్"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"వినియోగ యాక్సెస్‌తో యాప్ మీరు ఉపయోగించే ఇతర యాప్‌ల గురించి మరియు వాటిని ఎంత తరచుగా ఉపయోగిస్తున్నారనే దాని గురించి అలాగే మీ క్యారియర్, భాష సెట్టింగ్‌లు మరియు ఇతర వివరాలను ట్రాక్ చేయగలదు."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"డైరెక్టరీ యాక్సెస్"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi నియంత్రణ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"యాప్‌కు Wi-Fiను ఆన్ లేదా ఆఫ్ చేయడానికి, Wi-Fi నెట్‌వర్క్‌లను స్కాన్ చేసి, కనెక్ట్ చేయడానికి, నెట్‌వర్క్‌లను జోడించడానికి లేదా తీసివేయడానికి, స్థానికం-మాత్రమే హాట్‌స్పాట్‌ను ప్రారంభించడానికి ఈ Wi-Fi కంట్రోలర్ అనుమతిస్తుంది."</string>
     <string name="location_settings_title" msgid="901334356682423679">"స్థానం"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"బ్లూటూత్ ఆఫ్‌లో ఉన్నప్పుడు కూడా, ఏ సమయంలోనైనా సమీపంలోని పరికరాలను స్కాన్ చేయడానికి యాప్‌లను మరియు సేవలను అనుమతించండి. ఉదాహరణకు, ఇది స్థాన ఆధారిత ఫీచర్‌లు మరియు సేవలను మెరుగుపరచడానికి ఉపయోగించబడుతుంది."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"అందుబాటులో లేదు"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android భద్రతా ప్యాచ్ స్థాయి"</string>
     <string name="model_info" msgid="4966408071657934452">"మోడల్"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"కెర్నెల్ వెర్షన్"</string>
     <string name="build_number" msgid="3997326631001009102">"బిల్డ్ సంఖ్య"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"బ్లూటూత్ చిరునామా"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"Wi‑Fi MAC చిరునామా"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"అందుబాటులో లేదు"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"స్థితి"</string>
     <string name="device_status" msgid="267298179806290920">"స్థితి"</string>

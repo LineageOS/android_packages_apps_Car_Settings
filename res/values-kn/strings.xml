@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ಪ್ರೀಮಿಯಂ SMS ನಿಮ್ಮ ವೆಚ್ಚಗಳಿಗೆ ಕಾರಣವಾಗಬಹುದು ಮತ್ತು ಇದನ್ನು ನಿಮ್ಮ ವಾಹಕ ಬಿಲ್‌ಗಳಿಗೆ ಸೇರಿಸಲಾಗುತ್ತದೆ. ನೀವು ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಆ್ಯಪ್ ಬಳಸಿಕೊಂಡು ಪ್ರೀಮಿಯಂ SMS ಕಳುಹಿಸಲು ನಿಮಗೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ."</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ಬಳಕೆಯ ಡೇಟಾಗೆ ಪ್ರವೇಶ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ಬಳಕೆ ಪ್ರವೇಶವು, ನೀವು ಇತರ ಯಾವ ಆ್ಯಪ್‌ಗಳನ್ನು ಬಳಸುತ್ತಿರುವಿರಿ ಮತ್ತು ಎಷ್ಟು ಬಾರಿ ಎಂಬುದನ್ನು ಅಲ್ಲದೆ ನಿಮ್ಮ ವಾಹಕ, ಭಾಷೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಹಾಗೂ ಇತರ ವಿವರಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ."</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ಡೈರೆಕ್ಟರಿ ಪ್ರವೇಶ"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ವೈ-ಫೈ ನಿಯಂತ್ರಣ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ವೈ-ಫೈ ನಿಯಂತ್ರಣವು, ವೈ-ಫೈ ಅನ್ನು ಆನ್ ಅಥವಾ ಆಫ್ ಮಾಡಲು, ವೈ-ಫೈ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಮತ್ತು ಸಂಪರ್ಕಿಸಲು, ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಅಥವಾ ತೆಗೆದುಹಾಕಲು ಹಾಗೂ ಸ್ಥಳೀಯವಾದ ಹಾಟ್‌ಸ್ಪಾಟ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ಈ ಆ್ಯಪ್‌ಗೆ ಅನುಮತಿಸುತ್ತದೆ."</string>
     <string name="location_settings_title" msgid="901334356682423679">"ಸ್ಥಳ"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ಬ್ಲೂಟೂತ್‌ ಆಫ್‌ ಆಗಿದ್ದರೂ ಸಹ, ಯಾವ ಸಮಯದಲ್ಲಾದರೂ ಸಮೀಪದ ಸಾಧನಗಳಿಗೆ ಸ್ಕ್ಯಾನ್‌ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅನುಮತಿಸಿ. ಉದಾಹರಣೆಗೆ, ಸ್ಥಳ ಆಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಇದನ್ನು ಬಳಸಬಹುದಾಗಿದೆ."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ಸಿಸ್ಟಂ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ಆವೃತ್ತಿ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ಭದ್ರತೆ ಪ್ಯಾಚ್ ಮಟ್ಟ"</string>
     <string name="model_info" msgid="4966408071657934452">"ಮಾಡೆಲ್"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"ಕೆರ್ನಲ್ ಆವೃತ್ತಿ"</string>
     <string name="build_number" msgid="3997326631001009102">"ಬಿಲ್ಡ್ ಸಂಖ್ಯೆ"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ಬ್ಲೂಟೂತ್‌‌ ವಿಳಾಸ"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"ವೈ-ಫೈ MAC ವಿಳಾಸ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ಸ್ಥಿತಿ"</string>
     <string name="device_status" msgid="267298179806290920">"ಸ್ಥಿತಿ"</string>

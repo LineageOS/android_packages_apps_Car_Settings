@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্ৰিমিয়াম এছএমএছৰ কাৰণে আপুনি খৰচ বহন কৰিবলগীয়া হ’ব পাৰে যাৰ বাবে বাহকে আপোনালৈ পঠিওৱা বিলত দেয়ৰ পৰিমাণ বাঢ়িব পাৰে। আপুনি যদি কোনো এপক অনুমতি দিয়ে, তেন্তে আপুনি সেই এপটো ব্যৱহাৰ কৰি প্ৰিমিয়াম এছএমএছ পঠাব পাৰিব।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যৱহাৰৰ এক্সেছ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ব্যৱহাৰৰ এক্সেছ সুবিধাই এটা এপক আপুনি আন কি এপ্ ব্যৱহাৰ কৰে আৰু সেইবোৰ কিমান সঘনাই ব্যৱহাৰ কৰে, লগতে আপোনাৰ বাহক, ভাষাৰ ছেটিংসমূহ আৰু অন্যান্য সবিশেষ ট্ৰেক কৰিবলৈ অনুমতি দিয়ে।"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ডাইৰেক্টৰীৰ এক্সেছ"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ৱাই-ফাই নিয়ন্ত্ৰণ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ৱাই-ফাই নিয়ন্ত্ৰণ সুবিধাই এটা এপক ৱাই-ফাই অন বা অফ কৰিবলৈ, স্কেন কৰিবলৈ আৰু ৱাই-ফাই নেটৱৰ্কৰ সৈতে সংযোগ কৰিবলৈ আৰু বা নেটৱৰ্ক আঁতৰাবলৈ, বা স্থানীয়-মাত্ৰ হটস্পট আৰম্ভ কৰিবলৈ অনুমতি দিয়ে।"</string>
     <string name="location_settings_title" msgid="901334356682423679">"অৱস্থান"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ব্লুটুথ অফ থকা অৱস্থাতো এপ্ আৰু সেৱাসমূহক যিকোনো সময়ত নিকটৱৰ্তী ডিভাইচবোৰ স্কেন কৰিবলৈ দিয়ক। ইয়াক অৱস্থান-নিৰ্ভৰ সুবিধা আৰু সেৱাসমূহ উন্নত কৰা আদি কাৰ্যত ব্যৱহাৰ কৰিব পাৰি।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ছিষ্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ছিষ্টেম আপডে’ট"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"উপলব্ধ নহয়"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android সংস্কৰণ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android সুৰক্ষা পেচ্চ স্তৰ"</string>
     <string name="model_info" msgid="4966408071657934452">"ম\'ডেল"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"কাৰ্ণেলৰ সংস্কৰণ"</string>
     <string name="build_number" msgid="3997326631001009102">"বিল্ড নম্বৰ"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ব্লুটুথৰ ঠিকনা"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"ৱাই-ফাই মেক ঠিকনা"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"উপলব্ধ নহয়"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"স্থিতি"</string>
     <string name="device_status" msgid="267298179806290920">"স্থিতি"</string>

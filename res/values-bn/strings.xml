@@ -21,7 +21,7 @@
     <string name="more_settings_label" msgid="3867559443480110616">"আরও"</string>
     <string name="display_settings" msgid="5325515247739279185">"ডিসপ্লে"</string>
     <string name="brightness" msgid="2919605130898772866">"উজ্জ্বলতার স্তর"</string>
-    <string name="auto_brightness_title" msgid="9124647862844666581">"পরিবেশের আলো অনুসারে উজ্জ্বলতা"</string>
+    <string name="auto_brightness_title" msgid="9124647862844666581">"অভিযোজিত উজ্জ্বলতা"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"উপলভ্য আলোর পরিপ্রেক্ষিতে উজ্জ্বলতার স্তর অপ্টিমাইজ করুন"</string>
     <string name="condition_night_display_title" msgid="3777509730126972675">"নাইট লাইট চালু আছে"</string>
     <string name="keywords_display" msgid="3978416985146943922">"স্ক্রিন, টাচস্ক্রিন"</string>
@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"প্রিমিয়াম এসএমএসের জন্য অর্থ খরচ হতে পারে এবং আপনার পরিষেবা প্রদানকারীর বিলে যোগ করা হবে৷ আপনি যদি কোনও অ্যাপের জন্য অনুমতি চালু করেন তাহলে আপনি সেই অ্যাপ ব্যবহার করে প্রিমিয়াম এসএমএস পাঠাতে পারবেন।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ব্যবহারের তথ্যে অ্যাক্সেস"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ব্যবহার অ্যাক্সেস ফিচারের মাধ্যমে কোনও অ্যাপ, আপনি কী কী অ্যাপ ব্যবহার করছেন এবং কত ঘন ঘন ব্যবহার করছেন তা ট্র্যাক করতে পারে, এর পাশাপাশি আপনার পরিষেবা প্রদানকারী, ভাষা সেটিংস, এবং অন্যান্য বিষয়ে বিবরণ দেখতে পারে।"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ডিরেক্টরি অ্যাক্সেস"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ওয়াই-ফাই কন্ট্রোল"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ওয়াই-ফাই কন্ট্রোল সুবিধাটি কোনও অ্যাপকে ওয়াই-ফাই চালু অথবা বন্ধ করতে, ওয়াই-ফাই নেটওয়ার্ক স্ক্যান করে তাতে কানেক্ট করতে, নেটওয়ার্ক যোগ করতে বা মুছে ফেলতে অথবা শুধুমাত্র স্থানীয় ব্যবহারের জন্য হটস্পট চালু করতে অনুমতি দেয়।"</string>
     <string name="location_settings_title" msgid="901334356682423679">"লোকেশন"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ব্লুটুথ বন্ধ থাকলেও অ্যাপ এবং পরিষেবাগুলিকে যেকোনও সময় আশেপাশে থাকা অন্যান্য ডিভাইস স্ক্যান করার অনুমতি দিন। এটি বিভিন্ন ক্ষেত্রে কাজে লাগতে পারে, যেমন লোকেশন-ভিত্তিক বৈশিষ্ট্য এবং পরিষেবার উন্নতির জন্য।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"সিস্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"উপলভ্য নয়"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ভার্সন"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android সুরক্ষার প্যাচ লেবেল"</string>
     <string name="model_info" msgid="4966408071657934452">"মডেল"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"কার্নেল ভার্সন"</string>
     <string name="build_number" msgid="3997326631001009102">"বিল্ড নম্বর"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ব্লুটুথ অ্যাড্রেস"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"ওয়াই-ফাই MAC অ্যাড্রেস"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"উপলভ্য নয়"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"স্ট্যাটাস"</string>
     <string name="device_status" msgid="267298179806290920">"স্ট্যাটাস"</string>

@@ -320,10 +320,8 @@
     <string name="premium_sms_access_description" msgid="7119026067677052169">"ਪ੍ਰੀਮੀਅਮ SMS ਦਾ ਤੁਹਾਡੇ ਤੋਂ ਖਰਚਾ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਕੈਰੀਅਰ ਬਿੱਲਾਂ ਵਿੱਚ ਵਾਧਾ ਹੋ ਜਾਵੇਗਾ। ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਐਪ ਨੂੰ ਇਜਾਜ਼ਤ ਦਿੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਉਸ ਐਪ ਦੀ ਵਰਤੋਂ ਨਾਲ ਪ੍ਰੀਮੀਅਮ SMS ਭੇਜਣ ਦੇ ਯੋਗ ਹੋ ਜਾਵੋਗੇ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"ਵਰਤੋਂ ਪਹੁੰਚ"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"ਵਰਤੋਂ ਪਹੁੰਚ ਕਿਸੇ ਐਪ ਨੂੰ ਇਹ ਨਜ਼ਰ ਰੱਖਣ ਦਿੰਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਕਿਹੜੀਆਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ ਅਤੇ ਕਿੰਨੀ ਵਾਰੀ, ਜਿਵੇਂ ਕਿ ਤੁਹਾਡਾ ਕੈਰੀਅਰ, ਭਾਸ਼ਾ ਸੈਟਿੰਗਾਂ, ਅਤੇ ਹੋਰ ਵੇਰਵੇ।"</string>
-    <!-- no translation found for directory_access_title (7117264853202268740) -->
-    <skip />
-    <!-- no translation found for directory_on_volume (4947971311247097078) -->
-    <skip />
+    <string name="directory_access_title" msgid="7117264853202268740">"ਡਾਇਰੈਕਟਰੀ ਤੱਕ ਪਹੁੰਚ"</string>
+    <string name="directory_on_volume" msgid="4947971311247097078">"<xliff:g id="VOLUME">%1$s</xliff:g> (<xliff:g id="DIRECTORY">%2$s</xliff:g>)"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"ਵਾਈ‑ਫਾਈ ਕੰਟਰੋਲ"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"ਵਾਈ-ਫਾਈ ਕੰਟਰੋਲ ਰਾਹੀਂ ਕੋਈ ਐਪ ਵਾਈ-ਫਾਈ ਚਾਲੂ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੀ ਹੈ, ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸਕੈਨ ਅਤੇ ਉਹਨਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰ ਸਕਦੀ ਹੈ, ਨੈੱਟਵਰਕਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰ ਜਾਂ ਹਟਾ ਸਕਦੀ ਹੈ, ਜਾਂ ਸਿਰਫ਼-ਸਥਾਨਕ ਹੌਟਸਪੌਟ ਸ਼ੁਰੂ ਕਰ ਸਕਦੀ ਹੈ।"</string>
     <string name="location_settings_title" msgid="901334356682423679">"ਟਿਕਾਣਾ"</string>
@@ -338,8 +336,7 @@
     <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ਬਲੂਟੁੱਥ ਬੰਦ ਹੋਣ \'ਤੇ ਵੀ ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਕਿਸੇ ਵੀ ਵੇਲੇ ਨਜ਼ਦੀਕੀ ਡੀਵਾਈਸਾਂ ਲਈ ਸਕੈਨ ਕਰਨ ਦਿਓ। ਇਸਦੀ ਵਰਤੋਂ ਕਰਕੇ ਟਿਕਾਣਾ-ਆਧਾਰਿਤ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਬਿਹਤਰ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ਸਿਸਟਮ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
-    <!-- no translation found for status_unavailable (3737918179898732010) -->
-    <skip />
+    <string name="status_unavailable" msgid="3737918179898732010">"ਅਣਉਪਲਬਧ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ਵਰਜਨ"</string>
     <string name="security_patch" msgid="4794276590178386903">"Android ਸੁਰੱਖਿਆ ਪੈਚ ਪੱਧਰ"</string>
     <string name="model_info" msgid="4966408071657934452">"ਮਾਡਲ"</string>
@@ -347,8 +344,7 @@
     <string name="kernel_version" msgid="7327212934187011508">"ਕਰਨਲ ਵਰਜਨ"</string>
     <string name="build_number" msgid="3997326631001009102">"ਬਿਲਡ ਨੰਬਰ"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"ਬਲੂਟੁੱਥ ਪਤਾ"</string>
-    <!-- no translation found for about_wifi_mac_address (3934228440550548053) -->
-    <skip />
+    <string name="about_wifi_mac_address" msgid="3934228440550548053">"ਵਾਈ‑ਫਾਈ MAC ਪਤਾ"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"ਸਥਿਤੀ"</string>
     <string name="device_status" msgid="267298179806290920">"ਸਥਿਤੀ"</string>
