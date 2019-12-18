@@ -31,6 +31,7 @@ import com.android.car.settings.common.PreferenceControllerTestHelper;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
@@ -39,6 +40,7 @@ import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowEuiccManager;
 import org.robolectric.shadows.ShadowPackageManager;
 
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 public class AddMobileNetworkPreferenceControllerTest {
 

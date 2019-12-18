@@ -36,6 +36,7 @@ import com.google.android.collect.Lists;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
@@ -46,6 +47,7 @@ import org.robolectric.shadow.api.Shadow;
 
 import java.util.List;
 
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowSubscriptionManager.class})
 public class MobileNetworkListPreferenceControllerTest {
