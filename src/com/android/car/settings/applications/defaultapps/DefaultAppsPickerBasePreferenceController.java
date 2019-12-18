@@ -29,7 +29,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.GroupSelectionPreferenceController;
 import com.android.car.settings.common.Logger;
-import com.android.car.settings.common.RadioButtonPreference;
+import com.android.car.ui.preference.CarUiRadioButtonPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import java.util.ArrayList;
@@ -117,7 +117,7 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
     }
 
     protected TwoStatePreference createOption(DefaultAppInfo info) {
-        RadioButtonPreference preference = new RadioButtonPreference(getContext());
+        CarUiRadioButtonPreference preference = new CarUiRadioButtonPreference(getContext());
         preference.setKey(info.getKey());
         preference.setTitle(info.loadLabel());
         preference.setIcon(DefaultAppUtils.getSafeIcon(info.loadIcon(),
@@ -162,8 +162,8 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
         return true;
     }
 
-    private RadioButtonPreference createNoneOption() {
-        RadioButtonPreference preference = new RadioButtonPreference(getContext());
+    private CarUiRadioButtonPreference createNoneOption() {
+        CarUiRadioButtonPreference preference = new CarUiRadioButtonPreference(getContext());
         preference.setKey(NONE_PREFERENCE_KEY);
         preference.setTitle(R.string.app_list_preference_none);
         preference.setIcon(R.drawable.ic_remove_circle);
