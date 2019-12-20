@@ -36,7 +36,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.LogicalPreferenceGroup;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
-import com.android.car.settings.common.RadioButtonPreference;
+import com.android.car.ui.preference.CarUiRadioButtonPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import com.google.android.collect.Lists;
@@ -170,7 +170,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        RadioButtonPreference preference = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference preference = mPreferenceGroup.findPreference(testKey);
         assertThat(preference.isChecked()).isTrue();
     }
 
@@ -186,9 +186,9 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        RadioButtonPreference otherOption =
-                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
 
         assertThat(currentDefault.isChecked()).isTrue();
         assertThat(otherOption.isChecked()).isFalse();
@@ -196,7 +196,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         currentDefault.performClick();
 
         currentDefault = mPreferenceGroup.findPreference(testKey);
-        otherOption = (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
 
         assertThat(currentDefault.isChecked()).isTrue();
         assertThat(otherOption.isChecked()).isFalse();
@@ -215,9 +215,9 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        RadioButtonPreference otherOption =
-                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
 
         assertThat(currentDefault.isChecked()).isTrue();
         assertThat(otherOption.isChecked()).isFalse();
@@ -225,7 +225,7 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         otherOption.performClick();
 
         currentDefault = mPreferenceGroup.findPreference(testKey);
-        otherOption = (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        otherOption = (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
 
         assertThat(currentDefault.isChecked()).isFalse();
         assertThat(otherOption.isChecked()).isTrue();
@@ -244,9 +244,9 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.refreshUi();
 
-        RadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
-        RadioButtonPreference otherOption =
-                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        CarUiRadioButtonPreference currentDefault = mPreferenceGroup.findPreference(testKey);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
 
         assertThat(currentDefault.isChecked()).isTrue();
         assertThat(otherOption.isChecked()).isFalse();
@@ -273,8 +273,8 @@ public class DefaultAppsPickerBasePreferenceControllerTest {
         mController.refreshUi();
 
         // This preference represents the "None" option.
-        RadioButtonPreference otherOption =
-                (RadioButtonPreference) mPreferenceGroup.getPreference(0);
+        CarUiRadioButtonPreference otherOption =
+                (CarUiRadioButtonPreference) mPreferenceGroup.getPreference(0);
         assertThat(mController.getCurrentDefaultKey()).isEqualTo(testKey);
 
         otherOption.performClick();

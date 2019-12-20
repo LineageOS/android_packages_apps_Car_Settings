@@ -55,11 +55,6 @@
         <attr name="controller" format="string"/>
     </declare-styleable>
 
-    <declare-styleable name="TwoActionPreference">
-        <!-- Determines if the secondary action is initially shown -->
-        <attr name="actionShown" format="boolean"/>
-    </declare-styleable>
-
     <declare-styleable name="ProgressBarPreference">
         <attr name="min" format="integer"/>
         <attr name="max" format="integer"/>
