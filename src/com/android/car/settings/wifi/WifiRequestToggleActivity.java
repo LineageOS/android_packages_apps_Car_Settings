@@ -29,7 +29,6 @@ import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
@@ -265,11 +264,6 @@ public class WifiRequestToggleActivity extends Activity implements DialogInterfa
                         activity.setResult(Activity.RESULT_OK);
                         finish();
                     }
-                    break;
-
-                case WifiManager.ERROR:
-                    Toast.makeText(activity, R.string.wifi_error, Toast.LENGTH_SHORT).show();
-                    finish();
                     break;
             }
         }
