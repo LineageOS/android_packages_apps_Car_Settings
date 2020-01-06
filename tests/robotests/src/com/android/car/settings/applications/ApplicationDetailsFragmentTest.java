@@ -35,6 +35,8 @@ import android.os.Handler;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import androidx.test.core.app.ApplicationProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.BaseTestActivity;
@@ -56,6 +58,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
@@ -93,7 +96,7 @@ public class ApplicationDetailsFragmentTest {
         MockitoAnnotations.initMocks(this);
         int userId = UserHandle.myUserId();
 
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         getShadowUserManager().addUser(userId, "userName", /* flags= */ 0);
         getShadowUserManager().addProfile(userId, userId, "profileName", /* profileFlags= */ 0);
 
@@ -496,6 +499,7 @@ public class ApplicationDetailsFragmentTest {
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
+        Robolectric.flushForegroundThreadScheduler();
 
         assertThat(
                 mContext.getPackageManager().getApplicationEnabledSetting(PACKAGE_NAME)).isEqualTo(
@@ -513,6 +517,7 @@ public class ApplicationDetailsFragmentTest {
         mController.start();
 
         findDisableButton(mActivity).performClick();
+        Robolectric.flushForegroundThreadScheduler();
 
         assertThat(
                 mContext.getPackageManager().getApplicationEnabledSetting(PACKAGE_NAME)).isEqualTo(
