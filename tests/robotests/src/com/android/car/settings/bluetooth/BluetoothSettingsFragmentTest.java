@@ -31,6 +31,8 @@ import android.content.Intent;
 import android.os.UserHandle;
 import android.os.UserManager;
 
+import androidx.test.core.app.ApplicationProvider;
+
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
@@ -44,8 +46,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 import org.robolectric.shadows.ShadowUserManager;
@@ -64,7 +66,7 @@ public class BluetoothSettingsFragmentTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
 
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mLocalBluetoothManager = LocalBluetoothManager.getInstance(mContext, /* onInitCallback= */
                 null);
         mFragment = new BluetoothSettingsFragment();
@@ -230,6 +232,7 @@ public class BluetoothSettingsFragmentTest {
         Intent intent = new Intent(BluetoothAdapter.ACTION_STATE_CHANGED);
         intent.putExtra(BluetoothAdapter.EXTRA_STATE, state);
         mContext.sendBroadcast(intent);
+        Robolectric.flushForegroundThreadScheduler();
     }
 
     private MenuItem findSwitch(Activity activity) {

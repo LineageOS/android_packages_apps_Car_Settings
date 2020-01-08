@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
@@ -35,8 +36,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.List;
@@ -52,7 +53,7 @@ public class AddWifiFragmentTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(mContext);
         mFragment = new AddWifiFragment();
         mFragmentController = FragmentController.of(mFragment);
@@ -107,9 +108,8 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveNameChangeIntent_emptyName_buttonDisabled() {
         mFragmentController.setup();
-        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, "");
-        mLocalBroadcastManager.sendBroadcastSync(intent);
+
+        sendNameChangeBroadcastIntent("");
 
         assertThat(getAddWifiButton().isEnabled()).isFalse();
     }
@@ -117,10 +117,8 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveNameChangeIntent_name_buttonEnabled() {
         mFragmentController.setup();
-        String networkName = "test_network_name";
-        Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
-        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
-        mLocalBroadcastManager.sendBroadcastSync(intent);
+
+        sendNameChangeBroadcastIntent("test_network_name");
 
         assertThat(getAddWifiButton().isEnabled()).isTrue();
     }
@@ -128,17 +126,25 @@ public class AddWifiFragmentTest {
     @Test
     public void receiveSecurityChangeIntent_nameSet_buttonDisabled() {
         mFragmentController.setup();
-        String networkName = "test_network_name";
+        sendNameChangeBroadcastIntent("test_network_name");
+
+        sendSecurityChangeBroadcastIntent(AccessPoint.SECURITY_PSK);
+
+        assertThat(getAddWifiButton().isEnabled()).isFalse();
+    }
+
+    private void sendNameChangeBroadcastIntent(String networkName) {
         Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
         intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
         mLocalBroadcastManager.sendBroadcastSync(intent);
+        Robolectric.flushForegroundThreadScheduler();
+    }
 
-        intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
-        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE,
-                AccessPoint.SECURITY_PSK);
+    private void sendSecurityChangeBroadcastIntent(int securityType) {
+        Intent intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
+        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE, securityType);
         mLocalBroadcastManager.sendBroadcastSync(intent);
-
-        assertThat(getAddWifiButton().isEnabled()).isFalse();
+        Robolectric.flushForegroundThreadScheduler();
     }
 
     private MenuItem getAddWifiButton() {
