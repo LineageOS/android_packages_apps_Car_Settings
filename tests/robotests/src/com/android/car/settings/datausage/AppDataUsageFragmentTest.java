@@ -32,6 +32,7 @@ import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -44,6 +45,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /** Unit test for {@link AppDataUsageFragment}. */
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowNetworkPolicyEditor.class, ShadowNetworkPolicyManager.class,
         ShadowINetworkStatsServiceStub.class})

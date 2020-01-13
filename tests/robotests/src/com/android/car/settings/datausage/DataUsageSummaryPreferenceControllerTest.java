@@ -35,6 +35,7 @@ import android.text.TextUtils;
 import android.text.format.Formatter;
 
 import androidx.lifecycle.Lifecycle;
+import androidx.test.core.app.ApplicationProvider;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
@@ -52,7 +53,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
 
@@ -84,7 +84,7 @@ public class DataUsageSummaryPreferenceControllerTest {
         ShadowSubscriptionManager.setDefaultDataSubscriptionInfo(info);
         ShadowDataUsageController.setInstance(mDataUsageController);
 
-        mContext = RuntimeEnvironment.application;
+        mContext = ApplicationProvider.getApplicationContext();
         mDataUsageSummaryPreference = new DataUsageSummaryPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 DataUsageSummaryPreferenceController.class, mDataUsageSummaryPreference);
