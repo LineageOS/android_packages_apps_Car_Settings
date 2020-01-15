@@ -26,28 +26,23 @@ import android.util.ArrayMap;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
-import androidx.constraintlayout.widget.Guideline;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
-import androidx.preference.EditTextPreference;
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.PreferenceFragment;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +61,7 @@ import java.util.Map;
  * {@link #onAttach(Context)}. Changes to driving state restrictions are propagated to
  * controllers.
  */
-public abstract class SettingsFragment extends PreferenceFragmentCompat implements
+public abstract class SettingsFragment extends PreferenceFragment implements
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
 
     @VisibleForTesting
@@ -90,14 +85,15 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
     @XmlRes
     protected abstract int getPreferenceScreenResId();
 
+    protected Toolbar getToolbar() {
+        return requireActivity().findViewById(R.id.toolbar);
+    }
     /**
-     * Returns the layout id to use as the activity action bar. Subclasses should override this
-     * method to customize the action bar layout (e.g. additional buttons, switches, etc.). The
-     * default action bar contains a back button and the title.
+     * Returns the MenuItems to display in the toolbar. Subclasses should override this to
+     * add additional buttons, switches, ect. to the toolbar.
      */
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar;
+    protected List<MenuItem> getToolbarMenuItems() {
+        return null;
     }
 
     /**
@@ -187,33 +183,34 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        FrameLayout actionBarContainer = requireActivity().findViewById(R.id.action_bar);
-        if (actionBarContainer != null) {
-            actionBarContainer.removeAllViews();
-            getLayoutInflater().inflate(getActionBarLayoutId(), actionBarContainer);
-
-            TextView titleView = actionBarContainer.requireViewById(R.id.title);
-            titleView.setText(getPreferenceScreen().getTitle());
+        Toolbar toolbar = requireActivity().findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            List<MenuItem> items = getToolbarMenuItems();
+            if (items != null) {
+                if (items.size() == 1) {
+                    items.get(0).setId(R.id.toolbar_menu_item_0);
+                } else if (items.size() == 2) {
+                    items.get(0).setId(R.id.toolbar_menu_item_0);
+                    items.get(1).setId(R.id.toolbar_menu_item_1);
+                }
+            }
+            toolbar.setTitle(getPreferenceScreen().getTitle());
+            toolbar.setMenuItems(items);
+            toolbar.setNavButtonMode(Toolbar.NavButtonMode.BACK);
 
             // If the fragment is root, change the back button to settings icon.
-            ImageView imageView = actionBarContainer.requireViewById(R.id.back_button);
             FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
             if (fragmentManager.getBackStackEntryCount() == 1
                     && fragmentManager.findFragmentByTag("0") != null
                     && fragmentManager.findFragmentByTag("0").getClass().getName().equals(
                     getString(R.string.config_settings_hierarchy_root_fragment))) {
-                if (getContext().getResources()
-                        .getBoolean(R.bool.config_show_settings_root_exit_icon)) {
-                    imageView.setImageResource(R.drawable.ic_launcher_settings);
-                    imageView.setTag(R.id.back_button, R.drawable.ic_launcher_settings);
-                } else {
-                    hideExitIcon();
-                }
+                toolbar.setState(Toolbar.State.HOME);
+                toolbar.setLogo(getContext().getResources()
+                        .getBoolean(R.bool.config_show_settings_root_exit_icon)
+                        ? R.drawable.ic_launcher_settings
+                        : 0);
             } else {
-                imageView.setTag(R.id.back_button, R.drawable.ic_arrow_back);
-                actionBarContainer.requireViewById(R.id.action_bar_icon_container)
-                        .setOnClickListener(
-                                v -> requireActivity().onBackPressed());
+                toolbar.setState(Toolbar.State.SUBPAGE);
             }
         }
     }
@@ -253,27 +250,16 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
             return;
         }
 
-        DialogFragment dialogFragment;
         if (preference instanceof ValidatedEditTextPreference) {
-            if (preference instanceof PasswordEditTextPreference) {
-                dialogFragment = PasswordEditTextPreferenceDialogFragment.newInstance(
-                        preference.getKey());
-            } else {
-                dialogFragment = ValidatedEditTextPreferenceDialogFragment.newInstance(
-                        preference.getKey());
-            }
-        } else if (preference instanceof EditTextPreference) {
-            dialogFragment = EditTextPreferenceDialogFragment.newInstance(preference.getKey());
-        } else if (preference instanceof ListPreference) {
-            dialogFragment = SettingsListPreferenceDialogFragment.newInstance(preference.getKey());
-        } else {
-            throw new IllegalArgumentException(
-                    "Tried to display dialog for unknown preference type. Did you forget to "
-                            + "override onDisplayPreferenceDialog()?");
-        }
+            DialogFragment dialogFragment = preference instanceof PasswordEditTextPreference
+                    ? PasswordEditTextPreferenceDialogFragment.newInstance(preference.getKey())
+                    : ValidatedEditTextPreferenceDialogFragment.newInstance(preference.getKey());
 
-        dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
-        showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
+            dialogFragment.setTargetFragment(/* fragment= */ this, /* requestCode= */ 0);
+            showDialog(dialogFragment, DIALOG_FRAGMENT_TAG);
+        } else {
+            super.onDisplayPreferenceDialog(preference);
+        }
     }
 
     @Override
@@ -365,14 +351,5 @@ public abstract class SettingsFragment extends PreferenceFragmentCompat implemen
         if ((requestCode & 0xff00) != 0) {
             throw new IllegalArgumentException("Can only use lower 8 bits for requestCode");
         }
-    }
-
-    private void hideExitIcon() {
-        requireActivity().findViewById(R.id.action_bar_icon_container)
-                .setVisibility(FrameLayout.GONE);
-
-        Guideline guideLine = (Guideline) requireActivity().findViewById(R.id.start_margin);
-        guideLine.setGuidelineBegin(getResources()
-                .getDimensionPixelOffset(R.dimen.action_bar_no_icon_start_margin));
     }
 }

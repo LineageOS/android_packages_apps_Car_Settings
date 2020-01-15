@@ -30,7 +30,6 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
@@ -40,6 +39,8 @@ import com.android.car.settings.security.CheckLockActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -85,7 +86,9 @@ public class MasterClearFragmentTest {
 
     @Test
     public void masterClearButtonClicked_launchesCheckLockActivity() {
-        findMasterClearButton(mFragment.requireActivity()).performClick();
+        MenuItem masterClearButton = findMasterClearButton(mFragment.requireActivity());
+        masterClearButton.setEnabled(true);
+        masterClearButton.performClick();
 
         Intent startedIntent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(startedIntent.getComponent().getClassName()).isEqualTo(
@@ -112,7 +115,8 @@ public class MasterClearFragmentTest {
         assertThat(launchedFragment).isInstanceOf(MasterClearFragment.class);
     }
 
-    private Button findMasterClearButton(Activity activity) {
-        return activity.findViewById(R.id.action_button1);
+    private MenuItem findMasterClearButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 }

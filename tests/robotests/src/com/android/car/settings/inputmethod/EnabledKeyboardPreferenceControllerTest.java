@@ -124,6 +124,17 @@ public class EnabledKeyboardPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_skipVoiceTyping() {
+        List<InputMethodInfo> infos =
+                createInputMethodInfoList(InputMethodUtil.GOOGLE_VOICE_TYPING);
+        getShadowInputMethodManager(mContext).setInputMethodList(infos);
+
+        mControllerHelper.getController().refreshUi();
+
+        assertThat(mPreferenceGroup.getPreferenceCount()).isEqualTo(0);
+    }
+
+    @Test
     public void refreshUi_verifyPreferenceIcon() {
         getShadowDevicePolicyManager(mContext).setPermittedInputMethodsForCurrentUser(null);
         List<InputMethodInfo> infos = createInputMethodInfoList(ALLOWED_PACKAGE_NAME);

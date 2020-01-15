@@ -29,11 +29,11 @@ import android.os.UserHandle;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
-import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
@@ -251,7 +251,7 @@ public class ChooseAccountPreferenceController extends
         void addAccount(String accountType);
     }
 
-    private static class AuthenticatorDescriptionPreference extends Preference {
+    private static class AuthenticatorDescriptionPreference extends CarUiPreference {
         private final String mType;
 
         AuthenticatorDescriptionPreference(Context context, String accountType, CharSequence label,
@@ -262,6 +262,7 @@ public class ChooseAccountPreferenceController extends
             setKey(accountType);
             setTitle(label);
             setIcon(icon);
+            setShowChevron(false);
         }
 
         private String getAccountType() {

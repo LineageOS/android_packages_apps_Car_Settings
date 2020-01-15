@@ -25,25 +25,26 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.ProgressBar;
-import android.widget.Switch;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Fragment to host tethering-related preferences.
  */
-public class WifiTetherFragment extends SettingsFragment implements Switch.OnCheckedChangeListener {
+public class WifiTetherFragment extends SettingsFragment {
 
     private CarWifiManager mCarWifiManager;
     private ConnectivityManager mConnectivityManager;
     private ProgressBar mProgressBar;
-    private Switch mTetherSwitch;
+    private MenuItem mTetherSwitch;
 
     private final ConnectivityManager.OnStartTetheringCallback mOnStartTetheringCallback =
             new ConnectivityManager.OnStartTetheringCallback() {
@@ -56,9 +57,27 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
             };
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_toggle;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mTetherSwitch);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mTetherSwitch = new MenuItem.Builder(getContext())
+                .setCheckable()
+                .setChecked(mCarWifiManager.isWifiApEnabled())
+                .setOnClickListener(i -> {
+                    if (!mTetherSwitch.isChecked()) {
+                        mConnectivityManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
+                    } else {
+                        mConnectivityManager.startTethering(ConnectivityManager.TETHERING_WIFI,
+                                /* showProvisioningUi= */ true,
+                                mOnStartTetheringCallback, new Handler(Looper.getMainLooper()));
+                    }
+                })
+                .build();
     }
 
     @Override
@@ -80,9 +99,7 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mProgressBar = getActivity().findViewById(R.id.progress_bar);
-        mTetherSwitch = getActivity().findViewById(R.id.toggle_switch);
-        setupTetherSwitch();
+        mProgressBar = getToolbar().getProgressBar();
     }
 
     @Override
@@ -106,22 +123,6 @@ public class WifiTetherFragment extends SettingsFragment implements Switch.OnChe
     public void onDestroy() {
         super.onDestroy();
         mCarWifiManager.destroy();
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        if (!isChecked) {
-            mConnectivityManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
-        } else {
-            mConnectivityManager.startTethering(ConnectivityManager.TETHERING_WIFI,
-                    /* showProvisioningUi= */ true,
-                    mOnStartTetheringCallback, new Handler(Looper.getMainLooper()));
-        }
-    }
-
-    protected void setupTetherSwitch() {
-        mTetherSwitch.setChecked(mCarWifiManager.isWifiApEnabled());
-        mTetherSwitch.setOnCheckedChangeListener(this);
     }
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {

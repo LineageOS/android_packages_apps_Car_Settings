@@ -23,8 +23,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
@@ -32,6 +30,10 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
+
+import java.util.List;
 
 /**
  * Base fragment for setting activity.
@@ -68,16 +70,6 @@ public abstract class BaseFragment extends Fragment implements
     }
 
     /**
-     * Returns the layout id to use with the {@link ActionBar}. Subclasses should override this
-     * method to customize the action bar layout. The default action bar contains a back button
-     * and the title.
-     */
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar;
-    }
-
-    /**
      * Returns the layout id of the current Fragment.
      */
     @LayoutRes
@@ -85,8 +77,8 @@ public abstract class BaseFragment extends Fragment implements
 
     /**
      * Returns the string id for the current Fragment title. Subclasses should override this
-     * method to set the title to display. Use {@link #setTitle(CharSequence)} to update the
-     * displayed title while resumed. The default title is the Settings Activity label.
+     * method to set the title to display. Use {@link #getToolbar().setTitle(CharSequence)} to
+     * update the displayed title while resumed. The default title is the Settings Activity label.
      */
     @StringRes
     protected int getTitleId() {
@@ -94,16 +86,23 @@ public abstract class BaseFragment extends Fragment implements
     }
 
     /**
-     * Should be used to override fragment's title. This should only be called after
-     * {@link #onActivityCreated(Bundle)}.
-     *
-     * @param title CharSequence to set as the new title.
+     * Returns the MenuItems to display in the toolbar. Subclasses should override this to
+     * add additional buttons, switches, ect. to the toolbar.
      */
-    protected final void setTitle(CharSequence title) {
-        TextView titleView = requireActivity().findViewById(R.id.title);
-        if (titleView != null) {
-            titleView.setText(title);
-        }
+    protected List<MenuItem> getToolbarMenuItems() {
+        return null;
+    }
+
+    protected Toolbar.State getToolbarState() {
+        return Toolbar.State.SUBPAGE;
+    }
+
+    protected Toolbar.NavButtonMode getToolbarNavButtonStyle() {
+        return Toolbar.NavButtonMode.BACK;
+    }
+
+    protected final Toolbar getToolbar() {
+        return requireActivity().findViewById(R.id.toolbar);
     }
 
     @Override
@@ -127,18 +126,23 @@ public abstract class BaseFragment extends Fragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        FrameLayout actionBarContainer = requireActivity().findViewById(R.id.action_bar);
-        if (actionBarContainer != null) {
-            actionBarContainer.removeAllViews();
-            getLayoutInflater().inflate(getActionBarLayoutId(), actionBarContainer);
-
-            TextView titleView = actionBarContainer.requireViewById(R.id.title);
-            titleView.setText(getTitleId());
-            actionBarContainer.requireViewById(R.id.action_bar_icon_container).setOnClickListener(
-                    v -> onBackPressed());
+        Toolbar toolbar = getToolbar();
+        if (toolbar != null) {
+            List<MenuItem> items = getToolbarMenuItems();
+            if (items != null) {
+                if (items.size() == 1) {
+                    items.get(0).setId(R.id.toolbar_menu_item_0);
+                } else if (items.size() == 2) {
+                    items.get(0).setId(R.id.toolbar_menu_item_0);
+                    items.get(1).setId(R.id.toolbar_menu_item_1);
+                }
+            }
+            toolbar.setTitle(getTitleId());
+            toolbar.setMenuItems(items);
+            toolbar.setState(getToolbarState());
+            toolbar.setNavButtonMode(getToolbarNavButtonStyle());
         }
     }
-
 
     @Override
     public void onStart() {

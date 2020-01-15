@@ -129,6 +129,10 @@ public class KeyboardManagementPreferenceController extends
             if (!isInputMethodAllowedByOrganization(permittedInputMethodsSet, inputMethodInfo)) {
                 continue;
             }
+            // Hide "Google voice typing" IME.
+            if (inputMethodInfo.getPackageName().equals(InputMethodUtil.GOOGLE_VOICE_TYPING)) {
+                continue;
+            }
 
             Preference preference = createSwitchPreference(inputMethodInfo);
 

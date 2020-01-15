@@ -18,11 +18,19 @@ package com.android.car.settings.applications.defaultapps;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.isNull;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.verify;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ResolveInfo;
 import android.provider.Settings;
 
 import androidx.annotation.Nullable;
@@ -38,7 +46,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
-import org.robolectric.shadows.ShadowApplication;
+import org.robolectric.Shadows;
 
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class DefaultAppsPickerEntryBasePreferenceControllerTest {
@@ -83,20 +91,11 @@ public class DefaultAppsPickerEntryBasePreferenceControllerTest {
 
     @Before
     public void setUp() {
-        mContext = RuntimeEnvironment.application;
+        mContext = spy(RuntimeEnvironment.application);
         mButtonPreference = new ButtonPreference(mContext);
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestDefaultAppsPickerEntryBasePreferenceController.class, mButtonPreference);
         mController = mControllerHelper.getController();
-    }
-
-    @Test
-    public void refreshUi_hasSettingIntent_actionButtonIsVisible() {
-        mController.setSettingIntent(TEST_INTENT);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-        mController.refreshUi();
-
-        assertThat(mButtonPreference.isActionShown()).isTrue();
     }
 
     @Test
@@ -109,12 +108,53 @@ public class DefaultAppsPickerEntryBasePreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_hasSettingIntentButNoResolvableActivity_actionButtonIsNotVisible() {
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.activityInfo = null;
+        Shadows.shadowOf(mContext.getPackageManager()).addResolveInfoForIntent(
+                TEST_INTENT, resolveInfo);
+        mController.setSettingIntent(TEST_INTENT);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mButtonPreference.isActionShown()).isFalse();
+    }
+
+    @Test
+    public void refreshUi_hasSettingIntentButNoVisibleActivity_actionButtonIsVisible() {
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.exported = false;
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.activityInfo = activityInfo;
+        Shadows.shadowOf(mContext.getPackageManager()).addResolveInfoForIntent(
+                TEST_INTENT, resolveInfo);
+        mController.setSettingIntent(TEST_INTENT);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mButtonPreference.isActionShown()).isTrue();
+    }
+
+    @Test
+    public void refreshUi_hasSettingIntent_actionButtonIsVisible() {
+        mController.setSettingIntent(TEST_INTENT);
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mController.refreshUi();
+
+        assertThat(mButtonPreference.isActionShown()).isTrue();
+    }
+
+    @Test
     public void performButtonClick_launchesIntent() {
+        // Need to spy context because RuntimeEnvironment.application is not an Activity-based
+        // context, and so throws RuntimeException when we call startActivityForResult.
+        doNothing().when(mContext).startActivityForResult(
+                any(String.class), any(Intent.class), eq(0), isNull());
         mController.setSettingIntent(TEST_INTENT);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mButtonPreference.performButtonClick();
 
-        Intent actual = ShadowApplication.getInstance().getNextStartedActivity();
-        assertThat(actual.getAction()).isEqualTo(TEST_INTENT.getAction());
+        verify(mContext).startActivityForResult(
+                "android", TEST_INTENT, 0, null);
     }
 }

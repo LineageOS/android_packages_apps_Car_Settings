@@ -19,7 +19,6 @@ package com.android.car.settings.users;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
@@ -41,8 +40,8 @@ public class UserDetailsFragment extends UserDetailsBaseFragment {
     final CarUserManagerHelper.OnUsersUpdateListener mOnUsersUpdateListener = () -> {
         // Update the user info value, as it may have changed.
         refreshUserInfo();
-        // Update the text in the action bar when there is a user update.
-        ((TextView) getActivity().findViewById(R.id.title)).setText(getTitleText());
+        // Update the text in the toolbar when there is a user update.
+        getToolbar().setTitle(getTitleText());
     };
 
     @Override

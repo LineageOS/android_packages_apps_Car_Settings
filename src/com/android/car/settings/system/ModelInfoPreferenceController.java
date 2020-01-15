@@ -43,4 +43,9 @@ public class ModelInfoPreferenceController extends PreferenceController<Preferen
     protected void updateState(Preference preference) {
         preference.setSummary(Build.MODEL + DeviceInfoUtils.getMsvSuffix());
     }
+
+    @Override
+    protected int getAvailabilityStatus() {
+        return AVAILABLE_FOR_VIEWING;
+    }
 }

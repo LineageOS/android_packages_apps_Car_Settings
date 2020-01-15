@@ -26,6 +26,7 @@
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_tts_playback_group"
         settings:controller="com.android.car.settings.tts.TtsPlaybackPreferenceController">
+        <!-- Currently disabled in TtsPlaybackPreferenceController -->
         <ListPreference
             android:key="@string/pk_tts_default_language"
             android:persistent="false"
@@ -37,8 +38,9 @@
         <com.android.car.settings.common.SeekBarPreference
             android:key="@string/pk_tts_pitch"
             android:title="@string/tts_pitch"/>
-        <Preference
+        <com.android.car.ui.preference.CarUiPreference
             android:key="@string/pk_tts_reset"
-            android:title="@string/tts_reset"/>
+            android:title="@string/tts_reset"
+            settings:showChevron="false"/>
     </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>

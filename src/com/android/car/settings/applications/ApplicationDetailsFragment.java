@@ -38,10 +38,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.util.ArraySet;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
@@ -51,10 +48,12 @@ import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.Utils;
 import com.android.settingslib.applications.ApplicationsState;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -102,8 +101,8 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
 
     // The function of this button depends on which app is shown and the app's current state.
     // It is an application enable/disable toggle for apps bundled with the system image.
-    private Button mUninstallButton;
-    private Button mForceStopButton;
+    private MenuItem mUninstallButton;
+    private MenuItem mForceStopButton;
 
     /** Creates an instance of this fragment, passing packageName as an argument. */
     public static ApplicationDetailsFragment getInstance(String packageName) {
@@ -115,15 +114,14 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     }
 
     @Override
-    @XmlRes
-    protected int getPreferenceScreenResId() {
-        return R.xml.application_details_fragment;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Arrays.asList(mUninstallButton, mForceStopButton);
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.application_details_fragment;
     }
 
     @Override
@@ -148,6 +146,9 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
                 R.string.pk_application_details_notifications).setPackageInfo(mPackageInfo);
         use(PermissionsPreferenceController.class,
                 R.string.pk_application_details_permissions).setPackageName(mPackageName);
+        use(StoragePreferenceController.class,
+                R.string.pk_application_details_storage)
+                .setAppEntry(mAppEntry).setPackageName(mPackageName);
         use(VersionPreferenceController.class,
                 R.string.pk_application_details_version).setPackageInfo(mPackageInfo);
     }
@@ -161,18 +162,13 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         ConfirmationDialogFragment.resetListeners(
                 (ConfirmationDialogFragment) findDialogByTag(FORCE_STOP_CONFIRM_DIALOG_TAG),
                 mForceStopConfirmListener, /* rejectListener= */ null);
-    }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mUninstallButton = requireActivity().findViewById(R.id.action_button1);
-        mForceStopButton = requireActivity().findViewById(R.id.action_button2);
-        mForceStopButton.setVisibility(View.VISIBLE);
-        mForceStopButton.setEnabled(false);
-        mForceStopButton.setText(R.string.force_stop);
-        mForceStopButton.setOnClickListener(mForceStopClickListener);
+        mUninstallButton = new MenuItem.Builder(getContext()).build();
+        mForceStopButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.force_stop)
+                .setOnClickListener(mForceStopClickListener)
+                .setEnabled(false)
+                .build();
     }
 
     @Override
@@ -250,14 +246,14 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     private void updateUninstallButton() {
         if (isBundledApp()) {
             if (isAppEnabled()) {
-                mUninstallButton.setText(R.string.disable_text);
+                mUninstallButton.setTitle(R.string.disable_text);
                 mUninstallButton.setOnClickListener(mDisableClickListener);
             } else {
-                mUninstallButton.setText(R.string.enable_text);
+                mUninstallButton.setTitle(R.string.enable_text);
                 mUninstallButton.setOnClickListener(mEnableClickListener);
             }
         } else {
-            mUninstallButton.setText(R.string.uninstall_text);
+            mUninstallButton.setTitle(R.string.uninstall_text);
             mUninstallButton.setOnClickListener(mUninstallClickListener);
         }
 
@@ -395,21 +391,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
         }
     }
 
-    private final View.OnClickListener mForceStopClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ConfirmationDialogFragment dialogFragment =
-                    new ConfirmationDialogFragment.Builder(getContext())
-                            .setTitle(R.string.force_stop_dialog_title)
-                            .setMessage(R.string.force_stop_dialog_text)
-                            .setPositiveButton(android.R.string.ok,
-                                    mForceStopConfirmListener)
-                            .setNegativeButton(android.R.string.cancel, /* rejectListener= */ null)
-                            .build();
-            showDialog(dialogFragment, FORCE_STOP_CONFIRM_DIALOG_TAG);
-        }
-    };
-
     private final ConfirmationDialogFragment.ConfirmListener mForceStopConfirmListener =
             new ConfirmationDialogFragment.ConfirmListener() {
                 @Override
@@ -423,26 +404,24 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
                 }
             };
 
+    private final MenuItem.OnClickListener mForceStopClickListener = i -> {
+        ConfirmationDialogFragment dialogFragment =
+                new ConfirmationDialogFragment.Builder(getContext())
+                        .setTitle(R.string.force_stop_dialog_title)
+                        .setMessage(R.string.force_stop_dialog_text)
+                        .setPositiveButton(android.R.string.ok,
+                                mForceStopConfirmListener)
+                        .setNegativeButton(android.R.string.cancel, /* rejectListener= */ null)
+                        .build();
+        showDialog(dialogFragment, FORCE_STOP_CONFIRM_DIALOG_TAG);
+    };
+
     private final BroadcastReceiver mCheckKillProcessesReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             boolean enabled = getResultCode() != Activity.RESULT_CANCELED;
             LOG.d("Got broadcast response: Restart status for " + mPackageName + " " + enabled);
             updateForceStopButtonInner(enabled);
-        }
-    };
-
-    private final View.OnClickListener mDisableClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ConfirmationDialogFragment dialogFragment =
-                    new ConfirmationDialogFragment.Builder(getContext())
-                            .setMessage(getString(R.string.app_disable_dialog_text))
-                            .setPositiveButton(R.string.app_disable_dialog_positive,
-                                    mDisableConfirmListener)
-                            .setNegativeButton(android.R.string.cancel, /* rejectListener= */ null)
-                            .build();
-            showDialog(dialogFragment, DISABLE_CONFIRM_DIALOG_TAG);
         }
     };
 
@@ -455,26 +434,29 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
                 }
             };
 
-    private final View.OnClickListener mEnableClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            mPm.setApplicationEnabledSetting(mPackageName,
-                    PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
-        }
+    private final MenuItem.OnClickListener mDisableClickListener = i -> {
+        ConfirmationDialogFragment dialogFragment =
+                new ConfirmationDialogFragment.Builder(getContext())
+                        .setMessage(getString(R.string.app_disable_dialog_text))
+                        .setPositiveButton(R.string.app_disable_dialog_positive,
+                                mDisableConfirmListener)
+                        .setNegativeButton(android.R.string.cancel, /* rejectListener= */ null)
+                        .build();
+        showDialog(dialogFragment, DISABLE_CONFIRM_DIALOG_TAG);
     };
 
-    private final View.OnClickListener mUninstallClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Uri packageUri = Uri.parse("package:" + mPackageName);
+    private final MenuItem.OnClickListener mEnableClickListener = i -> {
+        mPm.setApplicationEnabledSetting(mPackageName,
+                PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, /* flags= */ 0);
+    };
 
-            Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
-            uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, true);
-            uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
-
-            startActivityForResult(uninstallIntent, UNINSTALL_REQUEST_CODE, /* callback= */
-                    ApplicationDetailsFragment.this);
-        }
+    private final MenuItem.OnClickListener mUninstallClickListener = i -> {
+        Uri packageUri = Uri.parse("package:" + mPackageName);
+        Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
+        uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, true);
+        uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
+        startActivityForResult(uninstallIntent, UNINSTALL_REQUEST_CODE, /* callback= */
+                ApplicationDetailsFragment.this);
     };
 
     private final ApplicationsState.Callbacks mApplicationStateCallbacks =

@@ -128,6 +128,18 @@ public class AccessPointListPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_notSavedAccessPoint_noForgetButton() {
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        ButtonPasswordEditTextPreference preference =
+                (ButtonPasswordEditTextPreference) mPreferenceGroup.getPreference(0);
+        assertThat(preference.isButtonShown()).isFalse();
+    }
+
+    @Test
     public void onUxRestrictionsChanged_switchToSavedApOnly() {
         List<AccessPoint> allAccessPointList = Arrays.asList(mMockAccessPoint1, mMockAccessPoint2);
         when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(allAccessPointList);
@@ -180,7 +192,7 @@ public class AccessPointListPreferenceControllerTest {
     }
 
     @Test
-    public void performButtonClick_savedAccessPoint_wrongPassword_forgetsNetwork() {
+    public void performButtonClick_savedAccessPoint_forgetsNetwork() {
         int netId = 1;
 
         WifiConfiguration config = mock(WifiConfiguration.class);
@@ -191,9 +203,7 @@ public class AccessPointListPreferenceControllerTest {
         when(mMockAccessPoint1.isSaved()).thenReturn(true);
         when(mMockAccessPoint1.getConfig()).thenReturn(config);
         when(config.getNetworkSelectionStatus()).thenReturn(status);
-        when(status.isNetworkEnabled()).thenReturn(false);
-        when(status.getNetworkSelectionDisableReason()).thenReturn(
-                WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD);
+        when(status.isNetworkEnabled()).thenReturn(true);
 
         List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
         when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
