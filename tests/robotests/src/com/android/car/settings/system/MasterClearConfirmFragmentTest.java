@@ -33,7 +33,6 @@ import androidx.preference.PreferenceManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
-import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
@@ -42,6 +41,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.shadows.ShadowApplication;
@@ -86,7 +86,7 @@ public class MasterClearConfirmFragmentTest {
 
     @Test
     public void confirmClicked_sendsResetIntent() {
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -102,7 +102,7 @@ public class MasterClearConfirmFragmentTest {
         PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean(
                 mContext.getString(R.string.pk_master_clear_reset_esim), false).commit();
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getExtras().getBoolean(Intent.EXTRA_WIPE_ESIMS)).isEqualTo(false);
@@ -112,7 +112,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_pdbManagerNull_sendsResetIntent() {
         ShadowApplication.getInstance().removeSystemService(Context.PERSISTENT_DATA_BLOCK_SERVICE);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -122,7 +122,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_oemUnlockAllowed_doesNotWipePdb() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(true);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager, never()).wipe();
     }
@@ -131,7 +131,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_oemUnlockAllowed_sendsResetIntent() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(true);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -141,7 +141,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_noOemUnlockAllowed_notProvisioned_doesNotWipePdb() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager, never()).wipe();
     }
@@ -150,7 +150,7 @@ public class MasterClearConfirmFragmentTest {
     public void confirmClicked_noOemUnlockAllowed_notProvisioned_sendsResetIntent() {
         when(mOemLockManager.isOemUnlockAllowed()).thenReturn(false);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
@@ -162,7 +162,7 @@ public class MasterClearConfirmFragmentTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         verify(mPersistentDataBlockManager).wipe();
     }
@@ -173,14 +173,16 @@ public class MasterClearConfirmFragmentTest {
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 1);
 
-        findMasterClearConfirmButton(mFragment.requireActivity()).performClick();
+        triggerMasterClearConfirmButton(mFragment.requireActivity());
 
         Intent resetIntent = ShadowApplication.getInstance().getBroadcastIntents().get(0);
         assertThat(resetIntent.getAction()).isEqualTo(Intent.ACTION_FACTORY_RESET);
     }
 
-    private MenuItem findMasterClearConfirmButton(Activity activity) {
+    private void triggerMasterClearConfirmButton(Activity activity) {
         Toolbar toolbar = activity.requireViewById(R.id.toolbar);
-        return toolbar.getMenuItems().get(0);
+        toolbar.getMenuItems().get(0).performClick();
+        Robolectric.flushForegroundThreadScheduler();
+
     }
 }

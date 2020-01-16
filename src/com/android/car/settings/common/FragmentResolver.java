@@ -94,11 +94,11 @@ public class FragmentResolver {
                 return new SoundSettingsFragment();
 
             case Settings.Panel.ACTION_INTERNET_CONNECTIVITY:
+            case Settings.ACTION_WIRELESS_SETTINGS:
                 return new NetworkAndInternetFragment();
 
             case WifiManager.ACTION_PICK_WIFI_NETWORK:
             case Settings.ACTION_WIFI_SETTINGS:
-            case Settings.ACTION_WIRELESS_SETTINGS:
             case Settings.Panel.ACTION_WIFI:
                 return new WifiSettingsFragment();
 
