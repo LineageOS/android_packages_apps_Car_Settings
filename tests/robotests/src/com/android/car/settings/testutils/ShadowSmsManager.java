@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,30 +16,29 @@
 
 package com.android.car.settings.testutils;
 
-import android.os.IBinder;
-
-import com.android.internal.telephony.ISms;
+import android.telephony.SmsManager;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
-@Implements(value = ISms.Stub.class)
-public class ShadowISms {
+@Implements(SmsManager.class)
+public class ShadowSmsManager {
 
-    private static ISms sISms;
+    private static SmsManager sSmsManager;
+
+    public static void setDefault(SmsManager smsManager) {
+        sSmsManager = smsManager;
+    }
 
     @Resetter
     public static void reset() {
-        sISms = null;
-    }
-
-    public static void setISms(ISms iSms) {
-        sISms = iSms;
+        sSmsManager = null;
     }
 
     @Implementation
-    protected static ISms asInterface(IBinder obj) {
-        return sISms;
+    public static SmsManager getDefault() {
+
+        return sSmsManager;
     }
 }
