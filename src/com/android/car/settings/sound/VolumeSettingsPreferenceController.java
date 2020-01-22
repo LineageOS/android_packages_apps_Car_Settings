@@ -61,6 +61,35 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     private final List<SeekBarPreference> mVolumePreferences = new ArrayList<>();
     private final VolumeSettingsRingtoneManager mRingtoneManager;
 
+    @VisibleForTesting
+    final CarAudioManager.CarVolumeCallback mVolumeChangeCallback =
+            new CarAudioManager.CarVolumeCallback() {
+                @Override
+                public void onGroupVolumeChanged(int zoneId, int groupId, int flags) {
+                    if (mCarAudioManager != null) {
+                        int value = mCarAudioManager.getGroupVolume(groupId);
+
+                        for (SeekBarPreference volumePreference : mVolumePreferences) {
+                            Bundle extras = volumePreference.getExtras();
+                            if (extras.getInt(VOLUME_GROUP_KEY) == groupId) {
+                                // Only setValue if the value is different, since changing the
+                                // seekbar of the volume directly will trigger CarVolumeCallback as
+                                // well, causing janky movement.
+                                if (volumePreference.getValue() != value) {
+                                    volumePreference.setValue(value);
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                @Override
+                public void onMasterMuteChanged(int zoneId, int flags) {
+                    // Mute is not being used yet
+                }
+            };
+
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -77,6 +106,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                             volumeItem.getTitle());
                     mVolumePreferences.add(volumePreference);
                 }
+                mCarAudioManager.registerCarVolumeCallback(mVolumeChangeCallback);
 
                 refreshUi();
             } catch (CarNotConnectedException e) {
@@ -177,6 +207,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
 
     private void cleanupAudioManager() {
         cleanUpVolumePreferences();
+        mCarAudioManager.unregisterCarVolumeCallback(mVolumeChangeCallback);
         mCarAudioManager = null;
     }
 
