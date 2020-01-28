@@ -230,7 +230,7 @@ public class UserHelper {
      * @param filter Optional filter to apply to the list of users.  Pass null to skip.
      * @return An optionally filtered list containing all living users
      */
-    private List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
+    public List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
         Stream<UserInfo> filteredListStream =
                 mUserManager.getUsers(/* excludeDying= */ true).stream();
 
