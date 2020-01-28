@@ -17,7 +17,7 @@
 package com.android.car.settings.testutils;
 
 import android.content.Context;
-import android.net.wifi.WifiConfiguration;
+import android.net.wifi.SoftApConfiguration;
 import android.net.wifi.WifiManager;
 
 import com.android.car.settings.wifi.CarWifiManager;
@@ -40,7 +40,8 @@ public class ShadowCarWifiManager {
 
     private static CarWifiManager sInstance;
     private static int sCurrentState = STATE_UNKNOWN;
-    private static WifiConfiguration sWifiConfiguration = new WifiConfiguration();
+    private static SoftApConfiguration sSoftApConfiguration =
+            new SoftApConfiguration.Builder().build();
     private static boolean sIsDualModeSupported = true;
     private static boolean sIs5GhzBandSupported = true;
 
@@ -51,7 +52,7 @@ public class ShadowCarWifiManager {
     @Resetter
     public static void reset() {
         sInstance = null;
-        sWifiConfiguration = new WifiConfiguration();
+        sSoftApConfiguration = new SoftApConfiguration.Builder().build();
         sCurrentState = STATE_UNKNOWN;
         sIsDualModeSupported = true;
         sIs5GhzBandSupported = true;
@@ -86,13 +87,13 @@ public class ShadowCarWifiManager {
     }
 
     @Implementation
-    public void setWifiApConfig(WifiConfiguration config) {
-        sWifiConfiguration = config;
+    public void setSoftApConfig(SoftApConfiguration config) {
+        sSoftApConfiguration = config;
     }
 
     @Implementation
-    public WifiConfiguration getWifiApConfig() {
-        return sWifiConfiguration;
+    public SoftApConfiguration getSoftApConfig() {
+        return sSoftApConfiguration;
     }
 
     @Implementation

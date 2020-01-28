@@ -19,7 +19,7 @@ package com.android.car.settings.wifi;
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
-import android.net.wifi.WifiConfiguration;
+import android.net.wifi.SoftApConfiguration;
 
 import androidx.lifecycle.Lifecycle;
 
@@ -54,9 +54,10 @@ public class WifiTetherNamePreferenceControllerTest {
         mContext = RuntimeEnvironment.application;
         mCarWifiManager = new CarWifiManager(mContext);
         String testSSID = "TEST_SSID";
-        WifiConfiguration config = new WifiConfiguration();
-        config.SSID = testSSID;
-        getShadowCarWifiManager().setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setSsid(testSSID)
+                .build();
+        getShadowCarWifiManager().setSoftApConfig(config);
         mPreference = new ValidatedEditTextPreference(mContext);
         mControllerHelper =
                 new PreferenceControllerTestHelper<WifiTetherNamePreferenceController>(mContext,

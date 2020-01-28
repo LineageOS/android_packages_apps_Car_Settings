@@ -21,7 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
-import android.net.wifi.WifiConfiguration;
+import android.net.wifi.SoftApConfiguration;
 
 import androidx.annotation.Nullable;
 import androidx.lifecycle.Lifecycle;
@@ -167,8 +167,8 @@ public class WifiTetherBasePreferenceControllerTest {
     @Test
     public void onSetWifiTetherConfig_requestsWifiTetherRestart() {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        WifiConfiguration config = new WifiConfiguration();
-        mController.setCarWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder().build();
+        mController.setCarSoftApConfig(config);
 
         Intent expectedIntent = new Intent(
                 WifiTetherBasePreferenceController.ACTION_RESTART_WIFI_TETHERING);
