@@ -82,17 +82,16 @@ public class UsersPreferenceProvider {
         List<Preference> users = new ArrayList<>();
         UserInfo currUserInfo = UserHelper.getInstance(mContext).getCurrentProcessUserInfo();
 
-        // Show current user
+        // Show current user at the top of the list.
         if (mIncludeCurrentUser) {
             users.add(createUserPreference(currUserInfo));
         }
 
-        // Display other users on the system
-        List<UserInfo> infos = UserHelper.getInstance(mContext).getAllSwitchableUsers();
+        // Display all users on the system, except: Guests and current user who's displayed already.
+        List<UserInfo> infos = UserHelper.getInstance(mContext).getAllLivingUsers(
+                userInfo -> !userInfo.isGuest() && userInfo.id != currUserInfo.id);
         for (UserInfo userInfo : infos) {
-            if (!userInfo.isGuest()) { // Do not show guest users.
-                users.add(createUserPreference(userInfo));
-            }
+            users.add(createUserPreference(userInfo));
         }
 
         // Display guest session option.
