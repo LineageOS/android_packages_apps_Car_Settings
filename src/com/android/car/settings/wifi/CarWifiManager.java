@@ -204,7 +204,7 @@ public class CarWifiManager implements WifiTracker.WifiListener {
      * @return {@code true} if required, {@code false} otherwise.
      */
     public boolean isDualModeSupported() {
-        return mWifiManager.isDualModeSupported();
+        return mWifiManager.isStaApConcurrencySupported();
     }
 
     /** Gets the wifi state from {@link WifiManager}. */
