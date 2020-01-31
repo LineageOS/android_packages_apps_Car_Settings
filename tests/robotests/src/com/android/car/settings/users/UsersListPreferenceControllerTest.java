@@ -37,6 +37,7 @@ import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -49,6 +50,7 @@ import org.robolectric.shadows.ShadowUserManager;
 
 import java.util.Collections;
 
+@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UsersListPreferenceControllerTest {
