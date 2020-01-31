@@ -31,10 +31,48 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"રાત્રિ મોડ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"નેટવર્ક અને ઇન્ટરનેટ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"મોબાઇલ નેટવર્ક"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> સિમ</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> સિમ</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"સક્રિય / સિમ"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"નિષ્ક્રિય / સિમ"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"સક્રિય / ડાઉનલોડ કરેલું સિમ"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"નિષ્ક્રિય / ડાઉનલોડ કરેલું સિમ"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"વધુ ઉમેરો"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"મોબાઇલ ડેટા"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"મોબાઇલ નેટવર્કનો ઉપયોગ કરીને ડેટા ઍક્સેસ કરો"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"મોબાઇલ ડેટા બંધ કરીએ?"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"પસંદગી કરવી જરૂરી છે"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"મોબાઇલ ડેટા માટે <xliff:g id="CARRIER">%1$s</xliff:g>નો ઉપયોગ કરીએ?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"તમે મોબાઇલ ડેટા માટે <xliff:g id="CARRIER2_0">%2$s</xliff:g>નો ઉપયોગ કરી રહ્યા છો. જો તમે <xliff:g id="CARRIER1">%1$s</xliff:g> પર સ્વિચ કરશો, તો મોબાઇલ ડેટા માટે <xliff:g id="CARRIER2_1">%2$s</xliff:g>નો ઉપયોગ નહીં થઈ શકે."</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g>નો ઉપયોગ કરો"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"રોમિંગ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"જ્યારે રોમિંગ હોય ત્યારે ડેટા સેવાઓથી કનેક્ટ કરો"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"ડેટા રોમિંગને મંજૂરી આપીએ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"તમારી પાસેથી કદાચ જરૂરી શુલ્ક વસૂલવામાં આવી શકે."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"ડેટા વપરાશ"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"પ્રાથમિક ડેટા"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ડેટાનો વપરાશ થયો"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"ડેટા સંબંધી ચેતવણી <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"ડેટાની મર્યાદા <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"ડેટા સંબંધી ચેતવણી <xliff:g id="ID_1">^1</xliff:g> / ડેટાની મર્યાદા <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d દિવસ બાકી</item>
+      <item quantity="other">%d દિવસ બાકી</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"કોઈ સમય બાકી નથી"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"1 દિવસ કરતાં પણ ઓછો સમય બાકી"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_2">^2</xliff:g> પહેલાં <xliff:g id="ID_1">^1</xliff:g> દ્વારા અપડેટ થયેલ"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"<xliff:g id="ID_1">^2</xliff:g> પહેલાં અપડેટ કરેલ"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"હમણાં જ <xliff:g id="ID_1">^1</xliff:g> દ્વારા અપડેટ કરેલ"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"હમણાં જ અપડેટ કર્યું"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"પ્લાન જુઓ"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"ઍપનો ડેટા વપરાશ"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"પ્રતિબંધિત"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"વપરાશ સાયકલ રીસેટ કરવાની તારીખ"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"દર મહિનાની તારીખ:"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"સેટ કરો"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"ડેટા સંબંધી ચેતવણી અને મર્યાદા"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"ઍપ ડેટા વપરાશનું ચક્ર"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"ડેટા વિશેની ચેતવણી સેટ કરો"</string>
@@ -43,6 +81,9 @@
     <string name="data_limit" msgid="227338836292511425">"ડેટાની મર્યાદા"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"ડેટાના વપરાશને મર્યાદિત કરો"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"તમે સેટ કરેલી મર્યાદાએ, તમારા વાહનનું હેડ એકમ મોબાઇલનો ડેટા બંધ કરી દેશે.\n\nવાહનના હેડ એકમ અને તમારા કૅરિઅર દ્વારા થતી ડેટા વપરાશની ગણતરીમાં ફરક હોઈ શકવાને કારણે માફકસરની મર્યાદા સેટ કરવાનું વિચારો."</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"ડેટા વપરાશની ચેતવણી સેટ કરો"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"ડેટા વપરાશની મર્યાદા સેટ કરો"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"સેટ કરો"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"વાઇ-ફાઇ"</string>
     <string name="wifi_starting" msgid="473253087503153167">"વાઇ-ફાઇ ચાલુ કરી રહ્યાં છીએ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"વાઇ-ફાઇ બંધ કરી રહ્યાં છીએ…"</string>
@@ -54,6 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"કનેક્ટ કરો"</string>
     <string name="wifi_password" msgid="5565632142720292397">"પાસવર્ડ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"પાસવર્ડ બતાવો"</string>
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"કૃપા કરીને નેટવર્કનું નામ દાખલ કરો"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"નેટવર્કનું નામ"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID દાખલ કરો"</string>
     <string name="wifi_security" msgid="158358046038876532">"સુરક્ષા"</string>
@@ -93,6 +135,28 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"મોબાઇલ ડેટા પર ઑટોમૅટિક રીતે સ્વિચ કરો"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"જ્યારે વાઇ-ફાઇ પાસે ઇન્ટરનેટનો ઍક્સેસ ન હોય, ત્યારે મોબાઇલ ડેટાનો ઉપયોગ કરો. ડેટા વપરાશ શુલ્ક લાગુ થઈ શકે છે."</string>
     <string name="learn_more" msgid="8214605928933358604">"વધુ જાણો"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"હૉટસ્પૉટનું નામ"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ચાલુ કરી રહ્યાં છીએ..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"બીજા ડિવાઇસ <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> સાથે કનેક્ટ કરી શકે છે"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"હૉટસ્પૉટનો પાસવર્ડ"</string>
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"સુરક્ષા"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-વ્યક્તિગત"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"કોઈ નહીં"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP બૅન્ડ"</string>
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP બૅન્ડ પસંદ કરો"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ઑટો"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 GHz બૅન્ડ"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 GHz બૅન્ડ"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 GHz બૅન્ડ પસંદ કર્યું"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 GHz"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 GHz"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"વાઇ-ફાઇ હૉટસ્પૉટ માટે ઓછામાં ઓછું એક બૅન્ડ પસંદ કરો:"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"હૉટસ્પૉટ અને ઇન્ટરનેટ શેર કરવાની સુવિધા"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"હૉટસ્પૉટ ઑટોમૅટિક રીતે બંધ કરો"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"જો કોઈ ડિવાઇસ કનેક્ટ કરેલું ન હોય, તો વાઇ-ફાઇ હૉટસ્પૉટ બંધ થઈ જશે"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g>, વાઇ-ફાઇ ચાલુ કરવા માગે છે"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g>, વાઇ-ફાઇ બંધ કરવા માગે છે"</string>
+    <string name="wifi_error" msgid="3105105447117289410">"ભૂલ"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"બ્લૂટૂથ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"અનામાંકિત ડિવાઇસ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"જોડાણ કરેલા ડિવાઇસ"</string>
@@ -109,6 +173,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"ઉપલબ્ધ ડિવાઇસ"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"પ્રોફાઇલ"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"બ્લૂટૂથ ચાલુ થઈ રહ્યું છે…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"બ્લૂટૂથ બંધ થઈ રહ્યું છે…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g>, બ્લૂટૂથ ચાલુ કરવા માગે છે"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g>, બ્લૂટૂથ બંધ કરવા માગે છે"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"કોઈ ઍપ બ્લૂટૂથ ચાલુ કરવા માગે છે"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"કોઈ ઍપ બ્લૂટૂથ બંધ કરવા માગે છે"</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g>, તમારા હેડયૂનિટને અન્ય બ્લૂટૂથ ડિવાઇસ પર <xliff:g id="TIMEOUT">%2$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"ઍપ, તમારા હેડયૂનિટને અન્ય બ્લૂટૂથ ડિવાઇસ પર <xliff:g id="TIMEOUT">%1$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g>, બ્લૂટૂથ ચાલુ કરવા અને તમારા હેડયૂનિટને અન્ય ડિવાઇસ પર <xliff:g id="TIMEOUT">%2$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"ઍપ, બ્લૂટૂથ ચાલુ કરવા અને તમારા હેડયૂનિટને અન્ય ડિવાઇસ પર <xliff:g id="TIMEOUT">%1$d</xliff:g> સેકન્ડ સુધી દૃશ્યક્ષમ બનાવવા માગે છે."</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"બ્લૂટૂથ જોડાણ બનાવવાની વિનંતી"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"જોડાણ બનાવો અને કનેક્ટ કરો"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"બ્લૂટૂથનો જોડાણ કરવાનો કોડ"</string>
@@ -122,6 +196,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"સામાન્ય રીતે 0000 અથવા 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"જોડાણ બનાવવાની વિનંતી"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> સાથે જોડાણ બનાવવા માટે ટૅપ કરો."</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"બ્લૂટૂથ ડિવાઇસ પસંદ કરો"</string>
     <string name="language_settings" msgid="2079258598337245546">"ભાષાઓ"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ભાષા અને ઇનપુટ"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"કીબોર્ડ"</string>
@@ -143,9 +218,59 @@
     <string name="ringtone_title" msgid="8370531086214517972">"ફોન રિંગટોન"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ડિફૉલ્ટ નોટિફિકેશન સાઉન્ડ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ડિફૉલ્ટ અલાર્મ સાઉન્ડ"</string>
+    <string name="units_settings" msgid="402325305096925886">"એકમ"</string>
+    <string name="units_speed_title" msgid="7115143916747108160">"ઝડપ"</string>
+    <string name="units_distance_title" msgid="6257691565990474635">"અંતર"</string>
+    <string name="units_fuel_consumption_title" msgid="6415108114453652570">"ઇંધણના વપરાશની વિગતો"</string>
+    <string name="units_energy_consumption_title" msgid="2775408854562057609">"ઊર્જાનો વપરાશ"</string>
+    <string name="units_temperature_title" msgid="22994498606206991">"તાપમાન"</string>
+    <string name="units_volume_title" msgid="1912873077839446914">"વૉલ્યૂમ"</string>
+    <string name="units_pressure_title" msgid="7477179239294531518">"દબાણ"</string>
+    <string name="units_list_entry" msgid="7277796571051055840">"<xliff:g id="UNIT_ABBREVIATION">%1$s</xliff:g> - <xliff:g id="UNIT_PRONUNCIATION">%2$s</xliff:g>"</string>
+    <string name="units_ratio" msgid="1085608614216280006">"<xliff:g id="UNIT_NUMERATOR">%1$s</xliff:g>/<xliff:g id="UNIT_DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="units_ratio_numerator" msgid="3462102280813794384">"<xliff:g id="UNIT_NUMERATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_NUMERATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_ratio_denominator" msgid="6737154450651499228">"<xliff:g id="UNIT_DENOMINATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_DENOMINATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_unit_name_meter_per_sec" msgid="9151123661434898991">"મીટર પ્રતિ સેકન્ડ"</string>
+    <string name="units_unit_name_rpm" msgid="4084216808160262380">"રિવોલ્યુશન પ્રતિ મિનિટ"</string>
+    <string name="units_unit_name_hertz" msgid="5373975672472735625">"હર્ટઝ"</string>
+    <string name="units_unit_name_percentile" msgid="1630667431830186060">"ટકાવારી"</string>
+    <string name="units_unit_name_millimeter" msgid="318832924604375755">"મિલીમીટર"</string>
+    <string name="units_unit_name_meter" msgid="4778344873095502130">"મીટર"</string>
+    <string name="units_unit_name_kilometer" msgid="4351417123421381297">"કિલોમીટર"</string>
+    <string name="units_unit_name_mile" msgid="8337486880403419613">"માઇલ"</string>
+    <string name="units_unit_name_celsius" msgid="1642787068882598698">"સેલ્સિયસ"</string>
+    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"ફેરનહીટ"</string>
+    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"કેલ્વિન"</string>
+    <string name="units_unit_name_milliliter" msgid="2735564290593738653">"મિલીલીટર"</string>
+    <string name="units_unit_name_liter" msgid="2682609997247920434">"લીટર"</string>
+    <string name="units_unit_name_us_gallon" msgid="2991675590060288099">"ગેલન"</string>
+    <string name="units_unit_name_imperial_gallon" msgid="7827144733136304182">"ઇમ્પીરિયલ ગેલન"</string>
+    <string name="units_unit_name_nano_secs" msgid="7258767560309570567">"નેનોસેકન્ડ"</string>
+    <string name="units_unit_name_secs" msgid="2282853373442592245">"સેકન્ડ"</string>
+    <string name="units_unit_name_year" msgid="8237348390239986270">"વર્ષ"</string>
+    <string name="units_unit_name_kilopascal" msgid="371397110720444118">"કિલોપાસ્કલ"</string>
+    <string name="units_unit_name_watt_hour" msgid="1581554497071668301">"વૉટ કલાક"</string>
+    <string name="units_unit_name_milliampere" msgid="4477388320207031153">"મિલીએમ્પિઅર"</string>
+    <string name="units_unit_name_millivolt" msgid="4730384331465782188">"મિલીવોલ્ટ"</string>
+    <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"મિલીવૉટ"</string>
+    <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"એમ્પિઅર કલાક"</string>
+    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"કિલોવૉટ કલાક"</string>
+    <string name="units_unit_name_psi" msgid="9199487304284041266">"પાઉન્ડ પ્રતિ ચોરસ ઇંચ"</string>
+    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"માઇલ પ્રતિ કલાક"</string>
+    <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"કિલોમીટર પ્રતિ કલાક"</string>
+    <string name="units_unit_name_bar" msgid="4051903414466411804">"બાર"</string>
+    <string name="units_unit_name_degrees" msgid="47944625323398947">"ડિગ્રી"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"કિલોવૉટ પ્રતિ સો માઇલ"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"કિલોવૉટ પ્રતિ સો કિલોમીટર"</string>
+    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"માઇલ પ્રતિ ગેલન (યુએસ)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"માઇલ પ્રતિ ગેલન (યુકે)"</string>
+    <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"કિલોમીટર પ્રતિ લીટર"</string>
+    <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"લીટર પ્રતિ સો કિલોમીટર"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"ઍપ અને નોટિફિકેશન"</string>
     <string name="all_applications" msgid="7798210477486822168">"બધી ઍપ બતાવો"</string>
     <string name="default_applications" msgid="1558183275638697087">"ડિફૉલ્ટ ઍપ"</string>
+    <string name="app_permissions" msgid="32799922508313948">"ઍપની પરવાનગીઓ"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g>નો ઉપયોગ કરતી ઍપ"</string>
     <string name="applications_settings" msgid="794261395191035632">"ઍપની માહિતી"</string>
     <string name="force_stop" msgid="2153183697014720520">"ફરજિયાત બંધ કરો"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"ફરજિયાત બંધ કરીએ?"</string>
@@ -155,7 +280,9 @@
     <string name="uninstall_text" msgid="277907956072833012">"અનઇન્સ્ટૉલ કરો"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"જો તમે આ ઍપ બંધ કરો છો, તો Android અને અન્ય ઍપ અપેક્ષા પ્રમાણે કાર્ય કરી શકશે નહીં."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"ઍપ બંધ કરો"</string>
+    <string name="not_installed" msgid="4218816013370552746">"આ વપરાશકર્તા માટે ઇન્સ્ટૉલ કરી નથી"</string>
     <string name="permissions_label" msgid="2701446753515612685">"પરવાનગીઓ"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"નોટિફિકેશન"</string>
     <string name="application_version_label" msgid="8556889839783311649">"વર્ઝન: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"કોઈ પરવાનગીઓ આપેલ નથી"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"કોઈ પરવાનગીઓની વિનંતી કરેલ નથી"</string>
@@ -166,20 +293,53 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> વધારાની પરવાનગીઓ</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> વધારાની પરવાનગીઓ</item>
     </plurals>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"નોંધ: રીબૂટ કર્યાં પછી, જ્યાં સુધી તમે તમારું વાહન અનલૉક નહીં કરો ત્યાં સુધી આ ઍપ શરૂ થઈ શકશે નહીં."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"સહાય અને વૉઇસ ઇનપુટ"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"સહાયક ઍપ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"સ્ક્રીન પરની ટેક્સ્ટનો ઉપયોગ કરો"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"સહાયક ઍપને સ્ક્રીન કન્ટેન્ટને ટેક્સ્ટ તરીકે ઍક્સેસ કરવાની મંજૂરી આપો"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"સ્ક્રીનશૉટનો ઉપયોગ કરો"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"સહાયક ઍપને સ્ક્રીનની છબીને ઍક્સેસ કરવાની મંજૂરી આપો"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"વૉઇસ ઇનપુટ"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"આપમેળે ભરાવાની સેવા"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"એકપણ નહીં"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"પસંદ કરેલી"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"તમારી સ્ક્રીન પર જોઈ શકાતી અથવા ઍપમાંથી ઍક્સેસ કરી શકાય તેવી માહિતી સહિતની તમારી સિસ્ટમમાં ઉપયોગમાં લેવાતી ઍપ વિશેની માહિતી આસિસ્ટંટ વાંચી શકશે."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ખાતરી કરો કે તમે આ ઍપનો વિશ્વાસ કરો છો&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google આપમેળે ભરાવાની સુવિધા&gt;%1$s&lt;/xliff:g&gt; તમારી સ્ક્રીન પર શું છે તેનો ઉપયોગ એ નક્કી કરવા કરે છે કે આપમેળે શું ભરાઈ શકે."</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"સેવા ઉમેરો"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"લિંક ખોલવી"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"ઇન્સ્ટૉલ કરેલી ઍપ"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"સમર્થિત લિંક ખોલશો નહીં"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> ખોલો"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> અને અન્ય URLs ખોલો"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"ડિફૉલ્ટ તરીકે ખોલો"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"અન્ય ડિફૉલ્ટ"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"કોઇ ડિફૉલ્ટ સેટ કરેલાં નથી."</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"તમે કેટલીક ક્રિયાઓ માટે ડિફૉલ્ટ તરીકે આ ઍપને લૉન્ચ કરવાનું પસંદ કર્યું છે."</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"ડિફૉલ્ટ સાફ કરો"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"સમર્થિત લિંક ખોલો"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"હંમેશાં આ ઍપમાં ખોલો"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"દર વખતે પૂછો"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"ક્યારેય આ ઍપમાં ખોલશો નહીં"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"સમર્થિત લિંક"</string>
+    <string name="special_access" msgid="5730278220917123811">"ઍપ માટે વિશેષ ઍક્સેસ"</string>
+    <string name="show_system" msgid="4401355756969485287">"સિસ્ટમ બતાવો"</string>
+    <string name="hide_system" msgid="8845453295584638040">"સિસ્ટમ છુપાવો"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"સિસ્ટમ સેટિંગમાં ફેરફાર કરો"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"આ પરવાનગી ઍપને સિસ્ટમ સેટિંગમાં ફેરફાર કરવાની મંજૂરી આપે છે."</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"નોટિફિકેશનનો ઍક્સેસ"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> માટે નોટિફિકેશનના ઍક્સેસની મંજૂરી આપીએ?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, સંપર્ક નામ અને તમને મળતા સંદેશાની ટેક્સ્ટ જેવી વ્યક્તિગત માહિતી સહિત બધા નોટિફિકેશન વાંચી શકશે. તે આ નોટિફિકેશનને છોડી દઈ શકશે અથવા તેમાં રહેલા ક્રિયા બટનને શરૂ પણ કરી શકશે.\n\nઆ ખલેલ પાડશો નહીંને ચાલુ કે બંધ કરવાની તથા સંબંધિત સેટિંગ બદલવાની ક્ષમતા પણ ઍપને આપશે."</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"જો તમે <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> માટે નોટિફિકેશન ઍક્સેસને બંધ કરો છો, તો ખલેલ પાડશો નહીં ઍક્સેસ પણ બંધ કરવામાં આવી શકે છે."</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"બંધ કરો"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"રદ કરો"</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"પ્રીમિયમ SMSનો ઍક્સેસ"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"તમને પ્રીમિયમ SMS માટે શુલ્ક લાગી શકે છે અને તે તમારા કૅરિઅર બિલમાં ઉમેરવામાં આવશે. જો તમે કોઇ ઍપ માટે પરવાનગી ચાલુ કરો છો, તો તમે તે ઍપનો ઉપયોગ કરીને પ્રીમિયમ SMS મોકલી શકશો."</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"વપરાશનો ઍક્સેસ"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"વપરાશનો ઍક્સેસ કોઈ ઍપને તમે કઈ અન્ય ઍપનો અને કેટલીવાર ઉપયોગ કરી રહ્યાં છો, તેમજ તમારા કૅરિઅર, ભાષા સેટિંગ અને અન્ય વિગતોને ટ્રૅક કરવાની મંજૂરી આપે છે."</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"વાઇ-ફાઇ નિયંત્રણ"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"વાઇ-ફાઇ નિયંત્રણ ઍપને વાઇ-ફાઇ ચાલુ અથવા બંધ કરવાની, વાઇ-ફાઇ નેટવર્કને સ્કૅન કરીને કનેક્ટ કરવાની, નેટવર્ક ઉમેરવાની કે કાઢી નાખવાની અથવા માત્ર-સ્થાનિક હૉટસ્પૉટ શરૂ કરવાની મંજૂરી આપે છે."</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"વધુ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"સ્થાન"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"સ્થાન માટે તાજેતરની વિનંતીઓ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"સ્થાન માટે તાજેતરમાં કોઈ વિનંતી નથી"</string>
@@ -218,6 +378,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"સિસ્ટમ WebView લાઇસન્સ"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"વૉલપેપર"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"ઉપગ્રહ છબી પ્રદાતાઓ:\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"તૃતીય-પક્ષ લાઇસન્સ"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"લાઇસન્સ લોડ કરવામાં સમસ્યા છે."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"લોડ કરી રહ્યાં છીએ…"</string>
@@ -259,7 +420,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"કાઢી નાંખી રહ્યું છે"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"કૃપા કરીને રાહ જુઓ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"તારીખ અને સમય"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"તારીખ અને સમય સેટ કરો"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"તારીખ, સમય, સમય ઝોન અને ફૉર્મેટ સેટ કરો"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"આપમેળે તારીખ અને સમય"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"નેટવર્ક દ્વારા પ્રદાન કરવામાં આવેલ સમયનો ઉપયોગ કરો"</string>
@@ -320,6 +480,25 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"વપરાશકર્તાના નામમાં ફેરફાર કરો"</string>
     <string name="users_list_title" msgid="770764290290240909">"વપરાશકર્તાઓ"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$sને આપેલી પરવાનગીઓ"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"સ્ટોરેજ"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"મ્યુઝિક અને ઑડિયો"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"અન્ય ઍપ"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ફાઇલો"</string>
+    <string name="storage_system" msgid="1271345630248014010">"સિસ્ટમ"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"સિસ્ટમમાં Androidનું <xliff:g id="VERSION">%s</xliff:g> વર્ઝન ચલાવવા માટે ઉપયોગી ફાઇલોનો સમાવેશ છે"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ઑડિયોની ફાઇલો"</string>
+    <string name="memory_calculating_size" msgid="1672238502950390033">"ગણતરી કરી રહ્યાં છીએ…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"ઍપનું કદ"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"વપરાશકર્તા ડેટા"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"કૅશ મેમરી"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"કુલ"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"સ્ટોરેજ સાફ કરો"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"કૅશ મેમરી સાફ કરો"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"ઍપ ડેટા ડિલીટ કરીએ?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"આ ઍપનો બધો ડેટા હંમેશ માટે ડિલીટ કરવામાં આવશે. આમાં બધી ફાઇલો, સેટિંગ, એકાઉન્ટ, ડેટાબેઝ વગેરેનો સમાવેશ થાય છે."</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ઍપ માટે સ્ટોરેજ સાફ ન કરી શક્યાં."</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢ્યું છે"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> સલામત રીતે બહાર કાઢી શકાયું નથી"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"એકાઉન્ટ"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"એકાઉન્ટ ઉમેરો"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"કોઈ એકાઉન્ટ ઉમેરવામાં આવ્યા નથી"</string>
@@ -442,6 +621,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>
     <string name="add_device_title" msgid="8452168024017866232">"વિશ્વસનીય ડિવાઇસ ઉમેરો"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે બ્લૂટૂથ ચાલુ થશે"</string>
     <string name="trusted_device" msgid="5637378361866787603">"વિશ્વસનીય ડિવાઇસ"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ડિવાઇસ</item>
@@ -451,20 +631,28 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"કન્ફર્મ કરો"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"વિશ્વસનીય ડિવાઇસ કાઢી નાખો"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"થઈ ગયું"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"વિશ્વસનીય ડિવાઇસનું સેટઅપ કરવા માટે સાથી ઍપનો ઉપયોગ કરો. એકવાર સેટઅપ થઈ જાય પછી, જ્યારે વાહનને તમારા ફોનની જાણ થાય ત્યારે તમે તમારી વપરાશકર્તા પ્રોફાઇલ અનલૉક કરી શકશો"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"વિશ્વસનીય ડિવાઇસનું સેટઅપ કરવા માટે સાથી ઍપનો ઉપયોગ કરો. એકવાર સેટઅપ થઈ જાય પછી, જ્યારે તમારો ફોન વાહનની નજીક હોવાની જાણ થાય ત્યારે તમારી વપરાશકર્તા પ્રોફાઇલ ઑટોમૅટિક રીતે અનલૉક થઈ જશે."</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. તમારા ફોન પર સાથી ઍપને ડાઉનલોડ કરો"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. ડિવાઇસને તમારા ફોન સાથે જોડાણ કરવા માટે <xliff:g id="CAR_NAME">%1$s</xliff:g>ને પસંદ કરો"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock આ ડિવાઇસની સુરક્ષા સુવિધાઓ શોધી શકતા નથી. તમારા કારને સુરક્ષિત રાખવામાં સહાય કરવા માટે, એકવાર તમે તમારી કાર પહેલેથી અનલૉક કરી દો, માત્ર પછીથી જ વિશ્વસનીય ડિવાઇસ તમારી કારને અનલૉક કરેલી રાખી શકશે. જો અન્ય કોઈ વ્યક્તિએ તમારું વિશ્વસનીય ડિવાઇસ પકડી રાખ્યું હોય, તો પણ જ્યારે તે નજીકમાં હશે ત્યારે તમારી કારને અનલૉક કરેલી રાખી શકશે."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ને વિશ્વસનીય ડિવાઇસ તરીકે ઉમેરો"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ને સફળતાપૂર્વક વિશ્વસનીય ડિવાઇસ તરીકે ઉમેર્યું"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"જો અન્ય કોઈ વ્યક્તિએ તમારું વિશ્વસનીય ડિવાઇસ પકડી રાખ્યું હોય, તો પણ જ્યારે તે ડિવાઇસ તમારી કારની નજીક હશે, ત્યારે તે તમારી કારને ચાલુ કરતી વખતે વપરાશકર્તાની પ્રોફાઇલને અનલૉક કરી નાખશે."</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"કૃપા કરીને કન્ફર્મ કરો કે જોડાણ કરવાનો કોડ મેળ ખાય છે"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ફોનની સફળતાપૂર્વક નોંધણી કરી"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ની નોંધણી નિષ્ફળ રહી"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"કોઈ વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે, તમારે પહેલાં કોઈ પ્રમાણીકરણ પદ્ધતિ સેટ કરવી આવશ્યક છે. જો તમારી પાસે તમારું વિશ્વસનીય ડિવાઇસ ન હોય, તો તમારી પ્રોફાઇલને ઍક્સેસ કરવા માટે પ્રમાણીકરણ આવશ્યક રહેશે."</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ડિવાઇસ ડિસ્કનેક્ટ થયું."</string>
+    <string name="credentials_reset" msgid="873900550885788639">"લૉગ ઇન વિગતોને સાફ કરો"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"બધા પ્રમાણપત્ર કાઢી નાખો"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"બધું કન્ટેન્ટ કાઢી નાખીએ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખ્યું છે."</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"ક્રિડેન્શ્યલ સ્ટોરેજ કાઢી નાખી શકાયું નથી."</string>
     <string name="forget" msgid="3971143908183848527">"ભૂલી જાઓ"</string>
     <string name="connect" msgid="5861699594602380150">"કનેક્ટ કરો"</string>
     <string name="disconnect" msgid="6140789953324820336">"ડિસ્કનેક્ટ કરો"</string>
     <string name="delete_button" msgid="5840500432614610850">"ડિલીટ કરો"</string>
     <string name="remove_button" msgid="6664656962868194178">"કાઢી નાખો"</string>
     <string name="cancel" msgid="750286395700355455">"રદ કરો"</string>
+    <string name="allow" msgid="7519431342750394402">"મંજૂરી આપો"</string>
+    <string name="deny" msgid="340512788979930804">"નકારો"</string>
     <string name="backspace_key" msgid="1545590866688979099">"Backspace કી"</string>
     <string name="enter_key" msgid="2121394305541579468">"Enter કી"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ડેમોમાંથી બહાર નીકળો"</string>

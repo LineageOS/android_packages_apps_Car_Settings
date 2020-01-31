@@ -31,10 +31,48 @@
     <string name="night_mode_tile_label" msgid="6603597795502131664">"የሌሊት ሁነታ"</string>
     <string name="network_and_internet" msgid="4229023630498537530">"አውታረ መረብ እና በይነመረብ"</string>
     <string name="mobile_network_settings" msgid="1708621113321368597">"የተንቀሳቃሽ ስልክ አውታረ መረብ"</string>
+    <plurals name="mobile_network_summary_count" formatted="false" msgid="6917348330386831454">
+      <item quantity="one"><xliff:g id="COUNT_1">%1$d</xliff:g> ሲሞች</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%1$d</xliff:g> ሲሞች</item>
+    </plurals>
+    <string name="mobile_network_active_sim" msgid="1901674954229832811">"ገቢር / ሲም"</string>
+    <string name="mobile_network_inactive_sim" msgid="3644984830926224318">"ገቢር ያልሆነ / ሲም"</string>
+    <string name="mobile_network_active_esim" msgid="5864100786496761032">"ገቢር / የወረደ ሲም"</string>
+    <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"ገቢር ያልሆነ / የወረደ ሲም"</string>
+    <string name="mobile_network_list_add_more" msgid="6174294462747070655">"ተጨማሪ ያክሉ"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"የተንቀሳቃሽ ስልክ ውሂብ"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"የተንቀሳቃሽ ስልክ አውታረ መረብን በመጠቀም ውሂብን ይድረሱበት"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"የተንቀሳቃሽ ስልክ ውሂብ ይጥፋ?"</string>
+    <string name="sim_selection_required_pref" msgid="6599562910262785784">"መምረጥ ያስፈልጋል"</string>
+    <string name="sim_change_data_title" msgid="6677115745127365131">"ለተንቀሳቃሽ ውሂብ <xliff:g id="CARRIER">%1$s</xliff:g>ን ይጠቀሙ?"</string>
+    <string name="sim_change_data_message" msgid="4669775284395549069">"ለተንቀሳቃሽ ስልክ ውሂብ <xliff:g id="CARRIER2_0">%2$s</xliff:g>ን እየተጠቀሙ ነው። ወደ <xliff:g id="CARRIER1">%1$s</xliff:g> ከቀየሩ <xliff:g id="CARRIER2_1">%2$s</xliff:g> ከእንግዲህ ለተንቀሳቃሽ ስልክ ውሂብ ስራ ላይ አይውልም።"</string>
+    <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g>ን ይጠቀሙ"</string>
+    <string name="roaming_title" msgid="6218635014519017734">"ማንዣበብ"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"በእንቅስቃሴ ላይ ሲሆን ከውሂብ አገልግሎቶች ጋር ተገናኝ"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"የውሂብ ዝውውር ይፈቀድ?"</string>
+    <string name="roaming_warning" msgid="5313281900566657209">"ጉልህ ክፍያዎችን ሊያስከትሉ ይችላ።"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"የውሂብ አጠቃቀም"</string>
+    <string name="data_usage_title" msgid="2923515974389203812">"ዋና ውሂብ"</string>
+    <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> ጥቅም ላይ ውሏል"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ማስጠንቀቂያ"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ገደብ"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"የ<xliff:g id="ID_1">^1</xliff:g> ውሂብ ማስጠንቀቂያ / የ<xliff:g id="ID_2">^2</xliff:g> ውሂብ ገደብ"</string>
+    <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
+      <item quantity="one">%d ቀናት ቀርተዋል</item>
+      <item quantity="other">%d ቀናት ቀርተዋል</item>
+    </plurals>
+    <string name="billing_cycle_none_left" msgid="3499893148398931302">"ምንም ጊዜ አይቀርም"</string>
+    <string name="billing_cycle_less_than_one_day_left" msgid="8121013296375203759">"ከ1 ቀን በታች ቀርቷል"</string>
+    <string name="carrier_and_update_text" msgid="4351043160977741244">"ከ<xliff:g id="ID_2">^2</xliff:g> በፊት በ<xliff:g id="ID_1">^1</xliff:g> ተዘምኗል"</string>
+    <string name="no_carrier_update_text" msgid="4396108017586427442">"ከ<xliff:g id="ID_1">^2</xliff:g> በፊት ተዘምኗል"</string>
+    <string name="carrier_and_update_now_text" msgid="9058821833613481573">"አሁን በ<xliff:g id="ID_1">^1</xliff:g> ተዘምኗል"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"ልክ አሁን ተዘምኗል"</string>
+    <string name="launch_manage_plan_text" msgid="906657488611815787">"ዕቅድን ይመልከቱ"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"የመተግበሪያ ውሂብ አጠቃቀም"</string>
+    <string name="data_usage_app_restricted" msgid="4570970078120010951">"የተገደበ"</string>
+    <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"የአጠቃቀም ዑደት ቀን ዳግም ያስጀምራል"</string>
+    <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"የእያንዳንዱ ወር ቀን፦"</string>
+    <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"አዘጋጅ"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"የውሂብ ማስጠንቀቂያ እና ገደብ"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"የመተግበሪያ ውሂብ አጠቃቀም ዑደት"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"የውሂብ ማስጠንቀቂያ አዘጋጅ"</string>
@@ -43,6 +81,9 @@
     <string name="data_limit" msgid="227338836292511425">"የውሂብ ገደብ"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"የውሂብ አጠቃቀም መወሰን"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"የእርስዎ ተሽከርካሪ ዋናው አሃድ አንዴ ያዘጋጁት ገደብ ላይ ሲደርስ የተንቀሳቃሽ ስልክ ውሂቡን ያጠፋዋል።\n\nየውሂብ አጠቃቀም የሚለካው በዋናው አሃድ፣ እና የአገልግሎት አቅራቢዎ አጠቃቀም በተለየ መልኩ ሊቆጥር የሚችል እንደመሆኑ መጠን ቆጠብ ያለ ገደብ ማዘጋጀቱን ያስቡበት።"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"የውሂብ አጠቃቀም ማስጠንቀቂያ ያቀናብሩ"</string>
+    <string name="data_usage_limit_editor_title" msgid="133468242379286689">"የውሂብ አጠቃቀም ወሰን አቀናብር"</string>
+    <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"አቀናብር"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
     <string name="wifi_starting" msgid="473253087503153167">"Wi-Fiን በማብራት ላይ…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi በማጥፋት ላይ…"</string>
@@ -54,6 +95,7 @@
     <string name="wifi_setup_connect" msgid="3512399573397979101">"አገናኝ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"የይለፍ ቃል"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"የይለፍ ቃል አሳይ"</string>
+    <string name="wifi_no_network_name" msgid="6819604337231313594">"እባክዎ የአውታረ መረብ ስም ያስገቡ"</string>
     <string name="wifi_ssid" msgid="488604828159458741">"የአውታረ መረብ ስም"</string>
     <string name="wifi_ssid_hint" msgid="3170608752313710099">"SSID ያስገቡ"</string>
     <string name="wifi_security" msgid="158358046038876532">"ደኅንነት"</string>
@@ -93,6 +135,28 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"በራስ-ሰር ወደ የተንቀሳቃሽ ስልክ ውሂብ ቀይር"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"የWi-Fi በይነመረብ መዳረሻ በማይኖርበት ጊዜ የተንቀሳቃሽ ስልክ ውሂብ ይጠቀሙ። የውሂብ ክፍያዎች ሊከፈልባቸው ይችላል።"</string>
     <string name="learn_more" msgid="8214605928933358604">"የበለጠ ለመረዳት"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"የመገናኛ ነጥብ ስም"</string>
+    <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>ን በማብራት ላይ..."</string>
+    <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"ሌሎች መሣሪያዎች ከ<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> ጋር መገናኘት ይችላሉ"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"የመገናኛ ነጥብ የይለፍ ቃል"</string>
+    <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"ደኅንነት"</string>
+    <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-የግል"</string>
+    <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"ምንም"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"የኤፒ ባንድ"</string>
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"የመዳረሻ ነጥብ ባንድ ይምረጡ"</string>
+    <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"ራስ-ሰር"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 ጊሄዝ ባንድ"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 ጊኸ ባንድ"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 ጊኸዝ ባንድ ይመረጣል"</string>
+    <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 ጊኸ"</string>
+    <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 ጊኸ"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"ለWi-Fi መገናኛ ነጥብ ቢያንስ አንድ ሞገድ ይምረጡ፦"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"የመገናኛ ነጥብ እና እንደ ሞደም መጠቀም"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"መገናኛ ነጥብን በራስሰር አጥፋ"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wi‑Fi መገናኛ ነጥብ ምንም መሣሪያዎች ካልተገናኙ ይጠፋል"</string>
+    <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiን ማብራት ይፈልጋል"</string>
+    <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fiን ማጥፋት ይፈልጋል"</string>
+    <string name="wifi_error" msgid="3105105447117289410">"ስህተት"</string>
     <string name="bluetooth_settings_title" msgid="3794688574569688649">"ብሉቱዝ"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"ያልተሰየመ መሳሪያ"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"የተጣመሩ መሣሪያዎች"</string>
@@ -109,6 +173,16 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"የሚገኙ መሣሪያዎች"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"መገለጫዎች"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"ብሉቱዝ በማብራት ላይ…"</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"ብሉቱዝ በማጥፋት ላይ…"</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> ብሉቱዝ ማብራት ይፈልጋል"</string>
+    <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> ብሉቱዝን ማጥፋት ይፈልጋል"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"አንድ መተግበሪያ ብሉቱዝን ማብራት ይፈልጋል"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"አንድ መተግበሪያ ብሉቱዝን ማጥፋት ይፈልጋል"</string>
+    <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> የመኪና መረጃ ስርዓትዎን ለ<xliff:g id="TIMEOUT">%2$d</xliff:g> ሰከንዶች ያህል ለሌሎች የብሉቱዝ መሣሪያዎች እንዲታይ ይፈልጋል።"</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"አንድ መተግበሪያ የመኪና መረጃ ስርዓትዎን ለ<xliff:g id="TIMEOUT">%1$d</xliff:g> ሰከንዶች ያህል ለሌሎች የብሉቱዝ መሣሪያዎች እንዲታይ ሊያደርገው ይፈልጋል።"</string>
+    <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ብሉቱዝን አብርቶ የመኪና መረጃ ስርዓትዎን ለ<xliff:g id="TIMEOUT">%2$d</xliff:g> ሰከንዶች ለሌሎች መሣሪያዎች እንዲታይ ሊያደርገው ይፈልጋል።"</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"አንድ መተግበሪያ ብሉቱዝን አብርቶ የመኪና መረጃ ስርዓትዎን ለ<xliff:g id="TIMEOUT">%1$d</xliff:g> ሰከንዶች ያህል ለሌሎች መሣሪያዎች እንዲታይ ሊያደርገው ይፈልጋል።"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"የብሉቱዝ ማጣመር ጥያቄ"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"አጣምር እና ተገናኝ"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"የብሉቱዝ ማጣመሪያ ኮድ"</string>
@@ -122,6 +196,7 @@
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"አብዛኛውን ጊዜ 0000 ወይም 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"የማጣመር ጥየቃ"</string>
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"ከ«<xliff:g id="DEVICE_NAME">%1$s</xliff:g>» ጋር ለማጣመር ነካ ያድርጉ።"</string>
+    <string name="bluetooth_device_picker" msgid="673238198452345475">"የብሉቱዝ መሣሪያ ይምረጡ"</string>
     <string name="language_settings" msgid="2079258598337245546">"ቋንቋዎች"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"ቋንቋዎች እና ግቤት"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"የቁልፍ ሰሌዳ"</string>
@@ -143,9 +218,59 @@
     <string name="ringtone_title" msgid="8370531086214517972">"የስልክ ጥሪ ቅላጼ"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"ነባሪ የማሳወቂያ ድምጽ"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"ነባሪ የማንቂያ ድምጽ"</string>
+    <string name="units_settings" msgid="402325305096925886">"መለኪያዎች"</string>
+    <string name="units_speed_title" msgid="7115143916747108160">"ፍጥነት"</string>
+    <string name="units_distance_title" msgid="6257691565990474635">"ርቀት"</string>
+    <string name="units_fuel_consumption_title" msgid="6415108114453652570">"የነዳጅ ፍጆታ"</string>
+    <string name="units_energy_consumption_title" msgid="2775408854562057609">"የኃይል ፍጆታ"</string>
+    <string name="units_temperature_title" msgid="22994498606206991">"የሙቀት መጠን"</string>
+    <string name="units_volume_title" msgid="1912873077839446914">"ድምፅ"</string>
+    <string name="units_pressure_title" msgid="7477179239294531518">"ግፊት"</string>
+    <string name="units_list_entry" msgid="7277796571051055840">"<xliff:g id="UNIT_ABBREVIATION">%1$s</xliff:g> - <xliff:g id="UNIT_PRONUNCIATION">%2$s</xliff:g>"</string>
+    <string name="units_ratio" msgid="1085608614216280006">"<xliff:g id="UNIT_NUMERATOR">%1$s</xliff:g>/<xliff:g id="UNIT_DENOMINATOR">%2$s</xliff:g>"</string>
+    <string name="units_ratio_numerator" msgid="3462102280813794384">"<xliff:g id="UNIT_NUMERATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_NUMERATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_ratio_denominator" msgid="6737154450651499228">"<xliff:g id="UNIT_DENOMINATOR_QUANTITY">%1$d</xliff:g><xliff:g id="UNIT_DENOMINATOR_UNIT">%2$s</xliff:g>"</string>
+    <string name="units_unit_name_meter_per_sec" msgid="9151123661434898991">"ሜትር በሰከንድ"</string>
+    <string name="units_unit_name_rpm" msgid="4084216808160262380">"ዙረት በደቂቃ"</string>
+    <string name="units_unit_name_hertz" msgid="5373975672472735625">"ኸርዝ"</string>
+    <string name="units_unit_name_percentile" msgid="1630667431830186060">"ፐርሰንታይል"</string>
+    <string name="units_unit_name_millimeter" msgid="318832924604375755">"ሚሊሜትር"</string>
+    <string name="units_unit_name_meter" msgid="4778344873095502130">"ሜትር"</string>
+    <string name="units_unit_name_kilometer" msgid="4351417123421381297">"ኪሎሜትር"</string>
+    <string name="units_unit_name_mile" msgid="8337486880403419613">"ማይል"</string>
+    <string name="units_unit_name_celsius" msgid="1642787068882598698">"ሴልሲየስ"</string>
+    <string name="units_unit_name_fahrenheit" msgid="7617395181535026095">"ፋራናይት"</string>
+    <string name="units_unit_name_kelvin" msgid="4043908998904418360">"ኬልቪን"</string>
+    <string name="units_unit_name_milliliter" msgid="2735564290593738653">"ሚሊሊትር"</string>
+    <string name="units_unit_name_liter" msgid="2682609997247920434">"ሊትር"</string>
+    <string name="units_unit_name_us_gallon" msgid="2991675590060288099">"ጋሎን"</string>
+    <string name="units_unit_name_imperial_gallon" msgid="7827144733136304182">"ኢምፔሪያል ጋሎን"</string>
+    <string name="units_unit_name_nano_secs" msgid="7258767560309570567">"ናኖሰከንድ"</string>
+    <string name="units_unit_name_secs" msgid="2282853373442592245">"ሰከንድ"</string>
+    <string name="units_unit_name_year" msgid="8237348390239986270">"ዓመት"</string>
+    <string name="units_unit_name_kilopascal" msgid="371397110720444118">"ኪሎፓስካል"</string>
+    <string name="units_unit_name_watt_hour" msgid="1581554497071668301">"ዋት ሰዓት"</string>
+    <string name="units_unit_name_milliampere" msgid="4477388320207031153">"ሚሊአምፔር"</string>
+    <string name="units_unit_name_millivolt" msgid="4730384331465782188">"ሚሊቮልት"</string>
+    <string name="units_unit_name_milliwatts" msgid="6689028603486588098">"ሚሊዋት"</string>
+    <string name="units_unit_name_ampere_hour" msgid="6139925422033142476">"አምፔር ሰዓት"</string>
+    <string name="units_unit_name_kilowatt_hour" msgid="4282251431283475831">"ኪሎዋት ሰዓት"</string>
+    <string name="units_unit_name_psi" msgid="9199487304284041266">"ፓውንድ በበካሬ ኢንች"</string>
+    <string name="units_unit_name_miles_per_hour" msgid="3988395919988136895">"ማይል በሰዓት"</string>
+    <string name="units_unit_name_kilometers_per_hour" msgid="8243061370606677881">"ኪሎሜትሮች በሰዓት"</string>
+    <string name="units_unit_name_bar" msgid="4051903414466411804">"ባር"</string>
+    <string name="units_unit_name_degrees" msgid="47944625323398947">"ዲግሪ"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_miles" msgid="715836273168653604">"ኪሎዋት በመቶ ማይል"</string>
+    <string name="units_unit_name_kilowatt_per_hundred_kilometers" msgid="2761254652642587883">"ኪሎዋት በመቶ ኪሎሜትር"</string>
+    <string name="units_unit_name_miles_per_gallon_us" msgid="3911349970584135950">"ማይል በጋሎን (አሜሪካ)"</string>
+    <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"ማይል በጋሎን (ዩኬ)"</string>
+    <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"ኪሎሜትር በሊትር"</string>
+    <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"ሊትር በመቶ ኪሎሜትር"</string>
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"መተግበሪያዎች እና ማሳወቂያዎች"</string>
     <string name="all_applications" msgid="7798210477486822168">"ሁሉንም መተግበሪያዎች አሳይ"</string>
     <string name="default_applications" msgid="1558183275638697087">"ነባሪ መተግበሪያዎች"</string>
+    <string name="app_permissions" msgid="32799922508313948">"የመተግበሪያ ፈቃዶች"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g>ን የሚጠቀሙ መተግበሪያዎች"</string>
     <string name="applications_settings" msgid="794261395191035632">"የመተግበሪያ መረጃ"</string>
     <string name="force_stop" msgid="2153183697014720520">"በኃይል አቁም"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"በኃይል አቁም?"</string>
@@ -155,7 +280,9 @@
     <string name="uninstall_text" msgid="277907956072833012">"አራግፍ"</string>
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"ይህን መተግበሪያ ካሰናከሉት ከዚህ በኋላ Android እና ሌሎች መተግበሪያዎች እንደተፈለገው ላይሠሩ ይችላሉ።"</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"መተግበሪያን አሰናክል"</string>
+    <string name="not_installed" msgid="4218816013370552746">"ለዚህ ተጠቃሚ አልተጫነም"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ፈቃዶች"</string>
+    <string name="notifications_label" msgid="6586089149665170731">"ማሳወቂያዎች"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ስሪት፦ %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ምንም ፈቃዶች አልተሰጡም"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ምንም ፈቃዶች አልተጠየቁም"</string>
@@ -166,20 +293,53 @@
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ተጨማሪ ፈቃዶች</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ተጨማሪ ፈቃዶች</item>
     </plurals>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"ማስታወሻ፦ ከዳግም ማስነሳት በኋላ ይህ መተግበሪያ ተሽከርካሪዎን እስከሚከፍቱት ድረስ ሊጀምር አይችልም።"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"እገዛ እና የድምጽ ግቤት"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"የእገዛ መተግበሪያ"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"ከማያ ገጽ ላይ ጽሑፍ ተጠቀም"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"ረዳት መተግበሪያው የማያ ገጹን ይዘቶች እንደ ጽሑፍ እንዲደርሳባቸው ይፍቀዱ"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"ቅጽበታዊ ገጽ እይታ ይጠቀሙ"</string>
     <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"ረዳት መተግበሪያው የማያ ገጹን ምስል እንዲደርስበት ይፍቀዱ"</string>
-    <!-- no translation found for voice_input_settings_title (3238707827815647526) -->
-    <skip />
+    <string name="voice_input_settings_title" msgid="3238707827815647526">"የድምፅ ግቤት"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"የራስ-ሙላ አገልግሎት"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"ምንም"</string>
     <string name="default_app_selected_app" msgid="5289396663745484773">"ተመርጧል"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"ረዳቱ በእርስዎ ስርዓት ላይ በአገልግሎት ላይ ስለሚውሉ መተግበሪያዎች መረጃን ማንበብ ይችላል፣ ይህም በእርስዎ ማያ ገጽ ላይ የሚታይ ወይም በመተግበሪያዎች ውስጥ የሚደረስበት መረጃን ይጨምራል።"</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;ይህን መተግበሪያ የሚያምኑት መሆንዎን ያረጋግጡ&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google ራስ-ሙላ&gt;%1$s&lt;/xliff:g&gt; ምን በራስ መሞላት እንደሚችል ለማወቅ በማያ ገጽዎ ላይ ያለውን ነገር ይጠቀማል።"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"አገልግሎት አክል"</string>
+    <string name="app_launch_domain_links_title" msgid="774480184927726651">"አገናኞችን በመክፈት ላይ"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"የተጫኑ መተግበሪያዎች"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"የሚደገፉ አገናኞችን አትክፈት"</string>
+    <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> ክፈት"</string>
+    <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g>ን እና ሌሎች ዩአርኤሎችን ይክፈቱ"</string>
+    <string name="app_launch_title" msgid="3442601467010363057">"በነባሪ ክፈት"</string>
+    <string name="app_launch_other_defaults_title" msgid="5734827759507953180">"ሌሎች ነባሪዎች"</string>
+    <string name="auto_launch_disable_text" msgid="3595315315092716391">"ምንም ነባሪዎች አልተዘጋጁም።"</string>
+    <string name="auto_launch_enable_text" msgid="7230832269574106901">"ይህን መተግበሪያ በነባሪ ለሌላ እርምጃዎች እንዲጀምር መርጠኸዋል።"</string>
+    <string name="auto_launch_reset_text" msgid="590439611312092392">"ነባሪዎችን አጽዳ"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"የሚደገፉ አገናኞችን ክፈት"</string>
+    <string name="app_link_open_always" msgid="5783167184335545230">"በዚህ መተግበሪያ ውስጥ ክፈት"</string>
+    <string name="app_link_open_ask" msgid="7242075065136237456">"ሁልጊዜ ጠይቅ"</string>
+    <string name="app_link_open_never" msgid="2173174327831792316">"በዚህ መተግበሪያ ውስጥ አትክፈት"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"የሚደገፉ አገናኞች"</string>
+    <string name="special_access" msgid="5730278220917123811">"ልዩ የመተግበሪያ መዳረሻ"</string>
+    <string name="show_system" msgid="4401355756969485287">"ሥርዓት አሳይ"</string>
+    <string name="hide_system" msgid="8845453295584638040">"ሥርዓትን ደብቅ"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"የሥርዓት ቅንብሮችን ይቀይራል"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"ይህ ፈቃድ መተግበሪያው የስርዓት ቅንብሮችን ለመቀየር ያስችለዋል።"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"የማሳወቂያ መዳረሻ"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"ለ<xliff:g id="SERVICE">%1$s</xliff:g> የማሳወቂያ መዳረሻ ይፈቀድለት?"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> እንደ የእውቂያ ስሞች እና የሚቀበሏቸው የመልዕክቶች ጽሑፍም ያሉ የግል መረጃንም ጨምሮ ሁሉንም ማሳወቂያዎች ማንበብ ይችላል። እንዲሁም ማሳወቂያዎችን ማሰናበት ወይም ሊይዟቸው የሚችሏቸው የእርምጃ አዝራሮችን ሊቀሰቅሱ ይችላሉ።\n\nይሄ እንዲሁም መተግበሪያው «አትረብሽ»ን የማብራት ወይም የማጥፋት እና ተዛማጅ ቅንብሮችን የመቀየር ይችሎታ ይሰጠዋል።"</string>
+    <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"የ<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> ማሳወቂያ መዳረሻን ካጠፉ የአትረብሽ መዳረሻ እንዲሁም ሊጠፋ ይችላል።"</string>
+    <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"አጥፋ"</string>
+    <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"ተወው"</string>
+    <string name="premium_sms_access_title" msgid="1409118461646148686">"የፕሪሚየም ኤስኤምኤስ መዳረሻ"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"ፕሪሚየም ኤስኤምኤስ ውድ ገንዘብ ሊያስወጣዎት ይችላል፣ እና በአገልግሎት አቅራቢ ክፍያዎ ላይ ሒሳብ ያስጨምርብዎታል። ለመተግበሪያ ፈቃድን ካነቁ ያንን መተግበሪያ በመጠቀም ፕሪሚየም ኤስኤምኤስ መላክ ይችላሉ።"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"የአጠቃቀም መዳረሻ"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"የአጠቃቀም መዳረሻ አንድ መተግበሪያ የሚጠቀሟቸውን ሌሎች መተግበሪያዎች እና ምን ያህል ጊዜ እንደሚጠቀሙባቸው፣ እንዲሁም የአገልግሎት አቅራቢዎን፣ የቋንቋ ቅንብሮችዎን እና ሌሎች ዝርዝሮችዎን እንዲከታተል ያስችለዋል።"</string>
+    <string name="wifi_control_title" msgid="5660436566907731929">"የWi-Fi ቁጥጥር"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi መቆጣጠሪያ አንድ መተግበሪያ Wi-Fiን እንዲያበራ ወይም እንዲያጠፋ፣ የWi-Fi አውታረ መረቦች እንዲቃኝ እና ከእነሱ ጋር እንዲገናኝ፣ አውታረ መረቦችን እንዲያክል ወይም እንዲያስወግድድ፣ ወይም የአካባቢ-ብቻ መገናኛ ነጥብን እንዲያስጀምርር ያስችለዋል።"</string>
+    <string name="more_special_access_title" msgid="166115485446645971">"ተጨማሪ"</string>
     <string name="location_settings_title" msgid="901334356682423679">"አካባቢ"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"የቅርብ ጊዜ የአካባቢ ጥያቄዎች"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ምንም የቅርብ ጊዜ የአካባቢ ጥያቄዎች የሉም"</string>
@@ -218,6 +378,7 @@
     <string name="webview_license_title" msgid="6442372337052056463">"የሥርዓት WebView ፈቃዶች"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"ልጣፎች"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"የሳተላይት ምስሎች አቅራቢዎች፦\n©2014 CNES / Astrium, DigitalGlobe, Bluesky"</string>
+    <string name="regulatory_info_text" msgid="8890339124198005428"></string>
     <string name="settings_license_activity_title" msgid="8499293744313077709">"የሶስተኛ ወገን ፈቃዶች"</string>
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"ፈቃዶቹን መጫን ላይ ችግር አለ።"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"በመጫን ላይ…"</string>
@@ -259,7 +420,6 @@
     <string name="master_clear_progress_title" msgid="7087480656932674774">"በመደምሰስ ላይ"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"እባክዎ ይጠብቁ..."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"ቀን እና ሰዓት"</string>
-    <string name="date_and_time_settings_title_setup_wizard" msgid="7580119979694174107">"ቀን እና ሰዓት ያቀናብሩ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"ቀን፣ ሰዓት፣ የሰዓት ሰቅ እና ቅርጸቶችን ያቀናብሩ"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"ራስ-ሰር ቀን እና ሰዓት"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"በአውታረ መረብ የቀረበ ሰዓት ተጠቀም"</string>
@@ -320,6 +480,25 @@
     <string name="edit_user_name_title" msgid="6890782937520262478">"የተጠቃሚ ስም አርትዕ ያድርጉ"</string>
     <string name="users_list_title" msgid="770764290290240909">"ተጠቃሚዎች"</string>
     <string name="user_details_admin_title" msgid="3530292857178371891">"ፈቃዶች ለ%1$s ተሰጥቷል"</string>
+    <string name="storage_settings_title" msgid="8957054192781341797">"ማከማቻ"</string>
+    <string name="storage_music_audio" msgid="7827147379976134040">"ሙዚቃ እና ኦዲዮ"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"ሌሎች መተግበሪያዎች"</string>
+    <string name="storage_files" msgid="6382081694781340364">"ፋይሎች"</string>
+    <string name="storage_system" msgid="1271345630248014010">"ሥርዓት"</string>
+    <string name="storage_detail_dialog_system" msgid="796365720531622361">"ስርዓት የAndroid ስሪት <xliff:g id="VERSION">%s</xliff:g>ን ለማሄድ ስራ ላይ የዋሉ ፋይሎችን ያካትታል"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"የኦዲዮ ፋይሎች"</string>
+    <string name="memory_calculating_size" msgid="1672238502950390033">"በማስላት ላይ…"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"የመተግበሪያ መጠን"</string>
+    <string name="storage_data_size_label" msgid="5022911581004239367">"የተጠቃሚ ውሂብ"</string>
+    <string name="storage_cache_size_label" msgid="6361308766707419555">"መሸጎጫ"</string>
+    <string name="storage_total_size_label" msgid="3892138268243791912">"ድምር"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"ማከማቻን አጽዳ"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"መሸጎጫ አጽዳ"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"የመተግበሪያ ውሂብ ይሰረዝ?"</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"የዚህ መተግበሪያ ውሂቦች ሁሉ በቋሚነት ይሰረዛሉ።እነዚህም ፋይሎችን፣ ቅንብሮችን፣ መለያዎችን፣ የውሂብ ጎታዎች እና የመሳሰሉትን ያካትታሉ።"</string>
+    <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ለመተግበሪያው ማከማቻን ማጽዳት አልተቻለም"</string>
+    <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> ደህንነቱ ተጠብቆ ወጥቷል"</string>
+    <string name="storage_unmount_failure" msgid="4591934911541762883">"ደህንነቱ እንደተጠበቀ <xliff:g id="NAME">%1$s</xliff:g>ን ማስወጣት አልተቻልም"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"መለያዎች"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"መለያ አክል"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"ምንም መለያዎች አልታከሉም"</string>
@@ -442,6 +621,7 @@
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"የማያ ገጽ መቆለፊያ አማራጮች"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ቀኖች በፊት"</string>
     <string name="add_device_title" msgid="8452168024017866232">"የሚታመን መሣሪያ አክል"</string>
+    <string name="add_device_summary" msgid="5368217520710573302">"ብሉቱዝ የታመነ መሣሪያን ለማከል ይበራል"</string>
     <string name="trusted_device" msgid="5637378361866787603">"የሚታመኑ መሣሪያዎች"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> መሣሪያዎች</item>
@@ -451,20 +631,28 @@
     <string name="trusted_device_confirm_button" msgid="102354635014627996">"ያረጋግጡ"</string>
     <string name="trusted_device_remove_button" msgid="6140476996063415420">"የሚታመን መሣሪያን አስወግድ"</string>
     <string name="trusted_device_done_button" msgid="8481956533222625296">"ተከናውኗል"</string>
-    <string name="add_trusted_device_instruction" msgid="109228038968439923">"የታመነ መሣሪያ ለማቀናበር አጃቢ መተግበሪያን ይጠቀሙ። አንድ ጊዜ ካቀናበሩ በኋላ፣ የእርስዎ ስልክ በተሽከርካሪው ተፈልጎ በሚገኝበት ጊዜ ላይ የእርስዎን የተጠቃሚ መገለጫ ለመክፈት እርስዎ ይችላሉ"</string>
+    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"የታመነ መሣሪያ ለማቀናበር አጃቢ መተግበሪያን ይጠቀሙ። አንድ ጊዜ ካቀናበሩ በኋላ፣ የእርስዎ የተጠቃሚ መገለጫ የእርስዎ ስልክ ከተሽከርካሪው አቅራቢያ እንዳለ ሲደረስበት በራስ ሰር ይከፈታል።"</string>
     <string name="trusted_device_download_app" msgid="6971096140154499983">"1. በእርስዎ ስልክ ላይ አጃቢውን መተግበሪያ ያውርዱ"</string>
     <string name="trusted_device_select_device" msgid="198902765179270739">"2. መሣሪያዎቹን ለማጣመር በእርስዎ ስልክ ላይ <xliff:g id="CAR_NAME">%1$s</xliff:g> ን ይምረጡ"</string>
-    <string name="trusted_device_safety_alert" msgid="8937542424166378247">"Smart Lock የዚህን መሣሪያ የደህንነት ባህሪያት ፈልጎ ማግኘት አይችልም። የእርስዎን መኪና ለመጠበቅ እንዲያግዝ፣ የታመነ መሣሪያ አንድ ጊዜ በእርስዎ ቀደም ብሎ ከተከፈተ በኋላ ብቻ የእርስዎን መኪና እንደተከፈተ ማቆየት ይችላል። የእርስዎ የታመነ መሣሪያ የእርስዎ መኪና በአቅራቢያ ላይ በሚሆንበት ጊዜ ምንም እንኳ ሌላ ሰው የያዘው ቢሆንም እንደተከፈተ ሊያቆየው ይችላል።"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="6551880047490332731">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> እንደ የሚታመን መሣሪያ ያክሉ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="3275482710090416690">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> በተሳካ ሁኔታ እንደ ታመነ መሣሪያ ታክሏል"</string>
+    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"መኪናው ሲነሣ ከእርስዎ መኪና አቅራቢያ ያለ የታመነ መሣሪያ መኪናውን ይከፍታል፣ ምንም እንኳ መሣሪያውን የያዘው ሌላ ሰው ቢሆንም።"</string>
+    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"እባክዎ የማጣመሪያ ኮዶች የሚዛመዱ መሆናቸውን ያረጋግጡ"</string>
+    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ስልክ በተሳካ ሁኔታ ተመዝግቧል"</string>
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> መመዝገብ አልተሳካም"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"የታመነ መሣሪያን ማከል ቀጥለው የማረጋገጫ ዘዴን እንዲያክሉ ይፈልግብዎታል። የታመነ መሣሪያዎ ከእርስዎ ጋር ከሌለ መገለጫዎን ለመድረስ ማረጋገጫ ያስፈልጋል።"</string>
+    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"የመሣሪያ ግንኙነት ተቋርጧል።"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"መረጃዎችን አጽዳ"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"ሁሉንም ምስክሮች አስወግድ"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"ሁሉም ይዘቶች ይወገድ?"</string>
+    <string name="credentials_erased" msgid="2515915439705550379">"የማስረጃ ማከማቻ ተደምስሷል።"</string>
+    <string name="credentials_not_erased" msgid="6118567459076742720">"የማስረጃ ማከማቻ ሊደመሰስ አልቻለም።"</string>
     <string name="forget" msgid="3971143908183848527">"እርሳ"</string>
     <string name="connect" msgid="5861699594602380150">"አገናኝ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ግንኙነት አቋርጥ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ሰርዝ"</string>
     <string name="remove_button" msgid="6664656962868194178">"አስወግድ"</string>
     <string name="cancel" msgid="750286395700355455">"ይቅር"</string>
+    <string name="allow" msgid="7519431342750394402">"ፍቀድ"</string>
+    <string name="deny" msgid="340512788979930804">"ከልክል"</string>
     <string name="backspace_key" msgid="1545590866688979099">"የBackspace ቁልፍ"</string>
     <string name="enter_key" msgid="2121394305541579468">"ቁልፍ አስገባ"</string>
     <string name="exit_retail_button_text" msgid="6093240315583384473">"ከማሳያ ውጣ"</string>
