@@ -16,6 +16,9 @@
 
 package com.android.car.settings.wifi;
 
+import static android.net.wifi.WifiConfiguration.NetworkSelectionStatus.NETWORK_SELECTION_ENABLED;
+import static android.net.wifi.WifiConfiguration.NetworkSelectionStatus.NETWORK_SELECTION_PERMANENTLY_DISABLED;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.mock;
@@ -80,7 +83,7 @@ public class AccessPointPreferenceTest {
         when(mAccessPoint.isSaved()).thenReturn(true);
         when(mAccessPoint.getConfig()).thenReturn(config);
         when(config.getNetworkSelectionStatus()).thenReturn(status);
-        when(status.isNetworkEnabled()).thenReturn(true);
+        when(status.getNetworkSelectionStatus()).thenReturn(NETWORK_SELECTION_ENABLED);
         mPreference.onClick();
 
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
@@ -97,7 +100,7 @@ public class AccessPointPreferenceTest {
         when(mAccessPoint.isSaved()).thenReturn(true);
         when(mAccessPoint.getConfig()).thenReturn(config);
         when(config.getNetworkSelectionStatus()).thenReturn(status);
-        when(status.isNetworkEnabled()).thenReturn(false);
+        when(status.getNetworkSelectionStatus()).thenReturn(NETWORK_SELECTION_PERMANENTLY_DISABLED);
         when(status.getNetworkSelectionDisableReason()).thenReturn(
                 WifiConfiguration.NetworkSelectionStatus.DISABLED_BY_WRONG_PASSWORD);
         mPreference.onClick();

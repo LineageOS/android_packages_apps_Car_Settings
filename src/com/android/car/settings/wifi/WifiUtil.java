@@ -15,6 +15,8 @@
  */
 package com.android.car.settings.wifi;
 
+import static android.net.wifi.WifiConfiguration.NetworkSelectionStatus.NETWORK_SELECTION_ENABLED;
+
 import android.annotation.DrawableRes;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -233,7 +235,8 @@ public class WifiUtil {
         }
         WifiConfiguration.NetworkSelectionStatus networkStatus =
                 config.getNetworkSelectionStatus();
-        if (networkStatus == null || networkStatus.isNetworkEnabled()) {
+        if (networkStatus == null
+                || networkStatus.getNetworkSelectionStatus() == NETWORK_SELECTION_ENABLED) {
             return false;
         }
         return networkStatus.getNetworkSelectionDisableReason()
