@@ -1138,6 +1138,10 @@
     <!-- Message when sync is currently failing [CHAR LIMIT=100] -->
     <string name="sync_is_failing">Sync is currently experiencing problems. It will be back shortly.</string>
 
+    <!-- Privacy --><skip/>
+    <!-- Title for settings that lead into Privacy settings [CHAR LIMIT=40] -->
+    <string name="privacy_settings_title">Privacy</string>
+
     <!-- security lock --><skip/>
     <!-- Title for security settings [CHAR LIMIT=20] -->
     <string name="security_settings_title">Security</string>
