@@ -36,6 +36,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -121,6 +122,8 @@ public class AddWifiFragmentTest {
         Intent intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
         intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
         mLocalBroadcastManager.sendBroadcastSync(intent);
+
+        Robolectric.flushForegroundThreadScheduler();
 
         assertThat(getAddWifiButton().isEnabled()).isTrue();
     }
