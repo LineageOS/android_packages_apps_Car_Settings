@@ -368,7 +368,7 @@
     <string name="device_status_activity_title" msgid="4083567497305368200">"Estado"</string>
     <string name="device_status" msgid="267298179806290920">"Estado"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Estado da batería, da rede e outra información"</string>
-    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Número de teléfono, sinal, etc."</string>
+    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Número de teléfono, sinal etc."</string>
     <string name="about_settings" msgid="4329457966672592345">"Acerca de"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Mostra información legal, o estado e a versión do software"</string>
@@ -505,7 +505,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Borrar almacenamento"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Borrar caché"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminar os datos da aplicación?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos, etc."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Non se puido borrar o almacenamento da aplicación."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>: expulsouse con seguranza"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>: non se puido expulsar con seguranza"</string>
@@ -540,6 +540,8 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizar agora"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Cancelar sincronización"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Neste momentos hai problemas coa sincronizacións, pero restablecerase en breve."</string>
+    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
+    <skip />
     <string name="security_settings_title" msgid="6955331714774709746">"Seguranza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Bloqueo de pantalla"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Ningún"</string>
