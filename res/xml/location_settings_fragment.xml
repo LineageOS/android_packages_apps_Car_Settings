@@ -33,11 +33,6 @@
                    android:value="android.permission-group.LOCATION"/>
         </intent>
     </Preference>
-    <Preference
-        android:fragment="com.android.car.settings.location.LocationScanningFragment"
-        android:key="@string/pk_location_scanning"
-        android:title="@string/location_settings_scanning_title"
-        settings:controller="com.android.car.settings.location.LocationScanningPreferenceController"/>
     <PreferenceCategory
         android:key="@string/pk_location_services"
         android:title="@string/location_settings_services_title"
