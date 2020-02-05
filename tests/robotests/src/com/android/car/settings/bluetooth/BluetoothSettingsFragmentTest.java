@@ -48,6 +48,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
@@ -237,6 +238,8 @@ public class BluetoothSettingsFragmentTest {
         Intent intent = new Intent(BluetoothAdapter.ACTION_STATE_CHANGED);
         intent.putExtra(BluetoothAdapter.EXTRA_STATE, state);
         mContext.sendBroadcast(intent);
+
+        Robolectric.flushForegroundThreadScheduler();
     }
 
     private MenuItem findSwitch(Activity activity) {
