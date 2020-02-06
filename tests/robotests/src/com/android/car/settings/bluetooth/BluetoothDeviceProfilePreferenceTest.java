@@ -103,7 +103,7 @@ public class BluetoothDeviceProfilePreferenceTest {
 
     @Test
     public void onAttached_preferred_setsChecked() {
-        when(mProfile.isPreferred(mDevice)).thenReturn(true);
+        when(mProfile.isEnabled(mDevice)).thenReturn(true);
 
         mPreference.onAttached();
 
@@ -112,7 +112,7 @@ public class BluetoothDeviceProfilePreferenceTest {
 
     @Test
     public void onAttached_notPreferred_setsUnchecked() {
-        when(mProfile.isPreferred(mDevice)).thenReturn(false);
+        when(mProfile.isEnabled(mDevice)).thenReturn(false);
 
         mPreference.onAttached();
 
@@ -147,7 +147,7 @@ public class BluetoothDeviceProfilePreferenceTest {
 
     @Test
     public void onDeviceAttributesChanged_refreshesUi() {
-        when(mProfile.isPreferred(mDevice)).thenReturn(false);
+        when(mProfile.isEnabled(mDevice)).thenReturn(false);
         when(mCachedDevice.isBusy()).thenReturn(false);
         ArgumentCaptor<CachedBluetoothDevice.Callback> callbackCaptor = ArgumentCaptor.forClass(
                 CachedBluetoothDevice.Callback.class);
@@ -157,7 +157,7 @@ public class BluetoothDeviceProfilePreferenceTest {
         assertThat(mPreference.isEnabled()).isTrue();
         assertThat(mPreference.isChecked()).isFalse();
 
-        when(mProfile.isPreferred(mDevice)).thenReturn(true);
+        when(mProfile.isEnabled(mDevice)).thenReturn(true);
         when(mCachedDevice.isBusy()).thenReturn(true);
 
         callbackCaptor.getValue().onDeviceAttributesChanged();
