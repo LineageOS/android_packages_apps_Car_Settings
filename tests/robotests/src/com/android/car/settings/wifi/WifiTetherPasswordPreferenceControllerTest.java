@@ -21,9 +21,8 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.wifi.WifiConfiguration;
+import android.net.wifi.SoftApConfiguration;
 import android.text.InputType;
-import android.text.TextUtils;
 
 import androidx.lifecycle.Lifecycle;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -79,11 +78,10 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStart_securityTypeIsNotNone_visibilityIsSetToTrue() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = null;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(TEST_PASSWORD, SoftApConfiguration.SECURITY_TYPE_WPA2_PSK)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mPreference.isVisible()).isTrue();
@@ -91,11 +89,10 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStart_securityTypeIsNotNone_wifiConfigHasPassword_setsPasswordAsSummary() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = TEST_PASSWORD;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(TEST_PASSWORD, SoftApConfiguration.SECURITY_TYPE_WPA2_PSK)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mPreference.getSummary()).isEqualTo(TEST_PASSWORD);
@@ -103,36 +100,10 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStart_securityTypeIsNotNone_wifiConfigHasPassword_obscuresSummary() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = TEST_PASSWORD;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-
-        assertThat(mPreference.getSummaryInputType())
-                .isEqualTo((InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD));
-    }
-
-    @Test
-    public void onStart_securityTypeIsNotNone_wifiConfigHasNoPassword_passwordIsNotEmpty() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = "";
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-
-        assertThat(!TextUtils.isEmpty(mPreference.getSummary())).isTrue();
-    }
-
-    @Test
-    public void onStart_securityTypeIsNotNone_wifiConfigHasNoPassword_obscuresSummary() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = "";
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(TEST_PASSWORD, SoftApConfiguration.SECURITY_TYPE_WPA2_PSK)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(mPreference.getSummaryInputType())
@@ -141,11 +112,10 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStart_securityTypeIsNone_visibilityIsSetToFalse() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = null;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(null, SoftApConfiguration.SECURITY_TYPE_OPEN)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(!mPreference.isVisible()).isTrue();
@@ -153,8 +123,8 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStart_receiverIsRegisteredOnLocalBroadcastManager() {
-        WifiConfiguration config = new WifiConfiguration();
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder().build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         assertThat(
@@ -164,8 +134,8 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onStop_receiverIsUnregisteredFromLocalBroadcastManager() {
-        WifiConfiguration config = new WifiConfiguration();
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder().build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
 
@@ -176,16 +146,16 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onSecurityChangedToNone_visibilityIsFalse() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(TEST_PASSWORD, SoftApConfiguration.SECURITY_TYPE_WPA2_PSK)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         Intent intent = new Intent(
                 WifiTetherSecurityPreferenceController.ACTION_SECURITY_TYPE_CHANGED);
         intent.putExtra(WifiTetherSecurityPreferenceController.KEY_SECURITY_TYPE,
-                WifiConfiguration.KeyMgmt.NONE);
+                SoftApConfiguration.SECURITY_TYPE_OPEN);
         mLocalBroadcastManager.sendBroadcast(intent);
 
         assertThat(mPreference.isVisible()).isFalse();
@@ -193,16 +163,16 @@ public class WifiTetherPasswordPreferenceControllerTest {
 
     @Test
     public void onSecurityChangedToWPA2PSK_visibilityIsTrue() {
-        WifiConfiguration config = new WifiConfiguration();
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(null, SoftApConfiguration.SECURITY_TYPE_OPEN)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
 
         Intent intent = new Intent(
                 WifiTetherSecurityPreferenceController.ACTION_SECURITY_TYPE_CHANGED);
         intent.putExtra(WifiTetherSecurityPreferenceController.KEY_SECURITY_TYPE,
-                WifiConfiguration.KeyMgmt.WPA2_PSK);
+                SoftApConfiguration.SECURITY_TYPE_WPA2_PSK);
         mLocalBroadcastManager.sendBroadcast(intent);
 
         assertThat(mPreference.isVisible()).isTrue();
@@ -213,28 +183,26 @@ public class WifiTetherPasswordPreferenceControllerTest {
         String oldPassword = "OLD_PASSWORD";
         String newPassword = "NEW_PASSWORD";
 
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = oldPassword;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(oldPassword, SoftApConfiguration.SECURITY_TYPE_WPA2_PSK)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.handlePreferenceChanged(mPreference, newPassword);
-        String passwordReturned = mCarWifiManager.getWifiApConfig().preSharedKey;
+        String passwordReturned = mCarWifiManager.getSoftApConfig().getPassphrase();
 
         assertThat(passwordReturned).isEqualTo(newPassword);
     }
 
     @Test
     public void onChangePassword_savesNewPassword() {
-        String oldPassword = "OLD_PASSWORD";
         String newPassword = "NEW_PASSWORD";
 
-        WifiConfiguration config = new WifiConfiguration();
-        config.preSharedKey = oldPassword;
-        config.allowedKeyManagement.clear();
-        config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
-        mCarWifiManager.setWifiApConfig(config);
+        SoftApConfiguration config = new SoftApConfiguration.Builder()
+                .setPassphrase(null, SoftApConfiguration.SECURITY_TYPE_OPEN)
+                .build();
+        mCarWifiManager.setSoftApConfig(config);
+
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mController.handlePreferenceChanged(mPreference, newPassword);
 
