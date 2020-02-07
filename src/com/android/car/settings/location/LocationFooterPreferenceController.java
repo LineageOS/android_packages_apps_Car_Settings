@@ -78,6 +78,7 @@ public class LocationFooterPreferenceController extends PreferenceController<Pre
                 CarUiPreference newPreference = new CarUiPreference(getContext());
                 newPreference.setSummary(footerString);
                 newPreference.setIcon(R.drawable.ic_settings_about);
+                newPreference.setSelectable(false);
                 getPreference().addPreference(newPreference);
             } catch (PackageManager.NameNotFoundException exception) {
                 LOG.w("Resources not found for application "
