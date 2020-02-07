@@ -170,7 +170,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         assertThat(profilePreference.isChecked()).isFalse();
         profilePreference.performClick();
 
-        verify(profile).setPreferred(mDevice, true);
+        verify(profile).setEnabled(mDevice, true);
     }
 
     @Test
@@ -185,14 +185,14 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         assertThat(profilePreference.isChecked()).isFalse();
         profilePreference.performClick();
 
-        verify(mCachedDevice).connectProfile(profile);
+        verify(profile).setEnabled(mDevice, true);
     }
 
     @Test
     public void profileUnchecked_setsProfileNotPreferred() {
         LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
         when(profile.getNameResource(mDevice)).thenReturn(R.string.bt_profile_name);
-        when(profile.isPreferred(mDevice)).thenReturn(true);
+        when(profile.isEnabled(mDevice)).thenReturn(true);
         when(mCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mController.refreshUi();
         BluetoothDeviceProfilePreference profilePreference =
@@ -201,14 +201,14 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         assertThat(profilePreference.isChecked()).isTrue();
         profilePreference.performClick();
 
-        verify(profile).setPreferred(mDevice, false);
+        verify(profile).setEnabled(mDevice, false);
     }
 
     @Test
     public void profileUnchecked_disconnectsFromProfile() {
         LocalBluetoothProfile profile = mock(LocalBluetoothProfile.class);
         when(profile.getNameResource(mDevice)).thenReturn(R.string.bt_profile_name);
-        when(profile.isPreferred(mDevice)).thenReturn(true);
+        when(profile.isEnabled(mDevice)).thenReturn(true);
         when(mCachedDevice.getProfiles()).thenReturn(Collections.singletonList(profile));
         mController.refreshUi();
         BluetoothDeviceProfilePreference profilePreference =
@@ -217,7 +217,7 @@ public class BluetoothDeviceProfilesPreferenceControllerTest {
         assertThat(profilePreference.isChecked()).isTrue();
         profilePreference.performClick();
 
-        verify(mCachedDevice).disconnect(profile);
+        verify(profile).setEnabled(mDevice, false);
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {
