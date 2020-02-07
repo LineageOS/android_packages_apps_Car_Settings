@@ -21,6 +21,7 @@
     android:title="@string/applications_settings">
     <Preference
         android:key="@string/pk_application_details_app"
+        android:selectable="false"
         settings:controller="com.android.car.settings.applications.ApplicationPreferenceController"/>
     <SwitchPreference
         android:key="@string/pk_application_details_notifications"
