@@ -732,20 +732,8 @@
     <string name="location_settings_recent_requests_empty_message">No recent location requests</string>
     <!-- Title of Location App-level Permissions setting [CHAR LIMIT=60] -->
     <string name="location_settings_app_permissions_title">App-level permissions</string>
-    <!-- Title of Location Scanning setting [CHAR LIMIT=60] -->
-    <string name="location_settings_scanning_title">Scanning</string>
     <!-- Title of Location Services category [CHAR LIMIT=60] -->
     <string name="location_settings_services_title">Location Services</string>
-
-    <!-- Location Scanning --><skip/>
-    <!-- Title of Wi-Fi scanning preference [CHAR LIMIT=60] -->
-    <string name="location_settings_wifi_scanning_title">Wi\u2011Fi scanning</string>
-    <!-- Summary of Wi-Fi scanning preference [CHAR LIMIT=240] -->
-    <string name="location_settings_wifi_scanning_summary">Allow apps and services to scan for Wi\u2011Fi networks at any time, even when Wi\u2011Fi is off. This can be used, for example, to improve location-based features and services.</string>
-    <!-- Title of Bluetooth scanning preference [CHAT LIMIT=60]-->
-    <string name="location_settings_bluetooth_scanning_title">Bluetooth scanning</string>
-    <!-- Summary of Bluetooth scanning preference [CHAR LIMIT=240] -->
-    <string name="location_settings_bluetooth_scanning_summary">Allow apps and services to scan for nearby devices at any time, even when Bluetooth is off. This can be used, for example, to improve location-based features and services.</string>
 
     <!-- System --><skip/>
     <!-- Main setting menu item to go into system settings -->
