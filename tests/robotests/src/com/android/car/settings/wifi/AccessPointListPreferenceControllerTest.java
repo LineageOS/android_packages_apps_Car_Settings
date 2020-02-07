@@ -16,6 +16,8 @@
 
 package com.android.car.settings.wifi;
 
+import static android.net.wifi.WifiConfiguration.NetworkSelectionStatus.NETWORK_SELECTION_ENABLED;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -203,7 +205,7 @@ public class AccessPointListPreferenceControllerTest {
         when(mMockAccessPoint1.isSaved()).thenReturn(true);
         when(mMockAccessPoint1.getConfig()).thenReturn(config);
         when(config.getNetworkSelectionStatus()).thenReturn(status);
-        when(status.isNetworkEnabled()).thenReturn(true);
+        when(status.getNetworkSelectionStatus()).thenReturn(NETWORK_SELECTION_ENABLED);
 
         List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
         when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);

@@ -29,7 +29,7 @@ import org.robolectric.annotation.Resetter;
 
 import java.util.List;
 
-/** TODO: Refactor all methods to run without relying on sInstance. */
+/** TODO(b/148971715): Refactor all methods to run without relying on sInstance. */
 @Implements(CarWifiManager.class)
 public class ShadowCarWifiManager {
 
@@ -44,6 +44,7 @@ public class ShadowCarWifiManager {
             new SoftApConfiguration.Builder().build();
     private static boolean sIsDualModeSupported = true;
     private static boolean sIs5GhzBandSupported = true;
+    private static int sWifiState = WifiManager.WIFI_STATE_UNKNOWN;
 
     public static void setInstance(CarWifiManager wifiManager) {
         sInstance = wifiManager;
@@ -56,6 +57,7 @@ public class ShadowCarWifiManager {
         sCurrentState = STATE_UNKNOWN;
         sIsDualModeSupported = true;
         sIs5GhzBandSupported = true;
+        sWifiState = WifiManager.WIFI_STATE_UNKNOWN;
     }
 
     @Implementation
@@ -64,25 +66,16 @@ public class ShadowCarWifiManager {
 
     @Implementation
     public void start() {
-        if (sInstance != null) {
-            sInstance.start();
-        }
         sCurrentState = STATE_STARTED;
     }
 
     @Implementation
     public void stop() {
-        if (sInstance != null) {
-            sInstance.stop();
-        }
         sCurrentState = STATE_STOPPED;
     }
 
     @Implementation
     public void destroy() {
-        if (sInstance != null) {
-            sInstance.destroy();
-        }
         sCurrentState = STATE_DESTROYED;
     }
 
@@ -103,7 +96,11 @@ public class ShadowCarWifiManager {
 
     @Implementation
     public int getWifiState() {
-        return sInstance.getWifiState();
+        return sWifiState;
+    }
+
+    public static void setWifiState(int wifiState) {
+        sWifiState = wifiState;
     }
 
     @Implementation
