@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applications"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Recherche"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Recherche de réseaux Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Autorisez les applications et les services à rechercher les réseaux Wi-Fi en tout temps, même lorsque le Wi-Fi est désactivé. Cette option peut, par exemple, être utilisée pour améliorer les fonctionnalités et les services qui utilisent la localisation."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Recherche d\'appareils Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Autorisez les applications et les services à rechercher les appareils à proximité en tout temps, même lorsque le Bluetooth est désactivé. Cette option peut, par exemple, être utilisée pour améliorer les fonctionnalités et les services qui utilisent la localisation."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour système"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synchroniser maintenant"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annuler la synchronisation"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"La synchronisation rencontre actuellement des problèmes. Elle sera rétablie sous peu."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Confidentialité"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sécurité"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Verrouill. de l\'écran"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Aucun"</string>
@@ -672,6 +666,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Cette action supprimera le compte de démonstration et réinitialisera le système. Toutes les données de l\'utilisateur seront perdues."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter le mode démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Cette fonction n\'est pas accessible durant la conduite."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Impossible d\'ajouter un utilisateur pendant la conduite."</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>

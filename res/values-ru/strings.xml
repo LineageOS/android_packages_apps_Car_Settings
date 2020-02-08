@@ -354,12 +354,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последние запросы местоположения"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нет недавних запросов местоположения."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения для приложений"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Поиск"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Геолокация"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Поиск сетей Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Разрешите приложениям и сервисам искать беспроводные сети, даже когда Wi-Fi отключен. Таким образом можно улучшить работу функций и сервисов, использующих данные о местоположении."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Поиск Bluetooth-устройств"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Разрешите приложениям и сервисам искать сигналы устройств, расположенных поблизости, даже если Bluetooth отключен. Таким образом можно улучшить работу функций и сервисов, использующих данные о местоположении."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Обновления системы"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия Android"</string>
@@ -550,8 +545,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Синхронизировать"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Отменить синхронизацию"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Проблемы с синхронизацией. Скоро все заработает."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Конфиденциальность"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Безопасность"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Блокировка экрана"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Нет"</string>
@@ -696,6 +690,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Произойдет сброс настроек. Тестовый аккаунт и все пользовательские данные будут удалены."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйти из деморежима"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРЫТЬ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Эта функция недоступна во время вождения."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Невозможно добавить пользователя во время вождения."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Эта функция недоступна во время вождения."</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Невозможно добавить пользователя во время вождения."</string>
 </resources>

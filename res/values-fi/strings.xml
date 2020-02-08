@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Viimeisimmät sijaintipyynnöt"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ei viimeaikaisia sijaintipyyntöjä"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Sovellustason käyttöoikeudet"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Hakeminen"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Sijaintipalvelut"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi-haku"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Salli sovellusten ja palvelujen hakea Wi‑Fi-verkkoja aina, vaikka Wi-Fi olisi pois käytöstä. Näin voidaan esimerkiksi kehittää sijaintiin perustuvia ominaisuuksia ja palveluja."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth-haku"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Salli sovellusten ja palvelujen hakea lähellä olevia laitteita aina, vaikka Bluetooth olisi pois käytöstä. Näin voidaan esimerkiksi kehittää sijaintiin perustuvia ominaisuuksia ja palveluja."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Järjestelmä"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Järjestelmäpäivitykset"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-versio"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Synkronoi nyt"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Peruuta synkronointi"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Synkronoinnissa on tällä hetkellä ongelmia. Palvelu palaa pian takaisin käyttöön."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Tietosuoja"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Tietoturva"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Näytön lukitus"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"–"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Tämä poistaa esittelytilin ja palauttaa järjestelmän tehdasasetukset. Kaikki käyttäjätiedot poistetaan."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Sulje esittely"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"OHITA"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Ominaisuus ei ole käytettävissä ajon aikana."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Käyttäjää ei voi lisätä ajon aikana."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Ominaisuus ei ole käytettävissä ajon aikana"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Käyttäjää ei voi lisätä ajon aikana"</string>
 </resources>

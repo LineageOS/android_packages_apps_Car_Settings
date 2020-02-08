@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"مقام کی حالیہ درخواستیں"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"مقام کی کوئی حالیہ درخواست نہیں ہے"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ایپ کی سطح کی اجازتیں"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"اسکیننگ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"مقام کی سروسز"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi اسکیننگ"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi‑Fi کے آف ہونے پر بھی ایپس اور سروسز کو کسی بھی وقت Wi‑Fi نیٹ ورکس اسکین کرنے کی اجازت دیں۔ مثال کے طور، اسے مقام پر مبنی خصوصیات اور سروسز کو بہتر بنانے کے لیے استعمال کیا جا سکتا ہے۔"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"بلوٹوتھ اسکیننگ"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"بلوٹوتھ کے آف ہونے پر بھی ایپس اور سروسز کو کسی بھی وقت قریبی آلات اسکین کرنے کی اجازت دیں۔ مثال کے طور، اسے مقام پر مبنی خصوصیات اور سروسز کو بہتر بنانے کے لیے استعمال کیا جا سکتا ہے۔"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سسٹم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"سسٹم اپ ڈیٹس"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ورژن"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ابھی مطابقت پذیری کریں"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"مطابقت پذیری منسوخ کریں"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"مطابقت پذیری میں فی الحال دشواریاں پیش آ رہی ہیں۔ یہ جلد ہی واپس آ جائے گا۔"</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"رازداری"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"سیکیورٹی"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"اسکرین لاک"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"کوئی نہیں"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"اس سے ڈیمو اکاؤنٹ اور فیکٹری ڈیٹا کی دوبارہ ترتیب کا سسٹم حذف ہو جائے گا۔ تمام صارف ڈیٹا غائب ہو جائیں گے۔"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ڈیمو سے باہر نکلیں"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"برخاست کریں"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ڈرائیونگ کے دوران یہ خصوصیت دستیاب نہیں ہے۔"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ڈرائیونگ کے دوران صارف کو شامل نہیں کیا جا سکتا۔"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"ڈرائیونگ کے دوران یہ خصوصیت دستیاب نہیں ہے"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ڈرائیونگ کے دوران صارف کو شامل نہیں کیا جا سکتا"</string>
 </resources>

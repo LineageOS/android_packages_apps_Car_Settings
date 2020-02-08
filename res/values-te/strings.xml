@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ఇటీవలి స్థాన అభ్యర్థనలు"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ఇటీవలి స్థాన అభ్యర్థనలు లేవు"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"యాప్‌-స్థాయి అనుమతులు"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"స్కానింగ్"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"స్థాన సేవలు"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi‑Fi స్కానింగ్"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi‑Fi ఆఫ్‌లో ఉన్నా కూడా, ఏ సమయంలోనైనా Wi‑Fi నెట్‌‍వర్క్‌లను స్కాన్ చేయడానికి యాప్‌లను మరియు సేవలను అనుమతించండి. ఉదాహరణకు, ఇది స్థాన ఆధారిత ఫీచర్‌లు మరియు సేవలను మెరుగుపరచడానికి ఉపయోగించబడుతుంది."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"బ్లూటూత్ స్కానింగ్"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"బ్లూటూత్ ఆఫ్‌లో ఉన్నప్పుడు కూడా, ఏ సమయంలోనైనా సమీపంలోని పరికరాలను స్కాన్ చేయడానికి యాప్‌లను మరియు సేవలను అనుమతించండి. ఉదాహరణకు, ఇది స్థాన ఆధారిత ఫీచర్‌లు మరియు సేవలను మెరుగుపరచడానికి ఉపయోగించబడుతుంది."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"సిస్టమ్"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"సిస్టమ్ అప్‌డేట్‌లు"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android వెర్షన్"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ఇప్పుడే సమకాలీకరించు"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"సమకాలీకరణను రద్దు చేయి"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"సమకాలీకరణ ప్రస్తుతం సమస్యలను ఎదుర్కొంటోంది. ఇది త్వరలో అందుబాటులోకి వస్తుంది."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"గోప్యత"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"భద్రత"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"స్క్రీన్ లాక్"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ఏదీ కాదు"</string>
@@ -672,6 +666,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ఫ్యాక్టరీ డేటా డెమో ఖాతాను తొలగించి, సిస్టమ్‌ను రీసెట్ చేస్తుంది. మొత్తం వినియోగదారు డేటాను కోల్పోతారు."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"డెమో నుండి నిష్క్రమించండి"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"డ్రైవింగ్ చేస్తున్నప్పుడు ఫీచర్ అందుబాటులో ఉండదు."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"డ్రైవింగ్ చేస్తున్నప్పుడు వినియోగదారుని జోడించడం సాధ్యం కాదు."</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>

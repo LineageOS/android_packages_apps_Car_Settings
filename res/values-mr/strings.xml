@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"अलीकडील स्थान विनंत्या"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"अलीकडील कोणत्याही स्थान विनंत्या नाहीत"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ॲप पातळी परवानग्या"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"स्कॅन करत आहे"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"स्‍थान सेवा"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"वाय-फाय स्कॅनिंग"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"वाय-फाय बंद असले तरीही अ‍ॅप्स आणि सेवांना वाय-फाय नेटवर्क कधीही स्कॅन करण्याची अनुमती द्या. याचा वापर स्थान आधारित वैशिष्ट्ये आणि सेवा सुधारणे अशा कामांसाठी केला जाऊ शकतो."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ब्लूटूथ स्कॅनिंग"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ब्लूटूथ बंद असले, तरीही अ‍ॅप्स आणि सेवांना जवळपासची डिव्हाइस कधीही स्कॅन करण्याची अनुमती द्या. याचा वापर उदाहरणार्थ, स्थान आधारित वैशिष्ट्ये आणि सेवा सुधारण्यासाठी केला जाऊ शकतो."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android आवृत्ती"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"आता सिंक करा"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"सिंक रद्द करा"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"संकालनास सध्या समस्या येत आहेत. हे लवकरच परत येईल."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"गोपनीयता"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षितता"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"काहीही नाही"</string>
@@ -672,6 +666,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"हे डेमो खाते हटवेल आणि फॅक्टरी डेटा सिस्टम रीसेट करेल. सर्व वापरकर्ता डेटा गमावेल."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोडमधून बाहेर पडा"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"डिसमिस करा"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ड्राइव्ह करताना वैशिष्ट्य उपलब्ध नाही."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ड्राइव्ह करत असताना वापरकर्त्याला जोडू शकत नाही."</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>
