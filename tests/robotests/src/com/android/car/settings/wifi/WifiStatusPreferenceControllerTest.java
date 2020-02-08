@@ -118,10 +118,7 @@ public class WifiStatusPreferenceControllerTest {
 
         mController.refreshUi();
 
-        assertThat(mPreference.getIcon()).isEqualTo(
-                mContext.getResources().getDrawable(R.drawable.ic_settings_about,
-                mContext.getTheme())
-        );
+        assertThat(mPreference.getIcon()).isNotNull();
     }
 
     @Test
