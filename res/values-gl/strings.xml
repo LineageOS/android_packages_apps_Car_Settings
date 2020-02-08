@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitudes de localización recentes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Non hai solicitudes de localización recentes"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permisos para as aplicacións"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Busca de localizacións"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizos de localización"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Busca de redes wifi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Permite ás aplicacións e aos servizos buscar redes wifi en calquera momento, mesmo cando a wifi está desactivada. Esta opción pode utilizarse, por exemplo, para mellorar as funcións e os servizos baseados na localización."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Busca de dispositivos Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Permite ás aplicacións e aos servizos buscar dispositivos próximos en calquera momento, mesmo cando o Bluetooth está desactivado. Esta opción pode utilizarse, por exemplo, para mellorar as funcións e os servizos baseados na localización."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Actualizacións do sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versión de Android"</string>
@@ -365,7 +360,7 @@
     <string name="device_status_activity_title" msgid="4083567497305368200">"Estado"</string>
     <string name="device_status" msgid="267298179806290920">"Estado"</string>
     <string name="device_status_summary" product="tablet" msgid="600543254608862075">"Estado da batería, da rede e outra información"</string>
-    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Número de teléfono, sinal, etc."</string>
+    <string name="device_status_summary" product="default" msgid="9130360324418117815">"Número de teléfono, sinal etc."</string>
     <string name="about_settings" msgid="4329457966672592345">"Acerca de"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"Mostra información legal, o estado e a versión do software"</string>
@@ -497,7 +492,7 @@
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Borrar almacenamento"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Borrar caché"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Eliminar os datos da aplicación?"</string>
-    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos, etc."</string>
+    <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Eliminaranse todos os datos desta aplicación permanentemente. Entre estes inclúense todos os ficheiros, opcións de configuracións, contas, bases de datos etc."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"Non se puido borrar o almacenamento da aplicación."</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g>: expulsouse con seguranza"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g>: non se puido expulsar con seguranza"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Con esta acción eliminarase a conta de demostración e restableceranse os datos de fábrica do sistema. Perderanse todos os datos do usuario."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Saír da demostración"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORAR"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Esta función non está dispoñible mentres conduces."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Non se poden engadir usuarios mentres se conduce."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Esta función non está dispoñible mentres conduces"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Non se poden engadir usuarios mentres se conduce"</string>
 </resources>

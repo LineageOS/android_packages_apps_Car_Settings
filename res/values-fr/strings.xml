@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Demandes de localisation récentes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations de l\'application"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Recherche"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Recherche Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Autoriser les applications et les services à rechercher des réseaux Wi-Fi à tout moment, même si le Wi-Fi est désactivé. Cette autorisation peut permettre, par ex., d\'améliorer les fonctionnalités et les services basés sur la localisation."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Recherche Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Autoriser les applications et les services à rechercher des appareils à proximité à tout moment, même si le Bluetooth est désactivé. Cette autorisation peut, par ex., améliorer les fonctionnalités et les services basés sur la localisation."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour du système"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Version d\'Android"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Le compte de démonstration sera supprimé et la configuration d\'usine du système sera rétablie. Toutes les données utilisateur seront perdues."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter la démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Fonctionnalité non disponible lorsque vous conduisez."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Impossible d\'ajouter un utilisateur pendant la conduite."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Fonctionnalité non disponible lorsque vous conduisez"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Impossible d\'ajouter un utilisateur pendant la conduite"</string>
 </resources>

@@ -349,12 +349,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavni zahtevi za lokaciju"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nema nedavnih zahteva za lokaciju"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dozvole na nivou aplikacija"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Skeniranje"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Usluge lokacije"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi skeniranje"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Dozvolite aplikacijama i uslugama da traže Wi‑Fi mreže u bilo kom trenutku, čak i kada je Wi‑Fi isključen. Ovo može da se koristi, na primer, za poboljšanje funkcija i usluga zasnovanih na lokaciji."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth skeniranje"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Dozvolite aplikacijama i uslugama da traže uređaje u blizini u svakom trenutku, čak i kada je Bluetooth isključen. Ovo može da se koristi, na primer, za poboljšanje funkcija i usluga zasnovanih na lokaciji."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ažuriranja sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Verzija Android-a"</string>
@@ -674,6 +669,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ovim ćete izbrisati nalog za demonstracije i resetovati sistem na fabrička podešavanja. Svi podaci korisnika će biti izgubljeni."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Napusti režim demonstr."</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ODBACI"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funkcija nije dostupna tokom vožnje."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Ne možete da dodate korisnika tokom vožnje."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funkcija nije dostupna tokom vožnje"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Ne možete da dodajete korisnike tokom vožnje"</string>
 </resources>

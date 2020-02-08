@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жакында изделген жерлер"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Жакында изделген жерлер жок"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Колдонмонун уруксаттары"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Издөө"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Жайгашкан жерди аныктоо кызматтары"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi тармактарын издөө"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi-Fi өчүп турса да, колдонмолор менен кызматтарга Wi-Fi тармактарын издегенге уруксат бересиз. Бул параметр менен жайгашкан жерди тагыраак аныктоого болот."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth түзмөктөрүн издөө"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Bluetooth өчүп турса да, колдонмолор менен кызматтарга жакын жердеги түзмөктөрдү издегенге уруксат бересиз. Бул параметр менен жайгашкан жерди тагыраак аныктоого болот."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Тутум жаңыртуулары"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
@@ -463,7 +458,7 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"Жаңы колдонуучу кошулбай калды"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"Бул колдонуучуну өчүрөсүзбү?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Бардык колдонмолор жана дайындар жок кылынат."</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"Бардык колдонмолор жана дайындар өчүрүлөт."</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"Колдонуучу өчүрүлгөн жок."</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"Четке кагуу"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"Кайталоо"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ушуну менен демо аккаунт жок кылынып, тутум кайра башынан жөндөлөт. Колдонуучунун бардык дайындары өчүрүлөт."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демо режимден чыгуу"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЧЕТКЕ КАГУУ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Унаа айдаганда бул функция жеткиликтүү эмес."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Унаа айдап баратканда колдонуучуну кошууга болбойт."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Унаа айдаганда бул функция жеткиликтүү эмес"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Унаа айдап баратканда колдонуучуну кошууга болбойт"</string>
 </resources>

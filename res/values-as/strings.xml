@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"শেহতীয়া অৱস্থানৰ অনুৰোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"শেহতীয়াকৈ কোনো এপে অৱস্থানৰ অনুৰোধ প্ৰেৰণ কৰা নাই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"এপ্‌-স্তৰৰ অনুমতি"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"স্কেন কৰি থকা হৈছে…"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"অৱস্থান সেৱা"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"ৱাই-ফাই স্কেনিং"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ব্লুটুথ অফ থকা অৱস্থাতো এপ্ আৰু সেৱাসমূহক যিকোনো সময়ত নিকটৱৰ্তী ডিভাইচবোৰ স্কেন কৰিবলৈ দিয়ক। ইয়াক অৱস্থান-নিৰ্ভৰ সুবিধা আৰু সেৱাসমূহ উন্নত কৰা আদি কাৰ্যত ব্যৱহাৰ কৰিব পাৰি।"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"ব্লুটুথ স্কেনিং"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ব্লুটুথ অফ থকা অৱস্থাতো এপ্ আৰু সেৱাসমূহক যিকোনো সময়ত নিকটৱৰ্তী ডিভাইচবোৰ স্কেন কৰিবলৈ দিয়ক। ইয়াক অৱস্থান-নিৰ্ভৰ সুবিধা আৰু সেৱাসমূহ উন্নত কৰা আদি কাৰ্যত ব্যৱহাৰ কৰিব পাৰি।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ছিষ্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ছিষ্টেম আপডে’ট"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android সংস্কৰণ"</string>
@@ -662,6 +657,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"এই কামে ডেম\' একাউণ্টটো মচি পেলাব আৰু ছিষ্টেমটোৰ ফেক্টৰী ডেটা ৰিছেট কৰিব। সকলো ব্যৱহাৰকাৰীৰ ডেটা হেৰাব।"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেম\'ৰ পৰা বাহিৰ হওক"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"অগ্ৰাহ্য কৰক"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ড্ৰাইভিং কৰা সময়ত এই সুবিধাটো নাথাকে।"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ড্ৰাইভিং কৰিথকা সময়ত ব্য়ৱহাৰকাৰী যোগ কৰিব নোৱাৰি।"</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>

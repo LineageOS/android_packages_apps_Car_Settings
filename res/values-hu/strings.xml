@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Legutóbbi helylekérdezések"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nincsenek friss helylekérdezések"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Alkalmazásszintű engedélyek"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Keresés"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Helyszolgáltatások"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi-alapú keresés"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy Wi-Fi-hálózatokat keressenek még akkor is, ha ki van kapcsolva a Wi-Fi. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-alapú keresés"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Engedélyezi az alkalmazásoknak és szolgáltatásoknak, hogy közeli eszközöket keressenek még akkor is, ha ki van kapcsolva a Bluetooth. Ez például a helyalapú funkciók és szolgáltatások javítására használható."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Rendszer"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Rendszerfrissítések"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-verzió"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ez törli a demófiókot, és visszaállítja a rendszer gyári adatait. Az összes felhasználói adat elveszik."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Kilépés a demóból"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ELVETÉS"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Vezetés közben nem áll rendelkezésre a funkció."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Vezetés közben nem lehet hozzáadni felhasználót."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Vezetés közben nem áll rendelkezésre a funkció"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Vezetés közben nem lehet hozzáadni felhasználót"</string>
 </resources>

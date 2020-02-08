@@ -319,11 +319,11 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Не се поставени стандардни вредности."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Избравте оваа апликација да се стартува стандардно за некои дејства."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Избришете ги стандардните вредности"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Отвори поддржани врски"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Отворај поддржани линкови"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Отвори во апликацијава"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Секогаш прашувај"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Не отворај во апликацијава"</string>
-    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддржани врски"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддржани линкови"</string>
     <string name="special_access" msgid="5730278220917123811">"Посебен пристап за апликации"</string>
     <string name="show_system" msgid="4401355756969485287">"Прикажи го системот"</string>
     <string name="hide_system" msgid="8845453295584638040">"Сокриј го системот"</string>
@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Последни барања за локација"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Нема неодамнешни барања за локација"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на ниво на апликација"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Скенирање"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги според локација"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Скенирање на Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Дозволете апликациите и услугите да скенираат Wi-Fi мрежи во секое време, дури и кога Wi-Fi е исклучено. Ова може да се користи, на пример, за да се подобрат функциите и услугите базирани на локација."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Скенирање на Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Дозволете апликациите и услугите да скенираат уреди во близина во секое време, дури и кога Bluetooth е исклучен. Ова може да се користи, на пример, за да се подобрат функциите и услугите базирани на локација."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Ажурирања на системот"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Верзија на Android"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Ова ќе ја избрише демо-сметката и ќе ги ресетира фабричките податоци на системот. Сите податоци на корисникот ќе се изгубат."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Излези од демо-режим"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТФРЛИ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Функцијата не е достапна при возење."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Не може да се додаде корисник додека возите."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Функцијата не е достапна при возење"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Не може да се додаде корисник додека возите"</string>
 </resources>

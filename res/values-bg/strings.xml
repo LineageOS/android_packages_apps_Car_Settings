@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Скорошни заявки за местоположението"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма скорошни заявки за местоположението"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Разрешения на ниво приложение"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Сканиране"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Услуги за местоположение"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Сканиране за Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Разрешете на приложенията и услугите да сканират за Wi‑Fi мрежи по всяко време дори когато функцията за Wi‑Fi e изключена. Това може да послужи например за подобряване на базиращите се на местоположението функции и услуги."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Сканиране за устройства с Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Разрешете на приложенията и услугите да сканират за устройства в близост по всяко време дори когато функцията за Bluetooth e изключена. Това може да послужи например за подобряване на базиращите се на местоположението функции и услуги."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системни актуализации"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версия на Android"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Това действие ще изтрие демонстрационния профил и ще възстанови фабричните настройки на системата. Всички потребителски данни ще бъдат изгубени."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Демонстр. режим: Изход"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТХВЪРЛЯНЕ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Функцията не е налице по време на шофиране."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Потребителят не може да се добави по време на шофиране."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Функцията не е налице по време на шофиране"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Потребителят не може да се добави по време на шофиране"</string>
 </resources>

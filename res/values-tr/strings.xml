@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yeni Konum İstekleri"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Yeni konum isteği yok"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Uygulama düzeyinde izinler"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Tarama"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Konum Hizmetleri"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Kablosuz taraması"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Uygulamaların ve hizmetlerin kablosuz ağları Kablosuz özelliği kapalıyken bile her zaman taramasına izin verin. Bu özellik, konuma dayalı özellikleri ve hizmetleri iyileştirme gibi amaçlar için kullanılabilir."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth taraması"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Uygulamaların ve hizmetlerin etrafınızdaki cihazları Bluetooth kapalıyken bile her zaman taramasına izin verin. Bu özellik, konuma dayalı özellikleri ve hizmetleri iyileştirme gibi amaçlar için kullanılabilir."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistem güncellemeleri"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android sürümü"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Bu işlem, demo hesabını silecek ve sistemi fabrika verilerine sıfırlayacak. Tüm kullanıcı verileri kaybolacak."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demodan çık"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"KAPAT"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Sürüş sırasında bu özellik kullanılamaz."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Sürüş sırasında kullanıcı eklenemez."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Sürüş sırasında bu özellik kullanılamaz"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Sürüş sırasında kullanıcı eklenemez"</string>
 </resources>

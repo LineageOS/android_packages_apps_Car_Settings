@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"მდებარეობის ბოლოდროინდელი მოთხოვნები"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"მდებარეობის ბოლოდროინდელი მოთხოვნები არ არის"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ნებართვები აპის დონეზე"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"სკანირება"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"მდებარეობის სერვისები"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi სკანირება"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"აპებისა და სერვისებისთვის Wi‑Fi ქსელების ნებისმიერ დროს სკანირების დაშვება, მაშინაც კი, როცა Wi‑Fi გამორთულია. მაგალითად, აღნიშნული გამოიყენება მდებარეობაზე დაფუძნებული ფუნქციებისა და სერვისების გასაუმჯობესებლად."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth სკანირება"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"აპებისა და სერვისებისთვის ახლომდებარე მოწყობილობების ნებისმიერ დროს სკანირების დაშვება, მაშინაც კი, როცა Bluetooth გამორთულია. მაგალითად, აღნიშნული გამოიყენება მდებარეობაზე დაფუძნებული ფუნქციებისა და სერვისების გასაუმჯობესებლად."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"სისტემა"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"სისტემის განახლებები"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-ის ვერსია"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ეს ქმედება წაშლის დემო-ანგარიშს და სისტემის ქარხნულ მონაცემებს აღადგენს. სამომხმარებლო მონაცემები მთლიანად წაიშლება."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"დემოს დატოვება"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"დახურვა"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ფუნქცია მიუწვდომელია მანქანის მართვისას."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"მანქანის მართვისას მომხმარებლის დამატება ვერ მოხერხდება."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"ფუნქცია მიუწვდომელია მანქანის მართვისას"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"მანქანის მართვისას მომხმარებლის დამატება ვერ მოხერხდება"</string>
 </resources>

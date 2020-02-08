@@ -286,7 +286,7 @@
     <string name="storage_application_label" msgid="5911779903670978586">"Хадгалах сан болон завсрын санах ойд хадгалах"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Хувилбар: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Зөвшөөрөл олгоогүй байна"</string>
-    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Хүссэн зөвшөөрөл алга"</string>
+    <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Ямар ч зөвшөөрөл хүсээгүй байна"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s-н дотоод сан"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"Дата ашиглалт"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Аппын дата ашиглалт"</string>
@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Саяхны байршлын хүсэлтүүд"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Саяхны байршлын хүсэлт алга"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Аппын түвшний зөвшөөрөл"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Скан хийж байна"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Байршлын үйлчилгээ"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi скан хийх"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Апп болон үйлчилгээнд Wi‑Fi унтраалттай үед ч Wi‑Fi сүлжээг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүдийг сайжруулахад ашиглаж магадгүй."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth скан хийх"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Апп болон үйлчилгээнд Bluetooth унтраалттай үед ч ойролцоох төхөөрөмжийг хүссэн үедээ скан хийхийг зөвшөөрнө үү. Үүнийг байршилд суурилсан онцлогууд болон үйлчилгээнүүдийг сайжруулахад ашиглаж магадгүй."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Систем"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Системийн шинэчлэлт"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Андройд хувилбар"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Энэ нь туршилтын бүртгэлийг устгах бөгөөд системийг үйлдвэрээс гарсан төлөвт шинэчилнэ. Хэрэглэгчийн бүх өгөгдөл устах болно."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Туршилтаас гарах"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ҮЛ ХЭРЭГСЭХ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Энэ онцлог жолоо барьж байх үед боломжгүй."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Жолоо барьж байх үед хэрэглэгч нэмэх боломжгүй."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Жолоо барьж байх үед онцлог боломжгүй"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Жолоо барьж байх үед хэрэглэгч нэмэх боломжгүй"</string>
 </resources>

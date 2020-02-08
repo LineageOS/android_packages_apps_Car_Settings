@@ -352,12 +352,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Останні запити на геодані"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Немає останніх запитів на геодані"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дозволи на рівні додатка"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Пошук"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Служби локації"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Пошук мереж Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Дозволити додаткам і службам будь-коли шукати мережі Wi-Fi, навіть коли Wi-Fi вимкнено. Це може покращити, наприклад, роботу функцій і служб, які використовують геодані."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Пошук пристроїв Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Дозволити додаткам і службам будь-коли шукати пристрої поруч, навіть коли Bluetooth вимкнено. Це може покращити, наприклад, роботу функцій і служб, які використовують геодані."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Система"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Оновлення системи"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версія Android"</string>
@@ -686,6 +681,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Буде видалено демонстраційний обліковий запис і відновлено заводські налаштування системи. Усі дані користувача буде втрачено."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Вийти з демо-режиму"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЗАКРИТИ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Функція недоступна під час руху автомобіля."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Неможливо додати користувача під час руху автомобіля."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Функція недоступна під час руху автомобіля"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Неможливо додати користувача під час руху автомобіля"</string>
 </resources>

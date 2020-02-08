@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近の位置情報リクエスト"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近の位置情報リクエストはありません"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"アプリレベルの権限"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"スキャン"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置情報サービス"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi のスキャン"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"アプリやサービスに対し、Wi‑Fi が OFF の場合でも、常に Wi-Fi ネットワークをスキャンすることを許可します。たとえば、位置情報を使用する機能やサービスの改善に役立ちます。"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth のスキャン"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"アプリやサービスに対し、Bluetooth が OFF の場合でも、常に付近のデバイスをスキャンすることを許可します。たとえば、位置情報を使用する機能やサービスの改善に役立ちます。"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"システム"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"システム アップデート"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android のバージョン"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"デモアカウントが削除され、システムが出荷時の設定にリセットされます。すべてのユーザーデータは失われます。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"デモを終了"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"閉じる"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"この機能は運転中は利用できません。"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"運転中はユーザーを追加できません。"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"この機能は運転中は利用できません"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"運転中はユーザーを追加できません"</string>
 </resources>

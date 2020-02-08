@@ -352,12 +352,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Нядаўнія запыты геаданых"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Няма нядаўніх запытаў геаданых"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Дазволы на ўзроўні праграм"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Сканіраванне"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Службы геалакацыі"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Пошук сетак Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Дазвольце праграмам і сэрвісам шукаць сеткі Wi‑Fi, нават калі Wi‑Fi не падключаны. Гэта можна выкарыстоўваць, напрыклад, для паляпшэння функцый і сэрвісаў, якія выкарыстоўваюць геалакацыю."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Пошук прылад Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Дазвольце праграмам і сэрвісам шукаць прылады паблізу, нават калі Bluetooth выключаны. Гэта можна выкарыстоўваць, напрыклад, для паляпшэння функцый і сэрвісаў, якія выкарыстоўваюць геалакацыю."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Сістэма"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Абнаўленне сістэмы"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Версія Android"</string>
@@ -686,6 +681,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Адбудзецца скід сістэмы да заводскіх налад. Тэставы ўліковы запіс і ўсе карыстальніцкія даныя будуць выдалены."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Выйсці з дэма-рэжыму"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"АДХІЛІЦЬ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Функцыя недаступная, калі вы за рулём."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Нельга дадаць карыстальніка, калі аўтамабіль рухаецца."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Функцыя недаступная, калі аўтамабіль рухаецца"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Нельга дадаць карыстальніка, калі аўтамабіль рухаецца"</string>
 </resources>

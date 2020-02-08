@@ -87,8 +87,7 @@
     <string name="wifi_settings" msgid="7701477685273103841">"WLAN"</string>
     <string name="wifi_starting" msgid="473253087503153167">"正在开启 WLAN…"</string>
     <string name="wifi_stopping" msgid="3534173972547890148">"正在关闭 WLAN…"</string>
-    <!-- no translation found for loading_wifi_list (8584901433195876465) -->
-    <skip />
+    <string name="loading_wifi_list" msgid="8584901433195876465">"正在加载 WLAN 列表"</string>
     <string name="wifi_disabled" msgid="5013262438128749950">"已停用 WLAN"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"无法取消保存网络"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"无法连接到网络"</string>
@@ -199,8 +198,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"点按即可与 <xliff:g id="DEVICE_NAME">%1$s</xliff:g> 配对。"</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"选择蓝牙设备"</string>
     <string name="language_settings" msgid="2079258598337245546">"语言"</string>
-    <!-- no translation found for languages_and_input_settings (3672322610529408248) -->
-    <skip />
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"语言和输入法"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"键盘"</string>
     <string name="manage_keyboard" msgid="4045394766282200132">"管理键盘"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"文字转语音 (TTS) 输出"</string>
@@ -348,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"最近的位置信息请求"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"最近没有任何位置信息请求"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"应用级权限"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"扫描"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"位置信息服务"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"WLAN 扫描"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"允许应用和服务随时扫描 WLAN 网络（即使 WLAN 已关闭）。这可用于改进基于位置的功能和服务。"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"蓝牙扫描"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"允许应用和服务随时扫描附近的设备（即使蓝牙已关闭）。这可用于改进基于位置的功能和服务。"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"系统"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"系统更新"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android 版本"</string>
@@ -541,8 +534,7 @@
     <string name="security_lock_pin" msgid="4891899974369503200">"PIN 码"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"密码"</string>
     <string name="lock_settings_picker_title" msgid="6590330165050361632">"选择一种锁定类型"</string>
-    <!-- no translation found for screen_lock_options (8531177937577168185) -->
-    <skip />
+    <string name="screen_lock_options" msgid="8531177937577168185">"锁定选项"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"绘制您的图案"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"确认"</string>
     <string name="lockpattern_restart_button_text" msgid="9355771277617537">"重新绘制"</string>
@@ -665,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"这项操作会删除演示帐号并将系统恢复出厂设置，且所有用户数据都会丢失。"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"退出演示模式"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"无法在驾驶时使用此功能。"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"驾车时无法添加用户。"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"驾车时无法使用此功能"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"驾车时无法添加用户"</string>
 </resources>

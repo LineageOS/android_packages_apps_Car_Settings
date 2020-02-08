@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Engar nýlegar staðsetningarbeiðnir"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Heimildir á forritsstigi"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Skönnun"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Staðsetningarþjónusta"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi-Fi leit"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Leyfa forritum og þjónustu að leita að Wi-Fi netum hvenær sem er, jafnvel þegar slökkt er á Wi-Fi. Sem dæmi er hægt að nota þetta til að bæta eiginleika og þjónustu sem byggja á staðsetningu."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-leit"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Leyfa forritum og þjónustu að leita að nálægum tækjum hvenær sem er, jafnvel þegar slökkt er á Bluetooth. Sem dæmi er hægt að nota þetta til að bæta eiginleika og þjónustu sem byggja á staðsetningu."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Kerfi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Kerfisuppfærslur"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android útgáfa"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Þetta eyðir kynningarreikningnum og núllstillir kerfið. Öll notandagögn glatast."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Hætta í kynningarútgáfu"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"HUNSA"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Þessi eiginleiki er ekki í boði á meðan þú ekur."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Ekki er hægt að bæta við notanda meðan á akstri stendur."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Þessi eiginleiki er ekki í boði meðan á akstri stendur"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Ekki er hægt að bæta við notanda meðan á akstri stendur"</string>
 </resources>

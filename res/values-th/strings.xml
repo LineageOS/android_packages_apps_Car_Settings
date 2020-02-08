@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"คำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ไม่มีคำขอตำแหน่งล่าสุด"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"สิทธิ์ระดับแอป"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"การสแกน"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"บริการตำแหน่ง"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"การสแกนหา Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"อนุญาตให้แอปและบริการต่างๆ สแกนหาเครือข่าย Wi‑Fi ตลอดเวลาแม้ Wi‑Fi จะปิดอยู่ การตั้งค่านี้ใช้เพื่อปรับปรุงสิ่งต่างๆ เช่น ฟีเจอร์และบริการตามสถานที่"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"การสแกนหาบลูทูธ"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"อนุญาตให้แอปและบริการต่างๆ สแกนหาอุปกรณ์ใกล้เคียงตลอดเวลา แม้บลูทูธจะปิดอยู่ การตั้งค่านี้ใช้เพื่อปรับปรุงสิ่งต่างๆ เช่น ฟีเจอร์และบริการตามสถานที่"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ระบบ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"การอัปเดตระบบ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"เวอร์ชันของ Android"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"การดำเนินการนี้จะลบบัญชีสาธิตและรีเซ็ตข้อมูลในระบบเป็นค่าเริ่มต้น ข้อมูลผู้ใช้ทั้งหมดจะสูญหาย"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ออกจากการสาธิต"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ปิด"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ฟีเจอร์ไม่พร้อมใช้งานขณะขับรถ"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"เพิ่มผู้ใช้ขณะขับรถไม่ได้"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"ฟีเจอร์ไม่พร้อมใช้งานขณะขับรถ"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"เพิ่มผู้ใช้ขณะขับรถไม่ได้"</string>
 </resources>

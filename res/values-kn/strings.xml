@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ಯಾವುದೇ ಇತ್ತೀಚಿನ ಸ್ಥಳ ವಿನಂತಿಗಳು ಇಲ್ಲ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ಆ್ಯಪ್‌ ಹಂತದ ಅನುಮತಿಗಳು"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"ಸ್ಕ್ಯಾನ್ ಮಾಡುವಿಕೆ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ಸ್ಥಳ ಸೇವೆಗಳು"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ವೈ-ಫೈ ಆಫ್‌ ಆಗಿದ್ದರೂ ಸಹ, ಯಾವ ಸಮುಯದಲ್ಲಾದರೂ ವೈ-ಫೈಗೆ ಸ್ಕ್ಯಾನ್‌ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅನುಮತಿಸಿ. ಉದಾಹರಣೆಗೆ, ಸ್ಥಳ ಆಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಇದನ್ನು ಬಳಸಬಹುದಾಗಿದೆ."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"ಬ್ಲೂಟೂತ್ ಸ್ಕ್ಯಾನಿಂಗ್"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ಬ್ಲೂಟೂತ್‌ ಆಫ್‌ ಆಗಿದ್ದರೂ ಸಹ, ಯಾವ ಸಮಯದಲ್ಲಾದರೂ ಸಮೀಪದ ಸಾಧನಗಳಿಗೆ ಸ್ಕ್ಯಾನ್‌ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಅನುಮತಿಸಿ. ಉದಾಹರಣೆಗೆ, ಸ್ಥಳ ಆಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಸುಧಾರಿಸಲು ಇದನ್ನು ಬಳಸಬಹುದಾಗಿದೆ."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ಸಿಸ್ಟಂ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ಸಿಸ್ಟಂ ಅಪ್‌ಡೇಟ್‌ಗಳು"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ಆವೃತ್ತಿ"</string>
@@ -662,6 +657,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ಇದು ಡೆಮೊ ಖಾತೆಯನ್ನು ಅಳಿಸುತ್ತದೆ ಮತ್ತು ಫ್ಯಾಕ್ಟರಿ ಡೇಟಾ ಸಿಸ್ಟಂ ಅನ್ನು ಮರುಹೊಂದಿಸುತ್ತದೆ. ಎಲ್ಲಾ ಬಳಕೆದಾರ ಡೇಟಾವನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೀರಿ."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ಡೆಮೊದಿಂದ ನಿರ್ಗಮಿಸಿ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ವಜಾಗೊಳಿಸಿ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ಡ್ರೈವ್ ಮಾಡುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯ ಲಭ್ಯವಿಲ್ಲ."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ಚಾಲನೆ ಮಾಡುವಾಗ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>

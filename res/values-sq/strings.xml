@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Kërkesat e vendndodhjeve të fundit"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nuk ka kërkesa të vendndodhjeve të fundit"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizimet në nivel aplikacioni"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Skanimi"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Shërbimet e vendndodhjes"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Skanimi i Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Lejo që aplikacionet dhe shërbimet të skanojnë për rrjete Wi-Fi në çdo moment, edhe kur Wi-Fi është joaktiv. Kjo mund të përdoret, për shembull, për të përmirësuar funksionet dhe shërbimet e bazuara te vendndodhja."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Skanimi i Bluetooth-it"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Lejo që aplikacionet dhe shërbimet të skanojnë për pajisje në afërsi në çdo moment, edhe kur Bluetooth është joaktiv. Kjo mund të përdoret, për shembull, për të përmirësuar funksionet dhe shërbimet e bazuara te vendndodhja."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistemi"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Përditësimet e sistemit"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versioni i Android-it"</string>
@@ -662,6 +657,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Kjo do të fshijë llogarinë e demonstrimit dhe sistemi do të rivendoset në të dhënat e fabrikës. Të gjitha të dhënat e përdoruesit do të humbasin."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Dil nga demonstrimi"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"HIQ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funksioni nuk ofrohet gjatë drejtimit të makinës."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Përdoruesi nuk mund të shtohet gjatë drejtimit të makinës"</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>
