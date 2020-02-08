@@ -19,10 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/applications_settings">
-    <Preference
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_application_details_app"
         android:selectable="false"
-        settings:controller="com.android.car.settings.applications.ApplicationPreferenceController"/>
+        settings:controller="com.android.car.settings.applications.ApplicationPreferenceController"
+        settings:showChevron="false"/>
     <SwitchPreference
         android:key="@string/pk_application_details_notifications"
         android:title="@string/notifications_label"
@@ -31,7 +32,8 @@
         android:key="@string/pk_application_details_permissions"
         android:title="@string/permissions_label"
         settings:controller="com.android.car.settings.applications.PermissionsPreferenceController"/>
-    <Preference
+    <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_application_details_version"
-        settings:controller="com.android.car.settings.applications.VersionPreferenceController"/>
+        settings:controller="com.android.car.settings.applications.VersionPreferenceController"
+        settings:showChevron="false"/>
 </PreferenceScreen>
