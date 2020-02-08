@@ -118,7 +118,7 @@ public class NotificationsPreferenceControllerTest {
         when(mMockManager.onlyHasDefaultChannel(PKG_NAME, UID)).thenReturn(true);
         when(mMockManager
                 .getNotificationChannelForPackage(
-                        PKG_NAME, UID, NotificationChannel.DEFAULT_CHANNEL_ID, true))
+                        PKG_NAME, UID, NotificationChannel.DEFAULT_CHANNEL_ID, null, true))
                 .thenReturn(mMockChannel);
 
         mTwoStatePreference.callChangeListener(true);
