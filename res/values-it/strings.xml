@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Richieste di posizione recenti"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nessuna richiesta di posizione recente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizzazioni a livello di app"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Ricerca"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Servizi di geolocalizzazione"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Ricerca di reti Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Consenti ad app e servizi di cercare reti Wi-Fi in qualsiasi momento, anche quando il Wi-Fi non è attivo. Questa funzione è utile, ad esempio, per migliorare funzioni e servizi basati sulla posizione."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Ricerca di dispositivi Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Consenti ad app e servizi di cercare dispositivi nelle vicinanze in qualsiasi momento, anche quando il Bluetooth non è attivo. Questa funzione è utile, ad esempio, per migliorare funzioni e servizi basati sulla posizione."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Aggiornamenti di sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versione Android"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sincronizza ora"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Annulla sincronizzazione"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"La sincronizzazione presenta dei problemi. Riprenderà a breve."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Privacy"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Sicurezza"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Blocco schermo"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Nessuno"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"L\'account dimostrativo verrà eliminato e verranno ripristinati i dati di fabbrica del sistema. Tutti i dati utente andranno persi."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Chiudi demo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORA"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funzione non disponibile durante la guida."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Impossibile aggiungere l\'utente durante la guida."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funzionalità non disponibile durante la guida"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Impossibile aggiungere l\'utente durante la guida"</string>
 </resources>

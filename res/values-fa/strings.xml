@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"درخواست‌های اخیر مکان"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"درخواست مکان جدیدی وجود ندارد"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"مجوزهای سطح برنامه"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"اسکن کردن"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات مکان"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"اسکن کردن Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"به برنامه‌ها و سرویس‌ها اجازه دهید درهر زمانی (حتی وقتی Wi‑Fi خاموش است) شبکه‌های Wi‑Fi را اسکن کنند. برای مثال این مورد مي‌تواند برای بهبود ویژگی‌ها و سرویس‌های مکان‌مبنا استفاده شود."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"اسکن کردن بلوتوث"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"به برنامه‌ها و سرویس‌ها اجازه دهید درهر زمانی (حتی وقتی «بلوتوث» خاموش است) دستگاه‌های اطراف را اسکن کنند. برای مثال این مورد مي‌تواند برای بهبود ویژگی‌ها و سرویس‌های مکان‌مبنا استفاده شود."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"سیستم"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"به‌روزرسانی‌های سیستم"</string>
     <string name="firmware_version" msgid="8491753744549309333">"نسخه Android"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"اکنون همگام‌سازی شود"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"لغو همگام‌سازی"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"همگام‌سازی درحال حاضر با مشکلی روبرو است. به‌زودی درست خواهد شد."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"حریم‌خصوصی"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"امنیت"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل صفحه"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"هیچ‌کدام"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"با این کار حساب نمایشی حذف و سیستم به داده‌های کارخانه بازنشانی می‌شود. همه داده‌های کاربر از بین می‌روند."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج از حالت نمایشی"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رد کردن"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"هنگام رانندگی، این ویژگی در دسترس نیست."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"نمی‌توان هنگام رانندگی، کاربر اضافه کرد."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"این ویژگی هنگام رانندگی در دسترس نیست"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"نمی‌توان هنگام رانندگی کاربر اضافه کرد"</string>
 </resources>

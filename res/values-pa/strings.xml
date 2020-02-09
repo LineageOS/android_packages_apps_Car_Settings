@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ਕੋਈ ਹਾਲੀਆ ਟਿਕਾਣਾ ਬੇਨਤੀਆਂ ਨਹੀਂ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ਐਪ-ਪੱਧਰ ਇਜਾਜ਼ਤਾਂ"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"ਸਕੈਨ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ਟਿਕਾਣਾ ਸੇਵਾਵਾਂ"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"ਵਾਈ‑ਫਾਈ ਸਕੈਨਿੰਗ"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ਵਾਈ-ਫਾਈ ਬੰਦ ਹੋਣ \'ਤੇ ਵੀ ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਕਿਸੇ ਵੀ ਵੇਲੇ ਵਾਈ-ਫਾਈ ਨੈੱਟਵਰਕਾਂ ਲਈ ਸਕੈਨ ਕਰਨ ਦਿਓ। ਇਸਦੀ ਵਰਤੋਂ ਕਰਕੇ ਟਿਕਾਣਾ-ਆਧਾਰਿਤ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਬਿਹਤਰ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ਬਲੂਟੁੱਥ ਸਕੈਨਿੰਗ"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ਬਲੂਟੁੱਥ ਬੰਦ ਹੋਣ \'ਤੇ ਵੀ ਐਪਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਨੂੰ ਕਿਸੇ ਵੀ ਵੇਲੇ ਨਜ਼ਦੀਕੀ ਡੀਵਾਈਸਾਂ ਲਈ ਸਕੈਨ ਕਰਨ ਦਿਓ। ਇਸਦੀ ਵਰਤੋਂ ਕਰਕੇ ਟਿਕਾਣਾ-ਆਧਾਰਿਤ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਤੇ ਸੇਵਾਵਾਂ ਵਰਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਬਿਹਤਰ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ਸਿਸਟਮ"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ਸਿਸਟਮ ਅੱਪਡੇਟ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ਵਰਜਨ"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ਹੁਣ ਸਮਕਾਲੀਕਰਨ ਕਰੋ"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"ਸਮਕਾਲੀਕਰਨ ਰੱਦ ਕਰੋ"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"ਇਸ ਵੇਲੇ ਸਮਕਾਲੀਕਰਨ ਵਿੱਚ ਸਮੱਸਿਆਵਾਂ ਆ ਰਹੀਆਂ ਹਨ। ਇਹ ਜਲਦੀ ਹੀ ਠੀਕ ਹੋ ਜਾਣਗੀਆਂ।"</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"ਪਰਦੇਦਾਰੀ"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"ਸੁਰੱਖਿਆ"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"ਸਕ੍ਰੀਨ ਲਾਕ"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"ਕੋਈ ਨਹੀਂ"</string>
@@ -672,6 +666,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ਇਹ ਡੈਮੋ ਖਾਤੇ ਨੂੰ ਮਿਟਾ ਦੇਵੇਗਾ ਅਤੇ ਸਿਸਟਮ ਦਾ ਫੈਕਟਰੀ ਡਾਟਾ ਰੀਸੈੱਟ ਹੋ ਜਾਵੇਗਾ। ਸਾਰਾ ਵਰਤੋਂਕਾਰ ਡਾਟਾ ਗੁੰਮ ਹੋ ਜਾਵੇਗਾ।"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ਡੈਮੋ ਮੋਡ ਤੋ ਬਾਹਰ ਜਾਓ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ਖਾਰਜ ਕਰੋ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ਗੱਡੀ ਚਲਾਉਣ ਵੇਲੇ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ਗੱਡੀ ਚਲਾਉਣ ਦੌਰਾਨ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>
