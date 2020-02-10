@@ -86,8 +86,11 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
         // user.
         for (int i = 0; i < getPreference().getPreferenceCount(); i++) {
             Preference preference = getPreference().getPreference(i);
-            if (!preference.getExtras().getBoolean(META_DATA_DISTRACTION_OPTIMIZED)) {
+            if (uxRestrictions.isRequiresDistractionOptimization()
+                    && !preference.getExtras().getBoolean(META_DATA_DISTRACTION_OPTIMIZED)) {
                 preference.setEnabled(false);
+            } else {
+                preference.setEnabled(getAvailabilityStatus() != AVAILABLE_FOR_VIEWING);
             }
         }
     }

@@ -349,12 +349,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"လတ်တလော တည်နေရာတောင်းဆိုချက်များ မရှိပါ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"အက်ပ်အဆင့် ခွင့်ပြုချက်များ"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"စကင်ဖတ်နေသည်"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"တည်နေရာဝန်ဆောင်မှုများ"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wi-Fi ရှာဖွေခြင်း"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi‑Fi ကို ပိတ်ထားသော်လည်း အနီးအနားရှိ Wi-Fi ကွန်ရက်များကို အချိန်မရွေးရှာဖွေရန် အက်ပ်နှင့် ဝန်ဆောင်မှုများအား ခွင့်ပြုပါ။ ဥပမာအားဖြင့် ၎င်းကို တည်နေရာအခြေပြု လုပ်ဆောင်ချက်နှင့် ဝန်ဆောင်မှုများ တိုးတက်လာစေရန် အသုံးပြုနိုင်ပါသည်။"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ဘလူးတုသ် ရှာဖွေခြင်း"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ဘလူးတုသ်ကို ပိတ်ထားသော်လည်း အနီးအနားရှိ စက်ပစ္စည်းများကို အချိန်မရွေးရှာဖွေရန် အက်ပ်နှင့် ဝန်ဆောင်မှုများအား ခွင့်ပြုပါ။ ဥပမာအားဖြင့် ၎င်းကို တည်နေရာအခြေပြု လုပ်ဆောင်ချက်နှင့် ဝန်ဆောင်မှုများ တိုးတက်လာစေရန် အသုံးပြုနိုင်ပါသည်။"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"စနစ်"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"စနစ်အပ်ဒိတ်များ"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ဗားရှင်း"</string>
@@ -541,8 +536,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"ယခု စင့်ခ်လုပ်ရန်"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"စင့်ခ် ပယ်ဖျက်ရန်"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"စင့်ခ်လုပ်ရန် လက်ရှိတွင် ပြဿနာရှိနေပါသည်။ ခဏကြာလျှင် ပြန်လည်ရရှိပါမည်။"</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"ကန့်သတ်ဆက်တင်"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"လုံခြုံရေး"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"မျက်နှာပြင်လော့ခ်"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"မရှိ"</string>
@@ -673,6 +667,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"၎င်းက သရုပ်ပြအကောင့်ကို ဖျက်ပြီး စနစ်ကို စက်ရုံထုတ်အခြေအနေပြန်ယူပါမည်။ အသုံးပြုသူ ဒေတာအားလုံး ရှိတော့မည်မဟုတ်ပါ။"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"သရုပ်ပြမှ ထွက်ရန်"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ပယ်ရန်"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ကားမောင်းနေစဉ် ဝန်ဆောင်မှု မရနိုင်ပါ။"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ကားမောင်းနေစဉ် အသုံးပြုသူကို ထည့်၍မရပါ။"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"ကားမောင်းနေစဉ် ဝန်ဆောင်မှု မရနိုင်ပါ"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ကားမောင်းနေစဉ် အသုံးပြုသူကို ထည့်၍မရပါ"</string>
 </resources>

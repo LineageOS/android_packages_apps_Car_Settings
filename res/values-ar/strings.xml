@@ -360,12 +360,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"طلبات الموقع الجغرافي الأخيرة"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"لا توجد طلبات حديثة للموقع الجغرافي."</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"الأذونات على مستوى التطبيقات"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"البحث عن الموقع الجغرافي"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"خدمات الموقع الجغرافي"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"البحث عن شبكات Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"يمكنك السماح للتطبيقات والخدمات بالبحث عن الأجهزة المجاورة في أيّ وقت، حتى في حال إيقاف Wi‑Fi. ويمكن استخدام هذه البيانات مثلاً لتحسين الميزات والخدمات المستندة إلى الموقع الجغرافي."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"البحث عن بلوتوث"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"يمكنك السماح للتطبيقات والخدمات بالبحث عن الأجهزة المجاورة في أيّ وقت، حتى في حال إيقاف البلوتوث. ويمكن استخدام هذه البيانات مثلاً لتحسين الميزات والخدمات المستندة إلى الموقع الجغرافي."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"النظام"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"تحديثات النظام"</string>
     <string name="firmware_version" msgid="8491753744549309333">"إصدار Android"</string>
@@ -560,8 +555,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"المزامنة الآن"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"إلغاء المزامنة"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"تواجه المزامنة حاليًا بعض المشاكل. وسوف تكون متاحة خلال وقت قصير."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"الخصوصية"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"الأمان"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"قفل الشاشة"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"بدون"</string>
@@ -720,6 +714,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"سيؤدي هذا إلى حذف حساب العرض التوضيحي وإعادة الضبط بحسب بيانات المصنع على النظام. سيتم فقد جميع بيانات المستخدم."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"خروج من عرض توضيحي"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رفض"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"لا تتوفَّر الميزة أثناء القيادة."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"لا يمكن إضافة مستخدم أثناء القيادة."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"لا تتوفَّر هذه الميزة أثناء القيادة."</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"لا يمكن إضافة مستخدم أثناء القيادة."</string>
 </resources>

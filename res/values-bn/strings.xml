@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"সাম্প্রতিক লোকেশনের অনুরোধ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"কোনও সাম্প্রতিক লোকেশনের অনুরোধ নেই"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"অ্যাপ-লেবেল অনুমতি"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"স্ক্যান করা হচ্ছে"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"লোকেশন পরিষেবা"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"ওয়াই-ফাই স্ক্যানিং"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ব্লুটুথ বন্ধ থাকলেও অ্যাপ এবং পরিষেবাগুলিকে যেকোনও সময় ওয়াই-ফাই নেটওয়ার্ক স্ক্যান করার অনুমতি দিন। এটি বিভিন্ন ক্ষেত্রে কাজে লাগতে পারে, যেমন লোকেশন-ভিত্তিক বৈশিষ্ট্য এবং পরিষেবার উন্নতির জন্য।"</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ব্লুটুথ স্ক্যানিং"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ব্লুটুথ বন্ধ থাকলেও অ্যাপ এবং পরিষেবাগুলিকে যেকোনও সময় আশেপাশে থাকা অন্যান্য ডিভাইস স্ক্যান করার অনুমতি দিন। এটি বিভিন্ন ক্ষেত্রে কাজে লাগতে পারে, যেমন লোকেশন-ভিত্তিক বৈশিষ্ট্য এবং পরিষেবার উন্নতির জন্য।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"সিস্টেম"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"সিস্টেম আপডেট"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ভার্সন"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"এখন সিঙ্ক করুন"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"সিঙ্ক বাতিল করুন"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"সিঙ্কে বর্তমানে সমস্যা দেখা দিচ্ছে। এটি খুব শীঘ্রই ঠিক হয়ে যাবে।"</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"গোপনীয়তা"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"নিরাপত্তা"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"স্ক্রিন লক"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"কোনওটিই নয়"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"এর ফলে ডেমো অ্যাকাউন্টটি মুছে দেওয়া হবে এবং সিস্টেমের ডেটা ফ্যাক্টরি রিসেট করা হবে। ব্যবহারকারীর সমস্ত ডেটা মুছে যাবে।"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ডেমো মোড ছেড়ে যান"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ড্রাইভ করার সময় এই বৈশিষ্ট্য উপলভ্য নয়।"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না।"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না"</string>
 </resources>

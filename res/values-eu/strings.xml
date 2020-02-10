@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Azken kokapen-eskaerak"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ez da egin kokapen-eskaerarik azkenaldian"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Bilaketa"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"Wifi-sareen bilaketa"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Eman wifi-sareak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita wifi-konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"Bluetooth gailuen bilaketa"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Eman inguruko gailuak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita Bluetooth konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android bertsioa"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sinkronizatu"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Utzi sinkronizazioa"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Sinkronizazioak arazoak ditu. Laster egongo da berriro erabilgarri."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Pribatutasuna"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurtasuna"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Pantailaren blokeoa"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Bat ere ez"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Demo kontua ezabatuko da eta sistemaren jatorrizko datuak berrezarriko dira. Erabiltzaile-datu guztiak galdu egingo dira."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Eginbide hau ezin da erabili gidatu bitartean."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Gidatu bitartean ezin da gehitu erabiltzailerik."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Gidatu bitartean ezin da gehitu erabiltzailerik"</string>
 </resources>

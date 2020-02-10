@@ -348,12 +348,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हाल ही में किए गए जगह के अनुरोध"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हाल ही में जगह का कोई अनुरोध नहीं है"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ऐप्लिकेशन-स्तर की अनुमतियां"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"स्‍कैन करना"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"जगह की जानकारी की सेवाएं"</string>
-    <string name="location_scanning_wifi_always_scanning_title" msgid="7319031273920869175">"वाई-फ़ाई स्कैन करें"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ऐप्लिकेशन और सेवाओं को किसी भी समय वाई-फ़ाई नेटवर्क स्कैन करने की मंज़ूरी दें, भले ही वाई-फ़ाई बंद हो. इसका इस्तेमाल करके, जगह की जानकारी जैसी सुविधाओं और सेवाओं में सुधार किया जा सकता है."</string>
-    <string name="location_scanning_bluetooth_always_scanning_title" msgid="4221402279368113396">"ब्लूटूथ स्कैन करें"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ऐप्लिकेशन और सेवाओं को किसी भी समय आस-पास के डिवाइस स्कैन करने की मंज़ूरी दें, भले ही ब्लूटूथ बंद हो. इसका इस्तेमाल करके, जगह की जानकारी जैसी सुविधाओं और सेवाओं में सुधार किया जा सकता है."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"सिस्टम"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"सिस्टम अपडेट"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android का वर्शन"</string>
@@ -540,8 +535,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"अभी सिंक करें"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"सिंक करना रद्द करें"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"सिंक करने में फ़िलहाल समस्याएं आ रही हैं. यह जल्द ही वापस काम करने लगेगा."</string>
-    <!-- no translation found for privacy_settings_title (3150145262029229572) -->
-    <skip />
+    <string name="privacy_settings_title" msgid="3150145262029229572">"निजता"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"सुरक्षा"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"स्क्रीन लॉक"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"कोई नहीं"</string>
@@ -672,6 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"डेमो मोड से बाहर निकलने पर, डेमो खाता मिट जाएगा और सिस्टम का डेटा फ़ैक्ट्री रीसेट हो जाएगा. साथ ही, उपयोगकर्ता का पूरा डेटा भी मिट जाएगा."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"डेमो मोड से बाहर निकलें"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"खारिज करें"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"गाड़ी चलाते समय इस सुविधा का इस्तेमाल नहीं किया जा सकता."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"गाड़ी चलाते समय उपयोगकर्ता को जोड़ा नहीं जा सकता."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"गाड़ी चलाते समय इस सुविधा का इस्तेमाल नहीं किया जा सकता"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"गाड़ी चलाते समय उपयोगकर्ता की जानकारी जोड़ी नहीं जा सकती"</string>
 </resources>
