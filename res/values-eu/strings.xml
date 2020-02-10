@@ -311,7 +311,7 @@
     <string name="autofill_add_service" msgid="6413893366443609951">"Gehitu zerbitzua"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Irekiko diren estekak"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Instalatutako aplikazioak"</string>
-    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Ez ireki onartzen diren estekak"</string>
+    <string name="domain_urls_summary_none" msgid="3077803215088293183">"Ez ireki esteka bateragarriak"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"Ireki <xliff:g id="DOMAIN">%s</xliff:g>"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"Ireki <xliff:g id="DOMAIN">%s</xliff:g> eta beste URL batzuk"</string>
     <string name="app_launch_title" msgid="3442601467010363057">"Ireki modu lehenetsian"</string>
@@ -319,11 +319,11 @@
     <string name="auto_launch_disable_text" msgid="3595315315092716391">"Ez dago balio lehenetsirik ezarrita."</string>
     <string name="auto_launch_enable_text" msgid="7230832269574106901">"Ekintza batzuk egiterakoan aplikazioa modu lehenetsian abiaraztea aukeratu duzu."</string>
     <string name="auto_launch_reset_text" msgid="590439611312092392">"Garbitu balio lehenetsiak"</string>
-    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Ireki onartzen diren estekak"</string>
+    <string name="app_launch_open_domain_urls_title" msgid="4705344946367759393">"Ireki esteka bateragarriak"</string>
     <string name="app_link_open_always" msgid="5783167184335545230">"Ireki aplikazio honetan"</string>
     <string name="app_link_open_ask" msgid="7242075065136237456">"Galdetu beti"</string>
     <string name="app_link_open_never" msgid="2173174327831792316">"Ez ireki aplikazio honetan"</string>
-    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Onartzen diren estekak"</string>
+    <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Esteka bateragarriak"</string>
     <string name="special_access" msgid="5730278220917123811">"Aplikazio-baimen bereziak"</string>
     <string name="show_system" msgid="4401355756969485287">"Erakutsi sistema"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ezkutatu sistema"</string>
@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Azken kokapen-eskaerak"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ez da egin kokapen-eskaerarik azkenaldian"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Aplikazio-mailako baimenak"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Bilaketa"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Kokapen-zerbitzuak"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wifi-sareen bilaketa"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Eman wifi-sareak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita wifi-konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth gailuak bilatzea"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Eman inguruko gailuak edozein unetan bilatzeko baimena aplikazioei eta zerbitzuei, baita Bluetooth konexioa desaktibatuta dagoenean ere. Kokapenean oinarritutako eginbideak eta zerbitzuak hobetzeko erabil daiteke hori, besteak beste."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Sistemaren eguneratzeak"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android bertsioa"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Demo kontua ezabatuko da eta sistemaren jatorrizko datuak berrezarriko dira. Erabiltzaile-datu guztiak galdu egingo dira."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Irten demo modutik"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Eginbide hau ezin da erabili gidatu bitartean."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Gidatu bitartean ezin da gehitu erabiltzailerik."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Gidatu bitartean ezin da gehitu erabiltzailerik"</string>
 </resources>

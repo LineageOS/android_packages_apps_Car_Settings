@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nylige posisjonsforespørsler"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ingen nylige posisjonsforespørsler"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Tillatelser på appnivå"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Søking"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Posisjonstjenester"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi-søking"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"La apper og tjenester søke etter Wi-Fi-nettverk når som helst, selv når Wi-Fi er slått av. Dette kan for eksempel brukes til å forbedre posisjonsbaserte funksjoner og tjenester."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-skanning"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"La apper og tjenester søke etter enheter i nærheten når som helst, selv når Bluetooth er slått av. Dette kan for eksempel brukes til å forbedre posisjonsbaserte funksjoner og tjenester."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemoppdateringer"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-versjon"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Dette sletter demokontoen og tilbakestiller systemet til fabrikkstandard. Alle brukerdataene går tapt."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Avslutt demomodus"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"AVVIS"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funksjonen er ikke tilgjengelig når du kjører."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Du kan ikke legge til en bruker mens du kjører."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funksjonen er ikke tilgjengelig når du kjører"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Du kan ikke legge til en bruker mens du kjører"</string>
 </resources>

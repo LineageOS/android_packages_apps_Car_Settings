@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"የቅርብ ጊዜ የአካባቢ ጥያቄዎች"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"ምንም የቅርብ ጊዜ የአካባቢ ጥያቄዎች የሉም"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"የመተግበሪያ ደረጃ ፈቃዶች"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"በመቃኘት ላይ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"የአካባቢ አገልግሎቶች"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi ቅኝት"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Wi-Fi ጠፍቶ ቢሆንም እንኳ በማንኛውም ጊዜ የWi-Fi አውታረ መረቦችን እንዲቃኙ ይፍቀዱ። ይህ ለምሳሌ በአካባቢ ላይ የተመሠረቱ ባሕሪያትን እና አገልግሎቶችን ለማሻሻል ጥቅም ላይ ሊውል ይችላል።"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"የብሉቱዝ ቅኝት"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ብሉቱዝ ጠፍቶ ቢሆንም እንኳ በማንኛውም ጊዜ መተግበሪያዎች እና አገልግሎቶች በአቅራቢያ ያሉ መሣሪያዎችን እንዲቃኙ ይፍቀዱ። ይህ ለምሳሌ በአካባቢ ላይ የተመሠረቱ ባሕሪያትን እና አገልግሎቶችን ለማሻሻል ጥቅም ላይ ሊውል ይችላል።"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ሥርዓት"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"የሥርዓት ዝማኔዎች"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ሥሪት"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ይህ የልምምድ መለያውን እና የፋብሪካ ዳግም አስጀምር ሥርዓቱን ይሰርዛል። ሁሉም የተጠቃሚ ውሂብ ይጠፋል።"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ከማሳያ ውጣ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"አሰናብት"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"እየነዱ ሳለ ባህሪ አይገኝም።"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"እየነዱ ሳለ ተጠቃሚን ማከል አይቻልም።"</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"እየነዱ ሳለ ባህሪው አይገኝም"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"እየነዱ ሳለ ተጠቃሚን ማከል አይቻልም"</string>
 </resources>

@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Solicitações recentes"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nenhuma solicitação recente de local"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Permissões no app"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Verificação"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Serviços de localização"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Busca por Wi-Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Permitir que apps e serviços procurem redes Wi‑Fi a qualquer momento, mesmo quando o Wi‑Fi estiver desativado. Essa configuração pode ser usada, por exemplo, para melhorar recursos e serviços baseados na localização."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Verificação de Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Permitir que apps e serviços procurem dispositivos próximos a qualquer momento, mesmo quando o Bluetooth estiver desativado. Essa configuração pode ser usada, por exemplo, para melhorar recursos e serviços baseados na localização."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistema"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Atualizações do sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Versão do Android"</string>
@@ -474,7 +469,7 @@
     <string name="choose_new_admin_message" msgid="7468286545352043354">"Você precisa de pelo menos um administrador. Para excluir este, primeiro escolha um substituto."</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"Escolher administrador"</string>
     <string name="user_guest" msgid="3465399481257448601">"Convidado"</string>
-    <string name="start_guest_session" msgid="4438752398760283201">"Visitante"</string>
+    <string name="start_guest_session" msgid="4438752398760283201">"Convidado"</string>
     <string name="user_switch" msgid="6544839750534690781">"Alternar"</string>
     <string name="current_user_name" msgid="3813671533249316823">"Você (%1$s)"</string>
     <string name="user_name_label" msgid="3210832645046206845">"Nome"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Isso excluirá a conta de demonstração e redefinirá o sistema para a configuração original. Todos os dados do usuário serão perdidos."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Sair da demonstração"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"DISPENSAR"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Recurso não disponível enquanto você dirige."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Não é possível adicionar usuários enquanto você dirige."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Recurso não disponível enquanto você dirige"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Não é possível adicionar usuários enquanto você dirige"</string>
 </resources>

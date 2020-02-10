@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nyligen gjorda platsbegäranden"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Inga platsbegäranden har gjorts nyligen"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Behörigheter på appnivå"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Platssökning"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Platstjänster"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Wi‑Fi-sökning"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Tillåt att appar och tjänster söker efter Wi‑Fi-nätverk när som helst, även när Wi‑Fi är inaktiverat. Funktionen kan till exempel användas till att förbättra platsbaserade funktioner och tjänster."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-sökning"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Tillåt att appar och tjänster söker efter enheter i närheten när som helst, även när Bluetooth är inaktiverat. Funktionen kan till exempel användas till att förbättra platsbaserade funktioner och tjänster."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemuppdateringar"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-version"</string>
@@ -662,6 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Detta raderar demokontot och återställer standardinställningarna för systemet. All användardata tas bort."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Avsluta demoläget"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORERA"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funktionen är inte tillgänglig när du kör."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Du kan inte lägga till användare medan du kör."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funktionen är inte tillgänglig när du kör"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Du kan inte lägga till användare medan du kör"</string>
 </resources>

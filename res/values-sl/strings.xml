@@ -352,12 +352,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Nedavne zahteve za lokacijo"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Ni nedavnih zahtev za lokacijo"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Dovoljenja na ravni aplikacije"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Iskanje"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Lokacijske storitve"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"Iskanje omrežij Wi‑Fi"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Aplikacijam in storitvam omogoči, da kadar koli iščejo omrežja Wi-Fi v bližini, tudi ko je Wi-Fi izklopljen. To funkcijo lahko na primer uporabite, če želite izboljšati funkcije in storitve, ki pri delovanju uporabljajo lokacijo."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Iskanje naprav Bluetooth"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Aplikacijam in storitvam omogoči, da kadar koli iščejo naprave v bližini, tudi ko je Bluetooth izklopljen. To funkcijo lahko na primer uporabite, če želite izboljšati funkcije in storitve, ki pri delovanju uporabljajo lokacijo."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Sistem"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Posodobitve sistema"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Različica Androida"</string>
@@ -686,6 +681,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"S tem izbrišete predstavitveni račun in ponastavite sistem na tovarniške nastavitve. Vsi uporabniški podatki bodo izgubljeni."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Zapri predstavitev"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"OPUSTI"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funkcija med vožnjo ni na voljo."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Med vožnjo ni mogoče dodati uporabnika."</string>
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funkcija med vožnjo ni na voljo"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Med vožnjo ni mogoče dodati uporabnika"</string>
 </resources>

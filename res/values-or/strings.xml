@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"ସାମ୍ପ୍ରତିକ ଲୋକେସନ୍‌ ଅନୁରୋଧ"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"କୌଣସି ନିକଟର ଲୋକେସନ୍‍ ଅନୁରୋଧ ହୋଇନାହିଁ"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"ଆପ୍‌-ସ୍ତରୀୟ ଅନୁମତି"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"ସ୍କାନିଂ"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"ଲୋକେସନ୍‌ ସମ୍ପର୍କିତ ସେବା"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"ୱାଇ-ଫାଇ ସ୍କାନିଂ"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"ଏପରିକି ୱାଇ-ଫାଇ ଅଫ୍‌ ଥିଲେ ମଧ୍ୟ, ଆପ୍ ଓ ସେବାଗୁଡ଼ିକୁ ଯେକୌଣସି ସମୟରେ ୱାଇ-ଫାଇ ନେଟ୍‌ୱର୍କ ସ୍କାନ୍‍ କରିବାକୁ ଅନୁମତି ଦିଏ। ଏହାକୁ ଲୋକେସନ୍‌ ଆଧାରିତ ଫିଚର୍ ଓ ସେବା ଇତ୍ୟାଦିକୁ ଉନ୍ନତ କରିବା ପାଇଁ ବ୍ୟବହାର କରାଯାଇପାରେ।"</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"ବ୍ଲୁଟୁଥ୍‍ ସ୍କାନିଂ"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"ଏପରିକି ବ୍ଲୁଟୁଥ୍‍‌ ବନ୍ଦ ଥିଲେ ମଧ୍ୟ, ଆପ୍ ଓ ସେବାଗୁଡ଼ିକୁ ଯେକୌଣସି ସମୟରେ ଆଖପାଖରେ ଥିବା ଡିଭାଇସ୍‌ ଖୋଜିବାକୁ ଦିଏ। ଏହାକୁ ଲୋକେସନ୍‌ ଆଧାରିତ ଫିଚର୍ ଓ ସେବା ଇତ୍ୟାଦିକୁ ଉନ୍ନତ କରିବା ପାଇଁ ବ୍ୟବହାର କରାଯାଇପାରେ।"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"ସିଷ୍ଟମ୍‌"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"ସିଷ୍ଟମ୍‌ ଅପ୍‌ଡେଟ୍"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android ଭର୍ସନ୍‌"</string>
@@ -662,6 +657,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"ଏହା ଡେମୋ ଆକାଉଣ୍ଟକୁ ଡିଲିଟ୍ କରିଦେବ ଏବଂ ଫ୍ୟାକ୍ଟୋରୀ ଡାଟା ସିଷ୍ଟମ୍‍କୁ ରିସେଟ୍ କରିବ। ସମସ୍ତ ୟୁଜର୍ ଡାଟା ନଷ୍ଟ ହୋ‍ଇଯିବ।"</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"ଡେମୋରୁ ବାହାରିଯା’ନ୍ତୁ"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"ଗାଡ଼ି ଚଲାଇବାବେଳେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବନାହିଁ।"</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ୟୁଜର୍ ଯୋଡ଼ିପାରିବେ ନାହିଁ।"</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>

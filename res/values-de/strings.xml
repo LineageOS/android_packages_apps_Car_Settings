@@ -346,12 +346,7 @@
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Letzte Standortanfragen"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Keine letzten Standortanfragen"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Berechtigungen auf App-Ebene"</string>
-    <string name="location_settings_scanning_title" msgid="4253945869911300740">"Suche"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Standortdienste"</string>
-    <string name="location_settings_wifi_scanning_title" msgid="8021558840074023719">"WLAN-Suche"</string>
-    <string name="location_settings_wifi_scanning_summary" msgid="2116283960258671324">"Apps und Dienste dürfen immer nach WLANs suchen, auch wenn die WLAN-Funktion deaktiviert ist. Dadurch können beispielsweise standortbasierte Funktionen und Dienste verbessert werden."</string>
-    <string name="location_settings_bluetooth_scanning_title" msgid="2969682902241932059">"Bluetooth-Suche"</string>
-    <string name="location_settings_bluetooth_scanning_summary" msgid="9158101751700727062">"Apps und Dienste dürfen immer nach Geräten in der Nähe suchen, auch wenn Bluetooth deaktiviert ist. Dadurch können beispielsweise standortbasierte Funktionen und Dienste verbessert werden."</string>
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemupdates"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-Version"</string>
@@ -662,6 +657,8 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Dadurch wird das Demokonto gelöscht und das System auf die Werkseinstellungen zurückgesetzt. Dabei gehen alle Nutzerdaten verloren."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demo beenden"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"SCHLIEẞEN"</string>
-    <string name="restricted_while_driving" msgid="6217369093121968299">"Funktion während der Fahrt nicht verfügbar."</string>
-    <string name="add_user_restricted_while_driving" msgid="6384004350628271556">"Während der Fahrt kann kein Nutzer hinzugefügt werden."</string>
+    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
+    <skip />
+    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
+    <skip />
 </resources>
