@@ -59,7 +59,7 @@ public class ExtraSettingsPreferenceControllerTest {
     private Map<Preference, Bundle> mPreferenceBundleMapEmpty = new HashMap<>();
     private Map<Preference, Bundle> mPreferenceBundleMap = new HashMap<>();
     private static final CarUxRestrictions UNRESTRICTED_UX_RESTRICTIONS =
-            new CarUxRestrictions.Builder(/* reqOpt= */ false,
+            new CarUxRestrictions.Builder(/* reqOpt= */ true,
                 CarUxRestrictions.UX_RESTRICTIONS_BASELINE, /* timestamp= */ 0).build();
     private Bundle mBundle;
 
