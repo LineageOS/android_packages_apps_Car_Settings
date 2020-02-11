@@ -199,14 +199,6 @@ public class CarWifiManager implements WifiTracker.WifiListener {
         return mWifiManager.is5GHzBandSupported();
     }
 
-    /**
-     * Check if the chipset requires conversion of 5GHz Only apBand to ANY.
-     * @return {@code true} if required, {@code false} otherwise.
-     */
-    public boolean isDualModeSupported() {
-        return mWifiManager.isStaApConcurrencySupported();
-    }
-
     /** Gets the wifi state from {@link WifiManager}. */
     public int getWifiState() {
         return mWifiManager.getWifiState();
