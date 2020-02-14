@@ -185,10 +185,8 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onUxRestrictionsChanged_unrestrictedAndDO_intentsIntoNonDOActivity_disabled() {
-        mBundle.putString(
-                ExtraSettingsPreferenceController.META_DATA_DISTRACTION_OPTIMIZED,
-                ExtraSettingsPreferenceController.META_DATA_FALSE
-        );
+        mBundle.putBoolean(
+                ExtraSettingsPreferenceController.META_DATA_DISTRACTION_OPTIMIZED, false);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
         mController.setExtraSettingsLoader(mExtraSettingsLoaderMock);
@@ -202,10 +200,8 @@ public class ExtraSettingsPreferenceControllerTest {
 
     @Test
     public void onUxRestrictionsChanged_unrestrictedAndDO_intentsIntoDOActivity_enabled() {
-        mBundle.putString(
-                ExtraSettingsPreferenceController.META_DATA_DISTRACTION_OPTIMIZED,
-                ExtraSettingsPreferenceController.META_DATA_TRUE
-        );
+        mBundle.putBoolean(
+                ExtraSettingsPreferenceController.META_DATA_DISTRACTION_OPTIMIZED, true);
         when(mExtraSettingsLoaderMock.loadPreferences(FAKE_INTENT)).thenReturn(
                 mPreferenceBundleMap);
         mController.setExtraSettingsLoader(mExtraSettingsLoaderMock);
