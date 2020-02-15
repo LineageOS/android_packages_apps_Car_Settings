@@ -53,8 +53,6 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
 
     @VisibleForTesting
     static final String META_DATA_DISTRACTION_OPTIMIZED = "distractionOptimized";
-    @VisibleForTesting static final String META_DATA_FALSE = "false";
-    @VisibleForTesting static final String META_DATA_TRUE = "true";
 
     private ExtraSettingsLoader mExtraSettingsLoader;
     private boolean mSettingsLoaded;
@@ -116,10 +114,11 @@ public class ExtraSettingsPreferenceController extends PreferenceController<Pref
     protected void addExtraSettings(Map<Preference, Bundle> preferenceBundleMap) {
         for (Preference setting : preferenceBundleMap.keySet()) {
             Bundle metaData = preferenceBundleMap.get(setting);
-            boolean distractionOptimized = metaData.getString(
-                    META_DATA_DISTRACTION_OPTIMIZED,
-                    META_DATA_FALSE
-            ).equals(META_DATA_TRUE);
+            boolean distractionOptimized = false;
+            if (metaData.containsKey(META_DATA_DISTRACTION_OPTIMIZED)) {
+                distractionOptimized =
+                        metaData.getBoolean(META_DATA_DISTRACTION_OPTIMIZED);
+            }
             setting.getExtras().putBoolean(META_DATA_DISTRACTION_OPTIMIZED, distractionOptimized);
             getPreference().addPreference(setting);
         }
