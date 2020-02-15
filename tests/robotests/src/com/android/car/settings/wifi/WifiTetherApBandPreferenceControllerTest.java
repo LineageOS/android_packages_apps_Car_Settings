@@ -117,7 +117,6 @@ public class WifiTetherApBandPreferenceControllerTest {
     @Test
     public void onPreferenceChangedTo5Ghz_updatesApBandConfigTo5Ghz() {
         ShadowCarWifiManager.setIs5GhzBandSupported(true);
-        ShadowCarWifiManager.setIsDualModeSupported(false);
         SoftApConfiguration config = new SoftApConfiguration.Builder()
                 .setBand(SoftApConfiguration.BAND_2GHZ)
                 .build();
@@ -127,13 +126,12 @@ public class WifiTetherApBandPreferenceControllerTest {
                 Integer.toString(SoftApConfiguration.BAND_5GHZ));
 
         assertThat(mCarWifiManager.getSoftApConfig().getBand())
-                .isEqualTo(SoftApConfiguration.BAND_5GHZ);
+                .isEqualTo(SoftApConfiguration.BAND_2GHZ | SoftApConfiguration.BAND_5GHZ);
     }
 
     @Test
     public void onPreferenceChangedTo2Ghz_updatesApBandConfigTo2Ghz() {
         ShadowCarWifiManager.setIs5GhzBandSupported(true);
-        ShadowCarWifiManager.setIsDualModeSupported(false);
         SoftApConfiguration config = new SoftApConfiguration.Builder()
                 .setBand(SoftApConfiguration.BAND_5GHZ)
                 .build();
@@ -147,9 +145,8 @@ public class WifiTetherApBandPreferenceControllerTest {
     }
 
     @Test
-    public void onStart_dualModeIsSupported_summarySetToPrefer5Ghz() {
+    public void onStart_summarySetToPrefer5Ghz() {
         ShadowCarWifiManager.setIs5GhzBandSupported(true);
-        ShadowCarWifiManager.setIsDualModeSupported(true);
         SoftApConfiguration config = new SoftApConfiguration.Builder()
                 .setBand(SoftApConfiguration.BAND_5GHZ)
                 .build();
@@ -160,9 +157,8 @@ public class WifiTetherApBandPreferenceControllerTest {
     }
 
     @Test
-    public void onPreferenceChangedTo5Ghz_dualModeIsSupported_defaultToApBandAny() {
+    public void onPreferenceChangedTo5Ghz_defaultToApBandAny() {
         ShadowCarWifiManager.setIs5GhzBandSupported(true);
-        ShadowCarWifiManager.setIsDualModeSupported(true);
         SoftApConfiguration config = new SoftApConfiguration.Builder()
                 .setBand(SoftApConfiguration.BAND_2GHZ)
                 .build();
