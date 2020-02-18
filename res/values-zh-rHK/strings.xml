@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"設定"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"更多"</string>
-    <string name="display_settings" msgid="5325515247739279185">"顯示"</string>
+    <string name="display_settings" msgid="5325515247739279185">"螢幕"</string>
     <string name="brightness" msgid="2919605130898772866">"亮度"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"自動調校光暗"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"按環境光線優化亮度"</string>
@@ -153,7 +153,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"請為 Wi-Fi 熱點至少選擇一個頻段："</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"熱點和網絡共享"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"自動關閉熱點"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"如果未連接任何裝置，Wi‑Fi 熱點將會關閉"</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"當沒有連接任何裝置時，Wi‑Fi 熱點就會關閉"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求開啟 Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"「<xliff:g id="REQUESTER">%s</xliff:g>」要求關閉 Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"錯誤"</string>
@@ -339,7 +339,7 @@
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"取消"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"付費短訊存取權"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"付費短訊的費用可能高昂，並會增加您流動網絡供應商帳單的款項。如果您為應用程式開放權限，將可以透過該應用程式發送付費短訊。"</string>
-    <string name="usage_access_title" msgid="7153427122072303254">"使用情況存取權"</string>
+    <string name="usage_access_title" msgid="7153427122072303254">"使用紀錄存取權"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"使用記錄存取權允許應用程式追蹤您正在使用的其他應用程式和使用頻率，以及流動網絡供應商、語言設定和其他詳情。"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi 控制"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi 控制允許應用程式開啟或關閉 Wi-Fi，掃瞄和連線至 Wi-Fi 網絡、新增或移除網絡，或啟動僅限本機的熱點。"</string>

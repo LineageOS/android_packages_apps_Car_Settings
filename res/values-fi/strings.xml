@@ -271,7 +271,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Sovellukset ja ilmoitukset"</string>
     <string name="all_applications" msgid="7798210477486822168">"Näytä kaikki sovellukset"</string>
     <string name="default_applications" msgid="1558183275638697087">"Oletussovellukset"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Sovelluksen käyttöoikeudet"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Sovellusten käyttöoikeudet"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Sovellukset, joilla on lupa käyttää seuraavia: <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Sovellustiedot"</string>
     <string name="force_stop" msgid="2153183697014720520">"Pakota sulkeutumaan"</string>
@@ -409,7 +409,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Nollaa asetukset"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Verkkoasetukset on nollattu"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Nollaa sovellusasetukset"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Kaikki seuraavien asetukset nollataan:\n\n"<li>"Käytöstä poistetut sovellukset"</li>\n<li>"Käytöstä poistetut sovellusilmoitukset"</li>\n<li>"Toimintojen oletussovellukset"</li>\n<li>" Sovellusten taustadatan käyttörajoitukset"</li>\n<li>"Käyttöoikeusrajoitukset"</li>\n\n"Et menetä mitään sovellusten dataa."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Kaikki seuraavien asetukset nollataan:\n\n"<li>"Käytöstä poistetut sovellukset"</li>\n<li>"Käytöstä poistetut sovellusilmoitukset"</li>\n<li>"Toimintojen oletussovellukset"</li>\n<li>"Sovellusten taustadatan käyttörajoitukset"</li>\n<li>"Käyttöoikeusrajoitukset"</li>\n\n"Et menetä mitään sovellusten dataa."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Nollaa sovellukset"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Sovellusasetukset on nollattu"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Poista data (tehdasasetusten palautus)"</string>
@@ -441,7 +441,7 @@
     <string name="date_picker_title" msgid="1533614225273770178">"Päivämäärä"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Aika"</string>
     <string name="user_admin" msgid="1535484812908584809">"Järjestelmänvalvoja"</string>
-    <string name="signed_in_admin_user" msgid="1267225622818673274">"Järjestelmänvalvoja kirjautuneena"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Kirjautunut järjestelmänvalvojana"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Kaikki järjestelmänvalvojan käyttöoikeudet"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Muuta järjestelmänvalvojaksi"</string>
     <string name="grant_admin_permissions_message" msgid="1751910369004774830">"Käyttäjä voi poistaa käyttäjiä, mukaan lukien muita järjestelmänvalvojia, ja palauttaa järjestelmän tehdasasetukset."</string>

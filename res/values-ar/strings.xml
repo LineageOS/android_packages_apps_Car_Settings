@@ -181,9 +181,9 @@
     <string name="bluetooth_available_devices" msgid="1854446368146061448">"الأجهزة المُتاحة"</string>
     <string name="bluetooth_profiles" msgid="5580372290862835951">"الملفات الشخصية"</string>
     <string name="bluetooth_error_title" msgid="2341600997536511742"></string>
-    <string name="bluetooth_turning_on" msgid="7046983059601710414">"جارٍ تشغيل البلوتوث..."</string>
-    <string name="bluetooth_turning_off" msgid="1753975097241024061">"جارٍ إيقاف تشغيل البلوتوث..."</string>
-    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> تشغيل البلوتوث"</string>
+    <string name="bluetooth_turning_on" msgid="7046983059601710414">"جارٍ تفعيل البلوتوث..."</string>
+    <string name="bluetooth_turning_off" msgid="1753975097241024061">"جارٍ إيقاف تفعيل البلوتوث..."</string>
+    <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> تفعيل البلوتوث"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"يريد <xliff:g id="APP_NAME">%1$s</xliff:g> إيقاف البلوتوث"</string>
     <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"يريد أحد التطبيقات تشغيل بلوتوث"</string>
     <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"يريد أحد التطبيقات إيقاف البلوتوث"</string>
@@ -472,7 +472,7 @@
     <string name="user_new_user_name" msgid="7115771396412339662">"مستخدم جديد"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"أتريد إضافة مستخدم جديد؟"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"عند إضافة مستخدم جديد، عليه إعداد مساحته."</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"يمكن لأي مستخدم تحديث التطبيقات لجميع المستخدمين الآخرين."</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"يمكن لأي مستخدم إعادة تحميل التطبيقات لجميع المستخدمين الآخرين."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"تم الوصول إلى أقصى عدد للمستخدمين"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="zero">يمكنك إنشاء ما يصل إلى <xliff:g id="COUNT">%d</xliff:g> مستخدم.</item>

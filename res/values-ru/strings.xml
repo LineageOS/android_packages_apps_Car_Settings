@@ -157,7 +157,7 @@
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Диапазон частот для точек доступа Wi-Fi."</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Точка доступа и режим модема"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Автоматически выключать точку доступа"</string>
-    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi автоматически, если к ней не подключено ни одного устройства."</string>
+    <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Выключать точку доступа Wi‑Fi, если к ней не подключено ни одного устройства"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает включение Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> запрашивает отключение Wi-Fi"</string>
     <string name="wifi_error" msgid="3105105447117289410">"Ошибка"</string>
@@ -169,7 +169,7 @@
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Отключить устройство?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"Автомобиль будет отключен от устройства \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"."</string>
     <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Адрес Bluetooth для автомобиля: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Адрес Bluetooth для устройства: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Адрес Bluetooth: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Название автомобиля"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Переименование автомобиля"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Переименование устройства"</string>
@@ -192,14 +192,14 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Код подключения через Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"PIN-код содержит буквы или символы"</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Введите код подключения и нажмите клавишу ввода"</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Установить соединение с устройством <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Подключить устройство \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Разрешить устройству <xliff:g id="DEVICE_NAME">%1$s</xliff:g> доступ к списку контактов и журналу звонков"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Возможно, потребуется ввести PIN-код на другом устройстве."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Возможно, потребуется ввести ключ доступа на другом устройстве."</string>
     <string name="bluetooth_pin_values_hint_16_digits" msgid="418776900816984778">"Должно быть 16 цифр"</string>
     <string name="bluetooth_pin_values_hint" msgid="1561325817559141687">"Обычно 0000 или 1234"</string>
     <string name="bluetooth_notif_title" msgid="8374602799367803335">"Запрос на подключение"</string>
-    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Нажмите, чтобы установить соединение с устройством \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"."</string>
+    <string name="bluetooth_notif_message" msgid="1060821000510108726">"Нажмите, чтобы подключить устройство \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Выбор устройства Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Языки"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Язык и ввод"</string>
@@ -333,7 +333,7 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Не открывать в этом приложении"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Поддерживаемые ссылки"</string>
     <string name="special_access" msgid="5730278220917123811">"Специальный доступ для приложений"</string>
-    <string name="show_system" msgid="4401355756969485287">"Показать системные процессы"</string>
+    <string name="show_system" msgid="4401355756969485287">"Показать сист. процессы"</string>
     <string name="hide_system" msgid="8845453295584638040">"Скрыть системные процессы"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Изменение системных настроек"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Приложение сможет изменять системные настройки."</string>
@@ -419,7 +419,7 @@
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Сбросить настройки приложений"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Будут сброшены следующие настройки:\n\n"<li>"Отключенные приложения."</li>\n<li>"Отключенные уведомления приложений."</li>\n<li>"Приложения по умолчанию."</li>\n<li>"Ограничения на передачу данных в фоновом режиме."</li>\n<li>"Все ограничения разрешений."</li>\n\n"Данные приложений удалены не будут."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Сбросить настройки"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены"</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Настройки приложений сброшены."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Удалить все данные (сбросить настройки)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Будут удалены все данные из головного устройства автомобиля, в том числе:\n\n"<li>"ваш аккаунт Google;"</li>\n<li>"настройки/данные системы и приложений;"</li>\n<li>"установленные приложения."</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Вы вошли в следующие аккаунты:"</string>
@@ -437,7 +437,7 @@
     <string name="zone_auto" msgid="3701878581920206160">"Автонастройка часового пояса"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Использовать часовой пояс сети"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-часовой формат"</string>
-    <string name="date_time_24hour" msgid="1137618702556486913">"Использовать 24-часовой формат"</string>
+    <string name="date_time_24hour" msgid="1137618702556486913">"24-часовой формат"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Время"</string>
     <string name="date_time_set_time" msgid="6449555153906058248">"Установить время"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Часовой пояс"</string>
@@ -460,7 +460,7 @@
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"SMS по мобильному Интернету в авто"</string>
     <string name="install_apps_permission_title" msgid="3099705360827925296">"Установка новых приложений"</string>
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Удаление приложений"</string>
-    <string name="user_add_user_menu" msgid="5319151436895941496">"Добавление пользователя"</string>
+    <string name="user_add_user_menu" msgid="5319151436895941496">"Добавить пользователя"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Новый пользователь"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"Добавить пользователя?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Когда вы добавите пользователя, ему потребуется настроить профиль."</string>
