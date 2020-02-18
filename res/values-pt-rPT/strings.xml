@@ -200,7 +200,7 @@
     <string name="language_settings" msgid="2079258598337245546">"Idiomas"</string>
     <string name="languages_and_input_settings" msgid="3672322610529408248">"Idiomas e introdução"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Teclado"</string>
-    <string name="manage_keyboard" msgid="4045394766282200132">"Efetue a gestão dos teclados"</string>
+    <string name="manage_keyboard" msgid="4045394766282200132">"Gerir teclados"</string>
     <string name="text_to_speech_settings" msgid="811985746199507343">"Saída de síntese de voz"</string>
     <string name="text_to_speech_preferred_engine_settings" msgid="2766782925699132256">"Motor preferido"</string>
     <string name="text_to_speech_current_engine" msgid="8133107484909612597">"Motor atual"</string>
@@ -402,17 +402,17 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Pretende repor todas as definições de rede? Não é possível anular esta ação."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Repor definições"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"As definições de rede foram repostas."</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"Repor preferências das aplicações"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Esta ação irá repor todas as preferências de:\n\n"<li>"Aplicações desativadas"</li>\n<li>"Notificações de aplicações desativadas"</li>\n<li>"Aplicações predefinidas para ações"</li>\n<li>"Restrições de dados de segundo plano para aplicações"</li>\n<li>"Todas as restrições de autorização"</li>\n\n"Não irá perder quaisquer dados das aplicações."</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Repor preferências das apps"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Esta ação irá repor todas as preferências de:\n\n"<li>"Apps desativadas"</li>\n<li>"Notificações de apps desativadas"</li>\n<li>"Apps predefinidas para ações"</li>\n<li>"Restrições de dados de segundo plano para apps"</li>\n<li>"Todas as restrições de autorização"</li>\n\n"Não irá perder quaisquer dados das apps."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Repor aplicações"</string>
-    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"As preferências das aplicações foram repostas."</string>
+    <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"As preferências das apps foram repostas."</string>
     <string name="master_clear_title" msgid="8515335233363214414">"Apagar todos os dados (repor dados de fábrica)"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Esta ação irá apagar todos os dados da unidade principal do veículo, incluindo:\n\n"<li>"A Conta Google"</li>\n<li>"Dados e definições do sistema e da aplicação"</li>\n<li>"Aplicações transferidas"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Atualmente, tem sessão iniciada nas seguintes contas:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Existem outros utilizadores presentes neste veículo."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Repor veículo"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"Pretende repor?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Pretende apagar todas as informações pessoais e as aplicações transferidas? Não é possível anular esta ação!"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Pretende apagar todas as informações pessoais e as apps transferidas? Não é possível anular esta ação!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Apagar tudo"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"A apagar…"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Aguarde…"</string>
@@ -448,7 +448,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Desinstalar aplicações"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Adicionar utilizador"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Novo utilizador"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Adicion. novo utilizador?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Pretende adicionar um novo utilizador?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Ao adicionar um novo utilizador, essa pessoa tem de configurar o respetivo espaço."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualquer utilizador pode atualizar aplicações para todos os outros utilizadores."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite de utilizadores alcançado"</string>
@@ -617,9 +617,9 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Não é permitida uma sequência de dígitos ascendente, descendente ou repetida."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opções de bloqueio de ecrã"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: há <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Adicionar disposit. fidedigno"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Adicionar dispositivo fidedigno"</string>
     <string name="add_device_summary" msgid="5368217520710573302">"O Bluetooth será ativado p/ adicionar disp. fided."</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Disposit. fidedignos"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Dispositivos fidedignos"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivos</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositivo</item>
@@ -638,7 +638,7 @@
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ao adicionar um dispositivo fidedigno, tem de definir um método de autenticação a seguir. Se não tiver o dispositivo fidedigno consigo, será necessária a autenticação para aceder ao seu perfil."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispositivo desligado."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Remover todos os certificados"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Permite remover todos os certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Pretende remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"O armazenamento de credenciais foi apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Não foi possível apagar o armazenamento de credenciais."</string>

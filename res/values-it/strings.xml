@@ -19,7 +19,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="settings_label" msgid="5147911978211079839">"Impostazioni"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"Altro"</string>
-    <string name="display_settings" msgid="5325515247739279185">"Visualizzazione"</string>
+    <string name="display_settings" msgid="5325515247739279185">"Display"</string>
     <string name="brightness" msgid="2919605130898772866">"Livello di luminosità"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"Luminosità adattiva"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"Ottimizza il livello di luminosità in base alla luce disponibile"</string>
@@ -209,7 +209,7 @@
     <string name="tts_reset" msgid="6289481549801844709">"Reimposta"</string>
     <string name="sound_settings" msgid="3072423952331872246">"Audio"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"Volume suoneria"</string>
-    <string name="navi_volume_title" msgid="946292066759195165">"Volume per la navigazione"</string>
+    <string name="navi_volume_title" msgid="946292066759195165">"Volume navigazione"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"Suoneria"</string>
     <string name="notification_volume_title" msgid="6749411263197157876">"Notifica"</string>
     <string name="media_volume_title" msgid="6697416686272606865">"Contenuti multimediali"</string>
@@ -342,7 +342,7 @@
     <string name="wifi_control_title" msgid="5660436566907731929">"Controllo del Wi-Fi"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Controllo del Wi-Fi consente a un\'app di attivare o disattivare il Wi-Fi, cercare e connettersi a reti Wi-Fi, aggiungere e rimuovere reti oppure avviare un hotspot solo locale."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Altro"</string>
-    <string name="location_settings_title" msgid="901334356682423679">"Luogo"</string>
+    <string name="location_settings_title" msgid="901334356682423679">"Posizione"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Richieste di posizione recenti"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Nessuna richiesta di posizione recente"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorizzazioni a livello di app"</string>
@@ -435,7 +435,7 @@
     <string name="date_picker_title" msgid="1533614225273770178">"Data"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"Ora"</string>
     <string name="user_admin" msgid="1535484812908584809">"Amministratore"</string>
-    <string name="signed_in_admin_user" msgid="1267225622818673274">"Accesso eseguito da amministratore"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"Accesso come amministratore"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"Tutte le autorizzazioni di amministratore"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"Imposta come amministratore"</string>
     <string name="grant_admin_permissions_message" msgid="1751910369004774830">"L\'utente potrà eliminare utenti, includere altri amministratori e ripristinare le impostazioni di fabbrica del sistema."</string>
@@ -448,7 +448,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Disinstallazione di app"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Aggiungi utente"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Nuovo utente"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Aggiungere nuovo utente?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Aggiungere un nuovo utente?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Il nuovo utente, una volta aggiunto, dovrà configurare il suo spazio."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Qualsiasi utente può aggiornare le app per tutti gli altri."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Limite utenti raggiunto"</string>
@@ -500,7 +500,7 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"Aggiungi account"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Nessun account aggiunto"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Account per <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizza i dati automaticamente"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizza dati automaticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Consenti aggiornamento automatico dei dati delle app"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Attivare sincron. automatica?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Tutte le modifiche che apporti ai tuoi account sul Web verranno automaticamente copiate sul dispositivo.\n\nAlcuni account potrebbero inoltre copiare automaticamente sul Web tutte le modifiche che apporti sul telefono. Gli Account Google funzionano in questo modo."</string>
@@ -617,9 +617,9 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Non sono consentite sequenze di cifre in ordine crescente o decrescente oppure ripetute."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opzioni di blocco schermo"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> giorni fa"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Aggiungi dispos. attendibile"</string>
+    <string name="add_device_title" msgid="8452168024017866232">"Aggiungi dispositivo attendibile"</string>
     <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth attivato per consentire disp. attend."</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dispos. attendibili"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Dispositivi attendibili"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivi</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositivo</item>
