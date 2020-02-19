@@ -345,7 +345,7 @@
     <string name="location_settings_title" msgid="901334356682423679">"Lieu"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Récentes demandes de localisation"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Aucune demande de localisation récente"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applications"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Autorisations à l\'échelle des applis"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Services de localisation"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Système"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Mises à jour système"</string>
@@ -402,7 +402,7 @@
     <string name="reset_network_confirm_desc" msgid="7721698076856330212">"Réinitialiser tous les paramètres réseau? Cette action est irréversible."</string>
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Réinitialiser les paramètres"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Les paramètres réseau ont été réinitialisés"</string>
-    <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitial. préférences des applications"</string>
+    <string name="reset_app_pref_title" msgid="5855420038951743992">"Réinitial. préférences des applis"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"Cette opération réinitialise toutes les préférences relatives aux éléments suivants :\n\n"<li>"Applications désactivées"</li>\n<li>"Notifications associées aux applications désactivées"</li>\n<li>"Applications par défaut pour les actions"</li>\n<li>"Restrictions de données en arrière-plan pour les applications"</li>\n<li>"Toutes les restrictions d\'autorisations"</li>\n\n"Vous ne perdrez aucune donnée liée aux applications."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Réinitialiser les applications"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Les préférences des applications ont été réinitialisées"</string>
@@ -411,7 +411,7 @@
     <string name="master_clear_accounts" msgid="7797522012993567494">"Vous êtes actuellement connecté aux comptes suivants :"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"D\'autres personnes utilisent ce véhicule."</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"Réinitialiser le véhicule"</string>
-    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Effectuez la réinitialisation?"</string>
+    <string name="master_clear_confirm_title" msgid="8646455623132887370">"Réinitialiser?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Voulez-vous effacer toutes vos données personnelles et les applications que vous avez téléchargées? Cette action est irréversible!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tout effacer"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Suppression en cours…"</string>
@@ -533,7 +533,7 @@
     <string name="security_lock_pattern" msgid="1174352995619563104">"Schéma"</string>
     <string name="security_lock_pin" msgid="4891899974369503200">"NIP"</string>
     <string name="security_lock_password" msgid="4420203740048322494">"Mot de passe"</string>
-    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Choisissez un type de verrouillage"</string>
+    <string name="lock_settings_picker_title" msgid="6590330165050361632">"Choisir un type de verrouillage"</string>
     <string name="screen_lock_options" msgid="8531177937577168185">"Options de verrouillage"</string>
     <string name="lock_settings_enter_pattern" msgid="4826034565853171624">"Entrez votre schéma"</string>
     <string name="lockpattern_confirm_button_text" msgid="7784925958324484965">"Confirmer"</string>
@@ -619,7 +619,7 @@
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
     <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil de confiance"</string>
     <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth s\'activera pour ajout. app. confiance"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Appareils fiables"</string>
+    <string name="trusted_device" msgid="5637378361866787603">"Appareils de confiance"</string>
     <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
       <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appareil</item>
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> appareils</item>
@@ -657,8 +657,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Cette action supprimera le compte de démonstration et réinitialisera le système. Toutes les données de l\'utilisateur seront perdues."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Quitter le mode démo"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
-    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
-    <skip />
-    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
-    <skip />
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Cette fonctionnalité n\'est pas accessible durant la conduite"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Impossible d\'ajouter un utilisateur durant la conduite"</string>
 </resources>
