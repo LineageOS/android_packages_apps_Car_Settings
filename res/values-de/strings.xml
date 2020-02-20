@@ -646,7 +646,7 @@
     <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Anmeldung von <xliff:g id="DEVICE_NAME">%1$s</xliff:g> fehlgeschlagen"</string>
     <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Wenn du ein vertrauenswürdiges Gerät hinzufügst, musst du danach eine Authentifizierungsmethode festlegen. Diese wird benötigt, um auf dein Konto zuzugreifen, wenn du dein vertrauenswürdiges Gerät nicht dabei hast."</string>
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Gerät getrennt."</string>
-    <string name="credentials_reset" msgid="873900550885788639">"Anmeldedatenspeicher löschen"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Anmeldedaten löschen"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Alle Zertifikate entfernen"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Alle Inhalte entfernen?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Anmeldedatenspeicher wurde gelöscht."</string>
@@ -666,8 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Dadurch wird das Demokonto gelöscht und das System auf die Werkseinstellungen zurückgesetzt. Dabei gehen alle Nutzerdaten verloren."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Demo beenden"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"SCHLIEẞEN"</string>
-    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
-    <skip />
-    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
-    <skip />
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Funktion während der Fahrt nicht verfügbar"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Während der Fahrt kann kein Nutzer hinzugefügt werden"</string>
 </resources>

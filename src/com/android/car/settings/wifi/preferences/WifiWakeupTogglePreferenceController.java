@@ -22,6 +22,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -44,6 +45,7 @@ public class WifiWakeupTogglePreferenceController extends PreferenceController<T
 
     private static final Logger LOG = new Logger(WifiWakeupTogglePreferenceController.class);
     private LocationManager mLocationManager;
+    private WifiManager mWifiManager;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
@@ -71,6 +73,7 @@ public class WifiWakeupTogglePreferenceController extends PreferenceController<T
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
         super(context, preferenceKey, fragmentController, uxRestrictions);
         mLocationManager = (LocationManager) context.getSystemService(Service.LOCATION_SERVICE);
+        mWifiManager = context.getSystemService(WifiManager.class);
     }
 
     @Override
@@ -125,19 +128,15 @@ public class WifiWakeupTogglePreferenceController extends PreferenceController<T
     }
 
     private void setWifiWakeupEnabled(boolean enabled) {
-        Settings.Global.putInt(getContext().getContentResolver(),
-                Settings.Global.WIFI_WAKEUP_ENABLED,
-                enabled ? 1 : 0);
+        mWifiManager.setScanAlwaysAvailable(enabled);
     }
 
     private boolean getWifiScanningEnabled() {
-        return Settings.Global.getInt(getContext().getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0) == 1;
+        return mWifiManager.isScanAlwaysAvailable();
     }
 
     private void enableWifiScanning() {
-        Settings.Global.putInt(getContext().getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        mWifiManager.setScanAlwaysAvailable(true);
         Toast.makeText(
                 getContext(),
                 getContext().getString(R.string.wifi_settings_scanning_required_enabled),

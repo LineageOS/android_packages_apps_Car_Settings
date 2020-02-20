@@ -666,8 +666,6 @@
     <string name="exit_retail_mode_dialog_body" msgid="8314316171782527301">"Aquesta acció suprimirà el compte de demostració i es restabliran les dades de fàbrica del sistema. Es perdran totes les dades d\'usuari."</string>
     <string name="exit_retail_mode_dialog_confirmation_button_text" msgid="3147249675355968649">"Surt de la demostració"</string>
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORA"</string>
-    <!-- no translation found for restricted_while_driving (6587569249519274524) -->
-    <skip />
-    <!-- no translation found for add_user_restricted_while_driving (4754946754222453656) -->
-    <skip />
+    <string name="restricted_while_driving" msgid="6587569249519274524">"Aquesta funció no està disponible mentre condueixes"</string>
+    <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"No pots afegir usuaris mentre condueixes"</string>
 </resources>

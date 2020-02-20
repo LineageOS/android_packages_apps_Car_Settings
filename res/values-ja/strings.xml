@@ -51,7 +51,7 @@
     <string name="roaming_summary" msgid="7476127740259728901">"ローミング中にデータサービスに接続する"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"データ ローミングを許可しますか？"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"ローミング料金が発生する場合があります。"</string>
-    <string name="data_usage_settings" msgid="7877132994777987848">"データ使用"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"データ使用量"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"メインデータ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> 使用"</string>
     <string name="cell_data_warning" msgid="8997739664336571149">"データ警告: <xliff:g id="ID_1">^1</xliff:g>"</string>
@@ -142,8 +142,8 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"セキュリティ"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"なし"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 帯域幅"</string>
-    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP 帯域幅の選択"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP 周波数帯"</string>
+    <string name="wifi_ap_band_config" msgid="6143905484067008736">"AP 周波数帯の選択"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"自動"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2.4 GHz 帯"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"5.0 GHz 帯"</string>
@@ -327,8 +327,8 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"このアプリで開かない"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"対応リンク"</string>
     <string name="special_access" msgid="5730278220917123811">"特別なアプリアクセス"</string>
-    <string name="show_system" msgid="4401355756969485287">"システムを表示"</string>
-    <string name="hide_system" msgid="8845453295584638040">"システムを表示しない"</string>
+    <string name="show_system" msgid="4401355756969485287">"システムアプリを表示"</string>
+    <string name="hide_system" msgid="8845453295584638040">"システムアプリを表示しない"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"システム設定の変更"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"この権限により、アプリはシステム設定を変更できるようになります。"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"通知へのアクセス"</string>
@@ -367,7 +367,7 @@
     <string name="about_settings" msgid="4329457966672592345">"Android Auto について"</string>
     <string name="about_summary" msgid="5374623866267691206">"Android <xliff:g id="VERSION">%1$s</xliff:g>"</string>
     <string name="about_settings_summary" msgid="7975072809083281401">"規約、ステータス、ソフトウェア バージョンを表示"</string>
-    <string name="legal_information" msgid="1838443759229784762">"規約"</string>
+    <string name="legal_information" msgid="1838443759229784762">"法的情報"</string>
     <string name="contributors_title" msgid="7698463793409916113">"アライアンス パートナー"</string>
     <string name="manual" msgid="4819839169843240804">"マニュアル"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"規制ラベル"</string>
@@ -441,7 +441,7 @@
     <string name="date_picker_title" msgid="1533614225273770178">"日付"</string>
     <string name="time_picker_title" msgid="7436045944320504639">"時刻"</string>
     <string name="user_admin" msgid="1535484812908584809">"管理者"</string>
-    <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログインしました"</string>
+    <string name="signed_in_admin_user" msgid="1267225622818673274">"管理者としてログイン済み"</string>
     <string name="grant_admin_permissions_title" msgid="4628430467359951437">"すべての管理者権限"</string>
     <string name="grant_admin_permissions_button_text" msgid="988239414372882401">"管理者にする"</string>
     <string name="grant_admin_permissions_message" msgid="1751910369004774830">"このユーザーは、他の管理者を含むユーザーの削除、システムデータの初期化を行えるようになります。"</string>

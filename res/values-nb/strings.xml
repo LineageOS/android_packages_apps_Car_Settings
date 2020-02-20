@@ -327,8 +327,8 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"Ikke åpne med denne appen"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Støttede linker"</string>
     <string name="special_access" msgid="5730278220917123811">"Spesiell apptilgang"</string>
-    <string name="show_system" msgid="4401355756969485287">"Vis systemapper"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Skjul systemapper"</string>
+    <string name="show_system" msgid="4401355756969485287">"Vis systemet"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Skjul systemet"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Endre systeminnstillingene"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Med denne tillatelsen kan apper endre systeminnstillingene."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Tilgang til varsler"</string>
@@ -352,7 +352,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"System"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Systemoppdateringer"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android-versjon"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Android-sikkerhetsoppdatering"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Nivå av Android-sikkerhetsoppdatering"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Modell og maskinvare"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modell: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Basisbåndversjon"</string>
@@ -395,7 +395,7 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Alternativer for tilbakestilling"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Tilbakestilling av nettverk, apper eller enhet"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Tilbakestill nettverket"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Dette tilbakestiller alle nettverksinnstillingene, blant annet"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"Dette tilbakestiller alle nettverksinnstillingene, inkludert"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Mobildata"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
@@ -419,7 +419,7 @@
     <string name="master_clear_button_text" msgid="8010754220392741160">"Tilbakestill kjøretøyet"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"Vil du tilbakestille?"</string>
     <string name="master_clear_confirm_desc" msgid="8920446291698038558">"Vil du slette den personlige informasjonen din og nedlastede apper? Du kan ikke angre denne handlingen."</string>
-    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Tøm alt"</string>
+    <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"Slett alt"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"Tømmer"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"Vent litt."</string>
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Dato og klokkeslett"</string>
@@ -431,7 +431,7 @@
     <string name="date_time_24hour_title" msgid="3025576547136168692">"24-timers format"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Bruk 24-timers format"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Klokkeslett"</string>
-    <string name="date_time_set_time" msgid="6449555153906058248">"Still klokken"</string>
+    <string name="date_time_set_time" msgid="6449555153906058248">"Angi klokkeslett"</string>
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Tidssone"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Velg tidssone"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Dato"</string>
@@ -454,7 +454,7 @@
     <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"Avinstaller apper"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"Legg til bruker"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"Ny bruker"</string>
-    <string name="user_add_user_title" msgid="7458813670614932479">"Vil du legge til denne brukeren?"</string>
+    <string name="user_add_user_title" msgid="7458813670614932479">"Vil du legge til en ny bruker?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"Når du legger til en ny bruker, må vedkommende konfigurere sitt eget område."</string>
     <string name="user_add_user_message_update" msgid="1528170913388932459">"Alle brukere kan oppdatere apper for alle andre brukere."</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"Grensen for antall brukere er nådd"</string>
