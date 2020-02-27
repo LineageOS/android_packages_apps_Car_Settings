@@ -33,6 +33,7 @@ import java.util.List;
  */
 public class PasswordHelper {
     public static final String EXTRA_CURRENT_SCREEN_LOCK = "extra_current_screen_lock";
+    public static final String EXTRA_CURRENT_PASSWORD_QUALITY = "extra_current_password_quality";
     /**
      * Required minimum length of PIN or password.
      */
