@@ -20,10 +20,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
+import android.net.TetheringManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -33,6 +32,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.internal.util.ConcurrentUtils;
 
 import java.util.Collections;
 import java.util.List;
@@ -43,20 +43,11 @@ import java.util.List;
 public class WifiTetherFragment extends SettingsFragment {
 
     private CarWifiManager mCarWifiManager;
-    private ConnectivityManager mConnectivityManager;
+    private TetheringManager mTetheringManager;
     private ProgressBar mProgressBar;
     private MenuItem mTetherSwitch;
     private boolean mRestartBooked = false;
 
-    private final ConnectivityManager.OnStartTetheringCallback mOnStartTetheringCallback =
-            new ConnectivityManager.OnStartTetheringCallback() {
-                @Override
-                public void onTetheringFailed() {
-                    super.onTetheringFailed();
-                    mTetherSwitch.setChecked(false);
-                    mTetherSwitch.setEnabled(true);
-                }
-            };
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -105,8 +96,7 @@ public class WifiTetherFragment extends SettingsFragment {
         super.onAttach(context);
 
         mCarWifiManager = new CarWifiManager(context);
-        mConnectivityManager = (ConnectivityManager) getContext().getSystemService(
-                Context.CONNECTIVITY_SERVICE);
+        mTetheringManager = getContext().getSystemService(TetheringManager.class);
     }
 
     @Override
@@ -175,13 +165,19 @@ public class WifiTetherFragment extends SettingsFragment {
     }
 
     private void startTethering() {
-        mConnectivityManager.startTethering(ConnectivityManager.TETHERING_WIFI,
-                /* showProvisioningUi= */ true,
-                mOnStartTetheringCallback, new Handler(Looper.getMainLooper()));
+        mTetheringManager.startTethering(ConnectivityManager.TETHERING_WIFI,
+                ConcurrentUtils.DIRECT_EXECUTOR,
+                new TetheringManager.StartTetheringCallback() {
+                    @Override
+                    public void onTetheringFailed(final int result) {
+                        mTetherSwitch.setChecked(false);
+                        mTetherSwitch.setEnabled(true);
+                    }
+                });
     }
 
     private void stopTethering() {
-        mConnectivityManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
+        mTetheringManager.stopTethering(ConnectivityManager.TETHERING_WIFI);
     }
 
     private void restartTethering() {
