@@ -69,7 +69,7 @@ public class ConfirmPasswordFragmentFactory {
         if (bundle == null) {
             bundle = new Bundle();
         }
-        bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, passwordQuality);
+        bundle.putInt(PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY, passwordQuality);
         fragment.setArguments(bundle);
         return fragment;
     }
