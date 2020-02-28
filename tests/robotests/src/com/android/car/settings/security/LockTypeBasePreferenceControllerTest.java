@@ -38,6 +38,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -76,6 +77,8 @@ public class LockTypeBasePreferenceControllerTest {
             DevicePolicyManager.PASSWORD_QUALITY_NUMERIC;
     private static final int NON_MATCHING_PASSWORD_QUALITY =
             DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED;
+    private static final LockscreenCredential NONE_LOCKSCREEN_CREDENTIAL =
+            LockscreenCredential.createNone();
 
     private Context mContext;
     private PreferenceControllerTestHelper<TestLockPreferenceController>
@@ -91,6 +94,11 @@ public class LockTypeBasePreferenceControllerTest {
         mPreferenceControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 TestLockPreferenceController.class, mPreference);
         mController = mPreferenceControllerHelper.getController();
+        mPreference.getExtras().putParcelable(
+                PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, NONE_LOCKSCREEN_CREDENTIAL
+        );
+        mPreference.getExtras().putInt(
+                PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY, NON_MATCHING_PASSWORD_QUALITY);
         mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
 
@@ -134,5 +142,16 @@ public class LockTypeBasePreferenceControllerTest {
         Shadows.shadowOf(UserManager.get(mContext))
                 .addUser(UserHandle.myUserId(), "name", /* flags= */ 0);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
+    }
+
+    @Test
+    public void testControllerPassword_isSet() {
+        assertThat(mController.getCurrentPassword()).isEqualTo(NONE_LOCKSCREEN_CREDENTIAL);
+    }
+
+    @Test
+    public void testControllerPasswordQuality_isSet() {
+        assertThat(mController.getCurrentPasswordQuality()).isEqualTo(
+                NON_MATCHING_PASSWORD_QUALITY);
     }
 }
