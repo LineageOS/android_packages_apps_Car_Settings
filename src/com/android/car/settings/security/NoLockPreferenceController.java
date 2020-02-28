@@ -57,6 +57,7 @@ public class NoLockPreferenceController extends LockTypeBasePreferenceController
      */
     @Override
     protected void onCreateInternal() {
+        super.onCreateInternal();
         ConfirmationDialogFragment dialog =
                 (ConfirmationDialogFragment) getFragmentController().findDialogByTag(
                         ConfirmationDialogFragment.TAG);
