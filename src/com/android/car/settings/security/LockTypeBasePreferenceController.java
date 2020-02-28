@@ -89,6 +89,11 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
         return mCurrentPassword;
     }
 
+    /** Gets the current password quality. */
+    protected int getCurrentPasswordQuality() {
+        return mCurrentPasswordQuality;
+    }
+
     @Override
     protected void updateState(Preference preference) {
         preference.setSummary(getSummary());
@@ -110,6 +115,19 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
             return true;
         }
         return false;
+    }
+
+    /**
+     * Retrieve and set password and password quality
+     */
+    @Override
+    protected void onCreateInternal() {
+        if (getPreference().peekExtras() != null) {
+            setCurrentPassword(getPreference().peekExtras().getParcelable(
+                    PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK));
+            setCurrentPasswordQuality(getPreference().peekExtras().getInt(
+                    PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY));
+        }
     }
 
     @Override
