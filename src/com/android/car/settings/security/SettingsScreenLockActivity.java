@@ -75,7 +75,7 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity implemen
         if (bundle == null) {
             bundle = new Bundle();
         }
-        bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
+        bundle.putInt(PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -88,7 +88,7 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity implemen
             bundle = new Bundle();
         }
         bundle.putParcelable(PasswordHelper.EXTRA_CURRENT_SCREEN_LOCK, lock);
-        bundle.putInt(ChooseLockTypeFragment.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
+        bundle.putInt(PasswordHelper.EXTRA_CURRENT_PASSWORD_QUALITY, mPasswordQuality);
         fragment.setArguments(bundle);
 
         // Intentionally not using launchFragment(), since we do not want to add to the back stack.
