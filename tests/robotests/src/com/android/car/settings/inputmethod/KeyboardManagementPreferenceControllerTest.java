@@ -286,6 +286,18 @@ public class KeyboardManagementPreferenceControllerTest {
     }
 
     @Test
+    public void refreshUi_oneInputMethod_defaultable_notChecked_preferenceEnabled() {
+        getShadowDevicePolicyManager(mContext).setPermittedInputMethodsForCurrentUser(null);
+        getShadowInputMethodManager(mContext).setInputMethodList(createInputMethodInfoList(
+                ALLOWED_PACKAGE_NAME, DUMMY_ID_DEFAULTABLE_NOT_DIRECT_BOOT_AWARE));
+        getShadowInputMethodManager(mContext).setEnabledInputMethodList(new ArrayList<>());
+
+        mControllerHelper.getController().refreshUi();
+
+        assertThat(mPreferenceGroup.getPreference(0).isEnabled()).isTrue();
+    }
+
+    @Test
     public void performClick_toggleTrue_securityDialogShown() {
         getShadowDevicePolicyManager(mContext).setPermittedInputMethodsForCurrentUser(null);
         getShadowInputMethodManager(mContext).setInputMethodList(createInputMethodInfoList(
