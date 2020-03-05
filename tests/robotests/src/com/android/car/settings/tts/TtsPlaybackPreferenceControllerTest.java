@@ -372,6 +372,8 @@ public class TtsPlaybackPreferenceControllerTest {
         mController.refreshUi();
 
         assertThat(mDefaultLanguagePreference.isEnabled()).isFalse();
+        // Default language preference is always hidden
+        assertThat(mDefaultLanguagePreference.isVisible()).isFalse();
         assertThat(mSpeechRatePreference.isEnabled()).isFalse();
         assertThat(mVoicePitchPreference.isEnabled()).isFalse();
         assertThat(mResetPreference.isEnabled()).isFalse();
@@ -387,6 +389,8 @@ public class TtsPlaybackPreferenceControllerTest {
         mController.refreshUi();
 
         assertThat(mDefaultLanguagePreference.isEnabled()).isFalse();
+        // Default language preference is always hidden
+        assertThat(mDefaultLanguagePreference.isVisible()).isFalse();
         assertThat(mSpeechRatePreference.isEnabled()).isFalse();
         assertThat(mVoicePitchPreference.isEnabled()).isFalse();
         assertThat(mResetPreference.isEnabled()).isFalse();
@@ -410,6 +414,8 @@ public class TtsPlaybackPreferenceControllerTest {
         mController.refreshUi();
 
         assertThat(mDefaultLanguagePreference.isEnabled()).isTrue();
+        // Default language preference is always hidden
+        assertThat(mDefaultLanguagePreference.isVisible()).isFalse();
         assertThat(mSpeechRatePreference.isEnabled()).isFalse();
         assertThat(mVoicePitchPreference.isEnabled()).isFalse();
         assertThat(mResetPreference.isEnabled()).isFalse();
@@ -434,6 +440,8 @@ public class TtsPlaybackPreferenceControllerTest {
 
         assertThat(mPreferenceGroup.isEnabled()).isTrue();
         assertThat(mDefaultLanguagePreference.isEnabled()).isTrue();
+        // Default language preference is always hidden
+        assertThat(mDefaultLanguagePreference.isVisible()).isFalse();
         assertThat(mSpeechRatePreference.isEnabled()).isTrue();
         assertThat(mVoicePitchPreference.isEnabled()).isTrue();
         assertThat(mResetPreference.isEnabled()).isTrue();

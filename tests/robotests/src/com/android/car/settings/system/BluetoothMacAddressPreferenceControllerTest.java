@@ -18,7 +18,7 @@ package com.android.car.settings.system;
 
 import static android.content.pm.PackageManager.FEATURE_BLUETOOTH;
 
-import static com.android.car.settings.common.PreferenceController.AVAILABLE;
+import static com.android.car.settings.common.PreferenceController.AVAILABLE_FOR_VIEWING;
 import static com.android.car.settings.common.PreferenceController.UNSUPPORTED_ON_DEVICE;
 
 import static com.google.common.truth.Truth.assertThat;
@@ -98,12 +98,12 @@ public class BluetoothMacAddressPreferenceControllerTest {
     }
 
     @Test
-    public void getAvailabilityStatus_enableDefaultAdapter_available() {
+    public void getAvailabilityStatus_enableDefaultAdapter_availableForViewing() {
         Shadows.shadowOf(mContext.getPackageManager()).setSystemFeature(
                 FEATURE_BLUETOOTH, /* supported= */ true);
 
         assertThat(mControllerHelper.getController().getAvailabilityStatus()).isEqualTo(
-                AVAILABLE);
+                AVAILABLE_FOR_VIEWING);
     }
 
     private ShadowBluetoothAdapter getShadowBluetoothAdapter() {

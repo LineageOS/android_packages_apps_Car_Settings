@@ -31,10 +31,12 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.ui.preference.EditTextPreferenceDialogFragment;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.shadow.api.Shadow;
@@ -54,18 +56,21 @@ public class ValidatedEditTextPreferenceDialogFragmentTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
+        Robolectric.getForegroundThreadScheduler().pause();
         mTestActivityController = ActivityController.of(new BaseTestActivity());
         mTestActivity = mTestActivityController.get();
         mTestActivityController.setup();
+
         TestTargetFragment targetFragment = new TestTargetFragment();
         mTestActivity.launchFragment(targetFragment);
         mPreference = new ValidatedEditTextPreference(mContext);
         mPreference.setDialogLayoutResource(R.layout.preference_dialog_edittext);
         mPreference.setKey("key");
+        Robolectric.getForegroundThreadScheduler().unPause();
         targetFragment.getPreferenceScreen().addPreference(mPreference);
+
         mFragment = ValidatedEditTextPreferenceDialogFragment
                 .newInstance(mPreference.getKey());
-
         mFragment.setTargetFragment(targetFragment, /* requestCode= */ 0);
     }
 

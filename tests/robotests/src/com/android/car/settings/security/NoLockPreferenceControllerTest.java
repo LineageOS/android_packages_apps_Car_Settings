@@ -23,6 +23,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.app.admin.DevicePolicyManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 
@@ -81,17 +82,31 @@ public class NoLockPreferenceControllerTest {
     }
 
     @Test
-    public void testHandlePreferenceClicked_goesToNextFragment() {
+    public void testHandlePreferenceClicked_ifNotSelectedAsLock_goesToNextFragment() {
+        mController.setCurrentPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_NUMERIC);
+
         mPreference.performClick();
-        verify(mPreferenceControllerHelper.getMockFragmentController()).showDialog(
-                any(ConfirmRemoveScreenLockDialog.class), anyString());
+
+        verify(mPreferenceControllerHelper.getMockFragmentController())
+            .showDialog(any(ConfirmRemoveScreenLockDialog.class), anyString());
+    }
+
+    @Test
+    public void testHandlePreferenceClicked_ifSelectedAsLock_goesBack() {
+        mController.setCurrentPasswordQuality(DevicePolicyManager.PASSWORD_QUALITY_UNSPECIFIED);
+
+        mPreference.performClick();
+
+        verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 
     @Test
     public void testConfirmRemoveScreenLockListener_removesLock() {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
+
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
+
         assertThat(ShadowLockPatternUtils.getClearLockCredential()).isEqualTo(
                 TEST_CURRENT_PASSWORD);
         assertThat(ShadowLockPatternUtils.getClearLockUser()).isEqualTo(TEST_USER);
@@ -101,7 +116,9 @@ public class NoLockPreferenceControllerTest {
     public void testConfirmRemoveScreenLockListener_goesBack() {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER);
         mController.setCurrentPassword(TEST_CURRENT_PASSWORD);
+
         mController.mRemoveLockListener.onConfirmRemoveScreenLock();
+
         verify(mPreferenceControllerHelper.getMockFragmentController()).goBack();
     }
 }

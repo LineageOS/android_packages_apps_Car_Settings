@@ -28,6 +28,60 @@
     <bool name="config_show_premium_sms">true</bool>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
     <bool name="config_show_settings_root_exit_icon">true</bool>
+    <!--
+        Array of bluetooth device major classes that should be used for unbonded
+        device filter.
+
+        The values of the device major classes can be found in
+        android.bluetooth.BluetoothClass. If the array is empty, the device
+        filter will return all unbonded devices.
+
+        Example usage:
+        <integer-array name="config_unbonded_device_filter_whitelist">
+            <item>0x0200</item>
+        </integer-array>
+
+        This filter would only return unbonded devices which correspond to the
+        major class for PHONE.
+    -->
+    <integer-array name="config_unbonded_device_filter_whitelist"/>
+    <!--
+        Array of keys that should be used for determining how audio attribute
+        usage should be mapped to ringtone uris.
+
+        The values of the keys can be found in android.media.AudioAttributes.
+        The number of items in this array must equal the number of items in
+        config_ringtone_uri_map_value, and the usages are mapped to the ringtone
+        uri based on positions in the array. The lowest rank usage (based on the
+        order in car_volume_items.xml) in each audio group (in Car service's
+        car_volume_groups.xml) will be used to sound for a given volume group's
+        slider.
+
+        If empty, all ringtones will default to the default ringtone uri.
+
+        TODO(b/144382611): Instead of mapping by usage, we should map by audio
+        group so as to make it clearer to define the sound to be played with a
+        given slider.
+    -->
+    <integer-array name="config_ringtone_audio_attribute_usages_map_key">
+        <item>5</item>
+        <item>4</item>
+    </integer-array>
+    <!--
+        Array of values that should be used to determine how audio attribute
+        usage should be mapped to ringtone uris.
+
+        The values should be uri strings that can be parsed into Uri. The number
+        of items in this array must equal the number of items in
+        config_ringtone_audio_attributes_map_key, and the ringtone uris are
+        mapped to the audio attributes based on positions in the array.
+
+        If empty, all ringtones will default to the default ringtone uri.
+    -->
+    <string-array name="config_ringtone_uri_map_value">
+        <item>content://settings/system/notification_sound</item>
+        <item>content://settings/system/alarm_alert</item>
+    </string-array>
     <!-- Whether all preferences should always ignore UX Restrictions -->
     <bool name="config_always_ignore_ux_restrictions">false</bool>
     <!-- Array of Preference Keys that ignore UX Restrictions -->

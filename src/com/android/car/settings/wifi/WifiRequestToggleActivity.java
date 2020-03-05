@@ -33,6 +33,7 @@ import android.widget.Toast;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.car.ui.AlertDialogBuilder;
 
 /**
  * Code drop from {@link com.android.settings.wifi.RequestToggleWiFiActivity}.
@@ -190,7 +191,7 @@ public class WifiRequestToggleActivity extends Activity implements DialogInterfa
             mDialog.dismiss();
         }
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(/* context= */
+        AlertDialogBuilder builder = new AlertDialogBuilder(/* context= */
                 this).setOnCancelListener(/* listener= */ this);
         switch (mState) {
             case STATE_ENABLE:

@@ -24,14 +24,14 @@ import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.os.UserManager;
-import android.widget.TextView;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -39,7 +39,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
@@ -53,14 +52,15 @@ public class UserDetailsFragmentTest {
     private static final int TEST_USER_ID = 10;
 
     private Context mContext;
-    private BaseTestActivity mTestActivity;
     private UserDetailsFragment mUserDetailsFragment;
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
     private UserManager mUserManager;
 
-    private TextView mTitle;
+    private Toolbar mToolbar;
+
+    private FragmentController<UserDetailsFragment> mFragmentController;
 
     @Before
     public void setUpTestActivity() {
@@ -69,7 +69,6 @@ public class UserDetailsFragmentTest {
         ShadowUserManager.setInstance(mUserManager);
 
         mContext = RuntimeEnvironment.application;
-        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     @After
@@ -84,7 +83,7 @@ public class UserDetailsFragmentTest {
         when(mUserManager.getUserInfo(TEST_USER_ID)).thenReturn(testUser);
         createUserDetailsFragment();
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUser));
     }
 
@@ -95,20 +94,22 @@ public class UserDetailsFragmentTest {
 
         createUserDetailsFragment();
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUser));
 
         UserInfo testUserUpdated = new UserInfo(TEST_USER_ID, TEST_UPDATED_NAME, /* flags= */ 0);
         when(mUserManager.getUserInfo(TEST_USER_ID)).thenReturn(testUserUpdated);
 
         mUserDetailsFragment.mOnUsersUpdateListener.onUsersUpdate();
-        assertThat(mTitle.getText()).isEqualTo(
+        assertThat(mToolbar.getTitle()).isEqualTo(
                 UserUtils.getUserDisplayName(mContext, mCarUserManagerHelper, testUserUpdated));
     }
 
     private void createUserDetailsFragment() {
         mUserDetailsFragment = UserDetailsFragment.newInstance(TEST_USER_ID);
-        mTestActivity.launchFragment(mUserDetailsFragment);
-        mTitle = mTestActivity.findViewById(R.id.title);
+        mFragmentController = FragmentController.of(mUserDetailsFragment);
+        mFragmentController.setup();
+
+        mToolbar = ((Toolbar) mUserDetailsFragment.requireActivity().findViewById(R.id.toolbar));
     }
 }

@@ -37,6 +37,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.Logger;
+import com.android.car.ui.AlertDialogBuilder;
 import com.android.settingslib.bluetooth.BluetoothDiscoverableTimeoutReceiver;
 import com.android.settingslib.bluetooth.LocalBluetoothAdapter;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
@@ -253,7 +254,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
         int message = mRequest == REQUEST_DISABLE ? R.string.bluetooth_turning_off
                 : R.string.bluetooth_turning_on;
 
-        return new AlertDialog.Builder(/* context= */ this)
+        return new AlertDialogBuilder(/* context= */ this)
                 .setMessage(message)
                 .setCancelable(false).setOnCancelListener(
                         dialog -> finishWithResult(RESULT_CANCELED))
@@ -266,7 +267,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
                 ? getString(R.string.bluetooth_ask_discovery, mAppLabel, timeoutSeconds)
                 : getString(R.string.bluetooth_ask_discovery_no_name, timeoutSeconds);
 
-        return new AlertDialog.Builder(/* context= */ this)
+        return new AlertDialogBuilder(/* context= */ this)
                 .setMessage(message)
                 .setPositiveButton(R.string.allow, (dialog, which) -> proceedAndFinish())
                 .setNegativeButton(R.string.deny,
@@ -280,7 +281,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
                 ? getString(R.string.bluetooth_ask_enablement, mAppLabel)
                 : getString(R.string.bluetooth_ask_enablement_no_name);
 
-        return new AlertDialog.Builder(/* context= */ this)
+        return new AlertDialogBuilder(/* context= */ this)
                 .setMessage(message)
                 .setPositiveButton(R.string.allow, this::onConfirmEnableBluetooth)
                 .setNegativeButton(R.string.deny,
@@ -297,7 +298,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
                 : getString(R.string.bluetooth_ask_enablement_and_discovery_no_name,
                         timeoutSeconds);
 
-        return new AlertDialog.Builder(/* context= */ this)
+        return new AlertDialogBuilder(/* context= */ this)
                 .setMessage(message)
                 .setPositiveButton(R.string.allow, this::onConfirmEnableBluetooth)
                 .setNegativeButton(R.string.deny,
@@ -345,7 +346,7 @@ public class BluetoothRequestPermissionActivity extends Activity {
                 ? getString(R.string.bluetooth_ask_disablement, mAppLabel)
                 : getString(R.string.bluetooth_ask_disablement_no_name);
 
-        return new AlertDialog.Builder(/* context= */ this)
+        return new AlertDialogBuilder(/* context= */ this)
                 .setMessage(message)
                 .setPositiveButton(R.string.allow, this::onConfirmDisableBluetooth)
                 .setNegativeButton(R.string.deny,

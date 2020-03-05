@@ -22,11 +22,9 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.view.View;
-import android.widget.ProgressBar;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -34,6 +32,7 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
+import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.bluetooth.BluetoothCallback;
 import com.android.settingslib.bluetooth.BluetoothEventManager;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -98,13 +97,10 @@ public class BluetoothPairingSelectionFragmentTest {
 
     @Test
     public void onStart_showsProgressBar() {
-        mFragmentController.create();
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.GONE);
+        mFragmentController.setup();
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
 
-        mFragmentController.start();
-
-        assertThat(progressBar.getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.VISIBLE);
     }
 
     @Test
@@ -127,12 +123,12 @@ public class BluetoothPairingSelectionFragmentTest {
     @Test
     public void onStop_hidesProgressBar() {
         mFragmentController.setup().onPause();
-        ProgressBar progressBar = findProgressBar(mFragment.requireActivity());
-        progressBar.setVisibility(View.VISIBLE);
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        toolbar.showProgressBar();
 
         mFragmentController.stop();
 
-        assertThat(progressBar.getVisibility()).isEqualTo(View.GONE);
+        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.GONE);
     }
 
     @Test
@@ -147,9 +143,5 @@ public class BluetoothPairingSelectionFragmentTest {
 
         assertThat(
                 ((BaseTestActivity) mFragment.requireActivity()).getOnBackPressedFlag()).isTrue();
-    }
-
-    private ProgressBar findProgressBar(Activity activity) {
-        return activity.findViewById(R.id.progress_bar);
     }
 }

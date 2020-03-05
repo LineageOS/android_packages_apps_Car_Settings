@@ -37,7 +37,7 @@ public class AddTrustedDeviceProgressFragment extends SettingsFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = requireActivity().findViewById(R.id.progress_bar);
+        mProgressBar = getToolbar().getProgressBar();
         mProgressBar.setVisibility(View.VISIBLE);
     }
 

@@ -28,19 +28,20 @@ import android.net.NetworkPolicyManager;
 import android.net.Uri;
 import android.provider.Telephony;
 import android.telephony.SubscriptionManager;
-import android.widget.Button;
 
 import androidx.preference.PreferenceManager;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
-import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowConnectivityManager;
 import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
 import com.android.car.settings.testutils.ShadowRecoverySystem;
 import com.android.car.settings.testutils.ShadowTelephonyManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -68,8 +69,10 @@ import java.util.List;
 public class ResetNetworkConfirmFragmentTest {
 
     private Context mContext;
-    private Button mResetButton;
+    private MenuItem mResetButton;
     private ContentResolver mContentResolver;
+
+    private FragmentController<ResetNetworkConfirmFragment> mFragmentController;
 
     @Before
     public void setUp() {
@@ -86,12 +89,15 @@ public class ResetNetworkConfirmFragmentTest {
         setEuiccResetCheckbox(false);
         setNetworkSubscriptionId("");
 
-        BaseTestActivity testActivity = Robolectric.setupActivity(BaseTestActivity.class);
+        Robolectric.getForegroundThreadScheduler().pause();
 
         ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
-        testActivity.launchFragment(fragment);
 
-        mResetButton = testActivity.findViewById(R.id.action_button1);
+        mFragmentController = FragmentController.of(fragment);
+        mFragmentController.setup();
+
+        Toolbar toolbar = fragment.getActivity().requireViewById(R.id.toolbar);
+        mResetButton = toolbar.getMenuItems().get(0);
     }
 
     @After

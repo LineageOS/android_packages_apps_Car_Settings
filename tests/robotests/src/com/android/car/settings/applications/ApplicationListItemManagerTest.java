@@ -37,6 +37,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowLooper;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,8 @@ public class ApplicationListItemManagerTest {
     private static final String SIZE_STR = "12.34 MB";
     private static final String SOURCE = "source";
     private static final int UID = 12;
+    private static final int MILLISECOND_UPDATE_INTERVAL = 500;
+    private static final int MILLISECOND_MAX_APP_LOAD_WAIT_INTERVAL = 5000;
 
     private Context mContext;
     private ApplicationListItemManager mApplicationListItemManager;
@@ -69,7 +72,7 @@ public class ApplicationListItemManagerTest {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
         mApplicationListItemManager = new ApplicationListItemManager(mVolumeInfo, mLifecycle,
-                mAppState);
+                mAppState, MILLISECOND_UPDATE_INTERVAL, MILLISECOND_MAX_APP_LOAD_WAIT_INTERVAL);
     }
 
     @Test
@@ -87,7 +90,7 @@ public class ApplicationListItemManagerTest {
         appInfo.sourceDir = SOURCE;
 
         ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
-                1234L);
+                /* id= */ 1234L);
         appEntry.label = LABEL;
         appEntry.sizeStr = SIZE_STR;
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
@@ -109,7 +112,7 @@ public class ApplicationListItemManagerTest {
         appInfo.sourceDir = SOURCE;
 
         ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
-                1234L);
+                /* id= */ 1234L);
         appEntry.label = LABEL;
         appEntry.sizeStr = SIZE_STR;
         appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
@@ -122,5 +125,50 @@ public class ApplicationListItemManagerTest {
 
         verify(mAppListItemListener1).onDataLoaded(apps);
         verify(mAppListItemListener2, times(0)).onDataLoaded(apps);
+    }
+
+    @Test
+    public void onRebuildComplete_calledAgainImmediately_shouldNotRunSecondCallImmediately() {
+        ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
+        ApplicationInfo appInfo = new ApplicationInfo();
+        appInfo.uid = UID;
+        appInfo.sourceDir = SOURCE;
+
+        ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
+                /* id= */ 1234L);
+
+        appEntry.label = LABEL;
+        appEntry.sizeStr = SIZE_STR;
+        appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        apps.add(appEntry);
+
+        mApplicationListItemManager.registerListener(mAppListItemListener1);
+        mApplicationListItemManager.onRebuildComplete(apps);
+        mApplicationListItemManager.onRebuildComplete(apps);
+
+        verify(mAppListItemListener1, times(1)).onDataLoaded(apps);
+    }
+
+    @Test
+    public void onRebuildComplete_calledAgainImmediately_shouldRunSecondCallAfterUpdateInterval() {
+        ArrayList<ApplicationsState.AppEntry> apps = new ArrayList<>();
+        ApplicationInfo appInfo = new ApplicationInfo();
+        appInfo.uid = UID;
+        appInfo.sourceDir = SOURCE;
+
+        ApplicationsState.AppEntry appEntry = new ApplicationsState.AppEntry(mContext, appInfo,
+                /* id= */ 1234L);
+
+        appEntry.label = LABEL;
+        appEntry.sizeStr = SIZE_STR;
+        appEntry.icon = mContext.getDrawable(R.drawable.test_icon);
+        apps.add(appEntry);
+
+        mApplicationListItemManager.registerListener(mAppListItemListener1);
+        mApplicationListItemManager.onRebuildComplete(apps);
+        mApplicationListItemManager.onRebuildComplete(apps);
+        ShadowLooper.runUiThreadTasksIncludingDelayedTasks();
+
+        verify(mAppListItemListener1, times(2)).onDataLoaded(apps);
     }
 }

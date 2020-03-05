@@ -128,8 +128,9 @@ public class AccessPointListPreferenceController extends
         accessPointPreference.setOnPreferenceClickListener(this);
         accessPointPreference.setOnPreferenceChangeListener(this);
         accessPointPreference.showButton(false);
+        accessPointPreference.setShowChevron(false);
 
-        if (accessPoint.isSaved() && WifiUtil.isAccessPointDisabledByWrongPassword(accessPoint)) {
+        if (accessPoint.isSaved()) {
             accessPointPreference.setWidgetLayoutResource(R.layout.delete_preference_widget);
             accessPointPreference.setOnButtonClickListener(
                     preference -> WifiUtil.forget(getContext(), accessPoint));

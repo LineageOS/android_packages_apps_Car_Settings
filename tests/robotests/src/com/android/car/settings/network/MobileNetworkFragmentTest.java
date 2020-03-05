@@ -21,12 +21,12 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
-import android.widget.TextView;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowSubscriptionManager;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -69,8 +69,8 @@ public class MobileNetworkFragmentTest {
                 createSubscriptionInfo(SUB_ID + 2, TEST_NAME + "_2"));
         mFragmentController.setup();
 
-        TextView textView = mFragment.requireActivity().findViewById(R.id.title);
-        assertThat(textView.getText()).isEqualTo(TEST_NAME);
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        assertThat(toolbar.getTitle()).isEqualTo(TEST_NAME);
     }
 
     @Test
@@ -84,8 +84,8 @@ public class MobileNetworkFragmentTest {
                 createSubscriptionInfo(SUB_ID + 2, TEST_NAME + "_2"));
         mFragmentController.setup();
 
-        TextView textView = mFragment.requireActivity().findViewById(R.id.title);
-        assertThat(textView.getText()).isEqualTo(TEST_NAME + "_1");
+        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        assertThat(toolbar.getTitle()).isEqualTo(TEST_NAME + "_1");
     }
 
     private void setUpFragmentWithSubId(int subId, String name) {

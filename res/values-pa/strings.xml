@@ -283,9 +283,11 @@
     <string name="not_installed" msgid="4218816013370552746">"ਇਸ ਵਰਤੋਂਕਾਰ ਲਈ ਸਥਾਪਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ"</string>
     <string name="permissions_label" msgid="2701446753515612685">"ਇਜਾਜ਼ਤਾਂ"</string>
     <string name="notifications_label" msgid="6586089149665170731">"ਸੂਚਨਾਵਾਂ"</string>
+    <string name="storage_application_label" msgid="5911779903670978586">"ਸਟੋਰੇਜ ਅਤੇ ਕੈਸ਼ੇ"</string>
     <string name="application_version_label" msgid="8556889839783311649">"ਵਰਜਨ: %1$s"</string>
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"ਕੋਈ ਇਜਾਜ਼ਤਾਂ ਨਹੀਂ ਦਿੱਤੀਆਂ ਗਈਆਂ"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"ਕਿਸੇ ਇਜਾਜ਼ਤਾਂ ਦੀ ਬੇਨਤੀ ਨਹੀਂ ਕੀਤੀ ਗਈ"</string>
+    <string name="storage_type_internal" msgid="8918688427078709570">"ਅੰਦਰੂਨੀ ਸਟੋਰੇਜ ਵਿੱਚ %s"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"ਡਾਟਾ ਵਰਤੋਂ"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"ਐਪ ਡਾਟਾ ਵਰਤੋਂ"</string>
     <string name="computing_size" msgid="5791407621793083965">"ਗਣਨਾ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…"</string>

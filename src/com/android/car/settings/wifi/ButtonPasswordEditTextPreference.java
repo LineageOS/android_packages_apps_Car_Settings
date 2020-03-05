@@ -25,8 +25,8 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.PasswordEditTextPreference;
 
 /**
- * A {@link PasswordEditTextPreference} which has a second button which can perform another action
- * defined by {@link OnButtonClickListener}.
+ * A {@link PasswordEditTextPreference} which has a second button which can perform another
+ * action defined by {@link OnButtonClickListener}.
  */
 public class ButtonPasswordEditTextPreference extends PasswordEditTextPreference {
 

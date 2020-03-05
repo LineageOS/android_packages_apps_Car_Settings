@@ -43,6 +43,10 @@ public final class InputMethodUtil {
      */
     public static final char INPUT_METHOD_DELIMITER = ':';
     /**
+     * Google Voice Typing package name.
+     */
+    public static final String GOOGLE_VOICE_TYPING = "com.google.android.carassistant";
+    /**
      * Splitter for Enabled Input Methods' concatenated string.
      */
     public static final TextUtils.SimpleStringSplitter sInputMethodSplitter =

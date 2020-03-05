@@ -20,7 +20,9 @@ import static android.os.storage.VolumeInfo.MOUNT_FLAG_PRIMARY;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.nullable;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -28,6 +30,9 @@ import static org.mockito.Mockito.when;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
 import android.os.storage.VolumeInfo;
 
@@ -47,7 +52,9 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowApplicationPackageManager;
 
 /** Unit test for {@link StorageFileCategoryPreferenceController}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -84,18 +91,43 @@ public class StorageFileCategoryPreferenceControllerTest {
     }
 
     @Test
-    public void handlePreferenceClicked_currentUser_startNewActivity() {
+    public void handlePreferenceClicked_currentUserAndNoActivityToHandleIntent_doesNotThrow() {
         VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
         volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
         ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
 
         mProgressBarPreference.performClick();
+
+        verify(mContext, never()).startActivityAsUser(
+                 any(Intent.class), nullable(UserHandle.class));
+    }
+
+    @Test
+    public void handlePreferenceClicked_currentUserAndActivityToHandleIntent_startsNewActivity() {
+        VolumeInfo volumeInfo = new VolumeInfo("id", VolumeInfo.TYPE_EMULATED, null, "id");
+        volumeInfo.mountFlags = MOUNT_FLAG_PRIMARY;
+        Intent browseIntent = volumeInfo.buildBrowseIntent();
+        ShadowStorageManagerVolumeProvider.setVolumeInfo(volumeInfo);
+        ActivityInfo activityInfo = new ActivityInfo();
+        activityInfo.packageName = "com.test.package.name";
+        activityInfo.name = "ClassName";
+        activityInfo.applicationInfo = new ApplicationInfo();
+        activityInfo.applicationInfo.packageName = "com.test.package.name";
+        ResolveInfo resolveInfo = new ResolveInfo();
+        resolveInfo.system = true;
+        resolveInfo.activityInfo = activityInfo;
+        getShadowPackageManager().addResolveInfoForIntent(browseIntent, resolveInfo);
+
+        mProgressBarPreference.performClick();
+
         ArgumentCaptor<Intent> argumentCaptor = ArgumentCaptor.forClass(Intent.class);
         verify(mContext).startActivityAsUser(argumentCaptor.capture(), nullable(UserHandle.class));
-
         Intent intent = argumentCaptor.getValue();
-        Intent browseIntent = volumeInfo.buildBrowseIntent();
         assertThat(intent.getAction()).isEqualTo(browseIntent.getAction());
         assertThat(intent.getData()).isEqualTo(browseIntent.getData());
+    }
+
+    private ShadowApplicationPackageManager getShadowPackageManager() {
+        return (ShadowApplicationPackageManager) Shadows.shadowOf(mContext.getPackageManager());
     }
 }

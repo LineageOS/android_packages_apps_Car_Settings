@@ -30,6 +30,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.DefaultAppInfo;
 
 import java.util.HashMap;
@@ -87,7 +88,8 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
                 for (DefaultAppInfo info : mCurrentCandidates) {
                     mDefaultAppInfoMap.put(info.getKey(), info);
 
-                    Preference preference = new Preference(getContext());
+                    CarUiPreference preference = new CarUiPreference(getContext());
+                    preference.setShowChevron(false);
                     bindPreference(preference, info);
                     getPreference().addPreference(preference);
                 }
@@ -177,11 +179,12 @@ public abstract class DefaultAppsPickerBasePreferenceController extends
     }
 
     private Preference createNonePreference() {
-        Preference nonePreference = new Preference(getContext());
+        CarUiPreference nonePreference = new CarUiPreference(getContext());
         nonePreference.setKey(NONE_PREFERENCE_KEY);
         nonePreference.setTitle(R.string.app_list_preference_none);
         nonePreference.setOnPreferenceClickListener(this);
         nonePreference.setIcon(R.drawable.ic_remove_circle);
+        nonePreference.setShowChevron(false);
         return nonePreference;
     }
 

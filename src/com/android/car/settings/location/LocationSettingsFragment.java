@@ -25,14 +25,16 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
-import android.widget.Switch;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.Utils;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Main page that hosts Location related preferences.
@@ -42,7 +44,7 @@ public class LocationSettingsFragment extends SettingsFragment {
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
 
     private LocationManager mLocationManager;
-    private Switch mLocationSwitch;
+    private MenuItem mLocationSwitch;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -51,15 +53,29 @@ public class LocationSettingsFragment extends SettingsFragment {
     };
 
     @Override
-    @XmlRes
-    protected int getPreferenceScreenResId() {
-        return R.xml.location_settings_fragment;
+    public List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mLocationSwitch);
     }
 
     @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_toggle;
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mLocationSwitch = new MenuItem.Builder(getContext())
+                .setCheckable()
+                .setOnClickListener(menuItem ->
+                        Utils.updateLocationEnabled(
+                                requireContext(),
+                                menuItem.isChecked(),
+                                UserHandle.myUserId(),
+                                Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS))
+                .build();
+    }
+
+    @Override
+    @XmlRes
+    protected int getPreferenceScreenResId() {
+        return R.xml.location_settings_fragment;
     }
 
     @Override
@@ -69,29 +85,15 @@ public class LocationSettingsFragment extends SettingsFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mLocationSwitch = requireActivity().findViewById(R.id.toggle_switch);
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
         requireContext().registerReceiver(mReceiver, INTENT_FILTER_LOCATION_MODE_CHANGED);
-        updateLocationSwitch();
+        mLocationSwitch.setChecked(mLocationManager.isLocationEnabled());
     }
 
     @Override
     public void onStop() {
         super.onStop();
         requireContext().unregisterReceiver(mReceiver);
-    }
-
-    // Update the location master switch's state upon starting the fragment.
-    private void updateLocationSwitch() {
-        mLocationSwitch.setChecked(mLocationManager.isLocationEnabled());
-        mLocationSwitch.setOnCheckedChangeListener((buttonView, isChecked) ->
-                Utils.updateLocationEnabled(requireContext(), isChecked, UserHandle.myUserId(),
-                        Settings.Secure.LOCATION_CHANGER_SYSTEM_SETTINGS));
     }
 }

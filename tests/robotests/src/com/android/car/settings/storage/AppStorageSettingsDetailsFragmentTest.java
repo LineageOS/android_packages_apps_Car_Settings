@@ -36,8 +36,6 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
@@ -47,6 +45,8 @@ import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.car.settings.testutils.ShadowCarUserManagerHelper;
 import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
@@ -115,7 +115,7 @@ public class AppStorageSettingsDetailsFragmentTest {
         when(mCarUserManagerHelper.getCurrentProcessUserId()).thenReturn(TEST_USER_ID);
         ShadowCarUserManagerHelper.setMockInstance(mCarUserManagerHelper);
         ShadowApplicationsState.setInstance(mApplicationsState);
-        mFragmentController.create();
+        mFragmentController.setup();
     }
 
     @After
@@ -132,15 +132,11 @@ public class AppStorageSettingsDetailsFragmentTest {
         mFragment.onActivityCreated(null);
 
         assertThat(findClearCacheButton(mFragment.requireActivity())).isNotNull();
-        assertThat(findClearCacheButton(mFragment.requireActivity()).getVisibility()).isEqualTo(
-                View.VISIBLE);
-        assertThat(findClearCacheButton(mFragment.requireActivity()).getText()).isEqualTo(
+        assertThat(findClearCacheButton(mFragment.requireActivity()).getTitle()).isEqualTo(
                 mContext.getString(R.string.storage_clear_cache_btn_text));
 
         assertThat(findClearStorageButton(mFragment.requireActivity())).isNotNull();
-        assertThat(findClearStorageButton(mFragment.requireActivity()).getVisibility()).isEqualTo(
-                View.VISIBLE);
-        assertThat(findClearStorageButton(mFragment.requireActivity()).getText()).isEqualTo(
+        assertThat(findClearStorageButton(mFragment.requireActivity()).getTitle()).isEqualTo(
                 mContext.getString(R.string.storage_clear_user_data_text));
     }
 
@@ -149,9 +145,7 @@ public class AppStorageSettingsDetailsFragmentTest {
         mFragment.onActivityCreated(null);
 
         assertThat(findClearStorageButton(mFragment.requireActivity())).isNotNull();
-        assertThat(findClearStorageButton(mFragment.requireActivity()).getVisibility()).isEqualTo(
-                View.VISIBLE);
-        assertThat(findClearStorageButton(mFragment.requireActivity()).getText()).isEqualTo(
+        assertThat(findClearStorageButton(mFragment.requireActivity()).getTitle()).isEqualTo(
                 mContext.getString(R.string.storage_clear_user_data_text));
     }
 
@@ -214,10 +208,8 @@ public class AppStorageSettingsDetailsFragmentTest {
 
         mFragment.onActivityCreated(null);
         mFragment.onDataLoaded(storageStats, false, false);
-        findClearStorageButton(mFragment.requireActivity()).performClick();
 
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                AppStorageSettingsDetailsFragment.CONFIRM_CLEAR_STORAGE_DIALOG_TAG)).isNull();
+        assertThat(findClearStorageButton(mFragment.requireActivity()).isEnabled()).isFalse();
     }
 
     @Test
@@ -313,11 +305,13 @@ public class AppStorageSettingsDetailsFragmentTest {
         assertThat(findClearStorageButton(mFragment.requireActivity()).isEnabled()).isFalse();
     }
 
-    private Button findClearCacheButton(Activity activity) {
-        return activity.findViewById(R.id.action_button2);
+    private MenuItem findClearCacheButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(1);
     }
 
-    private Button findClearStorageButton(Activity activity) {
-        return activity.findViewById(R.id.action_button1);
+    private MenuItem findClearStorageButton(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 }

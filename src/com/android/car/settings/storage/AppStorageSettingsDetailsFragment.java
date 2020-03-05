@@ -28,10 +28,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.annotation.LayoutRes;
 import androidx.annotation.VisibleForTesting;
 import androidx.annotation.XmlRes;
 import androidx.loader.app.LoaderManager;
@@ -40,6 +37,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.ApplicationsState;
@@ -105,8 +103,8 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
     private boolean mAppsControlDisallowedBySystem;
 
     // Clear user data and cache buttons and state.
-    private Button mClearStorageButton;
-    private Button mClearCacheButton;
+    private MenuItem mClearStorageButton;
+    private MenuItem mClearCacheButton;
     private boolean mCanClearData = true;
     private boolean mCacheCleared;
     private boolean mDataCleared;
@@ -132,12 +130,6 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
     @XmlRes
     protected int getPreferenceScreenResId() {
         return R.xml.app_storage_settings_details_fragment;
-    }
-
-    @Override
-    @LayoutRes
-    protected int getActionBarLayoutId() {
-        return R.layout.action_bar_with_button;
     }
 
     @Override
@@ -183,6 +175,11 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
     }
 
     @Override
+    public List<MenuItem> getToolbarMenuItems() {
+        return Arrays.asList(mClearStorageButton, mClearCacheButton);
+    }
+
+    @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBoolean(KEY_CACHE_CLEARED, mCacheCleared);
@@ -204,21 +201,17 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
                 (ConfirmationDialogFragment) findDialogByTag(
                         CONFIRM_CANNOT_CLEAR_STORAGE_DIALOG_TAG),
                 mConfirmCannotClearStorageDialog, /* rejectListener= */ null);
-    }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mClearStorageButton = requireActivity().findViewById(R.id.action_button1);
-        mClearStorageButton.setVisibility(View.VISIBLE);
-        mClearStorageButton.setEnabled(false);
-        mClearStorageButton.setText(R.string.storage_clear_user_data_text);
-
-        mClearCacheButton = requireActivity().findViewById(R.id.action_button2);
-        mClearCacheButton.setVisibility(View.VISIBLE);
-        mClearCacheButton.setEnabled(false);
-        mClearCacheButton.setText(R.string.storage_clear_cache_btn_text);
+        mClearStorageButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.storage_clear_user_data_text)
+                .setOnClickListener(i -> handleClearDataClick())
+                .setEnabled(false)
+                .build();
+        mClearCacheButton = new MenuItem.Builder(getContext())
+                .setTitle(R.string.storage_clear_cache_btn_text)
+                .setOnClickListener(i -> handleClearCacheClick())
+                .setEnabled(false)
+                .build();
     }
 
     @Override
@@ -234,29 +227,15 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
     @Override
     public void onDataLoaded(StorageStatsSource.AppStorageStats data, boolean cacheCleared,
             boolean dataCleared) {
-        if (data == null) {
+        if (data == null || mAppsControlDisallowedBySystem) {
             mClearStorageButton.setEnabled(false);
             mClearCacheButton.setEnabled(false);
         } else {
             long cacheSize = data.getCacheBytes();
             long dataSize = data.getDataBytes() - cacheSize;
 
-            if (dataSize <= 0 || !mCanClearData || mDataCleared) {
-                mClearStorageButton.setEnabled(false);
-            } else {
-                mClearStorageButton.setEnabled(true);
-                mClearStorageButton.setOnClickListener(v -> handleClearDataClick());
-            }
-            if (cacheSize <= 0 || mCacheCleared) {
-                mClearCacheButton.setEnabled(false);
-            } else {
-                mClearCacheButton.setEnabled(true);
-                mClearCacheButton.setOnClickListener(v -> handleClearCacheClick());
-            }
-        }
-        if (mAppsControlDisallowedBySystem) {
-            mClearStorageButton.setEnabled(false);
-            mClearCacheButton.setEnabled(false);
+            mClearStorageButton.setEnabled(dataSize > 0 && mCanClearData && !mDataCleared);
+            mClearCacheButton.setEnabled(cacheSize > 0 && !mCacheCleared);
         }
     }
 

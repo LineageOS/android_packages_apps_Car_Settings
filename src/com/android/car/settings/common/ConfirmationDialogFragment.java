@@ -16,7 +16,6 @@
 
 package com.android.car.settings.common;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -27,14 +26,15 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
-import androidx.fragment.app.DialogFragment;
+
+import com.android.car.ui.AlertDialogBuilder;
+import com.android.car.ui.preference.CarUiDialogFragment;
 
 /**
  * Common dialog that can be used across the settings app to ask the user to confirm their desired
  * action.
  */
-public class ConfirmationDialogFragment extends DialogFragment implements
-        DialogInterface.OnClickListener {
+public class ConfirmationDialogFragment extends CarUiDialogFragment {
 
     /** Builder to help construct {@link ConfirmationDialogFragment}. */
     public static class Builder {
@@ -231,7 +231,7 @@ public class ConfirmationDialogFragment extends DialogFragment implements
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        AlertDialogBuilder builder = new AlertDialogBuilder(getContext());
         if (!TextUtils.isEmpty(mTitle)) {
             builder.setTitle(mTitle);
         }
@@ -245,6 +245,10 @@ public class ConfirmationDialogFragment extends DialogFragment implements
             builder.setNegativeButton(mNegLabel, this);
         }
         return builder.create();
+    }
+
+    @Override
+    protected void onDialogClosed(boolean positiveResult) {
     }
 
     @Override

@@ -32,6 +32,7 @@ import androidx.preference.PreferenceCategory;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.accounts.AuthenticatorHelper;
 
 import java.util.ArrayList;
@@ -219,7 +220,7 @@ public class AccountListPreferenceController extends
     }
 
     private Preference createNoAccountsAddedPreference() {
-        Preference emptyPreference = new Preference(getContext());
+        CarUiPreference emptyPreference = new CarUiPreference(getContext());
         emptyPreference.setTitle(R.string.no_accounts_added);
         emptyPreference.setKey(NO_ACCOUNT_PREF_KEY);
         emptyPreference.setSelectable(false);
@@ -250,7 +251,7 @@ public class AccountListPreferenceController extends
         return false;
     }
 
-    private static class AccountPreference extends Preference {
+    private static class AccountPreference extends CarUiPreference {
         /** Account that this Preference represents. */
         private final Account mAccount;
         private final CharSequence mLabel;
@@ -265,6 +266,7 @@ public class AccountListPreferenceController extends
             setTitle(account.name);
             setSummary(label);
             setIcon(icon);
+            setShowChevron(false);
         }
 
         /**

@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
+import com.android.car.ui.preference.CarUiPreference;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.ApplicationsState.AppEntry;
 
@@ -67,6 +68,9 @@ public class ApplicationPreferenceController extends PreferenceController<Prefer
     protected void updateState(Preference preference) {
         preference.setTitle(getAppName());
         preference.setIcon(getAppIcon());
+        if (preference instanceof CarUiPreference) {
+            ((CarUiPreference) preference).setShowChevron(false);
+        }
     }
 
     protected String getAppName() {

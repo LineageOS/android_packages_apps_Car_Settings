@@ -31,6 +31,10 @@
         android:title="@string/permissions_label"
         settings:controller="com.android.car.settings.applications.PermissionsPreferenceController"/>
     <Preference
+        android:key="@string/pk_application_details_storage"
+        android:title="@string/storage_application_label"
+        settings:controller="com.android.car.settings.applications.StoragePreferenceController"/>
+    <Preference
         android:key="@string/pk_application_details_version"
         settings:controller="com.android.car.settings.applications.VersionPreferenceController"/>
 </PreferenceScreen>

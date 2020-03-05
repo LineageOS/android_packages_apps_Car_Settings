@@ -25,13 +25,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
-import android.widget.Switch;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
 import com.android.car.settings.testutils.ShadowConnectivityManager;
+import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
 import org.junit.Before;
@@ -174,8 +175,9 @@ public class WifiTetherFragmentTest {
         assertThat(findSwitch(mFragment.requireActivity()).isChecked()).isFalse();
     }
 
-    private Switch findSwitch(Activity activity) {
-        return activity.findViewById(R.id.toggle_switch);
+    private MenuItem findSwitch(Activity activity) {
+        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        return toolbar.getMenuItems().get(0);
     }
 
     private ShadowConnectivityManager getShadowConnectivityManager() {

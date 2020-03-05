@@ -30,7 +30,6 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
-import android.widget.FrameLayout;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.preference.Preference;
@@ -39,6 +38,7 @@ import com.android.car.settings.CarSettingsRobolectricTestRunner;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -91,56 +91,11 @@ public class SettingsFragmentTest {
     }
 
     @Test
-    public void onDisplayPreferenceDialog_editTextPreference_showsDialog() {
-        mFragmentController.setup();
-
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
-
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
-    }
-
-    @Test
-    public void onDisplayPreferenceDialog_listPreference_showsDialog() {
-        mFragmentController.setup();
-
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_list_preference)).performClick();
-
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                SettingsListPreferenceDialogFragment.class);
-    }
-
-    @Test
     public void onDisplayPreferenceDialog_unknownPreferenceType_throwsIllegalArgumentException() {
         mFragmentController.setup();
 
         assertThrows(IllegalArgumentException.class,
                 () -> mFragment.onDisplayPreferenceDialog(new Preference(mContext)));
-    }
-
-    @Test
-    public void onDisplayPreferenceDialog_alreadyShowing_doesNothing() {
-        mFragmentController.setup();
-
-        // Show a dialog.
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_edit_text_preference)).performClick();
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
-
-        // Attempt to show another.
-        mFragment.getPreferenceScreen().findPreference(
-                mContext.getString(R.string.tpk_list_preference)).performClick();
-
-        // Assert only one shown at a time.
-        assertThat(mFragment.getFragmentManager().findFragmentByTag(
-                SettingsFragment.DIALOG_FRAGMENT_TAG)).isInstanceOf(
-                EditTextPreferenceDialogFragment.class);
     }
 
     @Test
@@ -276,11 +231,9 @@ public class SettingsFragmentTest {
         DummyFragment otherFragment = new DummyFragment();
         mFragment.launchFragment(otherFragment);
 
-        FrameLayout actionBarContainer =
-                otherFragment.requireActivity().findViewById(R.id.action_bar);
+        Toolbar toolbar = otherFragment.requireActivity().requireViewById(R.id.toolbar);
 
-        assertThat(actionBarContainer.requireViewById(R.id.back_button).getTag(R.id.back_button))
-                .isEqualTo(R.drawable.ic_launcher_settings);
+        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.HOME);
     }
 
     @Test
@@ -293,11 +246,11 @@ public class SettingsFragmentTest {
         TestSettingsFragment otherFragment2 = new TestSettingsFragment();
         mFragment.launchFragment(otherFragment2);
 
-        FrameLayout actionBarContainer =
-                otherFragment2.requireActivity().findViewById(R.id.action_bar);
+        Toolbar toolbar = otherFragment2.requireActivity().requireViewById(R.id.toolbar);
 
-        assertThat(actionBarContainer.requireViewById(R.id.back_button).getTag(R.id.back_button))
-                .isEqualTo(R.drawable.ic_arrow_back);
+        assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
+        assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
+                Toolbar.NavButtonMode.BACK);
     }
 
     /** Concrete {@link SettingsFragment} for testing. */

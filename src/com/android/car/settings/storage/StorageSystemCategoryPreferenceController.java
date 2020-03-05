@@ -26,6 +26,7 @@ import android.util.SparseArray;
 import com.android.car.settings.R;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.ProgressBarPreference;
+import com.android.car.ui.AlertDialogBuilder;
 
 /**
  * Controller which determines the storage for system category in the storage preference screen.
@@ -60,7 +61,7 @@ public class StorageSystemCategoryPreferenceController extends
 
     @Override
     protected boolean handlePreferenceClicked(ProgressBarPreference preference) {
-        AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+        AlertDialog alertDialog = new AlertDialogBuilder(getContext())
                 .setMessage(getContext().getString(R.string.storage_detail_dialog_system,
                         Build.VERSION.RELEASE))
                 .setPositiveButton(android.R.string.ok, null)
