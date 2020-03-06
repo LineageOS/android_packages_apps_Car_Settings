@@ -54,4 +54,14 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <style name="NumberPickerStyle">
+        <item name="android:textSize">
+            @dimen/number_picker_text_size
+        </item>
+        <!-- The color of the number picker dividers -->
+        <!-- By default, the dividers are hidden -->
+        <!-- Use '?android:attr/textColorPrimary' (or another chosen color) to show the dividers -->
+        <item name="android:colorControlNormal">@android:color/transparent</item>
+    </style>
 </resources>
