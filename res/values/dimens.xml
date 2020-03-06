@@ -28,6 +28,9 @@
     <!-- Guideline begin margin for when not showing exit icon -->
     <dimen name="action_bar_no_icon_start_margin">@*android:dimen/action_bar_button_margin</dimen>
 
+    <!-- Number Picker -->
+    <dimen name="number_picker_text_size">@*android:dimen/car_body2_size</dimen>
+
     <!-- Suggestions -->
     <dimen name="suggestions_top_bottom_margin">@*android:dimen/car_padding_4</dimen>
     <dimen name="suggestions_corner_radius">@*android:dimen/car_radius_3</dimen>
