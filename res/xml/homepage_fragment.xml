@@ -92,6 +92,12 @@
         android:title="@string/accounts_settings_title"
         settings:controller="com.android.car.settings.accounts.AccountsEntryPreferenceController"/>
     <Preference
+        android:fragment="com.android.car.settings.privacy.PrivacySettingsFragment"
+        android:icon="@drawable/ic_privacy"
+        android:key="@string/pk_privacy_settings_entry"
+        android:title="@string/privacy_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+    <Preference
         android:fragment="com.android.car.settings.storage.StorageSettingsFragment"
         android:icon="@drawable/ic_storage"
         android:key="@string/pk_storage_settings_entry"
