@@ -44,6 +44,7 @@ import com.android.car.settings.inputmethod.KeyboardFragment;
 import com.android.car.settings.language.LanguagePickerFragment;
 import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.car.settings.network.NetworkAndInternetFragment;
+import com.android.car.settings.privacy.PrivacySettingsFragment;
 import com.android.car.settings.quicksettings.QuickSettingFragment;
 import com.android.car.settings.security.SecuritySettingsFragment;
 import com.android.car.settings.sound.SoundSettingsFragment;
@@ -177,6 +178,9 @@ public class FragmentResolver {
             case Settings.ACTION_DEVICE_INFO_SETTINGS:
             case Settings.DEVICE_NAME_SETTINGS:
                 return new AboutSettingsFragment();
+
+            case Settings.ACTION_PRIVACY_SETTINGS:
+                return new PrivacySettingsFragment();
 
             default:
                 return Fragment.instantiate(context,
