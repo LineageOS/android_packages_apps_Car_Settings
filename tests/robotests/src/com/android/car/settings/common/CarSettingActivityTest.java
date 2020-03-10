@@ -39,6 +39,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.datetime.DatetimeSettingsFragment;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.ShadowCar;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -74,6 +75,9 @@ public class CarSettingActivityTest {
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
         mActivityController.setup();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test

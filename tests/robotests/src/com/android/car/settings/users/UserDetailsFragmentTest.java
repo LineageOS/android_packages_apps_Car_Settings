@@ -24,6 +24,7 @@ import android.os.UserManager;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
@@ -58,6 +59,9 @@ public class UserDetailsFragmentTest {
         mContext = RuntimeEnvironment.application;
         mUserManager = UserManager.get(mContext);
         Shadows.shadowOf(mUserManager).addUser(TEST_USER_ID, TEST_NAME, /* flags= */ 0);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test

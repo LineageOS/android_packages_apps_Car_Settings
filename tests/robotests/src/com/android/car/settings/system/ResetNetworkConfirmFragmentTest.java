@@ -38,6 +38,7 @@ import com.android.car.settings.testutils.ShadowNetworkPolicyManager;
 import com.android.car.settings.testutils.ShadowRecoverySystem;
 import com.android.car.settings.testutils.ShadowTelephonyManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
@@ -98,6 +99,9 @@ public class ResetNetworkConfirmFragmentTest {
 
         Toolbar toolbar = fragment.getActivity().requireViewById(R.id.toolbar);
         mResetButton = toolbar.getMenuItems().get(0);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

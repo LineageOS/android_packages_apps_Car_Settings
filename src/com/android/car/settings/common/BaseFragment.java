@@ -16,6 +16,9 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.ui.core.CarUi.requireInsets;
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -30,8 +33,11 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.R;
+import com.android.car.ui.baselayout.Insets;
+import com.android.car.ui.baselayout.InsetsChangedListener;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import java.util.List;
 
@@ -39,7 +45,7 @@ import java.util.List;
  * Base fragment for setting activity.
  */
 public abstract class BaseFragment extends Fragment implements
-        CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, InsetsChangedListener {
 
     /**
      * Return the {@link FragmentHost}.
@@ -100,8 +106,8 @@ public abstract class BaseFragment extends Fragment implements
         return Toolbar.NavButtonMode.BACK;
     }
 
-    protected final Toolbar getToolbar() {
-        return requireActivity().findViewById(R.id.toolbar);
+    protected final ToolbarController getToolbar() {
+        return requireToolbar(requireActivity());
     }
 
     @Override
@@ -125,7 +131,7 @@ public abstract class BaseFragment extends Fragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Toolbar toolbar = getToolbar();
+        ToolbarController toolbar = getToolbar();
         if (toolbar != null) {
             List<MenuItem> items = getToolbarMenuItems();
             if (items != null) {
@@ -144,9 +150,23 @@ public abstract class BaseFragment extends Fragment implements
     }
 
     @Override
+    public void onCarUiInsetsChanged(Insets insets) {
+        View view = requireView();
+        View recyclerView = view.findViewById(R.id.recycler_view);
+        if (recyclerView != null) {
+            recyclerView.setPadding(0, insets.getTop(), 0, insets.getBottom());
+            view.setPadding(insets.getLeft(), 0, insets.getRight(), 0);
+        } else {
+            view.setPadding(insets.getLeft(), insets.getTop(),
+                    insets.getRight(), insets.getBottom());
+        }
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
         onUxRestrictionsChanged(getCurrentRestrictions());
+        onCarUiInsetsChanged(requireInsets(requireActivity()));
     }
 
     /**
