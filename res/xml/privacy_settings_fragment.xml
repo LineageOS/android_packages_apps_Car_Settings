@@ -20,7 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/privacy_settings_title">
 
-    <!-- App permissions -->
+    <Preference
+        android:fragment="com.android.car.settings.location.LocationSettingsFragment"
+        android:key="@string/pk_location_settings_entry"
+        android:title="@string/location_settings_title"
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"/>
+
     <Preference
         android:key="@string/pk_privacy_manage_perms"
         android:title="@string/app_permissions"
@@ -37,5 +42,10 @@
                    android:value="com.android.settings.category.ia.privacy"/>
         </intent>
     </com.android.car.settings.common.LogicalPreferenceGroup>
+
+    <Preference
+        android:key="terms"
+        android:title="@string/terms_title"
+        settings:controller="com.android.car.settings.system.legal.TermsPreferenceController"/>
 
 </PreferenceScreen>
