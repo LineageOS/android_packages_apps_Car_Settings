@@ -497,7 +497,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"Atera da segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Ezin izan da atera segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontuak"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontua"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontu bat"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ez da gehitu konturik"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> erabiltzailearen kontuak"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizatu datuak automatikoki"</string>
@@ -507,7 +507,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Sinkronizazio automatikoa desaktibatu nahi duzu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Datuak aurrezten lagunduko dizu, baina kontu bakoitza eskuz sinkronizatu beharko duzu informazio berriena biltzeko. Gainera, ez duzu jasoko berritasunen jakinarazpenik."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontuaren informazioa"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"Gehitu kontua"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"Gehitu kontu bat"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Gehitu kontu bat"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Profil murriztuek ezin dute gehitu konturik"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Kendu kontua"</string>
@@ -527,6 +527,7 @@
     <string name="sync_button_sync_now" msgid="5767643057970371315">"Sinkronizatu"</string>
     <string name="sync_button_sync_cancel" msgid="7739510554513641393">"Utzi sinkronizazioa"</string>
     <string name="sync_is_failing" msgid="5766255460901806206">"Sinkronizazioak arazoak ditu. Laster egongo da berriro erabilgarri."</string>
+    <string name="privacy_settings_title" msgid="3150145262029229572">"Pribatutasuna"</string>
     <string name="security_settings_title" msgid="6955331714774709746">"Segurtasuna"</string>
     <string name="security_settings_subtitle" msgid="2244635550239273229">"Pantailaren blokeoa"</string>
     <string name="security_lock_none" msgid="1054645093754839638">"Bat ere ez"</string>
