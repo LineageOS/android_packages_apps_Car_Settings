@@ -104,7 +104,7 @@ public class AppDataUsagePreferenceControllerTest {
         entry2.uid = UID_TETHERING;
         entry2.rxBytes = 200;
 
-        mController.onDataLoaded(networkStats.addValues(entry1).addValues(entry2), new int[0]);
+        mController.onDataLoaded(networkStats.addEntry(entry1).addEntry(entry2), new int[0]);
 
         assertThat(mLogicalPreferenceGroup.getPreferenceCount()).isEqualTo(2);
     }
@@ -119,7 +119,7 @@ public class AppDataUsagePreferenceControllerTest {
         entry2.uid = UID_TETHERING;
         entry2.rxBytes = 200;
 
-        mController.onDataLoaded(networkStats.addValues(entry1).addValues(entry2), new int[0]);
+        mController.onDataLoaded(networkStats.addEntry(entry1).addEntry(entry2), new int[0]);
 
         ProgressBarPreference preference1 =
                 (ProgressBarPreference) mLogicalPreferenceGroup.getPreference(0);
