@@ -111,12 +111,12 @@ public class AppDataUsagePreferenceControllerTest {
         NetworkStats networkStats = new NetworkStats(0, 0);
         NetworkStats.Entry entry1 = new NetworkStats.Entry();
         entry1.rxBytes = 100;
-        networkStats.addValues(entry1);
+        networkStats.addEntry(entry1);
 
         NetworkStats.Entry entry2 = new NetworkStats.Entry();
         entry2.uid = UID_TETHERING;
         entry2.rxBytes = 200;
-        networkStats.addValues(entry2);
+        networkStats.addEntry(entry2);
 
         mController.onDataLoaded(networkStats, new int[0]);
 
@@ -129,12 +129,12 @@ public class AppDataUsagePreferenceControllerTest {
         NetworkStats networkStats = new NetworkStats(0, 0);
         NetworkStats.Entry entry1 = new NetworkStats.Entry();
         entry1.rxBytes = 100;
-        networkStats.addValues(entry1);
+        networkStats.addEntry(entry1);
 
         NetworkStats.Entry entry2 = new NetworkStats.Entry();
         entry2.uid = UID_TETHERING;
         entry2.rxBytes = 200;
-        networkStats.addValues(entry2);
+        networkStats.addEntry(entry2);
 
         mController.onDataLoaded(networkStats, new int[0]);
 
