@@ -32,7 +32,6 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ActivityResultCallback;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.security.CheckLockActivity;
-import com.android.car.ui.recyclerview.CarUiRecyclerView;
 import com.android.car.ui.toolbar.MenuItem;
 
 import java.util.Collections;
@@ -85,12 +84,6 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
                     public void onGlobalLayout() {
-                        if (recyclerView instanceof CarUiRecyclerView) {
-                            CarUiRecyclerView pagedRecyclerView = (CarUiRecyclerView) recyclerView;
-                            if (!pagedRecyclerView.fullyInitialized()) {
-                                return;
-                            }
-                        }
                         mMasterClearButton.setEnabled(isAtEnd());
                         recyclerView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
                     }
@@ -112,9 +105,7 @@ public class MasterClearFragment extends SettingsFragment implements ActivityRes
     /** Returns {@code true} if the RecyclerView is completely displaying the last item. */
     private boolean isAtEnd() {
         RecyclerView recyclerView = getListView();
-        RecyclerView.LayoutManager layoutManager = (recyclerView instanceof CarUiRecyclerView)
-                ? ((CarUiRecyclerView) recyclerView).getEffectiveLayoutManager()
-                : recyclerView.getLayoutManager();
+        RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
         if (layoutManager == null || layoutManager.getChildCount() == 0) {
             return true;
         }
