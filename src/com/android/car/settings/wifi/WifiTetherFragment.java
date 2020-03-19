@@ -24,8 +24,6 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import androidx.annotation.XmlRes;
 
@@ -43,7 +41,6 @@ public class WifiTetherFragment extends SettingsFragment {
 
     private CarWifiManager mCarWifiManager;
     private ConnectivityManager mConnectivityManager;
-    private ProgressBar mProgressBar;
     private MenuItem mTetherSwitch;
 
     private final ConnectivityManager.OnStartTetheringCallback mOnStartTetheringCallback =
@@ -96,13 +93,6 @@ public class WifiTetherFragment extends SettingsFragment {
     }
 
     @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mProgressBar = getToolbar().getProgressBar();
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
 
@@ -116,7 +106,6 @@ public class WifiTetherFragment extends SettingsFragment {
         super.onStop();
         mCarWifiManager.stop();
         getContext().unregisterReceiver(mReceiver);
-        mProgressBar.setVisibility(View.GONE);
     }
 
     @Override

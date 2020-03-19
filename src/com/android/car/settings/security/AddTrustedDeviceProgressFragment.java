@@ -16,18 +16,17 @@
 package com.android.car.settings.security;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.ProgressBarController;
 
 /**
  * Add trusted device fragment which displays the progress and show the companion app information
  * to user.
  */
 public class AddTrustedDeviceProgressFragment extends SettingsFragment {
-    private ProgressBar mProgressBar;
+    private ProgressBarController mProgressBar;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -38,19 +37,19 @@ public class AddTrustedDeviceProgressFragment extends SettingsFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mProgressBar = getToolbar().getProgressBar();
-        mProgressBar.setVisibility(View.VISIBLE);
+        mProgressBar.setVisible(true);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        mProgressBar.setVisibility(View.VISIBLE);
+        mProgressBar.setVisible(true);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        mProgressBar.setVisibility(View.GONE);
+        mProgressBar.setVisible(false);
     }
 }
 

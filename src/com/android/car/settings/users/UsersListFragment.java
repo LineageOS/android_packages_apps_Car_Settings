@@ -22,8 +22,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import androidx.annotation.XmlRes;
 
@@ -32,6 +30,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.internal.annotations.VisibleForTesting;
 
 import java.util.Collections;
@@ -48,7 +47,7 @@ public class UsersListFragment extends SettingsFragment implements
 
     private CarUserManagerHelper mCarUserManagerHelper;
 
-    private ProgressBar mProgressBar;
+    private ProgressBarController mProgressBar;
     private MenuItem mAddUserButton;
 
     private AsyncTask mAddNewUserTask;
@@ -125,7 +124,7 @@ public class UsersListFragment extends SettingsFragment implements
     @Override
     public void onStop() {
         super.onStop();
-        mProgressBar.setVisibility(View.GONE);
+        mProgressBar.setVisible(false);
     }
 
     @Override
@@ -153,7 +152,7 @@ public class UsersListFragment extends SettingsFragment implements
 
     private void updateUi() {
         mAddUserButton.setEnabled(!mIsBusy);
-        mProgressBar.setVisibility(mIsBusy ? View.VISIBLE : View.GONE);
+        mProgressBar.setVisible(mIsBusy);
     }
 
     private void handleAddUserClicked() {
