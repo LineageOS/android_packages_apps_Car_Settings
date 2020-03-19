@@ -1446,4 +1446,7 @@
     <string name="restricted_while_driving">Feature not available while driving</string>
     <!-- Warn user that adding a user is blocked while the car is in motion [CHAR LIMIT=60] -->
     <string name="add_user_restricted_while_driving">Can\'t add user while driving</string>
+
+    <!-- Placeholder query for settings search -->
+    <string name="default_search_query">Search</string>
 </resources>
