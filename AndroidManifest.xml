@@ -135,11 +135,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <intent-filter android:priority="100">
-                <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APPLICATION_SETTINGS" />
                 <action android:name="android.settings.MANAGE_APPLICATIONS_SETTINGS" />
@@ -238,6 +233,11 @@
             <intent-filter android:priority="100">
                 <action android:name="android.settings.DEVICE_INFO_SETTINGS" />
                 <action android:name="android.settings.DEVICE_NAME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.PRIVACY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
