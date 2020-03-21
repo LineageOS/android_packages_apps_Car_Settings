@@ -85,10 +85,10 @@
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Ezarri datuen erabilera-muga"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Ezarri"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wifia"</string>
-    <string name="wifi_starting" msgid="473253087503153167">"Wi-Fi konexioa aktibatzen…"</string>
-    <string name="wifi_stopping" msgid="3534173972547890148">"Wi-Fi konexioa desaktibatzen…"</string>
-    <string name="loading_wifi_list" msgid="8584901433195876465">"Wi‑Fi sareen zerrenda kargatzen"</string>
-    <string name="wifi_disabled" msgid="5013262438128749950">"Desgaituta dago Wi‑Fi konexioa"</string>
+    <string name="wifi_starting" msgid="473253087503153167">"Wifi-konexioa aktibatzen…"</string>
+    <string name="wifi_stopping" msgid="3534173972547890148">"Wifi-konexioa desaktibatzen…"</string>
+    <string name="loading_wifi_list" msgid="8584901433195876465">"Wifi‑sareen zerrenda kargatzen"</string>
+    <string name="wifi_disabled" msgid="5013262438128749950">"Desgaituta dago wifi-konexioa"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Ezin izan da ahaztu sarea"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Ezin izan da konektatu sarera"</string>
     <string name="wifi_setup_add_network" msgid="3660498520389954620">"Gehitu sarea"</string>
@@ -133,7 +133,7 @@
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktibatu"</string>
     <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Aktibatu da Wifi-sareen bilaketa"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Aldatu datu-konexiora automatikoki"</string>
-    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Agian datuen erabilera ordaindu beharko duzu."</string>
+    <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wifi bidez ezin denean, erabili datu-konexioa Internetera konektatzeko. Agian datuen erabilera ordaindu beharko duzu."</string>
     <string name="learn_more" msgid="8214605928933358604">"Lortu informazio gehiago"</string>
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Sare publikoaren izena"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> aktibatzen…"</string>
@@ -150,7 +150,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5,0 GHz-ko banda hobetsia"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Aukeratu gutxienez banda bat Wi-Fi sare publikorako:"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Aukeratu gutxienez banda bat wifi-sare publikorako:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Sare publikoa eta konexioa partekatzea"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desaktibatu automatikoki sare publikoa"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Wifi-sare publikoa desaktibatu egingo da ez badauka gailurik konektatuta"</string>
@@ -396,7 +396,7 @@
     <string name="reset_options_summary" msgid="5508201367420359293">"Sarea, aplikazioak edo gailua berrezartzea"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Berrezarri sarea"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Sareko ezarpen guztiak berrezarriko dira; besteak beste:"</string>
-    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi konexioa"</li></string>
+    <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wifi‑konexioa"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datu-konexioa"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth-a"</li></string>
     <string name="reset_esim_title" msgid="8132107637911831211">"Ezabatu ibilgailuaren eSIM txarteletako eduki guztia"</string>
@@ -505,7 +505,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"Atera da segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Ezin izan da atera segurtasunez <xliff:g id="NAME">%1$s</xliff:g>"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Kontuak"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontua"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Gehitu kontu bat"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Ez da gehitu konturik"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> erabiltzailearen kontuak"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizatu datuak automatikoki"</string>
@@ -515,7 +515,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Sinkronizazio automatikoa desaktibatu nahi duzu?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Datuak aurrezten lagunduko dizu, baina kontu bakoitza eskuz sinkronizatu beharko duzu informazio berriena biltzeko. Gainera, ez duzu jasoko berritasunen jakinarazpenik."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Kontuaren informazioa"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"Gehitu kontua"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"Gehitu kontu bat"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Gehitu kontu bat"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Profil murriztuek ezin dute gehitu konturik"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Kendu kontua"</string>
@@ -668,4 +668,6 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BAZTERTU"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Eginbide hau ezin da erabili gidatu bitartean"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Gidatu bitartean ezin da gehitu erabiltzailerik"</string>
+    <!-- no translation found for default_search_query (3137420627428857068) -->
+    <skip />
 </resources>

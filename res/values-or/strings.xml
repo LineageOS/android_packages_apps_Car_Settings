@@ -91,7 +91,7 @@
     <string name="wifi_disabled" msgid="5013262438128749950">"ୱାଇ-ଫାଇ ଅକ୍ଷମ କରାଯାଇଛି"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"ନେଟ୍‌ୱର୍କ ଭୁଲିଯିବାରେ ବିଫଳ ହେଲା"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"ନେଟ୍‌ୱର୍କକୁ ସଂଯୋଗ କରିପାରିଲା ନାହିଁ।"</string>
-    <string name="wifi_setup_add_network" msgid="3660498520389954620">"ନେଟ୍‌ୱର୍କ ଯୋଡ଼ନ୍ତୁ"</string>
+    <string name="wifi_setup_add_network" msgid="3660498520389954620">"ନେଟ୍‌ୱର୍କ ଯୋଗ କରନ୍ତୁ"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"ସଂଯୋଗ"</string>
     <string name="wifi_password" msgid="5565632142720292397">"ପାସୱର୍ଡ"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"ପାସ୍‍ୱର୍ଡ ଦେଖାନ୍ତୁ"</string>
@@ -102,7 +102,7 @@
     <string name="wifi_signal_strength" msgid="8507318230553042817">"ସିଗ୍‍ନାଲ୍‌ ଦକ୍ଷତା"</string>
     <string name="wifi_status" msgid="5688013206066543952">"ସ୍ଥିତି"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"ଲିଙ୍କର ବେଗ"</string>
-    <string name="wifi_frequency" msgid="8951455949682864922">"ବାରମ୍ଵାରତା"</string>
+    <string name="wifi_frequency" msgid="8951455949682864922">"ଫ୍ରିକ୍ୱେନ୍ସୀ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ଠିକଣା"</string>
     <string name="show_password" msgid="2074628020371139240">"ପାସ୍‍ୱାର୍ଡ ଦେଖାନ୍ତୁ"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"ନେଟ୍‌ୱର୍କର ନାମ ଲେଖନ୍ତୁ"</string>
@@ -651,7 +651,7 @@
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ସବୁ କିଛି କାଢ଼ି ଦେବେ?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"କ୍ରେଡେନସିଆଲ୍ ଷ୍ଟୋରେଜ୍‌କୁ ଲିଭାଇ ଦିଆଯାଇଛି।"</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"କ୍ରେଡେନସିଆଲ୍ ଷ୍ଟୋରେଜ୍ ଲିଭା ଯାଇପାରିବ ନାହିଁ।"</string>
-    <string name="forget" msgid="3971143908183848527">"ଭୁଲିଗଲେ"</string>
+    <string name="forget" msgid="3971143908183848527">"ଭୁଲିଯାଆନ୍ତୁ"</string>
     <string name="connect" msgid="5861699594602380150">"ସଂଯୋଗ କରନ୍ତୁ"</string>
     <string name="disconnect" msgid="6140789953324820336">"ବିଛିନ୍ନ କରନ୍ତୁ"</string>
     <string name="delete_button" msgid="5840500432614610850">"ଡିଲିଟ୍‍"</string>
@@ -668,4 +668,6 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ଖାରଜ କରନ୍ତୁ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ଗାଡ଼ି ଚଲାଇବା ସମୟରେ ଫିଚର୍ ଉପଲବ୍ଧ ହେବ ନାହିଁ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ଗାଡ଼ି ଚଲାଇବା ବେଳେ ଉପଯୋଗକର୍ତ୍ତା ଯୋଗ କରିପାରିବେ ନାହିଁ"</string>
+    <!-- no translation found for default_search_query (3137420627428857068) -->
+    <skip />
 </resources>
