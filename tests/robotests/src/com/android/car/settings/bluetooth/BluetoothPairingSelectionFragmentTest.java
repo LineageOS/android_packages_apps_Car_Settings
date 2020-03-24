@@ -24,7 +24,6 @@ import static org.mockito.Mockito.verify;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.view.View;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
@@ -100,7 +99,7 @@ public class BluetoothPairingSelectionFragmentTest {
         mFragmentController.setup();
         Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
 
-        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.VISIBLE);
+        assertThat(toolbar.getProgressBar().isVisible()).isTrue();
     }
 
     @Test
@@ -128,7 +127,7 @@ public class BluetoothPairingSelectionFragmentTest {
 
         mFragmentController.stop();
 
-        assertThat(toolbar.getProgressBar().getVisibility()).isEqualTo(View.GONE);
+        assertThat(toolbar.getProgressBar().isVisible()).isFalse();
     }
 
     @Test
