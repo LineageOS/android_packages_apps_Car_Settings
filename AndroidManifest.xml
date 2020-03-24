@@ -248,6 +248,7 @@
         <activity-alias android:name="Settings"
                         android:label="@string/settings_label"
                         android:launchMode="singleTask"
+                        android:exported="true"
                         android:targetActivity=".common.CarSettingActivity">
             <intent-filter android:priority="1">
                 <action android:name="android.intent.action.MAIN" />
@@ -269,6 +270,7 @@
         <activity android:name=".bluetooth.BluetoothDevicePickerActivity"
                   android:label="@string/bluetooth_device_picker"
                   android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:exported="true"
                   android:clearTaskOnLaunch="true">
             <intent-filter>
                 <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
@@ -280,6 +282,7 @@
                   android:theme="@style/ActionDialogTheme"
                   android:excludeFromRecents="true"
                   android:clearTaskOnLaunch="true"
+                  android:exported="true"
                   android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
@@ -317,6 +320,7 @@
 
         <activity android:name=".security.SettingsScreenLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:exported="true"
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.car.settings.SCREEN_LOCK_ACTIVITY" />
@@ -327,6 +331,7 @@
 
         <activity android:name=".security.CheckLockActivity"
                   android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:exported="true"
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.app.action.CONFIRM_DEVICE_CREDENTIAL" />
@@ -343,6 +348,7 @@
         <activity android:name=".security.CredentialStorageActivity"
                   android:theme="@style/ActionDialogTheme"
                   android:launchMode="singleTop"
+                  android:exported="true"
                   android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter android:priority="1">
                 <action android:name="com.android.credentials.INSTALL" />
@@ -354,6 +360,7 @@
         <activity android:name=".system.ThirdPartyLicensesActivity"
                   android:label="@string/settings_license_activity_title"
                   android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:exported="true"
                   android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.settings.THIRD_PARTY_LICENSE" />
@@ -364,6 +371,7 @@
         <activity
             android:name=".system.RegulatoryInfoDisplayActivity"
             android:label="@string/regulatory_labels"
+            android:exported="true"
             android:enabled="@bool/config_show_regulatory_info">
             <intent-filter>
                 <action android:name="android.settings.SHOW_REGULATORY_INFO" />
@@ -394,6 +402,7 @@
             android:theme="@style/ActionDialogTheme"
             android:excludeFromRecents="true"
             android:clearTaskOnLaunch="true"
+            android:exported="true"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.net.wifi.action.REQUEST_ENABLE" />
@@ -408,6 +417,7 @@
                   android:excludeFromRecents="true"
                   android:label=""
                   android:screenOrientation="nosensor"
+                  android:exported="true"
                   android:theme="@style/FallbackHome">
             <intent-filter android:priority="-900">
                 <action android:name="android.intent.action.MAIN" />
@@ -423,7 +433,8 @@
                  android:exported="true"
                  android:permission="com.android.car.settings.SET_INITIAL_LOCK"/>
 
-        <receiver android:name=".bluetooth.BluetoothPairingRequest">
+        <receiver android:name=".bluetooth.BluetoothPairingRequest"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
             </intent-filter>
