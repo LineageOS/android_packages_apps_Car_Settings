@@ -30,7 +30,6 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
@@ -43,6 +42,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.BaseFragment;
 import com.android.car.settings.common.Logger;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.internal.widget.LockscreenCredential;
 import com.android.internal.widget.TextViewInputDisabler;
 
@@ -82,7 +82,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
     private MenuItem mSecondaryButton;
     private MenuItem mPrimaryButton;
     private EditText mPasswordField;
-    private ProgressBar mProgressBar;
+    private ProgressBarController mProgressBar;
 
     private TextChangedHandler mTextChangedHandler = new TextChangedHandler();
     private TextViewInputDisabler mPasswordEntryInputDisabler;
@@ -249,7 +249,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
         if (mSaveLockWorker != null) {
             mSaveLockWorker.setListener(null);
         }
-        mProgressBar.setVisibility(View.GONE);
+        mProgressBar.setVisible(false);
     }
 
     /**
@@ -385,7 +385,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
     @VisibleForTesting
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
-        mProgressBar.setVisibility(View.GONE);
+        mProgressBar.setVisible(false);
         if (isSaveSuccessful) {
             onComplete();
         } else {
@@ -414,7 +414,7 @@ public class ChooseLockPinPasswordFragment extends BaseFragment {
 
         mSaveLockWorker.start(mUserId, mCurrentEntry, mExistingCredential);
 
-        mProgressBar.setVisibility(View.VISIBLE);
+        mProgressBar.setVisible(true);
         updateSubmitButtonsState();
     }
 
