@@ -17,8 +17,6 @@ package com.android.car.settings.wifi;
 
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,6 +25,7 @@ import androidx.annotation.XmlRes;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.ui.toolbar.MenuItem;
+import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.Collections;
@@ -42,7 +41,7 @@ public class WifiSettingsFragment extends SettingsFragment
     private static final String EXTRA_CONNECTED_ACCESS_POINT_KEY = "connected_access_point_key";
 
     private CarWifiManager mCarWifiManager;
-    private ProgressBar mProgressBar;
+    private ProgressBarController mProgressBar;
     private MenuItem mWifiSwitch;
     @Nullable
     private String mConnectedAccessPointKey;
@@ -105,7 +104,7 @@ public class WifiSettingsFragment extends SettingsFragment
         super.onStop();
         mCarWifiManager.removeListener(this);
         mCarWifiManager.stop();
-        mProgressBar.setVisibility(View.GONE);
+        mProgressBar.setVisible(false);
     }
 
     @Override
@@ -116,8 +115,8 @@ public class WifiSettingsFragment extends SettingsFragment
 
     @Override
     public void onAccessPointsChanged() {
-        mProgressBar.setVisibility(View.VISIBLE);
-        getView().postDelayed(() -> mProgressBar.setVisibility(View.GONE), SEARCHING_DELAY_MILLIS);
+        mProgressBar.setVisible(true);
+        getView().postDelayed(() -> mProgressBar.setVisible(false), SEARCHING_DELAY_MILLIS);
         AccessPoint connectedAccessPoint = mCarWifiManager.getConnectedAccessPoint();
         if (connectedAccessPoint != null) {
             String connectedAccessPointKey = connectedAccessPoint.getKey();
@@ -135,10 +134,10 @@ public class WifiSettingsFragment extends SettingsFragment
         mWifiSwitch.setChecked(mCarWifiManager.isWifiEnabled());
         switch (state) {
             case WifiManager.WIFI_STATE_ENABLING:
-                mProgressBar.setVisibility(View.VISIBLE);
+                mProgressBar.setVisible(true);
                 break;
             default:
-                mProgressBar.setVisibility(View.GONE);
+                mProgressBar.setVisible(false);
         }
     }
 }
