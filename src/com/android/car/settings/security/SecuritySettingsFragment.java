@@ -20,7 +20,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 
 /**
- * Security home page which includes "choose lock type" and "trusted device"
+ * Security home page which includes "choose lock type" and "clear credentials".
  */
 public class SecuritySettingsFragment extends SettingsFragment {
 
