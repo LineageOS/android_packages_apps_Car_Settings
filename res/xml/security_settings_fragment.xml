@@ -29,12 +29,6 @@
             android:targetPackage="com.android.car.settings"/>
     </Preference>
     <Preference
-        android:fragment="com.android.car.settings.security.ChooseTrustedDeviceFragment"
-        android:icon="@drawable/ic_lock"
-        android:key="@string/pk_trusted_device"
-        android:title="@string/trusted_device"
-        settings:controller="com.android.car.settings.security.TrustedDeviceEntryPreferenceController"/>
-    <Preference
         android:key="@string/pk_credentials_reset"
         android:summary="@string/credentials_reset_summary"
         android:title="@string/credentials_reset"
@@ -43,4 +37,12 @@
             android:action="com.android.credentials.RESET"
             android:targetPackage="com.android.car.settings"/>
     </Preference>
+    <com.android.car.settings.common.LogicalPreferenceGroup
+        android:key="@string/pk_system_extra_settings"
+        settings:controller="com.android.car.settings.common.ExtraSettingsPreferenceController">
+        <intent android:action="com.android.settings.action.EXTRA_SETTINGS">
+            <extra android:name="com.android.settings.category"
+                   android:value="com.android.settings.category.ia.security"/>
+        </intent>
+    </com.android.car.settings.common.LogicalPreferenceGroup>
 </PreferenceScreen>
