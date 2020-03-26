@@ -21,11 +21,13 @@ import static com.google.common.truth.Truth.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.wifi.WifiManager;
 import android.os.Process;
 import android.provider.Settings;
 
@@ -43,6 +45,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.RuntimeEnvironment;
@@ -59,6 +62,8 @@ public class WifiWakeupTogglePreferenceControllerTest {
     private WifiWakeupTogglePreferenceController mController;
     private TwoStatePreference mTwoStatePreference;
     private LocationManager mLocationManager;
+    @Mock
+    private WifiManager mWifiManager;
 
     @Before
     public void setUp() {
@@ -69,6 +74,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
         mControllerHelper = new PreferenceControllerTestHelper<>(mContext,
                 WifiWakeupTogglePreferenceController.class, mTwoStatePreference);
         mController = mControllerHelper.getController();
+        mController.mWifiManager = mWifiManager;
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
     }
@@ -104,8 +110,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void handlePreferenceClicked_wifiScanningDisabled_showsDialog() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
@@ -119,8 +124,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void handlePreferenceClicked_wifiScanningEnabled_wifiWakeupDisabled_enablesWifiWakeup() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
@@ -134,8 +138,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void refreshUi_wifiWakeupEnabled_wifiScanningEnabled_locationEnabled_isChecked() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 1);
         mTwoStatePreference.setChecked(false);
@@ -148,8 +151,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void refreshUi_wifiWakeupDisabled_wifiScanningEnabled_locationEnabled_isNotChecked() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
         mTwoStatePreference.setChecked(true);
@@ -162,8 +164,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void refreshUi_wifiWakeupEnabled_wifiScanningDisabled_locationEnabled_isNotChecked() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 1);
         mTwoStatePreference.setChecked(true);
@@ -176,8 +177,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void refreshUi_wifiWakeupEnabled_wifiScanningEnabled_locationDisabled_isNotChecked() {
         setLocationEnabled(false);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 1);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(true);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 1);
         mTwoStatePreference.setChecked(true);
@@ -190,22 +190,19 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void onConfirmWifiScanning_setsWifiScanningOn() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
         mController.mConfirmListener.onConfirm(/* arguments= */ null);
 
-        assertThat(Settings.Global.getInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0)).isEqualTo(1);
+        verify(mWifiManager).setScanAlwaysAvailable(true);
     }
 
     @Test
     public void onConfirmWifiScanning_showsToast() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
@@ -218,8 +215,7 @@ public class WifiWakeupTogglePreferenceControllerTest {
     @Test
     public void onConfirmWifiScanning_enablesWifiWakeup() {
         setLocationEnabled(true);
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE, 0);
+        when(mWifiManager.isScanAlwaysAvailable()).thenReturn(false);
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.WIFI_WAKEUP_ENABLED,
                 0);
 
