@@ -45,7 +45,8 @@ public class WifiWakeupTogglePreferenceController extends PreferenceController<T
 
     private static final Logger LOG = new Logger(WifiWakeupTogglePreferenceController.class);
     private LocationManager mLocationManager;
-    private WifiManager mWifiManager;
+    @VisibleForTesting
+    WifiManager mWifiManager;
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
@@ -128,7 +129,9 @@ public class WifiWakeupTogglePreferenceController extends PreferenceController<T
     }
 
     private void setWifiWakeupEnabled(boolean enabled) {
-        mWifiManager.setScanAlwaysAvailable(enabled);
+        Settings.Global.putInt(getContext().getContentResolver(),
+                Settings.Global.WIFI_WAKEUP_ENABLED,
+                enabled ? 1 : 0);
     }
 
     private boolean getWifiScanningEnabled() {
