@@ -1342,45 +1342,6 @@
          user-debug and eng builds. -->
     <string name="build_info_fmt"><xliff:g example="google/gcar_emu_x86/..." id="fingerprint">%1$s</xliff:g>\n<xliff:g example="Thu Aug 30" id="date">%2$s</xliff:g> : <xliff:g example="4" id="num_days">%3$s</xliff:g> days ago</string>
 
-    <!-- security trusted device --><skip/>
-    <!-- Label for button to add a trusted device [CHAR LIMIT=50] -->
-    <string name="add_device_title">Add trusted device</string>
-    <!-- Label for button to add a trusted device [CHAR LIMIT=100] -->
-    <string name="add_device_summary">Bluetooth will turn on to add trusted device</string>
-    <!-- Screen title and label for button of trusted device [CHAR LIMIT=30]> -->
-    <string name="trusted_device">Trusted devices</string>
-    <!-- Subtitle of trusted device button in security page which displays the number of devices that are considered trusted[CHAR LIMIT=30]-->
-    <plurals name="trusted_device_subtitle">
-        <item quantity="one"><xliff:g id="count" example="1">%d</xliff:g> device</item>
-        <item quantity="other"><xliff:g id="count" example="10">%d</xliff:g> devices</item>
-    </plurals>
-    <!-- Message in dialog which will remind the user what a trusted device can do. [CHAR LIMIT=NONE]-->
-    <string name="remove_device_message">Your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g> will unlock this car when it\'s connected. If someone takes your <xliff:g id="connected_device_name" example="Pixel2">%1$s</xliff:g>, they may be able to access this device</string>
-    <!-- Confirm button label of confirm pairing code dialog [CHAR LIMIT=30]-->
-    <string name="trusted_device_confirm_button">Confirm</string>
-    <!-- Confirm button label of confirm remove device dialog [CHAR LIMIT=40]-->
-    <string name="trusted_device_remove_button">Remove trusted device</string>
-    <!-- Cancel button label of confirm remove device dialog [CHAR LIMIT=20]-->
-    <string name="trusted_device_done_button">Done</string>
-    <!-- Message shown on the add trusted device page [CHAR LIMIT=NONE]-->
-    <string name="add_trusted_device_instruction">Use the companion app to set up a trusted device. Once set up, your user profile will unlock automatically when your phone is detected near the vehicle.</string>
-    <!-- Step one of adding a trusted device [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_download_app">1. Download the companion app on your phone</string>
-    <!-- Step two of adding a trusted device [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_select_device">2. Select <xliff:g id="car_name" example="MyCar">%1$s</xliff:g> on your phone to pair the devices</string>
-    <!-- Messages shown to alert user about the safety of the trusted device feature [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_safety_alert">A trusted device nearby your car will unlock the user profile upon ignition, even if someone else is holding the device.</string>
-    <!-- Confirm pairing code dialog title [CHAR LIMIT=60]-->
-    <string name="trusted_device_pairing_code_dialog_title">Please confirm that the pairing codes match</string>
-    <!-- Toast shown when user enrolls a device successfully [CHAR LIMIT=100]-->
-    <string name="trusted_device_success_enrollment_toast">Phone has been enrolled successfully</string>
-    <!-- Toast shown when enrolling a device fails [CHAR LIMIT=50]-->
-    <string name="trusted_device_fail_enrollment_toast"><xliff:g id="device_name" example="Pixel2">%1$s</xliff:g> enrollment failed</string>
-    <!-- Message shown when user have not set authentication [CHAR LIMIT=NONE]-->
-    <string name="trusted_device_set_authentication_reminder">Adding a trusted device requires you to set an authentication method next. If you do not have your trusted device with you, authentication will be required to access your profile.</string>
-    <!-- Toast shown when phone is disconnected [CHAR LIMIT=50]-->
-    <string name="trusted_device_disconnected_toast">Device disconnected.</string>
-
     <!-- security credentials --><skip/>
     <!-- Title of preference to reset credential storage. [CHAR LIMIT=40] -->
     <string name="credentials_reset">Clear credentials</string>
