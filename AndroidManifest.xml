@@ -27,7 +27,6 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="24"/>
 
-    <uses-permission android:name="android.car.permission.CAR_ENROLL_TRUST"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.BACKUP"/>
@@ -342,11 +341,6 @@
                   android:configChanges="orientation|keyboardHidden|screenSize"
                   android:windowSoftInputMode="adjustResize"
                   android:exported="true">
-        </activity>
-
-        <activity android:name=".security.AddTrustedDeviceActivity"
-                  android:configChanges="orientation|keyboardHidden|screenSize"
-                  android:windowSoftInputMode="adjustResize">
         </activity>
 
         <activity android:name=".security.CredentialStorageActivity"
