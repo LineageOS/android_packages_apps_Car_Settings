@@ -99,7 +99,7 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
     @Override
     public void onClick(View v) {
         if (mUiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
-            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_AUTO);
+            mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
         } else {
             mUiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
         }
