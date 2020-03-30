@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Növekvő, csökkenő vagy ismétlődő számsor megadása nem engedélyezett."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"A képernyőzár beállításai"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> nappal ezelőtt"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Megbízható eszköz hozzáadása"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bekapcsol a Bluetooth az eszköz hozzáadásához"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Megbízható eszközök"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> eszköz</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> eszköz</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"A(z) <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> kapcsolódáskor feloldja az autózárat. Ha valaki elveszi a(z) <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> eszközét, akkor az illető hozzáférhet az eszközhöz"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Megerősítés"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Megbízható eszköz eltávolítása"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Kész"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Állítson be megbízható eszközt a társalkalmazással. A beállítást követően felhasználó profilja automatikusan feloldódik, amint azt észleljük, hogy a telefon a jármű közelében van."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Töltse le telefonjára a társalkalmazást."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Az eszközök párosításához válassza a(z) <xliff:g id="CAR_NAME">%1$s</xliff:g> elemet a telefonon."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Az autó közelében lévő megbízható eszközök indításkor feloldják a felhasználói profil zárolását, akkor is, ha éppen másnál van az eszköz."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Ellenőrizze, hogy egyeznek-e a párosítókódok"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"A telefon regisztrációja sikeresen megtörtént"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Nem sikerült a(z) <xliff:g id="DEVICE_NAME">%1$s</xliff:g> regisztrációja"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ha megbízható eszközt szeretne hozzáadni, akkor a következő lépésben hitelesítési módot kell megadnia. Ha nincs Önnél megbízható eszköze, hitelesítésre lesz szükség a profiljához való hozzáféréshez."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Eszköz leválasztva."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hitelesítési adatok törlése"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Összes tanúsítvány eltávolítása"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eltávolítja az összes tartalmat?"</string>

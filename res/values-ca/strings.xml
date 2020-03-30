@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No es permet cap seqüència de dígits ascendents, descendents ni repetits."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opcions de bloqueig de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: fa <xliff:g id="NUM_DAYS">%3$s</xliff:g> dies"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Afegeix dispositiu de confiança"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"S\'activarà Bluetooth per afegir disp. de confiança"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Disp. de confiança"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositius</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositiu</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"El <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> desbloquejarà el cotxe quan estigui connectat. Si algú t\'agafa el <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, és possible que puguin accedir-hi"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirma"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Suprimeix el dispositiu de confiança"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Fet"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilitza l\'aplicació complementària per configurar un dispositiu de confiança. Un cop configurat, el teu perfil d\'usuari es desbloquejarà automàticament quan el telèfon es detecti a prop del vehicle."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Baixa l\'aplicació complementària al telèfon"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> al telèfon per vincular els dispositius"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Un dispositiu de confiança proper desbloquejarà el perfil d\'usuari en arrencar-lo, encara que sigui una altra persona qui sostingui el dispositiu."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que coincideixen els codis de sincronització"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"El telèfon s\'ha inscrit correctament."</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"No s\'ha pogut inscriure el dispositiu <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Per afegir un dispositiu de confiança, cal que defineixis un mètode d\'autenticació a continuació. Si no tens a mà el dispositiu de confiança, caldrà que utilitzis el mètode d\'autenticació per accedir al perfil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"S\'ha desconnectat el dispositiu."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Esborrar les credencials"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Suprimeix tots els certificats"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vols suprimir tots els continguts?"</string>

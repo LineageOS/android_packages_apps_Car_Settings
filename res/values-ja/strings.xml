@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"信頼できるデバイスを追加"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"信頼できるデバイスを追加（Bluetooth: ON）"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"信頼できるデバイス"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台のデバイス</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 台のデバイス</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"接続すると、<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> によりこの車のロックが解除されます。<xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> が第三者の手に渡ると、このデバイスを利用されてしまうおそれがあります"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"確認"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"信頼できるデバイスを削除"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完了"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"コンパニオン アプリを使用して、信頼できるデバイスをセットアップしてください。セットアップすると、車の近くでスマートフォンが検出されたときにユーザー プロフィールが自動的にロック解除されます。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. スマートフォンにコンパニオン アプリをダウンロードします"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. スマートフォンで、デバイスとペア設定する <xliff:g id="CAR_NAME">%1$s</xliff:g> を選択します"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"信頼できるデバイスが車の近くにある場合、第三者がそのデバイスを手に取っている場合でも、エンジン始動時にユーザー プロフィールがロック解除されます。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ペア設定コードが一致していることをご確認ください"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"スマートフォンを登録しました"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"デバイスの接続が解除されました。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"認証情報の消去"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"証明書をすべて削除する"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"コンテンツをすべて削除しますか？"</string>

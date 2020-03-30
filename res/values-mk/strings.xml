@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Не е дозволена низа на цифри со растечки, опаѓачки или повторлив редослед."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пред <xliff:g id="NUM_DAYS">%3$s</xliff:g> дена"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Додај доверлив уред"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ќе се вклучи за да додаде доверлив уред"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Доверливи уреди"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уред</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> уреди</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Вашиот <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ќе го отклучува автомобилов кога е поврзан. Ако некој ви го земе <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, ќе може да пристапува до уредов"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Отстрани доверлив уред"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Употребете ја придружната апликација за да поставите доверлив уред. Откако ќе го поставите, вашиот кориснички профил ќе се отклучи автоматски кога вашиот телефон ќе се открие во близина на возилото."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преземете ја придружната апликација на телефонот"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефонот за да ги спарите уредите"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Доверлив уред во близина на вашиот автомобил може да го отклучи корисничкиот профил по стартувањето на автомобилот, дури и кога некој друг го држи уредот."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдете дека кодовите за спарување се совпаѓаат"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонот е регистриран успешно"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацијата на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не успеа"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ако додадете доверлив уред, ќе треба да поставите метод на проверка во следниот чекор. Ако доверливиот уред не ви е при рака, ќе ви биде потребна проверка за да пристапите до профилот."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Врската со уредот се прекина."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Исчисти акредитиви"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите акредитиви"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Дали да се отстранат сите содржини?"</string>

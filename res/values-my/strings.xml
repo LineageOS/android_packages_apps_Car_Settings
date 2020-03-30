@@ -627,26 +627,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"အစဉ်လိုက်ဖြစ်နေသော ဂဏန်း အငယ်မှအကြီး၊ အကြီးမှအငယ် သို့မဟုတ် ထပ်နေသည့် နံပါတ်စဉ်များကို ခွင့်မပြုပါ။"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"မျက်နှာပြင်လော့ခ်ချခြင်း ရွေးချယ်စရာများ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> - လွန်ခဲ့သော <xliff:g id="NUM_DAYS">%3$s</xliff:g> ရက်"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"ယုံကြည်ရသည့် စက်ကိုထည့်ရန်"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"စိတ်ချရသည့် ကိရိယာထည့်ရန် ဘလူးတုသ် ဖွင့်ပါမည်"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ယုံကြည်ရသည့် စက်များ"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other">စက်ပစ္စည်း <xliff:g id="COUNT_1">%d</xliff:g> ခု</item>
-      <item quantity="one">စက်ပစ္စည်း <xliff:g id="COUNT_0">%d</xliff:g> ခု</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ချိတ်ဆက်သည့်အခါ သင့် <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> က ဤကားကို လော့ခ်ဖွင့်ပါမည်။ တစ်စုံတစ်ယောက်က သင့် <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ကိုယူသွားလျှင် သူသည် ဤကိရိယာကို အသုံးပြုခွင့်ရရှိနိုင်ပါသည်"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"အတည်ပြုရန်"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ယုံကြည်ရသော ကိရိယာ ဖယ်ရှားရန်"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ပြီးပြီ"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"စိတ်ချရသည့် စက်ပစ္စည်းကို သတ်မှတ်ရန် တွဲဖက်အက်ပ်ကို သုံးပါ။ သတ်မှတ်ပြီးသည်နှင့် သင့်စက်ကို ယာဉ်အနီးတွင် တွေ့ရှိရသည့်အခါ သင့်အသုံးပြုသူပရိုဖိုင်သည် အလိုအလျောက် လော့ခ်ပွင့်ပါမည်။"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"၁။ တွဲဖက် အက်ပ်ကို သင့်ဖုန်းတွင် ဒေါင်းလုဒ်လုပ်ပါ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"၂။ စက်ပစ္စည်းနှင့်အတူ တွဲချိတ်ရန် သင့်ဖုန်းတွင် <xliff:g id="CAR_NAME">%1$s</xliff:g> ကို ရွေးပေးပါ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"စိတ်ချရသည့် စက်တစ်ခုသည် အခြားသူတစ်ဦး၏လက်ထဲတွင် ရှိနေစေကာမူ ကားစက်နှိုးလိုက်သည်နှင့် သင့်ကားအနီးရှိ ယင်းစက်တစ်ခုက အသုံးပြုသူ ပရိုဖိုင်ကို လော့ခ်ဖွင့်ပေးပါမည်။"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"အတူတွဲချိတ်ရန် ကုဒ်များ ကိုက်ညီကြောင်း အတည်ပြုပါ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ဖုန်းကို စာရင်းသွင်းပြီးပါပြီ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ကို စာရင်းသွင်း၍ မရပါ"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"စိတ်ချရသည့် ကိရိယာတစ်ခုကို ထည့်ပြီးပါက အထောက်အထားစိစစ်ခြင်း နည်းလမ်းတစ်ခုကို သတ်မှတ်ရပါမည်။ သင့်တွင် စိတ်ချရသည့် ကိရိယာ အတူပါမလာပါက သင့်ပရိုဖိုင်ကို ဝင်သုံးခွင့်ရရန် အထောက်အထားစိစစ်ခြင်း လိုအပ်ပါလိမ့်မည်။"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"စက်ချိတ်ဆက်မှု ပြတ်တောက်သွားသည်။"</string>
     <string name="credentials_reset" msgid="873900550885788639">"အထောက်အထားများကို ရှင်းလင်းခြင်း"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"အသိအမှတ်ပြုလက်မှတ်အားလုံးကို ဖယ်ရှားရန်"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"အကြောင်းအရာအားလုံးကို ဖယ်ရှားမလား။"</string>

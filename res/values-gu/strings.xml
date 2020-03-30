@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"અંકોના ચઢતા ક્રમની, ઉતરતા ક્રમની અથવા પુનરાવર્તિત અનુક્રમની મંજૂરી નથી."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"સ્ક્રીન લૉકના વિકલ્પો"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> દિવસ પહેલાં"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"વિશ્વસનીય ડિવાઇસ ઉમેરો"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે બ્લૂટૂથ ચાલુ થશે"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"વિશ્વસનીય ડિવાઇસ"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ડિવાઇસ</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ડિવાઇસ</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"જ્યારે તમારું <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> કનેક્ટ થયેલું હશે, ત્યારે આ કારને અનલૉક કરી શકશે જો કોઈ તમારી <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>કાર લઈ જશે, તો તેઓ આ ડિવાઇસને ઍક્સેસ કરી શકશે"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"કન્ફર્મ કરો"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"વિશ્વસનીય ડિવાઇસ કાઢી નાખો"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"થઈ ગયું"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"વિશ્વસનીય ડિવાઇસનું સેટઅપ કરવા માટે સાથી ઍપનો ઉપયોગ કરો. એકવાર સેટઅપ થઈ જાય પછી, જ્યારે તમારો ફોન વાહનની નજીક હોવાની જાણ થાય ત્યારે તમારી વપરાશકર્તા પ્રોફાઇલ ઑટોમૅટિક રીતે અનલૉક થઈ જશે."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. તમારા ફોન પર સાથી ઍપને ડાઉનલોડ કરો"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ડિવાઇસને તમારા ફોન સાથે જોડાણ કરવા માટે <xliff:g id="CAR_NAME">%1$s</xliff:g>ને પસંદ કરો"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"જો અન્ય કોઈ વ્યક્તિએ તમારું વિશ્વસનીય ડિવાઇસ પકડી રાખ્યું હોય, તો પણ જ્યારે તે ડિવાઇસ તમારી કારની નજીક હશે, ત્યારે તે તમારી કારને ચાલુ કરતી વખતે વપરાશકર્તાની પ્રોફાઇલને અનલૉક કરી નાખશે."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"કૃપા કરીને કન્ફર્મ કરો કે જોડાણ કરવાનો કોડ મેળ ખાય છે"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ફોનની સફળતાપૂર્વક નોંધણી કરી"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ની નોંધણી નિષ્ફળ રહી"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"કોઈ વિશ્વસનીય ડિવાઇસ ઉમેરવા માટે, તમારે પહેલાં કોઈ પ્રમાણીકરણ પદ્ધતિ સેટ કરવી આવશ્યક છે. જો તમારી પાસે તમારું વિશ્વસનીય ડિવાઇસ ન હોય, તો તમારી પ્રોફાઇલને ઍક્સેસ કરવા માટે પ્રમાણીકરણ આવશ્યક રહેશે."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ડિવાઇસ ડિસ્કનેક્ટ થયું."</string>
     <string name="credentials_reset" msgid="873900550885788639">"લૉગ ઇન વિગતોને સાફ કરો"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"બધા પ્રમાણપત્ર કાઢી નાખો"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"બધું કન્ટેન્ટ કાઢી નાખીએ?"</string>
@@ -668,6 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"છોડી દો"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ડ્રાઇવિંગ કરતી વખતે આ સુવિધા ઉપલબ્ધ નથી"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ડ્રાઇવ કરતી વખતે વપરાશકર્તાને ઉમેરી શકાતા નથી"</string>
-    <!-- no translation found for default_search_query (3137420627428857068) -->
-    <skip />
+    <string name="default_search_query" msgid="3137420627428857068">"શોધ"</string>
 </resources>
