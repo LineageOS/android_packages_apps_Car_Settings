@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Artan, azalan və ya təkrarlanan rəqəm ardıcıllığı qadağandır."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran kilidi seçimləri"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> gün əvvəl"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Güvənli cihaz əlavə edin"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Güvənli cihaz əlavə etmək üçün Bluetooth aktiv ediləcək"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Güvənli cihazlar"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> cihaz</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> cihaz</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> cihazınız qoşulduqda bu avtomobili kiliddən çıxaracaq. Kimsə <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> cihazınızı götürsə, bu cihaza daxil ola bilər"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Təsdiq"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Güvənli cihazı silin"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Hazırdır"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Etibarlı cihaz ayarlamaq üçün kompanyon tətbiq istifadə edin. Ayarlandıqdan sonra, telefonunuz avtomobil tərəfindən aşkarlandıqda istifadəçi profiliniz avtomatik kiliddən çıxarılacaq."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Telefonunuza kompanyon tətbiqini endirin"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Cihazları birləşdirmək üçün telefonda <xliff:g id="CAR_NAME">%1$s</xliff:g> seçin"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Avtomobilinizin yaxınında olan etibarlı cihaz başqasının əlində olsa belə, işə salma zamanı istifadəçi profilinin kilidini açacaq."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Birləşdirmə kodlarının uyğun gəldiyini təsdiqləyin"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon uğurla qeydiyyata alındı"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qeydiyyatı alınmadı"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Etibarlı cihaz əlavə etdikdən sonra doğrulama metodu təyin edilməlidir. Etibarlı cihazınız üzərinizdə deyilsə, profilinizə giriş üçün doğrulama tələb olunacaq."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Cihaz qoşulmayıb."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Giriş məlumatlarını silin"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Bütün sertifikatları silin"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Bütün məzmun silinsin?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"RƏDD EDİN"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funksiya avtomobil idarə edərkən əlçatan deyil"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Avtomobil idarə edərkən istifadəçi əlavə etmək mümkün deyil"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Axtarış"</string>
 </resources>

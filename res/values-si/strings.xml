@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ආරෝහණ, අවරෝහණ හෝ පුනරාවර්ත අනුක්‍රමයේ ඉලක්කම්වලට ඉඩ නොදේ."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"තිර අගුළු විකල්ප"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : දින <xliff:g id="NUM_DAYS">%3$s</xliff:g>කට පෙර"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"විශ්වාසදායී උපාංගය එක් කරන්න"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"විශ්වාසී උපාංගය එක් කිරීමට බ්ලූටූත් ක්‍රියාත්මක වේ"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"විශ්වාසදායී උපාංග"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one">උපාංග <xliff:g id="COUNT_1">%d</xliff:g> ක්</item>
-      <item quantity="other">උපාංග <xliff:g id="COUNT_1">%d</xliff:g> ක්</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ඔබේ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> සම්බන්ධ වන විට මෙම මෝටර් රථය අගුළු හරිනු ඇත. යමෙකු ඔබේ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>රැගෙන ගියහොත්, ඔවුන්ට මෙම උපාංගයට ප්‍රවේශ වීමට හැකි වනු ඇත"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"තහවුරු කරන්න"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"විශ්වාසදායී උපාංගය ඉවත් කරන්න"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"නිමයි"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"විශ්වසනීය උපාංගයක් සැකසීමට මිත්‍ර යෙදුම භාවිත කරන්න. වරක් සැකසූ පසු, ඔබේ දුරකථනය ඔබේ වාහනය අවට තිබීම අනාවරණ වූ විට ඔබේ පරිශීලක පැතිකඩ ස්වයංක්‍රීයව අඟුලු අරිනු ලැබේ."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ඔබේ දුරකථනය මත මිත්‍ර යෙදුම බාගන්න"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. උපාංග යුගල කිරීමට ඔබේ දුරකථනයේ <xliff:g id="CAR_NAME">%1$s</xliff:g> තෝරන්න"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"වෙන කෙනෙක් උපාංගය අල්ලා ගෙන සිටියත්, ඔබේ මෝටර් රථය අවට විශ්වාසදායී උපාංගයක් ජ්වලනයත් සමඟ පරිශීලක පැතිකඩ අගුළු හරිනු ඇත."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"යුගලන කේත ගැළපෙන බව තහවුරු කරන්න"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"දුරකථනය සාර්ථකව ලියාපදිංචි වී ඇත"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ලියාපදිංචි වීම අසාර්ථකයි"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"විශ්වාසදායී උපාංගයක් එක් කිරීමට ඔබට මීළඟට සත්‍යාපන ක්‍රමයක් සැකසීමට අවශ්‍ය කරයි. ඔබට ඔබේ විශ්වාසදායී උපාංගය ළඟ නොමැති නම්, ඔබේ පැතිකඩට ප්‍රවේශයට සත්‍යාපනය අවශ්‍ය වනු ඇත."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"උපාංගය විසන්ධි වී ඇත."</string>
     <string name="credentials_reset" msgid="873900550885788639">"අක්තපත්‍ර හිස් කරන්න"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"සියලුම සහතික ඉවත් කරන්න"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"සියලු අන්තර්ගත ඉවත් කරන්න ද?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"අස් කරන්න"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"රිය පදවන අතරේ විශේෂාංගය නොමැත"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"රිය පදවන අතරේ පරිශීලකයා එක් කළ නොහැක"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"සෙවීම"</string>
 </resources>
