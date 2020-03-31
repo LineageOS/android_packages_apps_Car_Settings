@@ -44,9 +44,7 @@ import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -55,17 +53,6 @@ import java.util.concurrent.TimeUnit;
 public class QuickSettingFragment extends BaseFragment {
     // Time to delay refreshing the build info, if the clock is not correct.
     private static final long BUILD_INFO_REFRESH_TIME_MS = TimeUnit.SECONDS.toMillis(5);
-    /**
-     * Indicates whether all Preferences are configured to ignore UX Restrictions Event.
-     */
-    private boolean mAllIgnoresUxRestrictions;
-
-    /**
-     * Set of the keys of Preferences that ignore UX Restrictions. When mAlwaysIgnoreUxRestrictions
-     * is configured to be false, then only the Preferences whose keys are contained in this Set
-     * ignore UX Restrictions.
-     */
-    private Set<String> mPreferencesIgnoringUxRestrictions;
 
     private UserManager mUserManager;
     private UserIconProvider mUserIconProvider;
@@ -73,8 +60,6 @@ public class QuickSettingFragment extends BaseFragment {
     private RecyclerView mListView;
     private MenuItem mFullSettingsBtn;
     private MenuItem mUserSwitcherBtn;
-    private float mOpacityDisabled;
-    private float mOpacityEnabled;
     private TextView mBuildInfo;
 
     @Override
@@ -89,8 +74,6 @@ public class QuickSettingFragment extends BaseFragment {
         mUserManager = UserManager.get(getContext());
         Activity activity = requireActivity();
 
-        mOpacityDisabled = activity.getResources().getFloat(R.dimen.opacity_disabled);
-        mOpacityEnabled = activity.getResources().getFloat(R.dimen.opacity_enabled);
         mUserIconProvider = new UserIconProvider();
         mListView = activity.findViewById(R.id.list);
         mGridAdapter = new QuickSettingGridAdapter(activity);
@@ -105,11 +88,6 @@ public class QuickSettingFragment extends BaseFragment {
                 .addTile(new CelluarTile(activity, mGridAdapter, getFragmentHost()))
                 .addSeekbarTile(new BrightnessTile(activity));
         mListView.setAdapter(mGridAdapter);
-
-        mPreferencesIgnoringUxRestrictions = new HashSet<String>(Arrays.asList(
-                getContext().getResources().getStringArray(R.array.config_ignore_ux_restrictions)));
-        mAllIgnoresUxRestrictions =
-                getContext().getResources().getBoolean(R.bool.config_always_ignore_ux_restrictions);
     }
 
 
@@ -222,5 +200,13 @@ public class QuickSettingFragment extends BaseFragment {
                 && UserManager.supportsMultipleUsers()
                 && !UserManager.get(getContext()).hasUserRestriction(
                 UserManager.DISALLOW_USER_SWITCH);
+    }
+
+    /**
+     *  Quick Settings should be viewable while driving
+     */
+    @Override
+    protected boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
+        return true;
     }
 }
