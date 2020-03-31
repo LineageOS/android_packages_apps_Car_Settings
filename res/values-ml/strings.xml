@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"അക്കങ്ങൾ ആരോഹണ ക്രമത്തിലോ അവരോഹണ ക്രമത്തിലോ അനുക്രമമായോ നൽകുന്നത് അനുവദനീയമല്ല."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"സ്‌ക്രീൻ ലോക്ക് ഓപ്ഷനുകള്‍"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ദിവസം മുമ്പ്"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"വിശ്വസ്‌ത ഉപകരണം ചേർക്കുക"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ ചേർക്കാൻ Bluetooth ഓണാകും"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"വിശ്വസ്‌ത ഉപകരണങ്ങൾ"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>ഉപകരണങ്ങൾ</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ഉപകരണം</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> കണക്റ്റ് ചെയ്‌തിരിക്കുമ്പോൾ അത് ഈ കാർ അൺലോക്ക് ചെയ്യും. ആരെങ്കിലും നിങ്ങളുടെ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> എടുക്കുകയാണെങ്കിൽ അവർക്ക് ഈ ഉപകരണം ആക്‌സസ് ചെയ്യാനായേക്കും"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"സ്ഥിരീകരിക്കുക"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"വിശ്വസ്‌ത ഉപകരണം നീക്കം ചെയ്യുക"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ചെയ്‌തു"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"വിശ്വസ്‌ത ഉപകരണം സജ്ജീകരിക്കാൻ സഹകാരി ആപ്പ് ഉപയോഗിക്കുക. ഒരിക്കൽ സജ്ജീകരിച്ചാൽ, വാഹനത്തിനടുത്ത് നിങ്ങളുടെ ഫോൺ കണ്ടെത്തുമ്പോൾ നിങ്ങളുടെ ഉപയോക്തൃ പ്രൊഫൈൽ സ്വയമേവ അൺലോക്ക് ചെയ്യും."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. നിങ്ങളുടെ ഫോണിൽ സഹകാരി ആപ്പ് ഡൗൺലോഡ് ചെയ്യുക"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ഉപകരണങ്ങൾ ജോഡിയാക്കാൻ നിങ്ങളുടെ ഫോണിൽ <xliff:g id="CAR_NAME">%1$s</xliff:g> തിരഞ്ഞെടുക്കുക"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"മറ്റൊരാളുടെ കൈവശം ഉപകരണമുണ്ടെങ്കിൽപ്പോലും നിങ്ങളുടെ കാറിന് സമീപമുള്ള വിശ്വസ്‌ത ഉപകരണം കാർ ഇഗ്‌നിഷനിലാകുമ്പോൾ ഉപയോക്തൃ പ്രൊഫൈൽ അൺലോക്ക് ചെയ്യും."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ജോടിയാക്കൽ കോഡുകൾ തമ്മിൽ പൊരുത്തമുണ്ടെന്ന് ഉറപ്പാക്കുക"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ഫോൺ എൻറോൾ ചെയ്‌തു"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> എൻറോൾമെന്റ് പരാജയപ്പെട്ടു"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ഒരു വിശ്വസ്‌ത ഉപകരണം ചേർക്കുന്നതിന്, അടുത്തതായി ഒരു പരിശോധിച്ചുറപ്പിക്കൽ രീതി നിങ്ങൾ സജ്ജീകരിക്കേണ്ടതുണ്ട്. വിശ്വസ്‌ത ഉപകരണം നിങ്ങളുടെ കൈവശമില്ലെങ്കിൽ, നിങ്ങളുടെ പ്രൊഫൈൽ ആക്‌സസ് ചെയ്യാൻ പരിശോധിച്ചുറപ്പിക്കൽ ആവശ്യമാണ്."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ഉപകരണം വിച്ഛേദിച്ചു."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ക്രെഡൻഷ്യലുകൾ മായ്ക്കുക"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"എല്ലാ സർട്ടിഫിക്കറ്റുകളും നീക്കം ചെയ്യുക"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"എല്ലാ ഉള്ളടക്കങ്ങളും നീക്കം ചെയ്യണോ?"</string>
@@ -668,6 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ഡിസ്‌മിസ് ചെയ്യുക"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഫീച്ചർ ലഭ്യമല്ല"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ഡ്രൈവ് ചെയ്യുമ്പോൾ ഉപയോക്താവിനെ ചേർക്കാനാവില്ല"</string>
-    <!-- no translation found for default_search_query (3137420627428857068) -->
-    <skip />
+    <string name="default_search_query" msgid="3137420627428857068">"തിരയുക"</string>
 </resources>

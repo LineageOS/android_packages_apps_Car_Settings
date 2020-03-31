@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不得使用依遞增或遞減順序排列或是重複的數字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"新增信任的裝置"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"系統會在新增信任的裝置時開啟藍牙"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"信任的裝置"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 部裝置</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 部裝置</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"如果你的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 與這輛車連結，就能將其解鎖。如果其他人取得你的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，對方或許能夠存取這個裝置"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"確認"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除信任的裝置"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"請使用隨附應用程式設定信任的裝置。設定完成後，使用者設定檔就會在你的手機位於車輛附近時自動解鎖。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. 在手機上下載隨附應用程式"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. 在手機上選取 [<xliff:g id="CAR_NAME">%1$s</xliff:g>] 以便將裝置配對"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"只要信任的裝置位於車輛附近，即可在車輛處於發動狀態時將使用者設定檔解鎖，就算該裝置在其他人手中也一樣。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"請確認配對碼是否相符"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"已成功註冊手機"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"無法註冊 <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"你必須在新增信任的裝置後設定驗證方法。如果你手邊沒有信任的裝置，就必須通過驗證才能存取自己的個人資料。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"裝置已中斷連線。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有憑證"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有內容嗎？"</string>

@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Stigende eller faldende talsekvens og gentagne tal er ikke tilladt."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Valgmuligheder for skærmlås"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> dage siden"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Tilføj godkendt enhed"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth aktiveres for at tilføje godkendt enhed"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Godkendte enheder"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> enhed</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> enheder</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Din <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> låser bilen op, når der er forbindelse til enheden. Hvis en anden person tager din <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, kan vedkommende muligvis få adgang til denne enhed"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Bekræft"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Fjern godkendt enhed"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Luk"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Brug den medfølgende app til at konfigurere en godkendt enhed. Når du har konfigureret enheden, aktiveres din profil automatisk, når din telefon er i nærheden af køretøjet."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download den medfølgende app på din telefon"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Vælg <xliff:g id="CAR_NAME">%1$s</xliff:g> på telefonen for at parre enhederne"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Hvis der er en godkendt enhed i nærheden af bilen, når du starter motoren, får denne enhed adgang brugerprofilen – også selvom det er en anden, der holder enheden."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Bekræft, at parringskoderne stemmer overens"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefonen blev tilmeldt"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Tilmeldingen af <xliff:g id="DEVICE_NAME">%1$s</xliff:g> mislykkedes"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Hvis du vil tilføje en godkendt enhed, skal du først angive en godkendelsesmetode. Hvis du ikke har din godkendte enhed med dig, kræves der godkendelse, før du kan få adgang til din profil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Forbindelsen til enheden blev afbrudt."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Ryd loginoplysninger"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Fjern alle certifikater"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vil du fjerne alt indhold?"</string>

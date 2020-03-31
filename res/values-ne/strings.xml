@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अङ्कहरूको बढ्दो, घट्दो वा दोहोरिएको अनुक्रम निषेध गरिएको छ।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रिन लकका विकल्पहरू"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिनअघि"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय यन्त्र थप्नुहोस्"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"विश्वसनीय यन्त्र थप्न ब्लुटुथ सक्रिय हुने छ"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय यन्त्रहरू"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> यन्त्रहरू</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> यन्त्र</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"तपाईंको <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> जडान भएका बेला यसले यो कार अनलक गर्ने छ कुनै व्यक्तिले तपाईंको <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> लैजानुभयो भने उहाँले यो यन्त्रमाथि पहुँच राख्न सक्ने सम्भावना छ।"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"पुष्टि गर्नुहोस्"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय यन्त्रलाई हटाउनुहोस्"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"सम्पन्न भयो"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"कुनै विश्वसनीय यन्त्र सेटअप गर्न सहयोगी अनुप्रयोग प्रयोग गर्नुहोस्। सेटअप भएपछि तपाईंको फोन सवारी साधानको नजिकै भएको कुरा पहिचान हुँदा तपाईंको प्रयोगकर्ता प्रोफाइल अनलक हुने छ।"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"१. आफ्नो फोनमा सहयोगी अनुप्रयोग डाउनलोड गर्नुहोस्"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"२. यन्त्रहरूको जोडा बनाउन आफ्नो फोनमा <xliff:g id="CAR_NAME">%1$s</xliff:g> चयन गर्नुहोस्"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"अरू कसैले यन्त्र समातिरहेको भए पनि स्विच अन हुँदा तपाईंको कार नजिक रहेको उक्त यन्त्रले प्रयोगकर्ताको प्रोफाइल खोल्ने छ।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"जोडा मिलाउने कोड मिल्दाजुल्दा छन् भन्ने सुनिश्चित गर्नुहोस्"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"फोन सफलतापूर्वक दर्ता गरिएको छ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> दर्ता गर्न सकिएन"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"कुनै विश्वसनीय यन्त्र थप्दा तपाईंले यसपछिको चरणमा प्रमाणीकरण विधि सेट गर्नु पर्छ। तपाईंसँग आफ्नो विश्वसनीय यन्त्र छैन भने तपाईंको प्रोफाइलमाथि पहुँच राख्न प्रमाणीकरणको आवश्यकता पर्ने छ।"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"यन्त्र विच्छेद गरियो।"</string>
     <string name="credentials_reset" msgid="873900550885788639">"प्रमाणहरू मेट्नुहोस्"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"सबै प्रमाणहरू हटाउनुहोस्"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सम्पूर्ण सामग्री हटाउने हो?"</string>
@@ -668,6 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"खारेज गर्नुहोस्"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"सवारी साधन चलाइरहेका बेला यो सुविधा उपलब्ध छैन"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"सवारी साधन चलाइरहेको बेला प्रयोगकर्तालाई थप्न सकिँदैन"</string>
-    <!-- no translation found for default_search_query (3137420627428857068) -->
-    <skip />
+    <string name="default_search_query" msgid="3137420627428857068">"खोज"</string>
 </resources>

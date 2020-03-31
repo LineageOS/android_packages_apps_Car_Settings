@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ციფრების ზრდადი, კლებადი ან გამეორებადი მიმდევრობის გამოყენება ნებადართული არ არის."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ეკრანის დაბლოკვის ვარიანტები"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> დღის წინ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"სანდო მოწყობილობის დამატება"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"სანდო მოწყობილ. დასამატებლად Bluetooth ჩაირთვება"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"სანდო მოწყობილობები"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> მოწყობილობა</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> მოწყობილობა</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"თქვენი <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> განბლოკავს ამ მანქანას, როცა ის დაკავშირებული იქნება. თუ თქვენი <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> სხვის ხელში აღმოჩნდება, ის შეძლებს ამ მოწყობილობაზე წვდომას."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"დადასტურება"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"სანდო მოწყობილობის ამოშლა"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"მზადაა"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"სანდო მოწყობილობის დასაყენებლად გამოიყენეთ კომპანიონი აპი. დაყენების შემდეგ თქვენი მომხმარებლის პროფილი ავტომატურად განიბლოკება, როცა თქვენ ტელეფონი ავტომობილთან ახლოს დაფიქსირდება."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ჩამოტვირთეთ კომპანიონი აპი თქვენს ტელეფონზე"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. თქვენს ტელეფონზე აირჩიეთ <xliff:g id="CAR_NAME">%1$s</xliff:g> მოწყობილობების დასაწყვილებლად"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"თქვენს ავტომობილთან ახლოს მდებარე სანდო მოწყობილობა განბლოკავს მომხმარებლის პროფილს აალებისას, მაშინაც კი, თუ მოწყობილობა სხვას უკავია."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"გთხოვთ, დაადასტუროთ, რომ დაკავშირების კოდები ემთხვევა"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ტელეფონი წარმატებით დარეგისტრირდა"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>-ის რეგისტრაცია ვერ მოხერხდა"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"სანდო მოწყობილობის დასამატებლად მომდევნო ეტაპზე საჭირო იქნება ავტორიზაციის მეთოდის დაყენება. ავტორიზაცია საჭირო იქნება თქვენს პროფილზე წვდომისთვის, როცა სანდო მოწყობილობა თან არ გექნებათ."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"მოწყობილობის კავშირი გათიშულია."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ავტორიზაციის მონაცემების გასუფთავება"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ყველა სერტიფიკატის ამოშლა"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"გსურთ სრული კონტენტის წაშლა?"</string>

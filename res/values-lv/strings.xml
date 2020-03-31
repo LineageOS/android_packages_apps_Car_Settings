@@ -637,27 +637,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nav atļauta augoša, dilstoša vai atkārtota ciparu secība."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekrāna bloķēšanas opcijas"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: pirms <xliff:g id="NUM_DAYS">%3$s</xliff:g> dienām"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Pievienot uzticamu ierīci"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Tiks ieslēgts Bluetooth, lai piev. uzticamu ierīci"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Uzticamas ierīces"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="zero"><xliff:g id="COUNT_1">%d</xliff:g> ierīču</item>
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ierīce</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ierīces</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Jūsu ierīce <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> atbloķēs šo automašīnu, ja ierīcei būs izveidots savienojums ar to. Ja kāda persona paņem jūsu ierīci <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, šī persona var piekļūt jūsu ierīcei."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Apstiprināt"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Noņemt uzticamo ierīci"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Gatavs"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Izmantojiet palīglietotni, lai iestatītu uzticamu ierīci. Pēc iestatīšanas jūsu lietotāja profils tiks automātiski atbloķēts, kad transportlīdzekļa tuvumā tiks konstatēts jūsu tālrunis."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Lejupielādējiet palīglietotni savā tālrunī."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tālrunī atlasiet automašīnas nosaukumu (<xliff:g id="CAR_NAME">%1$s</xliff:g>), lai ierīces savienotu pārī."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Izmantojot uzticamu ierīci automašīnas tuvumā, tiks atbloķēts lietotāja profils brīdī, kad tiks iedarbināts automašīnas dzinējs, pat ja ierīci tur cita persona."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Lūdzu, apstipriniet, ka kodi savienošanai pārī ir vienādi"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Tālrunis tika veiksmīgi reģistrēts"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Neizdevās reģistrēt ierīci <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Pievienojot uzticamu ierīci, jums ir jāiestata arī autentifikācijas metode. Autentifikācija būs nepieciešama, lai jūs varētu piekļūt savam profilam, ja jums nebūs līdzi jūsu uzticamā ierīce."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Ierīce ir atvienota."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Notīrīt akreditācijas datus"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Noņemt visus sertifikātus"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Vai noņemt visu saturu?"</string>

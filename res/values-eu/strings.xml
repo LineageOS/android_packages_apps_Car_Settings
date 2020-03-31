@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Ezin da erabili goranzko, beheranzko edo errepikatutako digitu-sekuentziarik."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Pantaila blokeatzeko aukerak"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: duela <xliff:g id="NUM_DAYS">%3$s</xliff:g> egun"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Gehitu gailu fidagarria"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth konexioa aktibatu egingo da gailu fidagarria gehitzeko"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Gailu fidagarriak"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> gailu</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> gailu</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> gailuak autoa desblokeatuko du konektatzen denean. Beste norbaitek <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> autoa hartzen badu, agian gailua atzitu ahal izango du."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Berretsi"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Kendu gailu fidagarria"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Eginda"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Erabili aplikazio osagarria gailu fidagarri bat konfiguratzeko. Konfiguratu ostean, erabiltzaile-profila automatikoki desblokeatuko da telefonoa hautematen denean ibilgailuaren inguruan."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Deskargatu aplikazio osagarria telefonoan"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Gailuak parekatzeko, hautatu <xliff:g id="CAR_NAME">%1$s</xliff:g> telefonoan"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Autoaren inguruan dagoen gailu fidagarri batek erabiltzailearen profila desblokeatuko du motorra martxan jartzean, baita gailua darabilena zeu ez bazara ere."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Berretsi parekatze-kodeak bat datozela"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Erregistratu da telefonoa"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailuaren harpidetzeak huts egin du"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Gailu fidagarri bat gehitzen baduzu, autentifikazio-metodo bat ezartzea izango da hurrengo urratsa. Ez badaukazu gailu fidagarririk gertu, sistemak autentifikatzeko eskatuko dizu profila atzitzen duzunean."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Gailu deskonektatu egin da."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Garbitu kredentzialak"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Kendu ziurtagiri guztiak"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Eduki guztiak kendu nahi dituzu?"</string>

@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : hace <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Añadir dispositivo de confianza"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Se activará Bluetooth para añadir disp. confianza"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dispositivos de confianza"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivos</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositivo</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Tu <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> desbloqueará este coche cuando esté conectado. Si alguien coge tu <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, es posible que pueda acceder a este dispositivo"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Quitar dispositivo de confianza"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Listo"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Usa la aplicación complementaria para configurar un dispositivo de confianza. Una vez que lo hagas, tu perfil de usuario se desbloqueará automáticamente cuando el teléfono se detecte cerca del vehículo."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descarga la aplicación complementaria en el teléfono"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para vincular los dispositivos"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Es posible que un dispositivo de confianza que se encuentre cerca pueda desbloquear el perfil del usuario al arrancar el coche, aunque lo esté sujetando otra persona."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que los códigos de sincronización coinciden"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"El teléfono se ha registrado correctamente"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> no se ha podido registrar"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Para añadir un dispositivo de confianza, debes configurar un método de autenticación. Si no tienes el dispositivo de confianza a mano, tendrás que autenticarte para acceder a tu perfil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"El dispositivo se ha desconectado."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Eliminar certificados"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Quitar todos los certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"¿Seguro que quieres quitar todos los contenidos?"</string>

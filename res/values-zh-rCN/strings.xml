@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"添加可信设备"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"系统将开启蓝牙以添加可信设备"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"可信设备"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台设备</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 台设备</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"您的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 会在连接到这辆车后将其解锁。如果有人拿到您的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，对方也许能够访问此设备"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"确认"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除可信设备"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"请使用配套应用来设置可信设备。设置后，您的用户个人资料就会在系统检测到手机位于汽车附近时自动解锁。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手机上下载配套应用"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"只要可信设备位于您的汽车附近，即可在汽车发动后将用户个人资料解锁（即使该设备在其他人手中也是如此）。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"请确认配对码是否一致"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"手机已成功注册"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"设备已断开连接。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有证书"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有内容吗？"</string>

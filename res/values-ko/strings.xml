@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"연속으로 올라가거나 내려가는 숫자 또는 반복되는 숫자의 배열은 허용되지 않습니다."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"화면 잠금 옵션"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g>일 전"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"신뢰할 수 있는 기기 추가"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"신뢰할 수 있는 기기를 추가하기 위해 블루투스가 사용 설정됩니다."</string>
-    <string name="trusted_device" msgid="5637378361866787603">"신뢰할 수 있는 기기"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other">기기 <xliff:g id="COUNT_1">%d</xliff:g>대</item>
-      <item quantity="one">기기 <xliff:g id="COUNT_0">%d</xliff:g>대</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g>이(가) 연결되면 차량을 잠금 해제합니다. 누군가 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>을(를) 가져가면 이 차량에 액세스할 수도 있습니다."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"확인"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"신뢰할 수 있는 기기 삭제"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"완료"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"호환 앱을 사용해 신뢰할 수 있는 기기를 설정하세요. 설정이 완료되면 차량 근처에서 휴대전화가 감지된 경우 사용자 프로필이 자동으로 잠금 해제됩니다."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. 휴대전화에 호환 앱을 다운로드합니다."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. 휴대전화에서 <xliff:g id="CAR_NAME">%1$s</xliff:g>을(를) 선택하여 기기를 페어링합니다."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"차량 근처에 신뢰할 수 있는 기기가 있는 경우 다른 사람이 기기를 들고 있어도 시동을 걸면 사용자 프로필이 잠금 해제됩니다."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"페어링 코드가 일치하는지 확인하세요."</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"휴대전화를 등록했습니다."</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>을(를) 등록하는 데 실패했습니다."</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"신뢰할 수 있는 기기를 추가하면 다음번에 인증 수단을 설정해야 합니다. 신뢰할 수 있는 기기가 없으면 인증 과정을 거쳐야 내 프로필에 액세스할 수 있습니다."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"기기 연결이 끊어졌습니다."</string>
     <string name="credentials_reset" msgid="873900550885788639">"사용자 인증 정보 삭제"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"모든 인증서 삭제"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"콘텐츠를 모두 삭제하시겠습니까?"</string>

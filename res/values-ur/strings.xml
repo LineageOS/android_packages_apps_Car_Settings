@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ہندسوں کی صعودی، نزولی یا مکرر ترتیب کی اجازت نہیں ہے۔"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"اسکرین لاک کے اختیارات"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> دن پہلے"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"بھروسہ مند آلہ شامل کریں"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"بھروسہ مند آلات شامل کے لیے بلوٹوتھ آن ہو جائے گا"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"بھروسہ مند آلات"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> آلات</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> آلہ</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"منسلک ہونے پر آپ کا <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> اس کار کو غیر مقفل کر دے گا۔ اگر کوئی شخص آپ کا <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> لیتا ہے تو اسے اس آلہ تک رسائی حاصل ہو سکتی ہے"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"تصدیق کریں"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"بھروسہ مند آلہ ہٹائیں"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ہو گیا"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"بھروسہ مند آلہ کو سیٹ اپ کرنے کے لیے ساتھی ایپ کا استعمال کریں۔ ایک بار سیٹ اپ ہو جانے پر، وہیکل کے قریب آپ کا فون دریافت ہونے پر آپ کا صارف پروفائل خودکار طور پر غیر مقفل ہو جائے گا۔"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1۔ اپنے فون پر ساتھی ایپ ڈاؤن لوڈ کریں"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2۔ آلات کو جوڑنے کے لیے فون پر <xliff:g id="CAR_NAME">%1$s</xliff:g> منتخب کریں"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"آپ کی کار کے قریب ایک بھروسہ مند آلہ آتش زنی پر صارف پروفائل کو غیر مقفل کر دے گا، اس وقت بھی جب کوئی اور آلے کو پکڑے ہوئے ہے۔"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"براہ کرم توثیق کریں کہ جوڑا بنانے کے کوڈز مماثل ہیں"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"فون کامیابی کے ساتھ اندراج کر دیا گیا ہے"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> اندراج ناکام ہوگیا"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"بھروسہ مند آلہ شامل کرنے کے لیے آپ کو آگے ایک تصدیقی طریقہ سیٹ کرنا ہوگا۔ اگر آپ کے پاس بھروسہ مند آلہ نہیں ہے تو آپ کے پروفائل تک رسائی حاصل کرنے کے لیے تصدیق درکار ہوگی۔"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"آلہ غیر منسلک ہو گیا۔"</string>
     <string name="credentials_reset" msgid="873900550885788639">"اسنادات صاف کریں"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"سبھی سرٹیفیکیٹس کو ہٹائیں"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"سبھی مواد کو ہٹائیں؟"</string>
