@@ -20,8 +20,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import androidx.annotation.XmlRes;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -64,6 +68,23 @@ public class AddWifiFragment extends SettingsFragment {
         }
     };
 
+    private final Handler mUiHandler = new Handler(Looper.getMainLooper());
+    private final WifiManager.ActionListener mConnectionListener =
+            new WifiManager.ActionListener() {
+                @Override
+                public void onSuccess() {
+                    LOG.d("connected to network");
+                    mUiHandler.post(() -> goBack());
+                }
+
+                @Override
+                public void onFailure(int reason) {
+                    LOG.d("Failed to connect to network. Failure code: " + reason);
+                    Toast.makeText(getContext(), R.string.wifi_failed_connect_message,
+                            Toast.LENGTH_SHORT).show();
+                }
+            };
+
     private MenuItem mAddWifiButton;
     private String mNetworkName;
     private int mSecurityType = AccessPoint.SECURITY_NONE;
@@ -91,12 +112,9 @@ public class AddWifiFragment extends SettingsFragment {
                 .setTitle(R.string.wifi_setup_connect)
                 .setOnClickListener(i -> {
                     // This only needs to handle hidden/unsecure networks.
-                    int netId = WifiUtil.connectToAccessPoint(getContext(), mNetworkName,
-                            AccessPoint.SECURITY_NONE, /* password= */ null, /* hidden= */ true);
-                    LOG.d("connected to netId: " + netId);
-                    if (netId != WifiUtil.INVALID_NET_ID) {
-                        goBack();
-                    }
+                    WifiUtil.connectToAccessPoint(getContext(), mNetworkName,
+                            AccessPoint.SECURITY_NONE, /* password= */ null, /* hidden= */ true,
+                            mConnectionListener);
                 })
                 .build();
         setButtonEnabledState();

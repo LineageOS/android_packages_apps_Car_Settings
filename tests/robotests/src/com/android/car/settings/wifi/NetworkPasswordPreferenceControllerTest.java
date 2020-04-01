@@ -21,6 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Pair;
 
@@ -187,9 +188,30 @@ public class NetworkPasswordPreferenceControllerTest {
 
         Pair<Integer, Boolean> lastEnabled = getShadowWifiManager().getLastEnabledNetwork();
         // Enable should be called on the most recently added network id.
-        assertThat(lastEnabled.first).isEqualTo(getShadowWifiManager().getLastAddedNetworkId());
+        int lastNetworkId = getShadowWifiManager().getLastAddedNetworkConfiguration().networkId;
+        assertThat(lastEnabled.first).isEqualTo(lastNetworkId);
         // WifiUtil will try to enable the network right away.
         assertThat(lastEnabled.second).isTrue();
+    }
+
+    @Test
+    public void handlePreferenceChanged_hasSecurity_networkNameSet_wifiConnected() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        String networkName = "network_name";
+        String password = "password";
+        Intent intent = new Intent(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE);
+        intent.putExtra(NetworkSecurityPreferenceController.KEY_SECURITY_TYPE,
+                AccessPoint.SECURITY_PSK);
+        mLocalBroadcastManager.sendBroadcastSync(intent);
+
+        intent = new Intent(NetworkNamePreferenceController.ACTION_NAME_CHANGE);
+        intent.putExtra(NetworkNamePreferenceController.KEY_NETWORK_NAME, networkName);
+        mLocalBroadcastManager.sendBroadcastSync(intent);
+        mPasswordEditTextPreference.callChangeListener(password);
+
+        WifiInfo lastConnected = getShadowWifiManager().getActiveWifiInfo();
+
+        assertThat(lastConnected.getSSID()).contains(networkName);
     }
 
     private ShadowWifiManager getShadowWifiManager() {
