@@ -20,6 +20,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
 import android.net.wifi.WifiManager;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.preference.Preference;
@@ -45,7 +46,19 @@ public class AccessPointListPreferenceController extends
         CarUxRestrictionsManager.OnUxRestrictionsChangedListener {
     private static final Logger LOG = new Logger(AccessPointListPreferenceController.class);
     private final WifiManager.ActionListener mConnectionListener =
-            new WifiUtil.ActionFailedListener(getContext(), R.string.wifi_failed_connect_message);
+            new WifiManager.ActionListener() {
+                @Override
+                public void onSuccess() {
+                    LOG.d("connected to network");
+                }
+
+                @Override
+                public void onFailure(int reason) {
+                    LOG.d("Failed to connect to network. Failure code: " + reason);
+                    Toast.makeText(getContext(), R.string.wifi_failed_connect_message,
+                            Toast.LENGTH_SHORT).show();
+                }
+            };
     private List<AccessPoint> mAccessPoints = new ArrayList<>();
 
     public AccessPointListPreferenceController(@NonNull Context context, String preferenceKey,
@@ -113,7 +126,8 @@ public class AccessPointListPreferenceController extends
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
         WifiUtil.connectToAccessPoint(getContext(), accessPoint.getSsid().toString(),
-                accessPoint.getSecurity(), newValue.toString(), /* hidden= */ false);
+                accessPoint.getSecurity(), newValue.toString(), /* hidden= */ false,
+                mConnectionListener);
         return true;
     }
 

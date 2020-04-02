@@ -30,6 +30,7 @@ import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.util.Pair;
 
@@ -254,9 +255,28 @@ public class AccessPointListPreferenceControllerTest {
         Pair<Integer, Boolean> lastEnabled = getShadowWifiManager().getLastEnabledNetwork();
 
         // Enable should be called on the most recently added network id.
-        assertThat(lastEnabled.first).isEqualTo(getShadowWifiManager().getLastAddedNetworkId());
+        int lastNetworkId = getShadowWifiManager().getLastAddedNetworkConfiguration().networkId;
+        assertThat(lastEnabled.first).isEqualTo(lastNetworkId);
         // WifiUtil will try to enable the network right away.
         assertThat(lastEnabled.second).isTrue();
+    }
+
+    @Test
+    public void callChangeListener_newSecureAccessPoint_wifiConnected() {
+        String ssid = "test_ssid";
+        String password = "test_password";
+        when(mMockAccessPoint1.getSsid()).thenReturn(ssid);
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_PSK);
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).callChangeListener(password);
+        WifiInfo lastConnected = getShadowWifiManager().getActiveWifiInfo();
+
+        assertThat(lastConnected.getSSID()).contains(ssid);
     }
 
     private ShadowWifiManager getShadowWifiManager() {
