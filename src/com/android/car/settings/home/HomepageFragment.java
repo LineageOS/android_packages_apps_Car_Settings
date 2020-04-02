@@ -17,16 +17,26 @@
 package com.android.car.settings.home;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.ui.toolbar.MenuItem;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Homepage for settings for car.
  */
 public class HomepageFragment extends SettingsFragment {
+    private static final int REQUEST_CODE = 501;
+
+    private MenuItem mSearchButton;
 
     @Override
     @XmlRes
@@ -41,4 +51,33 @@ public class HomepageFragment extends SettingsFragment {
         // use(SuggestionsPreferenceController.class, R.string.pk_suggestions).setLoaderManager(
         //        LoaderManager.getInstance(/* owner= */ this));
     }
+
+    @Override
+    protected List<MenuItem> getToolbarMenuItems() {
+        return Collections.singletonList(mSearchButton);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mSearchButton = new MenuItem.Builder(getContext())
+                .setToSearch()
+                .setOnClickListener(i -> onSearchButtonClicked())
+                .build();
+    }
+
+    private void onSearchButtonClicked() {
+        Intent intent = new Intent(Settings.ACTION_APP_SEARCH_SETTINGS)
+                .setPackage(getSettingsIntelligencePkgName(getContext()));
+        if (intent.resolveActivity(getContext().getPackageManager()) == null) {
+            return;
+        }
+        startActivityForResult(intent, REQUEST_CODE);
+    }
+
+    private String getSettingsIntelligencePkgName(Context context) {
+        return context.getString(R.string.config_settingsintelligence_package_name);
+    }
+
 }
