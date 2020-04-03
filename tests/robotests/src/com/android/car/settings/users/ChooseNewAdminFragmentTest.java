@@ -25,6 +25,7 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
@@ -56,6 +57,9 @@ public class ChooseNewAdminFragmentTest {
         mFragment = ChooseNewAdminFragment.newInstance(TEST_ADMIN_USER);
         mFragmentController = FragmentController.of(mFragment);
         mFragmentController.setup();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
