@@ -31,6 +31,7 @@ import android.net.wifi.WifiConfiguration;
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.Before;
@@ -63,6 +64,9 @@ public class AccessPointPreferenceTest {
         mPreference = new AccessPointPreference(context, mAccessPoint);
         mPreference.setKey(TEST_KEY);
         fragment.getPreferenceScreen().addPreference(mPreference);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test

@@ -34,6 +34,7 @@ import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.users.UserHelper;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
@@ -70,6 +71,9 @@ public class AccountSettingsFragmentTest {
         // Set up user info
         when(mMockUserHelper.getCurrentProcessUserInfo())
                 .thenReturn(new UserInfo(mUserId, "USER", /* flags= */ 0));
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

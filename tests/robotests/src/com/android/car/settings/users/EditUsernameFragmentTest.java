@@ -27,6 +27,7 @@ import android.widget.EditText;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
@@ -56,6 +57,9 @@ public class EditUsernameFragmentTest {
     @Before
     public void setUpTestActivity() {
         mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     /**
