@@ -40,6 +40,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.PreferenceControllerTestHelper;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 
 import org.junit.After;
 import org.junit.Before;
@@ -77,6 +78,9 @@ public class WifiWakeupTogglePreferenceControllerTest {
         mController.mWifiManager = mWifiManager;
 
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
