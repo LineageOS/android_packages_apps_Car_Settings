@@ -25,6 +25,7 @@ import android.telephony.SubscriptionManager;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowSubscriptionManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
@@ -52,6 +53,9 @@ public class MobileNetworkFragmentTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

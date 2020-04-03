@@ -22,6 +22,7 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +39,9 @@ public class ChooseLockPatternFragmentTest {
     @Before
     public void initFragment() {
         mFragment = FragmentController.of(new ChooseLockPatternFragment()).setup();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     /**
