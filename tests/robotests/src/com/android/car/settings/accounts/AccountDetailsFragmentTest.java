@@ -35,6 +35,7 @@ import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.users.UserHelper;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
@@ -74,6 +75,9 @@ public class AccountDetailsFragmentTest {
         mContext = application;
         // Add the account to the official list of accounts
         getShadowAccountManager().addAccount(mAccount);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

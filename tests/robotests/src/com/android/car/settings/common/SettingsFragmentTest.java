@@ -37,6 +37,7 @@ import androidx.preference.Preference;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.Before;
@@ -60,6 +61,9 @@ public class SettingsFragmentTest {
         mContext = RuntimeEnvironment.application;
         mFragmentController = FragmentController.of(new TestSettingsFragment());
         mFragment = mFragmentController.get();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @Test

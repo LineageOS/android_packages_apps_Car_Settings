@@ -20,13 +20,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/toolbar"/>
-
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
+        android:layout_alignParentTop="true"
         android:paddingEnd="@dimen/edit_username_padding_end"
         android:paddingStart="@dimen/edit_username_padding_start"
         android:paddingTop="@dimen/edit_username_text_padding_top">

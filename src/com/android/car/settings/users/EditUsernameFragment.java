@@ -104,6 +104,7 @@ public class EditUsernameFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mUserNameEditText = view.findViewById(R.id.user_name_text_edit);
     }
 

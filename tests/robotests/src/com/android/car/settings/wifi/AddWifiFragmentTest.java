@@ -28,6 +28,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.wifi.AccessPoint;
@@ -57,6 +58,9 @@ public class AddWifiFragmentTest {
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(mContext);
         mFragment = new AddWifiFragment();
         mFragmentController = FragmentController.of(mFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
