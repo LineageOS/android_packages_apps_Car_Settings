@@ -42,6 +42,7 @@ import com.android.car.settings.testutils.ShadowActivityManager;
 import com.android.car.settings.testutils.ShadowApplicationPackageManager;
 import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.RestrictedLockUtils;
@@ -106,6 +107,9 @@ public class AppStorageSettingsDetailsFragmentTest {
         when(mApplicationsState.getEntry(eq(PACKAGE_NAME), anyInt())).thenReturn(appEntry);
         ShadowApplicationsState.setInstance(mApplicationsState);
         mFragmentController.setup();
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

@@ -16,7 +16,7 @@
 -->
 
 <resources>
-    <style name="CarSettingTheme" parent="@style/Theme.CarUi">
+    <style name="CarSettingTheme" parent="@style/Theme.CarUi.WithToolbar">
         <item name="wifi_signal">@drawable/wifi_signal</item>
         <item name="wifiSignalColor">?android:attr/textColorPrimary</item>
         <item name="iconColor">?android:attr/textColorPrimary</item>

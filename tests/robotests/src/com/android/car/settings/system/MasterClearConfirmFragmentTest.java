@@ -33,6 +33,7 @@ import androidx.preference.PreferenceManager;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
 
 import org.junit.After;
@@ -76,6 +77,9 @@ public class MasterClearConfirmFragmentTest {
         // Default to not provisioned.
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
