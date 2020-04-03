@@ -16,6 +16,9 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.ui.core.CarUi.requireInsets;
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
 import android.content.Context;
@@ -42,6 +45,7 @@ import com.android.car.settings.R;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,8 +88,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     @XmlRes
     protected abstract int getPreferenceScreenResId();
 
-    protected Toolbar getToolbar() {
-        return requireActivity().findViewById(R.id.toolbar);
+    protected ToolbarController getToolbar() {
+        return requireToolbar(requireActivity());
     }
     /**
      * Returns the MenuItems to display in the toolbar. Subclasses should override this to
@@ -161,6 +165,12 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         });
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        onCarUiInsetsChanged(requireInsets(requireActivity()));
+    }
+
     /**
      * Inflates the preferences from {@link #getPreferenceScreenResId()} and associates the
      * preference with their corresponding {@link PreferenceController} instances.
@@ -182,7 +192,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Toolbar toolbar = requireActivity().findViewById(R.id.toolbar);
+        ToolbarController toolbar = getToolbar();
         if (toolbar != null) {
             List<MenuItem> items = getToolbarMenuItems();
             if (items != null) {

@@ -31,6 +31,7 @@ import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 
@@ -85,6 +86,9 @@ public class UserDetailsBaseFragmentTest {
         MockitoAnnotations.initMocks(this);
         ShadowUserHelper.setInstance(mUserHelper);
         setCurrentUserWithFlags(/* flags= */ 0);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
