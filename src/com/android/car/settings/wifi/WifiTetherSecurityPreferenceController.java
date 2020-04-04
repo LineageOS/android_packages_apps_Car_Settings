@@ -18,11 +18,9 @@ package com.android.car.settings.wifi;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.wifi.SoftApConfiguration;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.ListPreference;
 
 import com.android.car.settings.R;
@@ -34,11 +32,14 @@ import com.android.car.settings.common.FragmentController;
 public class WifiTetherSecurityPreferenceController extends
         WifiTetherBasePreferenceController<ListPreference> {
 
-    public static final String KEY_SECURITY_TYPE = "KEY_SECURITY_TYPE";
-    public static final String ACTION_SECURITY_TYPE_CHANGED =
-            "com.android.car.settings.wifi.ACTION_WIFI_TETHER_SECURITY_TYPE_CHANGED";
+    protected static final String KEY_SECURITY_TYPE =
+            "com.android.car.settings.wifi.KEY_SECURITY_TYPE";
 
     private int mSecurityType;
+
+    private final SharedPreferences mSharedPreferences = getContext().getSharedPreferences(
+                    WifiTetherPasswordPreferenceController.SHARED_PREFERENCE_PATH,
+                    Context.MODE_PRIVATE);
 
     public WifiTetherSecurityPreferenceController(Context context, String preferenceKey,
             FragmentController fragmentController, CarUxRestrictions uxRestrictions) {
@@ -67,7 +68,12 @@ public class WifiTetherSecurityPreferenceController extends
     protected boolean handlePreferenceChanged(ListPreference preference,
             Object newValue) {
         mSecurityType = Integer.parseInt(newValue.toString());
-        updateSecurityType();
+        // Rather than updating the ap config here, we will only update the security type shared
+        // preference. When the user confirms their selection by going back, the config will be
+        // updated by the WifiTetherPasswordPreferenceController. By updating the config in that
+        // controller, we avoid running into a transient state where the (securityType, passphrase)
+        // pair is invalid due to not being updated simultaneously.
+        mSharedPreferences.edit().putInt(KEY_SECURITY_TYPE, mSecurityType).commit();
         refreshUi();
         return true;
     }
@@ -88,60 +94,5 @@ public class WifiTetherSecurityPreferenceController extends
     @Override
     protected String getDefaultSummary() {
         return null;
-    }
-
-    /** Overriding to orchestrate the order in which the intents are broadcast. */
-    @Override
-    protected void setCarSoftApConfig(SoftApConfiguration configuration) {
-        getCarWifiManager().setSoftApConfig(configuration);
-        broadcastSecurityTypeChanged();
-        requestWifiTetherRestart();
-    }
-
-    private void updateSecurityType() {
-        String passphrase = mSecurityType == SoftApConfiguration.SECURITY_TYPE_OPEN
-                ? null : getSavedPassword();
-        try {
-            SoftApConfiguration config = new SoftApConfiguration.Builder(getCarSoftApConfig())
-                    .setPassphrase(passphrase, mSecurityType)
-                    .build();
-            setCarSoftApConfig(config);
-        } catch (IllegalArgumentException e) {
-            // setPassphrase() performs validation that the (securityType, passphrase) pair is
-            // consistent.
-            // e.g. if securityType == OPEN then passphrase == null,
-            // if securityType == WPA2_PSK then 8 <= passphrase.length() <= 63, etc.
-            // However, the (securityType, passphrase) pair is not updated simultaneously in this
-            // architecture, allowing there to be a transient period where the
-            // (securityType, passphrase) pair is not consistent.
-
-            // e.g.
-            // 1. (passphrase, securityType) = (null, OPEN)
-            // 2. securityType => WPA2_PSK
-            // 3. (passphrase, securityType) = (null, WPA2_PSK), illegal, WPA2_PSK must have a
-            // password
-
-            // During this transient state, do not save the SoftApConfiguration. Instead,
-            // broadcast the securityType change so that WifiTetherPasswordPreferenceController
-            // gets the latest securityType, and once the passphrase has been updated the
-            // (securityType, passphrase) pair can be updated simultaneously.
-            broadcastSecurityTypeChanged();
-        }
-    }
-
-    private void broadcastSecurityTypeChanged() {
-        Intent intent = new Intent(ACTION_SECURITY_TYPE_CHANGED);
-        intent.putExtra(KEY_SECURITY_TYPE, mSecurityType);
-        LocalBroadcastManager.getInstance(getContext()).sendBroadcast(intent);
-    }
-
-    private String getSavedPassword() {
-        SharedPreferences sp = getContext().getSharedPreferences(
-                WifiTetherPasswordPreferenceController.SHARED_PREFERENCE_PATH,
-                Context.MODE_PRIVATE);
-        String savedPassword =
-                sp.getString(WifiTetherPasswordPreferenceController.KEY_SAVED_PASSWORD,
-                        /* defaultValue= */ null);
-        return savedPassword;
     }
 }
