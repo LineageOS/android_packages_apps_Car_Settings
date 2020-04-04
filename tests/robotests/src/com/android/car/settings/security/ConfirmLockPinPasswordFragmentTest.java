@@ -22,6 +22,7 @@ import android.view.View;
 
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.internal.widget.LockscreenCredential;
 
 import org.junit.Before;
@@ -44,6 +45,9 @@ public class ConfirmLockPinPasswordFragmentTest {
         mTestActivity = Robolectric.setupActivity(TestSettingsScreenLockActivity.class);
         mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
         mTestActivity.launchFragment(mPinFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     /**
