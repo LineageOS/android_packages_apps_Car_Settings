@@ -48,6 +48,7 @@ import com.android.car.settings.testutils.ShadowPermissionControllerManager;
 import com.android.car.settings.testutils.ShadowSmsApplication;
 import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.car.settings.testutils.ShadowUtils;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.Utils;
@@ -105,6 +106,9 @@ public class ApplicationDetailsFragmentTest {
         mController.create();
 
         mFragment = ApplicationDetailsFragment.getInstance(PACKAGE_NAME);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After

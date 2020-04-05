@@ -32,6 +32,7 @@ import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
+import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.settingslib.bluetooth.CachedBluetoothDevice;
@@ -83,6 +84,9 @@ public class BluetoothDeviceDetailsFragmentTest {
 
         mFragment = BluetoothDeviceDetailsFragment.newInstance(mCachedDevice);
         mFragmentController = FragmentController.of(mFragment);
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
     }
 
     @After
