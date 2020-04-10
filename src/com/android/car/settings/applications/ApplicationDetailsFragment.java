@@ -455,7 +455,6 @@ public class ApplicationDetailsFragment extends SettingsFragment implements Acti
     private final MenuItem.OnClickListener mUninstallClickListener = i -> {
         Uri packageUri = Uri.parse("package:" + mPackageName);
         Intent uninstallIntent = new Intent(Intent.ACTION_UNINSTALL_PACKAGE, packageUri);
-        uninstallIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, true);
         uninstallIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
         startActivityForResult(uninstallIntent, UNINSTALL_REQUEST_CODE, /* callback= */
                 ApplicationDetailsFragment.this);
