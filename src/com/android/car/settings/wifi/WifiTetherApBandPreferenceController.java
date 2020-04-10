@@ -63,14 +63,14 @@ public class WifiTetherApBandPreferenceController extends
         SoftApConfiguration config = getCarSoftApConfig();
         if (config == null) {
             mBand = SoftApConfiguration.BAND_2GHZ;
-        } else if (is5GhzBandSupported()) {
-            mBand = validateSelection(config.getBand());
-        } else {
+        } else if (!is5GhzBandSupported() && config.getBand() == SoftApConfiguration.BAND_5GHZ) {
             SoftApConfiguration newConfig = new SoftApConfiguration.Builder(config)
                     .setBand(SoftApConfiguration.BAND_2GHZ)
                     .build();
             setCarSoftApConfig(newConfig);
-            mBand = config.getBand();
+            mBand = newConfig.getBand();
+        } else {
+            mBand = validateSelection(config.getBand());
         }
 
         if (!is5GhzBandSupported()) {

@@ -56,7 +56,9 @@ public class WifiTetherFragment extends SettingsFragment {
     private final BroadcastReceiver mRestartReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            restartTethering();
+            if (mCarWifiManager != null && mCarWifiManager.isWifiApEnabled()) {
+                restartTethering();
+            }
         }
     };
 
@@ -121,6 +123,9 @@ public class WifiTetherFragment extends SettingsFragment {
         mCarWifiManager.destroy();
     }
 
+    /**
+     * When the state of the hotspot changes, update the state of the tethering switch as well
+     */
     private void handleWifiApStateChanged(int state) {
         switch (state) {
             case WifiManager.WIFI_AP_STATE_ENABLING:
@@ -142,7 +147,9 @@ public class WifiTetherFragment extends SettingsFragment {
                 mTetherSwitch.setChecked(false);
                 mTetherSwitch.setEnabled(true);
                 if (mRestartBooked) {
-                    mTetherSwitch.setChecked(true);
+                    // Hotspot was disabled as part of a restart request - we can now re-enable it
+                    mTetherSwitch.setEnabled(false);
+                    startTethering();
                     mRestartBooked = false;
                 }
                 break;
