@@ -294,8 +294,8 @@
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"مصرف داده برنامه"</string>
     <string name="computing_size" msgid="5791407621793083965">"درحال محاسبه..."</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> مجوز دیگر</item>
+      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> اجازه تکمیلی</item>
+      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> اجازه‌های تکمیلی</item>
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"توجه: پس از راه‌اندازی مجدد، تا قفل وسیله‌تان را باز نکنید، این برنامه نمی‌تواند شروع به کار کند."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"همیار و ورودی گفتاری"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ترتیب صعودی، نزولی یا تکراری ارقام مجاز نیست."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"گزینه‌های قفل صفحه"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> روز پیش"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"افزودن دستگاه مطمئن"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"برای اضافه کردن دستگاه مطمئن، بلوتوث روشن خواهد شد"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"دستگاه‌های مطمئن"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> دستگاه</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> دستگاه</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> شما وقتی متصل شود، قفل این خودرو را باز می‌کند. اگر کسی <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> شما را بردارد، ممکن است بتواند به این دستگاه دسترسی پیدا کند"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"تأیید"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"حذف دستگاه مطمئن"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"تمام"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"از برنامه همراه برای راه‌اندازی دستگاه مطمئن استفاده کنید. پس از راه‌اندازی دستگاه مطمئن، وقتی تلفنتان اطراف خودرو شناسایی می‌شود، نمایه کاربری‌تان به‌طور خودکار قفل خودرو را باز می‌کند."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"۱. برنامه همراه را در تلفنتان بارگیری کنید"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"۲. برای مرتبط‌سازی دستگاه‌ها، <xliff:g id="CAR_NAME">%1$s</xliff:g> را در تلفنتان انتخاب کنید"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"اگر دستگاهی مطمئن در اطراف خودروتان وجود داشته باشد، به‌محض روشن شدن خودرو قفل نمایه کاربر باز می‌شود، حتی اگر دستگاه در اختیار فرد دیگری باشد."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"لطفاً تأیید کنید که کدهای مرتبط‌سازی مطابقت دارند"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"تلفن با موفقیت ثبت‌نام شد"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ثبت‌نام <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ناموفق بود"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"افزودن دستگاه مطمئن مستلزم تنظیم روش احراز هویت در مرحله بعد است. اگر دستگاه مطمئن‌تان را با خود حمل نمی‌کنید، برای دسترسی به نمایه‌تان باید احراز هویت کنید."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ارتباط دستگاه قطع شد."</string>
     <string name="credentials_reset" msgid="873900550885788639">"پاک کردن اطلاعات کاربری"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"حذف تمام گواهی‌ها"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"همه محتوا حذف شود؟"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"رد کردن"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"این ویژگی هنگام رانندگی در دسترس نیست"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"نمی‌توان هنگام رانندگی کاربر اضافه کرد"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"جستجو"</string>
 </resources>

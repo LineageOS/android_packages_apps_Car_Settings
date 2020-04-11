@@ -91,7 +91,7 @@
     <string name="wifi_disabled" msgid="5013262438128749950">"Wi-Fi е оневозможено"</string>
     <string name="wifi_failed_forget_message" msgid="121732682699377206">"Не успеа да се заборави мрежата"</string>
     <string name="wifi_failed_connect_message" msgid="4447498225022147324">"Не успеа да се поврзе со мрежата"</string>
-    <string name="wifi_setup_add_network" msgid="3660498520389954620">"Додај мрежа"</string>
+    <string name="wifi_setup_add_network" msgid="3660498520389954620">"Додајте мрежа"</string>
     <string name="wifi_setup_connect" msgid="3512399573397979101">"Поврзи"</string>
     <string name="wifi_password" msgid="5565632142720292397">"Лозинка"</string>
     <string name="wifi_show_password" msgid="8423293211933521097">"Прикажи ја лозинката"</string>
@@ -118,13 +118,13 @@
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"2,4 GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"5 GHz"</string>
-    <string name="wifi_network_detail" msgid="9070182553555487360">"Детали за мрежа"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"Детали за мрежата"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"MAC-адреса"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP-адреса"</string>
-    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Маска на подмрежа"</string>
+    <string name="wifi_subnet_mask" msgid="6238171812379380608">"Подмрежна маска"</string>
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-адреси"</string>
-    <string name="wifi_gateway" msgid="4975799192860431013">"Мрежен мост"</string>
+    <string name="wifi_gateway" msgid="4975799192860431013">"Портал"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Поставки за Wi‑Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Вклучувај Wi‑Fi автоматски"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi‑Fi ќе се вклучува на зачувани мрежи со висок квалитет во близина, како на пр., домашната мрежа"</string>
@@ -138,16 +138,16 @@
     <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Точка на пристап"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Се вклучува <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Другите уреди може да се поврзат на <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
-    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка за точка на пристап"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Лозинка за точката на пристап"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Безбедност"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Лична"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Нема"</string>
     <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Пристапна точка"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Изберете појас на AP"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Автоматскa"</string>
-    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Појас од 2,4 GHz"</string>
-    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Појас од 5,0 GHz"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Претпочитан појас: 5,0 GHz"</string>
+    <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Опсег од 2,4 GHz"</string>
+    <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Опсег од 5,0 GHz"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Претпочитан опсег: 5,0 GHz"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Избери барем еден појас:"</string>
@@ -374,7 +374,7 @@
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Безбедност и регулаторно упатство"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Авторски права"</string>
     <string name="license_title" msgid="936705938435249965">"Лиценца"</string>
-    <string name="terms_title" msgid="5201471373602628765">"Правила и услови"</string>
+    <string name="terms_title" msgid="5201471373602628765">"Одредби и услови"</string>
     <string name="webview_license_title" msgid="6442372337052056463">"Системски лиценци за WebView"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Тапети"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Извор на сателитски снимки:\n©2014 CNES/Astrium, DigitalGlobe, Bluesky"</string>
@@ -559,10 +559,10 @@
     <string name="lockpattern_retry_button_text" msgid="4655398824001857843">"Исчисти"</string>
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Откажи"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Вашата нова шема за отклучување"</string>
-    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Нацртајте ја шемата за отклучување"</string>
+    <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Нацртајте шема за отклучување"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Отпуштете го прстот кога ќе завршите"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Шемата е снимена"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Употреби ја шемата повторно за потврда"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Нацртајте ја шемата повторно за потврда"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Поврзете барем 4 точки. Обидете се пак."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Погрешна шема"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Како се употребува шемата на отклучување"</string>
@@ -574,7 +574,7 @@
     <string name="lock_settings_enter_password" msgid="2636669926649496367">"Внесете ја лозинката"</string>
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"За безбедност, поставете PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Внесете го PIN-кодот повторно"</string>
-    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-кодот мора да има најмалку 4 цифри"</string>
+    <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN-кодот мора да содржи барем 4 цифри"</string>
     <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN-кодот е неважечки. Мора да има барем 4 цифри."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PIN-кодовите не се совпаѓаат"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Грешка при зачувување PIN"</string>
@@ -588,7 +588,7 @@
     <string name="lockpassword_confirm_label" msgid="5918463281546146953">"Потврди"</string>
     <string name="choose_lock_password_hints" msgid="3903696950202491593">"Мора да има најмалку 4 знаци"</string>
     <string name="lockpassword_password_too_short" msgid="6681218025001328405">"Мора да има најмалку <xliff:g id="COUNT">%d</xliff:g> знаци"</string>
-    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-от мора да има најмалку <xliff:g id="COUNT">%d</xliff:g> цифри"</string>
+    <string name="lockpassword_pin_too_short" msgid="6363004004424904218">"PIN-кодот мора да содржи барем <xliff:g id="COUNT">%d</xliff:g> цифри"</string>
     <string name="lockpassword_password_too_long" msgid="7530214940279491291">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> знаци"</string>
     <string name="lockpassword_pin_too_long" msgid="62957683396974404">"Мора да содржи помалку од <xliff:g id="NUMBER">%d</xliff:g> цифри"</string>
     <string name="lockpassword_pin_contains_non_digits" msgid="3044526271686839923">"Мора да содржи само цифри од 0 до 9."</string>
@@ -626,27 +626,7 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Не е дозволена низа на цифри со растечки, опаѓачки или повторлив редослед."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Опции за заклучување на екранот"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: пред <xliff:g id="NUM_DAYS">%3$s</xliff:g> дена"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Додај доверлив уред"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ќе се вклучи за да додаде доверлив уред"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Доверливи уреди"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> уред</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> уреди</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Вашиот <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ќе го отклучува автомобилов кога е поврзан. Ако некој ви го земе <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, ќе може да пристапува до уредов"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Потврди"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Отстрани доверлив уред"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Готово"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Употребете ја придружната апликација за да поставите доверлив уред. Откако ќе го поставите, вашиот кориснички профил ќе се отклучи автоматски кога вашиот телефон ќе се открие во близина на возилото."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Преземете ја придружната апликација на телефонот"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Изберете <xliff:g id="CAR_NAME">%1$s</xliff:g> на телефонот за да ги спарите уредите"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Доверлив уред во близина на вашиот автомобил може да го отклучи корисничкиот профил по стартувањето на автомобилот, дури и кога некој друг го држи уредот."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Потврдете дека кодовите за спарување се совпаѓаат"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефонот е регистриран успешно"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Регистрацијата на <xliff:g id="DEVICE_NAME">%1$s</xliff:g> не успеа"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ако додадете доверлив уред, ќе треба да поставите метод на проверка во следниот чекор. Ако доверливиот уред не ви е при рака, ќе ви биде потребна проверка за да пристапите до профилот."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Врската со уредот се прекина."</string>
-    <string name="credentials_reset" msgid="873900550885788639">"Исчисти акредитиви"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Избриши акредитиви"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Отстрани ги сите акредитиви"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Дали да се отстранат сите содржини?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Меморијата на акредитиви е избришана."</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ОТФРЛИ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцијата не е достапна при возење"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Не може да се додаде корисник додека возите"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Пребарување"</string>
 </resources>

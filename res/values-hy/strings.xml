@@ -561,7 +561,7 @@
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Ձեր նոր ապակողպող նախշը"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Ապակողպող նախշ գծեք"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Ավարտելուց հետո մատը բաց թողեք"</string>
-    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշն ընդունված է"</string>
+    <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Նախշը պահվեց"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Հաստատելու համար նորից նկարեք նախշը"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Միացրեք առնվազն 4 կետ:"</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Նախշը սխալ է"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Թվանշանների աճող, նվազող կամ կրկնվող հաջորդականությունն արգելված է:"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Էկրանի կողպման տարբերակներ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> – <xliff:g id="NUM_DAYS">%3$s</xliff:g> օր առաջ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ավելացնել վստահելի սարք"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth-ը կմիանա, որ վստահելի սարք ավելացնեք"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Վստահելի սարքեր"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> սարք</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> սարք</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Միացված լինելու դեպքում ձեր <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> սարքը կկարողանա ապակողպել այս մեքենան: Եթե ձեր <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>-ը ինչ-որ մեկի մոտ հայտնվի, նա կկարողանա մտնել այս սարք:"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Հաստատել"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Հեռացնել վստահելի սարքը"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Փակել"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Ուղեկցող հավելվածի օգնությամբ կարգավորեք վստահելի սարքը։ Կարգավորումից հետո ձեր պրոֆիլն ավտոմատ կապակողպվի, երբ հեռախոսը միանա մեքենային։"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Ներբեռնեք ուղեկցող հավելվածը հեռախոսում։"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Սարքերը զուգակցելու համար ընտրեք «<xliff:g id="CAR_NAME">%1$s</xliff:g>» մեքենան հեռախոսում։"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Շարժիչի գործարկումից հետո օգտատիրոջ պրոֆիլը կարող է ապակողպվել ավտոմեքենային մոտ գտնվող սարքի կողմից, նույնիսկ եթե այն մեկ այլ անձի ձեռքում է գտնվում:"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Հաստատեք, որ զուգակցման կոդերը համընկնում են"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Հեռախոսը գրանցվեց"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Չհաջողվեց գրանցել «<xliff:g id="DEVICE_NAME">%1$s</xliff:g>» սարքը"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Վստահելի սարք ավելացնելու համար ընտրեք նույնականացման եղանակ: Եթե վստահելի սարքը ձեզ մոտ չէ, պրոֆիլ մուտք գործելու համար կպահանջվի նույնականացում:"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Սարքն անջատված է։"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Ջնջել հավաստագրերը"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Հեռացնել բոլոր հավաստագրերը"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Հեռացնե՞լ ողջ բովանդակությունը:"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ՓԱԿԵԼ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Վարելու ընթացքում գործառույթը հասանելի չէ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Վարելու ժամանակ հնարավոր չէ օգտատեր ավելացնել"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Որոնում"</string>
 </resources>

@@ -550,7 +550,7 @@
     <string name="continue_button_text" msgid="5129979170426836641">"ಮುಂದುವರಿಸಿ"</string>
     <string name="lockscreen_retry_button_text" msgid="5314212350698701242">"ಮರುಪ್ರಯತ್ನಿಸಿ"</string>
     <string name="lockscreen_skip_button_text" msgid="3755748786396198091">"ಸ್ಕಿಪ್"</string>
-    <string name="set_screen_lock" msgid="5239317292691332780">"ಪರದೆ ಲಾಕ್ ಹೊಂದಿಸಿ"</string>
+    <string name="set_screen_lock" msgid="5239317292691332780">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಸೆಟ್ ಮಾಡಿ"</string>
     <string name="lockscreen_choose_your_pin" msgid="1645229555410061526">"ನಿಮ್ಮ ಪಿನ್‌ ಆಯ್ಕೆಮಾಡಿ"</string>
     <string name="lockscreen_choose_your_pattern" msgid="6801175111142593404">"ಪ್ಯಾಟರ್ನ್ ಆಯ್ಕೆ ಮಾಡಿ"</string>
     <string name="lockscreen_choose_your_password" msgid="4487577710136014069">"ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್‌ ಅನ್ನು ಆರಿಸಿಕೊಳ್ಳಿ"</string>
@@ -563,7 +563,7 @@
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ಬಳಿಕ ಬೆರಳು ತೆಗೆಯಿರಿ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ಪ್ಯಾಟರ್ನ್ ಅನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡಲಾಗಿದೆ"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ಖಚಿತಪಡಿಸಲು ಪ್ಯಾಟರ್ನ್ ಚಿತ್ರಿಸಿ"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ಕನಿಷ್ಠ 4 ಡಾಟ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ಕನಿಷ್ಠ 4 ಡಾಟ್‌ಗಳನ್ನು ಕನೆಕ್ಟ್ ಮಾಡಿ. ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ಪ್ಯಾಟರ್ನ್ ತಪ್ಪಾಗಿದೆ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ಅನ್‌ಲಾಕ್ ನಮೂನೆಯನ್ನು ರಚಿಸುವುದು ಹೇಗೆ"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"ಪ್ಯಾಟರ್ನ್‌ ಉಳಿಸುವಲ್ಲಿ ದೋಷ"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ಅಂಕಿಗಳ ಆರೋಹಣ, ಅವರೋಹಣ ಅಥವಾ ಪುನರಾವರ್ತಿತ ಅನುಕ್ರಮವನ್ನು ನಿಷೇಧಿಸಲಾಗಿದೆ."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಆಯ್ಕೆಗಳು"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ದಿನಗಳ ಹಿಂದೆ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಿ"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನ ಸೇರಿಸಲು ಬ್ಲೂಟೂತ್ ಆನ್ ಆಗುತ್ತದೆ"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನಗಳು"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ಸಾಧನಗಳು</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ಸಾಧನಗಳು</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ಸಂಪರ್ಕಿತಗೊಂಡಾಗ ಈ ಕಾರ್‌ ಅನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ಒಂದು ವೇಳೆ ನಿಮ್ಮ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ಅನ್ನು ಯಾರಾದರೂ ತೆಗೆದುಕೊಂಡರೆ, ಅವರಿಗೆ ಈ ಸಾಧನವನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗಬಹುದು"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ದೃಢೀಕರಿಸಿ"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ಮುಗಿದಿದೆ"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೆಟಪ್ ಮಾಡಲು ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಬಳಸಿ. ಸೆಟಪ್ ಮಾಡಿದ ನಂತರ, ನಿಮ್ಮ ಫೋನ್ ವಾಹನದ ಬಳಿ ಕಂಡುಬಂದಾಗ ನಿಮ್ಮ ಬಳಕೆದಾರರ ಪ್ರೊಫೈಲ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅನ್‌ಲಾಕ್ ಆಗುತ್ತದೆ."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ ಕಂಪ್ಯಾನಿಯನ್ ಆ್ಯಪ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ನಲ್ಲಿರುವ <xliff:g id="CAR_NAME">%1$s</xliff:g> ಆಯ್ಕೆಮಾಡಿ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ಬೇರೊಬ್ಬರು ಸಾಧನವನ್ನು ಹಿಡಿದಿಟ್ಟುಕೊಂಡಿದ್ದರೂ ಸಹ, ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವು ಬಳಕೆದಾರರ ಪ್ರೊಫೈಲ್ ಸಮೀಪದಲ್ಲಿದ್ದಾಗ, ಅದು ಪ್ರಾರಂಭಿಸಿದ ನಂತರ ಅದನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ಜೋಡಣೆ ಕೋಡ್‌ಗಳು ಹೊಂದಾಣಿಕೆಯಾಗಿವೆಯೇ ಎಂದು ದೃಢೀಕರಿಸಿ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ಫೋನ್ ಅನ್ನು ಯಶಸ್ವಿಯಾಗಿ ನೋಂದಣಿ ಮಾಡಲಾಗಿದೆ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ನೋಂದಣಿ ವಿಫಲವಾಗಿದೆ"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ಸೇರಿಸುವುದು ನೀವು ಪ್ರಮಾಣೀಕರಣ ವಿಧಾನವನ್ನು ಹೊಂದಿಸುವ ಅಗತ್ಯವಿದೆ. ನೀವು ವಿಶ್ವಾಸಾರ್ಹ ಸಾಧನವನ್ನು ನಿಮ್ಮೊಂದಿಗೆ ಹೊಂದಿಲ್ಲದೇ ಇದ್ದರೆ, ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಅನ್ನು ಪ್ರವೇಶಿಸಲು ಪ್ರಮಾಣೀಕರಣದ ಅಗತ್ಯವಿದೆ."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ಸಾಧನದ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಲಾಗಿದೆ."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ರುಜುವಾತುಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ಎಲ್ಲಾ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ತೆಗೆದುಹಾಕಿ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ಎಲ್ಲಾ ವಿಷಯಗಳನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ವಜಾಗೊಳಿಸಿ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ಡ್ರೈವ್ ಮಾಡುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯ ಲಭ್ಯವಿಲ್ಲ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ಡ್ರೈವ್ ಮಾಡುವಾಗ ಬಳಕೆದಾರರನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ಹುಡುಕಿ"</string>
 </resources>

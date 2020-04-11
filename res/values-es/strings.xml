@@ -41,7 +41,7 @@
     <string name="mobile_network_inactive_esim" msgid="1397332352238119032">"Inactivo/SIM descargada"</string>
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Añadir más"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Datos móviles"</string>
-    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a los datos con la red móvil"</string>
+    <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Acceder a datos con la red móvil"</string>
     <string name="confirm_mobile_data_disable" msgid="826493998804496639">"¿Desactivar los datos móviles?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Debes seleccionar una opción"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"¿Usar <xliff:g id="CARRIER">%1$s</xliff:g> para los datos móviles?"</string>
@@ -81,7 +81,7 @@
     <string name="data_limit" msgid="227338836292511425">"Límite de datos"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Limitando uso de datos"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"La unidad principal de tu vehículo desactivará los datos móviles cuando se alcance el límite establecido.\n\nSe tiene en cuenta el uso de datos medido por la unidad principal, aunque tu operador podría registrarlo de forma diferente. Por tanto, debes ser prudente al establecer un límite."</string>
-    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establecer advertencia de uso de datos"</string>
+    <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Establece la advertencia de uso de datos"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Limitar uso de datos"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Definir"</string>
     <string name="wifi_settings" msgid="7701477685273103841">"Wi‑Fi"</string>
@@ -135,7 +135,7 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Cambiar a datos móviles automáticamente"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Utiliza la conexión de datos móviles cuando no haya acceso a Internet a través de la red Wi‑Fi. Podrían aplicarse cargos por el uso de datos."</string>
     <string name="learn_more" msgid="8214605928933358604">"Más información"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nombre punto acceso"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Nombre del punto de acceso"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"Activando <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>..."</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Otros dispositivos pueden conectarse a <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g>"</string>
     <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Contraseña del punto de acceso"</string>
@@ -151,8 +151,8 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5,0 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Elige mín. 1 banda para punto acceso Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Punto de acceso y conexión compartida"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar el punto de acceso automáticamente"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Punto de acceso/Conexión compartida"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Desactivar punto de acceso automáticamente"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"El punto de acceso Wi‑Fi se desactivará si no hay dispositivos conectados"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> quiere activar la conexión Wi-Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> quiere desactivar la conexión Wi-Fi"</string>
@@ -218,8 +218,8 @@
     <string name="media_volume_summary" msgid="2961762827637127239">"Establecer volumen para música y vídeos"</string>
     <string name="alarm_volume_title" msgid="840384014895796587">"Alarma"</string>
     <string name="ringtone_title" msgid="8370531086214517972">"Tono de llamada del teléfono"</string>
-    <string name="notification_ringtone_title" msgid="8661716239594010288">"Sonido notificación predeterm."</string>
-    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonido alarma predeterminado"</string>
+    <string name="notification_ringtone_title" msgid="8661716239594010288">"Sonido de notificación predeterminado"</string>
+    <string name="alarm_ringtone_title" msgid="3257364170646440908">"Sonido de alarma predeterminado"</string>
     <string name="units_settings" msgid="402325305096925886">"Unidades"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"Velocidad"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"Distancia"</string>
@@ -327,8 +327,8 @@
     <string name="app_link_open_never" msgid="2173174327831792316">"No abrir en esta aplicación"</string>
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Enlaces compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Acceso especial de aplicaciones"</string>
-    <string name="show_system" msgid="4401355756969485287">"Mostrar apps del sistema"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Ocultar apps del sistema"</string>
+    <string name="show_system" msgid="4401355756969485287">"Mostrar sistema"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Ocultar sistema"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar ajustes del sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cuando se concede este permiso, la aplicación puede modificar los ajustes del sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acceso a las notificaciones"</string>
@@ -356,7 +356,7 @@
     <string name="hardware_info" msgid="3973165746261507658">"Modelo y hardware"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modelo: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Versión de banda base"</string>
-    <string name="kernel_version" msgid="7327212934187011508">"Versión de kernel"</string>
+    <string name="kernel_version" msgid="7327212934187011508">"Versión del kernel"</string>
     <string name="build_number" msgid="3997326631001009102">"Número de compilación"</string>
     <string name="bluetooth_mac_address" msgid="7641425947941688072">"Dirección de Bluetooth"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"No disponible"</string>
@@ -395,7 +395,7 @@
     <string name="reset_options_title" msgid="4388902952861833420">"Opciones de recuperación"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Restablecer dispositivo, aplicaciones y red"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Restablecer red"</string>
-    <string name="reset_network_desc" msgid="602381374544634925">"Se restablecerán todos los ajustes de red, incluidas las siguientes opciones:"</string>
+    <string name="reset_network_desc" msgid="602381374544634925">"Se restablecerán todos los ajustes de red, como:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
     <string name="reset_network_item_mobile" msgid="5747282716664480997"><li>"Datos móviles"</li></string>
     <string name="reset_network_item_bluetooth" msgid="6035019931106921284"><li>"Bluetooth"</li></string>
@@ -427,7 +427,7 @@
     <string name="date_time_auto" msgid="3570339569471779767">"Fecha y hora automáticas"</string>
     <string name="date_time_auto_summary" msgid="3311706425095342759">"Usar la hora proporcionada por la red"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Zona horaria automática"</string>
-    <string name="zone_auto_summary" msgid="4345856882906981864">"Usar zona horaria proporcionada por la red"</string>
+    <string name="zone_auto_summary" msgid="4345856882906981864">"Usar la zona horaria proporcionada por la red"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Formato de 24 horas"</string>
     <string name="date_time_24hour" msgid="1137618702556486913">"Usar formato de 24 horas"</string>
     <string name="date_time_set_time_title" msgid="5884883050656937853">"Hora"</string>
@@ -435,7 +435,7 @@
     <string name="date_time_set_timezone_title" msgid="3001779256157093425">"Zona horaria"</string>
     <string name="date_time_set_timezone" msgid="4759353576185916944">"Seleccionar zona horaria"</string>
     <string name="date_time_set_date_title" msgid="6834785820357051138">"Fecha"</string>
-    <string name="date_time_set_date" msgid="2537494485643283230">"Definir fecha"</string>
+    <string name="date_time_set_date" msgid="2537494485643283230">"Establecer fecha"</string>
     <string name="zone_list_menu_sort_alphabetically" msgid="7041628618528523514">"Ordenar alfabéticamente"</string>
     <string name="zone_list_menu_sort_by_timezone" msgid="4944880536057914136">"Ordenar por zona horaria"</string>
     <string name="date_picker_title" msgid="1533614225273770178">"Fecha"</string>
@@ -509,7 +509,7 @@
     <string name="no_accounts_added" msgid="5148163140691096055">"No se ha añadido ninguna cuenta"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Cuentas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar datos automáticamente"</string>
-    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que las apps actualicen los datos automáticamente"</string>
+    <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permite que las aplicaciones actualicen los datos automáticamente"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"¿Activar sincronización autom.?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Los cambios que hagas en tus cuentas en la Web se reflejarán automáticamente en el dispositivo.\n\nAlgunas cuentas como, por ejemplo, las cuentas de Google, también reflejarán en la Web los cambios que hagas en el teléfono. A continuación, puedes ver cómo funciona  una cuenta de Google."</string>
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"¿Desactivar sincronización aut.?"</string>
@@ -626,28 +626,8 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"No se permite utilizar una secuencia ascendente, descendente ni repetida de dígitos."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opciones de bloqueo de pantalla"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : hace <xliff:g id="NUM_DAYS">%3$s</xliff:g> días"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Añadir dispositivo de confianza"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Se activará Bluetooth para añadir disp. confianza"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dispositivos de confianza"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivos</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositivo</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Tu <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> desbloqueará este coche cuando esté conectado. Si alguien coge tu <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, es posible que pueda acceder a este dispositivo"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Quitar dispositivo de confianza"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Listo"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Usa la aplicación complementaria para configurar un dispositivo de confianza. Una vez que lo hagas, tu perfil de usuario se desbloqueará automáticamente cuando el teléfono se detecte cerca del vehículo."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Descarga la aplicación complementaria en el teléfono"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecciona <xliff:g id="CAR_NAME">%1$s</xliff:g> en el teléfono para vincular los dispositivos"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Es posible que un dispositivo de confianza que se encuentre cerca pueda desbloquear el perfil del usuario al arrancar el coche, aunque lo esté sujetando otra persona."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirma que los códigos de sincronización coinciden"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"El teléfono se ha registrado correctamente"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> no se ha podido registrar"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Para añadir un dispositivo de confianza, debes definir un método de autenticación. Si no tienes el dispositivo de confianza a mano, tendrás que realizar el proceso de autenticación para acceder a tu perfil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"El dispositivo se ha desconectado."</string>
-    <string name="credentials_reset" msgid="873900550885788639">"Eliminar certificados"</string>
-    <string name="credentials_reset_summary" msgid="6067911547500459637">"Quitar todos los certificados"</string>
+    <string name="credentials_reset" msgid="873900550885788639">"Borrar credenciales"</string>
+    <string name="credentials_reset_summary" msgid="6067911547500459637">"Quita todos los certificados"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"¿Seguro que quieres quitar todos los contenidos?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Almacenamiento de credenciales borrado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"No se ha podido borrar el almacenamiento de credenciales."</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"CERRAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Esta función no está disponible mientras se conduce"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"No se puede añadir un usuario mientras se conduce"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Buscar"</string>
 </resources>

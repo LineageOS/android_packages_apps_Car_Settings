@@ -125,9 +125,9 @@
     <string name="wifi_dns" msgid="1841448353154932801">"DNS"</string>
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6 даректери"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Шлюз"</string>
-    <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi жеке жөндөөлөрү"</string>
+    <string name="wifi_preferences_title" msgid="772788844257225510">"Wi‑Fi жөндөөлөрү"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Wi‑Fi автоматтык түрдө күйсүн"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Байланыш сигналы күчтүү тармактарга (мисалы, үйдө) жакындаганда, Wi‑Fi автоматтык түрдө күйөт"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Сигналы күчтүү, сакталган тармактарга жакындаганда (мисалы, үйүңүздөгү), Wi‑Fi автоматтык түрдө күйөт"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Жайгашкан жерди аныктоо өчүрүлгөндүктөн, жеткиликсиз. "<annotation id="link">"Жайгашкан жерди"</annotation>" күйгүзүңүз."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Wi‑Fi тармактарын издөөнү күйгүзөсүзбү?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Күйгүзүү"</string>
@@ -135,10 +135,10 @@
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"Мобилдик Интернетке автоматтык түрдө которулсун"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"Wi-Fi аркылуу Интернетке туташуу мүмкүнчүлүгү жок болгондо, мобилдик Интернет колдонулсун. Трафиктин колдонулгандыгы үчүн акы алынышы мүмкүн."</string>
     <string name="learn_more" msgid="8214605928933358604">"Кеңири маалымат"</string>
-    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Хотспоттун аталышы"</string>
+    <string name="wifi_hotspot_name_title" msgid="8844779338692535356">"Байланыш түйүнүнүн аталышы"</string>
     <string name="wifi_hotspot_name_summary_connecting" msgid="5262510450498600038">"<xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> күйгүзүлүүдө…"</string>
     <string name="wifi_hotspot_name_summary_connected" msgid="7421325340822195506">"Башка түзмөктөр <xliff:g id="WIFI_HOTSPOT_NAME">%1$s</xliff:g> тармагына туташа алышат"</string>
-    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Хотспоттун сырсөзү"</string>
+    <string name="wifi_hotspot_password_title" msgid="4103948315849351988">"Байланыш түйүнү тун сырсөзү"</string>
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Коопсуздук"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Жок"</string>
@@ -151,7 +151,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 ГГц"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi туташуу түйүнүн иштетүү үчүн кеминде бир жыштыкты тандаңыз:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Хотспот жана байланыш түйүнү"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Байланыш түйүнү жана модем режими"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Байланыш түйүнү автоматтык түрдө өчөт"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Бир дагы түзмөк туташпаса, Wi‑Fi байланыш түйүнү автоматтык түрдө өчүп калат"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> WiFi\'ды күйгүзгөнү жатат"</string>
@@ -352,7 +352,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Тутум"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Тутум жаңыртуулары"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android версиясы"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Коопсуздук тутумунун жаңыртуусу:"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Коопсуздук тутумун жаңыртуу:"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Үлгү жана аппараттык камсыздоо"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Үлгү: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Байланыш модулунун версиясы"</string>
@@ -369,7 +369,7 @@
     <string name="about_settings_summary" msgid="7975072809083281401">"Юридикалык маалыматты, абалын, программанын версиясын көрүү"</string>
     <string name="legal_information" msgid="1838443759229784762">"Юридикалык маалымат"</string>
     <string name="contributors_title" msgid="7698463793409916113">"Салым кошуучулар"</string>
-    <string name="manual" msgid="4819839169843240804">"Нускама"</string>
+    <string name="manual" msgid="4819839169843240804">"Кол менен"</string>
     <string name="regulatory_labels" msgid="3165587388499646779">"Тастыктама энбелгилери"</string>
     <string name="safety_and_regulatory_info" msgid="1204127697132067734">"Коопсуздук жана стандарттарга жооп берүү"</string>
     <string name="copyright_title" msgid="4220237202917417876">"Автордук укук"</string>
@@ -626,29 +626,9 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Сандар чоңойгон, кичирейген же кайталанган ыраатта болбошу керек."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Экранды кулпулоо ыкмалары"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> күн мурун"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ишенимдүү түзмөк кошуу"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ишенимдүү түзмөктү кошуу үчүн күйгүзүлөт"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Ишенимдүү түзмөктөр"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> түзмөк</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> түзмөк</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> түзмөгүңүз туташып турганда, унаанын кулпусун ачат. Эгер <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> түзмөгү кимдир бирөөнүн колуна тийсе, ал ушул түзмөктү да ача алат"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Ырастоо"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ишенимдүү түзмөктү өчүрүү"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Бүттү"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Ишенимдүү түзмөктү жөндөө үчүн, коштомо колдонмону пайдаланыңыз. Жөндөлгөндөн кийин, телефонуңуз унаанын жанында аныкталганда, колдонуучу профилиңиздин кулпусу автоматтык түрдө ачылат."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Телефонуңузга коштомо колдонмону жүктөп алыңыз"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Түзмөктөрдү жупташтыруу үчүн, телефонуңуздан <xliff:g id="CAR_NAME">%1$s</xliff:g> унаасын тандаңыз"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Ишенимдүү түзмөктү унааңыздын жанында сиз же башка бирөө күйгүзгөн учурда да, колдонуучу профилиңиздин кулпусу ачылат."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Жупташтыруучу коддор дал келгендигин ырастаңыз"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Телефон ийгиликтүү катталды"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> катталган жок"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ишенимдүү түзмөктү кошууда аутентификация ыкмасын кошуу талап кылынат. Эгер ишенимдүү түзмөк жаныңызда болбосо, профилге кирүү үчүн аутентификациядан өтүү керек болот."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Түзмөк ажыратылды."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Эсептик дайындарды тазалоо"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Бардык тастыктамалар өчүрүлөт"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Бардык мазмундар өчүрүлсүнбү?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Баарын өчүрөсүзбү?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"Эсептик дайындар сакталчу жер тазаланды."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Эсептик дайындар сакталчу жерди тазалоо мүмкүн эмес."</string>
     <string name="forget" msgid="3971143908183848527">"Унутулсун"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ЧЕТКЕ КАГУУ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Унаа айдаганда бул функция жеткиликтүү эмес"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Унаа айдап баратканда колдонуучуну кошууга болбойт"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Издөө"</string>
 </resources>

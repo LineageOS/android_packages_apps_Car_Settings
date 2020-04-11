@@ -102,7 +102,7 @@
     <string name="wifi_signal_strength" msgid="8507318230553042817">"ਸਿਗਨਲ ਦੀ ਤੀਬਰਤਾ"</string>
     <string name="wifi_status" msgid="5688013206066543952">"ਸਥਿਤੀ"</string>
     <string name="wifi_speed" msgid="1650692446731850781">"ਲਿੰਕ ਸਪੀਡ"</string>
-    <string name="wifi_frequency" msgid="8951455949682864922">"ਬਾਰੰਬਾਰਤਾ"</string>
+    <string name="wifi_frequency" msgid="8951455949682864922">"ਵਾਰਵਾਰਤਾ"</string>
     <string name="wifi_ip_address" msgid="3128140627890954061">"IP ਪਤਾ"</string>
     <string name="show_password" msgid="2074628020371139240">"ਪਾਸਵਰਡ ਦਿਖਾਓ"</string>
     <string name="default_network_name_summary" msgid="8148402439232464276">"ਨੈੱਟਵਰਕ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ਅੰਕਾਂ ਦਾ ਵਧਦਾ ਕ੍ਰਮ, ਘਟਦਾ ਕ੍ਰਮ, ਜਾਂ ਦੁਹਰਾਈ ਗਈ ਲੜੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ਸਕ੍ਰੀਨ ਲਾਕ ਦੇ ਵਿਕਲਪ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ਦਿਨ ਪਹਿਲਾਂ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਸ਼ਾਮਲ ਕਰੋ"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਬਲੂਟੁੱਥ ਚਾਲੂ ਹੋਵੇਗਾ"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸਾਂ"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> ਡੀਵਾਈਸ</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ਡੀਵਾਈਸਾਂ</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ਤੁਹਾਡਾ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ਇਸ ਕਾਰ ਨੂੰ ਅਣਲਾਕ ਕਰ ਦੇਵੇਗਾ, ਜਦੋਂ ਇਹ ਕਨੈਕਟ ਕੀਤਾ ਹੋਇਆ ਹੋਵੇਗਾ। ਜੇਕਰ ਕੋਈ ਤੁਹਾਡਾ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ਲੈ ਲੈਂਦਾ ਹੈ, ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਉਹ ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਪਹੁੰਚ ਕਰਨ ਦੇ ਯੋਗ ਹੋ ਜਾਵੇ।"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ਪੁਸ਼ਟੀ ਕਰੋ"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਹਟਾਓ"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ਹੋ ਗਿਆ"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ਕਿਸੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸੈੱਟਅੱਪ ਕਰਨ ਲਈ ਸੰਬੰਧੀ ਐਪ ਵਰਤੋ। ਤੁਹਾਡਾ ਫ਼ੋਨ ਵਾਹਨ ਦੇ ਨੇੜੇ ਹੋਣ \'ਤੇ ਇੱਕ ਵਾਰ ਸੈੱਟਅੱਪ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡੀ ਵਰਤੋਂਕਾਰ ਪ੍ਰੋਫਾਈਲ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਅਣਲਾਕ ਹੋ ਜਾਵੇਗੀ।"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ ਸੰਬੰਧੀ ਐਪ ਡਾਊਨਲੋਡ ਕਰੋ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ਡੀਵਾਈਸਾਂ ਨੂੰ ਜੋੜਾਬੱਧ ਕਰਨ ਲਈ ਆਪਣੇ ਫ਼ੋਨ \'ਤੇ <xliff:g id="CAR_NAME">%1$s</xliff:g> ਚੁਣੋ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ਕਿਸੇ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਦਾ ਤੁਹਾਡੀ ਕਾਰ ਦੇ ਨਜ਼ਦੀਕ ਹੋਣਾ ਵਰਤੋਂਕਾਰ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਬਲਨ ਵੇਲੇ ਅਣਲਾਕ ਰੱਖੇਗਾ, ਭਾਵੇਂ ਡੀਵਾਈਸ ਨੂੰ ਕਿਸੇ ਹੋਰ ਨੇ ਫੜਿਆ ਹੋਵੇ।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ਕਿਰਪਾ ਕਰਕੇ ਜੋੜਾਬੱਧਕਰਨ ਕੋਡਾਂ ਦੇ ਮੇਲ ਖਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ਫ਼ੋਨ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਦਰਜ ਕੀਤਾ ਗਿਆ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> ਨੂੰ ਦਰਜ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਅੱਗੇ ਤੁਹਾਨੂੰ ਪ੍ਰਮਾਣੀਕਰਨ ਵਿਧੀ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਤੁਹਾਡਾ ਭਰੋਸੇਯੋਗ ਡੀਵਾਈਸ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਫ਼ਾਈਲ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਲਈ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ਡੀਵਾਈਸ ਡਿਸਕਨੈਕਟ ਕੀਤਾ ਗਿਆ।"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ਕ੍ਰੀਡੈਂਸ਼ੀਅਲ ਕਲੀਅਰ ਕਰੋ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ਸਾਰੇ ਪ੍ਰਮਾਣ-ਪੱਤਰ ਹਟਾਓ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"ਕੀ ਸਾਰੀਆਂ ਸਮੱਗਰੀਆਂ ਹਟਾਉਣੀਆਂ ਹਨ?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ਖਾਰਜ ਕਰੋ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ਚਲਦੀ ਗੱਡੀ ਵਿੱਚ ਵਰਤੋਂਕਾਰ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ਖੋਜ"</string>
 </resources>

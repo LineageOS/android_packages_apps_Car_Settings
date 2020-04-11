@@ -127,7 +127,7 @@
     <string name="wifi_gateway" msgid="4975799192860431013">"Porta e kalimit"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Preferencat e Wi‑Fi"</string>
     <string name="wifi_wakeup" msgid="7451825226044542000">"Aktivizo automatikisht Wi‑Fi"</string>
-    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi do të aktivizohet përsëri në afërsi të rrjeteve të ruajtura me cilësi të lartë, si p.sh. rrjetin e shtëpisë"</string>
+    <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi do të aktivizohet përsëri në afërsi të rrjeteve të ruajtura me cilësi të lartë, si p.sh. rrjeti i shtëpisë"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Nuk ofrohet sepse vendndodhja është e çaktivizuar. Aktivizo "<annotation id="link">"vendndodhjen"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Të aktivizohet skanimi për Wi‑Fi?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"Aktivizo"</string>
@@ -506,7 +506,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> nuk mund të nxirrej në mënyrë të sigurt"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Llogaritë"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Shto llogari"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Nuk u shtua asnjë llogari"</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nuk është shtuar asnjë llogari"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Llogaritë për <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sinkronizo automatikisht të dhënat"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Lejo që aplikacionet t\'i rifreskojnë automatikisht të dhënat"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Nuk lejohet një sekuencë shifrash në rritje, në zbritje ose me përsëritje."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsionet e kyçjes së ekranit"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ditë më parë"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Shto një pajisje të besuar"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth-i do të aktivizohet për të shtuar pajisjen e besuar"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Pajisjet e besuara"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> pajisje</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> pajisje</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Pajisja jote <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> do ta shkyçë këtë makinë kur është e lidhur. Nëse dikush merr pajisjen tënde <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, mund të jetë në gjendje të ketë qasje te kjo pajisje"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmo"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hiq pajisjen e besuar"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"U krye"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Përdor aplikacionin shoqërues për të konfiguruar një pajisje të besuar. Pasi të konfigurohet, profili yt si përdorues do të shkyçet automatikisht kur telefoni yt të zbulohet pranë automjetit."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Shkarko aplikacionin shoqërues në telefonin tënd"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Zgjidh <xliff:g id="CAR_NAME">%1$s</xliff:g> në telefon për të çiftuar pajisjet"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Një pajisje e besuar në afërsi do ta shkyçë profilin e përdoruesit pas ndezjes, edhe nëse pajisjen e mban dikush tjetër."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmo se kodet e çiftimit përputhen"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefoni është regjistruar me sukses"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Regjistrimi i <xliff:g id="DEVICE_NAME">%1$s</xliff:g> dështoi"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Shtimi i një pajisjeje të besuar kërkon që të caktosh më pas një metodë vërtetimi. Nëse nuk e ke pajisjen e besuar me vete, do të kërkohet vërtetim për të pasur qasje te profili yt."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Pajisja u shkëput"</string>
     <string name="credentials_reset" msgid="873900550885788639">"Pastro kredencialet"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hiqi të gjitha certifikatat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Të hiqen të gjitha përmbajtjet?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"HIQ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Veçoria nuk ofrohet gjatë drejtimit të makinës"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Përdoruesi nuk mund të shtohet gjatë drejtimit të makinës"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Kërko"</string>
 </resources>

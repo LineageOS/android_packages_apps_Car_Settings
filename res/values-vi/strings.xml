@@ -151,7 +151,7 @@
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2,4 GHz"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chọn 1 băng tần cho điểm phát sóng Wi‑Fi:"</string>
-    <string name="tether_settings_title_all" msgid="4663704772599383169">"Điểm phát sóng và chia sẻ kết nối"</string>
+    <string name="tether_settings_title_all" msgid="4663704772599383169">"Điểm phát sóng và chia sẻ Internet"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Tự động tắt điểm phát sóng"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Điểm phát sóng Wi-Fi sẽ tắt nếu không có thiết bị nào kết nối"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> muốn bật Wi-Fi"</string>
@@ -564,7 +564,7 @@
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Đã ghi lại hình mở khóa"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Vẽ lại hình mở khóa để xác nhận"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Kết nối ít nhất 4 điểm. Hãy thử lại."</string>
-    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Hình không chính xác"</string>
+    <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"Hình mở khóa không chính xác"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"Cách vẽ hình mở khóa"</string>
     <string name="error_saving_lockpattern" msgid="2933512812768570130">"Lỗi khi lưu mẫu"</string>
     <string name="okay" msgid="4589873324439764349">"OK"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Không cho phép thứ tự chữ số tăng dần, giảm dần hoặc lặp lại."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Tùy chọn phương thức khóa màn hình"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ngày trước"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Thêm thiết bị tin cậy"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth sẽ bật để thêm thiết bị tin cậy"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Thiết bị tin cậy"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> thiết bị</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> thiết bị</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> của bạn sẽ mở khóa ô tô này khi kết nối với ô tô. Nếu người khác cầm <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> của bạn, họ có thể truy cập vào thiết bị này"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Xác nhận"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Xóa thiết bị tin cậy"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Xong"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Dùng ứng dụng đồng hành để thiết lập thiết bị tin cậy. Sau khi thiết lập xong, hồ sơ người dùng của bạn sẽ tự động mở khóa khi hệ thống phát hiện điện thoại ở gần ô tô."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Tải ứng dụng đồng hành xuống điện thoại"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Chọn <xliff:g id="CAR_NAME">%1$s</xliff:g> trên điện thoại để ghép nối các thiết bị"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Thiết bị tin cậy ở gần ô tô của bạn sẽ mở khóa hồ sơ người dùng khi ô tô nổ máy, kể cả khi người khác đang giữ thiết bị này."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Vui lòng xác nhận rằng mã ghép nối trùng khớp"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Đã đăng ký thành công điện thoại"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Không đăng ký được <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Sau khi thêm thiết bị tin cậy, bạn phải đặt một phương thức xác thực. Nếu không mang theo thiết bị tin cậy, bạn sẽ phải sử dụng phương thức xác thực này để truy cập hồ sơ của mình."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Đã ngắt kết nối thiết bị."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Xóa thông tin xác thực"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Xóa tất cả chứng chỉ"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Xóa tất cả nội dung?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"BỎ QUA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Bạn không sử dụng được tính năng này khi đang lái xe"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Không thể thêm người dùng khi đang lái xe"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Tìm kiếm"</string>
 </resources>

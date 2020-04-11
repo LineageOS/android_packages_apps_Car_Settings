@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Ligar a serviços de dados em roaming"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"Pretende permitir roaming de dados?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Permitir roaming de dados?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Podem aplicar-se custos de roaming."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilização de dados"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dados principais"</string>
@@ -332,7 +332,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar definições sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Pretende permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desativar o acesso às notificações para o serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso ao modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
@@ -506,7 +506,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Não foi possível ejetar com segurança <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Contas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adicionar conta"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada."</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que as aplicações atualizem dados automaticamente"</string>
@@ -519,7 +519,7 @@
     <string name="add_an_account" msgid="1072285034300995091">"Adicionar uma conta"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Os perfis restritos não podem adicionar contas."</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Remover conta"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Pretende remover a conta?"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Remover a conta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"A remoção desta conta elimina todas as mensagens, os contactos e outros dados do dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Falha ao remover a conta"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronização da conta"</string>
@@ -581,7 +581,7 @@
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN incorreto"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Palavra-passe incorreta."</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Por segurança, defina uma palavra-passe."</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduzir a palavra-passe"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduza a palavra-passe"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Palavras-passe não coincidem"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Limpar"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Cancelar"</string>
@@ -626,29 +626,9 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Não é permitida uma sequência de dígitos ascendente, descendente ou repetida."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opções de bloqueio de ecrã"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: há <xliff:g id="NUM_DAYS">%3$s</xliff:g> dias"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Adicionar dispositivo fidedigno"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"O Bluetooth será ativado p/ adicionar disp. fided."</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dispositivos fidedignos"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> dispositivos</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> dispositivo</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"O dispositivo <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> irá desbloquear este automóvel quando for ligado. Se alguém pegar no dispositivo <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, essa pessoa pode aceder ao mesmo."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmar"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Remover dispositivo fidedigno"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Concluído"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilize a aplicação associada para configurar um dispositivo fidedigno. Após a configuração, o seu perfil de utilizador será desbloqueado automaticamente quando o telemóvel for detetado perto do veículo."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Transfira a aplicação associada no telemóvel."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Selecione o automóvel <xliff:g id="CAR_NAME">%1$s</xliff:g> no telemóvel para sincronizar os dispositivos."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Um dispositivo fidedigno próximo do seu automóvel irá desbloquear o perfil do utilizador no arranque, mesmo se outra pessoa estiver a utilizar o dispositivo."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Confirme se os códigos de sincronização coincidem"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"O telemóvel foi inscrito com êxito."</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Falha ao inscrever o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ao adicionar um dispositivo fidedigno, tem de definir um método de autenticação a seguir. Se não tiver o dispositivo fidedigno consigo, será necessária a autenticação para aceder ao seu perfil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispositivo desligado."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Permite remover todos os certificados"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Pretende remover todo o conteúdo?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"O armazenamento de credenciais foi apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Não foi possível apagar o armazenamento de credenciais."</string>
     <string name="forget" msgid="3971143908183848527">"Esquecer"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORAR"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funcionalidade não disponível durante a condução."</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Não é possível adicionar o utilizador durante a condução."</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Pesquisar"</string>
 </resources>

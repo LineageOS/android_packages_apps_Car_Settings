@@ -156,7 +156,7 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5 GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Vyberte aspoň jedno pásmo hotspotu Wi‑Fi:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Hotspot a tethering"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Automatické vypínanie hotspotu"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Hotspot automaticky vypínať"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Ak nebudú pripojené žiadne zariadenia, hotspot Wi‑Fi sa vypne"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> chce zapnúť Wi‑Fi"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> chce vypnúť Wi‑Fi"</string>
@@ -648,28 +648,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Vzostupná, zostupná alebo opakovaná sekvencia čísiel nie je povolená."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Možnosti zámky obrazovky"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : pred <xliff:g id="NUM_DAYS">%3$s</xliff:g> dňami"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Pridanie dôveryhodného zar."</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Zapne sa Bluetooth s cieľom pridať dôv. zariadenia"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Dôveryhodné zar."</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> zariadenia</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> devices</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> zariadení</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> zariadenie</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Vaše zariadenie <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> po pripojení odomkne toto auto. Ak vám niekto zariadenie <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> vezme, pravdepodobne bude mať prístup do tohto zariadenia"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Potvrdiť"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Odstrániť dôveryhodné zariadenie"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Hotovo"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Nastavte dôveryhodné zariadenie pomocou sprievodnej aplikácie. Po nastavení sa bude váš profil používateľa automaticky odomykať, keď vozidlo rozpozná v blízkosti váš telefón."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Stiahnite v telefóne sprievodnú aplikáciu"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Vyberte v telefóne auto <xliff:g id="CAR_NAME">%1$s</xliff:g> a spárujte tak zariadenia"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Dôveryhodné zariadenie v blízkosti auta môže po naštartovaní odomknúť používateľsky profil, a to aj vtedy, keď ho drží iná osoba."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Potvrďte, že sa párovacie kódy zhodujú"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefón bol úspešne zaregistrovaný"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> sa nepodarilo zaregistrovať"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ak chcete pridať dôveryhodné zariadenie, musíte v ďalšom kroku nastaviť spôsob overenia. Ak nemáte dôveryhodné zariadenie pri sebe, prístup do vášho profilu bude možný až po overení."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Zariadenie bolo odpojené."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Vymazanie poverení"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Odstrániť všetky certifikáty"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Chcete odstrániť všetok obsah?"</string>
@@ -692,4 +670,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ODMIETNUŤ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funkcia nie je k dispozícii počas jazdy"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Za jazdy nie je možné pridať používateľa"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Hľadať"</string>
 </resources>

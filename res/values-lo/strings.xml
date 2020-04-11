@@ -562,7 +562,7 @@
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"ແຕ້ມຮູບແບບປົດລັອກ"</string>
     <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"ປ່ອຍນິ້ວມືຂອງທ່ານເມື່ອເຮັດແລ້ວ"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"ບັນທຶກຮູບແບບແລ້ວ"</string>
-    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ແຕ້ມຮູບແບບຄືນອີກຄັ້ງເພື່ອຢັ້ງຢືນ"</string>
+    <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"ແຕ້ມຮູບແບບຄືນອີກຄັ້ງເພື່ອຢືນຢັນ"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"ເຊື່ອມຕໍ່ຢ່າງໜ້ອຍ 4 ຈຸດຫາກັນ. ກະລຸນາລອງໃໝ່."</string>
     <string name="lockpattern_pattern_wrong" msgid="929223969555399363">"ຮູບແບບບໍ່ຖືກຕ້ອງ"</string>
     <string name="lockpattern_settings_help_how_to_record" msgid="4436556875843192284">"ວິທີແຕ້ມຮູບແບບປົດລັອກ"</string>
@@ -626,29 +626,9 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ບໍ່ອະນຸຍາດໃຫ້ໃຊ້ຊຸດຕົວເລກລຽງກັນແຕ່ນ້ອຍຫາໃຫຍ່, ໃຫຍ່ຫານ້ອຍ ຫຼື ຊຸດຕົວເລກຊ້ຳກັນ."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ຕົວເລືອກການລັອກໜ້າຈໍ"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> ມື້ກ່ອນ"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"ເພີ່ມອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth ຈະເປີດເພື່ອເພີ່ມອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ອຸປະກອນ</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ອຸປະກອນ</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> ຂອງທ່ານຈະປົດລັອກລົດນີ້ ເມື່ອມັນເຊື່ອມຕໍ່. ຖ້າຄົນອື່ນເອົາ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> ຂອງທ່ານ, ພວກເຂົາຈະສາມາດເຂົ້າເຖິງອຸປະກອນນີ້ໄດ້"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"ຢືນຢັນ"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"ລຶບອຸປະກອນທີ່ເຊື່ອຖືໄດ້ອອກ"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"ແລ້ວໆ"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ໃຊ້ແອັບຊ່ວຍເຫຼືອເພື່ອຕັ້ງຄ່າອຸປະກອນທີ່ເຊື່ອຖືໄດ້. ເມື່ອຕັ້ງຄ່າແລ້ວ, ໂປຣໄຟລ໌ຜູ້ໃຊ້ຂອງທ່ານຈະປົດລັອກໂດຍອັດຕະໂນມັດ ເມື່ອພາຫານະທີ່ຢູ່ໃກ້ຄຽງກວດພົບໂທລະສັບຂອງທ່ານ."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ດາວໂຫຼດແອັບຊ່ວຍເຫຼືອໃນໂທລະສັບຂອງທ່ານ"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ເລືອກ <xliff:g id="CAR_NAME">%1$s</xliff:g> ໃນໂທລະສັບຂອງທ່ານເພື່ອຈັບຄູ່ອຸປະກອນ"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ອຸປະກອນທີ່ເຊື່ອຖືໄດ້ທີ່ຢູ່ໃກ້ກັບລົດຂອງທ່ານຈະປົດລັອກໂປຣໄຟລ໌ຜູ້ໃຊ້ຫຼັງຈາກຕິດເຄື່ອງແລ້ວ, ເຖິງແມ່ນວ່າຄົນອື່ນກຳລັງຖືອຸປະກອນໄວ້ຢູ່ກໍຕາມ."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ກະລຸນາຢືນຢັນວ່າລະຫັດຈັບຄູ່ກົງກັນ"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ລົງທະບຽນໂທລະສັບສຳເລັດແລ້ວ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"ການລົງທະບຽນ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> ບໍ່ສຳເລັດ"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ການເພີ່ມອຸປະກອນທີ່ເຊື່ອຖືໄດ້ກຳນົດໃຫ້ທ່ານຕ້ອງຕັ້ງຄ່າວິທີການກວດຮັບຮອງຄວາມຖືກຕ້ອງເປັນຂັ້ນຕອນຕໍ່ໄປ. ຖ້າທ່ານບໍ່ມີອຸປະກອນທີ່ເຊື່ອຖືໄດ້ຢູ່ນຳທ່ານ, ຈໍາເປັນຕ້ອງມີການກວດຮັບຮອງຄວາມຖືກຕ້ອງເພື່ອເຂົ້າເຖິງໂປຣໄຟລ໌ຂອງທ່ານ."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ຕັດການເຊື່ອມຕໍ່ອຸປະກອນແລ້ວ"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ລຶບຂໍ້ມູນຮັບຮອງ"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"ລຶບໃບຮັບຮອງທັງໝົດອອກ"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"ລຶບເນື້ອຫາທັງໝົດອອກ?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"ລຶບເນື້ອຫາທັງໝົດອອກບໍ?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"ພື້ນທີ່ຈັດເກັບຂໍ້ມູນປະຈຳຕົວຖືກລຶບແລ້ວ."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"ບໍ່ສາມາດບ່ອນຈັດເກັບຂໍ້ມູນປະຈຳຕົວໄດ້."</string>
     <string name="forget" msgid="3971143908183848527">"ລືມ"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ປິດໄວ້"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ຄຸນສົມບັດບໍ່ສາມາດໃຊ້ໄດ້ໃນເວລາຂັບລົດ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ບໍ່ສາມາດເພີ່ມຜູ້ໃຊ້ໃນຂະນະທີ່ຂັບລົດໄດ້"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ຊອກຫາ"</string>
 </resources>

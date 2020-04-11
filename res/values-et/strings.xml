@@ -68,7 +68,7 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"Operaator <xliff:g id="ID_1">^1</xliff:g> värskendas äsja"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Värskendati äsja"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Kuva pakett"</string>
-    <string name="app_data_usage" msgid="3878609885080232877">"Rakenduse andmekasutus"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"Rakenduste andmekasutus"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"piiratud"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Kasutustsükli lähtestuskuupäev"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Igakuine kuupäev:"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Kasvavad, kahanevad või korduvad numbrijadad on keelatud."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekraaniluku valikud"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> päeva tagasi"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Lisa usaldusväärne seade"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth lülit. usaldusväärse seadme lisam. sisse"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Usaldusv. seadmed"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> seadet</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> seade</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Teie <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> avab selle auto, kui need on omavahel ühendatud. Kui keegi võtab teie telefoni <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, on tal võimalik sellele seadmele juurde pääseda"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Kinnita"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Eemalda usaldusväärne seade"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Valmis"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Kasutage usaldusväärse seadme seadistamiseks kaasrakendust. Kui see on seadistatud, avaneb teie kasutajaprofiil automaatselt, kui sõiduki läheduses tuvastatakse teie telefon."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Laadige oma telefonis alla kaasrakendus."</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Tehke seadmete sidumiseks oma telefonis valik <xliff:g id="CAR_NAME">%1$s</xliff:g>."</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Teie auto läheduses olev usaldusväärne seade avab käivitamisel kasutajaprofiili ka siis, kui seade on kellelgi teise käes."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Veenduge, et sidumiskoodid ühtiksid"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefoni registreerimine õnnestus"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Seadme <xliff:g id="DEVICE_NAME">%1$s</xliff:g> registreerimine ebaõnnestus"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Usaldusväärse seadme lisamiseks peate hiljem määrama autentimismeetodi. Kui usaldusväärne seade pole teie käes, nõutakse teie profiilile juurdepääsemiseks autentimist."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Seadme ühendus on katkestatud."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Mandaatide kustutamine"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Kõikide sertifikaatide eemaldamine"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Kas eemaldada kogu sisu?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"LOOBU"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Funktsioon pole sõidu ajal saadaval"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Sõidu ajal ei saa kasutajat lisada"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Otsi"</string>
 </resources>
