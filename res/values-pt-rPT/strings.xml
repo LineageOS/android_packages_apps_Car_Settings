@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"Utilizar <xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Roaming"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Ligar a serviços de dados em roaming"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"Pretende permitir roaming de dados?"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"Permitir roaming de dados?"</string>
     <string name="roaming_warning" msgid="5313281900566657209">"Pode incorrer em custos significativos."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Utilização de dados"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dados principais"</string>
@@ -188,7 +188,7 @@
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"Código de sincronização Bluetooth"</string>
     <string name="bluetooth_enable_alphanumeric_pin" msgid="1636575922217263060">"O PIN contém letras ou símbolos."</string>
     <string name="bluetooth_enter_passkey_msg" msgid="5955236916732265593">"Introduza o código de sincronização e, em seguida, prima Return ou Enter."</string>
-    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Pretende sincronizar com o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
+    <string name="bluetooth_pairing_request" msgid="4769675459526556801">"Sincronizar com o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_pairing_shares_phonebook" msgid="2015966932886300630">"Permitir que o dispositivo <xliff:g id="DEVICE_NAME">%1$s</xliff:g> aceda aos contactos e ao histórico de chamadas"</string>
     <string name="bluetooth_enter_pin_other_device" msgid="7825091249522704764">"Poderá também ter de introduzir este PIN no outro dispositivo."</string>
     <string name="bluetooth_enter_passkey_other_device" msgid="7147248221018865922">"Poderá também ter de introduzir a chave de acesso no outro dispositivo."</string>
@@ -330,7 +330,7 @@
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modificar definições sistema"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Esta autorização permite que uma aplicação modifique as definições do sistema."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Acesso a notificações"</string>
-    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Pretende permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
+    <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Permitir o acesso a notificações do <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"O serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> consegue ler todas as notificações, incluindo informações pessoais como nomes de contactos e o texto das mensagens recebidas. Também consegue ignorar notificações ou acionar botões de ação que estas contenham.\n\nDeste modo, a aplicação também pode ativar ou desativar o modo Não incomodar e alterar as definições relacionadas."</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"Se desativar o acesso às notificações para o serviço <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>, é possível que o acesso ao modo Não incomodar seja igualmente desativado."</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"Desativar"</string>
@@ -498,7 +498,7 @@
     <string name="storage_unmount_failure" msgid="4591934911541762883">"Não foi possível ejetar com segurança <xliff:g id="NAME">%1$s</xliff:g>."</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Contas"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"Adicionar conta"</string>
-    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada."</string>
+    <string name="no_accounts_added" msgid="5148163140691096055">"Nenhuma conta adicionada"</string>
     <string name="account_list_title" msgid="7631588514613843065">"Contas de <xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Sincronizar dados automaticamente"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Permitir que as aplicações atualizem dados automaticamente"</string>
@@ -511,7 +511,7 @@
     <string name="add_an_account" msgid="1072285034300995091">"Adicionar uma conta"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Os perfis restritos não podem adicionar contas."</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Remover conta"</string>
-    <string name="really_remove_account_title" msgid="3555164432587924900">"Pretende remover a conta?"</string>
+    <string name="really_remove_account_title" msgid="3555164432587924900">"Remover a conta?"</string>
     <string name="really_remove_account_message" msgid="4296769280849579900">"A remoção desta conta elimina todas as mensagens, os contactos e outros dados do dispositivo."</string>
     <string name="remove_account_error_title" msgid="8368044943174826635">"Falha ao remover a conta"</string>
     <string name="account_sync_title" msgid="6541844336300236915">"Sincronização da conta"</string>
@@ -573,7 +573,7 @@
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"PIN incorreto"</string>
     <string name="lockscreen_wrong_password" msgid="5757087577162231825">"Palavra-passe incorreta."</string>
     <string name="choose_lock_password_message" msgid="6124341145027370784">"Por segurança, defina uma palavra-passe."</string>
-    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduzir a palavra-passe"</string>
+    <string name="confirm_your_password_header" msgid="7052891840366724938">"Reintroduza a palavra-passe"</string>
     <string name="confirm_passwords_dont_match" msgid="7300229965206501753">"Palavras-passe não coincidem"</string>
     <string name="lockpassword_clear_label" msgid="6363680971025188064">"Limpar"</string>
     <string name="lockpassword_cancel_label" msgid="5791237697404166450">"Cancelar"</string>
@@ -640,7 +640,7 @@
     <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Dispositivo desligado."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Limpar credenciais"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Permite remover todos os certificados"</string>
-    <string name="credentials_reset_hint" msgid="3459271621754137661">"Pretende remover todo o conteúdo?"</string>
+    <string name="credentials_reset_hint" msgid="3459271621754137661">"Remover todo o conteúdo?"</string>
     <string name="credentials_erased" msgid="2515915439705550379">"O armazenamento de credenciais foi apagado."</string>
     <string name="credentials_not_erased" msgid="6118567459076742720">"Não foi possível apagar o armazenamento de credenciais."</string>
     <string name="forget" msgid="3971143908183848527">"Esquecer"</string>
