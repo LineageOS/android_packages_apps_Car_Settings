@@ -26,7 +26,9 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.util.SparseArray;
 
 import androidx.annotation.DrawableRes;
@@ -61,6 +63,8 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
     private final List<SeekBarPreference> mVolumePreferences = new ArrayList<>();
     private final VolumeSettingsRingtoneManager mRingtoneManager;
 
+    private final Handler mUiHandler;
+
     @VisibleForTesting
     final CarAudioManager.CarVolumeCallback mVolumeChangeCallback =
             new CarAudioManager.CarVolumeCallback() {
@@ -76,7 +80,12 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
                                 // seekbar of the volume directly will trigger CarVolumeCallback as
                                 // well, causing janky movement.
                                 if (volumePreference.getValue() != value) {
-                                    volumePreference.setValue(value);
+                                    // CarVolumeCallback is run on a binder thread. In order to
+                                    // make updates to the SeekBarPreference, we need to switch
+                                    // over to the UI thread.
+                                    mUiHandler.post(() -> {
+                                        volumePreference.setValue(value);
+                                    });
                                 }
                                 break;
                             }
@@ -131,6 +140,7 @@ public class VolumeSettingsPreferenceController extends PreferenceController<Pre
         mCar = Car.createCar(getContext(), mServiceConnection);
         mVolumeItems = VolumeItemParser.loadAudioUsageItems(context, carVolumeItemsXml());
         mRingtoneManager = new VolumeSettingsRingtoneManager(getContext());
+        mUiHandler = new Handler(Looper.getMainLooper());
     }
 
     @Override
