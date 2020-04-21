@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.never;
@@ -34,7 +36,7 @@ import androidx.preference.PreferenceManager;
 import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -72,14 +74,14 @@ public class MasterClearConfirmFragmentTest {
                 mPersistentDataBlockManager);
         ShadowApplication.getInstance().setSystemService(Context.OEM_LOCK_SERVICE, mOemLockManager);
 
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         mFragment = FragmentController.of(new MasterClearConfirmFragment()).setup();
 
         // Default to not provisioned.
         Settings.Global.putInt(mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED,
                 0);
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -184,9 +186,8 @@ public class MasterClearConfirmFragmentTest {
     }
 
     private void triggerMasterClearConfirmButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         toolbar.getMenuItems().get(0).performClick();
         Robolectric.flushForegroundThreadScheduler();
-
     }
 }

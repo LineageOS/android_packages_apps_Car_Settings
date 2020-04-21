@@ -56,6 +56,10 @@ public class AccessPointPreferenceTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         Context context = RuntimeEnvironment.application;
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         FragmentController<TestSettingsFragment> fragmentController = FragmentController.of(
                 new TestSettingsFragment());
         TestSettingsFragment fragment = fragmentController.get();
@@ -64,9 +68,6 @@ public class AccessPointPreferenceTest {
         mPreference = new AccessPointPreference(context, mAccessPoint);
         mPreference.setKey(TEST_KEY);
         fragment.getPreferenceScreen().addPreference(mPreference);
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @Test

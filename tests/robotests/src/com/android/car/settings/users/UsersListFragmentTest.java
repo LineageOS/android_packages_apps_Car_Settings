@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -37,7 +39,7 @@ import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.car.ui.utils.CarUxRestrictionsUtil;
 
 import org.junit.After;
@@ -165,7 +167,7 @@ public class UsersListFragmentTest {
         when(mCarUserManagerHelper.createNewNonAdminUser(any())).thenReturn(null);
         mFragmentController.setup();
 
-        Toolbar toolbar = (Toolbar) mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = (ToolbarController) requireToolbar(mFragment.requireActivity());
         CarUxRestrictionsUtil.getInstance(mContext).setUxRestrictions(new CarUxRestrictions.Builder(
                 true, CarUxRestrictions.UX_RESTRICTIONS_BASELINE, 0)
                 .build());

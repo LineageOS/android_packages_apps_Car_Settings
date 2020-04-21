@@ -72,12 +72,13 @@ public class CarSettingActivityTest {
                 .thenReturn(noSetupRestrictions);
         ShadowCar.setCarManager(Car.CAR_UX_RESTRICTION_SERVICE, mMockCarUxRestrictionsManager);
         mContext = RuntimeEnvironment.application;
-        mActivityController = ActivityController.of(new CarSettingActivity());
-        mActivity = mActivityController.get();
-        mActivityController.setup();
 
         // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
         CarUiInstallerRobolectric.install();
+
+        mActivityController = ActivityController.of(new CarSettingActivity());
+        mActivity = mActivityController.get();
+        mActivityController.setup();
     }
 
     @Test
