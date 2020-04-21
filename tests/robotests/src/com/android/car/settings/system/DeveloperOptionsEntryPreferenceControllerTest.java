@@ -32,6 +32,7 @@ import androidx.lifecycle.Lifecycle;
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.PreferenceControllerTestHelper;
+import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -69,22 +70,19 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
 
     @Test
     public void testGetAvailabilityStatus_devOptionsEnabled_isAvailable() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        setDeveloperOptionsEnabled(true);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(AVAILABLE);
     }
 
     @Test
     public void testGetAvailabilityStatus_devOptionsDisabled_isUnavailable() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0);
+        setDeveloperOptionsEnabled(false);
         assertThat(mController.getAvailabilityStatus()).isEqualTo(CONDITIONALLY_UNAVAILABLE);
     }
 
     @Test
     public void testGetAvailabilityStatus_devOptionsEnabled_hasUserRestriction_isUnavailable() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        setDeveloperOptionsEnabled(true);
         getShadowUserManager().setUserRestriction(
                 UserHandle.of(UserHandle.myUserId()),
                 UserManager.DISALLOW_DEBUGGING_FEATURES,
@@ -94,8 +92,7 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
 
     @Test
     public void performClick_startsActivity() {
-        Settings.Global.putInt(mContext.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1);
+        setDeveloperOptionsEnabled(true);
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
         mPreference.performClick();
 
@@ -105,5 +102,11 @@ public class DeveloperOptionsEntryPreferenceControllerTest {
 
     private ShadowUserManager getShadowUserManager() {
         return Shadows.shadowOf(UserManager.get(mContext));
+    }
+
+    private void setDeveloperOptionsEnabled(boolean enabled) {
+        Settings.Global.putInt(mContext.getContentResolver(),
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enabled ? 1 : 0);
+        DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(mContext, enabled);
     }
 }
