@@ -17,6 +17,7 @@
 package com.android.car.settings.storage;
 
 import static com.android.car.settings.storage.AppStorageSettingsDetailsFragment.EXTRA_PACKAGE_NAME;
+import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -44,7 +45,7 @@ import com.android.car.settings.testutils.ShadowApplicationsState;
 import com.android.car.settings.testutils.ShadowRestrictedLockUtilsInternal;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.RestrictedLockUtils;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
@@ -88,6 +89,10 @@ public class AppStorageSettingsDetailsFragmentTest {
     public void setUp() {
         MockitoAnnotations.initMocks(this);
         mContext = RuntimeEnvironment.application;
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         mFragment = new AppStorageSettingsDetailsFragment();
         Bundle bundle = new Bundle();
         bundle.putString(EXTRA_PACKAGE_NAME, PACKAGE_NAME);
@@ -107,9 +112,6 @@ public class AppStorageSettingsDetailsFragmentTest {
         when(mApplicationsState.getEntry(eq(PACKAGE_NAME), anyInt())).thenReturn(appEntry);
         ShadowApplicationsState.setInstance(mApplicationsState);
         mFragmentController.setup();
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -299,12 +301,12 @@ public class AppStorageSettingsDetailsFragmentTest {
     }
 
     private MenuItem findClearCacheButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(1);
     }
 
     private MenuItem findClearStorageButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 }

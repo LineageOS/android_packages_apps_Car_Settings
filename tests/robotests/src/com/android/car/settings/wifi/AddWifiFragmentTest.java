@@ -16,6 +16,8 @@
 
 package com.android.car.settings.wifi;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
@@ -24,13 +26,12 @@ import android.content.Intent;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.test.core.app.ApplicationProvider;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocalBroadcastManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.wifi.AccessPoint;
 
 import org.junit.After;
@@ -152,7 +153,7 @@ public class AddWifiFragmentTest {
     }
 
     private MenuItem getAddWifiButton() {
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         return toolbar.getMenuItems().get(0);
     }
 
