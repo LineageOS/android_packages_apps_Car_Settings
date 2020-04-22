@@ -16,17 +16,18 @@
 
 package com.android.car.settings.network;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowSubscriptionManager;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -73,7 +74,7 @@ public class MobileNetworkFragmentTest {
                 createSubscriptionInfo(SUB_ID + 2, TEST_NAME + "_2"));
         mFragmentController.setup();
 
-        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getTitle()).isEqualTo(TEST_NAME);
     }
 
@@ -88,7 +89,7 @@ public class MobileNetworkFragmentTest {
                 createSubscriptionInfo(SUB_ID + 2, TEST_NAME + "_2"));
         mFragmentController.setup();
 
-        Toolbar toolbar = mFragment.requireActivity().findViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getTitle()).isEqualTo(TEST_NAME + "_1");
     }
 
