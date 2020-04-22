@@ -38,11 +38,11 @@ public class ChooseLockPinPasswordFragmentTest {
 
     @Before
     public void initFragment() {
-        mFragment = FragmentController.of(
-                ChooseLockPinPasswordFragment.newPasswordInstance()).setup();
-
         // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
         CarUiInstallerRobolectric.install();
+
+        mFragment = FragmentController.of(
+                ChooseLockPinPasswordFragment.newPasswordInstance()).setup();
     }
 
     /**
