@@ -16,6 +16,8 @@
 
 package com.android.car.settings.accounts;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
@@ -28,7 +30,6 @@ import android.content.pm.UserInfo;
 
 import androidx.fragment.app.Fragment;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
@@ -36,7 +37,7 @@ import com.android.car.settings.testutils.ShadowContentResolver;
 import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.users.UserHelper;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -89,7 +90,7 @@ public class AccountDetailsFragmentTest {
     @Test
     public void onActivityCreated_titleShouldBeSet() {
         initFragment();
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getTitle()).isEqualTo(mAccountLabel);
     }
 
@@ -99,7 +100,7 @@ public class AccountDetailsFragmentTest {
                 .thenReturn(false);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getMenuItems()).hasSize(1);
         assertThat(toolbar.getMenuItems().get(0).isVisible()).isFalse();
     }
@@ -110,7 +111,7 @@ public class AccountDetailsFragmentTest {
                 .thenReturn(true);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         assertThat(toolbar.getMenuItems()).hasSize(1);
         assertThat(toolbar.getMenuItems().get(0).isVisible()).isTrue();
     }
@@ -121,7 +122,7 @@ public class AccountDetailsFragmentTest {
                 .thenReturn(true);
         initFragment();
 
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         toolbar.getMenuItems().get(0).performClick();
 
         Fragment dialogFragment = mFragment.findDialogByTag(DIALOG_TAG);

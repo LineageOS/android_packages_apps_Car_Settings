@@ -44,6 +44,10 @@ public class NetworkNameRestrictedPasswordEditTextPreferenceTest {
     @Before
     public void setUp() {
         mContext = RuntimeEnvironment.application;
+
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         FragmentController<TestSettingsFragment> fragmentController = FragmentController.of(
                 new TestSettingsFragment());
         TestSettingsFragment fragment = fragmentController.get();
@@ -52,9 +56,6 @@ public class NetworkNameRestrictedPasswordEditTextPreferenceTest {
         mPreference = new NetworkNameRestrictedPasswordEditTextPreference(mContext);
         mPreference.setKey(KEY);
         fragment.getPreferenceScreen().addPreference(mPreference);
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @Test

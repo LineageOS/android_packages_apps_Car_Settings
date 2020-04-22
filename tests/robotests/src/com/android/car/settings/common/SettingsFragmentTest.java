@@ -16,6 +16,8 @@
 
 package com.android.car.settings.common;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -39,6 +41,7 @@ import com.android.car.settings.testutils.DummyFragment;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -235,7 +238,7 @@ public class SettingsFragmentTest {
         DummyFragment otherFragment = new DummyFragment();
         mFragment.launchFragment(otherFragment);
 
-        Toolbar toolbar = otherFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
 
         assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.HOME);
     }
@@ -250,7 +253,7 @@ public class SettingsFragmentTest {
         TestSettingsFragment otherFragment2 = new TestSettingsFragment();
         mFragment.launchFragment(otherFragment2);
 
-        Toolbar toolbar = otherFragment2.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(otherFragment2.requireActivity());
 
         assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
         assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(

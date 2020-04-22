@@ -16,6 +16,8 @@
 
 package com.android.car.settings.wifi;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -33,13 +35,12 @@ import android.net.wifi.WifiManager;
 
 import androidx.test.core.app.ApplicationProvider;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowCarWifiManager;
 import com.android.car.settings.testutils.ShadowConnectivityManager;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -200,7 +201,7 @@ public class WifiTetherFragmentTest {
     }
 
     private MenuItem findSwitch(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 
