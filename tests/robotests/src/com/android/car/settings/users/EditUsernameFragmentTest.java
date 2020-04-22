@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.never;
@@ -29,7 +31,7 @@ import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -56,10 +58,10 @@ public class EditUsernameFragmentTest {
 
     @Before
     public void setUpTestActivity() {
-        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
-
         // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
         CarUiInstallerRobolectric.install();
+
+        mTestActivity = Robolectric.setupActivity(BaseTestActivity.class);
     }
 
     /**
@@ -84,7 +86,7 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(userId, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        MenuItem okButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+        MenuItem okButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(1);
 
         String newUserName = "new_user_name";
@@ -105,7 +107,7 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(userId, /* name= */ "test_user", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        MenuItem cancelButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+        MenuItem cancelButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(0);
 
         String newUserName = "new_user_name";
@@ -127,7 +129,7 @@ public class EditUsernameFragmentTest {
         UserInfo testUser = new UserInfo(/* id= */ 10, "user_name", /* flags= */ 0);
         createEditUsernameFragment(testUser);
         EditText userNameEditText = mTestActivity.findViewById(R.id.user_name_text_edit);
-        MenuItem okButton = ((Toolbar) mTestActivity.requireViewById(R.id.toolbar))
+        MenuItem okButton = ((ToolbarController) requireToolbar(mTestActivity))
                 .getMenuItems().get(1);
 
         userNameEditText.requestFocus();

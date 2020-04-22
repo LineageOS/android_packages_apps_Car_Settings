@@ -16,6 +16,8 @@
 
 package com.android.car.settings.accounts;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -38,7 +40,7 @@ import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -192,7 +194,7 @@ public class AccountSyncDetailsFragmentTest {
     }
 
     private MenuItem getSyncButton() {
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         return toolbar.getMenuItems().get(0);
     }
 
