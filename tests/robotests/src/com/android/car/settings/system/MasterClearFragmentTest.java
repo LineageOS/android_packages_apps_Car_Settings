@@ -20,6 +20,7 @@ import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
 
 import static com.android.car.settings.system.MasterClearFragment.CHECK_LOCK_REQUEST_CODE;
+import static com.android.car.ui.core.CarUi.requireToolbar;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -38,7 +39,7 @@ import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowUserManager;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -112,7 +113,7 @@ public class MasterClearFragmentTest {
     }
 
     private MenuItem findMasterClearButton(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 }

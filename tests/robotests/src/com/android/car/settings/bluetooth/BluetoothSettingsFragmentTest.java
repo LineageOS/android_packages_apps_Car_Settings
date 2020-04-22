@@ -22,6 +22,8 @@ import static android.bluetooth.BluetoothAdapter.STATE_TURNING_OFF;
 import static android.bluetooth.BluetoothAdapter.STATE_TURNING_ON;
 import static android.os.UserManager.DISALLOW_BLUETOOTH;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.app.Activity;
@@ -33,13 +35,12 @@ import android.os.UserManager;
 
 import androidx.test.core.app.ApplicationProvider;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
 
 import org.junit.After;
@@ -240,7 +241,7 @@ public class BluetoothSettingsFragmentTest {
     }
 
     private MenuItem findSwitch(Activity activity) {
-        Toolbar toolbar = activity.requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(activity);
         return toolbar.getMenuItems().get(0);
     }
 
