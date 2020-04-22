@@ -16,6 +16,8 @@
 
 package com.android.car.settings.system;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.testng.Assert.assertThrows;
@@ -40,7 +42,7 @@ import com.android.car.settings.testutils.ShadowTelephonyManager;
 import com.android.car.settings.testutils.ShadowWifiManager;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -92,16 +94,16 @@ public class ResetNetworkConfirmFragmentTest {
 
         Robolectric.getForegroundThreadScheduler().pause();
 
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         ResetNetworkConfirmFragment fragment = new ResetNetworkConfirmFragment();
 
         mFragmentController = FragmentController.of(fragment);
         mFragmentController.setup();
 
-        Toolbar toolbar = fragment.getActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(fragment.getActivity());
         mResetButton = toolbar.getMenuItems().get(0);
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @After

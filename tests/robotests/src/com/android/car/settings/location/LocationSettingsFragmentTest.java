@@ -15,19 +15,20 @@
  */
 package com.android.car.settings.location;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.app.Service;
 import android.content.Intent;
 import android.location.LocationManager;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowLocationManager;
 import com.android.car.settings.testutils.ShadowSecureSettings;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -55,12 +56,12 @@ public class LocationSettingsFragmentTest {
         mLocationManager = (LocationManager) RuntimeEnvironment.application
                 .getSystemService(Service.LOCATION_SERVICE);
 
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         mFragment = new LocationSettingsFragment();
         mFragmentController = FragmentController.of(mFragment);
         mFragmentController.setup();
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     @After
@@ -100,7 +101,7 @@ public class LocationSettingsFragmentTest {
     }
 
     private void initFragment() {
-        Toolbar toolbar = mFragment.requireActivity().requireViewById(R.id.toolbar);
+        ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
         mLocationSwitch = toolbar.getMenuItems().get(0);
     }
 }

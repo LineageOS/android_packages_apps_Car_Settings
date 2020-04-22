@@ -16,16 +16,17 @@
 
 package com.android.car.settings.users;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import android.content.Context;
 import android.os.UserManager;
 
-import com.android.car.settings.R;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,7 +49,7 @@ public class UserDetailsFragmentTest {
     private UserManager mUserManager;
     private UserDetailsFragment mUserDetailsFragment;
 
-    private Toolbar mToolbar;
+    private ToolbarController mToolbar;
 
     private FragmentController<UserDetailsFragment> mFragmentController;
 
@@ -92,6 +93,6 @@ public class UserDetailsFragmentTest {
         mFragmentController = FragmentController.of(mUserDetailsFragment);
         mFragmentController.setup();
 
-        mToolbar = ((Toolbar) mUserDetailsFragment.requireActivity().findViewById(R.id.toolbar));
+        mToolbar = ((ToolbarController) requireToolbar(mUserDetailsFragment.requireActivity()));
     }
 }
