@@ -42,12 +42,12 @@ public class ConfirmLockPinPasswordFragmentTest {
 
     @Before
     public void initFragment() {
+        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
+        CarUiInstallerRobolectric.install();
+
         mTestActivity = Robolectric.setupActivity(TestSettingsScreenLockActivity.class);
         mPinFragment = ConfirmLockPinPasswordFragment.newPinInstance();
         mTestActivity.launchFragment(mPinFragment);
-
-        // Needed to install Install CarUiLib BaseLayouts Toolbar for test activity
-        CarUiInstallerRobolectric.install();
     }
 
     /**
