@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"అంకెలను ఆరోహణ, అవరోహణ క్రమంలో లేదా ఒకే అంకెను వరుసగా పునరావృతంగా ఉపయోగించకూడదు."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"స్క్రీన్ లాక్ ఎంపికలు"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> రోజుల క్రితం"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"విశ్వసనీయ పరికరాన్ని జోడించండి"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"విశ్వసనీయ పరికరం కోసం బ్లూటూత్ ఆన్ అవుతుంది"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"విశ్వసనీయ పరికరాలు"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> పరికరాలు</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> పరికరం</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"కనెక్ట్ అయి ఉన్నప్పుడు మీ <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> మీ కారును అన్‌లాక్ చేస్తుంది. ఎవరైనా మీ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>ను తీసుకున్నట్లయితే, వారు ఈ పరికరాన్ని యాక్సెస్ చేయగలరు"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"నిర్ధారించు"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"విశ్వసనీయ పరికరాన్ని తీసివేయి"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"పూర్తయింది"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"విశ్వసనీయ పరికరాన్ని సెటప్ చేయడానికి సహచర యాప్‌ను ఉపయోగించండి. ఒకసారి సెటప్ చేసుకున్న తర్వాత, వాహనం దగ్గరలో మీ ఫోన్ కనుగొనబడినప్పుడు మీ వినియోగదారు ప్రొఫైల్ ఆటోమేటిక్‌గా అన్‌లాక్ అవుతుంది."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. మీ ఫోన్‌లో సహచర యాప్‌ను డౌన్‌లోడ్ చేయండి"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. పరికరాలను జత చేయడానికి మీ ఫోన్‌లో <xliff:g id="CAR_NAME">%1$s</xliff:g>ను ఎంచుకోండి"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"కారులో ఎప్పుడైనా నిప్పు అంటుకోవడం లాంటివి జరిగితే, విశ్వసనీయ పరికరాన్ని వేరే వారు పట్టుకుని ఉన్నా కూడా ఆ పరికరం మీ వినియోగదారు ప్రొఫైల్‌ను అన్‌లాక్ చేస్తుంది."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"దయచేసి జత చేసే కోడ్‌లు సరిపోలాయని నిర్ధారించండి"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ఫోన్ విజయవంతంగా నమోదు చేయబడింది"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> నమోదు విఫలమైంది"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"విశ్వసనీయ పరికరాన్ని జోడించడానికి తర్వాత ప్రమాణీకరణ పద్ధతిని సెట్ చేయాల్సిన అవసరం ఉంది. మీ వద్ద మీ విశ్వసనీయ పరికరం లేకపోతే, మీ ప్రొఫైల్‌ను యాక్సెస్ చేయడానికి ప్రామాణీకరణ చేయాల్సిన అవసరం ఉంది."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"పరికరం డిస్‌కనెక్ట్ చేయబడింది."</string>
     <string name="credentials_reset" msgid="873900550885788639">"ఆధారాలను క్లియర్ చేయండి"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"అన్ని స‌ర్టిఫికెట్‌ల‌ను తీసివేయండి"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"అన్ని కంటెంట్‌లను తీసివేయాలా?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"విస్మరించు"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"డ్రైవింగ్ చేస్తున్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉండదు"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"డ్రైవింగ్ చేస్తున్నప్పుడు, యూజర్‌ను జోడించడం సాధ్యం కాదు"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"శోధన"</string>
 </resources>
