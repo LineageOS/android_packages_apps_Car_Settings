@@ -540,7 +540,6 @@ public class ApplicationDetailsFragmentTest {
 
         Intent intent = ShadowApplication.getInstance().getNextStartedActivity();
         assertThat(intent.getAction()).isEqualTo(Intent.ACTION_UNINSTALL_PACKAGE);
-        assertThat(intent.getBooleanExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, false)).isTrue();
         assertThat(intent.getBooleanExtra(Intent.EXTRA_RETURN_RESULT, false)).isTrue();
         assertThat(intent.getData().toString()).isEqualTo("package:" + PACKAGE_NAME);
     }
