@@ -164,8 +164,8 @@
     <string name="bluetooth_pair_new_device_summary" msgid="2497221247690369031">"Bluetooth konexioa aktibatuko da parekatu ahal izateko"</string>
     <string name="bluetooth_disconnect_title" msgid="7675271355910637528">"Gailua deskonektatu nahi duzu?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="2017519733701757244">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> gailutik deskonektatuko da ibilgailua."</string>
-    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Ibilgailuaren Bluetooth helbidea: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
-    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Gailuaren Bluetooth helbidea: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_vehicle_mac_address" msgid="7069234636525805937">"Ibilgailua Bluetooth bidez konektatzeko helbidea: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
+    <string name="bluetooth_device_mac_address" msgid="3949829271575045069">"Gailua Bluetooth bidez konektatzeko helbidea: <xliff:g id="ADDRESS">%1$s</xliff:g>"</string>
     <string name="bluetooth_name" msgid="2609869978821094114">"Ibilgailuaren izena"</string>
     <string name="bluetooth_rename_vehicle" msgid="5769424875066563154">"Aldatu ibilgailuaren izena"</string>
     <string name="bluetooth_rename_device" msgid="8406868875363878712">"Aldatu gailuaren izena"</string>
@@ -358,7 +358,7 @@
     <string name="baseband_version" msgid="2370088062235041897">"Oinarri-bandaren bertsioa"</string>
     <string name="kernel_version" msgid="7327212934187011508">"Kernel bertsioa"</string>
     <string name="build_number" msgid="3997326631001009102">"Konpilazio-zenbakia"</string>
-    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth bidezko konexioetarako helbidea"</string>
+    <string name="bluetooth_mac_address" msgid="7641425947941688072">"Bluetooth bidez konektatzeko helbidea"</string>
     <string name="device_info_not_available" msgid="2095601973977376655">"Ez dago erabilgarri"</string>
     <string name="device_status_activity_title" msgid="4083567497305368200">"Egoera"</string>
     <string name="device_status" msgid="267298179806290920">"Egoera"</string>
