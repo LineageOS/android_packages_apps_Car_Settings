@@ -20,10 +20,10 @@
     <string name="settings_label" msgid="5147911978211079839">"सेटिंग्ज"</string>
     <string name="more_settings_label" msgid="3867559443480110616">"आणखी"</string>
     <string name="display_settings" msgid="5325515247739279185">"डिस्प्ले"</string>
-    <string name="brightness" msgid="2919605130898772866">"चकाकी स्तर"</string>
+    <string name="brightness" msgid="2919605130898772866">"ब्राइटनेस पातळी"</string>
     <string name="auto_brightness_title" msgid="9124647862844666581">"अनुकूल चकाकी"</string>
     <string name="auto_brightness_summary" msgid="4741887033140384352">"उपलब्ध प्रकाशासाठी चकाकी पातळी ऑप्टिमाइझ करा"</string>
-    <string name="condition_night_display_title" msgid="3777509730126972675">"रात्रीचा प्रकाश चालू आहे"</string>
+    <string name="condition_night_display_title" msgid="3777509730126972675">"रात्रीचा प्रकाश सुरू आहे"</string>
     <string name="keywords_display" msgid="3978416985146943922">"स्क्रीन, टचस्क्रीन"</string>
     <string name="keywords_display_brightness_level" msgid="3956411572536209195">"मंद स्क्रीन, टचस्क्रीन, बॅटरी"</string>
     <string name="keywords_display_auto_brightness" msgid="2700310050333468752">"मंद स्क्रीन, टचस्क्रीन, बॅटरी"</string>
@@ -131,7 +131,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"स्थान बंद केल्यामुळे उपलब्ध नाही. "<annotation id="link">"स्थान"</annotation>" सुरू करा."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"वाय-फाय स्कॅनिंग सुरू करायचे का?"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"सुरू करा"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाय फाय स्कॅनिंग सुरू केले आहे"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"वाय-फाय स्कॅनिंग सुरू केले आहे"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"मोबाइल डेटावर आपोआप स्विच करा"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"वाय-फायवरून इंटरनेट ॲक्सेस नसताना मोबाइल डेटा वापरा. डेटा वापर शुल्क लागू शकते."</string>
     <string name="learn_more" msgid="8214605928933358604">"अधिक जाणून घ्या"</string>
@@ -491,14 +491,14 @@
     <string name="storage_files" msgid="6382081694781340364">"Files"</string>
     <string name="storage_system" msgid="1271345630248014010">"सिस्टम"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"सिस्टममध्ये अशा फायलींचा समावेश आहे ज्यांचा वापर Android आवृत्ती <xliff:g id="VERSION">%s</xliff:g> रन करण्यासाठी केला जातो"</string>
-    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फायली"</string>
+    <string name="storage_audio_files_title" msgid="5183170457027181700">"ऑडिओ फाइल"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"मोजत आहे…"</string>
     <string name="storage_application_size_label" msgid="1146156683170661354">"अ‍ॅप आकार"</string>
     <string name="storage_data_size_label" msgid="5022911581004239367">"वापरकर्ता डेटा"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"कॅशे"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"एकूण"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"स्‍टोरेज साफ करा"</string>
-    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे साफ करा"</string>
+    <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"कॅशे  साफ करा"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अ‍ॅप डेटा हटवायचा का?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"या ॲपचा सर्व डेटा कायमचा हटवला जाईल. यात सर्व फायली, सेटिंग्ज, खाती, डेटाबेस इ.चा समावेश असतो."</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"ॲपसाठी स्‍टोरेज साफ करता आले नाही."</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"अंकांच्या चढत्या, उतरत्या किंवा पुनरावृत्त क्रमाला अनुमती नाही."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"स्क्रीन लॉक पर्याय"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> दिवसांपूर्वी"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"विश्वसनीय डिव्हाइस जोडा"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"विश्वसनीय डिव्हाइस जोडण्यासाठी ब्लूटूथ सुरू होईल"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"विश्वसनीय डिव्हाइस"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> डिव्हाइस</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g>डिव्हाइस</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"ते कनेक्ट केलेले असते तेव्‍हा <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> तुमची कार अनलॉक करेल. एखाद्याने तुमचे <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> घेतल्यास, tकदाचित ते डिव्हाइस अ‍ॅक्सेस करू शकतील"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"खात्री करा"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"विश्वसनीय डिव्हाइस काढून टाका"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"पूर्ण झाले"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"विश्वसनीय डिव्हाइस सेट करण्यासाठी सहयोगी अ‍ॅप वापरा. एकदा सेट केल्यानंतर, तुमचा फोन वाहनाजवळ सापडताच तुमची वापरकर्ता प्रोफाईल आपोआप अनलॉक होईल."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"१. तुमच्या फोनवर सहयोगी अ‍ॅप डाउनलोड करा"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"२. डिव्हाइस पेअर करण्यासाठी तुमच्या फोनवर <xliff:g id="CAR_NAME">%1$s</xliff:g> निवडा"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"तुमचे विश्वसनीय डिव्हाइस दुसऱ्या कोणाच्या हातात असताना देखील ते तुमची वापरकर्ता प्रोफाइल कार जवळपास असताना सुरू होताच अनलॉक करेल."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"कृपया पेअरींग कोड जुळत असल्याची खात्री करा"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"फोनची यशस्वीरीत्या नोंदणी झाली आहे"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>ची नोंदणी करता आली नाही"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"विश्वासू डिव्हाइस जोडण्यााठी तुम्हाला यापुढे ऑथेंटिकेशन सेट करण्याची आवश्यकता आहे. तुमच्याजवळ तुमचे विश्वासू डिव्हाइस नसल्यास, ऑथेंटिकेशनला तुमची प्रोफाइल ॲक्सेस करण्याची आवश्यकता असेल."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"डिव्हाइस डिस्कनेक्ट केले आहे."</string>
     <string name="credentials_reset" msgid="873900550885788639">"क्रेडेन्शियल साफ करा"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"सर्व प्रमाणपत्रे काढून टाका"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"सर्व आशय काढून टाकायचा का?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"डिसमिस करा"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ड्राइव्ह करताना वैशिष्ट्य उपलब्ध नाही"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ड्राइव्ह करत असताना वापरकर्त्याला जोडू शकत नाही"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"शोधा"</string>
 </resources>

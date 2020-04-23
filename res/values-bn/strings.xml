@@ -331,7 +331,7 @@
     <string name="hide_system" msgid="8845453295584638040">"সিস্টেম লুকান"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"সিস্টেম সেটিংস পরিবর্তন করুন"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"এই অনুমতিটি কোনও অ্যাপকে সিস্টেম সেটিংস পরিবর্তন করার অনুমতি দেয়।"</string>
-    <string name="notification_access_title" msgid="1467340098885813473">"বিজ্ঞপ্তির অ্যাক্সেস"</string>
+    <string name="notification_access_title" msgid="1467340098885813473">"বিজ্ঞপ্তি অ্যাক্সেস"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g>-কে বিজ্ঞপ্তিতে অ্যাক্সেস দিতে চান?"</string>
     <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> পরিচিতির নাম ও আপনার পাওয়া মেসেজের মত ব্যক্তিগত তথ্য সহ সমস্ত বিজ্ঞপ্তি পড়তে পারবেন। এটি আবার এর মধ্যে থাকা বিজ্ঞপ্তি বা নির্দিষ্ট কাজের বোতাম খারিজ করতে পারবে।\n\nএছাড়াও এটি এই অ্যাপকে \'বিরক্ত করবে না\' বিকল্পটিকে চালু বা বন্ধ করার এবং সেই সংক্রান্ত সেটিংস পরিবর্তন করার সুবিধা দেয়।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"আপনি যদি <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g>-এর জন্য বিজ্ঞপ্তির অ্যাক্সেস বন্ধ করেন, তাহলে \'বিরক্ত করবে না\' এর অ্যাক্সেসও বন্ধ হয়ে যেতে পারে।"</string>
@@ -392,7 +392,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"আপনি এখন একজন ডেভেলপার!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"কোনও প্রয়োজন নেই, আপনি ইতিমধ্যেই একজন ডেভেলপার।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"ডেভেলপারের জন্য বিকল্প"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"রিসেটের বিকল্পগুলি"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"রিসেট করার বিকল্প"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"নেটওয়ার্ক, অ্যাপ অথবা ডিভাইস রিসেট"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"নেটওয়ার্ক রিসেট করুন"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"এর ফলে সমস্ত নেটওয়ার্ক সেটিংস রিসেট করা হবে, এগুলি সহ:"</string>
@@ -507,7 +507,7 @@
     <string name="accounts_settings_title" msgid="436190037084293471">"অ্যাকাউন্ট"</string>
     <string name="user_add_account_menu" msgid="6625351983590713721">"অ্যাকাউন্ট যোগ করুন"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"কোনও অ্যাকাউন্ট যোগ করা হয়নি"</string>
-    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> এর অ্যাকাউন্ট"</string>
+    <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g>-এর অ্যাকাউন্ট"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"ডেটা অটোমেটিক সিঙ্ক হবে"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"অ্যাপকে অটোমেটিক ডেটা রিফ্রেশ করতে দিন"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"ডেটা অটোমেটিক সিঙ্ক চালু করবেন?"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"ছোট থেকে বড়, বড় থেকে ছোট সংখ্যা অথবা নির্দিষ্ট কয়েকটি সংখ্যা বার বার লেখা যাবে না।"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"স্ক্রিন লকের বিকল্প"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> দিন আগে"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"বিশ্বস্ত ডিভাইস যোগ করুন"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"বিশ্বস্ত ডিভাইস যোগ করার জন্য ব্লুটুথ চালু হবে"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"বিশ্বস্ত ডিভাইসগুলি"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g>টি ডিভাইস</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g>টি ডিভাইস</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"এই গাড়ি কানেক্ট করা থাকলে <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> এটিকে আনলক করবে কেউ আপনার <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> নিলে, তারা আপনার ডিভাইস অ্যাক্সেস করতে পারবেন।"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"কনফার্ম করুন"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"বিশ্বস্ত ডিভাইস সরান"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"হয়ে গেছে"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"কোনও বিশ্বস্ত ডিভাইস সেট-আপ করতে কম্প্যানিয়ন অ্যাপ ব্যবহার করুন। সেট-আপ হয়ে যাওয়ার পরে গাড়ির আশেপাশে আপনার ফোন শনাক্ত হলে ব্যবহারকারী হিসেবে আপনার প্রোফাইল অটোমেটিক আনলক হয়ে যাবে।"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"১. আপনার ফোনে কম্প্যানিয়ন অ্যাপ ডাউনলোড করুন"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"২. ডিভাইসের সাথে যোগ করতে <xliff:g id="CAR_NAME">%1$s</xliff:g> বেছে নিন"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"কোনও বিশ্বস্ত ডিভাইস আপনার গাড়ির আশেপাশে থাকলে বা ডিভাইসটি অন্য কারও কাছে থাকলে গাড়ি চালু করার সাথে সাথে এটি গাড়ি আনলক করবে।"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"পেয়ারিং কোড মিলছে কিনা কনফার্ম করুন"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"ফোনটি নথিভুক্ত করা হয়েছে"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> নথিভুক্ত করা যায়নি"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"একটি বিশ্বস্ত ডিভাইস যোগ করার পর যাচাইকরণ পদ্ধতি সেট করতে হবে। যদি আপনার বিশ্বস্ত ডিভাইস হাতের কাছে না থাকে তাহলে আপনার প্রোফাইল অ্যাক্সেস করার জন্য যাচাইকরণ করা প্রয়োজন।"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"ডিভাইস ডিসকানেক্ট করা হয়েছে।"</string>
     <string name="credentials_reset" msgid="873900550885788639">"ক্রেডেনশিয়াল মুছে ফেলুন"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"সব সার্টিফিকেট সরান"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"সমস্ত কন্টেন্ট সরাতে চান?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"খারিজ করুন"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"ড্রাইভ করার সময় এই ফিচার কাজ করবে না"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"ড্রাইভ করার সময় ব্যবহারকারীকে যোগ করতে পারবেন না"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"সার্চ"</string>
 </resources>
