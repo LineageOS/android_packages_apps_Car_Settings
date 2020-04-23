@@ -16,6 +16,8 @@
 
 package com.android.car.settings.users;
 
+import static com.android.car.ui.core.CarUi.requireToolbar;
+
 import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
@@ -33,7 +35,7 @@ import com.android.car.settings.testutils.ShadowUserHelper;
 import com.android.car.settings.testutils.ShadowUserIconProvider;
 import com.android.car.ui.core.testsupport.CarUiInstallerRobolectric;
 import com.android.car.ui.toolbar.MenuItem;
-import com.android.car.ui.toolbar.Toolbar;
+import com.android.car.ui.toolbar.ToolbarController;
 
 import org.junit.After;
 import org.junit.Before;
@@ -158,8 +160,7 @@ public class UserDetailsBaseFragmentTest {
         mFragmentController = FragmentController.of(mUserDetailsBaseFragment).create().start();
         if (mUserDetailsBaseFragment.getToolbarMenuItems() != null) {
             mRemoveUserButton =
-                    ((Toolbar) mUserDetailsBaseFragment.requireActivity().requireViewById(
-                            R.id.toolbar))
+                    ((ToolbarController) requireToolbar(mUserDetailsBaseFragment.requireActivity()))
                             .getMenuItems().get(0);
         } else {
             mRemoveUserButton = null;
