@@ -16,6 +16,7 @@
 
 package com.android.car.settings.home;
 
+import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -64,6 +65,7 @@ public class HomepageFragment extends SettingsFragment {
         mSearchButton = new MenuItem.Builder(getContext())
                 .setToSearch()
                 .setOnClickListener(i -> onSearchButtonClicked())
+                .setUxRestrictions(CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD)
                 .build();
     }
 
