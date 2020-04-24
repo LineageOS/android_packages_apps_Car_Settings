@@ -56,6 +56,8 @@ public class ConfirmationDialogFragmentTest {
     private ConfirmationDialogFragment.ConfirmListener mConfirmListener;
     @Mock
     private ConfirmationDialogFragment.RejectListener mRejectListener;
+    @Mock
+    private ConfirmationDialogFragment.DismissListener mDismissListener;
 
     @Before
     public void setUp() {
@@ -153,6 +155,19 @@ public class ConfirmationDialogFragmentTest {
         dialog.getButton(DialogInterface.BUTTON_NEGATIVE).performClick();
         ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
         verify(mRejectListener).onReject(bundle.capture());
+        assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
+    }
+
+    @Test
+    public void dismissDialog_callsCallbackWithArgs() {
+        mDialogFragmentBuilder.setDismissListener(mDismissListener);
+        ConfirmationDialogFragment dialogFragment = mDialogFragmentBuilder.build();
+        dialogFragment.show(mFragment.getFragmentManager(), ConfirmationDialogFragment.TAG);
+
+        AlertDialog dialog = (AlertDialog) ShadowDialog.getLatestDialog();
+        dialog.dismiss();
+        ArgumentCaptor<Bundle> bundle = ArgumentCaptor.forClass(Bundle.class);
+        verify(mDismissListener).onDismiss(bundle.capture());
         assertThat(bundle.getValue().getString(TEST_ARG_KEY)).isEqualTo(TEST_ARG_VALUE);
     }
 }
