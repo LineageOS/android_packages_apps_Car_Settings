@@ -49,6 +49,7 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
         private ConfirmListener mConfirmListener;
         private RejectListener mRejectListener;
         private NeutralListener mNeutralListener;
+        private DismissListener mDismissListener;
 
         public Builder(Context context) {
             mContext = context;
@@ -110,6 +111,12 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
         public Builder setNeutralButton(@StringRes int label, NeutralListener neutralListener) {
             mNeuLabel = mContext.getString(label);
             mNeutralListener = neutralListener;
+            return this;
+        }
+
+        /** Sets the listener for dialog dismiss. */
+        public Builder setDismissListener(DismissListener dismissListener) {
+            mDismissListener = dismissListener;
             return this;
         }
 
@@ -176,6 +183,7 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
     private ConfirmListener mConfirmListener;
     private RejectListener mRejectListener;
     private NeutralListener mNeutralListener;
+    private DismissListener mDismissListener;
 
     /** Constructs the dialog fragment from the arguments provided in the {@link Builder} */
     private static ConfirmationDialogFragment init(Builder builder) {
@@ -191,6 +199,7 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
         dialogFragment.setConfirmListener(builder.mConfirmListener);
         dialogFragment.setRejectListener(builder.mRejectListener);
         dialogFragment.setNeutralListener(builder.mNeutralListener);
+        dialogFragment.setDismissListener(builder.mDismissListener);
         return dialogFragment;
     }
 
@@ -207,6 +216,17 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
             dialogFragment.setRejectListener(rejectListener);
             dialogFragment.setNeutralListener(neutralListener);
         }
+    }
+
+    /** Sets the listeners which listens for the dialog dismissed */
+    public void setDismissListener(DismissListener dismissListener) {
+        mDismissListener = dismissListener;
+    }
+
+    /** Gets the listener which listens for the dialog dismissed */
+    @Nullable
+    public DismissListener getDismissListener() {
+        return mDismissListener;
     }
 
     /** Sets the listener which listens to a click on the positive button. */
@@ -290,6 +310,9 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
 
     @Override
     protected void onDialogClosed(boolean positiveResult) {
+        if (mDismissListener != null) {
+            mDismissListener.onDismiss(getArguments().getBundle(ARGUMENTS_KEY));
+        }
     }
 
     @Override
@@ -335,5 +358,15 @@ public class ConfirmationDialogFragment extends CarUiDialogFragment {
          * {@link Builder#addArgumentString(String, String)}.
          */
         void onNeutral(@Nullable Bundle arguments);
+    }
+
+    /** Listens to the dismiss action. */
+    public interface DismissListener {
+        /**
+         * Defines the action to take when the dialog is closed. The bundle will contain the
+         * arguments added when constructing the dialog through with
+         * {@link Builder#addArgumentString(String, String)}.
+         */
+        void onDismiss(@Nullable Bundle arguments);
     }
 }
