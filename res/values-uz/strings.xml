@@ -142,7 +142,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"Xavfsizlik"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"Yoʻq"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"AP diapazoni"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"Wi-Fi diapazoni"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"Wi-Fi chastotalari diapazoni"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Avto"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"2,4 GGs"</string>
@@ -352,7 +352,7 @@
     <string name="system_setting_title" msgid="6864599341809463440">"Tizim"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"Tizimni yangilash"</string>
     <string name="firmware_version" msgid="8491753744549309333">"Android versiyasi"</string>
-    <string name="security_patch" msgid="4794276590178386903">"Tizim xavfsizligi uchun yangilanish"</string>
+    <string name="security_patch" msgid="4794276590178386903">"Android tizim xavfsizligi yangilanishi"</string>
     <string name="hardware_info" msgid="3973165746261507658">"Model va apparat taʼminoti"</string>
     <string name="hardware_info_summary" msgid="8262576443254075921">"Modeli: <xliff:g id="MODEL">%1$s</xliff:g>"</string>
     <string name="baseband_version" msgid="2370088062235041897">"Aloqa moduli versiyasi"</string>
@@ -375,7 +375,7 @@
     <string name="copyright_title" msgid="4220237202917417876">"Mualliflik huquqi belgisi"</string>
     <string name="license_title" msgid="936705938435249965">"Litsenziya"</string>
     <string name="terms_title" msgid="5201471373602628765">"Foydalanish shartlari"</string>
-    <string name="webview_license_title" msgid="6442372337052056463">"WebView tizim litsenziyalari"</string>
+    <string name="webview_license_title" msgid="6442372337052056463">"System WebView litsenziyalari"</string>
     <string name="wallpaper_attributions" msgid="9201272150014500697">"Orqa fon rasmlari"</string>
     <string name="wallpaper_attributions_values" msgid="4292446851583307603">"Sputnik tasvirlari:\n© CNES 2014/Astrium, DigitalGlobe, Bluesky"</string>
     <string name="model_info" msgid="4966408071657934452">"Modeli"</string>
@@ -505,7 +505,7 @@
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olindi"</string>
     <string name="storage_unmount_failure" msgid="4591934911541762883">"<xliff:g id="NAME">%1$s</xliff:g> xavfsiz chiqarib olinmadi"</string>
     <string name="accounts_settings_title" msgid="436190037084293471">"Hisoblar"</string>
-    <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob qo‘shish"</string>
+    <string name="user_add_account_menu" msgid="6625351983590713721">"Hisob kiritish"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Hech qanday hisobga kirilmagan"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> – hisoblar"</string>
     <string name="account_auto_sync_title" msgid="3238816995364191432">"Avtomatik sinxronlash"</string>
@@ -515,7 +515,7 @@
     <string name="data_usage_auto_sync_off_dialog_title" msgid="1235955038330202536">"Avto-sinxronlash bas qilinsinmi?"</string>
     <string name="data_usage_auto_sync_off_dialog" msgid="5040873073016183315">"Trafik tejaladi, lekin oxirgi axborotlarni yigʻish uchun har bir hisobni oʻzingiz sinxronlashingiz kerak. Shuningdek, oʻzgarishlar yuz berganda sizga bildirishnomalar keladi."</string>
     <string name="account_details_title" msgid="7529571432258448573">"Hisob haqida"</string>
-    <string name="add_account_title" msgid="5988746086885210040">"Hisob qo‘shish"</string>
+    <string name="add_account_title" msgid="5988746086885210040">"Hisob kiritish"</string>
     <string name="add_an_account" msgid="1072285034300995091">"Yangi hisob kiritish"</string>
     <string name="user_cannot_add_accounts_message" msgid="6775605884544906797">"Cheklangan profillar hisoblar qo‘sha olmaydilar"</string>
     <string name="remove_account_title" msgid="8840386525787836381">"Hisobni olib tashlash"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Oshib boruvchi, kamayib boruvchi yoki qaytarilgan ketma-ket raqamlarga ruxsat berilmaydi."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Ekran qulfi parametrlari"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> kun oldin"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ishonchli qurilma kiritish"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Qurilmani kiritish uchun Bluetooth yoqiladi"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Ishonchli qurilmalar"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> ta qurilma</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> ta qurilma</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> avtomobilga ulanishi bilan uning qulfini ochadi. <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> yordamida boshqalar ham bu qurilmaga kira oladi"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"OK"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ishonchli qurilmani olib tashlash"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Ishonchli qurilma sifatida sozlash uchun hamroh ilovadan foydalaning. Sozlangandan keyin telefoningizni avtomobil tanishi bilan foydalanuvchi profilingizni qulfdan chiqarish imkoni paydo boʻladi"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Telefoningiz orqali hamroh ilovani yuklab oling"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Qurilmalarni bir-biriga ulash uchun telefoningizdan <xliff:g id="CAR_NAME">%1$s</xliff:g> nomini tanlang"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Ishonchli qurilmangizni boshqa odam ushlab turgan holda ham, avtomobilingiz motori oʻt olgandan keyin foydalanuvchi profilini qulfdan chiqarish mumkin."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Ulanish kodlari bir xil ekanligini tasdiqlang"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon qayd qilindi"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> qayd qilinmadi"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Ishonchl qurilma kiritgandan keyin autentifikatsiya usulini sozlash talab qilinadi. Agar ishonchli qurilma yoningizda boʻlmasa, autentifikatsiya profilingizga kirishda talab etiladi."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Qurilma uzildi."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hisob axborotini tozalash"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Barcha sertifikatlarni olib tashlash"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Hamma narsa oʻchirib tashlansinmi?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"YOPISH"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Avtomobilda harakatlanayotganda bu funksiya ishlamaydi"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Avtomobilda harakatlanayotganda foydalanuvchi kiritilmaydi"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Qidiruv"</string>
 </resources>
