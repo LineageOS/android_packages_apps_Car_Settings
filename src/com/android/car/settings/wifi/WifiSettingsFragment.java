@@ -17,6 +17,7 @@ package com.android.car.settings.wifi;
 
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +25,10 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ProgressBarController;
+import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.wifi.AccessPoint;
 
 import java.util.Collections;
@@ -34,6 +37,7 @@ import java.util.List;
 /**
  * Main page to host Wifi related preferences.
  */
+@SearchIndexable
 public class WifiSettingsFragment extends SettingsFragment
         implements CarWifiManager.Listener {
 
@@ -140,4 +144,10 @@ public class WifiSettingsFragment extends SettingsFragment
                 mProgressBar.setVisible(false);
         }
     }
+
+    /**
+     * Data provider for Settings Search.
+     */
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.wifi_list_fragment, Settings.ACTION_WIFI_SETTINGS);
 }
