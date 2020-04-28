@@ -46,6 +46,7 @@ import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
 import com.android.car.ui.toolbar.ToolbarController;
+import com.android.settingslib.search.Indexable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +66,7 @@ import java.util.Map;
  * controllers.
  */
 public abstract class SettingsFragment extends PreferenceFragment implements
-        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController {
+        CarUxRestrictionsManager.OnUxRestrictionsChangedListener, FragmentController, Indexable {
 
     @VisibleForTesting
     static final String DIALOG_FRAGMENT_TAG =

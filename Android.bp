@@ -16,6 +16,10 @@ android_app {
     name: "CarSettings",
     overrides: ["Settings"],
     platform_apis: true,
+    defaults: [
+        "SettingsLibDefaults",
+        "SettingsLib-search-defaults",
+    ],
 
     srcs: ["src/**/*.java"],
 
@@ -32,6 +36,7 @@ android_app {
         "car-apps-common",
         "car-setup-wizard-lib-utils",
         "SettingsLib",
+        "SettingsLib-search",
         "android.car.userlib",
         "androidx-constraintlayout_constraintlayout-solver",
         "jsr305",
@@ -65,6 +70,10 @@ android_app {
 android_app {
     name: "CarSettingsForTesting",
     platform_apis: true,
+    defaults: [
+        "SettingsLibDefaults",
+        "SettingsLib-search-defaults",
+    ],
 
     srcs: ["src/**/*.java"],
 
@@ -81,6 +90,7 @@ android_app {
         "car-apps-common",
         "car-setup-wizard-lib-utils",
         "SettingsLib",
+        "SettingsLib-search",
         "android.car.userlib",
         "androidx-constraintlayout_constraintlayout-solver",
         "jsr305",
