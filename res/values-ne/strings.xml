@@ -177,12 +177,12 @@
     <string name="bluetooth_turning_off" msgid="1753975097241024061">"ब्लुटुथ निष्क्रिय पार्दै…"</string>
     <string name="bluetooth_ask_enablement" msgid="8565428400407368667">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लुटुथ सक्रिय गर्न चाहन्छ"</string>
     <string name="bluetooth_ask_disablement" msgid="6056441896274912839">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लुटुथ निष्क्रिय पार्न चाहन्छ"</string>
-    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"कुनै अनुप्रयोग ब्लुटुथ सक्रिय गर्न चाहन्छ"</string>
-    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"कुनै अनुप्रयोग ब्लुटुथ निष्क्रिय पार्न चाहन्छ"</string>
+    <string name="bluetooth_ask_enablement_no_name" msgid="3191739265037605547">"कुनै एप ब्लुटुथ सक्रिय गर्न चाहन्छ"</string>
+    <string name="bluetooth_ask_disablement_no_name" msgid="5694464250599567283">"कुनै एप ब्लुटुथ निष्क्रिय पार्न चाहन्छ"</string>
     <string name="bluetooth_ask_discovery" msgid="8774333095928068465">"<xliff:g id="APP_NAME">%1$s</xliff:g> <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकेन्डसम्म अन्य ब्लुटुथ यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
-    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एउटा अनुप्रयोग अन्य ब्लुटुथ यन्त्रहरूले <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
+    <string name="bluetooth_ask_discovery_no_name" msgid="164397600370102369">"एउटा एप अन्य ब्लुटुथ यन्त्रहरूले <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
     <string name="bluetooth_ask_enablement_and_discovery" msgid="5487502083015708674">"<xliff:g id="APP_NAME">%1$s</xliff:g> ब्लुटुथ सक्रिय गर्न र <xliff:g id="TIMEOUT">%2$d</xliff:g> सेकेन्डसम्म अन्य यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
-    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एउटा अनुप्रयोग ब्लुटुथ सक्रिय गर्न र <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म अन्य यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
+    <string name="bluetooth_ask_enablement_and_discovery_no_name" msgid="907153034209916282">"एउटा एप ब्लुटुथ सक्रिय गर्न र <xliff:g id="TIMEOUT">%1$d</xliff:g> सेकेन्डसम्म अन्य यन्त्रहरूले तपाईंको हेडयुनिट देख्न सक्ने बनाउन चाहन्छ।"</string>
     <string name="bluetooth_notif_ticker" msgid="7192577740198156792">"ब्लुटुथसँग जोडा बनाउने अनुरोध"</string>
     <string name="bluetooth_device_context_pair_connect" msgid="3138105800372470422">"जोडा बनाउनुहोस् र जडान गर्नुहोस्"</string>
     <string name="bluetooth_pairing_key_msg" msgid="5066825929751599037">"ब्लुटुथसँग जोडा बनाउने कोड"</string>
@@ -268,11 +268,11 @@
     <string name="units_unit_name_miles_per_gallon_uk" msgid="7700318800709988481">"माइल प्रति ग्यालन (संयुक्त अधिराज्य)"</string>
     <string name="units_unit_name_kilometers_per_liter" msgid="8769902235588571155">"किलोमिटर प्रति लिटर"</string>
     <string name="units_unit_name_liter_per_hundred_kilometers" msgid="4867647387452453552">"लिटर प्रति सय किलोमिटर"</string>
-    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"अनुप्रयोग तथा सूचनाहरू"</string>
-    <string name="all_applications" msgid="7798210477486822168">"सबै अनुप्रयोगहरू देखाउनुहोस्"</string>
-    <string name="default_applications" msgid="1558183275638697087">"पूर्वनिर्धारित अनुप्रयोगहरू"</string>
+    <string name="apps_and_notifications_settings" msgid="8704585874333781975">"एप तथा सूचनाहरू"</string>
+    <string name="all_applications" msgid="7798210477486822168">"सबै एपहरू देखाउनुहोस्"</string>
+    <string name="default_applications" msgid="1558183275638697087">"पूर्वनिर्धारित एपहरू"</string>
     <string name="app_permissions" msgid="32799922508313948">"अनुप्रयोगसम्बन्धी अनुमति"</string>
-    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> प्रयोग गरिरहेका अनुप्रयोगहरू"</string>
+    <string name="app_permissions_summary" msgid="1842858532315056367">"<xliff:g id="APPS">%1$s</xliff:g> प्रयोग गरिरहेका एपहरू"</string>
     <string name="applications_settings" msgid="794261395191035632">"अनुप्रयोगसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
@@ -297,9 +297,9 @@
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतिहरू</item>
       <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> अतिरिक्त अनुमति</item>
     </plurals>
-    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"टिपोट: पुनः बुट गरेप्रश्चात तपाईंले आफ्नो सवारी साधन अनलक नगरेसम्म यो अनुप्रयोग सुरु हुन सक्दैन।"</string>
+    <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"टिपोट: पुनः बुट गरेप्रश्चात तपाईंले आफ्नो सवारी साधन अनलक नगरेसम्म यो एप सुरु हुन सक्दैन।"</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"सहायक र आवाज संलग्न इनपुट"</string>
-    <string name="assist_app_settings" msgid="9085261410166776497">"सहायक अनुप्रयोग"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"सहायक एप"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रिनमा रहेको पाठ प्रयोग गर्नुहोस्"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"सहायक अनुप्रयोगलाई स्क्रिनमा रहेको कुनै सामग्रीमाथि पाठका रूपमा पहुँच राख्ने अनुमति दिनुहोस्"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रिसट प्रयोग गर्नुहोस्"</string>
@@ -312,7 +312,7 @@
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;तपाईं यो अनुप्रयोगमाथि भरोसा गर्नुहुन्छ भन्ने कुरा सुनिश्चित गर्नुहोस्&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Google Autofill&gt;%1$s&lt;/xliff:g&gt; यस अनुप्रयोगले स्वतः भर्न सकिने कुराहरूको निर्धारण गर्न तपाईंको स्क्रिनमा भएका वस्तुहरूको प्रयोग गर्छ।"</string>
     <string name="autofill_add_service" msgid="6413893366443609951">"सेवा थप्नुहोस्"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"लिंकहरू खोल्दै"</string>
-    <string name="domain_url_section_title" msgid="9070403140947787214">"स्थापना गरिएका अनुप्रयोगहरू"</string>
+    <string name="domain_url_section_title" msgid="9070403140947787214">"स्थापना गरिएका एपहरू"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"समर्थित लिंकहरू नखोल्नुहोस्"</string>
     <string name="domain_urls_summary_one" msgid="5072257421806034237">"<xliff:g id="DOMAIN">%s</xliff:g> खोल्नुहोस्"</string>
     <string name="domain_urls_summary_some" msgid="5523153458016701725">"<xliff:g id="DOMAIN">%s</xliff:g> र अन्य URL हरू खोल्नुहोस्"</string>
@@ -340,14 +340,14 @@
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
     <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले अनुप्रयोगका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस अनुप्रयोगको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"प्रयोगसम्बन्धी पहुँच"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले अनुप्रयोगलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन अनुप्रयोगहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले अनुप्रयोगलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन एपहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi को नियन्त्रण"</string>
     <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi नियन्त्रकले अनुप्रयोगलाई Wi-Fi सक्रिय गर्ने वा निष्क्रिय पार्ने, स्क्यान गरी Wi-Fi नेटवर्कमा जडान गर्ने, नेटवर्कहरू थप्ने वा हटाउने, वा स्थानीय रूपमा मात्र प्रयोग गर्न मिल्ने हटस्पट सुरु गर्ने अनुमति दिन्छ।"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"थप"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
     <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"हालसालैका स्थानसम्बन्धी कुनै पनि अनुरोध छैन"</string>
-    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"अनुप्रयोग स्तरीय अनुमति"</string>
+    <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"एप स्तरीय अनुमति"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"स्थानसम्बन्धी सेवाहरू"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"प्रणाली"</string>
     <string name="system_update_settings_title" msgid="8448588267784138855">"प्रणालीसम्बन्धी अद्यावधिकहरू"</string>
@@ -393,7 +393,7 @@
     <string name="show_dev_already" msgid="1678087328973865736">"आवश्यक छैन, तपाईं आफैँ नै एउटा विकासकर्ता हुनुहुन्छ।"</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"विकासकर्ताका विकल्पहरू"</string>
     <string name="reset_options_title" msgid="4388902952861833420">"रिसेटका विकल्पहरू"</string>
-    <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, अनुप्रयोग वा यन्त्रको रिसेटसम्बन्धी विकल्प"</string>
+    <string name="reset_options_summary" msgid="5508201367420359293">"नेटवर्क, एप वा यन्त्रको रिसेटसम्बन्धी विकल्प"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"नेटवर्क रिसेट गर्नुहोस्"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"यस कार्यले निम्नलगायत नेटवर्कसम्बन्धी सम्पूर्ण सेटिङहरू रिसेट गर्ने छ:"</string>
     <string name="reset_network_item_wifi" msgid="7569481589699982698"><li>"Wi‑Fi"</li></string>
@@ -410,15 +410,15 @@
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका अनुप्रयोगका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं अनुप्रयोगको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
-    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"अनुप्रयोगहरू रिसेट गर्नुहोस्"</string>
+    <string name="reset_app_pref_button_text" msgid="6270820447321231609">"एपहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र अनुप्रयोगका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका अनुप्रयोगहरू"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"यस कार्यले तपाईंको सवारी साधनाको मुख्य भागबाट सम्पूर्ण डेटा मेटाउने छ, जसमा निम्न कुराहरू पर्दछन्:\n\n"<li>"तपाईंको Google खाता"</li>\n<li>"प्रणाली र अनुप्रयोगका डेटा तथा सेटिङहरू"</li>\n<li>"डाउनलोड गरिएका एपहरू"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"तपाईं अहिले निम्न खाताहरूमा साइन इन हुनुहुन्छ:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"यस सवारी साधनमा अन्य प्रयोगकर्ताहरू छन्।"</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"सवारी साधन रिसेट गर्नुहोस्"</string>
     <string name="master_clear_confirm_title" msgid="8646455623132887370">"रिसेट गर्ने हो?"</string>
-    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"तपाईंका सबै व्यक्तिगत जानकारी र डाउनलोड गरिएका अनुप्रयोगहरू मेट्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
+    <string name="master_clear_confirm_desc" msgid="8920446291698038558">"तपाईंका सबै व्यक्तिगत जानकारी र डाउनलोड गरिएका एपहरू मेट्ने हो? तपाईं यो कार्य अन्डू गर्न सक्नुहुन्न!"</string>
     <string name="master_clear_confirm_button_text" msgid="7981254968588121786">"सबै कुरा मेटाउनुहोस्"</string>
     <string name="master_clear_progress_title" msgid="7087480656932674774">"मेटाउँदै"</string>
     <string name="master_clear_progress_text" msgid="3440789441935303176">"कृपया प्रतीक्षा गर्नुहोला..."</string>
@@ -450,13 +450,13 @@
     <string name="create_user_permission_title" msgid="7781550880565935298">"नयाँ प्रयोगकर्ताहरू सिर्जना गर्नु…"</string>
     <string name="outgoing_calls_permission_title" msgid="1230180443712099293">"फोन कल गर्नुहोस्"</string>
     <string name="sms_messaging_permission_title" msgid="6099328509729071243">"कारको मोबाइल डेटामार्फत सन्देश पठाउँदै"</string>
-    <string name="install_apps_permission_title" msgid="3099705360827925296">"नयाँ अनुप्रयोगहरू स्थापना गर्नुहोस्"</string>
-    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"अनुप्रयोग स्थापना रद्द गर्नुहोस्"</string>
+    <string name="install_apps_permission_title" msgid="3099705360827925296">"नयाँ एपहरू स्थापना गर्नुहोस्"</string>
+    <string name="uninstall_apps_permission_title" msgid="8448422340567430659">"एप स्थापना रद्द गर्नुहोस्"</string>
     <string name="user_add_user_menu" msgid="5319151436895941496">"प्रयोगकर्ता थप्नुहोस्"</string>
     <string name="user_new_user_name" msgid="7115771396412339662">"नयाँ प्रयोगकर्ता"</string>
     <string name="user_add_user_title" msgid="7458813670614932479">"नयाँ प्रयोगकर्ता थप्ने?"</string>
     <string name="user_add_user_message_setup" msgid="6030901156040053106">"तपाईंले नयाँ प्रयोगकर्ता थप्दा, ती व्यक्तिले आफ्नो स्थान सेटअप गर्नु पर्नेे हुन्छ।"</string>
-    <string name="user_add_user_message_update" msgid="1528170913388932459">"कुनै पनि प्रयोगकर्ताले अन्य सबै प्रयोगकर्ताहरूका लागि अनुप्रयोगहरू अद्यावधिक गर्न सक्नुहुन्छ।"</string>
+    <string name="user_add_user_message_update" msgid="1528170913388932459">"कुनै पनि प्रयोगकर्ताले अन्य सबै प्रयोगकर्ताहरूका लागि एपहरू अद्यावधिक गर्न सक्नुहुन्छ।"</string>
     <string name="user_limit_reached_title" msgid="8803355734556061238">"प्रयोगकर्ताको सीमा पुग्यो"</string>
     <plurals name="user_limit_reached_message" formatted="false" msgid="2651922256448824747">
       <item quantity="other">तपाईं अधिकतम <xliff:g id="COUNT">%d</xliff:g> प्रयोगकर्ताहरू सिर्जना गर्न सक्नुहुन्छ।</item>
@@ -464,13 +464,13 @@
     </plurals>
     <string name="add_user_error_title" msgid="3206300411663817038">"कुनै नयाँ प्रयोगकर्ता सिर्जना गर्न सकिएन"</string>
     <string name="delete_user_dialog_title" msgid="3422867434431562007">"यस प्रयोगकर्तालाई हटाउने हो?"</string>
-    <string name="delete_user_dialog_message" msgid="4346777604351785057">"सबै अनुप्रयोग र डेटा मेटाइने छन्।"</string>
+    <string name="delete_user_dialog_message" msgid="4346777604351785057">"सबै एप र डेटा मेटाइने छन्।"</string>
     <string name="delete_user_error_title" msgid="7609819398530124827">"प्रयोगकर्ता मेटाउन सकिएन।"</string>
     <string name="delete_user_error_dismiss" msgid="429156446763738273">"खारेज गर्नुहोस्"</string>
     <string name="delete_user_error_retry" msgid="5116434895572670563">"पुनः प्रयास गर्नुहोस्"</string>
     <string name="delete_last_user_dialog_title" msgid="3644392025675369680">"पछिल्लो प्रयोगकर्ता मेटाउने हो?"</string>
     <string name="delete_last_user_admin_created_message" msgid="1856897729010319054">"यो कारको बाँकी रहेको प्रयोगकर्ता मेटाए पछि नयाँ प्रशासक प्रयोगकर्ता सिर्जना गरिने छ।"</string>
-    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"यो प्रयोगकर्तासँग सम्बन्धित सबै डेटा, सेटिङ र अनुप्रयोगहरू मेटिने छन्। तपाईंले प्रणाली फेरि सेट अप गर्न पर्ने छ।"</string>
+    <string name="delete_last_user_system_setup_required_message" msgid="8550730509371697989">"यो प्रयोगकर्तासँग सम्बन्धित सबै डेटा, सेटिङ र एपहरू मेटिने छन्। तपाईंले प्रणाली फेरि सेट अप गर्न पर्ने छ।"</string>
     <string name="choose_new_admin_title" msgid="1915428454917699587">"नयाँ प्रशासक छनौट गर्नुहोस्‌"</string>
     <string name="choose_new_admin_message" msgid="7468286545352043354">"तपाईंलाई कम्तिमा एक प्रशासक चाहिन्छ। यो मेट्न पहिले प्रतिस्थापन छनौट गर्नुहोस्‌।"</string>
     <string name="choose_new_admin_label" msgid="5987653639387437939">"प्रशासक छनौट गर्नुहोस्‌"</string>
@@ -487,7 +487,7 @@
     <string name="user_details_admin_title" msgid="3530292857178371891">"%1$s लाई अनुमति प्रदान गरियो"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"भण्डारण"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"सङ्गीत तथा अडियो"</string>
-    <string name="storage_other_apps" msgid="945509804756782640">"अन्य अनुप्रयोगहरू"</string>
+    <string name="storage_other_apps" msgid="945509804756782640">"अन्य एपहरू"</string>
     <string name="storage_files" msgid="6382081694781340364">"फाइलहरू"</string>
     <string name="storage_system" msgid="1271345630248014010">"प्रणाली"</string>
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"प्रणालीमा Android को संस्करण <xliff:g id="VERSION">%s</xliff:g> चलाउन प्रयोग भएका फाइलहरू समावेश छन्"</string>

@@ -386,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ett problem inträffade när licenserna lästes in."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Läser in …"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Nu är du <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
-      <item quantity="one">Nu är du <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="other">Du är nu <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> steg från att bli utvecklare.</item>
+      <item quantity="one">Du är nu <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> steg från att bli utvecklare.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Nu är du en utvecklare!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Det behövs inte. Du är redan utvecklare."</string>
