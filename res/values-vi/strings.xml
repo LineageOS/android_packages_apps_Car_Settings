@@ -50,13 +50,13 @@
     <string name="roaming_title" msgid="6218635014519017734">"Chuyển vùng"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"Kết nối với dịch vụ dữ liệu khi chuyển vùng"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Cho phép chuyển vùng dữ liệu?"</string>
-    <string name="roaming_warning" msgid="4908184914868720704">"Bạn có thể mất phí chuyển vùng."</string>
+    <string name="roaming_warning" msgid="4908184914868720704">"Bạn có thể bị tính phí chuyển vùng."</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"Mức sử dụng dữ liệu"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Dữ liệu chính"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"Đã dùng <xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g>"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"Cảnh báo dữ liệu: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Cảnh báo dữ liệu khi dùng đến <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"Hạn mức dữ liệu <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Cảnh báo dữ liệu <xliff:g id="ID_1">^1</xliff:g>/Hạn mức dữ liệu <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Cảnh báo dữ liệu khi dùng đến <xliff:g id="ID_1">^1</xliff:g>/Hạn mức dữ liệu là <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="other">Còn %d ngày</item>
       <item quantity="one">Còn %d ngày</item>
@@ -329,7 +329,7 @@
     <string name="special_access" msgid="5730278220917123811">"Quyền truy cập đặc biệt"</string>
     <string name="show_system" msgid="4401355756969485287">"Hiển thị hệ thống"</string>
     <string name="hide_system" msgid="8845453295584638040">"Ẩn hệ thống"</string>
-    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các cài đặt hệ thống"</string>
+    <string name="modify_system_settings_title" msgid="4596320571562433972">"Sửa đổi các tùy chọn cài đặt hệ thống"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Quyền này cho phép ứng dụng sửa đổi các tùy chọn cài đặt hệ thống."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Quyền truy cập thông báo"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"Cấp quyền truy cập thông báo cho <xliff:g id="SERVICE">%1$s</xliff:g>?"</string>
@@ -345,8 +345,8 @@
     <string name="wifi_control_description" msgid="6021926850423169261">"Tùy chọn kiểm soát Wi-Fi cho phép một ứng dụng bật/tắt Wi-Fi, quét và kết nối vào mạng Wi-Fi, thêm/xóa mạng hoặc bắt đầu một điểm phát sóng chỉ dành cho mạng cục bộ."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Xem thêm"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Vị trí"</string>
-    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Yêu cầu vị trí gần đây"</string>
-    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Không có yêu cầu vị trí gần đây nào"</string>
+    <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Các yêu cầu gần đây về vị trí"</string>
+    <string name="location_settings_recent_requests_empty_message" msgid="7789667070033674910">"Không có yêu cầu nào gần đây về vị trí"</string>
     <string name="location_settings_app_permissions_title" msgid="6446735313354321564">"Quyền cấp ứng dụng"</string>
     <string name="location_settings_services_title" msgid="1186133632690970468">"Dịch vụ vị trí"</string>
     <string name="system_setting_title" msgid="6864599341809463440">"Hệ thống"</string>
@@ -425,7 +425,7 @@
     <string name="date_and_time_settings_title" msgid="4058492663544475485">"Ngày và giờ"</string>
     <string name="date_and_time_settings_summary" msgid="7669856855390804666">"Đặt ngày, giờ, múi giờ và định dạng"</string>
     <string name="date_time_auto" msgid="3570339569471779767">"Ngày và giờ tự động"</string>
-    <string name="date_time_auto_summary" msgid="3311706425095342759">"Sử dụng thời gian do mạng cung cấp"</string>
+    <string name="date_time_auto_summary" msgid="3311706425095342759">"Sử dụng ngày và giờ do mạng cung cấp"</string>
     <string name="zone_auto" msgid="3701878581920206160">"Múi giờ tự động"</string>
     <string name="zone_auto_summary" msgid="4345856882906981864">"Sử dụng múi giờ do mạng cung cấp"</string>
     <string name="date_time_24hour_title" msgid="3025576547136168692">"Định dạng 24 giờ"</string>

@@ -198,7 +198,7 @@
     <string name="bluetooth_notif_message" msgid="1060821000510108726">"Trokit për ta çiftuar me <xliff:g id="DEVICE_NAME">%1$s</xliff:g>."</string>
     <string name="bluetooth_device_picker" msgid="673238198452345475">"Zgjidh pajisjen me Bluetooth"</string>
     <string name="language_settings" msgid="2079258598337245546">"Gjuhët"</string>
-    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe të dhënat"</string>
+    <string name="languages_and_input_settings" msgid="3672322610529408248">"Gjuhët dhe metodat e hyrjes"</string>
     <string name="language_picker_list_suggested_header" msgid="7593893806003415948">"Sugjeruar"</string>
     <string name="language_picker_list_all_header" msgid="1577387973934368428">"Të gjitha gjuhët"</string>
     <string name="keyboard_settings" msgid="1959697870618278081">"Tastiera"</string>
@@ -386,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"Ka një problem me ngarkimin e licencave."</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"Po ngarkohet…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa që të bëhesh një zhvillues</item>
-      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap që të bëhesh një zhvillues</item>
+      <item quantity="other">Tani të duhen edhe <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> hapa për t\'u bërë zhvillues.</item>
+      <item quantity="one">Tani të duhet edhe <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> hap për t\'u bërë zhvillues.</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"Tani je një zhvillues!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Nuk ka nevojë, ti je tashmë një zhvillues."</string>

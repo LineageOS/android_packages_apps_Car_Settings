@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"មិន​អនុញ្ញាត​ឱ្យ​មាន​លេខ​លំដាប់​ឡើង ចុះ ឬ​ដដែលៗ​ទេ។"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"ជម្រើស​ការចាក់សោអេក្រង់"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\nថ្ងៃ <xliff:g id="DATE">%2$s</xliff:g>៖ <xliff:g id="NUM_DAYS">%3$s</xliff:g> ថ្ងៃមុន"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"បញ្ចូល​ឧបករណ៍​ដែលទុកចិត្ត"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"ប៊្លូធូសនឹងបើក ដើម្បីបញ្ចូលឧបករណ៍​ដែលទុកចិត្ត"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"ឧបករណ៍​ដែល​ទុកចិត្ត"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other">ឧបករណ៍ <xliff:g id="COUNT_1">%d</xliff:g></item>
-      <item quantity="one">ឧបករណ៍ <xliff:g id="COUNT_0">%d</xliff:g></item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> របស់​អ្នក​នឹង​ដោះសោរថយន្ត​នេះ នៅពេល​ភ្ជាប់។ ប្រសិនបើ​នរណាម្នាក់យក​ <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> របស់អ្នក បុគ្គល​នោះ​អាច​នឹងចូលប្រើ​ឧបករណ៍​នេះ​បាន"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"បញ្ជាក់"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"លុបឧបករណ៍ដែលទុកចិត្ត"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"រួចរាល់"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"ប្រើ​កម្មវិធី​ដៃគូ ដើម្បី​រៀបចំឧបករណ៍​ដែល​ទុក​ចិត្ត។ បន្ទាប់ពី​រៀបចំ​រួចហើយ កម្រងព័ត៌មាន​អ្នកប្រើប្រាស់​របស់អ្នក​នឹងដោះសោ​ដោយស្វ័យប្រវត្តិ នៅពេល​ចាប់បាន​ទូរសព្ទ​របស់អ្នក​នៅជិត​យានជំនិះ។"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. ទាញយក​កម្មវិធី​ដៃគូ​នៅលើទូរសព្ទរបស់អ្នក"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. ជ្រើសរើស​ <xliff:g id="CAR_NAME">%1$s</xliff:g> នៅលើ​ទូរសព្ទ​របស់អ្នក ដើម្បីផ្គូផ្គង​ឧបករណ៍"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"ឧបករណ៍​ទុកចិត្ត​ដែលនៅជិត​រថយន្តរបស់អ្នក​នឹង​ដោះសោ​កម្រងព័ត៌មាន​អ្នកប្រើប្រាស់​នៅពេល​បញ្ឆេះរថយន្ត ទោះបីជា​អ្នកផ្សេង​កំពុងកាន់​ឧបករណ៍នោះ​ក៏ដោយ។"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"សូមបញ្ជាក់ថា​កូដផ្គូផ្គងមានភាពត្រូវគ្នា"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"បានចុះឈ្មោះ​ទូរសព្ទដោយជោគជ័យ"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"មិន​អាច​ចុះឈ្មោះ <xliff:g id="DEVICE_NAME">%1$s</xliff:g> បាន​ទេ​"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"ការបញ្ចូល​ឧបករណ៍​ដែល​ទុកចិត្ត​តម្រូវឱ្យអ្នក​កំណត់​វិធីផ្ទៀងផ្ទាត់​បន្ទាប់។ ប្រសិនបើអ្នក​គ្មាន​ឧបករណ៍​ដែលទុកចិត្ត​ជាប់ខ្លួនអ្នក​ទេ នោះនឹង​តម្រូវឱ្យ​មានការផ្ទៀងផ្ទាត់ ដើម្បី​ចូលប្រើ​កម្រងព័ត៌មាន​របស់អ្នក។"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"បានផ្តាច់​ឧបករណ៍។"</string>
     <string name="credentials_reset" msgid="873900550885788639">"សម្អាត​ព័ត៌មានផ្ទៀងផ្ទាត់"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"លុប​វិញ្ញាបនបត្រ​ទាំងអស់"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"លុបខ្លឹមសារចេញ​ទាំងអស់?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ច្រានចោល"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"មិនអាច​ប្រើមុខងារ​នេះបានទេ ខណៈពេល​កំពុង​បើកបរ"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"មិនអាច​បញ្ចូល​អ្នកប្រើប្រាស់​បានទេ ខណៈពេល​កំពុងបើកបរ"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"ស្វែងរក"</string>
 </resources>
