@@ -131,7 +131,7 @@
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"由於位置資訊功能已關閉，因此無法使用。請開啟"<annotation id="link">"位置資訊"</annotation>"。"</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"要開啟 Wi-Fi 掃瞄功能嗎？"</string>
     <string name="wifi_settings_scanning_required_turn_on" msgid="4464931023377210050">"開啟"</string>
-    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"已開啟 Wi‑Fi 掃瞄功能"</string>
+    <string name="wifi_settings_scanning_required_enabled" msgid="5457372118991438313">"Wi‑Fi 掃瞄功能已開啟"</string>
     <string name="wifi_cellular_fallback_title" msgid="8322675436784870862">"自動切換至流動數據網絡"</string>
     <string name="wifi_cellular_fallback_summary" msgid="2433848528924203758">"當 Wi‑Fi 無法連線至互聯網時，切換至流動數據網絡 (可能需要支付數據用量費用)。"</string>
     <string name="learn_more" msgid="8214605928933358604">"瞭解詳情"</string>
@@ -386,8 +386,8 @@
     <string name="settings_license_activity_unavailable" msgid="6104592821991010350">"載入授權時發生問題。"</string>
     <string name="settings_license_activity_loading" msgid="6163263123009681841">"正在載入…"</string>
     <plurals name="show_dev_countdown" formatted="false" msgid="2968627665608969405">
-      <item quantity="other">您只需完成剩餘的 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，即可成為開發人員。</item>
-      <item quantity="one">您只需完成剩餘的 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，即可成為開發人員。</item>
+      <item quantity="other">尚餘 <xliff:g id="STEP_COUNT_1">%1$d</xliff:g> 個步驟，您就可以成為開發人員。</item>
+      <item quantity="one">尚餘 <xliff:g id="STEP_COUNT_0">%1$d</xliff:g> 個步驟，您就可以成為開發人員。</item>
     </plurals>
     <string name="show_dev_on" msgid="5339077400040834808">"您現已成為開發人員！"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"不需要了，您已經是開發人員。"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不可使用依遞增或遞減順序排列或重複的連續數字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"螢幕鎖定選項"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"加入信任的裝置"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"系統將開啟藍牙以新增信任的裝置"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"信任的裝置"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 部裝置</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 部裝置</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"您的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 將在連接後為此汽車解鎖。如果有人取得您的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，他們或許能存取此裝置。"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"確認"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除信任的裝置"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"使用隨附應用程式設定信任的裝置。完成設定後，汽車將會在偵測到您的手機時自動解鎖使用者設定檔。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手機下載隨附應用程式"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手機選取「<xliff:g id="CAR_NAME">%1$s</xliff:g>」以配對裝置"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"在汽車引擎啟動後，即使信任的裝置在他人手上，仍可在靠近汽車時解鎖使用者設定檔。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"請確認配對碼相符"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"已成功註冊手機"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"「<xliff:g id="DEVICE_NAME">%1$s</xliff:g>」註冊失敗"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"如要加入信任的裝置，則需要在下一步設定驗證方法。如果未有攜帶信任的裝置，便需要通過驗證才可存取您的設定檔。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"裝置已中斷連線。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除憑證"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有憑證"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有內容嗎？"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"關閉"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"無法在駕駛時使用此功能"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"無法在駕駛時新增使用者"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"搜尋"</string>
 </resources>

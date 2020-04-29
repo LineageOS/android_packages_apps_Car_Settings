@@ -48,15 +48,15 @@
     <string name="sim_change_data_message" msgid="4669775284395549069">"Мобилдик Интернет үчүн <xliff:g id="CARRIER2_0">%2$s</xliff:g> операторун колдонуп жатасыз. Эгер <xliff:g id="CARRIER1">%1$s</xliff:g> операторуна которулсаңыз, <xliff:g id="CARRIER2_1">%2$s</xliff:g> мобилдик Интернет үчүн колдонулбай калат."</string>
     <string name="sim_change_data_ok" msgid="2348804996223271081">"<xliff:g id="CARRIER">%1$s</xliff:g> операторун колдонуу"</string>
     <string name="roaming_title" msgid="6218635014519017734">"Роуминг"</string>
-    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда мобилдик Интернетке туташат"</string>
+    <string name="roaming_summary" msgid="7476127740259728901">"Роуминг учурунда дайын-даректерди өткөрүүчү кызматтарга туташуу"</string>
     <string name="roaming_alert_title" msgid="4433901635766775763">"Интернет-роумингди иштетесизби?"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"Роуминг акысын төлөп калышыңыз мүмкүн."</string>
-    <string name="data_usage_settings" msgid="7877132994777987848">"Дайындардын колдонулушу"</string>
+    <string name="data_usage_settings" msgid="7877132994777987848">"Маалымат алмашуу"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"Негизги тарифтик план"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> колдонулду"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"Трафик тууралуу эскертүү: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_limit" msgid="6862164869877993009">"Трафикти чектөө: <xliff:g id="ID_1">^1</xliff:g>"</string>
-    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Трафик тууралуу эскертүү: <xliff:g id="ID_1">^1</xliff:g> / Трафикти чектөө: <xliff:g id="ID_2">^2</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"Качан эскертүү берилет: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_limit" msgid="6862164869877993009">"Трафик чектелген: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"Качан эскертүү берилет: <xliff:g id="ID_1">^1</xliff:g> / Трафик чектелген: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
       <item quantity="other">%d күн калды</item>
       <item quantity="one">%d күн калды</item>
@@ -66,7 +66,7 @@
     <string name="carrier_and_update_text" msgid="4351043160977741244">"<xliff:g id="ID_1">^1</xliff:g> тарабынан <xliff:g id="ID_2">^2</xliff:g> мурда жаңырды"</string>
     <string name="no_carrier_update_text" msgid="4396108017586427442">"<xliff:g id="ID_1">^2</xliff:g> мурда жаңырды"</string>
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> тарабынан жаңы эле жаңырды"</string>
-    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Азыр эле жаңырды"</string>
+    <string name="no_carrier_update_now_text" msgid="5953142546373783189">"Жаңы эле жаңырды"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"Планды көрүү"</string>
     <string name="app_data_usage" msgid="3878609885080232877">"Колдонмолордун трафиги"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"чектелген"</string>
@@ -150,7 +150,7 @@
     <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"5.0 ГГц жыштыгы сунушталат"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"2.4 ГГц"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"5.0 ГГц"</string>
-    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi туташуу түйүнүн иштетүү үчүн кеминде бир жыштыкты тандаңыз:"</string>
+    <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi байланыш түйүнүн иштетүү үчүн кеминде бир жыштыкты тандаңыз:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"Байланыш түйүнү жана модем режими"</string>
     <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Байланыш түйүнү автоматтык түрдө өчөт"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"Бир дагы түзмөк туташпаса, Wi‑Fi байланыш түйүнү автоматтык түрдө өчүп калат"</string>
@@ -290,7 +290,7 @@
     <string name="runtime_permissions_summary_no_permissions_granted" msgid="6001439205270250021">"Бир да уруксат берилген жок"</string>
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"Бир да уруксат суралган жок"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"Ички сактагычтын %s ээлеп турат"</string>
-    <string name="data_usage_summary_title" msgid="4368024763485916986">"Дайындардын колдонулушу"</string>
+    <string name="data_usage_summary_title" msgid="4368024763485916986">"Маалымат алмашуу"</string>
     <string name="data_usage_app_summary_title" msgid="5012851696585421420">"Колдонмолордун трафиги"</string>
     <string name="computing_size" msgid="5791407621793083965">"Эсептелүүдө…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
@@ -303,7 +303,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"Экрандагы текстти колдонуу"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"Көмөкчү колдонмого экрандагы текстти колдонууга уруксат берүү"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Скриншотту колдонуу"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Көмөкчү колдонмого экрандагы сүрөттү колдонууга уруксат берүү"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Көмөкчү колдонмого экрандагы сүрөткө мүмкүнчүлүк бересиз"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Оозеки киргизүү"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Автотолтуруу кызматы"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Жок"</string>
@@ -342,7 +342,7 @@
     <string name="usage_access_title" msgid="7153427122072303254">"Колдонуу таржымалын көрүү"</string>
     <string name="usage_access_description" msgid="2413168719257435422">"Колдонуу таржымалы аркылуу кайсы колдонмолор канчалык көп колдонула турганын, ошондой эле байланыш операторуңузду, тил жөндөөлөрүн жана башка параметрлерди көрө аласыз."</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi\'ды көзөмөлдөө"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi\'ды көзөмөлдөө колдонмого Wi-Fi\'ды өчүрүп же күйгүзүүгө, Wi-Fi тармактарын издеп, аларга туташууга, тармактарды кошуп же алып салууга же жергиликтүү туташуу түйүнүн иштетүүгө уруксат берет."</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi\'ды көзөмөлдөө колдонмого Wi-Fi\'ды өчүрүп же күйгүзүүгө, Wi-Fi тармактарын издеп, аларга туташууга, тармактарды кошуп же алып салууга же жергиликтүү байланыш түйүнүн иштетүүгө уруксат берет."</string>
     <string name="more_special_access_title" msgid="166115485446645971">"Дагы"</string>
     <string name="location_settings_title" msgid="901334356682423679">"Жайгашкан жер"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"Жакында изделген жерлер"</string>
@@ -409,10 +409,10 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"Жөндөөлөрдү кайра коюу"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"Тармак жөндөөлөрү кайра коюлду"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"Колдонмонун жөндөөлөрүн баштапкы абалга келтирүү"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен төмөнкүлөр үчүн бардык жөндөөлөр баштапкы абалына келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"Ушуну менен, төмөнкүлөрдүн жөндөөлөрү баштапкы абалга келтирилет:\n\n"<li>"Өчүрүлгөн колдонмолор"</li>\n<li>"Өчүрүлгөн колдонмолордун билдирмелери"</li>\n<li>"Демейки колдонмолордун аракеттери"</li>\n<li>"Колдонмолордун Фондук режиминдеги чектөөлөрү"</li>\n<li>"Бардык уруксаттарды чектөөлөрs"</li>\n\n"Колдонмонун бардык дайындары сакталып калат."</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"Баштапкы абалга келтирүү"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"Колдонмонун жөндөөлөрү баштапкы абалга келтирилди"</string>
-    <string name="master_clear_title" msgid="8515335233363214414">"Бардык дайындарды тазалоо"</string>
+    <string name="master_clear_title" msgid="8515335233363214414">"Бардык дайын-даректерди өчүрүү"</string>
     <string name="master_clear_desc" msgid="9058719802779893535">"Унааңыздын негизги тутумундагы бардык маалымат өчүрүлөт, тактап айтканда:\n\n"<li>"Google аккаунтуңуз"</li>\n<li>"Тутумдун жана колдонмолордун жөндөөлөрү жана дайындары"</li>\n<li>"Жүктөлүп алынган колдонмолор"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"Учурда төмөнкү аккаунттарга кирип турасыз:"</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"Бул унаада башка колдонуучулар бар."</string>
@@ -493,7 +493,7 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"Тутумда Android <xliff:g id="VERSION">%s</xliff:g> версиясында иштеген файлдар бар"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"Аудио файлдар"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"Эсептелүүдө…"</string>
-    <string name="storage_application_size_label" msgid="1146156683170661354">"Колдонмонун өлчөмү"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"Колдонмонун көлөмү"</string>
     <string name="storage_data_size_label" msgid="5022911581004239367">"Колдонуучунун дайындары"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Кэш"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Жалпы"</string>
@@ -508,7 +508,7 @@
     <string name="user_add_account_menu" msgid="6625351983590713721">"Аккаунт кошуу"</string>
     <string name="no_accounts_added" msgid="5148163140691096055">"Бир да аккаунт кошулган эмес"</string>
     <string name="account_list_title" msgid="7631588514613843065">"<xliff:g id="CURRENT_USER_NAME">%1$s</xliff:g> аттуу колдонуучунун аккаунттары"</string>
-    <string name="account_auto_sync_title" msgid="3238816995364191432">"Дайындарды автоматтык түрдө шайкештирүү"</string>
+    <string name="account_auto_sync_title" msgid="3238816995364191432">"Дайын-даректердин автоматтык түрдө шайкештирилиши"</string>
     <string name="account_auto_sync_summary" msgid="6963837893148304128">"Колдонмолордун маалыматы автоматтык түрдө жаңырып турат"</string>
     <string name="data_usage_auto_sync_on_dialog_title" msgid="6027487764261344033">"Автошайкештирүүнү иштетесизби?"</string>
     <string name="data_usage_auto_sync_on_dialog" msgid="2770233931307606956">"Желеден аккаунтуңузга кандайдыр бир өзгөртүүлөр киргизилгенде, алардын баары телефонуңузга автоматтык түрдө көчүрүлөт.\n\nАйрым учурларда телефонуңуздагы өзгөртүүлөр автоматтык түрдө желеге көчүрүлүшү мүмкүн. Кыскасы, Google аккаунту ушундай жол менен иштейт."</string>

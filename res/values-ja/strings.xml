@@ -54,7 +54,7 @@
     <string name="data_usage_settings" msgid="7877132994777987848">"データ使用量"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"メインデータ"</string>
     <string name="data_used_formatted" msgid="6684557577780068339">"<xliff:g id="ID_1">^1</xliff:g> <xliff:g id="ID_2">^2</xliff:g> 使用"</string>
-    <string name="cell_data_warning" msgid="8997739664336571149">"データ警告: <xliff:g id="ID_1">^1</xliff:g>"</string>
+    <string name="cell_data_warning" msgid="8997739664336571149">"警告するデータ使用量: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_limit" msgid="6862164869877993009">"データ上限: <xliff:g id="ID_1">^1</xliff:g>"</string>
     <string name="cell_data_warning_and_limit" msgid="5003954080814312475">"データ警告: <xliff:g id="ID_1">^1</xliff:g> / データ上限: <xliff:g id="ID_2">^2</xliff:g>"</string>
     <plurals name="billing_cycle_days_left" formatted="false" msgid="9163059632851951402">
@@ -73,11 +73,11 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"使用サイクルのリセット日"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"毎月のリセット日:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"設定"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"データの警告と上限"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"データ使用量の警告と上限"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"アプリのデータ使用量のサイクル"</string>
-    <string name="set_data_warning" msgid="6628236612886588097">"データ使用の警告を設定"</string>
-    <string name="data_warning" msgid="116776633806885370">"データ使用の警告"</string>
-    <string name="set_data_limit" msgid="7136539812414500084">"データの上限を設定"</string>
+    <string name="set_data_warning" msgid="6628236612886588097">"データ使用量を警告"</string>
+    <string name="data_warning" msgid="116776633806885370">"警告するデータ使用量"</string>
+    <string name="set_data_limit" msgid="7136539812414500084">"データ使用量を制限"</string>
     <string name="data_limit" msgid="227338836292511425">"データの上限"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"データ使用の上限の設定"</string>
     <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"車載ヘッドユニットで設定した上限に達するとモバイルデータが OFF になります。\n\nデータ使用量はヘッドユニットで測定された値ですが、携帯通信会社での使用量の計算はこれと異なることがあるため、余裕をもって上限を設定することをおすすめします。"</string>
@@ -303,7 +303,7 @@
     <string name="assist_access_context_title" msgid="8034851731390785301">"画面のテキストを使用"</string>
     <string name="assist_access_context_summary" msgid="2374281280599443774">"画面コンテンツのテキストにアクセスすることをアシストアプリに許可します"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"スクリーンショットを使用"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"画面の画像にアクセスすることをアシストアプリに許可します"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"表示中の画像にアクセスすることをアシストアプリに許可します"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"音声入力"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"自動入力サービス"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"なし"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"一連の数字を昇順や降順にしたり、繰り返したりすることはできません。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"画面ロックの方法"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>: <xliff:g id="NUM_DAYS">%3$s</xliff:g> 日前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"信頼できるデバイスを追加"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"信頼できるデバイスを追加（Bluetooth: ON）"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"信頼できるデバイス"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台のデバイス</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 台のデバイス</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"接続すると、<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> によりこの車のロックが解除されます。<xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> が第三者の手に渡ると、このデバイスを利用されてしまうおそれがあります"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"確認"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"信頼できるデバイスを削除"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完了"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"コンパニオン アプリを使用して、信頼できるデバイスをセットアップしてください。セットアップすると、車の近くでスマートフォンが検出されたときにユーザー プロフィールが自動的にロック解除されます。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. スマートフォンにコンパニオン アプリをダウンロードします"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. スマートフォンで、デバイスとペア設定する <xliff:g id="CAR_NAME">%1$s</xliff:g> を選択します"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"信頼できるデバイスが車の近くにある場合、第三者がそのデバイスを手に取っている場合でも、エンジン始動時にユーザー プロフィールがロック解除されます。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"ペア設定コードが一致していることをご確認ください"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"スマートフォンを登録しました"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> の登録に失敗しました"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"信頼できるデバイスを追加するには、次に認証方式を設定してください。信頼できるデバイスがない場合は、プロフィールにアクセスする際に認証が必要になります。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"デバイスの接続が解除されました。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"認証情報の消去"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"証明書をすべて削除する"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"コンテンツをすべて削除しますか？"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"閉じる"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"この機能は運転中は利用できません"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"運転中はユーザーを追加できません"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"検索"</string>
 </resources>

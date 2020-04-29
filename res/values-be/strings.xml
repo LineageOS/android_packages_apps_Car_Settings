@@ -316,7 +316,7 @@
     <string name="default_app_selected_app" msgid="5289396663745484773">"Выбрана"</string>
     <string name="assistant_security_warning" msgid="1844807956967428012">"Памочнік атрымае доступ да інфармацыі пра праграмы, якія выкарыстоўваюцца ў вашай сістэме, у тым ліку да інфармацыі, бачнай на вашым экране ці даступнай у праграмах."</string>
     <string name="autofill_confirmation_message" msgid="1832984461556991378">"&lt;b&gt;Упэўніцеся, што давяраеце гэтай праграме&lt;/b&gt; &lt;br/&gt; &lt;br/&gt; &lt;xliff:g id=app_name example=Аўтазапаўненне Google&gt;%1$s&lt;/xliff:g&gt; выкарыстоўвае тое, што знаходзіцца на вашым экране, каб вызначыць, што можна запоўніць аўтаматычна."</string>
-    <string name="autofill_add_service" msgid="6413893366443609951">"Дадаць службу"</string>
+    <string name="autofill_add_service" msgid="6413893366443609951">"Дадаць сэрвіс"</string>
     <string name="app_launch_domain_links_title" msgid="774480184927726651">"Адкрыццё спасылак"</string>
     <string name="domain_url_section_title" msgid="9070403140947787214">"Усталяваныя праграмы"</string>
     <string name="domain_urls_summary_none" msgid="3077803215088293183">"Не адкрываць спасылкі, якія падтрымліваюцца"</string>
@@ -648,28 +648,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Забаронена выкарыстоўваць паслядоўнасці з лічбаў, якія ідуць адна за адной або паўтараюцца."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Параметры блакіроўкі экрана"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> сут. таму назад"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Дадаць давераную прыладу"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Каб дадаць давераную прыладу, уключыцца Bluetooth"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Давераныя прылады"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> прылада</item>
-      <item quantity="few"><xliff:g id="COUNT_1">%d</xliff:g> прылады</item>
-      <item quantity="many"><xliff:g id="COUNT_1">%d</xliff:g> прылад</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> прылады</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Калі падключана, <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> зможа разблакіраваць гэты аўтамабіль. Калі <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> трапіць у рукі іншаму карыстальніку, той атрымае доступ да прылады"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Пацвердзіць"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Выдаліць давераную прыладу"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Гатова"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Для наладкі даверанай прылады выкарыстоўвайце спадарожную праграму. Пасля наладкі ваш карыстальніцкі профіль аўтаматычна разблакіруецца, калі ваш тэлефон будзе выяўлены паблізу ад аўтамабіля."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Спампуйце спадарожную праграму на тэлефон"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Каб спалучыць прылады, выберыце на тэлефоне назву \"<xliff:g id="CAR_NAME">%1$s</xliff:g>\""</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Давераная прылада паблізу ад вашага аўтамабіля разблакіруе профіль карыстальніка пасля запуску рухавіка, незалежна ад таго, хто кіруе прыладай."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Пацвердзіце, што коды спалучэння супадаюць"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Тэлефон паспяхова зарэгістраваны"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Не ўдалося зарэгістраваць прыладу \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Для дадавання даверанай прылады неабходна задаць спосаб аўтэнтыфікацыі. Ён спатрэбіцца для атрымання доступу да вашага профілю, калі давераная прылада не з вамі."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Прылада адключана."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Выдаліць уліковыя даныя"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Выдаліць усе сертыфікаты"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Выдаліць усё змесціва?"</string>
@@ -692,4 +670,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"АДХІЛІЦЬ"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Функцыя недаступная, калі аўтамабіль рухаецца"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Нельга дадаць карыстальніка, калі аўтамабіль рухаецца"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Пошук"</string>
 </resources>

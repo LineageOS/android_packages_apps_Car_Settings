@@ -80,7 +80,7 @@
     <string name="set_data_limit" msgid="7136539812414500084">"Weka kikomo cha data"</string>
     <string name="data_limit" msgid="227338836292511425">"Kikomo cha data"</string>
     <string name="data_usage_limit_dialog_title" msgid="1864716658371721883">"Kupunguza matumizi ya data"</string>
-    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo kisicho kamili sana."</string>
+    <string name="data_usage_limit_dialog_mobile" msgid="3633960011913085089">"Stereo ya dashibodi ya gari lako itazima data ya mtandao wa simu pindi itakapofikia kikomo cha data ulichoweka.\n\nKwa kuwa stereo ya dashibodi ndiyo hupima matumizi ya data na huenda kampuni inayokupa huduma za mtandao ikahesabu matumizi hayo kwa njia tofauti, unashauriwa kuweka kikomo cha wastani."</string>
     <string name="data_usage_warning_editor_title" msgid="2041517150169038813">"Weka onyo kwa matumizi ya data"</string>
     <string name="data_usage_limit_editor_title" msgid="133468242379286689">"Weka kikomo cha matumizi ya data"</string>
     <string name="usage_bytes_threshold_picker_positive_button" msgid="4625479840977965519">"Weka"</string>
@@ -147,7 +147,7 @@
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"Otomatiki"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"Bendi ya GHz 2.4"</string>
     <string name="wifi_ap_choose_5G" msgid="8561440488455528673">"Bendi ya GHz 5.0"</string>
-    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Imechagua Bendi ya GHz 5.0"</string>
+    <string name="wifi_ap_prefer_5G" msgid="8252845223773871750">"Bendi ya GHz 5.0 (inapendelewa)"</string>
     <string name="wifi_ap_2G" msgid="5364135697314262014">"GHz 2.4"</string>
     <string name="wifi_ap_5G" msgid="4945574428537860279">"GHz 5.0"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Chagua angalau bendi moja ya mtandaopepe wa Wi‑Fi:"</string>
@@ -497,7 +497,7 @@
     <string name="storage_data_size_label" msgid="5022911581004239367">"Data ya mtumiaji"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"Akiba"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"Jumla"</string>
-    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa hifadhi"</string>
+    <string name="storage_clear_user_data_text" msgid="8787615136779130680">"Futa data ya hifadhi"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"Futa akiba"</string>
     <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"Ungependa kufuta data ya programu?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"Data yote ya programu hii itafutwa kabisa. Hii inajumuisha faili, mipangilio, akaunti, hifadhidata zote na mengineyo."</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Haturuhusu mpangilio wa tarakimu wa kupanda, kushuka au kujirudia."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Chaguo za kufunga skrini"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : Siku <xliff:g id="NUM_DAYS">%3$s</xliff:g> zilizopita"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ongeza kifaa unachokiamini"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth itawaka ili kuongeza kifaa unachokiamini"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Vifaa unavyoviamini"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other">Vifaa <xliff:g id="COUNT_1">%d</xliff:g></item>
-      <item quantity="one">Kifaa <xliff:g id="COUNT_0">%d</xliff:g></item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> yako itafungua gari hili itakapounganishwa. Mtu akichukua <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> yako, huenda ataweza kufikia kifaa hiki."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Thibitisha"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Ondoa kifaa unachokiamini"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Nimemaliza"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Tumia programu inayotumika kudhibiti ili uweke mipangilio ya kifaa unachokiamini. Ukimaliza kuweka mipangilio, wasifu wako wa mtumiaji utafunguka kiotomatiki simu yako inapotambuliwa karibu na gari."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Pakua programu saidizi kwenye simu yako"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Chagua <xliff:g id="CAR_NAME">%1$s</xliff:g> kwenye simu yako ili uoanishe vifaa"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Kifaa unachokiamini kilicho karibu na gari lako kitafungua wasifu wa mtumiaji itakapowashwa, hata ikiwa kimebebwa na mtu mwingine."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Tafadhali thibitisha kuwa misimbo ya kuoanisha inalingana"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Umesajili kifaa bila tatizo"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Imeshindwa kuandikisha <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Unatakiwa uweke njia ya kuthibitisha ili uongeze kifaa unachoamini katika hatua inayofuata. Kama huna kifaa unachoamini, uthibitishaji utataka idhini ya kufikia wasifu wako."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Kifaa kimeondolewa."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Futa hifadhi ya hati"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Ondoa vyeti vyote"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Ungependa kuondoa maudhui yote?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"ONDOA"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Kipengele hakipatikani unapoendesha gari"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Huwezi kuongeza mtumiaji unapoendesha gari"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Tafuta"</string>
 </resources>

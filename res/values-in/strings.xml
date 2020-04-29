@@ -392,7 +392,7 @@
     <string name="show_dev_on" msgid="5339077400040834808">"Sekarang Anda adalah seorang developer!"</string>
     <string name="show_dev_already" msgid="1678087328973865736">"Tidak perlu, Anda sudah menjadi developer."</string>
     <string name="developer_options_settings" msgid="1530739225109118480">"Opsi developer"</string>
-    <string name="reset_options_title" msgid="4388902952861833420">"Opsi setel ulang"</string>
+    <string name="reset_options_title" msgid="4388902952861833420">"Opsi reset"</string>
     <string name="reset_options_summary" msgid="5508201367420359293">"Menyetel ulang jaringan, aplikasi, atau perangkat"</string>
     <string name="reset_network_title" msgid="1284233059990797263">"Setel ulang jaringan"</string>
     <string name="reset_network_desc" msgid="602381374544634925">"Tindakan ini akan menyetel ulang semua setelan jaringan, termasuk:"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Urutan digit naik, turun, atau berulang tidak diizinkan."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Opsi kunci layar"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari yang lalu"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Tambahkan perangkat tepercaya"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth akan aktif guna menambah perangkat dipercaya"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Perangkat tepercaya"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> perangkat</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> perangkat</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> akan membuka kunci mobil Anda saat terhubung. Jika seseorang mengambil <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> Anda, orang tersebut mungkin dapat mengakses perangkat ini"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Konfirmasi"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Hapus perangkat tepercaya"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gunakan aplikasi pendamping untuk menyiapkan perangkat dipercaya. Setelah disiapkan, profil pengguna akan dibuka kuncinya secara otomatis saat ponsel terdeteksi di dekat kendaraan."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Download aplikasi pendamping di ponsel"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> di ponsel untuk menghubungkan perangkat"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Perangkat dipercaya di dekat mobil Anda akan membuka kunci profil pengguna setelah mobil distarter, meskipun orang lain memegang perangkat."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Konfirmasi bahwa kode penghubung cocok"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Ponsel telah berhasil didaftarkan"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Menambahkan perangkat dipercaya mewajibkan Anda menetapkan metode autentikasi setelahnya. Jika Anda tidak membawa perangkat dipercaya, autentikasi akan diperlukan untuk mengakses profil Anda."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Perangkat tidak terhubung."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Hapus kredensial"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Hapus semua sertifikat"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Hapus semua konten?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"TOLAK"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Fitur tidak tersedia saat mengemudi"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Tidak dapat menambahkan pengguna saat mengemudi"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Telusuri"</string>
 </resources>

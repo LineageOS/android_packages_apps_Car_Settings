@@ -328,7 +328,7 @@
     <string name="app_launch_supported_domain_urls_title" msgid="7345116365785981158">"Liens compatibles"</string>
     <string name="special_access" msgid="5730278220917123811">"Accès spécial pour applications"</string>
     <string name="show_system" msgid="4401355756969485287">"Afficher le système"</string>
-    <string name="hide_system" msgid="8845453295584638040">"Masquer le système"</string>
+    <string name="hide_system" msgid="8845453295584638040">"Masquer les processus système"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"Modifier paramètres système"</string>
     <string name="modify_system_settings_description" msgid="5295023124419592452">"Cette autorisation permet à une application de modifier les paramètres du système."</string>
     <string name="notification_access_title" msgid="1467340098885813473">"Accès aux notifications"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Les suites croissantes, décroissantes ou répétitives de chiffres ne sont pas autorisées."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Options de verrouillage de l\'écran"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : il y a <xliff:g id="NUM_DAYS">%3$s</xliff:g> jours"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Ajouter un appareil de confiance"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth s\'activera pour ajout. app. confiance"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Appareils de confiance"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="one"><xliff:g id="COUNT_1">%d</xliff:g> appareil</item>
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> appareils</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"Votre <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> déverrouillera votre voiture lorsqu\'il sera connecté. Si une personne prend votre <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>, elle pourrait être en mesure d\'accéder à cet appareil."</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Confirmer"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Supprimer l\'appareil de confiance"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"OK"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Utilisez l\'application compagnon pour configurer un appareil de confiance. Une fois configuré, votre profil utilisateur se déverrouillera automatiquement si votre téléphone est détecté à proximité de la voiture."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Téléchargez l\'application compagnon sur votre téléphone"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Sélectionnez <xliff:g id="CAR_NAME">%1$s</xliff:g> sur votre téléphone pour associer les appareils"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Au moment du démarrage du véhicule, un appareil de confiance à proximité de celui-ci déverrouillera le profil de l\'utilisateur, même si une autre personne le tient dans sa main."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Veuillez confirmer que les codes d\'association correspondent"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Le téléphone a été inscrit"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Échec de l\'inscription de l\'appareil <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"L\'ajout d\'un appareil de confiance nécessite ensuite la configuration d\'une méthode d\'authentification. Si vous n\'avez pas votre appareil de confiance avec vous, un processus d\'authentification sera nécessaire pour accéder à votre profil."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Appareil déconnecté."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Effacer les authentifiants"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Supprimer tous les certificats"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Voulez-vous supprimer l\'intégralité du contenu?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"IGNORER"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Cette fonctionnalité n\'est pas accessible durant la conduite"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Impossible d\'ajouter un utilisateur durant la conduite"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Recherche"</string>
 </resources>

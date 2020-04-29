@@ -49,7 +49,7 @@
     <string name="sim_change_data_ok" msgid="2348804996223271081">"使用<xliff:g id="CARRIER">%1$s</xliff:g>"</string>
     <string name="roaming_title" msgid="6218635014519017734">"漫游"</string>
     <string name="roaming_summary" msgid="7476127740259728901">"漫游时连接到移动数据网络服务"</string>
-    <string name="roaming_alert_title" msgid="4433901635766775763">"要允许数据网络漫游吗？"</string>
+    <string name="roaming_alert_title" msgid="4433901635766775763">"允许数据漫游？"</string>
     <string name="roaming_warning" msgid="4908184914868720704">"可能需要支付漫游费用。"</string>
     <string name="data_usage_settings" msgid="7877132994777987848">"流量消耗"</string>
     <string name="data_usage_title" msgid="2923515974389203812">"主要数据"</string>
@@ -413,7 +413,7 @@
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"重置应用"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"已重置应用偏好设置"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"清空所有数据（恢复出厂设置）"</string>
-    <string name="master_clear_desc" msgid="9058719802779893535">"这样做将会清空您车辆音响主机中的所有数据，其中包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统与应用的数据和设置"</li>\n<li>"已下载的应用"</li></string>
+    <string name="master_clear_desc" msgid="9058719802779893535">"这样做将会清空您车机中的所有数据，其中包括：\n\n"<li>"您的 Google 帐号"</li>\n<li>"系统与应用的数据和设置"</li>\n<li>"已下载的应用"</li></string>
     <string name="master_clear_accounts" msgid="7797522012993567494">"您目前已登录以下帐号："</string>
     <string name="master_clear_other_users_present" msgid="8383376863095743337">"此车辆目前还有其他用户。"</string>
     <string name="master_clear_button_text" msgid="8010754220392741160">"重置车辆"</string>
@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"不允许使用以升序、降序或重复序列进行排列的一串数字。"</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"屏幕锁定选项"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g>：<xliff:g id="NUM_DAYS">%3$s</xliff:g> 天前"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"添加可信设备"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"系统将开启蓝牙以添加可信设备"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"可信设备"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> 台设备</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> 台设备</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"您的 <xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> 会在连接到这辆车后将其解锁。如果有人拿到您的 <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g>，对方也许能够访问此设备"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"确认"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"移除可信设备"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"完成"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"请使用配套应用来设置可信设备。设置后，您的用户个人资料就会在系统检测到手机位于汽车附近时自动解锁。"</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1.在手机上下载配套应用"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2.在手机上选择“<xliff:g id="CAR_NAME">%1$s</xliff:g>”以与相应设备配对"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"只要可信设备位于您的汽车附近，即可在汽车发动后将用户个人资料解锁（即使该设备在其他人手中也是如此）。"</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"请确认配对码是否一致"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"手机已成功注册"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> 注册失败"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"添加可信设备后，接下来您必须设置身份验证方法。如果您没有随身携带可信设备，则必须进行身份验证才能访问自己的个人资料。"</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"设备已断开连接。"</string>
     <string name="credentials_reset" msgid="873900550885788639">"清除凭据"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"移除所有证书"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"要移除所有内容吗？"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"关闭"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"驾车时无法使用此功能"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"驾车时无法添加用户"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"搜索"</string>
 </resources>

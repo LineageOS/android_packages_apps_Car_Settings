@@ -626,26 +626,6 @@
     <string name="lockpassword_pin_no_sequential_digits" msgid="38813552228809240">"Angka menaik, menurun atau jujukan berulang tidak dibenarkan."</string>
     <string name="setup_lock_settings_options_button_label" msgid="3337845811029780896">"Pilihan kunci skrin"</string>
     <string name="build_info_fmt" msgid="5592554123908086426">"<xliff:g id="FINGERPRINT">%1$s</xliff:g>\n<xliff:g id="DATE">%2$s</xliff:g> : <xliff:g id="NUM_DAYS">%3$s</xliff:g> hari lalu"</string>
-    <string name="add_device_title" msgid="8452168024017866232">"Tambah peranti dipercayai"</string>
-    <string name="add_device_summary" msgid="5368217520710573302">"Bluetooth akan dihidupkan untuk peranti dipercayai"</string>
-    <string name="trusted_device" msgid="5637378361866787603">"Peranti dipercayai"</string>
-    <plurals name="trusted_device_subtitle" formatted="false" msgid="462041049834264945">
-      <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> peranti</item>
-      <item quantity="one"><xliff:g id="COUNT_0">%d</xliff:g> peranti</item>
-    </plurals>
-    <string name="remove_device_message" msgid="6447820559674148349">"<xliff:g id="CONNECTED_DEVICE_NAME_0">%1$s</xliff:g> anda akan membuka kunci kereta ini apabila disambungkan. Jika seseorang mengambil <xliff:g id="CONNECTED_DEVICE_NAME_1">%1$s</xliff:g> anda, orang itu mungkin dapat mengakses peranti ini"</string>
-    <string name="trusted_device_confirm_button" msgid="102354635014627996">"Sahkan"</string>
-    <string name="trusted_device_remove_button" msgid="6140476996063415420">"Alih keluar peranti yang dipercayai"</string>
-    <string name="trusted_device_done_button" msgid="8481956533222625296">"Selesai"</string>
-    <string name="add_trusted_device_instruction" msgid="2280382609884918033">"Gunakan apl rakan untuk menyediakan peranti yang dipercayai. Setelah peranti disediakan, profil pengguna anda akan dibuka kunci secara automatik apabila telefon anda dikesan berada berdekatan kenderaan."</string>
-    <string name="trusted_device_download_app" msgid="6971096140154499983">"1. Muat turun apl rakan pada telefon anda"</string>
-    <string name="trusted_device_select_device" msgid="198902765179270739">"2. Pilih <xliff:g id="CAR_NAME">%1$s</xliff:g> pada telefon anda untuk menggandingkan peranti tersebut"</string>
-    <string name="trusted_device_safety_alert" msgid="3834898922112046769">"Peranti yang dipercayai berdekatan kereta anda akan membuka kunci profil pengguna apabila kereta dihidupkan, walaupun orang lain yang memegang peranti itu."</string>
-    <string name="trusted_device_pairing_code_dialog_title" msgid="8173792468216796873">"Sila sahkan bahawa kod gandingan adalah sepadan"</string>
-    <string name="trusted_device_success_enrollment_toast" msgid="1238468775285575827">"Telefon telah berjaya didaftarkan"</string>
-    <string name="trusted_device_fail_enrollment_toast" msgid="6801324174861209092">"Pendaftaran <xliff:g id="DEVICE_NAME">%1$s</xliff:g> gagal"</string>
-    <string name="trusted_device_set_authentication_reminder" msgid="5947077589994822305">"Penambahan peranti yang dipercayai memerlukan anda menetapkan kaedah pengesahan selepas ini. Jika peranti yang dipercayai tiada dengan anda, pengesahan perlu mengakses profil anda."</string>
-    <string name="trusted_device_disconnected_toast" msgid="2541862946536880255">"Peranti diputuskan sambungan."</string>
     <string name="credentials_reset" msgid="873900550885788639">"Kosongkan bukti kelayakan"</string>
     <string name="credentials_reset_summary" msgid="6067911547500459637">"Alih keluar semua sijil"</string>
     <string name="credentials_reset_hint" msgid="3459271621754137661">"Alih keluar semua kandungan?"</string>
@@ -668,4 +648,5 @@
     <string name="suggestion_dismiss_button" msgid="4539412646977050641">"KETEPIKAN"</string>
     <string name="restricted_while_driving" msgid="6587569249519274524">"Ciri tidak tersedia semasa anda memandu"</string>
     <string name="add_user_restricted_while_driving" msgid="4754946754222453656">"Tidak dapat menambah pengguna semasa memandu"</string>
+    <string name="default_search_query" msgid="3137420627428857068">"Cari"</string>
 </resources>
