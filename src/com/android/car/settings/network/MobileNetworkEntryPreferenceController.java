@@ -18,6 +18,7 @@ package com.android.car.settings.network;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.UserManager;
 import android.telephony.SubscriptionInfo;
@@ -27,6 +28,7 @@ import android.telephony.TelephonyManager;
 import androidx.preference.Preference;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentController;
 import com.android.car.settings.common.PreferenceController;
 
@@ -100,10 +102,15 @@ public class MobileNetworkEntryPreferenceController extends
         }
 
         if (subs.size() == 1) {
-            getFragmentController().launchFragment(
-                    MobileNetworkFragment.newInstance(subs.get(0).getSubscriptionId()));
+            Intent intent = new Intent(getContext(),
+                    CarSettingActivities.MobileNetworkActivity.class);
+            intent.putExtra(MobileNetworkFragment.ARG_NETWORK_SUB_ID,
+                    subs.get(0).getSubscriptionId());
+            getContext().startActivity(intent);
         } else {
-            getFragmentController().launchFragment(new MobileNetworkListFragment());
+            Intent intent = new Intent(getContext(),
+                    CarSettingActivities.MobileNetworkListActivity.class);
+            getContext().startActivity(intent);
         }
         return true;
     }
