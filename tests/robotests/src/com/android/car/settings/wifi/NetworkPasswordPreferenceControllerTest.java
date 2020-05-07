@@ -73,34 +73,34 @@ public class NetworkPasswordPreferenceControllerTest {
     }
 
     @Test
-    public void onStart_registersNameChangeListener() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+    public void onCreate_registersNameChangeListener() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStart_registersSecurityChangeListener() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+    public void onCreate_registersSecurityChangeListener() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStop_unregistersNameChangeListener() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
+    public void onDestroy_unregistersNameChangeListener() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isFalse();
     }
 
     @Test
-    public void onStop_unregistersSecurityChangeListener() {
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
-        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
+    public void onDestroy_unregistersSecurityChangeListener() {
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+        mPreferenceControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_DESTROY);
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isFalse();
