@@ -110,7 +110,7 @@ public class AccessPointListPreferenceController extends
     public boolean onPreferenceClick(Preference preference) {
         AccessPoint accessPoint = ((AccessPointPreference) preference).getAccessPoint();
         // For new open unsecuried wifi network, connect to it right away.
-        if (accessPoint.getSecurity() == AccessPoint.SECURITY_NONE
+        if (WifiUtil.isOpenNetwork(accessPoint.getSecurity())
                 && !accessPoint.isSaved() && !accessPoint.isActive()) {
             getCarWifiManager().connectToPublicWifi(accessPoint, mConnectionListener);
         } else if (accessPoint.isActive()) {
