@@ -16,8 +16,12 @@
 -->
 
 <resources>
-    <!-- The fully qualified class name of the fragment to launch when the settings application starts. -->
-    <string name="config_settings_hierarchy_root_fragment" translatable="false">com.android.car.settings.quicksettings.QuickSettingFragment</string>
+    <!-- Whether quick settings should be the root settings activity or not. -->
+    <bool name="config_is_quick_settings_root">false</bool>
+    <!-- Whether to show the launcher icon for settings home or not. -->
+    <bool name="config_enable_home_settings_icon">true</bool>
+    <!-- Whether to show the launcher icon for quick settings or not. -->
+    <bool name="config_enable_quick_settings_icon">false</bool>
     <!-- Whether system_update_settings should be shown or not. -->
     <bool name="config_show_system_update_settings">true</bool>
     <!-- Whether Wi-Fi Mac address should be shown or not. -->
