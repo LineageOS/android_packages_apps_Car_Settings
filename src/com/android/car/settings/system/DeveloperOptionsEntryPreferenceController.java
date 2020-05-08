@@ -18,18 +18,19 @@ package com.android.car.settings.system;
 
 import android.car.drivingstate.CarUxRestrictions;
 import android.content.Context;
-import android.os.Build;
 import android.os.UserManager;
 
 import androidx.preference.Preference;
 
 import com.android.car.settings.common.FragmentController;
+import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceController;
 import com.android.car.settings.development.DevelopmentSettingsUtil;
 
 /** Controls the visibility of the developer options setting. */
 public class DeveloperOptionsEntryPreferenceController extends PreferenceController<Preference> {
 
+    private static final Logger LOG = new Logger(DeveloperOptionsEntryPreferenceController.class);
     private UserManager mUserManager;
 
     public DeveloperOptionsEntryPreferenceController(Context context, String preferenceKey,
@@ -51,17 +52,16 @@ public class DeveloperOptionsEntryPreferenceController extends PreferenceControl
 
     @Override
     protected boolean handlePreferenceClicked(Preference preference) {
-        // Needed to allow developer options to be enabled by default on eng builds
-        // On first launch, the developer options module is disabled while the setting is enabled,
-        // so we need to enable the module
+        // We need to make sure the developer options module is enabled for the following reasons:
+        //  - To enable developer options by default on eng builds
+        //  - To enable developer options for all admin users when any admin user enables it
+        // This is because on first launch per user, the developer options module may be disabled
+        // while the setting is enabled, so we need to enable the module
         if (!DevelopmentSettingsUtil.isDeveloperOptionsModuleEnabled(getContext())) {
-            if (Build.IS_ENG) {
-                DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), /* enable= */
-                        true);
-            } else {
-                throw new IllegalStateException("Inconsistent state: developer options enabled, but"
-                        + " developer options module disabled.");
-            }
+            LOG.i("Inconsistent state: developer options enabled, but developer options module "
+                    + "disabled. Enabling module...");
+            DevelopmentSettingsUtil.setDevelopmentSettingsEnabled(getContext(), /* enable= */
+                    true);
         }
         getContext().startActivity(preference.getIntent());
         return true;
