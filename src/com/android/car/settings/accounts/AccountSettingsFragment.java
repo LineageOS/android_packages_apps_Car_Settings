@@ -24,6 +24,7 @@ import android.provider.Settings;
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.SettingsFragment;
 import com.android.car.settings.users.UserHelper;
 import com.android.car.ui.toolbar.MenuItem;
@@ -100,7 +101,8 @@ public class AccountSettingsFragment extends SettingsFragment {
             startActivity(
                     AddAccountActivity.createAddAccountActivityIntent(getContext(), accountType));
         } else {
-            launchFragment(new ChooseAccountFragment());
+            startActivity(new Intent(getContext(),
+                    CarSettingActivities.ChooseAccountActivity.class));
         }
     }
 }
