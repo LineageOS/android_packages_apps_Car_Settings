@@ -18,13 +18,14 @@ package com.android.car.settings.quicksettings;
 
 import android.annotation.Nullable;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.telephony.TelephonyManager;
 import android.view.View;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentHost;
-import com.android.car.settings.network.MobileNetworkFragment;
 import com.android.settingslib.net.DataUsageController;
 
 /**
@@ -54,7 +55,8 @@ public class CelluarTile implements QuickSettingGridAdapter.Tile, DataUsageContr
         mCarrierName = mAvailable ? manager.getNetworkOperatorName() : null;
 
         mLaunchDisplaySettings = v -> {
-            fragmentHost.launchFragment(new MobileNetworkFragment());
+            context.startActivity(new Intent(context,
+                    CarSettingActivities.MobileNetworkActivity.class));
             return true;
         };
     }
