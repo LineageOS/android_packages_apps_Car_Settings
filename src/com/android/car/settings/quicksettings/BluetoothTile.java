@@ -27,7 +27,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.android.car.settings.R;
-import com.android.car.settings.bluetooth.BluetoothSettingsFragment;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentHost;
 import com.android.car.settings.common.Logger;
 
@@ -97,7 +97,8 @@ public class BluetoothTile implements QuickSettingGridAdapter.Tile {
         }
         mText = mContext.getString(R.string.bluetooth_settings_title);
         mLaunchBluetoothSettings = v -> {
-            fragmentHost.launchFragment(new BluetoothSettingsFragment());
+            context.startActivity(new Intent(context,
+                    CarSettingActivities.BluetoothSettingsActivity.class));
             return true;
         };
     }
