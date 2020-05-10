@@ -74,7 +74,7 @@
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Data de cada mês:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Definir"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"Limite e aviso de dados"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de utilização de dados da aplic."</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"Ciclo de utilização de dados da app"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Definir aviso de dados"</string>
     <string name="data_warning" msgid="116776633806885370">"Aviso de dados"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"Definir limite de dados"</string>
@@ -271,7 +271,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"Apps e notificações"</string>
     <string name="all_applications" msgid="7798210477486822168">"Mostrar todas as aplicações"</string>
     <string name="default_applications" msgid="1558183275638697087">"Aplicações predefinidas"</string>
-    <string name="app_permissions" msgid="32799922508313948">"Autorizações da aplicação"</string>
+    <string name="app_permissions" msgid="32799922508313948">"Autorizações da app"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"Aplicações que utilizam <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"Informações da aplicação"</string>
     <string name="force_stop" msgid="2153183697014720520">"Forçar paragem"</string>
@@ -299,11 +299,11 @@
     </plurals>
     <string name="direct_boot_unaware_dialog_message_car" msgid="2857599310518724080">"Nota: após reiniciar, só é possível iniciar esta aplicação quando o veículo for desbloqueado."</string>
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistente e entrada de texto por voz"</string>
-    <string name="assist_app_settings" msgid="9085261410166776497">"Aplicação de assistência"</string>
+    <string name="assist_app_settings" msgid="9085261410166776497">"App de assistência"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Utilizar o texto do ecrã"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Permitir que a aplicação de assistência aceda ao conteúdo do ecrã como texto"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Permitir que a app de assistência aceda ao conteúdo do ecrã como texto"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Utilizar a captura de ecrã"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permitir que a aplicação de assistência aceda a uma imagem do ecrã"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Permitir que a app de assistência aceda a uma imagem do ecrã"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Entrada de texto por voz"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Serviço de preenchimento automático"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Nenhuma"</string>
