@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/apps_and_notifications_settings">
+    android:title="@string/apps_and_notifications_settings"
+    android:key="@string/psk_apps_and_notifications">
     <Preference
         android:key="@string/pk_applications_settings_screen_entry"
         android:title="@string/all_applications"
