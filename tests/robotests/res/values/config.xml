@@ -16,8 +16,6 @@
 -->
 
 <resources>
-    <!-- replace with simple fragment for testing purpose . -->
-    <string name="config_settings_hierarchy_root_fragment" translatable="false">com.android.car.settings.testutils.DummyFragment</string>
     <!-- explicitly set to unset string for testing purpose -->
     <string name="config_defaultAssistantComponentName" translatable="false">#+UNSET</string>
     <!-- Whether exit button in settings' root action bar should be shown or not -->
