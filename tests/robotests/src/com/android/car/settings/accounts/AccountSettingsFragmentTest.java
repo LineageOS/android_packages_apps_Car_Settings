@@ -26,11 +26,13 @@ import static org.robolectric.RuntimeEnvironment.application;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.accounts.AuthenticatorDescription;
+import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.UserHandle;
 import android.os.UserManager;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.testutils.FragmentController;
 import com.android.car.settings.testutils.ShadowAccountManager;
 import com.android.car.settings.testutils.ShadowContentResolver;
@@ -50,6 +52,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.Shadows;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
+import org.robolectric.shadows.ShadowIntent;
 import org.robolectric.shadows.ShadowUserManager;
 
 /**
@@ -109,8 +112,10 @@ public class AccountSettingsFragmentTest {
         MenuItem addAccountButton = getToolbar().getMenuItems().get(0);
         addAccountButton.performClick();
 
-        assertThat(mFragment.getFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
+        Intent intent = Shadows.shadowOf(mFragment.getActivity()).getNextStartedActivity();
+        ShadowIntent shadowIntent = Shadows.shadowOf(intent);
+        assertThat(shadowIntent.getIntentClass()).isEqualTo(
+                CarSettingActivities.ChooseAccountActivity.class);
     }
 
     @Test
@@ -124,8 +129,9 @@ public class AccountSettingsFragmentTest {
         MenuItem addAccountButton = getToolbar().getMenuItems().get(0);
         addAccountButton.performClick();
 
-        assertThat(mFragment.getFragmentManager().findFragmentById(
-                R.id.fragment_container)).isNotInstanceOf(ChooseAccountFragment.class);
+        Intent intent = Shadows.shadowOf(mFragment.getActivity()).getNextStartedActivity();
+        ShadowIntent shadowIntent = Shadows.shadowOf(intent);
+        assertThat(shadowIntent.getIntentClass()).isEqualTo(AddAccountActivity.class);
     }
 
     @Test
@@ -139,8 +145,10 @@ public class AccountSettingsFragmentTest {
 
         getToolbar().getMenuItems().get(0).performClick();
 
-        assertThat(mFragment.getFragmentManager().findFragmentById(
-                R.id.fragment_container)).isInstanceOf(ChooseAccountFragment.class);
+        Intent intent = Shadows.shadowOf(mFragment.getActivity()).getNextStartedActivity();
+        ShadowIntent shadowIntent = Shadows.shadowOf(intent);
+        assertThat(shadowIntent.getIntentClass()).isEqualTo(
+                CarSettingActivities.ChooseAccountActivity.class);
     }
 
     private void initFragment() {

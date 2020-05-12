@@ -20,12 +20,13 @@ import android.annotation.DrawableRes;
 import android.annotation.Nullable;
 import android.app.UiModeManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities;
 import com.android.car.settings.common.FragmentHost;
-import com.android.car.settings.display.DisplaySettingsFragment;
 
 /**
  * Toggles auto or night mode tile on quick setting page.
@@ -57,7 +58,8 @@ public class DayNightTile implements QuickSettingGridAdapter.Tile {
         }
         mText = mContext.getString(R.string.night_mode_tile_label);
         mLaunchDisplaySettings = v -> {
-            fragmentHost.launchFragment(new DisplaySettingsFragment());
+            context.startActivity(new Intent(context,
+                    CarSettingActivities.DisplaySettingsActivity.class));
             return true;
         };
     }
