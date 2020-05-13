@@ -33,6 +33,8 @@ import static android.provider.SearchIndexablesContract.COLUMN_INDEX_RAW_USER_ID
 import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_CLASS_NAME;
 import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_ICON_RESID;
 import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_INTENT_ACTION;
+import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_INTENT_TARGET_CLASS;
+import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE;
 import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_RANK;
 import static android.provider.SearchIndexablesContract.COLUMN_INDEX_XML_RES_RESID;
 import static android.provider.SearchIndexablesContract.INDEXABLES_RAW_COLUMNS;
@@ -76,6 +78,8 @@ public class CarSettingsSearchIndexablesProvider extends SearchIndexablesProvide
                     ref[COLUMN_INDEX_XML_RES_CLASS_NAME] = val.className;
                     ref[COLUMN_INDEX_XML_RES_ICON_RESID] = val.iconResId;
                     ref[COLUMN_INDEX_XML_RES_INTENT_ACTION] = val.intentAction;
+                    ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_PACKAGE] = val.intentTargetPackage;
+                    ref[COLUMN_INDEX_XML_RES_INTENT_TARGET_CLASS] = val.intentTargetClass;
                     cursor.addRow(ref);
                 }));
 
