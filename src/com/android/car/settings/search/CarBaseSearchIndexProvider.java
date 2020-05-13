@@ -22,6 +22,9 @@ import static com.android.car.settings.common.PreferenceXmlParser.MetadataFlag.F
 import android.content.Context;
 import android.provider.SearchIndexableResource;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.XmlRes;
+
 import com.android.car.settings.common.Logger;
 import com.android.car.settings.common.PreferenceXmlParser;
 import com.android.settingslib.search.Indexable;
@@ -41,18 +44,28 @@ public class CarBaseSearchIndexProvider implements Indexable.SearchIndexProvider
     private static final Logger LOG = new Logger(CarBaseSearchIndexProvider.class);
 
     private final int mXmlRes;
-    private final String mIntent;
+    private final String mIntentAction;
+    private final String mIntentClass;
 
-    public CarBaseSearchIndexProvider(int xmlRes, String intent) {
+    public CarBaseSearchIndexProvider(@XmlRes int xmlRes, String intentAction) {
         mXmlRes = xmlRes;
-        mIntent = intent;
+        mIntentAction = intentAction;
+        mIntentClass = null;
+    }
+
+    public CarBaseSearchIndexProvider(@XmlRes int xmlRes, @NonNull Class intentClass) {
+        mXmlRes = xmlRes;
+        mIntentAction = null;
+        mIntentClass = intentClass.getName();
     }
 
     @Override
     public List<SearchIndexableResource> getXmlResourcesToIndex(Context context, boolean enabled) {
         SearchIndexableResource sir = new SearchIndexableResource(context);
         sir.xmlResId = mXmlRes;
-        sir.intentAction = mIntent;
+        sir.intentAction = mIntentAction;
+        sir.intentTargetPackage = context.getPackageName();
+        sir.intentTargetClass = mIntentClass;
         return Collections.singletonList(sir);
     }
 
