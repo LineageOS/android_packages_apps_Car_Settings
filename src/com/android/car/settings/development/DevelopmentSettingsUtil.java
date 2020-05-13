@@ -49,9 +49,7 @@ public class DevelopmentSettingsUtil {
                 Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enable ? 1 : 0);
 
         // Used to enable developer options module.
-        ComponentName targetName = ComponentName.unflattenFromString(
-                context.getString(R.string.config_dev_options_module));
-        setDeveloperOptionsEnabledState(context, targetName, showDeveloperOptions(context));
+        setDeveloperOptionsEnabledState(context, showDeveloperOptions(context));
     }
 
     /**
@@ -76,6 +74,19 @@ public class DevelopmentSettingsUtil {
                 Settings.Global.DEVICE_PROVISIONED, 0) != 0;
     }
 
+    /** Checks whether the developer options module is enabled. */
+    public static boolean isDeveloperOptionsModuleEnabled(Context context) {
+        PackageManager pm = context.getPackageManager();
+        ComponentName component = getDeveloperOptionsModule(context);
+        int state = pm.getComponentEnabledSetting(component);
+        return state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+    }
+
+    private static ComponentName getDeveloperOptionsModule(Context context) {
+        return ComponentName.unflattenFromString(
+                context.getString(R.string.config_dev_options_module));
+    }
+
     private static boolean showDeveloperOptions(Context context) {
         CarUserManagerHelper carUserManagerHelper = new CarUserManagerHelper(context);
         boolean showDev = DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(context)
@@ -89,11 +100,11 @@ public class DevelopmentSettingsUtil {
         return showDev;
     }
 
-    private static void setDeveloperOptionsEnabledState(Context context, ComponentName component,
-            boolean enabled) {
+    private static void setDeveloperOptionsEnabledState(Context context, boolean enabled) {
         PackageManager pm = context.getPackageManager();
+        ComponentName component = getDeveloperOptionsModule(context);
         int state = pm.getComponentEnabledSetting(component);
-        boolean isEnabled = state == PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+        boolean isEnabled = isDeveloperOptionsModuleEnabled(context);
         if (isEnabled != enabled || state == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT) {
             pm.setComponentEnabledSetting(component, enabled
                             ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
