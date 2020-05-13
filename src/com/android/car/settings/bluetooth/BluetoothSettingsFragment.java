@@ -25,13 +25,16 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.UserManager;
+import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.bluetooth.LocalBluetoothManager;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,6 +43,7 @@ import java.util.List;
  * Main page for Bluetooth settings. It manages the power switch for the Bluetooth adapter. It also
  * displays paired devices and the entry point for device pairing.
  */
+@SearchIndexable
 public class BluetoothSettingsFragment extends SettingsFragment {
 
     private final BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -139,4 +143,8 @@ public class BluetoothSettingsFragment extends SettingsFragment {
         }
         mBluetoothSwitch.setOnClickListener(mBluetoothSwitchListener);
     }
+
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.bluetooth_settings_fragment,
+                    Settings.ACTION_BLUETOOTH_SETTINGS);
 }
