@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/settings_label">
+    android:title="@string/settings_label"
+    android:key="@string/psk_homepage">
     <!-- TODO: Re-enable once more suggestion use cases are supported.
     <com.android.car.settings.common.LogicalPreferenceGroup
         android:key="@string/pk_suggestions"
