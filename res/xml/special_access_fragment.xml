@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/special_access">
+    android:title="@string/special_access"
+    android:key="@string/psk_special_access">
     <Preference
         android:key="@string/pk_modify_system_settings_entry"
         android:title="@string/modify_system_settings_title"
