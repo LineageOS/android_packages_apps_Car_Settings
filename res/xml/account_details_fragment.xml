@@ -15,7 +15,8 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:settings="http://schemas.android.com/apk/res-auto">
+                  xmlns:settings="http://schemas.android.com/apk/res-auto"
+                  android:key="@string/psk_account_details">
     <Preference
         android:key="@string/pk_account_details"
         android:selectable="false"

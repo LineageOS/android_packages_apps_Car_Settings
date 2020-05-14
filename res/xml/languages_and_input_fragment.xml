@@ -16,7 +16,8 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/languages_and_input_settings">
+                  android:title="@string/languages_and_input_settings"
+                  android:key="@string/psk_languages_and_input">
     <Preference
         android:icon="@drawable/ic_translate"
         android:key="@string/pk_language_settings_entry"
