@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/hardware_info">
+    android:title="@string/hardware_info"
+    android:key="@string/psk_hardware_info">
     <Preference
         android:key="pk_hardware_info_device_model"
         android:title="@string/model_info"
