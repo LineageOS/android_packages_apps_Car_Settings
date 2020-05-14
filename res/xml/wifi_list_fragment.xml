@@ -16,7 +16,8 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:settings="http://schemas.android.com/apk/res-auto"
-                  android:title="@string/wifi_settings">
+                  android:title="@string/wifi_settings"
+                  android:key="@string/psk_wifi_list">
     <com.android.car.ui.preference.CarUiPreference
         android:key="@string/pk_wifi_status"
         settings:controller="com.android.car.settings.wifi.WifiStatusPreferenceController"
