@@ -30,8 +30,10 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.settingslib.Utils;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.Collections;
 import java.util.List;
@@ -39,6 +41,7 @@ import java.util.List;
 /**
  * Main page that hosts Location related preferences.
  */
+@SearchIndexable
 public class LocationSettingsFragment extends SettingsFragment {
     private static final IntentFilter INTENT_FILTER_LOCATION_MODE_CHANGED =
             new IntentFilter(LocationManager.MODE_CHANGED_ACTION);
@@ -96,4 +99,8 @@ public class LocationSettingsFragment extends SettingsFragment {
         super.onStop();
         requireContext().unregisterReceiver(mReceiver);
     }
+
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.location_settings_fragment,
+                    Settings.ACTION_LOCATION_SOURCE_SETTINGS);
 }
