@@ -16,14 +16,19 @@
 
 package com.android.car.settings.privacy;
 
+import android.provider.Settings;
+
 import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
 /**
  * List of privacy features
  */
+@SearchIndexable
 public class PrivacySettingsFragment extends SettingsFragment {
 
     @Override
@@ -31,4 +36,8 @@ public class PrivacySettingsFragment extends SettingsFragment {
     protected int getPreferenceScreenResId() {
         return R.xml.privacy_settings_fragment;
     }
+
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.privacy_settings_fragment,
+                    Settings.ACTION_PRIVACY_SETTINGS);
 }
