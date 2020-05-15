@@ -281,6 +281,13 @@
         </activity>
 
         <activity
+            android:name=".common.CarSettingActivities$MobileNetworkListActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+
+        <activity
             android:name=".common.CarSettingActivities$DataUsageActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
