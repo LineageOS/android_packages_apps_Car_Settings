@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/network_and_internet">
+    android:title="@string/network_and_internet"
+    android:key="@string/psk_network_and_internet">
     <com.android.car.settings.common.MasterSwitchPreference
         android:icon="@drawable/ic_settings_wifi"
         android:key="@string/pk_wifi_settings_entry"
