@@ -71,34 +71,34 @@ public class AddWifiFragmentTest {
     }
 
     @Test
-    public void onStart_registersNameChangeListener() {
-        mFragmentController.create().start();
+    public void onCreate_registersNameChangeListener() {
+        mFragmentController.create();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStart_registersSecurityChangeListener() {
-        mFragmentController.create().start();
+    public void onCreate_registersSecurityChangeListener() {
+        mFragmentController.create();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isTrue();
     }
 
     @Test
-    public void onStop_unregistersNameChangeListener() {
-        mFragmentController.create().start();
-        mFragmentController.stop();
+    public void onDestroy_unregistersNameChangeListener() {
+        mFragmentController.create();
+        mFragmentController.destroy();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkNamePreferenceController.ACTION_NAME_CHANGE)).isFalse();
     }
 
     @Test
-    public void onStop_unregistersSecurityChangeListener() {
-        mFragmentController.create().start();
-        mFragmentController.stop();
+    public void onDestroy_unregistersSecurityChangeListener() {
+        mFragmentController.create();
+        mFragmentController.destroy();
 
         assertThat(isReceiverRegisteredForAction(
                 NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE)).isFalse();
