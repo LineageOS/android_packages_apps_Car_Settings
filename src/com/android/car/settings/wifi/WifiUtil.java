@@ -150,6 +150,13 @@ public class WifiUtil {
     }
 
     /**
+     * Returns {@code true} if the network security type doesn't require authentication.
+     */
+    public static boolean isOpenNetwork(int security) {
+        return security == AccessPoint.SECURITY_NONE || security == AccessPoint.SECURITY_OWE;
+    }
+
+    /**
      * Returns {@code true} if the provided NetworkCapabilities indicate a captive portal network.
      */
     public static boolean canSignIntoNetwork(NetworkCapabilities capabilities) {
