@@ -113,11 +113,21 @@ public class AddWifiFragment extends SettingsFragment {
                 .setOnClickListener(i -> {
                     // This only needs to handle hidden/unsecure networks.
                     WifiUtil.connectToAccessPoint(getContext(), mNetworkName,
-                            AccessPoint.SECURITY_NONE, /* password= */ null, /* hidden= */ true,
+                            mSecurityType, /* password= */ null, /* hidden= */ true,
                             mConnectionListener);
                 })
                 .build();
-        setButtonEnabledState();
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mNameChangeReceiver,
+                new IntentFilter(NetworkNamePreferenceController.ACTION_NAME_CHANGE));
+        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mSecurityChangeReceiver,
+                new IntentFilter(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE));
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mNameChangeReceiver);
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mSecurityChangeReceiver);
     }
 
     @Override
@@ -130,23 +140,21 @@ public class AddWifiFragment extends SettingsFragment {
     @Override
     public void onStart() {
         super.onStart();
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mNameChangeReceiver,
-                new IntentFilter(NetworkNamePreferenceController.ACTION_NAME_CHANGE));
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mSecurityChangeReceiver,
-                new IntentFilter(NetworkSecurityPreferenceController.ACTION_SECURITY_CHANGE));
+        setButtonEnabledState();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mNameChangeReceiver);
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mSecurityChangeReceiver);
+        if (mAddWifiButton != null) {
+            mAddWifiButton.setEnabled(false);
+        }
     }
 
     private void setButtonEnabledState() {
         if (mAddWifiButton != null) {
             mAddWifiButton.setEnabled(
-                    !TextUtils.isEmpty(mNetworkName) && mSecurityType == AccessPoint.SECURITY_NONE);
+                    !TextUtils.isEmpty(mNetworkName) && WifiUtil.isOpenNetwork(mSecurityType));
         }
     }
 }
