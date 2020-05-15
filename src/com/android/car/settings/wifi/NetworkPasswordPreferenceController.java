@@ -91,7 +91,7 @@ public class NetworkPasswordPreferenceController extends
     }
 
     @Override
-    protected void onStartInternal() {
+    protected void onCreateInternal() {
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mNameChangeReceiver,
                 new IntentFilter(NetworkNamePreferenceController.ACTION_NAME_CHANGE));
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(mSecurityChangeReceiver,
@@ -99,7 +99,7 @@ public class NetworkPasswordPreferenceController extends
     }
 
     @Override
-    protected void onStopInternal() {
+    protected void onDestroyInternal() {
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mNameChangeReceiver);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mSecurityChangeReceiver);
     }
@@ -111,7 +111,7 @@ public class NetworkPasswordPreferenceController extends
         } else {
             getPreference().setDialogTitle(mNetworkName);
         }
-        preference.setVisible(mSecurityType != AccessPoint.SECURITY_NONE);
+        preference.setVisible(!WifiUtil.isOpenNetwork(mSecurityType));
     }
 
     @Override
