@@ -17,7 +17,9 @@
 package com.android.car.settings.network;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 
@@ -26,13 +28,16 @@ import androidx.annotation.XmlRes;
 
 import com.android.car.settings.R;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.internal.util.CollectionUtils;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.google.android.collect.Lists;
 
 import java.util.List;
 
 /** Mobile network settings homepage. */
+@SearchIndexable
 public class MobileNetworkFragment extends SettingsFragment implements
         MobileNetworkUpdateManager.MobileNetworkUpdateListener {
 
@@ -119,4 +124,14 @@ public class MobileNetworkFragment extends SettingsFragment implements
             }
         }
     }
+
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.mobile_network_fragment,
+                    Settings.ACTION_NETWORK_OPERATOR_SETTINGS) {
+                @Override
+                protected boolean isPageSearchEnabled(Context context) {
+                    return NetworkUtils.hasMobileNetwork(
+                            context.getSystemService(ConnectivityManager.class));
+                }
+            };
 }
