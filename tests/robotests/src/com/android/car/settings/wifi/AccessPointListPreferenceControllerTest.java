@@ -172,6 +172,19 @@ public class AccessPointListPreferenceControllerTest {
     }
 
     @Test
+    public void performClick_oweSecurityNotConnectedAccessPoint_connect() {
+        when(mMockAccessPoint1.getSecurity()).thenReturn(AccessPoint.SECURITY_OWE);
+        when(mMockAccessPoint1.isSaved()).thenReturn(false);
+        when(mMockAccessPoint1.isActive()).thenReturn(false);
+        List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);
+        when(mMockCarWifiManager.getAllAccessPoints()).thenReturn(accessPointList);
+        mController.refreshUi();
+
+        mPreferenceGroup.getPreference(0).performClick();
+        verify(mMockCarWifiManager).connectToPublicWifi(eq(mMockAccessPoint1), any());
+    }
+
+    @Test
     public void performClick_activeAccessPoint_showDetailsFragment() {
         when(mMockAccessPoint1.isActive()).thenReturn(true);
         List<AccessPoint> accessPointList = Arrays.asList(mMockAccessPoint1);

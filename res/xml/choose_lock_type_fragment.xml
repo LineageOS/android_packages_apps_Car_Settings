@@ -18,7 +18,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/lock_settings_picker_title">
+    android:title="@string/lock_settings_picker_title"
+    android:key="@string/psk_choose_lock_type">
     <Preference
         android:key="@string/pk_no_lock"
         android:title="@string/security_lock_none"
