@@ -16,7 +16,9 @@
 
 package com.android.car.settings.users;
 
+import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
+import android.car.user.CarUserManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.Context;
 import android.content.Intent;
@@ -54,6 +56,7 @@ public class UsersListFragment extends SettingsFragment implements
     static final String MAX_USERS_LIMIT_REACHED_DIALOG_TAG =
             "com.android.car.settings.users.MaxUsersLimitReachedDialog";
 
+    private CarUserManager mCarUserManager;
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
 
@@ -66,8 +69,9 @@ public class UsersListFragment extends SettingsFragment implements
 
     @VisibleForTesting
     final ConfirmationDialogFragment.ConfirmListener mConfirmCreateNewUserListener = arguments -> {
-        mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */
-                this).execute(getContext().getString(R.string.user_new_user_name));
+        mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper,
+                mCarUserManager, /* addNewUserListener= */ this).execute(
+                getContext().getString(R.string.user_new_user_name));
         mIsBusy = true;
         updateUi();
     };
@@ -103,6 +107,8 @@ public class UsersListFragment extends SettingsFragment implements
     public void onAttach(Context context) {
         super.onAttach(context);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
+        mCarUserManager = (CarUserManager) Car.createCar(context).getCarManager(
+                Car.CAR_USER_SERVICE);
         mUserManager = UserManager.get(getContext());
     }
 
