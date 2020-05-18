@@ -21,6 +21,8 @@ import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
 
 import android.annotation.IntDef;
 import android.app.ActivityManager;
+import android.car.Car;
+import android.car.user.CarUserManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -76,6 +78,7 @@ public class UserGridRecyclerView extends RecyclerView {
     private AddNewUserTask mAddNewUserTask;
     private boolean mEnableAddUserButton;
     private UserIconProvider mUserIconProvider;
+    private CarUserManager mCarUserManager;
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
         @Override
@@ -91,6 +94,8 @@ public class UserGridRecyclerView extends RecyclerView {
         mUserManager = UserManager.get(mContext);
         mUserIconProvider = new UserIconProvider();
         mEnableAddUserButton = true;
+        mCarUserManager = (CarUserManager) Car.createCar(mContext).getCarManager(
+                Car.CAR_USER_SERVICE);
 
         addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
                 R.dimen.user_switcher_vertical_spacing_between_users)));
@@ -260,8 +265,8 @@ public class UserGridRecyclerView extends RecyclerView {
         private boolean mIsAddUserRestricted;
 
         private final ConfirmationDialogFragment.ConfirmListener mConfirmListener = arguments -> {
-            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper, /* addNewUserListener= */
-                    this);
+            mAddNewUserTask = new AddNewUserTask(mCarUserManagerHelper,
+                    mCarUserManager, /* addNewUserListener= */this);
             mAddNewUserTask.execute(mNewUserName);
         };
 
@@ -373,19 +378,20 @@ public class UserGridRecyclerView extends RecyclerView {
         }
 
         private void handleUserSwitch(UserInfo userInfo) {
-            if (mCarUserManagerHelper.switchToUser(userInfo)) {
+            mCarUserManager.switchUser(userInfo.id).thenRun(() -> {
                 // Successful switch, close Settings app.
                 mBaseFragment.getActivity().finish();
-            }
+            });
         }
 
         private void handleGuestSessionClicked() {
             UserInfo guest =
                     UserHelper.getInstance(mContext).createNewOrFindExistingGuest(mContext);
             if (guest != null) {
-                mCarUserManagerHelper.switchToUser(guest);
-                // Successful start, will switch to guest now. Close Settings app.
-                mBaseFragment.getActivity().finish();
+                mCarUserManager.switchUser(guest.id).thenRun(() -> {
+                    // Successful start, will switch to guest now. Close Settings app.
+                    mBaseFragment.getActivity().finish();
+                });
             }
         }
 
@@ -518,7 +524,7 @@ public class UserGridRecyclerView extends RecyclerView {
 
         @IntDef({START_GUEST, ADD_USER, FOREGROUND_USER, BACKGROUND_USER})
         @Retention(RetentionPolicy.SOURCE)
-        public @interface UserRecordType{}
+        public @interface UserRecordType {}
 
         public UserRecord(@Nullable UserInfo userInfo, @UserRecordType int recordType) {
             mInfo = userInfo;
