@@ -19,6 +19,7 @@ package com.android.car.settings.users;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import android.car.user.CarUserManager;
 import android.car.userlib.CarUserManagerHelper;
 import android.content.pm.UserInfo;
 
@@ -35,6 +36,8 @@ public class AddNewUserTaskTest {
     @Mock
     private CarUserManagerHelper mCarUserManagerHelper;
     @Mock
+    private CarUserManager mCarUserManager;
+    @Mock
     private AddNewUserTask.AddNewUserListener mAddNewUserListener;
 
     private AddNewUserTask mTask;
@@ -42,7 +45,7 @@ public class AddNewUserTaskTest {
     @Before
     public void createAsyncTask() {
         MockitoAnnotations.initMocks(this);
-        mTask = new AddNewUserTask(mCarUserManagerHelper, mAddNewUserListener);
+        mTask = new AddNewUserTask(mCarUserManagerHelper, mCarUserManager, mAddNewUserListener);
     }
 
     @Test
@@ -63,7 +66,7 @@ public class AddNewUserTaskTest {
         mTask.execute(newUserName);
         Robolectric.flushBackgroundThreadScheduler();
 
-        verify(mCarUserManagerHelper).switchToUser(newUser);
+        verify(mCarUserManager).switchUser(newUser.id);
     }
 
     @Test
