@@ -154,7 +154,7 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
                 .setAppEntry(mAppEntry)
                 .setAppState(mAppState);
 
-        List<StorageSizeBasePreferenceController> preferenceControllers = Arrays.asList(
+        List<? extends StorageSizeBasePreferenceController> preferenceControllers = Arrays.asList(
                 use(StorageApplicationSizePreferenceController.class,
                         R.string.pk_storage_application_size),
                 use(StorageApplicationTotalSizePreferenceController.class,
