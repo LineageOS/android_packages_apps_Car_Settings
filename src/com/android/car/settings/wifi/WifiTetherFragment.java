@@ -28,9 +28,13 @@ import androidx.annotation.XmlRes;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.android.car.settings.R;
+import com.android.car.settings.common.CarSettingActivities.WifiTetherActivity;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.network.NetworkUtils;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.internal.util.ConcurrentUtils;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.Collections;
 import java.util.List;
@@ -38,6 +42,7 @@ import java.util.List;
 /**
  * Fragment to host tethering-related preferences.
  */
+@SearchIndexable
 public class WifiTetherFragment extends SettingsFragment {
 
     private CarWifiManager mCarWifiManager;
@@ -181,4 +186,16 @@ public class WifiTetherFragment extends SettingsFragment {
         mRestartBooked = true;
     }
 
+    /**
+     * Data provider for Settings Search.
+     */
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.wifi_tether_fragment,
+                    WifiTetherActivity.class) {
+                @Override
+                public boolean isPageSearchEnabled(Context context) {
+                    return NetworkUtils.hasMobileNetwork(
+                            context.getSystemService(ConnectivityManager.class));
+                }
+            };
 }

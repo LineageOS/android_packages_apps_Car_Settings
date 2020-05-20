@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.UserManager;
+import android.provider.Settings;
 
 import androidx.annotation.XmlRes;
 
@@ -32,9 +33,11 @@ import com.android.car.settings.R;
 import com.android.car.settings.common.ConfirmationDialogFragment;
 import com.android.car.settings.common.ErrorDialog;
 import com.android.car.settings.common.SettingsFragment;
+import com.android.car.settings.search.CarBaseSearchIndexProvider;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.ProgressBarController;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.Collections;
 import java.util.List;
@@ -42,6 +45,7 @@ import java.util.List;
 /**
  * Lists all Users available on this device.
  */
+@SearchIndexable
 public class UsersListFragment extends SettingsFragment implements
         AddNewUserTask.AddNewUserListener {
     private static final String FACTORY_RESET_PACKAGE_NAME = "android";
@@ -218,4 +222,11 @@ public class UsersListFragment extends SettingsFragment implements
     private boolean canCurrentProcessAddUsers() {
         return !mUserManager.hasUserRestriction(UserManager.DISALLOW_ADD_USER);
     }
+
+    /**
+     * Data provider for Settings Search.
+     */
+    public static final CarBaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new CarBaseSearchIndexProvider(R.xml.users_list_fragment,
+                    Settings.ACTION_USER_SETTINGS);
 }
