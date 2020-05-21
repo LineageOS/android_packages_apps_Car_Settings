@@ -43,6 +43,7 @@ import com.android.settingslib.RestrictedLockUtilsInternal;
 import com.android.settingslib.applications.ApplicationsState;
 import com.android.settingslib.applications.StorageStatsSource;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -157,16 +158,25 @@ public class AppStorageSettingsDetailsFragment extends SettingsFragment implemen
                 .setAppEntry(mAppEntry)
                 .setAppState(mAppState);
 
-        List<? extends StorageSizeBasePreferenceController> preferenceControllers = Arrays.asList(
+        // Create preference controllers explicitly
+        List<StorageSizeBasePreferenceController> preferenceControllers =
+                new ArrayList<StorageSizeBasePreferenceController>();
+        StorageApplicationSizePreferenceController appSize =
                 use(StorageApplicationSizePreferenceController.class,
-                        R.string.pk_storage_application_size),
+                        R.string.pk_storage_application_size);
+        preferenceControllers.add(appSize);
+        StorageApplicationTotalSizePreferenceController totalSize =
                 use(StorageApplicationTotalSizePreferenceController.class,
-                        R.string.pk_storage_application_total_size),
+                        R.string.pk_storage_application_total_size);
+        preferenceControllers.add(totalSize);
+        StorageApplicationUserDataPreferenceController dataSize =
                 use(StorageApplicationUserDataPreferenceController.class,
-                        R.string.pk_storage_application_data_size),
+                        R.string.pk_storage_application_data_size);
+        preferenceControllers.add(dataSize);
+        StorageApplicationCacheSizePreferenceController cacheSize =
                 use(StorageApplicationCacheSizePreferenceController.class,
-                        R.string.pk_storage_application_cache_size)
-        );
+                        R.string.pk_storage_application_cache_size);
+        preferenceControllers.add(cacheSize);
 
         for (StorageSizeBasePreferenceController pc : preferenceControllers) {
             pc.setAppsStorageStatsManager(mAppsStorageStatsManager);
