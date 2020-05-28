@@ -27,6 +27,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.widget.EditText;
 
+import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 
@@ -82,7 +83,7 @@ public class LocalRenameDialogFragmentTest {
     public void localNameChangedBroadcast_updatesDeviceName() {
         BluetoothAdapter.getDefaultAdapter().setName(NAME);
         AlertDialog dialog = showDialog(mFragment);
-        EditText editText = dialog.findViewById(android.R.id.edit);
+        EditText editText = dialog.findViewById(R.id.textbox);
         assertThat(editText.getText().toString()).isEqualTo(NAME);
 
         BluetoothAdapter.getDefaultAdapter().setName(NAME_UPDATED);
@@ -98,7 +99,7 @@ public class LocalRenameDialogFragmentTest {
     public void setDeviceName_updatesLocalAdapterName() {
         BluetoothAdapter.getDefaultAdapter().setName(NAME);
         AlertDialog dialog = showDialog(mFragment);
-        EditText editText = dialog.findViewById(android.R.id.edit);
+        EditText editText = dialog.findViewById(R.id.textbox);
 
         editText.setText(NAME_UPDATED);
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
