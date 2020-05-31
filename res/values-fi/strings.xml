@@ -42,7 +42,7 @@
     <string name="mobile_network_list_add_more" msgid="6174294462747070655">"Lisää"</string>
     <string name="mobile_network_toggle_title" msgid="3515647310810280063">"Mobiilidata"</string>
     <string name="mobile_network_toggle_summary" msgid="8698267487987697148">"Käytä mobiiliverkon dataa"</string>
-    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Poistetaanko mobiilidata käytöstä?"</string>
+    <string name="confirm_mobile_data_disable" msgid="826493998804496639">"Laitetaanko mobiilidata pois päältä?"</string>
     <string name="sim_selection_required_pref" msgid="6599562910262785784">"Valinta on pakollinen"</string>
     <string name="sim_change_data_title" msgid="6677115745127365131">"Käytetäänkö mobiilidataa (<xliff:g id="CARRIER">%1$s</xliff:g>)?"</string>
     <string name="sim_change_data_message" msgid="4669775284395549069">"Käytät mobiilidataa (<xliff:g id="CARRIER2_0">%2$s</xliff:g>). Jos <xliff:g id="CARRIER1">%1$s</xliff:g> otetaan käyttöön, <xliff:g id="CARRIER2_1">%2$s</xliff:g> ei enää käytä mobiilidataa."</string>
@@ -126,7 +126,7 @@
     <string name="wifi_details_ipv6_address_header" msgid="4707181386646531890">"IPv6-osoitteet"</string>
     <string name="wifi_gateway" msgid="4975799192860431013">"Yhdyskäytävä"</string>
     <string name="wifi_preferences_title" msgid="772788844257225510">"Wi-Fi-asetukset"</string>
-    <string name="wifi_wakeup" msgid="7451825226044542000">"Ota Wi-Fi käyttöön automaattisesti"</string>
+    <string name="wifi_wakeup" msgid="7451825226044542000">"Laita Wi-Fi päälle automaattisesti"</string>
     <string name="wifi_wakeup_summary" msgid="7237521683331291414">"Wi-Fi otetaan käyttöön kotiverkon tai muun laadukkaan tallennetun verkon lähellä"</string>
     <string name="wifi_wakeup_summary_no_location" msgid="2821576525488435259">"Ei saatavilla, koska sijaintia ei käytetä. Käytä "<annotation id="link">"sijaintia"</annotation>"."</string>
     <string name="wifi_settings_scanning_required_title" msgid="2726782203331704928">"Otetaanko Wi-Fi-haku käyttöön?"</string>
@@ -283,7 +283,7 @@
     <string name="app_disable_dialog_text" msgid="7731155411006654025">"Jos poistat sovelluksen käytöstä, Android ja muut sovellukset eivät välttämättä enää toimi oikein."</string>
     <string name="app_disable_dialog_positive" msgid="4448684722791563349">"Poista sovellus käytöstä"</string>
     <string name="not_installed" msgid="4218816013370552746">"Ei asennettu tälle käyttäjälle"</string>
-    <string name="permissions_label" msgid="2701446753515612685">"Käyttöoikeudet"</string>
+    <string name="permissions_label" msgid="2701446753515612685">"Luvat"</string>
     <string name="notifications_label" msgid="6586089149665170731">"Ilmoitukset"</string>
     <string name="storage_application_label" msgid="5911779903670978586">"Tallennustila ja välimuisti"</string>
     <string name="application_version_label" msgid="8556889839783311649">"Versio: %1$s"</string>
@@ -301,9 +301,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"Assistant ja äänisyöte"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"Avustajasovellus"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"Käytä näytön tekstiä"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"Salli avustajasovelluksen käsitellä näytön sisältöä tekstinä"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"Salli avustajasovellukselle pääsy näytön sisältöön tekstinä"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"Käytä kuvakaappausta"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Salli avustajasovelluksen käsitellä näytön kuvaa"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"Salli avustajasovellukselle pääsy näytön kuvaan"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"Äänisyöte"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"Automaattinen täyttö ‑palvelu"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"Ei mitään"</string>
@@ -484,7 +484,7 @@
     <string name="name_input_blank_error" msgid="2088850865880984123">"Kenttä ei voi olla tyhjä."</string>
     <string name="name_input_invalid_error" msgid="3523545780580744273">"Syötetty käyttäjänimi on virheellinen."</string>
     <string name="users_list_title" msgid="770764290290240909">"Käyttäjät"</string>
-    <string name="user_details_admin_title" msgid="3530292857178371891">"Käyttöoikeudet myönnetty: %1$s"</string>
+    <string name="user_details_admin_title" msgid="3530292857178371891">"Luvat myönnetty: %1$s"</string>
     <string name="storage_settings_title" msgid="8957054192781341797">"Tallennustila"</string>
     <string name="storage_music_audio" msgid="7827147379976134040">"Musiikki ja audio"</string>
     <string name="storage_other_apps" msgid="945509804756782640">"Muut sovellukset"</string>
