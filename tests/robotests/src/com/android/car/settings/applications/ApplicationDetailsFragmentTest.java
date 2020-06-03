@@ -64,6 +64,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Config;
@@ -515,6 +516,7 @@ public class ApplicationDetailsFragmentTest {
         AlertDialog dialog = ShadowAlertDialog.getLatestAlertDialog();
 
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick();
+        Robolectric.flushForegroundThreadScheduler();
 
         assertThat(
                 mContext.getPackageManager().getApplicationEnabledSetting(PACKAGE_NAME)).isEqualTo(

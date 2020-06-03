@@ -16,13 +16,14 @@
 
 package com.android.car.settings;
 
+import static android.car.settings.CarSettings.Global.ENABLE_USER_SWITCH_DEVELOPER_MESSAGE;
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ResolveInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -82,8 +83,8 @@ public class FallbackHome extends Activity {
         } else {
             flags = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
-            // TODO: read from developer settings instead, so it can be used on user builds
-            showInfo = Build.IS_DEBUGGABLE;
+            showInfo = "true".equals(Settings.Global.getString(getContentResolver(),
+                    ENABLE_USER_SWITCH_DEVELOPER_MESSAGE));
         }
 
         if (showInfo) {

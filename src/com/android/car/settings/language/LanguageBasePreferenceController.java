@@ -72,7 +72,7 @@ public abstract class LanguageBasePreferenceController extends
     protected void updateState(PreferenceGroup preferenceGroup) {
         // Only populate if the preference group is empty.
         if (preferenceGroup.getPreferenceCount() == 0) {
-            defineLocaleProvider().populateBasePreference(preferenceGroup, this);
+            defineLocaleProvider().populateBasePreference(preferenceGroup, getExclusionSet(), this);
         }
     }
 

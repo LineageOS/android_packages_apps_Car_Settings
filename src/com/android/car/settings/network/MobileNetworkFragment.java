@@ -113,10 +113,8 @@ public class MobileNetworkFragment extends SettingsFragment implements
             // It is possible for this to be called before the activity is fully created. If so,
             // cache the value so that it can be constructed onActivityCreated.
             mTitle = info.getDisplayName();
-            try {
+            if (getToolbar() != null) {
                 getToolbar().setTitle(mTitle);
-            } catch (IllegalArgumentException ex) {
-                // Toolbar is not found since the activity is not loaded yet. Continue.
             }
         }
     }

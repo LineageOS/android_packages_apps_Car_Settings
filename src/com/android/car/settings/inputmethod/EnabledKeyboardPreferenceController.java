@@ -72,21 +72,12 @@ public class EnabledKeyboardPreferenceController extends
     protected void updateState(PreferenceGroup preferenceGroup) {
         List<Preference> preferencesToDisplay = new ArrayList<>();
         Set<String> preferencesToRemove = new HashSet<>(mPreferences.keySet());
-        List<String> permittedList = mDevicePolicyManager.getPermittedInputMethodsForCurrentUser();
-        List<InputMethodInfo> inputMethodInfos = mInputMethodManager.getEnabledInputMethodList();
+        List<InputMethodInfo> inputMethodInfos =
+                InputMethodUtil.getPermittedAndEnabledInputMethodList(
+                    mInputMethodManager, mDevicePolicyManager);
         int size = (inputMethodInfos == null) ? 0 : inputMethodInfos.size();
         for (int i = 0; i < size; ++i) {
             InputMethodInfo inputMethodInfo = inputMethodInfos.get(i);
-            // permittedList is Null means that all input methods are allowed.
-            boolean isAllowedByOrganization = (permittedList == null)
-                    || permittedList.contains(inputMethodInfo.getPackageName());
-            if (!isAllowedByOrganization) {
-                continue;
-            }
-            // Hide "Google voice typing" IME.
-            if (inputMethodInfo.getPackageName().equals(InputMethodUtil.GOOGLE_VOICE_TYPING)) {
-                continue;
-            }
 
             Preference preference = createPreference(inputMethodInfo);
             if (mPreferences.containsKey(preference.getKey())) {

@@ -74,16 +74,6 @@ public class LocationServicesPreferenceControllerTest {
     }
 
     @Test
-    public void onCreate_addsInjectedSettingsToPreferenceCategory() {
-        Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
-        doReturn(samplePrefs).when(mSettingsInjector)
-                .getInjectedSettings(any(Context.class), anyInt());
-        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
-
-        assertThat(mCategory.getPreferenceCount()).isEqualTo(samplePrefs.get(PROFILE_ID).size());
-    }
-
-    @Test
     public void onStart_registersBroadcastReceiver() {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
         mContext.sendBroadcast(new Intent(SettingInjectorService.ACTION_INJECTED_SETTING_CHANGED));
@@ -100,6 +90,32 @@ public class LocationServicesPreferenceControllerTest {
         mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_STOP);
         mContext.sendBroadcast(new Intent(SettingInjectorService.ACTION_INJECTED_SETTING_CHANGED));
         verify(mSettingsInjector, never()).reloadStatusMessages();
+    }
+
+    @Test
+    public void updateState_addsInjectedSettingsToPreferenceCategory() {
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
+        doReturn(samplePrefs).when(mSettingsInjector)
+                .getInjectedSettings(any(Context.class), anyInt());
+
+        mController.updateState(mCategory);
+
+        assertThat(mCategory.getPreferenceCount()).isEqualTo(samplePrefs.get(PROFILE_ID).size());
+    }
+
+    @Test
+    public void updateState_updatesPreferenceSummary() {
+        Map<Integer, List<Preference>> samplePrefs = getSamplePreferences();
+        doReturn(samplePrefs).when(mSettingsInjector)
+                .getInjectedSettings(any(Context.class), anyInt());
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_START);
+        String summary = "Summary";
+        samplePrefs.get(PROFILE_ID).get(0).setSummary(summary);
+
+        mController.updateState(mCategory);
+
+        assertThat(mCategory.getPreference(0).getSummary()).isEqualTo(summary);
     }
 
     @Test

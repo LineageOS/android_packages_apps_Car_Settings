@@ -90,6 +90,7 @@ public class LocationFooterPreferenceController extends PreferenceController<Pre
             CarUiPreference newPreference = new CarUiPreference(getContext());
             newPreference.setSummary(footerString);
             newPreference.setIcon(R.drawable.ic_settings_about);
+            newPreference.setSelectable(false);
             getPreference().addPreference(newPreference);
 
             // Send broadcast to the injector announcing a footer has been injected

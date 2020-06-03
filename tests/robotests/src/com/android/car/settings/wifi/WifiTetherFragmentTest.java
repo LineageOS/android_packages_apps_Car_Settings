@@ -40,6 +40,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.robolectric.Robolectric;
 import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadow.api.Shadow;
@@ -122,9 +123,7 @@ public class WifiTetherFragmentTest {
         ShadowCarWifiManager.setInstance(mCarWifiManager);
         mFragmentController.setup();
 
-        Intent intent = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
-        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_ENABLING);
-        mContext.sendBroadcast(intent);
+        sendStateChangedIntent(WifiManager.WIFI_AP_STATE_ENABLING);
 
         assertThat(findSwitch(mFragment.requireActivity()).isEnabled()).isFalse();
     }
@@ -135,9 +134,7 @@ public class WifiTetherFragmentTest {
         ShadowCarWifiManager.setInstance(mCarWifiManager);
         mFragmentController.setup();
 
-        Intent intent = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
-        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_ENABLED);
-        mContext.sendBroadcast(intent);
+        sendStateChangedIntent(WifiManager.WIFI_AP_STATE_ENABLED);
 
         assertThat(findSwitch(mFragment.requireActivity()).isEnabled()).isTrue();
         assertThat(findSwitch(mFragment.requireActivity()).isChecked()).isTrue();
@@ -149,9 +146,7 @@ public class WifiTetherFragmentTest {
         ShadowCarWifiManager.setInstance(mCarWifiManager);
         mFragmentController.setup();
 
-        Intent intent = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
-        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_DISABLED);
-        mContext.sendBroadcast(intent);
+        sendStateChangedIntent(WifiManager.WIFI_AP_STATE_DISABLED);
 
         assertThat(findSwitch(mFragment.requireActivity()).isEnabled()).isTrue();
         assertThat(findSwitch(mFragment.requireActivity()).isChecked()).isFalse();
@@ -163,16 +158,20 @@ public class WifiTetherFragmentTest {
         ShadowCarWifiManager.setInstance(mCarWifiManager);
         mFragmentController.setup();
 
-        Intent intent = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
-        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_ENABLING);
-        mContext.sendBroadcast(intent);
+        sendStateChangedIntent(WifiManager.WIFI_AP_STATE_ENABLING);
 
-        Intent intent2 = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
-        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, WifiManager.WIFI_AP_STATE_FAILED);
-        mContext.sendBroadcast(intent2);
+        sendStateChangedIntent(WifiManager.WIFI_AP_STATE_FAILED);
 
         assertThat(findSwitch(mFragment.requireActivity()).isEnabled()).isTrue();
         assertThat(findSwitch(mFragment.requireActivity()).isChecked()).isFalse();
+    }
+
+    private void sendStateChangedIntent(int state) {
+        Intent intent = new Intent(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
+        intent.putExtra(WifiManager.EXTRA_WIFI_AP_STATE, state);
+        mContext.sendBroadcast(intent);
+
+        Robolectric.flushForegroundThreadScheduler();
     }
 
     private MenuItem findSwitch(Activity activity) {

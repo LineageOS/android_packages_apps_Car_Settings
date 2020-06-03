@@ -37,6 +37,7 @@
     </string>
     <string name="pk_users_settings_entry" translatable="false">users_settings_entry</string>
     <string name="pk_accounts_settings_entry" translatable="false">accounts_settings_entry</string>
+    <string name="pk_privacy_settings_entry" translatable="false">privacy_settings_entry</string>
     <string name="pk_storage_settings_entry" translatable="false">storage_settings_entry</string>
     <string name="pk_security_settings_entry" translatable="false">security_settings_entry</string>
     <string name="pk_system_settings_entry" translatable="false">system_settings_entry</string>
@@ -226,6 +227,11 @@
     </string>
     <string name="pk_account_sync_details" translatable="false">account_sync_details</string>
 
+    <!-- Privacy -->
+    <string name="pk_privacy_manage_perms" translatable="false">privacy_manage_perms</string>
+    <string name="pk_show_password" translatable="false">privacy_show_password</string>
+    <string name="pk_privacy_extra_settings" translatable="false">privacy_extra_settings</string>
+
     <!-- Storage -->
     <string name="pk_storage_music_audio" translatable="false">storage_music_audio</string>
     <string name="pk_storage_music_audio_files" translatable="false">storage_music_audio_files
@@ -282,10 +288,6 @@
         location_recent_requests_screen
     </string>
     <string name="pk_location_app_permissions" translatable="false">location_app_permissions
-    </string>
-    <string name="pk_location_scanning" translatable="false">location_scanning</string>
-    <string name="pk_location_scanning_wifi" translatable="false">location_scanning_wifi</string>
-    <string name="pk_location_scanning_bluetooth" translatable="false">location_scanning_bluetooth
     </string>
     <string name="pk_location_services" translatable="false">location_services</string>
     <string name="pk_location_footer" translatable="false">location_footer</string>

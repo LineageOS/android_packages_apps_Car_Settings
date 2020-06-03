@@ -132,6 +132,15 @@ public class LocationFooterPreferenceControllerTest {
         assertThat(mGroup.getPreference(0).getSummary()).isEqualTo(TEST_TEXT);
     }
 
+    @Test
+    public void onCreate_injectedFooterIsNotSelectable() {
+        mResolveInfos.add(
+                getTestResolveInfo(/* isSystemApp= */ true, /* hasRequiredMetadata= */ true));
+        mControllerHelper.sendLifecycleEvent(Lifecycle.Event.ON_CREATE);
+
+        assertThat(mGroup.getPreference(0).isSelectable()).isFalse();
+    }
+
     // Broadcast Tests.
     @Test
     public void onCreate_broadcastsFooterDisplayedIntentForValidInjections() {
