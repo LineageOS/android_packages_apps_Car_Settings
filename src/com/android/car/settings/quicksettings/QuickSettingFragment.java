@@ -30,6 +30,8 @@ import android.os.UserManager;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -60,6 +62,14 @@ public class QuickSettingFragment extends BaseFragment {
     private MenuItem mFullSettingsBtn;
     private MenuItem mUserSwitcherBtn;
     private TextView mBuildInfo;
+
+    private ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.FINISH_TASK_WITH_ACTIVITY) {
+                    getActivity().finish();
+                }
+            });
 
     @Override
     @LayoutRes
@@ -118,7 +128,8 @@ public class QuickSettingFragment extends BaseFragment {
         mUserSwitcherBtn = new MenuItem.Builder(getContext())
                 .setTitle(getString(R.string.user_switch))
                 .setOnClickListener(i ->
-                        startActivity(new Intent(getContext(), UserSwitcherActivity.class)))
+                        mStartForResult.launch(
+                                new Intent(getContext(), UserSwitcherActivity.class)))
                 .setIcon(R.drawable.ic_user)
                 .setShowIconAndTitle(true)
                 .setVisible(showUserSwitcher())
@@ -203,7 +214,7 @@ public class QuickSettingFragment extends BaseFragment {
     }
 
     /**
-     *  Quick Settings should be viewable while driving
+     * Quick Settings should be viewable while driving
      */
     @Override
     protected boolean canBeShown(@NonNull CarUxRestrictions carUxRestrictions) {
