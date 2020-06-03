@@ -34,7 +34,6 @@ import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -46,7 +45,6 @@ import org.robolectric.annotation.Config;
 import java.util.Arrays;
 import java.util.List;
 
-@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UsersPreferenceProviderTest {
@@ -88,6 +86,8 @@ public class UsersPreferenceProviderTest {
         when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(users);
+        when(mUserHelper.getAllLivingUsers(any())).thenReturn(
+                Arrays.asList(TEST_OTHER_USER_1, TEST_OTHER_USER_2));
     }
 
     @After
