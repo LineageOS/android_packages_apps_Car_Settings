@@ -20,6 +20,7 @@ import static android.os.UserManager.DISALLOW_ADD_USER;
 import static android.os.UserManager.SWITCHABILITY_STATUS_OK;
 
 import android.annotation.IntDef;
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.car.Car;
 import android.car.user.CarUserManager;
@@ -78,6 +79,7 @@ public class UserGridRecyclerView extends RecyclerView {
     private AddNewUserTask mAddNewUserTask;
     private boolean mEnableAddUserButton;
     private UserIconProvider mUserIconProvider;
+    private Car mCar;
     private CarUserManager mCarUserManager;
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
@@ -94,8 +96,8 @@ public class UserGridRecyclerView extends RecyclerView {
         mUserManager = UserManager.get(mContext);
         mUserIconProvider = new UserIconProvider();
         mEnableAddUserButton = true;
-        mCarUserManager = (CarUserManager) Car.createCar(mContext).getCarManager(
-                Car.CAR_USER_SERVICE);
+        mCar = Car.createCar(mContext);
+        mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
 
         addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
                 R.dimen.user_switcher_vertical_spacing_between_users)));
@@ -119,6 +121,9 @@ public class UserGridRecyclerView extends RecyclerView {
         unregisterForUserEvents();
         if (mAddNewUserTask != null) {
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
+        }
+        if (mCar != null) {
+            mCar.disconnect();
         }
     }
 
@@ -380,7 +385,7 @@ public class UserGridRecyclerView extends RecyclerView {
         private void handleUserSwitch(UserInfo userInfo) {
             mCarUserManager.switchUser(userInfo.id).thenRun(() -> {
                 // Successful switch, close Settings app.
-                mBaseFragment.getActivity().finish();
+                closeSettingsTask();
             });
         }
 
@@ -390,7 +395,7 @@ public class UserGridRecyclerView extends RecyclerView {
             if (guest != null) {
                 mCarUserManager.switchUser(guest.id).thenRun(() -> {
                     // Successful start, will switch to guest now. Close Settings app.
-                    mBaseFragment.getActivity().finish();
+                    closeSettingsTask();
                 });
             }
         }
@@ -465,7 +470,7 @@ public class UserGridRecyclerView extends RecyclerView {
         public void onUserAddedSuccess() {
             enableAddView();
             // New user added. Will switch to new user, therefore close the app.
-            mBaseFragment.getActivity().finish();
+            closeSettingsTask();
         }
 
         @Override
@@ -475,6 +480,15 @@ public class UserGridRecyclerView extends RecyclerView {
             if (mBaseFragment != null) {
                 ErrorDialog.show(mBaseFragment, R.string.add_user_error_title);
             }
+        }
+
+        /**
+         * When we switch users, we also want to finish the QuickSettingActivity, so we send back a
+         * result telling the QuickSettingActivity to finish.
+         */
+        private void closeSettingsTask() {
+            mBaseFragment.getActivity().setResult(Activity.FINISH_TASK_WITH_ACTIVITY, new Intent());
+            mBaseFragment.getActivity().finish();
         }
 
         @Override
