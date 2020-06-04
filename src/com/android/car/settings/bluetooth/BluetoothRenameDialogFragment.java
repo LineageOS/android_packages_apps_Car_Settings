@@ -27,8 +27,6 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -40,6 +38,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
 import com.android.car.settings.R;
+import com.android.car.ui.AlertDialogBuilder;
 import com.android.car.ui.preference.CarUiDialogFragment;
 
 import java.util.Objects;
@@ -54,8 +53,7 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
     private static final int BLUETOOTH_NAME_MAX_LENGTH_BYTES = 248;
 
     private AlertDialog mAlertDialog;
-    private EditText mDeviceNameView;
-    private Button mRenameButton;
+    private String mDeviceName;
 
     /** Returns the title to use for the dialog. */
     @StringRes
@@ -79,25 +77,47 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
         if (savedInstanceState != null) {
             deviceName = savedInstanceState.getString(KEY_NAME, deviceName);
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity())
+
+        createAlertDialog(deviceName);
+
+        return mAlertDialog;
+    }
+
+    private void createAlertDialog(String deviceName) {
+        InputFilter[] inputFilters = new InputFilter[]{new Utf8ByteLengthFilter(
+                BLUETOOTH_NAME_MAX_LENGTH_BYTES)};
+        AlertDialogBuilder builder = new AlertDialogBuilder(requireActivity())
                 .setTitle(getDialogTitle())
-                .setView(createDialogView(deviceName))
                 .setPositiveButton(R.string.bluetooth_rename_button,
-                        (dialog, which) -> setDeviceName(
-                                mDeviceNameView.getText().toString().trim()))
-                .setNegativeButton(android.R.string.cancel, /* listener= */ null);
+                        (dialog, which) -> setDeviceName(getEditedName()))
+                .setNegativeButton(android.R.string.cancel, /* listener= */ null)
+                .setEditBox(deviceName, /* textChangedListener= */ this, inputFilters,
+                        InputType.TYPE_CLASS_TEXT);
+
         mAlertDialog = builder.create();
+
         mAlertDialog.setOnShowListener(d -> {
-            if (mDeviceNameView.requestFocus()) {
+
+            EditText deviceNameView = getDeviceNameView();
+
+            if (mDeviceName != null) {
+                deviceNameView.setSelection(mDeviceName.length());
+            }
+
+            deviceNameView.setOnEditorActionListener(this);
+            deviceNameView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+            if (deviceNameView.requestFocus()) {
                 InputMethodManager imm = (InputMethodManager) requireContext().getSystemService(
                         Context.INPUT_METHOD_SERVICE);
                 if (imm != null) {
-                    imm.showSoftInput(mDeviceNameView, InputMethodManager.SHOW_IMPLICIT);
+                    imm.showSoftInput(deviceNameView, InputMethodManager.SHOW_IMPLICIT);
                 }
             }
+
+            refreshRenameButton();
         });
 
-        return mAlertDialog;
     }
 
     @Override
@@ -106,34 +126,13 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putString(KEY_NAME, mDeviceNameView.getText().toString());
+        outState.putString(KEY_NAME, getEditedName());
     }
 
-    private View createDialogView(String deviceName) {
-        final LayoutInflater layoutInflater = (LayoutInflater) requireActivity().getSystemService(
-                Context.LAYOUT_INFLATER_SERVICE);
-        // TODO: use dialog layout defined in preference theme.
-        View view = layoutInflater.inflate(R.layout.preference_dialog_edittext, /* root= */ null);
-        mDeviceNameView = view.findViewById(android.R.id.edit);
-        mDeviceNameView.setFilters(new InputFilter[]{
-                new Utf8ByteLengthFilter(BLUETOOTH_NAME_MAX_LENGTH_BYTES)
-        });
-        mDeviceNameView.setText(deviceName); // Set initial value before adding listener.
-        if (!TextUtils.isEmpty(deviceName)) {
-            mDeviceNameView.setSelection(deviceName.length());
-        }
-        mDeviceNameView.addTextChangedListener(this);
-        mDeviceNameView.setOnEditorActionListener(this);
-        mDeviceNameView.setRawInputType(InputType.TYPE_CLASS_TEXT);
-        mDeviceNameView.setImeOptions(EditorInfo.IME_ACTION_DONE);
-
-        return view;
-    }
 
     @Override
     public void onStart() {
         super.onStart();
-        mRenameButton = mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
         refreshRenameButton();
     }
 
@@ -141,15 +140,17 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
     public void onDestroy() {
         super.onDestroy();
         mAlertDialog = null;
-        mDeviceNameView = null;
-        mRenameButton = null;
     }
 
     /** Refreshes the displayed device name with the latest value from {@link #getDeviceName()}. */
     protected void updateDeviceName() {
-        String name = getDeviceName();
-        if (name != null) {
-            mDeviceNameView.setText(name);
+        String deviceName = getDeviceName();
+        if (deviceName != null) {
+            mDeviceName = deviceName;
+            EditText deviceNameView = getDeviceNameView();
+            if (deviceNameView != null) {
+                deviceNameView.setText(deviceName);
+            }
         }
     }
 
@@ -159,6 +160,7 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
+        mDeviceName = s.toString();
     }
 
     @Override
@@ -183,12 +185,22 @@ public abstract class BluetoothRenameDialogFragment extends CarUiDialogFragment 
     }
 
     private void refreshRenameButton() {
-        String editedName = getEditedName();
-        mRenameButton.setEnabled(
-                !TextUtils.isEmpty(editedName) && !Objects.equals(editedName, getDeviceName()));
+        if (mAlertDialog != null) {
+            Button renameButton = mAlertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+            if (renameButton != null) {
+                String editedName = getEditedName();
+                renameButton.setEnabled(
+                        !TextUtils.isEmpty(editedName) && !Objects.equals(editedName,
+                                getDeviceName()));
+            }
+        }
     }
 
     private String getEditedName() {
-        return mDeviceNameView.getText().toString().trim();
+        return mDeviceName.trim();
+    }
+
+    private EditText getDeviceNameView() {
+        return mAlertDialog.getWindow().findViewById(R.id.textbox);
     }
 }
