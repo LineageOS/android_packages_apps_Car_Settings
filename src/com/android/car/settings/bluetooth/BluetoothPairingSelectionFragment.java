@@ -65,7 +65,7 @@ public class BluetoothPairingSelectionFragment extends SettingsFragment {
         super.onStart();
         mManager.setForegroundActivity(requireActivity());
         mManager.getEventManager().registerCallback(mCallback);
-        getToolbar().showProgressBar();
+        getToolbar().getProgressBar().setVisible(true);
     }
 
     @Override
@@ -73,6 +73,6 @@ public class BluetoothPairingSelectionFragment extends SettingsFragment {
         super.onStop();
         mManager.setForegroundActivity(null);
         mManager.getEventManager().unregisterCallback(mCallback);
-        getToolbar().hideProgressBar();
+        getToolbar().getProgressBar().setVisible(false);
     }
 }
