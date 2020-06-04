@@ -20,6 +20,7 @@ import static android.content.pm.UserInfo.FLAG_ADMIN;
 
 import static com.google.common.truth.Truth.assertThat;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 import android.car.drivingstate.CarUxRestrictions;
@@ -39,7 +40,6 @@ import com.android.car.settings.testutils.ShadowUserIconProvider;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -49,10 +49,10 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@Ignore
 @RunWith(RobolectricTestRunner.class)
 @Config(shadows = {ShadowUserIconProvider.class, ShadowUserHelper.class})
 public class UsersBasePreferenceControllerTest {
@@ -96,6 +96,8 @@ public class UsersBasePreferenceControllerTest {
         when(mUserHelper.getCurrentProcessUserInfo()).thenReturn(TEST_CURRENT_USER);
         when(mUserHelper.isCurrentProcessUser(TEST_CURRENT_USER)).thenReturn(true);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
+                Collections.singletonList(TEST_OTHER_USER));
+        when(mUserHelper.getAllLivingUsers(any())).thenReturn(
                 Collections.singletonList(TEST_OTHER_USER));
     }
 
@@ -143,6 +145,8 @@ public class UsersBasePreferenceControllerTest {
         UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(adminOtherUser));
+        when(mUserHelper.getAllLivingUsers(any())).thenReturn(
+                Arrays.asList(TEST_OTHER_USER, adminOtherUser));
 
         mController.refreshUi();
 
@@ -188,6 +192,8 @@ public class UsersBasePreferenceControllerTest {
         UserInfo adminOtherUser = new UserInfo(/* id= */ 11, "TEST_OTHER_NAME", FLAG_ADMIN);
         when(mUserHelper.getAllSwitchableUsers()).thenReturn(
                 Collections.singletonList(adminOtherUser));
+        when(mUserHelper.getAllLivingUsers(any())).thenReturn(
+                Arrays.asList(TEST_OTHER_USER, adminOtherUser));
 
         mContext.sendBroadcast(new Intent(LISTENER_ACTIONS.get(0)));
 
