@@ -60,6 +60,7 @@ public class UsersListFragment extends SettingsFragment implements
     static final String MAX_USERS_LIMIT_REACHED_DIALOG_TAG =
             "com.android.car.settings.users.MaxUsersLimitReachedDialog";
 
+    private Car mCar;
     private CarUserManager mCarUserManager;
     private CarUserManagerHelper mCarUserManagerHelper;
     private UserManager mUserManager;
@@ -110,9 +111,9 @@ public class UsersListFragment extends SettingsFragment implements
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        mCar = Car.createCar(context);
         mCarUserManagerHelper = new CarUserManagerHelper(getContext());
-        mCarUserManager = (CarUserManager) Car.createCar(context).getCarManager(
-                Car.CAR_USER_SERVICE);
+        mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
         mUserManager = UserManager.get(getContext());
     }
 
@@ -165,6 +166,9 @@ public class UsersListFragment extends SettingsFragment implements
 
         if (mAddNewUserTask != null) {
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
+        }
+        if (mCar != null) {
+            mCar.disconnect();
         }
     }
 
