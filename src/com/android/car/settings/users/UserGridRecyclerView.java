@@ -79,6 +79,7 @@ public class UserGridRecyclerView extends RecyclerView {
     private AddNewUserTask mAddNewUserTask;
     private boolean mEnableAddUserButton;
     private UserIconProvider mUserIconProvider;
+    private Car mCar;
     private CarUserManager mCarUserManager;
 
     private final BroadcastReceiver mUserUpdateReceiver = new BroadcastReceiver() {
@@ -95,8 +96,8 @@ public class UserGridRecyclerView extends RecyclerView {
         mUserManager = UserManager.get(mContext);
         mUserIconProvider = new UserIconProvider();
         mEnableAddUserButton = true;
-        mCarUserManager = (CarUserManager) Car.createCar(mContext).getCarManager(
-                Car.CAR_USER_SERVICE);
+        mCar = Car.createCar(mContext);
+        mCarUserManager = (CarUserManager) mCar.getCarManager(Car.CAR_USER_SERVICE);
 
         addItemDecoration(new ItemSpacingDecoration(context.getResources().getDimensionPixelSize(
                 R.dimen.user_switcher_vertical_spacing_between_users)));
@@ -120,6 +121,9 @@ public class UserGridRecyclerView extends RecyclerView {
         unregisterForUserEvents();
         if (mAddNewUserTask != null) {
             mAddNewUserTask.cancel(/* mayInterruptIfRunning= */ false);
+        }
+        if (mCar != null) {
+            mCar.disconnect();
         }
     }
 
