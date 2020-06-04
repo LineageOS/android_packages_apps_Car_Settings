@@ -62,13 +62,13 @@ public class BluetoothDevicePickerFragment extends SettingsFragment {
     public void onStart() {
         super.onStart();
         mManager.setForegroundActivity(requireActivity());
-        getToolbar().showProgressBar();
+        getToolbar().getProgressBar().setVisible(true);
     }
 
     @Override
     public void onStop() {
         super.onStop();
         mManager.setForegroundActivity(null);
-        getToolbar().hideProgressBar();
+        getToolbar().getProgressBar().setVisible(false);
     }
 }
