@@ -27,6 +27,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.widget.EditText;
 
+import com.android.car.settings.R;
 import com.android.car.settings.testutils.BaseTestActivity;
 import com.android.car.settings.testutils.ShadowBluetoothAdapter;
 import com.android.car.settings.testutils.ShadowBluetoothPan;
@@ -100,7 +101,7 @@ public class RemoteRenameDialogFragmentTest {
     public void setDeviceName_updatesCachedDeviceName() {
         when(mCachedDevice.getName()).thenReturn(NAME);
         AlertDialog dialog = showDialog(mFragment);
-        EditText editText = dialog.findViewById(android.R.id.edit);
+        EditText editText = dialog.findViewById(R.id.textbox);
 
         editText.setText(NAME_UPDATED);
         dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();

@@ -16,6 +16,7 @@
 
 package com.android.car.settings.testutils;
 
+import android.annotation.Nullable;
 import android.content.Context;
 import android.content.pm.UserInfo;
 
@@ -26,6 +27,7 @@ import org.robolectric.annotation.Implements;
 import org.robolectric.annotation.Resetter;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Shadow for {@link UserHelper}.
@@ -82,5 +84,10 @@ public class ShadowUserHelper {
     @Implementation
     public UserInfo createNewOrFindExistingGuest(Context context) {
         return sInstance.createNewOrFindExistingGuest(context);
+    }
+
+    @Implementation
+    public List<UserInfo> getAllLivingUsers(@Nullable Predicate<? super UserInfo> filter) {
+        return sInstance.getAllLivingUsers(filter);
     }
 }
