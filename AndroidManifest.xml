@@ -356,6 +356,10 @@
             android:name=".common.CarSettingActivities$AddWifiActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="android.settings.WIFI_ADD_NETWORKS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
             <meta-data android:name="distractionOptimized" android:value="true"/>
         </activity>
 
