@@ -93,7 +93,7 @@ public class BluetoothDevicePickerFragmentTest {
     public void onStop_hidesProgressBar() {
         mFragmentController.setup().onPause();
         ToolbarController toolbar = requireToolbar(mFragment.requireActivity());
-        toolbar.showProgressBar();
+        toolbar.getProgressBar().setVisible(true);
 
         mFragmentController.stop();
 
