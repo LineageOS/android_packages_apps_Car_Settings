@@ -19,6 +19,7 @@ package com.android.car.settings.search;
 import static com.android.car.settings.common.PreferenceXmlParser.METADATA_KEY;
 import static com.android.car.settings.common.PreferenceXmlParser.MetadataFlag.FLAG_NEED_KEY;
 
+import android.annotation.Nullable;
 import android.content.Context;
 import android.provider.SearchIndexableResource;
 
@@ -101,5 +102,20 @@ public class CarBaseSearchIndexProvider implements Indexable.SearchIndexProvider
      */
     protected boolean isPageSearchEnabled(Context context) {
         return true;
+    }
+
+    /**
+     * Creates a SearchIndexableRaw object from the provided parameters.
+     */
+    protected SearchIndexableRaw createRawDataEntry(Context context, String key, String title,
+            @Nullable String screenTitle) {
+        SearchIndexableRaw raw = new SearchIndexableRaw(context);
+        raw.key = key;
+        raw.title = title;
+        raw.screenTitle = screenTitle;
+        raw.intentAction = mIntentAction;
+        raw.intentTargetPackage = context.getPackageName();
+        raw.intentTargetClass = mIntentClass;
+        return raw;
     }
 }
