@@ -229,7 +229,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         if (mSaveLockWorker != null) {
             mSaveLockWorker.setListener(null);
         }
-        getToolbar().hideProgressBar();
+        getToolbar().getProgressBar().setVisible(false);
     }
 
     /**
@@ -388,7 +388,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
 
     @VisibleForTesting
     void onChosenLockSaveFinished(boolean isSaveSuccessful) {
-        getToolbar().hideProgressBar();
+        getToolbar().getProgressBar().setVisible(false);
 
         if (isSaveSuccessful) {
             onComplete();
@@ -417,7 +417,7 @@ public class ChooseLockPatternFragment extends BaseFragment {
         }
 
         mSaveLockWorker.start(mUserId, mChosenPattern, mCurrentCredential);
-        getToolbar().showProgressBar();
+        getToolbar().getProgressBar().setVisible(true);
     }
 
     @VisibleForTesting
