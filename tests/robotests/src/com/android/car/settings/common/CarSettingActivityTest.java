@@ -20,6 +20,8 @@ import static com.google.common.truth.Truth.assertThat;
 
 import static org.mockito.Mockito.when;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.car.Car;
 import android.car.drivingstate.CarUxRestrictions;
 import android.car.drivingstate.CarUxRestrictionsManager;
@@ -28,6 +30,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.android.car.settings.CarSettingsRobolectricTestRunner;
@@ -49,8 +54,6 @@ import org.robolectric.android.controller.ActivityController;
 @RunWith(CarSettingsRobolectricTestRunner.class)
 public class CarSettingActivityTest {
 
-    private static final String TEST_TAG = "test_tag";
-
     private Context mContext;
     private ActivityController<CarSettingActivity> mActivityController;
     private CarSettingActivity mActivity;
@@ -70,7 +73,7 @@ public class CarSettingActivityTest {
         mContext = RuntimeEnvironment.application;
         mActivityController = ActivityController.of(new CarSettingActivity());
         mActivity = mActivityController.get();
-        mActivityController.create();
+        mActivityController.setup();
     }
 
     @Test
@@ -133,7 +136,7 @@ public class CarSettingActivityTest {
     @Test
     public void onResume_newIntent_launchesNewFragment() {
         Robolectric.getForegroundThreadScheduler().unPause();
-        mActivityController.start().postCreate(null).resume();
+
         TestFragment testFragment = new TestFragment();
         mActivity.launchFragment(testFragment);
         assertThat(mActivity.getCurrentFragment()).isEqualTo(testFragment);
@@ -146,7 +149,6 @@ public class CarSettingActivityTest {
 
     @Test
     public void onResume_savedInstanceState_doesNotLaunchFragmentFromOldIntent() {
-        mActivityController.start().postCreate(null).resume();
         Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
         mActivity.onNewIntent(intent);
         assertThat(mActivity.getCurrentFragment()).isNotInstanceOf(TestFragment.class);
@@ -204,7 +206,47 @@ public class CarSettingActivityTest {
                 .isEqualTo(1);
     }
 
+    @Test
+    public void launchFragment_rootFragment_dismissesDialogs() {
+        Robolectric.getForegroundThreadScheduler().unPause();
+
+        // Add fragment 1
+        TestFragment testFragment1 = new TestFragment();
+        mActivity.launchFragment(testFragment1);
+
+        // Show dialog 1
+        String tag1 = "tag1";
+        TestDialogFragment testDialogFragment1 = new TestDialogFragment();
+        testDialogFragment1.show(mActivity.getSupportFragmentManager(), tag1);
+
+        // Show dialog 2
+        String tag2 = "tag2";
+        TestDialogFragment testDialogFragment2 = new TestDialogFragment();
+        testDialogFragment2.show(mActivity.getSupportFragmentManager(), tag2);
+
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNotNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNotNull();
+
+        // Add root fragment
+        Fragment root = Fragment.instantiate(mContext,
+                mContext.getString(R.string.config_settings_hierarchy_root_fragment));
+        mActivity.launchFragment(root);
+
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag1)).isNull();
+        assertThat(mActivity.getSupportFragmentManager().findFragmentByTag(tag2)).isNull();
+    }
+
     /** Simple Fragment for testing use. */
     public static class TestFragment extends Fragment {
+    }
+
+    /** Simple Dialog Fragment for testing use. */
+    public static class TestDialogFragment extends DialogFragment {
+
+        @NonNull
+        @Override
+        public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+            return new AlertDialog.Builder(getContext()).setTitle("Test Dialog").create();
+        }
     }
 }
