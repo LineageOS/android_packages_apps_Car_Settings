@@ -41,6 +41,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
 import com.android.car.settings.R;
+import com.android.car.ui.preference.DisabledPreferenceCallback;
 import com.android.car.ui.preference.PreferenceFragment;
 import com.android.car.ui.toolbar.MenuItem;
 import com.android.car.ui.toolbar.Toolbar;
@@ -81,6 +82,7 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
     private CarUxRestrictions mUxRestrictions;
     private int mCurrentRequestIndex = 0;
+    private String mRestrictedWhileDrivingMessage;
 
     /**
      * Returns the resource id for the preference XML of this fragment.
@@ -163,6 +165,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
             mPreferenceControllersLookup.computeIfAbsent(controller.getClass(),
                     k -> new ArrayList<>(/* initialCapacity= */ 1)).add(controller);
         });
+
+        mRestrictedWhileDrivingMessage = context.getString(R.string.restricted_while_driving);
     }
 
     @Override
@@ -185,7 +189,14 @@ public abstract class SettingsFragment extends PreferenceFragment implements
         addPreferencesFromResource(resId);
         PreferenceScreen screen = getPreferenceScreen();
         for (PreferenceController controller : mPreferenceControllers) {
-            controller.setPreference(screen.findPreference(controller.getPreferenceKey()));
+            Preference pref = screen.findPreference(controller.getPreferenceKey());
+
+            controller.setPreference(pref);
+
+            if (pref instanceof DisabledPreferenceCallback) {
+                ((DisabledPreferenceCallback) pref).setMessageToShowWhenDisabledPreferenceClicked(
+                        mRestrictedWhileDrivingMessage);
+            }
         }
     }
 
