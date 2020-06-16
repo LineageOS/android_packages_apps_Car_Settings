@@ -44,6 +44,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RuntimeEnvironment;
+import org.robolectric.shadows.ShadowToast;
 
 /** Unit test for {@link SettingsFragment}. */
 @RunWith(CarSettingsRobolectricTestRunner.class)
@@ -88,6 +89,19 @@ public class SettingsFragmentTest {
                 CarUxRestrictions.UX_RESTRICTIONS_NO_KEYBOARD, /* timestamp= */ 0).build();
         mFragment.onUxRestrictionsChanged(uxRestrictions);
         assertThat(controller.getUxRestrictions()).isEqualTo(uxRestrictions);
+    }
+
+    @Test
+    public void onUxRestrictedPreferenceTapped_showToast() {
+        mFragmentController.setup();
+        FakePreferenceController controller = mFragment.use(FakePreferenceController.class,
+                R.string.tpk_fake_controller);
+        CarUxRestrictions uxRestrictions = new CarUxRestrictions.Builder(/* reqOpt= */ true,
+                CarUxRestrictions.UX_RESTRICTIONS_NO_SETUP, /* timestamp= */ 0).build();
+        mFragment.onUxRestrictionsChanged(uxRestrictions);
+        controller.getPreference().performClick();
+        assertThat(ShadowToast.showedToast(
+                mContext.getString(R.string.restricted_while_driving))).isTrue();
     }
 
     @Test
