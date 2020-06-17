@@ -68,13 +68,13 @@
     <string name="carrier_and_update_now_text" msgid="9058821833613481573">"<xliff:g id="ID_1">^1</xliff:g> ले अहिले भर्खरै अद्यावधिक गरेको"</string>
     <string name="no_carrier_update_now_text" msgid="5953142546373783189">"अहिले भर्खरै अद्यावधिक गरिएको"</string>
     <string name="launch_manage_plan_text" msgid="906657488611815787">"योजना हेर्नुहोस्"</string>
-    <string name="app_data_usage" msgid="3878609885080232877">"अनुप्रयोगको मोबाइल डेटा प्रयोग"</string>
+    <string name="app_data_usage" msgid="3878609885080232877">"एपको मोबाइल डेटा प्रयोग"</string>
     <string name="data_usage_app_restricted" msgid="4570970078120010951">"सीमित पारिएको"</string>
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"प्रयोगको चक्र रिसेट गर्ने मिति"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"प्रत्येक महिनाको निम्न मिति:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"सेट गर्नुहोस्"</string>
     <string name="data_warning_limit_title" msgid="4950868241810828601">"डेटासम्बन्धी चेतावनी तथा सीमा"</string>
-    <string name="app_usage_cycle" msgid="8445927080245880296">"अनुप्रयोगको डेटा प्रयोगको चक्र"</string>
+    <string name="app_usage_cycle" msgid="8445927080245880296">"एपको डेटा प्रयोगको चक्र"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"डेटासम्बन्धी चेतावनी सेट गर्नु"</string>
     <string name="data_warning" msgid="116776633806885370">"डेटासम्बन्धी चेतावनी"</string>
     <string name="set_data_limit" msgid="7136539812414500084">"डेटाको सीमा सेट गर्नुहोस्"</string>
@@ -118,7 +118,7 @@
     <string name="link_speed" msgid="7868861844075624445">"%1$d Mbps"</string>
     <string name="wifi_band_24ghz" msgid="8972492390639295220">"२.४ GHz"</string>
     <string name="wifi_band_5ghz" msgid="2023762623523105080">"५ GHz"</string>
-    <string name="wifi_network_detail" msgid="9070182553555487360">"नेटवर्कसम्बन्धी विवरणहरू"</string>
+    <string name="wifi_network_detail" msgid="9070182553555487360">"नेटवर्कको विवरण"</string>
     <string name="wifi_mac_address" msgid="1466178247802349180">"MAC ठेगाना"</string>
     <string name="wifi_ip_address_title" msgid="300539799594024884">"IP ठेगाना"</string>
     <string name="wifi_subnet_mask" msgid="6238171812379380608">"सबनेट मास्क"</string>
@@ -152,7 +152,7 @@
     <string name="wifi_ap_5G" msgid="4945574428537860279">"५.० GHz"</string>
     <string name="wifi_ap_band_select_one" msgid="615578175244067396">"Wi‑Fi हटस्पटका लागि कम्तीमा एक ब्यान्ड छनौट गर्नुहोस्:"</string>
     <string name="tether_settings_title_all" msgid="4663704772599383169">"हटस्पट तथा टेदरिङ"</string>
-    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"Wi‑Fi हटस्पट स्वतः निष्क्रिय पार्नुहोस्"</string>
+    <string name="wifi_hotspot_auto_off_title" msgid="7871858619924599922">"स्वतः Wi‑Fi हटस्पट अफ गर्नुहोस्"</string>
     <string name="wifi_hotspot_auto_off_summary" msgid="4830341947541735136">"कुनै पनि यन्त्र नजोडिँदा Wi‑Fi हटस्पट स्वतः निष्क्रिय हुने छ"</string>
     <string name="wifi_ask_enable" msgid="4452418245680754578">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi सक्रिय गर्न चाहन्छ"</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"<xliff:g id="REQUESTER">%s</xliff:g> Wi-Fi निष्क्रिय पार्न चाहन्छ"</string>
@@ -276,12 +276,12 @@
     <string name="applications_settings" msgid="794261395191035632">"अनुप्रयोगसम्बन्धी जानकारी"</string>
     <string name="force_stop" msgid="2153183697014720520">"जबर्जस्ती रोक्नुहोस्"</string>
     <string name="force_stop_dialog_title" msgid="3342850939200388694">"जबरजस्ती रोक्ने हो?"</string>
-    <string name="force_stop_dialog_text" msgid="4354954014318432599">"तपाईंले कुनै अनुप्रयोगलाई जबरजस्ती रोक्नुभयो भने त्यसले सही तरिकाले काम नगर्न सक्छ।"</string>
+    <string name="force_stop_dialog_text" msgid="4354954014318432599">"तपाईंले कुनै एपलाई जबरजस्ती रोक्नुभयो भने त्यसले सही तरिकाले काम नगर्न सक्छ।"</string>
     <string name="disable_text" msgid="4358165448648990820">"असक्षम पार्नुहोस्"</string>
     <string name="enable_text" msgid="1794971777861881238">"सक्षम पार्नुहोस्"</string>
     <string name="uninstall_text" msgid="277907956072833012">"स्थापना रद्द गर्नुहोस्"</string>
-    <string name="app_disable_dialog_text" msgid="7731155411006654025">"तपाईंले यो अनुप्रयोगलाई असक्षम पार्नुभयो भने Android र अन्य अनुप्रयोगहरूले अब उप्रान्त अपेक्षाअनुसार कार्य नगर्न सक्छन्।"</string>
-    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"अनुप्रयोगलाई असक्षम पार्नुहोस्"</string>
+    <string name="app_disable_dialog_text" msgid="7731155411006654025">"तपाईंले यो एपलाई असक्षम पार्नुभयो भने Android र अन्य एपहरूले अब उप्रान्त अपेक्षाअनुसार कार्य नगर्न सक्छन्।"</string>
+    <string name="app_disable_dialog_positive" msgid="4448684722791563349">"एपलाई असक्षम पार्नुहोस्"</string>
     <string name="not_installed" msgid="4218816013370552746">"यो प्रयोगकर्ताको लागि स्थापना गरिएको छैन"</string>
     <string name="permissions_label" msgid="2701446753515612685">"अनुमतिहरू"</string>
     <string name="notifications_label" msgid="6586089149665170731">"सूचनाहरू"</string>
@@ -291,7 +291,7 @@
     <string name="runtime_permissions_summary_no_permissions_requested" msgid="4074220596273432442">"कुनै पनि अनुमतिका लागि अनुरोध गरिएको छैन"</string>
     <string name="storage_type_internal" msgid="8918688427078709570">"%s इन्चको आन्तरिक भण्डारण"</string>
     <string name="data_usage_summary_title" msgid="4368024763485916986">"डेटाको प्रयोग"</string>
-    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"अनुप्रयोगको डेटाको प्रयोग"</string>
+    <string name="data_usage_app_summary_title" msgid="5012851696585421420">"एपको डेटाको प्रयोग"</string>
     <string name="computing_size" msgid="5791407621793083965">"गणना गरिँदै…"</string>
     <plurals name="runtime_permissions_additional_count" formatted="false" msgid="3513360187065317613">
       <item quantity="other"><xliff:g id="COUNT_1">%d</xliff:g> अतिरिक्त अनुमतिहरू</item>
@@ -301,9 +301,9 @@
     <string name="assist_and_voice_input_settings" msgid="8813195157136637132">"सहायक र आवाज संलग्न इनपुट"</string>
     <string name="assist_app_settings" msgid="9085261410166776497">"सहायक एप"</string>
     <string name="assist_access_context_title" msgid="8034851731390785301">"स्क्रिनमा रहेको पाठ प्रयोग गर्नुहोस्"</string>
-    <string name="assist_access_context_summary" msgid="2374281280599443774">"सहायक अनुप्रयोगलाई स्क्रिनमा रहेको कुनै सामग्रीमाथि पाठका रूपमा पहुँच राख्ने अनुमति दिनुहोस्"</string>
+    <string name="assist_access_context_summary" msgid="2374281280599443774">"सहायक एपलाई स्क्रिनमा रहेको कुनै सामग्रीमाथि पाठका रूपमा पहुँच राख्ने अनुमति दिनुहोस्"</string>
     <string name="assist_access_screenshot_title" msgid="2855956879971465044">"स्क्रिसट प्रयोग गर्नुहोस्"</string>
-    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक अनुप्रयोगलाई स्क्रिनमा रहेको कुनै छविमाथि पहुँच राख्ने अनुमति दिनुहोस्"</string>
+    <string name="assist_access_screenshot_summary" msgid="6246496926635145782">"सहायक एपलाई स्क्रिनमा रहेको कुनै छविमाथि पहुँच राख्ने अनुमति दिनुहोस्"</string>
     <string name="voice_input_settings_title" msgid="3238707827815647526">"आवाज संलग्न इनपुट"</string>
     <string name="autofill_settings_title" msgid="1188754272680049972">"स्वतः भरण सेवा"</string>
     <string name="app_list_preference_none" msgid="7753357799926715901">"कुनै पनि होइन"</string>
@@ -330,19 +330,19 @@
     <string name="show_system" msgid="4401355756969485287">"प्रणाली देखाउनुहोस्"</string>
     <string name="hide_system" msgid="8845453295584638040">"प्रणाली लुकाउनुहोस्"</string>
     <string name="modify_system_settings_title" msgid="4596320571562433972">"प्रणालीसम्बन्धी सेटिङ परिमार्जन गर्नुहोस्"</string>
-    <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले अनुप्रयोगलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
+    <string name="modify_system_settings_description" msgid="5295023124419592452">"यस अनुमतिले एपलाई प्रणालीको सेटिङ परिमार्जन गर्न दिन्छ।"</string>
     <string name="notification_access_title" msgid="1467340098885813473">"सूचनामाथिको पहुँच"</string>
     <string name="notification_listener_security_warning_title" msgid="2893273335175140895">"<xliff:g id="SERVICE">%1$s</xliff:g> लाई सूचनामाथि पहुँच राख्ने अनुमति दिने हो?"</string>
-    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले अनुप्रयोगलाई बाधा नपुऱ्याउनुहोस् नामक मोड सक्रिय गर्ने वा निष्क्रिय पार्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
+    <string name="notification_listener_security_warning_summary" msgid="7280197998063498125">"<xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> सम्पर्क सूचीका व्यक्तीको नाम र तपाईंले प्राप्त गर्ने सन्देशहरूका पाठ जस्ता व्यक्तिगत जानकारीलगायतका सबै सूचनाहरू पढ्न सक्ने छ। यसले सूचनाहरू खारेज गर्न वा तिनीहरूमा रहेका कारबाहीसम्बन्धी बटनहरू ट्रिगर गर्न पनि सक्ने छ। \n\nयसले एपलाई बाधा नपुऱ्याउनुहोस् नामक मोड सक्रिय गर्ने वा निष्क्रिय पार्ने र सम्बन्धित सेटिङ परिवर्तन गर्ने क्षमता पनि प्रदान गर्ने छ।"</string>
     <string name="notification_listener_revoke_warning_summary" msgid="4904973394539125407">"तपाईंले <xliff:g id="NOTIFICATION_LISTENER_NAME">%1$s</xliff:g> का सूचनामाथिको पहुँच निष्क्रिय पार्नुभएका खण्डमा बाधा नपुऱ्याउनुहोस् नामक मोडमाथिको पहुँच पनि निष्क्रिय पारिन सक्छ।"</string>
     <string name="notification_listener_revoke_warning_confirm" msgid="2759583507454984812">"निष्क्रिय पार्नुहोस्"</string>
     <string name="notification_listener_revoke_warning_cancel" msgid="4399941651358241154">"रद्द गर्नुहोस्"</string>
     <string name="premium_sms_access_title" msgid="1409118461646148686">"प्रिमियम SMS सुविधामाथिको पहुँच"</string>
-    <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले अनुप्रयोगका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस अनुप्रयोगको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
+    <string name="premium_sms_access_description" msgid="7119026067677052169">"प्रिमियम SMS सुविधा सक्रिय गर्नाले तपाईंलाई पैसा लाग्न सक्छ र उक्त लागत तपाईंको सेवा प्रदायकलाई तिर्नु पर्ने बिलमा जोडिने छ। तपाईंले अनुप्रयोगका लागि अनुमति सक्षम पार्नुभएका खण्डमा तपाईं त्यस एपको प्रयोग गरेर प्रिमियम SMS पठाउन सक्नु हुने छ।"</string>
     <string name="usage_access_title" msgid="7153427122072303254">"प्रयोगसम्बन्धी पहुँच"</string>
-    <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले अनुप्रयोगलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन एपहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
+    <string name="usage_access_description" msgid="2413168719257435422">"प्रयोगको पहुँचले एपलाई तपाईंले आफ्नो सेवा प्रदायक, भाषासम्बन्धी सेटिङ र अन्य विवरणहरूसहित अन्य कुन कुन एपहरू गरिरहनुभएको छ र कत्तिको प्रयोग गर्नुहुन्छ भन्ने कुरा ट्र्याक गर्न दिन्छ।"</string>
     <string name="wifi_control_title" msgid="5660436566907731929">"Wi-Fi को नियन्त्रण"</string>
-    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi नियन्त्रकले अनुप्रयोगलाई Wi-Fi सक्रिय गर्ने वा निष्क्रिय पार्ने, स्क्यान गरी Wi-Fi नेटवर्कमा जडान गर्ने, नेटवर्कहरू थप्ने वा हटाउने, वा स्थानीय रूपमा मात्र प्रयोग गर्न मिल्ने हटस्पट सुरु गर्ने अनुमति दिन्छ।"</string>
+    <string name="wifi_control_description" msgid="6021926850423169261">"Wi-Fi नियन्त्रकले एपलाई Wi-Fi सक्रिय गर्ने वा निष्क्रिय पार्ने, स्क्यान गरी Wi-Fi नेटवर्कमा जडान गर्ने, नेटवर्कहरू थप्ने वा हटाउने, वा स्थानीय रूपमा मात्र प्रयोग गर्न मिल्ने हटस्पट सुरु गर्ने अनुमति दिन्छ।"</string>
     <string name="more_special_access_title" msgid="166115485446645971">"थप"</string>
     <string name="location_settings_title" msgid="901334356682423679">"स्थान"</string>
     <string name="location_settings_recent_requests_title" msgid="6345634382240930628">"हालका स्थानसम्बन्धी अनुरोधहरू"</string>
@@ -409,7 +409,7 @@
     <string name="reset_network_confirm_button_text" msgid="5246859685069024851">"सेटिङहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_network_complete_toast" msgid="3804108209431416865">"नेटवर्कसम्बन्धी सेटिङहरू रिसेट गरिएको छ"</string>
     <string name="reset_app_pref_title" msgid="5855420038951743992">"अनुप्रयोगका प्राथमिकताहरू रिसेट गर्नुहोस्"</string>
-    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका अनुप्रयोगका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं अनुप्रयोगको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
+    <string name="reset_app_pref_desc" msgid="579392665146962149">"यस कार्यले निम्न सुविधाहरूका सबै प्राथमिकताहरूलाई रिसेट गर्ने छ:\n\n"<li>"असक्षम पारिएका अनुप्रयोगहरू"</li>\n<li>"असक्षम पारिएका अनुप्रयोगका सूचनाहरू"</li>\n<li>"कारबाहीका लागि पूर्वनिर्धारित अनुप्रयोगहरू"</li>\n<li>"अनुप्रयोगका लागि पृष्ठभूमिका डेटासम्बन्धी बन्देजहरू"</li>\n<li>"अनुमतिसम्बन्धी सबै बन्देजहरू"</li>\n\n"तपाईं एपको कुनै पनि डेटा गुमाउनु हुने छैन।"</string>
     <string name="reset_app_pref_button_text" msgid="6270820447321231609">"एपहरू रिसेट गर्नुहोस्"</string>
     <string name="reset_app_pref_complete_toast" msgid="8709072932243594166">"अनुप्रयोगका प्राथमिकताहरू रिसेट गरिएको छ"</string>
     <string name="master_clear_title" msgid="8515335233363214414">"सबै डेटा मेटाउनुहोस् (फ्याक्ट्री रिसेट गर्नुहोस्)"</string>
@@ -493,13 +493,13 @@
     <string name="storage_detail_dialog_system" msgid="796365720531622361">"प्रणालीमा Android को संस्करण <xliff:g id="VERSION">%s</xliff:g> चलाउन प्रयोग भएका फाइलहरू समावेश छन्"</string>
     <string name="storage_audio_files_title" msgid="5183170457027181700">"अडियो फाइलहरू"</string>
     <string name="memory_calculating_size" msgid="1672238502950390033">"गणना गर्दै…"</string>
-    <string name="storage_application_size_label" msgid="1146156683170661354">"अनुप्रयोगको आकार"</string>
+    <string name="storage_application_size_label" msgid="1146156683170661354">"एपको आकार"</string>
     <string name="storage_data_size_label" msgid="5022911581004239367">"प्रयोगकर्ताको डेटा"</string>
     <string name="storage_cache_size_label" msgid="6361308766707419555">"क्यास"</string>
     <string name="storage_total_size_label" msgid="3892138268243791912">"कुल"</string>
     <string name="storage_clear_user_data_text" msgid="8787615136779130680">"भण्डारण खाली गर्नुहोस्"</string>
     <string name="storage_clear_cache_btn_text" msgid="8449547925966775612">"क्यास हटाउनुहोस्"</string>
-    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"अनुप्रयोगको डेटा मेटाउने हो?"</string>
+    <string name="storage_clear_data_dlg_title" msgid="5863775997588969879">"एपको डेटा मेटाउने हो?"</string>
     <string name="storage_clear_data_dlg_text" msgid="795055288575727801">"यस एपका सम्पूर्ण डेटा स्थायी रूपमा मेटाइने छ। यसमा सम्पूर्ण फाइल, सेटिङ, खाता, डेटाबेस आदि पर्दछन्।"</string>
     <string name="storage_clear_failed_dlg_text" msgid="6710485971686866306">"अनुप्रयोगका लागि भण्डारण खाली गर्न सकिएन।"</string>
     <string name="storage_unmount_success" msgid="1553591517580407021">"<xliff:g id="NAME">%1$s</xliff:g> सुरक्षित तवरले निकालिएको छ"</string>
