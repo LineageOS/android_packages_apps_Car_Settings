@@ -261,13 +261,10 @@ public class SettingsFragmentTest {
     public void onActivityCreated_hasBackArrowIconIfNotRoot() {
         mFragmentController.setup();
 
-        TestSettingsFragment otherFragment1 = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment1);
+        TestSettingsFragment otherFragment = new TestSettingsFragment();
+        mFragment.launchFragment(otherFragment);
 
-        TestSettingsFragment otherFragment2 = new TestSettingsFragment();
-        mFragment.launchFragment(otherFragment2);
-
-        ToolbarController toolbar = requireToolbar(otherFragment2.requireActivity());
+        ToolbarController toolbar = requireToolbar(otherFragment.requireActivity());
 
         assertThat(toolbar.getState()).isEquivalentAccordingToCompareTo(Toolbar.State.SUBPAGE);
         assertThat(toolbar.getNavButtonMode()).isEquivalentAccordingToCompareTo(
