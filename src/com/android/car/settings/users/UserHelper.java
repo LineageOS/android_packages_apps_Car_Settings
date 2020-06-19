@@ -15,20 +15,29 @@
  */
 package com.android.car.settings.users;
 
+import android.annotation.NonNull;
 import android.annotation.Nullable;
+import android.annotation.UserIdInt;
 import android.app.ActivityManager;
-import android.car.userlib.CarUserManagerHelper;
+import android.car.Car;
+import android.car.user.CarUserManager;
+import android.car.user.UserCreationResult;
+import android.car.user.UserRemovalResult;
+import android.car.user.UserSwitchResult;
 import android.content.Context;
 import android.content.pm.UserInfo;
 import android.content.res.Resources;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.sysprop.CarProperties;
 import android.util.Log;
 
 import com.android.car.settings.R;
 import com.android.internal.annotations.VisibleForTesting;
+import com.android.internal.infra.AndroidFuture;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -38,11 +47,12 @@ import java.util.stream.Stream;
  */
 public class UserHelper {
     private static final String TAG = "UserHelper";
+    private static final int TIMEOUT_MS = CarProperties.user_hal_timeout().orElse(5_000) + 500;
     private static UserHelper sInstance;
 
     private final UserManager mUserManager;
+    private final CarUserManager mCarUserManager;
     private final Resources mResources;
-    private final CarUserManagerHelper mCarUserManagerHelper;
     private final String mDefaultAdminName;
     private final String mDefaultGuestName;
 
@@ -56,19 +66,25 @@ public class UserHelper {
             sInstance = new UserHelper(UserManager.get(appContext), resources,
                     resources.getString(com.android.internal.R.string.owner_name),
                     resources.getString(R.string.user_guest),
-                    new CarUserManagerHelper(appContext));
+                    getCarUserManager(appContext));
         }
         return sInstance;
     }
 
     @VisibleForTesting
     UserHelper(UserManager userManager, Resources resources, String defaultAdminName,
-            String defaultGuestName, CarUserManagerHelper carUserManagerHelper) {
+            String defaultGuestName, CarUserManager carUserManager) {
         mUserManager = userManager;
         mResources = resources;
         mDefaultAdminName = defaultAdminName;
         mDefaultGuestName = defaultGuestName;
-        mCarUserManagerHelper = carUserManagerHelper;
+        mCarUserManager = carUserManager;
+    }
+
+    private static CarUserManager getCarUserManager(@NonNull Context context) {
+        Car car = Car.createCar(context);
+        CarUserManager carUserManager = (CarUserManager) car.getCarManager(Car.CAR_USER_SERVICE);
+        return carUserManager;
     }
 
     /**
@@ -112,10 +128,57 @@ public class UserHelper {
                 Log.e(TAG, "Could not create a Guest user.");
                 return false;
             }
-            mCarUserManagerHelper.switchToUserId(guestUser.id);
+            if (!switchUser(guestUser.id)) {
+                return false;
+            }
         }
 
-        return mUserManager.removeUser(userInfo.id);
+        return removeUser(userInfo.id);
+    }
+
+    private boolean removeUser(@UserIdInt int userId) {
+        UserRemovalResult userRemovalResult = mCarUserManager.removeUser(userId);
+        if (userRemovalResult == null || !userRemovalResult.isSuccess()) {
+            Log.w(TAG, "Could not remove user. " + userRemovalResult);
+            return false;
+        }
+        return true;
+    }
+
+    private boolean switchUser(@UserIdInt int userId) {
+        AndroidFuture<UserSwitchResult> userSwitchResultFuture =
+                mCarUserManager.switchUser(userId);
+        try {
+            UserSwitchResult userSwitchResult =
+                    userSwitchResultFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+            if (userSwitchResult == null || !userSwitchResult.isSuccess()) {
+                Log.w(TAG, "Could not switch user. " + userSwitchResult);
+                return false;
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Could not switch user.", e);
+            return false;
+        }
+        return true;
+    }
+
+    @Nullable
+    private UserInfo getUserInfo(AndroidFuture<UserCreationResult> future) {
+        UserCreationResult userCreationResult = null;
+        try {
+            userCreationResult = future.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+        } catch (Exception e) {
+            Log.w(TAG, "Could not create user.", e);
+            return null;
+        }
+
+        if (userCreationResult == null || !userCreationResult.isSuccess()
+                || userCreationResult.getUser() == null) {
+            Log.w(TAG, "Could not create user. " + userCreationResult);
+            return null;
+        }
+
+        return userCreationResult.getUser();
     }
 
     private boolean removeLastAdmin(UserInfo userInfo) {
@@ -130,8 +193,11 @@ public class UserHelper {
             return false;
         }
 
-        mCarUserManagerHelper.switchToUserId(newAdmin.id);
-        return mUserManager.removeUser(userInfo.id);
+        if (!switchUser(newAdmin.id)) {
+            return false;
+        }
+
+        return removeUser(userInfo.id);
     }
 
     /**
@@ -148,15 +214,13 @@ public class UserHelper {
             Log.e(TAG, "Only admin users and system user can create other admins.");
             return null;
         }
+        AndroidFuture<UserCreationResult> future =
+                mCarUserManager.createUser(userName, UserInfo.FLAG_ADMIN);
+        UserInfo user = getUserInfo(future);
 
-        UserInfo user = mUserManager.createUser(userName, UserInfo.FLAG_ADMIN);
-        if (user == null) {
-            // Couldn't create user, most likely because there are too many.
-            Log.w(TAG, "can't create admin user.");
-            return null;
-        }
+        if (user == null) return null;
+
         new UserIconProvider().assignDefaultIcon(mUserManager, mResources, user);
-
         return user;
     }
 
@@ -170,8 +234,9 @@ public class UserHelper {
     @Nullable
     public UserInfo createNewOrFindExistingGuest(Context context) {
         // CreateGuest will return null if a guest already exists.
-        UserInfo newGuest =
-                mUserManager.createGuest(context, mDefaultGuestName);
+        AndroidFuture<UserCreationResult> future = mCarUserManager.createGuest(mDefaultGuestName);
+        UserInfo newGuest = getUserInfo(future);
+
         if (newGuest != null) {
             new UserIconProvider().assignDefaultIcon(mUserManager, mResources, newGuest);
             return newGuest;
