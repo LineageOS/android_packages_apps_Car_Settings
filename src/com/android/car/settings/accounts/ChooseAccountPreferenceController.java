@@ -112,12 +112,15 @@ public class ChooseAccountPreferenceController extends
     protected void onStartInternal() {
         mAuthenticatorHelper.listenToAccountUpdates();
         mIsStarted = true;
+    }
 
+    @Override
+    protected void onResumeInternal() {
         if (mHasPendingBack) {
             mHasPendingBack = false;
 
             // Post the fragment navigation because FragmentManager may still be executing
-            // transactions during onStart.
+            // other transactions during onResume.
             new Handler().post(() -> getFragmentController().goBack());
         }
     }
