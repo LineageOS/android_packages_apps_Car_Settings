@@ -112,15 +112,7 @@ public class WifiInfoProvider implements DefaultLifecycleObserver {
             switch (intent.getAction()) {
                 case WifiManager.CONFIGURED_NETWORKS_CHANGED_ACTION:
                     LOG.d("Wifi Config changed.");
-                    if (!intent.getBooleanExtra(WifiManager.EXTRA_MULTIPLE_NETWORKS_CHANGED,
-                            /* defaultValue= */ false)) {
-                        // only one network changed
-                        WifiConfiguration wifiConfiguration = intent
-                                .getParcelableExtra(WifiManager.EXTRA_WIFI_CONFIGURATION);
-                        if (mAccessPoint.matches(wifiConfiguration)) {
-                            mWifiConfig = wifiConfiguration;
-                        }
-                    }
+                    updateMatchingWifiConfig();
                     updateInfo();
                     for (Listener listener : getListenersCopy()) {
                         listener.onWifiConfigurationChanged(mWifiConfig, mNetworkInfo, mWifiInfo);
@@ -134,6 +126,17 @@ public class WifiInfoProvider implements DefaultLifecycleObserver {
                         listener.onWifiChanged(mNetworkInfo, mWifiInfo);
                     }
                     break;
+            }
+        }
+
+        private void updateMatchingWifiConfig() {
+            // use getPrivilegedConfiguredNetworks() to get Passpoint & other ephemeral networks
+            for (WifiConfiguration wifiConfiguration :
+                    mWifiManager.getPrivilegedConfiguredNetworks()) {
+                if (mAccessPoint.matches(wifiConfiguration)) {
+                    mWifiConfig = wifiConfiguration;
+                    break;
+                }
             }
         }
     };
