@@ -193,7 +193,8 @@ public abstract class SettingsFragment extends PreferenceFragment implements
 
             controller.setPreference(pref);
 
-            if (pref instanceof DisabledPreferenceCallback) {
+            if (pref instanceof DisabledPreferenceCallback && controller.getAvailabilityStatus()
+                    != PreferenceController.AVAILABLE_FOR_VIEWING) {
                 ((DisabledPreferenceCallback) pref).setMessageToShowWhenDisabledPreferenceClicked(
                         mRestrictedWhileDrivingMessage);
             }
