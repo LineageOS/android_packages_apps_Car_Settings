@@ -73,7 +73,7 @@
     <string name="cycle_reset_day_of_month_picker_title" msgid="1374568502823735361">"Usage cycle reset date"</string>
     <string name="cycle_reset_day_of_month_picker_subtitle" msgid="5361061448258189846">"Date of each month:"</string>
     <string name="cycle_reset_day_of_month_picker_positive_button" msgid="6919858010423269305">"Set"</string>
-    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning limit"</string>
+    <string name="data_warning_limit_title" msgid="4950868241810828601">"Data warning and limit"</string>
     <string name="app_usage_cycle" msgid="8445927080245880296">"App data usage cycle"</string>
     <string name="set_data_warning" msgid="6628236612886588097">"Set data warning"</string>
     <string name="data_warning" msgid="116776633806885370">"Data warning"</string>
@@ -560,7 +560,7 @@
     <string name="lockpattern_cancel_button_text" msgid="4068764595622381766">"Cancel"</string>
     <string name="lockpattern_pattern_confirmed" msgid="5984306638250515385">"Your new unlock pattern"</string>
     <string name="lockpattern_recording_intro_header" msgid="7864149726033694408">"Draw an unlock pattern"</string>
-    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when you\'ve finished"</string>
+    <string name="lockpattern_recording_inprogress" msgid="1575019990484725964">"Release finger when finished"</string>
     <string name="lockpattern_pattern_entered" msgid="6103071005285320575">"Pattern recorded"</string>
     <string name="lockpattern_need_to_confirm" msgid="4648070076022940382">"Draw pattern again to confirm"</string>
     <string name="lockpattern_recording_incorrect_too_short" msgid="2417932185815083082">"Connect at least four dots. Try again."</string>
@@ -575,7 +575,7 @@
     <string name="choose_lock_pin_message" msgid="2963792070267774417">"For security, set a PIN"</string>
     <string name="confirm_your_pin_header" msgid="9096581288537156102">"Re-enter your PIN"</string>
     <string name="choose_lock_pin_hints" msgid="7362906249992020844">"PIN must be at least four digits"</string>
-    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"PIN invalid. Must be at least four digits."</string>
+    <string name="lockpin_invalid_pin" msgid="2149191577096327424">"Pin invalid, must be at least four digits."</string>
     <string name="confirm_pins_dont_match" msgid="4607110139373520720">"PINs don\'t match"</string>
     <string name="error_saving_lockpin" msgid="9011960139736000393">"Error saving PIN"</string>
     <string name="lockscreen_wrong_pin" msgid="4922465731473805306">"Wrong PIN"</string>
