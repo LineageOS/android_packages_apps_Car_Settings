@@ -186,10 +186,12 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
             public void onEnterKeyClick() {
                 mEnteredPassword = LockPatternUtils.charSequenceToByteArray(
                         mPasswordField.getText());
-                if (mEnteredPassword != null) {
+                if (mEnteredPassword != null && mEnteredPassword.length > 0) {
                     initCheckLockWorker();
                     mPinPad.setEnabled(false);
                     mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+                } else {
+                    setErrorMessage();
                 }
             }
         };
@@ -208,7 +210,11 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
                 if (!mCheckLockWorker.isCheckInProgress()) {
                     mEnteredPassword = LockPatternUtils.charSequenceToByteArray(
                             mPasswordField.getText());
-                    mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+                    if (mEnteredPassword != null && mEnteredPassword.length > 0) {
+                        mCheckLockWorker.checkPinPassword(mUserId, mEnteredPassword);
+                    } else {
+                        setErrorMessage();
+                    }
                 }
                 return true;
             }
@@ -257,8 +263,7 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         if (lockMatched) {
             mCheckLockListener.onLockVerified(mEnteredPassword);
         } else {
-            mMsgView.setText(
-                    mIsPin ? R.string.lockscreen_wrong_pin : R.string.lockscreen_wrong_password);
+            setErrorMessage();
             if (mIsPin) {
                 mPinPad.setEnabled(true);
             }
@@ -267,5 +272,10 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         if (!mIsPin) {
             hideKeyboard();
         }
+    }
+
+    private void setErrorMessage() {
+        mMsgView.setText(
+                mIsPin ? R.string.lockscreen_wrong_pin : R.string.lockscreen_wrong_password);
     }
 }
