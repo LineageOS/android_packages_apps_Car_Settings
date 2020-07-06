@@ -40,7 +40,8 @@
         android:key="@string/pk_keyboard_entry"
         android:title="@string/keyboard_settings"
         settings:controller="com.android.car.settings.inputmethod.KeyboardPreferenceController"
-        settings:iconSpaceReserved="true">
+        settings:iconSpaceReserved="true"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$KeyboardActivity"/>
     </Preference>
@@ -48,7 +49,8 @@
         android:key="@string/pk_tts_settings_entry"
         android:title="@string/text_to_speech_settings"
         settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
-        settings:iconSpaceReserved="true">
+        settings:iconSpaceReserved="true"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.common.CarSettingActivities$TextToSpeechOutputActivity"/>
     </Preference>
