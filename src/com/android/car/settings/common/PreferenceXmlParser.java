@@ -59,14 +59,17 @@ public class PreferenceXmlParser {
      */
     @IntDef(flag = true, value = {
             MetadataFlag.FLAG_NEED_KEY,
-            MetadataFlag.FLAG_NEED_PREF_CONTROLLER})
+            MetadataFlag.FLAG_NEED_PREF_CONTROLLER,
+            MetadataFlag.FLAG_NEED_SEARCHABLE})
     @Retention(RetentionPolicy.SOURCE)
     public @interface MetadataFlag {
         int FLAG_NEED_KEY = 1;
         int FLAG_NEED_PREF_CONTROLLER = 1 << 1;
+        int FLAG_NEED_SEARCHABLE = 1 << 9;
     }
 
     public static final String METADATA_KEY = "key";
+    public static final String METADATA_SEARCHABLE = "searchable";
     static final String METADATA_CONTROLLER = "controller";
 
     /**
@@ -114,6 +117,10 @@ public class PreferenceXmlParser {
                 preferenceMetadata.putString(METADATA_CONTROLLER,
                         getController(preferenceAttributes));
             }
+            if (hasFlag(flags, MetadataFlag.FLAG_NEED_SEARCHABLE)) {
+                preferenceMetadata.putBoolean(METADATA_SEARCHABLE,
+                        isSearchable(preferenceAttributes));
+            }
             metadata.add(preferenceMetadata);
 
             preferenceAttributes.recycle();
@@ -134,5 +141,9 @@ public class PreferenceXmlParser {
 
     private static String getController(TypedArray styledAttributes) {
         return styledAttributes.getString(R.styleable.Preference_controller);
+    }
+
+    private static boolean isSearchable(TypedArray styledAttributes) {
+        return styledAttributes.getBoolean(R.styleable.Preference_searchable, true);
     }
 }
