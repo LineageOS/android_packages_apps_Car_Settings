@@ -31,7 +31,8 @@
     <Preference
         android:key="@string/pk_data_warning_and_limit"
         android:title="@string/data_warning_limit_title"
-        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController">
+        settings:controller="com.android.car.settings.common.DefaultRestrictionsPreferenceController"
+        settings:searchable="false">
         <intent android:targetPackage="com.android.car.settings"
                 android:targetClass="com.android.car.settings.datausage.DataWarningAndLimitActivity"/>
     </Preference>

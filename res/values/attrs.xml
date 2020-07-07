@@ -61,6 +61,8 @@
     <declare-styleable name="Preference">
         <!-- Classname of a PreferenceController corresponding to the preference -->
         <attr name="controller" format="string"/>
+        <!-- Whether or not the preference is searchable, by default it's true. -->
+        <attr name="searchable" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="ProgressBarPreference">
