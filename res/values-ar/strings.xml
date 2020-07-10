@@ -150,7 +150,7 @@
     <string name="wifi_hotspot_security_title" msgid="2299925790743587725">"الأمان"</string>
     <string name="wifi_hotspot_wpa2_personal" msgid="7135181212837798318">"WPA2-Personal"</string>
     <string name="wifi_hotspot_security_none" msgid="2514844105085054386">"بلا"</string>
-    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة وصول"</string>
+    <string name="wifi_hotspot_ap_band_title" msgid="7685279281668988593">"نطاق نقطة الوصول"</string>
     <string name="wifi_ap_band_config" msgid="6143905484067008736">"اختيار نطاق نقطة الوصول"</string>
     <string name="wifi_ap_choose_auto" msgid="3779526909841604566">"تلقائي"</string>
     <string name="wifi_ap_choose_2G" msgid="6356913773766753502">"نطاق بتردد ٢٫٤ غيغاهرتز"</string>
@@ -165,7 +165,7 @@
     <string name="wifi_ask_enable" msgid="4452418245680754578">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في تفعيل شبكة Wi-Fi."</string>
     <string name="wifi_ask_disable" msgid="2949290055916181553">"هناك رغبة من <xliff:g id="REQUESTER">%s</xliff:g> في إيقاف شبكة Wi-Fi."</string>
     <string name="wifi_error" msgid="3105105447117289410">"خطأ"</string>
-    <string name="bluetooth_settings_title" msgid="3794688574569688649">"بلوتوث"</string>
+    <string name="bluetooth_settings_title" msgid="3794688574569688649">"البلوتوث"</string>
     <string name="bluetooth_device" msgid="3178478829314083240">"جهاز بدون اسم"</string>
     <string name="bluetooth_paired_devices" msgid="6463199569164652410">"الأجهزة المقترنة"</string>
     <string name="bluetooth_pair_new_device" msgid="6948753485443263095">"إقران جهاز جديد"</string>
@@ -217,7 +217,7 @@
     <string name="tts_speech_rate" msgid="4512944877291943133">"معدل سرعة الكلام"</string>
     <string name="tts_pitch" msgid="2389171233852604923">"درجة الصوت"</string>
     <string name="tts_reset" msgid="6289481549801844709">"إعادة الضبط"</string>
-    <string name="sound_settings" msgid="3072423952331872246">"صوت"</string>
+    <string name="sound_settings" msgid="3072423952331872246">"الصوت"</string>
     <string name="ring_volume_title" msgid="3135241004980719442">"مستوى صوت الرنين"</string>
     <string name="navi_volume_title" msgid="946292066759195165">"مستوى صوت التنقل"</string>
     <string name="incoming_call_volume_title" msgid="6972117872424656876">"نغمة الرنين"</string>
@@ -228,7 +228,7 @@
     <string name="ringtone_title" msgid="8370531086214517972">"نغمة رنين الهاتف"</string>
     <string name="notification_ringtone_title" msgid="8661716239594010288">"الصوت التلقائي للإشعارات"</string>
     <string name="alarm_ringtone_title" msgid="3257364170646440908">"الصوت التلقائي للمنبّه"</string>
-    <string name="units_settings" msgid="402325305096925886">"وحدة"</string>
+    <string name="units_settings" msgid="402325305096925886">"وحدات العرض"</string>
     <string name="units_speed_title" msgid="7115143916747108160">"السرعة"</string>
     <string name="units_distance_title" msgid="6257691565990474635">"المسافة"</string>
     <string name="units_fuel_consumption_title" msgid="6415108114453652570">"استهلاك الوقود"</string>
@@ -279,7 +279,7 @@
     <string name="apps_and_notifications_settings" msgid="8704585874333781975">"التطبيقات والإشعارات"</string>
     <string name="all_applications" msgid="7798210477486822168">"إظهار جميع التطبيقات"</string>
     <string name="default_applications" msgid="1558183275638697087">"التطبيقات التلقائية"</string>
-    <string name="app_permissions" msgid="32799922508313948">"أذونات التطبيق"</string>
+    <string name="app_permissions" msgid="32799922508313948">"أذونات التطبيقات"</string>
     <string name="app_permissions_summary" msgid="1842858532315056367">"التطبيقات التي تستخدم <xliff:g id="APPS">%1$s</xliff:g>"</string>
     <string name="applications_settings" msgid="794261395191035632">"معلومات التطبيق"</string>
     <string name="force_stop" msgid="2153183697014720520">"فرض الإيقاف"</string>
