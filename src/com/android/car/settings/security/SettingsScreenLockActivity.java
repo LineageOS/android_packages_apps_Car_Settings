@@ -97,4 +97,11 @@ public class SettingsScreenLockActivity extends BaseCarSettingsActivity implemen
                 .replace(R.id.fragment_container, fragment)
                 .commit();
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        PasswordHelper.zeroizeCredentials();
+    }
 }
