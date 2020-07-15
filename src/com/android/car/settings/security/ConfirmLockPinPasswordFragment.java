@@ -145,6 +145,14 @@ public class ConfirmLockPinPasswordFragment extends BaseFragment {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPasswordField.setText(null);
+
+        PasswordHelper.zeroizeCredentials(mEnteredPassword);
+    }
+
     private void initCheckLockWorker() {
         if (mCheckLockWorker == null) {
             mCheckLockWorker = new CheckLockWorker();

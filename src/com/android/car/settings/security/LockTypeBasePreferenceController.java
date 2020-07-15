@@ -45,6 +45,10 @@ public abstract class LockTypeBasePreferenceController extends PreferenceControl
         mUserManager = UserManager.get(context);
     }
 
+    @Override
+    protected void onDestroyInternal() {
+        PasswordHelper.zeroizeCredentials(mCurrentPassword);
+    }
 
     @Override
     protected Class<Preference> getPreferenceType() {
