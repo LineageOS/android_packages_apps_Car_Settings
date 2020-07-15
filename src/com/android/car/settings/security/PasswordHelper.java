@@ -190,4 +190,22 @@ public class PasswordHelper {
 
         return messages;
     }
+
+    /**
+     * Zero out credentials and force garbage collection to remove any remnants of user password
+     * shards from memory. Should be used in onDestroy for any LockscreenCredential fields.
+     *
+     * @param credentials the credentials to zero out, can be null
+     **/
+    public static void zeroizeCredentials(LockscreenCredential... credentials) {
+        for (LockscreenCredential credential : credentials) {
+            if (credential != null) {
+                credential.zeroize();
+            }
+        }
+
+        System.gc();
+        System.runFinalization();
+        System.gc();
+    }
 }
